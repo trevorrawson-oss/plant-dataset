@@ -5,6 +5,7 @@
 > 2. **Locate your step on the arc checklist** (gold-standard arc checklist v1.4) BEFORE acting. Do not infer the next action from "a cell is done" -- check the checklist.
 > 3. **This file is LIVE STATE ONLY.** Never delta-edit it (the past near-miss came from header-only patches). At session close, **fully regenerate this whole file** from the true state.
 > 4. **History is append-only** in `STATE_HISTORY.md` -- APPEND a dated entry there at close, never rewrite it. That file is the recovery net.
+> 5. **CLOSE RITUAL (every session ends here).** If the dataset changed: PROMOTE -- write canonical, re-pin `LATEST.txt` (new SHA + date + session). Then ALWAYS: regenerate this file (#3), append to `STATE_HISTORY.md` (#4), sync `00-current/`, and commit (+ push). Data change and state-only change both end with this ritual; never leave git behind (the hand-promote-uncommitted combination is what once turned a routine promote into a recovery).
 
 ---
 
