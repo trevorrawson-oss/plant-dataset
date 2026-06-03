@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-06-03 -- bolting register-conversion addendum (DATA change; `ed495666` -> `8a1d8a50`)
+
+Phase-0 gap-fix, closes `m15_step6_finding_001`. The register-bearing-field inventory was anchored on tomato shape (tomatoes do not bolt), so the `bolting` dict was missed by the 2.8 register conversion -- surfaced by the lettuce Step 6 register read. On the 9 crops carrying `bolting` (spinach, basil, broccoli, lettuce-leaf, arugula, bok-choy, radish, cauliflower, cilantro-coriander): `bolting.note` -> `note_seasoned` + `note_beginner:null`; `bolting.prevention` -> `prevention_seasoned` + `prevention_beginner:null`; `bolting.risk` (EXCLUDED enum) and `bolting.triggers` (USER-FACING-CATEGORICAL) left as-is. 18 prose renamed (byte-identical), 18 null beginner siblings scaffolded. No content authored; schema stays 2.8 (addendum). Scope independently re-verified (exactly 9 crops, no others). Gates: start-SHA, collateral hash audit (only the 9 changed; other 114 + risk/triggers byte-identical), value-preservation, 0 bare bolting.note/prevention remain, independent fresh re-read. Inventory doc updated (§2.1 + §4 + root-cause note). **Systemic follow-up (next, Claude Code):** a register-completeness gate -- walk all crops' prose fields, assert each has an inventory ruling; unruled = finding (would have caught this). git pushed; LATEST session `bolting_register_conversion_addendum`.
+
+---
+
 ## 2026-06-03 -- spec-B succession amendment CODIFIED into the spec doc (no data change; SHA stays `ed495666`)
 
 The succession-encoding clarification was inserted as **§3b-i** of `region_primary_schema_shape_spec_v1_0.md` (arm-OBJECTS prohibited in `resolved_by_zone` / date-STRINGS permitted; regenerable-vs-precompute warm-vs-cold; per-crop pipeline rule). Pure insertion -- §3a/§3b/§6/§4 untouched; verified (read-only) against the live data (north `succession_*` are strings, rule lives in `plantings[]` succession entries, warm cells carry none). The "Region-primary spec amendment" open item is now DISCHARGED and removed from CURRENT_STATE. The one-time amendment wrapper was discarded. Updated spec doc -> claude.ai project knowledge (Trevor's manual swap).
