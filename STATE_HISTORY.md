@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-06-03 -- spec-B succession amendment CODIFIED into the spec doc (no data change; SHA stays `ed495666`)
+
+The succession-encoding clarification was inserted as **§3b-i** of `region_primary_schema_shape_spec_v1_0.md` (arm-OBJECTS prohibited in `resolved_by_zone` / date-STRINGS permitted; regenerable-vs-precompute warm-vs-cold; per-crop pipeline rule). Pure insertion -- §3a/§3b/§6/§4 untouched; verified (read-only) against the live data (north `succession_*` are strings, rule lives in `plantings[]` succession entries, warm cells carry none). The "Region-primary spec amendment" open item is now DISCHARGED and removed from CURRENT_STATE. The one-time amendment wrapper was discarded. Updated spec doc -> claude.ai project knowledge (Trevor's manual swap).
+
+---
+
 ## 2026-06-03 -- spec-B succession-encoding clarification (no data change; SHA stays `ed495666`)
 
 A claude.ai review of the handoff caught an apparent contradiction: after Pass 1b, northern_tier carries succession in TWO places -- the rule in `plantings[]` (`track:"succession"`) AND materialized `succession_spring`/`succession_fall` date-strings in `resolved_by_zone[3..7]` -- while the lean CURRENT_STATE said `resolved_by_zone` holds "only date-strings + calendar[]" and "do NOT enumerate succession arms." Resolved as INTENTIONAL + a wording fix (not a data change):

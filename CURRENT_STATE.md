@@ -39,7 +39,6 @@
 - **Gold-standard arc checklist amendments** (claude.ai's authoring lane to apply): (1) per-step lane tags; (2) shell-pass-first structuring of Steps 4-5; (3) a Step 11 flip-disambiguation guardrail (this is the per-crop `launch_ready` flip ONLY); (4) the generalized per-crop deletion gate.
 - **Pipeline / operating-model doc -- TO BE DESIGNED** (cross-crop machine + full flip taxonomy + the checklist-amendments list). Design as its own session after lettuce is gold-standard.
 - **Step 11 Appendix-A registration:** the `succession_spring`/`succession_fall` resolved-cell keys (Pass 1b) + the `se_gulf_month_resolution` method label (Pass 2).
-- **Region-primary spec amendment (spec-B wording):** codify the 2026-06-03 succession-encoding clarification in the spec doc -- arm-OBJECTS prohibited in `resolved_by_zone`, materialized date-STRINGS permitted (static precompute); regenerable-vs-precompute principle (warm rule-only vs cold rule+precompute). claude.ai's authoring lane.
 - **Optional forward finding:** machine-readable fall heat-floor clamp field, dataset-wide, if the app resolver must reproduce the cold-zone Jul-1 clamp exactly. NOTE: this alone does NOT make the north regenerable (spring `soil_temp_40f` anchor is unstored); full symmetry would also need a `zone_soil_temp_40f` input table.
 - **Deferred vocabulary session:** dataset-wide rename of the `track` value `beginner` -> `main`.
 
