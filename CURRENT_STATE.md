@@ -24,7 +24,9 @@
 1. **Per-crop `launch_ready` flip** -- one crop becomes gold-standard / goes live. **Gate:** that crop's Step 11 returns 0 violations. *(The one a session jumped to early off "northern_tier done"; it only closed Step 5.5.)*
 2. **Region read-layer flip** -- renderer reads `regions{}` first. **Gate:** shape proven on the 3 provers (lettuce done; cherry + beefsteak still owe M16); shipped with a `zones{}` fallback.
 3. **Authoring-model flip** -- carrots and every later crop authored region-first. **Gate:** 3 provers done.
-4. **Schema 2.8 perennial bump** (`lifecycle_override`, perennial support) -- LATER milestone, after carrots. **Decoupled** from #2.
+4. **Schema perennial bump** (`lifecycle_override`, perennial support) -- a FUTURE bump, **2.9+ (NOT 2.8)**. LATER milestone, after carrots. **Decoupled** from #2.
+
+**Schema version lineage (so "2.8" isn't read two ways):** 2.7.5 = additive region scaffolding (Phase A, done) -> **2.8 = register-suffix conversion (DONE; current `schema_version`)** -> future bumps **re-number off 2.8** per the register inventory §9.1 ("the region-primary flip and perennial extension re-number; neither has shipped a schema artifact"). So the **region read-layer flip** (#2) and the **perennial extension** (#4) are **2.9+**, exact numbers pinned when each lands. NOTE: the region-primary spec's "## 4 Versioning: 2.7.5 -> 2.8 breaking flip" still labels the region flip "2.8" -- that label is stale (2.8 is taken); re-number to 2.9 when that flip is built (claude.ai's methodology lane).
 
 ## Live locked decisions / guardrails (in force; superseded ones live in history)
 - **Governing checklist: v1.4.1** (register-naming sync of v1.4; field examples now `_seasoned`; denominator mechanism + Appendix A + gates + F5 register-vs-entry distinction all unchanged). When checklist text and live dataset shape disagree, the **dataset is authoritative for what is true** -- flag the doc lag, do not author against fields that don't exist.

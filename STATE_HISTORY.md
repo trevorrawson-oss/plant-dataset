@@ -13,6 +13,7 @@
 - **6b source preflight SATISFIED:** all 5 container sources ADMITTED in the 80-entry source_catalog (the open item from 6a is closed).
 - **Validation (Claude Code, before any canonical write):** ran claude.ai's apply as a DRY-RUN against a temp copy -- SHA gate (`61cddea3`), preconditions, collateral hash audit (only crops[33] changed; 122 crops + 13 sibling keys byte-identical), dash sweep clean (incl. the resolved `--`), copy rules (no mid-sentence "Plant"), source admission. Then promoted the validated output (identical, `1e19948c`).
 - **No flip.** Step 6 progress: **22 of 119** (6a 15 + 6b 7). NEXT: 6c (top-level/identity/yield/succession + safe_sowing ×5), then 6d (compounds). Schema 2.8.
+- **Schema-version label fix (Trevor caught it; no data change).** CURRENT_STATE flip-gate #4 said "Schema 2.8 perennial bump" while the dataset is ALREADY 2.8 (the register-suffix conversion took it). Corrected: future bumps re-number off 2.8 (the register inventory §9.1 anticipated this), so the region read-flip + perennial extension are **2.9+**, not 2.8. Added a schema-version-lineage note to CURRENT_STATE. The region-primary spec still labels the region flip "2.8" -- flagged stale, re-number to 2.9 when that flip is built (claude.ai's lane).
 
 ---
 
