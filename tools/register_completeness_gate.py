@@ -73,9 +73,26 @@ def is_prose_shaped(v):
         return False
     return bool(re.search(r"[.;:?]\s", v)) or " " in v and len(v) >= 40
 
+# --- Positive roster: fields RULED as USER-FACING-CATEGORICAL (bare-by-design). ---
+def ruled_categorical(pat, k):
+    if k == "good_after" and pat.endswith("rotation"): return True       # bare crop list
+    if k == "when" and pat.endswith("thinning"): return True             # short timing phrase
+    if k in ("fruit_size", "fruit_color") and "varieties_detail" in pat: return True
+    return False
+
+# --- DEFERRED by design: companions array-split provenance (inventory §5 -- its own
+#     reconciliation session). Reported separately; NOT an open "unruled" gap. ---
+def deferred(pat, k):
+    return "companions" in pat and k == "reason"
+
+# RULING-2 note: a ruled SP/CP field that is NULL is left BARE (un-suffixed); a bare
+# null is empty-by-nature, not a finding. is_prose_shaped() returns False for non-str,
+# so bare nulls are never flagged here -- RULING-2 is satisfied by construction.
+
 data = json.load(open(PATH, encoding="utf-8"))
 
 cand = collections.defaultdict(lambda: {"crops": set(), "sample": None})
+defr = collections.defaultdict(lambda: {"crops": set(), "sample": None})
 def walk(o, pat, crop):
     if isinstance(o, dict):
         for k, v in o.items():
@@ -83,10 +100,12 @@ def walk(o, pat, crop):
                 ruled = (k.endswith("_seasoned") or k.endswith("_beginner")
                          or k in EXCLUDED_KEYS
                          or re.match(r"zone_\d+_", k)  # zone-N boolean/range primitives
-                         or excluded_by_path(pat))
+                         or excluded_by_path(pat)
+                         or ruled_categorical(pat, k))
                 if not ruled and is_prose_shaped(v):
                     p = pat + "." + k if pat else k
-                    c = cand[p]; c["crops"].add(crop)
+                    bucket = defr if deferred(pat, k) else cand
+                    c = bucket[p]; c["crops"].add(crop)
                     if c["sample"] is None: c["sample"] = v[:75]
             walk(v, (pat + "." + k if pat else k), crop)
     elif isinstance(o, list):
@@ -100,11 +119,16 @@ print("roster-completeness gate -- prose fields with NO matching ruling:\n")
 for p in sorted(cand):
     f = cand[p]
     print("  UNRULED  %-46s  %3d crops  e.g. %r" % (p, len(f["crops"]), f["sample"]))
+if defr:
+    print("\n  (deferred by design -- inventory §5 companions reconciliation, NOT an open gap:)")
+    for p in sorted(defr):
+        print("  DEFERRED %-46s  %3d crops" % (p, len(defr[p]["crops"])))
 
 if cand:
     print("\nGATE: HALT -- %d unruled prose pattern(s). A HUMAN must rule each in" % len(cand))
     print("register_bearing_field_inventory_v1_0.md (CP / SP / CATEGORICAL / EXCLUDED)")
     print("before the conversion or new-crop admission proceeds. Do NOT auto-rule.")
     sys.exit(1)
-print("GATE: PASS -- every prose-shaped field matches a ruling.")
+print("\nGATE: PASS -- 0 unruled prose fields (modulo %d deferred §5 companions entries)." % len(defr))
+print("Every prose field on every crop is ruled-and-converted or ruled-and-deferred.")
 sys.exit(0)
