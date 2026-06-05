@@ -46,6 +46,12 @@ def _build_north_from_zones(r):
     for cell in (r.get("resolved_by_zone") or {}).values():
         if isinstance(cell, dict):
             cell.pop("plantings", None)
+            # lifted_from_zone is tautological in the north (the region zone IS
+            # the legacy zone, so it always equals the cell's own zone key) -- the
+            # reference crop (lettuce northern_tier) sheds it on promotion. Drop it
+            # for shape parity. (In multi-zone warm regions like se_gulf it is
+            # informative and kept; that is not this north path.)
+            cell.pop("lifted_from_zone", None)
             if cell.get("resolution_method") == "static_precompute":
                 cell["resolution_method"] = "zone_promoted_verified"
     # provenance: replace the Phase-A verbatim-lift string with a promotion record

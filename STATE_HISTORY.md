@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-05 -- M16 cherry Step 3.5 follow-up: `lifted_from_zone` north normalization (all-crops shape fix)
+
+**SHA:** `a65c71758bba944a39059426c0ae5bc6cfe65ea683cb87cfb323b7b1d41b2aae` -> `1b4fea68e63ed63c02cc50aeb8bd55a761c6d6534fe037fba371eab7130df68a`. Session `m16_cherry_step3_5_lifted_from_zone_norm`. Same calendar day as the shell build, immediately after.
+
+**Trigger.** Trevor asked for a direct lettuce-vs-cherry comparison of `northern_tier` / `resolved_by_zone`. The comparison found cherry's north resolved cells matched lettuce on every structural essential (identical region keys, `zone_promoted_verified`, no nested `plantings`, correct single `beginner` track) EXCEPT one stray key: cherry kept `lifted_from_zone` (`"3"`,`"4"`,...`"7"`) while lettuce's `northern_tier` sheds it. In the north `lifted_from_zone` is **tautological** -- the region zone IS the legacy zone, so it always equals the cell's own zone key (that is why lettuce's NA-3h reconciliation dropped it there, while keeping it in multi-zone `se_gulf` where it is informative).
+
+**Trevor's systemic catch:** ALL crops' `northern_tier` is the same 109-crop Phase-A lift, so every one carries this redundant key -- the fix belongs in the TOOL, not just cherry.
+
+**Fix (Claude Code lane).** `tools/build_region_shells.py` `_build_north_from_zones` now `cell.pop("lifted_from_zone", None)` in the north promote (TDD: test asserts no `lifted_from_zone` in north cells). Re-applied to cherry via `apply_region_shells.py` (EXPECTED_SHA bumped to `a65c7175`; the re-run guard kept it idempotent -- warm regions untouched, provenance re-written identically). **Surgical delta confirmed:** only `lifted_from_zone` removed from the 5 cold cells; gate unchanged (cherry §A2 shape = 0, total 34; lettuce `GATE: PASS`); collateral audit = only `cherry.regions` changed. Cherry's north now has ZERO cherry-only cell keys vs lettuce (remaining lettuce-only keys = `heat_pause` + `succession_spring`/`succession_fall` = CORRECT biology differences -- tomato is frost-limited not heat-limited, and is not a succession crop).
+
+**Honest non-shape gaps still owed to claude.ai (by design, NOT this lane):** cherry's north `calendar[12]` is the lifted old calendar with `wait` in the winter-gap months where lettuce has derived `cold_pause` (Step 5.5 pause classification + derive-from-windows); `region_notes` null (Steps 6/7). So cherry's north is at-SHAPE-parity with lettuce but not yet biology-filled.
+
+**Owed checklist amendment (claude.ai):** fold the `lifted_from_zone`-strip into the v1.5 Step 3.5 north sub-procedure text (the tool already enforces it; this is the doc-sync).
+
+---
+
 ## 2026-06-05 -- M16 cherry-tomato Step 3.5: region shells BUILT + `second_planting` structure DEFINED -- Claude Code lane
 
 **SHA chain:** `29b3aaa904a62487960c5dc53b4282538454076f696ffec039ac4ab87937801a` (M15 lettuce flip) -> `a65c71758bba944a39059426c0ae5bc6cfe65ea683cb87cfb323b7b1d41b2aae` (M16 cherry Step 3.5). Session `m16_cherry_step3_5_region_shells`. Preflight clean (start SHA matched `LATEST.txt`). Run via the full superpowers flow: brainstorming -> spec -> writing-plans -> subagent-driven execution (4 tasks, each implementer + spec reviewer + code-quality reviewer).

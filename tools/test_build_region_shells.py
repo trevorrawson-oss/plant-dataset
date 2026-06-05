@@ -33,6 +33,9 @@ for rk, r in regions.items():
 nt = regions["northern_tier"]
 for z, cell in nt["resolved_by_zone"].items():
     assert cell.get("resolution_method") == "zone_promoted_verified", f"nt.{z}: not restamped"
+    # lifted_from_zone is tautological in the north (region zone == legacy zone)
+    # and the reference crop (lettuce) sheds it -- it must be dropped here too
+    assert "lifted_from_zone" not in cell, f"nt.{z}: tautological lifted_from_zone not stripped"
 assert isinstance(nt["plantings_provenance"], str) and "Zone-promoted" in nt["plantings_provenance"]
 
 # region_label em-dashes resolved

@@ -9,7 +9,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from build_region_shells import build_region_shells
 
-EXPECTED_SHA = "29b3aaa904a62487960c5dc53b4282538454076f696ffec039ac4ab87937801a"
+EXPECTED_SHA = "a65c71758bba944a39059426c0ae5bc6cfe65ea683cb87cfb323b7b1d41b2aae"
 PATH = "crops_data_final.json"
 SCRATCH = "crops_data_final.scratch.json"
 SLUG = sys.argv[1] if len(sys.argv) > 1 else "cherry-tomato"
