@@ -107,6 +107,30 @@ ok = (not vs.get("launch_ready_seasoned")) or vs.get("launch_ready_core")
 print(f"  launch_ready_seasoned => launch_ready_core: {'PASS' if ok else 'FAIL'}")
 if not ok: fail("§3 flag implication")
 
+# ---------------- A2. region-fill completeness (the 2.7.5-scaffold catcher) ----------------
+# Every crop got an empty regions{} shell at schema 2.7.5. A region whose
+# plantings is still a "PENDING ..." stub string, or whose region_notes pair is
+# both null, is an UNFILLED shell -- invisible to the dual-voice/dash/anchoring
+# walks below (a stub string trips none of them). This is the region-primary
+# FILL work-list at Step 0 and a hard violation at Step 11. Without this check
+# the gate silently under-reports an unfilled crop (the cherry/beefsteak miss).
+print("A2. region-fill completeness (PENDING-stub + null region_notes catcher)")
+regions = crop.get("regions") or {}
+stub_regions, empty_notes = [], []
+for rk, r in regions.items():
+    pl = r.get("plantings")
+    if isinstance(pl, list) and pl and isinstance(pl[0], str) and "PENDING" in pl[0]:
+        stub_regions.append(rk)
+    elif not (isinstance(pl, list) and pl and isinstance(pl[0], dict)):
+        stub_regions.append(rk)  # no real plantings rule layer at all
+    if not r.get("region_notes_seasoned") and not r.get("region_notes_beginner"):
+        empty_notes.append(rk)
+print(f"  regions: {len(regions)} | unfilled plantings (stub/missing): {len(stub_regions)} | both region_notes null: {len(empty_notes)}")
+for rk in stub_regions: fail(f"region unfilled (plantings stub/missing): {rk}")
+for rk in empty_notes:
+    if rk not in stub_regions:  # a filled region with no authored notes is its own gap
+        fail(f"region_notes pair both null: {rk}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
