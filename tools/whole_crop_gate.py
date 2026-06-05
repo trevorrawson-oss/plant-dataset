@@ -114,21 +114,35 @@ if not ok: fail("§3 flag implication")
 # walks below (a stub string trips none of them). This is the region-primary
 # FILL work-list at Step 0 and a hard violation at Step 11. Without this check
 # the gate silently under-reports an unfilled crop (the cherry/beefsteak miss).
-print("A2. region-fill completeness (PENDING-stub + null region_notes catcher)")
+print("A2. region-fill completeness (stub + null notes + STALE pre-hoist shape catcher)")
 regions = crop.get("regions") or {}
-stub_regions, empty_notes = [], []
+stub_regions, empty_notes, stale_shape, null_track = [], [], [], []
 for rk, r in regions.items():
     pl = r.get("plantings")
     if isinstance(pl, list) and pl and isinstance(pl[0], str) and "PENDING" in pl[0]:
         stub_regions.append(rk)
     elif not (isinstance(pl, list) and pl and isinstance(pl[0], dict)):
         stub_regions.append(rk)  # no real plantings rule layer at all
+    else:
+        # filled-shaped, but is it at-bar? track:None = unauthored (lettuce uses
+        # beginner/succession). A resolved_by_zone cell carrying a nested
+        # `plantings` key is the pre-Pass-1b off-spec shape (spec §3b-i forbids
+        # rule-bearing structure in resolved_by_zone) -- i.e. an OLD shallow lift
+        # that looks filled but is not region-primary. This is the cherry/beefsteak
+        # northern_tier trap: dict plantings, but static_precompute + nested cells.
+        if any(p.get("track") is None for p in pl):
+            null_track.append(rk)
+        rbz = r.get("resolved_by_zone") or {}
+        if any(isinstance(cell, dict) and "plantings" in cell for cell in rbz.values()):
+            stale_shape.append(rk)
     if not r.get("region_notes_seasoned") and not r.get("region_notes_beginner"):
         empty_notes.append(rk)
-print(f"  regions: {len(regions)} | unfilled plantings (stub/missing): {len(stub_regions)} | both region_notes null: {len(empty_notes)}")
+print(f"  regions: {len(regions)} | stub/missing plantings: {len(stub_regions)} | null-track plantings: {len(null_track)} | stale nested-cell shape (§3b-i): {len(stale_shape)} | both region_notes null: {len(empty_notes)}")
 for rk in stub_regions: fail(f"region unfilled (plantings stub/missing): {rk}")
+for rk in null_track: fail(f"region plantings track is None (unauthored shape): {rk}")
+for rk in stale_shape: fail(f"region resolved_by_zone carries nested plantings (pre-hoist §3b-i shape): {rk}")
 for rk in empty_notes:
-    if rk not in stub_regions:  # a filled region with no authored notes is its own gap
+    if rk not in stub_regions:
         fail(f"region_notes pair both null: {rk}")
 
 # ---------------- B. dual-voice coverage ----------------
