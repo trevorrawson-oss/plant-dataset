@@ -6,7 +6,24 @@
 
 ---
 
----
+## 2026-06-05 -- post-flip working session: gate tooling shipped + M16 region-fill scoping + the REGION SHELL-BUILD decision
+
+Same calendar day as the lettuce flip, after it landed. No dataset-content mutation (the gate runs are read-only; this entry + the CURRENT_STATE guardrail are the only writes). Three things happened: gate tooling was made permanent, the true M16 starting state was discovered, and a forward rule was decided.
+
+**1. Gate tooling shipped crop-agnostic (Claude Code lane).** The Step 11 certification logic lived only in `/tmp` scratch + this transcript (WORRY 3). Ported to `tools/whole_crop_gate.py` (dual-voice structural walk + dash + °F + source-tier + anchoring 1A with the sibling-pair predicate + `bolting.*` inherit-class + two-field predicate) and `tools/verbatim_scan.py` (systematic copyright/verbatim n-gram scan, two-step fetch/scan, honest coverage reporting). Verified: reproduces lettuce = 0. Commits `3409af5` + two follow-ups.
+
+**2. The M16 starting state -- discovered, and it is worse than first framed (Trevor caught two of my errors).** I initially called M16 a "regression." It is NOT. Live-data survey:
+- The schema-2.7.5 "additive region scaffolding" created empty `regions{}` for ALL 123 crops. **Only lettuce-leaf is region-primary FILLED (1 of 123.)** 108 crops = 9 stub + 1 filled-looking northern_tier; 14 (mushrooms/microgreens/sprouts, no `archetype`) = all stub.
+- A stub region literally reads `plantings:["PENDING CORRECTION PHASE ..."]`, `region_notes_*` null.
+- **The 109-crop `northern_tier` is the OLD shallow Phase-A lift, NOT at the lettuce bar:** `track:None` (no succession), `region_notes_*` null, `resolution_method:static_precompute`, resolved_by_zone cells still carrying nested `plantings` (the pre-Pass-1b shape spec §3b-i forbids). So cherry/beefsteak are effectively **0 of 10 regions at-bar**, not 1 of 10.
+- **My gate had the SAME blind spot twice -- the bolting class, in my own new tool.** First it counted PENDING stubs as non-violations (a stub string trips no prose check); fixed with an A2 region-fill check. Then it counted the stale northern_tier as "filled" (its `plantings[0]` is a dict); fixed by adding null-track + nested-cell-`plantings` (§3b-i) detection. Only a hand-check surfaced both. Lesson recorded: a gate only catches the shapes you teach it; treat any new gate's first clean run as suspect until a manual spot-check agrees. Honest counts now: lettuce 0 / cherry 42 / beefsteak 44 / carrot 292 (carrot near-greenfield).
+- History clarified: when the lettuce shell was built, the empty containers (123) + a shallow northern_tier (109) propagated dataset-wide in tandem; the other 9 regions + all depth (succession hoist, Hawaii, warm/CA re-derivation, region_notes, Steps 6/7/8) were lettuce-ONLY. None of the M15 quality propagated.
+
+**3. THE DECISION -- region shell-build rule (Trevor 2026-06-05).** Going forward, every crop's arc builds ALL 10 region cells to the lettuce bar. The northern_tier is NOT exempt for "having data" -- the shallow lift gets the full build like any other region. **Source model: north (`northern_tier`, zones 3-7) builds FROM the legacy cold `zones{}`** (promote + verify + hoist succession into region-constant `plantings[]`, strip nested cell plantings, re-stamp `static_precompute`->`zone_promoted_verified`); **warm/CA regions re-derive from T1** (zone data may be climate-contaminated -- the lettuce NA lesson). The gate now enforces the structural side. **Filing decision (this entry answers Trevor's "where does this go?"): the DECISION + reasoning lives here (history); the ACTIVE RULE is surfaced in CURRENT_STATE "Live locked decisions"; the EXECUTABLE STEP is finalized in the gold-standard arc checklist (claude.ai authors Step 0 -> Claude Code promotes -> Trevor refreshes PK).** Proposal vehicle staged: Downloads `proposal_step0_shell_admission_gate.md`.
+
+**Also proposed (claude.ai judgment, not yet decided): archetype-driven biology checklist.** The gates catch unknown EXISTING fields (register-completeness HALT) but structurally CANNOT catch a needed-but-ABSENT field or wrong-but-present biology -- the bolting class generalized. Proposal: per `archetype` (warm_season_fruiting 31, cool_season_annual 27, deciduous_fruit_tree 14, ...), a list of biology phenomena that archetype MUST address (bolting/heat-pause; det-indet/blossom-drop/BER; chill-hours/bloom/cross-pollination; etc.), asserted present-or-ruled-N/A at Step 0. Needs Trevor's per-archetype lists (biology judgment).
+
+**Riders still open (unchanged, claude.ai lane):** s11_finding_004.2 Option-A thermoinhibition-source package; Appendix-A inventory merge. Lettuce flip itself stands (`29b3aaa9`, commit `d307a24`).
 
 ---
 
