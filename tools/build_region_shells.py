@@ -19,6 +19,8 @@ DATE = "2026-06-05"
 def build_region_shells(crop):
     """Mutate `crop` so every region cell is at reference shape. Returns crop."""
     for rk, r in (crop.get("regions") or {}).items():
+        if not isinstance(r, dict):
+            continue
         # slot scaffolding: region_notes keys present (null acceptable at admission)
         r.setdefault("region_notes_seasoned", None)
         r.setdefault("region_notes_beginner", None)
@@ -58,16 +60,20 @@ def _build_warm_shell(r):
     # a single track:"beginner" rule object with the archetype window-rule keys
     # present-but-empty, ready for Step 4 to fill values into. resolved_by_zone
     # cells are left untouched (derived output; PENDING until Step 4 sources them).
-    r["plantings"] = [{
-        "succession_id": 1,
-        "label": "main",
-        "track": "beginner",
-        "start_indoors": [],
-        "plant_out": [],
-        "harvest_start": [],
-        "harvest_end": [],
-        "anchoring_urls": {},
-    }]
+    # Only build the skeleton if plantings is still a stub (a PENDING sentinel
+    # string or empty). If it is already a dict-shaped rule object, a later step
+    # has filled it -- do not clobber it. Keeps the transform safe to re-run.
+    if not r.get("plantings") or not isinstance(r["plantings"][0], dict):
+        r["plantings"] = [{
+            "succession_id": 1,
+            "label": "main",
+            "track": "beginner",
+            "start_indoors": [],
+            "plant_out": [],
+            "harvest_start": [],
+            "harvest_end": [],
+            "anchoring_urls": {},
+        }]
     # defensive: no rule-bearing structure may live in the resolved layer
     for cell in (r.get("resolved_by_zone") or {}).values():
         if isinstance(cell, dict):
