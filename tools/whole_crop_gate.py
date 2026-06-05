@@ -145,6 +145,21 @@ for rk in empty_notes:
     if rk not in stub_regions:
         fail(f"region_notes pair both null: {rk}")
 
+# second_planting structure validation (M16): when a resolved cell carries a
+# second_planting, it must be a discrete-window dict with the window field set.
+# Lenient on null VALUES at admission (claude.ai sources them at Step 4/5); the
+# KEYS must exist. Forward-looking -- cherry carries none at Step 3.5.
+SECOND_PLANTING_KEYS = {"plant_out", "start_indoors", "harvest_start", "harvest_end"}
+for rk, r in regions.items():
+    for z, cell in (r.get("resolved_by_zone") or {}).items():
+        if isinstance(cell, dict) and "second_planting" in cell:
+            sp = cell["second_planting"]
+            if not isinstance(sp, dict):
+                fail(f"second_planting not a dict: {rk}.{z}")
+            elif not SECOND_PLANTING_KEYS.issubset(sp):
+                missing = sorted(SECOND_PLANTING_KEYS - set(sp))
+                fail(f"second_planting missing window keys {missing}: {rk}.{z}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
