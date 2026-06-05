@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+"""Whole-crop gate -- the Step 11 certification suite, crop-agnostic core.
+
+Ported from the M15 lettuce Step 11 runs (2026-06-05, sessions
+m15_lettuce_step11_apply_and_gate + m15_lettuce_step11_writeback_flip), where
+this exact logic produced the 0-violations run the first flip rode on.
+
+Components (all denominators derived STRUCTURALLY by walking the crop --
+never from a hand roster; that discipline is the bolting-miss preventer):
+  B. dual-voice coverage (v2 logic): every `*_seasoned` prose key must have a
+     non-null `*_beginner` sibling (CP) or no sibling key at all (SP).
+     Presence IS the visibility declaration.
+  C. dash gate: user-facing `--` must be 0 (per-sense resolution is authored
+     per crop BEFORE this gate can pass; backend notes retain whatever form).
+  D. temperature notation: canonical `°F` only in user-facing strings.
+  E. source-tier: every cited source ID catalogued + admitted + T1.
+  F. anchoring completeness, 1A layer-scoped (Trevor 2026-06-04, amended
+     2026-06-05): every claim-bearing leaf with non-empty `sources` carries
+     `anchoring_urls` one-per-source-ID. EXCLUDED BY DEFINITION: the legacy
+     `zones{}` layer; the `regions{}` root rollup `sources` arrays;
+     `bolting.*` (inherit-class per A-2, evidence at tips_by_stage.bolting).
+     INCLUDED: sibling-named pairs `*_sources`/`*_anchoring_urls`
+     (harvest_ready_*, description_*, days_to_maturity_*, ...) -- the
+     s11_finding_001 predicate fix.
+  G. flip-state report + two-field predicate (blocks_launch AND status !=
+     "resolved").
+
+NOT covered here (run separately):
+  - §3 cross-field consistency: CROP-SPECIFIC. Author the checks per crop
+    (lettuce's 8 are in STATE_HISTORY 2026-06-04 Step 10). Generic subset
+    included below (ph nesting, container, flag implication) -- extend it.
+  - The copyright/verbatim scan: tools/verbatim_scan.py (flip-blocking).
+  - Roster-completeness (unknown-field catcher): tools/register_completeness_gate.py.
+
+Usage:
+  python3 tools/whole_crop_gate.py <crop-slug> [crops_data_final.json]
+Exit 1 on any violation. A clean run here + clean §3 + clean verbatim scan +
+clean roster gate = flip-eligible (gate #1).
+"""
+import json
+import re
+import sys
+
+if len(sys.argv) < 2:
+    print(__doc__)
+    sys.exit(2)
+SLUG = sys.argv[1]
+PATH = sys.argv[2] if len(sys.argv) > 2 else "crops_data_final.json"
+
+data = json.load(open(PATH))
+matches = [c for c in data["crops"] if c.get("slug") == SLUG]
+assert len(matches) == 1, f"slug {SLUG!r}: {len(matches)} matches"
+crop = matches[0]
+violations = []
+
+
+def fail(msg):
+    violations.append(msg)
+    print(f"  VIOLATION: {msg}")
+
+
+# ---- layer classification (Step 9 STEP-0 derivation, STATE_HISTORY 2026-06-04) ----
+BACKEND_KEYS = {
+    "id","slug","stage_id","tip_id","region_id","evidence_tier","added_in",
+    "last_reviewed","last_reviewed_session","last_operation","last_session",
+    "schema_version","last_updated","date","stored_date","resolution_tier",
+    "resolution_method","anchor_threshold","fallback_beyond_horizon",
+    "calendar_state","window_type","timing_relative","phase","status","image",
+    "plantings_provenance","provenance","lifted_from_zone","botanical_name",
+    "family","calendar_basis","resolution_source","from","from_year_round_note",
+    "url","verified","accessed","publisher","source_class","source_note",
+    "verification_log_ref","filing_record","disposition","scope","session",
+    "field","assigned_to","deferred_to","last_audited","resolution_note",
+    "filed_in","filed_in_session","resolved_in","resolved_by","note_internal",
+    "synthesis_note","synthesis_note_seasoned","design_note","design_note_seasoned",
+    "source_quote","source_quote_seasoned","zone_coverage_note",
+    "zone_coverage_note_seasoned","uscrn_validation","classification",
+    "source","source_id","claim","tier","trust_tier","citable_for","archetype",
+    "succession_id","track","added_by","sources_summary","description_sources",
+}
+BACKEND_PATH_SUBSTR = ("plantings_provenance", "verification_status",
+                       "anchoring_urls", ".provenance", "uscrn_validation")
+BACKEND_KEY_RE = re.compile(r"zone_\d+_")  # zone_8_presence etc. -- resolution records
+
+
+def is_backend(key, pat):
+    return (key in BACKEND_KEYS or BACKEND_KEY_RE.match(key)
+            or key.endswith("_sources") or key.endswith("_anchoring_urls")
+            or any(s in pat for s in BACKEND_PATH_SUBSTR))
+
+
+# ---------------- generic §3 subset (EXTEND PER CROP) ----------------
+print("A. §3 cross-field consistency -- GENERIC SUBSET ONLY (author the full per-crop set)")
+ph = crop.get("ph") or {}
+if ph.get("preferred_range") and ph.get("tolerated_range"):
+    ok = (ph["tolerated_range"][0] <= ph["preferred_range"][0]
+          and ph["preferred_range"][1] <= ph["tolerated_range"][1])
+    print(f"  ph preferred {ph['preferred_range']} within tolerated {ph['tolerated_range']}: {'PASS' if ok else 'FAIL'}")
+    if not ok: fail("§3 ph range nesting")
+cn = crop.get("container_notes") or {}
+if cn.get("container_ok"):
+    ok = bool(cn.get("min_pot_gallons"))
+    print(f"  container_ok=True => min_pot_gallons={cn.get('min_pot_gallons')}: {'PASS' if ok else 'FAIL'}")
+    if not ok: fail("§3 container fields")
+vs = crop["verification_status"]
+ok = (not vs.get("launch_ready_seasoned")) or vs.get("launch_ready_core")
+print(f"  launch_ready_seasoned => launch_ready_core: {'PASS' if ok else 'FAIL'}")
+if not ok: fail("§3 flag implication")
+
+# ---------------- B. dual-voice coverage ----------------
+print("B. dual-voice coverage gate (structural walk)")
+populated = sp_only = ruled_empty = oos = 0
+null_values = []
+
+def dv_walk(o, pat):
+    global populated, sp_only, ruled_empty, oos
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k.endswith("_seasoned"):
+                b = k[:-9] + "_beginner"
+                if not isinstance(v, str) or not v.strip():
+                    ruled_empty += 1
+                elif b in o:
+                    if o[b] is not None:
+                        populated += 1
+                    elif "companions" in pat and k.startswith("why"):
+                        oos += 1  # §5 companions array split, deferred by design
+                    else:
+                        null_values.append(f"{pat}.{b}")
+                else:
+                    sp_only += 1
+            dv_walk(v, f"{pat}.{k}" if pat else k)
+    elif isinstance(o, list):
+        for i, x in enumerate(o):
+            dv_walk(x, f"{pat}[{i}]")
+
+dv_walk(crop, "")
+print(f"  populated CP: {populated} | SP seasoned-only: {sp_only} | ruled-empty/non-prose: {ruled_empty} | out-of-scope §5: {oos}")
+print(f"  null_values: {len(null_values)}")
+for m in null_values:
+    fail(f"dual-voice null sibling: {m}")
+
+# ---------------- C+D. dash + temperature (user-facing) ----------------
+print("C/D. dash + temperature notation gates (user-facing strings)")
+dash_hits, degf_hits = [], []
+
+def uf_walk(o, pat):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            p = f"{pat}.{k}" if pat else k
+            if isinstance(v, str) and not is_backend(k, pat):
+                if "--" in v or "—" in v:
+                    dash_hits.append((p, v[:80]))
+                if re.search(r"\bdegrees?\s*F\b|\bdeg\.?\s*F\b|°\s+F", v):
+                    degf_hits.append((p, v[:80]))
+            uf_walk(v, p)
+    elif isinstance(o, list):
+        for i, x in enumerate(o):
+            uf_walk(x, f"{pat}[{i}]")
+
+uf_walk(crop, "")
+print(f"  user-facing dash hits: {len(dash_hits)} | non-canonical temperature forms: {len(degf_hits)}")
+for p, s in dash_hits: fail(f"dash: {p}: {s!r}")
+for p, s in degf_hits: fail(f"temp form: {p}: {s!r}")
+
+# ---------------- E. source-tier ----------------
+print("E. source-tier discipline")
+cat = data["source_catalog"]
+cited = set()
+
+def src_walk(o):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if (k == "sources" or k.endswith("_sources")) and isinstance(v, list):
+                cited.update(x for x in v if isinstance(x, str))
+            if k.endswith("anchoring_urls") and isinstance(v, dict):
+                cited.update(v.keys())
+            src_walk(v)
+    elif isinstance(o, list):
+        for x in o:
+            src_walk(x)
+
+src_walk(crop)
+bad = sorted(s for s in cited if s not in cat)
+not_t1 = sorted(s for s in cited if s in cat and cat[s].get("tier") != "T1")
+print(f"  distinct source IDs: {len(cited)}; uncatalogued: {len(bad)}; non-T1: {len(not_t1)}")
+for s in bad: fail(f"source-tier: {s} not in catalog")
+for s in not_t1: fail(f"source-tier: {s} tier={cat[s].get('tier')}")
+
+# ---------------- F. anchoring completeness (1A layer-scoped, amended) ----------------
+print("F. anchoring completeness (1A layer-scoped + sibling-pair predicate)")
+region_roots = [id((crop.get("regions") or {}).get(r)) for r in (crop.get("regions") or {})]
+gaps, claim_leaves = [], 0
+
+def check_pair(srcs, au, where):
+    global claim_leaves
+    claim_leaves += 1
+    if not isinstance(au, dict):
+        gaps.append(f"{where}: no anchoring dict (sources={srcs})")
+        return
+    for s in srcs:
+        if s not in au:
+            gaps.append(f"{where}: {s} unanchored")
+        elif not au[s].get("url") or not au[s].get("verified"):
+            gaps.append(f"{where}: {s} malformed entry")
+
+def anchor_walk(o, pat, in_zones, in_bolting):
+    if isinstance(o, dict):
+        srcs = o.get("sources")
+        if (isinstance(srcs, list) and srcs and not in_zones and not in_bolting
+                and id(o) not in region_roots and "verification_status" not in pat):
+            check_pair(srcs, o.get("anchoring_urls"), pat or "<crop root>")
+        for k, v in o.items():
+            anchor_walk(v, f"{pat}.{k}" if pat else k,
+                        in_zones or k == "zones", in_bolting or k == "bolting")
+    elif isinstance(o, list):
+        for i, x in enumerate(o):
+            anchor_walk(x, f"{pat}[{i}]", in_zones, in_bolting)
+
+anchor_walk(crop, "", False, False)
+# sibling-named pairs at the crop root (s11_finding_001 predicate fix)
+for k in list(crop.keys()):
+    if k.endswith("_sources") and isinstance(crop[k], list) and crop[k]:
+        sib = k[: -len("_sources")] + "_anchoring_urls"
+        check_pair(crop[k], crop.get(sib), sib)
+print(f"  claim-bearing leaves in gate scope: {claim_leaves}; gaps: {len(gaps)}")
+for g in gaps: fail(f"anchoring: {g}")
+
+# ---------------- G. flip state + two-field predicate ----------------
+print("G. flip state")
+print(f"  launch_ready_core={vs.get('launch_ready_core')} launch_ready_seasoned={vs.get('launch_ready_seasoned')} status={vs.get('status')!r}")
+of = vs.get("open_findings") or []
+blockers = [f for f in of if isinstance(f, dict) and f.get("blocks_launch") and f.get("status") != "resolved"]
+print(f"  open_findings blockers (blocks_launch AND status!=resolved): {len(blockers)}")
+for b in blockers: fail(f"open finding blocks launch: {b.get('id', b)}")
+
+print()
+if violations:
+    print(f"GATE: {len(violations)} VIOLATION(S)")
+    sys.exit(1)
+print("GATE: PASS (remember: full per-crop §3 + verbatim scan + roster gate are separate)")
