@@ -6,6 +6,14 @@
 
 ---
 
+## 2026-06-05 -- checklist v1.5 PROMOTED (Step 3.5 Region shell build)
+
+claude.ai authored the v1.5 integration from the Claude-Code-authored amendment (`checklist_v1_5_shell_build_amendment.md`); Claude Code reviewed + promoted. Review verdict: faithful, high-quality integration -- Step 3.5 matches the authored spec, reference-GS-crop pointer in §2, two-callsite admission/certification model in §1/Step 3.5/Step 11, Step 4 scope correctly narrowed to sourcing-into-shells, arc-at-a-glance + Appendix C (`gs_exemplar_finding_shell`) updated. **One mechanical bug fixed before promote:** line 138 had the `---` rule fused to the Step 4 heading (`---### Step 4`); split to restore heading rendering. **One minor nit left for claude.ai (not blocking):** the H1 still reads "v1.4 (Keystone)" per the on-disk provenance convention; the status block confirms v1.5.
+
+Promote actions (plant-project is not git-tracked -- file ops only): `gold_standard_arc_checklist_v1_5.md` -> `05-methodology/current/` + `00-current/`; `v1_4_1` moved to `05-methodology/archive/` (first on-disk checklist archive -- the checklist only went on-disk at v1.4.1 on 2026-06-04); the `00-current` stale v1.4.1 removed. `northern_tier_reconciliation_checklist_v1_0.md` got a SUPERSEDED-by-v1.5-Step-3.5 banner and is retained in `current/` as the worked example Step 3.5 references (not deleted -- Step 3.5 points to it for the north build procedure). Governing-checklist pointer in CURRENT_STATE bumped v1.4.1 -> v1.5. **Owed: Trevor refreshes claude.ai project knowledge with the v1.5 file** (the disk<->PK sync step).
+
+---
+
 ## 2026-06-05 -- post-flip working session: gate tooling shipped + M16 region-fill scoping + the REGION SHELL-BUILD decision
 
 Same calendar day as the lettuce flip, after it landed. No dataset-content mutation (the gate runs are read-only; this entry + the CURRENT_STATE guardrail are the only writes). Three things happened: gate tooling was made permanent, the true M16 starting state was discovered, and a forward rule was decided.
