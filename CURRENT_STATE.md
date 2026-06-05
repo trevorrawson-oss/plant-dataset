@@ -9,77 +9,67 @@
 
 ---
 
-## 🥬 LETTUCE IS FLIPPED -- the M15 gold-standard arc is CLOSED (2026-06-05)
-`lettuce-leaf` carries `launch_ready_core=True` + `launch_ready_seasoned=True` (`status` stays `"unverified"`; status vocab is M16's call). **First of the 9 anchors flipped (1 of 9).** The flip executed only after the whole-crop gate returned 0 violations against live post-write-back data. Two non-gating riders remain open (s11_finding_004.2 + the Appendix-A inventory merge -- see "Open items owed").
+## 🥬 LETTUCE FLIPPED (M15) · 🍅 CHERRY Step 3.5 region shells BUILT (M16, 2026-06-05)
+`lettuce-leaf` is the FIRST flipped anchor (1 of 9): `launch_ready_core=True` + `launch_ready_seasoned=True` (`status` stays `"unverified"` pending the M16 vocab decision). **M16 is in flight on `cherry-tomato`, CHERRY FIRST then beefsteak.** This session completed cherry's **Step 3.5 (region shell build, Claude Code lane)**: all 10 region cells are now at the ratified reference shape (§A2 shape classes = 0; `gs_exemplar_finding_shell` closed). It also DEFINED the net-new `second_planting` structure (cherry is the first crop to need it). Cherry now hands to **claude.ai for Steps 4-8** (warm-window sourcing, the second-planting dates + which-zones, region_notes copy, dual-voice siblings, the T2 ruling). **Lettuce was NOT touched -- byte-identical, still certified.**
 
 ## Canonical pointer
-- **Current SHA:** `29b3aaa904a62487960c5dc53b4282538454076f696ffec039ac4ab87937801a` (M15 lettuce Step 11 COMPLETE -- write-back + clean gate + THE FLIP). `LATEST.txt` session line: `m15_lettuce_step11_writeback_flip`.
-- **Predecessor chain:** `29b3aaa9` (the flip) <- `6880ed37` (write-back of the staged closure work, same session) <- `37bfc12d` (apply/gate + s11 findings registration) <- `cdcbf175` (the 45-slot apply) <- `df4d24c7` (S10-5 strip) <- `da4b8bc5` (Step 9) <- `7e9eeceb` (Steps 7/8) <- `5224e13a` <- `0dfd835a` <- `1e19948c` <- `61cddea3` <- `e27eec14` <- `815efe62` <- `8a1d8a50` <- `ed495666` <- `20f9fc2b` <- `327a2d5c` <- `582dbbad`.
+- **Current SHA:** `a65c71758bba944a39059426c0ae5bc6cfe65ea683cb87cfb323b7b1d41b2aae` (M16 cherry Step 3.5 region shells + `second_planting` structure). `LATEST.txt` session line: `m16_cherry_step3_5_region_shells`.
+- **Predecessor chain:** `a65c7175` (cherry Step 3.5) <- `29b3aaa9` (M15 lettuce flip) <- `6880ed37` (lettuce write-back) <- `37bfc12d` <- `cdcbf175` <- `df4d24c7` <- `da4b8bc5` <- `7e9eeceb` <- ... (full lettuce chain in STATE_HISTORY).
 - Every PROMOTE re-pins this SHA and `LATEST.txt`. Confirm at session start (protocol #1).
 
-## What just happened (2026-06-05, session `m15_lettuce_step11_writeback_flip`)
-- Promoted the claude.ai closure-session state docs; took Trevor's 3 batched decisions (4.2 = Option A; S9-1 = SP no sibling; A-2 = inherit-class).
-- **Write-back** (`37bfc12d` -> `6880ed37`): `harvest_ready_anchoring_urls` (5 entries) + `description_anchoring_urls` created (2 entries) + `soil.preferred_description_seasoned` own-voice rewrite + `uga_ext` C963 re-source (2 se_gulf slots) + findings 001/002/003 -> resolved, 004 annotated open. uariz_ext slots HELD untouched per Option A.
-- **Gate re-run: 0 violations** (§3 8/8; dual-voice 130/0/0; dash 0; °F clean; source-tier 40 IDs T1; anchoring 1A with the sibling-pair predicate fix = 0 gaps; verbatim re-scan: NCSU/soil hit GONE, residual run 3 words).
-- **THE FLIP** (`6880ed37` -> `29b3aaa9`): both `launch_ready` flags -> True; minimal write; collateral audit = exactly the two booleans.
+## What just happened (2026-06-05, session `m16_cherry_step3_5_region_shells`)
+- Ran the full superpowers flow: brainstorming -> spec (`docs/superpowers/specs/2026-06-05-second-planting-region-shell-model-design.md`) -> plan (`docs/superpowers/plans/2026-06-05-cherry-region-shells.md`) -> subagent-driven execution (4 tasks, each implementer + spec + code-quality reviewed).
+- **Built cherry's 10 region shells (Step 3.5):** `northern_tier` promoted from cold `zones{}` (track added, nested `plantings` stripped, `zone_promoted_verified`, provenance rewritten); 9 warm/CA regions -> shape-complete RULE skeletons (empty archetype window arrays); 4 `region_label` em-dashes resolved. NO biology values invented; NO warm zone data carried as verified.
+- **Defined the `second_planting` structure** (the bigger design outcome -- see Live locked decisions). Tooling: `tools/build_region_shells.py` (pure transform) + `tools/apply_region_shells.py` (SHA-gated apply + collateral audit) + a `whole_crop_gate.py` §A2 validation block for `second_planting`.
+- **Gate:** cherry §A2 shape classes = 0; total 42 -> 34 (residual = downstream claude.ai). Lettuce regression-guarded `GATE: PASS` byte-identical. Collateral audit clean (only `cherry.regions` changed).
 
 ## Active work + exact next step
-- **NEXT MILESTONE: M16 = cherry + beefsteak regression.** Both provers carry `launch_ready=True` from 2026-05-22/25 but predate the arc rigor; they owe the full regression pass and must independently rediscover the 4 Appendix-C defects (incl. `gs_exemplar_finding_004` `cause_beginner`). M16 also owes the **status-vocab decision** (successor value for `verification_status.status`; lettuce holds `"unverified"` despite being flipped until that vocab lands).
-- **Riders from the lettuce arc (non-gating, route to claude.ai):**
-  1. **s11_finding_004.2 Option-A package:** discover a T1 source that states the 77 to 95°F lettuce thermoinhibition range (candidates: UC ANR / UC Davis lettuce production pages; peer-reviewed thermoinhibition literature); then ONE staged write = AZ1615 entries into the 2 uariz_ext slots + the new source's entries + the prose attribution touch-up (replacing the dead-AZ1099 attribution). Then 004 -> resolved (Claude Code write-back).
-  2. **Appendix-A inventory merge:** `m15_lettuce_step11_appendix_a_registration.md` is produced; `[INVENTORY-MERGE]` items need the canonical `register_bearing_field_inventory_v1_0.md` (project knowledge). Decisions S9-1 (SP) + A-2 (inherit) are now taken and unblock it.
-- **After M16:** authoring-model flip eligibility (3 provers), the pipeline/operating-model doc session, then carrots region-first.
+- **M16 cherry is at Step 3.5-COMPLETE. NEXT = claude.ai Steps 4-8** on cherry: warm-region window sourcing into the shells; author which zones get a `second_planting` + the dates (the structure is defined + gate-validated, the data is biology); region_notes copy (Steps 6/7); dual-voice siblings incl. `cause_beginner` (`gs_exemplar_finding_004`, Steps 7/8); `harvest_to_table` T2 ruling (Step 10); extreme-zone computation record (`gs_exemplar_finding_003`, Step 2); `cornell_ext` zone-6 URL (Step 5). Then back to Claude Code for Step 11 certification + flip.
+- **`status`-vocab decision still owed** (Appendix B item 1): the successor to `"unverified"` for `verification_status.status`, decided at cherry's flip and back-applied to lettuce + both tomatoes. Do NOT set `gold_standard` before it is decided.
+- **Then beefsteak** repeats the SAME arc start-to-flip, INHERITING the cherry rulings but independently verifying its biology (v1.4.1 §4). Its Step 3.5 reuses `tools/build_region_shells.py` (parameterized by slug; the re-run guard makes it pipeline-safe).
+- **Riders from the lettuce arc (non-gating, claude.ai lane, still open):** s11_finding_004.2 Option-A thermoinhibition-source package; the Appendix-A inventory merge.
 
-## Step 11 final gate record (2026-06-05, post-write-back, the run the flip rode on)
-- §3 cross-field **8/8 PASS** (incl. organic-matter check against the rewritten soil field). Dual-voice **130 populated / 0 missing / 0 null**. Dash: user-facing `--` = **0**. **°F sole form.** Source-tier: 40 IDs, all T1. Roster gate: PASS dataset-wide. **Anchoring 1A (with sibling-pair predicate): 0 gaps.** Two-field predicate: **0 unresolved blockers.** Verbatim scan: 294 prose strings vs 69 text-compared source pages; 0 unadjudicated hard hits; 41 borderline all benign-class.
-- s11 findings final state: **001 resolved** (7 entries applied), **002 resolved** (soil rewrite, NCSU run 10 -> 3 words), **003 resolved** (ruled benign), **004 OPEN non-blocking** (4.1 done -- C963; 4.2 = Option A pending the thermoinhibition-source discovery).
+## Step 3.5 gate record (2026-06-05, post-promote, on canonical)
+- **§A2 shape classes: `stub:0 | null-track:0 | stale nested:0`** -- the Step-3.5 success condition; `gs_exemplar_finding_shell` closed. `both region_notes null: 10` REMAINS (admission-acceptable per the v1.5 two-callsite model; becomes a Step-11 cert violation; claude.ai authors region_notes at Steps 6/7).
+- Residual gate count 34 (all downstream): 10 region_notes-null, 21 dual-voice siblings, 1 source-name dash, 1 `harvest_to_table` T2, 1 `cornell_ext` URL. §F anchoring 3->1; §C/D dash 5->1.
+- Lettuce `GATE: PASS`, byte-identical. Collateral audit: only `cherry.regions` changed.
 
 ## Flip gates (the four distinct "flips" -- never conflate them)
-1. **Per-crop `launch_ready` flip** -- ✅ **lettuce DONE 2026-06-05** (the first arc-rigorous flip). Cherry + beefsteak carry True pre-arc and owe M16 regression. 1 of 9 anchors.
-2. **Region read-layer flip** -- renderer reads `regions{}` first. **Gate:** shape proven on the 3 provers (lettuce ✅; cherry + beefsteak owe M16); ships with `zones{}` fallback. **2.9+.**
+1. **Per-crop `launch_ready` flip** -- ✅ lettuce DONE (1 of 9). Cherry is mid-arc (Step 3.5 done, owes Steps 4-11). Beefsteak after cherry.
+2. **Region read-layer flip** -- renderer reads `regions{}` first. **Gate:** shape proven on the 3 provers (lettuce ✅; cherry shell ✅ this session, owes fill; beefsteak owes both). Ships with `zones{}` fallback. **2.9+.** (The plant-astro renderer rewrite -- read `regions{}` + consume `second_planting` instead of synthesizing from `zones{}` multi-window strings -- is gated here.)
 3. **Authoring-model flip** -- carrots onward authored region-first. **Gate:** 3 provers done.
-4. **Schema perennial bump** (`lifecycle_override`) -- FUTURE, **2.9+ (NOT 2.8)**. After carrots.
+4. **Schema perennial bump** (`lifecycle_override`) -- FUTURE, **2.9+**. After carrots.
 
-**Schema version lineage:** 2.7.5 -> **2.8 = register-suffix conversion (current)** -> region read-layer flip + perennial extension are **2.9+**.
+**Schema version lineage:** 2.7.5 -> **2.8 (current)** -> region read-layer flip + perennial extension are **2.9+**.
 
 ## Live locked decisions / guardrails
-- **Anchoring gate is LAYER-SCOPED (1A, Trevor 2026-06-04)** -- claim-bearing leaves only; legacy `zones{}` (58 leaves) + the 10 `regions{}` root rollup `sources` arrays EXCLUDED BY DEFINITION. **Amended (s11_finding_001):** the predicate MUST also match sibling-named `*_sources`/`*_anchoring_urls` pairs (`harvest_ready_*`, `description_*`). **Amended (A-2, Trevor 2026-06-05):** `bolting.*` register prose is INHERIT-class (evidence at `tips_by_stage.bolting`); excluded from per-field anchoring requirements.
-- **S9-1 RESOLVED (Trevor 2026-06-05):** `bolting.triggers` = **SP**, no `_beginner` sibling owed.
-- **s11_finding_004.2 = Option A (Trevor 2026-06-05):** keep the 77-95°F figure; AZ1615 for seasonal logic + a to-be-discovered T1 thermoinhibition source.
-- **Leaf-URL convention:** leaf `anchoring_urls` = the SPECIFIC lettuce-bearing publication URL; `verified` = date content confirmed present; catalog `url` may stay portal-root; store the canonical resolving URL form.
-- **Segment-parent `plantings[0].anchoring_urls:{}` stays empty** (5-of-8 precedent; normalize-or-vestigial = pre-buildout audit queue).
-- **`basis_seasoned` voice standard (S10-5):** SP; classifier reasoning in the structural `classification` key.
-- **Governing checklist: v1.5** (promoted 2026-06-05; adds **Step 3.5 -- Region shell build**, Claude Code lane; v1.4.1 archived). Dataset is authoritative for what is true; flag doc lag.
-- **Lane split.** STRUCTURAL/MECHANICAL = Claude Code (applies, gates, audits, SHA re-pins, flips). Biology + consumer copy + voice/IP + URL discovery/verification + Appendix-A = claude.ai.
-- **Per-crop pipeline (target):** Claude Code shell pass -> claude.ai biology + copy -> Claude Code certifies (Step 11) -> Claude Code gated deletion.
-- **REGION SHELL-BUILD RULE (Trevor 2026-06-05):** every crop's arc builds ALL 10 region cells to the lettuce bar. The 2.7.5 scaffold only created empty containers; the dataset-wide `northern_tier` fill (109 crops) is the OLD shallow lift (`track:None`, `static_precompute`, nested-cell `plantings`, null notes) and is NOT exempt -- it gets the full build like any other region. Source model: **north (`northern_tier`, zones 3-7) builds FROM the legacy cold `zones{}`** (promote + verify + hoist succession into region-constant `plantings[]`); **warm/CA regions re-derive from T1** (zone data may be climate-contaminated). `whole_crop_gate.py` enforces this (catches stub + null-track + §3b-i nested-cell + null-notes). To be finalized as a new checklist **Step 3.5 -- Region shell build** (Claude Code lane), NOT a new Step 0 (Step 0 is Preflight; the work is already partly owned by Steps 4/5.5). See Open items + Downloads `checklist_v1_5_shell_build_amendment.md`.
-- **Keep `zones{}` coherent until Phase C** (deletion gate: region carries everything + consumers read region-first + round-trip + frost-input independence; `safe_sowing_note` precondition not met, FINDING 6c-2).
-- **Inheritance is candidate, not verified (v1.4.1 §4).** **Pest/disease = highest-scrutiny cluster.**
-- **Micro-strings at-bar-by-nature but DO take `_beginner` siblings.** **`cause_beginner` ruling:** may be byte-identical where seasoned carries no jargon.
-- **TEMPERATURE -- canonical `°F`** user-facing; backend notes retain whatever form.
-- **DASH -- per-sense, per-crop.** Lettuce clean; other 122 crops carry ~5,360 user-facing `--` -- **F-6d-2 OPEN** (rides each crop's arc).
-- **Succession-shape (spec §3b-i):** rule ONCE in region-constant `plantings[]`; northern_tier's materialized strings kept-by-evidence (re-verified at Step 11).
-- **`year_round` encoding** for pauseless cells; `track`: `beginner` = shared MAIN, `succession` = seasoned-only.
-- **Register-conversion convention:** `X_seasoned` + (`X_beginner` for CP, absent for SP); presence IS the visibility declaration.
+- **`second_planting` structure (Claude Code lane, Trevor 2026-06-05) -- NEW.** Cherry is the first crop to need a discrete second planting. Representation OWNED by Claude Code (the renderer is ours). Resolved shape: `resolved_by_zone[z].second_planting = {plant_out, start_indoors, harvest_start, harvest_end, sources, anchoring_urls}` on applicable zones only, + a region-constant `plantings[]` entry `track:"second_planting"`. Discrete plantings (`beginner` + `second_planting`) share one window shape; SUCCESSION is a SEPARATE cadence -- two honest patterns, not one forced shape. Seasoned-only visibility (like succession). The gate validates the structure when present. Full spec: `docs/superpowers/specs/2026-06-05-second-planting-region-shell-model-design.md`.
+- **Resolved-layer shape standards RATIFIED (2026-06-05):** main planting = flat cell fields (universal); succession = `succession_spring`/`succession_fall` cadence (lettuce's shape, ratified -- carrot matches it, no new shape); `second_planting` = the discrete-window object above. Each crop carries ONLY the structures for what it is; each concept has ONE fixed shape across crops. **Lettuce is NOT reshaped** -- it already represents what it is.
+- **Shape-complete shells, not thin (2026-06-05):** Step 3.5 builds the archetype-correct RULE skeleton (window-rule keys present, arrays empty) so Step 4 fills VALUES, not 121 passes each building shape. Resolved cells stay PENDING fill-targets (derived output).
+- **Rendering is the app's call; the dataset is rendering-agnostic.** Built UI already handles cherry's second planting: `PlantingCalendarCard` (main, both modes) + `SuccessionCard` (seasoned-only, two render modes = discrete-window vs cadence). The structured `second_planting` replaces those cards' fragile synthesis. Same-calendar-band vs separate-card decided at the Phase C renderer rewrite; `zones{}` stays coherent until then so the current UI keeps working.
+- **REGION SHELL-BUILD RULE (Trevor 2026-06-05):** every crop's arc builds ALL 10 region cells to the lettuce bar. North (`northern_tier`, zones 3-7) builds FROM legacy cold `zones{}` (promote + verify + hoist succession into region-constant `plantings[]` where applicable; strip nested cell `plantings`; re-stamp `static_precompute -> zone_promoted_verified`). Warm/CA re-derive from T1 (zone data may be climate-contaminated). `whole_crop_gate.py` §A2 enforces the structural side (stub + null-track + §3b-i nested-cell catcher). Cherry's Step 3.5 this session is the first execution.
+- **Governing checklist: v1.5** (Step 3.5 Region shell build; reference-GS-crop = `lettuce-leaf`; two-callsite admission/certification model -- null `region_notes` / empty `anchoring_urls` accepted at Step 3.5, violations at Step 11). Dataset is authoritative; flag doc lag.
+- **Lane split.** STRUCTURAL/MECHANICAL = Claude Code (region shells, transforms, gates, audits, SHA re-pins, flips, the `second_planting` representation). Biology + consumer copy + voice/IP + URL discovery + which-zones/dates for second_planting + Appendix-A = claude.ai.
+- **Anchoring gate is LAYER-SCOPED (1A):** claim-bearing leaves only; legacy `zones{}` + the 10 `regions{}` root rollup `sources` arrays excluded; sibling-named `*_sources`/`*_anchoring_urls` pairs included; `bolting.*` inherit-class excluded.
+- **Keep `zones{}` coherent until Phase C** (deletion gate: region carries everything + consumers read region-first + round-trip + frost-input independence). The current renderer still reads `zones{}`.
+- **Inheritance is candidate, not verified (v1.4.1 §4).** Pest/disease = highest-scrutiny cluster. Verify cherry AND beefsteak independently even where biology overlaps.
+- **TEMPERATURE -- canonical `°F`** user-facing. **DASH -- per-sense, per-crop**, executed by each crop's arc (cherry's 4 region_label dashes resolved this session; 1 source-name dash remains, downstream).
+- **Two-field readiness predicate, never a bare count:** `blocks_launch AND status != "resolved"`.
+- **Dataset push autonomous (announce-then-execute); plant-astro stays gated.**
 
 ## Open items owed
-- **s11_finding_004.2 (claude.ai then Claude Code):** the Option-A package (see "Active work"). 004 -> resolved after it lands.
-- **Appendix-A inventory merge (claude.ai):** registration doc produced; S9-1 + A-2 decisions taken; `[INVENTORY-MERGE]` items await the canonical inventory.
-- **M16 -- region-primary FILL arc, governed by checklist v1.5. SEQUENCING (Trevor 2026-06-05): CHERRY FIRST start-to-flip, THEN beefsteak.** Both are 0/10 regions at-bar (9 stub + stale northern_tier); NOT a regression. Cherry's arc settles the tomato-archetype rulings ONCE (harvest_to_table T2; post-arc `status` vocab; blossom-drop / fruit-set-temp / BER homes + Appendix-A; det/indet); beefsteak repeats the arc INHERITING the rulings but independently verifying its biology (v1.4.1 §4). Opening lane = Claude Code (Step 3.5 region shell build to gate-0), then claude.ai Steps 4-8, back to Claude Code for Step 11. Kickoff staged: Downloads `m16_kickoff_prompt.md`.
-- **Checklist v1.5 -- DONE (promoted 2026-06-05).** Step 3.5 Region shell build added (Claude Code lane); Step 4 scope narrowed to sourcing-into-shells; northern_tier satellite doc superseded-bannered + retained as worked example; reference-GS-crop pointer (lettuce-leaf) + two-callsite admission/certification model added; `gs_exemplar_finding_shell` in Appendix C. Promoted to `05-methodology/current/` + `00-current/`; v1.4.1 archived. **Owed: Trevor refreshes claude.ai project knowledge with the v1.5 file.** (Minor nit, optional: the doc's H1 still reads "v1.4 (Keystone)" by the on-disk provenance convention; status block confirms v1.5 -- claude.ai's call to change.)
-- **Gate tooling shipped (Claude Code, committed):** `tools/whole_crop_gate.py` (dual-voice + dash + °F + source-tier + anchoring 1A/sibling-pair + region-fill stub/stale catcher + two-field predicate) and `tools/verbatim_scan.py` (systematic copyright scan). Reproduce lettuce=0; cherry 42 / beefsteak 44 / carrot 292. WORRY 3 partially closed (gates now exist as shared files; still owed: wire as formal Step-0 admission HALT via the checklist).
-- **Proposed (claude.ai judgment): archetype-driven biology checklist** -- per `archetype` (cool_season_annual, warm_season_fruiting, deciduous_fruit_tree, ...), the biology phenomena that archetype MUST address (bolting/heat-pause; det-indet/blossom-drop/BER; chill-hours/bloom; etc.), asserted present-or-ruled-N/A at Step 0. Catches the needed-but-ABSENT-field gap the gates structurally cannot (the bolting class generalized).
-- **Dual-voice gate (WORRY 3):** v2 structural walk still lives only in transcripts + ad-hoc rebuilds; ship into `tools/` + pipeline `rubric.md` as the admission HALT.
-- **Checklist amendments (claude.ai):** (1) lane tags; (2) shell-pass-first; (3) flip disambiguation; (4) deletion gate; (5) Step 8 structural walk; (6) Step 9 leaf-set derivation; (7) Step 10 layer scoping; (8) the 1A gate + sibling-pair predicate + A-2 inherit-class exclusions.
-- **Pre-buildout audit queue:** segment-parent `plantings[0].anchoring_urls` 3-populate/5-empty inconsistency; verbatim-scan tooling note (PDF extractor + the bot-blocked/JS-rendered URL sweep).
-- **Pipeline / operating-model doc:** own session, now unblocked (lettuce is gold-standard-flipped).
-- **`safe_sowing_note` migration (FINDING 6c-2):** Phase C, Claude Code.
-- **Deferred vocabulary session:** rename `track` `beginner` -> `main`.
-- **Companions reconciliation session (§5):** array-level register split; lettuce's 3 `why_seasoned`-with-null-`why_beginner` correctly OUT OF SCOPE until then.
+- **M16 cherry Steps 4-8 (claude.ai):** warm-window sourcing; the `second_planting` data (which zones + dates) authored against the defined structure; region_notes copy; dual-voice siblings incl. `cause_beginner`; the `harvest_to_table` T2 ruling; the extreme-zone computation record; `cornell_ext` zone-6 URL. Then Claude Code Step 11 + flip.
+- **`status`-vocab decision (Appendix B item 1):** successor to `"unverified"`; decided at cherry's flip, back-applied to lettuce + tomatoes.
+- **Lettuce riders (claude.ai):** s11_finding_004.2 Option-A thermoinhibition source; Appendix-A inventory merge.
+- **Beefsteak:** full arc after cherry flips (Step 3.5 reuses `tools/build_region_shells.py`).
+- **The 5 Appendix-C findings on cherry:** `_shell` CLOSED this session; `_001` (warm sourcing + `cornell_ext` URL + orphan UMN text), `_002` (dashes -- region_labels done, source-name remains), `_003` (extreme-zone record), `_004` (`cause_beginner`) remain for claude.ai's Steps 4-8.
+- **Gate tooling note:** `tools/whole_crop_gate.py` now knows `second_planting`; `build_region_shells.py` + `apply_region_shells.py` are committed + reusable for beefsteak/pipeline (slug-parameterized, re-run-safe).
+- **Checklist amendments + archetype-driven biology checklist + dual-voice gate v2 ship-into-tools** (claude.ai/Claude Code, unchanged).
+- **Pipeline / operating-model doc; `safe_sowing_note` migration (Phase C); `track` `beginner` -> `main` rename; companions reconciliation (§5)** -- all unchanged, deferred.
 
 ## Inherited findings (unchanged)
 - `finding_001` -- warm `zones{}` 8-11 SE-mis-sourced (legacy layer, own pass); excluded from the anchoring gate by 1A definition.
 - na3d-na3g sourcing-sibling findings; `na3d_finding_003` cosmetic.
-- Two-field predicate: `blocks_launch AND status != "resolved"` -- returns **0 unresolved blockers** (s11_finding_004 is open but non-blocking).
+- Two-field predicate returns 0 unresolved blockers (s11_finding_004 open but non-blocking).
 
 *Update this file at each session close.*
