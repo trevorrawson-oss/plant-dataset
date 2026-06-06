@@ -975,3 +975,42 @@ Cross-cutting rules that have crystallized across the arc. These are the institu
 
 ### Residual after this session (cherry, claude.ai lane)
 8 warm regions still PENDING (`ca_interior`, `ca_north_coast`, `ca_south_coast`, `ca_desert`, `warm_arid`, `low_desert_az`, `fl_peninsula`, `hawaii_tropical`); 9 region_notes pairs still null (se_gulf now done, `northern_tier` + 8 warm remain); 27 dual-voice siblings (gate shows 21); `cornell_ext` zone-6 URL; `gs_exemplar_finding_003` extreme-zone record. Then Steps 5–8, then Claude Code Step 11 + flip. **The arc is NOT done — one cell of one step is.**
+
+---
+
+## 2026-06-06 — session `m16_cherry_step4_coastal_desert_4cells` (claude.ai lane)
+
+**Start-SHA:** `813bade981f488e54479f83db2ba72d06f3a12f0cb791149e638d1a14da6a040` (post catalog-admit baseline)
+**End-SHA:** `9d8784f7a0e80ffd53fb6ecdc4500182c2519889ae15c2ff77202f19a7890e3c`
+**Gate:** 30 → **26** (gate-confirmed this session — claude.ai had `whole_crop_gate.py` available and ran it on every apply). Lettuce `GATE: PASS`, byte-identical.
+
+### What happened
+Four Step-4 region cells authored on `cherry-tomato`, all to the lettuce/se_gulf/ca_interior reference bar. Region fill 2/10 → **6/10**. The four cells took four genuinely different shapes from their sources (no template imposed) — this is the heart of the session.
+
+- **`ca_north_coast` (zones 9-10) — COOL-LIMITED exception.** Single window, May only. UC ANR Table 13.2 North & North Coast tomatoes = "May" (no semicolon → no fall window; contrast snap beans "July; May–June"). NO heat_pause: limiting factor is lack of summer heat (marine layer; UC Marin MG "Tomato time!" gives early-May transplant + sub-55°F nights any month). Two independent T1 (Table + Marin MG) confirm single-window + absence of second window. harvest_end production-tapered ~October (cooling + light), documented as NOT a frost cutoff; fall calendar months read `wait` not `cold_pause`. Sources `ucanr_ext` + `ucanr_marin_mg`. San Mateo/SF MG + Monterey Bay MG read-not-cited. Contra Costa MG (named in region_source_map) not catalogued → not cited.
+
+- **`ca_south_coast` (zones 9-10) — mild marine, longest window.** Single but long: Table 13.2 South Coast = "April – July 15" (105-day plant-out, widest CA region). Confirmed single continuous window not a pause-split (San Diego MG growing guide: harvest "early summer through end of year in coastal areas"; the "two-season" blog framing is the option to plant later within the long window). NO heat_pause. Real z9/z10 differentiation: z10 (frost-free immediate coast) harvest to December; z9 (cooler inland-edge) tapers to November. Sources `ucanr_ext` + `ucanr_san_diego_mg` (FIRST use of the newly-admitted ID; §E recognized it as catalogued T1 — the admit paid off). Per option (a): San Diego corroboration anchored to the ucanr.edu Vegetable Resources page; Association-domain (mastergardenersd.org) dated prose read-not-cited per the catalog entry caveat. **`fruit_set_temp_f` anchor found + logged:** San Diego MG Vegetable Resources gives tomato set ~65°F night–90°F (candidate for the deferred field).
+
+- **`ca_desert` (zones 9-10) — heat-inverted, TWO-WINDOW.** Table 13.2 Desert Valleys = "Dec–March" (inverted: winter is the growing season). heat_pause Jun–Aug, climatic-absolute (Imperial/Coachella >95–110°F; fruit set fails >95°F, viable pollen collapses; mechanism via UC IPM / UC ANR 8159). second_planting: Sep fall crop running into January (mild desert winter). Sources `ucanr_ext` + `uc_ipm`. UC ANR 8159 + UC Riverside MG + U Arizona az2078 read-not-cited.
+
+- **`low_desert_az` (zone 9 ONLY) — heat-inverted, TWO-WINDOW, AZ dates.** U of Arizona az2078 "Growing Tomatoes" (peer-reviewed Feb 2024): two short seasons; spring transplant ~February (racing the late-May Phoenix heat wall — LATER than the CA desert's Dec–March); summer fruit-set failure Jul–Aug (>90°F reduces viable pollen); September fall replant into December (often the better season). heat_pause Jun–Aug. zone 9 only (region_source_map Phase B: zone-10 desert served by `ca_desert`). Source `uariz_ext` (az2078 + AZ1005 Maricopa, two UofA docs agreeing — single-institution sufficient). AZ1615 Yuma read-not-cited (same institution).
+
+### Key per-region judgment recorded (precedent)
+**Cherry's heat resistance NARROWS the summer pause only where the heat is marginal, NOT where it is climatic-absolute.** se_gulf: narrowed to one month (month 7). `ca_desert` + `low_desert_az`: NOT narrowed — peak desert summer stops fruit set even for heat-tolerant cherry. Documented in both desert provenances, explicitly contrasted with gs_exemplar_finding_001. This is a per-region call, not a universal rule. beefsteak re-derives (wider everywhere).
+
+### `warm_arid` deliberately NOT authored (the discipline working)
+Southern NM (Las Cruces/Mesilla, zone 8) reads MILDER than the zone-9 low deserts — NMSU Circular 457/457-B + extension-specialist guidance (Las Cruces Bulletin, Stephanie Walker / Israel Joukhadar) emphasize spring-after-frost planting and transplants maturing before summer heat, with NO emphatic lethal-summer-pause structure. It leans single-window/no-heat_pause, but the CR457-B tomato-date table and the Doña Ana County MG Las Cruces chart (the documents that actually decide window count) were only seen as index pages this session, not the tomato row. Per "window structure is a source finding, confirm before authoring," `warm_arid` is held for a clean CR457-B + Doña Ana chart read at the top of next session. Did NOT stamp the desert two-window shape on it by analogy.
+
+### Catalog
+- `ucanr_san_diego_mg` used first time (`ca_south_coast`). No new admits this session (`uc_ipm`/`uariz_ext`/`ucanr_marin_mg` pre-catalogued).
+- `ucd_plantsci` DROPPED from the batch: UC Davis's citable vegetable center (vric.ucdavis.edu) is processing-tomato research (96% of US processed tomatoes), wrong register for home-garden timing; home-garden postharvest already covered by catalogued `ucd_postharvest`. No clean home-garden-timing UC Davis doc to pin.
+
+### Verification done (gate RAN this session)
+- Collateral hash audit: ONLY `cherry-tomato` changed (4 region cells); all 122 other crops + all top-level non-crop keys byte-identical; **lettuce byte-identical**; se_gulf + ca_interior (prior cells) byte-identical.
+- Key-parity: each new single-window cell exact-matches `ca_interior` shape; two-window cells carry the proven `heat_pause` + `second_planting` blocks (all 4 required window keys present, gate-validated).
+- Calendar-vs-declared-pause consistency: `ca_desert`/`low_desert_az` calendar `heat_pause` months [6,7,8] == declared `heat_pause.months`.
+- Serialization: minified `separators=(',',':')`, `ensure_ascii=False`, no trailing newline.
+- **Gate RAN: `GATE: 26 VIOLATION(S)`** (this session had `whole_crop_gate.py`). 30 → 26, the drop = the 4 region_notes pairs cleared. No new violation of any kind from the 4 cells. §C/D 0 dash / 0 temp forms; §E 0 uncatalogued / 0 non-T1 (42 IDs); §F 1 gap (known cornell_ext zone-6).
+
+### Residual after this session (cherry)
+**Gate 26.** 4 region_notes pairs still null (`northern_tier`, `warm_arid`, `fl_peninsula`, `hawaii_tropical`); 21 dual-voice siblings (author 27, gate shows 21); `cornell_ext` zone-6 URL; `gs_exemplar_finding_003` extreme-zone record. 3 warm regions + northern_tier calendar remain on Step 4 (`warm_arid` next, window-structure read required). Then Steps 5–8, then Claude Code Step 11 + flip. **The arc is NOT done — 6 of 10 cells of one step are.**
