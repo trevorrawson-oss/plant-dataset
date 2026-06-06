@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-06 -- M16 catalog admission: `ucanr_san_diego_mg` (Claude Code lane)
+
+**SHA:** `349fb7af...` -> `813bade981f488e54479f83db2ba72d06f3a12f0cb791149e638d1a14da6a040`. Session `m16_cherry_catalog_admit_sandiego_mg`.
+
+**Lane clarification (the trigger).** claude.ai (Step 4, heading into `ca_south_coast`) was correctly blocked: the South Coast corroborator it discovered (San Diego County Master Gardeners) was not in `source_catalog`, and the sourcing guard forbids introducing an uncatalogued ID inline. Trevor questioned the lane ("I thought catalog admission was claude.ai's"). The record settles it: **catalog admission = Claude Code** (the live Lane split; claude.ai operated under it this very session -- the ca_interior `ucd_plantsci` catch). Trevor's recollection matched the OLD practice -- the existing `ucanr_marin_mg`/`ucanr_santa_clara_mg` carry `"Admitted in S9"`, an earlier claude.ai session; the lane clarified since. **The split:** source DISCOVERY/verification = claude.ai (find it, confirm live URL + T1 + content); ADMISSION (canonical ID + registry write + the source-tier gate) = Claude Code. **Why:** one shared registry across 121 crops -- centralizing admission prevents ID drift, unverifiable tier claims, and a catalog the gates cannot trust.
+
+**The admission.** claude.ai handed the discovery batch as `{source, confirmed-live URL, why-T1, corroborates}`. One entry admitted: **`ucanr_san_diego_mg`** -- UC ANR Master Gardener San Diego County program (`https://ucanr.edu/site/uc-master-gardener-program-san-diego-county`, verified live by claude.ai via the rendering fetcher; sandbox curl proxy-blocked), `tier:T1`, `source_class: extension_master_gardener_program`, identical class to the two admitted CA county MGs. `citable_for` + `_admission_provenance` record the discovery basis and the **Association-domain caveat** (catalog url is the ucanr.edu program home; `mastergardenersd.org` prose is read-not-cited unless independently T1-anchored at cite-time). **`ucd_plantsci` HELD** -- claude.ai has no confirmed stable citable URL yet (it will confirm a specific UC Davis VRIC / Central Valley tomato doc next, then report whether to admit). Do not admit against a bare department root.
+
+**Write discipline + collateral.** SHA-gated against `349fb7af`. (The gate first CAUGHT a stale-SHA attempt against the remembered `f916e8fe` -- canonical had moved to `349fb7af` via claude.ai's ca_interior promote; re-preflighted before acting. The discipline worked exactly as designed.) Catalog `80 -> 81`, exactly `+ucanr_san_diego_mg`. Collateral: ONLY `source_catalog` changed, NO crop changed, every existing catalog entry byte-identical. Gate regression: an UNCITED entry changes no cited-source result -- cherry residual stays **30** (§E 40 IDs / 0 uncatalogued / 0 non-T1), lettuce `GATE: PASS`.
+
+**Git hygiene (recurring gap).** Committed claude.ai's uncommitted `ca_interior` (`349fb7af`) promote FIRST to keep git current, then this admission. The pattern: claude.ai's promote scripts land on disk (Trevor runs them) but the git commit+push step is not firing -- Claude Code has been committing each one (`f916e8fe` Steps 9+10, now `349fb7af` ca_interior). Worth folding the commit+push into the promote scripts. Two stray root apply scripts (`apply_ca_interior.py`, `fix_ca_interior_temp_form.py`) left untracked.
+
+**NEXT:** claude.ai preflights `ca_south_coast` against **`813bade9`** (NOT `349fb7af`) and authors it citing `ucanr_san_diego_mg`; the cert gate verifies catalogued + T1. Other coastal/warm anchors are all already catalogued, so this one admission effectively unblocks the rest of the sweep.
+
+---
+
 ## 2026-06-05 — session `m16_cherry_step4_ca_interior` (Step 4 second cell: ca_interior sourced; gate confirmed)
 
 **SHA:** `339933f2bdbcd8e13d11bf507c7c40efdd2cd1d2cba3342d9f069b090075220f` → `928210dd012b2f8640772f1c84373f0890d4a48b2bb8b38d3ca1d52216a89450` (cell apply) → `349fb7af6c3ea909970671d627cb0b7176e8b7251376eaea614d0c263329b55b` (§C/D fix). **Two applies this session; pin the FINAL `349fb7af…`, not the cell-apply value.**
