@@ -6,6 +6,50 @@
 
 ---
 
+## 2026-06-05 — session `m16_cherry_step4_ca_interior` (Step 4 second cell: ca_interior sourced; gate confirmed)
+
+**SHA:** `339933f2bdbcd8e13d11bf507c7c40efdd2cd1d2cba3342d9f069b090075220f` → `928210dd012b2f8640772f1c84373f0890d4a48b2bb8b38d3ca1d52216a89450` (cell apply) → `349fb7af6c3ea909970671d627cb0b7176e8b7251376eaea614d0c263329b55b` (§C/D fix). **Two applies this session; pin the FINAL `349fb7af…`, not the cell-apply value.**
+**Schema:** 2.8 → 2.8 (unchanged). **Crop count:** 123 → 123 (unchanged).
+**Arc position:** M16 cherry, Step 4 (warm-region window sourcing) — second cell. se_gulf done prior; `ca_interior` is the first of the 8 remaining warm/CA regions, per `region_source_map` order.
+
+### What happened
+- **`cherry-tomato.regions.ca_interior` (zones 8–9) sourced + authored to the lettuce/se_gulf reference bar.** The only cell changed this session. PENDING shell → filled.
+- **Gate finally run (resolves the se_gulf gate-not-run caveat).** Baseline confirmed at **31 VIOLATIONS** — matching the kickoff's hand-derived estimate exactly. Decomposition: 9 region_notes-null (incl. ca_interior pre-apply) + 21 dual-voice (gate-counted) + 1 `cornell_ext` zone-6 anchoring. §A2 shape counts (stub/null-track/stale-nested) all 0. The "~31 DERIVED" figure from the se_gulf close is now gate-confirmed.
+- **Windows re-derived from T1, not lifted** (climate-contamination guard):
+  - **z8 + z9 = UC ANR Master Gardener Handbook Table 13.2** via the online *Time of Planting* page (`ucanr.edu/program/uc-master-gardener-program/time-planting`, updated 2026-05-08; the page self-identifies as Table 13.2). Interior Valleys tomatoes = **April–May** (spring transplant; `*` = transplants used). Corroborated by **Sacramento County MG monthly tips** (single late-April, soil ~65°F / nights >50°F planting).
+  - Both fetched + verified live this session; verified-field = session date-string.
+- **SINGLE-WINDOW verified PER SOURCE — the `fl_peninsula`-style trap landing at ca_interior.** Two independent T1 sources give NO fall tomato window for the interior valleys (contrast se_gulf, where UGA C943 gives an explicit ~Jul 20 fall deadline → two-window). UC Davis Plant Sciences (read for confidence, NOT cited) independently frames Central Valley tomato as one spring planting with a single long harvest tail (70–120 d). → **`ca_interior` carries one main planting; NO `track:"second_planting"`, NO `heat_pause`.** The valley grows one continuous season; cherry is heat resistant and sets through peak summer heat. calendar[12] reads `growing`/`harvest` straight through summer.
+- **Second-planting decision SETTLED for ca_interior (decision owed this arc):** z8 + z9 both single-season, no second planting. Resolved by confirming absence with a second T1 source (Trevor's direction), not by inventing a fall window or dropping it silently.
+- **region_notes pair authored** (seasoned + beginner) — deliberately carrying the "why no fall planting here" explanation per Trevor's calendar-UI call (the explanation lives in region_notes, NOT a dedicated absence-field; same field se_gulf uses to explain its two-season split, opposite content). Beginner keeps the plain hook ("plant once in spring, pick through fall"), drops mechanism, not less true than seasoned. **No region-tip overrides** — sources do not fork the grower action; per-crop attestation recorded.
+- **Frost variant: mediterranean (interior-valley NOAA variant), NOT humid_subtropical.** ca_interior resolution anchors to the mediterranean frost variant (z8a Sacramento/Fresno/Bakersfield/Modesto last_spring Jan 24; z9a Stockton/Merced/Livermore last_spring Feb 17), distinct from the humid_subtropical default se_gulf correctly used. The gap between mediterranean last-frost (Jan/Feb) and actual plant-out (Apr–May) is itself the single-season signal: soil-temp/heat-gated, not frost-release.
+- **Shape matched to live se_gulf/lettuce exactly:** `plantings_provenance` block (+ `window_structure: single_window`); `resolution_method: ca_interior_month_resolution`; `planting_note: single_season`; cell-level envelope; NO `sources_pending_admission`; NO `lifted_from_zone` (re-derived).
+
+### Sourcing correction (mid-session)
+- Initial draft cited UC Davis Plant Sciences as a new ID `ucd_plantsci`. **Caught + corrected:** that ID is not in the 80-entry `source_catalog`, and catalog admission is the Claude Code lane. The single-window finding is fully supported by **already-admitted** IDs: **`uc_mg`** (UC Master Gardener Program — publisher of Table 13.2 / Time-of-Planting + Sacramento County tips; the catalog's `ucanr_ext` note explicitly scopes itself OUTSIDE uc_mg, so Table 13.2 homes to uc_mg) + **`ucanr_ext`** (UC ANR umbrella, handbook parent). §E stayed at 0 on apply BECAUSE of this correction — citing `ucd_plantsci` would have introduced an uncatalogued ID. UC Davis logged in provenance as `sources_read_not_cited`.
+
+### Findings
+- **M16-CA-INT-001 — ca_interior single-window** (source finding; se_gulf two-window contrast). Window structure decided by reading the source, not mirroring se_gulf. CONFIRMED.
+- **M16-CA-INT-002 — no `heat_pause` for ca_interior** (continuous warm season; cherry heat resistant; no in-source summer exclusion to encode). Per-region heat judgment, not a universal tomato pause.
+- **M16-CA-INT-003 — region_notes temperatures use degree-sign `°F`, NOT spelled "degrees F".** Surfaced by gate §C/D: first authoring used "65 degrees F" → flagged. Dataset confirms: ALL region_notes temps use `°F` (14 occ., zero spelled); spelled "degrees F" is correct + dominant in BACKEND prose (2302 occ., incl. `synthesis_note_seasoned`) but §C/D scopes to user-facing strings only. Gate corroborates — it flagged `region_notes_seasoned` but NOT the same cell's `plant_out.synthesis_note_seasoned` (also "65 degrees F"). One-field fix (`65 degrees F` → `65°F`) cleared it. **Carry-forward: author region_notes with `°F` from first draft on every remaining warm region; same user-facing-vs-backend split as the em-dash rule. Add to `tip_region_authoring_standard` if not present.**
+- **`gs_exemplar_finding_001`** — ca_interior slice CLOSED. (7 warm cells + `cornell_ext` URL remain for full close.)
+
+### Verification done (gate-confirmed this session)
+- **Gate run twice.** Baseline 31 (pre-apply, confirming the derived estimate). After cell apply, gate held at 31 — the §A2 region_notes clear (9→8) was masked by a NEW §C/D temp-form violation (the "65 degrees F" error). After the one-field §C/D fix, **gate = 30** (8 region_notes + 21 dual-voice + 1 anchoring); §C/D temp forms back to 0; §E 0 uncatalogued / 0 non-T1; §F still the 1 known cornell_ext zone-6 item. **31 → 30 is the real drop, now correctly accounted.**
+- Both applies SHA-gated (`sys.exit(1)` on mismatch), scratch-copy, minified `separators=(',',':')` / `ensure_ascii=False`, atomic swap, pre-swap backups written.
+- Collateral audit (both applies): ONLY `cherry-tomato.regions.ca_interior` changed; all 122 other crops + all top-level non-crop keys byte-identical; **lettuce-leaf AND se_gulf byte-identical** (explicit guards). Cell apply touched only ca_interior; fix touched only `ca_interior.region_notes_seasoned`.
+- Independent post-write re-verification reading OUTPUT only (both applies): single-window confirmed, no heat_pause / no second_planting, calendar[12] plant-in-April, region_notes both filled, all anchoring leaves carry url + date-string verified, all cited IDs catalog-admitted.
+
+### Residual after this session (cherry)
+**Gate = 30.** 7 warm regions still PENDING (`ca_north_coast`, `ca_south_coast`, `ca_desert`, `warm_arid`, `low_desert_az`, `fl_peninsula`, `hawaii_tropical`); 8 region_notes pairs still null (se_gulf + ca_interior done, `northern_tier` + 7 warm remain); 27 dual-voice siblings (gate shows 21 — blind spot unchanged); `cornell_ext` zone-6 URL; `gs_exemplar_finding_003` extreme-zone record. Then Steps 5–8, then Claude Code Step 11 + flip. **The arc is NOT done — two cells of Step 4 are.**
+
+### Next
+`ca_north_coast` (zones 9–10; zone 8 dropped per `region_source_map` marker resolution) — the **cool-LIMITED exception**: marine layer, warm season constrained by LACK of summer heat, NOT a summer pause. Heat-primary anchoring does NOT apply. Same `ucanr_ext`/Table 13.2 institution (North/North Coast column) + county MG corroboration. Author region_notes with `°F` per M16-CA-INT-003.
+
+### Deliverables
+`phase_3_cherry_m16_step4_ca_interior_findings.md` (1_for_project_knowledge); this entry (append to STATE_HISTORY, top of stack); regenerated `CURRENT_STATE.md`; `ca_north_coast` kickoff (2_for_next_chat); both apply scripts (3_for_your_records). Dataset-update model = apply-already-run (canonical already at `349fb7af…` on the machine via the two scripts). PROMOTE is Trevor's manual run: re-pin `LATEST.txt` → `349fb7af…` / 2026-06-05 / `m16_cherry_step4_ca_interior`, regenerate this file, append here, sync `00-current/`, commit + push.
+
+---
+
 ## 2026-06-05 -- M16 cherry-tomato Steps 9 + 10: T2 de-citation + source-name dash -- claude.ai lane
 
 **SHA:** `1b4fea68e63ed63c02cc50aeb8bd55a761c6d6534fe037fba371eab7130df68a` -> `f916e8fec820bb21a3f52e667e5efe6760764a12dfc2824a3ee20234872b8fd1`. Session `m16_cherry_steps9_10_mechanical`. Same calendar day as the shell build + `lifted_from_zone` follow-up; first claude.ai-lane session on cherry's downstream work. Preflight clean (start SHA matched `LATEST.txt`).
@@ -879,3 +923,39 @@ Cross-cutting rules that have crystallized across the arc. These are the institu
 - **A registered gap’s described REMEDIATION PATH is itself an unverified claim until checked against the live data.** (2026-06-04) S10-3 catalogued the `northern_tier` anchoring gap with the note “the cold legacy `zones[3–7]` hold the trustworthy URLs to promote up”; this rode forward verbatim into CURRENT_STATE line 63 and the kickoff. Verified at backfill time: the legacy `zones[3–7]` ALSO carry empty `anchoring_urls:{}` — there was nothing to promote. The NA-3h “trustworthy copy” judgment was correct for PLANTING DATA (promoted + re-verified, `zone_promoted_verified`) but was silently extended to URLs, which the legacy layer never had (it predates per-source anchoring). Impact was citation-only, not data (no date moved). **The lesson generalizes the “lifted-and-assumed-done” + “verify per source” rules one step further: it is not only LIFTED DATA that needs re-verification, but the GAP-REMEDIATION INSTRUCTIONS a prior session writes about how a future gap will be closed. “The URLs exist to promote” is a claim, not a fact, until the source slot is opened. Confirm the remediation path empirically before scoping work around it — and when a precedent says “promote-up where the legacy band is trustworthy,” scope it to CONTENT, never URLs (else the bot pipeline replicates the empty-URL assumption to ~114 crops).** Caught at backfill preflight, surfaced to Trevor; CURRENT_STATE line 63 corrected same session.
 
 *Update this file at each session close.*
+
+---
+
+## 2026-06-05 — session `m16_cherry_step4_se_gulf` (Step 4 first cell: se_gulf sourced)
+
+**SHA:** `f916e8fec820bb21a3f52e667e5efe6760764a12dfc2824a3ee20234872b8fd1` → `339933f2bdbcd8e13d11bf507c7c40efdd2cd1d2cba3342d9f069b090075220f`
+**Schema:** 2.8 → 2.8 (unchanged). **Crop count:** 123 → 123 (unchanged).
+**Arc position:** M16 cherry, Step 4 (warm-region window sourcing) — first cell. Steps 3.5 + 9 + 10 already done; this is the first biology cell of the Step 4–8 authoring surface.
+
+### What happened
+- **`cherry-tomato.regions.se_gulf` (zones 8–9) sourced + authored to the lettuce reference bar**, closing the se_gulf slice of `gs_exemplar_finding_001`. The only cell changed this session.
+- **Windows re-derived from T1, not lifted** (climate-contamination guard; warm `zones{}` is SE-mis-sourced):
+  - **z8 = UGA C943** *Vegetable Garden Calendar* (full-reviewed 2026-03-10) — middle-Georgia baseline (Columbus–Macon–Augusta belt) + the explicit South-Georgia offset rule ("spring 2–3 wk earlier, fall 2 wk later in extreme south Georgia") that derives z9. Tomato seed-start 6 wk; spring transplant late Mar–early Apr; fall deadline ~Jul 20.
+  - **z9 = UGA C943 + UF/IFAS VH021** *Florida Vegetable Gardening Guide* (modified 2026-02-10), North Florida column (north of State Road 40). Table 1 Tomatoes (supported) North = "Late Mar–Apr, Aug"; 70–90 d from transplant.
+  - Both publications fetched + verified live this session; verified-field = session date-string.
+- **Two-window spring/fall structure verified PER SOURCE** (standing rule). The summer gap between VH021's "Late Mar–Apr" and "Aug" IS the heat pause — read off the table, not assumed.
+- **Cherry-specific heat finding (cultivar-type universalization guard):** VH021 Table 2 — "Cherry types are heat resistant"; UF/IFAS Gardening Solutions lists cherry tomato among the few crops productive through Florida summer. → cherry's se_gulf `heat_pause.months = [7]` (single month, NARROW). A beefsteak cell from the same biology gets a WIDER pause (Jul–Aug). Logged so M16 beefsteak does not copy cherry's soft pause.
+- **`second_planting` data authored on z8 + z9** against Claude Code's ratified structure (resolved-layer sibling object + region-constant `plantings[]` entry `succession_id:2, track:"second_planting"`). De-multiplexed the legacy `zones["9"]` comma-string (`Feb 7 – Feb 28, Jun 24 – Jul 8`, "two full seasons") into main band (spring, beginner) + second band (late summer), dates re-sourced from the real region anchor. Discrete, not succession (`succession_policy.suitable=false`).
+- **z9 `calendar[]`↔prose heat-pause drift resolved at the region layer.** New `resolved_by_zone["9"].calendar` encodes `heat_pause` at the summer core, derived programmatically (precedence pause > plant > harvest > growing > wait). The legacy `zones["9"].calendar[Aug]="plant"` contradiction is the thing re-derived away from; legacy layer not mutated.
+- **region_notes pair authored** (seasoned + beginner; beginner keeps the plain causal hook, drops mechanism, not less true than seasoned). **No region-tip overrides** — UGA + UF/IFAS do not fork the grower action for se_gulf; per-crop attestation recorded.
+- **Shape matched to live `lettuce-leaf.regions.se_gulf` exactly:** added `plantings_provenance`; `resolution_method: se_gulf_month_resolution`; `planting_note: multi_season`; cell-level `harvest`/`first_plant_date`/`last_plant_date` envelope across both bands; structured `heat_pause`; **dropped** `sources_pending_admission` (lettuce has no such key on a sourced cell). NO `lifted_from_zone` (re-derived, per Claude Code).
+
+### Findings
+- **`gs_exemplar_finding_001`** — se_gulf slice CLOSED. (Full close when the remaining 8 warm cells are sourced + the `cornell_ext` zone-6 URL is found; `_001` per the kickoff spans those too.)
+- **`phase_3_tomatoes_s3c_finding_001`** (pre-existing, deferred) — z9 slice superseded by the se_gulf re-source (the Minnesota text on `zones["9"].start_indoors` is replaced for z9). Cross-referenced, NOT duplicated. Zones 3–8/10/11 slices remain open for family close.
+- **NEW — blossom-drop `fruit_set_temp_f` field proposed (ruling owed).** T1 anchors now in hand: VH021 ("Blossom drop is usually due to too high or too low temperatures") + existing s1b_finding_006 (Clemson HGIC / PSU: >90°F day / <55°F night). Schema-touching → Trevor rules shape; Claude Code adds. Rule together with s1b_finding_006.
+- **Three kickoff-vs-live discrepancies surfaced** (logged in the deliverable, none material once corrected): (1) Minnesota text sits on `start_indoors` not the `plant_out` window the kickoff implied, and is already filed as s3c_finding_001; (2) legacy `zones["9"]` already half-encoded the heat pause via a `heat_pause_start` anchor — the drift is specifically `calendar[Aug]`; (3) `uga_c963` is not a discrete catalog ID (folds under `uga_ext`).
+
+### Verification done (in lieu of the gate, which this session could not run)
+- Collateral hash audit: ONLY `cherry-tomato.regions.se_gulf` changed; all 122 other crops + all top-level non-crop keys byte-identical; lettuce byte-identical.
+- Key-parity check against live `lettuce-leaf.regions.se_gulf`: exact match (cherry adds `second_planting`, intended; omits `lifted_from_zone`, intended).
+- Serialization: minified `separators=(',',':')`, `ensure_ascii=False`, no trailing newline (verified on bytes).
+- **Gate NOT run** (claude.ai session, no `~/plant-dataset/tools/` access). Residual figure in CURRENT_STATE is DERIVED (32 → ~31 by the se_gulf region_notes pair). **Confirm with `whole_crop_gate.py cherry-tomato` at next preflight.**
+
+### Residual after this session (cherry, claude.ai lane)
+8 warm regions still PENDING (`ca_interior`, `ca_north_coast`, `ca_south_coast`, `ca_desert`, `warm_arid`, `low_desert_az`, `fl_peninsula`, `hawaii_tropical`); 9 region_notes pairs still null (se_gulf now done, `northern_tier` + 8 warm remain); 27 dual-voice siblings (gate shows 21); `cornell_ext` zone-6 URL; `gs_exemplar_finding_003` extreme-zone record. Then Steps 5–8, then Claude Code Step 11 + flip. **The arc is NOT done — one cell of one step is.**
