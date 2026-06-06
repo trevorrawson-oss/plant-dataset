@@ -6,6 +6,32 @@
 
 ---
 
+## 2026-06-06 -- M16 catalog admission: `nmsu_donaana_mg` (Claude Code lane)
+
+**SHA:** `9d8784f7...` -> `bf96d1d156417dd19d061edb05baf717e9bcf6e9ed69c016eb81debd9016d868`. Session `m16_catalog_admit_donaana_mg`.
+
+**The admission.** claude.ai handed the `warm_arid` discovery batch with a two-step structure (admit, then author). One entry admitted: **`nmsu_donaana_mg`** -- Doña Ana County Master Gardeners, NMSU Cooperative Extension (`https://donaanamastergardeners.nmsu.edu/`, verified live by claude.ai), `tier:T1`, `source_class: extension_master_gardener_program`, parallel to the admitted UC ANR county MGs. **Borderline recorded in `_admission_provenance`:** the anchoring document is a single-author graphical handout (copyright Darrol Shillingburg) hosted on the county MG program domain -- admitted as the locality-specific extension instrument for zone-8 NM, with anchoring SCOPE limited to the two-window STRUCTURE + the FALL transplant timing. The spring-transplant DATE is NOT taken from the chart (its March transplant sits on the zone-8a last-frost edge); beginner-safe spring plant-out comes from NMSU CR457-B frost data (Trevor's hybrid ruling -- each source governs what it is authoritative about: chart = does Las Cruces support a fall crop; CR457-B = when is it beginner-safe to set out).
+
+**Discipline + collateral.** SHA-gated against `9d8784f7` (clean committed base, re-preflighted first this time). Catalog `81 -> 82`, exactly `+nmsu_donaana_mg`; raw UTF-8 preserved (`ñ` not escaped; 0 `\u`). Collateral: ONLY `source_catalog` changed, NO crop changed, every existing entry byte-identical. Gate regression: uncited entry -> cherry residual stays **26**, §E 42 IDs / 0 uncatalogued / 0 non-T1, lettuce `GATE: PASS`.
+
+**Step 2 (`warm_arid` cell authoring) NOT done -- raised as a lane + data question.** claude.ai's handoff asked Claude Code to author the cell from a biology brief. Returned to claude.ai's lane (the same lane that authored the 6 prior cells): the exact window dates come from the sources claude.ai READ (the chart + CR457-B; Claude Code has not read them and cannot set verified dates), and the `region_notes` + `basis_seasoned`/`synthesis` prose are consumer copy under the voice methodology. The handoff itself kept the cherry-narrow `heat_pause` ruling and the fall-maturation check as owed-back-to-claude.ai, confirming the biology is not fully determined. Symmetric to claude.ai correctly refusing to admit catalog sources: do not author the other lane's work while guessing. **NEXT:** claude.ai preflights `warm_arid` against `bf96d1d1` and authors the cell (mirror low_desert_az shape; two-window + `second_planting`; spring plant-out ~May per CR457-B; cite `nmsu_ext` + `nmsu_donaana_mg`).
+
+---
+
+## 2026-06-06 -- M16 cherry Step 4: 4 coastal+desert cells (claude.ai lane) [history entry added by Claude Code -- was missing from the recovery log]
+
+**SHA:** `813bade9...` -> `9d8784f7a0e80ffd53fb6ecdc4500182c2519889ae15c2ff77202f19a7890e3c`. Session `m16_cherry_step4_coastal_desert_4cells`. (This entry reconstructs the session from the CURRENT_STATE "what happened" detail -- claude.ai's 4-cell promote updated CURRENT_STATE + LATEST + the dataset but did NOT append here; preserved by Claude Code before the CURRENT_STATE regen could discard it. Promote-before-collapse rule.)
+
+**Four Step-4 biology cells authored, four genuinely different source-decided shapes (no template imposed). Gate 30 -> 26. Only `cherry-tomato` changed; lettuce + the 2 prior cells byte-identical.**
+- **`ca_north_coast` (zones 9-10) -- COOL-LIMITED exception.** Single window, May only (UC ANR Table 13.2 North & North Coast = "May", no fall window). NO heat_pause -- limiting factor is LACK of summer heat (marine layer, sub-55°F nights, UC Marin MG), not a summer exclusion; harvest_end production-tapered ~October (cooling + light), NOT frost-cut; fall months read `wait` not `cold_pause`. Sources `ucanr_ext` + `ucanr_marin_mg`.
+- **`ca_south_coast` (zones 9-10) -- mild marine, LONGEST window.** Single but long: Table 13.2 South Coast = "April - July 15" (105-day plant-out). Confirmed single continuous window, NOT a pause-split (San Diego MG: harvest early summer through end of year coastal). NO heat_pause. z10 (frost-free) harvest to December; z9 tapers to November. Sources `ucanr_ext` + the newly-admitted `ucanr_san_diego_mg` (FIRST use; §E recognized it). `fruit_set_temp_f` anchor logged (San Diego MG ~65°F night - 90°F set).
+- **`ca_desert` (zones 9-10) -- heat-inverted, TWO-WINDOW.** Table 13.2 Desert Valleys = "Dec-March" (winter is the growing season). heat_pause Jun-Aug, climatic-absolute (Imperial/Coachella >95-110°F). CHERRY PAUSE NOT NARROWED (contrast se_gulf -- peak desert summer stops set even for cherry). `second_planting`: Sep fall crop into January. Sources `ucanr_ext` + `uc_ipm`.
+- **`low_desert_az` (zone 9 ONLY) -- heat-inverted, TWO-WINDOW.** U of Arizona az2078 (peer-reviewed): spring transplant ~February (racing the late-May Phoenix heat wall); summer fruit-set failure Jul-Aug; September fall replant into December. heat_pause Jun-Aug, cherry-not-narrowed. zone 9 only (zone-10 desert served by `ca_desert`). Source `uariz_ext` (az2078 + AZ1005).
+- **`warm_arid` deliberately NOT authored** -- window structure unresolved at the time (resolved by THIS session's handoff). Held for a clean source read.
+- **Catalog:** `ucanr_san_diego_mg` first use; `ucd_plantsci` DROPPED (UC Davis VRIC is processing-tomato research, wrong register). Write discipline: SHA-gated scratch applies, minified, atomic swap, collateral audited.
+
+---
+
 ## 2026-06-06 -- M16 catalog admission: `ucanr_san_diego_mg` (Claude Code lane)
 
 **SHA:** `349fb7af...` -> `813bade981f488e54479f83db2ba72d06f3a12f0cb791149e638d1a14da6a040`. Session `m16_cherry_catalog_admit_sandiego_mg`.
