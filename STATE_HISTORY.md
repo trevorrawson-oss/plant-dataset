@@ -6,6 +6,36 @@
 
 ---
 
+## 2026-06-06 — session `m16_cherry_northern_tier_calendar_notes` (claude.ai lane)
+
+**Start-SHA:** `7dd2837e461710ea33953f2fc5efe45647421658229dfaa026799319ff8b6a79` (post-`hawaii_tropical`, Step-4 warm-sourcing complete)
+**End-SHA:** `eeaeae379cd3a32fc13bdda821e519bb4b2dec40e2c6cd53801a7c5f8e92884d`
+**Gate:** not run this session (claude.ai authored JSON + this entry only; Claude Code verifies, runs `whole_crop_gate.py`, computes/re-pins SHA, regenerates CURRENT_STATE, syncs, commits). Expected residual after this cell: **23 → 22** (one region_notes-null cleared: `northern_tier`). Predicted composition: 0 region_notes-null + 21 dual-voice + 1 `cornell_ext` zone-6 URL.
+
+### What happened
+`northern_tier` (the last of the 10 region cells) got its `region_notes` pair authored and its per-zone `calendar[12]` derivations completed. **Region fill is now 10/10 with notes** (was 9/10). This closes the cell-authoring side of cherry's region work; what remains is whole-crop Steps 5–8 + Claude Code Step 11.
+
+- **`region_notes_seasoned` + `region_notes_beginner` authored** (both were null). Voice/length to the lettuce/se_gulf/ca_interior bar. **Biology = frost-bracketed single summer crop**: the limit on *both* ends is frost, not heat. Plant a week or two after last frost (nights above low-50s°F, soil past ~60°F); one continuous harvest to first fall frost; cherry's 55–65-day maturity finishes before frost even in Z3; cold end (Z3–4) leans on fast varieties + season extension, warm end (Z6–7) fits a second transplanting. Explicit contrast recorded in-copy: **NO midsummer heat exclusion up north** (unlike SE/Gulf + the deserts, and unlike lettuce's warm-zone Z5–7 heat_pause). User-facing → degree-sign `°F`, commas not em-dashes, American English. Attribution: UMN, NDSU, MSU, UMaine (the institutions anchoring the cold-zone windows already in the cell).
+
+- **`calendar[12]` derivation — winter `"wait"` → `"cold_pause"`, per zone.** The region's calendars live per-zone in `resolved_by_zone[z].calendar` (no cell-level calendar — matches lettuce + cherry's filled cells). Winter-gap months reclassified from `wait` to `cold_pause`; everything else preserved untouched, including the Z4 Oct `"late"` token. Changed months: **Z3** Jan–Apr + Oct–Dec (7); **Z4** Jan–Mar + Nov–Dec (5, Oct `late` left intact); **Z5** Jan–Feb + Nov–Dec (4); **Z6** Jan–Feb + Nov–Dec (4); **Z7** Jan + Dec (2). **NO `heat_pause` token anywhere up north** (frost-limited; task-confirmed and source-consistent — northern summers don't sustain the day/night highs that stop fruit set).
+
+### Key shape judgment recorded (precedent)
+**`northern_tier` carries the `cold_pause` TOKEN only, NOT a `cold_pause` sibling object** — exactly matching the reference GS crop `lettuce-leaf`, whose `northern_tier` has the token in-calendar and no sibling object. The `heat_pause` sibling object (`{months, classification, basis_seasoned, sources, anchoring_urls}`) is reserved for the *non-obvious* summer exclusion; the winter cold gap is the expected default for a frost-limited cold region and is declared by the token alone. This honors "absence carries a reason" without forking shape from lettuce. If a `cold_pause` *object* is ever wanted (e.g., to carry `basis_seasoned` prose for the renderer), that is a schema-touching change and a precedent fork — surface to Trevor before authoring; do NOT introduce inline.
+
+### Verification done (apply script, SHA-gated)
+- **Entry gate PASS** (`7dd2837e`), **exit SHA** `eeaeae37…`. Atomic minified write (`separators=(',',':')`, `ensure_ascii=False`, no trailing newline).
+- **Collateral hash audit:** ONLY `cherry-tomato` changed; all 122 other crops + non-crop top-level keys byte-identical (**lettuce byte-identical, still certified**). Intra-cherry: ONLY `northern_tier` changed; the other 9 region cells byte-identical.
+- **Token guards (in-script):** every reclassified month asserted `=='wait'` pre-change (refuses to touch a non-wait token); no `heat_pause` introduced in any zone; no residual non-winter `wait` left unaccounted; no `cold_pause` sibling object present.
+- **User-facing copy guards:** no `--`, no em-dash, no spelled "degrees F" in either register.
+- **Post-write round-trip:** re-parsed output, re-confirmed both `region_notes` strings and all 22 reclassified tokens.
+
+### Residual after this session (cherry)
+**Region cells 10/10 with notes — cell-authoring side DONE.** Expected gate **22**: 0 region_notes-null + 21 dual-voice siblings (author ~27, gate displays 21 — the dual-voice-walker blind spot, still owed to Claude Code) + 1 `cornell_ext` zone-6 URL (Step 5 discovery). Then whole-crop **Steps 5/5.5** (4-round side-by-side on every claim incl. all region windows; `cornell_ext` URL discovery), **Steps 6/7/8** (seasoned depth-lift; beginner siblings incl. `cause_beginner`; dual-voice coverage gate to 0), the **Step 2 rider** (`gs_exemplar_finding_003`), then Claude Code **Step 11 + the `launch_ready` reset-then-flip** (the stale M10 `launch_ready=true` resets under arc rigor at the close). **status-vocab decision (Appendix B item 1, three-state unification) + blossom-drop `fruit_set_temp_f` shape ruling still owed at the family close.** **The arc is NOT done — the last cell of Steps 5.5/6/7 is.**
+
+**Claude Code release note (2026-06-06, session `m16_cherry_northern_tier_calendar_notes`):** `7dd2837e` -> `eeaeae379cd3a32fc13bdda821e519bb4b2dec40e2c6cd53801a7c5f8e92884d` -- **my re-serialized SHA matched claude.ai's PREDICTED end-SHA exactly** (its output is now byte-compatible with the canonical minified/ensure_ascii=False convention). **CLEAN release, and verified claim-by-claim against the bytes** (not just gate-passed): collateral (only cherry -> only northern_tier; catalog/lettuce/the 9 other cells byte-identical); the calendar diff = EXACTLY the 22 claimed months (Z3=7,Z4=5,Z5=4,Z6=4,Z7=2), all `wait`->`cold_pause`, no other transition, Z4-Oct `late` preserved; **the Step-3.5-promoted dates UNTOUCHED** (only `calendar` changed in each NT zone -- the critical check for a cell that edits promoted data); no `heat_pause`, no `cold_pause` sibling object (token-only, matches lettuce); region_notes both registers, 0 em-dash / 0 `--` / 0 spelled-degrees; NT key structure IDENTICAL to the lettuce exemplar (zero novel keys); **calendar coherence: zero remaining silent `wait` in any NT zone** (every gap legible). Gate residual `23 -> 22` (0 region_notes-null + 21 dual-voice + 1 cornell_ext); §A2 shape 0; §E 0 uncatalogued; lettuce `GATE: PASS`. **MILESTONE: all 10 region cells now carry region_notes + coherent calendars -- the CELL-AUTHORING side of cherry's region work is DONE.** Remaining: whole-crop Steps 5/5.5 (4-round side-by-side, cornell URL), 6/7/8 (depth-lift, siblings incl. cause_beginner, dual-voice gate to 0), Step 2 rider, then Claude Code Step 11 + the launch_ready reset-then-flip. CURRENT_STATE full regen now due (10/10 milestone).
+
+---
+
 ## 2026-06-06 — session `m16_cherry_step4_hawaii_tropical` (claude.ai lane)
 
 **Start-SHA:** `7d4bf50cc56801017ed30d027343c55378a4ffe7631a736dd93284b2ade48140` (fl_peninsula end; preflight matched LATEST.txt + CURRENT_STATE)
