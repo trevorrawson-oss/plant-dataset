@@ -6,6 +6,49 @@
 
 ---
 
+## 2026-06-06 — M16 cherry-tomato Step 4: `warm_arid` authored (claude.ai)
+
+**Lane:** claude.ai authored cell content (biology + source discovery + consumer copy). Hand-off to Claude Code for release (catalog admit, gate, SHA/LATEST/CURRENT regen, git). Per new working model: claude.ai delivers updated JSON + this entry; Claude Code computes verified SHA and promotes.
+
+**Input SHA:** `9d8784f7a0e80ffd53fb6ecdc4500182c2519889ae15c2ff77202f19a7890e3c` (verified at preflight against LATEST.txt).
+
+**What was done:** Authored `cherry-tomato.regions.warm_arid` (zone 8, Las Cruces / Mesilla Valley NM) — the cell held PENDING last session because window structure was unresolved. Cell filled: `plantings[]` (2 entries), `resolved_by_zone["8"]` (full envelope + `heat_pause` + `second_planting` + 12-mo calendar), both `region_notes_*`, `plantings_provenance`. PENDING sentinel cleared. Collateral audit clean (only `warm_arid` changed; 122 other crops + 6 filled cells byte-identical; 707 `°F` intact, 0 escaped; no em-dashes in user-facing notes).
+
+**Window-structure ruling (the held question):** TWO-WINDOW. Resolved by reading sources directly this session, not by analogy.
+- NMSU CR457 (catalogued `nmsu_ext`, statewide): warm-season crops = spring planting only; summer-for-fall slot is cool-season; fruit-set thresholds 95°F day / 55°F night. CR457-B (current Jan-2025 rev) Table 2 carries NO planting-date columns (spacing/days-to-harvest/yield only) — the "planting dates" in old search descriptions are from a prior edition; could not anchor window count from it.
+- Doña Ana County MG Las Cruces Vegetable Planting Chart (NMSU extension, T1-eligible, © Darrol Shillingburg): tomato row shows TWO distinct transplant windows — spring (start ~late Jan–Feb, transplant ~March) and fall (start ~late Jun–Jul, transplant ~late Jul–Aug), separated by an Apr–Jun gap. Legend convention (faded "start" → solid "transplant") confirmed against the Peppers row directly above. Read from a screenshot Trevor supplied (chart PDF text layer is gutted; sandbox can't reach the NMSU subdomain — same proxy constraint as the San Diego MG admit).
+
+**Source conflict + hybrid resolution (Trevor ruled):** The two NMSU T1 sources disagree on window count AND spring date. Resolved by letting each govern what it is authoritative about:
+- Window STRUCTURE → Doña Ana MG chart (locality-specific extension instrument governs its own locality over the statewide average; NMSU's own >95°F set-failure threshold + Mesilla Valley summer climate independently predict the spring-crop / summer-gap / fall-crop shape). → two-window, `second_planting`, no longer single-window.
+- Spring transplant DATE → NMSU CR457-B frost-free guidance (~early-mid May), NOT the chart's March. Rationale: March sits on the zone-8a last-frost edge (Feb 28–Mar 30) — fine for experienced growers with protection (who a Shillingburg handout implicitly addresses) but a frost risk for plant's first-season audience. Beginner-safety divergence.
+- Net: spring transplant ~May (from `last_frost`), fall transplant ~late Jul–Aug (from `heat_pause_end`), recorded in `plantings_provenance`.
+
+**Cherry-narrow heat_pause ruling (claude.ai's call, per-region judgment):** `heat_pause.months = [7]` (July only), NOT [7,8]. Rationale: Mesilla Valley zone 8 is hot (clears 95°F Jun–Aug) but ARID — strong diurnal swing, nights into the 60s–low 70s give real recovery, unlike the zone-9 low deserts (`ca_desert`, `low_desert_az`) where the pause is climatic-absolute and was NOT narrowed for cherry. Cherry's faster set + cool arid nights justify a single-month pause, mirroring the `se_gulf` narrowing logic. **Beefsteak re-derives independently and will likely hold a wider [7,8]** — the correct cherry-vs-beefsteak divergence.
+
+**Citations:** `nmsu_ext` (CR457) = spring timing + fruit-set thresholds; `nmsu_donaana_mg` = two-window structure + fall window. CR457 url `https://pubs.nmsu.edu/_circulars/CR457.pdf`; chart url `https://donaanamastergardeners.nmsu.edu/documents/foodgardenplantingchart-1.pdf` (both verified live 2026-06-06).
+
+**FLAGGED FOR CLAUDE CODE (release blockers / structural):**
+1. **Catalog admit `nmsu_donaana_mg`** (NEW T1 reference — Claude Code lane). NMSU county-extension parallel to `ucanr_san_diego_mg`. Catalog `url` → program home `https://donaanamastergardeners.nmsu.edu/` (mirror San Diego MG: url = program home, document cited at point of use). Tier T1, class extension_master_gardener_program. Admission provenance caveat: single-author graphical handout (© Darrol Shillingburg) on the county MG program domain; admitted as the locality-specific zone-8 NM instrument; spring DATE not adopted from it (see hybrid). Cell currently carries `sources_pending_admission: ["nmsu_donaana_mg"]` on the region, the z8 resolved cell, and `plantings_provenance` — remove these flags once admitted. Gate §E will pass once the ID is in the registry.
+2. **`second_planting` structural shape** (structural — Claude Code lane). Authored to mirror `se_gulf` z8 exactly; confirm the shape conforms to the region-shell/`second_planting` spec.
+
+**FLAGGED FOR STEP 5/5.5 (claude.ai, later):**
+- Calendar April derivation: encoded `wait` (empty bed; seedlings indoors mid-Mar→May, captured by `start_indoors` month + rule window). `se_gulf` shows `growing` in April only because it plants late March (already in-ground). Confirm `wait` is right for the May-planting case at the calendar-validation pass.
+- Fall-window maturation: late-Jul/Aug transplant → ~Oct harvest is tight against ~mid-late-Oct zone-8 first frost. `harvest_end` set to Oct 21 (conservative). Re-check at 4-round side-by-side; may pull fall transplant toward late July if too tight.
+- Cornell zone-6 url:null gate item still outstanding (unrelated to this cell).
+
+**Next:** `fl_peninsula` (UF/IFAS VH021 — verify window count per source; CV137 tomato table found this session: S-FL Aug–Feb, W-central Aug–Sept/Jan–Feb, N-FL Jul–Aug/Feb–Apr), then `hawaii_tropical` (CTAHR, year-round encoding may apply), then `northern_tier` calendar/region_notes (cold_pause, NO heat_pause up north), then Steps 5–8, then Step 11 + flip.
+
+**Claude Code release note (2026-06-06, session `m16_cherry_step4_warm_arid`):** Released onto canonical `bf96d1d1` -> `842ee139c711e533110e6dc3868d77676e85cefda4b98915570d644dbb2327bf` (NOT the entry's input SHA `9d8784f7`). The handoff flagged the `nmsu_donaana_mg` admit as a Claude-Code release blocker, but it was ALREADY admitted in `bf96d1d1` (a parallel promote) -- so this was a MERGE, not a re-admit: kept canonical's 82-entry catalog (incl. donaana) and swapped in the authored `warm_arid` cell. The new model's release-verification caught three things a wholesale promote would have shipped wrong:
+1. claude.ai's JSON was built on the PRE-admit base (catalog 81, no donaana) yet CITED `nmsu_donaana_mg` -> a wholesale promote would have dropped the admission + shipped an uncatalogued citation. Fixed by the merge (canonical catalog retained; §E back to 0 uncatalogued).
+2. Two stale `sources_pending_admission:["nmsu_donaana_mg"]` markers (region + plantings_provenance) -- cleared (donaana is admitted), per the entry's own instruction.
+3. Two structural deviations from the cell's own `low_desert_az` exemplar, mechanically normalized (CONTENT untouched): `plantings_provenance.sources` -> `verified_against` (clears a §F anchoring false-gap -- provenance metadata, not a citation leaf), and `heat_pause.basis_seasoned` spelled "degrees F" -> `°F` (the `_seasoned` suffix makes it user-facing copy; low_desert_az + M16-CA-INT-003 both use `°F`).
+
+Final gate: cherry residual `26 -> 25` (warm_arid region_notes cleared; the 25 are all downstream: 3 region_notes-null + 21 dual-voice + 1 cornell_ext); §A2 shape 0; §E 0 uncatalogued / 0 non-T1; lettuce byte-identical (`GATE: PASS`). The cherry-narrow `heat_pause` [7] ruling + the fall-maturation check remain claude.ai's (owed at Step 5/5.5), untouched by this release.
+
+**SEQUENCING LESSON (new model):** a cell needing a NEW catalog source must be authored AFTER the admit, on the post-admit SHA -- not in parallel with the admit flagged for later. Here the only conflict was the catalog entry (trivially merged), but the general rule is: claude.ai requests the admit -> Claude Code admits + reports the new SHA -> claude.ai authors on THAT SHA. (First real exercise of the new author/release split: it worked -- the verification caught the base-cross before it corrupted canonical.)
+
+---
+
 ## 2026-06-06 -- M16 catalog admission: `nmsu_donaana_mg` (Claude Code lane)
 
 **SHA:** `9d8784f7...` -> `bf96d1d156417dd19d061edb05baf717e9bcf6e9ed69c016eb81debd9016d868`. Session `m16_catalog_admit_donaana_mg`.
