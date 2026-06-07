@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-07 — session `m16_status_vocab_unify` (Claude Code lane — status-vocab decision + a walker-fix finding)
+
+**Start-SHA:** `b6777ef6cb9a10ecf229bcda8c6e60b2f4af9ee2c4a5fc3541441b4c74fb89f9` (post-Step-11 flip)
+**End-SHA:** `87c8e0a14fdce235a3b751d731c8c1c116115a39334902912ef4f2886c8fe77b` (Claude Code, 2026-06-07).
+**Gate:** cherry PASS, lettuce PASS (lettuce was 3 -> 0 after the gap fill below).
+
+### What happened
+Two things, bundled because the second was uncovered while doing the first.
+1. **`status`-vocab three-state unification RESOLVED (Trevor):** the post-arc canonical status is **`verified_gs_arc`** ("gs" = gold-standard, Trevor's refinement of the proposed `verified_arc`). Applied to the two arc-completed anchors: `cherry-tomato` (`verified_retro_complete`->`verified_gs_arc`) and `lettuce-leaf` (`unverified`->`verified_gs_arc`). **`beefsteak-tomato` deliberately LEFT at `verified_complete`** — it has NOT been through the v1.5 arc; its `verified_complete` + `launch_ready=true` are STALE M11-cleanup artifacts (same class as cherry's stale M10), to be reset-then-re-earned at beefsteak's own Step 11. It is NOT `verified_gs_arc` and must not be treated as arc-done.
+2. **Walker-fix finding — lettuce had 3 HIDDEN dual-voice gaps.** The same-session gate fix (companions `why_beginner` now in-scope, commit `ac5f49f`) immediately flagged 3 null `why_beginner` on lettuce's `good_beginner_seasoned` (Radishes, Carrots, Chives) — masked until now by the old §5 carve-out. So lettuce, the prior reference exemplar, was NOT actually gate-clean. Filled all 3 (plain-language siblings of the existing `why_seasoned`, matching cherry's certified register; no dashes; Trevor to sanity-check the copy). Lettuce 3 violations -> 0 / PASS. **(Lane note: consumer copy is normally claude.ai's lane; Claude Code authored these 3 trivial tooling-revealed fills directly to unblock the status release, flagged for Trevor review.)**
+
+### Verification
+Targeted (NOT standard release_verify — this change spans TWO crops + lettuce is the would-be byte-identical reference, so the single-crop model does not apply). Collateral hand-checked: ONLY cherry + lettuce changed among crops; cherry = only `.verification_status.status`; lettuce = only the 3 `why_beginner` + `.verification_status.status`; all other crops + top-level keys byte-identical; beefsteak untouched. Gate PASS on both.
+
+### Residual / next
+cherry + lettuce both CERTIFIED at `verified_gs_arc`. This session is part of the post-cert tooling-hardening batch (also: #2 walker fix DONE `ac5f49f`; #1 patch-format standardization + #3 pre-commit release-verify hook IN PROGRESS). Then M16 beefsteak. Open: `fruit_set_temp_f` shape (Trevor); the lettuce why_beginner copy is Claude-Code-drafted (Trevor review); beefsteak stale-flag reset at its arc.
+
+
 ## 2026-06-07 — session `m16_cherry_step11_flip` (Claude Code lane — the certification flip)
 
 **Start-SHA:** `84b086f170bdf1184c96cb79bf4e1778da5cdfc33755898a56d9d2d9024fa23c` (post-6/7/8, gate=0/PASS)
