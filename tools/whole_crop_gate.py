@@ -176,9 +176,13 @@ def dv_walk(o, pat):
                 elif b in o:
                     if o[b] is not None:
                         populated += 1
-                    elif "companions" in pat and k.startswith("why"):
-                        oos += 1  # §5 companions array split, deferred by design
                     else:
+                        # companions why_* are IN-SCOPE as of 2026-06-07 (Trevor): the
+                        # former "§5 companions array split, deferred by design" carve-out
+                        # (which counted a null why_beginner as out-of-scope) is removed, so
+                        # a null _beginner sibling on a dual-register companion is FLAGGED,
+                        # not hidden. Seasoned-only companions (good_seasoned/bad_seasoned)
+                        # have no why_beginner key -> still counted SP, unaffected.
                         null_values.append(f"{pat}.{b}")
                 else:
                     sp_only += 1
@@ -188,7 +192,7 @@ def dv_walk(o, pat):
             dv_walk(x, f"{pat}[{i}]")
 
 dv_walk(crop, "")
-print(f"  populated CP: {populated} | SP seasoned-only: {sp_only} | ruled-empty/non-prose: {ruled_empty} | out-of-scope §5: {oos}")
+print(f"  populated CP: {populated} | SP seasoned-only: {sp_only} | ruled-empty/non-prose: {ruled_empty} | out-of-scope §5: {oos} (companions why_* now in-scope, expect 0)")
 print(f"  null_values: {len(null_values)}")
 for m in null_values:
     fail(f"dual-voice null sibling: {m}")
