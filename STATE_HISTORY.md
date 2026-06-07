@@ -6,6 +6,57 @@
 
 ---
 
+## 2026-06-07 — session `m16_cherry_5a_northern_tier` (claude.ai lane)
+
+**Start-SHA:** `eeaeae379cd3a32fc13bdda821e519bb4b2dec40e2c6cd53801a7c5f8e92884d` (preflight CLEAN — matched LATEST.txt + the 5/5.5 scope doc + CURRENT_STATE)
+**End-SHA:** Claude-Code-pending. claude.ai authored DATA values + this entry only; **Claude Code applies the patch (SHA-gated atomic write), recomputes the z6/z7 cell envelopes, runs `whole_crop_gate.py` + `release_verify` + claim cross-check, re-pins SHA, regenerates CURRENT_STATE, syncs, commits.**
+**Gate:** not run this session. Expected residual after apply: **22 → 21** (the one `cornell_ext` zone-6 URL clears; the ~21 dual-voice siblings remain, untouched by this pass). The new `second_planting` objects are NOT new violations — they satisfy §A2 shape (dict with the 4 window keys) and the certification-strict anchoring walk (≥1 T1 + URL on each). **Confirm 21 with `whole_crop_gate.py cherry-tomato` at promote.**
+
+### What this pass was
+Gold-standard arc v1.5 **Step 5 (4-round source side-by-side)** + **Step 5.5 (calendar coherence)** for **`northern_tier` only** (sub-session 5.A) — the largest, most-independent block: 5 zone-windows (z3–z7), 13 cited sources, the one open §F anchoring gap, plus the three fold-ins Trevor named in the kickoff. This is the BIOLOGY-TRUTH pass, not Steps 6/7/8 or Step 11.
+
+### What happened
+- **5 main-band (spring) windows 4-round VERIFIED (z3–z7).** The authored plant-out windows are *relative-to-last-frost* claims (date string = zone last-frost anchor + the source's "wait N after last frost" rule), so the 4-round target is the RULE the cited T1 states + the 6-wk indoor-start offset, not a literal date string. Live T1 corroboration captured this session: **UMN** ("transplant after danger of frost + soil warmed; indoors 5–6 wks before"), **NDSU** (≥60°F + frost-past, northern-Plains), **Cornell** ("wait at least a week or two after last frost; nights consistently >45°F; indoors 6–8 wks"), **VCE 426-331** (zone-graded spring+fall windows, footnote-3 = transplants), **Clemson HGIC** (6–8 wk start; transplant after last frost; fall transplant ~Jul). MSU/UMaine/Iowa State/PSU/UWisc rules consistent within each zone's cited set.
+- **§F gap CLOSED — cornell_ext z6 URL FILLED (not dropped/re-anchored).** Filled with `https://gardening.cals.cornell.edu/garden-guidance/foodgarden/vegetable-growing-guides/tomato-growing-guide/` (verified live 2026-06-07). This is the SAME Cornell growing-guide URL already used as the cornell_ext anchor for `germination_temp_f` / `det_indet` / `spacing` on this crop, and it carries the exact z6 transplant-timing rule. The kickoff permitted dropping cornell + re-anchoring to umd/vce/psu/umn; I chose FILL because cornell is a clean, claim-bearing, already-cited z6 source once the URL is supplied — dropping it would shrink the z6 source set for no accuracy gain. The gate's reported 22nd violation clears.
+- **z6/z7 second planting RESOLVED → STRUCTURED (the precedent fold-in, Trevor item #1).** See next block.
+
+### z6/z7 second-planting ruling (precedent) — STRUCTURED, per spec; DATA authored this pass
+**Finding:** z6/z7 each show a July `plant` token in `calendar[]` and assert a fall crop in `notes`/`zone_notes`/`region_notes_seasoned`, but carried **no `second_planting{}` object and only `succession_id:1`** in `plantings[]` (the warm two-window cells carry both). Calendar-token + prose only; renderer had nothing structured to read.
+
+**Ruling: the z6/z7 fall crop gets the structured `second_planting{}` + a `succession_id:2 / track:"second_planting"` rule entry.** This is not a judgment against the spec — **`second_planting_structure_spec_v1_0.md` §7 already decided it**: *"Where cherry has a second planting: cold zones 6-7 ('two crops possible') and warm zones 9+."* §8: cherry carries NO second_planting data at Step 3.5; claude.ai authors it at Step 4/5. The calendar-token-only state WAS the Step-3.5 admission state; this pass (Step 5) is exactly where the claude.ai lane populates the pre-defined shape. **Leaving it token-only would mean the seasoned prose promises a fall band the structured layer can't render** — the prose/structure mismatch the arc exists to eliminate.
+
+**Source basis for a TRUE fall band (not "spec says so"):** **VCE 426-331 Table 2 (zone 6a/6b), Tomatoes row Fall = Jun 10–Jul 10** (footnote 3 = transplants) — a cited, zone-6-specific fall transplant window. **Clemson HGIC** — fall tomatoes transplanted in SC (z7–8) in July ("transplant by July 25"). The cold-north second band is **discrete, NOT succession**, and carries **NO heat_pause** (unlike the spec's *lettuce* north-z6 worked example, which has a midsummer heat_pause). northern_tier is frost-bracketed; the fall band is back-timed from first frost.
+
+**DATA authored (values only; shape is the spec's):** anchor `from:"first_frost"` w/ negative offset (mirrors desert cells ca_desert/low_desert_az — the right model for a fall crop back-timed to mature before frost). Cherry DTM 55–65d. Offsets land plant-out early-to-mid July, matching the existing calendar token + the VCE/Clemson windows.
+- **z6 `second_planting`:** start_indoors May 25–Jun 1, plant_out Jul 6–20, harvest_start Sep 6, harvest_end Oct 26; sources vce_426_331 + psu_ext.
+- **z7 `second_planting`:** start_indoors Jun 1–8, plant_out Jul 13–27, harvest_start Sep 15, harvest_end Nov 10; sources clemson_hgic + vce_426_331.
+- **`plantings[]` `succession_id:2`** rule entry appended (label "second", track "second_planting"), `plant_out.from:"first_frost"` offset −110 w14, mirroring the warm-cell rule shape + spec §3, with seasoned synthesis notes citing VCE + Clemson.
+
+### Key shape judgments recorded (precedent)
+- **The second band is `from:"first_frost"`-anchored** (back-timed to mature before frost), not `last_frost`/`heat_pause_end`-anchored. The warm cells split on `heat_pause_end` (se_gulf/warm_arid) or `first_frost` (the deserts); the cold north has **no heat_pause to anchor from**, so first-frost back-timing is the only honest anchor. This is the cold-north second-planting precedent — beefsteak's northern_tier z6/z7 should match it (re-derive at the beefsteak cell, do NOT blind-inherit the dates).
+- **Calendar UNCHANGED.** z6/z7 `calendar[]` already encode both bands (July `plant` token under spec precedence `plant > harvest`). No calendar edit; the structured object now *backs* the existing token and REPLACES the renderer's fragile lone-token + DTM-midpoint inference with explicit dates.
+- **VCE-conservative-z6 vs dataset-milder-z6 spring window — non-blocking, logged.** VCE 426-331's VA-mountain z6 spring tomato window is May 10–Jun 10; the dataset z6 spring plant-out is Apr 8–22, anchored to a milder z6 (zone_frost_data last_spring Apr 1, PSU/UMD/Cornell pulling earlier). The "wait 1–2 wks after last frost" RULE holds at the dataset frost date, so the window is rule-coherent; the gap is a zone-6-definition difference, not a defect. **No change** — logged only so it isn't re-discovered later.
+
+### Verification done (claude.ai lane — read-only on the live file)
+- **Preflight SHA PASS** against LATEST.txt (`eeaeae37…`).
+- **No catalog admit from 5.A:** every source ID used (vce_426_331, clemson_hgic, psu_ext) confirmed present in the 82-entry catalog (programmatic check).
+- **Live-fetch verification** of the cornell fill URL + the VCE 426-331 fall-tomato table + Clemson tomato fact sheet + UMN/NDSU rule statements (this session, 2026-06-07).
+- All authored strings are American-English; these are backend doc/dataset strings (em-dashes permissible) — none used.
+
+### Flag for Claude Code (structural lane — explicitly NOT authored here)
+1. Wire 2 resolved `second_planting{}` (z6, z7) + 1 `plantings[]` `succession_id:2` entry per `m16_cherry_5a_patch.json`.
+2. **Envelope recompute (Claude Code owns):** z6/z7 cell envelope fields now span two bands — recompute `last_plant_date` to the band-2 plant-out end (z6 → Jul 20; z7 → Jul 27); confirm `harvest` / `first_plant_date` hold. claude.ai did NOT edit envelope fields.
+3. Gate §A2 shape + certification-strict anchoring on each `second_planting`; rule-layer `track` validation on the new succession entry.
+
+### Residual after 5.A
+northern_tier biology-truth + the cornell gap are done; the z6/z7 second-planting precedent is set + data authored. **Remaining 5.x:** 5.B (CA single-window cells + Note A — possible discovery→admit if uc_mg is replaced by an uncatalogued county ID), 5.C (two-window/desert cells + se_gulf-z9 4c confirm + all-two-window `wait`-vs-`heat_pause` rescan), 5.D (tropical/peninsula + whole-crop non-regional claims + the consolidated 8-row winter-`wait` classification). Then Steps 6/7/8, then Claude Code Step 11 + the `launch_ready` reset-then-flip. **status-vocab decision + `fruit_set_temp_f` shape ruling still owed at family close.**
+
+---
+
+**Claude Code release note (2026-06-07, session `m16_cherry_5a_northern_tier`):** `eeaeae37` -> `dadd18d1b7fc02237c9a9214b3ff03e415afa65c372d4a066f8832f9c4edcc8c`. **First PATCH-format delivery** (claude.ai sent explicit-path changes + a `claude_code_followups` block, not a full JSON). Applied 4 changes: cornell_ext z6 URL fill (closes the §F gap), z6 + z7 structured `second_planting{}` objects, the region-constant `second_planting` rule entry (`track:second_planting`, `succession_id:2`). **Claude Code followup done (envelope recompute, my lane):** z6/z7 `last_plant_date` recomputed to each band-2 plant_out end (z6 `Apr 22`->`Jul 20`; z7 `Apr 5`->`Jul 27`, derived from `second_planting.plant_out`); `harvest`/`first_plant_date` confirmed already span both bands (unchanged). **Verified per protocol #6:** gate `22 -> 21` (cornell §F gap CLEARED; the second_planting objects added 0 violations -- matches claude.ai's prediction exactly), `release_verify` clean (no new violations, no novel keys, no user-facing dashes; the 8 warm-cell `wait` months are the expected Step-5.5 notes; northern_tier itself now has ZERO waits), claim cross-check (applied values == patch from-states + values; the 5 main-band windows 4-round-verified in claude.ai's 16KB log). Only `cherry-tomato` -> only `northern_tier` changed; catalog 82 unchanged (no admit); lettuce byte-identical PASS. **Precedent: cold zones 6-7 get the STRUCTURED `second_planting{}` per spec §7 (not token-only)** -- same shape the warm two-window cells use; discrete (not succession), no heat_pause (frost-bracketed, back-timed from first frost). **Sub-session 5.A of 5.A-5.D DONE; NEXT = 5.B (CA single-window cells, incl. Note A uc_mg precision).**
+
+---
+
 ## 2026-06-06 — session `m16_cherry_northern_tier_calendar_notes` (claude.ai lane)
 
 **Start-SHA:** `7dd2837e461710ea33953f2fc5efe45647421658229dfaa026799319ff8b6a79` (post-`hawaii_tropical`, Step-4 warm-sourcing complete)
