@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-06-07 — session `m16_cherry_6_8_beginner_siblings` (claude.ai authored copy / Claude Code released + wrote this entry)
+
+**Start-SHA:** `12348fa008e88b75e5c8052def049bf44e06f8b099561825c5fd298d3d858508` (post-5e, 10/10 cells verified)
+**End-SHA:** `84b086f170bdf1184c96cb79bf4e1778da5cdfc33755898a56d9d2d9024fa23c` (Claude Code applied m16_cherry_6_8_patch.json, 27 edits, SHA-gated against 12348fa0, 2026-06-07).
+**Gate:** **21 VIOLATION(S) -> 0 / GATE: PASS.** The dual-voice coverage gate is now satisfied for cherry-tomato.
+
+### What happened — Steps 6/7/8 dual-voice beginner-sibling pass
+claude.ai authored 27 plain-language `_beginner` siblings for crop-level data fields that previously had only a `_seasoned` (expert) phrasing, from the Claude-Code-prepared punch list (each field paired with its seasoned source text + json_path). Consumer copy only — no dates, calendars, sources, structure, or region cells touched (regions byte-identical).
+- **21 gate-tracked siblings:** pests[0-3].cause_beginner, diseases[0-3].cause_beginner, watering.{frequency,amount,method}_beginner, container_notes.{shape_requirements,drainage.saucer_practice,soil_mix.type}_beginner, rotation.avoid_after_beginner, storage.{room_temp,fridge,freezer}_beginner, yield_expectations.{per_plant,peak_production}_beginner, companions.note_beginner.
+- **6 BLIND-SPOT siblings (the dual-voice walker does not count these):** companions.good_beginner_seasoned[0-2].why_beginner + companions.bad_beginner_seasoned[0-2].why_beginner. Authored so the cell does not ship with hidden null siblings. (This closes the owed "dual-voice-walker blind-spot" amendment for cherry; the walker fix itself is still owed so it auto-counts these on future crops.)
+- Voice verified: Latin pathogen/pest names stripped to plain descriptions (e.g. aphids -> "tiny soft-bodied insects that cluster on stems"; Manduca larvae -> "large green caterpillars"), no em/double-hyphen dashes, no spelled "degrees F".
+
+### Release notes (Claude Code)
+- **Two process deviations handled, both benign:** (1) claude.ai labeled all 27 ops `add`, but every target key already existed present-as-NULL (verified: 27 present-null, 0 absent, 0 present-non-null) — applied uniformly as a `from`-guarded set (assert current==null, then set), so the add/replace label was immaterial; no clobber risk. (2) claude.ai did NOT return a STATE_HISTORY entry (only the patch) — Claude Code authored THIS entry from the patch + punch list, since the pass was fully specified.
+- **Protocol #6 clean:** gate 21->0/PASS; release_verify clean exit 0 (only cherry; lettuce byte-identical; catalog 82; cleared all 21 dual-voice violations; no new violations; no novel keys); claim cross-check (all 27 base=null -> authored string == patch value; 21 gate + 6 blind-spot). 10th release (9 clean + 1 merge).
+
+### Residual after this session (cherry)
+**Gate = 0 / PASS. Steps 5/6/7/8 COMPLETE.** Remaining on the arc: the small **Step 2 rider** (gs_exemplar_finding_003 extreme-zone record), then **Claude Code Step 11** — the `launch_ready` reset-then-set + the `status`-vocab three-state decision + certification. That is cherry's gold-standard arc DONE (first of 9 anchors). Open Trevor item still parked: `fruit_set_temp_f` schema shape; the optional ca_south_coast z9 soft-cold_pause revert.
+
+
 ## 2026-06-07 — session `m16_cherry_5e_warm_arid` (claude.ai lane)
 
 **Start-SHA:** `45d5199f4e4adc335ef23bf510195815dea0b2dca6fe841610f90a7c3f26fee8` (post-5.D, verified clean against LATEST.txt at session open)
