@@ -16,8 +16,14 @@ SESSION = "m16_cherry_step3_5_region_shells"
 DATE = "2026-06-05"
 
 
-def build_region_shells(crop):
-    """Mutate `crop` so every region cell is at reference shape. Returns crop."""
+def build_region_shells(crop, session=SESSION, date=DATE):
+    """Mutate `crop` so every region cell is at reference shape. Returns crop.
+
+    `session`/`date` stamp the northern_tier promotion provenance. They DEFAULT to
+    the cherry-era constants for backward compatibility, but every crop after cherry
+    must pass its OWN session/date -- the provenance records when THIS crop's north
+    was promoted, not cherry's. (The apply wrapper passes them per-run.)
+    """
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):
             continue
@@ -29,13 +35,13 @@ def build_region_shells(crop):
         if isinstance(lbl, str) and " -- " in lbl:
             r["region_label"] = lbl.replace(" -- ", ": ")
         if rk == "northern_tier":
-            _build_north_from_zones(r)
+            _build_north_from_zones(r, session, date)
         else:
             _build_warm_shell(r)
     return crop
 
 
-def _build_north_from_zones(r):
+def _build_north_from_zones(r, session=SESSION, date=DATE):
     # region-constant RULE layer: every plantings entry carries a track
     for p in r.get("plantings") or []:
         if isinstance(p, dict):
@@ -57,7 +63,7 @@ def _build_north_from_zones(r):
     # provenance: replace the Phase-A verbatim-lift string with a promotion record
     r["plantings_provenance"] = (
         "Zone-promoted and re-verified from cold zones 3-7 "
-        f"({SESSION}, {DATE}). Supersedes the Phase A verbatim lift."
+        f"({session}, {date}). Supersedes the Phase A verbatim lift."
     )
 
 

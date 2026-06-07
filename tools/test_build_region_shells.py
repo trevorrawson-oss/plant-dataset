@@ -1,7 +1,18 @@
 #!/usr/bin/env python3
 """Unit test for build_region_shells -- asserts the post-transform shape.
-Run from repo root: python3 tools/test_build_region_shells.py"""
-import json, copy, sys, os
+Run from repo root: python3 tools/test_build_region_shells.py
+
+Two fixtures, deliberately decoupled from canonical fill-state:
+  1. a SYNTHETIC stub crop -- exercises the build-from-stub path (warm skeleton,
+     northern_tier promote-from-zones, dash resolution, parameterized provenance).
+     It does NOT read any live crop, because a live-crop fixture rots as crops are
+     authored through the arc: cherry's warm cells were empty `[]` skeletons at its
+     Step 3.5 and are fully filled now, so asserting "warm windows are empty" against
+     cherry silently breaks the moment cherry is sourced (it did).
+  2. cherry-tomato (already built) -- an idempotency smoke test: re-running the
+     transform on a fully-built real crop must be a no-op, never a corruption.
+"""
+import copy, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_region_shells import build_region_shells
 
@@ -9,34 +20,61 @@ REGION_KEYS = {"northern_tier", "se_gulf", "ca_interior", "ca_north_coast",
                "ca_south_coast", "ca_desert", "warm_arid", "low_desert_az",
                "fl_peninsula", "hawaii_tropical"}
 
-data = json.load(open("crops_data_final.json"))
-cherry = copy.deepcopy(next(c for c in data["crops"] if c["slug"] == "cherry-tomato"))
-build_region_shells(cherry)
-regions = cherry["regions"]
 
-# all 10 regions present
+def synthetic_stub_crop():
+    """A minimal pre-build crop: stub warm regions + a stale-shape north."""
+    def warm(label):
+        return {
+            "region_label": label,
+            "plantings": ["PENDING CORRECTION PHASE -- windows not yet pulled."],
+            "resolved_by_zone": {"9": {"plant_out": "PENDING",
+                                       "resolution_method": "static_precompute"}},
+        }
+    regions = {rk: warm("California -- Interior Valleys" if rk == "ca_interior" else rk)
+               for rk in REGION_KEYS if rk != "northern_tier"}
+    regions["northern_tier"] = {
+        "region_label": "Northern Tier (Cold Zones)",
+        "plantings": [{"succession_id": 1, "label": "main",
+                       "start_indoors": [], "plant_out": [],
+                       "harvest_start": [], "harvest_end": []}],  # NOTE: no track
+        "resolved_by_zone": {
+            z: {"plant_out": "May", "resolution_method": "static_precompute",
+                "lifted_from_zone": z,                       # tautological in the north
+                "plantings": [{"succession_id": 1, "label": "main"}]}  # forbidden nested
+            for z in ("3", "4", "5", "6", "7")
+        },
+        "plantings_provenance": "LIFTED VERBATIM from zone 5.",
+    }
+    return {"slug": "synthetic", "regions": regions}
+
+
+# ---- fixture 1: synthetic stub (the build-from-stub path) ----
+crop = build_region_shells(synthetic_stub_crop(), session="m16_unit_test", date="2026-06-07")
+regions = crop["regions"]
 assert set(regions) == REGION_KEYS, f"region set: {set(regions)}"
 
-# no stub plantings; every plantings entry is a dict with a valid track
-for rk, r in regions.items():
-    pl = r["plantings"]
-    assert isinstance(pl, list) and pl and isinstance(pl[0], dict), f"{rk}: stub plantings"
-    for p in pl:
-        assert p.get("track") in {"beginner", "second_planting", "succession"}, f"{rk}: bad track {p.get('track')!r}"
+# warm shells: dict plantings, valid track, present-but-empty window arrays
+for rk in REGION_KEYS - {"northern_tier"}:
+    p0 = regions[rk]["plantings"][0]
+    assert isinstance(p0, dict) and p0["track"] == "beginner", f"{rk}: warm track"
+    for w in ["start_indoors", "plant_out", "harvest_start", "harvest_end"]:
+        assert p0.get(w) == [], f"{rk}: {w} should be present-but-empty, got {p0.get(w)!r}"
 
-# no nested plantings in any resolved_by_zone cell (the forbidden shape)
+# every plantings entry is a dict with a valid track; no nested plantings survive
 for rk, r in regions.items():
+    for p in r["plantings"]:
+        assert p.get("track") in {"beginner", "second_planting", "succession"}, f"{rk}: bad track {p.get('track')!r}"
     for z, cell in (r.get("resolved_by_zone") or {}).items():
         assert "plantings" not in cell, f"{rk}.{z}: nested plantings survived"
 
-# northern_tier promoted from zones
+# northern_tier promoted from zones: restamped, lifted_from_zone stripped, provenance set
 nt = regions["northern_tier"]
 for z, cell in nt["resolved_by_zone"].items():
     assert cell.get("resolution_method") == "zone_promoted_verified", f"nt.{z}: not restamped"
-    # lifted_from_zone is tautological in the north (region zone == legacy zone)
-    # and the reference crop (lettuce) sheds it -- it must be dropped here too
     assert "lifted_from_zone" not in cell, f"nt.{z}: tautological lifted_from_zone not stripped"
-assert isinstance(nt["plantings_provenance"], str) and "Zone-promoted" in nt["plantings_provenance"]
+prov = nt["plantings_provenance"]
+assert "Zone-promoted" in prov, f"provenance lost its promotion marker: {prov!r}"
+assert "m16_unit_test" in prov and "2026-06-07" in prov, f"provenance not parameterized: {prov!r}"
 
 # region_label em-dashes resolved
 for rk, r in regions.items():
@@ -46,11 +84,15 @@ for rk, r in regions.items():
 for rk, r in regions.items():
     assert "region_notes_seasoned" in r and "region_notes_beginner" in r, f"{rk}: missing region_notes keys"
 
-# warm shells: shape-complete RULE skeleton with empty archetype window arrays
-for rk in ["se_gulf", "ca_interior", "hawaii_tropical"]:
-    p0 = regions[rk]["plantings"][0]
-    assert p0["track"] == "beginner", f"{rk}: warm track"
-    for w in ["start_indoors", "plant_out", "harvest_start", "harvest_end"]:
-        assert p0.get(w) == [], f"{rk}: {w} should be present-but-empty, got {p0.get(w)!r}"
+# defaults preserved (backward-compatible): a no-kwargs call keeps the cherry-era constant
+default_built = build_region_shells(synthetic_stub_crop())
+assert "m16_cherry_step3_5_region_shells" in default_built["regions"]["northern_tier"]["plantings_provenance"]
+
+# ---- fixture 2: cherry-tomato idempotency smoke (already built; re-run must be a no-op) ----
+data = json.load(open("crops_data_final.json"))
+cherry = copy.deepcopy(next(c for c in data["crops"] if c["slug"] == "cherry-tomato"))
+before = copy.deepcopy(cherry["regions"])
+build_region_shells(cherry)  # default kwargs == the constants cherry was built with
+assert cherry["regions"] == before, "transform not idempotent on an already-built crop"
 
 print("PASS build_region_shells")

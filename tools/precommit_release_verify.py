@@ -42,6 +42,30 @@ def crops_map(d):
     return {c["slug"]: c for c in d["crops"]}
 
 
+def _stub_regions(crop):
+    """Regions whose plantings is still a PENDING stub / not a real rule dict."""
+    out = set()
+    for rk, r in (crop.get("regions") or {}).items():
+        pl = r.get("plantings")
+        if not (isinstance(pl, list) and pl and isinstance(pl[0], dict)):
+            out.add(rk)
+    return out
+
+
+def drop_shell_build_unmasks(new, base_crop, cand_crop):
+    """Step-3.5 shell-build allowance: drop `region_notes pair both null: R`
+    violations that are new ONLY because region R graduated from a PENDING stub
+    (base) to a shaped shell (candidate). The stub MASKED the null region_notes
+    pair; building the shell un-masks it, and null region_notes is the explicitly
+    accepted Step-3.5 admission state (Steps 6/7 fill it) -- not a regression. A
+    region_notes-null that appears on a cell which was NOT a stub in base (a real
+    blanking, or a Step-11 unfilled cell) is left in -- still a regression."""
+    graduated = _stub_regions(base_crop) - _stub_regions(cand_crop)
+    prefix = "VIOLATION: region_notes pair both null: "
+    return {v for v in new
+            if not (v.startswith(prefix) and v[len(prefix):] in graduated)}
+
+
 def check(base_path, cand_path):
     base = json.load(open(base_path))
     cand = json.load(open(cand_path))
@@ -64,7 +88,8 @@ def check(base_path, cand_path):
         for slug in changed:
             vb = gate_violations(base_path, slug)
             vc = gate_violations(cand_path, slug)
-            new = sorted(vc - vb)
+            new = drop_shell_build_unmasks(vc - vb, bc.get(slug, {}), cc[slug])
+            new = sorted(new)
             if new:
                 concerns.append(f"{slug}: {len(new)} NEW gate violation(s): {new[:5]}")
             else:
