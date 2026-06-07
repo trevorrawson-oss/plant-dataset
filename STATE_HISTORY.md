@@ -6,6 +6,48 @@
 
 ---
 
+## 2026-06-06 — session `m16_cherry_step4_fl_peninsula` (claude.ai authored; Claude Code releases)
+
+**Cell authored:** `cherry-tomato.regions.fl_peninsula` (zones 10–11, South Florida). 8th of 10 region cells. Step 4 fill 7/10 → 8/10.
+
+**Predecessor (start) SHA:** `842ee139c711e533110e6dc3868d77676e85cefda4b98915570d644dbb2327bf` (warm_arid). Preflight clean against the uploaded artifact. NOTE: the kickoff prompt named an expected start-SHA of `9d8784f7…` (the pre-`warm_arid` checkpoint); that was a stale carry, reconciled against CURRENT_STATE which confirms `842ee139` canonical and `fl_peninsula` as the correct next cell. No drift in the dataset.
+
+**claude.ai output SHA (working copy, for Claude Code to re-verify on merge):** `7d4bf50cc56801017ed30d027343c55378a4ffe7631a736dd93284b2ade48140`. Single crop changed; collateral audit PASS (lettuce + 121 others byte-identical).
+
+### Two decisions taken with Trevor before authoring
+1. **Q1 — summer encoding = B (cherry-narrowed peak-summer `heat_pause`), NOT cool-season-only, NOT `year_round`.** Peak fruit-set-failure months for South FL cherry = **July + August `[7,8]`**. Basis: UF/IFAS Broward South Florida planting guide lists *cherry tomatoes* in the **June** summer column (with okra, southern peas, tropical vegetables) while restricting "tomatoes (larger fruit varieties)" to Sep–Mar; legacy zone-11 note: new fruit set fails above ~78°F nighttime. June/September are shoulder-productive, so the exclusion is the two peak months only. Same *direction* as se_gulf (cherry narrows the pause); larger-fruited beefsteak will re-derive wider.
+2. **Q2 — zone split = source-decides → ONE unified resolution for both z10 and z11.** VH021/EP452 divide Florida into North/Central/**South**; the peninsula (zones 10–11) is South Florida, served by one calendar (EP452) + the statewide VH021. The legacy `zones{}` 10-vs-11 difference was a **USCRN climate-data artifact** and is **NOT carried forward as verified**. `resolved_by_zone[10]` and `[11]` are byte-identical.
+
+### Window structure (source finding, not default)
+**Single long cross-year cool-season window** (`single_window_cross_year_cool_season`), NOT the desert two-window shape and NOT two discrete crops. Frost is rare on the peninsula, so the planting window runs continuously: fall transplant Sep–Oct → through the mild winter/spring → last planting Feb (EP452: "last month to plant … tomatoes for a late spring harvest"); seed-start indoors Aug. **No `second_planting` band** — `plantings[]` carries `succession_id` 1 only.
+
+**Resolved windows (both zones):** plant_out `Sep 15 – Feb 12`; start_indoors `Aug 1 – Aug 21`; harvest `Nov – May` (`harvest_start` Nov 15, `harvest_end` Jun 30); `planting_note: cross_year_range`. `calendar[12]` Jan–Dec: `harvest×5, growing(Jun), heat_pause(Jul), heat_pause(Aug), plant(Sep), plant(Oct), growing(Nov), harvest(Dec)`. calendar heat_pause months match the `heat_pause` block exactly.
+
+### Sourcing
+Cited the **catalog-canonical** IDs `uf_ifas_vh021` (SP103/VH021 statewide guide, https://edis.ifas.ufl.edu/publication/VH021) and `uf_ifas_south_cal` (ENH1191/EP452 South Florida calendar, https://edis.ifas.ufl.edu/publication/EP452), verified live 2026-06-06. Both already in the catalog (trust_tier high) and already cited in this crop's legacy zones 9–11 → **nothing for Claude Code to admit**. The `fl_peninsula` SHELL carried `ufifas_ext` (institution-level scout ID) in `sources` + `sources_pending_admission`; **`ufifas_ext` is NOT used in the authored cell**, and `sources_pending_admission` is cleared to `[]` (analogous to the stale-marker cleanup in the warm_arid release). Read-not-cited: UF/IFAS Broward county planting chart (cherry-vs-larger-tomato split) and Gardening Solutions seasonal guide (cherry among summer-tolerant crops), both folded under the UF/IFAS institutional voice.
+
+### Conventions / lessons carried from warm_arid
+- `°F` in all user-facing **and** backend prose (region_notes + basis_seasoned + synthesis_note_seasoned); §C/D 0. Em dashes 0 in user-facing copy (commas only). §C/D and em-dash checks: **PASS**.
+- `plantings_provenance` uses **`verified_against`** (not `sources`); leaf provenance and `anchoring_urls` use the `{url, verified}` shape.
+- §E: only `uf_ifas_vh021` + `uf_ifas_south_cal` referenced; 0 uncatalogued, 0 non-T1. Catalog stays at 82 entries (no admission this cell).
+
+### Gate delta (claude.ai estimate; Claude Code confirms on the gate run)
+`region_notes`-null violations expected **4 → 3** (fl_peninsula pair now authored). No new violation of any class introduced (single window → no `second_planting` shape surface; calendar/heat_pause consistent; user-facing temp/dash clean). Remaining region_notes-null: `northern_tier`, `hawaii_tropical` (and `hawaii_tropical` is the last cell). Lettuce expected byte-identical / `GATE: PASS`.
+
+### Flagged, not actioned (Claude Code / Trevor)
+- **Stale `launch_ready` flags on cherry.** `verification_status.launch_ready_core` and `launch_ready_seasoned` are `true` (leftover from M10 cleanup) while cherry is mid-Step-4. Left untouched (flipping is Claude Code's gated lane at Step 11); flagging so the Step 11 flip doesn't treat them as already-correct.
+
+### Owed to claude.ai downstream (unchanged from prior, plus this cell)
+- Step 5/5.5: 4-round side-by-side on the fl_peninsula windows (incl. the Jun shoulder-vs-pause boundary and the Nov harvest-start maturation check); the July–August `[7,8]` cherry-narrowing ruling re-confirmed against beefsteak when beefsteak's wider peninsular exclusion is derived.
+- Step 6/7: beginner siblings already authored inline as `region_notes_beginner`; dual-voice walker count to re-check.
+
+### Next
+**`hawaii_tropical`** (CTAHR B-91, zone 11) — year-round encoding likely applies (lettuce Hawaii precedent: `year_round:true` + `calendar_basis` + 12-month all-active calendar); `uhawaii_ctahr` catalogued. Then `northern_tier` calendar (cold; `cold_pause`, no midsummer heat_pause). Preflight the next cell against the **released** SHA (Claude Code re-pins LATEST after merge).
+
+**Claude Code release note (2026-06-06, session `m16_cherry_step4_fl_peninsula`):** `842ee139` -> `7d4bf50cc56801017ed30d027343c55378a4ffe7631a736dd93284b2ade48140`. **CLEAN release -- no merge, no normalization needed** (second run of the new author/release model; claude.ai applied every warm_arid lesson): authored on the CORRECT base (`842ee139`, reconciling the stale kickoff SHA against CURRENT_STATE itself); cited the already-catalogued `uf_ifas_vh021` + `uf_ifas_south_cal` (NOT the institution-level `ufifas_ext` scout ID) so NO admit was needed; cleared its own stale `sources_pending_admission` markers; used `°F` in user-facing fields. Encoding decisions (Trevor + Claude Code ruled): **Q1 = B** (cherry-narrowed soft `heat_pause` `[7,8]`, the two peak >78°F-night months -- honors the source's cherry-summer-tolerant signal AND the new-fruit-set-stop, vs A's cool-season-only or C's year_round); **Q2 = two distinct zone resolutions** (z10 + z11, source-decided, not legacy-carried). Verification: only `cherry-tomato` changed, catalog 82 unchanged, lettuce byte-identical; gate residual `25 -> 24` (fl_peninsula region_notes cleared; the 24 all downstream); §A2 shape 0; §E 0 uncatalogued; §F only the pre-existing cornell gap; `GATE: PASS`. Owed to claude.ai (Step 5/5.5): confirm the `[7,8]` cherry-narrow + the z10/z11 split at the 4-round side-by-side.
+
+---
+
 ## 2026-06-06 — M16 cherry-tomato Step 4: `warm_arid` authored (claude.ai)
 
 **Lane:** claude.ai authored cell content (biology + source discovery + consumer copy). Hand-off to Claude Code for release (catalog admit, gate, SHA/LATEST/CURRENT regen, git). Per new working model: claude.ai delivers updated JSON + this entry; Claude Code computes verified SHA and promotes.
