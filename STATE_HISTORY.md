@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-07 — session `m16_cherry_step11_flip` (Claude Code lane — the certification flip)
+
+**Start-SHA:** `84b086f170bdf1184c96cb79bf4e1778da5cdfc33755898a56d9d2d9024fa23c` (post-6/7/8, gate=0/PASS)
+**End-SHA:** `b6777ef6cb9a10ecf229bcda8c6e60b2f4af9ee2c4a5fc3541441b4c74fb89f9` (Claude Code, 2026-06-07).
+**Gate:** PASS (0) — held through the flip.
+
+### What happened — STEP 11, the gated launch_ready flip. CHERRY-TOMATO IS CERTIFIED.
+The final step of the gold-standard arc. cherry-tomato is now the first FULLY-complete gold-standard anchor (lettuce flipped booleans-only in M15; cherry is the first to go through the entire v1.5 arc end-to-end: Steps 3.5, 4, 5/5.5, 6/7/8, 9, 10, 11).
+- **Validation pass (independent re-run, did NOT trust prior sessions):** whole_crop_gate cherry = PASS (0 violations); release_verify clean exit 0; all 10 region cells populated with region_notes + anchoring (certification mode — the null/empty slots Step 3.5 accepted are all filled). lettuce reference still PASS.
+- **Entry guard + reset-then-set:** cherry carried a STALE `launch_ready_core/seasoned=true` from `phase_3_m10_cleanup` (set in M10, before the arc — NOT earned). Reset both to false (the Step-11 entry guard `both==false` then held), confirmed the gates green, then atomically re-flipped `launch_ready_core->true` then `launch_ready_seasoned->true` (earned this time). Net boolean value unchanged (true), but now provenance-honest.
+- **Metadata stamped:** `phase` `phase_3_m10_cleanup`->`phase_3_m16_gold_standard_arc`; `date`/`last_audited` -> 2026-06-07.
+- **`status` LEFT UNTOUCHED** (`verified_retro_complete`) per checklist F6 — the status-vocab three-state unification (Appendix B item 1) is a SEPARATE decision, surfaced to Trevor, NOT part of the flip.
+- **Collateral:** only `cherry-tomato.verification_status` changed; all other crops + top-level keys + lettuce byte-identical.
+
+### Arc status
+**cherry-tomato gold-standard arc = COMPLETE.** 10/10 region cells verified, dual-voice gate 0, launch_ready certified. 11th release (10 clean + 1 merge). 
+Still OPEN (do not block the cert): the `status`-vocab successor decision (Trevor — applies to cherry + lettuce); the small Step 2 rider `gs_exemplar_finding_003`; the `fruit_set_temp_f` schema shape (Trevor); the dual-voice-walker blind-spot FIX (Claude Code, before beefsteak); optional ca_south_coast z9 soft-cold_pause revert. NEXT MILESTONE = M16 beefsteak (the second anchor), authored region-first against cherry as the new reference exemplar.
+
+
 ## 2026-06-07 — session `m16_cherry_6_8_beginner_siblings` (claude.ai authored copy / Claude Code released + wrote this entry)
 
 **Start-SHA:** `12348fa008e88b75e5c8052def049bf44e06f8b099561825c5fd298d3d858508` (post-5e, 10/10 cells verified)
