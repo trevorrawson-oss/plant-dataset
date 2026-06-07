@@ -9,37 +9,37 @@
 
 ---
 
-## 🥬 LETTUCE FLIPPED (M15) · 🍅 CHERRY Step 4 IN PROGRESS -- 8 of 10 REGION CELLS SOURCED (M16, 2026-06-06)
-`lettuce-leaf` is the FIRST flipped anchor (1 of 9): `launch_ready_core=True` + `launch_ready_seasoned=True` (`status` stays `"unverified"` pending the M16 vocab decision). **M16 is in flight on `cherry-tomato`, CHERRY FIRST then beefsteak.** Cherry has completed **Step 3.5** (region shells, Claude Code), **Step 9** (residual source-name dash), **Step 10** (`harvest_to_table` T2-as-evidence ruling), and **Step 4 is in progress: 8 of 10 region cells sourced -- `se_gulf`, `ca_interior`, `ca_north_coast`, `ca_south_coast`, `ca_desert`, `low_desert_az`, `warm_arid`, `fl_peninsula`.** **NEXT = `hawaii_tropical`, then `northern_tier` calendar work**, then Steps 5-8, then Claude Code Step 11. **Lettuce was NOT touched -- byte-identical, still certified.** **(Operating model: claude.ai authors, Claude Code releases -- now 2 clean runs; see STATE_HISTORY.)**
+## 🥬 LETTUCE FLIPPED (M15) · 🍅 CHERRY Step 4 WARM-SOURCING COMPLETE -- 9 of 10 REGION CELLS (M16, 2026-06-06)
+`lettuce-leaf` is the FIRST flipped anchor (1 of 9): `launch_ready_core=True` + `launch_ready_seasoned=True` (`status` stays `"unverified"` pending the M16 vocab decision). **M16 is in flight on `cherry-tomato`, CHERRY FIRST then beefsteak.** Cherry has completed **Step 3.5** (region shells, Claude Code), **Step 9** (residual source-name dash), **Step 10** (`harvest_to_table` T2-as-evidence ruling), and **Step 4 (warm-region sourcing) is COMPLETE: all 9 warm/CA cells sourced -- `se_gulf`, `ca_interior`, `ca_north_coast`, `ca_south_coast`, `ca_desert`, `low_desert_az`, `warm_arid`, `fl_peninsula`, `hawaii_tropical`.** **NEXT = `northern_tier` calendar + region_notes (Steps 5.5/6/7)**, then whole-crop Steps 5-8, then Claude Code Step 11. **Lettuce was NOT touched -- byte-identical, still certified.** **(Operating model: claude.ai authors, Claude Code releases -- now 3 runs (2 clean + 1 merge); see STATE_HISTORY.)**
 
 ## Canonical pointer
-- **Current SHA:** `7d4bf50cc56801017ed30d027343c55378a4ffe7631a736dd93284b2ade48140` (M16 cherry Step 4 -- `fl_peninsula` cell: claude.ai authored, Claude Code released CLEAN, no merge/normalization). `LATEST.txt` session line: `m16_cherry_step4_fl_peninsula`.
-- **claude.ai: preflight the next cell (`hawaii_tropical`) against `7d4bf50c`.**
-- **Predecessor chain:** `7d4bf50c` (fl_peninsula) <- `842ee139` (warm_arid) <- `bf96d1d1` (catalog +nmsu_donaana_mg) <- `9d8784f7` (4 coastal+desert cells) <- `813bade9` (catalog +ucanr_san_diego_mg) <- `349fb7af` (ca_interior) <- `339933f2` (se_gulf) <- `f916e8fe` (Steps 9+10) <- `1b4fea68` (north `lifted_from_zone` strip) <- `a65c7175` (Step 3.5 region shells + `second_planting`) <- `29b3aaa9` (M15 lettuce flip) <- ... (full chain in STATE_HISTORY).
+- **Current SHA:** `7dd2837e461710ea33953f2fc5efe45647421658229dfaa026799319ff8b6a79` (M16 cherry Step 4 -- `hawaii_tropical` cell, `year_round`; claude.ai authored, Claude Code released CLEAN). `LATEST.txt` session line: `m16_cherry_step4_hawaii_tropical`.
+- **claude.ai: preflight `northern_tier` (calendar + region_notes) against `7dd2837e`.**
+- **Predecessor chain:** `7dd2837e` (hawaii_tropical) <- `7d4bf50c` (fl_peninsula) <- `842ee139` (warm_arid) <- `bf96d1d1` (catalog +nmsu_donaana_mg) <- `9d8784f7` (4 coastal+desert cells) <- `813bade9` (catalog +ucanr_san_diego_mg) <- `349fb7af` (ca_interior) <- `339933f2` (se_gulf) <- `f916e8fe` (Steps 9+10) <- `1b4fea68` (north `lifted_from_zone` strip) <- `a65c7175` (Step 3.5 region shells + `second_planting`) <- `29b3aaa9` (M15 lettuce flip) <- ... (full chain in STATE_HISTORY).
 - Every PROMOTE re-pins this SHA and `LATEST.txt`. Confirm at session start (protocol #1).
 
-## What just happened (2026-06-06, session `m16_cherry_step4_fl_peninsula`) -- SECOND RUN OF THE NEW MODEL, CLEAN
-- **`fl_peninsula` (zones 10-11, South Florida) released CLEAN** -- no merge, no normalization. claude.ai applied every warm_arid lesson: authored on the CORRECT base (`842ee139`); cited already-catalogued `uf_ifas_vh021` + `uf_ifas_south_cal` (NOT the `ufifas_ext` scout ID) so NO admit needed; cleared its own stale pending markers; used `°F`.
-- **Encoding rulings (Trevor + Claude Code):** **Q1 = B** -- cherry-narrowed soft `heat_pause` `[7,8]` (the two peak >78°F-night months), honoring BOTH the source's cherry-summer-tolerant signal AND the new-fruit-set-stop (vs A's cool-season-only or C's `year_round`). **Q2 = two distinct zone resolutions** (z10 + z11, source-decided per VH021/EP452, not legacy-carried).
-- **Gate: residual 25 -> 24** (fl_peninsula region_notes cleared; the 24 all downstream: 2 region_notes-null + 21 dual-voice + 1 cornell_ext). Only `cherry-tomato` changed; catalog 82 unchanged; §A2 shape 0; §E 0 uncatalogued; §F only the pre-existing cornell gap; lettuce byte-identical `GATE: PASS`. Owed-to-claude.ai (Step 5/5.5): confirm `[7,8]` cherry-narrow + the z10/z11 split at side-by-side.
-- **Operating model (now 2 clean runs):** claude.ai outputs ONLY the updated JSON + a STATE_HISTORY entry snippet (never the whole HISTORY, never LATEST/CURRENT/SHA). Claude Code verifies, computes the SHA, re-pins LATEST, regenerates THIS file, appends the entry, syncs `00-current`, commits + pushes. Cell-by-cell Step-4 detail lives in STATE_HISTORY.
-- **Standing Step-11 item (flagged by claude.ai):** cherry's `launch_ready_core/seasoned: true` are stale M10 per-zone-standard artifacts and CONFLICT with the Step-11 entry guard (which expects both-false at entry, as lettuce did). Claude Code reconciles at the flip (reset to false, then flip under arc rigor). Left untouched mid-arc; parked.
+## What just happened (2026-06-06, session `m16_cherry_step4_hawaii_tropical`) -- STEP 4 WARM-SOURCING COMPLETE
+- **`hawaii_tropical` (zone 11) released CLEAN** (third run; no merge/normalization). claude.ai authored on the correct base (`7d4bf50c`), cited catalogued `uhawaii_ctahr` (no admit), no stale markers, `°F`.
+- **Encoding: `year_round:true` + `calendar_basis`-as-reason** -- verified to EXACTLY match the `lettuce-leaf` hawaii_tropical exemplar (pauseless oceanic-tropical cell: NO heat_pause, NO cold_pause, the absence carrying its reason). Per-region guardrail honored -- cherry's FL/desert `heat_pause` does NOT universalize to Hawaii.
+- **Gate: residual 24 -> 23** (hawaii_tropical region_notes cleared; the 23 all downstream: 1 region_notes-null (`northern_tier`) + 21 dual-voice + 1 cornell_ext). Only `cherry-tomato` changed; catalog 82 unchanged; §A2 shape 0; §E 0 uncatalogued; NO new violations; lettuce byte-identical `GATE: PASS`.
+- **MILESTONE: Step 4 (warm-region sourcing) is COMPLETE** -- all 9 warm/CA cells sourced. `northern_tier` was region-built at Step 3.5 and owes only `calendar[12]` cold_pause derivation + region_notes (Steps 5.5/6/7).
+- **Operating model: 3 runs (2 clean + 1 merge).** claude.ai outputs JSON + a STATE_HISTORY entry only; Claude Code verifies, computes the SHA, re-pins LATEST, regenerates THIS file, appends, syncs `00-current`, commits + pushes. **This file has been targeted-patched across the 9 cell releases; a clean FULL regen is worth doing at the Step-5 transition.**
+- **Standing Step-11 item:** cherry's stale M10 `launch_ready=true` conflicts with the Step-11 entry guard; Claude Code resets-then-flips under arc rigor at the close. Parked.
 
 
 ## Active work + exact next step
-- **M16 cherry: Steps 3.5 + 9 + 10 DONE; Step 4 IN PROGRESS (8 of 10 cells done -- `fl_peninsula` released this session). NEXT = `hawaii_tropical` (claude.ai), then `northern_tier` calendar.** Per `region_source_map` anchors. **Preflight against `7d4bf50c`.**
-  - **`hawaii_tropical` (CTAHR B-91, zone 11) -- crop-distributed timing; year-round encoding may apply** (lettuce Hawaii precedent: `year_round:true` + `calendar_basis` + 12-month all-active calendar). `uhawaii_ctahr` catalogued.
+- **M16 cherry: Steps 3.5 + 9 + 10 DONE; Step 4 (warm-region sourcing) COMPLETE -- all 9 warm/CA cells sourced. NEXT = `northern_tier` calendar + region_notes (claude.ai, Steps 5.5/6/7), then whole-crop Steps 5-8.** **Preflight against `7dd2837e`.**
   - **`northern_tier` (zones 3-7)** -- promoted-verified (cold); owes `calendar[12]` cold_pause derivation (Step 5.5) + region_notes pair (Steps 6/7). Winter-gap months `wait`, owe `cold_pause` (frost-limited, NO midsummer heat_pause up north).
 - **Then in sequence:** Step 5/5.5 (4-round side-by-side on every claim incl. all region windows authored; derive every region `calendar[12]`; classify north winter gaps as `cold_pause`; discover `cornell_ext` zone-6 URL). Steps 6/7/8 (seasoned depth-lift; beginner siblings incl. `cause_beginner`; remaining `region_notes_*` pairs; dual-voice coverage gate to 0 -- **author 27, gate displays 21**, see blind spot). Step 2 rider (`gs_exemplar_finding_003`). Then Claude Code **Step 11** + flip.
 - **`status`-vocab decision still owed (Appendix B item 1) -- THREE-state unification.** Cherry `"verified_retro_complete"`; lettuce `"unverified"`. Successor (leaning `verified_arc`) decided at cherry's flip, back-applied. Do NOT set before decided + flip fires.
 - **Blossom-drop `fruit_set_temp_f` -- T1 anchors in hand, ruling owed (claude.ai surfaces shape, Claude Code adds field).** Now includes the San Diego MG 65°F–90°F range (in `ca_south_coast` provenance) + VH021 + s1b_finding_006 (Clemson/PSU: >90°F day, <55°F night). Schema-touching → Trevor rules shape. Rule with s1b_finding_006 (deferred to family close).
 
-## Gate record (2026-06-06, post-`fl_peninsula`, GATE-CONFIRMED on canonical)
-- **`GATE: 24 VIOLATION(S)`** -- all downstream. Composition: **2** region_notes-null (`hawaii_tropical`, `northern_tier`), **21** dual-voice siblings (Steps 7/8; gate-counts 21, author ~27 -- see blind spot), **1** `cornell_ext` zone-6 URL (Step 5).
-- **§A2 shape classes 0** (`stub:0 | null-track:0 | stale nested:0`); `second_planting` validates clean on the two-window cells (`ca_desert`, `low_desert_az`, `warm_arid`); §E 0 uncatalogued / 0 non-T1; §C/D 0 dash / 0 temp-form; §F only the pre-existing cornell gap. 8 of 10 region cells carry `region_notes`.
+## Gate record (2026-06-06, post-`hawaii_tropical`, GATE-CONFIRMED on canonical)
+- **`GATE: 23 VIOLATION(S)`** -- all downstream. Composition: **1** region_notes-null (`northern_tier` only), **21** dual-voice siblings (Steps 7/8; gate-counts 21, author ~27 -- see blind spot), **1** `cornell_ext` zone-6 URL (Step 5).
+- **§A2 shape classes 0** (`stub:0 | null-track:0 | stale nested:0`); `second_planting` validates clean on the two-window cells (`ca_desert`, `low_desert_az`, `warm_arid`); §E 0 uncatalogued / 0 non-T1; §C/D 0 dash / 0 temp-form; §F only the pre-existing cornell gap. 9 of 10 region cells carry `region_notes` (all but `northern_tier`).
 
 
-## Region fill state (8 of 10)
+## Region fill state (9 of 10)
 | region | zones | status | window | heat_pause | second_planting |
 |---|---|---|---|---|---|
 | `northern_tier` | 3-7 | promoted-verified; owes calendar+notes | (cold) | none (frost-limited) | (cold 6-7 TBD) |
@@ -51,11 +51,11 @@
 | `warm_arid` | 8 | FILLED | two-window | month 7 (cherry-narrowed) | yes (fall) |
 | `low_desert_az` | 9 | FILLED | two-window | Jun-Aug (absolute) | yes (Sep) |
 | `fl_peninsula` | 10-11 | FILLED | near-continuous (z10+z11 distinct) | Jul-Aug (cherry-narrowed) | none |
-| `hawaii_tropical` | 11 | PENDING | TBD (year-round?) | n/a | n/a |
+| `hawaii_tropical` | 11 | FILLED | year_round (all-active) | none (oceanic-tropical) | none |
 
 ## Flip gates (the four distinct "flips" -- never conflate them)
-1. **Per-crop `launch_ready` flip** -- ✅ lettuce DONE (1 of 9). Cherry is mid-arc (Steps 3.5 + 9 + 10 done; Step 4 in progress, 8 of 10 cells done; owes 3 warm regions + northern_tier calendar + Steps 5-8 + 11). Beefsteak after cherry.
-2. **Region read-layer flip** -- renderer reads `regions{}` first. **Gate:** shape proven on the 3 provers (lettuce ✅; cherry shell ✅ + 6 cells real-filled, owes 4 more; beefsteak owes both). Ships with `zones{}` fallback. **2.9+.** (The plant-astro renderer rewrite -- read `regions{}` + consume `second_planting` instead of synthesizing from `zones{}` multi-window strings -- is gated here.)
+1. **Per-crop `launch_ready` flip** -- ✅ lettuce DONE (1 of 9). Cherry is mid-arc (Steps 3.5 + 9 + 10 done; Step 4 warm-region sourcing COMPLETE, 9 of 10 cells; owes northern_tier calendar+notes + whole-crop Steps 5-8 + Step 11; the stale M10 `launch_ready=true` resets at the flip). Beefsteak after cherry.
+2. **Region read-layer flip** -- renderer reads `regions{}` first. **Gate:** shape proven on the 3 provers (lettuce ✅; cherry shell ✅ + 9 of 10 cells real-filled, owes northern_tier calendar/notes; beefsteak owes both). Ships with `zones{}` fallback. **2.9+.** (The plant-astro renderer rewrite -- read `regions{}` + consume `second_planting` instead of synthesizing from `zones{}` multi-window strings -- is gated here.)
 3. **Authoring-model flip** -- carrots onward authored region-first. **Gate:** 3 provers done.
 4. **Schema perennial bump** (`lifecycle_override`) -- FUTURE, **2.9+.** After carrots.
 

@@ -6,6 +6,48 @@
 
 ---
 
+## 2026-06-06 — session `m16_cherry_step4_hawaii_tropical` (claude.ai lane)
+
+**Start-SHA:** `7d4bf50cc56801017ed30d027343c55378a4ffe7631a736dd93284b2ade48140` (fl_peninsula end; preflight matched LATEST.txt + CURRENT_STATE)
+**End-SHA:** `7dd2837e461710ea33953f2fc5efe45647421658229dfaa026799319ff8b6a79`
+**Gate:** **DERIVED 24 → ~23** (claude.ai had no `whole_crop_gate.py` this session). The drop = the `hawaii_tropical` region_notes pair cleared. **Confirm with `whole_crop_gate.py cherry-tomato` at promote.**
+
+### What happened
+One Step-4 region cell authored on `cherry-tomato`: **`hawaii_tropical` (zone 11)**. Region fill **8/10 → 9/10**. This is the **SECOND year-round cell in the dataset** (lettuce `hawaii_tropical`, m15_na3g, was the first) and the first year-round cell on a *transplanted* crop.
+
+- **Shape: year-round / aseasonal, transplant variant.** `plantings[]` carries `start_indoors` + `plant_out` (NOT lettuce's `direct_sow`, because tomato is transplanted), both anchored `from:'year_round'` (window 365); `harvest_start` offsets from `plant_out_start` +62d (cherry mid maturity); `harvest_end` mirrors `year_round`. `resolved_by_zone[11]`: all-12-month active `calendar` with **no pause state**, `year_round:true`, `planting_note:'year_round'`, `resolution_method:'ctahr_year_round_resolution'`, plus a `calendar_basis` prose reason. Matches the lettuce year-round template adapted to the cherry-cell (start_indoors/plant_out) shape.
+- **`declare_one_outcome_invariant` satisfied** (Refinement A, all-active scope): `calendar[]` has no `heat_pause`/`cold_pause`/`season_over`, so the cell carries `year_round:true` + `calendar_basis`. Anchor coherence holds: region `start_indoors` and `plant_out` both `from:'year_round'` ⇒ resolved-cell `year_round:true` is derivable.
+- **region_notes pair authored** (seasoned + beginner). Beginner keeps the plain causal hook (no heat to fear; pests/disease/rain are the real work; pick adapted/cherry types, cage, water the soil, replant every few months), drops mechanism, never less true than seasoned. User-facing copy `--`-free / em-dash-free / no "degrees F" (§C/D-clean from first draft).
+
+### Year-round encoding decision (the kickoff's open question — RESOLVED: year-round applies)
+- **CTAHR HGV-5 "Home Garden Tomato" opens with the explicit T1 statement** that tomato can be grown throughout the year in most places in Hawaii by choosing varieties adapted to the area. Cherry tomatoes are named among recommended container types and 'Red Cherry' among cultivars grown in Hawaii. Same logical structure as the lettuce RES-164 year-round statement; the management lever is **variety choice** (the locally bred, nematode-/disease-tolerant UH cultivars — determinate 'Anahu'/'Healani'/'Kewalo', indeterminate N-series hybrids that fruit continuously while healthy), not a season.
+- **heat_pause deliberately NOT added** — a no-sow exclusion would directly contradict the explicit T1 year-round statement (same reasoning as lettuce **Decision 1**).
+
+### Key per-region judgment recorded (precedent)
+- **Cherry summer `heat_pause` does NOT universalize to Hawaii.** Per-region source finding, consistent with the standing guardrail. fl_peninsula carries Jul–Aug (UF/IFAS documents sustained nights ~78°F stopping fruit set in larger types); the deserts carry an absolute Jun–Aug. CTAHR makes the **opposite, explicit** statement for Hawaii (year-round by variety choice) and names **disease/pest/rain** — TSWV (thrips-vectored), TMV, warm-wet leaf spots/blights, whitefly, leafminer, fruit fly, rain-cracking — as the constraint, NOT a fruit-set season gap. Cherry is the most heat-tolerant tomato class → the **strongest** year-round case, not the weakest.
+- **beefsteak hand-off:** beefsteak re-derives. Likely still year-round-capable per the same HGV-5 statement, but a candidate for a quality caveat. **Re-read HGV-5 at the beefsteak cell; do NOT inherit this cell's wording.**
+
+### Sourcing decision (surfaced for Trevor's ratification at Step 5)
+- **Timing ANCHORED on HGV-5** (Ebesu, CTAHR Plant & Environmental Protection Sciences; replaces the 1978 "Tomatoes" leaflet) — the current crop-specific T1 guide carrying the year-round statement. **The kickoff named B-91, but B-91 is a 1943 general home-gardening bulletin (137 pp., historical);** per methodology (current, crop-specific T1) it is **corroboration only, not the timing anchor.** This mirrors the lettuce hawaii cell (anchored RES-164 + HGV-2; B-91 in `verified_against` as historical). B-91 retained in `verified_against`, flagged "1943; historical corroboration only."
+- **No tip_overrides authored.** Unlike lettuce's genuine bolting action-divergence fork, no specific portable cherry tip with a *materially* different Hawaii grower action was established this session (tip work is Steps 6/7/8; n=1 discipline — not manufactured). Management guidance lives in `region_notes`. Matches fl_peninsula (no `tip_overrides` key).
+
+### Catalog
+- **No admits, no changes.** Only `uhawaii_ctahr` cited (T1, admitted Phase B 2026-05-30; `citable_for` covers CTAHR crop-specific production guides and names the zone-11 `hawaii_tropical` anchor). HGV-5 publishes under it with URL `…/freepubs/pdf/HGV-5.pdf` (verified live 2026-06-06), exactly as the lettuce cell used per-publication CTAHR URLs under the same institutional ID. `source_catalog` byte-identical at 82 entries.
+- **Stale pending marker cleared:** stub carried `sources_pending_admission:['uhawaii_ctahr']` (stale since the Phase B admit). Cleared to `[]` in the authored cell, mirroring fl_peninsula clearing its stale `ufifas_ext` scout marker.
+
+### Verification done (gate NOT run — claude.ai lane, no gate script)
+- **Collateral hash audit:** ONLY `cherry-tomato` changed; all 122 other crops + all top-level non-crop keys (`source_catalog`, `region_source_map`, `zone_frost_data`, …) byte-identical; **lettuce-leaf byte-identical** (still certified); beefsteak byte-identical.
+- **New-cell structural validation:** `calendar` len 12, zero pause states; `year_round:true`; `calendar_basis` present; `sources_pending_admission` == `[]`; every `sources` array references catalogued `uhawaii_ctahr`; anchor coherence (both planting anchors `from:'year_round'`).
+- **Convention scan (user-facing):** `region_notes_beginner` / `region_notes_seasoned` / `zone_notes` / `calendar_basis` all clean (no spaced `--`, no U+2014 em-dash, no spelled "degrees F"). Zero real em-dashes in the entire cell.
+- **Serialization:** minified `separators=(',',':')`, `ensure_ascii=False`, no trailing newline (verified on bytes); reparses clean.
+
+### Residual after this session (cherry, claude.ai lane)
+**Derived gate ~23.** **Step 4 is now 9/10 — only `northern_tier` remains** (cold; owes `calendar[12]` cold_pause derivation [Step 5.5] + region_notes pair [Steps 6/7]; winter-gap months `wait`/`cold_pause`, NO midsummer heat_pause up north). 1 region_notes pair still null (`northern_tier`); 21 dual-voice siblings (author ~27, gate shows 21 — blind-spot note still owed to Claude Code); `cornell_ext` zone-6 URL; `gs_exemplar_finding_003` extreme-zone record. Then Steps 5/5.5–8 (4-round side-by-side on every authored window incl. confirming the year-round encoding holds; derive every region `calendar[12]`; seasoned depth-lift + beginner siblings), then Claude Code **Step 11** + the `launch_ready` flip (with the parked reconciliation: cherry's stale M10 `launch_ready_core/seasoned:true` reset to false at entry, then flipped under arc rigor). **The arc is NOT done — 9 of 10 cells of one step are.**
+
+**Claude Code release note (2026-06-06, session `m16_cherry_step4_hawaii_tropical`):** `7d4bf50c` -> `7dd2837e461710ea33953f2fc5efe45647421658229dfaa026799319ff8b6a79`. **CLEAN release (third run; no merge, no normalization).** Authored on the correct base (`7d4bf50c`), cited catalogued `uhawaii_ctahr` (no admit), no stale markers, `°F`. Encoding: `year_round:true` + `calendar_basis`-as-reason -- verified to **exactly match the `lettuce-leaf` hawaii_tropical exemplar** (pauseless oceanic-tropical cell: NO heat_pause, NO cold_pause, the absence carrying its reason; the per-region guardrail honored -- cherry's FL/desert heat_pause does NOT universalize to Hawaii). Verification: only `cherry-tomato` changed, catalog 82 unchanged, lettuce byte-identical, **NO new violations** (only hawaii_tropical region_notes cleared), residual `24 -> 23`, §E 0 uncatalogued, `GATE: PASS`. **MILESTONE: this completes the 9 warm/CA cells -- Step 4 (warm-region sourcing) is COMPLETE.** Remaining on cherry: `northern_tier` owes `calendar[12]` cold_pause derivation + region_notes (Steps 5.5/6/7); then whole-crop Steps 5-8; then Claude Code Step 11 + flip (incl. the stale-`launch_ready` reset). CURRENT_STATE is due a clean FULL regen at this milestone (it has been targeted-patched across the 9 cell releases).
+
+---
+
 ## 2026-06-06 — session `m16_cherry_step4_fl_peninsula` (claude.ai authored; Claude Code releases)
 
 **Cell authored:** `cherry-tomato.regions.fl_peninsula` (zones 10–11, South Florida). 8th of 10 region cells. Step 4 fill 7/10 → 8/10.
