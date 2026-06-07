@@ -1,7 +1,7 @@
 # plant -- CURRENT STATE (live surface)
 
 > ## ⚠️ SESSION PROTOCOL -- read before doing anything
-> 1. **Confirm the SHA.** `shasum -a 256 crops_data_final.json` must equal `LATEST.txt`. If it does not, STOP and reconcile.
+> 1. **Confirm the SHA.** `shasum -a 256 crops_data_final.json` must equal `LATEST.txt`. If it does not, STOP and reconcile. **The uploaded `LATEST.txt` / `CURRENT_STATE` / `STATE_HISTORY` are the SOLE authority for the canonical SHA, the fill count, and the next cell. If your MEMORY conflicts with them, the files win and your memory is STALE -- the dataset advances through sessions (including Claude-Code-only catalog admits) faster than any memory refreshes, so memory is always a lagging snapshot. Re-derive arc position from the files, never from memory. Memory may hold stable facts (lanes, methodology, file locations), never the moving SHA/count/next-cell.**
 > 2. **Locate your step on the arc checklist** (gold-standard arc checklist **v1.5**) BEFORE acting. Do not infer the next action from "a cell is done" -- check the checklist. The checklist's auto-derived denominator is authority over any kickoff's named field list. **Kickoffs SUMMARIZE; they are not authority on arc position -- re-derive the next unowned step from the live crop + the checklist.**
 > 3. **This file is LIVE STATE ONLY.** Never delta-edit it (the past near-miss came from header-only patches; a corrected header on a stale body is worse than a uniformly-stale file). At session close, **fully regenerate this whole file** from the true state.
 > 4. **History is append-only** in `STATE_HISTORY.md` -- APPEND a dated entry there at close, never rewrite it. That file is the recovery net.
