@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-06-07 -- session `m16_beefsteak_step3_5_region_shells` (Claude Code structural lane -- M16 ANCHOR 2 BEGINS)
+
+**Start-SHA:** `87c8e0a14fdce235a3b751d731c8c1c116115a39334902912ef4f2886c8fe77b` (post status-vocab unify; preflight matched LATEST.txt)
+**End-SHA:** `006cd0afbab0d3b9fab8909a870c3ac98909b3f066c5d6c0f8f4457693ec0071` (Claude Code, 2026-06-07)
+**Gate:** beefsteak §A2 SHAPE = 0 (49 -> 43, residual all downstream); cherry PASS; lettuce PASS.
+
+### What happened -- beefsteak Step 3.5, the region shell build (the M16 anchor-2 arc opens)
+M16 `beefsteak-tomato` (anchor 2 of 9) starts. Step 3.5 (Region shell build, Claude Code lane) brought all 10 `regions{}` cells to cherry's ratified reference shape -- the same structural build cherry got at `a65c7175`, now run for beefsteak via `tools/apply_region_shells.py beefsteak-tomato`.
+- **9 warm cells** (se_gulf, ca_interior, ca_north_coast, ca_south_coast, ca_desert, warm_arid, low_desert_az, fl_peninsula, hawaii_tropical): `PENDING` stub string -> shape-complete RULE skeleton (`succession_id:1, label:"main", track:"beginner"`, empty `start_indoors`/`plant_out`/`harvest_start`/`harvest_end` arrays, empty `anchoring_urls`, `region_notes_*` keys present-null). The 4 `California -- X` `region_label` em-dashes resolved to `California: X`.
+- **`northern_tier` promoted from the verified cold `zones{}`:** `plantings[0].track` None->`beginner`; all 5 `resolved_by_zone` cells (z3-7) stripped of the forbidden nested `plantings` (§3b-i) + the tautological `lifted_from_zone`, restamped `static_precompute`->`zone_promoted_verified`; `plantings_provenance` rewritten from the Phase-A "LIFTED VERBATIM from zone 5" string to the beefsteak promotion record. NT key structure now byte-identical to cherry's reference NT.
+- **Succession:** beefsteak is `succession_policy.suitable=false` (a `second_planting` crop like cherry -- its `tip_seasoned` is explicit: "Not a true succession crop; ... In zones 9-11 a late-summer planting ... is viable as a separate fall crop, not a succession"). So NO succession hoist is needed; the Step-3.5 `track:"beginner"` default is complete. (Contrast lettuce, which DID hoist `track:"succession"`.)
+- **Gate:** §A2 SHAPE classes all **0** (`stub:0 | null-track:0 | stale-nested:0`) -- closes `gs_exemplar_finding_shell` for beefsteak. Total **49 -> 43**. The -6 = 4 `region_label` dashes resolved + the 12 shape violations replaced by 10 admission-acceptable `region_notes`-null (the 9 warm + NT, populated by claude.ai Steps 6/7). §B SP dropped 97 -> 64 -- the CORRECT de-dup of the seasoned rule prose (`source_quote_seasoned`/`synthesis_note_seasoned`) redundantly nested in the 5 NT resolved cells; the canonical copy survives in the region-constant `plantings[]`. §F claim-leaves 68 -> 48, gaps unchanged at 1 (the stripped nested entries were clean -- no new anchoring gap). Residual 43 = all DOWNSTREAM claude.ai work: 10 region_notes-null (Steps 6/7); 30 dual-voice siblings incl. `cause_beginner` (x8) + `growth_stages.log_prompt_beginner` (x6, a beefsteak extra over cherry) (Steps 6/7/8); 1 `sources_summary[19].name` source-name dash (Step 9, same item cherry had); 1 `harvest_to_table` T2 (Step 10); 1 `harvest_urgency` anchoring (Step 4/5/10).
+
+### Tooling generalized for reuse (Claude Code lane, commit `653234d`)
+The cherry-pinned region-shell toolchain made reusable for all 9 anchors (it could not have run against beefsteak as-is):
+- `build_region_shells`: `session`/`date` params so the NT promotion provenance records THIS crop's session, not cherry's hardcoded `m16_cherry_step3_5_region_shells`/`2026-06-05`. Defaults preserve cherry-era behavior (backward compatible; a test pins it).
+- `apply_region_shells`: reads the start-SHA gate from `LATEST.txt` (the hardcoded `a65c7175` cherry constant could not match any later base) + passes session/date.
+- `precommit_release_verify`: **Step-3.5 shell-build allowance** -- a `region_notes pair both null: R` violation new ONLY because region R graduated from a PENDING stub to a shaped shell is the accepted admission unmask, not a regression. Real region_notes-blanking on an already-built cell still blocks (TDD, 4 cases). Beefsteak is the FIRST Step-3.5 to hit this hook (cherry's predated it); without the fix the hook blocks every shell build.
+- `test_build_region_shells`: decoupled from canonical fill-state. The old test used cherry as the empty-skeleton fixture, but cherry's warm cells filled at its Step 4, so the assertion broke on current canonical (a real pre-existing test breakage, fixed here). Now a synthetic stub fixture drives the build-from-stub path; cherry is an idempotency smoke test.
+
+### Verification (protocol #6 -- a green gate is NOT a clean release)
+- **(a) gate:** §A2 SHAPE = 0; total 43 (admission state). cherry PASS, lettuce PASS (regression-guarded).
+- **(b) release_verify** (`--slug beefsteak-tomato --ref cherry-tomato`): collateral clean (only `beefsteak.regions` changed; `zones{}`, lettuce, cherry, catalog byte-identical). Its §B "new violations" = exactly the 9 expected `region_notes`-null unmasks (the stub strings were masking them; Step 3.5 admission accepts null `region_notes`). Its §D flagged 9 `--` strings -- ALL **pre-existing** legacy `zones{}` anchoring-notes + Phase-B `zone_8_presence`/`zone_10_desert_fold` markers, byte-confirmed UNCHANGED base->scratch, and correctly backend-exempt in `whole_crop_gate` (release_verify's §D filter is narrower -- parked tooling note). §E/F ok. §C: 5 NT `wait`-month notes = Step 5.5 pause-legibility reviews (non-blocking; NT owes `cold_pause` derivation at Step 4/5.5, exactly as cherry's NT did).
+- **(c) claim cross-check:** byte-diff base->scratch -- EVERY change is an intended transform op (region_label dash x4, stub->skeleton x9, NT track + provenance + nested-strip x5 + lifted_from_zone-strip x5 + restamp x5); ZERO unexpected resolved-cell field changes; nothing outside `regions{}` touched.
+- **Pre-commit hook (Step-3.5-aware):** "no new violations (43 total, cleared 6) -- OK, no regression."
+- **Special-case note:** Step 3.5 is a structural shell build, not a claude.ai cell patch -- release_verify's single-cell-promote model only partially fits (its §B and §D both report expected/pre-existing artifacts, NOT regressions, as the cross-check proves). The authoritative admission gate is `whole_crop_gate` §A2 SHAPE = 0.
+
+### Residual / next
+**Beefsteak Step 3.5 DONE -- 10/10 shells at reference shape, §A2 SHAPE 0.** NEXT = **beefsteak Step 4 (warm-region sourcing, claude.ai lane)**: source the 9 warm shells from the `region_source_map` T1 anchors; drop orphaned cold (UMN) prose (beefsteak carries the identical `gs_exemplar_finding_001` pattern as cherry); clear `sources_pending_admission` per cell; `northern_tier` owes `calendar` `cold_pause` + `region_notes`. Beefsteak re-derives ALL heat biology independently (likely a WIDER pause than cherry). Handoff at `~/Downloads/HANDOFF_beefsteak_step4/`. **Beefsteak's stale `launch_ready=true` + `verified_complete` stay UNTOUCHED -- reset-then-re-earn at its OWN Step 11.** Post-cert tooling-hardening batch (#1 patch applier / #2 walker / #3 pre-commit hook + runbook) COMPLETE.
+
+
 ## 2026-06-07 — session `m16_status_vocab_unify` (Claude Code lane — status-vocab decision + a walker-fix finding)
 
 **Start-SHA:** `b6777ef6cb9a10ecf229bcda8c6e60b2f4af9ee2c4a5fc3541441b4c74fb89f9` (post-Step-11 flip)
