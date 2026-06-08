@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-08 -- session `m16_beefsteak_steps9_10_11_certification` (Claude Code lane -- BEEFSTEAK-TOMATO CERTIFIED, anchor 3 of 9)
+
+**Start-SHA:** `e8b46da50e043428d14be82136fba5e765040215564c29ff414004937746ea81` (post Steps 6/7/8; preflight matched LATEST.txt)
+**End-SHA:** `973632ea0549b77d1d4810b34d2c81f86f5ebd39dbffb6cfabd07c5162b10a63` (Claude Code, 2026-06-08)
+**Gate:** beefsteak `GATE: PASS` (3 -> 0); cherry + lettuce PASS.
+
+### What happened -- Steps 9 + 10 + 11 (Claude Code mechanical lane + the gated flip). BEEFSTEAK CERTIFIED.
+The final steps of beefsteak's gold-standard arc, all Claude Code lane (no claude.ai handoff -- mechanical fixes + the flip). beefsteak is the THIRD certified anchor (after lettuce M15 + cherry M16) and the first beyond cherry to run the full v1.6 arc end-to-end with independently-sourced (wider-than-cherry) biology.
+
+- **Step 9 (dash):** `sources_summary[19].name` (id `ucd_postharvest`) "UC Davis Postharvest Technology Center -- Produce Facts Sheets" -> ", Produce Facts Sheets" (publisher-publication apposition = comma, matching cherry; comma-vs-colon stays Trevor's one-char call).
+- **Step 10 (T2 de-cite + anchoring):** (a) `harvest_to_table` (catalog T2, "Not citable as anchor for biological claims") cited in `tips_by_stage.germination[0].sources` alongside 4 T1 -> REMOVED from `sources` + `anchoring_urls` (no grandfathering; cherry cites it 0x -- de-cite matches the reference). (b) `harvest_urgency_sources:[umn_ext,ncsu_ext]` lacked its anchoring sibling -> added `harvest_urgency_anchoring_urls` (cherry's verified template: umn_ext growing-tomatoes + ncsu_ext cracking page, verified 2026-05-22).
+- **Verbatim/copyright scan (the systematic Step-11 gate -- RAN FULL, not skipped):** fetched all 69 cited URLs to cache (56 HTTP 200; 13 PDF/404/403/JS reported NOT COVERED honestly), scanned every user-facing prose string for >=8-word shared runs. **2 HARD hits, BOTH adjudicated before the flip (the discipline that caught lettuce's `s11_finding_002`):**
+  - **HIT 1 -- `diseases[0].cause_seasoned`** (DEPTH-LIFTED at Step 6 this arc): shared "starts at the bottom of the plant and moves upward" with the Arkansas (uaex) **Septoria** line ("...starts at the bottom of the plant and rapidly spreads") -- different disease (beefsteak's is Alternaria/early blight), diverges after the run, but 8+ words. Surfaced to Trevor; **he chose reword-then-certify.** Reworded -> "**starts low on the plant and moves upward**" (Claude Code mechanical run-break; meaning + seasoned voice preserved). Re-scan: HIT 1 GONE.
+  - **HIT 2 -- `failure_diagnostics[3].next_season_tip_beginner`** (pre-existing): "need about 1 to 2 inches of water" shared with UNL -- **RULED BENIGN** (universal numeric watering convention; `s11_finding_003`-class precedent; Trevor 2026-06-08). Not reworded. 1 residual benign-adjudicated HARD hit, consistent with lettuce certifying with a benign-numeric finding.
+- **Step 11 (reset-then-flip):** beefsteak carried STALE `launch_ready_core/seasoned=true` + `status="verified_complete"` + `phase="phase_3_m11_cleanup"` (M11 pre-arc artifacts). RESET both flags -> false (entry guard `both==false` held), confirmed every gate green (whole_crop_gate 0, two-field predicate 0 blockers, release_verify clean, verbatim adjudicated), then atomically re-flipped -> true (EARNED). `status` -> `verified_gs_arc`; `phase` -> `phase_3_m16_gold_standard_arc`; `date`/`last_audited` -> 2026-06-08. Net launch_ready unchanged (true), now provenance-honest (cherry's M10 pattern).
+
+### Verification (protocol #6 + full Step-11 suite)
+whole_crop_gate beefsteak PASS (3->0); cherry + lettuce PASS. release_verify: only beefsteak changed (5 keys -- sources_summary, tips_by_stage, harvest_urgency_anchoring_urls, diseases, verification_status); §B no new violations; §D 6 = the SAME pre-existing legacy `zones{}` backend dashes. verbatim: hit 1 reworded/gone, hit 2 benign-ruled. **roster gate (register_completeness): dataset-wide HALT (24 unruled region `source_quote` patterns + 4 deferred companions) -- VERIFIED PRE-EXISTING on the base; cherry + lettuce are certified under the IDENTICAL HALT, so it is NOT a per-crop flip blocker** (it gates the future register-conversion / new-crop-admission). Collateral hand-audited: only beefsteak's 5 intended keys; cherry + lettuce + source_catalog + every other top-level key byte-identical.
+
+### Residual / next
+**BEEFSTEAK-TOMATO CERTIFIED -- anchor 3 of 9.** All 4 flip-gates advanced: per-crop launch_ready (3 done); authoring-model-flip provers (3 MET -> carrots onward region-first); region read-layer (proven on 3). NEXT = anchor 4 (carrots, region-first). **Dataset-wide item surfaced to Trevor (NOT a per-crop blocker):** the register inventory needs region-cell `source_quote` ruled EXCLUDED (the 24 unruled patterns are all that one backend field); the 4 companions `provenance.reason` are deferred-by-design. Beefsteak verbatim residual: 1 benign-adjudicated HARD hit (the water convention), documented.
+
 ## 2026-06-08 -- session `m16_beefsteak_steps678_dual_voice_nt_region_notes` (claude.ai authoring lane -- M16 anchor 2, Steps 6 + 7 + 8)
 
 **Start-SHA:** `8fdb3ee66c6866ed690949e03d59b90c006f4231d759a2222ecfa1b20ce63f54` (beefsteak Steps 5 + 5.5; preflight `shasum -a 256 crops_data_final.json` MATCHED `LATEST.txt` at session open)
