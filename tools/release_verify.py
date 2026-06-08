@@ -171,6 +171,36 @@ def main():
     if missing: concern(f"region_notes_beginner missing where seasoned present: {missing}")
     else: ok("every cell with seasoned notes has beginner notes")
 
+    # G. exemplar value-divergence -- the "byte-identical to <ref>" smell.
+    # SHAPE should match the exemplar (checked in E); biological VALUES (calendar
+    # tokens, heat_pause months) must be derived from the CROP's own sources. A value
+    # byte-identical to the reference is either a legit convergence (must be attested
+    # "independently derived, why it converges") or a PASTE. Surfaced, NOT blocked --
+    # but every identical value must carry an own-source justification in the entry.
+    # This also catches a loose "identical to <ref>" CLAIM that is actually false: if
+    # the entry says identical but a cell shows up here as DIFFERS, the claim is wrong.
+    print(f"G. exemplar value-divergence (calendar/heat_pause identity vs {a.ref})")
+    ident = []
+    for r, cell in regions.items():
+        rcell = refregions.get(r)
+        if not rcell:
+            continue
+        for z, zc in (cell.get("resolved_by_zone") or {}).items():
+            rzc = (rcell.get("resolved_by_zone") or {}).get(z)
+            if not rzc:
+                continue
+            cal, rcal = zc.get("calendar"), rzc.get("calendar")
+            if isinstance(cal, list) and cal == rcal:
+                ident.append(f"{r}.z{z}.calendar")
+            hp = (zc.get("heat_pause") or {}).get("months")
+            rhp = (rzc.get("heat_pause") or {}).get("months")
+            if hp is not None and hp == rhp:
+                ident.append(f"{r}.z{z}.heat_pause.months={hp}")
+    if ident:
+        note(f"value-IDENTICAL to {a.ref} -- attest each as independently-derived, NOT pasted: {ident}")
+    else:
+        ok(f"no region calendar/heat_pause byte-identical to {a.ref} (all crop-specific values)")
+
     print()
     if notes:
         print(f"  ({len(notes)} review note(s) above -- Step 5/5.5 items, NON-blocking)")
