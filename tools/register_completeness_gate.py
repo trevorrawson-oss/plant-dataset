@@ -34,8 +34,11 @@ EXCLUDED_KEYS = {
     "to_spacing","phase","status","image","example_product","plantings_provenance",
     "provenance","lifted_from_zone","name","botanical_name","family","variety",
     "region_label","calendar_basis","resolution_source","from","from_year_round_note",
-    # AUDIT-LEAF
-    "url","verified","accessed","publisher","source_class","source_note",
+    # AUDIT-LEAF (evidence machinery). `source_quote` reclassified SP->EXCLUDED per
+    # register_bearing_field_inventory addendum 2026-06-08 (verbatim third-party text =
+    # backend evidence, never rendered; matches whole_crop_gate). `_seasoned` variant is
+    # un-renamed to bare in the dataset, so the bare key is what is ruled here.
+    "url","verified","accessed","publisher","source_class","source_note","source_quote",
     "verification_log_ref","filing_record","disposition","scope","session","field",
     "assigned_to","deferred_to","last_audited","summary","resolution_note",
     "filed_in","filed_in_session","resolved_in","resolved_by","note_internal",

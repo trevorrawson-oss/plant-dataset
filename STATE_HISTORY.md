@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-08 -- session `register_source_quote_excluded_normalization` (Claude Code lane -- dataset-wide register normalization)
+
+**Start-SHA:** `973632ea0549b77d1d4810b34d2c81f86f5ebd39dbffb6cfabd07c5162b10a63` (post beefsteak cert; preflight matched LATEST.txt)
+**End-SHA:** `ab389f72136f6d8f6576da6f93b62c8eb1cf2e3cf765041276a6ac746c4f5e4b` (Claude Code, 2026-06-08)
+**Gate:** register_completeness_gate HALT(24) -> PASS(0); whole_crop_gate lettuce/cherry/beefsteak all PASS.
+
+### What happened -- `source_quote` reclassified SP -> EXCLUDED, un-renamed dataset-wide
+Implements the claude.ai register-inventory addendum (2026-06-08, Trevor-ratified): `source_quote` (verbatim third-party extension text, e.g. "tomatoes will take 6 weeks") reclassified from SP (seasoned-rendered) to EXCLUDED (§4 AUDIT_LEAF / evidence machinery -- same class as `source`/`source_id`/`source_note`/`source_class`). **Reverses the 2026-05-30 "Confirmed SP" call** -- that confirmation weighed the quotes as content and judged them seasoned-appropriate; it did not weigh the verbatim-display IP posture, which governs here (rendering unparaphrased third-party text to users as product content contradicts the paraphrase discipline + the `verbatim_scan` that just caught a real 8-word lift on beefsteak; some stored quotes exceed the <15-word attribution line).
+
+Resolves the parked 24-pattern roster HALT. Origin: the 2026-06-03 register-conversion renamed populated `source_quote` -> `source_quote_seasoned`; later region-fill authoring wrote bare `source_quote`. The dataset held a MIX -- **794 suffixed across 32 crops + 2265 bare across 95**. The ruling: all bare/backend.
+
+**Apply (Claude Code mechanical, two coupled parts):**
+1. **Dataset un-rename:** all 794 `source_quote_seasoned` -> bare `source_quote` (value + position preserving; 0 collisions). `synthesis_note_seasoned` / `design_note_seasoned` (own-voice reasoning) UNCHANGED -- they stay SP and keep rendering to seasoned mode (the seasoned "show your work" layer is NOT lost). Result: all 3059 `source_quote` are bare/backend; none renders to users.
+2. **Gate sync:** added `source_quote` to `tools/register_completeness_gate.py` `EXCLUDED_KEYS` (AUDIT-LEAF section) to match the inventory + `whole_crop_gate` (which already classed it backend). The two gates now agree -- this was the same gate-classification-drift class as the `basis_seasoned` item.
+
+### Verification
+- **In-transform audits (independent, all asserted):** (a) 0 `source_quote_seasoned` survive; (b) `source_quote` count 2265 -> 3059 (= +794); (c) strip-all-`source_quote*` -> before == after byte-identical (NOTHING else changed -- the decisive collateral check); (d) `source_quote*` VALUE multiset preserved (no value altered or dropped).
+- **register_completeness_gate: HALT(24) -> PASS(0)** on the normalized canonical. **whole_crop_gate: lettuce + cherry + beefsteak `GATE: PASS`** (backend rename, zero violation change -- the 3 certified anchors are untouched in their certified state; both gate-keys were already backend). Multi-crop change (32 crops) -> targeted collateral (the strip-compare), not the single-crop `release_verify` model (which does not fit a dataset-wide key rename).
+
+### Residual / next
+**24-pattern roster HALT RESOLVED.** The 4 `companions.*.provenance.reason` patterns remain DEFERRED-by-design (inventory §5). **Open follow-up:** `register_bearing_field_inventory_v1_0.md` lives only in claude.ai project knowledge; since `register_completeness_gate.py` ENFORCES it, consider promoting the inventory on-disk (as the gold-standard checklist was) so the spec + its enforcement are co-located + version-tracked. NEXT (unchanged) = anchor 4 = carrots (region-first). The addendum + the original ruling memo are archived under `06-sessions/handoffs-bundles/`.
+
 ## 2026-06-08 -- session `m16_beefsteak_steps9_10_11_certification` (Claude Code lane -- BEEFSTEAK-TOMATO CERTIFIED, anchor 3 of 9)
 
 **Start-SHA:** `e8b46da50e043428d14be82136fba5e765040215564c29ff414004937746ea81` (post Steps 6/7/8; preflight matched LATEST.txt)
