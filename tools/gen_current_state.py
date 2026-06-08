@@ -115,8 +115,10 @@ def main():
     P.append(static_header())
     P.append("")
     P.append(f"<!-- FILL: headline -- one-line cert status. Derived facts: "
-             f"{len(anchors)} of 9 anchors verified_gs_arc "
-             f"({', '.join(c['slug'] for c in anchors)}); see Flip gates below. -->")
+             f"{len(anchors)} anchors verified_gs_arc "
+             f"({', '.join(c['slug'] for c in anchors)}); see Flip gates below. "
+             f"(Anchor TARGET is a roadmap decision -- 10 as of 2026-06-08, incl. a microgreen; "
+             f"do not hardcode the denominator here.) -->")
     P.append("")
 
     P.append("## Canonical pointer")
@@ -158,7 +160,8 @@ def main():
         if core and seas and st == "verified_gs_arc":
             certified += 1
         P.append(f"- **{c['slug']}:** launch_ready_core={core} launch_ready_seasoned={seas} status=`{st}`")
-    P.append(f"- **{certified} of 9 anchors certified** (launch_ready true + status `verified_gs_arc`).")
+    P.append(f"- **{certified} anchors certified** (launch_ready true + status `verified_gs_arc`). "
+             f"(Target denominator is a roadmap call -- see the headline slot -- not derivable here.)")
     P.append("")
 
     P.append("<!-- FILL: Live locked decisions / guardrails (editorial -- accretes; carry forward + amend) -->")
