@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-08 -- session `carrot_steps1-3_author_fresh` (claude.ai authoring + Claude Code release -- FIRST author-fresh crop, anchor 4)
+
+**Start-SHA:** `aeb5c339d55039c7cd272e0338f73e820a7c3de7bcc531aed856f172f143aca5` (post-wipe shell; preflight matched LATEST.txt)
+**claude.ai proposed end-SHA:** `04b5543b...` (patch-only, triangulated exactly on self-apply)
+**Promoted end-SHA:** `ae2061ba75f4b38aab8312774b67d403aa5b75610c14de74b962d3bccfb9ff58` (Claude Code; = patch + the uga_c1232 mint + container dual-register normalization)
+**Gate:** whole_crop_gate carrot 10 (all region-fill, expected -- Steps 3.5/4); register_completeness PASS; cherry/beefsteak/lettuce PASS.
+
+### What happened -- carrot Steps 1-3 authored FRESH from an empty shell
+The first crop authored under the author-fresh model. claude.ai authored Steps 1-3 from carrot's OWN T1 sources into the wiped shell (never verify-or-replace; nothing recalled). 83-op canonical patch (71 replace + 12 add), single crop; self-apply reproduced claude.ai's proposed `04b5543b` exactly.
+- **Step 1:** `botanical_name`=Daucus carota, `family`=Apiaceae, `verification_status.source_set` = 10 CANDIDATE IDs (verification deferred to Step 5).
+- **Step 2:** soil (texture `[sandy_loam,loam]`, organic_matter `moderate` -- carrot-specific, NOT tomato's `high`), ph `[6.0,6.8]` tol `[5.5,7.0]`, succession_policy (suitable/3wk/3, pause_in_heat true), start_method (`direct`, taproot -- LOAD-BEARING for Step 3.5), container_notes, scalars (dtm `[60,75]`, germ `[55,75]` OPTIMUM, spacing `[2,4]`, sun `[6,10]`). Each >=2 T1 + anchoring.
+- **Step 3:** companions 3 good (Radishes research_backed; Onions/Lettuce likely) + 3 bad (Dill/Parsnips likely; Fennel traditional), dual-register, honest non-evidence-backed caveat.
+
+### Claude Code release (this lane)
+- **Minted `uga_c1232`** (UGA Circular 1232 "Homegrown Carrots", T1) and re-pointed carrot's pH/DTM/DTM-mid/germ anchors off the provisional `uga_calendar` (Circular 943 = a planting calendar; does not state pH/germ -- citing them to it would fail a Step-5 check). claude.ai flagged this as a catalog-precision decision; Claude Code owns catalog mints.
+- **Resolved a roster-gate HALT (dataset-shape finding).** carrot's `container_notes.shape_requirements` + `drainage.saucer_practice` came through as SINGLE-register prose: the wiped shell carried carrot's pre-arc non-canonical single-key shape (120 crops have it; only the 3 GS crops were normalized to dual-register during their arcs). Conformed both to the canonical dual-register shape (`_seasoned` = authored content; `_beginner` = copy drafted via the copywriting skill, Trevor-approved). This is shape-normalization to the already-ruled canonical form, NOT a new ruling. carrot now dual-complete (null_values 0).
+- **Protocol #6:** release_verify clean (only carrot + the uga_c1232 admit changed; lettuce byte-identical; no new violations; calendars coherent; no user-facing dashes/spelled-degrees). Committed clean (no --no-verify needed -- no new gate violations vs the wipe base).
+
+### Residual / next
+**Carrot Steps 1-3 DONE.** NEXT = carrot **Step 3.5** (region shells, Claude Code) -> Step 4. Requires EXTENDING `tools/build_region_shells.py` for the direct-sow + succession + from-scratch-NT shape (reference lettuce), test-first. **Dataset-wide shell-shape normalization** (the other 119 crops' single->dual container fields + any universal canonical-key conformance) is FOLDED INTO the schema 2.9 bump (fresh session after carrot; 2.9 is additive/no-retrofit -- same flavor of work). Guard: if anchor 5 precedes 2.9, run the 2-field sweep first. **v1.7 checklist amendment owed** (Step 3.5 "promote verified cold-zone data" applies to retro anchors only).
+
 ## 2026-06-08 -- session `author_fresh_wipe_120_to_shell` (Claude Code lane -- THE AUTHOR-FRESH PIVOT; 120 non-GS crops reset to honest shells)
 
 **Start-SHA:** `ab389f72136f6d8f6576da6f93b62c8eb1cf2e3cf765041276a6ac746c4f5e4b` (preflight matched LATEST.txt)
