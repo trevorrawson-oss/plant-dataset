@@ -58,10 +58,22 @@ Example leaf paths:
 
 ## Tolerated (historical drift the applier normalizes -- do not rely on these)
 
-- Op aliases: `replace_value`->replace, `add_key`->add, `delete_key`/`remove`->delete, `set`->replace.
-- Field aliases: `old`/`old_value`->`from`; `new`/`new_value`->`value`; `path`->`json_path`.
+- Op aliases: `replace_value`/`set`/`set_value`->replace, `add_key`->add, `delete_key`/`remove`->delete.
+- Field aliases: `old`/`old_value`->`from`; `new`/`new_value`/`after`->`value`; `path`->`json_path`.
 - `add` on a present-`null` key (the common mislabel) is accepted (it is really a replace-of-null); `add` on a present non-null value is REFUSED.
-- `base_sha` may also be supplied as `_base_sha`.
+- `base_sha` may also be supplied as `_base_sha`, or `_meta.base_sha`/`_meta.start_sha`.
+- The grouped `{_meta, corrections:[{id, step, finding, ruling, changes:[...]}]}` wrapper
+  (beefsteak Step 4): `corrections[*].changes[*]` is flattened into the edit stream; the
+  target crop slug is read from `_meta.crop`/`target_crop_slug`/`crop_slug`/`target_crop`.
+  A prose `before` is treated as ADVISORY (the patch-level `base_sha` gate is the real drift
+  protection), not a byte-exact `from`-guard -- a note is printed when it is not byte-equal.
+- Path forms: bracket-slug `crops[<slug>]` (resolves like the slug filter); crop-relative
+  `$.pests[0]...` or bare `regions.warm_arid...` (auto-prefixed with the crop filter when a
+  target slug is known -- pass `--slug` if the envelope omits it).
+- Proposed end-SHA (`_meta.end_sha`/`end_sha`/`proposed_sha`): verified against BOTH
+  `ensure_ascii=False` (canonical) and `ensure_ascii=True`; the applier reports which matched.
+  `--validate` does a dry-run (resolve paths + footprint, write nothing) claude.ai can run
+  pre-handoff.
 
 ## Companion: the STATE_HISTORY entry
 

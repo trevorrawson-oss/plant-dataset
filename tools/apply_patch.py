@@ -46,7 +46,30 @@ import json, hashlib, sys, re, argparse
 
 FILT = re.compile(r"^([^\[]+)\[\?\(@\.([^=]+)==\'([^\']+)\'\)\]$")
 IDX = re.compile(r"^([^\[]+)\[(\d+)\]$")
+BSLUG = re.compile(r"^([^\[]+)\[([^\]?=]+)\]$")  # name[token]; non-numeric token -> slug/id lookup
 _MISSING = object()
+
+
+def normalize_path(path, slug):
+    """Normalize the path forms claude.ai actually emits to a crop-rooted path:
+      - canonical `$.crops[?(@.slug=='X')]...`           -> unchanged
+      - bracket-slug `crops[X].regions...` (Step 4)       -> unchanged (BSLUG resolves it)
+      - $-rooted crop-relative `$.pests[0]...` (steps678) -> prefix the crop filter
+      - bare crop-relative `regions.warm_arid...`         -> prefix the crop filter
+    Crop-relative prefixing requires a known target slug (from the envelope/--slug)."""
+    p = path.strip()
+    if p.startswith("$."):
+        p = p[2:]
+    elif p == "$":
+        return path
+    elif p.startswith("$"):
+        p = p[1:]
+    first = p.split(".", 1)[0].split("[", 1)[0]
+    if first == "crops":
+        return "$." + p
+    if slug:
+        return f"$.crops[?(@.slug=='{slug}')]." + p
+    return "$." + p   # no slug known: leave crop-relative (will fail loudly at resolve)
 
 
 def tokenize(path):
@@ -74,6 +97,9 @@ def _parse(tok):
     m = IDX.match(tok)
     if m:
         return ("index", m.group(1), int(m.group(2)))
+    m = BSLUG.match(tok)
+    if m and not m.group(2).isdigit():
+        return ("slugfilter", m.group(1), m.group(2))
     return ("key", tok, None)
 
 
@@ -84,6 +110,12 @@ def _child(node, tok):
             if str(el.get(sel[0])) == sel[1]:
                 return el
         raise KeyError(f"filter matched nothing: {tok}")
+    if kind == "slugfilter":
+        for el in node[key]:
+            if isinstance(el, dict) and any(str(el.get(idk)) == sel
+                                            for idk in ("slug", "id", "region_id", "track")):
+                return el
+        raise KeyError(f"slug/id filter matched nothing: {tok}")
     if kind == "index":
         return node[key][sel]
     return node[key]
@@ -101,7 +133,7 @@ def resolve_parent(root, path):
 def leaf_get(container, leaf):
     """Current value at the leaf, or _MISSING if the slot is absent."""
     kind, key, sel = _parse(leaf)
-    if kind == "filter":
+    if kind in ("filter", "slugfilter"):
         try:
             return _child(container, leaf)
         except KeyError:
@@ -120,7 +152,7 @@ def leaf_set(container, leaf, value):
     kind, key, sel = _parse(leaf)
     if kind == "index":
         container[key][sel] = value
-    elif kind == "filter":
+    elif kind in ("filter", "slugfilter"):
         raise ValueError(f"cannot set a filter as a leaf: {leaf}")
     else:
         container[key] = value
@@ -130,7 +162,7 @@ def leaf_del(container, leaf):
     kind, key, sel = _parse(leaf)
     if kind == "index":
         del container[key][sel]
-    elif kind == "filter":
+    elif kind in ("filter", "slugfilter"):
         raise ValueError(f"cannot delete a filter leaf: {leaf}")
     else:
         del container[key]
@@ -143,18 +175,37 @@ def _get(edit, *names):
     return _MISSING
 
 
-# claude.ai has emitted three op vocabularies across sessions; normalize to canonical.
+# claude.ai has emitted several op vocabularies across sessions; normalize to canonical.
 OP_ALIASES = {
-    "replace": "replace", "replace_value": "replace", "set": "replace",
+    "replace": "replace", "replace_value": "replace", "set": "replace", "set_value": "replace",
     "add": "add", "add_key": "add",
     "delete": "delete", "delete_key": "delete", "remove": "delete",
 }
 
 
-def apply_patch(data, patch):
+def normalize_envelope(patch):
+    """Return (base_sha, edits, target_slug) from EITHER the canonical format
+    {base_sha, patches:[...]} OR the grouped {_meta, corrections:[{...,changes:[...]}]}
+    wrapper claude.ai emitted for beefsteak Step 4. Flattens corrections[*].changes[*]."""
+    meta = patch.get("_meta") or {}
+    base_sha = (patch.get("base_sha") or patch.get("_base_sha")
+                or meta.get("base_sha") or meta.get("start_sha"))
+    slug = (meta.get("target_crop_slug") or meta.get("crop_slug")
+            or meta.get("target_crop") or meta.get("crop")
+            or patch.get("crop_slug") or patch.get("target_crop"))
     edits = patch.get("patches", patch.get("edits", patch.get("patch")))
+    if edits is None and "corrections" in patch:
+        edits = []
+        for corr in patch["corrections"]:
+            edits.extend(corr.get("changes") or corr.get("edits") or [])
+    return base_sha, edits, slug
+
+
+def apply_patch(data, patch, slug=None):
+    base_sha, edits, env_slug = normalize_envelope(patch)
+    slug = slug or env_slug
     if edits is None:
-        sys.exit("patch has no 'patches'/'edits'/'patch' list")
+        sys.exit("patch has no 'patches'/'edits'/'patch'/'corrections' list")
     for i, e in enumerate(edits):
         raw_op = e["op"]
         op = OP_ALIASES.get(raw_op)
@@ -163,16 +214,23 @@ def apply_patch(data, patch):
         path = _get(e, "json_path", "path")
         if path is _MISSING:
             sys.exit(f"edit {i}: no json_path/path")
+        path = normalize_path(path, slug)
         try:
             parent, leaf = resolve_parent(data, path)
         except (KeyError, IndexError, TypeError) as ex:
             sys.exit(f"edit {i}: unresolved path {path} ({ex})")
         cur = leaf_get(parent, leaf)
         frm = _get(e, "from", "old", "old_value")
-        val = _get(e, "value", "new", "new_value")
+        val = _get(e, "value", "new", "new_value", "after")
+        before = _get(e, "before")
         if op == "replace":
             if frm is not _MISSING and cur != frm:
                 sys.exit(f"edit {i} FROM-GUARD: {path}\n  have: {json.dumps(cur, ensure_ascii=False)[:160]}\n  want: {json.dumps(frm, ensure_ascii=False)[:160]}")
+            # The grouped `corrections` format supplies a PROSE `before` summary, not a
+            # byte-exact guard. When no real `from` is given, the patch-level base_sha
+            # gate is the drift protection; surface a note for operator visibility.
+            if frm is _MISSING and before is not _MISSING and cur != before:
+                print(f"  note: edit {i} 'before' is advisory (not byte-equal to current); relying on base_sha gate -- {path}")
             leaf_set(parent, leaf, val)
         elif op == "add":
             if cur is not _MISSING and cur is not None:
@@ -211,11 +269,27 @@ def footprint(before, after):
     return out
 
 
+def verify_proposed_sha(text, proposed):
+    """claude.ai sometimes computes its proposed end-SHA with ensure_ascii=True
+    (degF -> the 6-char \\u00b0F escape); canonical is ensure_ascii=False. Try BOTH
+    and report which matched, so the operator isn't left guessing."""
+    canon = hashlib.sha256(text.encode()).hexdigest()
+    ascii_text = json.dumps(json.loads(text), separators=(",", ":"), ensure_ascii=True)
+    ascii_sha = hashlib.sha256(ascii_text.encode("utf-8")).hexdigest()
+    if proposed == canon:
+        return "proposed end-SHA matches CANONICAL (ensure_ascii=False) -- correct"
+    if proposed == ascii_sha:
+        return f"proposed end-SHA matches ASCII-ESCAPED (ensure_ascii=True) -- claude.ai used the wrong encoding; canonical is {canon}"
+    return f"proposed end-SHA MATCHES NEITHER encoding; canonical={canon} ascii={ascii_sha}"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("patch")
     ap.add_argument("--base", default="crops_data_final.json")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--slug", default=None, help="target crop slug for crop-relative paths (overrides envelope)")
+    ap.add_argument("--validate", action="store_true", help="dry-run: resolve paths + report footprint, write nothing")
     ap.add_argument("--quiet", action="store_true")
     a = ap.parse_args()
     out = a.out or (a.base.rsplit(".json", 1)[0] + ".scratch.json")
@@ -223,24 +297,33 @@ def main():
     raw = open(a.base, "rb").read()
     actual = hashlib.sha256(raw).hexdigest()
     patch = json.load(open(a.patch))
-    base_sha = patch.get("base_sha") or patch.get("_base_sha")
+    base_sha, _edits, env_slug = normalize_envelope(patch)
+    slug = a.slug or env_slug
     if not base_sha:
-        sys.exit("patch has no base_sha -- refusing to apply unanchored")
+        sys.exit("patch has no base_sha / _meta.start_sha -- refusing to apply unanchored")
     if actual != base_sha:
         sys.exit(f"SHA mismatch: base file is {actual}\n              patch expects {base_sha}\n  STOP -- re-preflight.")
 
     import copy as _copy
     data = json.loads(raw)
     before = _copy.deepcopy(data)
-    n = apply_patch(data, patch)
+    n = apply_patch(data, patch, slug=slug)
     text = json.dumps(data, separators=(",", ":"), ensure_ascii=False)
-    open(out, "w").write(text)
     new_sha = hashlib.sha256(text.encode()).hexdigest()
+
     if not a.quiet:
-        print(f"applied {n} edits; base {base_sha[:8]} -> out {new_sha[:8]}")
+        print(f"{'VALIDATED' if a.validate else 'applied'} {n} edits; base {base_sha[:8]} -> out {new_sha[:8]}")
         for line in footprint(before, data):
             print("  " + line)
         print(f"  escaped-unicode in output: {text.count(chr(92) + 'u')} (want 0)")
+        proposed = (patch.get('_meta') or {}).get('end_sha') or patch.get('end_sha') or patch.get('proposed_sha')
+        if proposed:
+            print("  " + verify_proposed_sha(text, proposed))
+    if a.validate:
+        print(f"OUT_SHA={new_sha}  (validate-only; nothing written)")
+        return
+    open(out, "w").write(text)
+    if not a.quiet:
         print(f"  wrote {out}")
     print(f"OUT_SHA={new_sha}")
 
