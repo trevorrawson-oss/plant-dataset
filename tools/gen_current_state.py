@@ -117,8 +117,8 @@ def main():
     P.append(f"<!-- FILL: headline -- one-line cert status. Derived facts: "
              f"{len(anchors)} anchors verified_gs_arc "
              f"({', '.join(c['slug'] for c in anchors)}); see Flip gates below. "
-             f"(Anchor TARGET is a roadmap decision -- 10 as of 2026-06-08, incl. a microgreen; "
-             f"do not hardcode the denominator here.) -->")
+             f"(Anchor TARGET is a roadmap decision -- ~18 as of 2026-06-08 after the +6 "
+             f"family-hub expansion (was 12); do not hardcode the denominator here.) -->")
     P.append("")
 
     P.append("## Canonical pointer")

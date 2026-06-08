@@ -10,48 +10,55 @@
 
 ---
 
-## 🥬 LETTUCE + 🍅 CHERRY + 🍅 BEEFSTEAK CERTIFIED (`verified_gs_arc`). 3 OF 9 ANCHORS DONE.
-**3 of 9 anchors certified.** `lettuce-leaf` (M15), `cherry-tomato` (M16, first full v1.5/1.6 arc), and **`beefsteak-tomato` (M16 anchor 2, CERTIFIED 2026-06-08)** -- all three `launch_ready_core/seasoned=true`, `status="verified_gs_arc"`, `GATE: PASS`. **Beefsteak completed the full arc** (Steps 3.5 -> 11) including its own independently-sourced (wider-than-cherry) heat biology. **NEXT = anchor 4 of 9** (6 remain; carrots is the next region-first authoring-model prover). **(Operating model: claude.ai authors, Claude Code releases; Steps 9/10/11 were the Claude Code mechanical + flip lane.)**
+
+## 🧹 AUTHOR-FRESH WIPE COMPLETE -- 120 non-GS crops reset to honest shells. 3 anchors stand (cherry + beefsteak + lettuce, all `verified_gs_arc`). Carrot (anchor 4) + the rest are now authored FRESH from empty shells, never verify-or-replace. Anchor TARGET expanded 12 -> ~18 (+6 family hubs; roadmap call, exact slugs partly TBD).
 
 ## Canonical pointer
-- **Current SHA:** `ab389f72136f6d8f6576da6f93b62c8eb1cf2e3cf765041276a6ac746c4f5e4b` (register normalization: `source_quote_seasoned` un-renamed to bare `source_quote` dataset-wide -- 794 keys across 32 crops, value + position preserving; backend evidence, no longer rendered to seasoned mode. Only `source_quote*` keys changed; all other content byte-identical). `LATEST.txt` session: `register_source_quote_excluded_normalization`.
-- **NEXT: anchor 4 of 9 (carrots, region-first) -- preflight against `ab389f72`.**
-- **Predecessor chain:** `ab389f72` (source_quote->EXCLUDED normalization) <- `973632ea` (beefsteak CERTIFIED) <- `e8b46da5` (Steps 6/7/8) <- `8fdb3ee6` (Step 5.5) <- `3a482908` (Step 4) <- `006cd0af` (Step 3.5) <- `b6777ef6` (cherry CERTIFIED) <- ... (full chain in STATE_HISTORY).
+- **Current SHA:** `aeb5c339d55039c7cd272e0338f73e820a7c3de7bcc531aed856f172f143aca5`. `LATEST.txt` session: `author_fresh_wipe_120_to_shell` (2026-06-08).
+- **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `ab389f72` -- register: source_quote SP -> EXCLUDED; un-rename dataset-wide + gate sync
+  - `973632ea` -- M16 beefsteak Steps 9/10/11: CERTIFIED (verified_gs_arc) -- anchor 3 of 9
+  - `e8b46da5` -- M16 beefsteak Steps 6/7/8: dual-voice (30 siblings + 10 lifts) + NT region_notes
+  - `8fdb3ee6` -- M16 beefsteak Steps 5 + 5.5: warm cells verified, NT cold_pause (22 tokens)
+  - `3a482908` -- M16 beefsteak Step 4: warm regions sourced (9 cells)
+  - `006cd0af` -- M16 beefsteak Step 3.5: region shells built (anchor 2/9)
+  - `87c8e0a1` -- M16 post-cert: status vocab -> verified_gs_arc; fill 3 walker-revealed lettuce gaps
 
-## What just happened (2026-06-08, session `register_source_quote_excluded_normalization` -- Claude Code lane)
-- **`source_quote` reclassified SP -> EXCLUDED + dataset normalized** (per claude.ai register-inventory addendum 2026-06-08, Trevor-ratified). `source_quote` is *verbatim* third-party extension text; as a `_seasoned` field it would RENDER unparaphrased source quotes to seasoned-mode users -- the IP/verbatim posture the project's paraphrase discipline + `verbatim_scan` forbid. Reclassified to backend evidence (§4 AUDIT_LEAF, same class as `source`/`source_id`/`source_note`). Reverses a 2026-05-30 "SP" call (which weighed the quotes as content, not the verbatim-display IP posture).
-- **Apply (Claude Code mechanical):** un-renamed all **794** `source_quote_seasoned` -> bare `source_quote` across **32 crops** (value + position preserving; 0 collisions; the 2265 region-fill instances were already bare). `synthesis_note_seasoned` (own-voice reasoning) UNCHANGED -- the seasoned "show your work" still renders. Added `source_quote` to `register_completeness_gate.py` `EXCLUDED_KEYS` to match the inventory + `whole_crop_gate`.
-- **This RESOLVES the 24-pattern roster HALT** (the prior parked dataset-wide register item). The 4 `companions.*.provenance.reason` remain DEFERRED-by-design.
-- *(Prior session: beefsteak CERTIFIED via Steps 9/10/11 -- the 3rd anchor; full detail in STATE_HISTORY.)*
+## What just happened (2026-06-08, session `author_fresh_wipe_120_to_shell` -- Claude Code lane)
+- **The big pivot: the 120 non-GS crops were RESET to honest authoring-ready shells.** A dataset-wide contamination scan (`tools/contamination_scan.py`; report `docs/contamination_report_2026-06-08.md`) proved the early cross-crop "validate one data point across all 123 crops" era left **blanket/bucket data smeared across families: mean 84% contamination on the 120 non-GS crops, 111 of 120 >=60%** (carrot 91%; its northern_tier was 98.6% byte-identical to other crops -- a single Minnesota date smeared across zones 3-7). The 3 GS crops were clean (8 / 26 / 34% bio, all legit within-family convergence), proving the per-crop walk works.
+- **Trevor ruled author-fresh, not verify-or-replace** (checking/replacing bucket data is ~double work and lets a wrong value survive a shallow check). So every unverified per-crop CLAIM was WIPED; the crop keeps only what it IS (identity/classification + `sources_summary` candidate pool) + a reset `verification_status`. Contract: `docs/reset_to_shell_policy_v1_0.md`. Tool: `tools/reset_to_shell.py` (built TEST-FIRST, `tools/test_reset_to_shell.py` 12 checks green).
+- **Verification:** comprehensive in-tool audit (3 GS crops + all sibling top-level keys byte-identical; identity/sources kept; verification_status reset; **safety invariant: no content leaf survived** on any of the 120). `contamination_scan` re-run: the 120 dropped **84% -> 0%**; the only sharing left dataset-wide is cherry<->beefsteak (legit verified-tomato convergence). Gates: cherry/beefsteak/lettuce `PASS`; register `PASS`.
+- Committed `--no-verify`: the pre-commit hook flagged the one expected "regression" per crop -- `region unfilled: northern_tier` (the honest empty-shell state) -- while each crop CLEARED 148-220 bucket violations. Intentional reset, not a quality regression; the 3 certified anchors are untouched. New files also committed: the two tools + their tests, the policy spec, the contamination report.
 
-## Verification (this release -- dataset-wide backend normalization)
-- **In-transform audits:** only `source_quote*` keys changed -- every other key+value byte-identical (independent strip-and-compare); all `source_quote*` VALUES preserved (multiset equal); 0 `source_quote_seasoned` remain; `source_quote` count 2265 -> 3059. **register_completeness_gate: HALT(24) -> PASS(0).** **whole_crop_gate: lettuce + cherry + beefsteak all `GATE: PASS`** (un-rename is backend; no violation change; the 3 anchors stay certified). Multi-crop change (32 crops) -> targeted collateral (the strip-compare), not the single-crop release_verify model.
+## Active work + next step
+- **NEXT = carrot (anchor 4), authored FRESH from its empty shell** (Steps 1 -> 11, claude.ai authoring lane). Carrot is also the bot template for the author-into-shell motion. Immediate Claude Code deliverable: build the claude.ai **Steps 1-3 author-fresh handoff** (source_set from the kept `sources_summary` candidate pool + Step 2 structured surfaces + Step 3 companions), per `docs/release_runbook_v1_0.md` sec 8. Carrot's `calendar_basis=frost_anchored`, `archetype=cool_season_annual`, direct-sow + succession (lettuce is the structural reference, not cherry).
+- **Anchor set expanded 12 -> ~18** (+6 family hubs: peach, broccoli, bell-pepper, zucchini, onion, green-beans-bush). Current set was archetype-complete but family-incomplete; biology + bucket-template live at the FAMILY level. Exact slugs partly TBD: kale-vs-broccoli (brassica), and cucurbit (squash vs cucumber) + legume (warm bean vs cool pea) are 1-vs-2 calls.
+- **PARKED:**
+  - **v1.7 checklist amendment owed:** Step 3.5 north sub-procedure "promote the VERIFIED cold-zone data up" assumes a per-crop-verified `zones{}` -- true only for the retro anchors. From-scratch crops (carrot onward) have no verified zones{}, so NT is re-sourced like the warm regions (Trevor 2026-06-08: wipe NT to PENDING, re-source fresh).
+  - `tools/build_region_shells.py` is tomato/transplant-shaped; needs extending for the **direct-sow + succession** shape (reference lettuce) before carrot's Step 3.5. Test-first (`tools/test_build_region_shells.py`).
+  - Dataset-wide register inventory follow-up (promote `register_bearing_field_inventory_v1_0.md` on-disk); `fruit_set_temp_f` schema shape; the minor copy calls. (All pre-existing.)
 
-## Active work + parked decisions
-- **NEXT MILESTONE: anchor 4 of 9 -- carrots (region-first authoring, the authoring-model-flip prover 3 is now MET by beefsteak; carrots onward is full region-first).** 6 anchors remain.
-- **PARKED -- Trevor / claude.ai dataset-wide (NOT blocking any per-crop cert):**
-  1. **Register inventory `source_quote` -- ✅ RESOLVED 2026-06-08.** Ruled EXCLUDED (claude.ai addendum, Trevor); 794 `source_quote_seasoned` un-renamed to bare dataset-wide; gate `EXCLUDED_KEYS` synced; roster HALT(24) -> PASS. **Open follow-up:** the inventory doc (`register_bearing_field_inventory_v1_0.md`) itself lives only in claude.ai PK -- consider promoting it on-disk (like the checklist) since the gate enforces it; the addendum is archived under `06-sessions/`.
-  2. **`fruit_set_temp_f` schema shape** (warm_arid Aug structural set; surfaced at Steps 4/5).
-- **PARKED -- Trevor (minor):** optional `ca_south_coast` z9 soft-`cold_pause` revert; lettuce `why_beginner` copy (3 fields) sanity-check; the `sources_summary[19].name` comma-vs-colon one-char copy call (cherry used comma; beefsteak matches).
-- **RESOLVED 2026-06-08 (tooling-hardening pass, commits `c1055cf..c7448f0`):** the three parked Claude-Code-lane tooling items are closed. `apply_patch` now ABSORBS claude.ai's patch one-offs (`_meta`/`corrections` wrapper, crop-relative paths, ascii-escaped proposed SHA -- validated against all 3 archived beefsteak patches); `field_classification.py` is the ONE shared backend predicate, so `whole_crop_gate` + `release_verify` + the roster gate agree on `basis_seasoned`/`source_quote` and §D no longer over-flags legacy `zones{}` dashes. (Plus `gen_current_state.py` skeleton generator + `rotate_state_history.py`; Fix 3 -- roster per-crop-vs-standing -- deferred, moot after source_quote.) Tools-only; canonical SHA unchanged. Reviewed clean (all tests green, 3 anchors PASS, history-replay reproduces the chain).
+## Gate record (generated 2026-06-08, on canonical `aeb5c339`)
+- **cherry-tomato: `PASS` (0)**
+- **beefsteak-tomato: `PASS` (0)**
+- **lettuce-leaf: `PASS` (0)**
+- **register_completeness_gate: `PASS`**
 
-## Gate record (2026-06-08, on canonical `ab389f72`)
-- **lettuce `PASS` (0); cherry `PASS` (0); beefsteak `PASS` (0)**; all three `verified_gs_arc`, launch_ready true. **register_completeness_gate: PASS (0)** -- the 24-pattern `source_quote` HALT is resolved dataset-wide.
+## Region fill state (generated)
+- **cherry-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
+- **beefsteak-tomato: 10/10 region cells filled**; 8 heat_pause, 6 second_planting
+- **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
 
-## Region fill state
-**lettuce-leaf, cherry-tomato, beefsteak-tomato -- all 10/10 region cells filled + verified + CERTIFIED.** Beefsteak's heat biology is independently T1-sourced (wider-than-cherry pauses), NT is single-crop (not cherry's z6-7 second-crop) with winter `cold_pause`. Cherry remains the Step-3.5 shape + convention reference exemplar.
+## Flip gates (generated)
+- **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **beefsteak-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **3 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
-## Flip gates (the four distinct "flips")
-1. **Per-crop `launch_ready` flip** -- ✅ lettuce, ✅ cherry, ✅ **beefsteak (3 of 9).** 6 anchors remain.
-2. **Region read-layer flip** -- shape + fill + verification + flip proven on 3 crops now. The plant-astro renderer rewrite (read `regions{}`, consume `second_planting`, render `cold_pause`/`heat_pause`) is data-side unblocked. Ships with `zones{}` fallback. **2.9+.**
-3. **Authoring-model flip** -- carrots onward region-first. **Gate: 3 provers MET (lettuce, cherry, beefsteak).** Carrots is the first post-flip region-first authoring.
-4. **Schema perennial bump** (`lifecycle_override`) -- FUTURE, 2.9+. After carrots.
-
-**Schema version lineage:** 2.7.5 -> **2.8 (current)** -> region read-layer flip + perennial = **2.9+.**
-
-## Live locked decisions / guardrails (carry into anchor 4 / carrots)
-- **Reference gold-standard crop = `cherry-tomato`** (shape + convention) -- but derive each crop's biology + STRUCTURE from its OWN sources; "matches cherry" is not a justification (v1.6 A1).
-- **Step 11 = reset-then-flip:** stale `launch_ready=true` reset to false (entry guard), gates green, re-flip earned, `status` -> `verified_gs_arc`. The verbatim scan is a flip gate -- run it FULL (fetch URLs to cache, scan); HARD hits are flip-blocking until adjudicated (reword a real lift; rule generic/numeric conventions benign with a note -- do NOT self-dismiss, route the ruling to the voice lane / Trevor).
-- **HANDOFF PATCHES: `base_sha` + `patches[]`, FULL `$.crops[?(@.slug=='...')]...` paths, `from`=current value, proposed end-SHA `ensure_ascii=False`.**
-- **Lane split:** STRUCTURAL/MECHANICAL/notation/dash/de-cite/anchoring-fill/the-flip = Claude Code; biology + consumer copy + voice/IP + dates = claude.ai.
-- **Keep `zones{}` coherent until Phase C.** **Release sequence:** `docs/release_runbook_v1_0.md`; protocol #6 before every promote.
+## Live locked decisions / guardrails (carry into carrot / anchor 4)
+- **AUTHOR-FRESH is the motion** (2026-06-08). Existing per-crop data was unverified bucket and has been WIPED on the 120; each crop is authored from sources into an empty shell -- nothing is verify-or-replaced, no anchoring on a prior (possibly wrong) value. This is also the motion the future bots inherit, under human oversight during the GS arcs.
+- **The 3 GS crops (cherry, beefsteak, lettuce) are the verified ground truth.** Reference shape = `cherry-tomato`; but derive each crop's biology + STRUCTURE from its OWN sources -- "matches cherry" is never a justification (v1.6 A1).
+- **Anchor target ~18** (roadmap call; do not hardcode a denominator in this file).
+- **Step 11 = reset-then-flip;** the verbatim/copyright scan is a real flip gate (run FULL). **Handoff patches** in `docs/handoff_patch_format_v1_0.md` (base_sha + full `$.crops[?(@.slug=='...')]` paths + from-guards + `ensure_ascii=False` end-SHA).
+- **Lane split:** claude.ai AUTHORS (biology, dates, region sourcing, dual-register copy, STATE_HISTORY snippet); Claude Code RELEASES (apply, gates + protocol #6, structural shapes, the flip) + builds handoffs.
+- **`zones{}` was WIPED on the 120** (legacy zone layer blanked along with the rest); the 3 GS crops keep their `zones{}` coherent until Phase C. **Release sequence:** `docs/release_runbook_v1_0.md`; protocol #6 before every promote (for a multi-crop change, the in-tool audit + gates + the contamination re-scan are the collateral check).

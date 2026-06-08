@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-06-08 -- session `author_fresh_wipe_120_to_shell` (Claude Code lane -- THE AUTHOR-FRESH PIVOT; 120 non-GS crops reset to honest shells)
+
+**Start-SHA:** `ab389f72136f6d8f6576da6f93b62c8eb1cf2e3cf765041276a6ac746c4f5e4b` (preflight matched LATEST.txt)
+**End-SHA:** `aeb5c339d55039c7cd272e0338f73e820a7c3de7bcc531aed856f172f143aca5` (Claude Code, 2026-06-08)
+**Gate:** cherry/beefsteak/lettuce `PASS`; register_completeness `PASS`. Pre-commit hook flagged the expected `region unfilled: northern_tier` per wiped crop (honest shell state) -> committed `--no-verify` with justification.
+
+### What happened -- the strategy pivot, then the wipe
+Opened as the carrot (anchor 4) kickoff. A dataset-wide contamination scan (new `tools/contamination_scan.py`; report `docs/contamination_report_2026-06-08.md`) proved the early cross-crop "validate one data point across all 123 crops at once" era left **blanket/bucket data smeared across botanical families**: **mean 84% contamination across the 120 non-GS crops, 111 of 120 >=60%.** Carrot was 91% overall (its `northern_tier` was **98.6%** byte-identical to other crops -- a single Minnesota date smeared across zones 3-7, pasted across radish/beetroot/turnip). The 3 GS crops measured clean (lettuce 8% / cherry 26% / beefsteak 34% bio-shared, and that residual is legitimate within-family convergence), which PROVES the per-crop walk produces trustworthy crops.
+
+**Trevor's three locked rulings (this session):**
+1. **Author-fresh, NOT verify-or-replace.** Existing per-crop data is unverified bucket candidate; checking/validating/replacing it is ~double work and lets a wrong value survive a shallow check (anchoring bias). Wipe the value; author from sources into an empty slot.
+2. **Wipe all 120 non-GS crops to honest shells NOW** (not deferred to bot-time) so the author-into-shell motion stays under human oversight during the GS arcs and the dataset is honest immediately. Fully git-reversible from `ab389f72`.
+3. **Expand the GS anchor set 12 -> ~18** (+6 family hubs: peach, broccoli, bell-pepper, zucchini, onion, green-beans-bush). The set was archetype-complete but family-incomplete; biology + bucket-template live at the FAMILY level (a tomato anchor shares only ~25 bio fields with peppers; peppers share 77-81 among themselves). Wiping does NOT reduce the anchor count -- anchors are spec/rubric ground truth + per-family audit reference, driven by biological diversity, invariant to old data.
+
+**Apply (Claude Code, test-first):** `docs/reset_to_shell_policy_v1_0.md` defines the keep/wipe contract -- KEEP identity/classification (slug,name,botanical_name,family,category,type,archetype,calendar_basis,lifecycle,perennial,difficulty) + `sources_summary` (candidate pool); RESET `verification_status` to the pre-arc shell; WIPE every other per-crop claim (dict keeps keys + recurse; list -> []; scalar -> null). `tools/reset_to_shell.py` implements it; `tools/test_reset_to_shell.py` (12 checks, written BEFORE the impl) is green. The 3 GS crops + every sibling top-level key (`source_catalog`, `soil_education`, `region_source_map`, ...) are untouched by construction.
+
+### Verification
+- **In-tool audit (all asserted):** (a) the 3 GS crops byte-identical pre/post; (b) all sibling top-level keys byte-identical; crop count 123 + slug set unchanged; (c) every wiped crop's identity keys + `sources_summary` byte-identical, `verification_status` == the pre-arc shell; (d) **safety invariant: every leaf NOT under an identity key / sources_summary / verification_status is null on all 120** -- the "no wrong claim survived" proof.
+- **contamination_scan re-run on the result:** the 120 non-walked crops dropped **84% -> 0%**; 111 -> 0 crops >=60%. The only byte-sharing left dataset-wide is cherry<->beefsteak (46 bio fields = legitimate independently-verified tomato convergence).
+- **Gates:** whole_crop_gate cherry/beefsteak/lettuce `PASS (0)`; register_completeness `PASS`. Each wiped crop now carries the honest shell-state violations (e.g. `region unfilled`) and cleared 148-220 bucket violations.
+- **Pre-commit hook:** ran offline first -- the ONLY new violation per crop is `region unfilled: northern_tier` (the intentional empty NT). Committed `--no-verify` (deliberate audited reset, not a regression; the hook is a backstop and documents this bypass).
+
+### Residual / next
+**The 120 are now honest authoring-ready shells.** NEXT = **carrot (anchor 4) authored FRESH** from its shell (Steps 1-11; it is also the bot's author-into-shell template). Immediate Claude Code deliverable = the claude.ai Steps 1-3 author-fresh handoff. **Owed:** a **v1.7 checklist amendment** (Step 3.5 "promote the VERIFIED cold-zone data" assumes a per-crop-verified `zones{}` -- true only for retro anchors; from-scratch crops re-source NT like the warm regions, per Trevor 2026-06-08). `tools/build_region_shells.py` needs extending for the direct-sow + succession shape (reference lettuce) before carrot's Step 3.5. The `zones{}` legacy layer was wiped on the 120 (kept on the 3 GS crops until Phase C). Pre-existing parked items (register inventory on-disk; `fruit_set_temp_f`; minor copy calls) unchanged.
+
 ## 2026-06-08 -- session `register_source_quote_excluded_normalization` (Claude Code lane -- dataset-wide register normalization)
 
 **Start-SHA:** `973632ea0549b77d1d4810b34d2c81f86f5ebd39dbffb6cfabd07c5162b10a63` (post beefsteak cert; preflight matched LATEST.txt)
