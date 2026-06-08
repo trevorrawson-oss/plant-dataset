@@ -6,6 +6,75 @@
 
 ---
 
+## 2026-06-07 -- session `m16_beefsteak_step5_5_nt_cold_pause` (claude.ai authoring lane -- M16 anchor 2, Steps 5 + 5.5)
+
+**Start-SHA:** `3a482908b610d81824f2151cc2aa95ecb9ca50e925077085d4ba293bfbec1994` (beefsteak Step 4 warm regions; preflight `shasum -a 256 crops_data_final.json` MATCHED LATEST.txt at session open)
+**Proposed End-SHA:** `5e09ef33d2040e64a4fca73d103db412b598baf44b7d56a62f411f09393aa790` (claude.ai scratch after the 22 NT `wait`->`cold_pause` token edits; Claude Code re-pins on promote)
+**Patch:** `m16_beefsteak_step5_patch.json` -- canonical `handoff_patch_format_v1_0.md` format (`base_sha` + `patches[]` of `{op:"replace", json_path, from, value}`); 22 leaf edits; self-applied on a clean copy of `3a482908` and triangulated to the proposed end-SHA. (Step-4's non-canonical `_meta`/`corrections`/`set_value` drift is CORRECTED this session per the parked flag.)
+**Gate expectation:** §C `wait`-note count drops (NT no longer contributes `wait` notes; the 2 cool-CA-coast z10 shoulders remain as legit `wait`). Total violation count otherwise UNCHANGED -- Step 5.5 is a coherence/legibility pass, not a violation-clearing pass (those are Steps 6-11). Claude Code recomputes the authoritative §C count + running total.
+
+### What happened -- beefsteak Steps 5 (verification side-by-side) + 5.5 (calendar coherence + NT cold_pause)
+
+**Step 5 -- per-claim T1 side-by-side, all 9 warm cells (VERIFY, no dataset change).** Every Step-4-authored biological value (spring/fall windows, harvest offsets, second_planting dates, heat_pause months) checked SIDE-BY-SIDE against its CITED T1, all live-fetched 2026-06-07. Nothing rests on inheritance or a Step-4 self-assertion. Full per-claim record in `m16_beefsteak_step5_verification_log.md`. **Result: ALL 9 warm cells VERIFIED TRUE as authored -- ZERO corrections needed in the warm cells.**
+
+- **THE HEADLINE (wider-than-cherry heat pause) -- VERIFIED, widths STAND.** The type-differential DIRECTION is doubly T1-confirmed: UF/IFAS VH021 ("Cherry types are heat resistant") AND CTAHR Field Tomato Production Guidelines ("Tomatoes, especially the large fruited varieties, are sensitive to high night-time temperatures"; optimum set 60-70 deg-F) -- an independent second T1. The set-failure THRESHOLD is multi-source T1 (U.Missouri IPM day >85/night >70; U.Maryland day >=90/night ~70; UA Yavapai >90 no-set). The per-region WIDTH is a T1-grounded synthesis (threshold x regional night-temp climatology x regional-chart summer-absence), confirmed at the WIDEST case: fl_peninsula Jun-Sep `[6,7,8,9]` -- Miami NCEI normals show nights >70-72 deg-F across Jun/Jul/Aug/Sep, so all four months breach the documented large-fruited set-failure threshold. se_gulf `[6,7,8]` + low_desert_az `[6,7,8]` corroborated by UGA (spring closes mid-April, fall reopens only at the Jul 20 deadline) and AZ1005 (no summer tomato transplant). **No narrowing required.**
+- **ca_desert held `[6,7,8]` (= cherry): CORRECT** -- an absolute climatic exclusion cannot be narrowed by type; beefsteak==cherry here is right, not a paste (basis prose is beefsteak-specific).
+- **warm_arid held `[7]` (= cherry): CORRECT as a legibility encoding** -- the Dona Ana MG Las Cruces chart transplants the fall crop mid-July, so July must read as the fall-plant month; blanking Aug would contradict that. Large-fruited Aug poor-set (>95 deg-F day) disclosed in prose. **PARKED for Trevor (re-surfaced): `fruit_set_temp_f` schema shape would make this Aug set STRUCTURAL instead of prose-only -- schema-touching, Trevor rules the shape, Claude Code adds the field.**
+- **Window dates verified EXACT against live T1:** UC ANR Table 13.2 tomato row (N/N-Coast=May; S-Coast=Apr-Jul 15; Interior=Apr-May; Desert=Dec-March) matches ca_north_coast/ca_south_coast/ca_interior/ca_desert main bands exactly; region definitions match dataset labels exactly. UGA C943 "no later than July 20" + "tomatoes will take 6 weeks" + B577 spring Mar 25-Apr 20 mid-GA / 2-weeks-earlier-south match se_gulf. VH021 Table 1 South tomato Aug-Feb supports fl_peninsula (dataset trims to Sep, conservative). AZ1005/Maricopa transplant timing supports low_desert_az.
+- **Cultivar-type:** PASS -- DTM [75,90] vs cherry [55,70]; harvest offsets 75/85/90d (NOT cherry's ~62d); large-fruited thresholds asserted, not cherry's. **Template-copy:** CLEARED -- ZERO heat_pause-basis or region_notes byte-identical to cherry; spring `plant_out` windows 8/8 identical to cherry but EXPECTED-CLEAN (species-level transplant timing, re-verified vs B577 + Table 13.2, not pasted-and-trusted). **Stage-temperature conflation:** none.
+
+**Step 5.5 -- calendar coherence + NT cold_pause (the only dataset CHANGE).**
+- **(a) northern_tier `wait`->`cold_pause` (CHANGE -- 22 token edits).** z3-z7 winter shoulder `wait` months derived to `cold_pause`, TOKEN-ONLY, no sibling object -- the exact move cherry's certified NT got (cherry NT uses `cold_pause` in the identical positions). Inventory: z3 Jan/Feb/Mar/Oct/Nov/Dec (6); z4 Jan/Feb/Mar/Oct/Nov/Dec (6); z5 Jan/Feb/Nov/Dec (4); z6 Jan/Feb/Nov/Dec (4); z7 Jan/Dec (2) = **22 total**. Preserved untouched: all `indoors`/`plant`/`growing`/`harvest`, the z7 Nov `late` token, the Step-3.5-verified promoted windows. Calendar length stays 12 per zone.
+- **(b) Warm cool-coast `wait` shoulders (CLASSIFY -> NO CHANGE).** ca_north_coast z10 (Jan/Feb/Nov/Dec `wait`) + ca_south_coast z10 (Jan/Feb `wait`): frost-free but cool. Per the pause-legibility rule, a frost-free-cool plantable gap stays `wait`; only a seasonal stop becomes a pause state. UC ANR coastal winter behavior (single warm tomato window, no hard exclusion) supports this. Decisive: beefsteak's z10 cool-coast calendars are BYTE-IDENTICAL to cherry's CERTIFIED z10 cells, which kept `wait`. **Kept `wait` -- no patch.**
+- **(c) Coherence invariants CONFIRMED (no drift).** `heat_pause.months` == calendar `heat_pause` tokens: all 15 warm zone-cells CLEAN (programmatically verified -- se_gulf/ca_desert/low_desert [6,7,8]; warm_arid [7]; fl_peninsula [6,7,8,9]; 7 no-pause cells clean). second_planting present iff two plant blocks: consistent (4 second-planting cells have two plant blocks; ca_interior/CA coasts/fl_peninsula/hawaii correctly none). calendar[]<->plantings[] sync + first/last_plant_date spot-checked se_gulf: coherent.
+
+### Path manifest (for Claude Code's claim cross-check) -- 22 leaf edits, ALL `op:replace`, ALL `from:"wait"` `value:"cold_pause"`
+- `$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[0]` (Jan)
+- `...resolved_by_zone.3.calendar[1]` (Feb)
+- `...resolved_by_zone.3.calendar[2]` (Mar)
+- `...resolved_by_zone.3.calendar[9]` (Oct)
+- `...resolved_by_zone.3.calendar[10]` (Nov)
+- `...resolved_by_zone.3.calendar[11]` (Dec)
+- `...resolved_by_zone.4.calendar[0]` (Jan)
+- `...resolved_by_zone.4.calendar[1]` (Feb)
+- `...resolved_by_zone.4.calendar[2]` (Mar)
+- `...resolved_by_zone.4.calendar[9]` (Oct)
+- `...resolved_by_zone.4.calendar[10]` (Nov)
+- `...resolved_by_zone.4.calendar[11]` (Dec)
+- `...resolved_by_zone.5.calendar[0]` (Jan)
+- `...resolved_by_zone.5.calendar[1]` (Feb)
+- `...resolved_by_zone.5.calendar[10]` (Nov)
+- `...resolved_by_zone.5.calendar[11]` (Dec)
+- `...resolved_by_zone.6.calendar[0]` (Jan)
+- `...resolved_by_zone.6.calendar[1]` (Feb)
+- `...resolved_by_zone.6.calendar[10]` (Nov)
+- `...resolved_by_zone.6.calendar[11]` (Dec)
+- `...resolved_by_zone.7.calendar[0]` (Jan)
+- `...resolved_by_zone.7.calendar[11]` (Dec)
+
+### COUNTS for cross-check
+- Patch leaf edits: **22** (all `replace`, `wait`->`cold_pause`).
+- NT `wait` slots before: **22**; after: **0**. NT `cold_pause` slots before: **0**; after: **22**.
+- Cells changed across entire dataset: **1** (`beefsteak-tomato` only). 9 warm region cells byte-identical pre/post; NT non-calendar fields byte-identical; cherry + lettuce + `source_catalog` byte-identical.
+- Warm-cell biological corrections this step: **0** (all Step-4 values verified TRUE).
+- Self-applied scratch SHA (informational): `5e09ef33d2040e64a4fca73d103db412b598baf44b7d56a62f411f09393aa790`.
+
+### Verification (claude.ai self-check -- Claude Code runs the authoritative gate on promote)
+- **Structural/self-apply:** patch base_sha gates on `3a482908`; self-apply reproduces the 22 `cold_pause` slots, zero `wait` remaining in NT; collateral isolation confirmed (only beefsteak.regions.northern_tier.resolved_by_zone.{3-7}.calendar changed). All NT calendars stay length 12.
+- **NOT run here (Claude Code lane):** `whole_crop_gate.py`, `release_verify.py`, the authoritative claim cross-check + SHA re-pin. Protocol #6 before promote.
+
+### Residual / next
+**Beefsteak Steps 5 + 5.5 DONE.** Step 5: 9/9 warm cells VERIFIED TRUE side-by-side (zero corrections; wider-than-cherry pauses stand, doubly T1-sourced). Step 5.5: NT `cold_pause` derived (22 tokens), cool-coast shoulders ruled legit `wait`, coherence invariants clean. NEXT = **Steps 6/7/8** (the 30 dual-voice `_beginner` siblings incl `cause_beginner` x8 + `growth_stages.log_prompt_beginner` x6 + the 9 region_notes already dual-register from Step 4); **Step 9** (1 `sources_summary[19].name` dash); **Step 10** (1 `harvest_to_table` T2 de-cite + 1 `harvest_urgency` anchoring gap); **Step 11** (validation + `launch_ready` reset-then-flip + `status`->`verified_gs_arc`). **Beefsteak's stale `launch_ready_core/seasoned=true` + `status="verified_complete"` (M11 artifacts) stay UNTOUCHED -- reset-then-re-earn at Step 11.** PARKED for Trevor: `fruit_set_temp_f` schema shape (warm_arid Aug structural set).
+
+### Claude Code release (2026-06-08, session `m16_beefsteak_step5_5_nt_cold_pause`)
+**Promoted End-SHA: `8fdb3ee66c6866ed690949e03d59b90c006f4231d759a2222ecfa1b20ce63f54`** (canonical `ensure_ascii=False`). Start `3a482908`.
+
+- **Patch applied DIRECTLY via `apply_patch.py` -- canonical format, no reconciliation.** claude.ai emitted `handoff_patch_format_v1_0.md` exactly this session (`base_sha` + `patches[]` of `{op:replace, json_path, from, value}`) -- the Step-4 `_meta`/`corrections` drift is CLOSED (the project-knowledge spec landed). 22 edits, all `replace`, all `from:"wait"` `value:"cold_pause"`, all on `northern_tier.resolved_by_zone.{3-7}.calendar`.
+- **Serialization finding (benign, content verified identical).** claude.ai's proposed end-SHA `5e09ef33` was computed `ensure_ascii=True` (the °F symbols escaped to `\u00b0`); the canonical convention is `ensure_ascii=False`, so the promoted SHA is `8fdb3ee6`. PROVEN same content: re-serializing the promoted file with `ensure_ascii=True` reproduces `5e09ef33` exactly. FLAGGED to claude.ai: compute the proposed end-SHA with `ensure_ascii=False`.
+- **Protocol #6.** (a) gate beefsteak **34 -> 34 UNCHANGED** (Step 5.5 is a coherence/legibility pass, not violation-clearing -- correct, as the snippet predicted); cherry + lettuce `GATE: PASS`. (b) release_verify: collateral clean (only `beefsteak.regions.northern_tier`; the 9 warm cells + NT non-calendar fields + lettuce + cherry + catalog byte-identical); §B **no new violations**; §C the 5 NT `wait`-legibility notes CLEARED (now `cold_pause`), only the 2 ruled-legit cool-coast z10 waits remain; §E/F ok; §D 6 dashes = the SAME pre-existing legacy `zones{}` backend strings (untouched). (c) claim cross-check: byte-diff confirms EXACTLY 22 `wait`->`cold_pause` on the 22 manifest paths, 0 non-conforming; only `northern_tier` changed in beefsteak; warm-cell biological corrections **0** (Step 5 verified all 9 TRUE).
+- **Step 5 = a pure verification pass, no warm-cell change** -- the batch Step-4 sourcing held under independent T1 side-by-side, and the wider-than-cherry heat pause is now doubly-T1-confirmed. **northern_tier UNTOUCHED except the 22 calendar tokens** (its promoted windows + `region_notes`-null intact; region_notes are Steps 6/7). **Beefsteak's stale `launch_ready=true` + `verified_complete` UNTOUCHED** -- reset-then-re-earn at Step 11. NEXT = Steps 6/7/8 (dual-voice beginner siblings).
+
+
 ## 2026-06-07 -- session `m16_beefsteak_step4_warm_regions` (claude.ai authoring lane -- M16 anchor 2, Step 4)
 
 **Start-SHA:** `006cd0afbab0d3b9fab8909a870c3ac98909b3f066c5d6c0f8f4457693ec0071` (beefsteak Step 3.5 region shells; preflight `shasum -a 256` matched LATEST.txt)
