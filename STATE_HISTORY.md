@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-08 -- session `carrot_step3_5_region_shells` (Claude Code lane -- carrot Step 3.5; first DIRECT-SOW region shells)
+
+**Start-SHA:** `ae2061ba75f4b38aab8312774b67d403aa5b75610c14de74b962d3bccfb9ff58` (carrot Steps 1-3; preflight matched LATEST.txt)
+**End-SHA:** `66b43bdac556b3836f33cc5811c23112a7a23f18f5dad9ef0f5fad0460306892` (Claude Code, 2026-06-08)
+**Gate:** whole_crop_gate carrot A2 = stub 0 / null-track 0 / stale 0 (region shape at-bar); 10 violations remain = region_notes both-null (admission state, filled at Steps 6/7). register PASS; cherry/beefsteak/lettuce PASS.
+
+### What happened -- carrot Step 3.5 (region shell build), first non-tomato
+Built all 10 of carrot's region cells to the reference shape -- in the **DIRECT-SOW** window shape, the first time Step 3.5 ran on a non-transplant crop. Each region's beginner-track rule object carries `direct_sow` + `harvest_start` + `harvest_end` (NOT the tomatoes' `start_indoors`/`plant_out`). `northern_tier` was built FROM-SCRATCH (not promoted): carrot's `zones{}` was wiped in the author-fresh reset, so there is no verified cold-zone data to promote -- NT is re-sourced fresh at Step 4 like the warm regions (the v1.7 amendment: Step 3.5's "promote the VERIFIED cold-zone data" applies to retro anchors only).
+
+**Tool extension (test-first, Claude Code lane):** `tools/build_region_shells.py` extended -- shape is now DERIVED from the crop (`start_method.start=="direct"` -> `direct_sow` shape; else transplant) and a new `_north_should_promote()` gates the legacy promote-from-zones path (retro anchors: an already-promoted resolved cell, a pre-hoist nested-`plantings` cell, or cold-zone `plantings` in `zones{}`) vs the from-scratch NT (author-fresh, none of those). Succession TRACKS are NOT created here -- Step 3.5 builds the beginner skeleton; succession windows are authored at Step 4/5.5 with the biology. `tools/test_build_region_shells.py` grew to 4 fixtures (added direct-sow author-fresh + transplant author-fresh); full tool suite 8/8 green; cherry idempotency + the original transplant fixture still pass (backward-compatible).
+
+### Verification (protocol #6)
+- Applied via `tools/apply_region_shells.py` (SHA-gated on LATEST; collateral-audited: only carrot's 10 cells changed; every other crop + top-level key byte-identical).
+- release_verify: collateral clean (lettuce byte-identical; no catalog/top-level change); calendar/dash/exemplar-key/value-divergence all ok. Its 1 CONCERN is EXACTLY the stub->region_notes-null graduation (10 "region unfilled" cleared, 10 "region_notes pair both null" introduced) -- the documented Step-3.5 admission state, not a regression. The pre-commit hook's `drop_shell_build_unmasks` recognizes the graduation and PASSES (committed clean, no --no-verify).
+
+### Residual / next
+**Carrot Step 3.5 DONE.** NEXT = **Step 4** (claude.ai): source verified region-appropriate `direct_sow` windows (+ succession `track:"succession"` entries) into the 10 empty shells, warm regions + the from-scratch NT, via the region->source map; author dual-register `region_notes`. Then Steps 5 / 5.5 / 6-8 / 9-11. **Owed/parked unchanged:** dataset-wide shell-shape normalization folded into 2.9; v1.7 checklist amendment; register inventory on-disk; `fruit_set_temp_f`.
+
 ## 2026-06-08 -- session `carrot_steps1-3_author_fresh` (claude.ai authoring + Claude Code release -- FIRST author-fresh crop, anchor 4)
 
 **Start-SHA:** `aeb5c339d55039c7cd272e0338f73e820a7c3de7bcc531aed856f172f143aca5` (post-wipe shell; preflight matched LATEST.txt)

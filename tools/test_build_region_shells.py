@@ -95,4 +95,61 @@ before = copy.deepcopy(cherry["regions"])
 build_region_shells(cherry)  # default kwargs == the constants cherry was built with
 assert cherry["regions"] == before, "transform not idempotent on an already-built crop"
 
+# ---- fixture 3: author-fresh DIRECT-SOW crop (carrot-like) ----
+# Wiped-shell crop: empty regions, no zones{} data, NT resolved cells emptied with
+# null resolution_method (nothing to promote). Direct-sown (start_method.start=="direct").
+# Expect: every region (incl. NT) gets a from-scratch beginner skeleton with the
+# DIRECT-SOW window shape (direct_sow, NOT start_indoors/plant_out); NT is NOT promoted.
+def direct_sow_author_fresh_crop():
+    def shell(label):
+        return {
+            "region_label": label,
+            "plantings": [],
+            "region_notes_seasoned": None, "region_notes_beginner": None,
+            "resolved_by_zone": {"9": {"calendar": [], "plant_out": None,
+                                       "resolution_method": None}},
+        }
+    regions = {rk: shell(rk) for rk in REGION_KEYS if rk != "northern_tier"}
+    regions["northern_tier"] = {
+        "region_label": "Northern Tier (Cold Zones)",
+        "plantings": [],
+        "region_notes_seasoned": None, "region_notes_beginner": None,
+        "resolved_by_zone": {z: {"calendar": [], "plantings": [],
+                                 "resolution_method": None}
+                             for z in ("3", "4", "5", "6", "7")},
+    }
+    return {"slug": "carrot-like", "start_method": {"start": "direct"},
+            "succession_policy": {"suitable": True, "successions": 3},
+            "zones": {}, "regions": regions}
+
+c3 = build_region_shells(direct_sow_author_fresh_crop(), session="carrot_step3_5", date="2026-06-08")
+r3 = c3["regions"]
+assert set(r3) == REGION_KEYS, f"fixture3 region set: {set(r3)}"
+for rk, r in r3.items():
+    p0 = r["plantings"][0]
+    assert isinstance(p0, dict) and p0["track"] == "beginner", f"{rk}: track"
+    # DIRECT-SOW shape: direct_sow present-empty; transplant keys absent
+    assert p0.get("direct_sow") == [], f"{rk}: direct_sow should be present-but-empty, got {p0.get('direct_sow')!r}"
+    assert "start_indoors" not in p0 and "plant_out" not in p0, f"{rk}: transplant keys leaked into a direct-sow shell"
+    assert p0.get("harvest_start") == [] and p0.get("harvest_end") == [], f"{rk}: harvest windows"
+    for z, cell in (r.get("resolved_by_zone") or {}).items():
+        assert "plantings" not in cell, f"{rk}.{z}: nested plantings survived"
+    assert "region_notes_seasoned" in r and "region_notes_beginner" in r, f"{rk}: region_notes keys"
+# NT is FROM-SCRATCH (not promoted): direct-sow skeleton, no promotion provenance
+nt3 = r3["northern_tier"]
+assert nt3["plantings"][0].get("direct_sow") == [], "NT not built as a direct-sow from-scratch shell"
+assert "Zone-promoted" not in (nt3.get("plantings_provenance") or ""), "from-scratch NT was wrongly promoted-from-zones"
+
+# ---- fixture 4: transplant author-fresh crop -> transplant shape, from-scratch NT ----
+def transplant_author_fresh_crop():
+    c = direct_sow_author_fresh_crop()
+    c["slug"] = "pepper-like"
+    c["start_method"] = {"start": "transplant"}
+    return c
+
+c4 = build_region_shells(transplant_author_fresh_crop())
+p4 = c4["regions"]["se_gulf"]["plantings"][0]
+assert p4.get("start_indoors") == [] and p4.get("plant_out") == [], "transplant author-fresh: missing transplant windows"
+assert "direct_sow" not in p4, "transplant shell should not carry direct_sow"
+
 print("PASS build_region_shells")

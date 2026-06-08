@@ -23,7 +23,18 @@ def build_region_shells(crop, session=SESSION, date=DATE):
     the cherry-era constants for backward compatibility, but every crop after cherry
     must pass its OWN session/date -- the provenance records when THIS crop's north
     was promoted, not cherry's. (The apply wrapper passes them per-run.)
+
+    Shape is DERIVED from the crop (no analogy -- v1.6 A1):
+      - `start_method.start == "direct"` -> direct-sow window shape (`direct_sow`),
+        else the transplant shape (`start_indoors` + `plant_out`).
+      - northern_tier is PROMOTED from the verified cold `zones{}` only when there is
+        verified zone data to promote (a retro crop). Author-fresh crops (wiped shells,
+        empty zones) have nothing to promote, so their NT is built FROM-SCRATCH like a
+        warm region. (Succession tracks are NOT created here -- they are authored at
+        Step 4/5.5 with the biology; Step 3.5 builds the beginner skeleton only.)
     """
+    direct = (crop.get("start_method") or {}).get("start") == "direct"
+    promote_north = _north_should_promote(crop)
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):
             continue
@@ -34,11 +45,28 @@ def build_region_shells(crop, session=SESSION, date=DATE):
         lbl = r.get("region_label")
         if isinstance(lbl, str) and " -- " in lbl:
             r["region_label"] = lbl.replace(" -- ", ": ")
-        if rk == "northern_tier":
+        if rk == "northern_tier" and promote_north:
             _build_north_from_zones(r, session, date)
         else:
-            _build_warm_shell(r)
+            _build_warm_shell(r, direct=direct)
     return crop
+
+
+def _north_should_promote(crop):
+    """Legacy retro path: promote northern_tier from the verified cold `zones{}` only
+    when there IS verified zone data -- an already-promoted resolved cell (carries a
+    `resolution_method`), a pre-hoist nested-`plantings` cell, or cold-zone `plantings`
+    in `zones{}`. A wiped author-fresh shell has none of these -> build NT from-scratch."""
+    nt = (crop.get("regions") or {}).get("northern_tier") or {}
+    for cell in (nt.get("resolved_by_zone") or {}).values():
+        if isinstance(cell, dict) and (cell.get("resolution_method") or cell.get("plantings")):
+            return True
+    z = crop.get("zones") or {}
+    for zk in ("3", "4", "5", "6", "7"):
+        c = z.get(zk)
+        if isinstance(c, dict) and c.get("plantings"):
+            return True
+    return False
 
 
 def _build_north_from_zones(r, session=SESSION, date=DATE):
@@ -67,25 +95,27 @@ def _build_north_from_zones(r, session=SESSION, date=DATE):
     )
 
 
-def _build_warm_shell(r):
-    # shape-complete RULE skeleton (warm_season_fruiting transplant archetype):
-    # a single track:"beginner" rule object with the archetype window-rule keys
-    # present-but-empty, ready for Step 4 to fill values into. resolved_by_zone
+def _build_warm_shell(r, direct=False):
+    # shape-complete RULE skeleton: a single track:"beginner" rule object with the
+    # archetype's window-rule keys present-but-empty, ready for Step 4 to fill values
+    # into. `direct` selects the window shape: direct-sow crops (carrots, roots) carry
+    # `direct_sow`; transplant crops carry `start_indoors` + `plant_out`. resolved_by_zone
     # cells are left untouched (derived output; PENDING until Step 4 sources them).
-    # Only build the skeleton if plantings is still a stub (a PENDING sentinel
-    # string or empty). If it is already a dict-shaped rule object, a later step
-    # has filled it -- do not clobber it. Keeps the transform safe to re-run.
+    # Only build the skeleton if plantings is still a stub (a PENDING sentinel string or
+    # empty). If it is already a dict-shaped rule object, a later step has filled it -- do
+    # not clobber it. Keeps the transform safe to re-run. (This path also builds the
+    # FROM-SCRATCH northern_tier of author-fresh crops -- nothing to promote.)
     if not r.get("plantings") or not isinstance(r["plantings"][0], dict):
-        r["plantings"] = [{
-            "succession_id": 1,
-            "label": "main",
-            "track": "beginner",
-            "start_indoors": [],
-            "plant_out": [],
-            "harvest_start": [],
-            "harvest_end": [],
-            "anchoring_urls": {},
-        }]
+        entry = {"succession_id": 1, "label": "main", "track": "beginner"}
+        if direct:
+            entry["direct_sow"] = []
+        else:
+            entry["start_indoors"] = []
+            entry["plant_out"] = []
+        entry["harvest_start"] = []
+        entry["harvest_end"] = []
+        entry["anchoring_urls"] = {}
+        r["plantings"] = [entry]
     # defensive: no rule-bearing structure may live in the resolved layer
     for cell in (r.get("resolved_by_zone") or {}).values():
         if isinstance(cell, dict):
