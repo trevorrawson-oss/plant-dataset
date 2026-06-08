@@ -29,13 +29,11 @@ Exit 1 on any CONCERN (so a bot can gate on it).
 import json, re, sys, subprocess, os, argparse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from field_classification import is_backend  # the ONE shared backend predicate
 MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 EMDASH = chr(8212)
 PAUSE_TOKENS = {"heat_pause", "cold_pause", "season_over"}
-# backend prose: dashes/spelled-degrees legitimately allowed here (CLAUDE.md)
-BACKEND_SUBSTR = ("plantings_provenance", "synthesis_note", "design_note",
-                  "source_quote", "_admission", "sources_summary", "uscrn_validation",
-                  "verification_status", "calendar_basis", "basis_seasoned", "notes_internal")
 
 concerns = []   # hard -> block the release
 notes = []      # review items surfaced for Step 5/5.5 -> do NOT block
@@ -56,18 +54,17 @@ def gate(path, slug):
     return viols, final
 
 
-def scan_user_facing(o, path=""):
+def scan_user_facing(o, path="", key=""):
     hits = []
     if isinstance(o, dict):
         for k, v in o.items():
-            hits += scan_user_facing(v, f"{path}.{k}")
+            hits += scan_user_facing(v, f"{path}.{k}", k)
     elif isinstance(o, list):
         for i, x in enumerate(o):
-            hits += scan_user_facing(x, f"{path}[{i}]")
+            hits += scan_user_facing(x, f"{path}[{i}]", key)  # list items inherit parent key
     elif isinstance(o, str):
-        backend = any(s in path for s in BACKEND_SUBSTR)
         flag = ("--" in o or EMDASH in o or re.search(r"\bdegrees?\s*F\b", o))
-        if flag and not backend:
+        if flag and not is_backend(key, path):
             hits.append((path, o[:60]))
     return hits
 

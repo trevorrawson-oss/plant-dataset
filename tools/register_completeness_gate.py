@@ -18,7 +18,10 @@ Home: per-crop shell pass (admission check on first contact with a crop's
 structure) + run dataset-wide as needed. Run:
   python3 tools/register_completeness_gate.py [crops_data_final.json]
 """
-import json, sys, re, collections
+import json, sys, re, collections, os
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from field_classification import BACKEND_KEYS, BACKEND_KEY_RE
 
 PATH = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
 
@@ -102,8 +105,9 @@ def walk(o, pat, crop):
             if isinstance(v, str):
                 ruled = (k.endswith("_seasoned") or k.endswith("_beginner")
                          or k in EXCLUDED_KEYS
+                         or k in BACKEND_KEYS or BACKEND_KEY_RE.match(k)  # shared backend KEY slice (kills source_quote/basis drift)
                          or re.match(r"zone_\d+_", k)  # zone-N boolean/range primitives
-                         or excluded_by_path(pat)
+                         or excluded_by_path(pat)  # roster keeps its OWN narrow path notion
                          or ruled_categorical(pat, k))
                 if not ruled and is_prose_shaped(v):
                     p = pat + "." + k if pat else k

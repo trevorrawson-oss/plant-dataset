@@ -59,34 +59,10 @@ def fail(msg):
     print(f"  VIOLATION: {msg}")
 
 
-# ---- layer classification (Step 9 STEP-0 derivation, STATE_HISTORY 2026-06-04) ----
-BACKEND_KEYS = {
-    "id","slug","stage_id","tip_id","region_id","evidence_tier","added_in",
-    "last_reviewed","last_reviewed_session","last_operation","last_session",
-    "schema_version","last_updated","date","stored_date","resolution_tier",
-    "resolution_method","anchor_threshold","fallback_beyond_horizon",
-    "calendar_state","window_type","timing_relative","phase","status","image",
-    "plantings_provenance","provenance","lifted_from_zone","botanical_name",
-    "family","calendar_basis","resolution_source","from","from_year_round_note",
-    "url","verified","accessed","publisher","source_class","source_note",
-    "verification_log_ref","filing_record","disposition","scope","session",
-    "field","assigned_to","deferred_to","last_audited","resolution_note",
-    "filed_in","filed_in_session","resolved_in","resolved_by","note_internal",
-    "synthesis_note","synthesis_note_seasoned","design_note","design_note_seasoned",
-    "source_quote","source_quote_seasoned","zone_coverage_note",
-    "zone_coverage_note_seasoned","uscrn_validation","classification",
-    "source","source_id","claim","tier","trust_tier","citable_for","archetype",
-    "succession_id","track","added_by","sources_summary","description_sources",
-}
-BACKEND_PATH_SUBSTR = ("plantings_provenance", "verification_status",
-                       "anchoring_urls", ".provenance", "uscrn_validation")
-BACKEND_KEY_RE = re.compile(r"zone_\d+_")  # zone_8_presence etc. -- resolution records
-
-
-def is_backend(key, pat):
-    return (key in BACKEND_KEYS or BACKEND_KEY_RE.match(key)
-            or key.endswith("_sources") or key.endswith("_anchoring_urls")
-            or any(s in pat for s in BACKEND_PATH_SUBSTR))
+# ---- layer classification: the ONE shared predicate (field_classification.py) ----
+import os as _os
+sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from field_classification import is_backend
 
 
 # ---------------- generic §3 subset (EXTEND PER CROP) ----------------
