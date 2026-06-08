@@ -2,7 +2,7 @@
 
 > ## ⚠️ SESSION PROTOCOL -- read before doing anything
 > 1. **Confirm the SHA.** `shasum -a 256 crops_data_final.json` must equal `LATEST.txt`. If it does not, STOP and reconcile. **The uploaded `LATEST.txt` / `CURRENT_STATE` / `STATE_HISTORY` are the SOLE authority for the canonical SHA, the fill count, and the next cell. If MEMORY conflicts, the files win (memory lags). Re-derive arc position from the files.**
-> 2. **Locate your step on the arc checklist** (gold-standard arc checklist **v1.5**) BEFORE acting. Kickoffs SUMMARIZE; re-derive the next unowned step from the live crop + the checklist.
+> 2. **Locate your step on the arc checklist** (gold-standard arc checklist **v1.6**) BEFORE acting. Kickoffs SUMMARIZE; re-derive the next unowned step from the live crop + the checklist.
 > 3. **This file is LIVE STATE ONLY.** Never delta-edit it. At session close, **fully regenerate it** from true state.
 > 4. **History is append-only** in `STATE_HISTORY.md` -- APPEND a dated entry, never rewrite.
 > 5. **CLOSE RITUAL.** If the dataset changed: PROMOTE (write canonical, re-pin `LATEST.txt`), regenerate this file, append to `STATE_HISTORY.md`, sync `00-current/`, commit (+ push).
@@ -36,7 +36,7 @@
   2. **Gate/release_verify `basis_seasoned` classification:** `whole_crop_gate` §D temp-scans `basis_seasoned` but exempts `synthesis_note_seasoned`; `release_verify` §D exempts both. Align them; settle user-facing-vs-backend for `*_basis`.
   3. `release_verify` §D over-flags pre-existing legacy `zones{}` anchoring-note dashes (narrower backend filter than the gate's).
   - **RESOLVED this session:** the Step-4 patch-format drift (claude.ai now emits canonical `{base_sha, patches[]}`).
-- **PARKED -- claude.ai checklist amendments:** `lifted_from_zone`-strip into Step 3.5 text; °F-in-user-facing rule; retire "every cell needs a county MG"; window-structure-is-a-source-finding (Path A); heat-set-failure-month = heat_pause token + second_planting action.
+- **RESOLVED:** the six previously-owed checklist amendments are SHIPPED in **v1.6** (governing checklist is now v1.6, synced on disk `05-methodology/current/` + `00-current/` + PK) -- no longer owed; do not re-flag.
 
 ## Gate record (2026-06-08, on canonical `8fdb3ee6`)
 - **cherry `GATE: PASS` (0); lettuce `GATE: PASS` (0).** Both: launch_ready core+seasoned=true, `status="verified_gs_arc"`.
