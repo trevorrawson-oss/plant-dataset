@@ -6,6 +6,49 @@
 
 ---
 
+## 2026-06-08 -- session `m16_beefsteak_steps678_dual_voice_nt_region_notes` (claude.ai authoring lane -- M16 anchor 2, Steps 6 + 7 + 8)
+
+**Start-SHA:** `8fdb3ee66c6866ed690949e03d59b90c006f4231d759a2222ecfa1b20ce63f54` (beefsteak Steps 5 + 5.5; preflight `shasum -a 256 crops_data_final.json` MATCHED `LATEST.txt` at session open)
+**Proposed End-SHA:** `e8b46da50e043428d14be82136fba5e765040215564c29ff414004937746ea81` (claude.ai scratch after the 42 ops; computed `ensure_ascii=False` per last session's flag; Claude Code re-pins on promote)
+**Patch:** `m16_beefsteak_steps678_patch.json` -- canonical `handoff_patch_format_v1_0.md` (`base_sha` + `patches[]` of `{op:replace, json_path, from, value}`; every `from` = current live value). 42 ops: 32 `from:null` (30 beginner siblings + 2 NT region_notes registers) + 10 seasoned depth-lifts. Self-applied on a clean copy of `8fdb3ee6`, reproduces `e8b46da5`.
+**Gate expectation:** dual-voice coverage 34 -> 3 (30 siblings + 1 NT §A2 region_notes-null cleared). Claude Code recomputes the authoritative count.
+
+### What happened -- beefsteak Steps 6 (seasoned depth-lift) + 7/8 (the 30 beginner siblings) + (B) NT region_notes
+
+**Denominator DERIVED by walking the crop, not trusted from the punch list.** Walked every `*_seasoned` prose key, applied Appendix A per-field rulings -> **30 in-scope null `_beginner` siblings**, bucket-identical to the cross-check (companions 5, pests.cause 4, diseases.cause 4, growth_stages.log_prompt 6, watering 3, container 2, storage 3, yield 2, rotation 1). The walk surfaced **7 apparent extras, all confirmed false positives against the certified exemplars and NOT authored:** the 5 `companions.{good,bad}_seasoned[*].why_beginner` (the `*_seasoned` arrays carry no `why_beginner` key on cherry/lettuce -- certified shape; the register lives in the `*_beginner_seasoned` arrays; collapsing the two is the deferred §5 array-split), `moon_phase_preference.source_note_beginner` (SP backend evidence note, no sibling on cherry/lettuce), `succession_policy.reason_beginner` (SP; Appendix A pairs `tip_beginner`, present, not `reason`).
+
+**Step 6 -- 10 seasoned lifts; the rest already at depth.** Lifted the terse 2.6-era `pests[0..3].cause_seasoned` (species + outbreak-driving condition), `diseases[0]/[2]` (debris/soil-splash overwinter + bottom-up spread), `diseases[1]` BER (calcium-moves-with-water transport), `diseases[3]` late blight (airborne-spore contrast), `rotation.avoid_after_seasoned` (Fusarium/Verticillium persistence + 3-yr), `container_notes.drainage.saucer_practice_seasoned` (root-anoxia why). Every added fact already documented in that entry's own T1-cited fields (spider-mite heat/dust re-confirmed live at UC IPM pn7405, the existing `uc_ipm` anchor) -- no new source minted. `watering`/`container shape`/`storage`/`yield`/`companions why` seasoned ruled already-at-depth by read. `growth_stages.log_prompt_seasoned` ruled not-applicable to the depth bar (journaling prompts, not bio prose).
+
+**Steps 7/8 -- 30 beginner siblings** authored from the lifted seasoned text per dual-register v1.1: Latin names stripped + glossed (hornworm/spider-mite/nematode/brassica), bio content preserved (Rule 4 carve-out), jargon-free `cause` siblings left as plain register transforms (permitted). Copy-convention scan 0 violations (degree symbol, no em-dash/`--`/spelled "degrees F", American English).
+
+**(B) NT region_notes -- BOTH registers, from beefsteak's OWN structure. PUNCH-LIST DISCREPANCY SURFACED, NOT FOLLOWED (flag to Trevor):** punch-list + kickoff said author "the z6-7 two-crops-possible second planting (already in the NT structure)" -- but **beefsteak NT carries NO second planting** (single `plant->growing->harvest` run per zone; one `track:"beginner"` planting). That is correct for beefsteak's 75-90 DTM (offset +85d, indoors -56d) -- no room for a second NT crop, unlike cherry's 55-65 DTM which does carry z6/z7 second plantings. The bullet imported cherry's shape. Authored from the TRUE single-crop structure (writing a z6-7 second crop would contradict the calendar tokens and fail Step 5.5 coherence); the seasoned + beginner notes STATE the no-second-crop point explicitly. Per v1.6 A1 (derive from own biology; "matches cherry" is not a justification). Notes also reflect z3/z4 April = `indoors` (not cherry's cold_pause).
+
+### COUNTS for cross-check
+- Patch ops: **42** (10 `replace` from-nonnull seasoned lifts + 32 `replace` from-null: 30 beginner siblings + 2 NT registers).
+- Beginner siblings authored: **30** (null -> text). NT region_notes registers authored: **2** (null -> text). Seasoned lifts: **10**.
+- Dual-voice coverage on applied scratch: **missing_keys 0, null_values 0 (PASS)**; 149 in-scope CP siblings present.
+- §A2 NT region_notes: cleared; region cells with a null register: **0/10**.
+- Cells/crops changed dataset-wide: **1** (`beefsteak-tomato` only); cherry + lettuce + `source_catalog` + all other top-level keys byte-identical. `verification_status` untouched.
+- Self-applied scratch SHA (informational): `e8b46da5...` (`ensure_ascii=False`); ascii-escaped variant `5537fc7f...`.
+
+### Verification (claude.ai self-check -- Claude Code runs the authoritative gate on promote)
+- Patch base_sha gates on `8fdb3ee6`; self-apply matched all 42 `from` values (no drift) and reproduced `e8b46da5`. Collateral isolation confirmed (beefsteak only).
+- Dual-voice coverage gate (the M13-flip preventer) re-run on the applied scratch: 0 missing AND 0 null.
+- **NOT run here (Claude Code lane):** `whole_crop_gate.py`, `release_verify.py`, authoritative claim cross-check + SHA re-pin. Protocol #6 before promote.
+
+### Residual / next
+**Beefsteak Steps 6/7/8 DONE** -- 30 dual-voice siblings + 10 seasoned lifts + NT region_notes (both registers). Dual-voice coverage PASS (0/0); §A2 NT cleared. NEXT = **Step 9** (1 `sources_summary[19].name` source-name dash); **Step 10** (1 `harvest_to_table` T2 de-cite + 1 `harvest_urgency` anchoring gap); **Step 11** (validation + `launch_ready` reset-then-flip + `status` -> `verified_gs_arc`). **Beefsteak's stale `launch_ready_core/seasoned=true` + `status="verified_complete"` (M11 artifacts) stay UNTOUCHED -- reset-then-re-earn at Step 11.**
+**FLAG to Trevor:** punch-list/kickoff (B) said NT has a z6-7 second planting; the structure correctly has none (beefsteak DTM). Region_notes authored to the true single-crop structure. PARKED (unchanged): `fruit_set_temp_f` schema shape (warm_arid Aug structural set).
+
+### Claude Code release (2026-06-08, session `m16_beefsteak_steps678_dual_voice_nt_region_notes`)
+**Promoted End-SHA: `e8b46da50e043428d14be82136fba5e765040215564c29ff414004937746ea81`** (canonical `ensure_ascii=False`). Start `8fdb3ee6`.
+
+- **Path-format reconciliation (NEW flag).** The patch STRUCTURE was canonical (`base_sha` + `patches[]`) and the proposed SHA was computed `ensure_ascii=False` (both prior flags honored), BUT the 42 `json_path`s were crop-RELATIVE (`$.pests[0].cause_seasoned`, no crop selector) -- the spec requires full paths from root (`$.crops[?(@.slug=='beefsteak-tomato')].pests[0]...`). Reconciled uniformly (prefixed the crop selector to all 42), applied via `apply_patch.py` -> **triangulated to claude.ai's proposed `e8b46da5` EXACTLY.** FLAGGED to claude.ai for Step 9/10: emit full paths from root.
+- **A punch-list error of MINE, caught + corrected by claude.ai.** My Step-6/7/8 punch list + kickoff instructed authoring "the z6-7 two-crops-possible second planting" into the NT region_notes -- that is CHERRY's NT shape. Beefsteak's NT is SINGLE-crop (75-90 DTM leaves no room for a cold-zone second crop). claude.ai correctly REFUSED the instruction (v1.6 A1: derive from own biology; "matches cherry" is not a justification), authored the notes to the true single-crop structure, and flagged it. Spot-checked on the promoted file: NT seasoned/beginner both state "a single frost-bracketed summer crop / grow ... once a year" -- correct. The error was in my prep, not the data.
+- **Protocol #6.** (a) gate beefsteak **34 -> 3** (dual-voice `null_values` 0; §A2 NT region_notes-null cleared; temp-form 0); cherry + lettuce `GATE: PASS`. The residual 3 = Step 9 `sources_summary` dash + Step 10 `harvest_to_table` T2 + `harvest_urgency` anchoring gap. (b) release_verify: collateral clean (only `beefsteak-tomato`; cherry + lettuce + catalog + `verification_status` byte-identical); §B **no new violations** (the 10 depth-lifts added zero new dash/temp); §F NT now carries both registers; §D 6 = the SAME pre-existing legacy `zones{}` backend strings. (c) claim cross-check: 42 ops = 30 beginner siblings + 2 NT registers + 10 seasoned lifts; dual-voice 0/0; `verification_status` byte-identical (stale `launch_ready` intact for the Step-11 reset).
+- **Beefsteak is now one short step from flip-eligible** (gate 3, all biology + dual-voice complete). NEXT = Steps 9/10 (small, mostly mechanical -- candidate for the Claude Code lane) then Step 11. Stale `launch_ready` / `verified_complete` UNTOUCHED.
+
+
 ## 2026-06-07 -- session `m16_beefsteak_step5_5_nt_cold_pause` (claude.ai authoring lane -- M16 anchor 2, Steps 5 + 5.5)
 
 **Start-SHA:** `3a482908b610d81824f2151cc2aa95ecb9ca50e925077085d4ba293bfbec1994` (beefsteak Step 4 warm regions; preflight `shasum -a 256 crops_data_final.json` MATCHED LATEST.txt at session open)

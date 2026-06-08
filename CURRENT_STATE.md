@@ -10,69 +10,55 @@
 
 ---
 
-## 🥬 LETTUCE + 🍅 CHERRY CERTIFIED (`verified_gs_arc`). 🍅 BEEFSTEAK (anchor 2/9) arc: Steps 3.5 + 4 + 5 + 5.5 DONE, NEXT = Steps 6/7/8
-**2 of 9 anchors certified.** `cherry-tomato` + `lettuce-leaf`, both `status="verified_gs_arc"`, both `GATE: PASS`. **M16 `beefsteak-tomato` (anchor 2 of 9) in flight:** **Steps 3.5 (shells) + 4 (warm sourcing) + 5 (side-by-side verification) + 5.5 (NT `cold_pause` + calendar coherence) all DONE.** All 9 warm cells VERIFIED TRUE against T1 (zero corrections; the wider-than-cherry heat pause is now doubly-T1-confirmed). `northern_tier` winter `cold_pause` derived. **NEXT = beefsteak Steps 6/7/8 (the 30 dual-voice `_beginner` siblings).** **(Operating model: claude.ai authors, Claude Code releases.)**
+## 🥬 LETTUCE + 🍅 CHERRY CERTIFIED. 🍅 BEEFSTEAK (anchor 2/9): Steps 3.5+4+5+5.5+6/7/8 DONE, gate=3, NEXT = Steps 9/10 then 11
+**2 of 9 anchors certified** (`cherry-tomato` + `lettuce-leaf`, `status="verified_gs_arc"`, `GATE: PASS`). **M16 `beefsteak-tomato` (anchor 2 of 9) nearly there:** region shells -> warm sourcing -> side-by-side verification -> NT cold_pause -> **dual-voice (30 beginner siblings + 10 seasoned depth-lifts) + NT region_notes** all DONE. **Dual-voice coverage gate = 0; §A2 = 0 (all 10 region cells carry both region_notes registers).** beefsteak `GATE: 3` -- only the Step 9 dash + Step 10 T2 + anchoring gap remain before the Step 11 flip. **NEXT = Steps 9 + 10 (small, mostly mechanical) then Step 11 (launch_ready reset-then-flip + status).** **(Operating model: claude.ai authors, Claude Code releases.)**
 
 ## Canonical pointer
-- **Current SHA:** `8fdb3ee66c6866ed690949e03d59b90c006f4231d759a2222ecfa1b20ce63f54` (beefsteak Step 5.5: NT 22 `wait`->`cold_pause` token edits; ONLY `beefsteak-tomato.regions.northern_tier.resolved_by_zone.{3-7}.calendar` changed -- 9 warm cells + NT non-calendar fields + lettuce + cherry + catalog byte-identical). `LATEST.txt` session: `m16_beefsteak_step5_5_nt_cold_pause`.
-- **NEXT: beefsteak Steps 6/7/8 (dual-voice beginner siblings) -- preflight against `8fdb3ee6`.**
-- **Predecessor chain:** `8fdb3ee6` (Step 5.5 NT cold_pause; Step 5 verified warm cells, 0 corrections) <- `3a482908` (Step 4 warm regions) <- `006cd0af` (Step 3.5 shells) <- `87c8e0a1` <- `b6777ef6` (cherry CERTIFIED) <- ... (full chain in STATE_HISTORY).
+- **Current SHA:** `e8b46da50e043428d14be82136fba5e765040215564c29ff414004937746ea81` (beefsteak Steps 6/7/8: 30 dual-voice `_beginner` siblings + 10 `_seasoned` depth-lifts + NT `region_notes` both registers; ONLY `beefsteak-tomato` changed -- cherry + lettuce + catalog + `verification_status` byte-identical). `LATEST.txt` session: `m16_beefsteak_steps678_dual_voice_nt_region_notes`.
+- **NEXT: beefsteak Step 9 (dash) + Step 10 (T2 + anchoring) -- preflight against `e8b46da5`.**
+- **Predecessor chain:** `e8b46da5` (Steps 6/7/8) <- `8fdb3ee6` (Step 5.5 NT cold_pause) <- `3a482908` (Step 4 warm) <- `006cd0af` (Step 3.5 shells) <- `87c8e0a1` <- `b6777ef6` (cherry CERTIFIED) <- ... (full chain in STATE_HISTORY).
 
-## What just happened (2026-06-08, session `m16_beefsteak_step5_5_nt_cold_pause`)
-- **Step 5 -- verification side-by-side, all 9 warm cells (claude.ai authored, Claude Code released).** Every Step-4 biological value (windows, harvest offsets, second_planting dates, heat_pause months) checked side-by-side against its cited T1, live-fetched. **ALL 9 warm cells VERIFIED TRUE -- ZERO corrections.** The wider-than-cherry heat pause STANDS, now DOUBLY T1-confirmed (UF/IFAS VH021 + CTAHR Field Production Guide for the type-differential; Missouri IPM / Maryland / Yavapai for thresholds; the widest case fl_peninsula Jun-Sep checked vs Miami NCEI night-temp normals). Cultivar-type PASS (DTM 75-90, +90d offsets, not cherry's). Template-copy CLEARED (0 heat_pause-basis/region_notes byte-identical to cherry; the 8 species-level spring windows match cherry but were re-verified, not pasted).
-- **Step 5.5 -- the only dataset CHANGE: NT `cold_pause` (22 tokens).** `northern_tier` z3-z7 winter shoulder `wait` -> `cold_pause` (token-only, no sibling, the move cherry's NT got). Inventory: z3 6 / z4 6 / z5 4 / z6 4 / z7 2 = 22. Cool-coast z10 `wait` shoulders (ca_north_coast, ca_south_coast) CLASSIFIED + KEPT `wait` (frost-free-cool, byte-identical to cherry's certified z10). Coherence invariants clean.
-- **Patch format: CANONICAL this session** (`base_sha` + `patches[]`) -- the Step-4 `_meta`/`corrections` drift is corrected; the project-knowledge spec landed.
+## What just happened (2026-06-08, session `m16_beefsteak_steps678_dual_voice_nt_region_notes`)
+- **Steps 6/7/8 -- dual-voice (claude.ai authored, Claude Code released).** **30 `_beginner` siblings** authored (companions `why` x5, pests/diseases `cause` x8, `growth_stages.log_prompt` x6, watering x3, container x2, storage x3, yield x2, rotation x1) from depth-lifted seasoned text per dual-register v1.1; **10 `_seasoned` depth-lifts** (8 `cause_seasoned` + `rotation.avoid_after` + `container drainage.saucer_practice`; the rest ruled already-at-depth). **Dual-voice coverage gate -> 0 missing / 0 null.** No new source mints (added facts traced to each field's existing T1).
+- **(B) northern_tier `region_notes` -- BOTH registers authored.** The last region_notes-null cell, now filled (10/10 region cells carry both registers).
+- **A PUNCH-LIST ERROR OF MINE, CAUGHT + CORRECTED BY claude.ai.** My Step-6/7/8 punch list + kickoff told claude.ai to author "the z6-7 two-crops-possible second planting" in the NT notes -- that is CHERRY's NT shape; **beefsteak's NT is single-crop** (its 75-90 DTM leaves no room for a cold-zone second crop). claude.ai correctly refused the instruction (v1.6 A1: derive from own biology, "matches cherry" is not a justification), authored the notes to the TRUE single-crop structure, and flagged it. Released data is correct. Lesson: punch lists must derive NT shape from the crop's own structure, not cherry's.
+- **Patch format: structure canonical + `ensure_ascii=False` SHA (both prior flags honored)**, BUT the json_paths were crop-RELATIVE (`$.pests[0]...`, no crop selector). Reconciled by prefixing `crops[?(@.slug=='beefsteak-tomato')]` to all 42 paths, then applied via `apply_patch.py` -- triangulated to claude.ai's `e8b46da5` exactly. New flag (below).
 
 ## Verification (protocol #6, this release)
-- **(a) gate:** beefsteak **34 (unchanged** -- Step 5.5 is coherence, not violation-clearing); cherry + lettuce `GATE: PASS`. **(b) release_verify:** collateral clean (only `beefsteak.regions.northern_tier`; 9 warm cells + NT non-calendar + lettuce + cherry + catalog byte-identical); §B **no new violations**; §C the 5 NT `wait`-notes CLEARED (now cold_pause), only the 2 legit cool-coast z10 waits remain; §E/F ok; §D 6 dashes = SAME pre-existing legacy `zones{}` backend strings. **(c) claim cross-check:** exactly 22 `wait`->`cold_pause` on the manifest paths, 0 non-conforming; 9 warm cells byte-identical; warm-cell corrections 0.
-- **Serialization note (benign):** claude.ai's proposed end-SHA `5e09ef33` was computed `ensure_ascii=True` (°-symbols escaped); the canonical convention is `ensure_ascii=False`, so the promoted SHA is `8fdb3ee6`. CONTENT verified identical (the ascii-escaped re-serialization of the promoted file reproduces `5e09ef33` exactly). Flag claude.ai to compute the proposed end-SHA with `ensure_ascii=False`.
+- **(a) gate:** beefsteak **34 -> 3** (dual-voice null_values **0**; §A2 NT region_notes-null cleared; temp-form 0); cherry + lettuce `GATE: PASS`. The residual 3 = 1 `sources_summary[19].name` dash (Step 9) + 1 `harvest_to_table` T2 (Step 10) + 1 `harvest_urgency` anchoring gap (Step 10). **(b) release_verify:** collateral clean (only `beefsteak-tomato`; cherry + lettuce + catalog + `verification_status` byte-identical); §B **no new violations** (the 10 depth-lifts introduced zero new dash/temp); §F NT now has both registers; §E ok; §D 6 dashes = SAME pre-existing legacy `zones{}` strings. **(c) claim cross-check:** 42 ops (30 siblings + 2 NT registers + 10 lifts) on the manifest paths; dual-voice 0/0; NT notes verified single-crop (not the erroneous z6-7 second crop); `verification_status` byte-identical (stale flags intact).
 
 ## Active work + parked decisions
-- **NEXT MILESTONE: beefsteak Steps 6/7/8 (dual-voice beginner siblings, claude.ai).** The 30 crop-level `_beginner` siblings: `cause_beginner` x8 (pests/diseases), `growth_stages.log_prompt_beginner` x6, watering x3, container x2, rotation x1, storage x3, yield x2, companions `why_beginner` x5. (The 9 region_notes are already dual-register from Step 4.) Then **Step 9** (1 `sources_summary[19].name` dash), **Step 10** (1 `harvest_to_table` T2 + 1 `harvest_urgency` anchoring gap), **Step 11** (validation + `launch_ready` reset-then-flip + `status`->`verified_gs_arc`).
-- **PARKED -- beefsteak stale-flag reset (Step 11, NOT now):** still carries `launch_ready_core/seasoned=true` + `status="verified_complete"` (M11 artifacts). Reset-then-re-earn at its OWN Step 11.
-- **PARKED -- Trevor decisions:** (1) **`fruit_set_temp_f` schema shape** (re-surfaced AGAIN at Step 5) -- would make `warm_arid`'s August large-fruited poor-set STRUCTURAL not prose-only; schema-touching -> Trevor rules shape, Claude Code adds field. (2) optional `ca_south_coast` z9 soft-`cold_pause` revert. (3) lettuce `why_beginner` copy (Radishes/Carrots/Chives) Claude-Code-drafted -- sanity-check.
-- **PARKED -- Claude Code lane (non-blocking):**
-  1. **claude.ai serialization:** compute the proposed end-SHA with `ensure_ascii=False` (it used `True` this session; content was fine, SHA differed). Flag in the Step 6/7/8 handoff.
-  2. **Gate/release_verify `basis_seasoned` classification:** `whole_crop_gate` §D temp-scans `basis_seasoned` but exempts `synthesis_note_seasoned`; `release_verify` §D exempts both. Align them; settle user-facing-vs-backend for `*_basis`.
-  3. `release_verify` §D over-flags pre-existing legacy `zones{}` anchoring-note dashes (narrower backend filter than the gate's).
-  - **RESOLVED this session:** the Step-4 patch-format drift (claude.ai now emits canonical `{base_sha, patches[]}`).
-- **RESOLVED:** the six previously-owed checklist amendments are SHIPPED in **v1.6** (governing checklist is now v1.6, synced on disk `05-methodology/current/` + `00-current/` + PK) -- no longer owed; do not re-flag.
+- **NEXT MILESTONE: beefsteak Steps 9 + 10 (small, mostly MECHANICAL -- candidate for the Claude Code lane), then Step 11.**
+  - **Step 9:** 1 `sources_summary[19].name` user-facing `--` -> per-sense (cherry resolved its identical one to a comma).
+  - **Step 10:** `harvest_to_table` cites a T2 (de-cite or replace with T1, no grandfathering) + `harvest_urgency` `sources:[umn_ext,ncsu_ext]` has no `anchoring_urls` dict (add the URLs).
+  - **Step 11:** validation re-run (all gates 0 except any intentional) + `launch_ready` reset-then-flip + `status` -> `verified_gs_arc`. **Beefsteak's stale `launch_ready_core/seasoned=true` + `status="verified_complete"` (M11 artifacts) stay UNTOUCHED until then -- reset-then-re-earn at Step 11** (exactly as cherry's stale M10 flags were).
+- **PARKED -- Trevor decisions:** (1) **`fruit_set_temp_f` schema shape** (warm_arid Aug structural set; re-surfaced at Steps 4 + 5). (2) optional `ca_south_coast` z9 soft-`cold_pause` revert. (3) lettuce `why_beginner` copy (3 fields) Claude-Code-drafted -- sanity-check.
+- **PARKED -- Claude Code lane / claude.ai flags (non-blocking):**
+  1. **Patch path format (NEW this session):** claude.ai's json_paths were crop-RELATIVE (`$.pests[0]...`); the spec requires FULL paths from root with the crop selector (`$.crops[?(@.slug=='...')].pests[0]...`). Reconciled by hand. Flag in the Step 9/10 handoff. (RESOLVED this session: the `ensure_ascii` SHA flag -- claude.ai computed `e8b46da5` correctly.)
+  2. **Gate/release_verify `basis_seasoned` classification:** `whole_crop_gate` §D temp-scans `basis_seasoned` but exempts `synthesis_note_seasoned`; align them; settle user-facing-vs-backend for `*_basis`.
+  3. `release_verify` §D over-flags pre-existing legacy `zones{}` anchoring-note dashes.
 
-## Gate record (2026-06-08, on canonical `8fdb3ee6`)
-- **cherry `GATE: PASS` (0); lettuce `GATE: PASS` (0).** Both: launch_ready core+seasoned=true, `status="verified_gs_arc"`.
-- **beefsteak `GATE: 34`** -- mid-arc (Steps 4 + 5 + 5.5 done). §A2 SHAPE 0; the 34 = 1 NT region_notes-null + 30 dual-voice siblings + 1 `sources_summary` dash + 1 `harvest_to_table` T2 + 1 `harvest_urgency` anchoring gap. All downstream Steps 6/7/8/9/10. (Step 5.5 left the total unchanged by design -- it cleared `wait`-legibility review notes, not gate violations.)
+## Gate record (2026-06-08, on canonical `e8b46da5`)
+- **cherry `GATE: PASS` (0); lettuce `GATE: PASS` (0).** Both `verified_gs_arc`, launch_ready true.
+- **beefsteak `GATE: 3`** -- §A2 0, dual-voice 0; the 3 = 1 `sources_summary` dash (Step 9) + 1 `harvest_to_table` T2 (Step 10) + 1 `harvest_urgency` anchoring gap (Step 10). One short step from flip-eligible.
 
 ## Region fill state
-**cherry-tomato -- 10/10 verified, CERTIFIED (the reference exemplar).**
-
-**beefsteak-tomato -- 9/10 warm cells SOURCED (Step 4) + VERIFIED side-by-side (Step 5); `northern_tier` promoted + `cold_pause`-derived (Step 5.5).** Owes only the crop-level dual-voice siblings (6/7/8) + NT `region_notes` (6/7). Independent heat biology, WIDER pause than cherry, now T1-verified:
-| region | zones | window | heat_pause (VERIFIED) | second_planting |
-|---|---|---|---|---|
-| `se_gulf` | 8,9 | two_window | Jun-Aug [6,7,8] (wider than cherry) | yes (z8,z9) |
-| `ca_interior` | 8,9 | single | none (production-tail) | none |
-| `ca_north_coast` | 9,10 | single (May) | none (cool-limited; z10 `wait` shoulders) | none |
-| `ca_south_coast` | 9,10 | single (long Apr-Jul15) | none (mild marine; z10 `wait` shoulders) | none |
-| `ca_desert` | 9,10 | two_window | Jun-Aug [6,7,8] (absolute, = cherry) | yes (z9,z10) |
-| `warm_arid` | 8 | two_window | [7] legibility (Aug poor-set in prose) | yes (z8) |
-| `low_desert_az` | 9 | two_window | Jun-Aug [6,7,8] (wider than cherry) | yes (z9) |
-| `fl_peninsula` | 10,11 | near_continuous_inverted | Jun-Sep [6,7,8,9] (widest) | none |
-| `hawaii_tropical` | 11 | year_round | none (oceanic-tropical) | none |
-| `northern_tier` | 3-7 | cold (frost-bracketed) | none; winter `cold_pause` DERIVED (22 tokens) | (owes region_notes at 6/7) |
+**cherry-tomato -- 10/10 verified, CERTIFIED (reference exemplar).**
+**beefsteak-tomato -- 10/10 region cells SOURCED + VERIFIED + dual-register region_notes; whole-crop dual-voice = 0.** Heat biology T1-verified (wider-than-cherry pauses: se_gulf/ca_desert/low_desert Jun-Aug, fl_peninsula Jun-Sep, warm_arid Jul-legibility; cool CA coast + Hawaii no pause; hawaii year_round). NT = single frost-bracketed crop (NOT a z6-7 second-crop crop -- that is cherry), winter `cold_pause` derived, region_notes both registers. Remaining: the 3 Steps-9/10 items + the Step 11 flip.
 
 ## Flip gates (the four distinct "flips")
-1. **Per-crop `launch_ready` flip** -- ✅ lettuce (1), ✅ cherry (2). **Beefsteak in flight (3.5+4+5+5.5 done; 6/7/8/9/10/11 remain).** Then 6 more anchors.
-2. **Region read-layer flip** -- shape + fill proven on lettuce + cherry; beefsteak 9/10 cells filled + verified (owes NT notes + Steps 6-11). Ships with `zones{}` fallback. **2.9+.**
-3. **Authoring-model flip** -- carrots onward region-first. 3 provers (cherry done; beefsteak prover 2, in flight).
+1. **Per-crop `launch_ready` flip** -- ✅ lettuce, ✅ cherry. **Beefsteak: 3.5+4+5+5.5+6/7/8 done; Steps 9/10/11 remain (gate 3, near flip-eligible).** Then 6 more anchors.
+2. **Region read-layer flip** -- shape + fill + verification proven on lettuce + cherry; beefsteak 10/10 filled + verified (owes only Steps 9-11). Ships with `zones{}` fallback. **2.9+.**
+3. **Authoring-model flip** -- carrots onward region-first. 3 provers (cherry done; beefsteak prover 2, nearly complete).
 4. **Schema perennial bump** (`lifecycle_override`) -- FUTURE, 2.9+. After carrots.
 
 **Schema version lineage:** 2.7.5 -> **2.8 (current)** -> region read-layer flip + perennial = **2.9+.**
 
-## Live locked decisions / guardrails (carry into beefsteak Steps 6/7/8)
-- **Reference gold-standard crop = `cherry-tomato`** (shape + convention reference). Dataset is authoritative; flag doc lag.
-- **BEEFSTEAK'S WIDER HEAT PAUSE is now T1-VERIFIED** (Step 5 side-by-side: VH021 + CTAHR + thresholds + regional night-temp normals). Do NOT re-litigate; it is doubly-sourced.
-- **DUAL-VOICE (Steps 6/7/8 focus): every in-scope `_seasoned` field needs a plain `_beginner` sibling** per dual-register v1.1's five rules (failure-diagnostics 4-slot, range-to-target safety-edge, contextual qualifiers, voice w/ bio-accuracy carve-out, gloss-then-use). `cause_beginner` = same content, plainer phrasing (may be byte-identical to its `_seasoned` if no jargon). Backend prose (`synthesis_note`, `*_basis`, `source_quote`) is seasoned-only.
-- **`harvest_to_table` T2-as-evidence: T1-only, NO grandfathering** (Step 10). **TEMPERATURE user-facing = `°F` not "degrees F"** (backend prose may spell it).
-- **HANDOFF PATCHES conform to `handoff_patch_format_v1_0.md`** (`base_sha` + `patches[]`) -- claude.ai conformed this session. Compute the proposed end-SHA `ensure_ascii=False`.
-- **`second_planting` = discrete-window object (seasoned-only); each crop carries ONLY its structures; lettuce NOT reshaped.**
-- **Lane split:** STRUCTURAL/MECHANICAL/notation = Claude Code; biology + consumer copy + voice/IP + URL discovery + dates = claude.ai.
+## Live locked decisions / guardrails (carry into beefsteak Steps 9/10/11)
+- **Reference gold-standard crop = `cherry-tomato`** (shape + convention reference) -- BUT derive each crop's biology + STRUCTURE from its OWN sources; "matches cherry" is not a justification (v1.6 A1; the NT single-crop catch this session is the live example).
+- **Step 11 entry guard:** assert `launch_ready_core == false AND launch_ready_seasoned == false` at entry. Beefsteak's are STALE true -> **reset to false first, confirm gates, then re-flip earned** (the cherry M10 pattern). `status` -> `verified_gs_arc` at the flip.
+- **`harvest_to_table` T2-as-evidence: T1-only, NO grandfathering** (Step 10). **TEMPERATURE user-facing = `°F`** (backend prose may spell it). Dashes per-sense (Step 9).
+- **HANDOFF PATCHES: `base_sha` + `patches[]`, FULL `$.crops[?(@.slug=='...')]...` paths, `from`=current value, proposed end-SHA `ensure_ascii=False`.** (claude.ai has hit each of these once; all now flagged.)
+- **DUAL-VOICE COMPLETE for beefsteak** (gate 0) -- do not re-author. Backend prose (`synthesis_note`, `*_basis`, `source_quote`) is seasoned-only.
+- **Lane split:** STRUCTURAL/MECHANICAL/notation = Claude Code; biology + consumer copy + voice/IP + dates = claude.ai. (Steps 9/10 are mostly mechanical -- candidate for the Claude Code lane directly.)
 - **Keep `zones{}` coherent until Phase C.** **Release sequence:** `docs/release_runbook_v1_0.md`; protocol #6 before every promote.
