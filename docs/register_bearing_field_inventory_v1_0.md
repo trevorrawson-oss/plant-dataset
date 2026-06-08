@@ -1,6 +1,6 @@
 # plant — Register-Bearing-Field Inventory v1.0
 
-**Status:** DRAFT for Trevor sign-off (Phase 0, Part 1). All 13 sibling-ambiguous fields resolved 2026-05-30 (§9). Becomes authoritative on sign-off; supersedes gold-standard arc checklist Appendix A as the canonical register-field roster.
+**Status:** AUTHORITATIVE (Phase 0, Part 1). All 13 sibling-ambiguous fields resolved 2026-05-30 (§9). Signed off; supersedes gold-standard arc checklist Appendix A as the canonical register-field roster.
 **Reconciled 2026-06-08:** `source_quote`/`source_quote_seasoned` reclassified **SP → EXCLUDED** to match the shipped dataset (canonical SHA `ab389f72`; 794 `source_quote_seasoned` un-renamed to bare `source_quote` across 32 crops, `register_completeness_gate.py` synced, roster gate PASSes). Folded into §3.2 / §4 / §8, with the reversal recorded in §10. `synthesis_note`/`design_note`/`zone_coverage_note` are unaffected (remain SP). **Filename kept at `v1_0`** (no bump) so the roster gate's filename reference holds — this follows the doc's existing convention of folding dated addenda into v1.0 (cf. the 2026-06-03 addenda in §2.1).
 **Authored:** 2026-05-30, Phase 0 session.
 **Dataset at authoring:** SHA `74fa36f0…2026952f` (Phase B correction, 2.7.5), 123 crops. Read-only; no write performed by Part 1.
