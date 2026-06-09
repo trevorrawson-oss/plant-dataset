@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-08 -- session `carrot_step4_northern_tier` (claude.ai authoring + Claude Code release -- carrot Step 4 PARTIAL: northern_tier only)
+
+**Start-SHA:** `66b43bdac556b3836f33cc5811c23112a7a23f18f5dad9ef0f5fad0460306892` (carrot Step 3.5; preflight matched LATEST.txt)
+**End-SHA:** `12bb057215d84d608889f0291546bcd48785f30411c4790a8606089ba84ff8f7` (= claude.ai's proposed SHA exactly -- see USCRN note)
+**Gate:** whole_crop_gate carrot 9 (the 9 warm region_notes-null, deferred); register PASS; release_verify exit 0; cherry/beefsteak/lettuce PASS.
+
+### What happened -- carrot Step 4 northern_tier authored FROM-SCRATCH; the 9 warm regions DEFERRED
+NT (zones 3-7) was wiped in the author-fresh reset (nothing to promote), so it was sourced fresh from carrot's OWN northern T1 anchors (UMN/UMD/MSU; maturity corroborated by UGA C1232). Windows are ANCHOR-RELATIVE so each cold zone resolves to its own dates -- the opposite of the old bucket NT (98.6% one Minnesota date across 3-7): direct_sow primary `soil_temp_40f`+0 / window 28d (spring), secondary `first_frost`-80 / 21d (fall+storage); harvest_start `direct_sow_start`+60 (primary) / +70 (fall, slower); harvest_end `first_frost`+30 (frost-tolerant, in-ground holding). sources `[umn_ext, umd_ext, msu_ext, uga_c1232]`; dual-register region_notes (°F symbol, no dashes/spelled-degrees). 9-op canonical patch, NT only, self-applied -> `12bb0572`.
+
+**THE SPLIT (Trevor's decision -- a schema fork).** Carrot's warm-region windows are bounded by HEAT, but carrot does NOT bolt -- its heat-failure mode is forking / coarse / strong-flavored roots in hot soil (UGA C1232; NMSU optimal root growth 60-70 degrees F). Lettuce anchors warm windows to `bolt_threshold_end/start`; reusing that token for a root crop would embed a biology error under a misleading name (A1). Trevor chose to introduce a proper **crop-agnostic HEAT anchor** (schema addition: token + WeatherKit resolver tier + Claude Code wiring) -- biologically honest + the template for the whole cool-season ROOT family -- as its OWN session. The 9 warm regions are FULLY SOURCED (windows locked, incl. 2 Path-A charts Trevor screenshot-confirmed: warm_arid Dona Ana, low_desert_az AZ1005) and handed forward in `WARM_REGION_sourced_windows_handoff.md` so that session is pure ENCODING. Per-region window counts are source findings (A5; NOT normalized): se_gulf 2-win, fl_peninsula 1-long-inverted, ca_interior 2, ca_north_coast 2, ca_south_coast 1-long, ca_desert 1, warm_arid 2, low_desert_az 1-long, hawaii_tropical season-granularity (CTAHR: carrots grow WELL, ~4mo, elevation/season-governed -- "marginal" worry not borne out). New source-pool IDs for that session: `ucanr_ext`/`nmsu_ext`/`uariz_ext`/`uhawaii_ctahr` (all catalog entries EXIST -- pool-add, not a mint). Region-tip override attestation also deferred there (carrot's tip forks are warm-region).
+
+### Claude Code release
+- **USCRN correction:** claude.ai's snippet expected Claude Code to populate the spring window's `uscrn_validation` on promote (hence "promoted SHA will differ"). There is NO USCRN validator tool in the current release flow -- only 8 windows dataset-wide are populated (the separate Phase 1.1 USCRN workstream), 292 null. Left `uscrn_validation: null` -- NOT fabricated. So the promoted SHA = claude.ai's proposed `12bb0572` (no divergence). Carrot's soil-temp windows await the USCRN workstream like every other crop's.
+- **Protocol #6:** apply triangulated to `12bb0572`; release_verify exit 0 (collateral: only carrot.regions.northern_tier changed; lettuce + all crops + top-level keys byte-identical; NT region_notes-null CLEARED; no new violations; calendar/dash/exemplar-key/value-divergence ok). register PASS. Claim cross-check: 9 ops, NT only, windows + sources + dual-register notes match the snippet; uscrn null (not fabricated).
+
+### Residual / next
+**Carrot Step 4 PARTIAL (NT done).** NEXT = the **heat-anchor schema session** (define the heat anchor; author the 9 warm regions from the locked sourced windows; add the 4 source-pool IDs + wire anchoring; author + attest region-tip overrides) -- THEN Step 4 closes and the arc proceeds to Step 5 / 5.5 / 6-8 / 9-11. Carrot NT `resolved_by_zone` calendar arrays / cold_pause tokens remain shell -> Step 5.5. PARKED unchanged: USCRN workstream, 2.9 shell-shape normalization, v1.7 amendment, register inventory on-disk, `fruit_set_temp_f`.
+
 ## 2026-06-08 -- session `carrot_step3_5_region_shells` (Claude Code lane -- carrot Step 3.5; first DIRECT-SOW region shells)
 
 **Start-SHA:** `ae2061ba75f4b38aab8312774b67d403aa5b75610c14de74b962d3bccfb9ff58` (carrot Steps 1-3; preflight matched LATEST.txt)
