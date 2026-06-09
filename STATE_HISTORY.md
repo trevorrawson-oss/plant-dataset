@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-09 -- session `carrot_step5_5_calendar_coherence` (claude.ai authoring + Claude Code release -- carrot Step 5.5)
+
+**Start-SHA:** `a9908c4a13b32366a4e4b4d8bb46977de735e36d2cc322652b23880ee0a23c2b` (carrot Step 5 verify; preflight matched LATEST.txt)
+**claude.ai proposed end-SHA (patch-only, 22-op):** `273ddd47da3d091688671145db18eed1502965f30ef5ef7ee295f628379df252` (apply triangulated to it EXACTLY)
+**Promoted end-SHA:** `ea16404c9d727dcbbce7fb57fe4d39f21c9a35a85d2b4edd3d554972e05419be` (= patch + the `sources_pending_admission` sweep)
+**Gate:** whole_crop_gate carrot PASS (0); register PASS; release_verify exit 0 (calendar coherence PASS). cherry/beefsteak/lettuce PASS.
+**(claude.ai omitted the STATE_HISTORY snippet -- authored here from the patch + its `summary`.)**
+
+### What happened -- per-zone calendars + pause tokens + succession shapes resolved
+Resolved all 20 per-zone `resolved_by_zone` cells from the VERIFIED region windows: `calendar[12]` (13-state enum), `first/last_plant_date`, `harvest_start`/`harvest_end`/`harvest`, and pause sub-objects -- `heat_pause` on warm cells (carrot's 75°F air ceiling closes the cool window), `cold_pause` on NT winters. **Succession encoded per the ratified spec v1.1:** `succession_continuous` (cadence STRING) on the 3 continuous regions (ca_south_coast, low_desert_az, fl_peninsula); `succession_spring`/`succession_fall` + 2 NEW `track:"succession"` `plantings[]` rule entries on `northern_tier` (spring anchored `soil_temp_40f`, fall `first_frost`). 22 ops (20 replace + 2 add); self-triangulated to `273ddd47`.
+
+### Claude Code release (tooling + cleanup + attestation)
+- **apply_patch.py hardened (test-first, `test_apply_patch.py` +2 cases):** (1) accepts the `ops` edit-list alias (claude.ai's 5.5 envelope used `ops` not `patches`); (2) **`add` at a list index == len now APPENDS** -- the 2 NT `track:"succession"` entries are real list-appends onto a `plantings[]` that had only `[0]`; `leaf_set` previously only index-assigned (IndexError). Appending a new plantings entry is a documented operation (second_planting spec), so this is a genuine applier capability, not a one-off.
+- **Swept the vestigial empty `sources_pending_admission` key** off the 9 warm regions (Step-3.5 scaffold residue; release_verify had flagged it benign). This is why the promoted SHA differs from `273ddd47`.
+- **G value-convergence attestation (A1, non-blocking review note):** 3 `heat_pause.months` are byte-identical to lettuce (`ca_interior` z8/z9 `[5,6,7]`; `fl_peninsula` z10 `[5,6,7,8]`). Attested INDEPENDENTLY-DERIVED, not pasted: carrot's air heat ceiling (~75°F) and lettuce's bolt threshold (~75°F) mean both cool-season crops are excluded by the SAME regional hot months; the values come from carrot's own verified windows. Legitimate climate convergence.
+
+### Verification (protocol #6)
+release_verify exit 0: collateral clean (only carrot's 10 region cells; lettuce + all crops + top-level byte-identical; no catalog change); **C calendar coherence PASS (no `wait` gaps; heat_pause aligned with the tokens)**; D dash/degree clean; E no novel non-benign keys (residue swept); F region_notes presence ok; G the 3-cell convergence review (attested above). whole_crop_gate carrot PASS (0) incl. the Step-5.5 succession-track requirement now satisfied (NT carries succession entries). register PASS (succession_continuous excluded per the gate-sync 5aedc63).
+
+### Residual / next
+**Carrot Steps 1-5.5 DONE -- the full region/timing layer is authored, verified, and coherent.** whole_crop_gate=0 is STRUCTURAL; carrot's BULK prose is still WIPED. NEXT = **Steps 6-8** (claude.ai): author pests/diseases/growth_stages/tips_by_stage/storage/watering/yield/rotation/fertilizer/varieties/failure_diagnostics from scratch in both registers -- the 6-8 handoff bundles `language_and_copy_architecture_v1_0` + voice methodology + copy-flags-on-from-the-start (Trevor), and authoring `tips_by_stage` re-triggers the region-tip fork check. Then 9-11. **PARKED:** PK refresh owed for `second_planting_structure_spec_v1_1` (succession_continuous); WeatherKit deferred; USCRN workstream; 2.9 shell normalization; v1.7 amendment; register inventory on-disk; `fruit_set_temp_f`. Standing re-fetch: AZ1005 + CTAHR + C943-render.
+
 ## 2026-06-09 -- session `carrot_step5_verify` (claude.ai verification lane -- NO dataset change)
 
 **No dataset change -> no PROMOTE, no SHA re-pin.** Canonical SHA stays `a9908c4a13b32366a4e4b4d8bb46977de735e36d2cc322652b23880ee0a23c2b`. Verification log archived at `06-sessions/handoffs-bundles/carrot-releases/step5-verify/`.

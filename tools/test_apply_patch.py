@@ -43,6 +43,22 @@ assert base_sha == "abc", base_sha
 assert slug == "beefsteak-tomato", slug
 assert len(edits) == 1 and edits[0]["op"] == "set_value", edits
 
+# 1b. edit-list alias `ops` (carrot Step 5.5 drift) resolves like patches/edits/patch
+_b, _e, _s = ap.normalize_envelope({"base_sha": "q", "ops": [
+    {"op": "replace", "json_path": "$.x", "from": 1, "value": 2}]})
+assert _b == "q" and len(_e) == 1 and _e[0]["op"] == "replace", ("ops alias", _e)
+
+# 1c. `add` at list index == len APPENDS a new entry (carrot Step 5.5: new
+# track:"succession" plantings entries onto a plantings[] that has only [0]).
+_d = {"crops": [{"slug": "carrot", "regions": {"northern_tier": {"plantings": [{"track": "beginner"}]}}}]}
+ap.apply_patch(_d, {"base_sha": "z", "ops": [
+    {"op": "add", "json_path": "$.crops[?(@.slug=='carrot')].regions.northern_tier.plantings[1]",
+     "value": {"track": "succession", "label": "spring"}},
+    {"op": "add", "json_path": "$.crops[?(@.slug=='carrot')].regions.northern_tier.plantings[2]",
+     "value": {"track": "succession", "label": "fall"}}]})
+_pl = _d["crops"][0]["regions"]["northern_tier"]["plantings"]
+assert len(_pl) == 3 and _pl[1]["label"] == "spring" and _pl[2]["label"] == "fall", ("append", _pl)
+
 # 2. set_value alias + `after` value + advisory `before` (no from-guard, sets anyway)
 data = {"crops": [{"slug": "x", "regions": {"r": {"old": True}}}]}
 ap.apply_patch(data, {"base_sha": "z", "patches": [

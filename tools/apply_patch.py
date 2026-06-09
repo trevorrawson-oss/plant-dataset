@@ -11,7 +11,7 @@ applies + reports; release_verify decides; the operator promotes.
 CANONICAL PATCH FORMAT (JSON):
 {
   "base_sha": "<sha256 of the base crops_data_final.json>",   # REQUIRED -- gated
-  "patches": [                                                 # alias: "edits" | "patch"
+  "patches": [                                                 # alias: "edits" | "patch" | "ops"
     {"op": "replace", "json_path": "<jsonpath>", "from": <current>, "value": <new>},
     {"op": "add",     "json_path": "<jsonpath>",                      "value": <new>},
     {"op": "delete",  "json_path": "<jsonpath>", "from": <current>}
@@ -151,7 +151,13 @@ def leaf_get(container, leaf):
 def leaf_set(container, leaf, value):
     kind, key, sel = _parse(leaf)
     if kind == "index":
-        container[key][sel] = value
+        lst = container[key]
+        if sel == len(lst):
+            lst.append(value)            # index == len -> APPEND a new entry
+        elif 0 <= sel < len(lst):
+            lst[sel] = value
+        else:
+            raise IndexError(f"index {sel} out of range (len {len(lst)}) for leaf {leaf!r}")
     elif kind in ("filter", "slugfilter"):
         raise ValueError(f"cannot set a filter as a leaf: {leaf}")
     else:
@@ -193,7 +199,7 @@ def normalize_envelope(patch):
     slug = (meta.get("target_crop_slug") or meta.get("crop_slug")
             or meta.get("target_crop") or meta.get("crop")
             or patch.get("crop_slug") or patch.get("target_crop"))
-    edits = patch.get("patches", patch.get("edits", patch.get("patch")))
+    edits = patch.get("patches", patch.get("edits", patch.get("patch", patch.get("ops"))))
     if edits is None and "corrections" in patch:
         edits = []
         for corr in patch["corrections"]:
