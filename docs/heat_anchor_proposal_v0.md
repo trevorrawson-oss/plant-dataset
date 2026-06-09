@@ -1,7 +1,7 @@
 # Heat-anchor token proposal v0 (FOR RATIFICATION)
 
 **Status:** RATIFIED 2026-06-08 (Trevor) -- v1. Asks 1-5 resolved: token `heat_threshold_start/end`
-(single, backend); per-crop `heat_threshold_temp_f`; carrot measures SOIL; coexists with
+(single, backend); per-crop `heat_threshold_temp_f`; carrot measures AIR (see 3 -- RESOLVED 2026-06-09: T1 evidence is air, not soil); coexists with
 `bolt_threshold` (no lettuce migration); sequence locked. **Plus (Trevor): the simple-vs-soil
 framing the user sees is DUAL-REGISTER COPY, not two tokens** -- see 2a. Surfaced by carrot
 Step 4 (cool-season ROOT family's warm windows are heat-bounded, but carrot does NOT bolt, so
@@ -62,10 +62,13 @@ A crop-level field **`heat_threshold_temp_f`** (mirrors the tomatoes' parked
 `fruit_set_temp_f`): the temperature ceiling, set PER CROP from T1 sources, with an
 explicit note of what it measures (soil vs air).
 
-- **Carrot measures SOIL temperature** (root quality is governed by soil heat). Value:
-  **TBD by claude.ai from sources** -- hint: NMSU optimal root growth 60-70 degrees F, so
-  the degradation ceiling is likely ~75-80 degrees F soil; claude.ai locks the exact figure
-  + citation when it authors the warm regions.
+- **Carrot measures AIR temperature -- RESOLVED 2026-06-09 (Trevor).** The original draft said
+  SOIL ~75-80 degrees F, but that was unsourced: the T1 evidence frames carrot's ceiling as AIR
+  (UF/IFAS AE588, 61-75 degrees F optimum air growth/root-color); UGA/NMSU state no soil-temp
+  ceiling. **Authored: `heat_threshold_temp_f = {temp_f: 75, measures: "air", sources:
+  [ufifas_ae588]}`** (the ceiling = top of the optimum). Mechanism is soil-driven, but air is the
+  sourced, measurable proxy AND what WeatherKit resolves directly (so the air->soil model is moot
+  for THIS anchor; germination keeps its soil anchor `soil_temp_40f`).
 - **Coexists with `bolt_threshold`** -- bolting crops (lettuce) keep `bolt_threshold` (a
   distinct mechanism with a daylength component). NO lettuce migration. The two anchors
   serve different mechanisms.

@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-09 -- session `carrot_step4_warm_close` (claude.ai authoring + Claude Code release -- carrot Step 4 CLOSED: 9 warm regions)
+
+**Start-SHA:** `12bb057215d84d608889f0291546bcd48785f30411c4790a8606089ba84ff8f7` (carrot Step 4 NT; preflight matched LATEST.txt + uploaded shasum)
+**claude.ai proposed end-SHA (patch-only):** `02fa1f40...` (9 warm cells; triangulated on apply)
+**Promoted end-SHA:** `a9908c4a13b32366a4e4b4d8bb46977de735e36d2cc322652b23880ee0a23c2b` (= patch + 4 catalog mints + uga_c943->uga_calendar re-point + source_set +8 + `heat_threshold_temp_f`)
+**Gate:** whole_crop_gate carrot **PASS (0)**; register PASS; release_verify exit 0; cherry/beefsteak/lettuce PASS.
+
+### What happened -- 9 warm region cells authored; Step 4 CLOSED
+All 9 warm cells filled from the locked `WARM_REGION_sourced_windows_handoff` using the ratified heat anchor. Anchors: `heat_threshold_end` (fall open) / `heat_threshold_start` (spring/cool close) / `last_frost` (marine spring opens; ca_desert/warm_arid) / `direct_sow_start` (harvest), all `fallback_beyond_horizon: stored_date`. Window counts A5 (NOT normalized): se_gulf 2 / fl_peninsula 1-long-inverted+succession / ca_interior 2 / ca_north_coast 2 / ca_south_coast 1-long+succession / ca_desert 1 / warm_arid 2 (Path A) / low_desert_az 1-long+succession (Path A) / hawaii_tropical season-granularity (CTAHR ~4mo, carrots grow WELL). Dual-register region_notes per cell. 9-op patch (one replace per warm cell), self-triangulated to `02fa1f40`.
+
+**Heat-anchor VALUE resolved (Trevor 2026-06-09, option a -- AIR):** the proposal's "soil ~75-80°F" was unsourced; T1 (UF/IFAS AE588) frames the ceiling as AIR 61-75°F (UGA/NMSU state no soil ceiling). Authored `heat_threshold_temp_f = {temp_f:75, measures:"air", sources:[ufifas_ae588]}`. Air is also WeatherKit-direct (air->soil model moot for this anchor); germination keeps `soil_temp_40f`. `heat_anchor_proposal_v0.md` corrected soil->air.
+
+### Claude Code release (protocol #6 cross-check caught real drift)
+- **5 cited source IDs were NOT in the catalog** (claude.ai's "they exist" was wrong). Minted 4 docs: `ufifas_ae588`, `nmsu_chart`, `uhawaii_ctahr_b91`, `uhawaii_ctahr_hgv1` (URLs from the patch's own anchoring). `uga_c943` was a DUPLICATE of the existing `uga_calendar` (both Circular 943) -> re-pointed in the warm windows, not minted.
+- Added the 8 cited region IDs (ucanr/nmsu/uariz/ufifas_ext/ufifas_ae588/nmsu_chart/uhawaii_ctahr_b91/hgv1) to `verification_status.source_set` (matching the lettuce pattern; region sources live there).
+- **Decision 2 (region-tip attestation):** claude.ai correctly recorded "nothing to attest" -- carrot's `tips_by_stage` is empty, succession tip is climate-aware/portable. RE-RUN the warm-region fork check when `tips_by_stage` is authored (Steps 6-8). Not silently skipped.
+- **Verify:** whole_crop_gate carrot PASS (0 -- region-fill 0 after the warm fill, source-tier 0 after mints/re-point, dual-voice 0). release_verify exit 0: only carrot's 9 warm cells changed + source_catalog +4 (none dropped); lettuce/cherry/beefsteak + top-level byte-identical; 9 region_notes-null cleared; calendar/dash/exemplar/value-divergence ok. Note: benign empty `sources_pending_admission` scaffold residue on the 9 cells (Step-3.5 leftover; release_verify rules benign) -- minor cleanup, flagged.
+
+### Residual / next
+**Carrot Step 4 CLOSED -- all 10 region cells filled (NT + 9 warm); heat anchor live.** whole_crop_gate=0 is STRUCTURAL ONLY. **Carrot is NOT near certified:** its bulk prose sections (pests, diseases, growth_stages, tips_by_stage, storage, watering, yield, rotation, fertilizer, varieties, failure_diagnostics) were WIPED in the author-fresh reset and remain EMPTY -- they are authored at Steps 6-8 (re-interpreted as from-scratch authoring for author-fresh crops; methodology note for the checklist). NEXT = Step 5 (side-by-side verification of the region windows + heat ceiling) -> Step 5.5 (calendar tokens: warm heat_pause + NT cold_pause + resolved_by_zone date population + coherence) -> 6-8 (author the bulk prose + dual-voice; re-run the region-tip fork check) -> 9-11. **PARKED:** WeatherKit deferred (stored_date carries it); USCRN workstream; 2.9 shell-shape normalization (+ sweep the vestigial `sources_pending_admission`); v1.7 amendment; register inventory on-disk; `fruit_set_temp_f`.
+
 ## 2026-06-08 -- session `carrot_step4_northern_tier` (claude.ai authoring + Claude Code release -- carrot Step 4 PARTIAL: northern_tier only)
 
 **Start-SHA:** `66b43bdac556b3836f33cc5811c23112a7a23f18f5dad9ef0f5fad0460306892` (carrot Step 3.5; preflight matched LATEST.txt)
