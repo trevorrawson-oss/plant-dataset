@@ -57,7 +57,7 @@ EXCLUDED_KEYS = {
     # CN planting-window primitives (zones / regions resolved_by_zone)
     "plant_out","start_indoors","direct_sow","harvest","harvest_start","harvest_end",
     "first_plant_date","last_plant_date","bloom","planting_note","zone_notes",
-    "notes","succession_spring","succession_fall","window_days","offset_days",
+    "notes","succession_spring","succession_fall","succession_continuous","window_days","offset_days",
     "interval_days","label_beginner",
 }
 
