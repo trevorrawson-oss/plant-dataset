@@ -1,10 +1,12 @@
 # Heat-anchor token proposal v0 (FOR RATIFICATION)
 
-**Status:** v0 DRAFT, 2026-06-08. Surfaced by carrot Step 4: the cool-season ROOT
-family's warm-region windows are heat-bounded, but carrot does NOT bolt, so lettuce's
-`bolt_threshold` token is the wrong mechanism + the wrong threshold to reuse (A1). For
-Trevor's ratification. On ratify -> v1 + implement (lock token, author carrot's 9 warm
-regions). NOT yet canonical.
+**Status:** RATIFIED 2026-06-08 (Trevor) -- v1. Asks 1-5 resolved: token `heat_threshold_start/end`
+(single, backend); per-crop `heat_threshold_temp_f`; carrot measures SOIL; coexists with
+`bolt_threshold` (no lettuce migration); sequence locked. **Plus (Trevor): the simple-vs-soil
+framing the user sees is DUAL-REGISTER COPY, not two tokens** -- see 2a. Surfaced by carrot
+Step 4 (cool-season ROOT family's warm windows are heat-bounded, but carrot does NOT bolt, so
+lettuce's `bolt_threshold` is the wrong mechanism + threshold to reuse, A1). Implement: lock the
+token + author carrot's 9 warm regions. (WeatherKit spike: Trevor's call, now or defer.)
 
 ---
 
@@ -39,6 +41,20 @@ Used exactly like the existing anchors: in `plantings[].<window>[].from` and in
 `resolution_source.anchor_threshold`. Anchors are free-string tokens (no central registry),
 so wiring is just: use it + confirm the gates accept it (they will -- they don't validate
 anchor-token names).
+
+### 2a. The token is backend; the simple-vs-soil framing is DUAL-REGISTER COPY (Trevor 2026-06-08)
+
+The token is an internal identifier the weather-resolver reads -- it is NEVER rendered to
+users (users see the resolved DATE + the prose explanation). So it stays a SINGLE name. The
+"beginner says heat, seasoned says soil-temp" split that Trevor wants is handled where it
+belongs -- in the dual-register `region_notes` / window prose -- NOT as two tokens:
+- **beginner:** plain -- "Stop planting before the soil gets hot, or the roots turn tough and
+  bitter."
+- **seasoned:** precise -- "Sustained soil temperatures above ~X degrees F degrade root quality
+  (forking, coarse texture, strong flavor)."
+
+Same boundary, two registers. claude.ai authors both when it writes the warm regions (as it did
+the NT `region_notes`). This is the standard dual-register treatment, applied to the heat boundary.
 
 ## 3. The per-crop threshold value
 
