@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-06-09 -- session `carrot_step5_verify` (claude.ai verification lane -- NO dataset change)
+
+**No dataset change -> no PROMOTE, no SHA re-pin.** Canonical SHA stays `a9908c4a13b32366a4e4b4d8bb46977de735e36d2cc322652b23880ee0a23c2b`. Verification log archived at `06-sessions/handoffs-bundles/carrot-releases/step5-verify/`.
+
+- **Carrot Step 5 side-by-side verification COMPLETE** against base `a9908c4a` (4-round bar, live-fetched). **RESULT: 0 corrections, 0 template-copy flags.** Every Step 1-4 authored surface re-confirmed against its cited T1 (verification log = the side-by-side record this arc).
+- **Heat ceiling VERIFIED-TRUE (the linchpin):** `heat_threshold_temp_f` = 75 / air / `ufifas_ae588`. AE588 PDF states verbatim "optimum growth and root color when the air temperatures are 61F-75F (16C-24C)"; figure originates in AE588, citation sound. (This was the one item warranting a hard look after last session's cross-check found a dup ID + 5 mis-stated catalog IDs; it resolved TRUE on direct read.)
+- **Regions:** California 4 cells VERIFIED EXACT vs UC ANR Table 13.2 carrot row (region defs match JSON); se_gulf vs C1232+C943; fl_peninsula vs VH021+AE588; warm_arid DTH 72 vs NMSU CR457-B Table 2; northern_tier offsets confirmed inside the UMN/UMD/MSU windows; low_desert_az + hawaii_tropical verified on their existing Path-A / season-granularity basis.
+- **Scalars/structured/companions all VERIFIED-TRUE:** germination 55-75F (Clemson/UGA C1232 optimum band), DTM 60-75 / mid 68 (Scarlet Nantes), spacing 2-4 thinned, soil (organic_matter MODERATE -- excess N forks roots), pH 6.0-6.8/5.5-7.0, start direct, succession 3wk x3, container depth 12in/5gal, sunlight 6-10; companion evidence labels clean (radishes sole research_backed; likely/traditional carry no false T1, verified_against_sources=false).
+- **Sub-checks PASS:** no inherited-only verification; stage-temp conflation clear (germination soil 55-75F vs air ceiling 75F vs spring-sow soil-40F distinct + correctly sourced); cultivar-type universalization holds (UGA C1232 cultivar list); R1 template-copy 0 flags across 124 Steps-1-4 prose surfaces (fresh post-wipe authoring).
+- **launch_ready NOT flipped** (Step 11 pending Steps 6-8 prose). `uscrn_validation` stays null (USCRN workstream, not fabricated). No new source IDs needed.
+- **FLAGS (non-blocking, standing follow-ups):** (1) AZ1005 grid + CTAHR PDFs not live-fetched this session -- low_desert_az on Trevor's 2026-06-08 Path-A screenshot, hawaii on flaky CTAHR PDFs; both verify on existing basis; a live re-fetch remains the standing follow-up. (2) C943 month table is JS-rendered (no fetch extract); se_gulf corroborated via C1232 + UGA B577 chart.
+
+**Claude Code release (2026-06-09, `carrot_step5_verify`):** verification-only -- nothing applied, no patch, no gate run needed (no bytes changed); confirmed canonical unchanged at `a9908c4a` == LATEST. Recorded this entry; archived the verification log + append. NEXT = Step 5.5.
+
 ## 2026-06-09 -- session `carrot_step4_warm_close` (claude.ai authoring + Claude Code release -- carrot Step 4 CLOSED: 9 warm regions)
 
 **Start-SHA:** `12bb057215d84d608889f0291546bcd48785f30411c4790a8606089ba84ff8f7` (carrot Step 4 NT; preflight matched LATEST.txt + uploaded shasum)
