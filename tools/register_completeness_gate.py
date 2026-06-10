@@ -59,6 +59,9 @@ EXCLUDED_KEYS = {
     "first_plant_date","last_plant_date","bloom","planting_note","zone_notes",
     "notes","succession_spring","succession_fall","succession_continuous","window_days","offset_days",
     "interval_days","label_beginner",
+    # SCHEMA 2.9 universal-plain (bare-by-design -- one plain line shown to BOTH
+    # registers, no _seasoned/_beginner split; see schema_2_9 scope Section 9).
+    "recommended_rootstock_note","establishment_note","what_to_ask_nursery","recommended_note",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /

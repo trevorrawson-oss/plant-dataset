@@ -11,31 +11,32 @@
 ---
 
 
-## 🥕 CARROT CERTIFIED -- anchor 4 of ~18 (`verified_gs_arc`; launch_ready core + seasoned). The FIRST crop taken from wiped shell -> certified entirely AUTHOR-FRESH, full arc (Steps 1-11): region/timing layer + all bulk prose authored from scratch, both registers. 4 anchors certified (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf). NEXT = anchor 5 (roadmap call: microgreen for the non_seasonal_indoor archetype, or a family hub). Carrot is now the author-fresh reference exemplar for the bots.
+## 🌳 SCHEMA 2.9 MIGRATED (2.8 -> 2.9): perennial/tree extension scaffolded **null-by-archetype** (chill / bloom / pollination / rootstock / dormancy+pruning windows / establishment / cane / renovation) + UNIVERSAL watering_method/schedule_by_stage/drought_tolerance/critical_periods + fertilizer.amount + container self-watering + sources plumbing. **STRICTLY ADDITIVE** (2439 leaves added, 0 changed, 0 removed); the 4 anchors stay certified. **Unblocks the perennial/tree anchors** (peach now eligible). 4 anchors certified (cherry/beefsteak/carrot/lettuce).
 
 ## Canonical pointer
-- **Current SHA:** `b34bd6fcb2112753b91989d32620c000c2df2143b008b3b165d95b4071c237a2`. `LATEST.txt` session: `carrot_steps6_8` (2026-06-10).
+- **Current SHA:** `0be2652ca00c878f0b8ecb975b521f09a8c81e7ac498679b9d16965fd4a19092`. `LATEST.txt` session: `schema_2_9_migration` (2026-06-10).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `b34bd6fc` -- feat(carrot): Steps 6-8 + CERTIFIED -- anchor 4 (first author-fresh, verified_gs_arc)
   - `ea16404c` -- feat(carrot): Step 5.5 -- per-zone calendars + pause tokens + succession shapes (v1.1)
   - `a9908c4a` -- feat(carrot): Step 4 CLOSED -- 9 warm regions + heat anchor live (air)
   - `12bb0572` -- feat(carrot): Step 4 partial -- northern_tier authored (from-scratch, anchor-relative)
   - `66b43bda` -- feat(carrot): Step 3.5 region shells (direct-sow) + extend build_region_shells
   - `ae2061ba` -- feat(carrot): Steps 1-3 author-fresh (anchor 4) + uga_c1232 mint + container dual-register
   - `aeb5c339` -- feat: author-fresh pivot -- reset 120 non-GS crops to honest shells
-  - `ab389f72` -- register: source_quote SP -> EXCLUDED; un-rename dataset-wide + gate sync
 
-## What just happened (2026-06-10, session `carrot_steps6_8` -- claude.ai authoring + Claude Code release)
-- **Carrot Steps 6-8 DONE + FLIPPED.** claude.ai authored every wiped bulk section from carrot's own sources, both registers: the 7 compounds (pests 2, diseases 4, growth_stages 4, tips_by_stage 11 tips / 5 stages, failure_diagnostics 6, notifications 5, weather_triggers 5), the 8 dict shells (storage/watering/yield/rotation/fertilizer/varieties/thinning/moon_phase), top-level prose (description/harvest_ready/soil_prep). 26-op patch, base `ea16404c`; dual-voice coverage 0 missing / 0 null.
-- **Claude Code release (all 10 snippet flags resolved):** re-pointed 5 `ipm.ucanr.edu` citations `ucanr_ext` -> **`uc_ipm`** (the precise catalog ID claude.ai could not see in its 19-source subset; added `uc_ipm` to source_set, `ucanr_ext` stays for region content); `fertilizer.type` snake_case -> human-readable; tips metadata set; nematode typed `pest`; growth_stages / moon_phase / varieties shapes confirmed vs anchors; dict-shell sources-plumbing + `harvest_urgency`/`fertilizer.frequency` vocab deferred to 2.9; region-tip override deferred (logged as carrot `open_finding` `carrot_s68_finding_001`).
-- **Step 11 verbatim scan = real flip gate again:** 3 HARD hits (8+ word runs) on a generic thinning-instruction echo of a Clemson page; Trevor approved a reword; 10 strings reworded (biology-fixed numbers kept, connective wording varied) -> 0 HARD hits. 10 borderline = benign (binomials, generic instructions). Coverage 24/33 URLs (9 PDFs/404s/JS NOT COVERED, stated honestly).
-- **Verify:** whole_crop_gate PASS(0), register PASS, release_verify clean (only carrot changed; lettuce byte-identical; no new violations), verbatim 0 HARD. Flipped `verification_status` -> full certified anchor shape (`verified_gs_arc`). Promoted `b34bd6fc`.
+## What just happened (2026-06-10, session `schema_2_9_migration` -- Claude Code structural lane)
+- **Schema 2.9 migration RELEASED.** `migrate_schema_2_9.py` (test-first, 10 assertions GREEN) null-scaffolds the perennial/tree extension per the archetype applicability matrix: chill block + bloom + pollination on 25 woody; rootstock on 21 grafted trees; cane on 4 brambles; renovation on strawberry; establishment on 26 (woody+strawberry). UNIVERSAL on all 123: `watering_method`/`schedule_by_stage`/`drought_tolerance`/`critical_periods`/`method_note`, `fertilizer.amount_*`, container `self_watering`, + `sources`/`anchoring_urls` plumbing on watering/fertilizer/thinning/varieties. `schema_version` 2.8 -> 2.9.
+- **Strictly additive + idempotent + non-destructive:** 0 leaves removed, 0 values changed, 2439 added; re-run = identical SHA. The 4 certified anchors changed ONLY by additions -> `launch_ready` intact (additive nulls don't un-earn the 2.8 cert, same flavor as 2.7.5).
+- **Gates:** register_completeness PASS (nulls aren't prose -> no halt), whole_crop_gate all 4 anchors PASS. Pre-ruled the 4 new universal-plain keys (`recommended_rootstock_note`/`establishment_note`/`what_to_ask_nursery`/`recommended_note`) in register EXCLUDED_KEYS so per-anchor authoring won't halt later. Promoted `0be2652c`.
+- **Scope (locked, Trevor "build it"):** FLAT null-by-archetype, label 2.9, one bundled migration, plumbing-everywhere. Variety-object upgrade scoped to WOODY only (non-woody anchors' `recommended` string lists untouched). Spec: `docs/schema_2_9_scope_v0.md`.
 
 ## Active work + next step
-- **NEXT = anchor 5 (roadmap call).** Per the anchor expansion: microgreen (covers the non_seasonal_indoor archetype before the bots derive the pipeline) or one of the 6 family hubs (peach/broccoli/bell-pepper/zucchini/onion/green-beans-bush).
-- **Carrot deferrals (non-blocking):** region-tip override shape (`carrot_s68_finding_001`; build when a renderer consumes region-conditioned tips); dict-shell `sources`/`anchoring_urls` plumbing inconsistency (watering/fertilizer/thinning/varieties lack it; dataset-wide drift) -> 2.9 normalization; `harvest_urgency` + `fertilizer.frequency` value-vocab (level "low" vs cadence "daily"/"every 2 weeks") -> dataset-wide vocab ruling at 2.9.
-- **PARKED (unchanged):** WeatherKit resolver deferred; USCRN workstream (uscrn_validation null); 2.9 shell-shape normalization; v1.7 checklist amendment (Step 3.5 promote = retro; + author-fresh Steps-6-8-author-from-scratch note); register inventory on-disk; `fruit_set_temp_f`. PK refresh owed: `second_planting_structure_spec` **v1.1** (promoted to 05-methodology/current 2026-06-10).
+- **2.9 design-lock DONE -> perennial/tree anchors UNBLOCKED.** NEXT = anchor 5 (roadmap call): **peach** (stone-fruit tree, now eligible -- first to exercise the new perennial surface) OR microgreen / an annual family hub (don't need 2.9).
+- **2.9 per-anchor back-fill (non-blocking):** 2.9 fields are null everywhere; biology authored per anchor (each perennial/tree anchor populates its chill/bloom/pollination/rootstock; the 4 certified anchors get a small watering_method/fertilizer.amount back-fill when convenient).
+- **Deferred off the additive migration:** C1 register-shape reshape (single->dual on universal keys; pre-existing debt) + C3 vocab value-reconcile (harvest_urgency/fertilizer.frequency level-vs-cadence). Variety×zone ROUTING (one-slug-per-varietal leaning) is plant-astro-side.
+- **PARKED (unchanged):** WeatherKit; USCRN (uscrn null); v1.7 checklist amendment; register inventory; carrot region-tip override (`carrot_s68_finding_001`). **PK refresh owed:** `second_planting_structure_spec` v1.1 + `schema_2_9_specification_v1_0` (both in 05-methodology/current).
 
-## Gate record (generated 2026-06-10, on canonical `b34bd6fc`)
+## Gate record (generated 2026-06-10, on canonical `0be2652c`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -55,11 +56,10 @@
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **4 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
-## Live locked decisions / guardrails (carry into anchor 5)
-- **AUTHOR-FRESH model proven end-to-end:** carrot is the first crop taken wiped-shell -> certified entirely author-fresh. Every value from the crop's own sources; bulk prose authored from scratch at Steps 6-8 (the retro arc assumed it pre-existed). "Matches an anchor" is never a justification (A1); derive + attest independently.
-- **CATALOG PRECISION (Exeter moat) is Claude Code's lane:** `ipm.ucanr.edu` -> `uc_ipm`, NOT the umbrella `ucanr_ext`. Claude Code holds the full catalog; claude.ai only gets the crop's source subset, so it cannot see IDs outside it -- re-point on release. This is exactly what the protocol #6 cross-check catches.
-- **Step-11 verbatim scan is flip-blocking:** a >=8-word shared run with a cited source = HARD hit; reword to break the run (route to the voice lane / Trevor, do NOT self-dismiss). Generic numeric conventions + binomials are benign-class. `tools/verbatim_scan.py` (two-step: fetch URLs to cache, then scan); state coverage honestly (PDFs/JS = NOT COVERED).
-- **SUCCESSION shape (spec v1.1):** `succession_continuous` (string) for window_type continuous; `succession_spring`/`succession_fall` for split; one crop can hold both. **HEAT ANCHOR:** `heat_threshold_temp_f` = AIR (carrot 75°F, UF/IFAS AE588); germination stays soil_temp_40f.
-- **AUTHOR-FRESH discipline:** don't fabricate (uscrn null). **Canonical JSON COMPACT** (`separators=(",",":")`, no trailing newline; never indent=2). GOTCHA: shell `>` TRUNCATES before read -- `gen_current_state` reads the old file for its protocol header, so generate to a temp then `mv`. Catalog IDs minted/re-pointed by Claude Code. Anchor target ~18.
-- **apply_patch.py** accepts the `ops` edit-list alias + APPENDS on `add` at list-index==len.
-- **Lane split:** claude.ai authors/verifies; Claude Code releases (apply, gates + protocol #6, structural shapes, catalog mints/re-points, the flip) + owns data SHAPE/naming. Run protocol #6 + roster gate + verbatim scan before every promote/flip. `zones{}` wiped on the 120 (kept on GS crops until Phase C).
+## Live locked decisions / guardrails (carry into the perennial/tree anchors)
+- **SCHEMA 2.9 model (locked):** crop = entity/guide/URL; **variety = DELTA overlay** (`{value,parent,changed}`, the apple-mock); Fuji is a VIEW of apple, never top-level. Three-tier info hierarchy keeps it scaling: universal education -> reference pages (`/guides/soil`+`/guides/ph` model; add chill-hours/pollination/pruning/watering); crop base -> hub; variety delta -> compact, distributes across page sections. Family tier = authoring (GS hubs + bots) + reference pages, NOT runtime inheritance -> renderer stays 2 levels. Perennial fields are FLAT null-by-archetype (not nested). Bloom calendar rides a structured `varieties.recommended[]` (curated recommended set, NO full Phase-5 dep). Beginner LEAN; depth -> seasoned.
+- **MIGRATIONS are additive null-scaffold** (per 2.7.5 + 2.9): add fields null per the archetype matrix, never interpret/move values, never un-earn a cert; biology authored per anchor. `migrate_schema_2_9.py` is idempotent + non-destructive (test-first).
+- **AUTHOR-FRESH model proven (carrot):** every value from the crop's own sources; "matches an anchor" is never a justification (A1). **CATALOG PRECISION = Claude Code's lane** (`ipm.ucanr.edu`->`uc_ipm`; claude.ai only sees the crop's source subset). **Step-11 verbatim_scan is flip-blocking** (reword, route to voice lane, don't self-dismiss).
+- **SUCCESSION shape (spec v1.1):** `succession_continuous` (string) for continuous; `succession_spring`/`succession_fall` for split. **HEAT ANCHOR:** `heat_threshold_temp_f` = AIR (carrot 75°F).
+- **Canonical JSON COMPACT** (`separators=(",",":")`, no trailing newline; never indent=2). GOTCHA: shell `>` truncates before read -> `gen_current_state` reads the old file for its header, so gen to a temp then `mv`. apply_patch accepts `ops` alias + APPENDS on `add` at list-index==len. Catalog IDs minted/re-pointed by Claude Code. Anchor target ~18.
+- **Lane split:** claude.ai authors/verifies biology + copy; Claude Code releases (apply, gates + protocol #6, structural shapes/migrations, catalog mints, the flip) + owns data SHAPE/naming + builds the renderer. `zones{}` wiped on the 120 (kept on GS crops until Phase C).

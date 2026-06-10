@@ -6,6 +6,32 @@
 
 ---
 
+## 2026-06-10 -- session `schema_2_9_migration` (Claude Code structural lane -- the perennial/tree design-lock)
+
+**Start-SHA:** `b34bd6fcb2112753b91989d32620c000c2df2143b008b3b165d95b4071c237a2` (carrot certified; preflight matched LATEST.txt)
+**End-SHA:** `0be2652ca00c878f0b8ecb975b521f09a8c81e7ac498679b9d16965fd4a19092`. `schema_version` 2.8 -> **2.9**.
+
+This is the roadmap's **Milestone 18 "perennial extension"** design-lock, unblocked by carrot's cert. Trevor said "go ahead and build it" after scoping (`docs/schema_2_9_scope_v0.md`). Claude Code lane: I design the shape + write the migration; claude.ai authors the per-crop BIOLOGY later, per perennial/tree anchor.
+
+### What changed -- `migrate_schema_2_9.py` (test-first, additive null-scaffold)
+Reframe from the probe: a partial perennial surface ALREADY existed scaffolded-null on 26 woody crops (`chill_hours_*`, `bloom_*`, `pollinator_notes_*`, `tips_by_stage` dormancy/dormant_prune/establishment), so 2.9 = formalize + complete, not invent. The migration adds, per the archetype applicability matrix:
+- **A perennial/tree:** chill block + bloom + `pollination{}` on the 25 woody (deciduous/evergreen/berries_woody); `rootstock`/`rootstock_options[]` on the 21 grafted trees; `cane_management` on the 4 brambles; `renovation` on strawberry; `establishment_years` on the 26 woody+strawberry; `dormancy_window`/`pruning_window`; `container_overwintering_*`.
+- **B universal (all 123):** `watering_method`, `schedule_by_stage[]`, `drought_tolerance`, `method_note_*`, `critical_periods_*`; `fertilizer.amount_*` (the how-much Trevor wanted); container `self_watering_ok`/`self_watering_notes_*`.
+- **C universal (additive slice):** `sources`/`anchoring_urls` plumbing on watering/fertilizer/thinning/varieties.
+
+### Verification (full ceremony)
+- **STRICTLY ADDITIVE + IDEMPOTENT + NON-DESTRUCTIVE:** leaf-diff vs base = 0 removed, 0 values changed, 2439 added; re-running the migration on its own output reproduces the SHA exactly. The 4 certified anchors changed ONLY by additions -> `launch_ready` left intact (additive nulls don't un-earn the 2.8 cert; same as the 2.7.5 bump).
+- **Gates:** `register_completeness` PASS on the migrated dataset (every new field is null -> `is_prose_shaped(null)` is False -> no halt; dual-register fields ruled by `_seasoned`/`_beginner` suffix). `whole_crop_gate` cherry/beefsteak/lettuce/carrot all PASS. Pre-ruled the 4 NEW universal-plain (unsuffixed) prose keys -- `recommended_rootstock_note`, `establishment_note`, `what_to_ask_nursery`, `recommended_note` -- in `register_completeness_gate.EXCLUDED_KEYS`, so per-anchor authoring won't halt the roster gate later. `migrate_schema_2_9` + `apply_patch` test suites green.
+
+### Scope decisions (locked, Trevor "build it")
+FLAT null-by-archetype (no nested `perennial:{}` -- matches the 26 already-scaffolded crops, no breaking retrofit); version label **2.9**; ONE bundled migration; plumbing on all four shells. Variety-object upgrade scoped to WOODY archetypes only -> the (non-woody) certified anchors' `varieties.recommended` string lists are untouched. **Deferred OFF this additive pass:** C1 register-shape reshape (single->dual on universal keys; pre-existing debt, not worsened by null additions) + C3 vocab value-reconcile (`harvest_urgency`/`fertilizer.frequency` level-vs-cadence; handled additively here by ADDING `fertilizer.amount_*`, leaving existing values alone).
+
+### Architecture locked (for the renderer + per-anchor authoring)
+Crop = entity/guide/URL; variety = DELTA overlay (`{value,parent,changed}`, the `apple-zone-6.html` mock); three-tier info hierarchy (universal reference pages / crop base / variety delta) keeps the soil-page layout scaling to rich varieties; family tier = authoring + reference pages, not runtime inheritance. Bloom-overlap calendar rides the structured `varieties.recommended[]` (curated recommended set, NO full Phase-5 dependency). Routing leaning one-slug-per-varietal (plant-astro-side, non-blocking).
+
+### Residual / next
+2.9 GATES the perennial/tree anchors. **NEXT = anchor 5 (roadmap call): peach (stone-fruit tree, now eligible)** or microgreen / an annual family hub (don't need 2.9). 2.9 fields are null everywhere -> per-anchor biology back-fill (incl. a small watering_method/fertilizer.amount back-fill on the 4 certified anchors). **PK refresh owed:** `schema_2_9_specification_v1_0` (promoted to 05-methodology/current) + `second_planting_structure_spec` v1.1. Spec + migration archived in-repo (`docs/` + `tools/`).
+
 ## 2026-06-10 -- session `carrot_steps6_8` (claude.ai authoring + Claude Code release -- carrot Steps 6-8 + CERTIFICATION)
 
 **Start-SHA:** `ea16404c9d727dcbbce7fb57fe4d39f21c9a35a85d2b4edd3d554972e05419be` (carrot Step 5.5; preflight matched LATEST.txt)

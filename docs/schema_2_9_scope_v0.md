@@ -1,6 +1,6 @@
 # Schema 2.9 -- Scope / Design-Lock Plan (v0 DRAFT)
 
-**Status:** v0.1 DRAFT. Incorporates Trevor's product decisions (2026-06-10): structured rootstock w/ choose-by delineators, variety-level bloom-overlap calendar (per the `apple-zone-6.html` sample), app-ready by-stage watering/drip, and level + how-often + how-much vocab. NOT ratified. No dataset write until ratified + migration spec'd. Remaining open items are engineering defaults (Section 7).
+**Status:** RATIFIED + BUILT 2026-06-10 (Trevor "go ahead and build it"). **Migration SHIPPED** -- `tools/migrate_schema_2_9.py` (test-first) ran the additive null-scaffold, `schema_version` 2.8 -> **2.9**, canonical SHA `0be2652c`, strictly additive (0 values changed), all gates green, the 4 certified anchors intact. Incorporates Trevor's product decisions (structured rootstock w/ choose-by delineators, variety-level bloom-overlap calendar per `apple-zone-6.html`, app-ready by-stage watering/drip, level + how-often + how-much vocab). The only OPEN item is variety x zone ROUTING (plant-astro-side, non-blocking). Per-crop biology fills the null fields per perennial/tree anchor.
 **Lane:** Claude Code (structural shape design + deterministic migration + gates). claude.ai authors the per-crop BIOLOGY into the shape LATER, during each perennial/tree anchor arc -- NOT here.
 **Roadmap:** this is Milestone 18 ("Schema perennial extension"), the structural design-lock gated BEFORE the first perennial/tree anchor. Carrot (M17) was the gate and is now CERTIFIED, so this is unblocked. The roadmap leaves the version label open ("2.8, 2.9, or a sub-point, pinned when the session opens"); this doc proposes **2.9**.
 **Base:** schema_version `2.8`, canonical SHA `b34bd6fc` (2026-06-10).
@@ -213,11 +213,15 @@ Which archetypes carry which new/formalized field group (present-but-null; absen
 - **B-1 drip/watering:** ✅ build the structured, app-ready by-stage model now (`watering_method` + `schedule_by_stage[{stage_id,system,rate,frequency,level,note_*}]`). Dataset supplies per-stage targets; app owns hydraulics. See B2/B3.
 - **C-1 vocab:** ✅ carry BOTH level AND how-often/how-much. `harvest_urgency` = level + cadence; `fertilizer` = frequency + amount + type. See C3.
 
-**STILL OPEN (engineering calls -- I will default these unless you say otherwise):**
-- **A-2 sub-typing:** flat null-by-archetype (default -- matches the 26 already-scaffolded crops, no breaking retrofit) vs a nested `perennial:{...}` object. *Leaning flat.*
-- **Version label:** 2.9 (default) vs a 2.8 sub-point.
-- **Bundling:** one 2.9 migration for all three threads (default -- touch the 123-crop file once) vs separate bumps.
-- **C2 plumbing policy:** every claim-bearing dict-shell carries `sources`+`anchoring_urls` (default) vs leave as-is.
+**RESOLVED to defaults (Trevor "go ahead and build it", 2026-06-10):**
+- **A-2 sub-typing:** ✅ FLAT null-by-archetype (matches the 26 already-scaffolded crops; no breaking retrofit; renderer branches on archetype it already reads).
+- **Version label:** ✅ **2.9**.
+- **Bundling:** ✅ one migration, all threads.
+- **C2 plumbing:** ✅ every claim-bearing dict-shell (`watering`/`fertilizer`/`thinning`/`varieties`) carries `sources` + `anchoring_urls` (null where missing).
+
+**MIGRATION SCOPE = purely ADDITIVE null-scaffold (locked 2026-06-10).** The migration ONLY adds new fields (null/empty), per the §5 applicability matrix, + bumps the version. It does NOT interpret or move existing values. Two consequences:
+- **C1 register-shape reshape + C3 vocab value-reconcile are DEFERRED** off the structural migration. C3 is handled ADDITIVELY here (add `fertilizer.amount_*`; leave `harvest_urgency`/`fertilizer.frequency` existing values alone -> their level/cadence reconcile is per-crop authoring). C1 (single->dual register reshape) stays a separate sweep; it is pre-existing debt, not introduced by 2.9, and null-additive scaffolding does not worsen it.
+- **The 4 certified anchors gain null 2.9 fields** (uniform shape) but keep `launch_ready` (additive null fields do not un-earn the 2.8 cert, same as the 2.7.5 bump). A small per-anchor 2.9 back-fill is a separate, non-blocking follow-up. Variety-object upgrade is scoped to WOODY archetypes only, so the (non-woody) certified anchors' `varieties.recommended` string lists are untouched.
 
 ## 8. Sequencing
 
