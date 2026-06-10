@@ -10,7 +10,14 @@ NOT done here: no biology values invented; no second_planting data written
 (claude.ai authors which-zones + dates at Step 4/5); resolved_by_zone cells of
 warm regions are left as PENDING fill-targets (derived output, not rule shape).
 
+PERMANENT TREES take a separate path (`_is_tree` -> `_build_tree_shells`): a tree is
+planted once and lives for decades, so the annual sowing-window model is replaced by
+the tree region model (per-zone suitability verdict where survives != fruits is
+first-class, region chill-adequacy, the bloom -> harvest -> dormant-prune cycle). The
+crop's `calendar_basis` flips to `perennial_chill_gated`. Annual crops are unaffected.
+
 See docs/superpowers/specs/2026-06-05-second-planting-region-shell-model-design.md
+and docs/tree_region_model_scope_v0.md (the tree model).
 """
 SESSION = "m16_cherry_step3_5_region_shells"
 DATE = "2026-06-05"
@@ -33,6 +40,8 @@ def build_region_shells(crop, session=SESSION, date=DATE):
         warm region. (Succession tracks are NOT created here -- they are authored at
         Step 4/5.5 with the biology; Step 3.5 builds the beginner skeleton only.)
     """
+    if _is_tree(crop):
+        return _build_tree_shells(crop)
     direct = (crop.get("start_method") or {}).get("start") == "direct"
     promote_north = _north_should_promote(crop)
     for rk, r in (crop.get("regions") or {}).items():
@@ -50,6 +59,112 @@ def build_region_shells(crop, session=SESSION, date=DATE):
         else:
             _build_warm_shell(r, direct=direct)
     return crop
+
+
+# ---------------------------------------------------------------------------
+# TREE region model (peach Step 3.5, the FIRST permanent tree).
+# A permanent tree is planted ONCE and lives for decades; the annual sowing-window
+# model does not fit it. What varies by place is hardiness/suitability, winter
+# chill adequacy (which gates the variety set), and the absolute phenology dates of
+# the recurring bloom -> fruit -> harvest -> dormant-prune cycle. The two-layer cut
+# (region-constant rule + zone-resolved render) is kept; the inner calendar model is
+# replaced. See docs/tree_region_model_scope_v0.md.
+# ---------------------------------------------------------------------------
+
+# resolved-cell keys that belong to the ANNUAL model only -- a permanent tree has no
+# second sowing, no indoor-start, no zone-lift, no per-cell rule structure. Stripped.
+_TREE_CELL_DEAD = ("start_indoors", "direct_sow", "lifted_from_zone", "plantings",
+                   "notes", "zone_notes", "planting_note",
+                   "first_plant_date", "last_plant_date")
+
+
+def _is_tree(crop):
+    """A permanent tree takes the tree region path. Detected by the calendar_basis
+    marker (set by THIS builder, so re-runs stay on the tree path) or, on the first
+    run before the flip, by lifecycle/archetype. Annual crops are unaffected."""
+    if crop.get("calendar_basis") == "perennial_chill_gated":
+        return True
+    arch = crop.get("archetype") or ""
+    return crop.get("lifecycle") == "permanent" or arch.endswith("_fruit_tree")
+
+
+def _build_tree_shells(crop):
+    """Build every region cell to the TREE reference shape. Pure transform; no biology
+    invented; idempotent + no-clobber (a re-run never wipes a cell Step 4 has filled).
+
+    Sets the crop-level `calendar_basis` to `perennial_chill_gated` -- the one marker
+    that makes the Step 5.5 gate branch off the annual sowing-window criteria and onto
+    the tree criteria (suitability + chill + the single perennial establishment entry).
+    """
+    crop["calendar_basis"] = "perennial_chill_gated"
+    for r in (crop.get("regions") or {}).values():
+        if isinstance(r, dict):
+            _build_tree_region(r)
+    return crop
+
+
+def _build_tree_region(r):
+    # dash resolution on the structural label (shared with the annual model)
+    lbl = r.get("region_label")
+    if isinstance(lbl, str) and " -- " in lbl:
+        r["region_label"] = lbl.replace(" -- ", ": ")
+    r.setdefault("region_notes_seasoned", None)
+    r.setdefault("region_notes_beginner", None)
+    # sweep the vestigial empty `sources_pending_admission` scaffold residue (the same
+    # benign Step-3.5 leftover the carrot release swept). Only when empty -- never drop
+    # a populated admission list.
+    if r.get("sources_pending_admission") == []:
+        r.pop("sources_pending_admission", None)
+    # region-constant CHILL-ADEQUACY layer: the typical winter chill the region banks
+    # (gates which varieties set fruit). Present-but-empty at shell stage.
+    r.setdefault("chill_hours_delivered", [])
+    r.setdefault("chill_basis_seasoned", None)
+    r.setdefault("chill_basis_beginner", None)
+    # region-constant RULE layer: a SINGLE one-time establishment entry, track:"perennial"
+    # (no succession, no second_planting -- a tree is planted once). bloom + harvest rule
+    # lists feed the Bloom/Harvest tracks; plant_out feeds the one-time Plant track. Only
+    # (re)build when it is not already the perennial entry -- never clobber a filled rule.
+    pl = r.get("plantings")
+    if not (isinstance(pl, list) and pl and isinstance(pl[0], dict)
+            and pl[0].get("track") == "perennial"):
+        r["plantings"] = [{
+            "succession_id": 1, "label": "establishment", "track": "perennial",
+            "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": [],
+            "anchoring_urls": {},
+        }]
+    r.setdefault("plantings_provenance", None)
+    # zone-resolved render layer: reshape each cell to the tree key-set
+    for cell in (r.get("resolved_by_zone") or {}).values():
+        if isinstance(cell, dict):
+            _build_tree_cell(cell)
+
+
+def _build_tree_cell(cell):
+    """Reshape one resolved_by_zone cell to the tree key-set, idempotent + no-clobber.
+    The per-zone `suitability` verdict makes survives != fruits FIRST-CLASS: a tree may
+    SURVIVE a zone yet not set a reliable crop there (survives_no_fruit), or be flatly
+    unsuitable (no chill at all). The render keys reuse the annual resolved-cell names
+    (plant_out/bloom/harvest_*) so the renderer reads tree and annual cells uniformly."""
+    for dead in _TREE_CELL_DEAD:
+        cell.pop(dead, None)
+    # per-zone suitability verdict (survives vs fruits-reliably vs survives_no_fruit vs unsuitable)
+    cell.setdefault("suitability", None)
+    cell.setdefault("suitability_note_seasoned", None)
+    cell.setdefault("suitability_note_beginner", None)
+    # per-zone chill the region banks (refines the region band)
+    cell.setdefault("chill_hours_delivered", [])
+    # resolved render fields (reuse the annual keys; the renderer's resolved reader is shared)
+    cell.setdefault("plant_out", None)      # one-time bare-root dormant window
+    cell.setdefault("bloom", None)          # absolute bloom window (region-resolved)
+    cell.setdefault("harvest_start", None)
+    cell.setdefault("harvest_end", None)
+    cell.setdefault("harvest", None)
+    cell.setdefault("calendar", [])         # 12-month tree cycle (dormant/bloom/growing/harvest/prune/care)
+    cell.setdefault("frost_risk_note_seasoned", None)  # late-frost-kills-early-bloom warning
+    cell.setdefault("resolved_from", {})    # frost dates + chill band used (auditable)
+    cell.setdefault("resolution_method", None)  # -> "perennial_precompute" once filled
+    cell.setdefault("sources", [])
+    cell.setdefault("anchoring_urls", {})
 
 
 def _north_should_promote(crop):

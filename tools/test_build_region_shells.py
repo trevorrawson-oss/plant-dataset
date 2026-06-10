@@ -152,4 +152,95 @@ p4 = c4["regions"]["se_gulf"]["plantings"][0]
 assert p4.get("start_indoors") == [] and p4.get("plant_out") == [], "transplant author-fresh: missing transplant windows"
 assert "direct_sow" not in p4, "transplant shell should not carry direct_sow"
 
+# ---- fixture 5: PERMANENT TREE author-fresh crop (peach-like) -> tree region model ----
+# A permanent tree is planted ONCE, then lives for decades. The annual sowing-window
+# model does not fit it; Step 3.5 builds the TREE region shape instead:
+#   - crop calendar_basis flips frost_anchored (wipe default) -> perennial_chill_gated
+#   - plantings[] = a SINGLE one-time establishment entry, track:"perennial" (no succession)
+#   - chill-adequacy layer (chill_hours_delivered + chill_basis_*) per region
+#   - resolved cells reshaped to the tree key-set: a per-zone `suitability` verdict
+#     (survives != fruits is FIRST-CLASS), chill, bloom/harvest/prune render fields,
+#     a tree `calendar[]`; the annual-only keys are stripped.
+# Input mimics the live peach scaffold: annual-shaped region cells, empty/null, the
+# frost_anchored wipe default still on the crop.
+def tree_author_fresh_crop():
+    def annual_cell(z):
+        return {"plant_out": None, "start_indoors": None, "harvest": None,
+                "harvest_start": None, "harvest_end": None,
+                "first_plant_date": None, "last_plant_date": None, "calendar": [],
+                "notes": None, "zone_notes": None, "planting_note": None,
+                "sources": [], "anchoring_urls": {}, "plantings": [],
+                "resolution_method": None, "lifted_from_zone": None}
+    def shell(label, zones):
+        return {"region_id": None, "region_label": label, "zone_span": [],
+                "sources": [], "sources_pending_admission": [],  # vestigial scaffold residue
+                "plantings": [], "plantings_provenance": None,
+                "resolved_by_zone": {z: annual_cell(z) for z in zones},
+                "region_notes_seasoned": None, "region_notes_beginner": None}
+    regions = {rk: shell("California -- Interior Valleys" if rk == "ca_interior" else rk, ("9",))
+               for rk in REGION_KEYS if rk != "northern_tier"}
+    regions["northern_tier"] = shell("Northern Tier (Cold Zones)", ("3", "4", "5", "6", "7"))
+    return {"slug": "peach", "lifecycle": "permanent",
+            "archetype": "deciduous_fruit_tree", "calendar_basis": "frost_anchored",
+            "start_method": {"start": "bare_root_dormant"},
+            "zones": {}, "regions": regions}
+
+c5 = build_region_shells(tree_author_fresh_crop(), session="peach_step3_5", date="2026-06-10")
+# the crop-level marker that makes the Step 5.5 gate branch to the tree model
+assert c5["calendar_basis"] == "perennial_chill_gated", f"calendar_basis not flipped: {c5.get('calendar_basis')!r}"
+r5 = c5["regions"]
+assert set(r5) == REGION_KEYS, f"fixture5 region set: {set(r5)}"
+for rk, r in r5.items():
+    # region-constant rule: exactly ONE perennial establishment entry, no succession
+    assert len(r["plantings"]) == 1, f"{rk}: tree must have exactly one establishment entry, got {len(r['plantings'])}"
+    p0 = r["plantings"][0]
+    assert p0.get("track") == "perennial", f"{rk}: establishment track must be 'perennial', got {p0.get('track')!r}"
+    assert p0.get("label") == "establishment", f"{rk}: establishment label"
+    for w in ("plant_out", "bloom", "harvest_start", "harvest_end"):
+        assert p0.get(w) == [], f"{rk}: {w} should be present-but-empty rule list, got {p0.get(w)!r}"
+    # a tree is bare-root: no annual sowing keys on the rule entry
+    assert "start_indoors" not in p0 and "direct_sow" not in p0, f"{rk}: annual sowing keys leaked onto a tree entry"
+    # chill-adequacy layer present-but-empty at shell stage
+    assert r.get("chill_hours_delivered") == [], f"{rk}: chill_hours_delivered should be present-but-empty"
+    assert "chill_basis_seasoned" in r and "chill_basis_beginner" in r, f"{rk}: chill_basis keys missing"
+    # region_notes + dash resolution (shared with the annual model)
+    assert "region_notes_seasoned" in r and "region_notes_beginner" in r, f"{rk}: region_notes keys"
+    assert " -- " not in (r.get("region_label") or ""), f"{rk}: region_label still has --"
+    # vestigial empty scaffold residue swept (matches the carrot Step 3.5 release)
+    assert "sources_pending_admission" not in r, f"{rk}: empty sources_pending_admission residue not swept"
+    # resolved cells reshaped to the TREE key-set
+    for z, cell in r["resolved_by_zone"].items():
+        # survives != fruits is FIRST-CLASS: the per-zone suitability verdict slot exists
+        assert "suitability" in cell, f"{rk}.{z}: tree cell missing the suitability verdict slot"
+        assert "suitability_note_seasoned" in cell and "suitability_note_beginner" in cell, f"{rk}.{z}: suitability_note keys"
+        assert cell.get("chill_hours_delivered") == [], f"{rk}.{z}: cell chill_hours_delivered"
+        assert cell.get("calendar") == [], f"{rk}.{z}: tree cell calendar should be present-but-empty"
+        # render fields reuse the annual resolved-cell keys (renderer reads them uniformly)
+        for w in ("plant_out", "bloom", "harvest_start", "harvest_end"):
+            assert w in cell, f"{rk}.{z}: tree render key {w} missing"
+        # annual-only leftovers stripped (a tree has no second sowing / lifted zone / nested rules)
+        for dead in ("start_indoors", "lifted_from_zone", "plantings", "notes",
+                     "zone_notes", "planting_note", "first_plant_date", "last_plant_date"):
+            assert dead not in cell, f"{rk}.{z}: annual-only key {dead!r} survived into a tree cell"
+# northern_tier is from-scratch (a tree cell, NOT zone-promoted)
+nt5 = r5["northern_tier"]
+assert nt5["plantings"][0].get("track") == "perennial", "NT not built as a tree establishment entry"
+assert "Zone-promoted" not in (nt5.get("plantings_provenance") or ""), "tree NT was wrongly promoted-from-zones"
+assert set(nt5["resolved_by_zone"]) == {"3", "4", "5", "6", "7"}, "NT zone keys not preserved (suitability carries the verdict, not zone-trimming)"
+
+# ---- fixture 6: tree idempotency + no-clobber of a FILLED cell ----
+built = build_region_shells(tree_author_fresh_crop(), session="peach_step3_5", date="2026-06-10")
+before6 = copy.deepcopy(built["regions"])
+build_region_shells(built)  # re-run must be a no-op on an already-built tree
+assert built["regions"] == before6, "tree transform not idempotent on an already-built crop"
+# a re-run must NOT wipe a cell Step 4 has already authored
+filled = build_region_shells(tree_author_fresh_crop())
+filled["regions"]["se_gulf"]["resolved_by_zone"]["9"].update(
+    {"suitability": "fruits_reliably", "chill_hours_delivered": [700, 900],
+     "bloom": "Mar 1 - Mar 20", "resolution_method": "perennial_precompute"})
+filled["regions"]["se_gulf"]["chill_hours_delivered"] = [650, 950]
+keep = copy.deepcopy(filled["regions"]["se_gulf"])
+build_region_shells(filled)
+assert filled["regions"]["se_gulf"] == keep, "tree build clobbered an already-authored cell"
+
 print("PASS build_region_shells")
