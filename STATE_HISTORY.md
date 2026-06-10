@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-06-10 -- session `carrot_steps6_8` (claude.ai authoring + Claude Code release -- carrot Steps 6-8 + CERTIFICATION)
+
+**Start-SHA:** `ea16404c9d727dcbbce7fb57fe4d39f21c9a35a85d2b4edd3d554972e05419be` (carrot Step 5.5; preflight matched LATEST.txt)
+**claude.ai patch (26-op, all replace, disjoint):** slice-triangulation hash `bc17637f` (slice-only). Canonical apply pre-release-edits = `706553d4`.
+**Promoted end-SHA:** `b34bd6fcb2112753b91989d32620c000c2df2143b008b3b165d95b4071c237a2` (= patch + Claude Code release edits below).
+**Gate:** whole_crop_gate carrot PASS(0); register PASS; release_verify clean; **verbatim_scan 0 HARD hits (post-reword)**. cherry/beefsteak/lettuce PASS.
+
+### What happened -- the full bulk-prose layer authored fresh, both registers
+claude.ai authored every wiped section from carrot's own 19-source set: the **7 compounds** (pests 2, diseases 4, growth_stages 4, tips_by_stage 11 tips / 5 stages, failure_diagnostics 6, notifications 5, weather_triggers 5), the **8 dict shells** (storage, watering, yield_expectations, rotation, fertilizer, varieties, thinning, moon_phase_preference), and **top-level prose** (description, harvest_ready + sources/anchoring/urgency, soil_prep), plus scalars `weeks_indoors=0` / `first_planting_notify_days=7`. Dual-voice coverage gate (Step 8): 0 missing, 0 null. Carrot biology honored as its own: root crop (no flowering/bolting), heat = quality not loss, thinning central, slow germination.
+
+### Claude Code release -- 10 snippet flags adjudicated
+- **FLAG 6 (catalog precision, the cross-check catch):** carrot's pest/disease URLs are `ipm.ucanr.edu/PMG/...` (UC IPM) but were attributed to `ucanr_ext`. `uc_ipm` already exists in the catalog -- claude.ai could not see it (it only had carrot's 19-source subset). **Re-pointed all 5 `ipm.ucanr.edu` entries `ucanr_ext` -> `uc_ipm`** (pests[0,1], diseases[0,2,3]; sources arrays + anchoring_urls keys); added `uc_ipm` to source_set; `ucanr_ext` stays (57 residual refs in region content / UC ANR Table 13.2).
+- **FLAG 2 (format):** `fertilizer.type` `balanced_low_nitrogen` -> `Balanced low-nitrogen` (human-readable, matches anchors). KEPT `harvest_urgency="low"` + `fertilizer.frequency="low"` (semantically honest for a hold-in-ground root) but logged the field value-vocab (level vs cadence "daily"/"every 2 weeks") for a dataset-wide 2.9 ruling.
+- **FLAG 1 (shape):** `watering`/`fertilizer`/`thinning`/`varieties` shells lack `sources`/`anchoring_urls` keys (carrot matches beefsteak exactly; anchors are inconsistent) -> dataset-wide plumbing drift, deferred to 2.9. Not a carrot blocker (gate clean).
+- **FLAGS 3/4/9 (confirmed vs anchors):** growth_stages key-set + id convention match (germination/seedling/established/harvest, day_range partitions 0-75); root-knot nematode typed `pest` (living organism, not pathogen/abiotic); moon_phase `phase="waning"` (correct folk assignment for roots) with seasoned-only `source_note_seasoned` + honest "no scientific evidence" note.
+- **FLAGS 5/7 (source attestation):** second-source + URL-provenance claims accepted as claude.ai Step-5 attestations (IDs valid + in-set); the verbatim/copyright scan is the protective backstop. **FLAG 10 (metadata):** tips `added_in="carrot_steps6_8"`, `last_reviewed="2026-06-10"`, `last_reviewed_operation="carrot_steps6_8_release"`.
+- **FLAG 8 (region-tip override):** the harvest tip's cool (frost-sweetening) vs warm (avoid hot soil) split is one coherent universal tip; no override shape built (no renderer consumer yet). Deferred + logged as carrot `open_finding` `carrot_s68_finding_001`.
+
+### Step 11 -- verbatim scan as flip gate (3 HARD hits, reworded)
+`verbatim_scan.py` (fetch 33 cited URLs -> scan; 24/33 text-comparable, 9 PDFs/404s/JS NOT COVERED, stated). **3 HARD hits (8+ word runs)**, all the same generic thinning-instruction echo of the Clemson carrot/parsnip sheet ("when they are 1 to 2 inches tall, thin them to..."), recurring across ~10 carrot fields because it was claude.ai's stock phrasing. **Trevor approved a reword.** Reworded 10 strings -- kept the biology-fixed numbers, varied the connective wording ("when they are ... tall" -> "once they stand ... high" / "once the stand reaches ... in height") -- dropping the longest shared run to the benign 4-word `1 to 2 inches`. Re-scan: **0 HARD hits.** 10 borderline (6-7 word) = benign class (binomials e.g. *Meloidogyne hapla*, generic instructions). Dash/temp gates 0.
+
+### Certification (Step 11 flip)
+`verification_status` brought from the lean wiped shell to the full certified anchor shape: `status="verified_gs_arc"`, `phase="phase_3_carrot_gold_standard_arc"`, `date/last_audited="2026-06-10"`, `launch_ready_core=True`, `launch_ready_seasoned=True`, `open_findings=[carrot_s68_finding_001]`, `verification_log_ref` set, `retro_resolution_log=null`. Top-level `last_reviewed="2026-06-10"`, `last_reviewed_session="carrot_steps6_8"`. **CARROT IS ANCHOR 4 CERTIFIED -- the first crop taken wiped-shell -> certified entirely author-fresh.** 4 anchors now certified.
+
+### Residual / next
+**NEXT = anchor 5 (roadmap call):** microgreen (non_seasonal_indoor archetype) or a family hub (peach/broccoli/bell-pepper/zucchini/onion/green-beans-bush). Carrot is the author-fresh reference exemplar for the bots. **Deferrals:** region-tip override shape (`carrot_s68_finding_001`); dict-shell sources-plumbing -> 2.9; harvest_urgency/fertilizer.frequency vocab -> 2.9. **PARKED:** WeatherKit; USCRN; 2.9 shell normalization; v1.7 amendment; register inventory; `fruit_set_temp_f`; PK refresh `second_planting_structure_spec_v1_1` (now in 05-methodology/current). Handoff bundle archived to `06-sessions/handoffs-bundles/carrot-releases/steps6-8/`.
+
 ## 2026-06-09 -- session `carrot_step5_5_calendar_coherence` (claude.ai authoring + Claude Code release -- carrot Step 5.5)
 
 **Start-SHA:** `a9908c4a13b32366a4e4b4d8bb46977de735e36d2cc322652b23880ee0a23c2b` (carrot Step 5 verify; preflight matched LATEST.txt)
