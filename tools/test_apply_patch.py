@@ -59,6 +59,43 @@ ap.apply_patch(_d, {"base_sha": "z", "ops": [
 _pl = _d["crops"][0]["regions"]["northern_tier"]["plantings"]
 assert len(_pl) == 3 and _pl[1]["label"] == "spring" and _pl[2]["label"] == "fall", ("append", _pl)
 
+# 1d. JSON-Pointer crop-relative paths (peach Steps 1-3 drift): `/a` and `/a/b` resolve
+# like dot-paths. claude.ai emitted RFC-6901 pointers (`path:"/sunlight"`,
+# `"/soil/drainage_requirement"`); the applier must split on `/`, not treat it as one key.
+_jp = {"crops": [{"slug": "peach", "sunlight": None, "soil": {"drainage_requirement": None},
+                  "rootstock_options": [{"name": None}]}]}
+ap.apply_patch(_jp, {"base_sha": "z", "crop": "peach", "ops": [
+    {"op": "replace", "path": "/sunlight", "from": None, "value": "full sun"},
+    {"op": "replace", "path": "/soil/drainage_requirement", "from": None, "value": "excellent"},
+    {"op": "replace", "path": "/rootstock_options/0/name", "from": None, "value": "Lovell"}]})
+_pk = _jp["crops"][0]
+assert _pk["sunlight"] == "full sun", ("json-pointer top", _pk)
+assert _pk["soil"]["drainage_requirement"] == "excellent", ("json-pointer nested", _pk)
+assert _pk["rootstock_options"][0]["name"] == "Lovell", ("json-pointer array index", _pk)
+
+# 1e. from-guard tolerates EMPTY-EQUIVALENT mismatch. The wipe types lists as [], dicts as {},
+# scalars as null; claude.ai's drift `from:null` must not block filling an empty [] / {} slot
+# (base_sha is the real drift gate). A populated cur vs from:null STILL halts.
+_e = {"crops": [{"slug": "x", "sunlight_hours": [], "soil": {}}]}
+ap.apply_patch(_e, {"base_sha": "z", "crop": "x", "ops": [
+    {"op": "replace", "path": "/sunlight_hours", "from": None, "value": [8, 12]},
+    {"op": "replace", "path": "/soil", "from": None, "value": {"texture": "loam"}}]})
+assert _e["crops"][0]["sunlight_hours"] == [8, 12] and _e["crops"][0]["soil"] == {"texture": "loam"}, _e
+# 1e-ii. NO-OP overwrite: a KEPT field (e.g. difficulty) survives the wipe populated; claude.ai
+# re-authors it to the SAME value with from:null. cur==value -> no drift -> apply (no halt).
+_k = {"crops": [{"slug": "x", "difficulty": "medium"}]}
+ap.apply_patch(_k, {"base_sha": "z", "crop": "x", "ops": [
+    {"op": "replace", "path": "/difficulty", "from": None, "value": "medium"}]})
+assert _k["crops"][0]["difficulty"] == "medium", _k
+# but a populated cur -> a DIFFERENT value with a wrong from:null STILL halts (real drift):
+_d2 = {"crops": [{"slug": "x", "v": "already here"}]}
+try:
+    ap.apply_patch(_d2, {"base_sha": "z", "crop": "x", "ops": [
+        {"op": "replace", "path": "/v", "from": None, "value": "new"}]})
+    raise AssertionError("populated cur vs from:null should still FROM-GUARD halt")
+except SystemExit:
+    pass
+
 # 2. set_value alias + `after` value + advisory `before` (no from-guard, sets anyway)
 data = {"crops": [{"slug": "x", "regions": {"r": {"old": True}}}]}
 ap.apply_patch(data, {"base_sha": "z", "patches": [

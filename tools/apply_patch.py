@@ -56,8 +56,20 @@ def normalize_path(path, slug):
       - bracket-slug `crops[X].regions...` (Step 4)       -> unchanged (BSLUG resolves it)
       - $-rooted crop-relative `$.pests[0]...` (steps678) -> prefix the crop filter
       - bare crop-relative `regions.warm_arid...`         -> prefix the crop filter
+      - JSON-Pointer crop-relative `/sunlight`, `/soil/x`, `/opts/0/name` (peach S1-3) -> a.b / a[0].b
     Crop-relative prefixing requires a known target slug (from the envelope/--slug)."""
     p = path.strip()
+    # RFC-6901 JSON-Pointer form (claude.ai peach Steps 1-3 drift): leading '/', '/'-separated.
+    # Convert to the dot/bracket crop-relative form the rest of this function expects.
+    if p.startswith("/"):
+        rebuilt = ""
+        for seg in p.split("/")[1:]:
+            seg = seg.replace("~1", "/").replace("~0", "~")  # pointer unescape
+            if seg.lstrip("-").isdigit():
+                rebuilt += f"[{seg}]"
+            else:
+                rebuilt += ("." + seg) if rebuilt else seg
+        p = rebuilt
     if p.startswith("$."):
         p = p[2:]
     elif p == "$":
@@ -181,6 +193,11 @@ def _get(edit, *names):
     return _MISSING
 
 
+def _is_empty(x):
+    """Empty-equivalent: the wipe types unpopulated slots as null / [] / {} / '' inconsistently."""
+    return x is None or x == [] or x == {} or x == ""
+
+
 # claude.ai has emitted several op vocabularies across sessions; normalize to canonical.
 OP_ALIASES = {
     "replace": "replace", "replace_value": "replace", "set": "replace", "set_value": "replace",
@@ -198,7 +215,8 @@ def normalize_envelope(patch):
                 or meta.get("base_sha") or meta.get("start_sha"))
     slug = (meta.get("target_crop_slug") or meta.get("crop_slug")
             or meta.get("target_crop") or meta.get("crop")
-            or patch.get("crop_slug") or patch.get("target_crop"))
+            or patch.get("crop_slug") or patch.get("target_crop")
+            or patch.get("crop"))   # top-level `crop` (peach Steps 1-3 envelope)
     edits = patch.get("patches", patch.get("edits", patch.get("patch", patch.get("ops"))))
     if edits is None and "corrections" in patch:
         edits = []
@@ -230,7 +248,13 @@ def apply_patch(data, patch, slug=None):
         val = _get(e, "value", "new", "new_value", "after")
         before = _get(e, "before")
         if op == "replace":
-            if frm is not _MISSING and cur != frm:
+            # The wipe types empties inconsistently (lists [], dicts {}, scalars null); claude.ai
+            # often guards with `from:null`. An empty-vs-empty mismatch is NOT drift -- the slot
+            # was unpopulated as claimed. A POPULATED cur vs the guard still halts (base_sha is the
+            # authoritative drift gate; this guard only catches overwriting real content).
+            if (frm is not _MISSING and cur != frm
+                    and not (_is_empty(cur) and _is_empty(frm))
+                    and not (val is not _MISSING and cur == val)):
                 sys.exit(f"edit {i} FROM-GUARD: {path}\n  have: {json.dumps(cur, ensure_ascii=False)[:160]}\n  want: {json.dumps(frm, ensure_ascii=False)[:160]}")
             # The grouped `corrections` format supplies a PROSE `before` summary, not a
             # byte-exact guard. When no real `from` is given, the patch-level base_sha
