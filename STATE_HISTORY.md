@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-11 -- session `peach_step5` (claude.ai region verification -- NO dataset change)
+
+**Start-SHA / End-SHA:** `3e07c4e1d2fc7b5a5c6d0f7496ed5db60d67f555519b4dd5fa16af521d75e0c2` -- **UNCHANGED. Verification-only, 0 corrections, no patch, no promote, no re-pin.** (claude.ai dated its snippet 2026-06-10; the actual run/record date is 2026-06-11.) Logged despite no dataset change so a future session does not re-run the verification -- the no-op was deliberate, not a skipped promotion. Deliverable: `peach_step5_region_verification_log.md` (archived in `HANDOFF_peach_step5/FROM_CHAT/`).
+
+### What was verified (peach Step 4 tree region biology, 4-round bar vs the 17 cited T1 sources)
+Same standard carrot Step 5 met. 0 dangling source IDs; 87-entry catalog; source-file base_sha matched LATEST.
+- **Crop bands:** survives 4/9 vs fruits 5/9 (fruit band strictly inside survival; warm edge co-terminal at 9, chill-limited). Bud-kill -13/-18°F, wood ~-20°F, tree-death ~-25°F **4-round confirmed** (iastate_ext cited + UMass + MSU + U Illinois); z4/z5 marginality independently confirmed by iastate_ext.
+- **Chill mechanism** (32-45°F window, >65°F subtracts, variety-driven 400-1,050) **4-round confirmed** (uariz_ext + ucanr_santa_clara_mg [exact URL] + TAMU/UC Davis). low_desert_az's >60°F / Nov1-Feb15 framing is faithful to the AZ pub, not an inconsistency. **Self-fertility** confirmed (umaine_ext + U Illinois).
+- **10 regions:** chill bands geographically defensible + source-framed; one `track:"perennial"` establishment `plantings[0]` each (no succession/start_indoors). **20 zones:** suitability 6/7/4/3 matches; band logic consistent vs the 4-9/5-9 crop bands; suitability-vs-chill coherent on all 20; calendars 12-mo, valid tokens, prune always late-dormant; **bloom/harvest date strings agree with calendar months (0 hard / 0 soft)**; bloom->harvest 75-150 d.
+- **FLAG-A DIRECTION SPLIT holds on every cell:** z4 (cold-edge, floor 1,100>=400) carries its calendar + the unreliable-crop caveat; ca_south/ca_desert/fl_peninsula z10 (chill-edge, 150-200<400) EMPTY; fl z11 + hawaii z11 (unsuitable) EMPTY; z3 (unsuitable, cold-limited, chill 1,200 irrelevant) EMPTY. No fabricated windows; honesty test passed.
+- **Sub-checks:** latitude trend monotonic; **0 stage-month conflations** (systematic scan); **0 verbatim 6-gram overlap**; **0 em-dashes**; render keys use the reused annual names (`plant_out`/`bloom`/`harvest_*`), NOT the spec EXAMPLE's `*_dates` names (a spec-example doc nit, below); verification_status correctly pre-cert.
+
+### Findings -- 0 corrections; 2 carried notes (neither a Step 4 defect)
+- **Forward note -> Steps 6-8:** crop-level `pollinator_notes_*` + `pollination.notes_*` are null (CP bulk-prose, belongs to 6-8, not Step 4 -- expected). BUT recommended-variety **J.H. Hale is NOT self-fertile** (its `recommended_note` correctly says so). When the crop-level "self-fertile -- a single tree fruits" pollinator prose is authored (it drives the apple-guide pollination section, the inverse of apple, per tree spec §7), it MUST accommodate the J.H. Hale exception so the renderer section + the variety note don't contradict. Carry into the 6-8 kickoff.
+- **PK doc-lag note:** claude.ai's Step 5 run saw the v1.8 amendment §5 in PK STILL stating the BLANKET `survives_no_fruit -> empty` rule (the live rule is the two-way DIRECTION SPLIT, which the DATA correctly implements). The data is right; the PK copy lags -> Trevor must re-upload the UPDATED master (`05-methodology/current/gold_standard_arc_checklist_v1_8_amendment.md`, §5 two-way), not an older copy. **NEW (Claude Code) doc nit:** the tree spec §3 worked-example JSON uses illustrative render-key names `plant_dates`/`bloom_dates`/`harvest_dates`, but §3a + the actual data + the amendment all use the REUSED annual names (`plant_out`/`bloom`/`harvest_*`) -- this caused claude.ai a false-alarm "missing render strings" read. Fix the spec example's key names to match the implementation (PK re-upload, owed with the amendment).
+
+### Claude Code release (verification-only)
+Nothing applied; no patch, no gate re-run needed (0 bytes changed). Confirmed canonical UNCHANGED at `3e07c4e1` == LATEST; peach gate still PASS; 17 sources resolve. Cross-checked claude.ai's claims (0 corrections, 6/7/4/3, the FLAG-A cell table) -- consistent. Recorded this entry + regenerated CURRENT_STATE (arc position moved to "Step 5 verified, next 6-8"; SHA unchanged). Archived the log + snippet to `HANDOFF_peach_step5/FROM_CHAT/`. **NEXT = peach Steps 6-8 (claude.ai)** -- the bulk care prose (carry the J.H. Hale pollinator forward note).
+
 ## 2026-06-10 -- session `peach_step4` (claude.ai authoring + Claude Code release -- the FIRST tree's region biology fill)
 
 **Start-SHA:** `e99001f2e70cf3b57b4b1c7ac74be788ca649dfb3a7c69b8e1c5a47d6fc1c919` (peach Step 3.5 tree shells; preflight matched LATEST.txt).
