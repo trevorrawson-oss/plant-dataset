@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-11 -- session `peach_steps6_8b` (claude.ai authoring + Claude Code release -- bulk prose, part 2 of 2)
+
+**Start-SHA:** `4a3a48012ee9f2edfb620a650679878812be269ba013011a40eeefb4d83b19f9` (6-8a; preflight matched LATEST).
+**End-SHA:** `59876b61468a7b64...` (`crops_data_final.json`). **Catalog 87 -> 88** (minted `clemson_peach_diseases`).
+**Deliverable:** `peach_steps6-8b_patch.json` -- 77 `replace` ops, base `4a3a4801`, all `expect_current:null` drift-guarded. The second half of the bulk care prose. Archived to `HANDOFF_peach_steps6-8b/FROM_CHAT/`.
+
+### What claude.ai authored (6-8b, both registers)
+Top-level `description_*` + `harvest_ready_*` (ground-color shift / gentle-press / aroma; "red blush is not ripeness"). `storage` (counter-ripen; refrigerate only when ripe; the 36-46°F chilling-injury/mealiness caveat -- "mealiness is CI from chilling underripe fruit, not a bad peach"; freeze sliced). `yield_expectations` (~50-150 lb / 1-3 bu per mature standard tree; full bearing yr 4-6; strip yr-1 fruit). `fertilizer` (~1 cup 10-10-10 per yr of tree age, max ~10; spring bloom-to-petal-fall; NO fertilizer at planting; **skip post-harvest feed if a late frost took the crop**; never late-season -> winter injury). `watering` prose (`method_note_*` deep+infrequent, drip/soaker, keep canopy dry for brown rot; `critical_periods_*` = the **final swell, last 2-4 weeks pre-harvest**; `schedule_by_stage[0-2].note_*`). `rotation` (HONEST for a tree: `family:"Rosaceae (Prunus)"`, `rotation_years:null`, the **replant-disease** angle -- no Prunus-after-Prunus, ring-nematode/PTSL carryover, Guardian + soil replacement if forced). `moon_phase_preference` (asserted NONE: `phase:null`, `evidence_tier:"none"`, source note). 2.9 perennial prose: `bloom_time_*` (early spring, variety-driven, early-bloom frost risk); `pollinator_notes_*` + `pollination.notes_*` (self-fertile / single-tree, the INVERSE of apple, WITH the J.H. Hale exception); `rootstock_options[0-3].traits_*` (Lovell/Halford/Guardian/Nemaguard by soil+nematode+PTSL); `year_one_notes_*` (establishment over fruit). Sources (all in-set): clemson_hgic, ncsu_ext, umd_ext (FS-1141 chilling injury), uf_ifas_edis (HS1413 irrigation/final-swell).
+
+### J.H. Hale consistency (the CRITICAL cross-field constraint) -- SATISFIED + cross-checked
+Crop-level `pollinator_notes_*` AND `pollination.notes_*` both carry the self-fertile headline AND the J.H. Hale "needs a concurrent-blooming pollinizer" caveat -> consistent with the 6-8a `blossom` tip + the no-fruit `failure_diagnostics`. Claude Code confirmed "Hale" present in both fields.
+
+### Claude Code release
+- **Slice-integrity SHA MATCHED byte-for-byte:** claude.ai shipped a post-apply SHA of the peach crop object (`b2b1c1b3...`); the applied crop hashed identically -> the 77 ops reproduced exactly, 0 drift. (New verification habit: verify the crop-object SHA when claude.ai provides one.)
+- **MINTED `clemson_peach_diseases`** (FLAG 1, catalog lane): Clemson HGIC "Peach Diseases" factsheet (`hgic.clemson.edu/factsheet/peach-diseases/`), T1, the distinct no-replant anchor for `rotation` -- separate from the general `clemson_hgic` (Peaches & Nectarines). claude.ai flagged rather than invented; minting (vs folding onto bare clemson_hgic) is the precise call. Mirrored the clemson_hgic catalog shape.
+- **Gates (protocol #6):** whole_crop_gate peach PASS(0) (18 sources catalogued+T1, 101 claim-leaves 0 gaps, 0 dash, 0 null). register PASS. release_verify: only peach changed + `source_catalog +clemson_peach_diseases` (the intended mint) + the 10 benign "novel region keys vs lettuce-leaf" tree-chill concerns; lettuce byte-identical; 4 anchors PASS. Honest-nulls confirmed (`rotation_years`, `moon_phase.phase`). Verbatim scan DEFERRED to Step 11. Promoted `59876b61`.
+
+### FLAGS / residual (2 structural, for Trevor)
+- **FLAG 3 (the GAP): `notifications` + `weather_triggers` are UNAUTHORED** (both `[]`). They fell through the 6-8a/6-8b split -- the original 6-8 kickoff listed them, but the 6-8a carry-forward + the 6-8b kickoff omitted them (my omission). The cert gate needs them (cherry: 7 notifications / 5 weather_triggers). **Peach is NOT cert-ready until authored.** For a tree: dormant-prune reminder, late-frost-on-bloom alert, establishment deep-watering, harvest. **NEXT: a small 6-8c events pass (recommended) or fold into 9-11 prep -- Trevor's call.**
+- **FLAG 2 (rotation shape):** the `rotation` dict is annual-built (`rotation_years`/`avoid_after`/`good_after`); authored honestly within it (`rotation_years:null` + replant prose), but a perennial-aware variant (`rotation_applicable:false`/`replant_disease_*`) is OWED in the tree spec before apple so the renderer doesn't imply a rotation interval.
+- **OWED (carried):** PK re-upload (v1.8 amendment + tree spec); Appendix A registration of the growth_stages stems; whole_crop_gate perennial CERT branch (Step 11); FLAG B `_build_tree_shells` for apple. FLAG 1 rootstock selection_basis -> apple.
+
 ## 2026-06-11 -- session `peach_steps6_8a` (claude.ai authoring + Claude Code release -- bulk prose, part 1 of 2)
 
 **Start-SHA:** `3e07c4e1d2fc7b5a5c6d0f7496ed5db60d67f555519b4dd5fa16af521d75e0c2` (Step 5 verified; preflight matched LATEST).
