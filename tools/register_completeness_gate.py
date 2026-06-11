@@ -50,6 +50,7 @@ EXCLUDED_KEYS = {
     "archetype","flower_type","light_required","lifecycle","self_fertile",
     "heat_tolerance","growth_habit","tier","frequency","unit","method","label",
     "evidence_label","trigger_type","classification","suitability","verdict",
+    "year_phase",  # tree growth_stages: establishment|annual_cycle (peach 6-8a; timing_* siblings are suffix-ruled CORE-PROSE)
     # USER-FACING-CATEGORICAL (dash-gated, no suffix)
     "sunlight","water","difficulty","triggers","spacing","depth","light",
     # CN-METADATA (evidence structure)

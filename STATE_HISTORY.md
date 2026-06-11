@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-11 -- session `peach_steps6_8a` (claude.ai authoring + Claude Code release -- bulk prose, part 1 of 2)
+
+**Start-SHA:** `3e07c4e1d2fc7b5a5c6d0f7496ed5db60d67f555519b4dd5fa16af521d75e0c2` (Step 5 verified; preflight matched LATEST).
+**End-SHA:** `4a3a48012ee9f2edfb620a650679878812be269ba013011a40eeefb4d83b19f9`.
+**Deliverable:** `peach_steps6-8a_patch.json` -- 14 ops (13 replace + 1 add), base `3e07c4e1`. **Steps 6-8 SPLIT into 6-8a + 6-8b** (Trevor, at the chat's open -- the tree 6-8 surface is larger than carrot's; accuracy-over-velocity). 6-8a = core biology compounds + the tree-stage journey; 6-8b = care dicts + 2.9 perennial prose + events + top-level. Archived to `HANDOFF_peach_steps6-8/` (note: that folder also holds the 6-8b kickoff + the PK refresh; 6-8a's patch+snippet here).
+
+### What claude.ai authored (6-8a, both registers, as a TREE)
+5 `pests` (peachtree borer, lesser peachtree borer, plum curculio, Oriental fruit moth, catfacing insects), 3 `diseases` (peach leaf curl, brown rot, bacterial spot), 8 `growth_stages` (the perennial JOURNEY: planting/establishment/scaffold_formation/dormancy/dormant_prune/blossom/fruit_set/harvest), 4 `failure_diagnostics` (no-fruit-after-bloom, curled-red-leaves, small-poor-fruit, gum-at-trunk-base), 17 `tips_by_stage` tips across all 9 tree stage keys (planting/establishment/first_growth/dormancy/dormant_prune/blossom/fruit_set/harvest/post_harvest), + `harvest_urgency:"high"`. All targets were null/[] in the Step-5 slice. Sources: clemson_hgic (bulk) + iastate_ext + mu_ext (leaf curl) + ncsu_ext (bare-root/J.H. Hale), all in the 17-set, 0 out-of-set citations. Dual-voice 0 missing/0 null across 291 consumer strings; 0 em-dash; °F symbol. **J.H. Hale self-incompatibility caveat already correct in the `blossom` tip + the no-fruit `failure_diagnostics`** -- 6-8b's `pollinator_notes_*` must stay consistent.
+
+### Claude Code release -- the 4 FLAGS (all addressed to me) resolved
+- **FLAG 1 (tree growth_stages shape -- STRUCTURAL, my lane):** a permanent tree has no sow date, so `day_range_from_sow:null` on all 8 stages; claude.ai added `year_phase` (enum establishment|annual_cycle) + `timing_seasoned/_beginner` (prose locator) to carry the journey timing honestly. ACCEPTED (do not invent a sow-relative range a tree lacks). RULED `year_phase` in `register_completeness_gate.EXCLUDED_KEYS` (MACHINERY enum; `timing_*` are suffix-ruled CORE-PROSE). Appendix A registration of both stems owed.
+- **FLAG 2 (gate id-parity):** growth_stages (8 ids, incl. scaffold_formation w/ no tip) and tips_by_stage (9 keys, incl. first_growth/post_harvest tip-only) need NO 1:1 mapping. Confirmed: the gate walks generically; whole_crop_gate PASS(0) with no mis-report.
+- **FLAG 3 (catalog precision):** claude.ai cited portal-level T1 IDs (clemson_hgic/iastate_ext/mu_ext/ncsu_ext) with peach-specific factsheet URLs -- CORRECTLY attributed (unlike carrot's ucanr->uc_ipm mis-attribution, which this is not). Every claim anchored in-set. The optional precision (mint `iastate_plc`/etc. or add out-of-set corroborators PSU/UC IPM) DEFERRED -- not needed. No mint.
+- **FLAG 4 (`harvest_urgency:"high"`):** a valid LEVEL (carrot uses "low"); the cross-crop level-vs-cadence inconsistency (cherry/lettuce "daily", beefsteak "weekly") is the known C3 vocab deferral, not a peach defect. Accepted.
+
+### Verification (protocol #6)
+whole_crop_gate peach PASS(0) -- 96 claim-leaves 0 gaps, 17 sources catalogued+T1, 0 dash, 0 null. register PASS (year_phase ruled). release_verify clean (only peach, lettuce byte-identical, no catalog change; the 10 "novel region keys vs lettuce-leaf" = the benign tree chill fields, adjudicated). 4 anchors PASS. Cross-check: counts match (5/3/8/4/17). **Verbatim scan DEFERRED to Step 11** (the definitive cross-crop flip gate, run when all 6-8 prose is in; claude.ai self-scanned 0 6-gram overlap, 43 legit shared 6-grams). Promoted `4a3a4801`.
+
+### Residual / next
+- **NEXT = peach Steps 6-8b (claude.ai):** the second half -- `description_*`, `harvest_ready_*`, `storage`, `yield_expectations`, `fertilizer` (incl. amount_*), `watering` prose, `rotation` (N/A-for-a-tree + replant-disease), `varieties.note_*`, `moon_phase_preference`, + the 2.9 perennial prose (`bloom_time_*`, `pollinator_notes_*` [J.H. Hale exception], `pollination.notes_*`, `rootstock_options[].traits_*`, `year_one_notes_*`). Then 9-11 cert (the verbatim scan + the flip). Handoff `HANDOFF_peach_steps6-8b/`.
+- **OWED:** PK re-upload (v1.8 amendment §5 two-way + tree spec §3 render keys, in `HANDOFF_peach_steps6-8/2_ADD_TO_PROJECT_KNOWLEDGE/`); Appendix A registration of the growth_stages stems; whole_crop_gate perennial CERT branch (Step 11); FLAG B `_build_tree_shells` for apple; optional `iastate_plc`/UC-IPM catalog precision. FLAG 1 rootstock selection_basis -> apple.
+
 ## 2026-06-11 -- session `peach_step5` (claude.ai region verification -- NO dataset change)
 
 **Start-SHA / End-SHA:** `3e07c4e1d2fc7b5a5c6d0f7496ed5db60d67f555519b4dd5fa16af521d75e0c2` -- **UNCHANGED. Verification-only, 0 corrections, no patch, no promote, no re-pin.** (claude.ai dated its snippet 2026-06-10; the actual run/record date is 2026-06-11.) Logged despite no dataset change so a future session does not re-run the verification -- the no-op was deliberate, not a skipped promotion. Deliverable: `peach_step5_region_verification_log.md` (archived in `HANDOFF_peach_step5/FROM_CHAT/`).
