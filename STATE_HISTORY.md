@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-11 -- session `peach_steps6_8c` (claude.ai authoring + Claude Code release -- the EVENTS layer; peach bulk prose COMPLETE)
+
+**Start-SHA:** `59876b61468a7b64...` (6-8b; preflight matched LATEST). **End-SHA:** `0d3ed015dbc1...`.
+**Deliverable:** `peach_steps6_8c_events_patch.json` -- 2 `replace` ops, base `59876b61`. The events layer (the gap that fell through the 6-8a/6-8b split, FLAG 3). Archived to `HANDOFF_peach_steps6-8c/FROM_CHAT/`. **With this, peach's authoring is COMPLETE -> Steps 9-11 (cert).**
+
+### What claude.ai authored (6-8c, as a TREE)
+`notifications` [] -> **8 entries** + `weather_triggers` [] -> **5 entries**, both registers (`title_*`/`body_*` pair; the rest machinery/enum, no `sources` on event nudges per the cherry/carrot shape).
+- **notifications (8):** `bareroot_planting` (last_frost -30, log_planting), `dormant_prune` (last_frost -14), `bloom_frost_watch` (bloom_start 0 -- the late-frost crop-killer, carries the J.H. Hale self-fertile exception), `fruit_thinning` (bloom_start +45, post June-drop, one per 6-8 in), `establishment_watering` (last_frost +30), `final_swell_harvest` (first_frost -21, the last 2-4 wk irreversible-size window + ripeness cues), `end_of_season_nudge` (first_frost +14, mummy/debris sanitation = brown-rot control + borer check), `inactivity` (dormancy re-engagement, mirrors cherry). Each consistent with the already-authored planting/dormant_prune/blossom tips, year_one_notes, watering critical_periods, harvest_ready, and the brown-rot disease.
+- **weather_triggers (5):** `FROST_WARNING` (severity HIGH, blossom/fruit_set -- THE peach weather event, consistent with frost_risk_note + the no-fruit diagnostic), `HIGH_HUMIDITY` + `HEAVY_RAIN` (brown-rot pressure + near-harvest cracking, consistent with the disease + the keep-canopy-dry watering note), `DROUGHT` (HIGH, establishment/fruit_set -- final-swell size loss), `HEAT_STRESS` (LOW -- deliberately lower priority for peach; sunburn). cherry's `condition` token set; `offset_from` tokens last_frost/first_frost/bloom_start; `audience:"core"`.
+- **No new catalog IDs:** every event references biology already authored + sourced in the slice; nudges are not evidence leaves.
+
+### Claude Code release
+- **Slice-integrity SHA MATCHED byte-for-byte** (peach crop object `72e2dd85...`; claude.ai's third consecutive exact match -> 0 drift, the new habit holds).
+- **Gates (protocol #6):** whole_crop_gate peach PASS(0) (18 sources catalogued+T1, 101 claim-leaves 0 gaps, 0 dash, 0 null). register PASS. release_verify clean (only peach changed, NO catalog change, lettuce byte-identical; the 10 benign "novel region keys vs lettuce-leaf" tree-chill concerns). 4 anchors PASS. Verbatim scan DEFERRED to Step 11. Promoted `0d3ed015`.
+- **Completeness verified:** every peach authoring section is now filled (pests 5 / diseases 3 / growth_stages 8 / tips_by_stage 9 / failure_diagnostics 4 / storage / fertilizer / watering / yield / rotation / the 2.9 perennial prose / notifications 8 / weather_triggers 5); honest-nulls intentional. **Also fixed the stale `v1.6` checklist pointer in the CURRENT_STATE protocol header -> `v1.7 + v1.8 amendment`.**
+
+### Residual / next
+- **NEXT = peach Steps 9-11 (CERT, mostly Claude Code):** the definitive cross-crop verbatim scan (`verbatim_scan.py`, the flip gate -- reword HARD hits with Trevor); build + run the whole_crop_gate **perennial CERT branch** (the two-way `survives_no_fruit` rule + the establishment-entry invariants, against FILLED peach); a per-crop §3 pass; the **launch_ready flip** (`status:"verified_gs_arc"`, launch_ready_core/seasoned true, last_reviewed set). claude.ai may run a Step-9/10 side-by-side verify first.
+- **Fold into the cert pass:** the perennial-aware `rotation` shape (FLAG 2); null the vestigial `growth_stages_year_one/_annual`; FLAG B `_build_tree_shells` for apple; Appendix A registration of the growth_stages stems.
+- **OWED (Trevor):** the PK cleanup (`PK_CLEANUP/`: delete 4 superseded + replace 3 stale-current). FLAG 1 rootstock selection_basis -> apple.
+
 ## 2026-06-11 -- session `peach_steps6_8b` (claude.ai authoring + Claude Code release -- bulk prose, part 2 of 2)
 
 **Start-SHA:** `4a3a48012ee9f2edfb620a650679878812be269ba013011a40eeefb4d83b19f9` (6-8a; preflight matched LATEST).
