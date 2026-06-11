@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-06-11 -- session `apple_steps1_3` (Claude Code release lane -- apple Steps 1-3 + 3.5 COMPRESSED, anchor 6, the SECOND tree)
+
+**Start-SHA:** `7345b944...` (peach CERTIFIED). **End-SHA:** `510edafe7e122b14...` (canonical promoted; LATEST re-pinned, session `apple_steps1_3`).
+**This is the first COMPRESSED tree-repeat:** claude.ai authored apple's Steps 1-3 (source set + scalars/structured incl. the 2.9 perennial block + the 13-variety bloom-overlap calendar) in ONE pass riding peach's proven rails; Claude Code applied + ran protocol #6 + built the Step-3.5 tree shells **in the same release**. Apple is anchor 6; its region cells are now admission-state shells awaiting Step 4 fill (next pass). Toward the 2-3-anchors/day cadence (peach took 7 passes; apple aims for ~3).
+
+### What was applied
+- **62-op patch** (envelope base `7345b944`, `replace` on null targets). Applied to scratch; **slice-integrity MATCHED** -- the applied apple crop object hashes to claude.ai's post-apply SHA `b12ade1f` (4th consecutive byte-for-byte match across the peach arc + apple).
+- **Apple's OWN biology authored (A1 -- not inherited from peach):** NOT self-fertile (`pollination.self_fertile:false`, `needs_pollinizer:true`, `pollinizer_distance_ft`) -- apple is the cross-pollination poster child, the bloom-overlap calendar is its hero feature; pome rootstocks are SIZE-controlling (M9/M26/MM106/MM111/seedling, 5 options); chill higher+wider (`chill_hours_range [100,1000]`); hardier than peach (survives `[3,9]` / fruits `[4,8]`, vs peach 4-9 / 5-9). 13 recommended varieties spanning bloom groups very_early..very_late AND chill, supporting real cross-pollination pairs; Golden Delicious carries the partially-self-fruitful + universal-pollinizer flag (peach's J.H. Hale analog).
+
+### Five release decisions (Q1-Q5)
+- **Q1 (companion shape):** `good_beginner` is the live canonical shape -- no re-path needed.
+- **Q2 (source mint):** minted `uf_ifas_hs764` (catalog 88->89) + re-pointed apple's varieties HS764 cite to it. Catalog-precision is Claude Code's lane (claude.ai only sees the crop's source subset, cannot mint a stable ID).
+- **Q3 (FLAG 1 RESOLVED):** added `rootstock_selection_basis` enum -- apple=`size` (the pome data point that resolves FLAG 1), peach backfilled=`soil_pest_tolerance` (additive, cert intact). Registered the key as EXCLUDED (per-archetype enum) in register_completeness_gate.
+- **Q4 (DTM null match):** nulled apple `days_to_maturity`/`[]`/`mid=None` to match certified peach (trees carry no DTM; the calendar layer owns timing).
+- **Q5 (rotation):** perennial-aware `rotation` shape stays an OWED structural item (peach open_finding) -- folded into apple Step 4+, not forced now.
+
+### Step 3.5 (tree shells, same release)
+`build_region_shells.py` tree branch built 10 region cells, `calendar_basis -> perennial_chill_gated`, ONE `track:"perennial"` establishment plantings entry per region, annual-only keys stripped. Cells are admission-state (`suitability:null`, `region_notes:null`) -- the expected Step-3.5 state, A2 region-fill owns "unauthored," A3 only enforces tree invariants on FILLED cells.
+
+### Tooling (test-first)
+- **`perennial_gate.py` shell-fix:** A3 now SKIPS null-suitability cells (`if s is None: continue`) -- apple's Step-3.5 shells were over-firing A3 before the cells exist. Added test #9 (shell-state -> 0 violations). `test_perennial_gate` GREEN; `test_apply_patch` + `test_build_region_shells` regression GREEN.
+- **`register_completeness_gate.py`:** ruled `varieties.recommended[].use` as USER-FACING-CATEGORICAL (variety use descriptor, e.g. "fresh eating, cooking"; the universal-pollinizer flag embedded in Golden Delicious's `use` migrates to `recommended_note` at 6-8). Register HALTED on it, then PASS after the ruling.
+
+### Gate battery + release_verify adjudication (protocol #6)
+- whole_crop_gate **apple** = 10 violations, ALL `region_notes`-null region-unfilled (A2) = the expected Step-3.5 admission state, **A3=0**; this is at-bar for a Steps-1-3+3.5 release (the region biology is Step 4). whole_crop_gate **peach** = PASS (A3=0; the selection_basis backfill is additive, `verified_gs_arc` intact). 4 annual anchors (cherry/beefsteak/carrot/lettuce) byte-identical, PASS.
+- register = PASS. perennial test + apply_patch + build_region_shells tests GREEN.
+- **release_verify 2 concerns, both adjudicated INTENTIONAL:** (1) peach + apple objects changed -- apple is the new authoring, peach is the additive `rootstock_selection_basis` backfill; (2) catalog +`uf_ifas_hs764` -- the Q2 mint. No unintended collateral.
+
+### Owed, folded into apple Step 4+
+perennial-aware `rotation` shape (Q5/peach open_finding); `_build_tree_shells` set region_id/label/zone_span + sweep stray keys (FLAG B); Appendix A registration of growth_stages `timing_*`/`year_phase` stems. NEXT = apple Step 4 region-fill kickoff (the per-zone suitability + chill bands + the no-fruit direction split, peach's Step-4 exemplar).
+
 ## 2026-06-11 -- session `peach_steps9_11` (Claude Code cert lane -- PEACH CERTIFIED, anchor 5, the FIRST tree)
 
 **Start-SHA:** `0d3ed015...` (6-8c, bulk prose complete; preflight matched LATEST). **End-SHA:** `7345b94469e5cbc0b783aa7b6c67c1940f52d0f65d7c179038af302131baba2c`.

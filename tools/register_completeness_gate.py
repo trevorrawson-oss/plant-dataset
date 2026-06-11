@@ -51,6 +51,7 @@ EXCLUDED_KEYS = {
     "heat_tolerance","growth_habit","tier","frequency","unit","method","label",
     "evidence_label","trigger_type","classification","suitability","verdict",
     "year_phase",  # tree growth_stages: establishment|annual_cycle (peach 6-8a; timing_* siblings are suffix-ruled CORE-PROSE)
+    "rootstock_selection_basis",  # FLAG 1: size (pome) | soil_pest_tolerance (stone) -- per-archetype enum (apple)
     # USER-FACING-CATEGORICAL (dash-gated, no suffix)
     "sunlight","water","difficulty","triggers","spacing","depth","light",
     # CN-METADATA (evidence structure)
@@ -88,6 +89,7 @@ def ruled_categorical(pat, k):
     if k == "good_after" and pat.endswith("rotation"): return True       # bare crop list
     if k == "when" and pat.endswith("thinning"): return True             # short timing phrase
     if k in ("fruit_size", "fruit_color") and "varieties_detail" in pat: return True
+    if k == "use" and "varieties" in pat: return True  # variety use descriptor, categorical (e.g. "fresh eating, cooking"); apple's Golden Delicious embeds the universal-pollinizer flag here (migrate to recommended_note at 6-8)
     return False
 
 # --- DEFERRED by design: companions array-split provenance (inventory §5 -- its own

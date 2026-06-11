@@ -90,4 +90,14 @@ t = well_formed_tree()
 t["regions"]["se_gulf"]["resolved_by_zone"]["8"]["calendar"] = []
 assert any("must carry a calendar" in v for v in perennial_cert_violations(t)), perennial_cert_violations(t)
 
+# 9. SHELL state (Step 3.5: cells unfilled, suitability=null) -> A3 skips unfilled cells
+# (the empty region is the region-fill check's job, not a malformed-suitability violation).
+# The perennial establishment entry (built by build_region_shells) is still present + valid.
+t = well_formed_tree()
+for r in t["regions"].values():
+    for cell in r["resolved_by_zone"].values():
+        cell["suitability"] = None
+        cell["calendar"] = []
+assert perennial_cert_violations(t) == [], perennial_cert_violations(t)
+
 print("PASS perennial_gate")

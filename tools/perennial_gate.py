@@ -50,6 +50,11 @@ def perennial_cert_violations(crop):
             if not isinstance(cell, dict):
                 continue
             s = cell.get("suitability")
+            if s is None:
+                # unfilled shell cell (Step 3.5 admission state) -- the region-fill check
+                # (whole_crop_gate A2) owns "this region is unauthored"; A3 only enforces the
+                # tree invariants on FILLED cells, so a null suitability is skipped, not flagged.
+                continue
             if s not in SUITABILITY_ENUM:
                 V.append(f"{rk}.{z}: suitability {s!r} not in the 4-value enum")
                 continue
