@@ -129,7 +129,11 @@ def _child(node, tok):
                 return el
         raise KeyError(f"slug/id filter matched nothing: {tok}")
     if kind == "index":
-        return node[key][sel]
+        child = node[key]
+        # RFC-6901: a numeric token against a DICT is a string key, not a list index
+        # (e.g. resolved_by_zone is keyed by zone-string "3".."11"). Against a list it
+        # stays an index (rootstock_options[0]). Branch on the actual node type.
+        return child[str(sel)] if isinstance(child, dict) else child[sel]
     return node[key]
 
 
@@ -151,10 +155,12 @@ def leaf_get(container, leaf):
         except KeyError:
             return _MISSING
     if kind == "index":
-        lst = container.get(key) if isinstance(container, dict) else None
-        if not isinstance(lst, list) or not (0 <= sel < len(lst)):
+        child = container.get(key) if isinstance(container, dict) else None
+        if isinstance(child, dict):            # numeric token vs a dict -> string key
+            return child.get(str(sel), _MISSING)
+        if not isinstance(child, list) or not (0 <= sel < len(child)):
             return _MISSING
-        return lst[sel]
+        return child[sel]
     if isinstance(container, dict):
         return container.get(key, _MISSING)
     return _MISSING
@@ -163,13 +169,15 @@ def leaf_get(container, leaf):
 def leaf_set(container, leaf, value):
     kind, key, sel = _parse(leaf)
     if kind == "index":
-        lst = container[key]
-        if sel == len(lst):
-            lst.append(value)            # index == len -> APPEND a new entry
-        elif 0 <= sel < len(lst):
-            lst[sel] = value
+        child = container[key]
+        if isinstance(child, dict):          # numeric token vs a dict -> string key
+            child[str(sel)] = value
+        elif sel == len(child):
+            child.append(value)              # index == len -> APPEND a new entry
+        elif 0 <= sel < len(child):
+            child[sel] = value
         else:
-            raise IndexError(f"index {sel} out of range (len {len(lst)}) for leaf {leaf!r}")
+            raise IndexError(f"index {sel} out of range (len {len(child)}) for leaf {leaf!r}")
     elif kind in ("filter", "slugfilter"):
         raise ValueError(f"cannot set a filter as a leaf: {leaf}")
     else:
@@ -179,7 +187,8 @@ def leaf_set(container, leaf, value):
 def leaf_del(container, leaf):
     kind, key, sel = _parse(leaf)
     if kind == "index":
-        del container[key][sel]
+        child = container[key]
+        del child[str(sel) if isinstance(child, dict) else sel]
     elif kind in ("filter", "slugfilter"):
         raise ValueError(f"cannot delete a filter leaf: {leaf}")
     else:

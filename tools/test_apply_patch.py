@@ -96,6 +96,29 @@ try:
 except SystemExit:
     pass
 
+# 1f. numeric JSON-Pointer token against a DICT resolves as a STRING KEY, not a list
+# index (peach Step 4: `regions[r].resolved_by_zone` is keyed by zone-string "3".."11",
+# so `/resolved_by_zone/3/suitability` must hit dict key "3", not list index [3]). The
+# `/0/name` list case (test 1d) must still index a list -- the resolver branches on the
+# actual node type (RFC-6901), so both coexist.
+_rz_nt = {"resolved_by_zone": {"3": {"suitability": None}, "4": {"calendar": []}}}
+_rz = {"crops": [{"slug": "peach", "regions": {"northern_tier": _rz_nt}}]}
+ap.apply_patch(_rz, {"base_sha": "z", "crop": "peach", "ops": [
+    {"op": "replace", "path": "/regions/northern_tier/resolved_by_zone/3/suitability",
+     "from": None, "value": "unsuitable"},
+    {"op": "replace", "path": "/regions/northern_tier/resolved_by_zone/4/calendar",
+     "from": [], "value": ["dormant"]}]})
+_nt = _rz["crops"][0]["regions"]["northern_tier"]["resolved_by_zone"]
+assert _nt["3"]["suitability"] == "unsuitable", ("numeric dict-key traversal", _nt)
+assert _nt["4"]["calendar"] == ["dormant"], ("numeric dict-key traversal 2", _nt)
+
+# 1f-ii. a numeric dict key as the LEAF token (set/from-guard on the cell slot itself).
+_lf = {"crops": [{"slug": "peach", "regions": {"se_gulf": {"resolved_by_zone": {"8": None}}}}]}
+ap.apply_patch(_lf, {"base_sha": "z", "crop": "peach", "ops": [
+    {"op": "replace", "path": "/regions/se_gulf/resolved_by_zone/8",
+     "from": None, "value": {"suitability": "fruits_reliably"}}]})
+assert _lf["crops"][0]["regions"]["se_gulf"]["resolved_by_zone"]["8"] == {"suitability": "fruits_reliably"}, ("numeric dict-key leaf", _lf)
+
 # 2. set_value alias + `after` value + advisory `before` (no from-guard, sets anyway)
 data = {"crops": [{"slug": "x", "regions": {"r": {"old": True}}}]}
 ap.apply_patch(data, {"base_sha": "z", "patches": [

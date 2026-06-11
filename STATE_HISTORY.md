@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-06-10 -- session `peach_step4` (claude.ai authoring + Claude Code release -- the FIRST tree's region biology fill)
+
+**Start-SHA:** `e99001f2e70cf3b57b4b1c7ac74be788ca649dfb3a7c69b8e1c5a47d6fc1c919` (peach Step 3.5 tree shells; preflight matched LATEST.txt).
+**End-SHA:** `3e07c4e1d2fc7b5a5c6d0f7496ed5db60d67f555519b4dd5fa16af521d75e0c2`.
+**Deliverable:** the merged `peach_step4_MERGED_patch.json` = 448 Step-4 ops + 8 z4 ops = 456 `replace`, base `e99001f2`. Step 4 is the FIRST time a permanent tree's region layer is authored -- the reference exemplar for apple/lemon/blueberry. Bundle archived to `HANDOFF_peach_step4/` (1_UPLOAD_TO_CHAT + FROM_CHAT).
+
+### What claude.ai authored (Step 4 -- the tree region biology)
+Per `tree_region_model_spec_v1_0`: crop-level two-band hardiness strip (`hardiness_zone_min/max` 4/9 survives, `reliable_fruit_zone_min/max` 5/9 fruits, `hardiness_notes_*`, `chill_hours_note_*`); per region (all 10) `chill_hours_delivered` band + `chill_basis_*` + `region_notes_*` + the `track:"perennial"` establishment `plantings[0]` rule (plant_out frost-relative, bloom near last_frost, harvest anchored to bloom_start); per zone (20 cells) `suitability` + `suitability_note_*`, zone chill, absolute bloom/harvest/plant render strings, the 12-month tree `calendar[]` (first use of `dormant`), `frost_risk_note_seasoned`, `resolved_from`, `resolution_method:"perennial_precompute"`. Calendars GENERATED deterministically from the dates (coherence-by-construction; `gen_patch.py::build_calendar`). 17 source IDs, all in-catalog T1, NO mints. Suitability: 6 fruits_reliably / 7 marginal / 4 survives_no_fruit / 3 unsuitable. Honesty test passed (unsuitable/chill-limited cells empty, no fabricated windows).
+
+### FLAG A resolved -- the no-fruit-calendar DIRECTION SPLIT (Trevor picked option 2)
+The binding docs contradicted (the tree spec's worked example showed a `survives_no_fruit` cell WITH a calendar; the v1.8 amendment's Step-11 gate required `survives_no_fruit` -> EMPTY). claude.ai shipped Step 4 conforming to the amendment (z4 empty). Trevor + Claude Code resolved it: the blanket rule was WRONG -- a `survives_no_fruit` cell fails one of two ways, and the calendar must match. **Rule:** carry a calendar IFF `chill_hours_delivered[0] >= min variety chill (400)`. **z4 is COLD-edge** (banks 1,100-1,500 chill, well above Contender's 1,050, so the tree completes dormancy + BLOOMS every May; only the crop is frost-lost) -> re-authored with its cycle (`bloom` May 5-25, `harvest` Aug 10-Sep 5, `calendar` dormant/prune/bloom/growing/harvest/care, `frost_risk_note`, `resolved_from` last_frost May 15) via an 8-op one-cell follow-up patch (sources umn_ext/umaine_ext/iastate_ext, all in-catalog), merged into this release. `suitability` stays `survives_no_fruit` (crop unreliable). **The 3 CHILL-edge cells** (ca_south_coast/ca_desert/fl_peninsula z10, chill lows 150-250 < 400) stay EMPTY; `unsuitable` always empty. This DISSOLVES the contradiction: the spec example = the cold-edge case, the amendment's empty = the chill-edge case; both are instances of one rule. `gold_standard_arc_checklist_v1_8_amendment` Section 5 rewritten to the two-way rule (**PK re-upload owed**).
+
+### Claude Code release -- applier hardening + structural cleanup
+- **apply_patch HARDENED (test-first, `test_apply_patch` +1f/1f-ii):** a numeric JSON-Pointer token (`/regions/northern_tier/resolved_by_zone/3/...`) against a DICT now resolves as a string key, not a list index -- Step 4 is the FIRST patch to touch zone-keyed `resolved_by_zone` cells, and the converter was forcing `[3]` (list index) on the dict-keyed zones. `_child` + `leaf_get`/`leaf_set`/`leaf_del` branch on node type (RFC-6901); the list-index path (`rootstock_options/0`, the append cases, the history replays) is intact.
+- **Stripped 3 stray annual-residue keys** (`ca_north_coast`/`ca_south_coast`.`zone_8_presence`, `ca_desert`.`zone_10_desert_fold`) -- Step-3.5 tree-shell residue the tree branch did not strip (FLAG B). claude.ai filled `region_id`/`region_label`/`zone_span` (Step 3.5 left them null) -- fold both into `_build_tree_shells` for apple (FLAG B, owed).
+
+### Verification (protocol #6)
+whole_crop_gate peach PASS(0) -- regions filled, 17 sources catalogued+T1, 71 claim-leaves 0 gaps, dual-voice 0 null, 0 dash/temp. register PASS. release_verify: only peach changed, lettuce byte-identical, no catalog change, **calendar coherence PASS (incl. z4)**; the 10 "novel region keys vs lettuce-leaf" concerns = the tree chill fields (`chill_basis_*`, `chill_hours_delivered`), benign (lettuce is an annual exemplar with no chill layer; the keys are the documented tree shape) -- adjudicated. 4 anchors PASS. Cross-check: every claude.ai claim matched (20 cells, 6/7/4/3, dormant used, hardiness bands 4-9/5-9, honesty test). Promoted `3e07c4e1`.
+
+### Residual / next
+- **NEXT = peach Step 5+ (claude.ai):** Step 5 side-by-side region verification, then Steps 6-8 (bulk prose, dual-register, tree-stage versions), then 9-11 (cert). The region/timing layer is authored; bulk prose is the next push.
+- **OWED:** PK re-upload of the updated v1.8 amendment (Section 5 two-way rule); the whole_crop_gate perennial CERT branch (Step 11) -- build + test against FILLED peach, enforcing the two-way `survives_no_fruit` rule (chill-vs-floor); FLAG B `_build_tree_shells` (region_id/label/zone_span + stray-key strip) for apple. FLAG C (`usda_phzm` mint) optional, deferred. FLAG 1 (rootstock selection_basis) -> apple.
+
 ## 2026-06-10 -- session `peach_step3_5` (Claude Code structural lane -- the TREE region/calendar model, NEW territory)
 
 **Start-SHA:** `621c79af3da48a4c376d65cb97fbd4690050ae8e8290638e26c4906c0c763e86` (peach Steps 1-3; preflight matched LATEST.txt).
