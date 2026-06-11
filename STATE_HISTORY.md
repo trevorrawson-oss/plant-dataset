@@ -6,6 +6,34 @@
 
 ---
 
+## 2026-06-11 -- session `apple_step4` (Claude Code release lane -- apple's TREE region fill, anchor 6, the second tree)
+
+**Start-SHA:** `510edafe7e122b14...` (apple Steps 1-3 + 3.5). **End-SHA:** `5cfe354eaaa7cc27...` (canonical promoted; LATEST session `apple_step4`).
+**apple's 10 TREE region shells FILLED** (the second tree's region biology, riding peach's Step-4 rails). claude.ai authored the region biology; Claude Code released, and reconciled an anchoring-convention drift inline (Trevor-approved Option A).
+
+### What was applied (claude.ai authoring)
+- **10 `replace` ops, one per region** (envelope base `510edafe`). Applied to scratch; **slice-integrity MATCHED** claude.ai's claimed pre-reconcile SHA `9d86c815...` -- the patch applied faithfully (5th consecutive match) BEFORE the anchoring reconcile.
+- **Region biology, A1 (no peach-mirroring; claude.ai's 8-gram cross-crop scan = 0 overlaps):** per region `chill_hours_delivered` band + `chill_basis_*` + `region_notes_*` + the single `track:"perennial"` establishment entry (frost-anchored plant_out/bloom/harvest rule lists); per zone (20 cells) `suitability` + `suitability_note_*` + zone chill + absolute render strings + 12-token `calendar[]` (first apple use of `dormant`) + `frost_risk_note_seasoned` + `resolved_from` + `resolution_method:"perennial_precompute"`.
+- **No-fruit DIRECTION SPLIT at apple's floor = min variety chill = 100** (Dorsett Golden / Ein Shemer, vs peach's 400): **17 cells carry a calendar, 3 empty.** The 100-floor flips two warm-edge cells that peach left empty into calendar-bearing `survives_no_fruit` -- ca_south_coast z10 + ca_desert z10 (chill 100-300, cold-edge keeps calendar). Empty: fl_peninsula z10 (`survives_no_fruit`, chill 50-150 < 100 floor), fl z11 + hawaii z11 (`unsuitable`). perennial cert-gate A3 = 0 violations (split consistent).
+- **FLAG B resolved (data side):** the shells arrived `region_id/label/zone_span` null; claude.ai populated all three per region (region_id=slug, label authored, zone_span=zone keys). No double-write conflict (shells were already built). The `_build_tree_shells` auto-populate fix is still owed so future trees get them without manual fill.
+
+### Claude Code reconciliation -- anchoring convention (Trevor 2026-06-11, Option A "reconcile here")
+claude.ai stamped a BROAD consulted-source array (e.g. `[umn_ext,ndsu_ext,umaine_ext,cornell_ext]`) on every rule/cell but anchored each to a SINGLE mnemonic key (`umn_apple`, `extorg_bloom`) -- **145 §F violations** (anchoring not one-per-source-ID, keys uncatalogued). The single anchor per rule IS claude.ai's actual per-rule evidence judgment; the 4-array was the region set copy-pasted down. **Reconciled to the peach/§F shape:**
+- re-keyed **12** mnemonic keys -> catalog IDs across **63 anchored leaves** (umn_apple->umn_ext, uga_apple->uga_ext, clemson_apple->clemson_hgic, ncsu_apple->ncsu_ext, nmsu_fruit->nmsu_ext, uariz_az1269->uariz_ext, uf_hs764->uf_ifas_hs764, ucanr_sc_chill->ucanr_santa_clara_mg, ucanr_sd_trees->ucanr_san_diego_mg, + the 3 mints below);
+- set each anchored leaf's `sources` = exactly its (re-keyed) anchor keys -- the per-rule evidence; the broad consulted set survives at the region-root rollup (§F-exempt, like peach). NO biology touched, NO fabricated URLs.
+- **minted 3 genuinely-new T1 sources** (catalog 89->92): `ucd_fruitnut` (UC Davis Fruit & Nut RIC, the canonical CA chill authority -- claude.ai gap #4), `ext_org_apples` (apples.extension.org, the cross-regional bloom-timing anchor -- gap #5), `ucanr_slo_mg` (UC MG San Luis Obispo, parallel to the existing ucanr_*_mg county IDs).
+- post-reconcile apple slice SHA = `15bb1c2d...` (supersedes claude.ai's `9d86c815`). One-off transform script removed after use; this entry is the record.
+
+### Gate battery + protocol #6
+- whole_crop_gate **apple = PASS** (region 10/10 filled; anchoring 0 gaps / 74 claim-leaves; source-tier 0 uncatalogued / 0 non-T1; perennial A3 0; dual-voice + dash + temp clean). register **PASS**. perennial unit tests + apply_patch + build_region_shells **PASS**.
+- **release_verify: 10 CONCERNs, all ADJUDICATED INTENTIONAL** -- each is the exemplar key-diff flagging apple's tree-model fields (`chill_basis_seasoned/_beginner`, `chill_hours_delivered`) as "novel vs lettuce-leaf" (the annual exemplar). Every tree trips this; peach did too. All other release_verify sections clean (calendar coherence, dash/degree, region_notes presence, value-divergence).
+- **Only `apple` changed** (123 crops, count unchanged); peach + 4 annual anchors byte-identical. Catalog +3 (the mints), 0 removed.
+
+### LEARNING + owed
+- **claude.ai authors tree region rules with broad source arrays + one mnemonic anchor per rule** (vs peach's tight per-rule sources, which it authored correctly). The reconcile-to-one-per-source is now a known per-tree release step; if it recurs at lemon/blueberry, promote the transform to a general tool.
+- **OPEN (non-blocking) -- `reliable_fruit_zone_min`:** claude.ai flagged species-honest z3 (ultra-hardy cultivars Honeycrisp/Haralson/Honeygold fruit in z3) vs roster-honest z4 (the current 13-variety roster tops near Honeycrisp). LEFT AT 4/8 this release. Decision owed at Step 5 / a roster-expansion pass: keep 4, or lower to 3 + add ultra-hardy cultivars. Trevor also asked whether the establishment-year **blossom-removal / no-fruit-year-1 care note** exists -- it is Steps 6-8 prose (unauthored for apple); check peach coverage and fold into the tree care-prose standard.
+- **Still owed (carried):** perennial-aware `rotation` shape (Q5/peach open_finding); `_build_tree_shells` auto-populate region_id/label/zone_span + stray-key sweep; Appendix A registration of growth_stages `timing_*`/`year_phase`. NEXT = apple Step 5 (verify) -> 5.5 calendars -> 6-8 bulk prose (fold the blossom-removal note here) -> cert.
+
 ## 2026-06-11 -- session `apple_steps1_3` (Claude Code release lane -- apple Steps 1-3 + 3.5 COMPRESSED, anchor 6, the SECOND tree)
 
 **Start-SHA:** `7345b944...` (peach CERTIFIED). **End-SHA:** `510edafe7e122b14...` (canonical promoted; LATEST re-pinned, session `apple_steps1_3`).
