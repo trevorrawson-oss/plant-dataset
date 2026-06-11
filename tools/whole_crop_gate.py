@@ -136,6 +136,18 @@ for rk, r in regions.items():
                 missing = sorted(SECOND_PLANTING_KEYS - set(sp))
                 fail(f"second_planting missing window keys {missing}: {rk}.{z}")
 
+# ---------------- A3. perennial (tree) cert-gate branch ----------------
+# The tree-shape invariants the generic A2 checks do not encode: exactly one
+# track:"perennial" establishment entry per region, the suitability enum, and the
+# NO-FRUIT DIRECTION SPLIT (a survives_no_fruit cell carries a calendar IFF chill is
+# reliably met). No-op for non-perennial crops. (v1.8 amendment §4-5.)
+from perennial_gate import perennial_cert_violations
+print("A3. perennial cert-gate branch (tree invariants; no-op for non-perennial)")
+_perennial = perennial_cert_violations(crop)
+print(f"  calendar_basis={crop.get('calendar_basis')!r} | perennial violations: {len(_perennial)}")
+for m in _perennial:
+    fail(f"perennial: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
