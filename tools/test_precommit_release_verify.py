@@ -12,7 +12,7 @@ on an already-built cell is still caught.
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from precommit_release_verify import drop_shell_build_unmasks
+from precommit_release_verify import drop_shell_build_unmasks, drop_precert_anchoring
 
 STUB = {"plantings": ["PENDING CORRECTION PHASE -- windows not yet pulled."]}
 SHELL = {"plantings": [{"succession_id": 1, "track": "beginner"}]}
@@ -40,3 +40,23 @@ mixed = {NULL_NOTES, other, "VIOLATION: region_notes pair both null: ca_desert"}
 assert drop_shell_build_unmasks(mixed, base, cand) == {other, "VIOLATION: region_notes pair both null: ca_desert"}
 
 print("PASS precommit_release_verify shell-build allowance")
+
+# --- pre-cert anchoring allowance ---
+ANCH = "VIOLATION: anchoring: rootstock_options[0]: uf_ifas_hs1153 unanchored"
+precert = {"verification_status": {"status": None}}          # lemon Steps 1-3 state
+certified = {"verification_status": {"status": "verified_gs_arc"}}
+
+# case 5: pre-cert crop gains an anchoring gap (sources authored, anchoring at Step 4+)
+# -> accepted admission state, dropped from the blocking set.
+assert drop_precert_anchoring({ANCH}, precert) == set(), "pre-cert anchoring gap must be forgiven"
+
+# case 6: a CERTIFIED crop gains an anchoring gap -> real regression, still blocks.
+assert drop_precert_anchoring({ANCH}, certified) == {ANCH}, "certified anchoring regression must NOT be forgiven"
+
+# case 7: a non-anchoring new violation on a pre-cert crop is never forgiven by this filter.
+assert drop_precert_anchoring({other}, precert) == {other}, "non-anchoring violations must never be forgiven here"
+
+# case 8: mixed -- only the anchoring violation is dropped on a pre-cert crop.
+assert drop_precert_anchoring({ANCH, other}, precert) == {other}, "only anchoring dropped, pre-cert"
+
+print("PASS precommit_release_verify pre-cert anchoring allowance")

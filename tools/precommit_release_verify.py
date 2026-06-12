@@ -66,6 +66,22 @@ def drop_shell_build_unmasks(new, base_crop, cand_crop):
             if not (v.startswith(prefix) and v[len(prefix):] in graduated)}
 
 
+def drop_precert_anchoring(new, cand_crop):
+    """Pre-cert anchoring allowance. A crop that is NOT yet certified
+    (verification_status.status != 'verified_gs_arc') legitimately carries authored
+    `sources[]` without per-field `anchoring_urls` -- those fill progressively at
+    Step 4+, and anchoring COMPLETENESS is a Step-11 cert requirement (whole_crop_gate
+    section F), not a between-commit invariant. So a NEW `anchoring: ... unanchored`
+    violation on a pre-cert crop is the accepted admission state (e.g. every tree /
+    perennial / annual-hub Steps 1-3, which author sourced rootstock/varieties/
+    companions before the anchoring pass), not a regression. A CERTIFIED crop gaining
+    an anchoring gap IS a regression (it must keep its anchoring) -- left in to block."""
+    status = (cand_crop.get("verification_status") or {}).get("status")
+    if status == "verified_gs_arc":
+        return new
+    return {v for v in new if "VIOLATION: anchoring:" not in v}
+
+
 def check(base_path, cand_path):
     base = json.load(open(base_path))
     cand = json.load(open(cand_path))
@@ -89,6 +105,7 @@ def check(base_path, cand_path):
             vb = gate_violations(base_path, slug)
             vc = gate_violations(cand_path, slug)
             new = drop_shell_build_unmasks(vc - vb, bc.get(slug, {}), cc[slug])
+            new = drop_precert_anchoring(new, cc[slug])
             new = sorted(new)
             if new:
                 concerns.append(f"{slug}: {len(new)} NEW gate violation(s): {new[:5]}")
