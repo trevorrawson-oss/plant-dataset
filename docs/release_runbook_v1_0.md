@@ -45,13 +45,18 @@ python3 tools/apply_patch.py <patch.json> --base crops_data_final.json --out cro
 - `git push` (dataset push is AUTONOMOUS -- announce-then-execute). **plant-astro merge-to-main + push stays gated on explicit Trevor approval.**
 - Confirm `HEAD == @{u}`.
 
-## 7. Archive the consumed handoff
-- Move the patch + STATE_HISTORY snippet + kickoff into `~/Documents/plant-project/06-sessions/handoffs-bundles/<arc>-releases/<cell>/`.
-- PRUNE reconstructable heavies (the full `crops_data_final.json` snapshot, full state-doc copies) -- they reconstruct from git by SHA. Keep only the unique small artifacts.
+## 7. Archive the consumed handoff + clean the plant-project top level (STANDING RULE)
+
+**Top-level hygiene invariant:** at any moment `~/Documents/plant-project/` shows ONLY the permanent numbered folders (`00-current` .. `11-photos`, `99-archive`) + the SINGLE active `HANDOFF_<current>/`. Every new handoff (Step 8) is preceded by archiving the prior transient folders, so the active handoff is always the only new folder there.
+
+- **Consumed handoff** -> `06-sessions/handoffs-bundles/<arc>-releases/<step>/` (e.g. `peach-releases/register-fill-backfill/`). **Name the archive folder for the RELEASE SESSION, not the kickoff label** -- a kickoff may call itself "6-8c" while the release is `register_fill_backfill`; reusing "steps6-8c" would clobber a different archived step (this actually happened). Drop the kickoff bundle in `1_UPLOAD_TO_CHAT/` and the deliverables (patch + STATE_HISTORY snippet) in `FROM_CHAT/`.
+- **Consumed PK manifests** (`PK_UPLOAD_*`, `PK_CLEANUP`) -> `99-archive/pk-uploads/`.
+- Keep the bundle whole (it is small; the existing archive does). Pruning the reconstructable heavies (the full JSON snapshot, the copied state docs -- they rebuild from git by SHA) is OPTIONAL, only if archive size matters.
 
 ## 8. Build the next handoff
-- `~/Downloads/HANDOFF_<next>/1_UPLOAD_TO_CHAT/`: the 4 current files (JSON, LATEST, CURRENT_STATE, STATE_HISTORY) + `PASTE_THIS.txt` (a tight kickoff) + any punch list (Claude Code enumerates the work; claude.ai authors).
-- `2_PROJECT_KNOWLEDGE/`: only when a rulebook doc actually changed.
+- FIRST run Step 7's top-level cleanup (archive the prior handoff + any consumed PK folders) so the new handoff is the only new folder.
+- `~/Documents/plant-project/HANDOFF_<next>/1_UPLOAD_TO_CHAT/`: the orientation trio (LATEST, CURRENT_STATE, STATE_HISTORY) + the crop slice + sources/catalog + `00_KICKOFF_<step>.md` (Claude Code enumerates the work; claude.ai authors). (Earlier runbook said `~/Downloads/` -- actual practice is the plant-project folder, per the top-level-hygiene rule.)
+- `2_ADD_TO_PROJECT_KNOWLEDGE/`: only when a rulebook doc actually changed.
 
 ## Lanes (never blur)
 - **claude.ai AUTHORS:** biology, dates, consumer copy (dual-register, copywriting skill), source discovery/verification, the STATE_HISTORY entry snippet.
