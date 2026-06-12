@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-06-11 -- session `apple_step5` (Claude Code release lane -- region verification + a SYSTEMIC tree-calendar fix; peach corrected post-cert)
+
+**Start-SHA:** `5cfe354eaaa7cc27...` (apple Step 4). **End-SHA:** `09538e31ec5d...` (canonical promoted; LATEST session `apple_step5`).
+**apple Step 5 verification came back with corrections -- and the release-side independent check found the correction was INCOMPLETE, exposing a systemic defect in BOTH trees' calendars. Fixed at the root (generate-don't-author) + gated.** apple still NOT certified.
+
+### claude.ai's Step 5 verification (the authoring lane)
+Thorough + correct on everything it checked: hardiness bands (3/9 survives, 4/8 fruits) confirmed; 21 source refs all resolve to the 92-catalog (the 3 Step-4 mints present); suitability distribution (7 fruits_reliably / 7 marginal / 4 survives_no_fruit / 2 unsuitable) confirmed; FLAG-A no-fruit split (floor=100; 17 calendars / 3 empty) confirmed 0 violations; climate-only suitability confirmed; copy clean. **Both flagged decisions RESOLVED (no data change): `reliable_fruit_zone_min` KEPT at 4** (roster-honest; ultra-hardy z3 cultivars Haralson/Honeygold absent from the 13-variety roster -> queued candidate roster-expansion pass, not blocking cert); **the 100-chill floor on ca_south_coast z10 + ca_desert z10 HOLDS** (anchored to real roster varieties Dorsett Golden + Ein Shemer, both exactly 100 chill hr). It also authored a **5-cell calendar corrections patch** (bloom-token / stage-month conflation in northern_tier z3/z4/z5 + se_gulf z8 + ca_interior z8; nt z3/z4/z5 were also copy-paste-identical).
+
+### The release-side finding: the 5-cell fix was 5 of 26
+claude.ai's verification checked BLOOM-token alignment (caught 5) but not exhaustively the HARVEST tokens. An independent recompute-from-dates check (every token, every cell) found the SAME class of error in the HARVEST tokens of **11 MORE apple cells** claude.ai's patch did not touch (harvest tokens ~1 month early / wrong length, each contradicting the cell's OWN `harvest` display field), AND -- because peach was hand-authored the same way at its Step 4 -- **10 of peach's 14 calendars** (peach is CERTIFIED; it shipped with drift).
+- **Root cause:** the tree `calendar[]` is DERIVED data (a pure function of the cell's bloom + harvest display windows) that was HAND-AUTHORED at Step 4. Two hand-maintained copies of one fact drift. A by-eye Step-5 verification caught one symptom class (bloom) and declared the rest clean; the mechanical, exhaustive release-side recompute caught the rest.
+
+### The fix (all four items, this release)
+1. **Generator + gate, test-first (`tools/tree_calendar.py` + `test_tree_calendar.py`, 9 fixtures GREEN):** `derive_tree_calendar(bloom,harvest)` computes the 12-token calendar from the display windows (prune=month before bloom; bloom=bloom-open month; growing=between; harvest=display span; care=month after; dormant=rest). Validated: reproduces claude.ai's 5 hand-authored corrections + ca_desert z10 byte-for-byte. `tree_calendar_violations(crop)` = the coherence gate (recompute-and-compare; no-op for non-perennial).
+2. **Wired as `whole_crop_gate` section A4** (after the A3 perennial branch) -- flip-blocking, exhaustive, runs every release. A tree can no longer certify with an incoherent calendar. (Confirmed firing: pre-fix apple A4=16, peach A4=10, carrot A4=0 no-op.)
+3. **apple calendars REGENERATED (16 cells changed)** from the dates -- supersedes + subsumes claude.ai's 5-cell patch (reproduces those 5 exactly, fixes the other 11). apple A4 -> 0.
+4. **peach calendars BACKFILLED (10 cells changed)** -- a post-cert correction to a CERTIFIED anchor; peach A4 -> 0, whole_crop_gate peach still PASS, launch_ready intact (the fix makes a latent defect correct; cert unaffected).
+
+### Footprint + protocol #6
+- **Only `apple` + `peach` changed; ONLY `calendar` tokens** (precise leaf-diff: apple 44 / peach 30 leaf diffs, 100% under `.calendar[]` -- 0 biology/date/suitability/source changes). No catalog change (calendar-only; no mints). 4 annual anchors byte-identical, PASS. register PASS. tool tests (tree_calendar + perennial_gate + apply_patch + build_region_shells) GREEN. release_verify 11 CONCERNs all = the tree chill-field-vs-annual-exemplar kind (intentional, as before).
+- claude.ai's `apple_step5_corrections_patch.json` was NOT applied as-is; the regeneration supersedes it. Its verification log + decisions are recorded above.
+
+### Convention change (item 4) + owed
+**Future trees AUTHOR the bloom/harvest DATES; Claude Code GENERATES the `calendar[]` from them (never hand-author the derived field).** Tree spec `tree_region_model_spec_v1_0.md` updated to record this + the A4 gate. The Step-4 kickoff convention changes accordingly (claude.ai stops hand-typing tree calendars). LEARNING: a derived field authored by hand WILL drift; derive it + gate it. This is why the A4 gate is the real defense (eyeball verification is non-exhaustive by nature). NEXT = apple Step 5.5 (now largely satisfied by the generator) -> Steps 6-8 (bulk care prose: chill-window def, the year-1 blossom-removal `year_one_notes`, the not-self-fertile reminder) -> cert.
+
 ## 2026-06-11 -- session `apple_step4` (Claude Code release lane -- apple's TREE region fill, anchor 6, the second tree)
 
 **Start-SHA:** `510edafe7e122b14...` (apple Steps 1-3 + 3.5). **End-SHA:** `5cfe354eaaa7cc27...` (canonical promoted; LATEST session `apple_step4`).

@@ -11,32 +11,31 @@
 ---
 
 
-**5 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, peach, lettuce-leaf) of a ~18 roadmap target. **Anchor 6 = apple IN PROGRESS:** Step 4 (TREE region fill) released this session -- all 10 region cells now FILLED (17 calendars / 3 empty at the 100-hour no-fruit floor), gate PASS, but NOT yet certified. NEXT = apple Step 5 (verify).
+**5 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, peach, lettuce-leaf) of a ~18 roadmap target. **Anchor 6 = apple IN PROGRESS:** Step 5 (region verification) released this session -- biology verified clean + a SYSTEMIC tree-calendar fix (calendars now DERIVED from dates + a new flip-blocking A4 gate; peach corrected post-cert). apple NOT yet certified. NEXT = apple Steps 6-8 (bulk care prose).
 
 ## Canonical pointer
-- **Current SHA:** `5cfe354eaaa7cc2714def0f9052615d8b013c0ca8f69c75fb918ecbbb32da848`. `LATEST.txt` session: `apple_step4` (2026-06-11).
+- **Current SHA:** `09538e31ec5d325ba48bb0189cabdb8ce4a148f821bbf8e4c00b1efbd950ed98`. `LATEST.txt` session: `apple_step5` (2026-06-11).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `5cfe354e` -- feat(apple): Step 4 -- tree region fill + anchoring reconcile (anchor 6)
   - `510edafe` -- feat(apple): Steps 1-3 + 3.5 -- anchor 6, the second tree (compressed)
   - `7345b944` -- feat(peach): CERTIFIED -- anchor 5, the FIRST tree (Steps 9-11: verbatim scan + perennial cert-gate + flip)
   - `0d3ed015` -- feat(peach): Steps 6-8c -- the events layer (notifications + weather_triggers); bulk prose COMPLETE
   - `59876b61` -- feat(peach): Steps 6-8b -- bulk care prose part 2 + mint clemson_peach_diseases
   - `4a3a4801` -- feat(peach): Steps 6-8a -- core biology compounds + the tree-stage journey (bulk prose, part 1 of 2)
   - `3e07c4e1` -- feat(peach): Step 4 -- the first tree's region biology fill + the no-fruit-calendar direction split
-  - `e99001f2` -- feat(peach): Step 3.5 -- the TREE region/calendar model (anchor 5, first permanent tree)
 
-## What just happened (session `apple_step4`)
-- **apple's 10 TREE region shells FILLED** (`510edafe`->`5cfe354e`). claude.ai authored the region biology (chill bands + per-zone suitability + absolute bloom/harvest/dormant timing + 12-token tree calendars); slice-integrity matched its pre-reconcile SHA `9d86c815` (faithful apply, 5th match).
-- **No-fruit DIRECTION SPLIT at apple's floor = 100** (vs peach's 400): 17 calendars / 3 empty. The 100-floor keeps ca_south_coast z10 + ca_desert z10 calendar-bearing where peach left them empty; fl z10 (chill < 100) + fl z11 + hawaii z11 are empty. perennial A3 = 0.
-- **Claude Code reconciled an anchoring-convention drift inline** (Trevor-approved): claude.ai used broad source arrays + one mnemonic anchor per rule (145 §F violations). Re-keyed 12 mnemonics -> catalog IDs across 63 leaves, set each leaf's sources = its actual anchor(s) (broad set stays at the §F-exempt region rollup), minted 3 new T1 sources (catalog 89->92: `ucd_fruitnut`, `ext_org_apples`, `ucanr_slo_mg`). No biology touched, no fabricated URLs.
-- **Gates green:** whole_crop_gate apple PASS (anchoring 0 gaps, source-tier 0 uncatalogued); register PASS; only apple changed; release_verify's 10 concerns all = the tree-model chill fields vs the annual exemplar (intentional, as for peach).
+## What just happened (session `apple_step5`)
+- **apple Step 5 region verification** (`5cfe354e`->`09538e31`). claude.ai verified the biology clean (hardiness bands 3/9 + 4/8, suitability 7/7/4/2, FLAG-A split 17/3, sources all resolve) and resolved both flagged decisions WITHOUT data change: **`reliable_fruit_zone_min` stays 4** (roster-honest; ultra-hardy z3 cultivars absent -> queued roster-expansion candidate), **the 100-chill floor on ca_south_coast z10 + ca_desert z10 HOLDS** (anchored to Dorsett Golden + Ein Shemer at 100 chill).
+- **SYSTEMIC tree-calendar fix.** claude.ai authored a 5-cell calendar correction (bloom-token conflation); the release-side recompute-from-dates check found the SAME error class in the HARVEST tokens of 11 more apple cells AND 10 of certified **peach**'s 14 calendars. Root cause: the tree `calendar[]` is DERIVED data that was hand-authored at Step 4 and drifted from the bloom/harvest dates.
+- **The fix (test-first):** new `tools/tree_calendar.py` -- `derive_tree_calendar(bloom,harvest)` generator + `tree_calendar_violations` gate, wired as `whole_crop_gate` **A4** (flip-blocking, exhaustive). apple calendars REGENERATED (16 cells, supersedes claude.ai's 5-cell patch) + peach BACKFILLED (10 cells, post-cert correction). Only `calendar` tokens changed (apple 44 / peach 30 leaf diffs, 0 biology); both trees A4=0, gate PASS; launch_ready intact.
 
 ## Active work + next step
-- **NEXT = apple Step 5 (verify)** -> 5.5 calendars -> 6-8 bulk prose -> cert (9-11). apple's region layer is filled + gate-clean; it is NOT in the Gate/Region/Flip tables below until it certifies.
-- **OPEN decision (non-blocking) -- `reliable_fruit_zone_min`:** left at 4 (roster-honest); lowering to species-honest 3 needs adding ultra-hardy cultivars (Honeycrisp/Haralson/Honeygold) to the roster. Decide at Step 5 / a roster pass.
-- **Trevor content question (fold into 6-8):** the establishment-year **blossom-removal / no-fruit-year-1** care note -- apple's bulk prose is unauthored (Steps 6-8); verify peach coverage and make the year-1 blossom-thinning note a standard part of the tree care prose.
-- **Still owed (carried):** perennial-aware `rotation` shape (peach open_finding); `_build_tree_shells` auto-populate region_id/label/zone_span + stray-key sweep; Appendix A registration of growth_stages `timing_*`/`year_phase`.
+- **NEXT = apple Steps 6-8 (bulk care prose)** -> cert (9-11). Carry into 6-8: chill-window definition (32-45 °F) into `chill_hours_note_*`; the year-1 blossom-removal `year_one_notes_*` (peach has it; make it standard tree-care prose + surface in the calendar caption per tree spec §7); the not-self-fertile reminder into `suitability_note_beginner` / `pollinator_notes_*`. Step 5.5 (calendar coherence) is now largely satisfied by the A4 generator/gate.
+- **CONVENTION CHANGE (tree authoring):** future trees AUTHOR the bloom/harvest DATES; Claude Code GENERATES the `calendar[]` (never hand-author the derived field). Recorded in `tree_region_model_spec_v1_0.md`; the Step-4 kickoff convention changes accordingly.
+- **Queued candidate (non-blocking):** expand apple's cold-hardy roster to species-honest z3 (add Haralson/Honeygold as full variety objects, re-derive the z3 cell, lower `reliable_fruit_zone_min` to 3). Own pass.
+- **Still owed (carried):** perennial-aware `rotation` shape; `_build_tree_shells` auto-populate region_id/label/zone_span; Appendix A reg of growth_stages `timing_*`/`year_phase`.
 
-## Gate record (generated 2026-06-11, on canonical `5cfe354e`)
+## Gate record (generated 2026-06-11, on canonical `09538e31`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**

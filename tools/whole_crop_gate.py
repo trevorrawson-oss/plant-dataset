@@ -148,6 +148,18 @@ print(f"  calendar_basis={crop.get('calendar_basis')!r} | perennial violations: 
 for m in _perennial:
     fail(f"perennial: {m}")
 
+# ---------------- A4. tree calendar coherence (DERIVED-from-dates) ----------------
+# The tree calendar[] is a pure function of each cell's bloom + harvest display windows.
+# Hand-authoring it let it drift (apple Step 5: 5 bloom + 11 harvest mismatches; peach
+# carried 10). This gate recomputes the calendar from the dates and fails on any mismatch,
+# so an incoherent tree calendar cannot ship. No-op for non-perennial. (apple Step 5, 2026-06-11.)
+from tree_calendar import tree_calendar_violations
+print("A4. tree calendar coherence (calendar == derive(bloom,harvest); no-op for non-perennial)")
+_treecal = tree_calendar_violations(crop)
+print(f"  calendar cells incoherent with their own dates: {len(_treecal)}")
+for m in _treecal:
+    fail(f"tree-calendar: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
