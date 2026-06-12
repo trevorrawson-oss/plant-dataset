@@ -6,6 +6,45 @@
 
 ---
 
+## 2026-06-12 — lemon Steps 6A (the biology layer) [claude.ai authoring; pending Claude Code release]
+
+**Arc:** anchor 7 (lemon, first evergreen). Steps 1–3 + 3.5 + 4–5 closed (regions LIVE). This entry = **Step 6A**, the biology-layer prose. Step 6B (the 65 register/care fields + tips) follows; cert (9–11) after that.
+
+**Base SHA:** `6c9b9a5434e6701a9669d16ac295c2e4b6b38c189cbf9b20865427d5bdf868d4` (lemon_steps4_5).
+**Patch:** `lemon_6A_patch.json` — 6 ops, one per surface, each replacing `[]` with a populated list-of-objects in apple's confirmed tree shape. 57 KB.
+**Post-apply lemon-crop sorted-min SHA (simulated):** `fb3e0beac1fe983b5fcd732ca95bfadd368a20fa31227498d33ebc66033be18f`.
+
+**Surfaces authored (all dual-register, T1-verified, fresh from lemon's own citrus biology — not lifted from peach/apple):**
+- `pests` (6): scale, aphids, citrus leafminer, spider/citrus mites, mealybugs, **Asian citrus psyllid**. The five cosmetic-on-mature pests set at honest low/moderate severity; ACP at `high` with prose that names the regions where it is real (FL, parts of CA/TX/AZ/Gulf) and states most backyard growers won't see it. Regional scoping lives in prose (no region field on the element, by design).
+- `diseases` (6): **Phytophthora foot/root rot + gummosis** (headline; tied to the already-authored graft-above-grade + raised-mound + drainage story; lemons flagged as especially susceptible per IOCV/UCR; UF/IFAS >6 in bud-union clearance), greasy spot (humid-region), sooty mold (secondary, honeydew-driven), **citrus canker** (regulated, FL/Gulf), **HLB/citrus greening** (fatal, FL-industry context, ACP-vectored), and iron/zinc high-pH chlorosis (the micronutrient lockout flagged in Steps 1–3 ph notes). Canker + HLB regionally scoped in prose at `high` severity (severity set for in-region presence, not averaged down).
+- `growth_stages` (6): the single **evergreen-tree journey** in apple's shape (single `timing`, `year_phase`, NO `day_range_from_sow`) — planting → establishment yrs 1–3 (yr-1 blossom removal, `year_phase:"year_1"`) → bloom → fruit set → ripening/harvest → mature year-round bearing.
+- `failure_diagnostics` (5): flower/fruit drop, no-fruit-on-healthy-tree (too-young / excess-N), frost damage, trunk-gumming decline (foot rot), interveinal chlorosis. Apple shape (`label_*`, `what_happened_*`, `next_season_tip_*`).
+- `notifications` (4): yr-1 blossom removal, spring feeding start, even-watering-at-fruit-sizing, harvest-window-open.
+- `weather_triggers` (3): **frost = headline** (cover / bank graft / move container indoors), heat-stress at bloom/set, no-oil-over-95°F.
+
+**HLB ↔ ACP cross-reference** kept (vector ↔ disease, each entry points to the other).
+
+**DID NOT TOUCH** (per Claude Code's shape ruling, correcting the kickoff's "N/A prose" instruction): `growth_stages_annual` and `growth_stages_year_one` left null/empty — list fields, N/A for a tree, no N/A-prose sentinel exists.
+
+**Self-checks (claude.ai side, pre-release):**
+- Dash scan (whole patch file, raw): `--` = 0, em-dash = 0, en-dash = 0. CLEAN.
+- Dual-voice pairing: 95 `_seasoned`/`_beginner` pairs, every one with both sides populated, no orphans, no empties.
+- `°F` symbol used; American English; "lemon"/"plant" lowercase.
+
+**⚠️ ENUM FLAG for Claude Code (assumed-pending-confirmation, not baked in silently):** the slice carried no populated enum examples to crib from. Authored with `audience:"both"` and `severity ∈ {low,moderate,high}`, plus assumed values for `type` / `trigger_type` / `offset_from` / weather `condition` / `year_phase` (full list in the patch `enum_flags` block). **If canonical schema-enum differs, remap mechanically at apply** rather than rejecting the patch. This is the one open question on 6A.
+
+**Release path (Claude Code):** apply → `register_fill_gate lemon` (the 65-field worklist is 6B, not 6A; 6A should not change that count but confirm) → `whole_crop_gate lemon` (dual-voice coverage, A3/A4 evergreen-aware) → `register_completeness_gate` → §D dash re-scan → confirm only lemon changed (6 anchors + catalog byte-identical). Then the enum reconcile if needed.
+
+**Next:** lemon Step 6B (watering 19, fertilizer 14, container 21 — lemon's OWN container-as-strength story, NOT peach's "not recommended"; storage 10 — the store-on-the-tree advantage; yield 9; tips 9). Then cert 9–11.
+
+**Claude Code release note (2026-06-12, session `lemon_6A`):** `6c9b9a54` -> `7df91190edabaa57d1067e28989ae59348db48e4e399a4019e000befb5982095`. **CLEAN release; lemon's 6 biology surfaces are LIVE. Pre-cert.**
+- **Clean apply:** 6 ops; lemon-crop SHA == claude.ai's claimed `fb3e0bea` (pre-reconcile) byte-for-byte.
+- **ENUM RECONCILIATION (the flagged open question -- my lane).** claude.ai had no enum examples in the slice, so it assumed values; **18 distinct values diverged from the peach/apple canonical vocab.** Remapped **53 values** to canonical (synonyms, same concept): `audience both->core`; `severity moderate->medium`; weather `condition temp_below_32f->FROST_WARNING`, `temp_above_95f/100f->HEAT_STRESS`; `trigger_type seasonal->calendar`, `stage_event->stage`; `stage fruit_set_development->fruit_set`, `ripening_harvest->harvest`; `offset_from first_bloom->bloom`, `maturity->harvest`; `action check_watering->water`; `year_phase mature->bearing_annual`; display `type` buckets (`mite->pest`, Phytophthora `oomycete->fungal`, chlorosis `nutritional->disease`; prose carries the precise detail). Post-reconcile crop SHA `66f80c9c`.
+- **7 NEW citrus enum values ADDED (Trevor-blessed; in-pattern -- the enums grow per crop):** notification actions `fertilize`; weather actions `protect_from_frost` / `guard_against_heat_stress` / `avoid_oil_in_heat`; offset_from anchors `fruit_set` / `spring_growth_start`; stage `mature_bearing`. These are correct citrus concepts (frost protection is the headline citrus alert; lossy-mapping would fire notifications at the wrong time/action). **iOS-APP FORWARD DEPENDENCY: the app must handle these new notification/weather actions + anchors + stage** -- logged to OWED for the app track.
+- **Surfaces:** pests (6, ACP at high w/ regional-honesty prose), diseases (6, Phytophthora headline + canker/HLB regionally scoped, HLB<->ACP cross-ref), growth_stages (6, apple shape -- single `timing`, no `day_range_from_sow`), failure_diagnostics (5), notifications (4), weather_triggers (3). `growth_stages_annual`/`growth_stages_year_one` left empty/null (N/A for a tree, per my shape ruling).
+- **Protocol #6:** whole_crop_gate lemon = 2 (the carried pre-cert anchoring gaps; A3=0, A4=0, **dual-voice coverage complete -- 148 CP pairs, null_values 0**, dash 0); register_completeness PASS; **register_fill_gate lemon = 65 UNCHANGED** (6A is biology, not register -- confirms scope; 6B authors the 65); release_verify only-lemon / no-catalog / no-new-violations / lettuce byte-identical; pre-commit clean. Verbatim scan DEFERRED to cert.
+- Promoted, LATEST re-pinned, CURRENT_STATE regenerated, 00-current synced, committed (+ pushed). **NEXT = claude.ai lemon Step 6B (the 65 register fields: watering/fertilizer/container-as-strength/store-on-the-tree/yield/tips).**
+
 ## 2026-06-12 — lemon Steps 4-5 (EVERGREEN region biology layer) [claude.ai authoring lane]
 
 **Start-SHA:** `3a0947696b1bb904ed1e5a00006fe8f184b5cafffab292fb4bb443273f817e3e` (session `lemon_step3_5`).
