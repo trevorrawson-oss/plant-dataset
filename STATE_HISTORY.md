@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-11 -- session `apple_steps6-8a` (Claude Code release lane -- bulk care prose part A; key-shape reconcile; peach register gap found)
+
+**Start-SHA:** `09538e31...` (apple Step 5). **End-SHA:** `3c8ac5e905a9...` (canonical promoted; LATEST session `apple_steps6-8a`).
+**apple's bulk care prose authored (107 ops) -- with two shape findings the gates caught, and a parallel gap discovered in CERTIFIED peach.** apple still NOT certified.
+
+### claude.ai's 6-8A authoring (the worklist as kicked off)
+107 `replace` ops, slice-integrity MATCHED its claimed `5d027fd1` (6th consecutive). Authored: description/harvest_ready; the 2.9 perennial prose (the cross-pollination HERO `pollinator_notes`/`pollination.notes` = apple's "need a second variety", the INVERSE of peach; `bloom_time`, `chill_hours_note` incl. the 32-45°F window def, `hardiness_notes` incl. the ultra-hardy-z3 note, `year_one_notes` incl. blossom-removal, `rootstock_options[].traits` for the 5 size-controlling stocks); pests (codling moth/scab/fire blight/...), diseases, growth_stages (perennial tree journey), tips_by_stage, failure_diagnostics, notifications, weather_triggers, storage/yield/fertilizer/watering/rotation/moon prose. claude.ai self-flagged a `deferred_register_fields` block (30 fields) + a `correct_null_not_work` block (3 empty-cell frost notes) in the envelope.
+
+### Finding 1 -- NARROW WORKLIST (30 deferred register fields). Same class as the calendar.
+My Kickoff worklist hand-enumerated the compounds + 2.9 fields + 4 dict-prose pairs but did NOT list soil/ph/companions/start_method/container_notes/succession_policy. claude.ai authored exactly the named set; 30 register fields fell out (soil 5, ph 2, companions 2, start_method 4, container_notes 16, succession_policy.reason 1). **An independent null-register sweep confirmed claude.ai's 30 EXACTLY** (+ the 3 correct-null). Root cause = hand-enumerated worklist, same as the hand-authored calendar. Deferred to **apple 6-8B**.
+
+### Finding 2 -- KEY-SHAPE DRIFT (the register gate caught it; 3rd apple shape-drift after calendar + anchoring)
+claude.ai authored the SEASONED register with BARE keys (`pests[].symptoms` not `symptoms_seasoned`) -- a renderer reading `*_seasoned` would find nothing -- and `tips_by_stage` single-register (`text`, no `_beginner`). register_completeness HALTed on the 25 bare-key patterns. **Reconciled (Claude Code, mechanical):** 96 bare-seasoned keys renamed `K -> K_seasoned` (the `_beginner` sibling already existed; content identical), and 18 tips `text -> text_seasoned`. apple shape now matches peach. The 18 tips' missing `_beginner` register is a real content gap -> folded into 6-8B. apple slice SHA `5d027fd1 -> d8fe3877` (the rename supersedes claude.ai's slice).
+- **6-8B SCOPE = 48 fields, sweep-derived (not hand-listed):** the 30 deferred register fields + the 18 tips `text_beginner`. Biology calls for 6-8B: `start_method/hardening_off` = N/A (bare-root dormant tree, not a hardened-off seedling); `companions/note` = tree framing (pollinizer proximity + trunk competition, not vegetable companions); `succession_policy/reason` = N/A perennial.
+
+### PEACH AUDIT (Trevor asked: did peach's 6-8 miss/mis-author anything?)
+- **Key shapes CLEAN** -- peach used `_seasoned`/`_beginner` correctly everywhere; all 17 tips dual-register. The bare-key/single-tip drift was apple-specific authoring, not systemic.
+- **BUT peach shipped CERTIFIED with 46 null register fields** -- the SAME gap class: container_notes (16) + soil (5) + ph (2) + companions (2) + start_method (4) [= the same ~29 apple deferred] PLUS watering flat-prose (12), varieties/note (2), legacy zones[3,4] suitability_reason (4), succession_policy.reason (1). Some are correct-null (legacy `zones{}` suitability_reason, succession reason for a tree); the container/soil/ph/companions/start_method set (~29) is a real unauthored gap. **Root cause: whole_crop_gate TOLERATES null register prose (`null_values:0` does not catch them), so a narrow worklist certified anyway.** -> a **peach 6-8C** backfill is warranted (Trevor greenlit), and a register-completeness GATE is the systemic fix (parallel to the A4 calendar gate) -- flag null register fields at cert with a correct-null allowlist, so the bots can't ship unauthored register prose.
+
+### Footprint
+Only `apple` changed; no catalog change (92). 4 annual anchors + peach byte-identical, all PASS. register PASS (post-reconcile). release_verify 10 CONCERNs = the tree-field-vs-annual-exemplar kind (intentional). NEXT = apple 6-8B (the 48-field sweep) -> peach 6-8C backfill -> the register-completeness gate -> apple cert (9-11). Anchor 7 = lemon (3rd tree) on deck.
+
 ## 2026-06-11 -- session `apple_step5` (Claude Code release lane -- region verification + a SYSTEMIC tree-calendar fix; peach corrected post-cert)
 
 **Start-SHA:** `5cfe354eaaa7cc27...` (apple Step 4). **End-SHA:** `09538e31ec5d...` (canonical promoted; LATEST session `apple_step5`).
