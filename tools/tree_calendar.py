@@ -109,6 +109,10 @@ def tree_calendar_violations(crop):
             cal = cell.get("calendar") or []
             if not cal:
                 continue  # empty cell -- A3 (no-fruit split) owns whether it SHOULD be empty
+            if cell.get("year_round"):
+                continue  # genuinely pauseless cell (tropical citrus): the calendar is a
+                          # DECLARED outcome (the locked year_round pattern), not date-derived
+                          # -- coherence-checking it against "Year-round" strings is wrong.
             expect = derive(cell.get("bloom"), cell.get("harvest"))
             if expect is None:
                 V.append(f"{rk}.{z}: non-empty calendar but bloom/harvest dates are "

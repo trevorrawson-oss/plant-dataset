@@ -105,4 +105,20 @@ assert any("ca" in v and "10" in v for v in viol5), viol5
 # E6. an empty evergreen calendar (no-fruit cell) is skipped (A3 owns emptiness)
 assert tree_calendar_violations(evergreen_crop([("nt", "7", "n/a", "n/a", [])])) == []
 
+# E7. a year_round:true cell (genuinely pauseless tropical, e.g. Hawaii citrus) is SKIPPED by
+# A4: its calendar is a DECLARED outcome (the locked year_round pattern), not date-derived, so
+# coherence-checking it against unparseable "Year-round" strings is wrong. (A3 still requires the
+# fruits_reliably cell to carry a non-empty calendar -- satisfied by the declared harvest fill.)
+yr = {"slug": "lemon", "calendar_basis": "perennial_evergreen", "regions": {
+    "hawaii": {"resolved_by_zone": {"11": {
+        "year_round": True,
+        "bloom": "Year-round (peaks vary)", "harvest": "Year-round (continuous)",
+        "calendar": ["harvest"] * 12}}}}}
+assert tree_calendar_violations(yr) == [], tree_calendar_violations(yr)
+# but a NON-year_round cell with the same unparseable dates is still a violation (regression guard)
+nyr = {"slug": "lemon", "calendar_basis": "perennial_evergreen", "regions": {
+    "hawaii": {"resolved_by_zone": {"11": {
+        "bloom": "Year-round", "harvest": "Year-round", "calendar": ["harvest"] * 12}}}}}
+assert any("hawaii" in v and "11" in v for v in tree_calendar_violations(nyr)), tree_calendar_violations(nyr)
+
 print("PASS tree_calendar")
