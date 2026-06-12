@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-11 -- session `apple_cert` (Claude Code cert lane -- APPLE CERTIFIED, anchor 6, the second tree)
+
+**Start-SHA:** `0711aa99...` (6-8B, register-complete). **End-SHA:** `a821d6d456d7...` (canonical promoted; LATEST session `apple_cert`).
+**APPLE CERTIFIED -- anchor 6, the SECOND permanent tree; 6 of ~18.** The first crop certified under the FULL hardened bar (A4 calendar gate + register-fill gate + verbatim scan all live). Both the annual arc (carrot) and the tree arc (peach, apple) proven end-to-end.
+
+### Steps 9-11 (the cert)
+- **Structural cert gates ALL PASS:** whole_crop_gate apple (A3 perennial cert-gate = 0, A4 calendar coherence = 0), register_completeness PASS, **register_fill PASS** (apple is the FIRST register-complete crop -- the new gate's first green).
+- **Verbatim scan (the flip gate):** 20 cited URLs, 15 text-compared (5 not covered: ncsu 404 / EDIS HS764 410 / UC-Davis 403 + 2 PDFs no-extractor). **1 HARD hit** -- `northern_tier.region_notes_seasoned` shared the 8-word stock phrase "as soon as the soil can be worked" with the UMN apple page. Per the reword-don't-self-dismiss precedent (peach + carrot), **Trevor approved a reword** -> "...in early spring, once the soil thaws enough to dig." Re-scan: **0 HARD** (run broken). 7 borderline (6-7 word generic horticultural conventions: "soak the roots in water for", "pollen from a different apple variety", etc.) ruled benign-class, no action.
+- **THE FLIP:** `verification_status` set -- `status:"verified_gs_arc"`, `launch_ready_core:true`, `launch_ready_seasoned:true`, phase `phase_3_apple_gold_standard_arc`, date 2026-06-11, derived 23-source `source_set`, `verification_log_ref`. whole_crop_gate G: 0 blockers.
+
+### open_findings filed (all blocks_launch:false)
+- `apple_rotation_shape_finding` -- the perennial-aware rotation shape still owed in the tree spec (shared with peach's open finding).
+- `apple_dead_anchor_urls` -- 3 cited URLs went dead/blocked after authoring (ncsu 404 / EDIS HS764 410 / UC-Davis 403); legitimate sources, live at authoring; Step-10 anchoring repair (re-point to live equivalents) owed.
+- `apple_companions_array_split` -- the out-of-scope companions array-level register reshape (dedicated session).
+- `apple_reliable_fruit_zone_roster` -- reliable_fruit_zone_min kept at 4; lowering to species-honest 3 needs the ultra-hardy roster expansion (Haralson/Honeygold). Queued.
+
+### Footprint + state
+Only `apple` changed (reword + the flip); no catalog change (92). 5 prior anchors byte-identical, all PASS. register PASS. release_verify 10 CONCERNs = tree-field-vs-annual-exemplar (intentional). **6 anchors certified: cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple.** NEXT per Trevor: **peach 6-8C** (its 42 register-fill gaps -- 26 worklist + 16 2.9-deferred -- via register_fill_gate as the computed worklist), then anchor 7 = lemon (needs the citrus/chill-gating model decision). Dataset-wide register-fill backlog (the 4 annuals' ~10 each = 2.9-deferred fields) is the gate's computed to-do list, scheduled as its own sweep.
+
 ## 2026-06-11 -- session `apple_steps6-8b` (Claude Code release lane -- the remaining register prose; apple prose COMPLETE)
 
 **Start-SHA:** `3c8ac5e9...` (apple 6-8A). **End-SHA:** `0711aa990df1...` (canonical promoted; LATEST session `apple_steps6-8b`). **apple's register prose is now COMPLETE -- ready for Steps 9-11 (cert).** Still NOT certified.
