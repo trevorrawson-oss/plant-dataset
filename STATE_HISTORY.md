@@ -6,6 +6,56 @@
 
 ---
 
+## 2026-06-12 — lemon Step 6B — the 65 register/care fields (claude.ai authoring handoff)
+
+**Arc:** anchor 7 (lemon, first evergreen). Steps 1-3 + 3.5 + 4-5 + 6A complete on canonical `7df91190`. 6B authors the last 65 null register/care fields; only cert (9-11) remains after.
+
+**Base SHA (preflight):** `7df91190edabaa57d1067e28989ae59348db48e4e399a4019e000befb5982095` — matched `LATEST.txt` (session `lemon_6A`). Slice confirmed refreshed to this SHA; all 65 scope fields verified null pre-authoring.
+
+**Lane:** claude.ai AUTHORED dual-register prose fresh from lemon's own citrus biology + T1 sources. Claude Code releases (apply, gates, flip-blocking scans).
+
+**Deliverable:** `lemon_6B_patch.json` — envelope `{base_sha, crop:"lemon", ops:[80]}`, leading-slash RFC-6901 paths, pretty JSON.
+
+### What was authored (65 prose fields, all dual-register pairs except 1 seasoned-only by design)
+- **soil (2):** preferred_description pair — drainage as the non-negotiable (foot-rot thread from 6A diseases), raised-mound fix on clay, ties to existing texture arrays + ph.
+- **watering (14):** deep + infrequent, top 1-2 in dry between; base-watering / dry-trunk method; over/underwater signs (yellow-that-won't-recover = rot tell, consistent with 6A diseases); 2.9 `method_note` (constant-wet is the #1 killer); `critical_periods` = bloom-through-fruit-sizing + establishment year.
+- **fertilizer (6):** N-forward citrus feeder, light/frequent spring→summer, STOP late summer (late flush + frost), iron/zinc micros on high-pH (consistent with Steps 1-3 ph note_seasoned), avoid P-heavy.
+- **container_notes (16):** lemon's OWN container-as-STRENGTH story (did NOT lift peach's "not recommended"). Coarse citrus/cactus mix + porosity amendments; pots dry/leach faster (water + feed adjustments); overwintering = the frost-escape mobility play (move indoors below frost); self_watering = CAUTION (constant-wet reservoir → foot rot, same as in-ground); container_overwintering indoor specifics (bright window/grow light, reduce water, away from vents, gradual transition, pest check).
+- **storage (8):** the store-ON-THE-TREE advantage (weeks-to-months, pick as needed) as the headline; fridge (several weeks-to-month), freezer (juice/zest, not whole), room_temp (1-2 wk), notes.
+- **start_method (4):** hardening_off = honest **N/A prose** (grafted nursery tree, not hardened-off seedlings); notes = real planting prose (graft union well above soil/mulch per UF/IFAS, raised mound on clay, water in). **No `sources`/`anchoring_urls` op** — schema container has no sources slot (matches moon_phase_preference); UF/IFAS cited inline in prose.
+- **rotation (4):** **N/A prose** for a permanent tree, with the citrus **replant-decline** caveat (don't plant young citrus into a declined old citrus's spot).
+- **yield_expectations (6):** dozens-to-hundreds at maturity (size/age/variety/climate dependent, container bears less); peak yr 4-6, long bearing season; first_year_note = blossom removal yr 1 (consistent with 6A `first_year_blossom_removal` notification), real crop ~yr 3.
+- **description (2) + harvest_ready (2):** evergreen subtropical, cold-sensitive but forgiving, container+move-indoors for cold climates; harvest by color+heft+gentle-squeeze, taste as the surest test (color misleads), green-to-yellow pickable, store-on-tree = forgiving window.
+- **moon_phase_preference.source_note_seasoned (1):** standard folk-practice / no-T1-backing note, seasoned-only (matches certified crops; schema has no `_beginner` twin).
+
+### Citations attached (T1, per-container sources + verified anchoring_urls)
+15 citation ops across 8 containers + top-level `harvest_ready_sources`. IDs used: `uf_ifas_hs1153` (UF/IFAS HS402 Lemon in the FL Home Landscape), `uf_ifas_hs132` (UF/IFAS Citrus Culture), `tamu_agrilife`, `ucanr_ext`, `ucd_postharvest` (storage), `clemson_hgic` (cold/overwintering). All from the lemon sources_summary primary set + catalog; every attached path was empty/null/missing pre-apply (no non-empty sources overwritten).
+
+### Self-verification done in-session (Claude Code is the defense — these are advisory)
+- **Preflight SHA:** matched LATEST.txt.
+- **Scope coverage:** all 65 fields covered, 0 missing, 0 duplicate paths.
+- **Dual-voice pairing:** 32 true `_seasoned`/`_beginner` pairs + 1 intentional seasoned-only (moon_phase) = 65; 0 orphans.
+- **Dash/symbol scan (twice, independent):** 0 `--`, 0 em/en-dash, 0 stray non-ASCII (only `°` present). `°F` symbol convention honored.
+- **Simulated strict apply** against the slice: all 80 ops applied, **0 collateral changes** (only intended paths differ; anchoring_urls expand to url/verified sub-leaves).
+- **Post-apply lemon-crop sorted-min SHA:** `7b213b7c5495904cb5bb4ff4b8cf6b223cc3fe53cef93238f608dcd3ec71197d` (pre was `b7506c2c…`). For Claude Code cross-check.
+
+### Open / OWED (unchanged by 6B, carried to cert)
+- **register_fill_gate lemon must hit 0** after apply (was 65; these 80 ops fill all 65 nulls).
+- Cert (9-11) remains: Step-11 verbatim scan; close the 2 pre-cert anchoring gaps (`varieties/sources` + `hawaii.11 ucanr_ext`); variety-attribution decision; the flip.
+- Carried from 6A: the 7 new citrus enum values are an **iOS-app forward dependency** (untouched here); apple's 4 open_findings; peach/perennial rotation-shape finding; region-meta auto-populate into `_build_tree_shells`; growth_stages `timing_*` reconcile; apply_patch reject-bare-slash hardening.
+
+### Flag for Trevor (judgment call surfaced, not resolved unilaterally)
+- **`start_method` carries no `sources`/`anchoring_urls` slot** in the current schema (same as `moon_phase_preference`). I attached citations inline in the `notes` prose rather than inventing a schema key the certified crops don't have. If the register-completeness/citation gate expects a structured sources slot on `start_method`, that's a schema decision (add the slot dataset-wide vs. accept inline-only for slot-less containers) — flagging rather than guessing. This does not block the 6B apply.
+
+**Claude Code release note (2026-06-12, session `lemon_6B`):** `7df91190` -> `f1fce7472ccaa07bd5f99952775e9d817ac7d1273dd885863b9cac6525543ece`. **CLEAN release; lemon is now REGISTER-COMPLETE (register_fill 65 -> 0). Pre-cert; only 9-11 remain.**
+- **register_fill_gate lemon = 0** (was 65) -- all 65 register/care fields authored. The 6B goal achieved.
+- **Crop-SHA cross-check DIVERGED (claude.ai-side method artifact, NOT a data error).** claude.ai's pre `b7506c2c` AND post `7b213b7c` both differ from the canonical sort-keys/minified crop-SHA (pre `66f80c9c`, post `e329615d`) -- claude.ai hashed a different serialization (likely the pretty-printed slice). **Dispositive collateral check used instead:** 118 leaves changed, ALL within the 6B register surfaces (soil/watering/fertilizer/container_notes/storage/start_method/rotation/yield/description/harvest_ready/moon); ZERO stray; verification_status / regions / the 6A biology surfaces all byte-untouched. apply is correct. **Process note for claude.ai: compute the crop SHA as sha256(json.dumps(crop, separators=(',',':'), ensure_ascii=False, sort_keys=True)) so the cross-check stays informative.**
+- **Container-as-strength + store-on-the-tree authored** (NOT peach's "not recommended"); container_notes + storage anchoring correctly populated.
+- **start_method no-sources-slot CONFIRMED** (matches moon_phase_preference; citations inline; no anchoring gap there). claude.ai's flag = a schema question (add a sources slot to slot-less containers vs accept inline) -- deferred, non-blocking.
+- **Protocol #6:** whole_crop_gate lemon = 4 (ALL pre-cert anchoring, forgiven by drop_precert_anchoring; A3=0, **dual-voice coverage complete -- 180 CP pairs, null_values 0**, dash 0, sources 9/0 uncatalogued/0 non-T1); register_completeness PASS; release_verify only-lemon / no-catalog / lettuce byte-identical; pre-commit clean. Verbatim DEFERRED to cert.
+- **4 anchoring gaps now carry to cert:** `varieties/sources` (4 ids), `regions.hawaii_tropical.11` (ucanr_ext), and NEW from 6B `harvest_ready_anchoring_urls` (uf_ifas_hs1153 + ucd_postharvest -- sources listed, anchoring dict left `{}`). All have CITED sources in the catalog -> close at Step-11 by populating anchoring from the catalog.
+- Promoted, LATEST re-pinned, CURRENT_STATE regenerated, 00-current synced, committed (+ pushed). **NEXT = lemon CERT (Steps 9-11):** the Step-11 verbatim scan (anchoring URLs now exist), close the 4 anchoring gaps, the variety-attribution call, the flip. Lemon (anchor 7, the first evergreen) certifies.
+
 ## 2026-06-12 — lemon Steps 6A (the biology layer) [claude.ai authoring; pending Claude Code release]
 
 **Arc:** anchor 7 (lemon, first evergreen). Steps 1–3 + 3.5 + 4–5 closed (regions LIVE). This entry = **Step 6A**, the biology-layer prose. Step 6B (the 65 register/care fields + tips) follows; cert (9–11) after that.
