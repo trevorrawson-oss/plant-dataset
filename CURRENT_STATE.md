@@ -11,31 +11,32 @@
 ---
 
 
-**6 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, **apple**) of a ~18 roadmap target. **APPLE CERTIFIED this session** (anchor 6, the second tree) -- the first crop certified under the full hardened bar (A4 calendar gate + register-fill gate + verbatim scan). NEXT = peach 6-8C backfill, then anchor 7 = lemon.
+**6 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple) of a ~18 roadmap target. **PEACH is now REGISTER-COMPLETE** (the 2nd register-complete crop after apple) -- its 42 certified-but-incomplete null register fields are backfilled and `register_fill_gate peach` returns 0. No flip (peach was already `verified_gs_arc`). NEXT = anchor 7 = lemon (needs the citrus/chill-gating MODEL decision first).
 
 ## Canonical pointer
-- **Current SHA:** `a821d6d456d7e8cff1748ba2ce1abbdd609bc846286d539b6128c9e6a898951c`. `LATEST.txt` session: `apple_cert` (2026-06-11).
+- **Current SHA:** `d228ed7ba3e5dfea1a438335100e4268a71656bee19b954bd27d6a263298dbb3`. `LATEST.txt` session: `peach_register_fill_backfill` (2026-06-11).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `a821d6d4` -- feat(apple): CERTIFIED -- anchor 6, the second tree (Steps 9-11)
   - `0711aa99` -- feat(apple): Steps 6-8B -- register prose complete (anchor 6)
   - `3c8ac5e9` -- feat(apple): Steps 6-8A -- bulk care prose + key-shape reconcile (anchor 6)
   - `09538e31` -- fix(trees): derive calendars from dates + A4 coherence gate; apple Step 5 + peach backfill
   - `5cfe354e` -- feat(apple): Step 4 -- tree region fill + anchoring reconcile (anchor 6)
   - `510edafe` -- feat(apple): Steps 1-3 + 3.5 -- anchor 6, the second tree (compressed)
   - `7345b944` -- feat(peach): CERTIFIED -- anchor 5, the FIRST tree (Steps 9-11: verbatim scan + perennial cert-gate + flip)
-  - `0d3ed015` -- feat(peach): Steps 6-8c -- the events layer (notifications + weather_triggers); bulk prose COMPLETE
 
-## What just happened (session `apple_cert`)
-- **APPLE CERTIFIED** (`0711aa99`->`a821d6d4`), anchor 6, the second tree. Steps 9-11: all structural cert gates PASS (A3=0, A4=0, register, **register_fill PASS -- apple is the first register-complete crop**); verbatim scan = **1 HARD hit** ("as soon as the soil can be worked", an 8-word stock phrase vs the UMN page) -> Trevor-approved reword ("...once the soil thaws enough to dig") -> re-scan **0 HARD**; 7 borderline benign. The flip set `verification_status.status=verified_gs_arc` + both `launch_ready` booleans.
-- **open_findings filed (all blocks_launch:false):** rotation shape (owed, shared w/ peach); 3 dead anchor URLs (ncsu/HS764/UC-Davis -- Step-10 repair owed); companions array-split (out-of-scope reshape); reliable_fruit_zone roster-expansion candidate.
-- Only apple changed (reword + flip); no catalog change. The first cert under the fully hardened bar (the A4 + register-fill gates this session built).
+## What just happened (session `peach_register_fill_backfill`)
+- **PEACH register-fill BACKFILL** (`a821d6d4`->`d228ed7b`): the 42 null register-prose fields peach was CERTIFIED without (the gap `register_fill_gate` surfaced -- the original narrow 6-8 worklist missed the care-prose containers + the 2.9-deferred set). **`register_fill_gate peach` 42 -> 0.** Authored fresh from peach's own biology (NOT lifted from apple): container_notes (16, dwarf-rootstock container case, honest vs `container_ok:false`), watering flat-prose (10), soil (5), start_method (4, `hardening_off`=N/A bare-root), companions (2, peach is SELF-FERTILE + replant-disease), ph (2), varieties (2, chill-hours-first), succession_policy.reason (1, N/A perennial).
+- **Additive only -- NO certified value touched.** `verification_status` byte-identical; both `launch_ready` stay true; status stays `verified_gs_arc`; regions/calendars/biology/suitability all byte-identical. Only `peach` changed; only the 42 register fields (43 leaves); catalog unchanged (92). No flip needed.
+- **PATCH PATH-FORMAT CORRECTION (Claude Code).** The delivered patch used slash-separated paths WITHOUT a leading slash (`companions/note_beginner`). `apply_patch.normalize_path` does not recognize that form -- it silently wrote the values to LITERAL flat keys (`peach["companions/note_beginner"]`), so the nested fields stayed null. **Caught by `register_fill_gate` still reporting 42** (defense-in-depth worked). Normalized every op path to leading-slash RFC-6901 (the established "Claude Code absorbs claude.ai path drift" precedent), re-applied; the resulting peach-crop sorted-min SHA matched claude.ai's claimed `e39d4b9b...` EXACTLY -- proof the corrected application is byte-for-byte what was intended.
+- **Protocol #6 all-clean:** `register_fill_gate peach` 0; `whole_crop_gate peach` PASS(0); `register_completeness_gate` PASS; `release_verify` 10 CONCERN (all the known-intentional tree-vs-annual `chill_*` key-diff -- peach regions changed `[]`, no new violations, lettuce byte-identical); verbatim scan **0 HARD** (16 borderline 6-7-word, all benign-class numeric/seasonal conventions + Latin binomials); claim cross-check byte-confirmed (42 fields, only peach, no catalog change, no flip).
 
 ## Active work + next step
-- **NEXT = peach 6-8C backfill** (Trevor: after apple's arc, now): peach's 42 register-fill gaps via `register_fill_gate.py peach` as the COMPUTED worklist -- 26 genuine worklist-gaps (soil/ph/companions/start_method/container/watering/varieties) + 16 of the 2.9-deferred set. Author -> release -> re-run register_fill (must return 0) to close the certified-but-incomplete state.
-- **Then anchor 7 = lemon** (3rd tree) -- needs the citrus/chill-gating MODEL decision first (an evergreen sibling to `perennial_chill_gated`, or a `suitability.gating_factor`; flagged in checklist v2.0 §1). Not a pure compression repeat.
-- **Dataset-wide register-fill backlog (the gate's computed to-do):** the 4 certified annuals carry ~10 null register fields each -- almost all the 2.9-deferred null-scaffolded fields (watering.method_note/critical_periods, fertilizer.amount, container self_watering/overwintering). A planned 2.9-completion sweep, lower priority than the anchors.
-- **OWED:** apple's 4 open_findings (dead-anchor repair, rotation shape, companions split, roster expansion); perennial-aware `rotation` shape; `_build_tree_shells` auto-populate region_id/label/zone_span; Appendix A reg of growth_stages `timing_*`/`year_phase`; repoint `gen_current_state` checklist ref -> v2.0.
+- **NEXT = anchor 7 = lemon** (3rd tree) -- needs the citrus/chill-gating MODEL decision FIRST (an evergreen sibling to `perennial_chill_gated`, or a `suitability.gating_factor`; flagged in checklist v2.0 §1). Not a pure compression repeat of peach/apple. Lock the model, then run the compressed tree arc.
+- **Dataset-wide register-fill backlog (the gate's computed to-do):** the 4 certified annuals (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf) each carry ~10 null register fields -- almost all the 2.9-deferred null-scaffolded set (watering.method_note/critical_periods, fertilizer.amount, container self_watering/overwintering). A planned 2.9-completion sweep, lower priority than the anchors. (peach + apple are now register-complete; these annuals are the remainder.)
+- **OWED (tooling):** `apply_patch` should REJECT (exit 1) an unrecognized bare-slash path rather than silently create a literal slash-key. Test-first hardening recommended (the only reason this release was safe is the downstream `register_fill_gate` caught it; the bot pipeline must not depend on that). New finding this session.
+- **OWED (carried):** apple's 4 open_findings (dead-anchor repair, rotation shape, companions array-split, reliable_fruit_zone roster); `peach_rotation_shape_finding`; perennial-aware `rotation` shape; `_build_tree_shells` auto-populate region_id/label/zone_span; Appendix A reg of growth_stages `timing_*`/`year_phase`; repoint `gen_current_state` checklist ref -> v2.0.
 
-## Gate record (generated 2026-06-11, on canonical `a821d6d4`)
+## Gate record (generated 2026-06-11, on canonical `d228ed7b`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -62,3 +63,6 @@
 - **6 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 <!-- FILL: Live locked decisions / guardrails (editorial -- accretes; carry forward + amend) -->
+- **register-fill is a cert dimension.** `register_fill_gate` (null register-prose at cert, with an N/A-prose-not-null rule + a frost_risk_note/legacy-zones allowlist) is live and flip-blocking; apple was the first register-complete cert, peach the first backfill-to-complete. whole_crop_gate's `null_values:0` does NOT catch null register prose -- run both.
+- **Tree calendars are DERIVED, never hand-authored.** `tools/tree_calendar.py` generates `calendar[]` from bloom+harvest display windows; the A4 coherence gate (whole_crop_gate section A4) recomputes-and-compares, flip-blocking.
+- **Patch path format = leading-slash RFC-6901 or dot-form.** Bare slash-separated paths (no leading `/`) are NOT supported and currently mis-apply silently -- normalize before apply until apply_patch is hardened to reject them.
