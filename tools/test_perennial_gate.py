@@ -162,4 +162,77 @@ for r in e["regions"].values():
         cell["calendar"] = []
 assert perennial_cert_violations(e) == [], perennial_cert_violations(e)
 
+# ============ HEAT-ACCUMULATION branch (orange-navel, anchor 8) ============
+# tree_region_model_evergreen_amendment_v1_0 section 4: a `heat_accumulation` crop
+# (orange, grapefruit) adds a COOL-summer edge to the cold-only evergreen model -- a
+# frost-safe cell that does not bank enough summer heat to ripen sweet fruit is capped
+# BELOW fruits_reliably (the heat FLOOR, the third no-fruit direction). The climate datum
+# is the qualitative `heat_summer_basis` verdict (no GDD number required at the anchor).
+def well_formed_heat_evergreen():
+    """orange-like: gating_factors cold + heat. Each filled, frost-safe cell carries the
+    qualitative `heat_summer_basis` verdict alongside min_winter_temp_f. A desert cell
+    (high heat) fruits_reliably; a cool-coast cell (insufficient heat) is marginal -- it
+    bears, but sour. An unsuitable (hard-freeze) cell is cold-decided; heat is moot there."""
+    return {
+        "slug": "orange-mini",
+        "calendar_basis": "perennial_evergreen",
+        "gating_factors": ["cold_hardiness", "heat_accumulation"],
+        "regions": {
+            "ca_desert": {
+                "plantings": [{"succession_id": 1, "label": "establishment", "track": "perennial",
+                               "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": []}],
+                "resolved_by_zone": {
+                    "9": {"suitability": "fruits_reliably", "min_winter_temp_f": [28, 34],
+                          "heat_summer_basis": "high",
+                          "calendar": ["harvest", "harvest", "bloom", "bloom", "growing", "growing",
+                                       "growing", "growing", "growing", "growing", "harvest", "harvest"]}}},
+            "ca_south_coast": {
+                "plantings": [{"succession_id": 1, "label": "establishment", "track": "perennial",
+                               "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": []}],
+                "resolved_by_zone": {
+                    "10": {"suitability": "marginal", "min_winter_temp_f": [38, 44],
+                           "heat_summer_basis": "insufficient",
+                           "calendar": ["harvest", "harvest", "bloom", "growing", "growing", "growing",
+                                        "growing", "growing", "growing", "growing", "harvest", "harvest"]},
+                    "7": {"suitability": "unsuitable", "min_winter_temp_f": [5, 15], "calendar": []}}}},
+    }
+
+
+# 16. well-formed heat evergreen -> clean (high->fruits_reliably; insufficient->marginal; unsuitable has no heat datum)
+assert perennial_cert_violations(well_formed_heat_evergreen()) == [], perennial_cert_violations(well_formed_heat_evergreen())
+
+# 17. insufficient heat + fruits_reliably -> the heat FLOOR fires (cannot promise a reliable sweet crop)
+h = well_formed_heat_evergreen()
+h["regions"]["ca_south_coast"]["resolved_by_zone"]["10"]["suitability"] = "fruits_reliably"
+assert any("insufficient" in v and "fruits_reliably" in v and "10" in v for v in perennial_cert_violations(h)), perennial_cert_violations(h)
+
+# 18. insufficient heat + survives_no_fruit (empty calendar) -> clean (cold-only no-fruit branch still applies; heat floor only caps fruits_reliably)
+h = well_formed_heat_evergreen()
+c = h["regions"]["ca_south_coast"]["resolved_by_zone"]["10"]
+c["suitability"] = "survives_no_fruit"; c["calendar"] = []
+assert perennial_cert_violations(h) == [], perennial_cert_violations(h)
+
+# 19. heat-gated filled non-unsuitable cell MISSING heat_summer_basis -> violation (gate cannot apply the floor)
+h = well_formed_heat_evergreen()
+del h["regions"]["ca_desert"]["resolved_by_zone"]["9"]["heat_summer_basis"]
+assert any("heat_summer_basis" in v and "9" in v for v in perennial_cert_violations(h)), perennial_cert_violations(h)
+
+# 20. heat_summer_basis with a value outside the enum -> violation
+h = well_formed_heat_evergreen()
+h["regions"]["ca_desert"]["resolved_by_zone"]["9"]["heat_summer_basis"] = "scorching"
+assert any("heat_summer_basis" in v and "scorching" in v for v in perennial_cert_violations(h)), perennial_cert_violations(h)
+
+# 21. SHELL state (Step 3.5: suitability null) -> the heat check skips unfilled cells (no false demand for heat datum)
+h = well_formed_heat_evergreen()
+for r in h["regions"].values():
+    for cell in r["resolved_by_zone"].values():
+        cell["suitability"] = None
+        cell["calendar"] = []
+        cell.pop("heat_summer_basis", None)
+assert perennial_cert_violations(h) == [], perennial_cert_violations(h)
+
+# 22. REGRESSION: a cold-only evergreen (no heat_accumulation) is NOT subject to the heat check
+#     even though its cells carry no heat_summer_basis -- the branch is gating_factor-keyed.
+assert perennial_cert_violations(well_formed_evergreen()) == [], perennial_cert_violations(well_formed_evergreen())
+
 print("PASS perennial_gate")

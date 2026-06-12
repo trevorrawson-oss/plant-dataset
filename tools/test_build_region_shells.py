@@ -293,4 +293,47 @@ assert c5["calendar_basis"] == "perennial_chill_gated", "deciduous basis changed
 assert r5["se_gulf"].get("chill_hours_delivered") == [], "deciduous chill layer changed -- regression"
 assert "min_winter_temp_f" not in r5["se_gulf"], "deciduous region wrongly got an evergreen climate field"
 
+# ---- fixture 8: HEAT-gated evergreen (orange-navel-like) -> +heat climate layer ----
+# An evergreen whose gating_factors include heat_accumulation (orange, grapefruit) banks a
+# SECOND climate datum beyond cold: heat_summer_basis (the qualitative summer-heat-adequacy
+# verdict) + heat_basis_* prose, ALONGSIDE the cold min_winter_temp_f. Cool-summer cells are
+# frost-safe but cannot sweeten fruit -- the heat floor, enforced at fill-time by perennial_gate.
+def heat_evergreen_author_fresh_crop():
+    base = evergreen_author_fresh_crop()
+    base["slug"] = "orange-navel"
+    base["gating_factors"] = ["cold_hardiness", "heat_accumulation"]
+    return base
+
+c8 = build_region_shells(heat_evergreen_author_fresh_crop(), session="orange_step3_5", date="2026-06-12")
+assert c8["calendar_basis"] == "perennial_evergreen", f"heat-evergreen calendar_basis: {c8.get('calendar_basis')!r}"
+r8 = c8["regions"]
+assert set(r8) == REGION_KEYS, f"fixture8 region set: {set(r8)}"
+for rk, r in r8.items():
+    # cold datum still present (cold_hardiness is also in gating_factors)
+    assert r.get("min_winter_temp_f") == [], f"{rk}: cold datum missing on a heat-gated evergreen"
+    assert "cold_basis_seasoned" in r and "cold_basis_beginner" in r, f"{rk}: cold_basis keys missing"
+    # NEW heat climate layer present-but-empty (enum verdict = None at shell stage; prose = None)
+    assert "heat_summer_basis" in r and r.get("heat_summer_basis") is None, f"{rk}: heat_summer_basis region slot missing or non-null"
+    assert "heat_basis_seasoned" in r and "heat_basis_beginner" in r, f"{rk}: heat_basis prose keys missing"
+    # still NOT chill-gated (chill ~ 0 for citrus)
+    assert "chill_hours_delivered" not in r, f"{rk}: chill leaked onto a heat-gated evergreen"
+    for z, cell in r["resolved_by_zone"].items():
+        assert cell.get("min_winter_temp_f") == [], f"{rk}.{z}: cell cold datum missing"
+        assert "heat_summer_basis" in cell and cell.get("heat_summer_basis") is None, f"{rk}.{z}: cell heat_summer_basis slot missing or non-null"
+        assert "chill_hours_delivered" not in cell, f"{rk}.{z}: chill leaked onto a heat-gated evergreen cell"
+
+# heat-evergreen idempotency: a re-run is a no-op
+built8 = build_region_shells(heat_evergreen_author_fresh_crop(), session="orange_step3_5", date="2026-06-12")
+before8 = copy.deepcopy(built8["regions"])
+build_region_shells(built8)
+assert built8["regions"] == before8, "heat-evergreen transform not idempotent on an already-built crop"
+
+# REGRESSION: a COLD-ONLY evergreen (lemon, fixture 7) gets NO heat scaffolding -- the heat
+# layer is gating_factor-keyed, so lemon stays byte-identical to its pre-heat build.
+for rk, r in r7.items():
+    assert "heat_summer_basis" not in r, f"{rk}: heat_summer_basis leaked onto a cold-only evergreen region"
+    assert "heat_basis_seasoned" not in r and "heat_basis_beginner" not in r, f"{rk}: heat_basis leaked onto a cold-only evergreen region"
+    for z, cell in r["resolved_by_zone"].items():
+        assert "heat_summer_basis" not in cell, f"{rk}.{z}: heat_summer_basis leaked onto a cold-only evergreen cell"
+
 print("PASS build_region_shells")

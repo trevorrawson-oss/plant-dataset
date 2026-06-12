@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-12 -- orange-navel Step 3.5 -- the HEAT-accumulation gate + evergreen region shells (test-first) [Claude Code structural-build lane]
+
+**Start-SHA:** `43f2f44f...` (orange Steps 1-3). **End-SHA:** `dee5de3aa2c00157dff23aa249957af2eb4f95d6e4497b62aa971469e5cf32e1` (canonical; LATEST session `orange_step3_5`).
+**The genuinely-new piece of anchor 8 -- the HEAT-accumulation gate -- built TEST-FIRST** (the v1.0 pattern: gates built at their step against real shape, regression-guarded, not pre-built in a vacuum). Post-3.5 orange crop-SHA `0f3174d8...`.
+
+### Code (test-first; RED watched fail, then GREEN)
+- **`perennial_gate.py` -- the heat branch (7 new tests, #16-22):** `HEAT_BASIS_ENUM = {high, adequate, marginal, insufficient}` (a qualitative ripening-adequacy verdict, NO GDD -- evergreen amendment section 3). `heat_gated = "heat_accumulation" in gating_factors(crop)`. The **heat FLOOR**: a FILLED, frost-safe (non-`unsuitable`) cell with `heat_summer_basis:"insufficient"` cannot be `fruits_reliably` (the navel sets fruit but it stays sour); a filled non-unsuitable cell must carry a valid `heat_summer_basis`. This is the THIRD no-fruit direction -- vs lemon's cold-only MONOTONE (colder always worse) + peach/apple's chill GOLDILOCKS band. RED proof: test #17 (insufficient + fruits_reliably) failed `AssertionError: []` (no violation produced) before the branch existed.
+- **`build_region_shells.py` -- the heat climate layer (fixture 8 + cold-only regression):** `heat_gated` threaded `_build_tree_shells -> _build_tree_region -> _build_tree_cell`; when set, the evergreen shell adds `heat_summer_basis` + `heat_basis_seasoned`/`heat_basis_beginner` (present-null) ALONGSIDE the cold `min_winter_temp_f`/`cold_basis_*`, on both the region-constant layer and each resolved cell. A cold-only evergreen (lemon, fixture 7) gets NO heat scaffolding -- byte-identical regression asserted.
+- Regression: `test_perennial_gate` / `test_tree_calendar` / `test_build_region_shells` all PASS; whole_crop_gate lemon/peach/apple PASS (the heat branch is gating-factor-keyed -> silent for them).
+
+### Data
+orange `calendar_basis` flipped `frost_anchored -> perennial_evergreen`; 10 evergreen+heat region shells built via `apply_region_shells.py` (SHA-gated, collateral-audited): perennial establishment entry + cold+heat climate layers + tree-reshaped cells, all `suitability:null` pre-fill. `region_id`/`region_label`/`zone_span` still null (FLAG B; Steps 4-5 fills them, same as lemon).
+
+### Release verification (protocol #6)
+- Only orange-navel changed (10 regions); top-level + catalog byte-identical; lettuce-leaf byte-identical.
+- **A3 (heat-aware perennial gate) = 0, A4 (calendar coherence) = 0** on the null shells (the heat branch correctly stays silent until cells are filled).
+- whole_crop_gate 23: the 10 "region unfilled (plantings stub/missing)" CLEARED -> 10 "region_notes both null" (a wash; shape advanced stub -> built-unfilled) + the 13 `_beginner` deferrals carried. release_verify exit 0 (1 CONCERN = those region_notes-null fills, owed to Steps 4-5).
+- **register_completeness PASS -- forward-tested:** a probe populating `heat_summer_basis:"high"` + the `heat_basis_seasoned`/`heat_basis_beginner` prose pair on one cell still PASSes the gate, so Steps 4-5 are UNBLOCKED and **no heat register-ruling is owed** (`heat_summer_basis` reads like `suitability`, a known categorical verdict; `heat_basis_*` is a well-formed dual-register pair -- unlike the variety-delta which needed a ruling).
+
+NEXT = **orange Steps 4-5** (claude.ai authoring): the 10 region cells incl. the per-cell `heat_summer_basis` verdicts (desert/warm-inland high/adequate -> fruits_reliably; cool CA coast insufficient -> marginal/survives_no_fruit) + `suitability` + bloom/harvest dates; Claude Code derives the evergreen calendars + releases.
+
+
 ## 2026-06-12 -- orange-navel Steps 1-3 (anchor 8, the SECOND evergreen; the HEAT-gate crop) [claude.ai authoring -> Claude Code release; re-cut once]
 
 **Start-SHA:** `670f14fa...` (lemon_cert). **End-SHA:** `43f2f44f2f5d9fefe717b2010b8e2ae828f2aa641364bf773646d22e928b43e3` (canonical; LATEST session `orange_navel_steps1_3`).

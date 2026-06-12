@@ -107,14 +107,17 @@ def _build_tree_shells(crop):
     the tree criteria (suitability + chill + the single perennial establishment entry).
     """
     evergreen = _evergreen(crop)
+    # a heat_accumulation crop (orange/grapefruit) banks a SECOND climate datum beyond cold;
+    # gating_factors is the source of truth (evergreen amendment section 2-3).
+    heat_gated = "heat_accumulation" in (crop.get("gating_factors") or [])
     crop["calendar_basis"] = "perennial_evergreen" if evergreen else "perennial_chill_gated"
     for r in (crop.get("regions") or {}).values():
         if isinstance(r, dict):
-            _build_tree_region(r, evergreen)
+            _build_tree_region(r, evergreen, heat_gated)
     return crop
 
 
-def _build_tree_region(r, evergreen=False):
+def _build_tree_region(r, evergreen=False, heat_gated=False):
     # dash resolution on the structural label (shared with the annual model)
     lbl = r.get("region_label")
     if isinstance(lbl, str) and " -- " in lbl:
@@ -134,6 +137,12 @@ def _build_tree_region(r, evergreen=False):
         r.setdefault("min_winter_temp_f", [])
         r.setdefault("cold_basis_seasoned", None)
         r.setdefault("cold_basis_beginner", None)
+        # a heat_accumulation crop (orange/grapefruit) ALSO banks summer heat: the
+        # qualitative ripening-adequacy verdict + its prose pair, alongside cold.
+        if heat_gated:
+            r.setdefault("heat_summer_basis", None)
+            r.setdefault("heat_basis_seasoned", None)
+            r.setdefault("heat_basis_beginner", None)
     else:
         r.setdefault("chill_hours_delivered", [])
         r.setdefault("chill_basis_seasoned", None)
@@ -154,10 +163,10 @@ def _build_tree_region(r, evergreen=False):
     # zone-resolved render layer: reshape each cell to the tree key-set
     for cell in (r.get("resolved_by_zone") or {}).values():
         if isinstance(cell, dict):
-            _build_tree_cell(cell, evergreen)
+            _build_tree_cell(cell, evergreen, heat_gated)
 
 
-def _build_tree_cell(cell, evergreen=False):
+def _build_tree_cell(cell, evergreen=False, heat_gated=False):
     """Reshape one resolved_by_zone cell to the tree key-set, idempotent + no-clobber.
     The per-zone `suitability` verdict makes survives != fruits FIRST-CLASS: a tree may
     SURVIVE a zone yet not set a reliable crop there (survives_no_fruit), or be flatly
@@ -173,6 +182,8 @@ def _build_tree_cell(cell, evergreen=False):
     # min winter temp for a cold-gated evergreen.
     if evergreen:
         cell.setdefault("min_winter_temp_f", [])
+        if heat_gated:
+            cell.setdefault("heat_summer_basis", None)
     else:
         cell.setdefault("chill_hours_delivered", [])
     # resolved render fields (reuse the annual keys; the renderer's resolved reader is shared)

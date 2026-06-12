@@ -11,6 +11,12 @@ tree blooms; an empty calendar UNDER-reports) vs is chill-limited (a calendar OV
 
 SUITABILITY_ENUM = {"fruits_reliably", "marginal", "survives_no_fruit", "unsuitable"}
 
+# The qualitative summer-heat-adequacy verdict for a `heat_accumulation` crop (orange,
+# grapefruit). A COARSE ripening-adequacy band, not a GDD number (evergreen amendment
+# section 3): high (desert) / adequate (warm inland) / marginal (borderline) /
+# insufficient (cool-coastal -- frost-safe but fruit stays sour). Ordinal hot -> cold.
+HEAT_BASIS_ENUM = {"high", "adequate", "marginal", "insufficient"}
+
 # Both permanent-tree calendar bases run these invariants. `perennial_chill_gated` =
 # deciduous (chill Goldilocks band); `perennial_evergreen` = evergreen (citrus/avocado/
 # olive, no dormancy). See tree_region_model_evergreen_amendment_v1_0.
@@ -47,6 +53,7 @@ def perennial_cert_violations(crop):
         return []
     V = []
     chill_gated = "chill_hours" in gating_factors(crop)
+    heat_gated = "heat_accumulation" in gating_factors(crop)
     floor = min_variety_chill(crop) if chill_gated else None
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):
@@ -99,4 +106,17 @@ def perennial_cert_violations(crop):
             else:  # fruits_reliably / marginal
                 if not cal:
                     V.append(f"{rk}.{z}: {s} cell must carry a calendar")
+            # --- heat-accumulation FLOOR (orange/grapefruit; evergreen amendment section 4):
+            # a frost-safe cell that cannot bank enough summer heat to ripen sweet fruit is
+            # capped BELOW fruits_reliably -- the third no-fruit direction (vs the cold-only
+            # monotone + the chill Goldilocks band). `unsuitable` is cold-decided (heat moot),
+            # so the heat datum is not demanded there. ---
+            if heat_gated and s != "unsuitable":
+                hb = cell.get("heat_summer_basis")
+                if hb is None:
+                    V.append(f"{rk}.{z}: heat-gated cell missing heat_summer_basis (cannot apply the heat floor)")
+                elif hb not in HEAT_BASIS_ENUM:
+                    V.append(f"{rk}.{z}: heat_summer_basis {hb!r} not in {sorted(HEAT_BASIS_ENUM)}")
+                elif hb == "insufficient" and s == "fruits_reliably":
+                    V.append(f"{rk}.{z}: heat_summer_basis 'insufficient' cannot be fruits_reliably (needs summer heat to sweeten the crop)")
     return V
