@@ -243,4 +243,54 @@ keep = copy.deepcopy(filled["regions"]["se_gulf"])
 build_region_shells(filled)
 assert filled["regions"]["se_gulf"] == keep, "tree build clobbered an already-authored cell"
 
+# ---- fixture 7: EVERGREEN permanent tree (lemon-like) -> the evergreen tree model ----
+# An evergreen fruit tree (citrus/avocado/olive) shares the tree two-layer cut but
+# differs on TWO axes (tree_region_model_evergreen_amendment_v1_0): the calendar SHAPE
+# (calendar_basis -> perennial_evergreen, no dormancy) and the suitability GATE (a
+# crop-level gating_factors list). For a cold-only evergreen the region CLIMATE layer is
+# min_winter_temp_f (the frost-risk datum), NOT chill_hours_delivered (chill ~ 0).
+def evergreen_author_fresh_crop():
+    base = tree_author_fresh_crop()
+    base["slug"] = "lemon"
+    base["archetype"] = "evergreen_fruit_tree"
+    base["gating_factors"] = ["cold_hardiness"]
+    return base
+
+c7 = build_region_shells(evergreen_author_fresh_crop(), session="lemon_step3_5", date="2026-06-12")
+# Axis 1: the calendar_basis SHAPE marker flips to perennial_evergreen (NOT chill_gated)
+assert c7["calendar_basis"] == "perennial_evergreen", f"evergreen calendar_basis not set: {c7.get('calendar_basis')!r}"
+r7 = c7["regions"]
+assert set(r7) == REGION_KEYS, f"fixture7 region set: {set(r7)}"
+for rk, r in r7.items():
+    # the perennial establishment entry is shared with the deciduous tree
+    assert len(r["plantings"]) == 1 and r["plantings"][0].get("track") == "perennial", f"{rk}: evergreen establishment entry"
+    # region CLIMATE layer is gating-keyed: cold_hardiness -> min_winter_temp_f + cold_basis_*
+    assert r.get("min_winter_temp_f") == [], f"{rk}: min_winter_temp_f should be present-but-empty, got {r.get('min_winter_temp_f')!r}"
+    assert "cold_basis_seasoned" in r and "cold_basis_beginner" in r, f"{rk}: cold_basis keys missing"
+    # an evergreen is NOT chill-gated: no chill climate fields
+    assert "chill_hours_delivered" not in r, f"{rk}: chill_hours_delivered leaked onto an evergreen region"
+    assert "chill_basis_seasoned" not in r, f"{rk}: chill_basis leaked onto an evergreen region"
+    for z, cell in r["resolved_by_zone"].items():
+        # shared tree cell shape: suitability verdict + reused render keys + empty calendar
+        assert "suitability" in cell, f"{rk}.{z}: evergreen cell missing suitability verdict"
+        assert cell.get("calendar") == [], f"{rk}.{z}: evergreen cell calendar should be present-but-empty"
+        for w in ("plant_out", "bloom", "harvest_start", "harvest_end"):
+            assert w in cell, f"{rk}.{z}: evergreen render key {w} missing"
+        # cell climate is min_winter_temp_f, not chill
+        assert cell.get("min_winter_temp_f") == [], f"{rk}.{z}: cell min_winter_temp_f should be present-but-empty"
+        assert "chill_hours_delivered" not in cell, f"{rk}.{z}: chill_hours_delivered leaked onto an evergreen cell"
+        for dead in ("start_indoors", "lifted_from_zone", "plantings", "notes"):
+            assert dead not in cell, f"{rk}.{z}: annual-only key {dead!r} survived into an evergreen cell"
+
+# evergreen idempotency: a re-run is a no-op (and re-detects via the perennial_evergreen basis)
+built7 = build_region_shells(evergreen_author_fresh_crop(), session="lemon_step3_5", date="2026-06-12")
+before7 = copy.deepcopy(built7["regions"])
+build_region_shells(built7)
+assert built7["regions"] == before7, "evergreen transform not idempotent on an already-built crop"
+
+# the DECIDUOUS path stays exactly as before (peach/apple byte-identical regression)
+assert c5["calendar_basis"] == "perennial_chill_gated", "deciduous basis changed -- regression"
+assert r5["se_gulf"].get("chill_hours_delivered") == [], "deciduous chill layer changed -- regression"
+assert "min_winter_temp_f" not in r5["se_gulf"], "deciduous region wrongly got an evergreen climate field"
+
 print("PASS build_region_shells")

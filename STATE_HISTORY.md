@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-06-12 -- lemon Step 3.5 (Claude Code structural lane -- the EVERGREEN region/calendar model BUILD, test-first)
+
+**Start-SHA:** `08556e215da0155225ada8c68160f016948030a577280b65f7b2c5018b67d191` (lemon_steps1_3). **End-SHA:** `3a0947696b1bb904ed1e5a00006fe8f184b5cafffab292fb4bb443273f817e3e` (canonical promoted; LATEST session `lemon_step3_5`).
+**The first build of the two-axis EVERGREEN tree model** (tree_region_model_evergreen_amendment_v1_0). Lemon's 10 annual-shape shells -> evergreen tree shells; `calendar_basis frost_anchored -> perennial_evergreen`. All four tool changes TEST-FIRST (RED watched, then GREEN); peach/apple/annual regression green. Lemon still NOT certified (pre-cert; region cells empty, Steps 4-5 fill them).
+
+### What was built (test-first)
+- **`build_region_shells` evergreen branch:** `_evergreen(crop)` (archetype `evergreen_fruit_tree` or the flipped basis); `_build_tree_shells` sets `calendar_basis -> perennial_evergreen`; the region CLIMATE layer is gating-keyed -- a cold-gated evergreen banks ~0 chill, so it gets `min_winter_temp_f` + `cold_basis_seasoned/beginner` (the frost-risk datum), NOT `chill_hours_delivered`/`chill_basis`. Cells get `min_winter_temp_f` + the SHARED tree key-set (suitability verdict + reused render keys plant_out/bloom/harvest_*/calendar). The deciduous path is byte-identical (chill layer unchanged -- new test fixture 7 pins evergreen, fixture 5 pins deciduous regression).
+- **`perennial_gate` generalized:** `PERENNIAL_BASES = {perennial_chill_gated, perennial_evergreen}`; `gating_factors(crop)` (a chill-gated crop w/o the field DEFAULTS to `["chill_hours","cold_hardiness"]` -> peach/apple hit the exact chill path unchanged). The no-fruit DIRECTION SPLIT is keyed on gating: chill-gated keeps the chill Goldilocks split; a cold-only evergreen has no warm-edge no-chill failure, so `survives_no_fruit` may carry-or-empty a calendar (both honest). Universal invariants (one establishment entry / suitability enum / unsuitable->empty / fruits-marginal->calendar) apply to both. Tests 10-15 added; the chill tests 0-9 unchanged.
+- **`tree_calendar` evergreen derivation:** `derive_evergreen_calendar(bloom,harvest)` -- bloom + harvest are the dated states, EVERYTHING ELSE is `growing` (never `dormant`); the harvest span may WRAP the year (citrus blooms spring, harvested the following winter); bloom overwrites harvest on overlap (flowers + ripe fruit co-occur). `tree_calendar_violations` recognizes the evergreen basis + uses the evergreen derivation. Tests E1-E6 added; deciduous tests 1-9 unchanged.
+- **`whole_crop_gate` A3/A4:** no code change needed -- they import the now-generalized `perennial_cert_violations` + `tree_calendar_violations`, which recognize `perennial_evergreen` automatically. Confirmed: gate prints `calendar_basis='perennial_evergreen' | perennial violations: 0` on the built lemon (A3 runs, empty cells skip).
+
+### Verification (Claude Code structural lane)
+- `apply_region_shells.py lemon` SHA-gated against LATEST (`08556e21`); collateral audit = ONLY lemon changed (no catalog, no top-level, 6 anchors + lettuce byte-identical).
+- Full tool-test sweep GREEN (build_region_shells / perennial_gate / tree_calendar / precommit / register_fill / apply_patch).
+- whole_crop_gate lemon = 19 -- composition shifted from base's 10 `region unfilled` (stub) to 10 `region_notes pair both null` (the stub->shell graduation, the explicitly accepted Step-3.5 admission state) + the 9 pre-cert anchoring. release_verify CLEARED the 10 `region unfilled`; pre-commit hook = NO concerns (drop_shell_build_unmasks forgives the graduated region_notes-null; drop_precert_anchoring forgives the anchoring). No dashes, no degrees.
+
+### NEXT (claude.ai, lemon Steps 4-5)
+Author per-region `min_winter_temp_f` bands + `cold_basis_*`, the per-zone `suitability` verdicts (survives != fruits; a hard-winter zone = unsuitable, no fabricated window), and bloom/harvest/plant DATES (dates only -- Claude Code GENERATES each cell's `calendar[]` via `derive_evergreen_calendar`, the A4 gate enforces coherence), `frost_risk_note_seasoned`, region_notes. Then 6-8 care prose, 9-11 cert (+ the Step-11 verbatim scan, deferred from Steps 1-3). Anchor 8 = orange-navel adds the heat-accumulation gate.
+
+
 ## 2026-06-12 -- lemon Steps 1-3 (anchor 7, the FIRST evergreen / first citrus) [claude.ai AUTHOR; Claude Code RELEASES]
 
 **Base SHA:** `d228ed7ba3e5dfea1a438335100e4268a71656bee19b954bd27d6a263298dbb3` (peach_register_fill_backfill).

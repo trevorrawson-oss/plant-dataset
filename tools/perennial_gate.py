@@ -11,6 +11,22 @@ tree blooms; an empty calendar UNDER-reports) vs is chill-limited (a calendar OV
 
 SUITABILITY_ENUM = {"fruits_reliably", "marginal", "survives_no_fruit", "unsuitable"}
 
+# Both permanent-tree calendar bases run these invariants. `perennial_chill_gated` =
+# deciduous (chill Goldilocks band); `perennial_evergreen` = evergreen (citrus/avocado/
+# olive, no dormancy). See tree_region_model_evergreen_amendment_v1_0.
+PERENNIAL_BASES = {"perennial_chill_gated", "perennial_evergreen"}
+
+
+def gating_factors(crop):
+    """The crop's suitability gate(s). Authored explicitly on evergreen anchors; a
+    `perennial_chill_gated` crop with none defaults to chill+cold (so peach/apple --
+    which predate the field -- hit the exact chill direction-split path unchanged)."""
+    g = crop.get("gating_factors")
+    if g:
+        return g
+    return (["chill_hours", "cold_hardiness"]
+            if crop.get("calendar_basis") == "perennial_chill_gated" else ["cold_hardiness"])
+
 
 def min_variety_chill(crop, default=400):
     """The crop's lowest recommended-variety chill requirement -- the 'chill reliably met'
@@ -22,12 +38,16 @@ def min_variety_chill(crop, default=400):
 
 
 def perennial_cert_violations(crop):
-    """Return a list of violation strings for a perennial_chill_gated crop ([] = clean).
-    No-op (returns []) for any other calendar_basis."""
-    if crop.get("calendar_basis") != "perennial_chill_gated":
+    """Return a list of violation strings for a permanent-tree crop ([] = clean).
+    No-op (returns []) for any non-perennial calendar_basis. The universal invariants
+    apply to every perennial base; the no-fruit DIRECTION SPLIT is keyed on
+    gating_factors -- chill-gated crops get the chill Goldilocks split, a cold-only
+    evergreen does not (colder is monotonically worse -- no warm-edge no-chill failure)."""
+    if crop.get("calendar_basis") not in PERENNIAL_BASES:
         return []
     V = []
-    floor = min_variety_chill(crop)
+    chill_gated = "chill_hours" in gating_factors(crop)
+    floor = min_variety_chill(crop) if chill_gated else None
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):
             continue
@@ -65,12 +85,17 @@ def perennial_cert_violations(crop):
                 if cal:
                     V.append(f"{rk}.{z}: unsuitable cell must have an empty calendar")
             elif s == "survives_no_fruit":
-                if chill_lo is None:
-                    V.append(f"{rk}.{z}: survives_no_fruit cell missing chill_hours_delivered (cannot apply the no-fruit split)")
-                elif chill_lo >= floor and not cal:
-                    V.append(f"{rk}.{z}: survives_no_fruit with chill met ({chill_lo} >= {floor}) MUST carry a calendar (under-report)")
-                elif chill_lo < floor and cal:
-                    V.append(f"{rk}.{z}: survives_no_fruit chill-limited ({chill_lo} < {floor}) MUST have an empty calendar (over-promise)")
+                # the chill direction-split applies only to a chill-gated tree (a chill
+                # Goldilocks band: cold-edge blooms -> calendar; chill-edge -> empty). A
+                # cold-only evergreen has no such band, so survives_no_fruit may carry a
+                # calendar (blooms in mild years) or be empty (no dependable crop) -- both honest.
+                if chill_gated:
+                    if chill_lo is None:
+                        V.append(f"{rk}.{z}: survives_no_fruit cell missing chill_hours_delivered (cannot apply the no-fruit split)")
+                    elif chill_lo >= floor and not cal:
+                        V.append(f"{rk}.{z}: survives_no_fruit with chill met ({chill_lo} >= {floor}) MUST carry a calendar (under-report)")
+                    elif chill_lo < floor and cal:
+                        V.append(f"{rk}.{z}: survives_no_fruit chill-limited ({chill_lo} < {floor}) MUST have an empty calendar (over-promise)")
             else:  # fruits_reliably / marginal
                 if not cal:
                     V.append(f"{rk}.{z}: {s} cell must carry a calendar")

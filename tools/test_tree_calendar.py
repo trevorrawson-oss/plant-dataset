@@ -14,7 +14,7 @@ Run: python3 tools/test_tree_calendar.py
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from tree_calendar import derive_tree_calendar, tree_calendar_violations
+from tree_calendar import derive_tree_calendar, derive_evergreen_calendar, tree_calendar_violations
 
 D, P, B, G, H, C = "dormant", "prune", "bloom", "growing", "harvest", "care"
 
@@ -64,5 +64,45 @@ assert tree_calendar_violations({"slug": "carrot", "calendar_basis": "frost_anch
 # 9. non-empty calendar with unparseable dates -> violation (cannot verify a calendar with no dates)
 viol9 = tree_calendar_violations(perennial_crop([("nt", "3", "", "", [B] * 12)]))
 assert any("nt" in v and "3" in v for v in viol9), viol9
+
+# ============ EVERGREEN calendar (no dormancy, growing filler, year-wrap) ============
+# An evergreen (citrus) never goes dormant: the off-season is `growing`, never `dormant`,
+# and the bloom->harvest span commonly WRAPS the year (bloom spring, harvest the following
+# winter). bloom + harvest are the dated facts; everything else is growing.
+# tree_region_model_evergreen_amendment_v1_0 section 1.
+
+# E1. lemon wrap: bloom Mar-Apr, harvest Nov-Feb -> harvest straddles the year, no dormant
+assert derive_evergreen_calendar("Mar - Apr", "Nov - Feb") == \
+    [H, H, B, B, G, G, G, G, G, G, H, H], derive_evergreen_calendar("Mar - Apr", "Nov - Feb")
+
+# E2. single-month bloom + harvest -> the entire off-season is growing (zero dormant tokens)
+ev = derive_evergreen_calendar("Apr", "Oct")
+assert ev == [G, G, G, B, G, G, G, G, G, H, G, G], ev
+assert D not in ev, f"evergreen calendar must never carry a dormant token: {ev}"
+
+# E3. empty / unparseable -> None (a no-fruit evergreen cell carries no calendar)
+assert derive_evergreen_calendar("", "Nov - Feb") is None
+assert derive_evergreen_calendar(None, None) is None
+
+# --- the A4 gate recognizes the evergreen basis + uses the evergreen derivation ---
+def evergreen_crop(cells):
+    regions = {}
+    for rid, z, bloom, harvest, cal in cells:
+        regions.setdefault(rid, {"resolved_by_zone": {}})
+        regions[rid]["resolved_by_zone"][z] = {"bloom": bloom, "harvest": harvest, "calendar": cal}
+    return {"slug": "lemon", "calendar_basis": "perennial_evergreen", "regions": regions}
+
+# E4. a coherent evergreen cell -> no violation
+co = derive_evergreen_calendar("Mar - Apr", "Nov - Feb")
+assert tree_calendar_violations(evergreen_crop([("ca", "10", "Mar - Apr", "Nov - Feb", co)])) == []
+
+# E5. an evergreen cell whose stored calendar carries a (deciduous) dormant token it can't
+# derive -> incoherent -> violation naming the cell
+baddec = [D, D, B, B, G, G, G, G, G, G, H, H]  # would-be evergreen but Jan/Feb are dormant not harvest
+viol5 = tree_calendar_violations(evergreen_crop([("ca", "10", "Mar - Apr", "Nov - Feb", baddec)]))
+assert any("ca" in v and "10" in v for v in viol5), viol5
+
+# E6. an empty evergreen calendar (no-fruit cell) is skipped (A3 owns emptiness)
+assert tree_calendar_violations(evergreen_crop([("nt", "7", "n/a", "n/a", [])])) == []
 
 print("PASS tree_calendar")

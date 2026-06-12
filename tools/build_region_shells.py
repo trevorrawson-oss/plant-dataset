@@ -79,13 +79,23 @@ _TREE_CELL_DEAD = ("start_indoors", "direct_sow", "lifted_from_zone", "plantings
 
 
 def _is_tree(crop):
-    """A permanent tree takes the tree region path. Detected by the calendar_basis
-    marker (set by THIS builder, so re-runs stay on the tree path) or, on the first
-    run before the flip, by lifecycle/archetype. Annual crops are unaffected."""
-    if crop.get("calendar_basis") == "perennial_chill_gated":
+    """A permanent tree takes the tree region path. Detected by either perennial
+    calendar_basis marker (set by THIS builder, so re-runs stay on the tree path) or,
+    on the first run before the flip, by lifecycle/archetype. Annual crops unaffected."""
+    if crop.get("calendar_basis") in ("perennial_chill_gated", "perennial_evergreen"):
         return True
     arch = crop.get("archetype") or ""
     return crop.get("lifecycle") == "permanent" or arch.endswith("_fruit_tree")
+
+
+def _evergreen(crop):
+    """Evergreen fruit trees (citrus/avocado/olive) take the EVERGREEN calendar shape
+    (calendar_basis `perennial_evergreen`, no dormancy) and a cold-hardiness climate
+    layer (`min_winter_temp_f`), not the deciduous chill-gated shape -- chill ~ 0 for
+    them, frost is the limiter. Detected by the evergreen archetype or the already-
+    flipped basis (so re-runs stay evergreen). See tree_region_model_evergreen_amendment_v1_0."""
+    return (crop.get("calendar_basis") == "perennial_evergreen"
+            or (crop.get("archetype") or "").endswith("evergreen_fruit_tree"))
 
 
 def _build_tree_shells(crop):
@@ -96,14 +106,15 @@ def _build_tree_shells(crop):
     that makes the Step 5.5 gate branch off the annual sowing-window criteria and onto
     the tree criteria (suitability + chill + the single perennial establishment entry).
     """
-    crop["calendar_basis"] = "perennial_chill_gated"
+    evergreen = _evergreen(crop)
+    crop["calendar_basis"] = "perennial_evergreen" if evergreen else "perennial_chill_gated"
     for r in (crop.get("regions") or {}).values():
         if isinstance(r, dict):
-            _build_tree_region(r)
+            _build_tree_region(r, evergreen)
     return crop
 
 
-def _build_tree_region(r):
+def _build_tree_region(r, evergreen=False):
     # dash resolution on the structural label (shared with the annual model)
     lbl = r.get("region_label")
     if isinstance(lbl, str) and " -- " in lbl:
@@ -115,11 +126,18 @@ def _build_tree_region(r):
     # a populated admission list.
     if r.get("sources_pending_admission") == []:
         r.pop("sources_pending_admission", None)
-    # region-constant CHILL-ADEQUACY layer: the typical winter chill the region banks
-    # (gates which varieties set fruit). Present-but-empty at shell stage.
-    r.setdefault("chill_hours_delivered", [])
-    r.setdefault("chill_basis_seasoned", None)
-    r.setdefault("chill_basis_beginner", None)
+    # region-constant CLIMATE layer (present-but-empty at shell stage), keyed to the
+    # gate: a deciduous tree banks winter CHILL (gates which varieties fruit); a
+    # cold-gated evergreen banks ~0 chill, so its limiter is the typical winter LOW
+    # (min_winter_temp_f) -- the frost-risk datum. (evergreen amendment section 3.)
+    if evergreen:
+        r.setdefault("min_winter_temp_f", [])
+        r.setdefault("cold_basis_seasoned", None)
+        r.setdefault("cold_basis_beginner", None)
+    else:
+        r.setdefault("chill_hours_delivered", [])
+        r.setdefault("chill_basis_seasoned", None)
+        r.setdefault("chill_basis_beginner", None)
     # region-constant RULE layer: a SINGLE one-time establishment entry, track:"perennial"
     # (no succession, no second_planting -- a tree is planted once). bloom + harvest rule
     # lists feed the Bloom/Harvest tracks; plant_out feeds the one-time Plant track. Only
@@ -136,10 +154,10 @@ def _build_tree_region(r):
     # zone-resolved render layer: reshape each cell to the tree key-set
     for cell in (r.get("resolved_by_zone") or {}).values():
         if isinstance(cell, dict):
-            _build_tree_cell(cell)
+            _build_tree_cell(cell, evergreen)
 
 
-def _build_tree_cell(cell):
+def _build_tree_cell(cell, evergreen=False):
     """Reshape one resolved_by_zone cell to the tree key-set, idempotent + no-clobber.
     The per-zone `suitability` verdict makes survives != fruits FIRST-CLASS: a tree may
     SURVIVE a zone yet not set a reliable crop there (survives_no_fruit), or be flatly
@@ -151,8 +169,12 @@ def _build_tree_cell(cell):
     cell.setdefault("suitability", None)
     cell.setdefault("suitability_note_seasoned", None)
     cell.setdefault("suitability_note_beginner", None)
-    # per-zone chill the region banks (refines the region band)
-    cell.setdefault("chill_hours_delivered", [])
+    # per-zone climate datum (refines the region band): chill for deciduous,
+    # min winter temp for a cold-gated evergreen.
+    if evergreen:
+        cell.setdefault("min_winter_temp_f", [])
+    else:
+        cell.setdefault("chill_hours_delivered", [])
     # resolved render fields (reuse the annual keys; the renderer's resolved reader is shared)
     cell.setdefault("plant_out", None)      # one-time bare-root dormant window
     cell.setdefault("bloom", None)          # absolute bloom window (region-resolved)

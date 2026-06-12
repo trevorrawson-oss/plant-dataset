@@ -100,4 +100,66 @@ for r in t["regions"].values():
         cell["calendar"] = []
 assert perennial_cert_violations(t) == [], perennial_cert_violations(t)
 
+# ============ EVERGREEN branch (perennial_evergreen, gating-aware no-fruit) ============
+# tree_region_model_evergreen_amendment_v1_0: a perennial_evergreen crop runs the SAME
+# universal invariants, but the no-fruit DIRECTION SPLIT is keyed on gating_factors. A
+# cold-only evergreen (citrus) has no chill Goldilocks band -- colder is monotonically
+# worse -- so survives_no_fruit is NOT forced to carry-or-empty a calendar by chill.
+def well_formed_evergreen():
+    """A minimal valid perennial_evergreen crop, cold-only gating (lemon-like).
+    Climate datum is min_winter_temp_f (chill ~ 0), NOT chill_hours_delivered."""
+    return {
+        "slug": "lemon-mini",
+        "calendar_basis": "perennial_evergreen",
+        "gating_factors": ["cold_hardiness"],
+        "regions": {
+            "ca_south_coast": {
+                "plantings": [{"succession_id": 1, "label": "establishment", "track": "perennial",
+                               "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": []}],
+                "resolved_by_zone": {
+                    "10": {"suitability": "fruits_reliably", "min_winter_temp_f": [36, 42],
+                           "calendar": ["harvest", "harvest", "bloom", "bloom", "growing", "growing",
+                                        "growing", "growing", "growing", "growing", "harvest", "harvest"]}}},
+            "northern_tier": {
+                "plantings": [{"succession_id": 1, "label": "establishment", "track": "perennial",
+                               "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": []}],
+                "resolved_by_zone": {
+                    "7": {"suitability": "unsuitable", "min_winter_temp_f": [0, 10], "calendar": []},
+                    "8": {"suitability": "survives_no_fruit", "min_winter_temp_f": [15, 25], "calendar": []}}}},
+    }
+
+
+# 10. well-formed evergreen -> fires + clean (survives_no_fruit with empty calendar is OK, cold-only)
+assert perennial_cert_violations(well_formed_evergreen()) == [], perennial_cert_violations(well_formed_evergreen())
+
+# 11. evergreen survives_no_fruit WITH a calendar is ALSO fine (no chill over/under split for cold-only)
+e = well_formed_evergreen()
+e["regions"]["northern_tier"]["resolved_by_zone"]["8"]["calendar"] = [
+    "harvest", "harvest", "bloom", "growing", "growing", "growing",
+    "growing", "growing", "growing", "growing", "harvest", "harvest"]
+assert perennial_cert_violations(e) == [], perennial_cert_violations(e)
+
+# 12. universal invariant still fires on an evergreen: unsuitable cell with a calendar
+e = well_formed_evergreen()
+e["regions"]["northern_tier"]["resolved_by_zone"]["7"]["calendar"] = ["bloom"]
+assert any("unsuitable" in v and "7" in v for v in perennial_cert_violations(e)), perennial_cert_violations(e)
+
+# 13. universal: fruits_reliably with an empty calendar on an evergreen -> violation
+e = well_formed_evergreen()
+e["regions"]["ca_south_coast"]["resolved_by_zone"]["10"]["calendar"] = []
+assert any("must carry a calendar" in v for v in perennial_cert_violations(e)), perennial_cert_violations(e)
+
+# 14. universal: a succession entry on an evergreen tree -> violation
+e = well_formed_evergreen()
+e["regions"]["ca_south_coast"]["plantings"].append({"track": "second_planting", "label": "x"})
+assert any("exactly 1" in v or "second_planting" in v for v in perennial_cert_violations(e)), perennial_cert_violations(e)
+
+# 15. SHELL state on an evergreen (Step 3.5: suitability null) -> A3 skips unfilled cells
+e = well_formed_evergreen()
+for r in e["regions"].values():
+    for cell in r["resolved_by_zone"].values():
+        cell["suitability"] = None
+        cell["calendar"] = []
+assert perennial_cert_violations(e) == [], perennial_cert_violations(e)
+
 print("PASS perennial_gate")

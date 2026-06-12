@@ -60,14 +60,45 @@ def derive_tree_calendar(bloom_field, harvest_field):
     return cal
 
 
+def derive_evergreen_calendar(bloom_field, harvest_field):
+    """Return the 12-token EVERGREEN calendar from the bloom + harvest display windows,
+    or None if either is empty/unparseable. An evergreen (citrus/avocado/olive) never
+    goes dormant: bloom and harvest are the dated states and EVERYTHING ELSE is `growing`
+    (never `dormant`). The harvest span may WRAP the year (citrus blooms in spring and
+    is picked the following winter). bloom overwrites harvest on an overlap month --
+    flowering is the notable transition, and citrus can carry flowers + ripe fruit at
+    once. See tree_region_model_evergreen_amendment_v1_0 section 1."""
+    bm = _months(bloom_field)
+    hm = _months(harvest_field)
+    if not bm or not hm:
+        return None
+    cal = ["growing"] * 12
+    m = hm[0]                              # harvest display span (forward, wrapping)
+    while True:
+        cal[m] = "harvest"
+        if m == hm[-1]:
+            break
+        m = (m + 1) % 12
+    m = bm[0]                              # bloom span (forward, wrapping); overwrites harvest
+    while True:
+        cal[m] = "bloom"
+        if m == bm[-1]:
+            break
+        m = (m + 1) % 12
+    return cal
+
+
 def tree_calendar_violations(crop):
     """Return a list of violation strings for a perennial_chill_gated crop ([] = clean).
     For every cell with a NON-EMPTY calendar, the stored calendar must equal the calendar
     derived from that cell's own bloom + harvest fields. Empty calendars are skipped (the
     no-fruit direction split in perennial_cert_violations owns emptiness). No-op for
-    non-perennial crops."""
-    if crop.get("calendar_basis") != "perennial_chill_gated":
+    non-perennial crops. The deciduous basis derives via `derive_tree_calendar`; the
+    evergreen basis via `derive_evergreen_calendar` (no dormancy, growing filler, wrap)."""
+    basis = crop.get("calendar_basis")
+    if basis not in ("perennial_chill_gated", "perennial_evergreen"):
         return []
+    derive = derive_evergreen_calendar if basis == "perennial_evergreen" else derive_tree_calendar
     V = []
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):
@@ -78,7 +109,7 @@ def tree_calendar_violations(crop):
             cal = cell.get("calendar") or []
             if not cal:
                 continue  # empty cell -- A3 (no-fruit split) owns whether it SHOULD be empty
-            expect = derive_tree_calendar(cell.get("bloom"), cell.get("harvest"))
+            expect = derive(cell.get("bloom"), cell.get("harvest"))
             if expect is None:
                 V.append(f"{rk}.{z}: non-empty calendar but bloom/harvest dates are "
                          f"missing/unparseable (cannot verify coherence)")
