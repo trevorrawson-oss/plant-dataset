@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-12 -- lemon CERTIFIED (anchor 7, the FIRST evergreen / first citrus; the two-axis evergreen model proven end-to-end) [Claude Code cert lane]
+
+**Start-SHA:** `f1fce747...` (lemon_6B, register-complete). **End-SHA:** `670f14fa37fe6f8d7c18cb0b90d21dd46b5d8369c434de208ea8bc61bd0e6b4e` (canonical; LATEST session `lemon_cert`).
+**LEMON CERTIFIED -- anchor 7, the 7th of ~18, and the FIRST evergreen.** The whole two-axis evergreen model is now proven end-to-end in one day: design (the amendment) -> Step 3.5 build (test-first) -> 4-5 region biology -> 6A biology surfaces -> 6B register -> cert. whole_crop_gate lemon = **0** (clean).
+
+### Steps 9-11 (the cert)
+- **Anchoring closed (4 gaps -> 0):** `varieties/sources`, `regions.hawaii_tropical.11` (uf_ifas_hs1153 + ucanr_ext), `harvest_ready_anchoring_urls` (uf_ifas_hs1153 + ucd_postharvest) -- all populated from the catalog (cited sources). **`verified`-format normalized:** lemon was the LONE outlier carrying 145 `verified: true`; converted to the date convention (`2026-06-12`) the 6 certified crops use, so the evergreen exemplar seeds the right anchoring format for the bots.
+- **Variety-attribution RESOLVED (claude.ai's flag):** peach (8 varieties) + apple (13) both carry ZERO per-entry sources -> lemon's top-level `varieties.sources` matches the precedent; no per-variety attribution needed.
+- **Verbatim scan (the flip gate; 19/20 URLs text-compared):** **1 real HARD prose lift** -- `rootstock_options[1].traits_seasoned` (trifoliate orange) echoed the TAMU AgriLife citrus page >=8 words. **Trevor-approved reword;** the first (minimal) reword revealed a SECOND masked lift in the same field (the "not well adapted to saline" clause -- the original had two lifted runs, one masking the other), so a fuller fresh-phrasing rewrite was applied (facts preserved: hardier than sour orange, foot-rot immune, somewhat smaller, poor on saline/alkaline, modest size). Re-scan: **0 real prose lifts.** The 1 remaining HARD (`sources_summary.primary[0].name` == the HS402 doc title) + 18 borderline (6-7-word generic horticultural phrases / source names / "spread by the Asian citrus psyllid") are all the benign citation/convention class. (OWED tooling: exclude `sources_summary[].name` from the verbatim scan -- a source name SHOULD equal its doc title.)
+- **THE FLIP:** `verification_status` set -- `status:"verified_gs_arc"`, `launch_ready_core:true`, `launch_ready_seasoned:true`, phase `phase_3_lemon_gold_standard_arc`, 9-source set, verification_log_ref. Flip gates: whole_crop_gate G 0 blockers; register_fill 0; register_completeness PASS; A3 (perennial)=0; A4 (calendar)=0.
+
+### open_findings filed (all blocks_launch:false)
+- `lemon_app_enum_dependency` -- the 7 new citrus enum values from 6A drive the iOS notification/weather engine (frost-protect/heat/feed actions, citrus phenology anchors, mature_bearing stage); the app track must support them. Dataset-correct; app-side owed.
+- `lemon_start_method_sources_slot` -- start_method/moon_phase_preference have no structured sources slot (citations inline); schema decision owed.
+- `lemon_rotation_shape` -- annual-shaped rotation authored N/A for a tree + replant-decline caveat; perennial-aware variant owed (shared w/ peach+apple).
+- `lemon_verbatim_uncovered` -- postharvest.ucdavis 403-blocked the fetch (storage prose not text-compared); legitimate source.
+
+### Footprint
+Only `lemon` changed (anchoring + the 1 reword + verified-normalize + the flip); no catalog change (94). 6 prior anchors byte-identical, all PASS. release_verify 10 CONCERN = the intentional evergreen-vs-annual key-diffs (min_winter_temp_f/cold_basis/suitability vs the lettuce exemplar). pre-commit clean (cleared the 4 anchoring -> 0). **7 anchors certified: cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon.** NEXT = **anchor 8 = orange-navel** (the heat-accumulation gate -- first `heat_accumulation`/`heat_summer_basis`, built test-first at orange's Step 3.5; rides lemon's evergreen rails otherwise).
+
+
 ## 2026-06-12 — lemon Step 6B — the 65 register/care fields (claude.ai authoring handoff)
 
 **Arc:** anchor 7 (lemon, first evergreen). Steps 1-3 + 3.5 + 4-5 + 6A complete on canonical `7df91190`. 6B authors the last 65 null register/care fields; only cert (9-11) remains after.
