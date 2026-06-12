@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-06-11 -- session `apple_steps6-8b` (Claude Code release lane -- the remaining register prose; apple prose COMPLETE)
+
+**Start-SHA:** `3c8ac5e9...` (apple 6-8A). **End-SHA:** `0711aa990df1...` (canonical promoted; LATEST session `apple_steps6-8b`). **apple's register prose is now COMPLETE -- ready for Steps 9-11 (cert).** Still NOT certified.
+
+### Authored (48 fields, the SWEEP-derived 6-8B scope)
+The 30 deferred register fields (6-8A Finding 1) + the 18 tips' `text_beginner` (6-8A Finding 2). claude.ai **independently re-derived the 48 by its own null-sweep** (the 6-8A lesson applied -- computed, not trusting the kickoff list) and reconciled to the kickoff's 48 exactly (its 55 candidates minus 3 correct-null region frost notes minus 4 out-of-scope companions array-split empties). Patch was DOT-path format (`soil.preferred_texture_seasoned`, `tips_by_stage.planting[0].text_beginner`) -> normalized to slash JSON-pointer before apply (apply_patch crashed on dot paths). **Slice-integrity MATCHED claude.ai's claimed `f115bbaa`** (7th match) before the `_core` fix below.
+- container_notes (16, the dwarf-rootstock M9/20-gal container story; self_watering authored as honest "not recommended" per `self_watering_ok:false`); soil (5); start_method (4 -- `hardening_off`=N/A bare-root, `notes`=real bare-root planting); ph (2); companions (2 -- TREE framing: pollinizer proximity + keep turf off the root zone + avoid black walnut, not a vegetable-companion story); succession_policy.reason (1, N/A perennial). The three biology N/A calls match the kickoff.
+
+### Claude Code structural fix -- texture `_core` string->array (claude.ai's flagged 4th shape class)
+apple's `preferred/tolerated/problematic_texture_core` were bare STRINGS (`"loam"`, set at Steps 1-3) while claude.ai authored the `_seasoned` siblings as ARRAYS (the beefsteak precedent). **Confirmed every certified crop uses ARRAYS for texture `_core` + `_seasoned`** (beefsteak/cherry/carrot/lettuce all array[2]/array[3]); apple's strings were the anomaly. Normalized apple's 3 `_core` strings -> single-element arrays (claude.ai's recommended option a; mechanical, structural lane). apple texture shape now cross-crop consistent.
+
+### Footprint + state
+Only `apple` changed; no catalog change (92). 4 anchors + peach byte-identical, PASS. register PASS. **null-register sweep on the promoted canonical = 0 non-region nulls remaining** -- apple's register prose is complete (the only remaining nulls are the 3 correct-null frost cells + the 4 out-of-scope companions array-split, both expected). release_verify 10 CONCERNs = tree-field-vs-annual-exemplar (intentional). NEXT = **apple Steps 9-11 (cert):** verbatim scan (flip gate) + perennial cert-gate (A3) + tree-calendar gate (A4) + the launch_ready flip. **Queued:** peach 6-8C backfill (the ~29 register gaps); the register-completeness GATE (systemic, spec'd in checklist v2.0 §5); the companions array-split reconciliation. Anchor 7 = lemon (needs the citrus/chill-gating model decision).
+
 ## 2026-06-11 -- session `apple_steps6-8a` (Claude Code release lane -- bulk care prose part A; key-shape reconcile; peach register gap found)
 
 **Start-SHA:** `09538e31...` (apple Step 5). **End-SHA:** `3c8ac5e905a9...` (canonical promoted; LATEST session `apple_steps6-8a`).
