@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-06-12 -- orange-navel Steps 1-3 (anchor 8, the SECOND evergreen; the HEAT-gate crop) [claude.ai authoring -> Claude Code release; re-cut once]
+
+**Start-SHA:** `670f14fa...` (lemon_cert). **End-SHA:** `43f2f44f2f5d9fefe717b2010b8e2ae828f2aa641364bf773646d22e928b43e3` (canonical; LATEST session `orange_navel_steps1_3`).
+**ORANGE-NAVEL anchor 8 OPENED.** Steps 1-3 (source set + 2.9 evergreen scalars + biology prose + varieties + companions) released; the SECOND evergreen, the first crop gated by HEAT as well as cold (`gating_factors: ["cold_hardiness","heat_accumulation"]`).
+
+### What landed (49-op patch)
+9 citrus T1 sources (all in the 94-entry catalog; no minting). 2.9 evergreen scalars (chill 0, dormancy null, pruning light, establishment 3). gating_factors = cold + heat (the new axis vs lemon). Pollination self-fertile + parthenocarpic (seedless without pollination; cross-pollen introduces seeds). 3 citrus rootstocks (Carrizo / Swingle / Flying Dragon). Hardiness z9-11 survives + fruits, cold damage ~24°F. 5 `_seasoned` biology surfaces capturing the heat-to-sweeten story. 4 navel varieties (Washington / Cara Cara / Lane Late / Fukumoto). Companions = tree root-zone framing.
+
+### The re-cut (register_completeness HALT -> PASS)
+The FIRST cut (crop-SHA `0bc816d3`) was HALTed by `register_completeness` on TWO shape divergences from the certified lemon exemplar:
+1. `pruning_window` shipped a BARE STRING; lemon = OBJECT `{month_band, offset_from, note_seasoned, note_beginner}`.
+2. `varieties.recommended[]` used a novel UNRULED `note` key + omitted the ruled tree-variety fields; lemon = the rich per-variety schema.
+claude.ai re-cut on the same base to lemon shapes: pruning_window -> object (byte-parity confirmed vs canonical lemon: `month_band:["spring"]`, `offset_from:"after_harvest"`); varieties -> full lemon schema (`subtitle/use/difficulty/notes_seasoned/recommended_note/delta`), the `note` prose relocated to `notes_seasoned`, each navel a `delta` overlay vs Washington (flesh/season/color_dev). **register_completeness now PASS.** (Cause: the canonical lemon crop is not in claude.ai's context -- it authored both shapes from the kickoff description. OWED: include the exact lemon field shapes in the next tree kickoff.)
+
+### Claude Code release verification (protocol #6, on the re-cut)
+- **crop-SHA EXACT match** `a63b5136...` (sorted-min sha256). full-file `670f14fa` -> `43f2f44f`.
+- **release_verify exit 0**, 1 CONCERN = the 13 expected `_beginner` deferrals (blocks_launch:false); only orange-navel changed; lettuce-leaf byte-identical; no region cells; no catalog/enum change; dash/temp scans clean; all 9 source IDs catalogued.
+- **whole_crop_gate delta** base 10 -> 23: the +13 are ALL `_beginner` null siblings (5 biology surfaces + pollination/companions/start_method/varieties.note + 3 rootstock traits + pruning_window.note_beginner). No region regression. Per-variety `notes_seasoned` correctly needs no `_beginner` sibling (SP-only, matches lemon).
+- **register_completeness PASS** (verified on the scratch explicitly -- the gate defaults to `crops_data_final.json`, so the candidate must be passed by name -- then re-confirmed on canonical post-promote).
+
+### open_findings (all blocks_launch:false)
+- `orange_heat_gate_unbuilt` -- gating_factors authored; the heat mechanics (`heat_summer_basis` + cool-summer no-fruit branch in `perennial_gate`) built test-first at Step 3.5 (Claude Code).
+- `orange_beginner_surfaces_owed` -- all `_beginner` siblings deferred to Steps 7-8.
+
+NEXT = **orange Step 3.5** (Claude Code): `calendar_basis -> perennial_evergreen`, evergreen region shells, + the heat-accumulation gate test-first.
+
+
 ## 2026-06-12 -- lemon CERTIFIED (anchor 7, the FIRST evergreen / first citrus; the two-axis evergreen model proven end-to-end) [Claude Code cert lane]
 
 **Start-SHA:** `f1fce747...` (lemon_6B, register-complete). **End-SHA:** `670f14fa37fe6f8d7c18cb0b90d21dd46b5d8369c434de208ea8bc61bd0e6b4e` (canonical; LATEST session `lemon_cert`).
