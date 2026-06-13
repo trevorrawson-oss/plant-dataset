@@ -21,7 +21,7 @@ structure) + run dataset-wide as needed. Run:
 import json, sys, re, collections, os
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from field_classification import BACKEND_KEYS, BACKEND_KEY_RE
+from field_classification import BACKEND_KEYS, BACKEND_KEY_RE, _basis_family
 
 PATH = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
 
@@ -117,6 +117,7 @@ def walk(o, pat, crop):
                 ruled = (k.endswith("_seasoned") or k.endswith("_beginner")
                          or k in EXCLUDED_KEYS
                          or k in BACKEND_KEYS or BACKEND_KEY_RE.match(k)  # shared backend KEY slice (kills source_quote/basis drift)
+                         or _basis_family(k)  # bare *_basis evidence prose is backend (checklist A3; e.g. year_round_basis)
                          or re.match(r"zone_\d+_", k)  # zone-N boolean/range primitives
                          or excluded_by_path(pat)  # roster keeps its OWN narrow path notion
                          or ruled_categorical(pat, k))
