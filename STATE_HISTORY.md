@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-12 -- orange-navel CERTIFIED (anchor 8, the SECOND evergreen / the HEAT-gate crop; the two-axis evergreen model COMPLETE) [Claude Code cert lane]
+
+**Start-SHA:** `7b2f8179...` (orange_step6, structurally complete). **End-SHA:** `a0cc0178d95e4f6a31b7e4a4b425653ccc793e033cdcfc376878d473e2c4dbfa` (canonical; LATEST session `orange_cert`). orange crop-SHA `1d8f026d...`.
+**ORANGE-NAVEL CERTIFIED -- anchor 8, the 8th of ~18, the SECOND evergreen.** The two-axis evergreen model is now complete + cert-proven on BOTH anchors: lemon (cold-only) + orange (cold + HEAT). The heat-accumulation gate built test-first at Step 3.5 is end-to-end proven. whole_crop_gate orange = PASS; G flip-state verified_gs_arc + both launch_ready + 0 blockers.
+
+### The cert verbatim -- TWO passes
+- **(1) Source-verbatim (the formal flip gate) = CLEAN, 0 HARD lifts.** 439 prose strings vs 17/22 cited URL bodies; 14 borderline (6-7w) all benign (source names: UC ANR institution name x10, HS132 doc title; generic phrases "left on the tree too long", "at the same soil line"). 5 URLs NOT COVERED (L2304 301, arizona 403, mgsantaclara 404, ctahr F_N-14 PDF, lsu 404) -> filed.
+- **(2) Lemon-echo (sibling-crop convergence, claude.ai's flag) = REWORDED.** The full-lemon-prose scan caught orange converging with the certified lemon on shared citrus facts (HLB cause 13w, sooty mold 11w, watering/fertilizer/container/pest descriptions 9-10w; 31 passages >=8w). The source scan being clean means this is convergence, NOT plagiarism -- but **Trevor ruled REWORD for distinctiveness** (the AskUserQuestion call). claude.ai reworded 28 passages (facts/dates held exact; 3 numeric ENRICHMENTS -- zones 9-11, 27°F fruit-freeze [w/in UF/IFAS 26-28°F], >95°F spring heat-drop [w/in az1850 90s°F] -- all accurate + consistent, accepted). Re-scan: **31 -> 5 residual benign-irreducible** (3 region plant_out date windows + the fertilizer feeding-season window + 1 generic container construction; all adjudicated convergence-not-lift per the "don't contort a standard fact" rule). Targeted source re-scan of the 28 reworded strings: 0 new source lifts.
+
+### THE FLIP
+`verification_status` set: status=verified_gs_arc, phase=phase_3_orange_gold_standard_arc, date 2026-06-12, launch_ready_core/seasoned=true, last_audited, source_set (9: az_coop_ext/lsu_agcenter/tamu_agrilife/uc_ipm/ucanr_santa_clara_mg/ucr_citrus/uf_ifas_edis/uf_ifas_hs132/uhawaii_ctahr), verification_log_ref. Top-level last_reviewed + last_reviewed_session=orange_cert.
+
+### open_findings filed (6, all blocks_launch:false)
+`orange_app_enum_dependency` (citrus enums incl. the Trevor-ratified guard_against_heat_stress NOTIFICATION action), `orange_verbatim_uncovered` (5 URLs), `orange_biology_band_edge_confirm` (se_gulf/warm_arid band edges + the >95°F specific), `orange_lemon_echo_residual` (the 5 benign convergences), `orange_rotation_shape` + `orange_start_method_sources_slot` (shared/carried).
+
+### Footprint
+Only orange changed; lemon byte-identical; release_verify 10 CONCERN = intentional evergreen+heat key-diffs vs lemon (orange = lemon + heat); register_fill 0; register_completeness PASS; A3/A4 0; verified-format = 74 dates / 0 `true`; anchoring F 42 leaves / 0 gaps. **8 anchors certified: cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel.** NEXT = anchor 9 (roadmap call): grapefruit (rides orange's heat rails) OR pivot to annual demand (basil/zinnia).
+
+
 ## 2026-06-12 -- orange-navel enum decision ratified + session close-out [Trevor decision; docs-only]
 
 **SHA unchanged** (`7b2f8179...`; no crops_data_final.json change -- decision-record + cleanup only).
