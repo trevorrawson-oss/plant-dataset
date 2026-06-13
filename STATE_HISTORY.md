@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-06-12 -- orange-navel Step 6 -- 6 biology surfaces + 79 register/care fields (whole_crop_gate PASS) [claude.ai authoring -> Claude Code release]
+
+**Start-SHA:** `32b0c6e7...` (orange_steps4_5). **End-SHA:** `7b2f8179d4f585919047ad356b1dfa55f449ac02c65d7c0642dc31bc4a4d36b5` (canonical; LATEST session `orange_step6`). orange crop-SHA `f04ed533...`.
+**Orange is STRUCTURALLY COMPLETE -- only cert (9-11) remains.** claude.ai authored all of Step 6 (the last authoring step) from orange's own citrus biology, dual-register, heat axis threaded; lemon was the SHAPE exemplar only. 85-op patch.
+
+### What landed
+- **6A -- the 6 biology surfaces:** pests(6: Asian citrus psyllid/HLB-vector, leafminer, scale, aphids, citrus red mite, katydids), diseases(6: HLB, Phytophthora foot rot, canker, sooty mold, brown rot, greasy spot), growth_stages(6: evergreen establishment->bearing, no dormant), failure_diagnostics(5: sour-pale-fruit-from-insufficient-heat FIRST, heat fruit-drop/granulation, cold leaf-drop, chlorosis), weather_triggers(3: frost + EXTREME_HEAT), notifications(4).
+- **6B -- 79 register/care fields:** watering(14, +irrigate-up-in-heat), container_notes(16, citrus-as-best-container-tree, NOT peach's "not recommended"), storage(8, store-on-the-tree), fertilizer(6), soil(5)/ph(2), yield(6), rotation(4 N/A perennial), start_method(3), harvest_ready (color-unreliable-when-humid nuance), + the 13 deferred `_beginner` siblings. `register_fill_gate orange` 79 -> 0.
+
+### Claude Code release work
+- **Catalog reconciliation (apple precedent):** claude.ai's `anchoring_urls` used 11 granular UC IPM per-pest sub-ids (`uc_ipm_psyllid`/`uc_ipm_hlb`/`uc_ipm_phyto`/...) + `uf_ifas_cg009` -- NONE in the 94-catalog (its self-check "7 distinct, all catalog" counted only `sources[]`, not anchoring keys). lemon anchors via the PORTAL `uc_ipm` + URL; remapped all 13 anchoring keys -> `uc_ipm` / `uf_ifas_edis` (URLs kept), no minting. Also anchored a cited-but-unanchored `uf_ifas_hs132` on diseases[1] to its catalog URL (whole_crop_gate F: 1 -> 0).
+- Path format: leading-slash pointer + top-level `crop` key (lemon-6B cadence); apply_patch read it cleanly (85/85).
+
+### Release verification (protocol #6)
+- **whole_crop_gate orange = PASS** (A3 heat-floor 0, A4 coherence 0, dual-voice null_values 0 [189 CP pairs], source-tier uncatalogued 0). register_fill 0. register_completeness PASS. release_verify exit 0 -- 10 CONCERN = the intended 3 heat keys vs the lemon exemplar; G note (NON-blocking) = northern_tier z3-7 calendars byte-identical to lemon because BOTH are empty (orange's north is `unsuitable`, frost-decided -> derive yields no calendar; independently derived, not pasted). dash/degree clean. crop-SHA via leaf-diff (diverges from claude.ai's `8c65825b` by design -- the anchoring reconciliation). NO flip.
+
+### Flags
+- **iOS-app enum (Trevor, non-blocking):** `summer_heat_irrigation` notification uses `action:"guard_against_heat_stress"` (a blessed citrus heat value, but a WEATHER action; the canonical notification action is `fertilize`). KEPT + flagged for the app-track namespace decision; folds into `lemon_app_enum_dependency`.
+- **Owed at cert:** the FULL-lemon-prose verbatim scan (claude.ai only saw the scope exemplars); the se_gulf/warm_arid band-edge confirm.
+
+NEXT = **orange cert (9-11, Claude Code):** verbatim scan vs full lemon prose + anchoring closure + band-edge confirm + THE FLIP -> orange-navel certifies, anchor 8, the heat exemplar.
+
+
 ## 2026-06-12 -- orange-navel Steps 4-5 -- the evergreen+HEAT region biology (10 cells LIVE) [claude.ai authoring -> Claude Code release]
 
 **Start-SHA:** `dee5de3a...` (orange_step3_5). **End-SHA:** `32b0c6e742393902e55b1fef4192d5a75910bfe189ccfea65d3bcbfa55b120a6` (canonical; LATEST session `orange_steps4_5`). orange crop-SHA `6ac3ae4a...`.

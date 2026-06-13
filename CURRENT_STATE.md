@@ -11,56 +11,55 @@
 ---
 
 
-**7 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon) of a ~18 target. **ORANGE-NAVEL = anchor 8 IN PROGRESS -- the SECOND evergreen, the HEAT-gate crop.** Steps 1-3 + 3.5 (heat gate) + **Steps 4-5 (the 10 evergreen+heat region cells, LIVE)** RELEASED 2026-06-12. **NEXT = orange 6A/6B (claude.ai authoring): the biology surfaces + register/care fields.**
+**7 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon) of a ~18 target. **ORANGE-NAVEL = anchor 8, STRUCTURALLY COMPLETE -- only cert remains.** Steps 1-3 + 3.5 + 4-5 + **Step 6 (6 biology surfaces + 79 register fields, `whole_crop_gate` PASS)** all RELEASED 2026-06-12. **NEXT = orange cert (9-11, Claude Code): the verbatim scan vs FULL lemon prose + anchoring closure + the flip.**
 
 ## Canonical pointer
-- **Current SHA:** `32b0c6e742393902e55b1fef4192d5a75910bfe189ccfea65d3bcbfa55b120a6`. `LATEST.txt` session: `orange_steps4_5` (2026-06-12).
+- **Current SHA:** `7b2f8179d4f585919047ad356b1dfa55f449ac02c65d7c0642dc31bc4a4d36b5`. `LATEST.txt` session: `orange_step6` (2026-06-12).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `32b0c6e7` -- feat(orange-navel): Steps 4-5 -- the evergreen+heat region biology (10 cells live)
   - `dee5de3a` -- feat(orange-navel): Step 3.5 -- the heat-accumulation gate + evergreen region shells (test-first)
   - `43f2f44f` -- feat(orange-navel): Steps 1-3 -- anchor 8, the SECOND evergreen / the HEAT-gate crop
   - `670f14fa` -- feat(lemon): CERTIFIED -- anchor 7, the FIRST evergreen / first citrus
   - `f1fce747` -- feat(lemon): Step 6B -- the 65 register/care fields (register-complete)
   - `7df91190` -- feat(lemon): Step 6A -- the 6 biology surfaces (pests/diseases/journey/etc.)
   - `6c9b9a54` -- feat(lemon): Steps 4-5 -- the evergreen region biology (10 regions live)
-  - `3a094769` -- feat(lemon): Step 3.5 -- the evergreen region/calendar model (test-first)
 
-## What just happened (session `orange_steps4_5`)
-- **ORANGE Steps 4-5 RELEASED** (`dee5de3a` -> `32b0c6e7`): the 10 evergreen+heat region cells authored (claude.ai) + applied + region metadata filled + calendars DERIVED (Claude Code). orange's regions are LIVE. orange crop-SHA `6ac3ae4a`.
-- **The heat story is live, gate-honest:** desert (`ca_desert`/`low_desert_az`) + Central Valley (`ca_interior` z9) = `high` heat -> `fruits_reliably`; Gulf/FL/warm = `adequate`; **the HERO contrast -- `ca_south_coast` = heat `marginal` -> `marginal`** (the same coast that grows flawless lemons leaves a navel only middling; corrected from the kickoff's over-framed `survives_no_fruit` per UC IPM + Santa Clara MG -- coast is sub-optimal, NOT failure); `ca_north_coast` = `insufficient` -> `marginal`; Hawaii = `marginal` (no cool nights, stays green, per CTAHR). northern_tier z3-7 = `unsuitable` (frost). A3 heat-floor = 0 (no `insufficient` cell is `fruits_reliably`).
-- **A derivation bug caught + fixed test-first** (`tree_calendar._months`): the harvest field doubles as display + derivation source, and claude.ai's descriptive parentheticals carried stray months ("...can start late October") + the modal verb "may" ("rind may stay green"), which corrupted the parsed harvest span (low_desert_az read Dec->Oct; fl_peninsula read Nov->May) -- and A4 would NOT have caught it (it parses the same way). Fix: parse only the primary range before the first "(". RED watched fail (E8); GREEN; **0 certified cells affected** (byte-identical regression on lemon/peach/apple).
-- **Release verification:** A3 (heat floor + no-fruit) = 0; A4 (calendar coherence) = 0; whole_crop_gate 23 -> 13 (the 10 region_notes-null CLEARED; the 13 residual = the top-level `_beginner` deferrals owed to 6-8); release_verify exit 0 -- vs the EVERGREEN exemplar (lemon) orange differs by ONLY the 3 heat keys (`heat_summer_basis`/`heat_basis_seasoned`/`heat_basis_beginner`), confirming orange = lemon + heat; dash/temp scans clean. crop-SHA cross-check used the collateral leaf-diff (claude.ai's slice-only SHA diverges by design -- CC fills region metadata + derives calendars).
+## What just happened (session `orange_step6`)
+- **ORANGE Step 6 RELEASED** (`32b0c6e7` -> `7b2f8179`): the 6 biology surfaces (pests/diseases/growth_stages/failure_diagnostics/weather_triggers/notifications) + the 79 register/care fields, dual-register, heat axis threaded. **`register_fill_gate orange` 79 -> 0; `whole_crop_gate orange` = PASS.** orange crop-SHA `f04ed533`.
+- **Catalog reconciliation (Claude Code lane, the apple precedent):** claude.ai's `anchoring_urls` used 11 granular UC IPM per-pest sub-IDs (`uc_ipm_psyllid`/`uc_ipm_hlb`/...) + `uf_ifas_cg009` that are NOT catalog entries (its self-check counted only the `sources` arrays). lemon anchors pests/diseases via the PORTAL `uc_ipm` + the specific URL -> remapped all 13 to `uc_ipm` / `uf_ifas_edis` (kept the URLs), no minting. Also anchored a cited-but-unanchored `uf_ifas_hs132` on diseases[1] (Phytophthora) to its catalog URL. Source-tier gate: uncatalogued 0.
+- **Release verification:** whole_crop_gate PASS (A3 heat-floor 0, A4 coherence 0, dual-voice null_values 0, source-tier uncatalogued 0); register_completeness PASS; release_verify exit 0 (CONCERN = the intended 3 heat keys vs lemon; G note = northern_tier z3-7 calendars empty-because-unsuitable, attested cold-decided/derived-not-pasted); dash/temp clean. crop-SHA via leaf-diff (diverges from claude.ai's `8c65825b` by design -- the anchoring reconciliation).
+- **NO flip** -- launch_ready stays False; that is cert (9-11).
 
 ## Active work + next step
-- **NEXT = orange 6A/6B (claude.ai authoring lane):** 6A = the biology surfaces (pests/diseases/growing-journey/companions-detail/etc., apple/lemon shape -- 6 surfaces); 6B = the register/care fields (watering/container/fertilizer/storage/the 2.9 perennial prose). Then 9-11 cert. orange = the heat exemplar for grapefruit + the rest.
-- **Step-5 biology confirm owed (non-blocking):** claude.ai reasoned the `se_gulf`/`warm_arid` winter-low BAND EDGES from documented citrus damage thresholds rather than a single zone table (the qualitative claims are sourced); confirm the numeric `[low,high]` edges against the cited sources at the cert side-by-side. Verbatim scan (cited-URL prose lifts across the new region prose) runs at cert (Step 11).
-- Roster: 7 certified; orange anchor 8 in progress (1-3 + 3.5 + 4-5 done); ~10 remaining after orange.
+- **NEXT = orange cert (Steps 9-11, Claude Code lane):**
+  1. **Verbatim scan vs the FULL lemon crop prose** (flip-blocking). claude.ai only had the SCOPE exemplar items as lemon text and self-de-risked to 0 against those (787->0 n-grams over 4 passes); Claude Code re-runs against lemon's live prose (the surfaces are the main lift risk).
+  2. **Anchoring closure** -- confirm every claim-bearing leaf is anchored (whole_crop_gate F already PASS post-reconciliation; re-confirm at cert).
+  3. **The se_gulf/warm_arid winter-low band-edge confirm** (carried from 4-5; claude.ai reasoned the edges from damage thresholds).
+  4. **THE FLIP** -- `verification_status.status = verified_gs_arc`, `launch_ready_core/seasoned = true`, the phase + log_ref. orange-navel certifies = anchor 8.
+- Roster: 7 certified; orange = anchor 8 at the cert gate; ~10 remaining after. orange = the heat exemplar for grapefruit + the rest.
 
 ## OWED
-- **Tooling (recurring evergreen-tree release steps, currently ad-hoc):** region_id/region_label/zone_span fill + the per-cell `calendar[]` derivation are done by a one-off release transform each tree (lemon + orange both). Fold into a reusable `_build_tree_shells`/apply step (FLAG B). The `tree_calendar._months` paren-strip is now committed.
-- **iOS-app forward dependency** (`lemon_app_enum_dependency`): the 7 citrus enum values incl. `guard_against_heat_stress` (orange's heat axis).
-- **Process:** ship the exact lemon field shapes in every tree kickoff (claude.ai authors off-exemplar -- the canonical lemon crop is not in its context). The Steps 4-5 sources file's stale `orange_sources_summary.primary` scaffold caused a catalog misread -- regenerate the `primary` for the next tree handoff.
-- **OPTIONAL mint (Trevor's call, not blocking):** pub-level `az_ext_az1850` (Glenn Wright); `az_coop_ext` portal covers it and is gate-clean.
+- **iOS-app enum -- DECISION FLAG (Trevor, non-blocking):** the `summer_heat_irrigation` notification carries `action:"guard_against_heat_stress"` -- a blessed citrus heat-axis value, but enumerated as a WEATHER action (the canonical NOTIFICATION action is `fertilize`). KEPT (semantically a heat-irrigation reminder); Trevor/app-track to confirm whether notification-action + weather-action share one namespace or this needs a different token. Folds into `lemon_app_enum_dependency` (the 7 citrus enum values). The dataset value is honest either way; trivially repointed if the app wants a distinct token.
+- **Tooling:** the granular-anchoring->portal reconciliation + region-meta fill + calendar derivation are still one-off transforms each tree; fold into a reusable evergreen-apply step (FLAG B). The `tree_calendar._months` paren-strip is committed.
+- **Process:** ship the exact lemon field shapes + curated citrus sources in every tree kickoff (done for Step 6). For the NEXT tree, also ship the lemon pests/diseases ANCHORING convention (portal `uc_ipm` + URL, not granular sub-IDs).
 - **Schema:** start_method/moon_phase sources-slot; perennial-aware `rotation` shape; Appendix A growth_stages `timing_*` reconcile. Carried: apple's 4 open_findings.
 
-## Gate record (generated 2026-06-12, on canonical `32b0c6e7`)
+## Gate record (generated 2026-06-12, on canonical `7b2f8179`)
 - **cherry-tomato / beefsteak-tomato / carrot / peach / apple / lemon / lettuce-leaf: `PASS` (0)**
 - **register_completeness_gate: `PASS`**
-- (orange-navel: mid-arc, 13 violations = the top-level `_beginner` deferrals owed to 6-8; A3 heat-floor = 0, A4 coherence = 0; regions LIVE, not certifiable until cert.)
+- (orange-navel: `whole_crop_gate` = **PASS** structurally; register_fill 0; A3/A4 0. NOT flipped -- cert (9-11) adds the verbatim scan + the launch_ready flip.)
 
 ## Region fill state (generated)
-- **cherry-tomato: 10/10**; 8 heat_pause, 8 second_planting
-- **beefsteak-tomato: 10/10**; 8 heat_pause, 6 second_planting
-- **carrot: 10/10**; 13 heat_pause
-- **peach: 10/10** · **apple: 10/10** · **lemon: 10/10** · **lettuce-leaf: 10/10**; 15 heat_pause
-- (orange-navel: 10/10 evergreen+heat region cells LIVE -- 15 fruiting cells with derived calendars + 5 unsuitable; region_notes dual-register complete.)
+- **cherry-tomato / beefsteak-tomato / carrot / peach / apple / lemon / lettuce-leaf: 10/10.**
+- (orange-navel: 10/10 evergreen+heat region cells LIVE; all biology surfaces + 79 register fields authored.)
 
 ## Flip gates (generated)
 - **cherry-tomato / beefsteak-tomato / carrot / peach / apple / lemon / lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **7 anchors certified.** orange-navel = in progress (status None, launch_ready False). (Target ~18 -- a roadmap call.)
+- **7 anchors certified.** orange-navel = structurally complete, NOT flipped (status None, launch_ready False) -- cert is the next + final step. (Target ~18.)
 
 <!-- FILL: Live locked decisions / guardrails (editorial -- accretes) -->
-- **EVERGREEN + HEAT model -- live end-to-end on orange (2026-06-12):** `perennial_evergreen` calendar_basis + crop `gating_factors`; cold climate = `min_winter_temp_f` + `cold_basis_*`; **heat climate = `heat_summer_basis` (`{high|adequate|marginal|insufficient}`, NO GDD) + `heat_basis_*`**; calendars DERIVED (`derive_evergreen_calendar`, A4-gated, no `dormant`, wrap-aware); z9 per-region by frost; survives_no_fruit honest-empty; tropical may be year_round OR dated (orange Hawaii is dated `marginal`). **THREE no-fruit directions, keyed on `gating_factors`:** chill Goldilocks (peach/apple) / cold monotone (lemon) / **heat FLOOR (orange: `insufficient` heat caps a frost-safe cell below `fruits_reliably`).** Heat branch fires only for orange/grapefruit. **Hero verdict precedent: heat `marginal` -> suitability `marginal` (reduced quality, NOT failure); reserve `insufficient`+`survives_no_fruit` for true non-sweetening (the fog-belt / Hawaii lowland), sourced -- do not borrow Hawaii's failure language for the CA coast.**
-- **DERIVATION precedent (`tree_calendar._months`, fixed 2026-06-12):** the bloom/harvest field doubles as DISPLAY + derivation source; parse ONLY the primary range before the first "(" -- parenthetical prose carries stray months + the modal verb "may". A4 cannot catch a bad-source-date calendar (it parses identically), so the parse must be right at authoring; future tree kickoffs should keep month-bearing asides out of the headline range or expect the strip.
-- **TREE per-variety schema:** trees use rich `varieties.recommended[]` objects (lemon's 11-key set incl. `delta`); annuals use `varieties_detail[]`. A bare `note` HALTs register_completeness.
-- **Cert mechanics:** anchoring `verified` = a DATE; verbatim scan flip-blocking on >=8-word HARD lifts (re-scan after each reword; source-name==title benign); crop-SHA falls back to the collateral leaf-diff. **`register_completeness_gate` reads `crops_data_final.json` by default -- pass the candidate explicitly when gating a scratch.**
-- variety-delta = CATEGORICAL; register-fill is a cert dimension; patch paths = leading-slash/dot; pre-cert anchoring = admission state; claude.ai self-checks are advisory -- the gates are the defense.
+- **EVERGREEN + HEAT model -- live + register-complete on orange (2026-06-12):** `perennial_evergreen` + `gating_factors`; cold = `min_winter_temp_f`/`cold_basis_*`; heat = `heat_summer_basis` (`{high|adequate|marginal|insufficient}`, no GDD) + `heat_basis_*`; calendars DERIVED; THREE no-fruit directions (chill Goldilocks / cold monotone / heat FLOOR). Hero verdict precedent: heat `marginal` -> suitability `marginal` (reduced quality, NOT failure); `insufficient`+`survives_no_fruit` reserved for true non-sweetening. Heat fields need NO register ruling (forward-tested).
+- **ANCHORING convention (lemon precedent, reconfirmed orange Step 6):** pests/diseases/surfaces anchor via the catalog PORTAL id (`uc_ipm`) + the specific page URL in the anchor -- NOT granular per-page sub-ids (`uc_ipm_psyllid`). A cited source in `sources[]` MUST carry a matching `anchoring_urls` entry (whole_crop_gate F). Claude Code reconciles granular->portal at apply (the apple/carrot drift-absorption precedent); claude.ai's source self-count omits anchoring keys -- the gate is the defense.
+- **DERIVATION precedent (`tree_calendar._months`):** parse ONLY the primary range before the first "(" -- parenthetical prose carries stray months + the modal verb "may"; A4 cannot catch a bad-source-date calendar.
+- **Cert mechanics:** anchoring `verified` = a DATE; verbatim scan flip-blocking at cert on >=8-word HARD lifts (re-scan after each reword; claude.ai only sees scope exemplars, so the FULL-lemon-prose scan is Claude Code's at Step 11); crop-SHA falls back to the collateral leaf-diff (diverges when Claude Code reconciles anchoring/metadata). **`register_completeness_gate` + `register_fill_gate` read `crops_data_final.json` by default -- pass the candidate explicitly when gating a scratch.**
+- TREE per-variety schema = lemon's 11-key set incl. `delta` (CATEGORICAL); a bare `note` HALTs register_completeness. claude.ai self-checks are advisory -- the gates are the defense.
