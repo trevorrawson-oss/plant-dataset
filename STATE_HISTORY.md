@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-13 -- basil Steps 6-8 (bulk prose; basil is REGISTER-COMPLETE + gate-clean) [claude.ai authoring + Claude Code release]
+
+**Start-SHA:** `48c9580f...` (basil_5c_5_5). **End-SHA:** `83ed20e5e0f4f99a517bf86aa36d4b5f1c8671bf89d5c3045a4c22ef5b55fc56` (canonical; LATEST session `basil_steps_6_8`). Tooling commit `09b5d51` (gate `*_basis` fix).
+**basil is now register-complete:** `whole_crop_gate basil = PASS` (0 violations), `register_fill_gate = PASS` (was 8 nulls), `register_completeness_gate = PASS`. Only Step 11 (verbatim flip gate + the flip) remains before basil is anchor 9.
+
+### What changed -- `48c9580f` -> `83ed20e5`
+- 19 ops, ONLY basil. Authored the empty compounds in both registers: `tips_by_stage` (germination/seedling/established/harvest/bolting), `growth_stages` (leaf-crop stages, no flowering), `failure_diagnostics`, `notifications`, `weather_triggers`; the dict-shell stragglers `yield_expectations` (per_plant + first_year_note + factors), `moon_phase_preference`, `fertilizer.notify_message`; and the OWED `container_notes.drainage.saucer_practice_beginner`. Did NOT touch regions/calendars or `launch_ready`.
+- **The worklist was COMPUTED, not hand-listed (v1.9 §3):** `register_fill_gate` gave the exact 8 null register fields; the empty compounds were added by sweep. basil's 6-8 was light because its Steps 1-3 already authored most biology prose in both registers (apple/peach, which hand-listed, missed 30/46).
+
+### Two register-gate rulings (the 6-8 human touchpoint -- Trevor)
+- **`region_tip_override_assessment` -> STRIPPED.** claude.ai added a NEW crop-level process attestation (the Step-4 region-tip-override rider assessed -> `no_override_warranted` + rationale). Most-accurate handling = process metadata belongs in STATE_HISTORY, not the crop JSON (consistent with cherry/carrot; structured in-data audit would live in `verification_status`, not a bespoke top-level key). **The attestation (recorded here):** basil's core care actions (pinch-above-node, base-watering, frost timing, succession cadence) are biologically universal across zones 3-11 and consistent across the T1 set; the heat-loving trait is encoded in the no-heat-pause architecture + `pause_in_heat:false`; warm-region differentiation (FL year-round, HI tropical) is TIMING-ONLY, fully expressed in the region cells. **No region-tip override warranted.**
+- **`regions.*.plantings[].year_round_basis` -> EXCLUDED backend.** The hawaii year-round declaration reason (a 5C field, enum-prefixed `frost_free_tropical:`). It is a `*_basis` evidence field; checklist A3 rules `*_basis`/`synthesis_note` backend (never rendered; the renderer branches on the `year_round` flag, not the basis). Gate fix `09b5d51`: `register_completeness_gate` now rules bare `*_basis` keys via the shared `_basis_family` predicate (it had used only the BACKEND_KEYS/RE slice). Canonical re-scan still PASS -- no other crop's prose hidden.
+
+### Release verification (protocol #6)
+- release_verify CLEAN: only basil; lettuce byte-identical; **violation-diff CLEARED `saucer_practice_beginner`, 0 new**; calendars coherent (unchanged); dash/temp 0. whole_crop_gate / register_fill / register_completeness all PASS. Pre-commit hook PASSES. 8 certified anchors untouched.
+
+### Next step
+**Step 11 CERT.** (1) Verbatim flip gate: fetch basil's cited source URLs + run `verbatim_scan` (two-step) -- authored prose vs cited bodies, 0 HARD lifts to flip (basil = first herb, no sibling-herb echo). (2) Re-confirm Step 10 anchoring hygiene (no claim-leaf gap). (3) `basil_s1_uconn_mint_flag` -- mint `uconn_ext` IF the UConn downy mildew URL is cited as a primary anchor. (4) THE FLIP (Claude Code): `verification_status` -> `verified_gs_arc` + launch_ready x2 True + source_set + verification_log_ref + open_findings (blocks_launch:false) + top-level last_reviewed. basil -> anchor 9 of ~18.
+
+---
+
 ## 2026-06-13 -- basil Steps 5C + 5.5 (per-zone harvest resolution + DERIVED calendars; the annual calendar deriver) [claude.ai 5C + Claude Code 5.5]
 
 **Start-SHA:** `954565ee...` (basil_steps_4_5). **End-SHA:** `48c9580fcfb80c1193bffc6a8a551dbedbcbd7b4980f014b7bc417212d273baf` (canonical; LATEST session `basil_5c_5_5`). Tooling commits: `dfbd27c` (deriver), `15076e7` (fl-z11 fix).

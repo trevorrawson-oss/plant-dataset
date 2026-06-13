@@ -11,33 +11,36 @@
 ---
 
 
-**8 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel) of a ~18 target. **basil (anchor 9, the FIRST herb) is mid-arc: its REGION LAYER is fully resolved + CALENDARED -- Steps 1-3 + 3.5 + 4-5 + 5C + 5.5 RELEASED 2026-06-13.** All 10 region cells carry windows + per-zone dates + per-arm anchoring + dual-register region_notes + a DERIVED 12-month `calendar[]`. basil status `in_progress_steps_1_3`, launch_ready False/False. **NEXT = Steps 6-8 (seasoned depth + beginner siblings incl. the owed `saucer_practice_beginner` + dual-voice coverage), then Step 11 cert.**
+**8 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel) of a ~18 target. **basil (anchor 9, the FIRST herb) is REGISTER-COMPLETE + gate-clean -- Steps 1-3 + 3.5 + 4-5 + 5C + 5.5 + 6-8 RELEASED 2026-06-13.** All prose surfaces authored in both registers; `whole_crop_gate basil = PASS` (0 violations), `register_fill_gate = PASS`, `register_completeness_gate = PASS`. basil status still `in_progress_steps_1_3`, launch_ready False/False. **NEXT = Step 11 CERT: the verbatim flip gate (fetch + compare basil's prose vs its cited source URLs) + the `launch_ready` x2 + status `verified_gs_arc` flip. basil becomes anchor 9 at the flip.**
 
 ## Canonical pointer
-- **Current SHA:** `48c9580fcfb80c1193bffc6a8a551dbedbcbd7b4980f014b7bc417212d273baf`. `LATEST.txt` session: `basil_5c_5_5` (2026-06-13).
+- **Current SHA:** `83ed20e5e0f4f99a517bf86aa36d4b5f1c8671bf89d5c3045a4c22ef5b55fc56`. `LATEST.txt` session: `basil_steps_6_8` (2026-06-13).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `48c9580f` -- feat(basil): Steps 5C + 5.5 -- per-zone harvest resolution + derived calendars
   - `954565ee` -- feat(basil): Steps 4-5 -- region layer complete (10 cells + per-arm anchoring)
   - `8318cc03` -- feat(basil): Steps 1-3 + 3.5 -- anchor 9, the first herb
   - `a0cc0178` -- feat(orange-navel): CERTIFIED -- anchor 8, the SECOND evergreen / the HEAT-gate crop
   - `7b2f8179` -- feat(orange-navel): Step 6 -- 6 biology surfaces + 79 register/care fields (whole_crop_gate PASS)
   - `32b0c6e7` -- feat(orange-navel): Steps 4-5 -- the evergreen+heat region biology (10 cells live)
   - `dee5de3a` -- feat(orange-navel): Step 3.5 -- the heat-accumulation gate + evergreen region shells (test-first)
-  - `43f2f44f` -- feat(orange-navel): Steps 1-3 -- anchor 8, the SECOND evergreen / the HEAT-gate crop
 
-## What just happened (session `basil_5c_5_5`)
-- **Step 5C (claude.ai transcription) applied** (`954565ee` -> intermediate): the 15 warm cells were carrying ONLY `plant_out`; 5C transcribed their per-zone `harvest`/`harvest_start`/`harvest_end` + `start_indoors` + plant dates + `planting_note` from the Steps 4-5 findings (101 ops, no new sourcing). The region layer is now fully resolved per zone (matches the certified-annual cell shape).
-- **Step 5.5 (Claude Code) -- calendars DERIVED, not hand-authored.** Built `tools/annual_calendar.py` (the annual analog of `tree_calendar`, test-first) and derived all **20 region-cell `calendar[]` arrays** from the resolved windows. `annual_calendar_violations(basil)` = 0 (stored == re-derived by construction); release_verify C = "all filled calendars coherent (no waits; heat_pause aligned)."
-- **Deriver fix surfaced by basil:** South FL `fl_peninsula z11` is near-year-round (harvest wraps Oct->Jan). The first cut marked its Jul/Aug summer lull `cold_pause` (absurd); fixed by anchoring `cold_pause` at deep winter (January) -- a January-active cell has no winter off-season, so an inactive month is `growing`. Reproduces carrot `northern_tier` z5 unchanged. `hawaii_tropical` = `year_round` -> 12x `growing`.
-- **Verification:** release_verify CLEAN (only basil; lettuce byte-identical; dash/temp 0; calendars coherent); whole_crop_gate = **1 violation** (the carried `saucer_practice_beginner`); **no NEW violations**; 8 certified anchors untouched. Commits: deriver `dfbd27c`, fl-z11 fix `15076e7`, data `[this]`.
+## What just happened (session `basil_steps_6_8`)
+- **basil Steps 6-8 (bulk prose) applied** (`48c9580f` -> `83ed20e5`): 19 ops, ONLY basil. Authored the empty compounds (`tips_by_stage` 5 stages, `growth_stages`, `failure_diagnostics`, `notifications`, `weather_triggers`) + the dict-shell stragglers (`yield_expectations`, `moon_phase_preference`, `fertilizer.notify_message`) + the owed `container_notes.drainage.saucer_practice_beginner`, all dual-register. **`register_fill_gate basil` = PASS** (was 8 nulls); whole_crop_gate null_values 0, populated CP 129. Did NOT touch regions/calendars or `launch_ready`.
+- **The worklist was COMPUTED, not hand-listed** (v1.9 §3) -- `register_fill_gate` gave the exact 8 null fields, the empty compounds added by sweep. basil's 6-8 was light (its 1-3 authored most biology prose in both registers already).
+- **Two register-gate rulings (the 6-8 touchpoint, Trevor):** (a) `region_tip_override_assessment` (a NEW crop-level process attestation: rider assessed -> no override) -> **STRIPPED** (process metadata belongs in STATE_HISTORY, not crop data; consistent with cherry/carrot; structured in-data audit would live in `verification_status`, not a bespoke key). The attestation: care actions (pinch-above-node / base-watering / frost timing / succession) are biologically universal z3-11; warm-region differentiation (FL year-round, HI tropical) is TIMING-ONLY, already in the region cells -> no override. (b) `regions.*.plantings[].year_round_basis` (the hawaii year-round reason, a 5C field) -> **EXCLUDED backend** (`*_basis` evidence, checklist A3; enum-prefixed, never rendered). Gate fix: `register_completeness_gate` now rules bare `*_basis` via the shared `_basis_family` predicate (commit `09b5d51`).
+- **Verification:** release_verify CLEAN (only basil; lettuce byte-identical; **violation-diff: CLEARED the saucer_practice_beginner**, no new); whole_crop_gate / register_fill / register_completeness all PASS; 8 certified anchors untouched.
 
 ## Active work + next step
-- **basil region layer COMPLETE + CALENDARED (10/10 cells: windows + per-arm anchoring + region_notes + derived calendar).** Gate = 1 (the owed `saucer_practice_beginner`).
-- **NEXT = Steps 6-8 (claude.ai):** the bulk dual-register prose pass -- seasoned depth-lift + beginner siblings across every prose surface (sweep ALL null `_seasoned`/`_beginner`, §v1.9.3), INCLUDING the owed `container_notes.drainage.saucer_practice_beginner`. Then dual-voice coverage to 0, then Step 11 cert (register_fill_gate must return 0; verbatim flip gate; the launch_ready x2 + status `verified_gs_arc` flip).
-- **OWED:** `saucer_practice_beginner` (Steps 6-8); `basil_s1_uconn_mint_flag` (mint `uconn_ext` before cert IF the UConn downy mildew URL becomes a primary anchor).
-- **ANNUAL DERIVER -- future extension (not basil):** `annual_calendar.py` is scoped to summer-centered frost-anchored cells (basil's archetype). Winter-wrapping harvest + lettuce-style heat-inverted two-cool-season cells need a cycle-segmentation extension (17 of carrot's warm cells diverge by design). Build that + retro the certified annuals + wire `annual_calendar_violations` into the always-on gate as its own project before the bots scale.
-- **Separate track:** the tree GUIDE PAGE on plant-astro (apple-zone-6 mock; 4 certified trees to template from).
+- **basil is REGISTER-COMPLETE + gate-clean** (whole_crop_gate PASS, both register gates PASS). The only thing between basil and cert is the verbatim flip gate + the flip.
+- **NEXT = Step 11 CERT:**
+  - **Verbatim flip gate** (claude.ai lane / fetch step): fetch basil's cited source URLs + run `verbatim_scan` (two-step) -- basil's authored prose vs the cited bodies; 0 HARD lifts is the flip gate. basil is the FIRST herb (no sibling-herb echo concern, unlike orange-vs-lemon).
+  - **Step 10 anchoring hygiene** confirm (per-arm anchoring done at 4-5; re-confirm no claim-leaf gap).
+  - **The FLIP (Claude Code):** `verification_status` -> status `verified_gs_arc` + phase + `launch_ready_core`/`launch_ready_seasoned` True + last_audited + source_set + verification_log_ref + open_findings (all blocks_launch:false) + top-level `last_reviewed`/`_session`. basil -> anchor 9 (9 of ~18).
+- **OWED into cert:** `basil_s1_uconn_mint_flag` (mint `uconn_ext` IF the UConn downy mildew URL is cited as a primary anchor -- check basil's authored diseases/tips for it before the flip).
+- **ANNUAL DERIVER -- future extension (not basil):** `annual_calendar.py` scoped to summer-centered frost-anchored cells; winter-wrap/heat-inverted needs a cycle-segmentation extension before retro-ing the certified annuals + wiring `annual_calendar_violations` into the always-on gate.
+- **Separate track:** the tree GUIDE PAGE on plant-astro.
 
-## Gate record (generated 2026-06-13, on canonical `48c9580f`)
+## Gate record (generated 2026-06-13, on canonical `83ed20e5`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -57,7 +60,7 @@
 - **lemon: 10/10 region cells filled**
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
 - **orange-navel: 10/10 region cells filled**
-- *(basil: 10/10 region cells filled + per-arm anchoring + 20 DERIVED calendars (5C+5.5). Not a certified anchor, not listed above.)*
+- *(basil: 10/10 cells + per-arm anchoring + 20 derived calendars + register-complete prose. Not yet certified (status `in_progress`, awaiting the Step 11 flip) -- not listed above.)*
 
 ## Flip gates (generated)
 - **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -71,13 +74,14 @@
 - **8 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 <!-- FILL: Live locked decisions / guardrails (editorial -- accretes; carry forward + amend) -->
-- **ANNUAL CALENDAR DERIVATION -- BUILT (`tools/annual_calendar.py`, test-first):** calendars are COMPUTED from resolved per-zone windows, never hand-authored (v1.9). Rules: explicit `plant_out` authoritative (plant > harvest in overlap); else direct-sow envelope MINUS harvest; `cold_pause` anchored at deep winter (January) -- a Jan-active near-year-round cell has no cold pause, an inactive month is a `growing` lull; `year_round` -> 12x growing; declared `heat_pause` honored. Reproduces carrot `northern_tier` z5 exactly. SCOPE = summer-centered frost-anchored (basil); NOT yet wired into the always-on gate (would false-flag the certified annuals' hand-authored calendars). `annual_calendar_violations()` ready for the future full-generality + retro pass.
-- **PER-ZONE RESOLUTION precedes calendars:** a region cell needs per-zone `harvest` (not just `plant_out`) before its calendar can derive. basil's warm cells were under-resolved at 4-5 (Step 5C transcription gap); the certified annuals carry full per-zone harvest. claude.ai resolves the per-zone windows (its lane); Claude Code derives the calendars.
-- **ANCHORING (basil 4-5):** every `plantings[]` window arm anchors to the SPECIFIC verified page (lettuce exemplar = the B577 PDF / VH021), NEVER the publisher homepage; nested `{id:{url,verified:DATE}}`. claude.ai homepage drift reconciled at release.
-- **HERB ARCHETYPE (basil = first herb):** heat-LOVING (inverse of lettuce -- summer is peak, NO heat_pause, `pause_in_heat:false`); frost-limited both ends; `year_round` for frost-free hawaii; bolting herb-central; chilling-injury storage; foliar-wetness disease nexus; DMR notation sweet-basil-specific.
-- **TOOLING (basil-surfaced):** `apply_patch` `add` tolerates empty-equivalent shells; `sources_summary` subtree EXCLUDED from register coverage. `saucer_practice` ruled CP (bare CP key = §v1.9.4 shape bug -> reshape to `_seasoned`/`_beginner`).
-- **EVERGREEN + HEAT model -- COMPLETE + cert-proven (lemon cold-only, orange cold+heat):** `perennial_evergreen` + `gating_factors`; heat `heat_summer_basis {high|adequate|marginal|insufficient}`; THREE no-fruit directions; heat `marginal` -> suitability `marginal`. Ready to replicate to grapefruit.
-- **CERT mechanics:** source-verbatim (vs cited URLs) is the flip gate; sibling-crop echo is a separate voice call -> Trevor. The cert FLIP = `verification_status` block + top-level last_reviewed; open_findings all blocks_launch:false.
-- **ANCHORING convention (pests/diseases):** via the catalog PORTAL id (`uc_ipm`) + the specific URL; Claude Code reconciles claude.ai's granular drift at apply.
+- **PROCESS ATTESTATIONS belong in STATE_HISTORY, not crop data:** a rider/assessment record (e.g. region-tip-override "assessed -> no override") is process metadata -> STATE_HISTORY entry, never a bespoke crop field. Structured in-data audit lives in the `verification_status` subtree. (basil 6-8: `region_tip_override_assessment` stripped.)
+- **`*_basis` evidence prose is BACKEND (checklist A3):** bare `*_basis` keys (e.g. `year_round_basis`) are EXCLUDED -- never rendered, dash-exempt, no register suffix; `register_completeness_gate` rules them via `_basis_family`. Register-suffixed `*_basis_seasoned/_beginner` (evergreen cold/heat basis) are CP, caught by the suffix.
+- **ANNUAL CALENDAR DERIVATION -- BUILT (`tools/annual_calendar.py`):** computed from resolved per-zone windows, never hand-authored. `cold_pause` anchored at deep winter (January); a Jan-active near-year-round cell has no cold pause (inactive month = `growing` lull); `year_round` -> 12x growing. Reproduces carrot `northern_tier` z5 exactly. Scope = summer-centered frost-anchored; not yet always-on (would false-flag certified annuals' hand-authored calendars).
+- **6-8 WORKLIST is a COMPUTED SWEEP (v1.9 §3):** `register_fill_gate` gives the null-register worklist + the empty compounds; the release re-runs it to 0. Never hand-list sections (apple missed 30, peach shipped 46).
+- **ANCHORING (basil 4-5):** every `plantings[]` arm anchors to the SPECIFIC verified page (lettuce exemplar = B577 PDF / VH021), never the homepage; nested `{id:{url,verified:DATE}}`.
+- **HERB ARCHETYPE (basil = first herb):** heat-LOVING (inverse of lettuce; NO heat_pause, `pause_in_heat:false`); frost-limited both ends; `year_round` for hawaii; bolting herb-central; chilling-injury storage; foliar-wetness disease nexus; DMR notation sweet-basil-specific.
+- **TOOLING (basil-surfaced):** `apply_patch` `add` tolerates empty-equivalent shells; `sources_summary` subtree EXCLUDED; `saucer_practice` ruled CP.
+- **EVERGREEN + HEAT model -- COMPLETE + cert-proven (lemon cold-only, orange cold+heat).** Heat `heat_summer_basis {high|adequate|marginal|insufficient}`; heat `marginal` -> suitability `marginal`. Ready to replicate to grapefruit.
+- **CERT mechanics:** source-verbatim (vs cited URLs) is the flip gate; sibling-crop echo is a separate voice call -> Trevor. The FLIP = `verification_status` block + top-level last_reviewed; open_findings all blocks_launch:false.
 - **DERIVATION (`tree_calendar._months`):** parse ONLY before the first "(".
 - TREE per-variety schema = lemon's 11-key set incl. `delta`. claude.ai self-checks are advisory -- the gates are the defense.
