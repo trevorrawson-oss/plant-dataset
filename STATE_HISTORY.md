@@ -6,6 +6,14 @@
 
 ---
 
+## 2026-06-12 -- orange-navel enum decision ratified + session close-out [Trevor decision; docs-only]
+
+**SHA unchanged** (`7b2f8179...`; no crops_data_final.json change -- decision-record + cleanup only).
+- **Heat-notification enum RESOLVED (Trevor):** the `summer_heat_irrigation` notification KEEPS `action:"guard_against_heat_stress"`. The notification-action namespace now INCLUDES the heat-axis action (the certified lemon uses generic `water` for its irrigation notification; orange uses the heat-specific token by Trevor's bless). iOS-app forward-dep: support `guard_against_heat_stress` as a NOTIFICATION action, not only a weather action -- formalized as an orange open_finding at cert, folded into `lemon_app_enum_dependency`. The Step-6 flag is closed.
+- **Cleanup:** the consumed Step-6 handoff archived to `06-sessions/handoffs-bundles/orange-releases/step6/`; plant-project top-level clean (no transient handoff); git in sync; no stray scratch/one-off scripts in the dataset repo.
+- **Orange status carried:** STRUCTURALLY COMPLETE (whole_crop_gate PASS, register_fill 0). NEXT session = cert (9-11): verbatim scan vs full lemon prose + anchoring closure + se_gulf/warm_arid band-edge confirm + THE FLIP -> anchor 8.
+
+
 ## 2026-06-12 -- orange-navel Step 6 -- 6 biology surfaces + 79 register/care fields (whole_crop_gate PASS) [claude.ai authoring -> Claude Code release]
 
 **Start-SHA:** `32b0c6e7...` (orange_steps4_5). **End-SHA:** `7b2f8179d4f585919047ad356b1dfa55f449ac02c65d7c0642dc31bc4a4d36b5` (canonical; LATEST session `orange_step6`). orange crop-SHA `f04ed533...`.
