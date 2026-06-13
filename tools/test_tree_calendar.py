@@ -121,4 +121,26 @@ nyr = {"slug": "lemon", "calendar_basis": "perennial_evergreen", "regions": {
         "bloom": "Year-round", "harvest": "Year-round", "calendar": ["harvest"] * 12}}}}}
 assert any("hawaii" in v and "11" in v for v in tree_calendar_violations(nyr)), tree_calendar_violations(nyr)
 
+# ============ parenthetical asides in the display field (harvest doubles as prose) ============
+# The bloom/harvest field is BOTH the display string AND the derivation source. Authors put
+# descriptive asides in parentheses -- and those can carry stray month names ("early
+# selections can start late October") or the modal verb "may" ("rind may stay green"). The
+# derivation must parse only the PRIMARY range (before the first "("), or it mis-reads the
+# harvest span. (orange-navel Steps 4-5: low_desert_az read Dec->Oct; fl_peninsula read Nov->May.)
+
+# E8. a stray month in a parenthetical aside must NOT extend the harvest span
+assert derive_evergreen_calendar("Mar - Apr", "Dec - Mar (early selections can start late October)") == \
+    [H, H, B, B, G, G, G, G, G, G, G, H], \
+    derive_evergreen_calendar("Mar - Apr", "Dec - Mar (early selections can start late October)")
+
+# E9. the modal verb "may" inside a parenthetical must NOT be read as the month May
+assert derive_evergreen_calendar("Mar - Apr", "Nov - Jan (rind may stay green-tinged when ripe)") == \
+    [H, G, B, B, G, G, G, G, G, G, H, H], \
+    derive_evergreen_calendar("Mar - Apr", "Nov - Jan (rind may stay green-tinged when ripe)")
+
+# E10. the same strip applies to the deciduous derivation + to the bloom field (regression: a
+# clean field with no paren is unchanged -- covered by tests 1-3 / E1-E2 staying green).
+assert derive_tree_calendar("Apr 1 - Apr 20 (peak late April)", "Aug - Sep (may hold to October)") == \
+    derive_tree_calendar("Apr 1 - Apr 20", "Aug - Sep"), "paren-strip must apply to both fields + the deciduous path"
+
 print("PASS tree_calendar")

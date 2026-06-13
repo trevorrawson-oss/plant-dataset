@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-12 -- orange-navel Steps 4-5 -- the evergreen+HEAT region biology (10 cells LIVE) [claude.ai authoring -> Claude Code release]
+
+**Start-SHA:** `dee5de3a...` (orange_step3_5). **End-SHA:** `32b0c6e742393902e55b1fef4192d5a75910bfe189ccfea65d3bcbfa55b120a6` (canonical; LATEST session `orange_steps4_5`). orange crop-SHA `6ac3ae4a...`.
+**orange's 10 evergreen+heat region cells are LIVE.** claude.ai authored the region biology (cold bands + the heat verdicts + dates + dual-register prose, 339 ops); Claude Code applied, filled region metadata, DERIVED every calendar, gated.
+
+### The heat story (authored verdicts, A3-clean)
+desert (`ca_desert`/`low_desert_az`) + `ca_interior` z9 = `high` heat -> `fruits_reliably`; `se_gulf`/`fl_peninsula`/`warm_arid` = `adequate`; **HERO contrast `ca_south_coast` = heat `marginal` -> `marginal`** (the same frost-safe coast that grows flawless lemons leaves a navel only middling); `ca_north_coast` = `insufficient` -> `marginal`; `hawaii_tropical` = `marginal` (no cool nights, stays green-tinged, CTAHR); northern_tier z3-7 = `unsuitable` (frost). The kickoff over-framed the south coast as `survives_no_fruit`; **corrected to `marginal` per source** (UC IPM = inland-best/coast-suboptimal, NOT failure; Santa Clara MG = coastal navel a normal crop; Hawaii's "fails to sweeten" is a distinct stronger claim, NOT borrowed for the CA coast) -- Trevor ratified in-session. Sources all resolve in the 94-catalog (`uc_ipm`/`uhawaii_ctahr`/`az_coop_ext`/`uf_ifas_hs132`/`ucanr_santa_clara_mg`); the catalog "mismatch" was claude.ai misreading the stale `orange_sources_summary.primary` scaffold -- no admission owed.
+
+### Claude Code release work
+- **Applied** the 339-op patch (only orange changed; all 10 regions; 0 escaped-unicode).
+- **Filled** `region_id`/`region_label`/`zone_span` on all 10 regions from the canonical (lemon) set (FLAG B; one-off transform).
+- **Derived** 15 cell `calendar[]`s via `derive_evergreen_calendar` (5 unsuitable left empty). **Caught + fixed a derivation bug TEST-FIRST:** the harvest field doubles as display + derivation source, and claude.ai's parenthetical asides carried stray months ("...can start late October" -> low_desert_az read Dec->Oct) + the modal verb "may" ("rind may stay green" -> fl_peninsula read Nov->May). A4 would NOT have caught it (it parses identically). Fix in `tree_calendar._months`: parse only the primary range before the first "(" (tests E8/E9/E10; RED watched fail; **0 certified cells affected** -- lemon/peach/apple byte-identical).
+
+### Release verification (protocol #6)
+- **A3 (heat floor + no-fruit) = 0** (no `insufficient` cell is `fruits_reliably`; every filled non-unsuitable cell carries a valid `heat_summer_basis`); **A4 (calendar coherence) = 0** (all 15 derived calendars coherent).
+- whole_crop_gate 23 -> 13 (the 10 region_notes-null CLEARED; 13 residual = the top-level `_beginner` deferrals owed to 6-8, blocks_launch:false). release_verify exit 0 -- 10 CONCERN = intentional evergreen+heat key-diffs vs the lettuce annual reference; **vs the lemon evergreen exemplar orange differs by ONLY the 3 heat keys** (`heat_summer_basis`/`heat_basis_seasoned`/`heat_basis_beginner`), confirming orange = lemon + heat. dash/temp scans clean. crop-SHA via the collateral leaf-diff (claude.ai's slice-only SHA diverges by design -- CC fills metadata + derives calendars).
+- **Owed at cert (non-blocking):** confirm the `se_gulf`/`warm_arid` winter-low band EDGES against the cited sources (claude.ai reasoned them from documented damage thresholds, not a zone table; the qualitative claims are sourced); the verbatim prose-lift scan across the new region prose runs at Step 11.
+
+NEXT = **orange 6A/6B** (claude.ai authoring): biology surfaces + register/care fields; then 9-11 cert.
+
+
 ## 2026-06-12 -- orange-navel Step 3.5 -- the HEAT-accumulation gate + evergreen region shells (test-first) [Claude Code structural-build lane]
 
 **Start-SHA:** `43f2f44f...` (orange Steps 1-3). **End-SHA:** `dee5de3aa2c00157dff23aa249957af2eb4f95d6e4497b62aa971469e5cf32e1` (canonical; LATEST session `orange_step3_5`).

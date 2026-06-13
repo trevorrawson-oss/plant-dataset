@@ -28,6 +28,12 @@ _MON = {m: i for i, m in enumerate(
 def _months(s):
     if not isinstance(s, str):
         return []
+    # Parse ONLY the primary range, before any parenthetical aside. The bloom/harvest field
+    # doubles as the display string + the derivation source, so authors put descriptive prose
+    # in parentheses -- and that prose can carry a stray month ("...can start late October") or
+    # the modal verb "may" ("rind may stay green"), either of which would corrupt the parsed
+    # span. The headline range before "(" is the authoritative one.
+    s = s.split("(", 1)[0]
     return [_MON[m] for m in re.findall(
         r"jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec", s.lower())]
 
