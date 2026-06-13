@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-06-13 -- basil Steps 4-5 (region layer COMPLETE: 10 cells + per-arm anchoring + 2 source admissions) [claude.ai authoring + Claude Code release]
+
+**Start-SHA:** `8318cc03...` (basil_steps_1_3_3_5). **End-SHA:** `954565ee4bb743c25835629dcac2f0b16b9bf042fb4a819943afdf9ef9c3d3bb` (canonical; LATEST session `basil_steps_4_5`).
+**basil region layer is now COMPLETE** -- all 10 frost-anchored cells carry warm-season windows + per-zone dates + dual-register region_notes + per-arm anchoring. The heat-loving annual model held end-to-end (A6 cleared, zero `heat_pause`). Released in TWO passes (pass-1 held, amended pass shipped).
+
+### Two-pass release (why)
+- **Pass-1** (`basil_steps_4_5_patch.json`, 119 ops, 8 cells) was authored + verified but **HELD by Claude Code**: (a) the `plantings[]` window arms lacked specific `anchoring_urls` -- some pointed at publisher homepages (`https://ucanr.edu`, `https://ifas.ufl.edu/...`) rather than the specific verified page the certified exemplar (lettuce-leaf) uses (the B577 PDF / VH021 publication); (b) 2 cells (`low_desert_az`, `hawaii_tropical`) were left as shells pending source-admission decisions. Trevor approved holding for one clean follow-up over shipping a fidelity-downgraded or half-anchored layer.
+- **Amended pass** (`basil_steps_4_5_amended_patch_RELEASE.json`, 131 ops, all 10 cells) fixed both and is what shipped.
+
+### What changed (amended pass) -- `8318cc03` -> `954565ee`
+- 131 ops, ONLY basil (lettuce byte-identical; 0 catalog/top-level delta). All 10 region cells filled.
+- **Per-arm anchoring (82 arms):** every `plantings[]` window arm with `sources` now carries `anchoring_urls` `{id:{url,verified}}` pointing to the SPECIFIC verified page (claude.ai corrected 4 homepage URLs: `ucanr_ext` -> the basil fact-sheet PDF, `uf_ifas_nwdistrict` -> EP451, `uf_ifas` -> VH021, `umaine_ext` -> the herb-gardening page).
+- **2 deferred cells authored:** `low_desert_az` (z9, `uariz_ext` az2061 -- warm-season annual Apr-Nov in the Sonoran Desert, single arm; shade cloth = care, NOT a pause) + `hawaii_tropical` (z11, `uhawaii_ctahr` -- `year_round` below 700 ft, continuous, the prime pauseless cell).
+- **Source admissions (Claude Code lane):** `uariz_ext` + `uhawaii_ctahr` appended to `basil.sources_summary.primary[]` (21 -> 23; Trevor-approved 2026-06-13; both already T1-cataloged, `tier=high`). The 2 pass-1 source-gap findings RESOLVED.
+- **Residue swept:** 5 cells' vestigial empty `sources_pending_admission` arrays removed (Step-3.5 annual-path residue; the tree path already sweeps these -- annual `build_region_shells` gap noted, benign).
+- **Calendars NOT derived** -- no annual calendar-derivation tool exists (only `tree_calendar.py`); deferred to a focused Step 5.5.
+
+### Release verification (protocol #6)
+- release_verify CLEAN: only basil; lettuce byte-identical; dash/temp 0; exemplar key-diff clean (residue swept); value-divergence ok. **violation-diff: NO new violations; CLEARED all 10 region_notes-null.**
+- Claim cross-check vs bytes: 0 homepage URLs (`ucanr.edu`/`ifas.ufl.edu` roots absent); 0 `heat_pause` token; 0 `--`/em-dash; `year_round` on hawaii; **all 82 cited arms carry anchoring_urls**; 19 distinct sources used, 0 uncatalogued, 0 non-T1.
+- whole_crop_gate = **1 violation** (the carried `saucer_practice_beginner` null sibling -- Steps 6-8). Pre-commit hook PASSES (no new violations vs base). 8 certified anchors untouched.
+
+### Next step
+**Step 5.5 -- build the annual calendar deriver (test-first) + derive basil's 10 cells' `calendar[]`.** The annual analog of `tree_calendar`: zone `plant_out`/`harvest` windows + declared pauses -> 12-month token array (precedence pause > plant > harvest > growing > wait; `year_round:true` -> continuous). Reusable for every annual + the bot pipeline. Then Steps 6-8 (bulk prose + the owed `saucer_practice_beginner`), then Step 11 cert.
+
+---
+
 ## 2026-06-13 -- basil Steps 1-3 + 3.5 (anchor 9, the FIRST herb; first return to the annual cadence after 4 trees) [claude.ai authoring 1-3 + Claude Code 3.5 / release]
 
 **Start-SHA:** `a0cc0178...` (orange_cert). **End-SHA:** `8318cc03b22bf331b999bd73680886aaeb195ea4aea27eaae6265c92572a358f` (canonical; LATEST session `basil_steps_1_3_3_5`). Intermediate `61cd1e92` (post Steps 1-3, pre Step 3.5). Enabling tooling commit `ac2b096`.
