@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-06-13 -- basil Steps 1-3 + 3.5 (anchor 9, the FIRST herb; first return to the annual cadence after 4 trees) [claude.ai authoring 1-3 + Claude Code 3.5 / release]
+
+**Start-SHA:** `a0cc0178...` (orange_cert). **End-SHA:** `8318cc03b22bf331b999bd73680886aaeb195ea4aea27eaae6265c92572a358f` (canonical; LATEST session `basil_steps_1_3_3_5`). Intermediate `61cd1e92` (post Steps 1-3, pre Step 3.5). Enabling tooling commit `ac2b096`.
+**basil = anchor 9, archetype `culinary_herb`, calendar_basis `frost_anchored`, lifecycle `annual`.** Author-fresh on a wiped shell. Released as ONE combined session (Steps 1-3 apply + Step 3.5 region shells) -- the carrot annual-author-fresh cadence.
+
+### Steps 1-3 (claude.ai authored; Claude Code applied) -- `a0cc0178` -> `61cd1e92`
+- 30 edits, ONLY basil changed (lettuce byte-identical; 0 catalog/top-level delta; out-SHA matched the validate projection).
+- **Source set:** 21 T1 catalog IDs (incl. `umass_ext` = the basil downy mildew authority). `source_set` populated; status `in_progress_steps_1_3`.
+- **Scalars + 2.9 UNIVERSAL:** days_to_maturity [60,90]/mid 75, germination_temp_f [70,85], spacing_inches [6,12], weeks_indoors 6, start_method "both"; succession_policy (suitable, interval 3wk, 3/max 4, continuous, no heat-pause); soil (loam/sandy_loam); ph [6.0,7.5]; watering (full 2.9 -- 4-stage schedule_by_stage, drought low, method_note + critical_periods both registers); fertilizer (amount both); container_notes (self_watering ok). Biology prose both registers: description, harvest_ready, bolting (risk high / long_days+heat / photoperiodic), rotation (Lamiaceae 2yr), storage (chilling injury below 50°F -- no refrigeration). pests 3 (aphids/Japanese beetle/slugs); diseases 2 -- downy mildew (*Peronospora belbahrii*, oomycete, first US 2007, Rutgers DMR Devotion/Obsession/Prospera) + Fusarium wilt. varieties 6 (annual list-of-strings). companions three-array (basil+tomato = the thrips field-study pairing).
+- **Claim cross-check (byte-verified vs scratch):** germination [70,85], spacing [6,12], weeks_indoors 6, ph [6.0,7.5], watering.amount_seasoned "1-1.5", downy cause_seasoned has "Peronospora belbahrii"+"2007", varieties has Devotion/Obsession/Prospera. ALL PASS.
+
+### Register HALTs ruled (Trevor -- the first-herb touchpoint)
+- **`container_notes.drainage.saucer_practice`:** already ruled CP (inventory §2.1) but authored as a BARE prose single (the §v1.9.4 bare-key shape bug). **Trevor: honor the existing CP ruling** -> Claude Code reshaped to `saucer_practice_seasoned` (the authored string) + `saucer_practice_beginner: null`. The beginner sibling is OWED at the Steps 6-8 dual-voice pass (basil otherwise filled every `_beginner` at 1-3; this lone null is its only gap).
+- **`sources_summary._note`:** new backend provenance note. **Trevor: "what we normally do"** = EXCLUDE backend (we keep backend notes, we don't strip them). Claude Code added the `sources_summary` subtree to `register_completeness_gate.EXCLUDED_PATH_SUBSTR` + recorded in inventory §4. `register_completeness_gate` -> PASS.
+
+### Step 3.5 region shells (Claude Code structural) -- `61cd1e92` -> `8318cc03`
+- `apply_region_shells.py basil` (annual path; `_is_tree` False): 10 region cells, `calendar_basis` stays `frost_anchored` (NOT perennial), transplant shape (start_indoors + plant_out + harvest_start/_end, track `beginner`, succession_id), resolved_by_zone per cold/warm band, region_notes null + empty anchoring (admission-acceptable). `northern_tier` built FROM-SCRATCH (author-fresh: no verified `zones{}` to promote -- the v1.7 C1 retro-only path). Zero tree-key contamination. Collateral: ONLY basil changed.
+
+### Enabling tooling fix -- commit `ac2b096`
+- `apply_patch` `add` op refused author-fresh empty list/dict/str shells (`[]`/`{}`/`""`) although the wipe types empties inconsistently and the `replace` path already tolerates them via `_is_empty`. Loosened `add` to the same `_is_empty` rule (a POPULATED value still refuses; `base_sha` is the real drift gate). Test 7b added; **history-replay reproduces 3 prior committed patch SHAs exactly** -- no behavior change to any shipped patch. The systemic fix for every author-fresh crop + the bot pipeline (else hand-reconciled per crop).
+
+### Release verification (protocol #6)
+- **Steps 1-3:** release_verify CLEAN (only basil; lettuce byte-identical; dash/temp 0; exemplar checks ok). whole_crop_gate = 10 region-stub violations (expected pre-3.5) + 1 saucer-beginner-null (the reshape's owed sibling).
+- **Step 3.5:** release_verify violation-diff = the 10 region-stub violations CLEARED, replaced by 10 `region_notes pair both null` (the expected admission transition: stub -> shaped-shell-pending-notes).
+- **basil admission end-state = 11 violations, ALL expected pending-fill markers:** 10 region_notes-pair-null (Steps 4-8) + 1 `saucer_practice_beginner`-null (Steps 6-8). None structural.
+
+### Next step
+claude.ai **Steps 4-5:** warm-region sourcing + per-region biology both registers across the 10 cells. Verify window structure PER SOURCE (A5). basil is frost-limited on BOTH ends (no midsummer heat-pause up north), succession-capable. Herb-archetype firsts recorded for the bot briefing (bolting-central, chilling-injury storage, foliar-wetness disease nexus, sweet-basil-specific DMR notation, container-as-frost-mitigation).
+
+---
+
 ## 2026-06-12 -- orange-navel CERTIFIED (anchor 8, the SECOND evergreen / the HEAT-gate crop; the two-axis evergreen model COMPLETE) [Claude Code cert lane]
 
 **Start-SHA:** `7b2f8179...` (orange_step6, structurally complete). **End-SHA:** `a0cc0178d95e4f6a31b7e4a4b425653ccc793e033cdcfc376878d473e2c4dbfa` (canonical; LATEST session `orange_cert`). orange crop-SHA `1d8f026d...`.
