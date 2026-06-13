@@ -68,7 +68,11 @@ EXCLUDED_KEYS = {
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
 # MACHINERY). A field anywhere under these is ruled-excluded.
-EXCLUDED_PATH_SUBSTR = ("plantings_provenance", "verification_status", "anchoring_urls")
+# `sources_summary` is named backend machinery in the arc checklist (§2; dash-exempt,
+# no siblings, never rendered); its whole subtree (`primary`, `frost_data`, `_note`, ...)
+# is EXCLUDED. Ruled by Trevor at the basil herb anchor, 2026-06-12.
+EXCLUDED_PATH_SUBSTR = ("plantings_provenance", "verification_status", "anchoring_urls",
+                        "sources_summary")
 
 def excluded_by_path(pat):
     return any(s in pat for s in EXCLUDED_PATH_SUBSTR)

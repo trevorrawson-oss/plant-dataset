@@ -23,9 +23,10 @@ value|new|new_value ; json_path|path .
 OPS (each is from-guarded for safety -- the guard, not the label, is authoritative,
 so the common add-vs-replace mislabel cannot corrupt data):
   replace -- assert current == `from`, then set `value`.
-  add     -- target must be ABSENT or present-as-null; then set `value`. (Tolerates
-             the frequent "add" label on a present-null key; refuses to clobber a
-             present NON-null value.)
+  add     -- target must be ABSENT or empty-equivalent (null / [] / {} / ""); then set
+             `value`. (Tolerates the frequent "add" label on an unpopulated wipe slot,
+             however the wipe typed its emptiness; refuses to clobber a present,
+             NON-empty value.)
   delete  -- assert current == `from`, then remove the key/element.
 
 JSONPATH GRAMMAR (bracket-aware; the filter's inner `.` does not split tokens):
@@ -272,7 +273,11 @@ def apply_patch(data, patch, slug=None):
                 print(f"  note: edit {i} 'before' is advisory (not byte-equal to current); relying on base_sha gate -- {path}")
             leaf_set(parent, leaf, val)
         elif op == "add":
-            if cur is not _MISSING and cur is not None:
+            # The wipe types unpopulated slots as null / [] / {} / "" inconsistently, and
+            # claude.ai emits `add` for them. Tolerate an empty-equivalent cur (mirrors the
+            # replace path's _is_empty drift-absorption); a POPULATED cur still halts so a
+            # real clobber is caught. (An absent slot / append-at-len index is _MISSING.)
+            if cur is not _MISSING and not _is_empty(cur):
                 sys.exit(f"edit {i} ADD onto present non-null value (refusing to clobber): {path}\n  have: {json.dumps(cur, ensure_ascii=False)[:160]}")
             leaf_set(parent, leaf, val)
         elif op == "delete":

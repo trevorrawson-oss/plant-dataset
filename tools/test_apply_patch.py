@@ -163,6 +163,21 @@ try:
 except SystemExit:
     pass
 
+# 7b. add onto an EMPTY-EQUIVALENT cur ([] / {} / "") PROCEEDS. The wipe types unpopulated
+# list/dict/string scalars as [] / {} / "" (not null), and claude.ai emits op:add for them
+# (basil Steps 1-3: days_to_maturity:[], sunlight_hours:[], spacing_inches:[], pests:[],
+# diseases:[]). This mirrors the replace path's _is_empty tolerance (test 1e); the
+# present-non-null safety guard (test 7) is unchanged.
+_ae = {"crops": [{"slug": "x", "dtm": [], "soil": {}, "note": "", "n": None}]}
+ap.apply_patch(_ae, {"base_sha": "z", "patches": [
+    {"op": "add", "json_path": "$.crops[?(@.slug=='x')].dtm", "value": [60, 90]},
+    {"op": "add", "json_path": "$.crops[?(@.slug=='x')].soil", "value": {"texture": "loam"}},
+    {"op": "add", "json_path": "$.crops[?(@.slug=='x')].note", "value": "Genovese"},
+    {"op": "add", "json_path": "$.crops[?(@.slug=='x')].n", "value": 5}]})
+_x = _ae["crops"][0]
+assert _x["dtm"] == [60, 90] and _x["soil"] == {"texture": "loam"} \
+    and _x["note"] == "Genovese" and _x["n"] == 5, ("add onto empty-equiv", _x)
+
 print("  unit: envelope/op/field/path/sha all PASS")
 
 # ============ HISTORY: real archived patches reconstructed from git ============
