@@ -11,7 +11,7 @@
 ---
 
 
-**8 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, **orange-navel**) of a ~18 target. **ORANGE-NAVEL CERTIFIED 2026-06-12 -- anchor 8, the SECOND evergreen, the HEAT-gate crop; the heat-accumulation model proven end-to-end.** **NEXT = anchor 9 (roadmap call): grapefruit (rides orange's heat rails -- fast) OR pivot to annual demand (basil/zinnia per go-live).**
+**8 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, **orange-navel**) of a ~18 target. **ORANGE-NAVEL CERTIFIED 2026-06-12 -- anchor 8, the SECOND evergreen, the HEAT-gate crop; the heat-accumulation model proven end-to-end.** **NEXT = anchor 9, a ROADMAP CALL (Trevor): demand-first `basil` (Herbs) + `zinnia` (Flowers) per go-live (annual template, no new UI); then the indoor + family hubs + `blueberry`/`strawberry`. grapefruit/lime/mandarin/avocado/olive are bot-derivable deltas or parked -- NOT roster anchors (orange is the heat EXEMPLAR they derive from).**
 
 ## Canonical pointer
 - **Current SHA:** `a0cc0178d95e4f6a31b7e4a4b425653ccc793e033cdcfc376878d473e2c4dbfa`. `LATEST.txt` session: `orange_cert` (2026-06-12).
@@ -32,7 +32,7 @@
 
 ## Active work + next step
 - **THE TWO-AXIS EVERGREEN MODEL IS COMPLETE:** both evergreen anchors certified -- lemon (cold-only) + orange (cold + HEAT). The heat-accumulation gate (`heat_summer_basis` + the cool-summer no-fruit branch in perennial_gate) is built, cert-proven, and ready to replicate. orange = the heat exemplar for **grapefruit** + the rest of the citrus/heat-gated pipeline.
-- **NEXT = anchor 9 -- a ROADMAP CALL (Trevor):** (a) **grapefruit** -- the other `["cold_hardiness","heat_accumulation"]` evergreen; rides orange's rails as a near-pure compression repeat (fastest path, validates the heat model replicates); OR (b) **pivot to annual demand** -- basil / zinnia (herbs/flowers, the go-live demand signal per `go_live_start_fresh_no_url_preservation`). Roster: 8 certified; ~10 remaining (avocado-maybe, blueberry, strawberry + the annual/indoor hubs).
+- **NEXT = anchor 9 -- a ROADMAP CALL (Trevor).** ~10 anchors remain, all from the locked GS-18 roster: **9 annual/indoor hubs** (basil, zinnia, microgreens-mix, broccoli, bell-pepper, zucchini-courgette, onion, green-beans-bush, oyster-mushroom[maybe-cut]) + **2 perennials** (blueberry, strawberry). Recommended order (demand + archetype-coverage): (1) **basil** + (2) **zinnia** -- the ONLY crops with search demand (herbs/flowers, go-live) and they render on the existing annual template; (3) **microgreens-mix** -- the never-exercised `non_seasonal_indoor` archetype, needed in the set BEFORE the bots derive (else frost-blind); (4-8) the family hubs for bot per-family coverage; (9) **blueberry** (chill-gated, rides peach/apple rails -- fast); (10) **strawberry** (new renovation archetype -- depth, do last). grapefruit/avocado/lime/mandarin/olive = bot-derived deltas or parked, NOT anchors.
 - **Separate track:** the tree GUIDE PAGE on plant-astro (apple-zone-6 mock; net-new UI; now have 4 certified trees to template from).
 
 ## OWED (orange open_findings + carried)
