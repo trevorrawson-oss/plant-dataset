@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-06-13 -- basil Steps 5C + 5.5 (per-zone harvest resolution + DERIVED calendars; the annual calendar deriver) [claude.ai 5C + Claude Code 5.5]
+
+**Start-SHA:** `954565ee...` (basil_steps_4_5). **End-SHA:** `48c9580fcfb80c1193bffc6a8a551dbedbcbd7b4980f014b7bc417212d273baf` (canonical; LATEST session `basil_5c_5_5`). Tooling commits: `dfbd27c` (deriver), `15076e7` (fl-z11 fix).
+**basil's region layer is now fully resolved per zone AND calendared.** Two pieces: Step 5C (claude.ai transcribes the warm cells' harvest) + Step 5.5 (Claude Code builds the deriver + computes all calendars).
+
+### The prerequisite discovery (why 5C exists)
+On opening Step 5.5 (calendars), Claude Code found the calendar deriver had an unmet prerequisite: basil's **15 warm cells carried only `plant_out`** -- no per-zone `harvest` (it lived as relative rules in the region `plantings[]` arms; e.g. `harvest_end = first_frost - 3d`). Only `northern_tier` (z3-7) was fully resolved. The certified annuals (lettuce/carrot) carry full per-zone harvest in every cell -- so basil's warm cells were under-resolved at 4-5. Both the per-zone resolution AND the calendars were HAND-AUTHORED on the certified annuals (no tool; the `*_month_resolution` methods are claude.ai's). LANE SPLIT (Trevor-approved): claude.ai resolves the per-zone harvest (its authoring lane), Claude Code derives the calendars. Labeled **5C** (resolution) + **5.5** (calendars).
+
+### Step 5C (claude.ai transcription) -- the 15 warm cells
+- 101 ops, base `954565ee`. Transcribed `harvest`/`harvest_start`/`harvest_end` + `start_indoors` + `first/last_plant_date` + `planting_note` into the 15 warm cells from the Steps 4-5 findings (NO new sourcing, NO re-derivation). Multi-arm cells (se_gulf, warm_arid, fl_peninsula) list both spans; `hawaii_tropical` = `year_round:true`. `plant_out`/`plantings`/anchoring/region_notes/sources_summary untouched.
+
+### Step 5.5 (Claude Code) -- the annual calendar deriver, BUILT test-first
+- **`tools/annual_calendar.py`** (commit `dfbd27c`) -- the annual analog of `tree_calendar`. Derives a frost-anchored crop's 12-month `calendar[]` from resolved windows; calendars are COMPUTED, never hand-authored (v1.9). Algorithm: explicit `plant_out` authoritative (plant > harvest in overlap); else direct-sow envelope MINUS harvest; `growing` fills in-season lulls; `year_round` -> 12x growing; declared `heat_pause` honored. **Reproduces carrot `northern_tier` z5 EXACTLY** from its windows (the regression anchor).
+- **Deriver fix (`15076e7`):** the first cut used a contiguous-season model and marked South FL `fl_peninsula z11`'s Jul/Aug **summer lull** as `cold_pause` (its harvest wraps Oct->Jan, so January is active -> there is no winter off-season). Fixed by anchoring `cold_pause` at deep winter (January): a January-active near-year-round cell has no cold pause; an inactive month is a `growing` lull. Re-verified: carrot NT z5 still exact.
+- **Derived all 20 basil cells' calendars** and wrote them in. `annual_calendar_violations(basil)` = 0 (stored == re-derived). Validated against the full carrot crop: the in-scope cold-cycle cells reproduce; the 17 that diverge are exactly the winter-wrapping/heat-inverted warm cells (documented out-of-scope -- NOT wired into the always-on gate, which would false-flag the certified annuals' hand-authored calendars).
+
+### Release verification (protocol #6)
+- release_verify CLEAN: only basil; lettuce byte-identical; **C = all filled calendars coherent (no waits; heat_pause aligned)**; dash/temp 0; exemplar/value-divergence ok. violation-diff: NO new violations.
+- whole_crop_gate = **1 violation** (the carried `saucer_practice_beginner` null sibling, owed Steps 6-8). Pre-commit hook PASSES. 8 certified anchors untouched.
+
+### Next step
+**Steps 6-8 (claude.ai)** -- the bulk dual-register prose pass: seasoned depth + beginner siblings across every prose surface (computed sweep of all null `_seasoned`/`_beginner`, §v1.9.3), INCLUDING the owed `saucer_practice_beginner`. Then dual-voice coverage to 0, then Step 11 cert (register_fill_gate -> 0; verbatim flip gate; launch_ready x2 + status `verified_gs_arc`). FUTURE (not basil): extend the deriver to winter-wrap/heat-inverted cells + retro the certified annuals + wire `annual_calendar_violations` into the always-on gate.
+
+---
+
 ## 2026-06-13 -- basil Steps 4-5 (region layer COMPLETE: 10 cells + per-arm anchoring + 2 source admissions) [claude.ai authoring + Claude Code release]
 
 **Start-SHA:** `8318cc03...` (basil_steps_1_3_3_5). **End-SHA:** `954565ee4bb743c25835629dcac2f0b16b9bf042fb4a819943afdf9ef9c3d3bb` (canonical; LATEST session `basil_steps_4_5`).
