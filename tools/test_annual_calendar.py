@@ -67,6 +67,22 @@ got = ac.derive_annual_calendar(basil_seg9, calendar_basis="frost_anchored")
 assert got == EXPECT_BASIL_SEG9, ("basil se_gulf z9", got)
 print("  basil se_gulf z9 (double arm, plant>harvest overlap): PASS")
 
+# ---------- near-year-round cell with a SUMMER lull (fl_peninsula z11): no cold_pause ----------
+# harvest wraps Oct->Jan, so January is ACTIVE -> there is NO winter off-season. The Jul/Aug
+# inactive gap is a SUMMER lull -> "growing", never "cold_pause" (a season-span model wrongly
+# marks it cold_pause). cold_pause is anchored at deep winter (January), not a contiguous span.
+fl_z11 = {
+    "start_indoors": "Dec 15 - Feb 15", "plant_out": "Feb 1 - Apr 30; Sep 1 - Nov 15",
+    "harvest": "Mar - Jun, Oct - Jan", "harvest_start": "Mar 15", "harvest_end": "Jan 15",
+    "first_plant_date": "Feb 1", "last_plant_date": "Nov 15",
+}
+EXPECT_FL_Z11 = ["harvest", "plant", "plant", "plant", "harvest", "harvest",
+                 "growing", "growing", "plant", "plant", "plant", "harvest"]
+got = ac.derive_annual_calendar(fl_z11, calendar_basis="frost_anchored")
+assert "cold_pause" not in got, ("no cold_pause in a January-active near-year-round cell", got)
+assert got == EXPECT_FL_Z11, ("fl_peninsula z11 near-year-round", got)
+print("  fl_peninsula z11 (near-year-round, summer lull -> growing): PASS")
+
 # ---------- year_round cell (hawaii) -> continuous, no pause ----------
 hawaii = {"plant_out": "Year round", "year_round": True,
           "harvest": "Year round", "harvest_start": None, "harvest_end": None}

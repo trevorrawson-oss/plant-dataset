@@ -92,10 +92,19 @@ def derive_annual_calendar(cell, calendar_basis="frost_anchored"):
         fp, lp = _month_num(cell.get("first_plant_date")), _month_num(cell.get("last_plant_date"))
         P = (set(_span(fp, lp)) - H) if (fp and lp) else set()
 
-    starts = [m for m in (min(I) if I else None, min(P) if P else None,
-                          _month_num(cell.get("first_plant_date"))) if m]
-    h_end = _month_num(cell.get("harvest_end")) or (max(H) if H else None)
-    season = set(_span(min(starts), h_end)) if (starts and h_end) else (P | H | I)
+    active = P | H | I | heat                # token-bearing (active) months
+    # cold_pause = the winter off-season, anchored at deep winter (January) and grown
+    # contiguously while inactive. A January-active cell is near-year-round -> NO cold_pause,
+    # so an inactive SUMMER lull (e.g. South FL Jul/Aug) renders "growing", not a cold pause.
+    cold = set()
+    if calendar_basis == "frost_anchored" and 1 not in active:
+        cold.add(1)
+        m = 12                               # walk backward from January
+        while m not in active and m not in cold:
+            cold.add(m); m = 12 if m == 1 else m - 1
+        m = 2                                # walk forward from January
+        while m not in active and m not in cold:
+            cold.add(m); m = 1 if m == 12 else m + 1
 
     cal = []
     for m in range(1, 13):
@@ -107,10 +116,10 @@ def derive_annual_calendar(cell, calendar_basis="frost_anchored"):
             cal.append("harvest")
         elif m in I:
             cal.append("indoors")
-        elif m in season:
-            cal.append("growing")
-        elif calendar_basis == "frost_anchored":
+        elif m in cold:
             cal.append("cold_pause")
+        elif calendar_basis == "frost_anchored":
+            cal.append("growing")            # in-season lull (between cycles / summer)
         else:
             cal.append("wait")
     return cal
