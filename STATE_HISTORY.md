@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-14 -- basil Step 11 verbatim flip gate (clean except 1 reword; FLIP HELD on the AZ source-fidelity finding) [claude.ai verify + Claude Code release]
+
+**Start-SHA:** `83ed20e5...` (basil_steps_6_8). **End-SHA:** `de9f54bfecc6a0e653c5d9ba5d1d4b40304c302f7d85f0752229511514fc7f34` (canonical; LATEST session `basil_step11_verbatim`).
+**The Step-11 verbatim flip gate ran clean on the wording front, but the FLIP IS HELD** on one HIGH-severity content-accuracy finding the gate caught (the `low_desert_az` window is unsupported by its source). basil is NOT yet certified.
+
+### Verbatim verification (claude.ai verify lane)
+- 312 user-facing strings scanned vs basil's cited sources. **16 of 23 URLs fetched** (UConn confirmed moot -- backend-only; 4 broken cites). **1 HARD lift:** `regions.hawaii_tropical.region_notes_seasoned` reproduced the CTAHR sentence for 17 words -> **REWORDED** to own-voice ("University of Hawaii CTAHR identifies low-elevation Hawaii, below 700 feet, as suitable for continuous basil cultivation..."), facts exact, 0 residual >=6w. **8 borderline 6-7w hits, all benign** (standard horticultural instructions: "just above a pair of leaves", "freeze in ice cube trays"; a properly-attributed UMN research finding).
+- **Broken citations (verify-before-swap):** UMN Japanese-beetle RE-PINNED (cited URL 404'd; live page fetched + basil confirmed a host + pests[1] scanned clean). PSU fusarium-wilt + PSU herbs-in-garden = NOT-COVERED (host-blocks the fetcher). UMaine herb-gardening = NOT-COVERED (404, no legit replacement; NT co-anchors to UMN, not sole-sourced to the dead link). Hawaii CTAHR = re-pin OWED (cited URL is the directory root; real page `/new/fjgi/Garden/pop-basil.htm` quote confirmed via search but robots-blocked to the fetcher).
+
+### What was applied -- `83ed20e5` -> `de9f54bf`
+- The verbatim patch: the hawaii reword + the UMN-JB anchoring-URL re-pin. 2 ops, only basil; whole_crop_gate / register_fill / register_completeness all PASS; release_verify clean; dash 0. **No flip** (held).
+
+### THE BLOCKER (HELD the flip -- Trevor: send back to fix)
+- **`regions.low_desert_az` season unsupported by its sole source.** Fetching `uariz_ext` az2061 ("Growing Herbs In Tucson") LIVE at cert, claude.ai found it states the Sonoran Desert warm season as **May through mid-September** -- but basil's `low_desert_az` cells claim **"April through November"** in both registers with explicit attribution, sole-anchored to az2061. **The Steps 4-5 authoring mis-stated the source** (its findings claimed az2061 says "April to November"; the live page does not). Every prior gate (structural/register/calendar) passed this; only the cert verbatim fetch caught it. **A citation-integrity failure -> must fix before cert.**
+- **LEARNING (locked):** the cert verbatim gate verifies source CLAIMS against the LIVE source, not just lifts; "the findings said the source says X" is not proof. Re-source, never quick-edit dates to match.
+
+### Next step
+Trevor approved sending it back. **AZ re-source kickoff (claude.ai):** find the UA/T1 source that actually supports the real low-desert basil window + reconcile window/attribution (lean: April-Nov likely biologically right for irrigated Phoenix-z9 basil but cited to the wrong bulletin -> the UA low-desert PLANTING calendar; if none supports beyond az2061's May-mid-Sept, narrow to match) + the hawaii CTAHR URL re-pin. Then **Claude Code: apply -> re-run verbatim_scan + gates -> THE FLIP** (`verification_status` verified_gs_arc + launch_ready x2 + open_findings [AZ resolved; 3 NOT-COVERED + benign residuals + uconn-moot all blocks_launch:false] + top-level last_reviewed). basil -> anchor 9, the first certified herb.
+
+---
+
 ## 2026-06-13 -- basil Steps 6-8 (bulk prose; basil is REGISTER-COMPLETE + gate-clean) [claude.ai authoring + Claude Code release]
 
 **Start-SHA:** `48c9580f...` (basil_5c_5_5). **End-SHA:** `83ed20e5e0f4f99a517bf86aa36d4b5f1c8671bf89d5c3045a4c22ef5b55fc56` (canonical; LATEST session `basil_steps_6_8`). Tooling commit `09b5d51` (gate `*_basis` fix).
