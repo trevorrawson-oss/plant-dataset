@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-06-14 -- zinnia Steps 1-3 (anchor 10, the FIRST flower) -- RELEASED [Claude Code]
+
+**Start-SHA:** `94d647f84ccfbf608d1eb5ac779fb8c11547bcd877f0b31b9058fc0956a249d6` (`annual_calendar_coherence_gate`). **End-SHA:** `aff87ab3145dc7207baa07ea80c35ffed501ccda6b7de10627feb606208ecf16` (canonical; LATEST session `zinnia_steps1_3`). 9 anchors stay certified; zinnia opens as anchor 10 (mid-arc, NOT certified).
+
+**Lane:** claude.ai AUTHORED (sourced biology + scalars + 2.9 universal + variety set + INVERTED companions + dual-register prose) into the wiped shell; crop-SHA `5b7bbd87` -> `105f27b0`. Claude Code RELEASED after a one-round release correction.
+
+**Archetype proven (first flower / `companion_and_ornamental_flower`):** warm-season FROST-TENDER annual; grown for BLOOMS not food; summer = peak, NO heat_pause (`pause_in_heat:false`) -- rides the basil heat-loving annual rails. Care arc is bloom-centric (cut + deadhead drive cut-and-come-again), the INVERSE of basil's bolt-avoidance. NO `bolting` field. Companion role INVERTS: zinnia is the DRAW (pollinator/beneficial magnet interplanted to benefit vegetables), not the beneficiary. zinnia is the exemplar for the 5-crop `Companion & Pollinator` family (marigold/cosmos/sweet-alyssum/sweet-pea).
+
+**In-shell rulings (the first-flower HALT analogs, flagged for Trevor):**
+1. Cut-flower vase life -> `storage.notes_seasoned`/`_beginner`; the edible `room_temp`/`fridge`/`freezer` slots stay null. DECISION POINT: confirm this is the canonical home vs a future ruled `vase_life` field if cut-flower crops proliferate.
+2. `flower_type` scalar FILLED ("single to fully double, daisy- to dahlia-form"); not minted parallel.
+3. `deadheading_seasoned`/`_beginner` pair FILLED in-shell (not folded into `description`).
+4. `harvest_ready_*` repurposed for the cut-flower cut cue (cut when nearly open, disc florets not yet emerged).
+5. NO `sources_summary.secondary` key introduced (shape change); T2 corroboration (almanac, Johnny's) stays in the evidence log, referenced-not-cited. FLAG if a T2 reference slot is ever wanted (schema ruling).
+6. `moon_phase_preference` left unset (`evidence_tier:"none"`); no T1 supports a zinnia moon preference.
+
+**SOURCING:** NO mint required (95-entry catalog): `ncsu_ext` (3-species toolbox + cut-flower trial = PM-resistant-variety evidence), `psu_ext` (Profusion/Zahara + pollinator/interplant), `umn_ext`, `clemson_hgic`, `uf_ifas` (gardeningsolutions + EDIS FPS-623), `rhs`. MBG + ASCFG named as possible mints but NOT needed for 1-3 (NC State's marylandica page covers the PM-resistance claim). `mo_ext_g6201` = U. *Missouri Extension*, NOT MBG -- not cited as MBG.
+
+### RELEASE CORRECTION (one round; the release lane caught 2 findings the author self-check missed)
+1. **`register_completeness_gate` HALT on a flat `companions.*.why`** -- claude.ai had invented a THIRD companion item shape (`{name, label, why}` + flat `label` + the deprecated cherry-era `extension_backed`/`mechanistic`/`disputed` vocab). Re-cut to the certified carrot rich-object shape: `good_seasoned[]` = {name, category, timing, why_seasoned, notify_weeks_before, provenance:{label, confidence, reason, verified_against_sources, verified_date}, mirrored evidence_label/confidence/verified_against_sources, sources, anchoring_urls}; `good_beginner_seasoned[]` = {name, why_beginner}; `good_beginner`/`bad_*` empty; the bad-companion caution (crowding raises shared PM pressure) folded into `note_*`. VOCAB now the live certified enum `research_backed`/`likely`/`traditional`. Items: tomatoes + cucurbits = research_backed/pollinator_draw (T1 psu_ext + uf_ifas, per-item specific zinnia pages); beans = likely/beneficial_habitat (no per-item sources); corn = traditional/pollinator_draw.
+2. **`whole_crop_gate` E: `johnny_seeds` (T2) on `varieties.sources`** -- certified crops carry ZERO non-T1. Dropped -> `[ncsu_ext, uf_ifas, psu_ext]` (the 3 T1 extensions already name the same cultivars; Johnny's was decorative). Block-level companions sources trimmed to the T1 union actually cited (psu_ext, uf_ifas).
+
+### Claude Code release verification (protocol #6 -- a green gate is NOT a clean release)
+- **(a) `whole_crop_gate zinnia`:** 10 VIOLATIONS, ALL region-unfilled (the Step 3.5 pass, expected mid-arc). B/C/D/E/F/G clean: register dual-voice OK (SP-seasoned-only:6 = companion why_seasoned + moon/succession seasoned-only fields, the certified pattern -- carrot carries 89); dash/temp 0/0; **E non-T1: 0**; anchoring gaps 0.
+- **`register_completeness_gate`:** PASS -- 0 unruled prose (the 3 `companions.*.why` HALT cleared; 4 `provenance.reason` are deferred-by-design §5).
+- **(b) `release_verify`:** CLEAN -- only zinnia changed among crops; lettuce-leaf byte-identical (still certified); no new violations; no novel keys; no exemplar value collisions.
+- **(c) claim cross-check:** every STATE_HISTORY claim matched the bytes (post-crop SHA, op count 100, johnny_seeds drop, companion re-cut shape + vocab + sources, specific-page anchoring). pre/post crop-SHA reproduced to the byte (claude.ai's serialization is byte-compatible).
+- **NOT this pass (Claude Code next):** Step 3.5 region shells (ANNUAL path), then 4-5 / 5C-5.5 / 6-8 / cert.
+
+---
+
 ## 2026-06-14 -- annual calendar coherence gate wired always-on + tomato start_indoors token fix (the deriver-drift loose end, CLOSED) [Claude Code]
 
 **Start-SHA:** `0678212e...` (basil_citation_cleanup). **End-SHA:** `94d647f84ccfbf608d1eb5ac779fb8c11547bcd877f0b31b9058fc0956a249d6` (canonical; LATEST session `annual_calendar_coherence_gate`). 9 anchors stay certified.
