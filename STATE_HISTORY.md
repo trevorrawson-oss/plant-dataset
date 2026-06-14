@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-06-14 -- basil CERTIFIED (anchor 9, the FIRST herb; AZ blocker re-sourced + THE FLIP) [claude.ai re-source + Claude Code cert lane]
+
+**Start-SHA:** `de9f54bf...` (basil_step11_verbatim). **End-SHA:** `c998b1cb202a2947a5b757e55cb49da3b83594f5092374f75b9268dc94d08494` (canonical; LATEST session `basil_cert`).
+**BASIL CERTIFIED -- anchor 9 of ~18, the FIRST certified herb / the first `culinary_herb` archetype.** The held cert blocker (the `low_desert_az` source-fidelity finding) was resolved by re-sourcing; THE FLIP is done.
+
+### The AZ blocker, RESOLVED (claude.ai re-source lane)
+- **az2061 is internally self-contradicting** on the warm window: intro "May - mid-September", Seasonal Guide "April to November" (a category line, not basil-specific), and its basil planting-calendar row marks spring (Feb-Apr) planting only. So it could NOT sole-anchor basil's "April-November" low-desert window.
+- **Re-anchored to `az1005`** (UA Maricopa County Vegetable Planting Calendar) -- the source the `uariz_ext` catalog entry ALREADY NAMES for low-desert z9 -- whose basil row (T=30, S=60-75d, planting spring-through-fall) supports the long warm-season window. `plant_out` April + `harvest` "May - Oct" RETAINED (now genuinely supported); az2061 demoted to a CARE-only co-anchor (spring start, shade-cloth) via a new split sub-ID **`uariz_ext_az2061`** (minted to the catalog; mirrors `uf_ifas_vh021`). Both registers re-authored own-voice, verbatim-clean (max 4-word shared run vs all 3 live sources).
+- Also: all 6 hawaii `uhawaii_ctahr` URLs re-pinned off the directory root `/site/info.aspx` to `/new/fjgi/Garden/pop-basil.htm` (live, quote-confirmed).
+
+### Claude Code release + THE FLIP -- `de9f54bf` -> `c998b1cb`
+- Applied the AZ patch (23 ops: low_desert_az re-source + hawaii re-pin) + minted `uariz_ext_az2061` to `source_catalog` + **re-derived the `low_desert_az` calendar** (window unchanged -> reproduced; `annual_calendar_violations` 0). Collateral: only basil among crops + catalog +1.
+- **THE FLIP:** `verification_status` = status `verified_gs_arc`, phase `phase_3_basil_gold_standard_arc`, date 2026-06-14, `launch_ready_core`/`launch_ready_seasoned` True, last_audited, source_set (20 cited IDs incl. az1005's uariz_ext + uariz_ext_az2061 + uhawaii_ctahr), verification_log_ref, **6 open_findings ALL blocks_launch:false** (low_desert_az + hawaii-url RESOLVED; PSU x2 + UMaine NOT-COVERED honest; uconn moot). Top-level `last_reviewed`/`last_reviewed_session` = basil_cert.
+- **Gates:** whole_crop_gate G flip-state = launch_ready x2 True + status verified_gs_arc + **0 open-finding blockers**; register_fill / register_completeness PASS; release_verify clean (only basil + the catalog admit; lettuce byte-identical); pre-commit hook PASSES. gen_current_state now lists **9 verified_gs_arc anchors**.
+
+### Milestone + learning
+- **9 of ~18 anchors certified.** The annual archetype set spans warm-season fruiting / root / cool-leaf / **heat-loving herb (basil)**; evergreen+heat trees complete; deciduous trees done. basil = the template for the other tender heat-loving annual herbs.
+- **LOCKED LEARNING:** the cert verbatim gate verifies source CLAIMS against the LIVE source, catching a Steps-4-5 mis-statement that the structural/register/calendar gates all passed. A self-contradicting source cannot sole-anchor; re-anchor to a cleaner catalog-named publication + demote the weak one to its supported scope (a split sub-ID). The annual calendar deriver (`annual_calendar.py`, built this arc) earned its keep at the AZ re-derive.
+
+### Next step
+**Anchor 10 -- a ROADMAP CALL (Trevor).** Locked demand-first sequence: `zinnia` (Flowers, the other go-live demand crop, annual template) next; then `microgreens-mix` (the `non_seasonal_indoor` archetype, before the bots); then the family hubs + `blueberry`/`strawberry`. **Carried non-blocking:** basil's 3 NOT-COVERED citation URLs (PSU x2, UMaine); the annual-deriver full-generality extension before retro + always-on wiring.
+
+---
+
 ## 2026-06-14 -- basil Step 11 verbatim flip gate (clean except 1 reword; FLIP HELD on the AZ source-fidelity finding) [claude.ai verify + Claude Code release]
 
 **Start-SHA:** `83ed20e5...` (basil_steps_6_8). **End-SHA:** `de9f54bfecc6a0e653c5d9ba5d1d4b40304c302f7d85f0752229511514fc7f34` (canonical; LATEST session `basil_step11_verbatim`).
