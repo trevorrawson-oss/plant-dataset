@@ -160,6 +160,22 @@ print(f"  calendar cells incoherent with their own dates: {len(_treecal)}")
 for m in _treecal:
     fail(f"tree-calendar: {m}")
 
+# ---------------- A5. annual calendar coherence (always-on; NOT a re-derivation) ----------------
+# Frost_anchored annual calendars are consistency-checked, not re-derived -- complex multi-cycle
+# cells (winter-wrap / heat-inverted) are legitimately hand-authored and a clean deriver would
+# degrade them. HARD on a non-12 length, a token outside the annual enum (catches the
+# start_indoors -> indoors render drift; SuccessionCard reads `indoors`), or a heat_pause.months
+# object disagreeing with the calendar's heat_pause tokens. `wait` tokens are a pause-legibility
+# note. No-op for non-frost_anchored. (2026-06-14, the annual analog of A4.)
+from annual_calendar import annual_coherence_violations
+print("A5. annual calendar coherence (token enum + heat_pause alignment; no-op for non-annual)")
+_acoh, _anote = annual_coherence_violations(crop)
+print(f"  annual calendar hard incoherences: {len(_acoh)} | wait-token notes: {len(_anote)}")
+for m in _acoh:
+    fail(f"annual-calendar: {m}")
+for m in _anote:
+    print(f"  note: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

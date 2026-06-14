@@ -125,6 +125,50 @@ def derive_annual_calendar(cell, calendar_basis="frost_anchored"):
     return cal
 
 
+# The valid annual calendar token vocabulary (checklist enum, frost_anchored slice).
+# `start_indoors` is deliberately ABSENT: SuccessionCard renders the token `indoors`
+# (the enum value) and has no case for `start_indoors`, so a `start_indoors` token is
+# a rendering-drift bug the gate must catch.
+ANNUAL_CALENDAR_TOKENS = {"wait", "indoors", "plant", "growing", "harvest", "late",
+                          "cold_pause", "heat_pause", "season_over"}
+
+
+def annual_coherence_violations(crop):
+    """Always-on coherence check for frost_anchored annual calendars -- the annual
+    analog of the tree A4 gate. Returns (hard, notes). It does NOT require a calendar
+    to be re-derivable (complex multi-cycle cells are legitimately hand-authored), only
+    that it is internally consistent:
+      HARD (gate-blocking): a calendar that is not length-12, carries a token outside
+        the annual enum (catches the `start_indoors` drift + typos), or whose heat_pause
+        tokens disagree with the cell's `heat_pause.months` object (the apple/peach
+        author-the-two-independently bug, for annuals).
+      NOTE (surfaced, non-blocking): a `wait` token -- a pause-legibility review item.
+    No-op for non-frost_anchored crops."""
+    if crop.get("calendar_basis") != "frost_anchored":
+        return [], []
+    hard, notes = [], []
+    for rk, r in (crop.get("regions") or {}).items():
+        for z, cell in (r.get("resolved_by_zone") or {}).items():
+            cal = cell.get("calendar")
+            if not isinstance(cal, list) or not cal:
+                continue
+            loc = f"{rk}.z{z}"
+            if len(cal) != 12:
+                hard.append(f"{loc}: calendar length {len(cal)} != 12")
+                continue
+            bad = sorted(set(cal) - ANNUAL_CALENDAR_TOKENS)
+            if bad:
+                hard.append(f"{loc}: invalid calendar token(s) {bad}")
+            hp = (cell.get("heat_pause") or {}).get("months")
+            if hp is not None:
+                cal_hp = [i + 1 for i in range(12) if cal[i] == "heat_pause"]
+                if sorted(hp) != sorted(cal_hp):
+                    hard.append(f"{loc}: heat_pause.months {sorted(hp)} != calendar heat_pause {sorted(cal_hp)}")
+            if "wait" in cal:
+                notes.append(f"{loc}: `wait` token (pause-legibility review)")
+    return hard, notes
+
+
 def annual_calendar_violations(crop):
     """For every resolved cell with a NON-EMPTY calendar, recompute from the cell's
     windows and flag any mismatch (the drift defense, like tree A4). No-op for non-

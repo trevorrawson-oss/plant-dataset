@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-14 -- annual calendar coherence gate wired always-on + tomato start_indoors token fix (the deriver-drift loose end, CLOSED) [Claude Code]
+
+**Start-SHA:** `0678212e...` (basil_citation_cleanup). **End-SHA:** `94d647f84ccfbf608d1eb5ac779fb8c11547bcd877f0b31b9058fc0956a249d6` (canonical; LATEST session `annual_calendar_coherence_gate`). 9 anchors stay certified.
+
+Closed the "annual calendar hand-authoring can drift" loose end -- but NOT the way it was first framed (full-generality deriver + retro). Investigation reframed it:
+- **The complex hand-authored calendars are GOOD, not drift.** Ran the deriver against all 5 certified annuals: 75/100 cells diverge -- but the winter-wrap / heat-inverted cells (e.g. cherry-tomato South FL: plant Sep-Feb, harvest Nov-May, heat_pause Jul-Aug, `growing` shoulders) are sophisticated, biologically-sound cycle representations. Unlike the trees (where peach's calendars were demonstrably incoherent and the deriver CORRECTED them), these annual calendars embed real judgment a clean deriver would DEGRADE. So "derive everything" was the wrong fix.
+- **The right fix = enforce COHERENCE, not re-derivation.** New tooling: `annual_coherence_violations(crop)` (test-first) + `whole_crop_gate` **section A5** (always-on, the annual analog of the A4 tree-calendar gate). HARD on: calendar length != 12, a token outside the annual enum, or a `heat_pause.months` object disagreeing with the calendar's heat_pause tokens. NOTE on `wait` (pause-legibility). It does NOT require re-derivability, so the hand-authored complex cells pass.
+- **The one REAL defect it caught + fixed:** cherry-tomato + beefsteak-tomato mixed `indoors` AND `start_indoors` for the same concept in their calendars, but the plant-astro renderer (`SuccessionCard.astro`) checks `=== 'indoors'` and has NO case for `start_indoors` -- so those tokens were a silent render bug. Normalized **28 `start_indoors` -> `indoors`** (cherry + beefsteak); 0 remain dataset-wide. basil already used `indoors` (correct).
+
+### Forward-fix status (answering Trevor's question)
+- **Convention -> ENFORCEMENT.** Before: kickoffs said "don't hand-author calendars, derive them" but nothing checked it (the always-on gate was blocked by the inconsistent back-catalog). Now A5 runs on every frost_anchored crop on every gate call: new annuals (deriver-computed) AND hand-authored complex cells are both coherence-guarded. A future `start_indoors`/bad-token/heat_pause-mismatch slip is caught automatically.
+- **Back-catalog: gate-clean.** All 9 certified anchors PASS `whole_crop_gate` with A5 live (trees no-op). The only residual: 4 cool-coast tomato cells carry a `wait` token, surfaced as a non-blocking NOTE (a true between-window gap is legitimate on the mild coast).
+
+### Verification
+- Token normalization: collateral = ONLY cherry-tomato + beefsteak-tomato changed; certs intact (verified_gs_arc, launch_ready x2). All 9 anchors PASS whole_crop_gate. `test_annual_calendar.py` + `test_apply_patch.py` green.
+
+**LEARNING:** "compute, never hand-author" (v1.9, trees) does NOT blanket-extend to annuals -- complex multi-cycle annual calendars need human judgment; the right enforcement is a COHERENCE gate (consistency with windows + the token enum + heat_pause alignment), not forced re-derivation. Derive the simple, hand-author the complex, gate both.
+
+**Next:** anchor 10 (zinnia) -- now on a genuinely drift-proof + enforced annual-calendar footing.
+
+---
+
 ## 2026-06-14 -- basil citation-hygiene cleanup (post-cert; the NOT-COVERED URL loose-end) [Claude Code]
 
 **Start-SHA:** `c998b1cb...` (basil_cert). **End-SHA:** `0678212ee3c79683148e09b1b7e8874efdbb2ee0b0e113ab64440b6da6e11b2d` (canonical; LATEST session `basil_citation_cleanup`). basil stays `verified_gs_arc` (post-cert hygiene, cert intact).

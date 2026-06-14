@@ -99,3 +99,38 @@ assert got[4] == "harvest", got            # May still harvest
 print("  declared heat_pause override: PASS")
 
 print("PASS annual_calendar deriver")
+
+# ============ annual_coherence_violations (the always-on gate check) ============
+# A coherent frost_anchored cell -> no hard violations, no notes.
+clean = {"calendar_basis": "frost_anchored", "regions": {"se_gulf": {"resolved_by_zone": {"8": {
+    "calendar": ["cold_pause", "indoors", "plant", "harvest", "harvest", "harvest",
+                 "plant", "plant", "harvest", "harvest", "cold_pause", "cold_pause"]}}}}}
+h, n = ac.annual_coherence_violations(clean)
+assert h == [] and n == [], ("clean cell", h, n)
+
+# A `start_indoors` token (the cherry/beefsteak drift; SuccessionCard reads 'indoors') -> HARD.
+drift = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"8": {
+    "calendar": ["cold_pause", "start_indoors", "plant", "harvest", "harvest", "harvest",
+                 "harvest", "harvest", "harvest", "harvest", "cold_pause", "cold_pause"]}}}}}
+h, n = ac.annual_coherence_violations(drift)
+assert len(h) == 1 and "start_indoors" in h[0], ("start_indoors caught", h)
+
+# heat_pause.months object disagreeing with the calendar's heat_pause tokens -> HARD.
+mis = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [7]},
+    "calendar": ["plant", "plant", "harvest", "harvest", "harvest", "harvest",
+                 "harvest", "heat_pause", "plant", "harvest", "cold_pause", "cold_pause"]}}}}}
+h, n = ac.annual_coherence_violations(mis)
+assert len(h) == 1 and "heat_pause" in h[0], ("heat_pause misalignment caught", h)
+
+# A `wait` token -> NOTE (surfaced, non-blocking), not a hard violation.
+w = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"10": {
+    "calendar": ["cold_pause", "wait", "indoors", "plant", "harvest", "harvest",
+                 "harvest", "harvest", "harvest", "harvest", "cold_pause", "cold_pause"]}}}}}
+h, n = ac.annual_coherence_violations(w)
+assert h == [] and len(n) == 1 and "wait" in n[0], ("wait is a note not hard", h, n)
+
+# non-frost_anchored crop -> no-op.
+assert ac.annual_coherence_violations({"calendar_basis": "perennial_chill_gated"}) == ([], [])
+print("  annual_coherence_violations (always-on gate): PASS")
+print("PASS annual_calendar (deriver + coherence gate)")
