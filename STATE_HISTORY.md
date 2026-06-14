@@ -6,6 +6,21 @@
 
 ---
 
+## 2026-06-14 -- basil citation-hygiene cleanup (post-cert; the NOT-COVERED URL loose-end) [Claude Code]
+
+**Start-SHA:** `c998b1cb...` (basil_cert). **End-SHA:** `0678212ee3c79683148e09b1b7e8874efdbb2ee0b0e113ab64440b6da6e11b2d` (canonical; LATEST session `basil_citation_cleanup`). basil stays `verified_gs_arc` (post-cert hygiene, cert intact).
+
+Closed the 3 NOT-COVERED citation findings from the verbatim gate by checking each URL directly with `curl`:
+- **UMaine `herb-gardening` = genuine 404 (dead).** No valid replacement (UMaine has no basil culture/timing page). REMOVED as an anchor from `northern_tier` z3/z4 (sources + anchoring_urls) + dropped from `source_set` (20 -> 19). Those cells retain the live `umn_ext` co-anchor, so no coverage lost; basil now has 0 dead citation URLs.
+- **PSU `herbs-in-the-garden` + `fusarium-wilt` = HTTP 403, NOT 404.** The pages EXIST; PSU's WAF blocks automated fetchers (which is why the verbatim scan reported them NOT-COVERED, and why claude.ai's fetcher mis-read one as 404). RETAINED as correct citations; the verbatim scan cannot machine-read them -- a benign, permanent limitation, not a URL defect. Findings updated to state this.
+- All 3 findings keep `blocks_launch:false`; the 0-blocker flip-state is intact. whole_crop_gate / register_fill / register_completeness PASS; release_verify clean (only basil; lettuce byte-identical; no catalog change).
+
+**LEARNING:** at cert, distinguish 403 (live but bot-blocked -> correct citation, machine-unscannable, benign) from 404 (dead -> remove or replace). A bot's "NOT-COVERED" is a SCAN limitation, not proof a URL is wrong; verify with a direct request before removing/re-pinning.
+
+**Next:** the annual-deriver full-generality extension (the other loose end) -> then anchor 10 (zinnia).
+
+---
+
 ## 2026-06-14 -- basil CERTIFIED (anchor 9, the FIRST herb; AZ blocker re-sourced + THE FLIP) [claude.ai re-source + Claude Code cert lane]
 
 **Start-SHA:** `de9f54bf...` (basil_step11_verbatim). **End-SHA:** `c998b1cb202a2947a5b757e55cb49da3b83594f5092374f75b9268dc94d08494` (canonical; LATEST session `basil_cert`).

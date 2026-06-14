@@ -14,15 +14,15 @@
 **9 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, **basil**) of a ~18 target. **BASIL CERTIFIED 2026-06-14 -- anchor 9, the FIRST certified herb / the first `culinary_herb` archetype; the heat-LOVING annual model (inverse of lettuce) proven end-to-end.** **NEXT = anchor 10, a ROADMAP CALL (Trevor): the locked demand-first sequence puts `zinnia` (Flowers) next (the other go-live search-demand crop, annual template), then the indoor/family hubs (microgreens-mix, broccoli, bell-pepper, zucchini-courgette, onion, green-beans-bush) + `blueberry`/`strawberry`.**
 
 ## Canonical pointer
-- **Current SHA:** `c998b1cb202a2947a5b757e55cb49da3b83594f5092374f75b9268dc94d08494`. `LATEST.txt` session: `basil_cert` (2026-06-14).
+- **Current SHA:** `0678212ee3c79683148e09b1b7e8874efdbb2ee0b0e113ab64440b6da6e11b2d`. `LATEST.txt` session: `basil_citation_cleanup` (2026-06-14). *(basil CERTIFIED at `c998b1cb`; this is a post-cert citation-hygiene follow-up -- basil stays `verified_gs_arc`.)*
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `30ad063` -- feat(basil): CERTIFIED -- anchor 9, the first herb
   - `de9f54bf` -- feat(basil): Step 11 verbatim reword + JB re-pin (flip HELD on AZ finding)
   - `83ed20e5` -- feat(basil): Steps 6-8 -- bulk prose; register-complete + gate-clean
   - `48c9580f` -- feat(basil): Steps 5C + 5.5 -- per-zone harvest resolution + derived calendars
   - `954565ee` -- feat(basil): Steps 4-5 -- region layer complete (10 cells + per-arm anchoring)
   - `8318cc03` -- feat(basil): Steps 1-3 + 3.5 -- anchor 9, the first herb
   - `a0cc0178` -- feat(orange-navel): CERTIFIED -- anchor 8, the SECOND evergreen / the HEAT-gate crop
-  - `7b2f8179` -- feat(orange-navel): Step 6 -- 6 biology surfaces + 79 register/care fields (whole_crop_gate PASS)
 
 ## What just happened (session `basil_cert`)
 - **BASIL CERTIFIED** (`de9f54bf` -> `c998b1cb`), anchor 9, the FIRST herb. THE FLIP: `verification_status` = status `verified_gs_arc` + phase + `launch_ready_core`/`launch_ready_seasoned` True + last_audited + source_set (20 cited IDs) + verification_log_ref + 6 open_findings (all blocks_launch:false) + top-level `last_reviewed`/`_session`. whole_crop_gate G = flip-state clean, 0 blockers.
@@ -33,10 +33,11 @@
 ## Active work + next step
 - **basil DONE.** 9 of ~18 anchors certified. The annual archetype set now spans: warm-season fruiting (cherry, beefsteak), root (carrot), cool-season leaf (lettuce), and **heat-loving herb (basil)**; the evergreen+heat tree model is complete (lemon, orange); deciduous trees (peach, apple).
 - **NEXT = anchor 10, a ROADMAP CALL (Trevor).** Locked sequence (demand + archetype coverage): **(1) `zinnia`** (Flowers -- the other go-live search-demand crop, annual template, no new UI); then **microgreens-mix** (the never-exercised `non_seasonal_indoor` archetype, needed BEFORE the bots derive); then the family hubs (broccoli, bell-pepper, zucchini-courgette, onion, green-beans-bush) for bot per-family coverage; then `blueberry` (chill-gated, rides peach/apple rails) + `strawberry` (new renovation archetype, do last). Recommended: zinnia next.
-- **OWED / carried (non-blocking):** 3 NOT-COVERED citation URLs on basil (PSU x2 host-blocked, UMaine 404 -- all blocks_launch:false; Trevor can re-pin PSU manually if it loads). The annual-deriver full-generality extension (winter-wrap/heat-inverted) before retro-ing the certified annuals + wiring `annual_calendar_violations` always-on.
+- **Citation loose-end CLOSED (2026-06-14):** the UMaine dead-404 link REMOVED from basil (NT z3/z4 retain the live `umn_ext` co-anchor; dropped from source_set, source_set 20 -> 19); PSU x2 (`herbs-in-the-garden`, `fusarium-wilt`) confirmed LIVE via curl (HTTP 403 -- the host WAF blocks automated fetchers, NOT dead pages) -> retained as correct citations, machine-unscannable (benign permanent limitation), findings updated. basil now carries 0 dead citation URLs.
+- **OWED (non-blocking):** the annual-deriver full-generality extension (winter-wrap/heat-inverted cells) before retro-ing the certified annuals + wiring `annual_calendar_violations` always-on -- IN PROGRESS this session.
 - **Separate track:** the tree GUIDE PAGE on plant-astro (apple-zone-6 mock; 4 certified trees to template from).
 
-## Gate record (generated 2026-06-14, on canonical `c998b1cb`)
+## Gate record (generated 2026-06-14, on canonical `0678212e`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
