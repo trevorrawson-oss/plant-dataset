@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-14 -- zinnia Step 3.5 region shells (anchor 10) -- BUILT [Claude Code]
+
+**Start-SHA:** `aff87ab3145dc7207baa07ea80c35ffed501ccda6b7de10627feb606208ecf16` (`zinnia_steps1_3`). **End-SHA:** `5e7e5f66ace50109083c0b36a09a30801ce7b66359c0b35fe20cfe6886233ab2` (canonical; LATEST session `zinnia_steps3_5_region_shells`). 9 anchors stay certified; zinnia still mid-arc (anchor 10).
+
+**Lane:** Claude Code deterministic pass (no claude.ai handoff). `build_region_shells.py` (the ratified M16 Step-3.5 builder) applied to zinnia.
+
+**What changed:**
+- **All 10 region cells graduated PENDING-stub -> shape-complete RULE skeleton.** Each region now carries a `plantings[]` main-arm skeleton (`{succession_id:1, label:"main", track:"beginner", start_indoors:[], plant_out:[], harvest_start:[], harvest_end:[], anchoring_urls:{}}`) + `region_notes_seasoned`/`_beginner` slots. No biology/dates/notes invented -- those are Steps 4-5/5.5. `northern_tier` built FROM-SCRATCH (author-fresh shell, empty `zones{}`, nothing to promote). The 4 `California -- X` region_label em-dashes resolved to `California: X`.
+- **Off-enum `start_method.start` fixed:** `"direct_sow_or_transplant"` (non-canonical, slipped the 1-3 gates -- no enum check on that field) normalized to **`both`** (the certified enum is {direct, both, indoors}: carrot/lettuce=direct, basil=both, tomatoes=indoors). The author's value literally meant both methods supported, so this is a faithful normalization, not a content change. `both` -> the builder's TRANSPLANT shape (`start_indoors`+`plant_out`), matching basil; zinnia's hero method is direct-sow (per `start_method.notes`), and direct-sowers read `plant_out` as their sow date.
+
+**Verification:**
+- `whole_crop_gate zinnia` = 10 violations, now ALL `region_notes pair both null` (skeletons present, notes pending). The 10 `region unfilled (plantings stub/missing)` CLEARED. This is the **explicitly accepted Step-3.5 admission state** -- `precommit_release_verify.drop_shell_build_unmasks` exempts the `region_notes both null` of stub->shell graduated regions (Steps 4-7 fill region_notes); NOT a regression. dash/temp 0/0.
+- `release_verify` raised 1 CONCERN (the region_notes-null new-violation strings) -- reviewed and accepted: it is the known shell-build forward-state (the conservative cell-model surfaces it for human review; the precommit hook encodes the same allowance). The `anchoring_urls:{}` per planting is the ratified skeleton (basil lacks it only because Steps 4-5 relocated anchoring per-zone).
+- pre-commit hook ran on commit: no regression (the 3.5 allowance applied).
+
+**NEXT (claude.ai handoff):** Steps 4-5 region biology + per-zone windows, then 5C/5.5 + DERIVED calendars (`annual_calendar.py`), 6-8 bulk prose, cert.
+
+---
+
 ## 2026-06-14 -- zinnia Steps 1-3 (anchor 10, the FIRST flower) -- RELEASED [Claude Code]
 
 **Start-SHA:** `94d647f84ccfbf608d1eb5ac779fb8c11547bcd877f0b31b9058fc0956a249d6` (`annual_calendar_coherence_gate`). **End-SHA:** `aff87ab3145dc7207baa07ea80c35ffed501ccda6b7de10627feb606208ecf16` (canonical; LATEST session `zinnia_steps1_3`). 9 anchors stay certified; zinnia opens as anchor 10 (mid-arc, NOT certified).
