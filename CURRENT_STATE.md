@@ -1,32 +1,33 @@
 
 
-**9 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil) of a ~18 target. **ZINNIA in flight -- anchor 10, the FIRST flower.** Steps 1-3 + 3.5 DONE; **Steps 4-5 region fill: 6 of 10 cells RELEASED 2026-06-15** (se_gulf single-window, fl_peninsula double-window, + the CA-4 batch all single-window). NO `heat_pause` anywhere (incl. the low desert). **NEXT = the remaining 4: warm_arid + low_desert_az (desert), hawaii_tropical (`year_round` candidate), northern_tier.**
+**9 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil) of a ~18 target. **ZINNIA -- anchor 10, the FIRST flower. Steps 4-5 region fill: 9 of 10 cells DONE 2026-06-15** (se_gulf, fl_peninsula, CA-4, + warm_arid / low_desert_az / northern_tier). **`hawaii_tropical` HELD** -- no UH CTAHR T1 documents zinnia as `year_round`, and A5 bars templating basil's hawaii finding; **DECISION owed from Trevor** (see Active work). Then Steps 6-8 + cert.
 
 ## Canonical pointer
-- **Current SHA:** `7ca57f28998c42e21d085cdc21ee87acb0e5515d715212aa32c0c35c474931be`. `LATEST.txt` session: `zinnia_steps4_5_ca_batch` (2026-06-15).
+- **Current SHA:** `ccb3d71da7d9bee7ceed38779e374783222f72786a96f4f095d02d3f012634ed`. `LATEST.txt` session: `zinnia_steps4_5_final3` (2026-06-15).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `7ca57f28` -- feat(zinnia): Steps 4-5 CA-4 batch -- the four California cells (cells 3-6/10)
   - `b86d8958` -- feat(zinnia): Steps 4-5 fl_peninsula -- the fall-sow double window (cell 2/10)
   - `8ded22a0` -- feat(zinnia): Steps 4-5 se_gulf proof cell -- anchor 10
   - `5e7e5f66` -- feat(zinnia): Step 3.5 region shells -- anchor 10
   - `aff87ab3` -- feat(zinnia): Steps 1-3 -- anchor 10, the first flower
   - `94d647f8` -- feat(gate): always-on annual calendar coherence (A5) + fix tomato start_indoors token
   - `0678212e` -- fix(basil): citation hygiene -- remove dead UMaine link, confirm PSU URLs live
-  - `c998b1cb` -- feat(basil): CERTIFIED -- anchor 9, the first herb
 
-## What just happened (session `zinnia_steps4_5_ca_batch`)
-- **ZINNIA CA-4 BATCH RELEASED** (`b86d8958` -> `7ca57f28`), cells 3-6: ca_interior, ca_north_coast, ca_south_coast, ca_desert. First MULTI-cell batch (confidence calibrated by se_gulf + fl_peninsula). claude.ai authored 8 zones; Claude Code released. Authored crop-SHA `6a679c4f` verified byte-exact.
-- **All 4 CA cells = SINGLE window** (no double like fl_peninsula -- the UC Santa Clara cut-flower chart sows zinnia spring only; per-cell A5, NOT templated). ca_interior = hot Central Valley single window; ca_north_coast = cool-maritime LATE start (soil 60-65 °F, Marin MG); ca_south_coast = mild long single window, NOT year_round; ca_desert = single window, plant Feb-Mar then bloom THROUGH the desert summer.
-- **ca_desert heat-stall DISPOSITION (Trevor-confirmed): NO `heat_pause`.** No T1 documents a peak-heat bloom stall; UC IPM affirmatively says zinnia blooms summer + fall; the T2/T3 "105 °F stall" can't anchor (zero non-T1). Matches the basil twin (0 desert heat_pause). Expressed as a planting-window edge (sow before peak; established plants bloom through), not a pause token.
-- **Claude Code finishing:** filled region metadata for the 4 cells (`California: X` labels from lettuce); derived all 8 calendars (single window each, NO heat_pause anywhere, ca_north_coast cool-late start, ca_desert bloom-through-summer). NO new mints (all 5 UC + flower IDs catalogued); NO region-root anchoring_urls; NO prose in resolved_from -- claude.ai applied EVERY prior lesson.
-- **Verification:** ran `register_completeness_gate` EXPLICITLY up front this time (the fl_peninsula lesson) = PASS; whole_crop_gate 4 violations = the 4 remaining unauthored regions; A5 0; dash/temp 0/0; E non-T1:0 + uncatalogued:0; F anchoring 0 gaps; release_verify clean.
+## What just happened (session `zinnia_steps4_5_final3`)
+- **ZINNIA final-3 RELEASED** (`7ca57f28` -> `ccb3d71d`), cells 7-9: warm_arid (z8), low_desert_az (z9), northern_tier (z3-7). claude.ai authored; Claude Code released. Authored crop-SHA `2a51cf07` verified byte-exact.
+- **warm_arid + low_desert_az:** the ca_desert disposition applied -- single window, sow before the peak (Feb-Apr), bloom THROUGH the desert summer, NO `heat_pause` (planting-window edge; UA Pima March guide + AZ1100; uc_ipm no-stall; basil twin = 0 desert heat_pause).
+- **northern_tier (z3-7, FROM-SCRATCH cold):** the cherry/lettuce/basil shape -- single frost-bracketed summer across all 5 zones; sow/transplant after last frost (soil 60-70 °F, UMN); cold-zone progression (z3 plant Jun, bloom Aug-Sep; z7 plant Apr, bloom to Oct); winter `cold_pause` TOKEN only; NO `heat_pause`; fast first-bloom beats fall frost even z3-4.
+- **`hawaii_tropical` HELD (correctly):** no UH CTAHR T1 documents zinnia as a continuous year-round crop (CTAHR flower pubs cover perennials/plumeria, not zinnia; the only HI "year around" claim is T2/T3 + about MARIGOLD). A5 bars templating basil's hawaii `year_round:true` onto zinnia without a zinnia source. Surfaced to Trevor, NOT authored.
+- **Claude Code finishing:** region metadata; derived 7 calendars (deserts bloom-through, northern_tier cold_pause + cold-zone progression). NO new mints (all 4 IDs catalogued); register PASS up front; no region-root anchoring; no prose in resolved_from.
+- **Verification:** register_completeness_gate PASS; whole_crop_gate 1 violation = hawaii (the only cell left); A5 0; dash/temp 0/0; E distinct 12 / uncatalogued 0 / non-T1 0; F anchoring 0 gaps; release_verify clean.
 
 ## Active work + next step
-- **zinnia 6 of 10 region cells DONE** (se_gulf, fl_peninsula, CA-4). 4 remain Step-3.5 shells (the 4 region_notes-null gate violations = scope, expected).
-- **NEXT = the remaining 4 (claude.ai handoff):** **warm_arid (z8) + low_desert_az (z9)** -- the other two desert cells; the ca_desert precedent applies (no T1 stall = no heat_pause, planting-window-edge handling). Then **hawaii_tropical (z11)** -- the remaining `year_round` CANDIDATE (frost-free; verify per source whether genuinely continuous). Then **northern_tier (z3-7)** -- frost-bracketed single summer, `cold_pause` token, from-scratch, last. Then 6-8 bulk prose + cert.
-- **Suggested batching:** warm_arid + low_desert_az together (shared desert/AZ sources + the ca_desert precedent), then hawaii solo (the year_round question), then northern_tier solo. Or all 4 -- the vocabulary is now well-pinned. Trevor's call at the next checkpoint.
+- **zinnia 9 of 10 region cells DONE.** Only `hawaii_tropical` (z11) remains -- HELD on the `year_round` determination (the 1 gate violation = hawaii region_notes-null).
+- **DECISION OWED FROM TREVOR -- hawaii `year_round`:** no zinnia-specific UH CTAHR T1 states continuous year-round culture (basil set `year_round:true` from BASIL's CTAHR finding; A5 bars templating it). Options: (a) targeted CTAHR / HI zinnia search before authoring; (b) author `year_round:true` on the frost-free + heat-loving + CTAHR-grow-list basis (a `calendar_basis`-reason inference, not a direct continuity statement); (c) author hawaii as a seasonal single window (hard without a frost anchor or a seasonal source -- biologically weak in frost-free HI). Resolve, then hawaii is the 10th cell.
+- **AFTER hawaii: all 10 region cells DONE** -> Steps 6-8 bulk prose (the register-fill sweep, both registers) -> cert (Step 11 flip). zinnia is the `Companion & Pollinator` family exemplar + the second go-live demand crop.
 - **Separate track:** the tree GUIDE PAGE on plant-astro (apple-zone-6 mock; 4 certified trees to template from).
 
-## Gate record (generated 2026-06-15, on canonical `7ca57f28`)
+## Gate record (generated 2026-06-15, on canonical `ccb3d71d`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
