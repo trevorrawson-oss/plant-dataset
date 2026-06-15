@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-06-15 -- zinnia Step 11 CERT -- anchor 10 CERTIFIED, the FIRST flower [claude.ai verified + Claude Code flipped]
+
+**Start-SHA:** `4a6b26797905f592bfd6a434f45167c2a75f40b90cb841e83a74ee28e8748971` (`zinnia_steps6_8`). **End-SHA:** `5294bd49ed4474260a0505ddb4a7e3548246f8bad9293acf11f8ce37b7ed4d37` (canonical; LATEST session `zinnia_step11_cert`). **10 anchors now certified** (zinnia joins; the FIRST flower / first certified ornamental).
+
+**THE FLIP:** `verification_status` = status `verified_gs_arc` + phase `phase_3_zinnia_gold_standard_arc` + date + launch_ready_core/seasoned **True** + last_audited 2026-06-15 + source_set (the 13 cited leaf IDs) + verification_log_ref + 3 open_findings + top-level `last_reviewed`/`_session`. whole_crop_gate **G flip-state clean** (launch_ready x2 true, status verified_gs_arc, 0 open_finding blockers).
+
+**Verbatim flip gate -- CLEAN (the formal gate):**
+- claude.ai (web lane) fetched all 13 cited URLs (100% coverage): **0 HARD lifts** (>=8 normalized words) across 359 user-facing prose strings; **0 cross-crop echo** (>=8w vs the certified annuals); 2 benign 6-word residuals retained (universal facts: "one inch of water per week", "from summer until the first frost"). No reword patch. (Honest scoping catch: a naive pass produced 110 spurious hits = the Clemson factsheet title embedded in its own URL slug; excluding `.url`/dates -> 0 HARD.)
+- **Claude Code independently corroborated** by fetching the heaviest-cited source (Clemson HGIC 1149, via WebFetch): zinnia's deadheading line rewrites Clemson's "cut to just above a leaf node... encourage a long blooming season" into "back to the next leaf node... redirect energy from seed set into new flower production"; PM prose shares no run. Own-voice. **NOTE: the local `verbatim_scan.py` cannot fetch in-sandbox (0/13)** -> it is the STRUCTURAL backstop (scope + exclusions); the fetch-based verification is claude.ai's pass + the Claude Code spot-check.
+
+**succession_policy.successions: null -> 3 (Trevor's call).** Mirrors `max_successions_per_season: 3`; a season-length DERIVATION (the ~2-3 wk cadence + season bounds are T1-sourced; no T1 pins a literal sowing count). Logged as `zinnia_successions_cap_derived` (accepted_inference). The more-rigorous alternative -- a per-zone REALIZED succession count in `plantings[]` (cold zones support more sowings than desert spring-only arms; the lettuce 7-10-vs-cap pattern) -- is a dataset-wide schema enhancement deferred as a future upgrade, NOT a zinnia-flip blocker. interval_weeks:2 vs tip "2 to 3 weeks" noted consistent.
+
+**open_findings logged (all `blocks_launch:false`):** (1) `hawaii_year_round_climate_derived` (medium, accepted_inference -- frost-free + T1 pause_in_heat:false + grow-list derivation, not a CTAHR continuity quote; upgradeable); (2) `zinnia_successions_cap_derived` (low, accepted_inference); (3) `zinnia_verbatim_borderline_benign_residual` (info, accepted). `sources_summary` confirmed current (johnny_seeds correctly T2; 6/7 T1; every cited claim T1-anchored).
+
+**Verification:** whole_crop_gate PASS; register_fill_gate PASS; register_completeness_gate PASS; release_verify CLEAN (only zinnia changed; lettuce-leaf byte-identical; no new violations). pre-commit hook: no regression.
+
+**MILESTONE: zinnia is the FIRST flower anchor certified -- the full GS arc (1-3 / 3.5 / 4-5 / 6-8 / 11) authored + released end-to-end across one session-arc.** The complete `Companion & Pollinator` template (region window vocabulary + bloom-centric compounds + the cut-flower N/A + the climate-derived year_round + block-coherent anchoring) is what the bot pipeline derives for marigold, cosmos, sweet-alyssum, sweet-pea. **NEXT = anchor 11 (roadmap call): the indoor/family hubs (microgreens-mix first -- the non_seasonal_indoor archetype) + blueberry/strawberry.**
+
+---
+
 ## 2026-06-15 -- zinnia Steps 6-8 (bulk prose + register-fill + retro-anchoring, scope A) -- RELEASED; REGISTER-COMPLETE [claude.ai authored + Claude Code released]
 
 **Start-SHA:** `18555cd43cafcda7a56c66c31715cf046019ee93a9e328627bb70623766920df` (`zinnia_steps4_5_hawaii`). **End-SHA:** `4a6b26797905f592bfd6a434f45167c2a75f40b90cb841e83a74ee28e8748971` (canonical; LATEST session `zinnia_steps6_8`). 9 anchors stay certified; zinnia REGISTER-COMPLETE (flip-eligible, pre-cert).

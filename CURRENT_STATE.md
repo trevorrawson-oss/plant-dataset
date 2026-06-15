@@ -1,32 +1,32 @@
 
 
-**9 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil) of a ~18 target. **ZINNIA -- anchor 10, the FIRST flower. Steps 1-3 + 3.5 + 4-5 + 6-8 ALL DONE 2026-06-15: zinnia is REGISTER-COMPLETE** (register_fill_gate + register_completeness_gate + whole_crop_gate all PASS; all 10 regions + all prose + all blocks anchored). **NEXT = Step 11 CERT (the flip)** -- launch_ready x2 + status `verified_gs_arc` + the source-verbatim scan + the hawaii year_round open_finding. zinnia -> anchor 10 certified.
+**10 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, **zinnia**) of a ~18 target. **ZINNIA CERTIFIED 2026-06-15 -- anchor 10, the FIRST flower / first certified ornamental; the full GS arc (Steps 1-3 / 3.5 / 4-5 / 6-8 / 11) done end-to-end, the first crop authored through the whole pipeline as the Companion & Pollinator family template.** **NEXT = anchor 11, a ROADMAP CALL (Trevor):** the remaining ~8 roster anchors (microgreens-mix, broccoli, bell-pepper, zucchini-courgette, onion, green-beans-bush + blueberry/strawberry).
 
 ## Canonical pointer
-- **Current SHA:** `4a6b26797905f592bfd6a434f45167c2a75f40b90cb841e83a74ee28e8748971`. `LATEST.txt` session: `zinnia_steps6_8` (2026-06-15).
+- **Current SHA:** `5294bd49ed4474260a0505ddb4a7e3548246f8bad9293acf11f8ce37b7ed4d37`. `LATEST.txt` session: `zinnia_step11_cert` (2026-06-15).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `4a6b2679` -- feat(zinnia): Steps 6-8 bulk prose + retro-anchoring (scope A) -- REGISTER-COMPLETE
   - `18555cd4` -- feat(zinnia): Steps 4-5 hawaii_tropical (cell 10/10) -- region fill COMPLETE
   - `ccb3d71d` -- feat(zinnia): Steps 4-5 final-3 -- deserts + northern_tier (cells 7-9/10); hawaii held
   - `7ca57f28` -- feat(zinnia): Steps 4-5 CA-4 batch -- the four California cells (cells 3-6/10)
   - `b86d8958` -- feat(zinnia): Steps 4-5 fl_peninsula -- the fall-sow double window (cell 2/10)
   - `8ded22a0` -- feat(zinnia): Steps 4-5 se_gulf proof cell -- anchor 10
   - `5e7e5f66` -- feat(zinnia): Step 3.5 region shells -- anchor 10
-  - `aff87ab3` -- feat(zinnia): Steps 1-3 -- anchor 10, the first flower
 
-## What just happened (session `zinnia_steps6_8`)
-- **ZINNIA Steps 6-8 RELEASED -- REGISTER-COMPLETE** (`18555cd4` -> `4a6b2679`). 70-op bulk-prose patch (scope A, block-coherent). claude.ai authored; Claude Code released. Authored crop-SHA `265aa9e3` verified byte-exact.
-- **Section 1: the 36 register-prose nulls** (soil/fertilizer/watering/container_notes/rotation/yield_expectations) -- incl. the **cut-flower N/A PROSE** for `storage` room_temp/fridge/freezer + `container_notes.overwintering` (frost-tender annual), authored as N/A prose not null. `register_fill_gate` -> 0.
-- **Section 2: the 5 empty compounds + factors** (bloom-centric, INVERSE of basil): `tips_by_stage` (6 stages germ/seedling/established/budding/flowering/seed_saving), `growth_stages` (6, no fruiting/bolting), `failure_diagnostics` (6: PM/leggy/damping-off/frost/germ/Japanese-beetle), `notifications` (4), `weather_triggers` (3, heat=positive).
-- **Section 3 (LABELED beyond-prose, scope A): retro-anchored all 8 prose blocks** (fertilizer/watering/soil/ph/container_notes/storage/rotation/yield_expectations were UNANCHORED -> now sources + anchoring_urls, reusing zinnia's verified URLs; this is required `launch_ready_core` cert work); closed structured nulls (`rotation.family`=Asteraceae, `overwintering.applicable`=false, etc.); stripped the backstage placeholder "Cite per-field sources..." from `description_seasoned`.
-- **Region-tip override = NONE** (PM PRESSURE varies by region but the grower ACTION is identical; a gradient is not a divergent action -- v1.4 criterion not met). **NO mints** (all anchoring reuses existing zinnia IDs).
-- **Verification:** register_fill_gate PASS (0); register_completeness_gate PASS; whole_crop_gate PASS (F anchoring 104 -> 142 leaves, 0 gaps); A5 0; dash/temp 0/0; E non-T1:0 + uncatalogued:0; release_verify clean (only zinnia changed, DO-NOT-TOUCH blocks byte-identical).
+## What just happened (session `zinnia_step11_cert`)
+- **ZINNIA CERTIFIED** (`4a6b2679` -> `5294bd49`), anchor 10, the FIRST flower / first certified ornamental. THE FLIP: `verification_status` = status `verified_gs_arc` + phase + launch_ready_core/seasoned True + last_audited + source_set (13 IDs) + verification_log_ref + 3 open_findings (all `blocks_launch:false`) + top-level last_reviewed/_session. whole_crop_gate **G flip-state clean, 0 blockers**.
+- **VERBATIM FLIP GATE CLEAN:** claude.ai fetched all 13 cited URLs (100% coverage) -- 0 HARD lifts (>=8w) across 359 user-facing strings, 0 cross-crop echo, 2 benign 6-word residuals. **Claude Code independently CORROBORATED** by fetching the heaviest-cited source (Clemson HGIC 1149, via WebFetch): zinnia's deadheading/PM prose is own-voice paraphrase, no lift. (NOTE: local `verbatim_scan.py` cannot fetch in-sandbox -> structural backstop only; claude.ai's web fetch + the Claude Code spot-check are the authoritative verbatim verification.)
+- **`succession_policy.successions`: null -> 3** (Trevor's call: mirror `max_successions_per_season`; logged `zinnia_successions_cap_derived` accepted_inference -- season-length derivation, no T1-quoted count). The per-zone realized-count encoding is a future dataset-wide enhancement, NOT a flip blocker.
+- **3 open_findings logged (all `blocks_launch:false`):** hawaii_year_round_climate_derived (medium), zinnia_successions_cap_derived (low), zinnia_verbatim_borderline_benign_residual (info).
+- **Verification:** whole_crop_gate PASS; register_fill_gate PASS; register_completeness_gate PASS; release_verify clean (only zinnia changed, lettuce-leaf byte-identical, no new violations). pre-commit hook: no regression.
 
 ## Active work + next step
-- **zinnia is REGISTER-COMPLETE.** All authoring done (1-3 biology + 4-5 regions + 6-8 bulk prose + block anchoring). Every gate PASS; flip-eligible on the register / fill / anchoring dimensions.
-- **NEXT = Step 11 CERT: the FLIP.** Author the `verification_status` block (status `verified_gs_arc` + phase + launch_ready_core/seasoned True + last_audited + source_set + verification_log_ref + open_findings) + top-level last_reviewed/_session. Gated by the **SOURCE-VERBATIM scan** (fetch the cited URLs, verify the authored claims against the live source, fail the flip on a lift -- the formal gate). **Open findings to LOG at the flip:** (1) hawaii `year_round` = climate-derived (`blocks_launch:false`); (2) `succession_policy.successions` null -- resolve the count; (3) confirm `sources_summary` current. zinnia -> **anchor 10 certified**, the FIRST flower + the `Companion & Pollinator` family exemplar (marigold/cosmos/sweet-alyssum/sweet-pea author against it).
-- **Separate track:** the tree GUIDE PAGE on plant-astro (apple-zone-6 mock; 4 certified trees to template from).
+- **zinnia DONE -- anchor 10 CERTIFIED, the FIRST flower.** The full GS arc (Steps 1-3 / 3.5 / 4-5 [10 region cells] / 6-8 / 11) completed end-to-end. The annual archetype set now spans warm-season fruiting (cherry, beefsteak), root (carrot), cool-season leaf (lettuce), heat-loving herb (basil), and **ornamental/cut-flower (zinnia)**; evergreen+heat + deciduous trees done.
+- **NEXT = anchor 11, a ROADMAP CALL (Trevor).** The remaining ~8 roster anchors: the indoor/family hubs (**microgreens-mix** -- the never-exercised `non_seasonal_indoor` archetype, needed BEFORE the bots derive; broccoli, bell-pepper, zucchini-courgette, onion, green-beans-bush) + **blueberry** (chill-gated, rides peach/apple rails) + **strawberry** (renovation archetype, do last). zinnia is now the `Companion & Pollinator` flower template the bots derive for marigold/cosmos/sweet-alyssum/sweet-pea.
+- **Owed (non-blocking, upgradeable open_findings):** the per-zone realized-succession-count encoding (dataset-wide; would let `successions` diverge from `max_successions_per_season` by zone -- the lettuce 7-10-vs-cap discrepancy); upgrade hawaii `year_round` if a HI-specific zinnia continuity source surfaces.
+- **Separate track:** the tree GUIDE PAGE on plant-astro (apple-zone-6 mock; now 4 certified trees + the certified annuals/flower to template from).
 
-## Gate record (generated 2026-06-15, on canonical `4a6b2679`)
+## Gate record (generated 2026-06-15, on canonical `5294bd49`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -36,6 +36,7 @@
 - **lemon: `PASS` (0)**
 - **lettuce-leaf: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
+- **zinnia: `PASS` (0)**
 - **register_completeness_gate: `PASS`**
 
 ## Region fill state (generated)
@@ -48,6 +49,7 @@
 - **lemon: 10/10 region cells filled**
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
 - **orange-navel: 10/10 region cells filled**
+- **zinnia: 10/10 region cells filled**
 
 ## Flip gates (generated)
 - **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -59,7 +61,8 @@
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **9 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **zinnia:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **10 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 <!-- FILL: Live locked decisions / guardrails (editorial -- accretes; carry forward + amend) -->
 - **STEPS 6-8 BLOCK-COHERENT authoring (scope A) = the cert-ready bot template:** author each TOUCHED prose block as a UNIT -- the `_seasoned`/`_beginner` pairs + close its structured nulls + ANCHOR the block (`sources`+`anchoring_urls`) in ONE pass. zinnia's 8 non-region prose blocks (fertilizer/watering/soil/ph/container_notes/storage/rotation/yield_expectations) shipped UNANCHORED from 1-3; anchoring them is REQUIRED `launch_ready_core` cert work (Step-11), not optional polish -- close it during 6-8 while the sources are open, not in a later sweep. Surface beyond-prose changes (retro-anchoring + structured nulls) as a LABELED sub-section for the release review. **N/A fields get N/A PROSE, never null** (`register_fill_gate` rejects null): cut-flower `storage` room_temp/fridge/freezer = "not a stored edible, see vase life"; `overwintering` = "frost-tender annual, re-sow". **Region-tip override (v1.4 rider): a pressure GRADIENT is not a divergent ACTION** -- author an override ONLY where >=2 T1 from different regions prescribe DIFFERENT grower actions (zinnia PM: same action everywhere, only pressure varies -> NO override). **Backstage authoring placeholders in consumer fields** (e.g. "Cite per-field sources") slip the dash/temp gate -> catch them at the Step-6 depth-lift.
