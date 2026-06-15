@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-15 -- zinnia Steps 6-8 (bulk prose + register-fill + retro-anchoring, scope A) -- RELEASED; REGISTER-COMPLETE [claude.ai authored + Claude Code released]
+
+**Start-SHA:** `18555cd43cafcda7a56c66c31715cf046019ee93a9e328627bb70623766920df` (`zinnia_steps4_5_hawaii`). **End-SHA:** `4a6b26797905f592bfd6a434f45167c2a75f40b90cb841e83a74ee28e8748971` (canonical; LATEST session `zinnia_steps6_8`). 9 anchors stay certified; zinnia REGISTER-COMPLETE (flip-eligible, pre-cert).
+
+**Scope = (A) block-coherent (Trevor-confirmed).** 70-op patch, 3-section manifest. claude.ai authored crop-SHA `265aa9e3` verified byte-exact. NO mints, NO DO-NOT-TOUCH violations (regions/companions/scalars/start_method/succession_policy/sources_summary/flower_type/deadheading/zones/varieties/pests/diseases/recipes/moon_phase byte-identical).
+
+**Section 1 -- the 36 register-prose nulls (`register_fill_gate` target -> 0):** soil texture seasoned siblings; fertilizer notify_message/amount; watering amount/signs_over/signs_under/method_note (base-watering/PM); **storage room_temp/fridge/freezer = N/A PROSE** (cut flower, vase life lives in notes_*, not null); container_notes soil_mix/watering/fertilizer adjustments + **overwintering = N/A PROSE** (frost-tender annual); rotation avoid_after/note (Asteraceae, debris sanitation); yield_expectations per_plant (STEMS/season) + first_year_note (blooms first season).
+
+**Section 2 -- 5 empty compounds + factors (bloom-centric, INVERSE of basil, no bolting arc):** tips_by_stage (6 stages germ/seedling/established/budding/flowering/seed_saving), growth_stages (6, no fruiting/bolting), failure_diagnostics (6: PM/leggy/damping-off/frost/germ/Japanese-beetle), notifications (4), weather_triggers (3, heat=POSITIVE per uf_ifas_zinnia pause_in_heat:false), yield_expectations.factors_seasoned (SP seasoned-only, no _beginner).
+
+**Section 3 -- LABELED beyond-prose (the (A) expansion, surfaced separately):** (3a) structured-null closures inside touched blocks: `rotation.family`=Asteraceae, `rotation.rotation_years`=1, `rotation.good_after`, `container_notes.overwintering.applicable`=false, `fertilizer.notify_days_after`=14 + `stage_id`=established. (3b) **RETRO-ANCHORING:** sources[]+anchoring_urls{} populated on all 8 touched blocks (fertilizer/watering/soil/ph/container_notes/storage/rotation/yield_expectations) -- they were UNANCHORED from 1-3 (the pre-existing non-region anchoring gap); required `launch_ready_core` cert work, closed in one pass while in-block, reusing zinnia's verified URLs (no mints). (3c) Step-6 depth-lift: stripped the live backstage placeholder "Cite per-field sources for any specific window." from `description_seasoned` (a consumer field; slipped 1-3 + the dash/temp gate, which does not catch authoring placeholders).
+
+**Region-tip override (Step-4 v1.4 rider): NONE.** PM ACTION (full sun, airflow spacing, base watering, Profusion/Zahara) is identical across regions; only PM PRESSURE varies (humid SE/Gulf/FL vs dry CA/desert) and the portable tip already carries the "where mildew pressure is high" rider. A pressure gradient is not a materially different grower action -> v1.4 criterion not met.
+
+**Claude Code release verification (protocol #6):** apply byte-exact (crop-SHA `265aa9e3` reproduced); **`register_fill_gate zinnia` = 0** (flip-eligible); **`register_completeness_gate` = PASS** (no bare-seasoned keys); **whole_crop_gate = PASS** (0 region violations; A5 0; null_values 0; dash/temp 0/0; E distinct 13/uncatalogued 0/non-T1 0; **F anchoring 104 -> 142 claim-leaves, 0 gaps** -- the retro-anchoring added 38 anchored leaves); **release_verify CLEAN** (only zinnia changed; lettuce-leaf byte-identical; DO-NOT-TOUCH blocks byte-identical; no new violations). pre-commit hook: no regression.
+
+**Carried owed to cert (Step 11):** (1) hawaii_tropical `year_round` open_finding (climate-derived basis, `blocks_launch:false`); (2) `succession_policy.successions` null (resolve the count at the flip); (3) confirm `sources_summary` current (johnny_seeds T2 fixed in 1-3). The companions array-split 4th-register mechanism stays deferred (its own reconciliation session).
+
+**MILESTONE: zinnia REGISTER-COMPLETE -- the full author arc (1-3 / 3.5 / 4-5 / 6-8) is done; the FIRST flower through the whole pipeline.** NEXT = Step 11 cert (the `launch_ready` x2 + status `verified_gs_arc` flip + the source-verbatim scan + the 3 open_findings). zinnia = the `Companion & Pollinator` family exemplar (marigold/cosmos/sweet-alyssum/sweet-pea) + the second go-live demand crop.
+
+---
+
 ## 2026-06-15 -- zinnia Steps 4-5 hawaii_tropical (cell 10/10) -- RELEASED; REGION FILL COMPLETE [claude.ai authored + Claude Code released]
 
 **Start-SHA:** `ccb3d71da7d9bee7ceed38779e374783222f72786a96f4f095d02d3f012634ed` (`zinnia_steps4_5_final3`). **End-SHA:** `18555cd43cafcda7a56c66c31715cf046019ee93a9e328627bb70623766920df` (canonical; LATEST session `zinnia_steps4_5_hawaii`). 9 anchors stay certified; **zinnia region fill 10/10 COMPLETE** (whole_crop_gate PASS, 0 region violations).
