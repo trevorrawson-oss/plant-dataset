@@ -181,6 +181,24 @@ for m in _acoh:
 for m in _anote:
     print(f"  note: {m}")
 
+# ---------------- A6. non_seasonal_indoor cycle presence (no-op for non-indoor) ----------------
+# An indoor crop (microgreens/sprouts/mushrooms) has NO frost/region/zone axis -- its source of
+# truth is the indoor_cycle block (the relative sow->harvest cycle). This is the Step 5.5
+# non_seasonal_indoor branch, and the indoor counterpart to A2 region-fill: the cycle must be
+# present (days_to_harvest non-empty) and dual-register (tip_seasoned + tip_beginner both
+# authored). No-op for any other calendar_basis. (microgreens-mix anchor 11, 2026-06-15.)
+print("A6. non_seasonal_indoor cycle presence (no-op for non-indoor)")
+if crop.get("calendar_basis") == "non_seasonal_indoor":
+    ic = crop.get("indoor_cycle") or {}
+    both_tips = bool(ic.get("tip_seasoned")) and bool(ic.get("tip_beginner"))
+    print(f"  indoor_cycle: days_to_harvest={ic.get('days_to_harvest')!r} | dual-register tip: {'both' if both_tips else 'MISSING'}")
+    if not ic.get("days_to_harvest"):
+        fail("indoor_cycle incomplete: days_to_harvest empty (the cycle length is the indoor source of truth)")
+    if not both_tips:
+        fail("indoor_cycle incomplete: tip_seasoned/tip_beginner not both authored")
+else:
+    print("  (not non_seasonal_indoor -- skipped)")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-06-15 -- microgreens Step 5.5 indoor-cycle PRESENCE GATE (tooling follow-up to Steps 1-3)
+
+**No data change** -- canonical stays `5dba6cefd4b51e438316f237a110f23dc9c651da0cad8a44f491358396d00e55`; tooling only (`whole_crop_gate.py` + new `tools/test_gate_indoor_cycle.py`). Closes the one Step 5.5 enforcement gap from the microgreens Steps 1-3 release.
+
+**Why:** Steps 3.5 + 4-5 (region build/fill) are N/A for `non_seasonal_indoor` (no frost/region/zone axis), but **Step 5.5 HAS a non_seasonal_indoor branch** (checklist v2.0 line 362): plantings[] empty + the cycle is the source of truth + frost-resolution suppressed. microgreens satisfied the SUBSTANCE in 1-3 (populated `indoor_cycle`, collapsed regions), but nothing ENFORCED it -- `annual_coherence` (whole_crop_gate A5) and `annual_calendar` both skip non-frost_anchored, so no gate checked the indoor cycle. The kickoff flagged adding an indoor-cycle presence check; this is it.
+
+**The gate (whole_crop_gate A6, test-first):** for `calendar_basis == "non_seasonal_indoor"`, assert `indoor_cycle.days_to_harvest` non-empty (the cycle length = the indoor source of truth) AND `indoor_cycle.tip_seasoned` + `tip_beginner` both authored (dual-register). NO-OP for any other calendar_basis (the 10 certified crops stay PASS; verified). The indoor counterpart to A2 region-fill. This locks the Step 5.5 indoor check before the bots derive the ~8 microgreen siblings + mushrooms. `test_gate_indoor_cycle.py`: microgreens passes; empty days_to_harvest and a null tip each FAIL; a frost crop is not subjected to the check.
+
+**Verification:** all 7 tool/gate test suites green; all 11 crops PASS whole_crop_gate (A6 no-op for the 10 non-indoor).
+
+**Still owed (methodology, claude.ai/Trevor lane -- NOT this commit):** the checklist Step 5.5 `non_seasonal_indoor` branch wording says "the cyclic `calendar[]` is the source of truth," but NO indoor crop carries a `calendar[]` -- all 13 use `indoor_cycle` (claude.ai's model writeup chose indoor_cycle over a synthesized 12-month array). The branch text is stale and should be updated to name `indoor_cycle` as the indoor source of truth at the next checklist pass.
+
+---
+
 ## 2026-06-15 -- microgreens-mix Steps 1-3 -- anchor 11, the FIRST `non_seasonal_indoor` crop -- RELEASED [claude.ai authored + Claude Code released, reconciled, + tooling]
 
 **Start-SHA:** `5294bd49ed4474260a0505ddb4a7e3548246f8bad9293acf11f8ce37b7ed4d37` (`zinnia_step11_cert`). **End-SHA:** `5dba6cefd4b51e438316f237a110f23dc9c651da0cad8a44f491358396d00e55` (canonical; LATEST `microgreens_steps1_3`). **microgreens-mix crop-SHA (sorted-min):** `015fec3d3bc6c38988c274b183e9a1a4184e3dcf06a9c532734b8eeec64f7620`. NO flip -- launch_ready stays false (Steps 1-3). 10 anchors stay certified (lettuce-leaf byte-identical; all 10 PASS whole_crop_gate).
