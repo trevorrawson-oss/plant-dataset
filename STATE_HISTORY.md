@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-15 -- zinnia Steps 4-5 hawaii_tropical (cell 10/10) -- RELEASED; REGION FILL COMPLETE [claude.ai authored + Claude Code released]
+
+**Start-SHA:** `ccb3d71da7d9bee7ceed38779e374783222f72786a96f4f095d02d3f012634ed` (`zinnia_steps4_5_final3`). **End-SHA:** `18555cd43cafcda7a56c66c31715cf046019ee93a9e328627bb70623766920df` (canonical; LATEST session `zinnia_steps4_5_hawaii`). 9 anchors stay certified; **zinnia region fill 10/10 COMPLETE** (whole_crop_gate PASS, 0 region violations).
+
+**Scope:** `regions.hawaii_tropical` (z11) ONLY -- the 10th and final cell. Other 9 cells byte-identical. claude.ai authored crop-SHA `7fc9abf0` verified byte-exact.
+
+**THE HAWAII year_round CALL -- outcome (C) -> Trevor chose C-1 (climate-DERIVED year_round, honest basis):**
+- The targeted search (4 angles) found NO zinnia-specific UH CTAHR year-round continuity statement and NO wet-season-bounded zinnia window (the only HI "year around" claim is T2/T3 + about MARIGOLD). So `year_round` is **DERIVED, not quoted**: frost-free z11 (no frost to bracket the frost_anchored season) + T1 `pause_in_heat:false` (UC IPM, blooms through heat) + zinnia's presence in CTAHR HI home-garden GROW-LISTS = no season-closing factor -> continuous.
+- **Authored HONESTLY (the C-1 requirement):** NO fabricated `source_quote`; the derivation is stated in `calendar_basis` (z11 cell) + the arm `synthesis_note` + region_notes ("climate-derived, not a sourced continuity quote"). `year_round:true` on the beginner + succession arms (basil hawaii arm shape: `plant_out {from:date, date:01-01, window_days:365}`); `resolution_method:hawaii_year_round_climate_derived`. Sources anchor only to the REAL claims: `uc_ipm` (blooms-through-heat), `uhawaii_ctahr` (grow-list = grown in HI), `clemson_hgic_1149` (species). Wet-season PM caveat in region_notes (basil precedent; the crop does not stop). NO heat_pause.
+- **OWED AT CERT (Step 11):** log hawaii `year_round` as a **`blocks_launch:false` open_finding** -- the OUTCOME (no seasonal gap in frost-free HI for a heat-lover, T1 pause_in_heat:false) is biologically sound; the BASIS is inferential and upgradeable if a zinnia-specific HI source surfaces. The one non-direct-sourced window in zinnia's region layer, flagged transparently rather than dressed as a quote.
+
+**Claude Code finishing:** region metadata (`Hawaii / Tropical`/z11, lettuce label); derived the 12x `growing` calendar. NO new mints (all 3 IDs catalogued); register PASS up front; no region-root anchoring; no prose in resolved_from (`{last_frost:"none (frost-free)", first_frost:"none (frost-free)"}`).
+
+**Verification:** register_completeness_gate PASS; **whole_crop_gate PASS -- 0 violations, REGION FILL COMPLETE**; A5 0; dash/temp 0/0; E distinct 13 / uncatalogued 0 / non-T1 0; F anchoring 104 leaves 0 gaps; release_verify CLEAN. pre-commit hook: no regression.
+
+**MILESTONE: zinnia Steps 4-5 DONE -- all 10 region cells authored + per-zone calendars derived.** The complete warm-region + cold + tropical window vocabulary (single-long / spring+fall-double / desert planting-window-edge / cold frost-bracketed / frost-free climate-derived year_round) is the template the bot pipeline derives for the `Companion & Pollinator` flowers (marigold, cosmos, sweet-alyssum, sweet-pea). **NEXT = Steps 6-8 bulk prose (register-fill sweep) -> cert (Step 11 flip, + the hawaii open_finding).**
+
+---
+
 ## 2026-06-15 -- zinnia Steps 4-5 final-3 (warm_arid + low_desert_az + northern_tier; cells 7-9) -- RELEASED; hawaii HELD [claude.ai authored + Claude Code released]
 
 **Start-SHA:** `7ca57f28998c42e21d085cdc21ee87acb0e5515d715212aa32c0c35c474931be` (`zinnia_steps4_5_ca_batch`). **End-SHA:** `ccb3d71da7d9bee7ceed38779e374783222f72786a96f4f095d02d3f012634ed` (canonical; LATEST session `zinnia_steps4_5_final3`). 9 anchors stay certified; zinnia 9 of 10 region cells authored (hawaii HELD).
