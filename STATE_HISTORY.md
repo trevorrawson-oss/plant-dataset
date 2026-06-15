@@ -6,6 +6,32 @@
 
 ---
 
+## 2026-06-15 -- zinnia Steps 4-5 fl_peninsula (cell 2/10, the FALL-SOW double window) -- RELEASED [claude.ai authored + Claude Code released]
+
+**Start-SHA:** `8ded22a030f39b0fa7ff63535c7fd14234d46f02ff9fed52185392b20c6dd450` (`zinnia_steps4_5_se_gulf`). **End-SHA:** `b86d895864c97850662ac4662dff312f68a9248bd5360446c2fb84568bac5f21` (canonical; LATEST session `zinnia_steps4_5_fl_peninsula`). 9 anchors stay certified; zinnia 2 of 10 region cells authored.
+
+**Scope:** `regions.fl_peninsula` ONLY (z10 + z11), authored end-to-end, then STOP. se_gulf preserved byte-identical; 8 regions remain Step-3.5 shells. claude.ai authored crop-SHA `01bc870c` verified byte-exact after the ops.
+
+**The window-structure call (fl_peninsula owns the fall sow se_gulf deferred; A5 per-source):**
+- **TWO sowing windows, CONTINUOUS bloom through summer -> the LETTUCE one-arm two-window-entry model, NOT the cherry two-arm `second_planting`.** Discriminator = the PAUSE, not the count: UF/IFAS Gardening Solutions documents zinnia blooms THROUGH the FL summer, so there is no midsummer no-plant cycle break. One `track:"beginner"` "main" arm whose `direct_sow`/`plant_out` arrays carry `primary` (spring) + `secondary` (fall) entries, plus the basil-twin `track:"succession"` arm. (This was the answer to the kickoff's plantings-shape question, decided on the pause rule and relayed via Trevor; claude.ai applied the continuous branch.)
+- Spring window: UF/IFAS EP452 (south-FL calendar), zinnia in March "that will last into fall." Fall window: UF/IFAS Gardening Solutions, "also planted in the fall in South Florida." Between them: bloom through the hot/wet summer; new sowings held out of the May-Aug rainy peak (a sowing-window signal, not a bloom stall). **NO `heat_pause`** (`pause_in_heat:false` holds). **NO `year_round`** even at frost-free z11 (EP452 gives a dated spring planting; season bounded by the summer wet/disease peak, not frost).
+
+**Claude Code finishing (RELEASE lane):**
+- Filled region metadata (`Florida Peninsula` / z10-11, matching lettuce/carrot). NO new mints -- all 3 anchors (`uf_ifas_south_cal` EP452 + the se_gulf-minted `uf_ifas_zinnia` + `clemson_hgic_1149`) already catalogued. NO region-root `anchoring_urls` (claude.ai applied the se_gulf lesson). johnny_seeds (T2) anchored nothing.
+- **Normalized the two-window DISPLAY separator** semicolon -> comma in the resolved-cell date fields (`Feb 8 - Mar 1, Oct 6 - Nov 3`), matching the tomato/lettuce convention (date fields only, not prose).
+- **Derived z10 + z11 `calendar[]`:** two plant windows (Feb-Mar + Oct-Nov) + continuous bloom Apr-Dec, NO `heat_pause`, NO `cold_pause` (frost-free); A5 coherence 0.
+- **Removed a `resolved_from.season_bound` prose key on z11** ("summer wet/disease peak + cool-season slowdown") that HALTed `register_completeness_gate`. `resolved_from` is the FROST-DATE audit only (`{last_frost, first_frost}`, here "none (frost-free)"); the editorial season-bound reason was already in the z11 `zone_notes`. **PROCESS CATCH:** the HALT was surfaced by the CURRENT_STATE regen's gate record, NOT by whole_crop_gate + release_verify (which I ran first) -- run `register_completeness_gate` explicitly in verification next time.
+
+**Verification (post-fix):** register_completeness_gate PASS; whole_crop_gate 8 violations = the 8 UNauthored regions' region_notes-null (proof-cell scope, expected); A5 0; dash/temp 0/0; E distinct 6 / uncatalogued 0 / non-T1 0; F anchoring 0 gaps; release_verify CLEAN (se_gulf byte-identical, lettuce-leaf byte-identical). pre-commit hook: no regression.
+
+**CONTRAST (se_gulf + fl_peninsula pin the warm-region vocabulary for the bots):** se_gulf = single long frost-bracketed season (z9 longer than z8, no fall arm). fl_peninsula = spring+fall double window, bloom-through summer, frost-limited only at the z10 edge, NOT year_round at z11. Bot rule: warm-region window structure is region-specific; pick the shape by the pause (gap -> two arms/second_planting; continuous -> one arm/two-window-entries). Do NOT template one warm region onto another.
+
+**FLAG for Trevor (claude.ai surfaced, "STOP if structural"):** confirm the one-arm two-window model is the right bot-template DEFAULT for "continuous bloom, two sowing windows" before the remaining warm cells + bots adopt it.
+
+**NEXT (claude.ai handoff):** the CA-4 batch (ca_interior / ca_north_coast / ca_south_coast / ca_desert, sharing `ucanr_ext`) now that confidence is calibrated; then desert/arid (the peak-heat-stall question), hawaii_tropical (the year_round candidate), northern_tier last. Then 6-8 + cert.
+
+---
+
 ## 2026-06-15 -- zinnia Steps 4-5 se_gulf PROOF CELL (anchor 10) -- RELEASED [claude.ai authored + Claude Code released]
 
 **Start-SHA:** `5e7e5f66ace50109083c0b36a09a30801ce7b66359c0b35fe20cfe6886233ab2` (`zinnia_steps3_5_region_shells`). **End-SHA:** `8ded22a030f39b0fa7ff63535c7fd14234d46f02ff9fed52185392b20c6dd450` (canonical; LATEST session `zinnia_steps4_5_se_gulf`). 9 anchors stay certified; zinnia mid-arc, now 1 of 10 region cells authored.
