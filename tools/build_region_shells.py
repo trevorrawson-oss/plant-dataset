@@ -42,6 +42,8 @@ def build_region_shells(crop, session=SESSION, date=DATE):
     """
     if _is_tree(crop):
         return _build_tree_shells(crop)
+    if _is_indoor(crop):
+        return crop  # no frost/region axis -- the cycle lives in indoor_cycle{}; never inflate shells
     direct = (crop.get("start_method") or {}).get("start") == "direct"
     promote_north = _north_should_promote(crop)
     for rk, r in (crop.get("regions") or {}).items():
@@ -76,6 +78,16 @@ def build_region_shells(crop, session=SESSION, date=DATE):
 _TREE_CELL_DEAD = ("start_indoors", "direct_sow", "lifted_from_zone", "plantings",
                    "notes", "zone_notes", "planting_note",
                    "first_plant_date", "last_plant_date")
+
+
+def _is_indoor(crop):
+    """A non_seasonal_indoor crop (microgreens, sprouts) is grown year-round in a relative
+    sow -> harvest CYCLE: no frost, no season, no hardiness zone, so no region axis. The cycle
+    lives in indoor_cycle{} and the renderer reads calendar_basis. build_region_shells is a
+    NO-OP for it -- never inflate the 10 frost region cells (anchor 11 microgreens-mix collapsed
+    regions{} to {}; this keeps a future/bot run from rebuilding them)."""
+    return (crop.get("calendar_basis") == "non_seasonal_indoor"
+            or bool(crop.get("zone_independent")))
 
 
 def _is_tree(crop):

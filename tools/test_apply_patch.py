@@ -178,6 +178,28 @@ _x = _ae["crops"][0]
 assert _x["dtm"] == [60, 90] and _x["soil"] == {"texture": "loam"} \
     and _x["note"] == "Genovese" and _x["n"] == 5, ("add onto empty-equiv", _x)
 
+# 7c. add onto a RECURSIVELY-EMPTY dict/list PROCEEDS. The schema-2.9 migration scaffolded
+# the universal blocks (watering/fertilizer/soil/ph/container_notes/...) as null-KEYED dicts
+# (NOT {}), so _is_empty must recurse: a dict/list whose every leaf is null/[]/{}/"" is itself
+# empty-equivalent. claude.ai authors these blocks with one whole-block op:add (microgreens-mix
+# Steps 1-3, the first crop authored over a 2.9 shell with whole-block adds). A block carrying
+# ANY real (non-empty) leaf still halts -- the present-non-null clobber guard is intact.
+_re = {"crops": [{"slug": "x",
+    "watering": {"method_seasoned": None, "amount_beginner": None,
+                 "drainage": {"holes": None, "gravel": None}, "sources": [], "anchoring_urls": {}},
+    "occupied": {"method_seasoned": None, "self_watering_ok": False}}]}
+ap.apply_patch(_re, {"base_sha": "z", "patches": [
+    {"op": "add", "json_path": "$.crops[?(@.slug=='x')].watering",
+     "value": {"method_seasoned": "bottom-water", "amount_beginner": "keep moist"}}]})
+assert _re["crops"][0]["watering"] == {"method_seasoned": "bottom-water", "amount_beginner": "keep moist"}, \
+    ("add onto recursively-empty dict", _re["crops"][0]["watering"])
+try:
+    ap.apply_patch(_re, {"base_sha": "z", "patches": [
+        {"op": "add", "json_path": "$.crops[?(@.slug=='x')].occupied", "value": {"x": 1}}]})
+    assert False, "add onto a dict carrying a real leaf (self_watering_ok:False) must halt"
+except SystemExit:
+    pass
+
 print("  unit: envelope/op/field/path/sha all PASS")
 
 # ============ HISTORY: real archived patches reconstructed from git ============

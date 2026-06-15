@@ -204,8 +204,18 @@ def _get(edit, *names):
 
 
 def _is_empty(x):
-    """Empty-equivalent: the wipe types unpopulated slots as null / [] / {} / '' inconsistently."""
-    return x is None or x == [] or x == {} or x == ""
+    """Empty-equivalent: the wipe AND the schema-2.9 migration type unpopulated slots
+    inconsistently -- null / [] / {} / '' scalars, and 2.9 scaffolds the universal blocks
+    (watering/fertilizer/soil/ph/container_notes/...) as null-KEYED dicts (not {}). So a
+    dict/list whose every leaf is itself empty-equivalent is empty (recursive). A container
+    carrying ANY real (non-empty) leaf is NOT empty -- the clobber guard stays intact."""
+    if x is None or x == [] or x == {} or x == "":
+        return True
+    if isinstance(x, dict):
+        return all(_is_empty(v) for v in x.values())
+    if isinstance(x, list):
+        return all(_is_empty(v) for v in x)
+    return False
 
 
 # claude.ai has emitted several op vocabularies across sessions; normalize to canonical.

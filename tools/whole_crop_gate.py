@@ -75,8 +75,13 @@ if ph.get("preferred_range") and ph.get("tolerated_range"):
     if not ok: fail("§3 ph range nesting")
 cn = crop.get("container_notes") or {}
 if cn.get("container_ok"):
-    ok = bool(cn.get("min_pot_gallons"))
-    print(f"  container_ok=True => min_pot_gallons={cn.get('min_pot_gallons')}: {'PASS' if ok else 'FAIL'}")
+    # A potted crop is dimensioned by VOLUME (min_pot_gallons); an indoor TRAY crop
+    # (microgreens/sprouts, anchor 11) by DEPTH (depth_inches_min) -- a 1020-style tray is
+    # not measured in gallons. container_ok requires ONE of the two dimensions.
+    ok = bool(cn.get("min_pot_gallons")) or bool(cn.get("depth_inches_min"))
+    print(f"  container_ok=True => pot-gallons|tray-depth "
+          f"(min_pot_gallons={cn.get('min_pot_gallons')} depth_inches_min={cn.get('depth_inches_min')}): "
+          f"{'PASS' if ok else 'FAIL'}")
     if not ok: fail("§3 container fields")
 vs = crop["verification_status"]
 ok = (not vs.get("launch_ready_seasoned")) or vs.get("launch_ready_core")

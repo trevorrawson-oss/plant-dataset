@@ -336,4 +336,23 @@ for rk, r in r7.items():
     for z, cell in r["resolved_by_zone"].items():
         assert "heat_summer_basis" not in cell, f"{rk}.{z}: heat_summer_basis leaked onto a cold-only evergreen cell"
 
+# ---- fixture 9: NON_SEASONAL_INDOOR crop (microgreens-mix) -> build is a NO-OP ----
+# An indoor crop (microgreens, sprouts, mushrooms) is grown year-round in a relative
+# sow->harvest CYCLE with no frost, season, or hardiness zone. It has NO region axis:
+# microgreens-mix (anchor 11) collapsed regions{}/zones{} to {}. build_region_shells must
+# NOT inflate frost shells for it -- a future/bot run stays a no-op, regions stay empty,
+# calendar_basis is NOT flipped. Marker: calendar_basis=='non_seasonal_indoor' or zone_independent.
+def indoor_crop():
+    return {"slug": "microgreens-mix", "calendar_basis": "non_seasonal_indoor",
+            "zone_independent": True, "lifecycle": "annual",
+            "start_method": {"start": None}, "regions": {}, "zones": {}}
+
+c9 = build_region_shells(indoor_crop(), session="microgreens_step3_5", date="2026-06-15")
+assert c9["regions"] == {}, f"indoor crop got frost region shells: {list(c9['regions'])}"
+assert c9["calendar_basis"] == "non_seasonal_indoor", f"indoor calendar_basis was flipped: {c9.get('calendar_basis')!r}"
+# even a stale/stub frost cell left on an indoor crop is NOT warm-built (no plantings injected)
+stale = indoor_crop(); stale["regions"] = {"northern_tier": {"region_label": "Cold Zones"}}
+c9b = build_region_shells(stale)
+assert "plantings" not in c9b["regions"]["northern_tier"], "indoor crop's stale cell was warm-built"
+
 print("PASS build_region_shells")

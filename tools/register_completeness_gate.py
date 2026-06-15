@@ -95,6 +95,7 @@ def ruled_categorical(pat, k):
     if k in ("fruit_size", "fruit_color") and "varieties_detail" in pat: return True
     if k == "use" and "varieties" in pat: return True  # variety use descriptor, categorical (e.g. "fresh eating, cooking"); apple's Golden Delicious embeds the universal-pollinizer flag here (migrate to recommended_note at 6-8)
     if k in ("value", "parent") and ".delta." in pat and "varieties.recommended" in pat: return True  # variety-delta overlay descriptor, categorical (Trevor 2026-06-12, lemon anchor; e.g. "compact; container-friendly", "high-20s F damage; fruits z9b-11") -- terse single-form attribute/diff values, not dual-register prose; sets the register treatment for the whole variety-delta model
+    if k == "note" and "varieties.recommended" in pat and ".delta." not in pat: return True  # per-variety mix-component descriptor, categorical (Trevor 2026-06-15, microgreens anchor; e.g. "Fast brassica, 8 to 12 days; spicy. No presoak.") -- terse single-form per-variety labels (days/flavor/handling), not dual-register prose; mix components are different SPECIES (the delta cultivar model is N/A). Sets the per-variety recommended[].note convention. Distinct from top-level varieties.note (CP, _seasoned/_beginner) -- the `varieties.recommended` path guard separates them
     return False
 
 # --- DEFERRED by design: companions array-split provenance (inventory §5 -- its own
