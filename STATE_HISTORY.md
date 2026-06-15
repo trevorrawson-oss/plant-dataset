@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-15 -- zinnia Steps 4-5 CA-4 BATCH (cells 3-6) -- RELEASED [claude.ai authored + Claude Code released]
+
+**Start-SHA:** `b86d895864c97850662ac4662dff312f68a9248bd5360446c2fb84568bac5f21` (`zinnia_steps4_5_fl_peninsula`). **End-SHA:** `7ca57f28998c42e21d085cdc21ee87acb0e5515d715212aa32c0c35c474931be` (canonical; LATEST session `zinnia_steps4_5_ca_batch`). 9 anchors stay certified; zinnia 6 of 10 region cells authored.
+
+**Scope:** the FOUR California regions in ONE batch -- `ca_interior` (z8-9), `ca_north_coast` (z9-10), `ca_south_coast` (z9-10), `ca_desert` (z9-10). First multi-cell batch (confidence calibrated by se_gulf + fl_peninsula). se_gulf + fl_peninsula preserved byte-identical; 4 regions remain Step-3.5 shells. claude.ai authored crop-SHA `6a679c4f` verified byte-exact.
+
+**Window structure (A5 per cell -- all four = SINGLE window, NOT templated):**
+- **ca_interior (z8-9):** hot Central Valley single long season; spring direct-sow (Apr-Jun, UC Santa Clara MG cut-flower chart) -> bloom through summer to first fall frost. NO fall sow (the chart sows zinnia spring only). NO heat_pause.
+- **ca_north_coast (z9-10):** cool maritime; LATE warm-season start (soil 60-65 °F per UC Marin MG), bloom through the mild summer. Cool nights push bloom start later; lower PM (dry). NO heat_pause.
+- **ca_south_coast (z9-10):** mild long single season; NOT `year_round` (frost-tender annual, cool-season slowdown). NO heat_pause.
+- **ca_desert (z9-10):** single window, sow Feb-Mar (before the brutal peak), bloom THROUGH the desert summer. **HEAT-STALL DISPOSITION (Trevor-confirmed):** NO `heat_pause` -- no T1 documents a peak-heat bloom stall, UC IPM affirmatively says zinnia blooms summer + fall, the T2/T3 "105 °F stall" can't anchor (zero non-T1), and the basil twin carries 0 desert heat_pause. Expressed as a planting-window edge, not a pause token.
+- **All four:** NO `heat_pause`, NO `year_round`. Anchored to the UC source family (`ucanr_santa_clara_mg` dated cut-flower chart, `uc_ipm`, `ucanr_marin_mg`, `ucanr_ext`) + `clemson_hgic_1149`/`uf_ifas_zinnia` corroboration. cluster-13 holds (UC ornamental/cut-flower sources, not vegetable charts).
+
+**Claude Code finishing (RELEASE lane):** filled region metadata for the 4 cells (`California: X` labels from the lettuce exemplar); derived all 8 calendars (single window each, no heat_pause, ca_north_coast cool-late start, ca_desert bloom-through-summer). **NO new mints** (all 5 source IDs already catalogued); **NO region-root `anchoring_urls`; NO prose in `resolved_from`** -- claude.ai applied EVERY prior lesson, so the patch was clean on arrival.
+
+**Verification:** ran `register_completeness_gate` EXPLICITLY up front this time (the fl_peninsula process lesson) = PASS (both on the applied scratch and post-finishing); whole_crop_gate 4 VIOLATIONS = the 4 remaining unauthored regions' region_notes-null (scope, expected); A5 coherence 0; dash/temp 0/0; E distinct 10 / uncatalogued 0 / non-T1 0; F anchoring 0 gaps; release_verify CLEAN (se_gulf + fl_peninsula + lettuce-leaf byte-identical). pre-commit hook: no regression.
+
+**NEXT (claude.ai handoff):** the remaining 4 -- warm_arid (z8) + low_desert_az (z9) (the ca_desert no-heat_pause precedent applies), hawaii_tropical (z11, the remaining `year_round` candidate to test), northern_tier (z3-7, frost-bracketed single summer, cold_pause token, from-scratch) last. Then 6-8 bulk prose + cert.
+
+---
+
 ## 2026-06-15 -- zinnia Steps 4-5 fl_peninsula (cell 2/10, the FALL-SOW double window) -- RELEASED [claude.ai authored + Claude Code released]
 
 **Start-SHA:** `8ded22a030f39b0fa7ff63535c7fd14234d46f02ff9fed52185392b20c6dd450` (`zinnia_steps4_5_se_gulf`). **End-SHA:** `b86d895864c97850662ac4662dff312f68a9248bd5360446c2fb84568bac5f21` (canonical; LATEST session `zinnia_steps4_5_fl_peninsula`). 9 anchors stay certified; zinnia 2 of 10 region cells authored.
