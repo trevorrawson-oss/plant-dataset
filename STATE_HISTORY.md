@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-06-15 -- zinnia Steps 4-5 se_gulf PROOF CELL (anchor 10) -- RELEASED [claude.ai authored + Claude Code released]
+
+**Start-SHA:** `5e7e5f66ace50109083c0b36a09a30801ce7b66359c0b35fe20cfe6886233ab2` (`zinnia_steps3_5_region_shells`). **End-SHA:** `8ded22a030f39b0fa7ff63535c7fd14234d46f02ff9fed52185392b20c6dd450` (canonical; LATEST session `zinnia_steps4_5_se_gulf`). 9 anchors stay certified; zinnia mid-arc, now 1 of 10 region cells authored.
+
+**Scope:** `regions.se_gulf` ONLY (z8 + z9), authored end-to-end, then STOP to re-scope (NA-3b / cluster-13 false-confidence discipline -- flower-window sourcing was unproven). The other 9 regions remain Step-3.5 empty shells.
+
+**claude.ai authored (verified byte-exact, crop-SHA `4b6f745a` after the ops, before Claude Code finishing):**
+- Region-constant `plantings[]`: a `track:"beginner"` main arm (direct-sow hero + transplant arm) and a `track:"succession"` arm (basil-twin shape: interval 2 wk, max 4, in region-constant `plantings[]` per spec-B, NOT in resolved_by_zone). `resolved_by_zone[8]` + `[9]` full key-set (`resolution_method: static_precompute`, `resolved_from` frost dates recorded). Dual-register `region_notes` (heat-through-summer, humid-SE PM/airflow angle, Profusion/Zahara DMR, 2-wk succession).
+- **A5 per-source discipline:** NO `heat_pause` anywhere (UF/IFAS "blooms through summer heat", T1-grounded). z9 is a SINGLE long frost-bracketed season, NOT a second cycle -- **NO z9 fall arm** (the only fall-sow T1 is "south Florida" = `fl_peninsula`'s region, not se_gulf; authoring it here = the Reedley-reads-Florida cross-region defect).
+
+**Claude Code finishing (RELEASE lane):**
+- **Minted 2 T1 catalog sub-IDs** (95 -> 97): `clemson_hgic_1149` (Clemson HGIC 1149 "How to Grow Zinnias", under clemson_hgic) + `uf_ifas_zinnia` (UF/IFAS Gardening Solutions zinnia page, under uf_ifas). Both inherit the parent T1 tier; `_admission_provenance` recorded; mirrors the `uf_ifas_vh021` precedent. `uga_b954` + UF EP451 used as corroboration only (NOT minted). johnny_seeds (T2) anchored NOWHERE.
+- **Filled se_gulf region metadata** (region_id/region_label `Southeast / Gulf`/zone_span `['8','9']`, matching the lettuce exemplar).
+- **Derived z8 + z9 `calendar[]`** (`annual_calendar.py`): z8 = winter `cold_pause` both ends + indoor-start + spring plant + summer-fall bloom; z9 = near-continuous (milder winter, indoor-start bridges the frost months); **NO `heat_pause`** in either (heat-loving). A5 coherence 0.
+- **Stripped a novel region-root `anchoring_urls`** claude.ai authored on se_gulf (the certified exemplars carry region-root `sources` only; anchoring lives per-arm in `plantings[]` + per-cell in `resolved_by_zone` -- gate F confirmed 0 anchoring gaps after the strip). release_verify CONCERN cleared.
+- **Folded the owed normalization:** `sources_summary` johnny_seeds tier T1 -> T2 (the 1-3 self-label defect; the catalog already had T2).
+
+**CLUSTER-13 ANSWERED (the proof cell's payoff -- a re-scope finding):** extensions do NOT carry zinnia in the dated vegetable charts (B577 / VH021 have no zinnia row), but DO give dated last-frost-anchored zinnia windows + time-to-bloom + season span in dedicated flower factsheets (Clemson HGIC 1149) + regional ornamental gardening calendars (UF/IFAS). **Flower windows anchor to flower factsheets + ornamental calendars, NOT vegetable charts; the B577/VH021 anchor used for lettuce/tomato does NOT transfer.** Carry into the remaining-9 re-scope + the bot pipeline template.
+
+**Verification:** whole_crop_gate 9 violations = the 9 UNauthored regions' `region_notes both null` (proof-cell scope, expected); se_gulf fully filled + off the list. A5 coherence 0; B null_values 0; C/D dash/temp 0/0; E distinct 5 / uncatalogued 0 / non-T1 0; F anchoring 0 gaps. release_verify CLEAN (only zinnia + the 2 catalog admits; lettuce-leaf byte-identical, still certified). pre-commit hook: no regression.
+
+**NEXT (claude.ai handoff):** re-scope the remaining 9 with calibrated confidence. Suggested order: `fl_peninsula` (UF/IFAS overlap + owns the fall-sow window question), then the CA-4 batch (ucanr_ext), desert/arid (the lone peak-heat-stall surfacing question), hawaii (`year_round` candidate), `northern_tier` (cold_pause token) last. Then 6-8 bulk prose + cert.
+
+---
+
 ## 2026-06-14 -- zinnia Step 3.5 region shells (anchor 10) -- BUILT [Claude Code]
 
 **Start-SHA:** `aff87ab3145dc7207baa07ea80c35ffed501ccda6b7de10627feb606208ecf16` (`zinnia_steps1_3`). **End-SHA:** `5e7e5f66ace50109083c0b36a09a30801ce7b66359c0b35fe20cfe6886233ab2` (canonical; LATEST session `zinnia_steps3_5_region_shells`). 9 anchors stay certified; zinnia still mid-arc (anchor 10).
