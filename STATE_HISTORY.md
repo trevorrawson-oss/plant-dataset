@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-16 -- onion Step 4 northern_tier -- the long-day PROOF-region (region fill + first filled photoperiod cells) [claude.ai author + Claude Code reconcile/release]
+
+**Start-SHA:** `5a776f58933cceaa7d6ac4965a72aaca906f49164897ba31664157928ec5d272` (onion_step3_5). **End-SHA:** `150e0831e1ad774d150eb0720854e65d4b53eb6b6d0ddd79d7aec6b500e20224`. **Session:** onion_step4_nt. PROOF-region (NA-3b) for the new day-length sourcing axis; the 9 warm/southern regions are the next pass.
+
+**What was authored (NT zones 3-7):** frost-anchored SPRING sowing windows (onion North = a single long-day crop; transplant shape, last-frost-relative offsets start_indoors -84/win21, plant_out -14/win21, harvest_start +76, harvest_end +106) + the FIRST filled photoperiod cells (`recommended_day_length_type: long_day` on all 5; dual-register `day_length_note_*`, distinct per cell, gloss-then-use). Region `plantings[]` single beginner-track arm + provenance; region_notes; per-zone render strings + calendars + zone_notes. 6 T1 sources (umn_ext/ndsu_ext/cornell_ext/umd_ext for frost; tamu_agrilife + piedmont_mg for the day-length bands), ALL catalog-admitted, ZERO to mint.
+
+**FROST-DATE RECONCILE (the proof-region's whole purpose):** v1 (`onion_step4_northern_tier_patch.json`) authored z5/z6/z7 `resolved_from` from REMEMBERED cold-zone anchors (Apr 20 / Apr 10 / Mar 30), not the live `zone_frost_data` (which was NOT in the slice). Claude Code reconciled at apply: the dataset says Apr 15 / Apr 1 / Mar 15 (off 5-15 days; z7 shifting calendar months). NO automated gate catches this -- the calendars were internally coherent with the wrong dates (A5 = 0). Bounced a CORRECTION (`CORRECTION_onion_step4_nt_frost_dates.md` + `zone_frost_data.json`) -> claude.ai v2 (`...patch.v2.json`, 3 cells re-resolved). Claude Code INDEPENDENTLY re-derived all three from the live dates + verified claude.ai's v2 byte-for-byte (render strings + calendars + zone_notes all matched, incl. z7's December seedling-start year-wrap), merged v1+v2 into one 13-op patch, applied, re-reconciled ALL 5 cells == live zone_frost_data.
+
+**Gates on `150e0831`:** A9 photoperiod **0** (the coverage gate's FIRST live pass on FILLED cells -- NT resolves to long_day, 2 long-day varieties cover it), A2 NT filled (9 warm regions remain), A5 calendar coherence **0**, register_completeness **PASS**, release_verify **clean** (NT region_notes-null CLEARED, onion-only collateral, lettuce byte-identical, no novel keys). Commits: `3a23d5e` feat(onion) + the docs(state) regen.
+
+**Lesson -> warm pass:** `zone_frost_data.json` (all zones 3-13 + a/b) handed to claude.ai for the warm regions; reconcile every `resolved_from` against it; Claude Code re-reconciles at apply (the manual reconcile is the ONLY catch -- now a locked guardrail).
+
+**NEXT:** onion Step 4 warm/southern regions -- se_gulf/fl_peninsula/low_desert_az/ca_desert (short_day, fall/winter-planted, vernalization-bolting guidance), the CA intermediate band, hawaii_tropical (z11 edge) -> Steps 6-8 -> Step 9 -> Step 11 cert.
+
+---
+
 ## 2026-06-16 -- onion Step 3.5 -- region-shell rebuild + photoperiod day-length slots + the A9 gate [Claude Code structural lane]
 
 **Start-SHA:** `b9576b2b8e207e81bd96918fa57006930023e720a0dcb77019b4972477f224f4` (onion_steps_1_3). **End-SHA:** `5a776f58933cceaa7d6ac4965a72aaca906f49164897ba31664157928ec5d272`. **Session:** onion_step3_5. 3 commits (tools / data / state). All tool code test-first (red -> green).
