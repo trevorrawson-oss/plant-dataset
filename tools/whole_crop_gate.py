@@ -199,6 +199,32 @@ if crop.get("calendar_basis") == "non_seasonal_indoor":
 else:
     print("  (not non_seasonal_indoor -- skipped)")
 
+# ---------------- A7. CP-field placement (suffixed siblings, NOT a nested wrapper) ----------------
+# A CP field renders as parent.X_seasoned / parent.X_beginner DIRECT siblings (container_notes.notes_seasoned,
+# storage.fridge_seasoned), never parent.X.{X_seasoned}. The dual-voice (B) + roster walks recurse for the
+# suffix, so they PASS a mis-nested CP field -- placement was otherwise unenforced. Signature: a key K whose
+# dict value carries a child key named exactly K_seasoned or K_beginner (the suffix redundantly repeats K).
+# Legit grouping objects (soil_mix.type_seasoned, drainage.saucer_practice_seasoned) differ -- the inner stem
+# != the parent key, so they are NOT flagged. (microgreens-mix 6-8, 2026-06-15: claude.ai shipped
+# shape_requirements/saucer_practice double-nested; the gates passed it; flattened at release.)
+print("A7. CP-field placement (suffixed siblings, not a nested wrapper)")
+_misnest = []
+def cp_placement_walk(o, pat):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if isinstance(v, dict):
+                for ck in v:
+                    if ck == f"{k}_seasoned" or ck == f"{k}_beginner":
+                        _misnest.append(f"{pat}.{k}.{ck}")
+            cp_placement_walk(v, f"{pat}.{k}")
+    elif isinstance(o, list):
+        for i, it in enumerate(o):
+            cp_placement_walk(it, f"{pat}[{i}]")
+cp_placement_walk(crop, crop.get("slug", "?"))
+print(f"  CP-placement walk: {len(_misnest)} mis-nest(s)")
+for m in _misnest:
+    fail(f"mis-nested CP field: {m} (the suffixed pair must be siblings of the parent key, not nested under it)")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

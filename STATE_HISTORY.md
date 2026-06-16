@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-06-15 -- CP-field placement GATE (whole_crop_gate A7) -- tooling follow-up to microgreens 6-8
+
+**No data change** -- canonical stays `096a99fd4fa414c95dc19ccbdcaecf8998fb08499eb83c24071feaf472f89716`; tooling only (`whole_crop_gate.py` + new `tools/test_gate_cp_placement.py`). Closes the gate gap surfaced by the microgreens 6-8 release.
+
+**The gap:** a CP field must render as suffixed SIBLINGS (`parent.X_seasoned`/`parent.X_beginner`, like `container_notes.notes_seasoned`, `storage.fridge_seasoned`), never a nested wrapper (`parent.X.{X_seasoned}`). claude.ai shipped microgreens' `shape_requirements`/`saucer_practice` double-nested; `whole_crop_gate` B (dual-voice) + `register_completeness_gate` both walk RECURSIVELY for the `_seasoned`/`_beginner` suffix, so they PASSED the mis-nested form -- a silent defect (renderer-invisible, would propagate to the ~8 bot-derived microgreen siblings). It was caught only by manual op-shape inspection at release.
+
+**The gate (A7, test-first):** flags any key K whose dict value carries a child key named exactly `K_seasoned` or `K_beginner` (the redundant self-name is the signature). Legit grouping objects (`soil_mix.type_seasoned`, `drainage.saucer_practice_seasoned`) differ -- the inner stem != the parent key -- so they are NOT flagged. Recurses dicts + lists. `test_gate_cp_placement.py`: a clean certified crop passes; an injected double-nest (top-level + inside a list item) flags; correct sibling placement passes.
+
+**AUDIT (Trevor's question -- did this slip into a certified crop?):** scanned ALL 123 crops for three placement-defect variants -- (a) `K.K_seasoned` redundant double-nest, (b) bare `seasoned`/`beginner` keys, (c) single-pair wrapper dicts. **0 hits, 0 on the 10 certified crops.** The microgreens 6-8 nest was the only instance, fixed at that release before this gate existed. The GS-true crops are clean.
+
+**Verification:** all 8 tool/gate test suites green; all 11 crops PASS whole_crop_gate (A7 = 0 mis-nests on each).
+
+---
+
 ## 2026-06-15 -- microgreens-mix Steps 6-8 -- register-complete + fully anchored -- RELEASED [claude.ai authored + Claude Code released + 1 shape fix]
 
 **Start-SHA:** `5dba6cefd4b51e438316f237a110f23dc9c651da0cad8a44f491358396d00e55` (`microgreens_steps1_3`). **End-SHA:** `096a99fd4fa414c95dc19ccbdcaecf8998fb08499eb83c24071feaf472f89716` (canonical; LATEST `microgreens_steps6_8`). **microgreens-mix crop-SHA (sorted-min):** `e356a219b3d0902e4fe625d01ea058055629b346120b4c459efe8f0fb6637e09` (post shape-fix; claude.ai's pre-fix `3f441997...` verified first as content fidelity). NO flip -- launch_ready stays false (6-8). 10 anchors stay certified (lettuce-leaf byte-identical; all 10 PASS).
