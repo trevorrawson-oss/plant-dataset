@@ -60,6 +60,12 @@ def build_region_shells(crop, session=SESSION, date=DATE):
             _build_north_from_zones(r, session, date)
         else:
             _build_warm_shell(r, direct=direct)
+        # photoperiod crops carry a per-cell day-length resolution layer alongside the frost
+        # windows (which cultivar TYPE bulbs at that latitude), scaffolded null at 3.5.
+        if _is_photoperiod(crop):
+            for cell in (r.get("resolved_by_zone") or {}).values():
+                if isinstance(cell, dict):
+                    _scaffold_photoperiod_cell(cell)
     return crop
 
 
@@ -88,6 +94,25 @@ def _is_indoor(crop):
     regions{} to {}; this keeps a future/bot run from rebuilding them)."""
     return (crop.get("calendar_basis") == "non_seasonal_indoor"
             or bool(crop.get("zone_independent")))
+
+
+_PHOTOPERIOD_CELL_KEYS = ("recommended_day_length_type",
+                          "day_length_note_seasoned", "day_length_note_beginner")
+
+
+def _is_photoperiod(crop):
+    """A photoperiod (day-length) gated crop (onion, anchor 12; the allium family) carries a
+    per-cell day-length resolution layer ALONGSIDE the frost windows: which cultivar TYPE bulbs
+    at that latitude. The crop stays on the normal frost-anchored annual path -- photoperiod
+    gates the variety, not the calendar. Marker: "photoperiod" in gating_factors."""
+    return "photoperiod" in (crop.get("gating_factors") or [])
+
+
+def _scaffold_photoperiod_cell(cell):
+    """Add the per-cell day-length slots (null) -- idempotent + no-clobber: a re-run never
+    wipes a value Step 4 has filled (setdefault only fills an absent key)."""
+    for k in _PHOTOPERIOD_CELL_KEYS:
+        cell.setdefault(k, None)
 
 
 def _is_tree(crop):

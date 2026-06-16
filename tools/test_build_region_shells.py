@@ -355,4 +355,43 @@ stale = indoor_crop(); stale["regions"] = {"northern_tier": {"region_label": "Co
 c9b = build_region_shells(stale)
 assert "plantings" not in c9b["regions"]["northern_tier"], "indoor crop's stale cell was warm-built"
 
+# ---- fixture 10: PHOTOPERIOD-gated crop (onion, anchor 12) -> per-cell day-length slots ----
+# A photoperiod crop stays on the normal frost-anchored ANNUAL path (day length gates the
+# cultivar TYPE, not the calendar), but every resolved cell additionally carries the day-length
+# resolution layer: recommended_day_length_type + day_length_note_seasoned/_beginner, scaffolded
+# null at 3.5 and filled at Step 4. Marker: "photoperiod" in gating_factors. (onion, 2026-06-16.)
+PHOTO_KEYS = ("recommended_day_length_type", "day_length_note_seasoned", "day_length_note_beginner")
+
+def photoperiod_stub_crop():
+    c = synthetic_stub_crop()
+    c["slug"] = "onion"
+    c["gating_factors"] = ["photoperiod"]
+    c["start_method"] = {"start": "both"}
+    return c
+
+c10 = build_region_shells(photoperiod_stub_crop(), session="onion_step3_5", date="2026-06-16")
+r10 = c10["regions"]
+assert set(r10) == REGION_KEYS, f"fixture10 region set: {set(r10)}"
+# stays a frost-anchored annual -- NOT flipped to a perennial/indoor basis
+assert c10.get("calendar_basis") != "perennial_chill_gated", "photoperiod crop wrongly flipped to a tree"
+# every resolved cell carries the 3 day-length slots, scaffolded null
+for rk, r in r10.items():
+    for z, cell in r["resolved_by_zone"].items():
+        for k in PHOTO_KEYS:
+            assert k in cell, f"{rk}.{z}: photoperiod slot {k} missing"
+            assert cell[k] is None, f"{rk}.{z}: photoperiod slot {k} should scaffold null, got {cell[k]!r}"
+
+# control: a NON-photoperiod crop does NOT get the day-length slots
+c10n = build_region_shells(synthetic_stub_crop(), session="ctl", date="2026-06-16")
+for rk, r in c10n["regions"].items():
+    for z, cell in r["resolved_by_zone"].items():
+        for k in PHOTO_KEYS:
+            assert k not in cell, f"{rk}.{z}: non-photoperiod crop leaked the photoperiod slot {k}"
+
+# idempotency + NO-CLOBBER: a re-run never wipes a recommended_day_length_type Step 4 has filled
+c10["regions"]["se_gulf"]["resolved_by_zone"]["9"]["recommended_day_length_type"] = "short_day"
+build_region_shells(c10, session="onion_step3_5", date="2026-06-16")
+assert c10["regions"]["se_gulf"]["resolved_by_zone"]["9"]["recommended_day_length_type"] == "short_day", \
+    "photoperiod re-run clobbered a filled day-length value"
+
 print("PASS build_region_shells")

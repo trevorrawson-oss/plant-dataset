@@ -271,6 +271,21 @@ else:
     for s in _stray:
         fail(f"successions_realized on out-of-scope crop (a succession is not a second planting): {s}")
 
+# ---------------- A9. photoperiod (day-length) coverage (no-op off photoperiod scope) ----------------
+# A photoperiod-gated crop (onion, anchor 12; the allium family) resolves day-length TYPE by
+# latitude: long_day North / intermediate_day middle / short_day South. The varieties carry the
+# type (biological truth); each filled region cell resolves which type to grow. The COVERAGE
+# invariant is load-bearing: every type a region resolves to must have >=1 recommended variety
+# carrying it (no "grow short-day here" with zero short-day varieties on the page). A null cell
+# recommended_day_length_type is the Step-3.5 admission state (skipped -- A2 owns region-fill).
+# No-op unless "photoperiod" in gating_factors. (onion anchor 12, 2026-06-16.)
+from photoperiod_gate import photoperiod_violations
+print("A9. photoperiod day-length coverage (variety + cell typing + coverage; no-op off scope)")
+_photo = photoperiod_violations(crop)
+print(f"  gating_factors={(crop.get('gating_factors') or [])!r} | photoperiod violations: {len(_photo)}")
+for m in _photo:
+    fail(f"photoperiod: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
