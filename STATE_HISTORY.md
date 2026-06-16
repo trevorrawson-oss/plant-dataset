@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-16 -- lemon container-placeability back-fill [Claude Code structural lane; additive]
+
+**Start-SHA:** `f89a1b7af025513eab4ec11dc0cbd54a15ab49a9f18999db14d69396f347bb65` (`microgreens_step11_cert`). **End-SHA:** `9b55c248ad1fb1d19759b57ea4039241452f2a2a7b49d0f131264c05ec6841ad` (canonical; LATEST `lemon_container_backfill`). Strictly additive -- lemon stays `verified_gs_arc` + launch_ready x2. Same DISPLAY-READINESS class as `lemon_spacing_backfill`; done at Trevor's direction off a plant-astro garden-calculator gap.
+
+**The gap:** lemon is certified and its own `container_notes` prose calls it "among the best citrus for containers," yet the machine-readable container fields were null. The calculator gates container placeability on `container_ok==true` AND a non-null `min_pot_gallons` (-> `fitsContainer`), so a potted lemon could not be offered -- while apple (M9 dwarf, 20 gal) and orange-navel (Flying Dragon dwarf, 25 gal), which carried rootstock-derived gallons, appeared. Root cause is the same GS-arc DoD blind spot: biology + sources certified, but the consumer-tool container fields never required.
+
+**The fix (surgical/additive, lemon ONLY):** `container_notes.container_ok null->true`, `container_recommended null->true`, `min_pot_gallons null->15`, `recommended_pot_gallons null->20`. No prose, no rootstock, no other crop touched.
+
+**Sourcing (the 15-gal min is a SOURCED figure, never guessed):** Clemson HGIC "Container Citrus Production" gives a final container of 18-36 in diameter (~15 gal at the small end); Clemson is already a cited org in lemon's container_notes. Corroborated by UC Master Gardeners ("at least a 15 gallon size [~17 in dia]" for Meyer/compact citrus). The cited UF/IFAS HS402 gives only a 3-gal NURSERY-STOCK figure (not a home-pot rec), so was deliberately NOT anchored to. Recommended 20 gal sits inside Clemson's range and matches apple's pattern.
+
+**Verification (protocol #6):** whole_crop_gate lemon PASS -- incl. the `container_ok => pot-gallons|tray-depth (min_pot_gallons=15)` invariant the new fields satisfy (the gate would have FAILED container_ok=true with a null min, confirming coherence). release_verify clean: collateral = lemon only, `lemon regions changed: []`, orange-navel byte-identical, top-level unchanged, 0 new violations. verbatim_scan lemon = 0 HARD lifts (no prose changed). Cert intact: launch_ready_core/seasoned True, status `verified_gs_arc` unchanged, 0 open_finding blockers. precommit_release_verify: 1 crop changed, no new violations.
+
+**Lesson reinforced (display-readiness DoD debt):** when a certified crop's OWN notes assert container suitability but its structured container fields are null, back-fill `container_ok`/`min_pot_gallons` (sourced) -- the container fields join `spacing_inches`/`companions` (from `lemon_spacing_backfill`) as consumer-surface fields the GS-arc DoD still owes. Audit display-readiness per consuming surface; a `launch_ready` flag certifies biology, not field-completeness for downstream tools.
+
+---
+
 ## 2026-06-15 -- microgreens-mix Step 11 CERT -- anchor 11 CERTIFIED, the FIRST non_seasonal_indoor crop [Claude Code verified + flipped]
 
 **Start-SHA:** `3d7b8b8f69bc1cdde1a97f9d9339fdc2bca6f399d55c614c71dd4cd7317d0dda` (`succession_realized_count`). **End-SHA:** `f89a1b7af025513eab4ec11dc0cbd54a15ab49a9f18999db14d69396f347bb65` (canonical; LATEST `microgreens_step11_cert`). **11 anchors now certified** (microgreens joins; the FIRST certified indoor crop). Done THIS session at Trevor's direction (he'd mis-recalled microgreens as already certified -- it was register-complete + anchored from Steps 1-3 + 6-8 but never flipped; status None, launch_ready both false).
