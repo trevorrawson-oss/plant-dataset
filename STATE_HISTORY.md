@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-16 -- onion Step 4 warm/southern regions -- REGION FILL COMPLETE + the anchoring-fork resolution [claude.ai author + Claude Code release]
+
+**Start-SHA:** `150e0831e1ad774d150eb0720854e65d4b53eb6b6d0ddd79d7aec6b500e20224` (onion_step4_nt). **End-SHA:** `de59090fc5cf24a87a46e3a07e42afd798d23024ed86e934aabe2716ef7a3103`. **Session:** onion_step4_warm. The 9 warm/southern regions filled in ONE pass; onion's whole_crop_gate now PASSES (all 10 regions filled; A9 coverage holds across all 3 day-length classes). REGION FILL COMPLETE.
+
+**THE ANCHORING FORK (resolved before delivery, Trevor-endorsed Option 1):** how to anchor a photoperiod-governed warm cell whose season-limiter is DAY LENGTH, for which there is NO registered anchor token (claude.ai had drafted the unregistered `from: "fixed"`). Claude Code's analysis -> Option 1: frost-bearing cells frost-anchor (last_frost/first_frost + region-specific offsets); frost-free cells (fl z10/z11, hawaii z11) `resolved_from: null` + month-resolution + a `resolution_method` naming the source (the lettuce fl_peninsula pattern). REJECTED Option 3 (mint `bulb_threshold_*`): NON-RESOLVABLE without a per-zone day-length-date table; the full version is a deliberate future schema session. REJECTED Option 2 (reuse `bolt_threshold_*`): onion bolt = COLD vernalization, inverse semantics. KEY INSIGHT: photoperiod is a VARIETY gate (`recommended_day_length_type` + A9), already encoded -- not a window anchor. (Now a locked guardrail.)
+
+**What was authored (9 regions, 87 ops):** day-length types -- short_day (se_gulf/fl_peninsula/low_desert_az/ca_desert/hawaii), intermediate_day (ca_interior/ca_north_coast/ca_south_coast/warm_arid). Region-specific windows from regional tables (UC ANR Table 13.2 per CA sub-region; TAMU/UGA Gulf; UA AZ1005 low-desert; NMSU warm_arid; UF/IFAS + CTAHR). Pause-discriminated structure: the CA two-window cells = the lettuce ONE-arm primary+secondary model (continuous cool-season, brief winter lull, onion overwinters); se_gulf single fall-overwinter (no second arm); warm_arid spring-primary (distinct from low_desert fall -- A5 anti-cross-region). **hawaii_tropical = short_day, NOT year_round** despite frost-free z11 (CTAHR: 21 deg N, 11.5-12.5 h year-round -> short-day; the photoperiod gate bounds a fall-winter window, OVERRIDING the frost-free->year_round inference -- the key A5 call).
+
+**FROST RECONCILE (the NT lesson held):** claude.ai used the supplied `zone_frost_data.json` -- ALL warm frost-bearing cells' `resolved_from` match the live table (z8 Feb 15/Dec 1, z9 Jan 31/Dec 15, z10 Jan 15/Dec 31); frost-free cells `resolved_from: null`. Claude Code re-reconciled at apply: 0 mismatches.
+
+**2 sub-IDs MINTED (Claude Code release lane, autonomous):** `uariz_ext_az1005` (UA AZ1005 low-desert planting calendar, under uariz_ext) + `uf_ifas_gs` (UF/IFAS Gardening Solutions onions page, under uf_ifas) -- both inherit parent T1 + `_admission_provenance`, mirroring uf_ifas_vh021. catalog 99 -> 101.
+
+**Gates on `de59090f`:** whole_crop_gate onion **PASS** (A2 region_notes-null 0, A5 0, A9 0, source-tier 17 IDs / 0 uncatalogued / 0 non-T1), register_completeness **PASS**, release_verify **clean** (9 warm region_notes-null CLEARED, onion + catalog+2 collateral, lettuce byte-identical; benign empty `sources_pending_admission` residue on 5 regions noted, non-blocking). Patch base re-stamped 5a776f58 -> 150e0831 (the warm regions were byte-identical across the NT release). Commits: `60991b4` feat(onion) + the docs(state).
+
+**NEXT:** onion Steps 6-8 (bulk prose -- the register_fill worklist incl. the deferred `saucer_practice`) -> Step 9 -> Step 11 cert + flip.
+
+---
+
 ## 2026-06-16 -- onion Step 4 northern_tier -- the long-day PROOF-region (region fill + first filled photoperiod cells) [claude.ai author + Claude Code reconcile/release]
 
 **Start-SHA:** `5a776f58933cceaa7d6ac4965a72aaca906f49164897ba31664157928ec5d272` (onion_step3_5). **End-SHA:** `150e0831e1ad774d150eb0720854e65d4b53eb6b6d0ddd79d7aec6b500e20224`. **Session:** onion_step4_nt. PROOF-region (NA-3b) for the new day-length sourcing axis; the 9 warm/southern regions are the next pass.
