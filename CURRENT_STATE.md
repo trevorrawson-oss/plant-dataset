@@ -19,7 +19,7 @@
 ## Active work + next step
 - **microgreens is DONE (certified).** The `non_seasonal_indoor` archetype is cert-proven -- the template the ~8 microgreen siblings derive from (mushrooms = a SEPARATE indoor archetype, still to author).
 - **NEXT roadmap anchors:** onion / blueberry (chill-gated) / strawberry (renovation, last) + the succession-capable rail-riders (broccoli/bell-pepper/zucchini/green-beans -- born with `successions_realized` via the A8 gate during their own Step 4/5), then the bots.
-- **Separate tracks:** the indoor GUIDE PAGE template on plant-astro (microgreens not yet in `BUILT_CROPS`; zone-less relative-timeline render); **garden calculator (plant-astro): in-ground fruit trees fixed (row-grid counting -- a tree always fits open ground, big plots hold several) + a 30-gal large-pot chip added, on branch `fix/calculator-in-ground-trees`. lemon goes container-placeable once the plant-astro submodule bumps to `>= e54dca4`** (its in-ground spacing already rode the `>= 3ec810a` bump; apple/orange already container-placeable; peach is correctly in-ground-only).
+- **Separate tracks:** the indoor GUIDE PAGE template on plant-astro (microgreens not yet in `BUILT_CROPS`; zone-less relative-timeline render); **garden calculator (plant-astro): in-ground fruit trees fixed (row-grid counting -- a tree always fits open ground, big plots hold several) + a 30-gal large-pot chip added, on branch `fix/calculator-in-ground-trees`. lemon goes container-placeable once the plant-astro submodule bumps to `>= 422c1e6`** (its in-ground spacing already rode the `>= 3ec810a` bump; apple/orange already container-placeable; peach is correctly in-ground-only).
 
 ## Gate record (generated 2026-06-16, on canonical `9b55c248`)
 - **cherry-tomato: `PASS` (0)**
