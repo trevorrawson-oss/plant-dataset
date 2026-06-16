@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-15 -- microgreens-mix Steps 6-8 -- register-complete + fully anchored -- RELEASED [claude.ai authored + Claude Code released + 1 shape fix]
+
+**Start-SHA:** `5dba6cefd4b51e438316f237a110f23dc9c651da0cad8a44f491358396d00e55` (`microgreens_steps1_3`). **End-SHA:** `096a99fd4fa414c95dc19ccbdcaecf8998fb08499eb83c24071feaf472f89716` (canonical; LATEST `microgreens_steps6_8`). **microgreens-mix crop-SHA (sorted-min):** `e356a219b3d0902e4fe625d01ea058055629b346120b4c459efe8f0fb6637e09` (post shape-fix; claude.ai's pre-fix `3f441997...` verified first as content fidelity). NO flip -- launch_ready stays false (6-8). 10 anchors stay certified (lettuce-leaf byte-identical; all 10 PASS).
+
+**A LIGHT 6-8 (13 ops):** `register_fill_gate` already passed at 1-3, so NO bulk-prose sweep. The work was anchoring + the 2 deferred CP pairs + two structured-null settlements -- exactly the scope Claude Code computed into the kickoff.
+
+**1. Retro-anchored 4 prose surfaces** that shipped from 1-3 carrying prose but no citations (block-coherent `sources` + nested `anchoring_urls`, all the in-use microgreen T1 pages at their 2026-06-15 stamp; NO new mints, no homepages, johnny_seeds not cited): `description` (-> usu_ext + psu_microgreens, top-level description_sources/_anchoring_urls), `start_method` (-> usu_ext, dense-sow + presoak), `succession_policy` (-> usu_ext, continuous stagger basis), `indoor_cycle` (-> usu_ext + psu_microgreens, the full sow->blackout->light->harvest cycle + temps + 18h + the 7-21 d range).
+
+**2. Authored the 2 deferred CP container pairs** (distinct from the existing `container_notes.notes` pair): shape_requirements (shallow 1020-style tray, 1-2 in medium) + drainage.saucer_practice (nest the drilled tray in a solid tray for bottom-watering). **SHAPE FIX (Claude Code release lane):** claude.ai delivered both as a NESTED object -- `replace container_notes/shape_requirements -> {shape_requirements_seasoned, shape_requirements_beginner}` (double-nested `container_notes.shape_requirements.shape_requirements_seasoned`), same for `drainage.saucer_practice`. The dataset CP convention is suffixed SIBLINGS at the parent level (`container_notes.notes_seasoned`, `storage.fridge_seasoned`), NOT a nested wrapper. Flattened both to siblings (claude.ai's exact prose preserved, key position preserved, the bare/nested wrapper removed). **GATE GAP found + logged:** whole_crop_gate B + register_completeness_gate walk RECURSIVELY for the `_seasoned`/`_beginner` suffix + sibling, so they PASS a mis-nested CP field -- placement is NOT enforced. The nested form would have shipped clean yet been renderer-invisible + propagated to the bot-derived siblings. Caught by inspecting the patch op SHAPE at release (a `replace parent/X -> object` op on a CP single-field is the tell; the right ops are `add parent/X_seasoned` + `add parent/X_beginner`). Carried into CURRENT_STATE locked-decisions.
+
+**3. succession_policy.successions + max_successions_per_season: LEFT NULL**, basis stated in `succession_policy.notes` (window_type continuous_indoor; microgreens run continuously year-round indoors -- no season to cap, the limit is tray count + counter space, not climate; capping to an integer would invent a constraint the biology does not impose). This was the Claude Code 1-3 recommendation; claude.ai confirmed it (contrast zinnia, a seasonal flower that DID cap to season length).
+
+**4. pests + diseases: AUTHORED** (were empty `[]`): damping-off / surface mold (Pythium/Rhizoctonia) promoted from `failure_diagnostics` to a first-class `diseases[]` entry (the #1 microgreen failure, dual-register name/description/management, sourced psu_microgreens/usu_ext/unr_ext); fungus gnats added as the one realistic indoor `pests[]` entry (itself a wet-tray symptom, sourced psu_microgreens/unr_ext). Arrays stop there -- no other pest/disease is materially relevant to a sterile-tray days-long indoor cycle.
+
+**5. Confirmed N/A structured nulls left bare (NOT filled):** weeks_indoors, fertilizer.stage_id, start_method.weeks_before, container min/recommended_pot_gallons (tray uses depth_inches_min), ph.tolerated_range, rotation.rotation_years/good_after, first_planting_notify_days.
+
+**Verification:** whole_crop_gate PASS (microgreens + all 10 certified); register_completeness_gate PASS; register_fill_gate PASS; release_verify CLEAN (only microgreens changed, NO catalog/top-level change, lettuce-leaf byte-identical, dash/spelled-degree clean, no new violations). Indoor model untouched (`regions`/`zones` `{}`, the cycle in `indoor_cycle`, no `calendar[]`).
+
+**MILESTONE: microgreens-mix is REGISTER-COMPLETE + fully anchored.** NEXT = Step 9 (copy sweep) + Step 11 (cert flip: verification_status + last_reviewed). After cert it is the certified `non_seasonal_indoor` anchor the ~8 sibling microgreens (radish/broccoli/arugula/pea-shoots/sunflower-sprouts/wheatgrass/cilantro) derive from; mushrooms remain a SEPARATE indoor archetype.
+
+---
+
 ## 2026-06-15 -- microgreens Step 5.5 indoor-cycle PRESENCE GATE (tooling follow-up to Steps 1-3)
 
 **No data change** -- canonical stays `5dba6cefd4b51e438316f237a110f23dc9c651da0cad8a44f491358396d00e55`; tooling only (`whole_crop_gate.py` + new `tools/test_gate_indoor_cycle.py`). Closes the one Step 5.5 enforcement gap from the microgreens Steps 1-3 release.
