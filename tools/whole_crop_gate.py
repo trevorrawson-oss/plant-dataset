@@ -225,6 +225,52 @@ print(f"  CP-placement walk: {len(_misnest)} mis-nest(s)")
 for m in _misnest:
     fail(f"mis-nested CP field: {m} (the suffixed pair must be siblings of the parent key, not nested under it)")
 
+# ---------------- A8. realized-succession coherence (no-op off succession scope) ----------------
+# successions_realized is a PURE DERIVED per-zone count (deriver = the source of truth, like
+# the A4 tree calendar). This re-derives and asserts equality, so an edit to a zone's window
+# that was not followed by a deriver re-run is caught as STALE. Also enforces presence on every
+# in-scope cell + the LOCK #4 crop-level reconciliation (successions == max_successions_per_season
+# == max over zones). For an OUT-OF-SCOPE crop (suitable=False / indoor -- cherry/beefsteak/
+# microgreens) the field must be ABSENT (a succession is not a second planting). This is the
+# "wired into the arc" guarantee: a future succession anchor cannot certify without it.
+# (per-zone realized-succession-count pass, 2026-06-15.)
+from derive_realized_successions import derive_cell_realized, crop_in_scope as _succ_in_scope
+print("A8. realized-succession coherence (successions_realized == derive; no-op off scope)")
+if _succ_in_scope(crop):
+    _iw = (crop.get("succession_policy") or {}).get("interval_weeks")
+    _realized = []
+    for rk, r in (crop.get("regions") or {}).items():
+        for z, cell in (r.get("resolved_by_zone") or {}).items():
+            if not isinstance(cell, dict):
+                continue
+            want = derive_cell_realized(cell, _iw)
+            have = cell.get("successions_realized")
+            if want is None:
+                if have is not None:
+                    fail(f"successions_realized present on non-derivable cell: {rk}.{z}")
+                continue
+            _realized.append(want)
+            if have is None:
+                fail(f"successions_realized missing: {rk}.{z}")
+            elif have != want:
+                fail(f"successions_realized stale: {rk}.{z} (have {have}, derive {want})")
+    _mx = max(_realized) if _realized else None
+    if _realized:
+        _sp = crop["succession_policy"]
+        if _sp.get("successions") != _mx:
+            fail(f"succession_policy.successions {_sp.get('successions')} != max(realized) {_mx}")
+        if _sp.get("max_successions_per_season") != _mx:
+            fail(f"succession_policy.max_successions_per_season {_sp.get('max_successions_per_season')} != max(realized) {_mx}")
+    print(f"  in-scope: {len(_realized)} cells | crop-max={_mx} "
+          f"| successions={(crop.get('succession_policy') or {}).get('successions')}")
+else:
+    _stray = [f"{rk}.{z}" for rk, r in (crop.get("regions") or {}).items()
+              for z, cell in (r.get("resolved_by_zone") or {}).items()
+              if isinstance(cell, dict) and "successions_realized" in cell]
+    print(f"  (not succession-scope -- {len(_stray)} stray field(s))")
+    for s in _stray:
+        fail(f"successions_realized on out-of-scope crop (a succession is not a second planting): {s}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
