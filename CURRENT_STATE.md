@@ -1,27 +1,27 @@
-**10 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia) of a ~18 target. **microgreens-mix (anchor 11) -- Steps 1-3 + 6-8 RELEASED; REGISTER-COMPLETE + fully anchored.** No cert flip yet (launch_ready false); **NEXT = Step 9 (copy sweep) + Step 11 (cert flip).** The FIRST `non_seasonal_indoor` crop; once certified, the template the ~8 microgreen siblings derive from (mushrooms = a SEPARATE indoor archetype).
+**11 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, **microgreens-mix**) of a ~18 target. microgreens (anchor 11) is the FIRST `non_seasonal_indoor` crop -- the certified template the ~8 microgreen siblings (radish/broccoli/arugula/pea-shoots/sunflower/wheatgrass/cilantro) derive from; mushrooms = a SEPARATE indoor archetype.
 
 ## Canonical pointer
-- **Current SHA:** `3d7b8b8f69bc1cdde1a97f9d9339fdc2bca6f399d55c614c71dd4cd7317d0dda`. `LATEST.txt` session: `succession_realized_count` (2026-06-15).
+- **Current SHA:** `f89a1b7af025513eab4ec11dc0cbd54a15ab49a9f18999db14d69396f347bb65`. `LATEST.txt` session: `microgreens_step11_cert` (2026-06-15).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `f89a1b7a` -- feat(dataset): microgreens-mix CERTIFIED -- anchor 11, first non_seasonal_indoor
   - `3d7b8b8f` -- feat(dataset): per-zone successions_realized + whole_crop_gate A8
   - `722dbb11` -- fix(lemon): backfill spacing_inches [180,300] + UF/IFAS HS1153 anchor
   - `096a99fd` -- feat(microgreens): Steps 6-8 register-fill + anchoring (anchor 11)
   - `5dba6cef` -- feat(microgreens): Steps 1-3 + indoor archetype model (anchor 11)
   - `5294bd49` -- feat(zinnia): CERTIFIED -- anchor 10, the first flower
   - `4a6b2679` -- feat(zinnia): Steps 6-8 bulk prose + retro-anchoring (scope A) -- REGISTER-COMPLETE
-  - `18555cd4` -- feat(zinnia): Steps 4-5 hawaii_tropical (cell 10/10) -- region fill COMPLETE
 
-## What just happened (session `succession_realized_count`)
-- **Per-zone realized-succession-count pass SHIPPED** (the queued item off the zinnia succession issue; Claude Code structural lane, deterministic). Added derived `resolved_by_zone.<z>.successions_realized` to the 4 region-filled succession crops (carrot, basil, lettuce-leaf, zinnia; 80 cells) + set `succession_policy.successions` AND `max_successions_per_season` = max-over-zones (all 12). **Strictly additive** -- object-diff = 90 paths, ALL on the 4 crops (80 field-adds + 8 policy + zinnia status/note); the other 119 crops + top-level byte-identical -> the 10 anchors stay launch_ready.
-- **Method (spec v1.1, two in-build decisions Trevor ratified):** the locked single-window envelope formula over-counted heat-split zones ~2x (carrot ca_interior Feb1->Sep30 hides a May-Jul heat gap) and read absurd for long/year_round windows. **Gap-aware** per cell: year_round -> `min(floor(52/iw),12)`; authored `succession_spring`/`succession_fall` -> count; else day-precise `[first_plant_date,last_plant_date]` span (wrap-aware) split ONLY at internal heat/cold pauses, summing `floor(span/(iw*7))+1` per sub-window. **Cap 12 is GLOBAL** (not just year_round). Reproduces the authored northern_tier lists exactly.
-- **`whole_crop_gate` A8** = realized-succession coherence (re-derive-and-assert-equality + presence + reconciliation + out-of-scope absence) -- the gate-enforced guarantee future succession anchors are born with the field. zinnia `zinnia_successions_cap_derived` finding accepted_inference -> **resolved**. All test-first. (`release_verify`'s 2 CONCERNs were single-crop-arc false-positives; `test_gen_current_state` fails PRE-EXISTING, unrelated.)
+## What just happened (session `microgreens_step11_cert`)
+- **microgreens-mix CERTIFIED -- anchor 11, the FIRST `non_seasonal_indoor` crop.** Step 11 flip: `verification_status` -> status `verified_gs_arc` + launch_ready core/seasoned **True** + phase + last_audited + source_set (4 T1: usu_ext, psu_microgreens, unr_ext, umn_ext) + verification_log_ref + 2 open_findings (both `blocks_launch:false`) + top-level `last_reviewed`/`_session`. **Collateral-clean** (only microgreens changed; top-level + the other 122 crops byte-identical).
+- **Verbatim flip gate CLEAN:** 0 HARD (>=8 word) lifts on 151 user-facing strings. Claude Code fetched 3/4 cited URLs and confirmed own-voice (usu_ext primary cultivation + psu_microgreens + unr_ext food-safety); umn_ext not fetchable (landing page -> external Google Doc), its facts corroborated by usu_ext/psu_microgreens (logged honestly as an info finding). All cert gates 0: whole_crop_gate (incl. G flip-state + A8 out-of-scope absence), register_completeness_gate, register_fill_gate.
+- **Earlier this day:** the per-zone `successions_realized` pass shipped (canonical `3d7b8b8f` -> microgreens cert `f89a1b7a`). microgreens is correctly OUT of the successions_realized scope (indoor, no frost window); A8 confirms the field is absent.
 
 ## Active work + next step
-- **microgreens-mix is REGISTER-COMPLETE + fully anchored. NEXT = Step 9 (copy sweep) + Step 11 (cert flip)** -- the verbatim/source-fidelity pass + the `verification_status` flip. After that microgreens is the certified `non_seasonal_indoor` anchor the ~8 siblings derive from.
-- **The queued per-zone succession pass is now DONE (shipped this session).** Remaining roadmap: onion / blueberry (chill-gated) / strawberry (renovation, last) + rail-riders (broccoli/bell-pepper/zucchini/green-beans) -- the succession-capable rail-riders are now BORN with `successions_realized` during their own Step 4/5 (A8 blocks cert otherwise), then the bots.
-- **Separate track:** the indoor GUIDE PAGE template on plant-astro; garden calculator (lemon goes placeable once the plant-astro submodule bumps to `>= 6f8de53`).
+- **microgreens is DONE (certified).** The `non_seasonal_indoor` archetype is now cert-proven -- the template the ~8 microgreen siblings derive from (mushrooms = a SEPARATE indoor archetype, still to author).
+- **NEXT roadmap anchors:** onion / blueberry (chill-gated) / strawberry (renovation, last) + the succession-capable rail-riders (broccoli/bell-pepper/zucchini/green-beans -- born with `successions_realized` via the A8 gate during their own Step 4/5), then the bots.
+- **Separate tracks:** the indoor GUIDE PAGE template on plant-astro (microgreens not yet in `BUILT_CROPS`; zone-less relative-timeline render); garden calculator (lemon goes placeable once the plant-astro submodule bumps to `>= 3ec810a`).
 
-## Gate record (generated 2026-06-15, on canonical `3d7b8b8f`)
+## Gate record (generated 2026-06-15, on canonical `f89a1b7a`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -31,6 +31,7 @@
 - **lemon: `PASS` (0)**
 - **lettuce-leaf: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
+- **microgreens-mix: `PASS` (0)**
 - **zinnia: `PASS` (0)**
 - **register_completeness_gate: `PASS`**
 
@@ -44,6 +45,7 @@
 - **lemon: 10/10 region cells filled**
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
 - **orange-navel: 10/10 region cells filled**
+- **microgreens-mix: 0/0 region cells filled**
 - **zinnia: 10/10 region cells filled**
 
 ## Flip gates (generated)
@@ -56,8 +58,9 @@
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **microgreens-mix:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **zinnia:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **10 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **11 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 <!-- FILL: Live locked decisions / guardrails (editorial -- accretes; carry forward + amend) -->
 - **PER-ZONE `successions_realized` = a DERIVED integer, NOT sourced (succession pass, 2026-06-15):** `resolved_by_zone.<z>.successions_realized` = the realized sowing count a zone's season supports, replacing the lossy crop-level cap (season-length-driven -> zone-dependent; carrot/lettuce carried no count at all). Deriver (`tools/derive_realized_successions.py`, gap-aware): year_round -> `min(floor(52/interval_weeks),12)`; authored `succession_spring`/`succession_fall` lists -> count; else day-precise `[first_plant_date,last_plant_date]` (wrap-aware) split ONLY at internal `heat_pause`/`cold_pause` months (harvest/growing/indoors stay INSIDE the sow window; whole-month sums over-count short windows + `indoors` lead-time inflates transplant crops -- both rejected), summing `floor(span/(iw*7))+1` per sub-window. **Cap 12 GLOBAL** (Trevor: raw floor reads absurd for long warm windows too, not just year_round; all 4 crops' crop-max = 12). Crop-level `successions` + `max_successions_per_season` = max-over-zones (LOCK #4). Scope = `succession_policy.suitable==True` + region-filled + non-indoor (cherry/beefsteak suitable=False = OUT; microgreens indoor = OUT; a succession is NOT a second planting). `whole_crop_gate` **A8** re-derives-and-asserts-equality (catches a stale count after a window edit, like A4 tree-calendar) + presence + reconciliation + out-of-scope absence -- a future succession anchor (green-beans/zucchini/broccoli) CANNOT certify without it. Strictly additive (schema-2.9 precedent); spec v1.1 in `05-methodology/current/`.

@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-15 -- microgreens-mix Step 11 CERT -- anchor 11 CERTIFIED, the FIRST non_seasonal_indoor crop [Claude Code verified + flipped]
+
+**Start-SHA:** `3d7b8b8f69bc1cdde1a97f9d9339fdc2bca6f399d55c614c71dd4cd7317d0dda` (`succession_realized_count`). **End-SHA:** `f89a1b7af025513eab4ec11dc0cbd54a15ab49a9f18999db14d69396f347bb65` (canonical; LATEST `microgreens_step11_cert`). **11 anchors now certified** (microgreens joins; the FIRST certified indoor crop). Done THIS session at Trevor's direction (he'd mis-recalled microgreens as already certified -- it was register-complete + anchored from Steps 1-3 + 6-8 but never flipped; status None, launch_ready both false).
+
+**THE FLIP:** `verification_status` = status `verified_gs_arc` + phase `phase_3_microgreens_gold_standard_arc` + date + launch_ready_core/seasoned **True** + last_audited 2026-06-15 + source_set (4 T1: usu_ext, psu_microgreens, unr_ext, umn_ext) + verification_log_ref + 2 open_findings + top-level `last_reviewed`/`_session`. Entry guard held (both flags false at entry). whole_crop_gate **G flip-state clean** (launch_ready x2 true, status verified_gs_arc, 0 open_finding blockers).
+
+**The indoor arc (1-3 -> 6-8 -> 9 -> 11, NO 3.5/4-5):** microgreens is the `non_seasonal_indoor` archetype -- `regions{}`/`zones{}` collapsed to `{}`, the relative sow->blackout->light->harvest cycle in `indoor_cycle`, no frost/zone axis. So the region steps are N/A by design; cert rests on the indoor-cycle presence (A6), the register completeness/fill, and the verbatim gate. Region-fill shows `0/0` (correct, not a gap).
+
+**Verbatim flip gate -- CLEAN (Claude Code did the fetch-verification; verify is the CC release lane):**
+- **0 HARD lifts** (>=8 normalized words) across 151 user-facing prose strings. **Claude Code fetched 3/4 cited URLs via WebFetch** and confirmed own-voice paraphrase: `usu_ext` (the primary cultivation source -- 74 °F germ / 18h light / 68-72 °F / presoak pea 6h sunflower 12h / seeding g per 1020 tray, all rendered as prose not the source's table), `psu_microgreens` ("Production time can be as little as seven..." -> "Most types finish in 7 to 21 days"), `unr_ext` (a food-safety sheet -- the dataset's "eaten raw -> clean handling" follows UNR's "post-harvest washing is ineffective" rather than PSU's "wash before eating"). **`umn_ext` NOT fetchable** (landing page -> external Google Doc), its overlapping facts corroborated by usu_ext/psu_microgreens -> 0 verbatim exposure. Logged honestly as the `microgreens_verbatim_umn_not_fetched` info finding. (Contrast zinnia, where claude.ai ran the full 13/13 fetch + Claude Code spot-checked one source; here the source count is 4 so Claude Code ran the whole pass.) The local `verbatim_scan.py` ran as the structural backstop (0 intra-dataset hits; 0/4 fetched in-sandbox, as expected).
+
+**open_findings logged (both `blocks_launch:false`):** (1) `microgreens_verbatim_umn_not_fetched` (info, accepted -- the not-coverable umn landing page, facts corroborated); (2) `microgreens_indoor_succession_uncapped` (info, accepted_inference -- `succession_policy.successions`/`max_successions_per_season` intentionally null because the indoor model has no climate season to cap; cadence is in `indoor_cycle` + the tip; out of the successions_realized scope, A8 confirms absence).
+
+**Verification:** whole_crop_gate PASS (incl. A6 indoor-cycle presence, A8 out-of-scope absence, G flip-state); register_completeness_gate PASS; register_fill_gate PASS; precommit_release_verify = only microgreens changed, no new violations. Collateral audit: top-level + the other 122 crops byte-identical. All 11 anchors PASS post-flip.
+
+**MILESTONE: microgreens-mix is the FIRST certified `non_seasonal_indoor` anchor** -- the indoor template (regions/zones {}, indoor_cycle, relative-timeline render, raw-consumption food-safety surface) the ~8 microgreen siblings (radish/broccoli/arugula/pea-shoots/sunflower/wheatgrass/cilantro) derive from. **NEXT (roadmap call):** onion / blueberry (chill-gated) / strawberry (renovation, last) + the succession rail-riders (broccoli/bell-pepper/zucchini/green-beans -- born with `successions_realized` via A8), then the bots.
+
+---
+
 ## 2026-06-15 -- Per-zone realized-succession-count pass -- `successions_realized` derived + back-filled [Claude Code structural lane; deterministic]
 
 **Start-SHA:** `722dbb11f8d6701caffb7ea5e8ae0a2e17f3d7a3492031fd01b751cf95e74cfa` (`lemon_spacing_backfill`). **End-SHA:** `3d7b8b8f69bc1cdde1a97f9d9339fdc2bca6f399d55c614c71dd4cd7317d0dda` (canonical; LATEST `succession_realized_count`). Strictly additive -- the 10 anchors stay `verified_gs_arc` + launch_ready (schema-2.9 precedent). The queued pass off the zinnia succession issue; spec v1.0 LOCKED 2026-06-15 (`05-methodology/current/`), refined to v1.1 in-build (below).
