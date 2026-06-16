@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-16 -- onion Step 3.5 -- region-shell rebuild + photoperiod day-length slots + the A9 gate [Claude Code structural lane]
+
+**Start-SHA:** `b9576b2b8e207e81bd96918fa57006930023e720a0dcb77019b4972477f224f4` (onion_steps_1_3). **End-SHA:** `5a776f58933cceaa7d6ac4965a72aaca906f49164897ba31664157928ec5d272`. **Session:** onion_step3_5. 3 commits (tools / data / state). All tool code test-first (red -> green).
+
+**Tool code:**
+- `photoperiod_gate.py` + `test_photoperiod_gate.py` -- `photoperiod_violations(crop)` = the A9 invariants: VARIETY TYPING (every `recommended[]` is an object with `day_length_type` in {long_day, intermediate_day, short_day}), CELL TYPING (every FILLED resolved cell's `recommended_day_length_type` is valid; a null cell is skipped = the Step-3.5 admission state, like the perennial branch's null suitability), and the COVERAGE invariant (every day-length type a region RESOLVES to has >=1 matching recommended variety -- no "grow short-day here" with zero short-day varieties). No-op unless "photoperiod" in `gating_factors`.
+- `whole_crop_gate.py` -- wired `photoperiod_violations` as section **A9** (no-op off-branch, mirroring A8/A6).
+- `build_region_shells.py` + fixture 10 -- `_is_photoperiod` + `_scaffold_photoperiod_cell`: when "photoperiod" in `gating_factors`, every resolved cell gets `recommended_day_length_type` + `day_length_note_seasoned`/`_beginner` (null), idempotent + no-clobber. The crop STAYS `frost_anchored` (photoperiod gates the variety, not the calendar).
+
+**Data (onion rebuild):** ran `build_region_shells` on onion (session onion_step3_5). Regions graduated stub -> shell (A2 stale-shape 0, stub-plantings 0). North built FROM-SCRATCH (`_north_should_promote` False -- author-fresh, empty zones, nothing to promote). Day-length slots scaffolded on all 10 regions' cells. onion-only collateral.
+
+**Gates on `5a776f58`:** whole_crop_gate onion **10** (region_notes-null only -- the correct admission state), A9 photoperiod **0**, register_completeness **PASS**, register_fill **62** (20 region_notes + 2 saucer + 40 per-cell day-length notes = the Step 4/6-8 worklist), full tool suite green (photoperiod_gate / build_region_shells / perennial_gate).
+
+**FINDING -- `lifted_from_zone` residue (TOLERATED, non-blocking):** onion's north built from-scratch, and the from-scratch warm path leaves resolved cells UNTOUCHED, so the tautological `lifted_from_zone` (from the old shallow-lift scaffold) survives on north cells 3-7. Only the PROMOTE path (`_build_north_from_zones`) strips it. Audited the certified anchors: carrot + basil KEEP it (certified with it), lettuce + zinnia shed it -- so it is tolerated, non-blocking, and a SHARED pre-existing build_region_shells behavior, NOT onion-specific. A2 does not flag it. Left as-is (scope); a future focused cleanup could strip it universally in the from-scratch path.
+
+**TOOLING FIX folded into this release:** RESTORED the `⚠️ SESSION PROTOCOL` header + the `---` rule to CURRENT_STATE.md (lost in pre-onion drift). `gen_current_state.static_header()` partitions on the first `\n---\n` and returns the WHOLE file when there is none, so the regen DOUBLED (whole old file + fresh skeleton; the onion_steps_1_3 regen was hand-assembled around it). With the header restored, a verification re-run now yields 1 canonical pointer + 0 duplicated headline. Future regens partition cleanly.
+
+**NEXT:** onion Step 4 region fill (claude.ai author lane) -- the frost windows + the per-cell `recommended_day_length_type` / `day_length_note_*` (a SOURCE finding per region, never inferred from latitude) -> Steps 6-8 (incl. the deferred saucer_practice) -> Step 9 -> Step 11 cert (A9 enforces coverage on the filled cells).
+
+---
+
 ## 2026-06-16 -- onion Steps 1-3 -- anchor 12, the FIRST photoperiod / day-length-gated crop [claude.ai author lane]
 
 **Start-SHA:** `9b55c248ad1fb1d19759b57ea4039241452f2a2a7b49d0f131264c05ec6841ad` (`lemon_container_backfill`; matches LATEST.txt -- the bundled `CURRENT_STATE.md` already reads `9b55c248`, the kickoff's stale-`f89a1b7a` note was pre-resolved). **End-SHA:** `b9576b2b8e207e81bd96918fa57006930023e720a0dcb77019b4972477f224f4`. **post_apply_crop_sha (onion, sorted-min):** `48a54464e086a97fc947e424bd685a2ff42ca81953f7b0cdf56d3a90de85d8b7`. **170 ops** (168 replace into the honest shell + 2 add: `/gating_factors`, `/photoperiod`). Author lane: sourced biology + scalars + 2.9 universals + variety objects + companion walk + the crop-level photoperiod block + dual-register copy. Claude Code RELEASES, builds the Step 3.5 region shells (+ per-cell day-length slots), and owns the A9 photoperiod coverage gate.
