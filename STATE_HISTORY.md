@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-16 -- onion Steps 6-8 -- the 3 empty compounds + the deferred saucer pair (REGISTER-COMPLETE, flip-eligible) [claude.ai author + Claude Code release]
+
+**Start-SHA:** `de59090fc5cf24a87a46e3a07e42afd798d23024ed86e934aabe2716ef7a3103` (onion_step4_warm). **End-SHA:** `cc7469eff48c05b67088594547fe7ef761e7b7f4585012e99d8ab1a1cbf97a8c`. **Session:** onion_steps6_8. A LIGHT 6-8 -- the 8 non-region prose blocks were already authored + anchored + at gold-standard seasoned depth from Steps 1-3 (no bulk-prose sweep, no depth-lift, no retro-anchoring). 5 `replace` ops; post-apply onion-crop SHA matched claude.ai's `380410b6` byte-for-byte.
+
+**What was authored:** `growth_stages` (was []) -> onion's own 5-stage arc, each inner prose a CP `_seasoned`/`_beginner` pair: germination_emergence -> leaf_canopy_building (the leaf-count = bulb-size-ceiling concept) -> **bulb_initiation (the PHOTOPERIOD switch, gloss-then-use, tied to the day_length_type; "trigger is day length, not the calendar")** -> bulb_sizing -> maturity_curing (~half tops down = harvest; cure 2-4 wk). `notifications` (was []) -> 6 on the regions' frost-relative spine (offset_from last_frost). `weather_triggers` (was []) -> 4: `cold_snap_after_warm` (the COLD-driven vernalization bolting risk, deliberately distinct from the photoperiod bulbing switch -- mirrors failure_diagnostics[0], no day-length language), `hard_freeze`, `heat_dry_stress`, `wet_weather_at_harvest`. `container_notes.drainage.saucer_practice_seasoned`/`_beginner` -> the complete pair (the 2 register_fill nulls; inherits the already-anchored container_notes sources).
+
+**`bulbing_watch` trigger_type:"stage" (the structural question, RESOLVED keep-as-is):** claude.ai used `trigger_type:"stage"` (+ null offsets, `stage:"bulb_initiation"`) instead of carrot's `calendar`, because the bulbing trigger is photoperiod, not a frost offset. Claude Code confirmed: `stage` is ALREADY used 11x across the dataset (trigger_type vocab = calendar 26 / stage 11 / milestone 6 / stage_entry 2 / ...), NO gate enforces a trigger_type enum (register_completeness EXCLUDES the key), and it is RESOLVABLE via `bulb_initiation.day_range_from_sow [80,110]`. No fallback needed.
+
+**Verbatim:** claude.ai's pre-handoff intra-crop >=8-word scan caught 17 shared runs (new harvest/cure prose echoing tips_by_stage/failure_diagnostics) -> rewrote all four spots, biology unchanged -> re-scan 0. The FORMAL source-verbatim scan (user-facing vs cited URLs) is the Step-11 flip gate.
+
+**Sources:** ZERO new IDs to mint -- the compound biology rests on onion's existing T1 set (usu_ext/umn_ext/iastate_ext/mu_ext/umd_ext/ndsu_ext/tamu_agrilife/piedmont_mg), re-authored fresh.
+
+**Gates on `cc7469ef`:** whole_crop_gate onion **PASS** (A7 0, null_values 0), register_completeness **PASS**, **register_fill PASS -- flip-eligible** (saucer closed + the 3 compounds populated; empty-compound sweep 0), release_verify **clean** (onion-only collateral, 0 new violations, lettuce byte-identical, the 5 benign empty `sources_pending_admission` residues noted non-blocking). Commits: `da75f05` feat(onion) + the docs(state).
+
+**NEXT:** onion Step 9 + Step 11 cert + the FLIP -- the source-verbatim scan (the flip gate) + the verification_status block (status verified_gs_arc, launch_ready x2, source_set, open_findings blocks_launch:false) + top-level last_reviewed/_session. Structural + register dimensions ALL green; the flip is gated on the verbatim source-fidelity check. onion = anchor 12, the FIRST photoperiod crop.
+
+---
+
 ## 2026-06-16 -- onion Step 4 warm/southern regions -- REGION FILL COMPLETE + the anchoring-fork resolution [claude.ai author + Claude Code release]
 
 **Start-SHA:** `150e0831e1ad774d150eb0720854e65d4b53eb6b6d0ddd79d7aec6b500e20224` (onion_step4_nt). **End-SHA:** `de59090fc5cf24a87a46e3a07e42afd798d23024ed86e934aabe2716ef7a3103`. **Session:** onion_step4_warm. The 9 warm/southern regions filled in ONE pass; onion's whole_crop_gate now PASSES (all 10 regions filled; A9 coverage holds across all 3 day-length classes). REGION FILL COMPLETE.

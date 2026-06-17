@@ -10,34 +10,34 @@
 ---
 
 
-**11 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, microgreens-mix) of a ~18 target. **Anchor 12 = onion, the FIRST photoperiod / day-length-gated crop: Steps 1-3 + 3.5 + Step 4 REGION FILL COMPLETE (all 10 regions; whole_crop_gate PASSES, A9 coverage holds across long/short/intermediate); Steps 6-8 bulk prose are NEXT.**
+**11 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, microgreens-mix) of a ~18 target. **Anchor 12 = onion, the FIRST photoperiod / day-length-gated crop: Steps 1-3 + 3.5 + 4 + 6-8 DONE -- now REGISTER-COMPLETE + flip-eligible (whole_crop_gate PASS, register_fill PASS); Step 9 + Step 11 cert + the FLIP are NEXT (the home stretch).**
 
 ## Canonical pointer
-- **Current SHA:** `de59090fc5cf24a87a46e3a07e42afd798d23024ed86e934aabe2716ef7a3103`. `LATEST.txt` session: `onion_step4_warm` (2026-06-16).
+- **Current SHA:** `cc7469eff48c05b67088594547fe7ef761e7b7f4585012e99d8ab1a1cbf97a8c`. `LATEST.txt` session: `onion_steps6_8` (2026-06-16).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `cc7469ef` -- feat(onion): Steps 6-8 -- growth_stages + notifications + weather_triggers + saucer pair (anchor 12)
   - `de59090f` -- feat(onion): Step 4 warm/southern regions -- region fill COMPLETE (anchor 12)
   - `150e0831` -- feat(onion): Step 4 northern_tier -- region fill + the first photoperiod day-length cells (anchor 12, proof-region)
   - `5a776f58` -- feat(onion): Step 3.5 region shells -- day-length slots scaffolded (anchor 12)
   - `b9576b2b` -- feat(onion): Steps 1-3 -- photoperiod model + scalars + companions (anchor 12)
   - `9b55c248` -- feat(lemon): container-placeable back-fill (container_ok + 15-gal min)
   - `f89a1b7a` -- feat(dataset): microgreens-mix CERTIFIED -- anchor 11, first non_seasonal_indoor
-  - `3d7b8b8f` -- feat(dataset): per-zone successions_realized + whole_crop_gate A8
 
 
-## What just happened (session `onion_step4_warm`)
-- **onion Step 4 warm/southern regions filled -- REGION FILL COMPLETE; onion's `whole_crop_gate` now PASSES (0 violations).** The 9 warm regions authored (se_gulf, fl_peninsula, low_desert_az, ca_desert, ca_interior, ca_north_coast, ca_south_coast, warm_arid, hawaii_tropical) + the anchoring-fork resolution + 2 sub-ID mints. **A9 photoperiod coverage now holds across ALL 3 day-length classes** (long_day NT, short_day South, intermediate_day CA band) -- the coverage gate validated on the full crop.
-- **The anchoring fork (RESOLVED Option 1, Trevor-endorsed -- see the new locked guardrail):** frost-bearing warm cells frost-anchor (region-specific offsets); frost-free cells (fl z10/z11, hawaii z11) `resolved_from: null` + month-resolution (lettuce fl_peninsula pattern); NO minted photoperiod anchor. **hawaii = short_day NOT year_round** (photoperiod gate overrides the frost-free->year_round inference). CA two-window cells = the lettuce one-arm primary+secondary model; se_gulf single fall-overwinter; warm_arid spring (distinct from low_desert fall -- A5 anti-cross-region).
-- **2 sub-IDs MINTED (Claude Code release lane, autonomous):** `uariz_ext_az1005` (under uariz_ext), `uf_ifas_gs` (under uf_ifas) -- both inherit parent T1 with `_admission_provenance`; mirrors the uf_ifas_vh021 pattern. catalog 99 -> 101.
-- **Gates on `de59090f`:** whole_crop_gate onion **PASS**, A2 all 10 regions filled (region_notes-null 0), A5 calendar coherence **0**, A9 photoperiod **0**, source-tier 17 IDs / 0 uncatalogued / 0 non-T1, register_completeness **PASS**, release_verify **clean** (9 warm region_notes-null CLEARED, onion + catalog+2 collateral, lettuce byte-identical). ALL warm frost-bearing cells reconciled to `zone_frost_data` (the NT lesson held). base `150e0831` -> `de59090f`.
+## What just happened (session `onion_steps6_8`)
+- **onion Steps 6-8 -- the 3 empty compounds + the deferred saucer pair; onion is now REGISTER-COMPLETE + flip-eligible.** A LIGHT 6-8 (the 8 non-region prose blocks were already authored + anchored + at GS seasoned depth from Steps 1-3, so NO bulk-prose sweep / depth-lift / retro-anchoring). 5 replace ops: `growth_stages` (onion's 5-stage arc -- germination -> leaf/canopy [the leaf-count = bulb-size-ceiling concept] -> **bulb_initiation [the PHOTOPERIOD switch, tied to day_length_type]** -> bulb sizing -> maturity/curing; dual-register inner prose), `notifications` (6, on the regions' frost-relative spine), `weather_triggers` (4, incl. `cold_snap_after_warm` = the COLD vernalization bolting risk, kept distinct from the photoperiod switch), + the `saucer_practice` pair (the 2 register_fill nulls).
+- **`bulbing_watch` uses `trigger_type:"stage"`** (-> bulb_initiation), NOT carrot's `calendar`: the bulbing trigger is photoperiod, not a frost date, so a calendar offset would be dishonest. Confirmed structural-question -- `stage` is already used 11x in the dataset, no gate enforces a trigger_type enum, and it is resolvable via `bulb_initiation.day_range_from_sow [80,110]`. Kept as-is.
+- **claude.ai self-caught + fixed 17 verbatim echo runs** (the new harvest/cure prose echoed `tips_by_stage`/`failure_diagnostics` >=8-word runs) -> re-scan 0 (A1 own-voice, biology unchanged). The formal SOURCE-verbatim flip scan is still Step 11.
+- **Gates on `cc7469ef`:** whole_crop_gate onion **PASS**, register_completeness **PASS**, **register_fill PASS (flip-eligible)**, empty-compound sweep 0, release_verify **clean** (onion-only, no new violations, lettuce byte-identical; benign sources_pending_admission residue noted). base `de59090f` -> `cc7469ef`.
 
 ## Active work + next step
-- **NEXT = onion Steps 6-8 (bulk prose, claude.ai author lane):** author every remaining null `_seasoned`/`_beginner` field (the `register_fill_gate` worklist -- the deferred `saucer_practice` dual pair + the bulk-prose blocks: fertilizer/watering/soil/ph/storage/rotation/yield/etc.; the per-cell `day_length_note_*` were already authored at Step 4). Block-coherent authoring (close each block's structured nulls + anchor it in one pass). Then Step 9 -> Step 11 cert + flip (A9 + register_fill + the verbatim source-fidelity scan are the flip gates).
-- **REGION FILL is DONE** (whole_crop_gate PASS) -- the photoperiod model is proven end-to-end: structural at 3.5, NT on live frost data, and the full 3-class coverage + the anchoring-fork resolution at Step 4.
+- **NEXT = onion Step 9 + Step 11 cert + the FLIP (the home stretch):** the formal **source-verbatim scan** (every user-facing string vs its CITED source URLs -- the flip gate; distinct from the intra-crop echo claude.ai already fixed) + the cert flip = the `verification_status` block (status `verified_gs_arc` + phase + launch_ready_core/seasoned True + last_audited + source_set + verification_log_ref + open_findings all blocks_launch:false) + top-level last_reviewed/_session. The structural + register dimensions are ALL green (whole_crop_gate PASS, register_fill flip-eligible, A9 coverage holds across all 3 day-length classes); the flip gate is the verbatim source-fidelity check.
+- **onion becomes anchor 12** at the flip (the FIRST photoperiod crop; the template garlic/shallots/leeks inherit).
 - **Design-of-record:** `docs/superpowers/specs/2026-06-16-onion-photoperiod-model-design.md` (`87b6321`).
 - **Other roadmap anchors:** blueberry (chill-gated) / strawberry (renovation, last) + the succession rail-riders, then the bots.
 - **Separate tracks:** indoor GUIDE PAGE template on plant-astro; garden calculator (lemon goes container-placeable once the plant-astro submodule bumps `>= 422c1e6`).
 
-## Gate record (generated 2026-06-16, on canonical `de59090f`)
+## Gate record (generated 2026-06-16, on canonical `cc7469ef`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
