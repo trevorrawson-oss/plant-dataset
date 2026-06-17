@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-16 -- onion CERTIFIED -- anchor 12, the FIRST photoperiod / day-length crop [claude.ai author + Claude Code re-verify/flip]
+
+**Start-SHA:** `cc7469eff48c05b67088594547fe7ef761e7b7f4585012e99d8ab1a1cbf97a8c` (onion_steps6_8). **End-SHA:** `6f48eb11374edea5a2b0ae893d7a71169ed71c68404b75cb12e116fe65d319e7`. **Session:** onion_step11_cert. THE FLIP: onion is the 12th certified anchor and the FIRST photoperiod / day-length-gated crop -- the template garlic/shallots/leeks inherit.
+
+**The flip block:** `verification_status` -> status `verified_gs_arc` + phase `phase_3_onion_gold_standard_arc` + launch_ready_core/seasoned True + last_audited + source_set (17 T1 ids) + verification_log_ref + 4 open_findings (all blocks_launch:false) + top-level last_reviewed/_session. Collateral-clean (only onion changed).
+
+**Step 9 (dash/temp/spelling) + Step 11 (source-verbatim) CLEAN:** 0 `--`/em-dash/spelled-degrees; **0 HARD (>=8-word) lifts on 417 user-facing strings**, clean at the 7- and 6-word backstop. claude.ai fetched 13/17 cited URLs (own-voice confirmed); 4/17 unfetchable (tamu_agrilife EHT-037 PDF / uariz_az1005 table PDF / cornell robots-disallowed / piedmont_mg JS-gate), each corroborated against fetchable T1 siblings and logged blocks_launch:false.
+
+**CLAUDE CODE RE-VERIFICATION caught a source-FIDELITY miss the lift-only scan missed (v1 -> v2):** the gates are the defense, not the self-scan. Claude Code independently fetched umn_ext (confirmed 0 lifts) AND usu_ext, and found the `fertilizer` block's rate/frequency ("side-dressing every few weeks" / "1/2 cup ammonium sulfate per 10 ft of row", cited to usu_ext + umn_ext) was NOT supported by either cited page -- usu gives "1/2 lb of 21-0-0 per 100 sq ft, mid-May and again in late June, do not fertilize after mid-July"; umn warns against excess N. The dataset claim leaned toward the over-fertilization both sources WARN against; the "1/2 cup/10 ft" traced to a legacy USU bulletin, not the cited page. The flip was HELD and a same-chat CORRECTION bounced; claude.ai v2 (`onion_step11_cert_patch.v2.json`, 7 ops = the 4 fertilizer field rewrites + the flip + 2 review fields) reconciled the rate/frequency to the cited page (own voice, no new lift); Claude Code re-fetched-confirmed + re-ran the gates. **LESSON (now a locked guardrail): the verbatim scan checks COPYING; source FIDELITY -- do the NUMBERS match the cited source -- is a SEPARATE cert check that only the independent fetch catches.**
+
+**A1 discipline:** claude.ai dropped two kickoff-anticipated open_findings (the lifted_from_zone north residue; the empty sources_pending_admission) because the LIVE data contradicts them -- Claude Code confirmed every `lifted_from_zone` null + every `sources_pending_admission` []. Hawaii correctly short_day NOT year_round.
+
+**Gates on `6f48eb11`:** whole_crop_gate onion PASS, register_completeness PASS, register_fill PASS, A9 0, release_verify clean; post-apply crop SHA matched claude.ai's `2d4757ab` byte-for-byte. Commits: `a950a99` feat(onion) CERTIFIED + the docs(state).
+
+**NEXT:** garlic / shallots / leeks inherit the photoperiod template; the remaining roadmap anchors (blueberry chill-gated / strawberry renovation, last / the succession rail-riders), then the bots.
+
+---
+
 ## 2026-06-16 -- onion Steps 6-8 -- the 3 empty compounds + the deferred saucer pair (REGISTER-COMPLETE, flip-eligible) [claude.ai author + Claude Code release]
 
 **Start-SHA:** `de59090fc5cf24a87a46e3a07e42afd798d23024ed86e934aabe2716ef7a3103` (onion_step4_warm). **End-SHA:** `cc7469eff48c05b67088594547fe7ef761e7b7f4585012e99d8ab1a1cbf97a8c`. **Session:** onion_steps6_8. A LIGHT 6-8 -- the 8 non-region prose blocks were already authored + anchored + at gold-standard seasoned depth from Steps 1-3 (no bulk-prose sweep, no depth-lift, no retro-anchoring). 5 `replace` ops; post-apply onion-crop SHA matched claude.ai's `380410b6` byte-for-byte.
