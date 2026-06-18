@@ -144,5 +144,16 @@ Built test-first against FILLED strawberry data; the fill assertions run at Step
 - **`hardiness_zone` (survives, with mulch) vs `reliable_fruit_zone` (fruits well)** -- both Step-5 sourced.
 - **Variety set:** how many of June-bearing / day-neutral / everbearing to list, and whether everbearing earns its own entries or a mention (claude.ai's recommended-set call).
 - **`bloom_duration_days`:** author if relevant to the frost-on-blossom guidance, else null.
-```
+
+---
+
+## 8. Variety pages + the delta process (Phase 5 -- NOT anchor scope)
+
+The variety-delta architecture (checklist C2: crop = base/URL, variety = `{value, parent, changed}` overlay) interacts with strawberry's type split. Resolved here so it is not re-litigated when variety pages land.
+
+- **The anchor does not exercise the delta process.** It authors a descriptive recommended-variety SET (objects `{name, type, ...}`) ON the crop page, not per-variety pages. So there is no delta issue in any work this spec sequences.
+- **Cultivars WITHIN a type are clean small deltas.** Honeoye vs Earliglow (both June-bearing), or Albion vs Seascape (both day-neutral), differ only in season / hardiness / flavor / size -- identical growing model. The delta overlay handles these exactly as it handles tomato cultivars.
+- **The TYPE axis is bigger than a normal delta.** `june_bearing` vs `day_neutral` changes lifecycle, calendar shape, and whether renovation applies. A day-neutral cultivar is therefore NOT a small delta on the June-bearing spine.
+- **Resolution (Phase 5):** `type` is a STRUCTURAL axis the renderer keys off the variety's `type` tag, carried ONCE per type, never baked into each cultivar's delta. A per-variety page renders the growing-model presentation for ITS type; cultivars are deltas WITHIN their type. The crop stays ONE URL (`strawberry`); the type is a structural sub-mode of that page, NOT a separate crop (separate-crops-per-type was rejected in D1 for SEO + the one-guide convention). This is the "per-type structural track" Section 6 marks re-openable -- promoted from prose (anchor) to a selectable model only when variety pages are built.
+- **So:** do NOT split strawberry into separate crops; the cultivar-level delta is fine; the type-level difference is carried once per type at the Phase-5 variety layer.
 
