@@ -6,6 +6,53 @@
 
 ---
 
+## 2026-06-18 -- strawberry Steps 1-3 -- anchor 13, the FIRST (and only) berries_herbaceous crop [claude.ai author lane]
+
+**Start-SHA:** `6f48eb11374edea5a2b0ae893d7a71169ed71c68404b75cb12e116fe65d319e7` (`onion_step11_cert`; matches LATEST.txt). **post_apply_crop_sha (strawberry, sorted-min):** `05e2971d5162fa0c7b81e2dc5094a2239038b9b4e4233b1ddbee69ae72ee08a2`. **104 ops** (91 replace with from-guards + 13 add). Author lane: source set + Step-2 scalars/structured incl. the 2.9 perennial-herbaceous scalars + `start_method=bare_root_dormant` + companions, all authored to `DESIGN_SPEC.md` (Trevor 2026-06-18). Claude Code RELEASES, then runs Step 3.5 (`build_region_shells` `perennial_herbaceous` path: flips `calendar_basis` + builds the 10 region shells), and the arc continues to Steps 4-8. **Claude Code release-verified 2026-06-18:** full-file SHA `1aef42c3`, crop SHA matches `05e2971d` byte-for-byte; design invariants D1-D9 all hold; `register_completeness_gate` PASS (type_selection_* ruled); A10/A11 correctly no-op (basis still frost_anchored); all 4 cited sources (osu_ext/umd_ext/umn_ext/usu_ext) catalogued T1 -- the "MINT osu_ext" flag was STALE (already present); the 10 whole_crop_gate violations are the expected region-fill admission gaps.
+
+**THE berries_herbaceous MODEL -- authored INTO the locked design (not re-proposed):**
+- **calendar_basis UNTOUCHED at `frost_anchored`** -- the flip to `perennial_herbaceous` is Claude Code's at 3.5 (D2), NOT the author lane's. Confirmed `frost_anchored` in the delivered crop.
+- **One guide, June-bearing matted-row SPINE, type ELEVATED (D1/D8):** new crop-level CP pair `type_selection_seasoned`/`_beginner` authored as the first-class "which type should you grow?" section (June-bearing / day-neutral / everbearing), surfaced near the top -- not buried in varieties.
+- **`self_fertile: true` + NO photoperiod gate (D7):** `gating_factors` key deliberately ABSENT (the inverse of onion -- type is a harvest-pattern choice, both work at one latitude; OSU EC1307 confirms). `pollinator_notes_*` = bees improve shape/size, no pollinizer needed.
+- **`start_method.start = "bare_root_dormant"` (D5):** the peach/apple value reused; `hardening_off_*` authored as honest N/A prose (dormant crowns do not harden off). Plugs/runners/seed are prose nuance.
+- **The 2.9 perennial scalars (D6 -- the new archetype's core, the A10 gate backstop):** `establishment_years` 1, `establishment_note`, `years_to_first_harvest` [1,2] (June-bearer yr2 / day-neutral+everbearing yr1), `years_to_full_production` [2,2], `productive_lifespan_years` 4 (~3-4 yr matted-row bed), `self_fertile` true, `renovation_*` (June-bearing only, ~1-2 wk after last harvest, mow ~2 in above crown, narrow row 10-12 in), `year_one_notes_*` (June-bearer pinch all flowers yr1; day-neutral first 4-6 wk). **ALL authored BEFORE 3.5 so A10 (`berries_herbaceous_violations`) asserts them clean once the basis flips** (the kickoff's explicit requirement).
+- **chill is INFORMATIONAL, field NULL (D8/Sec7):** `chill_hours_required` left null + `chill_hours_range` []. No clean T1 numeric exists -- strawberry crowns stay metabolically active (unlike trees), so chill is qualitative; honest `chill_hours_note_*` authored at 6-8. NOT a gate, NO per-cell suitability.
+- **`hardiness_zone` (survives, mulched) 3-10 vs `reliable_fruit_zone` (fruits well) 4-9 -- kept DISTINCT.** Provisional; Step 5 SOURCE-refines the warm-edge (heat-limited, not cold-limited) per the design's open item.
+- **`succession_policy.suitable = FALSE`** (perennial bed / annual-replant, not a staggered-sowing crop; reason_seasoned states it).
+
+**Sourcing (Step 1 -- T1 only; the type-by-system map was the key target):**
+- **`osu_ext` (Oregon State EC 1307 "Growing Strawberries in Your Home Garden", peer-reviewed Orange-level; + EC 1618 cultivars / EM 9375 day-neutral):** the PRIMARY type-biology + container + renovation + pH + planting-depth anchor. VERIFIED LIVE (fetched in full). (Claude Code: already catalogued T1; no mint needed.)
+- **`umd_ext` (Maryland "Growing Strawberries in a Home Garden"):** crown depth, spacing, year-1 flower removal, renovation steps, 3-4 yr bed life, harvest timing (5 wk after bloom, fully red +1-2 days), storage (3-5 days fridge), self-fertile, seed stratification. VERIFIED LIVE (fetched). catalog-present.
+- **`umn_ext`** (home-garden guide + production-system page): self-fertile + bees, hardy z4 mulched / z3 needs cover, June-bearing matted-row spine, day-neutral annual. catalog-present.
+- **`usu_ext`** (Strawberries in the Garden): type-biology mechanism (June-bearer short-day fall initiation, day-neutral <70F, everbearing long-day), dormant bare-root spring planting. catalog-present (onion/basil cited it).
+- **`uc_ipm`** (Strawberry: time to plant): CA fall-planted-annual short-day cultivars, treated as annual -- anchors the `grown_as: annual` story coming at Step 4. catalog-present.
+- **`msu_ext` / `ncsu_ext` / `cornell_ext`** -- type corroboration + diagnostic key. catalog-present.
+- **Anchored NOWHERE (corroboration only / T2):** none cited; the recommended-variety zone bands cross-checked against OSU EC1307 Table 1.
+
+**Variety set (D8 SIMPLER shape `{name, type, days_or_season, use, recommended_note}` -- NO tree bloom_group/pollinizer/bloom_window machinery):** 9 objects spanning all three types the page teaches -- june_bearing (Honeoye, Earliglow, Jewel, Allstar), day_neutral (Albion, Seascape, Tristar), everbearing (Ozark Beauty, Quinault). `recommended_note` universal-plain (no register suffix, peach/onion precedent).
+
+**Companion walk (Step 3 -- certified carrot rich-object shape; vocab `research_backed`/`likely`/`traditional`):** 3 `good_seasoned[]` rich objects (Bush beans, Lettuce, Borage) each with the full {name, category, timing, why_seasoned, notify_weeks_before, provenance{...}, evidence_label, confidence, verified_against_sources, sources, anchoring_urls}; `good_beginner_seasoned[]` = {name, why_beginner}; good_beginner/bad_* empty. **All three labeled `traditional`, confidence low, verified_against_sources false, EMPTY sources** -- the strawberry good-companion claims are folk/space-driven, not T1-demonstrated, so NO T1 falsely attached (the onion pattern). The ONE firm claim is the AVOID set, carried in `note_*` + `rotation`: do NOT follow/precede Verticillium hosts (tomato/pepper/eggplant/potato/raspberry/blackberry) -- T1-anchored to osu_ext + umd_ext. NO flat `companions.*.why` (zinnia HALT trap avoided).
+
+**rotation:** `family` Rosaceae (Fragaria), `rotation_years` 4 (Verticillium persists; bed life 3-4 yr), avoid-after the Verticillium hosts, `good_after` legumes/greens/alliums/cover crop. Sourced osu_ext + umd_ext.
+
+**moon_phase_preference = NONE** (`phase` null, `evidence_tier` "none", seasoned note: no T1 lunar link; house convention).
+
+**Local gate analogues (claude.ai pre-handoff):**
+- dash/em-dash user-facing **0**; "degrees F"/bare-NNF user-facing **0**; non-American spelling **0**.
+- 55 dual-register pairs, **0 byte-identical**, **0 half-pairs** (one register null + other set).
+- companion rich-object shape conformant (0 flat `why`); variety objects conformant + type coverage 3/3; **NO `gating_factors` (D7)**; **NO tree variety machinery (D8)**.
+- every anchored field (soil/ph/varieties/container_notes/companions/rotation) carries **>=2 T1 sources**, anchoring keys == sources, **0 non-T1**.
+- **Verbatim 8-word scan vs the fetched OSU + UMD bodies: 0 HARD lifts** (after rewording 6 spots that mirrored source phrasing). 3 residual 6-gram borderlines (benign-irreducible). Formal fetch-based scan is Claude Code's at cert.
+- **NUMERIC FIDELITY (the separate check the lift scan does not do):** every quantitative claim cross-checked against its cited source -- pH 5.6-6.5 (OSU exact), spacing 15-24 (OSU 15 / UMD 18-24), establishment yr1 / full yr2, lifespan 3-4 (UMD), container 10-in deep + 4 plants/12-in pot + 5-gal floor (OSU), day-neutral 40-90F (OSU EC1307 exact, corrected from an initial 40-85). ALL MATCH.
+
+**MILESTONE: strawberry is anchor 13, the FIRST and ONLY berries_herbaceous crop** -- the archetype's whole schema stress-test, not a family template. The new model (perennial_herbaceous basis, per-cell grown_as perennial|annual, renovation calendar token, type-elevated-not-gated) is exercised end-to-end by this single arc.
+
+**NEXT:** Step 3.5 (`build_region_shells` `perennial_herbaceous` path) -> Step 4 region fill (per-region crown windows + `grown_as` per region as a SOURCE finding per A5, NOT inferred; the `berry_herbaceous_calendar` deriver emits the dormant+renovation cycle for perennial cells, the season_over shape for annual cells; frost reconcile vs zone_frost_data) -> Steps 6-8 (bulk prose incl. chill_hours_note_*/bloom_time_*/hardiness_notes_*/grown_as_note_*/region_notes_*) -> Step 9 -> Step 11 cert + flip.
+
+**OPEN FLAGS (Step 4/5 lane):**
+1. `reliable_fruit_zone` 4-9 is PROVISIONAL -- the warm-edge (z9-10, heat-limited) is a genuine Step-5 SOURCE call per DESIGN_SPEC Section 7; refine at Step 5.
+2. `grown_as` per-region assignment is a Step-4 SOURCE finding (A5), not authored here -- the design's expected set (northern_tier perennial; ca_interior/ca_desert/low_desert_az/fl_peninsula annual; mild-coastal CA + se_gulf + warm_arid + hawaii source-decided) is a sanity check, never the authority.
+
 ## 2026-06-16 -- onion CERTIFIED -- anchor 12, the FIRST photoperiod / day-length crop [claude.ai author + Claude Code re-verify/flip]
 
 **Start-SHA:** `cc7469eff48c05b67088594547fe7ef761e7b7f4585012e99d8ab1a1cbf97a8c` (onion_steps6_8). **End-SHA:** `6f48eb11374edea5a2b0ae893d7a71169ed71c68404b75cb12e116fe65d319e7`. **Session:** onion_step11_cert. THE FLIP: onion is the 12th certified anchor and the FIRST photoperiod / day-length-gated crop -- the template garlic/shallots/leeks inherit.
