@@ -1,0 +1,322 @@
+{
+ "patch_format": "rfc6901_json_patch_with_from_guards",
+ "target": "crops_data_final.json -> crops['strawberry'] (slug match)",
+ "scope": "regions.ca_interior ONLY (z8, z9). All other regions + crops untouched.",
+ "start_sha_expected": "f880a63c6325125b0017b713dd13ac80c801d8d3699ae9a6cd5f0612d7412725",
+ "start_sha_note": "Full crops_data_final.json SHA per LATEST.txt; Claude Code preflights at apply.",
+ "calendar_left_empty": true,
+ "calendar_note": "resolved_by_zone.{8,9}.calendar left [] for the berry_herbaceous_calendar deriver (annual branch).",
+ "ops": [
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/region_id",
+   "from": null,
+   "value": "ca_interior"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/region_label",
+   "from": null,
+   "value": "California Interior Valley"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/zone_span",
+   "from": [],
+   "value": [
+    "8",
+    "9"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/sources",
+   "from": [],
+   "value": [
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/plantings_provenance",
+   "from": null,
+   "value": "Region-constant short-day (June-bearing) establishment window, month-resolved (absolute), NOT frost-relative. In the hot interior valley strawberries are grown as a fall-cropping annual that is set in mid to late summer, takes a small fall crop, then carries its main flush into the following spring before summer heat exhausts the planting; the cycle is driven by heat avoidance and the summer planting window, not by the last spring frost. Windows resolve from the UC IPM recommended-planting-dates table for the San Joaquin Valley (short-day cultivars, summer plantings July 20 to Aug 5); winter planting is not used in the valley. resolved_from is null per cell. Sourced to UC IPM home-garden strawberry guidance. NOTE for Claude Code: this is the INTERIOR summer-plant annual sub-shape -- distinct from the frost-free fall-plant (plasticulture) sub-shape that fl_peninsula will prove; do not template this summer-plant window onto the coastal/FL cells, and do not template the coastal fall-plant window onto ca_desert / low_desert_az / warm_arid, which share THIS interior summer-plant reality."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/plantings/0/track",
+   "from": "perennial",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/region_notes_seasoned",
+   "from": null,
+   "value": "In the interior valley, summer heat is the limit, so strawberries are grown as a fall-cropping annual rather than a long-lived bed. Set short-day (June-bearing) plants from late July to early August. They take a small crop that fall, then deliver their main flush the following spring, with heaviest picking in May and June. Replace the planting with fresh nursery stock every two to three years, or sooner if vigor or fruit quality drops, since heat and soilborne pests build up over time. White mulch laid over the bed in summer keeps the soil cooler and reduces fruit burn once temperatures climb above 90F."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/region_notes_beginner",
+   "from": null,
+   "value": "Your summers are too hot for a strawberry bed that lasts for years, so treat strawberries as a yearly crop here. Plant in late July or early August. You will get a few berries that fall, then a bigger harvest the next spring, mostly in May and June. Plan to start over with new plants every couple of years when the old ones slow down. A light-colored mulch over the soil in summer helps keep the roots cool."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/plantings/0/plant_out",
+   "from": [],
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jul 20 - Aug 5",
+     "synthesis_note": "Set short-day (June-bearing) plants in the valley from July 20 to August 5, the UC summer planting window for the San Joaquin Valley; winter planting is not used here. Space plants about 12 inches apart in two-row beds with rows about 12 inches apart, keeping the crown above the soil line. This is an absolute, month-resolved window driven by the summer planting season, not anchored to the last spring frost.",
+     "sources": [
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/home-and-landscape/time-to-plant",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/plantings/0/bloom",
+   "from": [],
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Feb - Mar",
+     "synthesis_note": "After the small fall crop, flowering for the main spring flush builds in late winter into early spring ahead of the May to June harvest peak. Open blossoms are frost-sensitive, so a hard or late freeze during bloom can reduce the crop.",
+     "sources": [
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-strawberry",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/plantings/0/harvest_start",
+   "from": [],
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Oct",
+     "synthesis_note": "A small first crop comes the fall of the planting year (UC: August-set short-day plants yield a small fall crop), then the main flush follows the next spring. The main harvest peak is May and June; the cell harvest window below spans the small fall crop through the spring peak.",
+     "sources": [
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-strawberry",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/plantings/0/harvest_end",
+   "from": [],
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jun",
+     "synthesis_note": "The main flush runs through May and June (UC: heaviest production is in May and June). After the spring crop the planting is carried over for at most two to three years before replacement, since summer heat and soilborne pests drive decline; UC advises replacing plantings with fresh nursery stock every two to three years.",
+     "sources": [
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-strawberry",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/plant_out",
+   "from": null,
+   "value": "Jul 20 - Aug 5"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/resolution_method",
+   "from": null,
+   "value": "absolute_month_uc_planting_table"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/grown_as",
+   "from": null,
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/grown_as_note_seasoned",
+   "from": null,
+   "value": "The interior valley grows strawberries as a fall-cropping annual, not a perennial bed, because summer heat exhausts the planting. Set plants in late summer for a small fall crop and a main spring flush, then replace the bed with fresh nursery stock every two to three years as heat and soilborne pests build up."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/grown_as_note_beginner",
+   "from": null,
+   "value": "Here strawberries are a yearly crop, not a bed that lives for years. Hot summers wear the plants out, so you plant in late summer, harvest into the next spring, and start over with new plants every couple of years."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/bloom",
+   "from": null,
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/harvest_start",
+   "from": null,
+   "value": "Oct"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/harvest_end",
+   "from": null,
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/harvest",
+   "from": null,
+   "value": "Oct, then May - Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/frost_risk_note_seasoned",
+   "from": null,
+   "value": "Valley winters are mild but not frost-free, so a hard or late freeze in winter or early spring can damage open blossoms on the overwintering crop; cover the bed on freezing nights during bloom."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/resolved_from",
+   "from": {},
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/sources",
+   "from": [],
+   "value": [
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/8/anchoring_urls",
+   "from": {},
+   "value": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-strawberry",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/plant_out",
+   "from": null,
+   "value": "Jul 20 - Aug 5"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/resolution_method",
+   "from": null,
+   "value": "absolute_month_uc_planting_table"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/grown_as",
+   "from": null,
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/grown_as_note_seasoned",
+   "from": null,
+   "value": "The interior valley grows strawberries as a fall-cropping annual, not a perennial bed, because summer heat exhausts the planting. Set plants in late summer for a small fall crop and a main spring flush, then replace the bed with fresh nursery stock every two to three years as heat and soilborne pests build up."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/grown_as_note_beginner",
+   "from": null,
+   "value": "Here strawberries are a yearly crop, not a bed that lives for years. Hot summers wear the plants out, so you plant in late summer, harvest into the next spring, and start over with new plants every couple of years."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/bloom",
+   "from": null,
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/harvest_start",
+   "from": null,
+   "value": "Oct"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/harvest_end",
+   "from": null,
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/harvest",
+   "from": null,
+   "value": "Oct, then May - Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/frost_risk_note_seasoned",
+   "from": null,
+   "value": "Zone 9 valley winters rarely freeze hard, but an occasional cold snap during late-winter bloom can injure open blossoms; protect the bed on the rare freezing night."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/resolved_from",
+   "from": {},
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/sources",
+   "from": [],
+   "value": [
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_interior/resolved_by_zone/9/anchoring_urls",
+   "from": {},
+   "value": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-strawberry",
+     "verified": "2026-06-18"
+    }
+   }
+  }
+ ]
+}
