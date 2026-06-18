@@ -1,0 +1,1111 @@
+{
+ "format": "rfc6901_json_patch_with_from_guards",
+ "base_sha": "6f48eb11374edea5a2b0ae893d7a71169ed71c68404b75cb12e116fe65d319e7",
+ "base_sha_note": "full-file sha256(crops_data_final.json); must equal LATEST.txt at apply (Step 0 preflight). Claude Code re-confirms.",
+ "session": "strawberry_steps_1_3",
+ "crop": "strawberry",
+ "step": "1-3",
+ "post_apply_crop_sha": "05e2971d5162fa0c7b81e2dc5094a2239038b9b4e4233b1ddbee69ae72ee08a2",
+ "post_apply_crop_sha_method": "sha256(json.dumps(crop, separators=(',',':'), ensure_ascii=False, sort_keys=True))",
+ "op_count": 104,
+ "ops": [
+  {
+   "op": "replace",
+   "path": "/sunlight",
+   "from_value": null,
+   "value": "full_sun"
+  },
+  {
+   "op": "replace",
+   "path": "/sunlight_hours",
+   "from_value": [],
+   "value": [
+    6,
+    10
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/water",
+   "from_value": null,
+   "value": "moderate"
+  },
+  {
+   "op": "replace",
+   "path": "/spacing_inches",
+   "from_value": [],
+   "value": [
+    15,
+    24
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/preferred_texture_core",
+   "from_value": null,
+   "value": [
+    "loam",
+    "sandy_loam"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/preferred_texture_seasoned",
+   "from_value": null,
+   "value": [
+    "loam",
+    "sandy_loam"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/tolerated_texture_core",
+   "from_value": null,
+   "value": [
+    "clay_loam"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/tolerated_texture_seasoned",
+   "from_value": null,
+   "value": [
+    "clay_loam"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/problematic_texture_core",
+   "from_value": null,
+   "value": [
+    "clay"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/problematic_texture_seasoned",
+   "from_value": null,
+   "value": [
+    "clay"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/soil/preferred_description_seasoned",
+   "from_value": null,
+   "value": "Strawberries want a fertile, well-drained sandy loam or loam with steady but not excessive moisture. The roots are shallow and fibrous, so they suffocate in soil that stays waterlogged for more than a day or two, and root rots follow. On heavy or slow-draining ground, plant into a raised bed or mounded row about 12 inches high so water drains away from the crowns. Work 1 to 2 inches of compost or aged organic matter into the bed before planting to lift organic matter above 3 percent."
+  },
+  {
+   "op": "replace",
+   "path": "/soil/preferred_description_beginner",
+   "from_value": null,
+   "value": "Strawberries grow best in loose, rich soil that drains well, like a sandy loam. Their roots are shallow, so they rot if the ground stays soggy. If your soil is heavy clay or puddles after rain, build a raised bed or a mounded row about 12 inches tall and plant into that. Mixing 1 to 2 inches of compost into the bed before planting gives the roots a good start."
+  },
+  {
+   "op": "replace",
+   "path": "/soil/drainage_requirement",
+   "from_value": null,
+   "value": "well_drained"
+  },
+  {
+   "op": "replace",
+   "path": "/soil/organic_matter_preference",
+   "from_value": null,
+   "value": "high"
+  },
+  {
+   "op": "replace",
+   "path": "/soil/sources",
+   "from_value": [],
+   "value": [
+    "osu_ext",
+    "umd_ext",
+    "usu_ext"
+   ]
+  },
+  {
+   "op": "add",
+   "path": "/soil/anchoring_urls/osu_ext",
+   "value": {
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "add",
+   "path": "/soil/anchoring_urls/umd_ext",
+   "value": {
+    "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "add",
+   "path": "/soil/anchoring_urls/usu_ext",
+   "value": {
+    "url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/ph/preferred_range",
+   "from_value": [],
+   "value": [
+    5.6,
+    6.5
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/ph/tolerated_range",
+   "from_value": null,
+   "value": [
+    5.5,
+    6.8
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/ph/note_seasoned",
+   "from_value": null,
+   "value": "Aim for slightly acidic soil in the range of pH 5.6 to 6.5. Test the bed a season ahead so there is time to adjust: elemental sulfur brings a high reading down, and ground dolomitic limestone raises a low one. Both amendments take months to move the soil, so apply them well before the crowns go in."
+  },
+  {
+   "op": "replace",
+   "path": "/ph/note_beginner",
+   "from_value": null,
+   "value": "Strawberries prefer soil on the slightly acidic side, roughly pH 5.6 to 6.5. A cheap test kit shows where you are. Garden sulfur lowers a too-high number; garden lime raises a too-low one. Both take a few months to take effect, so test and adjust the season before you plant."
+  },
+  {
+   "op": "replace",
+   "path": "/ph/sources",
+   "from_value": [],
+   "value": [
+    "osu_ext",
+    "usu_ext"
+   ]
+  },
+  {
+   "op": "add",
+   "path": "/ph/anchoring_urls/osu_ext",
+   "value": {
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "add",
+   "path": "/ph/anchoring_urls/usu_ext",
+   "value": {
+    "url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/years_to_first_harvest",
+   "from_value": [],
+   "value": [
+    1,
+    2
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/years_to_full_production",
+   "from_value": [],
+   "value": [
+    2,
+    2
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/productive_lifespan_years",
+   "from_value": null,
+   "value": 4
+  },
+  {
+   "op": "replace",
+   "path": "/companions/good_seasoned",
+   "from_value": [],
+   "value": [
+    {
+     "name": "Bush beans",
+     "category": "legume",
+     "timing": "interplant or nearby",
+     "why_seasoned": "A traditional strawberry companion: as a legume, beans fix nitrogen and occupy a different root zone, and they share no major strawberry pest. The benefit is a folk-garden one rather than a documented yield effect, so treat it as a low-risk neighbor, not a proven booster.",
+     "notify_weeks_before": 0,
+     "provenance": {
+      "label": "traditional",
+      "confidence": "low",
+      "reason": "Classic interplanting practice; no T1 extension study documents a strawberry yield or pest benefit from the pairing.",
+      "verified_against_sources": false,
+      "verified_date": "2026-06-18"
+     },
+     "evidence_label": "traditional",
+     "confidence": "low",
+     "verified_against_sources": false,
+     "sources": [],
+     "anchoring_urls": {}
+    },
+    {
+     "name": "Lettuce",
+     "category": "leafy_green",
+     "timing": "interplant along bed edges",
+     "why_seasoned": "Lettuce is a shallow, quick, cool-season crop often tucked along a strawberry bed edge while the berries fill in. It uses space and light the young strawberries are not yet using and shares no serious pest. The pairing is traditional and space-driven, not a documented growth benefit.",
+     "notify_weeks_before": 0,
+     "provenance": {
+      "label": "traditional",
+      "confidence": "low",
+      "reason": "Space-use interplanting lore; no T1 source documents a strawberry benefit.",
+      "verified_against_sources": false,
+      "verified_date": "2026-06-18"
+     },
+     "evidence_label": "traditional",
+     "confidence": "low",
+     "verified_against_sources": false,
+     "sources": [],
+     "anchoring_urls": {}
+    },
+    {
+     "name": "Borage",
+     "category": "herb",
+     "timing": "interplant a few plants near the bed",
+     "why_seasoned": "Borage is a long-standing strawberry companion said to draw pollinators and improve fruit set. The pollinator-attraction half is mechanistically plausible, since more bee visits do mean better-shaped berries, but the specific borage-strawberry pairing has not been tested in T1 extension trials, so it stays a traditional claim.",
+     "notify_weeks_before": 0,
+     "provenance": {
+      "label": "traditional",
+      "confidence": "low",
+      "reason": "Pollinator-draw mechanism is plausible but the borage-strawberry pairing is untested in T1 literature.",
+      "verified_against_sources": false,
+      "verified_date": "2026-06-18"
+     },
+     "evidence_label": "traditional",
+     "confidence": "low",
+     "verified_against_sources": false,
+     "sources": [],
+     "anchoring_urls": {}
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/companions/good_beginner_seasoned",
+   "from_value": [],
+   "value": [
+    {
+     "name": "Bush beans",
+     "why_beginner": "Beans are an easy, friendly neighbor for strawberries. They do not compete much and add a little nitrogen to the soil, though do not expect them to make your berries bigger."
+    },
+    {
+     "name": "Lettuce",
+     "why_beginner": "Lettuce fits nicely along the edge of a strawberry bed while the berries are still small, using space the strawberries are not using yet."
+    },
+    {
+     "name": "Borage",
+     "why_beginner": "Borage is a herb with blue flowers that bees love. A few plants near your strawberries can bring in more bees, which helps the flowers turn into well-shaped berries."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/companions/note_seasoned",
+   "from_value": null,
+   "value": "The one firm rule for strawberry placement is rotation, not companionship: do not plant strawberries where tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries have recently grown, because all of them host Verticillium wilt, a soilborne fungus that also attacks strawberries and lingers in the ground for years. Keep the same crops out of the bed for several years afterward. Beyond that, strawberries compete poorly with weeds because their roots are shallow, so the most valuable neighbor is bare, weed-free soil rather than any particular plant. The good-companion pairings above are traditional and low-risk, not documented yield boosters."
+  },
+  {
+   "op": "replace",
+   "path": "/companions/note_beginner",
+   "from_value": null,
+   "value": "The most important placement rule for strawberries is about what grew there before, not what you plant beside them. Do not put strawberries where tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries grew recently. Those plants can leave a soil disease called Verticillium wilt behind, and it attacks strawberries too and stays in the soil for years. Also keep weeds out, since strawberries have shallow roots and lose out to weeds easily. The companion plants listed above are nice, low-risk neighbors, but they are garden tradition rather than a proven way to grow more fruit."
+  },
+  {
+   "op": "replace",
+   "path": "/companions/sources",
+   "from_value": [],
+   "value": [
+    "osu_ext",
+    "umd_ext"
+   ]
+  },
+  {
+   "op": "add",
+   "path": "/companions/anchoring_urls/osu_ext",
+   "value": {
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "add",
+   "path": "/companions/anchoring_urls/umd_ext",
+   "value": {
+    "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/start_method/start",
+   "from_value": null,
+   "value": "bare_root_dormant"
+  },
+  {
+   "op": "replace",
+   "path": "/start_method/hardening_off_seasoned",
+   "from_value": null,
+   "value": "Not applicable. Strawberries are set as dormant bare-root crowns (or as potted plugs), not as tender indoor-raised seedlings, so there is no hardening-off step. Dormant crowns go straight into the ground in their planting window; potted plugs from a garden center are already acclimated and can be set out the same way."
+  },
+  {
+   "op": "replace",
+   "path": "/start_method/hardening_off_beginner",
+   "from_value": null,
+   "value": "There is no hardening-off step for strawberries. You plant them either as dormant bare-root crowns, which look like a clump of roots with a small bud, or as small potted plants from a garden center. Neither one was raised soft indoors, so you can plant them straight out without the week of gradual exposure that tender seedlings need."
+  },
+  {
+   "op": "replace",
+   "path": "/start_method/notes_seasoned",
+   "from_value": null,
+   "value": "Planting depth is the make-or-break detail: position each crown with its midpoint at soil height, roots just beneath the surface and the growing tip exposed to light. Set too deep, the bud smothers and rots; set too shallow, the roots dry out. Spread the roots in the hole without bending them, firm the soil, and water in. Bare-root crowns are the cold-region norm in early spring; potted plugs are common for fall and warm-region planting. June-bearers fill a matted row from runners over the first season, so give them room."
+  },
+  {
+   "op": "replace",
+   "path": "/start_method/notes_beginner",
+   "from_value": null,
+   "value": "The most important thing is planting depth. A strawberry has a thick short stem called the crown. Set it so the middle of the crown sits right at soil height: roots just under the surface, the little growing bud sitting on top in the light. Plant it too deep and the bud rots; too shallow and the roots dry out. Spread the roots out without bending them, firm the soil down, and water. Bare-root crowns are usual in early spring; small potted plants are easy to set out in fall or in mild climates."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/container_ok",
+   "from_value": null,
+   "value": true
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/min_pot_gallons",
+   "from_value": null,
+   "value": 5
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/container_recommended",
+   "from_value": null,
+   "value": true
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/recommended_pot_gallons",
+   "from_value": null,
+   "value": 7
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/depth_inches_min",
+   "from_value": null,
+   "value": 10
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/drainage/drainage_holes_required",
+   "from_value": null,
+   "value": true
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/drainage/gravel_layer",
+   "from_value": null,
+   "value": false
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/soil_mix/type_seasoned",
+   "from_value": null,
+   "value": "Fast drainage is essential, because strawberry crowns rot in standing moisture. A blend that works is two parts potting or garden soil to one part perlite and one part fine bark: enough to hold some moisture while still shedding excess water quickly."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/soil_mix/type_beginner",
+   "from_value": null,
+   "value": "Use a potting mix that drains well so the plants never sit in soggy soil. An easy homemade version is two scoops of potting soil mixed with one scoop of perlite and one scoop of fine bark."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/soil_mix/amendments_seasoned",
+   "from_value": null,
+   "value": "Blend a slow-release fertilizer into the mix at planting, and refresh the top inch of mix and feed each spring for plants kept more than one season."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/soil_mix/amendments_beginner",
+   "from_value": null,
+   "value": "Mix a little slow-release fertilizer into the soil when you plant, and add fresh mix and fertilizer each spring if you keep the plants past the first year."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/watering_adjustment_seasoned",
+   "from_value": null,
+   "value": "Pots dry far faster than ground beds, especially in summer heat, so check daily and water whenever the top inch is dry. Do not let a pot sit in a full saucer, which keeps the lower roots waterlogged and invites crown rot."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/watering_adjustment_beginner",
+   "from_value": null,
+   "value": "Strawberries in pots dry out fast, so check every day in warm weather and water when the top of the soil feels dry. Empty the saucer after watering so the roots are not sitting in water."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/fertilizer_adjustment_seasoned",
+   "from_value": null,
+   "value": "Frequent watering flushes nutrients out of a pot quickly, so feed lightly and often through the growing season rather than in one big dose. A diluted soluble fertilizer applied with watering works well."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/fertilizer_adjustment_beginner",
+   "from_value": null,
+   "value": "Because watering washes food out of the pot, give container strawberries a small amount of fertilizer often instead of one large feeding. A weak liquid feed added when you water is easy."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/overwintering/applicable",
+   "from_value": null,
+   "value": true
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/overwintering/approach_seasoned",
+   "from_value": null,
+   "value": "A potted root ball freezes harder than the same plant in the ground, so in cold-winter regions move pots into an unheated garage, shed, or against a sheltered wall for winter, or sink the pot to its rim in a garden bed and mulch over it. Bring containers back out as growth resumes in spring."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/overwintering/approach_beginner",
+   "from_value": null,
+   "value": "Roots in a pot get much colder in winter than roots in the ground. In cold areas, move your strawberry pots into an unheated garage or shed for the winter, or bury the pot up to its rim in the garden and cover it with mulch. Set them back out when they start growing in spring."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/container_suitable_varieties",
+   "from_value": [],
+   "value": [
+    "Albion",
+    "Seascape",
+    "Tristar"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/notes_seasoned",
+   "from_value": null,
+   "value": "Strawberries grow well in containers, and day-neutral cultivars are the best fit because they fruit all season and throw few runners. Choose a pot no less than 10 inches deep and at least a foot across; a 12-inch pot holds up to four plants. Remove any runners that form, since daughter plants cannot root over the pot edge and only drain the mother. The small pocketed strawberry jars sold at garden centers usually last just one season."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/notes_beginner",
+   "from_value": null,
+   "value": "Strawberries do great in pots, and the day-neutral kind is the best choice because it gives berries all season and does not spread much. Pick a pot at least 10 inches deep and a foot or more wide; up to four plants fit in a 12-inch pot. Snip off any runners the plants send out, since they cannot take root in a pot and just weaken the main plant. The little strawberry jars with side pockets usually only work for one year."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/sources",
+   "from_value": [],
+   "value": [
+    "osu_ext",
+    "umd_ext"
+   ]
+  },
+  {
+   "op": "add",
+   "path": "/container_notes/anchoring_urls/osu_ext",
+   "value": {
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "add",
+   "path": "/container_notes/anchoring_urls/umd_ext",
+   "value": {
+    "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/self_watering_ok",
+   "from_value": null,
+   "value": false
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/self_watering_notes_seasoned",
+   "from_value": null,
+   "value": "Self-watering containers are risky for strawberries. The constant-moisture reservoir keeps the lower root zone and crown wet, which is exactly the condition that drives crown and root rot. If you use one, run it on the dry side and make sure the mix drains freely."
+  },
+  {
+   "op": "replace",
+   "path": "/container_notes/self_watering_notes_beginner",
+   "from_value": null,
+   "value": "Self-watering pots are not a good match for strawberries. They keep the soil wet all the time, and wet soil rots strawberry roots and crowns. If you already have one, keep it on the drier side and use a mix that drains well."
+  },
+  {
+   "op": "replace",
+   "path": "/varieties/recommended",
+   "from_value": [],
+   "value": [
+    {
+     "name": "Honeoye",
+     "type": "june_bearing",
+     "days_or_season": "early-season June-bearer",
+     "use": "fresh, freezing, jam",
+     "recommended_note": "A hardy, productive early June-bearer that does well in cold-winter matted rows. Bright, firm, slightly tart fruit."
+    },
+    {
+     "name": "Earliglow",
+     "type": "june_bearing",
+     "days_or_season": "early-season June-bearer",
+     "use": "fresh, jam",
+     "recommended_note": "The flavor standard among early June-bearers. Small to medium deep-red berries; modest yield but excellent taste."
+    },
+    {
+     "name": "Jewel",
+     "type": "june_bearing",
+     "days_or_season": "mid- to late-season June-bearer",
+     "use": "fresh, freezing",
+     "recommended_note": "Large, glossy, firm berries on a vigorous plant. Productive, though prone to red stele and verticillium on poorly drained sites."
+    },
+    {
+     "name": "Allstar",
+     "type": "june_bearing",
+     "days_or_season": "mid- to late-season June-bearer",
+     "use": "fresh",
+     "recommended_note": "Very large, light-colored, sweet berries with a long mid- to late-season harvest. A reliable, disease-tolerant garden choice."
+    },
+    {
+     "name": "Albion",
+     "type": "day_neutral",
+     "days_or_season": "summer through fall",
+     "use": "fresh",
+     "recommended_note": "A day-neutral that fruits the first season and bears steadily into fall. Large, conical, firm, sweet-tart berries; excellent in raised beds and containers."
+    },
+    {
+     "name": "Seascape",
+     "type": "day_neutral",
+     "days_or_season": "summer through fall",
+     "use": "fresh, freezing",
+     "recommended_note": "A widely adapted day-neutral with large, good-quality fruit across the season. Forgiving and well suited to containers."
+    },
+    {
+     "name": "Tristar",
+     "type": "day_neutral",
+     "days_or_season": "summer through fall",
+     "use": "fresh",
+     "recommended_note": "A disease-resistant day-neutral, sweet and dependable. A long-standing home-garden standard for season-long picking."
+    },
+    {
+     "name": "Ozark Beauty",
+     "type": "everbearing",
+     "days_or_season": "early summer and late summer",
+     "use": "fresh, jam",
+     "recommended_note": "A classic everbearer giving two lighter crops, one in early summer and one in late summer. Good flavor; less total yield than a day-neutral."
+    },
+    {
+     "name": "Quinault",
+     "type": "everbearing",
+     "days_or_season": "early summer and late summer",
+     "use": "fresh",
+     "recommended_note": "A soft, sweet everbearer that produces some fruit its first year. Tender berries best eaten fresh; can be grown without winter cover in milder areas."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/varieties/note_seasoned",
+   "from_value": null,
+   "value": "Choose by type first, then by season and local adaptation. Match cold hardiness to your winters and pick a fruiting pattern that fits how you want to harvest: one big flush from a June-bearer for preserving, or a steady trickle from a day-neutral for fresh eating. Within a type, cultivars differ in flavor, size, firmness, and disease tolerance, so trying two or three is the fastest way to find what thrives at your site. Always start from certified disease-free stock rather than runners off an old patch."
+  },
+  {
+   "op": "replace",
+   "path": "/varieties/note_beginner",
+   "from_value": null,
+   "value": "Pick the type that matches how you want to eat your berries first: a June-bearer if you want a big batch all at once for jam or freezing, a day-neutral if you want a few fresh berries at a time over a long season. After that, choose a variety known to grow well in your area, and feel free to plant two or three to see which you like best. Buy fresh plants labeled disease-free rather than digging up runners from an old bed."
+  },
+  {
+   "op": "replace",
+   "path": "/varieties/sources",
+   "from_value": null,
+   "value": [
+    "osu_ext",
+    "umd_ext",
+    "umn_ext"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/varieties/anchoring_urls",
+   "from_value": null,
+   "value": {
+    "osu_ext": {
+     "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+     "verified": "2026-06-18"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+     "verified": "2026-06-18"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/family",
+   "from_value": null,
+   "value": "Rosaceae (Fragaria)"
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/rotation_years",
+   "from_value": null,
+   "value": 4
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/avoid_after_seasoned",
+   "from_value": null,
+   "value": "Do not plant strawberries after tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries. All host Verticillium wilt, a soilborne fungus that infects strawberries and persists in soil for years; a strawberry bed following them is at real risk. Avoid replanting strawberries into ground where strawberries recently grew, too, since soilborne pests and viruses build up."
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/avoid_after_beginner",
+   "from_value": null,
+   "value": "Do not plant strawberries in a spot where you recently grew tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries. Those crops can leave behind a soil disease (Verticillium wilt) that also harms strawberries and stays in the soil for years. It is also best not to replant strawberries right where old strawberries were."
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/good_after",
+   "from_value": null,
+   "value": "legumes, leafy greens, alliums, or a cover crop"
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/sources",
+   "from_value": [],
+   "value": [
+    "osu_ext",
+    "umd_ext"
+   ]
+  },
+  {
+   "op": "add",
+   "path": "/rotation/anchoring_urls/osu_ext",
+   "value": {
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "add",
+   "path": "/rotation/anchoring_urls/umd_ext",
+   "value": {
+    "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+    "verified": "2026-06-18"
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/note_seasoned",
+   "from_value": null,
+   "value": "Strawberries are a multi-year planting, so the rotation decision is mostly made once, at bed establishment: choose ground that has not grown a Verticillium host recently, and plan to move the next bed to fresh ground when this one declines after three to four fruiting seasons. Starting the replacement bed in a new spot during the old bed's last productive year keeps production continuous and breaks the soilborne pest cycle."
+  },
+  {
+   "op": "replace",
+   "path": "/rotation/note_beginner",
+   "from_value": null,
+   "value": "Because a strawberry bed lasts a few years, the main thing is choosing a good spot at the start: somewhere that has not grown tomatoes, peppers, potatoes, or berries lately. When the bed slows down after three or four years, start a fresh one in a different part of the garden rather than replanting the same ground."
+  },
+  {
+   "op": "replace",
+   "path": "/harvest_urgency",
+   "from_value": null,
+   "value": "high"
+  },
+  {
+   "op": "replace",
+   "path": "/moon_phase_preference/evidence_tier",
+   "from_value": null,
+   "value": "none"
+  },
+  {
+   "op": "replace",
+   "path": "/moon_phase_preference/source_note_seasoned",
+   "from_value": null,
+   "value": "No T1 extension or peer-reviewed source supports a lunar-phase planting preference for strawberries. Plant by soil readiness and frost timing, not the moon."
+  },
+  {
+   "op": "replace",
+   "path": "/hardiness_zone_min",
+   "from_value": null,
+   "value": 3
+  },
+  {
+   "op": "replace",
+   "path": "/hardiness_zone_max",
+   "from_value": null,
+   "value": 10
+  },
+  {
+   "op": "replace",
+   "path": "/reliable_fruit_zone_min",
+   "from_value": null,
+   "value": 4
+  },
+  {
+   "op": "replace",
+   "path": "/reliable_fruit_zone_max",
+   "from_value": null,
+   "value": 9
+  },
+  {
+   "op": "replace",
+   "path": "/self_fertile",
+   "from_value": null,
+   "value": true
+  },
+  {
+   "op": "replace",
+   "path": "/sources_summary/primary",
+   "from_value": [
+    {
+     "id": "clemson_hgic",
+     "name": "Clemson Cooperative Extension Home & Garden Information Center",
+     "url": "https://hgic.clemson.edu",
+     "publisher": "Clemson University",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "cornell_ext",
+     "name": "Cornell Cooperative Extension",
+     "url": "https://cals.cornell.edu/cornell-cooperative-extension",
+     "publisher": "Cornell University",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "iastate_ext",
+     "name": "Iowa State University Extension",
+     "url": "https://yardandgarden.extension.iastate.edu",
+     "publisher": "Iowa State Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "msu_bozeman",
+     "name": "Montana State University Extension",
+     "url": "https://www.montana.edu/extension/",
+     "publisher": "MSU Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "msu_ext",
+     "name": "Michigan State University Extension",
+     "url": "https://www.canr.msu.edu/resources",
+     "publisher": "MSU Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "ncsu_ext",
+     "name": "NC State Extension",
+     "url": "https://content.ces.ncsu.edu",
+     "publisher": "NC State",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "ndsu_ext",
+     "name": "North Dakota State University Extension",
+     "url": "https://www.ndsu.edu/agriculture/extension",
+     "publisher": "NDSU Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "psu_ext",
+     "name": "Penn State Extension",
+     "url": "https://extension.psu.edu",
+     "publisher": "Penn State",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "tamu_agrilife",
+     "name": "Texas A&M AgriLife Extension",
+     "url": "https://agrilifeextension.tamu.edu",
+     "publisher": "Texas A&M AgriLife",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uc_mg",
+     "name": "UC Master Gardener Program",
+     "url": "https://mg.ucanr.edu",
+     "publisher": "University of California",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uf_ifas_central_cal",
+     "name": "UF/IFAS Central Florida Gardening Calendar (ENH1189/EP450)",
+     "url": "https://edis.ifas.ufl.edu/publication/EP450",
+     "publisher": "UF/IFAS Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uf_ifas_north_cal",
+     "name": "UF/IFAS North Florida Gardening Calendar (EP451)",
+     "url": "https://edis.ifas.ufl.edu/publication/EP451",
+     "publisher": "UF/IFAS Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uf_ifas_nwdistrict",
+     "name": "UF/IFAS Northwest District Horticulture Vegetable Garden Planting Dates (Florida Panhandle)",
+     "url": "https://nwdistrict.ifas.ufl.edu/hort/",
+     "publisher": "UF/IFAS Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uf_ifas_south_cal",
+     "name": "UF/IFAS South Florida Gardening Calendar (ENH1191/EP452)",
+     "url": "https://edis.ifas.ufl.edu/publication/EP452",
+     "publisher": "UF/IFAS Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uf_ifas_vh021",
+     "name": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+     "url": "https://edis.ifas.ufl.edu/publication/VH021",
+     "publisher": "UF/IFAS Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uga_b577",
+     "name": "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)",
+     "url": "https://secure.caes.uga.edu/extension/publications/files/html/b577/b577plantingchart.pdf",
+     "publisher": "University of Georgia Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uga_c1258_fall",
+     "name": "UGA Extension Fall Vegetable Gardening (Circular 1258)",
+     "url": "https://extension.uga.edu/publications/detail.html?number=C1258",
+     "publisher": "University of Georgia Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uga_calendar",
+     "name": "UGA Extension Vegetable Garden Calendar (Circular 943)",
+     "url": "https://extension.uga.edu/publications/detail.html?number=C943",
+     "publisher": "University of Georgia Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "umaine_ext",
+     "name": "University of Maine Cooperative Extension",
+     "url": "https://extension.umaine.edu/",
+     "publisher": "UMaine Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "umd_ext",
+     "name": "University of Maryland Extension",
+     "url": "https://extension.umd.edu",
+     "publisher": "UMD Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "umn_ext",
+     "name": "University of Minnesota Extension",
+     "url": "https://extension.umn.edu/vegetables",
+     "publisher": "UMN Extension",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "uwi_hort",
+     "name": "Wisconsin Horticulture Extension",
+     "url": "https://hort.extension.wisc.edu",
+     "publisher": "UW Madison Horticulture",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    },
+    {
+     "id": "vce_426_331",
+     "name": "Virginia Cooperative Extension Publication 426-331",
+     "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+     "publisher": "Virginia Tech",
+     "source_class": "university_extension",
+     "accessed": "2026-04"
+    }
+   ],
+   "value": [
+    {
+     "id": "osu_ext",
+     "name": "Oregon State University Extension (Growing Strawberries in Your Home Garden, EC 1307)",
+     "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+     "publisher": "Oregon State University",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "umd_ext",
+     "name": "University of Maryland Extension (Growing Strawberries in a Home Garden)",
+     "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+     "publisher": "University of Maryland",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "umn_ext",
+     "name": "University of Minnesota Extension (Growing strawberries in the home garden)",
+     "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+     "publisher": "University of Minnesota",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "usu_ext",
+     "name": "Utah State University Extension (Strawberries in the Garden)",
+     "url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden",
+     "publisher": "Utah State University",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "msu_ext",
+     "name": "Michigan State University Extension (Strawberries in the Home Garden)",
+     "url": "https://www.canr.msu.edu/resources/strawberries_in_the_home_garden",
+     "publisher": "Michigan State University",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "ncsu_ext",
+     "name": "NC State Extension (Strawberries)",
+     "url": "https://content.ces.ncsu.edu/strawberries",
+     "publisher": "NC State University",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "cornell_ext",
+     "name": "Cornell Cooperative Extension (Strawberries, home garden)",
+     "url": "https://gardening.cals.cornell.edu/lawn-garden/fruit/strawberries",
+     "publisher": "Cornell University",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    },
+    {
+     "id": "uc_ipm",
+     "name": "UC IPM / UC ANR (Strawberry: time to plant, California systems)",
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "publisher": "University of California",
+     "source_class": "university_extension",
+     "accessed": "2026-06"
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/succession_policy/suitable",
+   "from_value": null,
+   "value": false
+  },
+  {
+   "op": "replace",
+   "path": "/succession_policy/reason_seasoned",
+   "from_value": null,
+   "value": "Strawberries are not a succession crop. A June-bearing bed is a perennial planting that runs on a yearly cycle of bloom, fruit, renovation, and dormancy; in hot-summer regions strawberries are grown as a single fall-planted annual that is pulled and replaced once a year. Neither model stacks staggered sowings within a season the way lettuce or beans do, so there is no succession interval to set."
+  },
+  {
+   "op": "replace",
+   "path": "/verification_status/status",
+   "from_value": null,
+   "value": "in_progress_steps_1_3"
+  },
+  {
+   "op": "replace",
+   "path": "/pollinator_notes_seasoned",
+   "from_value": null,
+   "value": "Strawberries are self-fertile, so a single cultivar fruits on its own with no pollinizer needed. Each flower still relies on bees, wind, and its own structure to set fully: a thoroughly pollinated flower produces the largest, best-shaped berry, while poor pollination from cold or wet bloom weather leaves small, grooved, or pinched fruit. If plants are under a row cover, pull it back as bloom opens so bees can reach the flowers."
+  },
+  {
+   "op": "replace",
+   "path": "/pollinator_notes_beginner",
+   "from_value": null,
+   "value": "You only need one kind of strawberry to get fruit, because each plant pollinates itself. Bees still help a lot: a flower that gets plenty of bee visits makes a big, even berry, while one that does not can make a small or lumpy one. If you cover your plants to protect them from frost, take the cover off once the flowers open so bees can get in."
+  },
+  {
+   "op": "replace",
+   "path": "/year_one_notes_seasoned",
+   "from_value": null,
+   "value": "For June-bearers, pinch off every flower the entire first season so the plant pours its energy into roots, crown, and runners instead of a small early crop; the payoff is a strong matted row and a full harvest in year two. Let the early runners root in the row to build the bed, and sweep stray runners back into the row before they root in the aisles. Day-neutral and everbearing plants are pinched only for the first four to six weeks after planting, then allowed to fruit the same season."
+  },
+  {
+   "op": "replace",
+   "path": "/year_one_notes_beginner",
+   "from_value": null,
+   "value": "In the first year, June-bearing strawberries do best if you pinch off all their flowers as they appear. It feels wrong to remove flowers, but it lets the plant build strong roots and send out runners that fill the bed, so you get a big crop the next year instead of a few berries now. Let those runners take root to fill in the row. Day-neutral and everbearing plants only need their flowers pinched for the first month or so, and then you let them fruit."
+  },
+  {
+   "op": "replace",
+   "path": "/establishment_years",
+   "from_value": null,
+   "value": 1
+  },
+  {
+   "op": "replace",
+   "path": "/establishment_note",
+   "from_value": null,
+   "value": "Strawberries are planted one year and reach full production the next. A June-bearing matted-row bed stays productive for about three to four fruiting seasons before yield and berry size decline and it is time to start a fresh bed in a new spot."
+  },
+  {
+   "op": "replace",
+   "path": "/renovation_seasoned",
+   "from_value": null,
+   "value": "Renovation applies to June-bearing matted rows. Do it within a week or two of picking the final berries, while the plants still have time to regrow before fall. Mow or shear the old leaves to roughly 2 inches above the crowns without cutting into the crowns themselves, rake out the debris to cut next spring's fruit rot, narrow the row back to about 10 to 12 inches by tilling or hoeing the edges, then fertilize and water to push fresh leaf and runner growth. Leave day-neutral and everbearing plants alone, since they are still fruiting in late summer."
+  },
+  {
+   "op": "replace",
+   "path": "/renovation_beginner",
+   "from_value": null,
+   "value": "Renovation is a once-a-year tidy-up for June-bearing strawberries, done a week or two after the last berries are picked. Mow or cut the old leaves down to about 2 inches above the crowns (the thick stems at soil level), being careful not to cut into the crowns. Rake away the cut leaves, narrow the row back to about a hand's width by removing plants from the edges, then feed and water so the plants put out fresh leaves before winter. Skip this for day-neutral and everbearing types, since they are still making fruit in late summer."
+  },
+  {
+   "op": "add",
+   "path": "/type_selection_seasoned",
+   "value": "Strawberries come in three types, and the choice shapes your whole season. June-bearing cultivars set flower buds in the short days of fall and deliver one concentrated crop over about four weeks in late spring or early summer; they throw the most runners, so they suit a matted row and give a large flush ideal for freezing and jam. Their first real crop comes the season after planting. Day-neutral cultivars flower regardless of day length whenever temperatures sit between about 40 and 90 degrees, so they fruit from late spring through fall, bear in their first season, and throw few runners, which makes them the pick for containers, raised beds, and a steady supply of fresh berries. Everbearing cultivars give two lighter crops, one in early summer and one in late summer, and are generally less productive than day-neutrals. This guide follows the June-bearing matted-row model because it is the backbone of US backyard strawberry growing; the day-neutral notes throughout tell you where the care diverges."
+  },
+  {
+   "op": "add",
+   "path": "/type_selection_beginner",
+   "value": "There are three kinds of strawberries, and picking the right one matters more than picking a fancy variety. June-bearing types give you one big harvest over about four weeks in late spring or early summer, perfect if you want a pile of berries at once for jam or the freezer. They spread by sending out runners that fill in a wide row, and they give their first real crop the year after you plant them. Day-neutral types fruit a little at a time from late spring all the way to fall, give berries the first year, and stay compact, so they are the best choice for pots and small raised beds. Everbearing types fall in between, with one crop in early summer and another in late summer. This guide is built around the June-bearing kind grown in a wide row, since that is how most home gardeners grow strawberries, and it points out along the way where day-neutrals are handled differently."
+  }
+ ]
+}
