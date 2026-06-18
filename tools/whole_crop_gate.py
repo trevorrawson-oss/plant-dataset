@@ -286,6 +286,32 @@ print(f"  gating_factors={(crop.get('gating_factors') or [])!r} | photoperiod vi
 for m in _photo:
     fail(f"photoperiod: {m}")
 
+# ---------------- A10. berries_herbaceous structural cert (no-op off perennial_herbaceous) ----------------
+# Strawberry (anchor 13, the only berries_herbaceous crop) is a herbaceous perennial whose
+# LIFECYCLE is region-dependent: a per-cell grown_as in {perennial, annual} (north matted-row
+# vs hot-summer CA/FL annual). This asserts the structural invariants the generic checks do not
+# encode -- lifecycle scalars present, self_fertile, the photoperiod guard (strawberry type is a
+# variety attribute, NOT an onion zone gate), no tree cross-pollination keys, no tree-only cell
+# keys, and grown_as<->token placement. No-op unless basis perennial_herbaceous. (strawberry, 2026-06-18.)
+from berry_herbaceous_gate import berry_herbaceous_violations
+print("A10. berries_herbaceous structural cert (lifecycle + grown_as + guards; no-op off scope)")
+_berry = berry_herbaceous_violations(crop)
+print(f"  calendar_basis={crop.get('calendar_basis')!r} | berries_herbaceous violations: {len(_berry)}")
+for m in _berry:
+    fail(f"berries_herbaceous: {m}")
+
+# ---------------- A11. berries_herbaceous calendar coherence (DERIVED-from-dates) ----------------
+# The strawberry calendar[] is a pure function of the cell's grown_as + display windows (the
+# tree_calendar lesson): perennial -> dormant/growing/bloom/harvest/renovation bracketed by frost;
+# annual -> plant/growing/bloom/harvest/season_over. Recompute-from-dates and fail on any mismatch.
+# Empty calendars are the Step-3.5 admission state (skipped). No-op off perennial_herbaceous.
+from berry_calendar import berry_calendar_violations
+print("A11. berries_herbaceous calendar coherence (calendar == derive(grown_as, dates); no-op off scope)")
+_berrycal = berry_calendar_violations(crop)
+print(f"  berries_herbaceous calendar violations: {len(_berrycal)}")
+for m in _berrycal:
+    fail(f"berries_herbaceous calendar: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
