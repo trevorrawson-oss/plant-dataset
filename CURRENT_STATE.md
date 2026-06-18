@@ -10,11 +10,12 @@
 ---
 
 
-**12 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, microgreens-mix, onion) of a ~18 target. **strawberry (anchor 13) -- the FIRST and ONLY `berries_herbaceous` crop -- is IN PROGRESS at the Step-4 boundary:** Steps 1-3 (claude.ai author lane) + Step 3.5 (region shells; `calendar_basis` flipped to `perennial_herbaceous`) RELEASED 2026-06-18. The new archetype is structurally proven end-to-end -- the design spec, the A10/A11 gates, the `build_region_shells` perennial-herbaceous path, and the `berry_herbaceous_calendar` deriver are all built test-first and exercised (A10 + A11 = 0 at admission).
+**12 anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, microgreens-mix, onion) of a ~18 target. **strawberry (anchor 13) -- the FIRST and ONLY `berries_herbaceous` crop -- is IN PROGRESS, Step 4 region fill underway:** Steps 1-3 + Step 3.5 + the **`northern_tier` PROOF CELL (z3-7)** all RELEASED 2026-06-18. The perennial path is proven end-to-end (the `berry_herbaceous_calendar` deriver's first real run generated the 5 north calendars, A10/A11 = 0); the **9 warm regions are the remaining region-fill admission gaps** -- PROOF-CELL-FIRST stop point, re-scope to one annual proof cell next.
 
 ## Canonical pointer
-- **Current SHA:** `b4a76fd52094e4866d369dcebd7dead307252bf280d3e108af1a577c9cd54659`. `LATEST.txt` session: `strawberry_step3_5` (2026-06-18).
+- **Current SHA:** `f880a63c6325125b0017b713dd13ac80c801d8d3699ae9a6cd5f0612d7412725`. `LATEST.txt` session: `strawberry_step4_northern_tier` (2026-06-18).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `f880a63c` -- feat(strawberry): Step 4 northern_tier proof cell (z3-7) -- the perennial path's first region fill
   - `b4a76fd5` -- feat(strawberry): Step 3.5 region-shell build -- perennial_herbaceous path (anchor 13)
   - `1aef42c3` -- feat(strawberry): Steps 1-3 -- source set + scalars + companions (anchor 13, the first berries_herbaceous)
   - `6f48eb11` -- feat(onion): CERTIFIED -- anchor 12, the FIRST photoperiod / day-length crop
@@ -23,20 +24,18 @@
   - `150e0831` -- feat(onion): Step 4 northern_tier -- region fill + the first photoperiod day-length cells (anchor 12, proof-region)
   - `5a776f58` -- feat(onion): Step 3.5 region shells -- day-length slots scaffolded (anchor 12)
 
-## What just happened (session `strawberry_step3_5`)
-- **strawberry archetype DESIGNED + the new-archetype tooling BUILT + Steps 1-3 and 3.5 RELEASED** -- anchor 13, the first (and only) `berries_herbaceous` crop. Full design-through-3.5 in one session.
-- **Design (approved, Trevor 2026-06-18):** design-of-record spec `docs/superpowers/specs/2026-06-18-strawberry-berries-herbaceous-model-design.md` (D1-D9 + the Phase-5 variety/delta resolution). Model: one guide, June-bearing matted-row SPINE, type ELEVATED (new CP pair `type_selection_*`); new `calendar_basis: perennial_herbaceous`; per-cell `grown_as` (perennial|annual) lifecycle discriminator (north perennial, hot-summer CA/FL annual -- the z9-central-valley-as-annual answer); reuse `bare_root_dormant` + the `dormant` token, add a `renovation` token; photoperiod = a VARIETY attribute, NOT an onion-style zone gate; self-fertile, no cross-pollination calendar.
-- **Tooling (test-first):** `berry_calendar.py` (deriver + A11 coherence), `berry_herbaceous_gate.py` (A10 structural cert), wired into `whole_crop_gate`; `build_region_shells` perennial_herbaceous path. Full tool suite 21/21 green; commits `d2f6ff6`/`f486cea`/`20357e8`/`fb0ac52`.
-- **Steps 1-3 RELEASED (`1aef42c3`, commit `95dfe1c`):** claude.ai author lane applied + release-verified -- crop SHA `05e2971d` byte-for-byte, D1-D9 invariants hold, register gate PASS, all cited sources (osu_ext/umd_ext/umn_ext/usu_ext) catalogued T1 (the "MINT osu_ext" flag was STALE), the 10 violations are region-fill admission gaps.
-- **Step 3.5 RELEASED (`b4a76fd5`, commit `c3c1759`):** `build_region_shells` flipped the basis to `perennial_herbaceous` + built the 10 region shells (the `grown_as` slot, no tree keys, northern_tier from-scratch); **A10 + A11 now FIRE and BOTH report 0** -- the new gates' first real exercise; the lifecycle scalars assert clean because the author lane set them before 3.5 (the kickoff's explicit requirement, proven).
+## What just happened (session `strawberry_step4_northern_tier`)
+- **strawberry: full DESIGN -> tooling -> Steps 1-3 -> 3.5 -> Step 4 `northern_tier` proof cell, all released 2026-06-18** (anchor 13, the first/only `berries_herbaceous` crop). Design spec `docs/superpowers/specs/2026-06-18-strawberry-berries-herbaceous-model-design.md` (D1-D9); model + tooling detail in the locked-decisions section below and in STATE_HISTORY.
+- **Step 4 `northern_tier` proof cell RELEASED (`f880a63c`, commit `78c6c5b`):** claude.ai authored `grown_as: perennial` (SOURCED, not inferred) + frost-relative windows + `resolved_from` + prose, `calendar[]` left empty. Claude Code: pre-deriver crop SHA `fd63aadf` byte-for-byte; **frost reconcile CLEAN** (5/5 vs `zone_frost_data`); **the `berry_herbaceous_calendar` deriver's FIRST real run** generated the 5 north calendars (`tools/derive_berry_calendars.py`, `61d88bc`, test-first), frost-bracket validated; **anchoring conformance fix** (claude.ai placed per-arm anchoring at the `plantings[0]` parent; the certified onion shape wants it per-rule-entry -- mirrored from the pool, no new sourcing). A10/A11 = 0, register PASS, collateral clean; gate 9 = the warm-region admission gaps.
+- **Earlier this session (same arc):** Steps 1-3 (`1aef42c3`, `95dfe1c`) + Step 3.5 basis-flip + shell build (`b4a76fd5`, `c3c1759`) + the test-first tooling (`d2f6ff6`/`f486cea`/`20357e8`/`fb0ac52`, suite 21/21).
 
 ## Active work + next step
-- **strawberry is AT THE STEP-4 BOUNDARY.** The perennial_herbaceous archetype is structurally proven. NEXT = Step 4 region fill (claude.ai author + Claude Code release): per-region `grown_as` as an A5 SOURCE finding (NOT inferred -- the design's expected set is a sanity check); crown windows; the `berry_herbaceous_calendar` deriver GENERATES each calendar (dormant+renovation cycle for perennial cells / season_over shape for annual cells); frost reconcile vs `zone_frost_data` (the onion NT lesson) -> Steps 6-8 -> Step 9 -> Step 11 cert + flip.
-- **OPEN FLAGS (Step 4/5):** `reliable_fruit_zone` 4-9 is PROVISIONAL (warm-edge is heat-limited, a Step-5 source call); `grown_as` per-region is a Step-4 source finding, not yet authored.
+- **strawberry: PROOF-CELL-FIRST stop point after `northern_tier`.** The PERENNIAL path is proven (deriver + gates exercised on real cells). **NEXT (re-scope) = ONE annual proof cell** (fl_peninsula z10/z11 OR ca_interior z8/z9) to prove the annual deriver branch (fall plant -> winter-spring harvest -> `season_over`, NO renovation/dormant; frost-free cells carry `resolved_from: null` + month-resolution), THEN the remaining warm regions, THEN Steps 6-8 -> Step 9 -> Step 11 cert + flip. The kickoff bundle for the warm-region pass updates from `~/Downloads/strawberry-steps-4-5-kickoff/` (proof-cell-scoped this round).
+- **OPEN FLAGS (warm-region pass):** `grown_as` per region is a per-region SOURCE call (ca_interior=annual + FL=winter-annual are strong schema-2.8-memo candidates but re-verify LIVE; se_gulf/warm_arid/hawaii open); `reliable_fruit_zone` 4-9 warm-edge (z9-10 heat-limited) is a Step-5 source call; **per-rule-entry `anchoring_urls` placement** -- instruct claude.ai to author anchoring ON each rule entry, not just at the `plantings[0]` parent (the conformance fix Claude Code made on northern_tier).
 - **NEXT roadmap anchors after strawberry:** blueberry (chill-gated) + the succession rail-riders (broccoli/bell-pepper/zucchini/green-beans, born with successions_realized via A8), then the bots.
 - **Separate tracks:** indoor GUIDE PAGE template on plant-astro; garden calculator (strawberry will become calculator-placeable once `spacing_inches` + container fields are confirmed -- they are in the Steps 1-3 scalars).
 
-## Gate record (generated 2026-06-18, on canonical `b4a76fd5`)
+## Gate record (generated 2026-06-18, on canonical `f880a63c`; strawberry IN PROGRESS = 9 warm-region admission gaps, A10/A11=0, not listed below)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
