@@ -394,4 +394,59 @@ build_region_shells(c10, session="onion_step3_5", date="2026-06-16")
 assert c10["regions"]["se_gulf"]["resolved_by_zone"]["9"]["recommended_day_length_type"] == "short_day", \
     "photoperiod re-run clobbered a filled day-length value"
 
+# ---- berries_herbaceous (strawberry, anchor 13) shell build ----
+from build_region_shells import (build_region_shells, _is_berry_herbaceous,
+                                  _build_berry_herbaceous_shells)
+
+def _berry_shell_crop():
+    """An author-fresh strawberry-shaped crop: perennial archetype, frost_anchored wipe
+    default, two region cells to reshape."""
+    return {
+        "slug": "strawberry", "archetype": "berries_herbaceous", "lifecycle": "perennial",
+        "calendar_basis": "frost_anchored",
+        "regions": {
+            "northern_tier": {"region_label": "Northern tier", "resolved_by_zone": {
+                "5": {"start_indoors": None, "direct_sow": None, "plantings": [], "calendar": []}}},
+            "ca_interior": {"region_label": "California -- interior", "resolved_by_zone": {
+                "9": {"start_indoors": None, "direct_sow": None}}}},
+    }
+
+# detector: True by archetype (first run) and by basis (re-run)
+assert _is_berry_herbaceous(_berry_shell_crop()) is True
+assert _is_berry_herbaceous({"calendar_basis": "perennial_herbaceous"}) is True
+assert _is_berry_herbaceous({"archetype": "warm_season_fruiting", "calendar_basis": "frost_anchored"}) is False
+# strawberry must NOT be picked up by the tree detector (archetype is not *_fruit_tree, lifecycle not permanent)
+from build_region_shells import _is_tree
+assert _is_tree(_berry_shell_crop()) is False
+
+# build flips the basis and shapes every cell
+c = build_region_shells(_berry_shell_crop())
+assert c["calendar_basis"] == "perennial_herbaceous", c["calendar_basis"]
+# dash resolution on the region label (shared convention)
+assert c["regions"]["ca_interior"]["region_label"] == "California: interior", c["regions"]["ca_interior"]["region_label"]
+
+cell = c["regions"]["northern_tier"]["resolved_by_zone"]["5"]
+# the grown_as lifecycle slot + its dual-register note, scaffolded null
+assert cell["grown_as"] is None and "grown_as_note_seasoned" in cell and "grown_as_note_beginner" in cell
+# render keys reused from the annual/tree names; calendar empty at admission
+assert cell["calendar"] == [] and cell["plant_out"] is None and cell["bloom"] is None
+assert cell["harvest_start"] is None and cell["harvest_end"] is None
+assert cell["resolved_from"] == {} and cell["resolution_method"] is None
+assert cell["frost_risk_note_seasoned"] is None
+# annual-only keys stripped; NO tree-only keys introduced
+assert "start_indoors" not in cell and "direct_sow" not in cell and "plantings" not in cell
+assert "suitability" not in cell and "chill_hours_delivered" not in cell
+
+# region-constant rule layer: ONE crown-setting establishment entry (no succession/second_planting)
+pls = c["regions"]["northern_tier"]["plantings"]
+assert len(pls) == 1 and pls[0]["track"] == "perennial" and pls[0]["label"] == "establishment"
+assert pls[0]["plant_out"] == [] and pls[0]["bloom"] == [] and pls[0]["harvest_start"] == []
+
+# idempotent + no-clobber: a re-run does not wipe a filled value
+cell["plant_out"] = "Apr 1-20"
+build_region_shells(c)
+assert c["regions"]["northern_tier"]["resolved_by_zone"]["5"]["plant_out"] == "Apr 1-20", "re-run clobbered a filled cell"
+
+print("build_region_shells berries_herbaceous: all tests passed")
+
 print("PASS build_region_shells")

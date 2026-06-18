@@ -44,6 +44,8 @@ def build_region_shells(crop, session=SESSION, date=DATE):
         return _build_tree_shells(crop)
     if _is_indoor(crop):
         return crop  # no frost/region axis -- the cycle lives in indoor_cycle{}; never inflate shells
+    if _is_berry_herbaceous(crop):
+        return _build_berry_herbaceous_shells(crop)
     direct = (crop.get("start_method") or {}).get("start") == "direct"
     promote_north = _north_should_promote(crop)
     for rk, r in (crop.get("regions") or {}).items():
@@ -233,6 +235,90 @@ def _build_tree_cell(cell, evergreen=False, heat_gated=False):
     cell.setdefault("frost_risk_note_seasoned", None)  # late-frost-kills-early-bloom warning
     cell.setdefault("resolved_from", {})    # frost dates + chill band used (auditable)
     cell.setdefault("resolution_method", None)  # -> "perennial_precompute" once filled
+    cell.setdefault("sources", [])
+    cell.setdefault("anchoring_urls", {})
+
+
+# ---------------------------------------------------------------------------
+# BERRIES_HERBACEOUS region model (strawberry Step 3.5, anchor 13; the only crop with
+# this archetype). A herbaceous perennial whose LIFECYCLE is region-dependent: the north
+# grows it as a perennial matted row, hot-summer CA/FL as a fall-planted annual. The crop
+# is planted from bare-root dormant crowns in a frost-anchored window, so frost resolution
+# stays ON (basis perennial_herbaceous, not a tree basis). The per-cell grown_as picks the
+# lifecycle the renderer + the A10/A11 gates branch on. See the 2026-06-18 design spec.
+# ---------------------------------------------------------------------------
+
+# resolved-cell keys belonging to the ANNUAL sowing model only -- a crown-planted perennial
+# has no indoor start, no second sowing, no per-cell rule structure. Stripped.
+_BERRY_CELL_DEAD = ("start_indoors", "direct_sow", "lifted_from_zone", "plantings",
+                    "notes", "zone_notes", "planting_note",
+                    "first_plant_date", "last_plant_date")
+
+
+def _is_berry_herbaceous(crop):
+    """A herbaceous-perennial berry (strawberry) takes the berry region path. Detected by the
+    perennial_herbaceous basis marker (set by THIS builder, so re-runs stay on the path) or, on
+    the first run before the flip, by the berries_herbaceous archetype. NOT a tree (_is_tree keys
+    on *_fruit_tree / lifecycle permanent, neither of which strawberry is)."""
+    return (crop.get("calendar_basis") == "perennial_herbaceous"
+            or crop.get("archetype") == "berries_herbaceous")
+
+
+def _build_berry_herbaceous_shells(crop):
+    """Build every region cell to the berries_herbaceous reference shape. Pure transform; no
+    biology invented; idempotent + no-clobber. Sets calendar_basis -> perennial_herbaceous, the
+    marker that branches Step 5.5 + the A10/A11 gates onto the perennial-herbaceous criteria."""
+    crop["calendar_basis"] = "perennial_herbaceous"
+    for r in (crop.get("regions") or {}).values():
+        if isinstance(r, dict):
+            _build_berry_region(r)
+    return crop
+
+
+def _build_berry_region(r):
+    lbl = r.get("region_label")
+    if isinstance(lbl, str) and " -- " in lbl:
+        r["region_label"] = lbl.replace(" -- ", ": ")
+    r.setdefault("region_notes_seasoned", None)
+    r.setdefault("region_notes_beginner", None)
+    if r.get("sources_pending_admission") == []:
+        r.pop("sources_pending_admission", None)
+    # region-constant RULE layer: a SINGLE crown-setting establishment entry (no succession,
+    # no second_planting -- a strawberry bed is planted once per replant cycle). Only (re)build
+    # when it is not already the perennial entry -- never clobber a filled rule.
+    pl = r.get("plantings")
+    if not (isinstance(pl, list) and pl and isinstance(pl[0], dict)
+            and pl[0].get("track") == "perennial"):
+        r["plantings"] = [{
+            "succession_id": 1, "label": "establishment", "track": "perennial",
+            "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": [],
+            "anchoring_urls": {},
+        }]
+    r.setdefault("plantings_provenance", None)
+    for cell in (r.get("resolved_by_zone") or {}).values():
+        if isinstance(cell, dict):
+            _build_berry_cell(cell)
+
+
+def _build_berry_cell(cell):
+    """Reshape one resolved_by_zone cell to the berries_herbaceous key-set, idempotent +
+    no-clobber. The per-zone `grown_as` makes the region-dependent lifecycle first-class. The
+    render keys reuse the annual/tree names (plant_out/bloom/harvest_*) so the renderer reads
+    berry, tree, and annual cells uniformly. NO tree keys (suitability/chill_hours_delivered)."""
+    for dead in _BERRY_CELL_DEAD:
+        cell.pop(dead, None)
+    cell.setdefault("grown_as", None)               # perennial (north) | annual (hot-summer CA/FL)
+    cell.setdefault("grown_as_note_seasoned", None)
+    cell.setdefault("grown_as_note_beginner", None)
+    cell.setdefault("plant_out", None)              # crown-setting window (frost-anchored)
+    cell.setdefault("bloom", None)
+    cell.setdefault("harvest_start", None)
+    cell.setdefault("harvest_end", None)
+    cell.setdefault("harvest", None)
+    cell.setdefault("calendar", [])                 # 12-month cycle, derived at Step 4 (A11)
+    cell.setdefault("frost_risk_note_seasoned", None)  # late-frost-kills-open-blossom warning
+    cell.setdefault("resolved_from", {})            # frost dates used (auditable)
+    cell.setdefault("resolution_method", None)      # -> "perennial_herbaceous_precompute" once filled
     cell.setdefault("sources", [])
     cell.setdefault("anchoring_urls", {})
 
