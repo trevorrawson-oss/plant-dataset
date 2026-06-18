@@ -1,0 +1,531 @@
+{
+  "base_sha": "b4a76fd52094e4866d369dcebd7dead307252bf280d3e108af1a577c9cd54659",
+  "crop": "strawberry",
+  "step": "strawberry_step4_northern_tier",
+  "note": "PROOF CELL ONLY (NA-3b rule). northern_tier z3-7 end-to-end: grown_as=perennial (June-bearing matted-row spine), frost-relative crown windows, resolved_from from zone_frost_data.json, dual-register prose. calendar[] left [] for the berry_herbaceous_calendar deriver (Claude Code). The other 9 regions are NOT authored; re-scope after release (one annual proof cell next).",
+  "anchoring_convention": "Region-root carries sources only (NO anchoring_urls) per the certified lettuce/basil/carrot pattern. Per-arm anchoring lives in plantings[0]; per-cell anchoring lives in resolved_by_zone.<z>.anchoring_urls. All anchored leaves: sources == anchoring_urls keys. T1 only.",
+  "post_apply_crop_sha_note": "Claude Code computes the authoritative post-apply crop SHA after generating calendar[]; the author-lane SHA below is pre-deriver (calendar[] empty) and will be superseded by the deriver run.",
+  "ops": [
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/region_id",
+      "from": null,
+      "value": "northern_tier"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/region_label",
+      "from": null,
+      "value": "Northern Tier"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/zone_span",
+      "from": [],
+      "value": ["3", "4", "5", "6", "7"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/sources",
+      "from": [],
+      "value": ["umn_ext", "osu_ext", "usu_ext", "cornell_ext"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/plantings_provenance",
+      "from": null,
+      "value": "Region-constant June-bearing matted-row establishment window, frost-relative. Dormant bare-root crowns are set early, around two weeks before the last spring frost, because they are dormant stock and can go in as soon as the soil can be worked. Window dates resolve per zone from zone_frost_data.json last_spring frost. Sourced to UMN, OSU EC1307, and USU home-garden guides."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/plantings/0/plant_out",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": "last_frost",
+          "offset_days": -14,
+          "window_days": 21,
+          "synthesis_note": "Set dormant bare-root crowns about two weeks before the last spring frost, as soon as the soil can be worked. The plants are dormant, so there is no need to wait until frost danger has passed (USU). Plant so the middle of the crown sits level with the soil surface. In matted rows, space plants 18 to 24 inches apart in rows 3 to 4 feet apart (UMN, OSU EC1307).",
+          "sources": ["umn_ext", "osu_ext", "usu_ext"]
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/plantings/0/bloom",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": "last_frost",
+          "offset_days": 14,
+          "window_days": 21,
+          "synthesis_note": "On an established bed, June-bearing plants begin flowering around mid-spring, near the last-frost date. UMN reports flowering begins about mid-May in southern Minnesota. Open blossoms are frost-sensitive, so a late frost during bloom can reduce the crop (OSU EC1307).",
+          "sources": ["umn_ext", "osu_ext"]
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/plantings/0/harvest_start",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": "last_frost",
+          "offset_days": 42,
+          "synthesis_note": "June-bearing strawberries ripen about four weeks after flowering (UMN), giving one concentrated early-summer flush. This is the established-bed (year 2 and later) cycle; in the planting year all flowers are removed so no crop is taken (year_one_notes).",
+          "sources": ["umn_ext", "cornell_ext"]
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/plantings/0/harvest_end",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": "last_frost",
+          "offset_days": 70,
+          "synthesis_note": "The June-bearing flush runs roughly four weeks. After the last picking, renovate the matted row within about two weeks: mow the leaves two inches above the crowns, narrow the row, and fertilize (UMN, OSU EC1307).",
+          "sources": ["umn_ext", "osu_ext"]
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/plantings/0/anchoring_urls",
+      "from": {},
+      "value": {
+        "umn_ext": {"url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden", "verified": "2026-06-18"},
+        "osu_ext": {"url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden", "verified": "2026-06-18"},
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden", "verified": "2026-06-18"},
+        "cornell_ext": {"url": "https://gardening.cals.cornell.edu/fruit/strawberries/", "verified": "2026-06-18"}
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/region_notes_seasoned",
+      "from": null,
+      "value": "Across the northern tier (zones 3 to 7), strawberries are grown as a perennial matted-row bed, the dominant US backyard system. Set dormant bare-root crowns in early spring, about two weeks before the last frost, as soon as the soil can be worked. June-bearing types give one concentrated flush about four weeks after they flower in late spring to early summer, then send runners to fill the row. Renovate the bed within two weeks of the last harvest, mow tops two inches above the crowns, narrow the row, and fertilize, and replace the planting after three or four fruiting years. In zone 3, and in colder pockets of zone 4 without reliable snow cover, give plants extra winter protection; reliable fruiting starts at zone 4."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/region_notes_beginner",
+      "from": null,
+      "value": "In the north (zones 3 to 7), strawberries are a perennial: you plant them once and the same bed comes back and fruits for several years. Plant the small brown dormant crowns in early spring, as soon as you can dig the soil, even if frost is still possible. June-bearing kinds give one big batch of berries in late spring or early summer, about a month after they bloom, then grow runners that root into new plants and fill the row. After the berries finish, cut the leaves back and thin the plants to keep the bed healthy, and start a fresh bed every three or four years. In zone 3, cover plants with straw over winter for protection; berries are most reliable from zone 4 and warmer."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/grown_as",
+      "from": null,
+      "value": "perennial"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/plant_out",
+      "from": null,
+      "value": "May 1 - May 22"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/bloom",
+      "from": null,
+      "value": "May 29 - Jun 19"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/harvest_start",
+      "from": null,
+      "value": "Jun 26"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/harvest_end",
+      "from": null,
+      "value": "Jul 24"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/harvest",
+      "from": null,
+      "value": "Jun 26 - Jul 24"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/grown_as_note_seasoned",
+      "from": null,
+      "value": "Zone 3 grows strawberries as a perennial matted row, but it is the cold edge: crowns are damaged near 10 to 20°F at the crown, so without dependable snow cover apply two to three inches of straw mulch in late fall and rake it off as growth resumes in spring."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/grown_as_note_beginner",
+      "from": null,
+      "value": "In zone 3 your strawberry bed comes back each year, but winters are harsh, so cover the plants with a few inches of straw in late fall and pull it back when they start growing again in spring."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/frost_risk_note_seasoned",
+      "from": null,
+      "value": "A late spring frost can damage open blossoms (late May to mid-June here); cover the bed with row cover or straw on frosty nights during bloom to protect the crop."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/resolved_from",
+      "from": {},
+      "value": {"last_frost": "May 15", "first_frost": "Sep 15"}
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/resolution_method",
+      "from": null,
+      "value": "perennial_herbaceous_precompute"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/sources",
+      "from": [],
+      "value": ["umn_ext", "osu_ext", "usu_ext"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/3/anchoring_urls",
+      "from": {},
+      "value": {
+        "umn_ext": {"url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden", "verified": "2026-06-18"},
+        "osu_ext": {"url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden", "verified": "2026-06-18"},
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden", "verified": "2026-06-18"}
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/grown_as",
+      "from": null,
+      "value": "perennial"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/plant_out",
+      "from": null,
+      "value": "Apr 17 - May 8"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/bloom",
+      "from": null,
+      "value": "May 15 - Jun 5"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/harvest_start",
+      "from": null,
+      "value": "Jun 12"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/harvest_end",
+      "from": null,
+      "value": "Jul 10"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/harvest",
+      "from": null,
+      "value": "Jun 12 - Jul 10"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/grown_as_note_seasoned",
+      "from": null,
+      "value": "Zone 4 is the reliable cold floor for perennial matted-row strawberries. Mulched June-bearing varieties such as Honeoye, Jewel, and Earliglow overwinter well here; apply straw mulch after several hard frosts in late fall and rake it off as growth resumes."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/grown_as_note_beginner",
+      "from": null,
+      "value": "Zone 4 is a great fit for a come-back-every-year strawberry bed. Pick winter-hardy June-bearing types, mulch with straw in late fall, and uncover the plants in spring."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/frost_risk_note_seasoned",
+      "from": null,
+      "value": "Open blossoms in mid-May to early June are frost-sensitive; cover the bed with row cover or straw on frosty nights during bloom to protect the crop."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/resolved_from",
+      "from": {},
+      "value": {"last_frost": "May 1", "first_frost": "Oct 1"}
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/resolution_method",
+      "from": null,
+      "value": "perennial_herbaceous_precompute"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/sources",
+      "from": [],
+      "value": ["umn_ext", "osu_ext", "usu_ext"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/4/anchoring_urls",
+      "from": {},
+      "value": {
+        "umn_ext": {"url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden", "verified": "2026-06-18"},
+        "osu_ext": {"url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden", "verified": "2026-06-18"},
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden", "verified": "2026-06-18"}
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/grown_as",
+      "from": null,
+      "value": "perennial"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/plant_out",
+      "from": null,
+      "value": "Apr 1 - Apr 22"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/bloom",
+      "from": null,
+      "value": "Apr 29 - May 20"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/harvest_start",
+      "from": null,
+      "value": "May 27"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/harvest_end",
+      "from": null,
+      "value": "Jun 24"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/harvest",
+      "from": null,
+      "value": "May 27 - Jun 24"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/grown_as_note_seasoned",
+      "from": null,
+      "value": "Zone 5 grows strawberries as a dependable perennial matted row. A light straw mulch over winter protects the crowns and reduces frost heaving; rake it off as growth resumes in spring."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/grown_as_note_beginner",
+      "from": null,
+      "value": "Zone 5 is a comfortable fit for a strawberry bed that returns each year. A layer of straw over winter keeps the plants safe; pull it back in spring."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/frost_risk_note_seasoned",
+      "from": null,
+      "value": "Blossoms opening in late April to mid-May are frost-sensitive; cover the bed on frosty nights during bloom to protect the crop."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/resolved_from",
+      "from": {},
+      "value": {"last_frost": "Apr 15", "first_frost": "Oct 15"}
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/resolution_method",
+      "from": null,
+      "value": "perennial_herbaceous_precompute"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/sources",
+      "from": [],
+      "value": ["umn_ext", "osu_ext", "usu_ext"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/5/anchoring_urls",
+      "from": {},
+      "value": {
+        "umn_ext": {"url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden", "verified": "2026-06-18"},
+        "osu_ext": {"url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden", "verified": "2026-06-18"},
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden", "verified": "2026-06-18"}
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/grown_as",
+      "from": null,
+      "value": "perennial"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/plant_out",
+      "from": null,
+      "value": "Mar 18 - Apr 8"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/bloom",
+      "from": null,
+      "value": "Apr 15 - May 6"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/harvest_start",
+      "from": null,
+      "value": "May 13"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/harvest_end",
+      "from": null,
+      "value": "Jun 10"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/harvest",
+      "from": null,
+      "value": "May 13 - Jun 10"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/grown_as_note_seasoned",
+      "from": null,
+      "value": "Zone 6 grows strawberries as a perennial matted row with a longer, milder season than the colder zones. Light winter mulch is still worthwhile to limit frost heaving and protect crowns in open winters."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/grown_as_note_beginner",
+      "from": null,
+      "value": "Zone 6 strawberries come back every year and enjoy a longer growing season. A thin layer of straw over winter still helps in cold snaps."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/frost_risk_note_seasoned",
+      "from": null,
+      "value": "Blossoms opening in mid-April to early May can be caught by a late frost; cover the bed on frosty nights during bloom to protect the crop."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/resolved_from",
+      "from": {},
+      "value": {"last_frost": "Apr 1", "first_frost": "Oct 31"}
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/resolution_method",
+      "from": null,
+      "value": "perennial_herbaceous_precompute"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/sources",
+      "from": [],
+      "value": ["umn_ext", "osu_ext", "usu_ext"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/6/anchoring_urls",
+      "from": {},
+      "value": {
+        "umn_ext": {"url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden", "verified": "2026-06-18"},
+        "osu_ext": {"url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden", "verified": "2026-06-18"},
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden", "verified": "2026-06-18"}
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/grown_as",
+      "from": null,
+      "value": "perennial"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/plant_out",
+      "from": null,
+      "value": "Mar 1 - Mar 22"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/bloom",
+      "from": null,
+      "value": "Mar 29 - Apr 19"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/harvest_start",
+      "from": null,
+      "value": "Apr 26"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/harvest_end",
+      "from": null,
+      "value": "May 24"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/harvest",
+      "from": null,
+      "value": "Apr 26 - May 24"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/grown_as_note_seasoned",
+      "from": null,
+      "value": "Zone 7 grows strawberries as a perennial matted row with the earliest bloom and harvest in the northern tier. Winters are mild enough that heavy mulch is usually unnecessary, though a light cover helps in a hard freeze; summer heat is not yet severe enough to force an annual system here."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/grown_as_note_beginner",
+      "from": null,
+      "value": "Zone 7 strawberries return each year and ripen earliest in this group. Winters are mild, so you usually do not need heavy winter cover."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/frost_risk_note_seasoned",
+      "from": null,
+      "value": "Early bloom in late March to mid-April can still meet a late frost; cover the bed on frosty nights during bloom to protect the crop."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/resolved_from",
+      "from": {},
+      "value": {"last_frost": "Mar 15", "first_frost": "Nov 15"}
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/resolution_method",
+      "from": null,
+      "value": "perennial_herbaceous_precompute"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/sources",
+      "from": [],
+      "value": ["umn_ext", "osu_ext", "usu_ext"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/northern_tier/resolved_by_zone/7/anchoring_urls",
+      "from": {},
+      "value": {
+        "umn_ext": {"url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden", "verified": "2026-06-18"},
+        "osu_ext": {"url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden", "verified": "2026-06-18"},
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/strawberries-in-the-garden", "verified": "2026-06-18"}
+      }
+    }
+  ]
+}
