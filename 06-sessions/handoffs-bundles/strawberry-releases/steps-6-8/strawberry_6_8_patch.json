@@ -1,0 +1,1037 @@
+{
+  "base_sha": "ec0bf9d0529eca6d5352d7eb9fa005f3182750b09e0c4288b833ee44fc2caee2",
+  "session": "strawberry_steps_6_8",
+  "patches": [
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].growth_stages",
+      "from": [],
+      "value": [
+        {
+          "id": "plant",
+          "name": "Planting",
+          "day_range_from_sow": null,
+          "year_phase": "year_1_spring",
+          "timing_seasoned": "Set dormant bare-root crowns or potted plugs in the planting window, crown midpoint level with the soil surface. In matted rows, space plants about 15 inches apart in rows 3 to 4 feet apart.",
+          "timing_beginner": "Plant your strawberry crowns or small potted plants, setting each so the middle of the crown sits right at soil height. In a wide row, leave about 15 inches between plants.",
+          "what_to_look_for_seasoned": "Newly set plants with the growing tip exposed and roots just below the surface; no top growth yet on bare-root crowns.",
+          "what_to_look_for_beginner": "A small bud at the top of each crown sitting in the light, with roots tucked just under the soil.",
+          "user_action_seasoned": "Firm the soil around the roots and water in to settle it. Check that the crown is still at the right depth after watering and adjust if it has sunk or heaved.",
+          "user_action_beginner": "Press the soil down around the roots and water. Make sure the little bud on top is not buried and the roots are not poking out.",
+          "log_prompt_seasoned": "Planted: variety, type, and number of crowns set, with the date.",
+          "log_prompt_beginner": "Wrote down what you planted and when.",
+          "audience": "core"
+        },
+        {
+          "id": "establishment",
+          "name": "Establishment",
+          "day_range_from_sow": null,
+          "year_phase": "year_1",
+          "timing_seasoned": "The first season after planting. June-bearing plants pour energy into roots, crown, and runners rather than fruit; all flowers are pinned off to build a strong matted row for year two.",
+          "timing_beginner": "The first growing season. The plants are building roots and spreading, not making a real crop yet.",
+          "what_to_look_for_seasoned": "New leaves unfurling from the crown and the first flower stems emerging. On June-bearers these flowers are removed, not kept.",
+          "what_to_look_for_beginner": "Fresh leaves growing and small flower stalks appearing. On June-bearing plants you pick these flowers off.",
+          "user_action_seasoned": "Pinch off every flower on June-bearers through the first season so the plant invests in establishment. On day-neutral and everbearing plants, remove flowers only for the first four to six weeks, then allow fruiting. Keep the bed evenly watered and weed-free; strawberries have shallow roots and lose out to weeds quickly.",
+          "user_action_beginner": "On June-bearing plants, pinch off all the flowers the first year so the plant grows strong. On day-neutral or everbearing plants, only pick off flowers for the first month or so. Water often and pull weeds. The roots are shallow, so weeds crowd them out fast.",
+          "log_prompt_seasoned": "Establishment: leaf-out date and, for June-bearers, that flowers are being pinched.",
+          "log_prompt_beginner": "Noted that leaves are growing and, for June-bearers, that you are picking off flowers.",
+          "audience": "core"
+        },
+        {
+          "id": "runner",
+          "name": "Runner and daughter-plant growth",
+          "day_range_from_sow": null,
+          "year_phase": "year_1_summer",
+          "timing_seasoned": "June-bearers send out runners (stolons) bearing daughter plants from early summer. Early runners (rooted before September) are the productive ones; sweep strays back into the row so they root in the bed, not the aisle.",
+          "timing_beginner": "Through summer the plants send out long stems called runners, with baby plants on the ends. These fill in your row.",
+          "what_to_look_for_seasoned": "Above-ground stems arching out from the mother plant with small plantlets that root where they touch soil.",
+          "what_to_look_for_beginner": "Long stems creeping out sideways with little new plants on them that take root when they reach the ground.",
+          "user_action_seasoned": "Guide early runners into the row to build the matted bed. In containers or a hill system, remove runners instead, since daughter plants cannot root over a pot edge and only drain the mother. Direct early runners into the row before they root in the aisle; remove late runners that will not fruit next year.",
+          "user_action_beginner": "Let the runners root in your row to fill it in. If you are growing in a pot, snip the runners off, because they cannot root in a pot and just weaken the plant. Tuck the runners into your row so they root there, not in the path.",
+          "log_prompt_seasoned": "Runners: that daughter plants are rooting in the row (or being removed in containers).",
+          "log_prompt_beginner": "Noted that runners are filling in the row, or that you removed them from a pot.",
+          "audience": "core"
+        },
+        {
+          "id": "bloom",
+          "name": "Bloom",
+          "day_range_from_sow": null,
+          "year_phase": "year_2_spring",
+          "timing_seasoned": "On an established bed (year two and later), June-bearing plants flower in mid-spring near the last-frost date. Open blossoms are frost-sensitive, so a late frost during bloom can cut the crop.",
+          "timing_beginner": "In the second year and after, the plants flower in mid-spring. These open flowers can be killed by a late frost.",
+          "what_to_look_for_seasoned": "White five-petaled flowers opening across the bed, with yellow centers that become the fruit.",
+          "what_to_look_for_beginner": "White flowers with yellow centers opening up. Each one can turn into a berry.",
+          "user_action_seasoned": "Watch the forecast during bloom. Cover open flowers with row cover in the late afternoon when frost is predicted and remove it the next morning once the danger has passed. If row cover is over the bed, pull it back as bloom opens so bees can reach the flowers and set well-shaped fruit.",
+          "user_action_beginner": "Keep an eye on the weather while the plants flower. If frost is coming, cover the flowers in the evening with a light cloth and take it off in the morning. If you covered the plants, open them up while they flower so bees can get to them.",
+          "log_prompt_seasoned": "Bloom: first-flower date and any frost protection used.",
+          "log_prompt_beginner": "Noted when flowers opened and whether you covered them for frost.",
+          "audience": "core"
+        },
+        {
+          "id": "fruit_set",
+          "name": "Green fruit and ripening",
+          "day_range_from_sow": null,
+          "year_phase": "year_2_spring",
+          "timing_seasoned": "Pollinated flowers form green fruit that swells and colors over roughly four weeks. Fruit is mostly water, so steady moisture through this period drives size and quality.",
+          "timing_beginner": "After the flowers are pollinated, small green berries form and slowly ripen over about four weeks. The berries need steady water now.",
+          "what_to_look_for_seasoned": "Green berries enlarging and beginning to blush red. Well-pollinated fruit is plump and even; poorly pollinated fruit is grooved or pinched.",
+          "what_to_look_for_beginner": "Green berries getting bigger and starting to turn red. Good berries are plump and even; lumpy ones did not get pollinated well.",
+          "user_action_seasoned": "Keep moisture steady and even, about 1 to 1.5 inches of water a week, and keep ripening fruit off wet soil to limit gray mold. Maintain even watering and watch for the first blush of color to time your first picking.",
+          "user_action_beginner": "Water evenly, about 1 to 1.5 inches a week. Try to keep the ripening berries off wet ground so they do not rot. Keep watering and watch for the first berries to turn red.",
+          "log_prompt_seasoned": "Fruit set: that green fruit has formed and is beginning to color.",
+          "log_prompt_beginner": "Noted that green berries formed and are starting to ripen.",
+          "audience": "core"
+        },
+        {
+          "id": "harvest",
+          "name": "Harvest",
+          "day_range_from_sow": null,
+          "year_phase": "year_2_summer",
+          "timing_seasoned": "June-bearing strawberries ripen about four weeks after flowering, giving one concentrated flush over roughly four weeks. Pick every one to three days; fruit is sweetest fully red and ripened on the plant.",
+          "timing_beginner": "About four weeks after flowering, the berries ripen all at once over roughly four weeks. Pick every couple of days, and let them turn fully red for the best flavor.",
+          "what_to_look_for_seasoned": "Fully red, fragrant berries that pull free easily. Color deepens after picking, so fruit picked at 75 percent red stores a little longer.",
+          "what_to_look_for_beginner": "Bright red, sweet-smelling berries that come off easily. If you need them to last longer, pick when they are about three-quarters red.",
+          "user_action_seasoned": "Harvest in the cool of the morning and refrigerate promptly. If a long rain is forecast, pick fruit that is 75 percent to fully red, since rain dilutes flavor and invites rot. Pick ripe fruit every one to three days, checking more often in warm weather; remove any rotting berries to protect the rest.",
+          "user_action_beginner": "Pick in the morning when it is cool and get the berries into the fridge soon. If a lot of rain is coming, pick the riper berries first so they do not rot. Pick ripe berries every day or two, more often when it is hot. Toss any moldy ones so they do not spread.",
+          "log_prompt_seasoned": "Harvest: first-pick date and a rough running weight if you want to track yield.",
+          "log_prompt_beginner": "Noted when you started picking and how the harvest is going.",
+          "audience": "core"
+        },
+        {
+          "id": "renovation",
+          "name": "Renovation",
+          "day_range_from_sow": null,
+          "year_phase": "year_2_summer",
+          "timing_seasoned": "June-bearing matted rows only. Within one to two weeks of the last picking, mow leaves to about 2 inches above the crowns, rake debris, narrow the row to 10 to 12 inches, then fertilize and irrigate to push fresh growth. Day-neutral and everbearing plants are not renovated.",
+          "timing_beginner": "For June-bearing wide rows only. A week or two after the last berries, mow the old leaves to about 2 inches above the crowns, rake them away, narrow the row, then feed and water. Leave day-neutral and everbearing plants alone.",
+          "what_to_look_for_seasoned": "Tired, spotted foliage after the four-week harvest. After renovation the crowns regrow fresh leaves and new runners within a few weeks.",
+          "what_to_look_for_beginner": "Worn-out leaves after harvest. Once you cut them back, the plants grow fresh leaves again in a few weeks.",
+          "user_action_seasoned": "Mow without cutting into the crowns, remove the clippings to reduce next spring's fruit rot, narrow the matted row, and fertilize at the renovation rate to drive flower-bud development for next year. Renovate within one to two weeks of the final harvest; fertilize and water right after to encourage regrowth.",
+          "user_action_beginner": "Cut the leaves but not the crowns, rake the cut leaves away, narrow the row, and feed the plants so they set up next year's crop. Renovate a week or two after the last berries, then feed and water.",
+          "log_prompt_seasoned": "Renovation: the date you mowed and renovated the bed.",
+          "log_prompt_beginner": "Noted the day you cut back and tidied the bed.",
+          "audience": "core"
+        },
+        {
+          "id": "dormancy",
+          "name": "Dormancy and winter",
+          "day_range_from_sow": null,
+          "year_phase": "year_round_winter",
+          "timing_seasoned": "In cold regions the bed goes dormant in late fall. Crowns are injured between about 10 and 20 °F at the crown, so a 2 to 3 inch loose straw mulch is applied after the first hard freeze and raked off in early spring. In wet-winter regions, straw over the crowns invites rot and is skipped.",
+          "timing_beginner": "In cold areas the plants go dormant for winter. Cover them with 2 to 3 inches of loose straw after the first hard freeze to protect the crowns, then rake it off in early spring. In mild, rainy areas, skip the straw because it makes the crowns rot.",
+          "what_to_look_for_seasoned": "Plants stop growing and leaves die back where winters are cold. In mild regions the plants may hold some green leaves through winter.",
+          "what_to_look_for_beginner": "The plants stop growing and the leaves die back in cold places. In mild places they may stay a little green.",
+          "user_action_seasoned": "Apply straw after plants harden off and the first hard freeze arrives, not earlier, which would smother the crowns. Remove it as growth resumes in spring. Move containers to an unheated garage or sink them to the rim and mulch. Mulch cold-region beds for winter and plan to remove it promptly in spring; protect container roots, which freeze harder than in-ground beds.",
+          "user_action_beginner": "Put straw on after the first hard freeze, not before, or it will smother the plants. Take it off when growth starts in spring. Move pots into an unheated garage or bury them to the rim and cover with mulch. Cover the bed with straw for winter in cold areas and uncover it in spring. Protect pots, since roots in pots get colder than roots in the ground.",
+          "log_prompt_seasoned": "Dormancy: the date you mulched for winter (cold regions).",
+          "log_prompt_beginner": "Noted when you covered the plants for winter.",
+          "audience": "core"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.frequency",
+      "from": null,
+      "value": "At planting and through the first season for new plantings; for established June-bearing beds, once a year at renovation."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.type",
+      "from": null,
+      "value": "balanced_granular"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.timing",
+      "from": null,
+      "value": "renovation"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.example_product",
+      "from": null,
+      "value": "16-16-16 balanced fertilizer (or a comparable all-purpose granular)"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.notify_days_after",
+      "from": null,
+      "value": null
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.stage_id",
+      "from": null,
+      "value": "renovation"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.notes_seasoned",
+      "from": null,
+      "value": "Strawberry feeding is nitrogen-driven and timed to the planting model. In the first year, apply a total of about 0.5 to 0.8 ounces of actual nitrogen per 10 feet of row, split across the season: a small dose one to two weeks after planting, a second about a month later, and a third roughly two months after planting. On established June-bearing beds, do not feed in spring; spring nitrogen drives leaf growth, not fruit, and a dense canopy traps moisture and promotes gray mold. Instead, fertilize once at renovation, just after harvest, to build the flower buds for next year. Established day-neutral and everbearing plants, which fruit all season, take the same total split into monthly doses through summer with an optional August feeding. On sandy soil, divide every rate into more frequent, lighter applications."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.notes_beginner",
+      "from": null,
+      "value": "Strawberries mainly need nitrogen, and when you feed depends on the type. The first year, give a little fertilizer two or three times spread across the season rather than one big dose. After that, the rule for June-bearing plants is simple: do not feed in spring, because it grows lots of leaves but not more berries, and the thick leaves trap dampness that causes mold. Feed them once instead, right after harvest when you cut the plants back. Day-neutral and everbearing plants, which fruit all summer, get small amounts spread across the months instead. If your soil is sandy, feed smaller amounts more often."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.notify_message_seasoned",
+      "from": null,
+      "value": "Time to renovate and feed your June-bearing strawberries. Mow the old leaves, narrow the row, then apply about 0.4 to 0.6 ounces of nitrogen per 10 feet of row and water it in to set next year's crop."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.notify_message_beginner",
+      "from": null,
+      "value": "Your June-bearing strawberries are ready for their after-harvest cutback and feeding. Mow the old leaves, then give the plants a balanced fertilizer and water it in to help next year's berries."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.npk_hint_seasoned",
+      "from": null,
+      "value": "A balanced analysis such as 16-16-16 works well. Rates are given as actual nitrogen per length of row, so divide the nitrogen you need by the decimal nitrogen fraction of your product: about 0.4 to 0.6 ounces of nitrogen per 10 feet at renovation works out to roughly 2.5 to 3.75 ounces of 16-16-16 per 10-foot row."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.npk_hint_beginner",
+      "from": null,
+      "value": "A balanced fertilizer like 16-16-16 (the three numbers are nitrogen, phosphorus, and potassium) is a good all-purpose choice. Follow the label rate for the row length you are feeding, and water it in after spreading."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.amount_seasoned",
+      "from": null,
+      "value": "First year: about 0.5 to 0.8 ounces of nitrogen per 10 feet of row total, in two to three splits. Established June-bearers: about 0.4 to 0.6 ounces of nitrogen per 10 feet of row, all at once at renovation. Day-neutral and everbearing: about 0.1 to 0.2 ounces of nitrogen per 10 feet each month after spring growth begins, with an optional August dose."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.amount_beginner",
+      "from": null,
+      "value": "A rough guide: feed a new bed lightly two or three times the first year. Feed an established June-bearing bed once, after harvest. Feed day-neutral or everbearing plants a little each month through summer. Use the label rate on your fertilizer for the length of your row."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.sources",
+      "from": null,
+      "value": [
+        "osu_ext",
+        "umn_ext"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].fertilizer.anchoring_urls",
+      "from": null,
+      "value": {
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+          "verified": "2026-06-18"
+        },
+        "umn_ext": {
+          "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+          "verified": "2026-06-18"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.frequency_seasoned",
+      "from": null,
+      "value": "About 1 to 1.5 inches of water per week through the growing season, adjusted for vigor, growth stage, soil, and weather. On sandy soil and in heat, water more often and more lightly. Newly set plants have undeveloped roots and stress easily, so irrigate several times a week until established."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.frequency_beginner",
+      "from": null,
+      "value": "Give strawberries about 1 to 1.5 inches of water a week while they are growing. Water more often in hot weather or sandy soil, and keep new plants well watered since their roots are still small."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.amount_seasoned",
+      "from": null,
+      "value": "Wet the soil to a depth of about 6 inches to 1 foot with each irrigation, enough that the shallow root zone does not fully dry between waterings, but never so much that water stands. Standing water harms strawberries even for a day or two."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.amount_beginner",
+      "from": null,
+      "value": "Water enough to wet the soil about 6 inches to a foot deep, so the roots stay moist but never soggy. Strawberry roots are shallow and rot if they sit in water, so do not overdo it."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.method_seasoned",
+      "from": null,
+      "value": "Drip irrigation is ideal: it keeps water off the foliage and fruit, which reduces gray mold and weeds. Run a single drip line per row with half-gallon emitters spaced about every 12 inches, or use a soaker hose while monitoring soil moisture."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.method_beginner",
+      "from": null,
+      "value": "The best way to water strawberries is at the base, not over the leaves, because wet leaves and fruit lead to mold. A drip line or soaker hose along the row works well; if you water by hand, water the soil rather than the plants."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.signs_overwater_seasoned",
+      "from": null,
+      "value": "Wilting despite wet soil, yellowing lower leaves, and soft or collapsing crowns signal waterlogging and the root and crown rots that follow. Standing water and slow-draining ground are the usual causes."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.signs_overwater_beginner",
+      "from": null,
+      "value": "If the soil is wet but the plants still wilt, the leaves yellow, or the crowns turn soft and mushy, you are watering too much or the ground drains poorly. Soggy soil rots strawberry roots."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.signs_underwater_seasoned",
+      "from": null,
+      "value": "Dull, wilting leaves in dry soil and small, soft berries point to drought stress. Because fruit is mostly water, under-watering during fruit development directly cuts size and yield."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.signs_underwater_beginner",
+      "from": null,
+      "value": "Drooping, dull leaves with dry soil, and small berries, mean the plants need more water. Strawberries especially need water while the fruit is filling out, or the berries stay small."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.watering_method",
+      "from": null,
+      "value": "drip"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.drought_tolerance",
+      "from": null,
+      "value": "low"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.method_note_seasoned",
+      "from": null,
+      "value": "Keep water off ripening fruit and foliage where possible. Overhead watering wets the canopy and raises gray mold pressure, so if you must use it, water early in the day so leaves and fruit dry quickly."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.method_note_beginner",
+      "from": null,
+      "value": "Try to keep water off the berries and leaves. If you can only water from above, do it in the morning so everything dries out during the day and does not stay damp."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.critical_periods_seasoned",
+      "from": null,
+      "value": "On established beds, two periods matter most: from just after bloom through harvest, when fruit is sizing, and from late summer into early fall, when next year's flower buds form. Do not let plants stress for water in either window."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.critical_periods_beginner",
+      "from": null,
+      "value": "Two times are most important for watering: while the berries are forming and ripening, and again in late summer to early fall when the plant is setting up next year's crop. Keep the soil from drying out during both."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.schedule_by_stage",
+      "from": [],
+      "value": [
+        {
+          "stage_id": "establishment",
+          "system": "drip",
+          "rate": "1 to 1.5 inches per week",
+          "frequency": "several times per week",
+          "level": "moderate",
+          "note_seasoned": "Keep new plantings evenly moist; shallow, undeveloped roots stress quickly.",
+          "note_beginner": "Keep new plants evenly watered so they do not dry out."
+        },
+        {
+          "stage_id": "fruit_set",
+          "system": "drip",
+          "rate": "1 to 1.5 inches per week",
+          "frequency": "as needed to keep soil evenly moist",
+          "level": "steady",
+          "note_seasoned": "Even moisture during fruit sizing drives berry size and quality; keep fruit off wet soil.",
+          "note_beginner": "Water evenly while berries are filling out, and keep the fruit off wet ground."
+        },
+        {
+          "stage_id": "renovation",
+          "system": "drip",
+          "rate": "1 to 1.5 inches per week",
+          "frequency": "after mowing and feeding",
+          "level": "moderate",
+          "note_seasoned": "Irrigate right after renovation to push fresh leaf and runner growth.",
+          "note_beginner": "Water right after you cut the plants back and feed them, to help them regrow."
+        },
+        {
+          "stage_id": "dormancy",
+          "system": "none",
+          "rate": "rainfall in most regions",
+          "frequency": "minimal",
+          "level": "low",
+          "note_seasoned": "Dormant beds need little water; avoid waterlogged soil over winter.",
+          "note_beginner": "Dormant plants need almost no water; just do not let them sit in soggy soil."
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.sources",
+      "from": null,
+      "value": [
+        "osu_ext",
+        "umn_ext"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].watering.anchoring_urls",
+      "from": null,
+      "value": {
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+          "verified": "2026-06-18"
+        },
+        "umn_ext": {
+          "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+          "verified": "2026-06-18"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.room_temp_seasoned",
+      "from": null,
+      "value": "Strawberries are highly perishable and do not ripen further after picking, so hold them at room temperature only if eating within a day. For anything longer, refrigerate promptly; cool freshly picked fruit as soon as possible after harvest."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.room_temp_beginner",
+      "from": null,
+      "value": "Strawberries do not get sweeter after picking and spoil fast, so only leave them out if you will eat them that day. Otherwise, get them into the fridge soon after picking."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.fridge_seasoned",
+      "from": null,
+      "value": "Refrigerate unwashed in the crisper drawer, kept in a closed clamshell or a partially open plastic bag to hold humidity near 90 to 95 percent. Do not wash until just before use, since surface moisture speeds spoilage. Under good conditions berries keep up to about a week, depending on ripeness at picking."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.fridge_beginner",
+      "from": null,
+      "value": "Put the berries in the fridge unwashed, in their container or a loosely closed bag, and wash them only right before you eat them. Washing too early makes them mushy. Stored this way they last up to about a week, depending on how ripe they were."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.freezer_seasoned",
+      "from": null,
+      "value": "For long-term storage, hull the berries, spread them on a tray to flash-freeze, then transfer to airtight containers or bags. Held at 0 °F they keep good quality for up to about a year."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.freezer_beginner",
+      "from": null,
+      "value": "To keep strawberries for months, remove the green tops, freeze them spread out on a tray first so they do not clump, then pack them into airtight bags. In the freezer they keep for up to about a year."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.notes_seasoned",
+      "from": null,
+      "value": "Sort before storing and discard any bruised or molding fruit, since gray mold spreads quickly from one berry to the next. Pick and store fruit with the cap on for the longest shelf life."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.notes_beginner",
+      "from": null,
+      "value": "Before storing, pick out and toss any soft or moldy berries, because mold jumps quickly from one to another. Berries keep best with their green caps left on."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.sources",
+      "from": [],
+      "value": [
+        "uc_anr_8256",
+        "osu_ext"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].storage.anchoring_urls",
+      "from": {},
+      "value": {
+        "uc_anr_8256": {
+          "url": "https://anrcatalog.ucanr.edu/pdf/8256.pdf",
+          "verified": "2026-06-18"
+        },
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+          "verified": "2026-06-18"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.per_plant_seasoned",
+      "from": null,
+      "value": "About 1 to 2 pounds per plant, or roughly 7 to 15 pounds per 10-foot row, varying with cultivar and planting age."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.per_plant_beginner",
+      "from": null,
+      "value": "Expect roughly 1 to 2 pounds of berries per plant, depending on the variety and how old the bed is."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.peak_production_seasoned",
+      "from": null,
+      "value": "Yield peaks the year after planting (year two). It is often similar or slightly lower in year three, and both berry size and total yield decline from years two to four."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.peak_production_beginner",
+      "from": null,
+      "value": "You will get the most berries the second year, the year after planting. After that the crop slowly tapers off in size and amount."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.first_year_note_seasoned",
+      "from": null,
+      "value": "Expect little or no crop in the planting year. On June-bearers the flowers are pinned off the first season by design, so a missing first-year harvest is the plan working, not a failure."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.first_year_note_beginner",
+      "from": null,
+      "value": "Do not expect berries the first year. On June-bearing plants you pick the flowers off on purpose, so no first-year crop is exactly what should happen."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.factors_seasoned",
+      "from": [],
+      "value": [
+        "Cultivar and type: June-bearers concentrate yield in one flush; day-neutrals spread a similar or smaller total across the season.",
+        "Planting age: highest in year two, declining through year four as the bed ages.",
+        "Pollination: cold or wet bloom weather and few bees give small, grooved, or pinched berries.",
+        "Water during fruiting: fruit is mostly water, so moisture stress during sizing cuts yield and berry size directly.",
+        "Renovation and weed control on June-bearers: timely renovation and a weed-free, well-spaced row sustain yield across seasons."
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.sources",
+      "from": [],
+      "value": [
+        "osu_ext",
+        "umn_ext"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].yield_expectations.anchoring_urls",
+      "from": {},
+      "value": {
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+          "verified": "2026-06-18"
+        },
+        "umn_ext": {
+          "url": "https://extension.umn.edu/fruit/growing-strawberries-home-garden",
+          "verified": "2026-06-18"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].description_seasoned",
+      "from": null,
+      "value": "The garden strawberry is a low-growing herbaceous perennial with a short, compressed stem called the crown, from which leaves, flowers, and runners arise. It is grown in three types: June-bearing (one concentrated early-summer flush, the matted-row backbone of US backyard growing), day-neutral (fruiting through the season, compact, ideal for containers), and everbearing (two lighter flushes). Plants are self-fertile, set from dormant bare-root crowns or potted plugs, and a bed stays productive for about three to four fruiting seasons before it is replaced."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].description_beginner",
+      "from": null,
+      "value": "Strawberries are low, leafy plants that come back year after year. There are three kinds: June-bearing, which gives one big batch of berries in early summer; day-neutral, which gives a few berries at a time all season and does great in pots; and everbearing, which gives two smaller batches. One plant makes fruit on its own, and a strawberry patch keeps producing for about three to four years before you start a fresh one."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].harvest_ready_seasoned",
+      "from": null,
+      "value": "Fruit is ready when it is fully red and fragrant and pulls free easily; flavor is best when berries ripen on the plant. Color deepens after picking, so fruit picked at about 75 percent red stores slightly longer. Pick every one to three days, more often in warm weather, and pick before forecast rain to protect flavor and limit rot."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].harvest_ready_beginner",
+      "from": null,
+      "value": "A strawberry is ready when it is bright red all over, smells sweet, and comes off the plant easily. Berries taste best left to ripen on the plant. Pick every day or two, more often when it is hot, and pick before heavy rain so the berries do not get watery or moldy."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].harvest_ready_sources",
+      "from": [],
+      "value": [
+        "osu_ext",
+        "uc_anr_8256"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].harvest_ready_anchoring_urls",
+      "from": {},
+      "value": {
+        "osu_ext": {
+          "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+          "verified": "2026-06-18"
+        },
+        "uc_anr_8256": {
+          "url": "https://anrcatalog.ucanr.edu/pdf/8256.pdf",
+          "verified": "2026-06-18"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].bloom_time_seasoned",
+      "from": null,
+      "value": "On established beds, June-bearing plants flower in mid-spring, near the last-frost date, and fruit ripens about four weeks later. Day-neutral plants flower and fruit through the season whenever temperatures sit between about 40 and 90 °F. Open blossoms are frost-sensitive, so bloom timing and late frosts together set the crop."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].bloom_time_beginner",
+      "from": null,
+      "value": "June-bearing strawberries flower in mid-spring, around the last frost, and the berries ripen about four weeks after that. Day-neutral plants flower on and off all season as long as it is not too cold or too hot. Open flowers can be killed by a late frost, so watch the weather while they bloom."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].hardiness_notes_seasoned",
+      "from": null,
+      "value": "Strawberries grow across USDA zones 3 through 10, but how they are grown shifts with climate. In cold-winter regions they are a perennial matted-row bed that needs winter straw mulch, since crowns are injured between about 10 and 20 °F at the crown. In hot-summer regions, summer heat exhausts the planting, so strawberries are grown as a fall-set annual that is pulled and replaced each year. Choose cultivars matched to your winters; cold-hardy types and heat-adapted types are not interchangeable."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].hardiness_notes_beginner",
+      "from": null,
+      "value": "Strawberries grow in most of the country, from cold zone 3 to warm zone 10, but the way you grow them changes with your climate. Where winters are cold, they live for years as a bed and need a straw cover in winter to protect the crowns. Where summers are hot, the heat wears the plants out, so people plant fresh ones each fall and pull them after one season. Pick a variety suited to your area."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].chill_hours_note_seasoned",
+      "from": null,
+      "value": "Strawberries need only modest winter chill, and chilling is not a limiting factor for the home grower the way it is for tree fruit. It is informational here, not a hardiness gate. Cultivar cold-hardiness and summer heat, not chill accumulation, decide where and how strawberries are grown."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].chill_hours_note_beginner",
+      "from": null,
+      "value": "Strawberries do not need a set amount of winter cold to fruit, unlike apples or peaches. You do not have to count chill hours for them. What matters instead is choosing a variety that suits your winters and summers."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].soil_prep_seasoned",
+      "from": null,
+      "value": "Strawberries want a fertile, well-drained sandy loam or loam rich in organic matter. Because the roots are shallow and rot in waterlogged soil, plant into a raised bed or mounded row about 12 inches high on heavy or slow-draining ground. Work 1 to 2 inches of compost into the bed before planting and adjust pH to 5.6 to 6.5 a season ahead, since sulfur or lime take months to act. Avoid ground that recently grew tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries, which leave Verticillium wilt in the soil."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].soil_prep_beginner",
+      "from": null,
+      "value": "Strawberries like loose, rich soil that drains well. Their roots are shallow and rot in soggy ground, so if your soil is heavy clay or puddles after rain, build a raised bed or mound about 12 inches tall and plant into that. Mix in an inch or two of compost before planting. Strawberries prefer slightly acidic soil, so test it the season before and adjust if needed. Do not plant where tomatoes, peppers, potatoes, or other berries grew recently, because they leave behind a soil disease that attacks strawberries."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].diseases",
+      "from": [],
+      "value": [
+        {
+          "name": "Gray mold (Botrytis fruit rot)",
+          "severity": "high",
+          "type": "fungal",
+          "symptoms_seasoned": "A soft, tan rot of green and ripe fruit that quickly becomes a fuzzy gray mold, often starting where berries touch soil, mulch, or another berry. It spreads fast through a picked basket.",
+          "symptoms_beginner": "Berries turn soft and rot, then grow a gray fuzz. It often starts where a berry touches the ground or another berry, and spreads quickly.",
+          "cause_seasoned": "The fungus Botrytis cinerea, which overwinters on dead leaves and thrives when it rains during bloom and fruit development.",
+          "cause_beginner": "A mold that lives on old dead leaves and takes hold when it is wet while the plants are flowering and fruiting.",
+          "organic_treatment_seasoned": "Remove and destroy infected berries the moment you see them. Keep an open, airy canopy, keep ripening fruit off wet soil, and clean out old leaves at renovation and in early spring.",
+          "organic_treatment_beginner": "Pick off and throw away any moldy berries right away. Keep the plants from getting crowded, keep berries off wet ground, and clear away old dead leaves.",
+          "prevention_seasoned": "Avoid spring nitrogen on June-bearers, which thickens the canopy and traps moisture. Water at the base rather than overhead, space plants for airflow, and pick fruit promptly and often.",
+          "prevention_beginner": "Do not feed June-bearing plants in spring, since extra leaves trap dampness. Water at the soil, give plants room to breathe, and pick ripe berries often.",
+          "audience": "core"
+        },
+        {
+          "name": "Anthracnose fruit rot",
+          "severity": "medium",
+          "type": "fungal",
+          "symptoms_seasoned": "Dark, sunken, circular lesions on fruit; the fungus can also infect crowns and runners, causing wilting and plant death in warm, wet spells.",
+          "symptoms_beginner": "Dark, sunken round spots on the berries. The disease can also rot the crown and runners, making plants wilt and die in warm, wet weather.",
+          "cause_seasoned": "Colletotrichum fungi, favored by warm, humid, rainy conditions during fruit development and spread by splashing water.",
+          "cause_beginner": "A fungus that thrives in warm, wet, humid weather and splashes around in the rain.",
+          "organic_treatment_seasoned": "Remove and destroy diseased fruit and plants promptly. Reduce splash by watering at the base and mulching, and improve airflow.",
+          "organic_treatment_beginner": "Pull off and throw away diseased berries and plants. Water at the soil instead of overhead, and give plants room.",
+          "prevention_seasoned": "Start with certified disease-free plants, avoid overhead watering, and do not plant into ground with a recent history of the disease.",
+          "prevention_beginner": "Buy clean, certified plants, water at the base, and avoid spots where this disease has been a problem before.",
+          "audience": "core"
+        },
+        {
+          "name": "Powdery mildew",
+          "severity": "low",
+          "type": "fungal",
+          "symptoms_seasoned": "Upward cupping and purpling of leaf edges with a white powdery film; in some cultivars infected fruit tastes bitter.",
+          "symptoms_beginner": "Leaf edges curl upward and turn purple, with a white dusty coating. In some varieties the berries taste bitter.",
+          "cause_seasoned": "A fungus that, unlike most strawberry diseases, spreads in dry conditions with high humidity and moderate temperatures.",
+          "cause_beginner": "A fungus that spreads when the air is humid but the leaves are dry.",
+          "organic_treatment_seasoned": "Remove badly affected leaves and improve airflow. Choose resistant cultivars where mildew is a recurring problem.",
+          "organic_treatment_beginner": "Pick off the worst leaves and give plants more room. Grow varieties known to resist mildew if it keeps coming back.",
+          "prevention_seasoned": "Space plants well, avoid dense canopies, and select tolerant cultivars.",
+          "prevention_beginner": "Give plants room, keep them from getting crowded, and choose mildew-resistant varieties.",
+          "audience": "core"
+        },
+        {
+          "name": "Red stele (Phytophthora root rot)",
+          "severity": "medium",
+          "type": "fungal",
+          "symptoms_seasoned": "Stunted, wilting plants that collapse in spring; roots are rotted and, when sliced lengthwise, show a reddish-brown core. Worst in heavy, wet, poorly drained soil.",
+          "symptoms_beginner": "Plants are stunted and wilt, then collapse in spring. If you cut a root open, the center is reddish-brown. It is worst in heavy, wet soil that drains poorly.",
+          "cause_seasoned": "Soilborne Phytophthora fungi that thrive in cold, saturated soils and persist for years.",
+          "cause_beginner": "A soil fungus that builds up in cold, soggy ground and stays in the soil for years.",
+          "organic_treatment_seasoned": "There is no cure once plants are infected; remove and destroy affected plants. Improve drainage with raised beds and choose resistant cultivars.",
+          "organic_treatment_beginner": "There is no cure once a plant has it, so pull and destroy sick plants. Build raised beds for better drainage and grow resistant varieties.",
+          "prevention_seasoned": "Plant only in well-drained soil or raised beds, start with certified plants, and choose red-stele-resistant cultivars on wet sites.",
+          "prevention_beginner": "Plant in well-drained soil or raised beds, buy certified plants, and pick resistant varieties if your ground stays wet.",
+          "audience": "core"
+        },
+        {
+          "name": "Verticillium wilt",
+          "severity": "medium",
+          "type": "fungal",
+          "symptoms_seasoned": "Outer leaves wilt, dry at the margins, and collapse while inner leaves may stay upright; plants are stunted and may die. Symptoms often appear as fruit load increases.",
+          "symptoms_beginner": "The outer leaves wilt, dry at the edges, and flop down while the middle leaves stay up. Plants are stunted and may die, often as the berries are forming.",
+          "cause_seasoned": "The soilborne fungus Verticillium, which also infects tomatoes, peppers, eggplant, potatoes, and brambles and persists in soil for years.",
+          "cause_beginner": "A soil fungus that also attacks tomatoes, peppers, potatoes, and other berries, and stays in the soil for years.",
+          "organic_treatment_seasoned": "There is no rescue treatment; remove affected plants. Manage it through rotation and resistant cultivars rather than cure.",
+          "organic_treatment_beginner": "There is no cure, so remove sick plants. The real fix is where you plant and which variety you choose.",
+          "prevention_seasoned": "Do not plant strawberries after or near tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries, and start with certified disease-free stock on a clean site.",
+          "prevention_beginner": "Do not plant strawberries where you recently grew tomatoes, peppers, potatoes, or other berries, and start with certified clean plants.",
+          "audience": "core"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].pests",
+      "from": [],
+      "value": [
+        {
+          "name": "Slugs",
+          "severity": "medium",
+          "type": "mollusk",
+          "symptoms_seasoned": "Ragged holes chewed in ripe fruit and leaves, with slime trails, worst in damp, heavily mulched beds and wet weather.",
+          "symptoms_beginner": "Ragged holes eaten in the berries and leaves, with shiny slime trails. Worst in damp, mulchy beds and wet weather.",
+          "cause_seasoned": "Slugs, which shelter in deep or wet mulch and feed at night on soft ripe fruit.",
+          "cause_beginner": "Slugs, which hide in damp mulch and eat the soft ripe berries at night.",
+          "organic_treatment_seasoned": "Hand-pick in the evening, set out shallow traps, and remove damp hiding places. Keep ripening fruit off wet mulch.",
+          "organic_treatment_beginner": "Pick them off in the evening, use simple traps, and clear away damp hiding spots. Keep berries off wet mulch.",
+          "prevention_seasoned": "Avoid deep straw mulch during the growing season, keep the bed tidy, and harvest ripe fruit promptly.",
+          "prevention_beginner": "Do not pile on thick straw in summer, keep the bed clean, and pick ripe berries quickly.",
+          "audience": "core"
+        },
+        {
+          "name": "Spotted wing drosophila",
+          "severity": "high",
+          "type": "insect",
+          "symptoms_seasoned": "Soft, collapsing spots on ripening and ripe fruit; tiny larvae feed inside berries. Populations build through the season, so later fruit is hit hardest.",
+          "symptoms_beginner": "Soft, sunken spots on ripening berries, with tiny maggots inside. It gets worse later in the season.",
+          "cause_seasoned": "A vinegar fly that lays eggs in coloring fruit; the larvae feed inside as the berry ripens.",
+          "cause_beginner": "A small fruit fly that lays eggs in the berries as they start to color, and the maggots eat the fruit from inside.",
+          "organic_treatment_seasoned": "Pick fruit frequently and completely, remove and destroy overripe and culled berries, and use fine exclusion netting on susceptible later crops.",
+          "organic_treatment_beginner": "Pick all the ripe berries often, throw away overripe and damaged ones, and cover later crops with fine netting.",
+          "prevention_seasoned": "Harvest on a tight schedule, never leave overripe fruit on the plant, and exclude adults with fine netting where pressure is high.",
+          "prevention_beginner": "Keep up with picking, never leave overripe berries on the plant, and use fine netting if the flies are bad.",
+          "audience": "core"
+        },
+        {
+          "name": "Tarnished plant bug (lygus)",
+          "severity": "medium",
+          "type": "insect",
+          "symptoms_seasoned": "Catfaced fruit, dimpled and pinched at the tip with seedy, woody patches; most noticeable on day-neutrals in summer.",
+          "symptoms_beginner": "Lumpy, dented berries with a pinched, seedy tip. Most common on day-neutral plants in summer.",
+          "cause_seasoned": "Lygus bugs feeding on developing flowers and fruit, which disrupts seed and berry development at the tip.",
+          "cause_beginner": "A small bug that feeds on the flowers and young fruit, which makes the berry tip grow lumpy.",
+          "organic_treatment_seasoned": "Keep the bed and surrounding area weed-free to remove alternate hosts, and monitor flowers during fruiting.",
+          "organic_treatment_beginner": "Keep weeds down in and around the bed, since the bugs live on them, and watch the flowers while fruiting.",
+          "prevention_seasoned": "Control broadleaf weeds that host lygus near the planting and keep the bed clean through the season.",
+          "prevention_beginner": "Pull broadleaf weeds near the bed, since the bugs breed on them, and keep the area tidy.",
+          "audience": "core"
+        },
+        {
+          "name": "Aphids",
+          "severity": "low",
+          "type": "insect",
+          "symptoms_seasoned": "Clusters of small soft-bodied insects on new growth and leaf undersides, with sticky honeydew and sometimes sooty mold; aphids can also transmit strawberry viruses.",
+          "symptoms_beginner": "Groups of tiny soft bugs on new leaves and leaf undersides, leaving a sticky film. They can also spread plant viruses.",
+          "cause_seasoned": "Aphids feeding on plant sap, building up quickly on tender new growth.",
+          "cause_beginner": "Aphids, tiny bugs that suck plant juices and multiply fast on new leaves.",
+          "organic_treatment_seasoned": "Knock populations back with a strong spray of water, encourage natural predators such as lady beetles, and use insecticidal soap on heavy infestations.",
+          "organic_treatment_beginner": "Spray them off with water, let helpful bugs like ladybugs do their work, and use insecticidal soap if there are a lot.",
+          "prevention_seasoned": "Start with clean, certified plants to limit virus introduction, and avoid excess nitrogen that flushes soft, aphid-prone growth.",
+          "prevention_beginner": "Start with clean plants, and do not over-feed, since lots of soft new growth attracts aphids.",
+          "audience": "core"
+        },
+        {
+          "name": "Two-spotted spider mite",
+          "severity": "medium",
+          "type": "mite",
+          "symptoms_seasoned": "Fine stippling and bronzing of leaves with faint webbing on undersides, worst in hot, dry, dusty conditions; heavy infestations weaken plants and reduce yield.",
+          "symptoms_beginner": "Leaves look speckled and bronzed, with fine webbing underneath. Worst in hot, dry, dusty weather, and bad cases weaken the plants.",
+          "cause_seasoned": "Tiny mites that feed on the underside of leaves and multiply rapidly in hot, dry weather.",
+          "cause_beginner": "Tiny mites under the leaves that multiply fast when it is hot and dry.",
+          "organic_treatment_seasoned": "Rinse foliage to raise humidity and dislodge mites, encourage predatory mites, and treat severe cases with horticultural oil or insecticidal soap.",
+          "organic_treatment_beginner": "Spray the leaves with water to knock mites off and raise humidity, and use horticultural oil or soap for bad cases.",
+          "prevention_seasoned": "Avoid drought stress and dusty conditions, and keep plants well watered in heat.",
+          "prevention_beginner": "Keep plants watered in hot weather and avoid letting them get dusty and dry.",
+          "audience": "core"
+        },
+        {
+          "name": "Root and crown weevils (black vine weevil)",
+          "severity": "medium",
+          "type": "insect",
+          "symptoms_seasoned": "Notched leaf margins from night-feeding adults, and stunted, wilting, or collapsing plants whose roots and crowns have been eaten by larvae.",
+          "symptoms_beginner": "Leaf edges notched as if cut with pinking shears, and plants that wilt or collapse because grubs have eaten the roots and crown.",
+          "cause_seasoned": "Weevils whose adults notch leaves at night and whose larvae feed underground on roots and crowns.",
+          "cause_beginner": "Beetles whose adults chew the leaf edges at night and whose grubs eat the roots underground.",
+          "organic_treatment_seasoned": "Inspect on warm evenings and remove adults; beneficial nematodes can target soil-dwelling larvae. Remove and destroy heavily infested plants in fall.",
+          "organic_treatment_beginner": "Look for the beetles on warm evenings and remove them. Beneficial nematodes can attack the grubs in the soil. Pull badly infested plants in fall.",
+          "prevention_seasoned": "Rotate to a fresh site when starting a new bed, since larvae build up in older plantings, and start with clean stock.",
+          "prevention_beginner": "Start new beds in a fresh spot, since the grubs build up in old beds, and use clean plants.",
+          "audience": "core"
+        },
+        {
+          "name": "Birds",
+          "severity": "medium",
+          "type": "vertebrate",
+          "symptoms_seasoned": "Pecked and partly eaten ripe berries, often the first fully colored fruit taken just before you would pick it.",
+          "symptoms_beginner": "Ripe berries pecked or half-eaten, often the best red ones taken right before you pick them.",
+          "cause_seasoned": "Birds attracted to ripening red fruit.",
+          "cause_beginner": "Birds that go for the ripe red berries.",
+          "organic_treatment_seasoned": "Drape bird netting over the bed as fruit colors, or use floating row cover, keeping it secured at the edges.",
+          "organic_treatment_beginner": "Cover the bed with bird netting or a light cloth as the berries turn red, tucking the edges down.",
+          "prevention_seasoned": "Net the planting before the first fruit ripens rather than after birds find it.",
+          "prevention_beginner": "Put netting on before the first berries ripen, not after the birds have already found them.",
+          "audience": "core"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].failure_diagnostics",
+      "from": [],
+      "value": [
+        {
+          "id": "runners_no_fruit",
+          "label_seasoned": "Lots of runners and leaves, but little or no fruit",
+          "label_beginner": "Big leafy plants and lots of runners, but hardly any berries",
+          "what_happened_seasoned": "Heavy leaf and runner growth at the expense of fruit usually means too much nitrogen, spring feeding on an established June-bearing bed, or, in year one, the normal result of pinching flowers to establish the plant.",
+          "what_happened_beginner": "Too much nitrogen, or feeding a June-bearing bed in spring, pushes leaves and runners instead of berries. In the first year, no fruit is normal because you pinch the flowers off on purpose.",
+          "next_season_tip_seasoned": "Feed June-bearers only at renovation, not in spring, and keep total nitrogen modest. Remember that a fruitless first year on a June-bearing bed is the plan, with the real crop coming in year two.",
+          "next_season_tip_beginner": "Feed June-bearing plants only after harvest, not in spring, and do not overdo the fertilizer. And remember the first year is supposed to be fruitless, with the big crop the second year.",
+          "audience": "core"
+        },
+        {
+          "id": "small_misshapen_fruit",
+          "label_seasoned": "Small, lumpy, or pinched-tip berries",
+          "label_beginner": "Small, lumpy, or pinched berries",
+          "what_happened_seasoned": "Misshapen or grooved fruit comes from poor pollination during cold or wet bloom weather, or from tarnished plant bug feeding that pinches the berry tip (catfacing).",
+          "what_happened_beginner": "Lumpy or pinched berries usually mean the flowers were not pollinated well in cold or wet weather, or a small bug fed on them and deformed the tip.",
+          "next_season_tip_seasoned": "Protect bloom from frost, pull row covers back so bees can work the flowers, and control broadleaf weeds that host tarnished plant bug.",
+          "next_season_tip_beginner": "Cover flowers only when frost threatens and open them up for bees otherwise, and keep weeds down to reduce the bugs that deform the tips.",
+          "audience": "core"
+        },
+        {
+          "id": "gray_fuzz_fruit",
+          "label_seasoned": "Berries rotting with gray fuzz",
+          "label_beginner": "Berries rotting with gray fuzz",
+          "what_happened_seasoned": "Soft fruit covered in gray fuzz is gray mold (Botrytis), driven by wet conditions, a dense canopy, fruit resting on wet soil, and rain during bloom and ripening.",
+          "what_happened_beginner": "Gray fuzzy rot on the berries is a mold that takes hold when things stay wet, the plants are crowded, or berries sit on damp ground.",
+          "next_season_tip_seasoned": "Open up the canopy by skipping spring nitrogen on June-bearers, water at the base, keep fruit off wet soil, clean out old leaves, and pick ripe fruit promptly.",
+          "next_season_tip_beginner": "Give the plants more air by not feeding June-bearers in spring, water at the soil, keep berries off wet ground, clear old leaves, and pick ripe berries quickly.",
+          "audience": "core"
+        },
+        {
+          "id": "no_fruit_year_one",
+          "label_seasoned": "No fruit at all in the first year",
+          "label_beginner": "No berries the first year",
+          "what_happened_seasoned": "On a June-bearing bed this is expected and correct: flowers are pinned off the first season so the plant builds roots, crown, and a matted row, with the first real crop in year two.",
+          "what_happened_beginner": "On June-bearing plants this is normal. You pick the flowers off the first year so the plant gets strong, and the first real crop comes the second year.",
+          "next_season_tip_seasoned": "Stay the course: pinch first-year flowers on June-bearers and let runners fill the row. For fruit the first year, grow a day-neutral type, which fruits in its planting season.",
+          "next_season_tip_beginner": "Keep pinching the flowers off June-bearing plants the first year and let the runners fill in. If you want berries the first year, grow a day-neutral type instead.",
+          "audience": "core"
+        },
+        {
+          "id": "winter_crown_kill",
+          "label_seasoned": "Plants dead or stunted after winter, with blackened crowns",
+          "label_beginner": "Plants dead or weak after winter, with dark mushy crowns",
+          "what_happened_seasoned": "Winter cold injury: strawberry crowns are damaged between about 10 and 20 °F at the crown, especially without snow cover or winter mulch in cold regions, or with a poorly cold-hardy cultivar.",
+          "what_happened_beginner": "Winter cold killed the crowns. This happens in cold areas when there is no snow or straw cover, or when the variety is not hardy enough for your winters.",
+          "next_season_tip_seasoned": "In cold regions, apply 2 to 3 inches of loose straw after the first hard freeze and remove it in early spring, and choose cultivars rated for your hardiness zone. Skip straw in wet-winter regions, where it causes crown rot instead.",
+          "next_season_tip_beginner": "In cold places, cover the plants with 2 to 3 inches of straw after the first hard freeze and uncover them in spring, and pick a variety hardy for your area. In mild, rainy places, skip the straw, since it makes the crowns rot.",
+          "audience": "core"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].notifications",
+      "from": [],
+      "value": [
+        {
+          "id": "plant_window",
+          "title_seasoned": "Time to plant strawberries",
+          "title_beginner": "Time to plant your strawberries",
+          "body_seasoned": "Your strawberry planting window is open. Set dormant bare-root crowns or potted plugs with the crown midpoint level with the soil surface.",
+          "body_beginner": "It is time to plant your strawberries. Set each plant so the middle of the crown sits right at soil height.",
+          "action": "log_planting",
+          "trigger_type": "stage",
+          "offset_from": null,
+          "offset_days": null,
+          "condition": null,
+          "stage": "plant",
+          "audience": "core"
+        },
+        {
+          "id": "pinch_flowers_y1",
+          "title_seasoned": "Pinch first-year flowers",
+          "title_beginner": "Pick off the flowers this year",
+          "body_seasoned": "On June-bearing plants, pinch off flowers through the first season so the plant builds roots, crown, and runners for a full year-two crop.",
+          "body_beginner": "On June-bearing plants, pick off the flowers this first year so the plant grows strong and gives a big crop next year.",
+          "action": "remind",
+          "trigger_type": "stage",
+          "offset_from": null,
+          "offset_days": null,
+          "condition": null,
+          "stage": "establishment",
+          "audience": "core"
+        },
+        {
+          "id": "frost_on_bloom",
+          "title_seasoned": "Frost risk during bloom",
+          "title_beginner": "Frost coming while plants are flowering",
+          "body_seasoned": "Frost is forecast during bloom. Open blossoms are injured at about 30 °F. Cover the bed with row cover in the late afternoon and remove it in the morning once the danger passes.",
+          "body_beginner": "Frost is coming while your strawberries are flowering. Cover the plants with a light cloth in the evening and take it off in the morning.",
+          "action": "frost_protect",
+          "trigger_type": "weather",
+          "offset_from": null,
+          "offset_days": null,
+          "condition": "FROST_DURING_BLOOM",
+          "stage": "bloom",
+          "audience": "core"
+        },
+        {
+          "id": "harvest_window",
+          "title_seasoned": "Strawberry harvest is starting",
+          "title_beginner": "Your strawberries are ready to pick",
+          "body_seasoned": "Fruit is ripening. Pick fully red berries every one to three days, more often in warm weather, and refrigerate promptly.",
+          "body_beginner": "Your strawberries are starting to ripen. Pick the fully red ones every day or two and get them into the fridge.",
+          "action": "remind",
+          "trigger_type": "stage",
+          "offset_from": null,
+          "offset_days": null,
+          "condition": null,
+          "stage": "harvest",
+          "audience": "core"
+        },
+        {
+          "id": "renovation_reminder",
+          "title_seasoned": "Renovate your June-bearing bed",
+          "title_beginner": "Time to cut back your June-bearing bed",
+          "body_seasoned": "Within one to two weeks of your last picking, mow the old leaves to about 2 inches above the crowns, narrow the row, then fertilize and water to set next year's crop.",
+          "body_beginner": "A week or two after your last berries, mow the old leaves to about 2 inches above the crowns, narrow the row, then feed and water the plants.",
+          "action": "remind",
+          "trigger_type": "stage",
+          "offset_from": null,
+          "offset_days": null,
+          "condition": null,
+          "stage": "renovation",
+          "audience": "core"
+        },
+        {
+          "id": "winter_mulch",
+          "title_seasoned": "Mulch for winter (cold regions)",
+          "title_beginner": "Cover the plants for winter (cold areas)",
+          "body_seasoned": "In cold regions, after the first hard freeze, cover the bed with 2 to 3 inches of loose straw to protect the crowns. Skip this in wet-winter regions, where straw causes crown rot.",
+          "body_beginner": "In cold areas, after the first hard freeze, cover the plants with 2 to 3 inches of loose straw to protect them. Skip this if your winters are mild and rainy.",
+          "action": "remind",
+          "trigger_type": "stage",
+          "offset_from": null,
+          "offset_days": null,
+          "condition": null,
+          "stage": "dormancy",
+          "audience": "core"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].weather_triggers",
+      "from": [],
+      "value": [
+        {
+          "id": "frost_bloom",
+          "title_seasoned": "Frost during bloom",
+          "title_beginner": "Frost while flowering",
+          "body_seasoned": "A frost is forecast while plants are in bloom. Open flowers are injured at about 30 °F and closed flowers at about 28 °F. Apply row cover in the late afternoon and remove it after the morning thaw.",
+          "body_beginner": "Frost is coming while your plants are flowering. Cover them with a light cloth in the late afternoon and uncover them once it warms up in the morning.",
+          "action": "frost_protect",
+          "severity": "high",
+          "condition": "TEMP_BELOW_32_DURING_BLOOM",
+          "audience": "core"
+        },
+        {
+          "id": "heat_pause",
+          "title_seasoned": "High heat slows fruiting",
+          "title_beginner": "Hot weather pauses the berries",
+          "body_seasoned": "Sustained temperatures of 90 °F or higher pause flower formation on day-neutral plants until it cools. Keep soil evenly moist and consider afternoon shade in extreme heat.",
+          "body_beginner": "When it stays 90 °F or hotter, day-neutral plants stop setting new flowers until it cools down. Keep the soil evenly watered and give some afternoon shade in extreme heat.",
+          "action": "monitor",
+          "severity": "medium",
+          "condition": "TEMP_ABOVE_90",
+          "audience": "core"
+        },
+        {
+          "id": "heavy_rain_harvest",
+          "title_seasoned": "Rain forecast during harvest",
+          "title_beginner": "Rain coming while berries ripen",
+          "body_seasoned": "An extended rain is forecast during ripening. Rain dilutes flavor and promotes gray mold, so pick fruit that is 75 percent to fully red before it arrives.",
+          "body_beginner": "A lot of rain is coming while your berries ripen. Rain makes them watery and moldy, so pick the riper berries before it hits.",
+          "action": "harvest_now",
+          "severity": "medium",
+          "condition": "RAIN_DURING_HARVEST",
+          "audience": "core"
+        },
+        {
+          "id": "hard_freeze_winter",
+          "title_seasoned": "Hard freeze in cold regions",
+          "title_beginner": "Hard freeze coming (cold areas)",
+          "body_seasoned": "A hard freeze is forecast. Strawberry crowns are injured between about 10 and 20 °F. In cold regions, ensure winter straw mulch is in place; protect or relocate containers, whose roots freeze harder than in-ground beds.",
+          "body_beginner": "A hard freeze is coming. In cold areas, make sure your straw winter cover is on. Move or protect pots, since roots in pots get colder than roots in the ground.",
+          "action": "protect",
+          "severity": "high",
+          "condition": "HARD_FREEZE",
+          "audience": "core"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].type_selection_seasoned",
+      "from": "Strawberries come in three types, and the choice shapes your whole season. June-bearing cultivars set flower buds in the short days of fall and deliver one concentrated crop over about four weeks in late spring or early summer; they throw the most runners, so they suit a matted row and give a large flush ideal for freezing and jam. Their first real crop comes the season after planting. Day-neutral cultivars flower regardless of day length whenever temperatures sit between about 40 and 90 degrees, so they fruit from late spring through fall, bear in their first season, and throw few runners, which makes them the pick for containers, raised beds, and a steady supply of fresh berries. Everbearing cultivars give two lighter crops, one in early summer and one in late summer, and are generally less productive than day-neutrals. This guide follows the June-bearing matted-row model because it is the backbone of US backyard strawberry growing; the day-neutral notes throughout tell you where the care diverges.",
+      "value": "Strawberries come in three types, and the choice shapes your whole season. June-bearing cultivars set flower buds in the short days of fall and deliver one concentrated crop over about four weeks in late spring or early summer; they throw the most runners, so they suit a matted row and give a large flush ideal for freezing and jam. Their first real crop comes the season after planting. Day-neutral cultivars flower regardless of day length whenever temperatures sit between about 40 and 90 degrees, so they fruit from late spring through fall, bear in their first season, and throw few runners, which makes them the pick for containers, raised beds, and a steady supply of fresh berries. Everbearing cultivars give two lighter crops, one in early summer and one in late summer, and are generally less productive than day-neutrals. This guide follows the June-bearing matted-row model because it is the backbone of US backyard strawberry growing; the day-neutral notes throughout tell you where the care diverges. In mild-winter coastal regions, day-neutral plantings can fruit across much of the year and are often grown as a fall-set annual rather than a long-lived bed, which is why the warm-region notes treat them differently from the cold-region matted row."
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='strawberry')].type_selection_beginner",
+      "from": "There are three kinds of strawberries, and picking the right one matters more than picking a fancy variety. June-bearing types give you one big harvest over about four weeks in late spring or early summer, perfect if you want a pile of berries at once for jam or the freezer. They spread by sending out runners that fill in a wide row, and they give their first real crop the year after you plant them. Day-neutral types fruit a little at a time from late spring all the way to fall, give berries the first year, and stay compact, so they are the best choice for pots and small raised beds. Everbearing types fall in between, with one crop in early summer and another in late summer. This guide is built around the June-bearing kind grown in a wide row, since that is how most home gardeners grow strawberries, and it points out along the way where day-neutrals are handled differently.",
+      "value": "There are three kinds of strawberries, and picking the right one matters more than picking a fancy variety. June-bearing types give you one big harvest over about four weeks in late spring or early summer, perfect if you want a pile of berries at once for jam or the freezer. They spread by sending out runners that fill in a wide row, and they give their first real crop the year after you plant them. Day-neutral types fruit a little at a time from late spring all the way to fall, give berries the first year, and stay compact, so they are the best choice for pots and small raised beds. Everbearing types fall in between, with one crop in early summer and another in late summer. This guide is built around the June-bearing kind grown in a wide row, since that is how most home gardeners grow strawberries, and it points out along the way where day-neutrals are handled differently. In mild coastal areas with gentle winters, day-neutral plants can give berries through much of the year, and gardeners there often plant fresh ones each year instead of keeping a bed for years."
+    }
+  ]
+}
