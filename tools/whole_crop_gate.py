@@ -312,6 +312,20 @@ print(f"  berries_herbaceous calendar violations: {len(_berrycal)}")
 for m in _berrycal:
     fail(f"berries_herbaceous calendar: {m}")
 
+# ---------------- A12. consumer-compound population (the truthy-but-empty trap) ----------------
+# A consumer compound can ship PRESENT yet EMPTY and pass every other gate: an empty list, or the
+# dict-of-empty-lists that shipped lemon/orange/strawberry with ZERO tips ({"established":[],...}
+# is truthy AND its key-count reads non-empty). register_fill (pairs) + register_completeness
+# (unruled keys) are both blind to it. This recurses the value and fails any required consumer
+# compound with zero real content. Indoor crops are exempt from weather_triggers (no frost/heat).
+# (Found 2026-06-19 -- tips_by_stage shipped empty on 3 certified crops, undetected.)
+from compound_population_gate import empty_compound_violations
+print("A12. consumer-compound population (no truthy-but-empty; recurses dict-of-lists)")
+_empty = empty_compound_violations(crop)
+print(f"  empty consumer compounds: {len(_empty)}")
+for m in _empty:
+    fail(f"empty consumer compound -- {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

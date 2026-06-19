@@ -4,7 +4,7 @@
 
 **Goal:** Build the test-first tooling for the `perennial_woody_ornamental` archetype (anchor 14, lavender) so the data arc (Steps 1-3 -> 3.5 -> 4) can run, exactly mirroring the strawberry `berries_herbaceous` tooling.
 
-**Architecture:** A pure-function calendar DERIVER (`woody_ornamental_calendar.py`) + a release-lane FILL pass (`derive_woody_ornamental_calendars.py`) + a structural cert gate (`woody_ornamental_gate.py`, whole_crop_gate A12) + the deriver coherence gate (A13) + a `build_region_shells` path. All no-op unless `calendar_basis == "perennial_woody_ornamental"`, so the 13 certified crops are untouched. Each tool is a sibling of its `berry_*` counterpart.
+**Architecture:** A pure-function calendar DERIVER (`woody_ornamental_calendar.py`) + a release-lane FILL pass (`derive_woody_ornamental_calendars.py`) + a structural cert gate (`woody_ornamental_gate.py`, whole_crop_gate A13) + the deriver coherence gate (A14) + a `build_region_shells` path. All no-op unless `calendar_basis == "perennial_woody_ornamental"`, so the 13 certified crops are untouched. Each tool is a sibling of its `berry_*` counterpart.
 
 **Tech Stack:** Python 3 stdlib only; `pytest`-free plain-`assert` test modules run via `python3 tools/test_*.py` (the existing convention); DRY reuse of `tree_calendar._months`.
 
@@ -17,13 +17,13 @@
 ---
 
 ## File Structure
-- `tools/woody_ornamental_calendar.py` (Create) -- the deriver + `woody_ornamental_calendar_violations` (A13 body).
+- `tools/woody_ornamental_calendar.py` (Create) -- the deriver + `woody_ornamental_calendar_violations` (A14 body).
 - `tools/test_woody_ornamental_calendar.py` (Create) -- deriver + coherence tests.
-- `tools/woody_ornamental_gate.py` (Create) -- `woody_ornamental_violations` (A12 structural).
+- `tools/woody_ornamental_gate.py` (Create) -- `woody_ornamental_violations` (A13 structural).
 - `tools/test_woody_ornamental_gate.py` (Create) -- structural-gate tests.
 - `tools/derive_woody_ornamental_calendars.py` (Create) -- release-lane FILL pass (CLI + `fill_woody_ornamental_calendars`).
 - `tools/test_derive_woody_ornamental_calendars.py` (Create) -- FILL-pass tests.
-- `tools/whole_crop_gate.py` (Modify: after A11, ~line 310) -- wire A12 + A13.
+- `tools/whole_crop_gate.py` (Modify: after A11, ~line 310) -- wire A13 + A14.
 - `tools/build_region_shells.py` (Modify: the `_is_*` dispatch ~line 47 + a new builder) -- `_is_woody_ornamental` + `_build_woody_ornamental_shells`.
 - `tools/test_build_region_shells.py` (Modify) -- shell-path test.
 
@@ -185,7 +185,7 @@ def woody_ornamental_calendar_violations(crop):
 
 ---
 
-## Task 2: The structural gate (`woody_ornamental_gate.py`, A12)
+## Task 2: The structural gate (`woody_ornamental_gate.py`, A13)
 
 **Files:**
 - Create: `tools/woody_ornamental_gate.py`
@@ -237,7 +237,7 @@ if __name__ == "__main__":
 - [ ] **Step 2: Run, verify fail** (`ModuleNotFoundError`).
 - [ ] **Step 3: Implement** `woody_ornamental_violations` per the invariants above (model on `tools/berry_herbaceous_gate.py`'s structure: early `return []` off basis; walk `regions[].resolved_by_zone`; collect strings).
 - [ ] **Step 4: Run, verify PASS.**
-- [ ] **Step 5: Commit** -- `feat(lavender): A12 woody-ornamental structural gate (test-first)`.
+- [ ] **Step 5: Commit** -- `feat(lavender): A13 woody-ornamental structural gate (test-first)`.
 
 ---
 
@@ -258,7 +258,7 @@ if __name__ == "__main__":
 
 ---
 
-## Task 4: Wire A12 + A13 into `whole_crop_gate.py`
+## Task 4: Wire A13 + A14 into `whole_crop_gate.py`
 
 **Files:**
 - Modify: `tools/whole_crop_gate.py` (immediately after the A11 block, ~line 310).
@@ -266,25 +266,25 @@ if __name__ == "__main__":
 **Interfaces:**
 - Consumes: `woody_ornamental_gate.woody_ornamental_violations`, `woody_ornamental_calendar.woody_ornamental_calendar_violations`.
 
-- [ ] **Step 1: Add the A12/A13 blocks** (symmetric to A10/A11):
+- [ ] **Step 1: Add the A13/A14 blocks** (symmetric to A10/A11):
 
 ```python
-# ---------------- A12. woody_ornamental structural cert (no-op off perennial_woody_ornamental) ----------------
+# ---------------- A13. woody_ornamental structural cert (no-op off perennial_woody_ornamental) ----------------
 from woody_ornamental_gate import woody_ornamental_violations
-print("A12. woody_ornamental structural cert (lifecycle + grown_as + prune-placement + guards; no-op off scope)")
+print("A13. woody_ornamental structural cert (lifecycle + grown_as + prune-placement + guards; no-op off scope)")
 _wo = woody_ornamental_violations(crop)
-for v in _wo: violations.append(f"A12 {v}")
+for v in _wo: violations.append(f"A13 {v}")
 
-# ---------------- A13. woody_ornamental calendar coherence (DERIVED-from-dates) ----------------
+# ---------------- A14. woody_ornamental calendar coherence (DERIVED-from-dates) ----------------
 from woody_ornamental_calendar import woody_ornamental_calendar_violations
-print("A13. woody_ornamental calendar coherence (calendar == derive(grown_as, dates); no-op off scope)")
+print("A14. woody_ornamental calendar coherence (calendar == derive(grown_as, dates); no-op off scope)")
 _wocal = woody_ornamental_calendar_violations(crop)
-for v in _wocal: violations.append(f"A13 {v}")
+for v in _wocal: violations.append(f"A14 {v}")
 ```
 (Match the EXACT local-variable + `violations.append` convention used by the A10/A11 blocks above lines 298/310 -- read them first and copy the form.)
 
-- [ ] **Step 2: Verify no regression on the certified crops** -- `python3 tools/whole_crop_gate.py strawberry` and `python3 tools/whole_crop_gate.py lemon` still `PASS` (A12/A13 print + no-op). Run `python3 tools/test_woody_ornamental_calendar.py` and `python3 tools/test_woody_ornamental_gate.py` -> still `ALL PASS`.
-- [ ] **Step 3: Commit** -- `feat(lavender): wire A12/A13 woody-ornamental gates into whole_crop_gate`.
+- [ ] **Step 2: Verify no regression on the certified crops** -- `python3 tools/whole_crop_gate.py strawberry` and `python3 tools/whole_crop_gate.py lemon` still `PASS` (A13/A14 print + no-op). Run `python3 tools/test_woody_ornamental_calendar.py` and `python3 tools/test_woody_ornamental_gate.py` -> still `ALL PASS`.
+- [ ] **Step 3: Commit** -- `feat(lavender): wire A13/A14 woody-ornamental gates into whole_crop_gate`.
 
 ---
 
@@ -306,7 +306,7 @@ for v in _wocal: violations.append(f"A13 {v}")
 ---
 
 ## Self-Review
-- **Spec coverage:** D1 (basis) -> Task 5 builder sets it; D3 (tokens) -> Task 1 deriver; D9 (deriver) -> Task 1; D10 (A12/A13 gates) -> Tasks 2+4; D2 (grown_as) -> validated in Tasks 1/2; the FILL pass (release lane) -> Task 3. D4-D8, D11-D12 are DATA-arc decisions (claude.ai authoring at Steps 1-8), not tooling -- correctly out of this plan.
+- **Spec coverage:** D1 (basis) -> Task 5 builder sets it; D3 (tokens) -> Task 1 deriver; D9 (deriver) -> Task 1; D10 (A13/A14 gates) -> Tasks 2+4; D2 (grown_as) -> validated in Tasks 1/2; the FILL pass (release lane) -> Task 3. D4-D8, D11-D12 are DATA-arc decisions (claude.ai authoring at Steps 1-8), not tooling -- correctly out of this plan.
 - **No central token enum** exists (confirmed: `renovation` was never registered in an allowlist; the deriver + gate are the token authority), so no token-registration task is needed -- `prune` is authored by Task 1's deriver and policed by Task 2's gate.
 - **No-op safety:** every gate/deriver task includes an off-basis test; Task 4 re-runs the certified crops.
 - **Naming consistency:** `woody_ornamental_*` function/file names are symmetric to `berry_*`, so the whole_crop_gate wiring mirrors A10/A11 exactly.
