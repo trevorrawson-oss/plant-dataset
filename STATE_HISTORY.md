@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-18 -- strawberry Step 4 SCALE-UP: the final 7 warm regions -- REGION FILL COMPLETE (10/10), whole_crop_gate PASS [claude.ai author + Claude Code release]
+
+**base `78ebccff` -> `ec0bf9d0`** (full-file). 225 author ops (11 cells across the last 7 regions) + Claude Code: 5 source mints + a CTAHR re-point + a frost-free-perennial deriver refinement + the calendar fill. **REGION FILL IS NOW COMPLETE: all 10 regions, 20/20 resolved cells with grown_as + calendar; `whole_crop_gate strawberry` PASSES (0 violations) for the first time.** (Structural completeness -- Steps 6-8 bulk prose + Step 11 cert still owed; whole_crop_gate tolerates the null 6-8 register prose.)
+
+**claude.ai author lane -- 7 regions, each a SOURCE finding (A5, no templating); the distinct calls:**
+- **`warm_arid` z8 = PERENNIAL spring-plant matted row (NOT annual) -- an A5 OVERTURN of the kickoff's "deserts on the ca_interior template" sketch.** NMSU Guide H-324 + UArizona AZ1667: above ~3000 ft is a spring-planted perennial (dormant+renovation), distinct from the below-3000-ft low desert. Frost-bearing -> `resolved_from` populated, frost-anchored. The only new perennial-frost-relative cell.
+- **`ca_desert` z9-10 + `low_desert_az` z9 = fall-plant PULLED annual** (UArizona / UC low-desert): a 115F summer can't carry a bed, so set in fall, harvest spring, pull -> `season_over` emerges. `resolved_from: null` (month-resolved). Desert-shifted windows, NOT lifted from FL.
+- **`se_gulf` z8-9 = fall-plant PULLED annual** (LSU AgCenter Pub 3363/3364): Gulf humid-summer decline -> fall-set, spring harvest, pulled; `season_over`.
+- **Coastal CA `ca_north_coast` + `ca_south_coast` z9-10 = annual** (UC ANR Monterey/Santa Cruz MG): mild-coast late-summer plant + a LONG day-neutral harvest (Jan/Feb-Jul). Windows WRAP the year -> NO `season_over` emerges (the carried-vs-pulled distinction is emergent; not forced).
+- **`hawaii_tropical` z11 = PERENNIAL, frost-free, NOT year_round** (UH CTAHR Hawaii County, the onion hawaii lesson): cool-elevation upcountry niche, Feb-Jun flush. **Flagged the WEAKEST of the 7 calls** -- no clean CTAHR home-garden lifecycle statement; the perennial read is INFERRED -> logged as the hawaii Step-5 open finding (`blocks_launch:false`).
+- Per-rule-entry + per-cell anchoring authored from the start; calendar[] left []; A5 restated in plantings_provenance.
+
+**Claude Code release (2026-06-18):**
+- **Byte cross-check CLEAN:** applied strawberry crop == claude.ai's `strawberry_slice_AFTER.json` (`f1c8ad95`) before any release-lane change.
+- **5 SOURCE entries minted/admitted (autonomous release lane):** `nmsu_ext_h324` (under nmsu_ext), `lsu_agcenter_3363` (under lsu_agcenter), `uariz_ext_az1667` (under uariz_ext), `ucanr_mg_monterey_santacruz` (standalone county MG, mirrors ucanr_santa_clara_mg), and the CTAHR page under the EXISTING parent family as `uhawaii_ctahr_hawaii_county` (the patch had cited a bare `ctahr_hawaii_county`; **re-pointed 11 refs** to keep one CTAHR family, not fragment it). All T1 inherited + `_admission_provenance`. Source-tier: 12 IDs, 0 uncatalogued, 0 non-T1.
+- **FROST-FREE PERENNIAL DERIVER REFINEMENT (test-first, `berry_calendar`):** hawaii (perennial, `resolved_from: null`) returned no calendar -- the perennial deriver needed frost dates to bracket dormancy. Refined: a perennial cell with no frost dates defaults to `growing` year-round (NO dormancy -- the evergreen analog), keeping the bloom/harvest/renovation overlay. hawaii now derives cleanly (growing year-round, Feb-Jun harvest, Nov bloom, Jul renovation, no dormant/season_over). Frost-bearing cells unchanged; suite 22/22.
+- **FROST RECONCILE CLEAN:** `warm_arid` z8 `resolved_from` (Feb 15 / Dec 1) == live `zone_frost_data` z8.
+- **Deriver validation across all 11:** `season_over` emerged for the 5 pulled-annual cells (deserts + se_gulf); NOT for the 2 perennials (warm_arid frost-bracketed, hawaii frost-free) NOR the 4 coastal-CA cells (windows wrap, no gap) -- all emergent, zero forced tokens.
+- **Gates on `ec0bf9d0`:** `whole_crop_gate` PASS (region fill 10/10 -> 0 gaps; A10/A11 = 0; source-tier clean); `register_completeness_gate` PASS; collateral = strawberry crop + the 5 minted catalog entries.
+
+**NEXT:** Step 5 (source-fidelity fetch sample + the ONE-TIME boundary-scalar decision [Trevor, Option-1 lean: leave hardiness/reliable_fruit as perennial semantics, cells carry the annual reality] + confirm/soften the hawaii open finding) -> Steps 6-8 (bulk prose: register-fill the null `_seasoned`/`_beginner` across the crop + the deferred day-neutral type story + the ca_interior fall-crop note in `type_selection_*`) -> Step 9 (dash/temp sweep) -> Step 11 cert + the four-flip close.
+
 ## 2026-06-18 -- strawberry Step 4 fl_peninsula ANNUAL proof cell (z10-11) -- frost-free fall-plant plasticulture; the THIRD lifecycle shape [claude.ai author + Claude Code release]
 
 **base `adf6f86f` -> `78ebccff`** (full-file); strawberry crop SHA `f7fc3058` -> `210f42ea` (post-apply, pre-mint `0f3c3898` matched byte-for-byte). 14 author ops + Claude Code source mint + re-point + deriver fill. Proof-cell-first: `fl_peninsula` (z10, z11) end-to-end, the other 7 warm regions UNTOUCHED. **The three-shape map now has a worked instance of each** (perennial north / interior summer-plant annual / frost-free fall-plant annual).
