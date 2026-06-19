@@ -21,19 +21,24 @@ from tree_calendar import _months   # DRY: identical "leading month range" parse
 
 
 def derive_perennial_berry_calendar(bloom_field, harvest_field, last_frost_field, first_frost_field):
-    """12-token perennial matted-row calendar, or None if any window is empty/unparseable.
-    Dormancy is bracketed by the frost dates; renovation is the month after harvest end."""
+    """12-token perennial matted-row calendar, or None if bloom/harvest is empty/unparseable.
+    Frost-BEARING cells (last_frost + first_frost present) bracket winter dormancy. A FROST-FREE
+    perennial (e.g. hawaii upcountry: no frost dates, resolved_from null) has NO dormancy and grows
+    year-round -- the evergreen analog. Renovation is the month after harvest end either way."""
     bm, hm = _months(bloom_field), _months(harvest_field)
     lf, ff = _months(last_frost_field), _months(first_frost_field)
-    if not (bm and hm and lf and ff):
+    if not (bm and hm):
         return None
-    cal = ["dormant"] * 12
-    m = lf[0]                              # frost-free growing season (last_frost .. first_frost)
-    while True:
-        cal[m] = "growing"
-        if m == ff[-1]:
-            break
-        m = (m + 1) % 12
+    if not (lf and ff):
+        cal = ["growing"] * 12             # frost-free perennial: no dormancy, grows year-round
+    else:
+        cal = ["dormant"] * 12
+        m = lf[0]                          # frost-free growing season (last_frost .. first_frost)
+        while True:
+            cal[m] = "growing"
+            if m == ff[-1]:
+                break
+            m = (m + 1) % 12
     m = hm[0]                              # harvest display span (forward, wrapping)
     while True:
         cal[m] = "harvest"

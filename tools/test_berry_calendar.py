@@ -18,6 +18,12 @@ perennial = derive_perennial_berry_calendar("May", "June", "April", "October")
 assert perennial == ["dormant", "dormant", "dormant", "growing", "bloom", "harvest",
                      "renovation", "growing", "growing", "growing", "dormant", "dormant"], perennial
 
+# 1b. FROST-FREE PERENNIAL (hawaii upcountry: no frost -> no dormancy, growing year-round; the evergreen analog)
+ff_peren = derive_perennial_berry_calendar("Nov - Mar", "Feb - Jun", None, None)
+assert ff_peren == ["growing", "harvest", "harvest", "harvest", "harvest", "harvest",
+                    "renovation", "growing", "growing", "growing", "bloom", "growing"], ff_peren
+assert "dormant" not in ff_peren
+
 # 2. ANNUAL CA z9: plant Oct, bloom Feb, harvest Mar-Jun -> season_over the rest.
 annual = derive_annual_berry_calendar("October", "February", "March-June")
 assert annual == ["growing", "bloom", "harvest", "harvest", "harvest", "harvest",
