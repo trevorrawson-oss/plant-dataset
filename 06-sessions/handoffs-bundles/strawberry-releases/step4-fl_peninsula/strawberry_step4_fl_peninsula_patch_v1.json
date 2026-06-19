@@ -1,0 +1,221 @@
+{
+  "patch_id": "strawberry_step4_fl_peninsula",
+  "target_crop": "strawberry",
+  "arc_step": "Step 4 region fill -- frost-free fall-plant plasticulture proof cell (fl_peninsula z10-11) [anchor 13]",
+  "start_sha": "adf6f86ff8d082072c8832324f8cd33ccac7e64637aaddb6f4a5ee1a8545873d",
+  "format": "rfc6901_json_patch_with_from_guards",
+  "scope_note": "Fills fl_peninsula z10 + z11 ONLY. grown_as=annual (UF/IFAS HS1154/HS403). Fall-plant pulled annual: plant_out month-resolved absolute (resolved_from null, forced by absent frost, NOT heat-avoidance), per-rule-entry anchoring authored from the start. calendar[] left [] for the Claude Code deriver -- this is the FIRST strawberry cell expected to emit season_over (pulled annual). The other 8 warm regions remain UNTOUCHED.",
+  "source_admission_flag": "uf_ifas is NOT yet in strawberry sources_summary. Claude Code mints the page sub-id at release: uf_ifas_hs403 under parent uf_ifas (EDIS HS1154/HS403, T1 inherited, _admission_provenance recorded), per the lettuce uf_ifas_vh021 / zinnia clemson_hgic_1149 precedent. The sub-id uf_ifas_ep452 (South Florida Gardening Calendar ENH1191/EP452, rev Oct 2024) corroborates z10b-11 timing as a second T1 page. Both cited URLs verified 2026-06-18.",
+  "ops": [
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/region_id",
+      "from": null,
+      "value": "fl_peninsula"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/region_label",
+      "from": null,
+      "value": "Florida Peninsula"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/zone_span",
+      "from": [],
+      "value": ["10", "11"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/sources",
+      "from": [],
+      "value": ["uf_ifas"]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/plantings/0/track",
+      "from": "perennial",
+      "value": "annual"
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/plantings/0/plant_out",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": null,
+          "window": "Oct - early Nov",
+          "synthesis_note": "Set bare-root or plug transplants in the fall, from late September to early November, the UF/IFAS window for peninsular Florida; central and west-central Florida gardeners plant in mid to late October. Strawberries are grown here as a winter annual, not a perennial bed: plants are set in fall, fruited through winter and spring, then pulled at the end of the season. This is an absolute, month-resolved window driven by Florida's fall-to-spring growing conditions (temperatures 50F to 80F and short days), not anchored to a last spring frost.",
+          "sources": ["uf_ifas"],
+          "anchoring_urls": {
+            "uf_ifas": {
+              "url": "https://edis.ifas.ufl.edu/publication/hs403",
+              "verified": "2026-06-18"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/plantings/0/bloom",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": null,
+          "window": "Nov - Dec",
+          "synthesis_note": "Flowering begins in November, a few weeks after the fall planting, and fruiting follows in two or three cycles through the winter and spring. Open blossoms can be injured by air temperatures below 32F, so a freeze during the bloom and harvest season can interrupt production.",
+          "sources": ["uf_ifas"],
+          "anchoring_urls": {
+            "uf_ifas": {
+              "url": "https://edis.ifas.ufl.edu/publication/hs403",
+              "verified": "2026-06-18"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/plantings/0/harvest_start",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": null,
+          "window": "Nov - Dec",
+          "synthesis_note": "Harvest begins in late fall, generally November into December in peninsular Florida, once the first fruit cycle ripens. Production is not constant but comes in two or three cycles across the winter and spring season.",
+          "sources": ["uf_ifas"],
+          "anchoring_urls": {
+            "uf_ifas": {
+              "url": "https://edis.ifas.ufl.edu/publication/hs403",
+              "verified": "2026-06-18"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/plantings/0/harvest_end",
+      "from": [],
+      "value": [
+        {
+          "label": "establishment",
+          "from": null,
+          "window": "Apr - May",
+          "synthesis_note": "Fruiting continues into April or May, after which warming weather ends the season and the planting is pulled and discarded; new plants are set the following fall. The cell harvest window is scoped to this full fall-to-spring fruiting span.",
+          "sources": ["uf_ifas"],
+          "anchoring_urls": {
+            "uf_ifas": {
+              "url": "https://edis.ifas.ufl.edu/publication/hs403",
+              "verified": "2026-06-18"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/resolved_by_zone/10",
+      "from": {
+        "plant_out": null,
+        "resolution_method": null,
+        "grown_as": null,
+        "grown_as_note_seasoned": null,
+        "grown_as_note_beginner": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": null,
+        "resolved_from": {},
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      "value": {
+        "plant_out": "Oct - early Nov",
+        "resolution_method": "absolute_month_uf_planting_guidance",
+        "grown_as": "annual",
+        "grown_as_note_seasoned": "Peninsular Florida grows strawberries as a winter annual rather than a perennial bed. Florida's fall, winter, and spring deliver the cool temperatures (roughly 50F to 80F) and short days strawberries need to flower and fruit, while summer heat and rain end the planting. Set transplants in fall, fruit them from late fall into spring, then pull and discard the plants and start fresh the following fall, since the best fruit comes from young plants. Use raised beds with plastic mulch for drainage and clean fruit.",
+        "grown_as_note_beginner": "In peninsular Florida, strawberries are a cool-season crop you grow over the winter, not a bed that lives for years. You plant in fall, pick berries from late fall through spring, then pull the plants out when hot weather returns and plant new ones next fall. Raised beds covered with plastic keep the roots drained and the fruit clean.",
+        "bloom": "Nov - Dec",
+        "harvest_start": "Nov",
+        "harvest_end": "Apr",
+        "harvest": "Nov - Apr",
+        "calendar": [],
+        "frost_risk_note_seasoned": "Zone 10 is nearly frost-free, but a rare radiational freeze can still occur on a cold, clear winter night and nip open blossoms or ripening fruit, since flowers and fruit are damaged below 32F. On a night a freeze is forecast, cover the bed with frost cloth or a row tunnel in the afternoon beforehand and anchor it on all sides.",
+        "resolved_from": null,
+        "sources": ["uf_ifas"],
+        "anchoring_urls": {
+          "uf_ifas": {
+            "url": "https://edis.ifas.ufl.edu/publication/hs403",
+            "verified": "2026-06-18"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/resolved_by_zone/11",
+      "from": {
+        "plant_out": null,
+        "resolution_method": null,
+        "grown_as": null,
+        "grown_as_note_seasoned": null,
+        "grown_as_note_beginner": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": null,
+        "resolved_from": {},
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      "value": {
+        "plant_out": "Oct - early Nov",
+        "resolution_method": "absolute_month_uf_planting_guidance",
+        "grown_as": "annual",
+        "grown_as_note_seasoned": "Zone 11 in the Florida peninsula is frost-free, and strawberries are grown as a winter annual on the same fall-to-spring schedule as the rest of the peninsula. The crop is driven by day length and the cool-but-mild winter rather than by frost: set transplants in fall, fruit from late fall through spring, then pull the planting when summer heat and rain return, replanting fresh the following fall. Raised beds with plastic mulch handle the heavy seasonal rain and keep fruit clean.",
+        "grown_as_note_beginner": "In zone 11 there is no frost, but strawberries are still a cool-season crop you grow over the winter. Plant in fall, pick from late fall into spring, then pull the plants when hot, wet summer weather arrives and start over with new plants the next fall. Grow them on raised beds covered with plastic so the roots stay drained through the rains.",
+        "bloom": "Nov - Dec",
+        "harvest_start": "Nov",
+        "harvest_end": "May",
+        "harvest": "Nov - May",
+        "calendar": [],
+        "frost_risk_note_seasoned": "Zone 11 is frost-free, so freeze injury to blossoms is not a concern here; the season is bounded by heat and day length rather than cold. The limit on the back end is warming spring weather, which ends fruiting and signals time to pull the planting, not a spring frost.",
+        "resolved_from": null,
+        "sources": ["uf_ifas"],
+        "anchoring_urls": {
+          "uf_ifas": {
+            "url": "https://edis.ifas.ufl.edu/publication/hs403",
+            "verified": "2026-06-18"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/region_notes_seasoned",
+      "from": null,
+      "value": "Florida is the winter strawberry capital, and in peninsular Florida (zones 10 and 11) strawberries are grown as a winter annual, not a perennial bed. Florida's fall, winter, and spring supply the cool temperatures (about 50F to 80F) and short days needed for flowering and fruit, while summer heat and rain exhaust the planting. Set bare-root or plug transplants in fall, from late September to early November (mid to late October in central and west-central Florida), on raised beds covered with black plastic mulch for drainage and clean fruit. Expect flowering from November and fruit in two or three cycles from late fall into April or May, then pull and discard the plants; the highest-quality fruit comes from young plants, so replant fresh each fall. Zone 10 can see a rare freeze that nips open blossoms, so keep frost cloth handy during bloom; zone 11 is frost-free. Rotate away from beds that grew strawberries, tomatoes, peppers, or eggplant in the past two to three years to limit soilborne disease."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/region_notes_beginner",
+      "from": null,
+      "value": "In peninsular Florida (zones 10 and 11), strawberries are a winter crop, not a bed that comes back for years. Plant transplants in the fall, from late September to early November, on raised beds covered with plastic so the roots drain and the berries stay clean. You will get flowers starting around November and berries in waves from late fall into April or May. When hot, wet summer weather returns, pull the plants out and plant fresh ones the next fall, because young plants make the best fruit. In zone 10 a rare cold night can hurt the flowers, so keep a frost cloth ready to cover the bed; zone 11 does not freeze. Try not to plant where strawberries, tomatoes, peppers, or eggplant grew in the last couple of years, to avoid soil diseases."
+    },
+    {
+      "op": "replace",
+      "path": "/regions/fl_peninsula/plantings_provenance",
+      "from": null,
+      "value": "Region-constant winter-annual establishment window, month-resolved (absolute), NOT frost-relative. In peninsular Florida strawberries are grown as a fall-planted winter annual (UF/IFAS HS1154/HS403): single-crown transplants set late September to early November (mid to late October in central/west-central Florida), flowering from November and fruiting in two or three cycles into April or May, then PULLED and replanted the following fall. This is the frost-free fall-plant (plasticulture) sub-shape -- the PULLED annual that produces a genuine summer off-season, distinct from the ca_interior interior summer-plant CARRIED bed. resolved_from is null per cell, forced by the absence of frost (z11 frost-free; z10 nearly so), with windows month-resolved from UF/IFAS guidance -- NOT by heat-avoidance as in ca_interior. Windows anchor to UF/IFAS EDIS HS1154/HS403 (Growing Strawberries in the Florida Home Garden), corroborated by the South Florida Gardening Calendar (ENH1191/EP452) for z10b-11 timing. NOTE for Claude Code: calendar[] is left [] for the deriver; this is the FIRST strawberry cell expected to emit season_over (the summer off-season of a pulled annual). Do NOT template this fall-plant window onto the interior deserts (ca_desert / low_desert_az / warm_arid = ca_interior summer-plant sub-shape), and do NOT template the interior summer-plant window onto this cell."
+    }
+  ]
+}
