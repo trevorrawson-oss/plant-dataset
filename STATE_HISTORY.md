@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-06-18 -- strawberry Step 4 fl_peninsula ANNUAL proof cell (z10-11) -- frost-free fall-plant plasticulture; the THIRD lifecycle shape [claude.ai author + Claude Code release]
+
+**base `adf6f86f` -> `78ebccff`** (full-file); strawberry crop SHA `f7fc3058` -> `210f42ea` (post-apply, pre-mint `0f3c3898` matched byte-for-byte). 14 author ops + Claude Code source mint + re-point + deriver fill. Proof-cell-first: `fl_peninsula` (z10, z11) end-to-end, the other 7 warm regions UNTOUCHED. **The three-shape map now has a worked instance of each** (perennial north / interior summer-plant annual / frost-free fall-plant annual).
+
+**claude.ai author lane:**
+- **`grown_as: annual` SOURCED** to UF/IFAS EDIS HS1154/HS403 (fetched 2026-06-18): "grown as an annual crop rather than as perennials"; transplants set late Sep-early Nov; "plants are usually removed at the end of the fruiting season" (the PULL). Corroborated by ENH1191/EP452 (South FL Gardening Calendar) for z10b-11 timing.
+- **Window (fall-plant PULLED annual):** plant_out `Oct - early Nov`; bloom `Nov - Dec`; harvest z10 `Nov - Apr`, z11 `Nov - May` (z11 one month longer). MONTH-RESOLVED absolute, **`resolved_from: null` forced by ABSENT FROST** (z11 frost-free; z10 ~frost-free, a nominal Jan 15/Dec 31 in zone_frost_data) -- the clean reason for the same field value vs ca_interior's heat-avoidance. `resolution_method = absolute_month_uf_planting_guidance`.
+- **z10 vs z11 per-cell differentiated** (NOT templated): z10 carries a rare-radiational-frost blossom caveat (cover below 32F per HS403); z11 frost-free, harvest one month longer. Per-rule-entry anchoring authored from the start; `track` perennial -> annual; tree keys absent.
+- **A5 in BOTH directions** (in plantings_provenance): do NOT template this FL fall-plant onto the interior deserts (= ca_interior summer-plant), nor the interior summer-plant onto FL.
+
+**Claude Code release (2026-06-18):**
+- **Preflight + apply CLEAN:** start-SHA == `adf6f86f`; 14 from-guarded ops; post-apply crop SHA == claude.ai's `0f3c3898` byte-for-byte; collateral CLEAN (only fl_peninsula changed).
+- **SOURCE SUB-ID MINT (autonomous release lane):** `uf_ifas_hs403` minted under the trusted parent `uf_ifas` (T1 inherited, `_admission_provenance` recorded, URL `edis.ifas.ufl.edu/publication/hs403`), mirroring `uf_ifas_vh021` / `clemson_hgic_1149`. **Re-pointed 13 fl_peninsula `uf_ifas` citations -> `uf_ifas_hs403`** (anchor to the SPECIFIC page, not the homepage parent -- the locked convention; the patch had cited bare `uf_ifas`). Source-tier gate: 7 distinct IDs, 0 uncatalogued, 0 non-T1.
+- **`season_over` FIRST VALIDATION (the deriver's pulled-annual proof):** `derive_berry_calendars` generated the 2 cells; **`season_over` EMERGED** (z10 May-Sep, z11 Jun-Sep, the summer off-season when no planting exists), with **NO `dormant`, NO `renovation`**. Confirms the carried-vs-pulled distinction is EMERGENT (ca_interior's carried bed wraps the year -> no season_over; fl_peninsula's pulled bed leaves a gap -> season_over) with ZERO deriver change. The annual deriver branch now proven across BOTH carried + pulled.
+- **Gates on `78ebccff`:** A10 = 0, A11 = 0, perennial = 0, photoperiod = 0, register_completeness PASS; `whole_crop_gate` **7** (the 7 remaining warm-region region_notes admission gaps); collateral = strawberry crop + the one minted catalog entry.
+
+**DEFERRED to Step 5 (Trevor's call, NOT resolved -- decide ONCE globally, not per-cell):** the z11 cell fruits well as a pulled annual, but crop-level `hardiness_zone_max = 10` / `reliable_fruit_zone_max = 9`. claude.ai's lean (and the consistent precedent, since ca_interior z9 annual is also above reliable_fruit_zone_max=9 and the scalar was NOT stretched) = **Option 1: leave both scalars as perennial-survival / reliable-perennial-fruiting semantics; the `grown_as: annual` region cells carry the annual reality.** Apply whatever is chosen once, at the Step-5 verification pass.
+
+**NEXT:** the 7 remaining warm regions scale on the THREE proven templates -- interior deserts (ca_desert/low_desert_az/warm_arid) on the ca_interior summer-plant template (re-source per A5); coastal-CA (ca_north_coast/ca_south_coast) = perennial-vs-annual source call; se_gulf + hawaii_tropical = open grown_as calls (hawaii = elevation/niche, do NOT assume year_round). THEN Steps 5 / 6-8 (incl. the deferred day-neutral type story + ca_interior fall-crop note) / 9 / 11 cert.
+
 ## 2026-06-18 -- strawberry Step 4 ca_interior ANNUAL proof cell (z8-9) -- the interior summer-plant template [claude.ai author + Claude Code release]
 
 **base `f880a63c` -> `adf6f86f`** (full-file); strawberry crop SHA `94f5ab60` -> `f7fc3058`. 38 author ops + Claude Code deriver fill + an Option-1 harvest reshape. Proof-cell-first continues: `ca_interior` (z8, z9) authored end-to-end, the other 8 warm regions UNTOUCHED.
