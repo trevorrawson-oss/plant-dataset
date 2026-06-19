@@ -1,0 +1,2673 @@
+{
+ "description": "strawberry Step 4 SCALE-UP -- final 7 warm regions (11 cells); calendar[] left [] for deriver",
+ "base_note": "apply against canonical crops_data_final.json strawberry crop; ops are RFC-6901 over the strawberry /regions subtree",
+ "ops": [
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/region_id",
+   "value": "low_desert_az"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/region_label",
+   "value": "Low Desert (Arizona)"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/zone_span",
+   "value": [
+    "9"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/sources",
+   "value": [
+    "uariz_ext_az1667"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/plantings/0/track",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "mid Sep - mid Nov",
+     "synthesis_note": "Set dormant, pre-chilled (frigo) bare-root or plug plants in the fall, from mid September to mid November, the University of Arizona window for the low desert (below 3,000 feet). Strawberries are grown here as a cool-season annual, not a perennial bed: plants are set in fall, fruited the following winter and spring, then pulled before the summer heat, which is too stressful to carry a planting. This is an absolute, month-resolved window driven by the low-desert fall-to-spring growing season, not anchored to a last spring frost.",
+     "sources": [
+      "uariz_ext_az1667"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jan - Mar",
+     "synthesis_note": "Flowering builds through the cool winter and into spring once the fall-set plants are established. Flower buds form under the short days of fall and winter (day lengths under 12 hours), and the ideal fruiting temperature range is roughly 55 to 70 degrees Fahrenheit.",
+     "sources": [
+      "uariz_ext_az1667"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Mar",
+     "synthesis_note": "Harvest begins in late winter to early spring as temperatures warm into the fruiting range. In the low desert the first berries typically ripen around March.",
+     "sources": [
+      "uariz_ext_az1667"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "May",
+     "synthesis_note": "Fruiting runs into spring and finishes by about May, after which rising summer heat ends the season and the planting is pulled and discarded; new plants are set the following fall, since the heat is too stressful to carry the bed over. The cell harvest window is scoped to this late-winter-to-spring span.",
+     "sources": [
+      "uariz_ext_az1667"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/region_notes_seasoned",
+   "value": "In the Arizona low desert (zone 9, below 3,000 feet), strawberries are grown as a cool-season annual, not a perennial bed. Set dormant, pre-chilled (frigo) bare-root or plug plants in fall, from mid September to mid November, so they establish for fruiting the following winter and spring. Plants are pulled before summer, because desert heat above the ideal 55 to 70 degree Fahrenheit fruiting range is too stressful to carry a bed over; replant fresh each fall. Grow where plants get morning sun but afternoon shade from a wall, fence, or 65 percent shade cloth, and use well-drained beds, since strawberries are highly sensitive to salty soil and water. A few freezing nights occur in December and January, so keep frost cloth handy to protect open blossoms below 32 degrees Fahrenheit. Choose low-desert-adapted June-bearers, and avoid planting where tomatoes, peppers, eggplant, or potatoes recently grew to limit Verticillium wilt."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/region_notes_beginner",
+   "value": "In the Arizona low desert, strawberries are a winter crop you grow and then replace, not a bed that lives for years. Plant dormant or young plants in the fall, from about mid September to mid November, pick berries from late winter into spring, then pull the plants before the hot summer and plant fresh ones the next fall. Give them morning sun but shade in the hot afternoon, water regularly because their roots are shallow, and grow them where water drains away well. A few cold nights in winter can hurt the flowers, so keep a frost cloth ready to cover them."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/plantings_provenance",
+   "value": "Region-constant cool-season-annual establishment window, month-resolved (absolute), NOT frost-relative. The Arizona low desert below 3,000 feet (Southern Arizona, Gila and Salt River valleys) grows June-bearing strawberries as a fall-planted annual (UA AZ1667): dormant pre-chilled (frigo) plants set mid September to mid November, fruited the following winter and spring, then PULLED before the summer heat and replanted the next fall ('the summer heat causes too much stress for strawberries'). This is the desert fall-plant PULLED sub-shape (season_over emerges for the summer off-season), distinct from the ca_interior summer-plant CARRIED bed. resolved_from is null per cell, forced by the heat/season-driven window (z9 carries some winter frost, but the limiter is heat, not the last spring frost). Windows anchor to UA Cooperative Extension AZ1667 (Growing Strawberries in Home Gardens). NOTE for Claude Code: calendar[] left [] for the deriver; this cell is expected to emit season_over. A5: do NOT template the FL fall-plant window or the ca_interior summer-plant window onto this cell -- the desert window is its own."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/plant_out",
+   "value": "mid Sep - mid Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/resolution_method",
+   "value": "absolute_month_ua_low_desert_guidance"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/grown_as_note_seasoned",
+   "value": "Arizona's low desert (below 3,000 feet) grows strawberries as a cool-season annual rather than a perennial bed. Set dormant, pre-chilled (frigo) plants in fall, from mid September to mid November, fruit them through winter and spring, then pull and discard the planting before summer; the intense desert heat is too stressful to carry a bed over. Establish the bed where it gets morning sun but afternoon shade (a wall, fence, or 65 percent shade cloth) to reduce heat and water stress, and grow on well-drained beds because strawberries are sensitive to salty soil and water."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/grown_as_note_beginner",
+   "value": "In the Arizona low desert, strawberries are a cool-season crop you grow over the winter, not a bed that lives for years. Plant in fall, pick from late winter into spring, then pull the plants out before the hot summer and start fresh next fall. Give them morning sun but shade in the hot afternoon, and grow them where water drains away well."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/bloom",
+   "value": "Jan - Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/harvest_start",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/harvest_end",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/harvest",
+   "value": "Mar - May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/frost_risk_note_seasoned",
+   "value": "The low desert sees a handful of freezing nights in December and January. Open blossoms and ripening fruit are damaged below 32 degrees Fahrenheit, so on a night a freeze is forecast during bloom, cover the bed with frost cloth in the afternoon beforehand and anchor the edges. Frost pockets where cold air settles are best avoided."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/sources",
+   "value": [
+    "uariz_ext_az1667"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/low_desert_az/resolved_by_zone/9/anchoring_urls",
+   "value": {
+    "uariz_ext_az1667": {
+     "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/region_id",
+   "value": "ca_desert"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/region_label",
+   "value": "California Low Desert"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/zone_span",
+   "value": [
+    "9",
+    "10"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/sources",
+   "value": [
+    "uariz_ext_az1667",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/plantings/0/track",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "mid Sep - mid Nov",
+     "synthesis_note": "Set dormant, pre-chilled (frigo) bare-root or plug plants in the fall, from mid September to mid November, the University of Arizona window for the low desert (below 3,000 feet). Strawberries are grown here as a cool-season annual, not a perennial bed: plants are set in fall, fruited the following winter and spring, then pulled before the summer heat, which is too stressful to carry a planting. This is an absolute, month-resolved window driven by the low-desert fall-to-spring growing season, not anchored to a last spring frost. The same low-desert practice applies across the California desert valleys (Coachella, Imperial), which share the Sonoran/Colorado desert climate.",
+     "sources": [
+      "uariz_ext_az1667",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Dec - Mar",
+     "synthesis_note": "Flowering builds through the cool winter and into spring once the fall-set plants are established. Flower buds form under the short days of fall and winter (day lengths under 12 hours), and the ideal fruiting temperature range is roughly 55 to 70 degrees Fahrenheit.",
+     "sources": [
+      "uariz_ext_az1667",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Feb - Mar",
+     "synthesis_note": "Harvest begins in late winter to early spring as temperatures warm into the fruiting range. In the low desert the first berries typically ripen around March. The nearly frost-free zone 10 pockets can start a few weeks earlier than zone 9.",
+     "sources": [
+      "uariz_ext_az1667",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "May",
+     "synthesis_note": "Fruiting runs into spring and finishes by about May, after which rising summer heat ends the season and the planting is pulled and discarded; new plants are set the following fall, since the heat is too stressful to carry the bed over. The cell harvest window is scoped to this late-winter-to-spring span.",
+     "sources": [
+      "uariz_ext_az1667",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uariz_ext_az1667": {
+       "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/region_notes_seasoned",
+   "value": "In the California low desert (the Coachella and Imperial valleys, zones 9 and 10), strawberries are grown as a cool-season annual rather than a perennial bed, the same way they are across the Sonoran desert. Set dormant, pre-chilled plants in fall, from mid September to mid November, fruit them through winter and spring, then pull and discard the planting before the summer heat, which is too stressful to carry a bed over; replant fresh each fall. Provide afternoon shade and use well-drained, low-salt beds. Zone 9 sees occasional winter frost that can injure open blossoms below 32 degrees Fahrenheit, so keep frost cloth handy during bloom; the warmest zone 10 pockets are nearly frost-free and can start fruiting a few weeks earlier. Choose desert-adapted June-bearers and rotate away from recent tomato, pepper, or eggplant beds."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/region_notes_beginner",
+   "value": "In the California low desert, strawberries are a winter crop you grow and then replace, not a bed that returns for years. Plant in the fall, from about mid September to mid November, pick berries from late winter into spring, then pull the plants before the brutal summer heat and plant fresh ones next fall. Give them shade in the hot afternoons, water often because their roots are shallow, and plant where water drains away. In the cooler zone 9 areas a winter cold snap can hurt the flowers, so keep a frost cloth ready."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/plantings_provenance",
+   "value": "Region-constant cool-season-annual establishment window, month-resolved (absolute), NOT frost-relative. The California low desert (Coachella and Imperial valleys) shares the Sonoran/Colorado low-desert climate, and strawberries are grown there as a fall-planted annual on the same model UA AZ1667 documents for the Arizona low desert: pre-chilled plants set mid September to mid November, fruited winter into spring, then PULLED before the summer heat. UC Master Gardener desert-valleys guidance confirms the cool-season fall-set/spring-crop rhythm for this region (the dated strawberry window itself lives in the UA low-desert publication, since strawberry is a fruit and is absent from the UC vegetable planting table -- the lesson zinnia taught). Primary anchor UA AZ1667; UC IPM cultural-tips corroborates the California cultural practice (afternoon shade, salt sensitivity, heaviest production timing). resolved_from null per cell (heat/season-driven; z9 carries winter frost but the limiter is heat). season_over emerges. A5: do NOT lift the FL or coastal-CA windows here -- the desert window is its own."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/plant_out",
+   "value": "mid Sep - mid Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/resolution_method",
+   "value": "absolute_month_ua_low_desert_guidance"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/grown_as_note_seasoned",
+   "value": "California's low desert (the Coachella and Imperial valleys) shares the Sonoran/Colorado desert climate, and strawberries are grown there as a cool-season annual, not a perennial bed. Set dormant, pre-chilled plants in fall, fruit them through winter and spring, then pull and discard the planting before the summer heat, which is too stressful to carry a bed over. Use well-drained beds and provide afternoon shade to reduce heat and water stress; strawberries are sensitive to salts in desert soil and water."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/grown_as_note_beginner",
+   "value": "In the California low desert, strawberries are a winter crop you grow and then replace, not a bed that comes back for years. Plant in fall, pick from late winter into spring, then pull the plants before the brutal summer heat and start over next fall. Shade them in the hot afternoons and plant where water drains away."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/bloom",
+   "value": "Jan - Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/harvest_start",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/harvest_end",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/harvest",
+   "value": "Mar - May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/frost_risk_note_seasoned",
+   "value": "The low desert can drop below freezing on a few clear winter nights. Open blossoms and fruit are injured below 32 degrees Fahrenheit, so cover the bed with frost cloth on a forecast freeze during bloom and anchor the edges."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/sources",
+   "value": [
+    "uariz_ext_az1667",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/9/anchoring_urls",
+   "value": {
+    "uariz_ext_az1667": {
+     "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+     "verified": "2026-06-18"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/plant_out",
+   "value": "mid Sep - mid Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/resolution_method",
+   "value": "absolute_month_ua_low_desert_guidance"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/grown_as_note_seasoned",
+   "value": "In the warmest low-desert pockets (zone 10), strawberries are still grown as a cool-season annual on the same fall-to-spring schedule: set pre-chilled plants in fall, fruit through winter and spring, then pull before summer. Zone 10 is nearly frost-free, so the season is bounded by heat rather than cold. Afternoon shade and well-drained, low-salt beds are essential."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/grown_as_note_beginner",
+   "value": "In the hottest, nearly frost-free parts of the California low desert, strawberries are a winter crop. Plant in fall, pick from late winter into spring, then pull the plants before the summer heat returns and replant next fall. Give them afternoon shade and good drainage."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/bloom",
+   "value": "Dec - Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/harvest_start",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/harvest_end",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/harvest",
+   "value": "Feb - May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/frost_risk_note_seasoned",
+   "value": "Zone 10 in the low desert is nearly frost-free, so freeze injury to blossoms is rarely a concern; the season is limited by summer heat, not cold. On a rare radiational freeze, cover open blossoms with frost cloth as a precaution."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/sources",
+   "value": [
+    "uariz_ext_az1667",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_desert/resolved_by_zone/10/anchoring_urls",
+   "value": {
+    "uariz_ext_az1667": {
+     "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+     "verified": "2026-06-18"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/region_id",
+   "value": "warm_arid"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/region_label",
+   "value": "Warm Arid (Interior)"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/zone_span",
+   "value": [
+    "8"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/sources",
+   "value": [
+    "nmsu_ext_h324"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": "last_frost",
+     "offset_days": -14,
+     "window_days": 21,
+     "synthesis_note": "Set dormant bare-root crowns in early spring, after the danger of hard frost has passed and as soon as the soil can be worked. New Mexico State recommends spring planting because the cool weather gives the plants the best chance to establish. Plant so the middle of the crown is level with the soil surface. In a matted-row system, space plants about 18 inches apart in rows 36 to 42 inches apart and let runners fill the row to 12 to 18 inches wide; a plastic- or fabric-covered perennial bed is an alternative for day-neutral types.",
+     "sources": [
+      "nmsu_ext_h324"
+     ],
+     "anchoring_urls": {
+      "nmsu_ext_h324": {
+       "url": "https://pubs.nmsu.edu/_h/H324/index.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": "last_frost",
+     "offset_days": 45,
+     "window_days": 30,
+     "synthesis_note": "On an established bed, June-bearing plants flower in early spring from buds that formed the previous fall under short days. Those early blossoms produce the largest berries and are frost-sensitive, so frost protection during bloom is strongly recommended (NMSU).",
+     "sources": [
+      "nmsu_ext_h324"
+     ],
+     "anchoring_urls": {
+      "nmsu_ext_h324": {
+       "url": "https://pubs.nmsu.edu/_h/H324/index.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": "last_frost",
+     "offset_days": 75,
+     "synthesis_note": "The single concentrated June-bearing harvest begins in late spring. In the planting year, flowers are pinched off so no crop is taken, which strengthens the plants for a full crop the following spring (year_one_notes).",
+     "sources": [
+      "nmsu_ext_h324"
+     ],
+     "anchoring_urls": {
+      "nmsu_ext_h324": {
+       "url": "https://pubs.nmsu.edu/_h/H324/index.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": "last_frost",
+     "offset_days": 110,
+     "synthesis_note": "The spring flush finishes by early summer; matted-row beds are renovated immediately after harvest (mow old foliage above the crowns, narrow the row, weed, and fertilize), and should not be renovated after July 15. Beds remain productive for about three to four years before replanting (NMSU).",
+     "sources": [
+      "nmsu_ext_h324"
+     ],
+     "anchoring_urls": {
+      "nmsu_ext_h324": {
+       "url": "https://pubs.nmsu.edu/_h/H324/index.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/region_notes_seasoned",
+   "value": "In interior arid zone 8 (the New Mexico high desert and similar areas), strawberries are grown as a perennial matted row, not a pulled annual. Plant dormant bare-root crowns in early spring, after the danger of hard frost and as soon as the soil can be worked, spacing plants about 18 inches apart in rows 36 to 42 inches apart and letting runners fill the row. June-bearing plants set their flower buds the previous fall under short days and give one concentrated crop in late spring; pinch off all flowers the first year to build strong plants. Renovate the bed right after harvest (mow the old foliage above the crowns, narrow the row, weed, and fertilize) and expect about three to four productive years before replanting. In warmer, lower spots, afternoon shade reduces summer heat and water stress. High-pH desert soils cause iron chlorosis, so choose tolerant cultivars and apply an iron chelate when leaves yellow. Late spring frosts are the main threat to the crop, so protect open blossoms, and mulch crowns with straw over winter."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/region_notes_beginner",
+   "value": "In the high desert of zone 8, a strawberry bed comes back year after year. Plant dormant crowns in early spring once hard frost is past, and pinch off the flowers that first year so the plants grow strong. From the second spring on you get one big crop in late spring. After picking, mow and tidy the bed to keep it healthy, and start a new bed every three to four years. Shade the plants from harsh afternoon sun, cover them with straw over winter, and protect the flowers on frosty spring nights. If the leaves turn yellow, an iron treatment usually fixes it."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/plantings_provenance",
+   "value": "Region-constant PERENNIAL matted-row establishment, frost-relative (anchored to the last spring frost), planted in early spring. *** A5 OVERTURN: the kickoff sketch grouped warm_arid with the 'interior deserts on the ca_interior summer-plant annual template,' but the z8 interior-arid authority (NMSU H-324, Home Garden Strawberry Production in New Mexico) grows it as a SPRING-PLANTED PERENNIAL matted row, NOT a pulled or summer-plant annual. *** NMSU: plant dormant crowns in spring after hard frost; June-bearer flower buds initiate the previous fall under short days; one concentrated late-spring crop; renovate immediately after harvest (before Jul 15); beds last 3-4 years; southern/warmer NM needs afternoon shade and high-pH iron management. AZ1667 independently corroborates that Arizona areas ABOVE 3,000 feet are spring-planted perennials (3-4 fruiting years, runners, renovation) -- the same elevation/climate class as z8 warm_arid, distinct from the below-3,000-ft low desert. This is the SAME perennial frost-relative shape as northern_tier (dormant + bloom + harvest + renovation; NO season_over). z8 carries frost (zone_frost_data: last_spring Feb 15, first_fall Dec 1), so the cell frost-anchors -- resolved_from POPULATED. NOTE for Claude Code: calendar[] left [] for the deriver (perennial cycle, NO season_over); reconcile the z8 resolved_from against zone_frost_data and re-derive the offsets. A5: do NOT import the low-desert fall-plant window here."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/plant_out",
+   "value": "Mar 1 - Mar 22"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/resolution_method",
+   "value": "perennial_herbaceous_precompute"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/grown_as",
+   "value": "perennial"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/grown_as_note_seasoned",
+   "value": "Interior arid New Mexico and similar high-desert zone 8 areas grow strawberries as a perennial matted row, planted in early spring after hard frost. June-bearers set flower buds the previous fall and crop once in late spring; renovate the bed right after harvest and expect three to four productive years. In the warmer, lower areas, afternoon shade (a fence, wall, or 65 percent shade cloth) reduces summer heat and water stress, and a winter straw mulch protects crowns. High-pH desert soils cause iron chlorosis, so choose tolerant cultivars and treat with iron chelate as needed."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/grown_as_note_beginner",
+   "value": "In the high desert of New Mexico (zone 8), a strawberry bed comes back each year. Plant dormant crowns in early spring once hard frost is past, and you will get one big crop in late spring. After picking, mow and tidy the bed so it stays healthy, and replant every three to four years. Shade the plants from harsh afternoon sun, mulch with straw over winter, and watch for yellowing leaves, which iron treatment fixes."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/bloom",
+   "value": "Apr - May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/harvest_start",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/harvest_end",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/harvest",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/frost_risk_note_seasoned",
+   "value": "Late spring frosts are the main risk: open blossoms in April and May are frost-sensitive and the earliest blossoms produce the largest berries, so cover the bed with a frost blanket or straw on frosty nights during bloom. Siting the bed on a gentle slope so cold air drains away, or using a northern exposure to delay bloom, reduces frost loss."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/resolved_from",
+   "value": {
+    "last_frost": "Feb 15",
+    "first_frost": "Dec 1"
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/sources",
+   "value": [
+    "nmsu_ext_h324"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/warm_arid/resolved_by_zone/8/anchoring_urls",
+   "value": {
+    "nmsu_ext_h324": {
+     "url": "https://pubs.nmsu.edu/_h/H324/index.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/region_id",
+   "value": "ca_north_coast"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/region_label",
+   "value": "California North & Central Coast"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/zone_span",
+   "value": [
+    "9",
+    "10"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/sources",
+   "value": [
+    "ucanr_mg_monterey_santacruz",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/plantings/0/track",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "mid Aug - early Nov",
+     "synthesis_note": "Set transplants from mid August into fall, the UC window for the California coast; mid to late August is a good time in all coastal locations, and day-neutral types can also go in during the fall. Strawberries are grown on the mild coast as a fall-planted annual system: fruit production is highest in the first full season after planting and then declines, so the bed is replaced rather than carried for years. Space plants about 12 inches apart in two-row beds. This is an absolute, month-resolved window driven by the mild coastal season, not anchored to a last spring frost.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Feb - Apr",
+     "synthesis_note": "Flowering builds from late winter into spring on the mild coast. Short-day types flower as the cool, short days of late winter give way to spring; day-neutral types flower across a longer span. The cool, foggy coastal climate suits berries well, with little heat stress on fruit set.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Apr",
+     "synthesis_note": "Harvest begins in spring and builds toward the heaviest production in May and June (UC IPM: heaviest production for both short-day and day-neutral plantings is in May and June).",
+     "sources": [
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jul",
+     "synthesis_note": "On the mild coast, harvest of day-neutral plantings can extend through summer into fall, but the main flush ends by midsummer and production declines after the first full season, so beds are typically replaced. The cell harvest window is scoped to the main spring-to-early-summer flush.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/region_notes_seasoned",
+   "value": "On California's cool, foggy north and central coast (zones 9 and 10, Monterey County north), strawberries are grown as a fall-planted annual system rather than a long-lived perennial bed. Set short-day (June-bearing) transplants from mid August to early September, or in the fall, and day-neutral types from late September into November; mid to late August is a good planting time in all coastal locations. Production is highest in the first full season after planting and declines after that, so replace the bed rather than carrying it for years. The cool maritime climate puts little heat stress on fruit set, the main flush builds to heaviest production in May and June, and day-neutral varieties can fruit across much of the year on the mild coast. Hard frost is rare, but protect open blossoms in any inland cold pocket. Grow on raised, well-drained beds and keep moisture off the flowers to limit fruit rot in the damp coastal air."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/region_notes_beginner",
+   "value": "On the cool, foggy California coast, strawberries grow best when you plant them in late summer or fall and replace them rather than keeping the same bed for years. Plant transplants from about mid August into fall, and you will pick the most berries the following spring, with the heaviest picking in May and June. The mild weather is easy on the plants, and some types keep fruiting much of the year. Grow them on raised beds so water drains away, and try to keep the leaves and flowers dry to avoid rot. Hard frost is rare here, but cover the flowers if a cold night is forecast inland."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/plantings_provenance",
+   "value": "Region-constant fall-plant winter-production ANNUAL establishment window, month-resolved (absolute), NOT frost-relative. The genuine perennial-vs-annual coastal fork (flagged in the kickoff) resolves to the ANNUAL fall-plant system: the UC Master Gardeners of Monterey & Santa Cruz guide gives dated coastal planting windows (short-day summer Aug 15-Sep 5 / winter Oct 15-Nov 5; day-neutral summer Sep 25-Oct 10 / winter Oct 25-Nov 26; 'middle to late August generally is the best time to plant in all locations') and states production is highest the first full season then declines -> the bed is replaced, not carried. This is the California coastal fall-plant winter-production model (the Fronteras variety note: 'adapted to the fall planting and winter production system of the California coast'). Distinct from the desert (pulled at summer onset by heat) and the interior (summer-plant). Cell-level harvest timing anchored to UC IPM cultural-tips ('heaviest production in May and June' for both types) -- the same cell anchor ca_interior uses. resolved_from null per cell (mild/season-driven; z9 carries nominal frost but the limiter is the mild season, not the last spring frost). NOTE for Claude Code: calendar[] left []; the fall-to-summer windows WRAP without a clean no-plant summer gap on the mild coast, so the deriver may NOT emit season_over here (carried-vs-pulled is emergent) -- verify the deriver's branch on this cell. The day-neutral near-year-round type story stays in the centralized type_selection_* (Steps 6-8), not the cell. A5: do NOT lift the desert or interior windows."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/plant_out",
+   "value": "mid Aug - early Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/resolution_method",
+   "value": "absolute_month_uc_coastal_planting_dates"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/grown_as_note_seasoned",
+   "value": "The cool, foggy north and central coast grows strawberries as a fall-planted annual system rather than a long-lived perennial bed. Set short-day (June-bearing) transplants from mid August to early September, or in the fall, and day-neutral types from late September into November; production peaks the first full spring and then declines, so replace the bed rather than carrying it for years. The mild climate means little heat stress, and day-neutral varieties can fruit across much of the year here."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/grown_as_note_beginner",
+   "value": "On the cool, foggy coast, strawberries grow best when you plant them in late summer or fall and replace them rather than keeping the same bed for years. Plant transplants from about mid August into fall, and you will get the most berries the following spring. The mild weather is easy on the plants, and some types keep fruiting much of the year."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/bloom",
+   "value": "Feb - Apr"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/harvest_start",
+   "value": "Apr"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/harvest_end",
+   "value": "Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/harvest",
+   "value": "Apr - Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/frost_risk_note_seasoned",
+   "value": "The mild coast rarely sees a hard freeze, but an inland cold pocket or an early cold snap can nip open blossoms, which are damaged below 32 degrees Fahrenheit. On a forecast frosty night during bloom, cover the bed with frost cloth."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/sources",
+   "value": [
+    "ucanr_mg_monterey_santacruz",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/anchoring_urls",
+   "value": {
+    "ucanr_mg_monterey_santacruz": {
+     "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+     "verified": "2026-06-18"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/plant_out",
+   "value": "mid Aug - early Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/resolution_method",
+   "value": "absolute_month_uc_coastal_planting_dates"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/grown_as_note_seasoned",
+   "value": "The warmest north-coast pockets (zone 10) grow strawberries on the same fall-planted annual system: set transplants from mid August into fall, take the main crop the following spring, and replace the bed as production declines. Zone 10 here is essentially frost-free, so the season is bounded by the mild climate rather than cold, and day-neutral types can fruit across much of the year."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/grown_as_note_beginner",
+   "value": "In the mildest, nearly frost-free coastal spots, strawberries are still best planted in late summer or fall and replaced rather than kept for years. Plant from about mid August into fall for the biggest crop the next spring. With no real frost, some types keep producing much of the year."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/bloom",
+   "value": "Jan - Apr"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/harvest_start",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/harvest_end",
+   "value": "Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/harvest",
+   "value": "Mar - Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/frost_risk_note_seasoned",
+   "value": "These mild coastal zone 10 areas are essentially frost-free, so freeze injury to blossoms is rarely a concern; the season is shaped by the cool maritime climate rather than cold."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/sources",
+   "value": [
+    "ucanr_mg_monterey_santacruz",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/anchoring_urls",
+   "value": {
+    "ucanr_mg_monterey_santacruz": {
+     "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+     "verified": "2026-06-18"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/region_id",
+   "value": "ca_south_coast"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/region_label",
+   "value": "California South Coast"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/zone_span",
+   "value": [
+    "9",
+    "10"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/sources",
+   "value": [
+    "ucanr_mg_monterey_santacruz",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/plantings/0/track",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "mid Aug - Nov",
+     "synthesis_note": "Set transplants from mid August into fall, the UC window for the California coast; mid to late August is a good time in all coastal locations, and day-neutral types can also go in during the fall. Strawberries are grown on the mild coast as a fall-planted annual system: fruit production is highest in the first full season after planting and then declines, so the bed is replaced rather than carried for years. Space plants about 12 inches apart in two-row beds. This is an absolute, month-resolved window driven by the mild coastal season, not anchored to a last spring frost. On the warmest south coast, fall-set plants can begin fruiting in winter and run into summer.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jan - Apr",
+     "synthesis_note": "Flowering builds from late winter into spring on the mild coast. Short-day types flower as the cool, short days of late winter give way to spring; day-neutral types flower across a longer span. The cool, foggy coastal climate suits berries well, with little heat stress on fruit set. On the warm south coast, bloom can begin in midwinter.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jan - Feb",
+     "synthesis_note": "Harvest begins in spring and builds toward the heaviest production in May and June (UC IPM: heaviest production for both short-day and day-neutral plantings is in May and June). In the warmest south-coast districts (the Oxnard/Ventura pattern), fall-set plants begin fruiting as early as midwinter.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jul",
+     "synthesis_note": "On the mild coast, harvest of day-neutral plantings can extend through summer into fall, but the main flush ends by midsummer and production declines after the first full season, so beds are typically replaced. The cell harvest window is scoped to the main spring-to-early-summer flush.",
+     "sources": [
+      "ucanr_mg_monterey_santacruz",
+      "uc_ipm"
+     ],
+     "anchoring_urls": {
+      "ucanr_mg_monterey_santacruz": {
+       "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+       "verified": "2026-06-18"
+      },
+      "uc_ipm": {
+       "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/region_notes_seasoned",
+   "value": "On California's mild south coast (zones 9 and 10, San Luis Obispo south through Oxnard and the South Coast), strawberries are grown as a fall-planted annual system, the heart of the state's coastal winter-planting model. Set short-day transplants from mid August through fall and day-neutral types into late fall; in the warmest south-coast districts, fall-set plants begin fruiting in winter and run into summer, with production peaking the first full season before the bed is replaced. The mild climate carries little heat stress, the heaviest production falls in May and June, and day-neutral types can fruit across much of the year. Hard frost is rare on the coast but possible in inland pockets, so protect open blossoms there. Grow on raised, well-drained beds and keep moisture off flowers and fruit."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/region_notes_beginner",
+   "value": "On the mild south coast, strawberries grow best planted in late summer or fall and then replaced rather than kept for years. Plant transplants from about mid August into fall; in the warmest spots they start fruiting in winter and keep going into summer, with the biggest crop the first full season. The mild weather is easy on the plants, and some types fruit much of the year. Grow them on raised beds for good drainage, keep the flowers dry, and cover them on the rare frosty night inland."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/plantings_provenance",
+   "value": "Region-constant fall-plant winter-production ANNUAL establishment window, month-resolved (absolute), NOT frost-relative. The perennial-vs-annual coastal fork resolves to the ANNUAL fall-plant system, same as ca_north_coast, anchored to the UC Master Gardeners of Monterey & Santa Cruz coastal planting dates and UC IPM cultural-tips. The south coast (San Luis Obispo south, per the UC region split) runs a slightly earlier/longer production tail than the central coast: in the warmest south-coast districts fall-set plants fruit from midwinter into summer (the Oxnard/Ventura commercial pattern), with heaviest production still May-June and the first-season peak followed by replacement. resolved_from null per cell (mild/season-driven). NOTE for Claude Code: calendar[] left []; windows wrap without a clean summer no-plant gap -> the deriver may NOT emit season_over (verify the branch). A5: authored as its own south-coast window, NOT a copy of the central-coast cell -- the production tail is earlier here; do NOT lift the desert or interior windows."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/plant_out",
+   "value": "mid Aug - Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/resolution_method",
+   "value": "absolute_month_uc_coastal_planting_dates"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/grown_as_note_seasoned",
+   "value": "The mild south coast (San Luis Obispo south through Oxnard and the South Coast) grows strawberries as a fall-planted annual system, the heart of California's coastal winter-planting model. Set short-day transplants from mid August through fall and day-neutral types into late fall; in the warmest south-coast districts, fall-set plants begin fruiting in winter and run into summer, with production peaking the first full season, then the bed is replaced. The mild climate carries little heat stress."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/grown_as_note_beginner",
+   "value": "On the mild south coast, strawberries grow best planted in late summer or fall and then replaced rather than kept for years. Plant transplants from about mid August into fall; in the warmest spots they start fruiting in winter and keep going into summer, with the biggest crop the first full season."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/bloom",
+   "value": "Jan - Apr"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/harvest_start",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/harvest_end",
+   "value": "Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/harvest",
+   "value": "Feb - Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/frost_risk_note_seasoned",
+   "value": "The south coast rarely freezes, but an inland cold pocket can nip open blossoms below 32 degrees Fahrenheit; cover the bed on a forecast frosty night during bloom. Most coastal south-coast gardens see little to no frost."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/sources",
+   "value": [
+    "ucanr_mg_monterey_santacruz",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/anchoring_urls",
+   "value": {
+    "ucanr_mg_monterey_santacruz": {
+     "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+     "verified": "2026-06-18"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/plant_out",
+   "value": "mid Aug - Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/resolution_method",
+   "value": "absolute_month_uc_coastal_planting_dates"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/grown_as_note_seasoned",
+   "value": "The warmest, frost-free south-coast pockets (zone 10) grow strawberries on the same fall-planted annual system: set transplants from mid August into late fall, with fall-set plants fruiting from winter into summer and the heaviest production in the first full season before the bed is replaced. With essentially no frost, day-neutral types can fruit across much of the year."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/grown_as_note_beginner",
+   "value": "In the mildest, frost-free parts of the south coast, plant strawberries in late summer or fall and replace them rather than keeping them for years. Fall-planted beds fruit from winter into summer, and with no frost some types keep producing much of the year."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/bloom",
+   "value": "Dec - Apr"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/harvest_start",
+   "value": "Jan"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/harvest_end",
+   "value": "Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/harvest",
+   "value": "Jan - Jul"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/frost_risk_note_seasoned",
+   "value": "Zone 10 on the south coast is essentially frost-free, so freeze injury to blossoms is rarely a concern; the mild maritime climate, not cold, shapes the season."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/sources",
+   "value": [
+    "ucanr_mg_monterey_santacruz",
+    "uc_ipm"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/anchoring_urls",
+   "value": {
+    "ucanr_mg_monterey_santacruz": {
+     "url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+     "verified": "2026-06-18"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/region_id",
+   "value": "se_gulf"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/region_label",
+   "value": "Southeast & Gulf Coast"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/zone_span",
+   "value": [
+    "8",
+    "9"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/sources",
+   "value": [
+    "lsu_agcenter_3363"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/plantings/0/track",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "early Oct - mid Nov",
+     "synthesis_note": "Set bare-root or plug transplants in the fall, from early October through mid November, the LSU AgCenter window for the Gulf Coast (mid to late October is ideal in southeast Louisiana). Strawberries are grown here as a fall-planted annual: plants are set in fall, fruited through winter and spring, then removed in early summer because humid-summer disease pressure is extreme; fresh plants are set the following fall. Grow on raised rows with plastic mulch or a thick pine-straw layer for drainage and clean fruit. This is an absolute, month-resolved window driven by the cool fall-to-spring season, not anchored to a last spring frost.",
+     "sources": [
+      "lsu_agcenter_3363"
+     ],
+     "anchoring_urls": {
+      "lsu_agcenter_3363": {
+       "url": "https://www.lsuagcenter.com/NR/rdonlyres/F364192A-744D-4E43-B95E-E9EBD75CDF4E/100278/Pub3364Strawberries4Cweb.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Nov - Feb",
+     "synthesis_note": "Short-day varieties initiate flowers during the short days and cool temperatures of fall and winter, and fruit appears in late winter and early spring when conditions favor good-quality berries. Open flowers are damaged below 32 degrees Fahrenheit even though the plants themselves are cold-hardy.",
+     "sources": [
+      "lsu_agcenter_3363"
+     ],
+     "anchoring_urls": {
+      "lsu_agcenter_3363": {
+       "url": "https://www.lsuagcenter.com/NR/rdonlyres/F364192A-744D-4E43-B95E-E9EBD75CDF4E/100278/Pub3364Strawberries4Cweb.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Nov - Dec",
+     "synthesis_note": "Production can begin as early as late November when plug plants are used, with the harvest running through winter and building in spring. Louisiana berries appear as early as November, December, and January.",
+     "sources": [
+      "lsu_agcenter_3363"
+     ],
+     "anchoring_urls": {
+      "lsu_agcenter_3363": {
+       "url": "https://www.lsuagcenter.com/NR/rdonlyres/F364192A-744D-4E43-B95E-E9EBD75CDF4E/100278/Pub3364Strawberries4Cweb.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "May - early Jun",
+     "synthesis_note": "Fruiting continues into spring and can run to the beginning of June; after June the plants stop fruiting and turn to vegetative growth, so the planting is removed in early summer and replaced the following fall (the nine-month strawberry season). The cell harvest window is scoped to this late-fall-to-spring span.",
+     "sources": [
+      "lsu_agcenter_3363"
+     ],
+     "anchoring_urls": {
+      "lsu_agcenter_3363": {
+       "url": "https://www.lsuagcenter.com/NR/rdonlyres/F364192A-744D-4E43-B95E-E9EBD75CDF4E/100278/Pub3364Strawberries4Cweb.pdf",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/region_notes_seasoned",
+   "value": "On the Southeast and Gulf Coast (zones 8 and 9), strawberries are grown as a fall-planted annual, not a perennial bed. Set bare-root or plug transplants from early October through mid November (mid to late October is ideal in southeast Louisiana), on raised rows covered with plastic mulch or a thick layer of pine straw for drainage and clean fruit. Short-day varieties initiate flowers in the cool, short days of fall and winter; expect fruit from late fall (as early as late November from plugs) through winter and spring, running to about early June. After June the plants stop fruiting and the planting is removed, because humid-summer disease pressure is extreme; replant fresh each fall. The plants are cold-hardy to roughly 17 degrees Fahrenheit, but open flowers are damaged below 32, so cover the bed with row-cover cloth on forecast freezes during bloom. Side-dress with nitrogen in January and again in mid-to-late spring, and rotate away from recent tomato, pepper, or eggplant beds."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/region_notes_beginner",
+   "value": "On the Gulf Coast, strawberries are a cool-season crop you grow over the winter and then replace, not a bed that lives for years. Plant transplants in October or early November on raised rows covered with plastic or pine straw so the heavy rain drains and the berries stay clean. You will pick berries from late fall through spring, into early summer. When summer arrives, pull the plants out, because the heat and humidity bring disease, and plant fresh ones the next fall. The plants handle cold well, but the flowers do not, so cover them when a freeze is coming. Feed them in winter and again in spring."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/plantings_provenance",
+   "value": "Region-constant fall-plant PULLED ANNUAL establishment window, month-resolved (absolute), NOT frost-relative. The Gulf Coast grows strawberries as a fall-planted annual (LSU AgCenter Pub 3363/3364, Strawberries): bare-root or plug transplants set early October through mid November, production from late November (plugs) through the beginning of June, then the planting is REMOVED in early summer ('disease pressure is extreme in the summer months') and replaced the following fall. LSU is explicit that the home-garden default is annual: 'If space is unlimited... strawberries can be continued as perennials. If space is limited, as it usually is, remove the plants in early summer and plant again the next fall.' Short-day flower initiation in cool fall/winter; plants hardy to ~17F but flowers die <32F. This is the humid-Gulf fall-plant PULLED sub-shape (season_over emerges for the summer off-season). resolved_from null per cell, forced by the cool-fall-initiation, season-driven window (z8/z9 carry frost, but the limiter is the season + humid-summer disease, not the last spring frost; the frost dates inform the frost_risk_note only). Windows anchor to LSU AgCenter Pub 3363/3364. NOTE for Claude Code: calendar[] left [] for the deriver; this cell is expected to emit season_over (summer off-season). A5: SINGLE fall-plant window (no separate spring arm); do NOT template the desert, coastal, or interior windows onto the Gulf cell, and do NOT lift the FL peninsula months -- the Gulf window is its own (slightly later plant, earlier finish than peninsular FL)."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/plant_out",
+   "value": "early Oct - mid Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/resolution_method",
+   "value": "absolute_month_lsu_planting_dates"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/grown_as_note_seasoned",
+   "value": "The Gulf Coast grows strawberries as a fall-planted annual, not a perennial bed. Set transplants from early October through mid November, fruit them from late fall into spring, then remove the planting in early summer because humid-summer disease pressure is severe, and replant fresh each fall. Grow on raised rows with plastic mulch or a thick pine-straw layer to keep the heavy rains drained and the fruit clean. Choose short-day varieties suited to the South."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/grown_as_note_beginner",
+   "value": "On the Gulf Coast, strawberries are a cool-season crop you grow over the winter and then replace, not a bed that lives for years. Plant in October or early November, pick from late fall into spring, then pull the plants out when summer arrives and start fresh next fall. Grow them on raised rows covered with plastic or pine straw so the rain drains and the berries stay clean."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/bloom",
+   "value": "Dec - Feb"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/harvest_start",
+   "value": "Dec"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/harvest_end",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/harvest",
+   "value": "Dec - May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/frost_risk_note_seasoned",
+   "value": "Gulf Coast strawberry plants are hardy to about 17 degrees Fahrenheit, but the flowers are damaged below 32 degrees Fahrenheit. Whenever a freeze is forecast and there are open blossoms, cover the bed with a lightweight row-cover cloth and anchor the edges; remove or vent it once the freeze passes."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/sources",
+   "value": [
+    "lsu_agcenter_3363"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/8/anchoring_urls",
+   "value": {
+    "lsu_agcenter_3363": {
+     "url": "https://www.lsuagcenter.com/NR/rdonlyres/F364192A-744D-4E43-B95E-E9EBD75CDF4E/100278/Pub3364Strawberries4Cweb.pdf",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/plant_out",
+   "value": "early Oct - mid Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/resolution_method",
+   "value": "absolute_month_lsu_planting_dates"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/grown_as",
+   "value": "annual"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/grown_as_note_seasoned",
+   "value": "In the warmer Gulf Coast zone 9, strawberries are grown on the same fall-planted annual system: set transplants from early October through mid November, with production starting as early as late November from plugs and running through spring into early summer, then remove the planting before the humid summer and replant the next fall. Raised rows with plastic or pine-straw mulch handle the heavy rain and keep fruit clean."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/grown_as_note_beginner",
+   "value": "In the warmer Gulf Coast areas, strawberries are still a winter crop you grow and then replace. Plant in October or early November, start picking as early as late fall, keep going through spring, then pull the plants before the humid summer and replant next fall. Use raised rows with plastic or pine straw for drainage."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/bloom",
+   "value": "Nov - Feb"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/harvest_start",
+   "value": "Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/harvest_end",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/harvest",
+   "value": "Nov - May"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/frost_risk_note_seasoned",
+   "value": "Zone 9 on the Gulf Coast sees occasional freezes; the plants are hardy to about 17 degrees Fahrenheit but the open flowers are damaged below 32 degrees Fahrenheit. Cover the bed with row-cover cloth when a freeze is forecast during bloom and anchor the edges."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/sources",
+   "value": [
+    "lsu_agcenter_3363"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/se_gulf/resolved_by_zone/9/anchoring_urls",
+   "value": {
+    "lsu_agcenter_3363": {
+     "url": "https://www.lsuagcenter.com/NR/rdonlyres/F364192A-744D-4E43-B95E-E9EBD75CDF4E/100278/Pub3364Strawberries4Cweb.pdf",
+     "verified": "2026-06-18"
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/region_id",
+   "value": "hawaii_tropical"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/region_label",
+   "value": "Hawaii (Upcountry / Tropical)"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/zone_span",
+   "value": [
+    "11"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/sources",
+   "value": [
+    "ctahr_hawaii_county"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/plantings/0/plant_out",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Sep - Nov",
+     "synthesis_note": "In Hawaii, strawberries are a cool-elevation crop, grown upcountry (the slopes of Haleakala on Maui around Kula, and Waimea on Hawaii Island) where temperatures are mild, rather than in the warm lowlands. Set transplants in the cool fall months for the main winter-into-spring crop. At a fixed upcountry elevation this is a seasonal, cool-month crop, not a year-round lowland one. This is a month-resolved window in a frost-free zone, not anchored to a last spring frost.",
+     "sources": [
+      "ctahr_hawaii_county"
+     ],
+     "anchoring_urls": {
+      "ctahr_hawaii_county": {
+       "url": "https://www.ctahr.hawaii.edu/hawaii/Plants.aspx",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/plantings/0/bloom",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Nov - Mar",
+     "synthesis_note": "Flowering and fruiting follow the cooler upcountry season, building through winter into spring. Hawaii's day length varies little across the year (roughly 11 to 13.5 hours), so temperature and elevation, more than day length, set the practical season at a given site.",
+     "sources": [
+      "ctahr_hawaii_county"
+     ],
+     "anchoring_urls": {
+      "ctahr_hawaii_county": {
+       "url": "https://www.ctahr.hawaii.edu/hawaii/Plants.aspx",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/plantings/0/harvest_start",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Feb",
+     "synthesis_note": "At a fixed upcountry site the harvest concentrates in the cool months; on Maui the upcountry U-pick season runs roughly February through June.",
+     "sources": [
+      "ctahr_hawaii_county"
+     ],
+     "anchoring_urls": {
+      "ctahr_hawaii_county": {
+       "url": "https://www.ctahr.hawaii.edu/hawaii/Plants.aspx",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/plantings/0/harvest_end",
+   "value": [
+    {
+     "label": "establishment",
+     "from": null,
+     "window": "Jun",
+     "synthesis_note": "Fruiting at a single elevation tapers as the warmer season arrives; the cell harvest window is scoped to the cool-season spring crop. Commercial Maui farms extend supply year-round only by moving harvest higher up the mountain in summer and lower in winter, which a home garden at one site cannot do.",
+     "sources": [
+      "ctahr_hawaii_county"
+     ],
+     "anchoring_urls": {
+      "ctahr_hawaii_county": {
+       "url": "https://www.ctahr.hawaii.edu/hawaii/Plants.aspx",
+       "verified": "2026-06-18"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/region_notes_seasoned",
+   "value": "In Hawaii (zone 11), strawberries are a cool-elevation niche crop, not a warm-lowland year-round one. They are grown upcountry, on the cool slopes of Haleakala around Kula on Maui and at Waimea on Hawaii Island, where the climate stays mild; in the warm lowlands they perform poorly. At a fixed upcountry site, treat the planting as a short-lived perennial: set plants in the cool fall months for a main crop that builds through winter into spring, with the upcountry season running roughly February through June. Hawaii's day length barely changes across the year, so temperature and elevation, not day length, set the practical season at a given site. The year-round Hawaiian strawberry supply you see at markets comes from commercial farms shifting harvest up and down the mountain with the seasons, which a single home garden cannot replicate. Grow on well-drained beds; the zone is frost-free, so cold protection is not needed."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/region_notes_beginner",
+   "value": "In Hawaii, strawberries grow best up in the cool higher country, like Kula on Maui or Waimea on the Big Island, not down in the warm lowlands. Plant in the cool fall months and you will pick berries through winter and spring, roughly February through June. There is no frost to worry about up there. You may have heard Hawaii has strawberries year-round, but that is because big farms move up and down the mountain with the seasons. In your own garden at one spot, expect a cool-season crop, not fruit all year. Grow them where water drains away well."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/plantings_provenance",
+   "value": "Region-constant cool-elevation PERENNIAL establishment, month-resolved (absolute) in a frost-free zone, NOT frost-relative. *** A5 + the onion hawaii lesson: hawaii_tropical is NOT year_round despite frost-free z11. *** CTAHR (Hawaii County diversified-ag page) documents Waimea (Hawaii Island) as a major strawberry production area, and CTAHR-aligned education materials place the crop upcountry (Kula on Maui, Waimea) where it is cool; commercial Maui farms achieve a year-round SUPPLY only by moving harvest HIGHER in summer and LOWER in winter (an elevation move a fixed home garden cannot do), and the upcountry U-pick/home season runs roughly Feb-Jun. So a home-garden cell at one elevation is a cool-season crop, NOT year_round -- this OVERRIDES the zinnia frost-free->year_round inference, exactly as onion hawaii did. grown_as: authored PERENNIAL (cool, frost-free, no killing summer heat or winter at upcountry elevation favor a multi-year bed). *** This is the WEAKEST of the 7 grown_as calls -- no clean CTAHR HOME-GARDEN lifecycle statement exists; the perennial read is inferred from the cool-elevation niche + frost-free conditions. FLAGGED as the residual open finding for Step 5 (blocks_launch:false): confirm perennial-vs-annual + the window against a dedicated CTAHR strawberry publication if one can be obtained, or soften to an explicitly informational note. *** resolved_from null (frost-free). NOTE for Claude Code: calendar[] left [] (perennial cycle, NO season_over); do NOT set year_round. A5: do NOT import the FL z11 fall-plant pulled-annual shape -- the Hawaii cell is a cool-elevation perennial, a different lifecycle."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/plant_out",
+   "value": "Sep - Nov"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/resolution_method",
+   "value": "absolute_month_ctahr_upcountry_practice"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/grown_as",
+   "value": "perennial"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/grown_as_note_seasoned",
+   "value": "In Hawaii (zone 11), strawberries are a cool-elevation niche crop, not a warm-lowland year-round one. They are grown upcountry, on the cool slopes of Haleakala (around Kula) and at Waimea on Hawaii Island, where conditions stay mild. At a fixed upcountry site, treat the bed as a short-lived perennial: set plants in the cool fall months for a main crop through winter and spring. Year-round supply exists in Hawaii only because commercial farms move harvest up and down the mountain with the seasons, which a single home garden cannot replicate. In the warm lowlands strawberries perform poorly."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/grown_as_note_beginner",
+   "value": "In Hawaii, strawberries grow best up in the cool higher country, like Kula on Maui, not down in the warm lowlands. Plant in the cool fall months and you will get berries through winter and spring. The big farms have berries all year because they move up and down the mountain with the seasons, but in a home garden at one spot you will get a cool-season crop, not year-round fruit."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/bloom",
+   "value": "Nov - Mar"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/harvest_start",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/harvest_end",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/harvest",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/frost_risk_note_seasoned",
+   "value": "Upcountry Hawaii (zone 11) is frost-free, so freeze injury to blossoms is not a concern. The practical season is set by the mild upcountry temperatures and elevation rather than by cold; warm spells, not frost, end the crop at a given site."
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/resolved_from",
+   "value": null
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/sources",
+   "value": [
+    "ctahr_hawaii_county"
+   ]
+  },
+  {
+   "op": "replace",
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/anchoring_urls",
+   "value": {
+    "ctahr_hawaii_county": {
+     "url": "https://www.ctahr.hawaii.edu/hawaii/Plants.aspx",
+     "verified": "2026-06-18"
+    }
+   }
+  }
+ ],
+ "from_guards": [
+  {
+   "path": "/regions/low_desert_az/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/plantings/0/track",
+   "expect": "perennial"
+  },
+  {
+   "path": "/regions/low_desert_az/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/low_desert_az/resolved_by_zone/9/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_desert/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/plantings/0/track",
+   "expect": "perennial"
+  },
+  {
+   "path": "/regions/ca_desert/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/9/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_desert/resolved_by_zone/10/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/warm_arid/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/warm_arid/resolved_by_zone/8/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_north_coast/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/plantings/0/track",
+   "expect": "perennial"
+  },
+  {
+   "path": "/regions/ca_north_coast/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/9/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_north_coast/resolved_by_zone/10/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_south_coast/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/plantings/0/track",
+   "expect": "perennial"
+  },
+  {
+   "path": "/regions/ca_south_coast/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/9/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/ca_south_coast/resolved_by_zone/10/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/se_gulf/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/plantings/0/track",
+   "expect": "perennial"
+  },
+  {
+   "path": "/regions/se_gulf/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/8/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/se_gulf/resolved_by_zone/9/anchoring_urls",
+   "expect": {}
+  },
+  {
+   "path": "/regions/hawaii_tropical/region_id",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/region_label",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/zone_span",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/plantings/0/plant_out",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/plantings/0/bloom",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/plantings/0/harvest_start",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/plantings/0/harvest_end",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/region_notes_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/region_notes_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/plantings_provenance",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/plant_out",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/resolution_method",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/grown_as",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/grown_as_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/grown_as_note_beginner",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/bloom",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/harvest_start",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/harvest_end",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/harvest",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/frost_risk_note_seasoned",
+   "expect": null
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/resolved_from",
+   "expect": {}
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/sources",
+   "expect": []
+  },
+  {
+   "path": "/regions/hawaii_tropical/resolved_by_zone/11/anchoring_urls",
+   "expect": {}
+  }
+ ]
+}
