@@ -92,5 +92,13 @@ Steps 1-3 (sources + scalars + companions + the species/variety set) -> 3.5 (reg
 - Rebloom/shearing-for-a-second-flush handling in the calendar (lean: a harvest_ready/care note, not a second bloom token).
 - A future shared `perennial_woody` deriver/gating layer if rosemary/sage/butterfly-bush reveal common structure (YAGNI now; revisit at the 2nd woody ornamental).
 
-## 6. Sources (Step-1 lane, T1 only)
-Anchor candidates to verify at Step 1: extension lavender guides (e.g. USU, OSU, UMN, UC ANR/UC MG, NMSU, Texas A&M AgriLife, Washington State / WSU -- a lavender-growing region), each on the SPECIFIC publication page (the anchor-the-page rule). Culinary-use + drying claims must be T1-sourced (not seed-company/craft-blog T2).
+## 6. Sources -- the citations do the REAL WORK (Trevor, 2026-06-19); T1 only
+**Governing principle:** every DISTINCTIVE claim is carried by a T1 citation that actually STATES it -- the citation does the information's real work; it is never decorative or retro-fitted to text written first. Block-coherent authoring (anchor each block while its source is open, not in a later sweep); the Step-11 independent source-fidelity fetch verifies the NUMBERS match the cited page (the locked cert re-verification). **A claim with no T1 page that states it does not ship -- it is cut, or demoted to an honest `traditional` confidence, never floated on a weak citation.**
+
+The claim areas at highest risk of weak / T2 sourcing, to source HARD:
+- **Culinary + craft/drying use** (the "both" story): which species/cultivars are culinary (low-camphor English / lavandin) vs ornamental-only -- T1 extension food/herb guides, NEVER seed-company or craft-blog T2.
+- **The inverted-care specifics**: drought tolerance, lean / sharp-drainage / alkaline (the pH ceiling), minimal feed, and OVERWATERING as the chief killer -- each a T1 extension statement, not garden-lore.
+- **The cut-back rule**: shear ~1/3 after bloom + NEVER into bare old wood -- T1 (load-bearing care; a wrong version kills the plant).
+- **Species cold-hardiness** (English ~z5 vs Spanish/French ~z7-8) + the per-region `grown_as` flip -- T1, PER region (A5, never analogized).
+
+Anchor candidates (verify at Step 1, each on the SPECIFIC publication page -- the anchor-the-page rule): extension lavender guides from USU, OSU, UMN, UC ANR / UC MG, NMSU, Texas A&M AgriLife, WSU (a lavender-growing region).
