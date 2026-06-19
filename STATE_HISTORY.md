@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-18 -- strawberry Steps 6-8: bulk prose -- register_fill CLOSED (0), prose-complete [claude.ai author + Claude Code release]
+
+**base `ec0bf9d0` -> `15e2a021`** (full-file). 76 author ops + 1 source mint. **The last big authoring leg before cert.** claude.ai preflighted the SLICE by its crop SHA (`f42aaf47`, per the new SLICE_INTEGRITY convention).
+
+**claude.ai author lane -- block-coherent across the computed worklist (48 register pairs + 6 compounds + the structured nulls):**
+- **The 10 register blocks** authored dual-register + ANCHORED in one pass: fertilizer, watering, storage, yield_expectations, description, harvest_ready, bloom_time, hardiness_notes, chill_hours_note (informational N/A prose, not a gate -- D8), soil_prep. Most anchored osu_ext + umn_ext; storage + harvest_ready add UC ANR Pub 8256.
+- **Structured nulls CLOSED block-coherently** (the scope clarification, confirmed vs peach): `fertilizer.{frequency,type:balanced_granular,timing:renovation,example_product,notify_days_after,stage_id:renovation}`; `watering.{watering_method:drip, drought_tolerance:low, schedule_by_stage[4]}`; `yield_expectations.factors_seasoned` (5-item SINGLE-REGISTER, NO _beginner twin -- intentional SP).
+- **6 compound blocks** (were []): **growth_stages** (8-stage perennial arc, peach 13-key shape, ids plant->establishment->runner->bloom->fruit_set->harvest->renovation->dormancy); **diseases** (5 -- gray mold/Botrytis lead, the foliar-wetness nexus; + anthracnose/powdery mildew/red stele/Verticillium); **pests** (7); **failure_diagnostics** (5); **notifications** (6); **weather_triggers** (4). **Stage-ids wired by the author lane** (fertilizer.stage_id + schedule_by_stage + notifications all reference the growth_stages ids).
+- **type_selection_*** re-authored with the day-neutral type story (the deferred item). No `gating_factors` added (D7).
+
+**Claude Code release (2026-06-18):**
+- **Apply CLEAN:** start-SHA == `ec0bf9d0`; 76 ops; collateral = strawberry crop only.
+- **1 SOURCE MINT:** `ucanr_ext_8256` (UC ANR Pub 8256, strawberry storage/harvest) under the trusted parent `ucanr_ext` (T1 inherited, `_admission_provenance`); the patch cited a bare `uc_anr_8256` -> **re-pointed 4 refs to `ucanr_ext_8256`** (keep one UC ANR family, the CTAHR-precedent); added to `sources_summary.primary[]`.
+- **FORCING-FUNCTION CHECKS (the structured-null + wiring verification promised at the kickoff):** (1) every `stage_id` reference (fertilizer + all 4 schedule_by_stage + all 6 notifications) RESOLVES to a real growth_stages id -- 0 dangling; (2) the block-coherent structured nulls are all closed (fertilizer/watering scalars + schedule_by_stage + factors_seasoned) -- no authored-but-unanchored block.
+- **Gates on `15e2a021`:** `register_fill_gate` -> **0** (worklist closed); `register_completeness` PASS (0 unruled -- factors_seasoned correctly SP, the compound prose all ruled); `whole_crop_gate` PASS (dual-voice 0 null siblings, 0 user-facing dashes, 0 non-canonical temps, source-tier 13 IDs / 0 non-T1). collateral = strawberry + `ucanr_ext_8256`.
+
+**STRAWBERRY IS NOW PROSE-COMPLETE + STRUCTURALLY CLEAN.** Step 9 (dash/temp sweep) is effectively already 0. **REMAINING = Step 11 cert:** the verbatim scan (>=8-word lift check vs the cited sources) + the INDEPENDENT source-fidelity fetch (the locked cert re-verification -- numbers match cited pages) + resolve the 2 Step-5 calls (boundary scalars [Option-1 lean] + the hawaii lifecycle open finding) + the FLIP (`verification_status`: status `verified_gs_arc` + launch_ready x2 + source_set + open_findings incl. hawaii, all blocks_launch:false) + top-level last_reviewed. Then strawberry = anchor 13 CERTIFIED.
+
 ## 2026-06-18 -- strawberry Step 4 SCALE-UP: the final 7 warm regions -- REGION FILL COMPLETE (10/10), whole_crop_gate PASS [claude.ai author + Claude Code release]
 
 **base `78ebccff` -> `ec0bf9d0`** (full-file). 225 author ops (11 cells across the last 7 regions) + Claude Code: 5 source mints + a CTAHR re-point + a frost-free-perennial deriver refinement + the calendar fill. **REGION FILL IS NOW COMPLETE: all 10 regions, 20/20 resolved cells with grown_as + calendar; `whole_crop_gate strawberry` PASSES (0 violations) for the first time.** (Structural completeness -- Steps 6-8 bulk prose + Step 11 cert still owed; whole_crop_gate tolerates the null 6-8 register prose.)
