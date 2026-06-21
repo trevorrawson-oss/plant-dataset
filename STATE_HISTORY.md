@@ -6,6 +6,19 @@
 
 ---
 
+## 2026-06-21 -- TIPS rendering-conformance: A12 hardened + 4 certified crops re-keyed [Claude Code]
+
+**base `a21b3144` -> `908bf71a`** (full-file; tooling commits in between). A systemic `tips_by_stage` problem surfaced (Trevor: "no tips for strawberries... this has been happening lately"). The renderer (`GrowingJourneyCard`) does `tipsByStage[stage.id].text_seasoned`, exposing THREE traps that passed cert undetected across **7 of 13 certified crops**:
+- **EMPTY** -- lemon, orange-navel, strawberry shipped zero tips (the dict-of-empty-lists `{"established":[],"harvest":[]}` is truthy + reads a non-zero key count, so register_fill/register_completeness were blind).
+- **WRONG FIELD** -- onion's 6 tips used `tip_seasoned`/`tip_beginner`; the renderer reads `text_seasoned` -> invisible.
+- **ORPHANED KEY** -- tips keyed to a stage NOT in `growth_stages` (the taxonomy was revised after the tips were authored) -> the renderer never grabs them: carrot(`storage`), peach(`first_growth`,`post_harvest`), apple(`first_growth`,`dormancy`,`blossom`), onion(all 6).
+
+**GATE (`tools/compound_population_gate.py`, A12 hardened, test-first):** `tips_violations` now checks non-empty + `text_*` shape + every key is a real growth_stage id; INDOOR crops EXEMPT (their tip surface is `indoor_cycle.tip_*`, gated A6 -- microgreens is correctly clean, "done differently" per Trevor). Committed before the data fix; the generic `empty_compound_violations` (A12, 2026-06-19) handles the other 5 compounds.
+
+**DATA FIX (this release -- 4 crops, mechanical, recovers stranded authored content):** re-keyed each orphaned tip to its real stage by content -- onion {planting->germination_emergence, early_growth+established->leaf_canopy_building, bulb_forming->bulb_sizing, harvest+curing->maturity_curing} + the `tip_*`->`text_*` field rename; carrot {storage->harvest}; peach {first_growth->scaffold_formation, post_harvest->harvest}; apple {first_growth->establishment, dormancy->dormant_prune, blossom->bloom}. Post-harvest/storage/curing -> `harvest` (Trevor's call). All 4 now PASS A12 + whole_crop_gate; collateral = exactly those 4; catalog unchanged; release_verify clean.
+
+**STILL PENDING:** lemon / orange-navel / strawberry remain EMPTY (still fail A12) -- a claude.ai tips AUTHORING back-fill (text_* shape, keyed to real growth_stages, T1-sourced); see [[tips_backfill_pending]]. **plant-astro submodule bump (Trevor's lane) needed for these fixes to reach the live site.**
+
 ## 2026-06-18 -- strawberry CERTIFIED -- anchor 13, the FIRST and ONLY berries_herbaceous crop [Claude Code cert: fidelity fetch + flip]
 
 **base `15e2a021` -> `a21b3144`** (full-file). The Step-11 cert flip. **strawberry = anchor 13 CERTIFIED** (status `verified_gs_arc`, launch_ready_core/seasoned True). The `berries_herbaceous` / `perennial_herbaceous` archetype is now proven end-to-end from design through cert in ONE day.
