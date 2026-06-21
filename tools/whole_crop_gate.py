@@ -319,12 +319,19 @@ for m in _berrycal:
 # (unruled keys) are both blind to it. This recurses the value and fails any required consumer
 # compound with zero real content. Indoor crops are exempt from weather_triggers (no frost/heat).
 # (Found 2026-06-19 -- tips_by_stage shipped empty on 3 certified crops, undetected.)
-from compound_population_gate import empty_compound_violations
-print("A12. consumer-compound population (no truthy-but-empty; recurses dict-of-lists)")
+from compound_population_gate import empty_compound_violations, tips_violations
+print("A12. consumer-compound population + tips rendering-conformance (recurses dict-of-lists)")
 _empty = empty_compound_violations(crop)
 print(f"  empty consumer compounds: {len(_empty)}")
 for m in _empty:
     fail(f"empty consumer compound -- {m}")
+# tips_by_stage carries 3 rendering traps the generic check misses: empty, wrong field
+# (tip_ vs text_), orphaned key (not a growth_stage id -> renderer never grabs it). Indoor
+# crops exempt (tip surface is indoor_cycle.tip, gated by A6). (Found 2026-06-21, 7 crops.)
+_tips = tips_violations(crop)
+print(f"  tips rendering-conformance issues: {len(_tips)}")
+for m in _tips:
+    fail(f"tips conformance -- {m}")
 
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
