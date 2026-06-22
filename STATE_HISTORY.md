@@ -6,6 +6,16 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) Step 4 SCALE-UP: region fill 10/10 COMPLETE [Claude Code release]
+
+**base `c840bf5a` -> `993d762e`** (data commit `b9ddffa`). The 9 remaining regions filled -> REGION FILL COMPLETE (10/10). claude.ai authored (81 ops in the canonical `{base_sha,patches}` form -> `apply_patch.py` handled it directly); post-author crop SHA `f98ff40b` matched claude.ai's claim AND equaled the authored slice; deriver filled all 20 cells (0 skipped, 0 grown_as-but-empty).
+- **grown_as:** CA interior/coast/desert + warm_arid + low_desert_az = perennial (Mediterranean/dry-heat ideal); se_gulf = perennial container-preferred/short-lived; fl_peninsula z10 perennial-container/raised-bed, z11 annual; hawaii_tropical z11 perennial UPCOUNTRY microclimate only (humid lowland not grown).
+- **WARM-ZONE WINDOW MODEL (adjudicated, Trevor 2026-06-22):** display windows (bloom/plant_out) authored from REAL regional T1, NOT frost-offset -- the perennial deriver places bloom at the string's months + brackets growing/dormant by resolved_from + IGNORES plant_out (display-only); z11 cells -> resolved_from null + resolution_method `frost_free_no_anchor` -> deriver yields growing year-round (CLIMATE-derived, no fabricated source -- the onion/zinnia hawaii lesson). resolved_from byte-exact from zone_frost_data for z8/9/10.
+- **Sources:** 22 distinct T1, 0 uncatalogued / 0 non-T1, no catalog changes; A5 per region.
+- **OPEN (blocks_launch:false; in cell synthesis_notes + REGIONS_LEFT_UNSOURCED.md; formalize at cert):** se_gulf z8/9 + fl_peninsula z10/11 (humid-heat, no clean reliably-perennial in-ground bloom window) + hawaii_tropical z11 (lowland not grown; only cool upcountry sourced). Community-correction invites.
+- **Gates:** A13/A14 = 0; register_completeness PASS; register_fill PASS (flip-eligible on the region-fill dimension); dash/temp/source-tier clean; whole_crop_gate = 7 (ONLY the Steps-6-8 empties: growth_stages/notifications/pests/diseases/failure_diagnostics/weather_triggers/tips); release_verify cleared 9 region_notes-null, no new violations. NOT a flip (status stays in_progress_gs_arc).
+- **NEXT:** Steps 6-8 (the cut-back growth-stage + notifications + pests/diseases + failure_diagnostics + tips + weather_triggers + the pet-safety beat -- clears the 7 A12 empties), then Step 9, Step 11 cert + the flip.
+
 ## 2026-06-22 -- lavender (anchor 14) Step 4 PROOF region northern_tier [Claude Code release]
 
 **base `7c0f149a` -> `c840bf5a`** (data commit `ee35ff2`). The FIRST woody-ornamental region fill, PROOF-CELL-FIRST: claude.ai authored ONE region (northern_tier, z3-7) end-to-end; Claude Code validated + released before scaling to the other nine.
