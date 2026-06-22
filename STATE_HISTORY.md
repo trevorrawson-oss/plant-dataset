@@ -6,6 +6,41 @@
 
 ---
 
+## 2026-06-22 -- green-beans-bush (anchor 15) Steps 4-5.5 RELEASED: region fill + succession calendars [Claude Code release]
+
+**base `a39de1aa` -> `fe470c61`** (data commit `bb9c5fc`). All 10 region cells filled (20 zone-cells). claude.ai authored (session `green_beans_steps_4_5_5_region_fill`, post-author crop SHA `695e4d0c`); Claude Code ran the A8 succession derivation + 2 release-lane conformances + released. NOT a flip (status `in_progress_gs_arc`).
+
+### Geometry (A5 per-region SOURCE finding; the carrot mixed-geometry precedent, INVERTED)
+- **continuous (`succession_continuous`, deriver rule-3 day-precise):** northern_tier z3-7, ca_north_coast, ca_south_coast, hawaii_tropical z11 (bounded Feb-Aug), fl_peninsula z11 (continuous-inverted, grow Sep-Apr).
+- **split (`succession_spring`/`succession_fall` comma-lists, rule-2):** se_gulf, ca_interior, ca_desert, low_desert_az, warm_arid z8 (BRIDGE -- harvest tail meets fall sow, no heat_pause), fl_peninsula z10.
+- §4 keying is PER-REGION by continuous-vs-split, NOT warm-vs-cold; fl_peninsula carries both geometries within one region.
+
+### A8 succession derivation (Claude Code lane)
+`derive_realized_successions.py` set per-zone `successions_realized` = 5-12 (cap 12; northern progression 5->10; the long continuous cells ca_south_coast / fl z10 / fl z11 / hawaii cap at 12). `succession_policy.successions` reconciled 6 -> 12 (max-over-zones, LOCK #4). A8 re-derives + asserts equality: PASS.
+
+### Findings (decided with Trevor)
+1. **Northern last-sow T1-capped** mid-Jul..early-Aug, NOT raw `first_fall - 60d` (which over-extended to Sep at z6/z7 -- the anchor-at-extremes guard). `resolved_from` byte-exact frost dates; the cap is a documented synthesis in each rule arm.
+2. **z11 NOT `year_round`** -- both bounded. VH021 South FL = Sept-Apr (summer `season_over`); CTAHR B-91 "should not be planted year around." Onion/zinnia Hawaii precedent.
+3. **ca_interior SPLIT** -- Trevor (Exeter grower) ground-truth confirmed via AskUserQuestion: a real June heat stop (pods will not set), then a fall planting. Authored per UC ANR T13.2 with a June `heat_pause`.
+4. **Option A heat-wall harvest-end** -- split-cell spring harvest ends at the ~90F+ heat wall, so the no-sow gap is a legible `heat_pause`; warm_arid z8 bridge exception (harvest tail meets fall sow, no dead gap).
+
+### Claude Code release-lane CONFORMANCES (consumer copy untouched; conformed crop SHA `cc3700b2`)
+1. **`wait` -> `cold_pause` (73 tokens).** claude.ai used `wait` for the frost-killed WINTER off-season; every certified warm-season annual (cherry/beefsteak/basil/zinnia + the succession exemplar lettuce-leaf) uses `cold_pause` (ZERO wait). All 73 were in frost-bracketed z3-10 cells; the frost-free z11 cells correctly used `season_over`. claude.ai correctly resolved the MID-SEASON desert gaps to `heat_pause` but missed the winter token; the A5 gate flags wait as advisory-only (the CC eye caught it). FEED FORWARD to zucchini/broccoli.
+2. **4 CA `region_label` ` -- ` -> `: `** (gate-C user-facing dash; conformed to lettuce-leaf/carrot's colon labels).
+
+### Release verification (protocol #6)
+- Preflight: authored slice crop SHA `695e4d0c` reproduced; collateral clean (only `regions{}` + `last_reviewed_session` changed; 122 other crops byte-identical).
+- whole_crop_gate = 7 (ONLY the Steps-6-8 A12 empties); A2 region-fill 0 (filled), A5 annual coherence 0 (+0 wait-notes post-fix), A8 PASS, register_completeness PASS; source-tier 13 IDs all T1, 0 uncatalogued (no minting -- bare parents + per-cell anchoring URLs).
+- release_verify clean: only green-beans changed, lettuce-leaf byte-identical, CLEARED 10 region_notes-null, no new violations.
+- **Frost-reconcile (manual): 18/18 frost-bracketed cells' `resolved_from` match `zone_frost_data` (last_spring/first_fall) EXACTLY; the 2 frost-free z11 cells correctly null + `zone_resolved_verified`.**
+- precommit: no regression (7 total, cleared 10).
+
+### Open (blocks_launch:false)
+hawaii z11 anchored to CTAHR B-91 (1943 foundational bulletin -- still the cited Hawaii planting-calendar T1, but old); corroborate vs a current CTAHR vegetable publication at display-readiness (mirrors lavender's hawaii primary-source tightening).
+
+### NEXT
+Steps 6-8 (claude.ai consumer prose: the 7 A12 empties + beginner siblings + anchoring; INCLUDE the deferred `container_notes.shape_requirements` CP pair) -> Step 9 (dash) -> Step 11 (cert + the launch_ready flip).
+
 ## 2026-06-22 -- green-beans-bush (anchor 15) Step 3.5: direct-sow region shells [Claude Code]
 
 **base `af3b1627` -> `a39de1aa`** (data commit `8f3c1ed`). Pure structural build (Claude Code lane, no claude.ai). `apply_region_shells.py` ran `build_region_shells`, SHA-gated on LATEST `af3b1627`.
