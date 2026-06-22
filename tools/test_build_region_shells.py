@@ -449,4 +449,73 @@ assert c["regions"]["northern_tier"]["resolved_by_zone"]["5"]["plant_out"] == "A
 
 print("build_region_shells berries_herbaceous: all tests passed")
 
+# ---- perennial_woody_ornamental (lavender, anchor 14) shell build ----
+from build_region_shells import (build_region_shells, _is_woody_ornamental,
+                                 _build_woody_ornamental_shells)
+
+
+def _woody_shell_crop():
+    """An author-fresh lavender-shaped crop: the distinctive `woody_ornamental` archetype (the
+    Step-1 refinement), frost_anchored wipe default, perennial lifecycle, two cells to reshape."""
+    return {
+        "slug": "lavender", "archetype": "woody_ornamental", "lifecycle": "perennial",
+        "calendar_basis": "frost_anchored",
+        "regions": {
+            "northern_tier": {"region_label": "Northern tier", "resolved_by_zone": {
+                "5": {"start_indoors": None, "direct_sow": None, "plantings": [], "calendar": [],
+                      "harvest_start": None, "harvest_end": None}}},
+            "ca_interior": {"region_label": "California -- interior", "resolved_by_zone": {
+                "9": {"start_indoors": None, "direct_sow": None}}}},
+    }
+
+
+# detector: True by archetype (first run) and by basis (re-run); False off-archetype
+assert _is_woody_ornamental(_woody_shell_crop()) is True
+assert _is_woody_ornamental({"calendar_basis": "perennial_woody_ornamental"}) is True
+assert _is_woody_ornamental({"archetype": "companion_and_ornamental_flower",
+                             "calendar_basis": "frost_anchored"}) is False
+# an ANNUAL flower (zinnia) and a HERBACEOUS perennial flower (bee-balm) share the generic
+# companion_and_ornamental_flower default and must NOT be caught -- the woody_ornamental archetype
+# is the discriminator, NOT lifecycle.
+assert _is_woody_ornamental({"slug": "zinnia", "archetype": "companion_and_ornamental_flower",
+                             "lifecycle": "annual", "calendar_basis": "frost_anchored"}) is False
+assert _is_woody_ornamental({"slug": "bee-balm", "archetype": "companion_and_ornamental_flower",
+                             "lifecycle": "perennial", "calendar_basis": "frost_anchored"}) is False
+# lavender must NOT be picked up by the tree OR berry detectors (the dispatch routes it first)
+from build_region_shells import _is_tree, _is_berry_herbaceous
+assert _is_tree(_woody_shell_crop()) is False
+assert _is_berry_herbaceous(_woody_shell_crop()) is False
+
+# build flips the basis and shapes every cell
+c = build_region_shells(_woody_shell_crop())
+assert c["calendar_basis"] == "perennial_woody_ornamental", c["calendar_basis"]
+# dash resolution on the region label (shared convention)
+assert c["regions"]["ca_interior"]["region_label"] == "California: interior", c["regions"]["ca_interior"]["region_label"]
+
+cell = c["regions"]["northern_tier"]["resolved_by_zone"]["5"]
+# the grown_as lifecycle slot + its dual-register note, scaffolded null
+assert cell["grown_as"] is None and "grown_as_note_seasoned" in cell and "grown_as_note_beginner" in cell
+# render keys reused from the annual/berry names; calendar empty at admission
+assert cell["calendar"] == [] and cell["plant_out"] is None and cell["bloom"] is None
+assert cell["resolved_from"] == {} and cell["resolution_method"] is None
+assert cell["frost_risk_note_seasoned"] is None
+# NO harvest keys (an ornamental: bloom IS the cut window) -- distinct from the berry cell
+assert "harvest_start" not in cell and "harvest_end" not in cell and "harvest" not in cell
+# annual-only keys stripped; NO tree-only keys introduced (proves it went the woody path, NOT _is_tree)
+assert "start_indoors" not in cell and "direct_sow" not in cell and "plantings" not in cell
+assert "suitability" not in cell and "chill_hours_delivered" not in cell
+
+# region-constant rule layer: ONE transplant-setting establishment entry, plant_out + bloom, NO harvest arms
+pls = c["regions"]["northern_tier"]["plantings"]
+assert len(pls) == 1 and pls[0]["track"] == "perennial" and pls[0]["label"] == "establishment"
+assert pls[0]["plant_out"] == [] and pls[0]["bloom"] == []
+assert "harvest_start" not in pls[0] and "harvest_end" not in pls[0]
+
+# idempotent + no-clobber: a re-run does not wipe a filled value
+cell["plant_out"] = "Apr 15 - May 5"
+build_region_shells(c)
+assert c["regions"]["northern_tier"]["resolved_by_zone"]["5"]["plant_out"] == "Apr 15 - May 5", "re-run clobbered a filled cell"
+
+print("build_region_shells perennial_woody_ornamental: all tests passed")
+
 print("PASS build_region_shells")

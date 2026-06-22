@@ -40,6 +40,8 @@ def build_region_shells(crop, session=SESSION, date=DATE):
         warm region. (Succession tracks are NOT created here -- they are authored at
         Step 4/5.5 with the biology; Step 3.5 builds the beginner skeleton only.)
     """
+    if _is_woody_ornamental(crop):
+        return _build_woody_ornamental_shells(crop)  # checked BEFORE _is_tree (defensive)
     if _is_tree(crop):
         return _build_tree_shells(crop)
     if _is_indoor(crop):
@@ -319,6 +321,103 @@ def _build_berry_cell(cell):
     cell.setdefault("frost_risk_note_seasoned", None)  # late-frost-kills-open-blossom warning
     cell.setdefault("resolved_from", {})            # frost dates used (auditable)
     cell.setdefault("resolution_method", None)      # -> "perennial_herbaceous_precompute" once filled
+    cell.setdefault("sources", [])
+    cell.setdefault("anchoring_urls", {})
+
+
+# ---------------------------------------------------------------------------
+# PERENNIAL_WOODY_ORNAMENTAL region model (lavender Step 3.5, anchor 14; the FIRST and only crop
+# with this archetype). A woody perennial subshrub grown for BLOOMS (not fruit) whose LIFECYCLE is
+# region-dependent: cold-hardy zones grow it as an in-ground perennial shrub, the coldest zones /
+# tender types as a container/replant annual. It is planted as a nursery transplant in a frost-
+# anchored window, so frost resolution stays ON (basis perennial_woody_ornamental, not a tree
+# basis). The per-cell grown_as picks the lifecycle the renderer + the A13/A14 gates branch on. The
+# defining care act is the annual hard CUT-BACK (the derived `prune` calendar beat). There is NO
+# harvest -- the BLOOM window IS the cut-for-use window. See the 2026-06-19 design spec (D1-D12).
+# ---------------------------------------------------------------------------
+
+# resolved-cell keys belonging to the ANNUAL sowing model only -- a transplant-set subshrub has no
+# indoor start, no second sowing, no per-cell rule structure. The harvest_* keys are stripped too:
+# an ornamental has NO harvest (the bloom window IS the cut-for-use window), so any harvest key left
+# by the annual/scaffold shape is dead weight. Stripped.
+_WOODY_CELL_DEAD = ("start_indoors", "direct_sow", "lifted_from_zone", "plantings",
+                    "notes", "zone_notes", "planting_note",
+                    "first_plant_date", "last_plant_date",
+                    "harvest_start", "harvest_end", "harvest")
+
+# The Step-1 archetype refinement that triggers the FIRST 3.5 run (before the basis flip), mirroring
+# how strawberry's shell archetype became `berries_herbaceous`. The generic shell default for
+# lavender is `companion_and_ornamental_flower` (shared with zinnia + 12 other flowers), so it is NOT
+# a usable trigger -- the data arc must set this distinctive value, which also tells the herbaceous
+# perennials (bee-balm/echinacea) that share the flower default apart from the woody subshrub.
+WOODY_ORNAMENTAL_ARCHETYPE = "woody_ornamental"
+
+
+def _is_woody_ornamental(crop):
+    """A woody-perennial ornamental subshrub (lavender, anchor 14; the first) takes the woody-
+    ornamental region path. Detected by the perennial_woody_ornamental basis marker (set by THIS
+    builder, so re-runs stay on the path) or, on the FIRST run before the flip, by the distinctive
+    `woody_ornamental` archetype (the Step-1 refinement of the generic companion_and_ornamental_flower
+    shell default). NOT a tree (lifecycle is "perennial" not "permanent"; archetype does not end with
+    _fruit_tree) and NOT an annual flower (zinnia stays companion_and_ornamental_flower)."""
+    return (crop.get("calendar_basis") == "perennial_woody_ornamental"
+            or crop.get("archetype") == WOODY_ORNAMENTAL_ARCHETYPE)
+
+
+def _build_woody_ornamental_shells(crop):
+    """Build every region cell to the woody-ornamental reference shape. Pure transform; no biology
+    invented; idempotent + no-clobber. Sets calendar_basis -> perennial_woody_ornamental, the marker
+    that branches Step 5.5 + the A13/A14 gates onto the woody-ornamental criteria."""
+    crop["calendar_basis"] = "perennial_woody_ornamental"
+    for r in (crop.get("regions") or {}).values():
+        if isinstance(r, dict):
+            _build_woody_ornamental_region(r)
+    return crop
+
+
+def _build_woody_ornamental_region(r):
+    lbl = r.get("region_label")
+    if isinstance(lbl, str) and " -- " in lbl:
+        r["region_label"] = lbl.replace(" -- ", ": ")
+    r.setdefault("region_notes_seasoned", None)
+    r.setdefault("region_notes_beginner", None)
+    if r.get("sources_pending_admission") == []:
+        r.pop("sources_pending_admission", None)
+    # region-constant RULE layer: a SINGLE transplant-setting establishment entry (no succession --
+    # a subshrub is planted once per replant cycle). plant_out feeds the Plant track, bloom the Bloom
+    # track; the `prune` beat is DERIVED (the month after bloom), so there is NO harvest/prune rule
+    # arm. Only (re)build when it is not already the perennial entry -- never clobber a filled rule.
+    pl = r.get("plantings")
+    if not (isinstance(pl, list) and pl and isinstance(pl[0], dict)
+            and pl[0].get("track") == "perennial"):
+        r["plantings"] = [{
+            "succession_id": 1, "label": "establishment", "track": "perennial",
+            "plant_out": [], "bloom": [],
+            "anchoring_urls": {},
+        }]
+    r.setdefault("plantings_provenance", None)
+    for cell in (r.get("resolved_by_zone") or {}).values():
+        if isinstance(cell, dict):
+            _build_woody_ornamental_cell(cell)
+
+
+def _build_woody_ornamental_cell(cell):
+    """Reshape one resolved_by_zone cell to the woody-ornamental key-set, idempotent + no-clobber.
+    The per-zone grown_as makes the region-dependent lifecycle first-class. NO harvest keys (an
+    ornamental's bloom window IS the cut-for-use window). NO tree keys (suitability/chill). The
+    render keys reuse the annual/tree/berry names (plant_out/bloom) so the renderer reads them
+    uniformly. The `prune` calendar beat is derived at Step 4, not a stored window."""
+    for dead in _WOODY_CELL_DEAD:
+        cell.pop(dead, None)
+    cell.setdefault("grown_as", None)               # perennial (hardy in-ground shrub) | annual (cold/tender, replant)
+    cell.setdefault("grown_as_note_seasoned", None)
+    cell.setdefault("grown_as_note_beginner", None)
+    cell.setdefault("plant_out", None)              # nursery-transplant window (frost-anchored)
+    cell.setdefault("bloom", None)                  # bloom window = the cut-for-use window
+    cell.setdefault("calendar", [])                 # 12-month cycle, derived at Step 4 (A14)
+    cell.setdefault("frost_risk_note_seasoned", None)  # late-frost-kills-tender-new-growth warning
+    cell.setdefault("resolved_from", {})            # frost dates used (auditable)
+    cell.setdefault("resolution_method", None)      # -> "perennial_woody_ornamental_precompute" once filled
     cell.setdefault("sources", [])
     cell.setdefault("anchoring_urls", {})
 
