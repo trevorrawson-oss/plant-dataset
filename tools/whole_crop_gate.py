@@ -333,6 +333,35 @@ print(f"  tips rendering-conformance issues: {len(_tips)}")
 for m in _tips:
     fail(f"tips conformance -- {m}")
 
+# ---------------- A13. woody_ornamental structural cert (no-op off perennial_woody_ornamental) ----------------
+# Lavender (anchor 14, the FIRST and only perennial_woody_ornamental crop) is a woody perennial
+# subshrub grown for BLOOMS whose LIFECYCLE is region-dependent: a per-cell grown_as in
+# {perennial, annual} (cold-hardy in-ground shrub vs container/replant annual). This asserts the
+# structural invariants the generic checks do not encode -- boundary scalars present, gating_factors
+# EMPTY (cold-hardiness handled lighter than citrus, no A9 coverage gate -- D7), no tree machinery
+# (rootstock/chill-gate/pollinizer) carrying a value, no tree-only cell keys, and the grown_as<->token
+# placement (prune/dormant perennial-only, season_over annual-only, no fruit/mow token). No-op off
+# basis. (lavender, 2026-06-19.)
+from woody_ornamental_gate import woody_ornamental_violations
+print("A13. woody_ornamental structural cert (lifecycle + grown_as + prune-placement + guards; no-op off scope)")
+_woody = woody_ornamental_violations(crop)
+print(f"  calendar_basis={crop.get('calendar_basis')!r} | woody_ornamental violations: {len(_woody)}")
+for m in _woody:
+    fail(f"woody_ornamental: {m}")
+
+# ---------------- A14. woody_ornamental calendar coherence (DERIVED-from-dates) ----------------
+# The lavender calendar[] is a pure function of the cell's grown_as + display windows (the
+# tree_calendar lesson): perennial -> dormant/growing/bloom/prune bracketed by frost (frost-free ->
+# growing year-round, the evergreen analog); annual -> plant/growing/bloom/season_over. No harvest
+# token (bloom IS the cut-for-use window). Recompute-from-dates and fail on any mismatch. Empty
+# calendars are the Step-3.5 admission state (skipped). No-op off perennial_woody_ornamental.
+from woody_ornamental_calendar import woody_ornamental_calendar_violations
+print("A14. woody_ornamental calendar coherence (calendar == derive(grown_as, dates); no-op off scope)")
+_woodycal = woody_ornamental_calendar_violations(crop)
+print(f"  woody_ornamental calendar violations: {len(_woodycal)}")
+for m in _woodycal:
+    fail(f"woody_ornamental calendar: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
