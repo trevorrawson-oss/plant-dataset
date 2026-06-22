@@ -6,6 +6,16 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) CERTIFIED: the FIRST perennial_woody_ornamental [Claude Code, Step 11 cert]
+
+**base `b76e0aab` -> `1499251f`** (data commit `d9d0359`). THE FLIP -- lavender is certified, the **14th GS anchor** and the **FIRST `perennial_woody_ornamental`** crop (a woody perennial subshrub grown for blooms).
+- **The flip:** `verification_status` -> {status `verified_gs_arc`, launch_ready_core + launch_ready_seasoned true, phase `phase_3_lavender_gold_standard_arc`, last_audited 2026-06-22, source_set (22 T1), verification_log_ref, 5 open_findings}; top-level last_reviewed / last_reviewed_session set.
+- **Archetype proven end-to-end:** calendar_basis perennial_woody_ornamental + the `prune` token + per-cell grown_as (perennial|annual, the COLD flip = inverse of strawberry's heat flip) + A13/A14 woody_ornamental gates + the woody_ornamental_calendar deriver. Region fill 10/10; Steps 6-8 prose; whole_crop_gate PASS. Template for the woody subshrub-herb family (rosemary/sage/thyme/butterfly-bush).
+- **CERT VERIFICATION (independent source-fidelity fetch via WebFetch of the cited T1 live pages):** USU / NCSU / WSU / CSU / Purdue -- every NUMBER matches (pH 6.5-7.5; z5-9 [NCSU 5a-9b, USU 5-10]; spacing 18-24 in; 3 yr to size / 10-15 yr life; cuttings, seed 100-200 days; Phytophthora root/crown rot; few pests; low human + cat/dog/horse toxicity; English = the culinary type). **Pruning-timing examined + CLEARED** (not a blocker): USU backs the after-bloom hard cut; CSU ("one third when green emerges in spring") + OSU's cold-climate SPRING shaping is acknowledged in the cells' frost_risk_notes; each citation backs its specific point (USU=timing, CSU=amount+rationale, OSU=not-July). Verbatim scan clean. OSU live re-fetch 403 (corroborated).
+- **5 open_findings, all blocks_launch:false:** se_gulf z8/9 + fl_peninsula z10/11 + hawaii_tropical z11 (humid-heat marginal / lowland-not-grown; LSU AgCenter + CTAHR content cited via the nola.com / westhawaiitoday newspaper republications -- anchors to TIGHTEN to primary URLs later), northern_tier z3/4 first-year-bloom (no T1 for cold-zone annual first-year bloom; honest derivation + community-correction invite), osu 403-at-cert.
+- **Gates:** whole_crop_gate PASS (G: launch_ready x2, status verified_gs_arc, 0 blocking findings); A13/A14 + register all PASS; release_verify clean; precommit no-new-violations (0 total). **14 anchors now certified.**
+- **NEXT:** blueberry (anchor 15, `berries_woody` -- NEW archetype, design + tooling) + the rail-riders (16-18, quick).
+
 ## 2026-06-22 -- lavender (anchor 14) Steps 6-8: consumer prose; whole_crop_gate PASS [Claude Code release]
 
 **base `993d762e` -> `b76e0aab`** (data commit `742ffe1`). The 7 empty consumer compounds authored; lavender now PASSES `whole_crop_gate` (0 violations). claude.ai authored (7-op patch); post-author crop SHA `c3d4cada` matched + equaled the authored slice.
