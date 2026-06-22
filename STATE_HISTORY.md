@@ -6,6 +6,15 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) Steps 6-8: consumer prose; whole_crop_gate PASS [Claude Code release]
+
+**base `993d762e` -> `b76e0aab`** (data commit `742ffe1`). The 7 empty consumer compounds authored; lavender now PASSES `whole_crop_gate` (0 violations). claude.ai authored (7-op patch); post-author crop SHA `c3d4cada` matched + equaled the authored slice.
+- **growth_stages (6):** transplant / establishment / vegetative / bloom / **cut_back** (the headline hard prune) / dormancy. No harvest/fruit (ornamental).
+- **tips_by_stage RE-KEYED to the real stage ids** -- the stale generic shell keys (germination/seedling/established/budding/flowering/seed_saving) REPLACED; 12 tips, all `text_seasoned`/`text_beginner`, non-empty, keys == growth_stages ids. **The A12 tips-conformance trap was avoided first-time** (the kickoff flagged it + shipped a strawberry shape reference) -- the bug class that shipped empty on 7 already-certified crops.
+- notifications (3, incl. the bloom-fading shear reminder); pests (2, "few pests" honest); diseases (2, Phytophthora root/crown-rot nexus); failure_diagnostics (4, lead "yellowing/dieback = too wet, not too dry" -- the inverted-care signature); weather_triggers (3). Pet-safety surfaced (NC State).
+- **Gates:** A12 7 -> 0; whole_crop_gate = PASS; A13/A14 + register_completeness + register_fill all PASS (flip-eligible); dash/temp/source-tier clean (22 T1, 0 non-T1/uncatalogued); release_verify cleared 7, no new. NOT a flip (status stays in_progress_gs_arc; cert = Step 11).
+- **NEXT:** Step 9 (dash/temp, already passing in-gate) + Step 11 CERT = the independent source-fidelity fetch (WebFetch a sample of cited T1, confirm the numbers) + the verbatim re-scan + the launch_ready flip (with the 4 blocks_launch:false open_findings: se_gulf z8/9, fl_peninsula z10/11, hawaii z11, northern_tier z3/4 first-year-bloom).
+
 ## 2026-06-22 -- lavender (anchor 14) Step 4 SCALE-UP: region fill 10/10 COMPLETE [Claude Code release]
 
 **base `c840bf5a` -> `993d762e`** (data commit `b9ddffa`). The 9 remaining regions filled -> REGION FILL COMPLETE (10/10). claude.ai authored (81 ops in the canonical `{base_sha,patches}` form -> `apply_patch.py` handled it directly); post-author crop SHA `f98ff40b` matched claude.ai's claim AND equaled the authored slice; deriver filled all 20 cells (0 skipped, 0 grown_as-but-empty).
