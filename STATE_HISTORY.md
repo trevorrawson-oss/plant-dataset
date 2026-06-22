@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) Step 4 PROOF region northern_tier [Claude Code release]
+
+**base `7c0f149a` -> `c840bf5a`** (data commit `ee35ff2`). The FIRST woody-ornamental region fill, PROOF-CELL-FIRST: claude.ai authored ONE region (northern_tier, z3-7) end-to-end; Claude Code validated + released before scaling to the other nine.
+- **grown_as:** z3-4 = annual/container (below English lavender's z5 in-ground hardiness), z5-7 = perennial woody sub-shrub. The A5 cold flip, sourced per zone.
+- **Frost reconcile EXACT** vs `zone_frost_data` (z3 May 15/Sep 15 ... z7 Mar 15/Nov 15). Region rule arms span the zone range (plant_out Mar 15 - May 29, bloom May 24 - Aug 7).
+- **Sources** T1 per zone incl. `ucanr_marin_mg` + `rhs` (both already catalogued T1; rhs = horticultural_authority T1, precedent exists). 0 uncatalogued, 0 non-T1.
+- **Calendars DERIVED** by `woody_ornamental_calendar` (perennial dormant/growing/bloom/prune; annual plant/growing/bloom/season_over); A14 coherence = 0.
+- **PROOF-CELL FINDING (representation; CC lane, [[second_planting_resolved_layer_structure]] rule):** claude.ai authored the resolved-cell `bloom` as a `[start,end]` LIST -- the canonical cell convention (peach/strawberry) is a display STRING, which the deriver requires (it returned None on the lists -> empty calendars). Converted the 5 cells (CC owns representation, claude.ai owns dates). **Convention recorded** for the scale-up + the woody guardrail: resolved-cell `bloom`/`plant_out` = display string; the `[start,end]` list is the RULE-arm format only.
+- **OPEN (blocks_launch:false):** z3/z4 first-year-bloom window unsourced (no T1/T2 gives a cold-zone annual lavender first-year-bloom month); honest frost-resolved derivation from the first-summer-bloom expectation + a community-correction invite (claude.ai), documented in the cell synthesis_note; logged for cert.
+- **Gates:** A13/A14 = 0; B/C/D/E clean (0 non-T1); register_completeness PASS; precommit no-new-violations (16 total = 9 still-unfilled-region region_notes + 7 Steps-6-8 empties; cleared northern_tier's).
+- **NEXT:** Step 4 scale-up -- the 9 remaining regions (CA/warm-arid perennial; the humid-heat trio se_gulf/fl_peninsula/hawaii sourced honestly per region; hawaii z11 = the frost-free case).
+
 ## 2026-06-22 -- lavender (anchor 14) Step 3.5: woody-ornamental region shells [Claude Code]
 
 **base `1753a301` -> `7c0f149a`** (data commit `98b9abe`). Pure structural build (Claude Code lane, no claude.ai). `apply_region_shells.py` ran `build_region_shells`, SHA-gated on LATEST `1753a301`.
