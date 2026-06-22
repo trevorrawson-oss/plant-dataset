@@ -6,6 +6,35 @@
 
 ---
 
+## 2026-06-22 -- green-beans-bush (anchor 15) Steps 1-3 RELEASED [Claude Code release]
+
+**base `1499251f` -> `af3b1627`** (data commit `7c9c65e`). The FIRST rail-rider of the remaining roster: a warm-season annual on the proven `warm_season_fruiting` rails (NO new archetype/tooling) + a succession crop. claude.ai authored (session `green_beans_steps_1_3`); Claude Code verified + released. NOT a flip (status `in_progress_gs_arc`, both launch_ready false).
+
+### ANCHOR REORDER (decision of record)
+**Green-beans-bush is now anchor 15.** Trevor confirmed a deliberate reorder 2026-06-22: knock out the quick rail-riders (green-beans, then zucchini/broccoli) BEFORE the blueberry long-pole. CURRENT_STATE (regenerated at the lavender cert close) had blueberry as anchor 15 + green-beans as a later rail-rider; the green-beans kickoff called it anchor 15. Per the standing rule ("kickoffs summarize, the checklist/state wins on arc position") the conflict was surfaced to Trevor, who chose the reorder. **Blueberry (`berries_woody`, new archetype + tooling) moves to a later slot.** Baked into the regenerated CURRENT_STATE headline so it does not re-surface.
+
+### Apply + cross-check
+- Slice preflight: blank-shell crop SHA `ff5d6704` matched `SLICE_INTEGRITY.md`. Handback = the full authored SLICE (`green-beans-bush_authored_slice.json`); post-author crop SHA `7b54d560` reproduced exactly. Spliced the crop into canonical (replaced the shell; crops count 123 unchanged = `total_crops`; `source_catalog` 118 unchanged).
+- **Source-tier:** all 5 distinct cited IDs (clemson_hgic, usu_ext, uiuc_ext, umd_ext, psu_ext) already catalogued + T1 -- NO catalog minting needed (the slice cited bare trusted parents + pinned specific URLs in the per-anchor `anchoring_urls` meta; the re-point-to-parent rule applies, so claude.ai's "mint sub-ids" suggestion was moot).
+
+### Claude Code release-lane CONFORMANCE (3 shapes vs the certified contract; consumer copy verbatim; conformed crop SHA `124e9f1d`)
+The fresh-authored slice drifted from the certified field shapes; `register_completeness_gate` HALTed on the unruled prose patterns (the designed human-in-the-loop checkpoint). The contract is stable across all 14 anchors, so carrot/onion are the TEMPLATES (no new rulings):
+1. **companion `provenance`** `{basis, note}` -> the certified `{label, confidence, reason, verified_against_sources, verified_date}` + item-level `evidence_label`/`confidence`/`verified_against_sources` (the onion all-`traditional` model: Three Sisters corn/squash -> `medium`, allium onion/garlic caution -> `low`, `verified_against_sources:false` / `verified_date:null`; `reason` = claude.ai's note text verbatim).
+2. **`soil.organic_matter_preference`** prose ("moderate; work in compost before planting") -> the categorical token `"moderate"` (the compost-prep guidance already lives in `preferred_description_*` / `tolerated_texture_seasoned` / `amendments_*`).
+3. **`container_notes.shape_requirements`** (bare single string) -> DROPPED. The field is ruled CP, so a populated `_seasoned` requires a `_beginner` (the B dual-voice gate rejects the half-pair; the null-`_beginner` scaffold is only for an entirely-unused field). Authoring the beginner register is claude.ai's COPY lane -> dropped the optional field (basil/onion ship certified without it) + flagged the wide>deep-narrow/shallow-roots nuance for Steps 6-8 as a real CP pair.
+
+### Demoted / standard-practice claims (claude.ai-flagged, Trevor-reviewed, non-blocking)
+1. **container pot dims (5 gal / 8 in):** `container_ok:true` sourced (compact habit); the dims are standard container-veg practice -> `container_notes.sources:[]` (no misattribution); want a bean-specific T1 confirm later.
+2. **`rotation_years` 3:** rotation-necessity sourced (UIUC/USU); the 3-year interval is the standard legume convention (the pages prescribe rotation without naming a year count).
+3. **ph `tolerated_range` floor 5.5 -> 5.8** (the 5.5 traced only to a non-T1 aggregator; 5.8 is the Clemson T1 floor).
+
+### Release verification (protocol #6)
+- `whole_crop_gate green-beans-bush` = **17** violations, ALL pre-existing shell scaffolding (10 A2 region-unfilled [Step 3.5/4] + 6 A12 empty consumer compounds + 1 A12 empty tips [Steps 6-8]); A8 succession correctly OUT-OF-SCOPE (0 stray fields); source-tier 5 IDs all T1, 0 uncatalogued; C/D dash/temp clean; F anchoring 9 leaves / 0 gaps; B null_values 0.
+- `release_verify` (vs base `1499251f`): clean -- only green-beans changed, lettuce-leaf byte-identical, regions untouched, **no new violations introduced**.
+- `register_completeness` PASS (after the 3 conformances cleared the HALT); precommit hook no-regression (17 total).
+- **succession_policy** authored crop-level (interval_weeks 2, window_type continuous, trigger last_frost, **`pause_in_heat:false`** -- beans are heat-lovers, the limit is the fall-frost runway not a midsummer gap; max_successions_per_season 12 global cap). Per-zone `successions_realized` deferred to Step 4 (A8 derives).
+- **NEXT:** green-beans Step 3.5 (region shells -- Claude Code, the direct-sow annual path) -> Steps 4-5.5 (region fill + the A8 succession derivation) -> Steps 6-8 (incl. the deferred `shape_requirements` CP pair) -> Step 9 -> cert.
+
 ## 2026-06-22 -- lavender (anchor 14) CERTIFIED: the FIRST perennial_woody_ornamental [Claude Code, Step 11 cert]
 
 **base `b76e0aab` -> `1499251f`** (data commit `d9d0359`). THE FLIP -- lavender is certified, the **14th GS anchor** and the **FIRST `perennial_woody_ornamental`** crop (a woody perennial subshrub grown for blooms).
