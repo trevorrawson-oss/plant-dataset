@@ -6,6 +6,14 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) Step 3.5: woody-ornamental region shells [Claude Code]
+
+**base `1753a301` -> `7c0f149a`** (data commit `98b9abe`). Pure structural build (Claude Code lane, no claude.ai). `apply_region_shells.py` ran `build_region_shells`, SHA-gated on LATEST `1753a301`.
+- The `archetype: woody_ornamental` set at Steps 1-3 routed lavender onto `_is_woody_ornamental` (checked BEFORE `_is_tree`); **calendar_basis flipped `frost_anchored` -> `perennial_woody_ornamental`** (activates A13/A14 + branches Step 5.5).
+- All 10 regions reshaped to the woody-ornamental key-set: each cell = {grown_as null, grown_as_note pair, plant_out, bloom, calendar [], frost_risk_note_seasoned, resolved_from {}, resolution_method, sources, anchoring_urls}; NO harvest keys (ornamental: bloom IS the cut window), NO tree keys (suitability/chill); the annual-shell dead keys (start_indoors/direct_sow/plantings/harvest_*/notes/lifted_from_zone/...) stripped. ONE perennial establishment rule per region (plant_out [], bloom [], no harvest arms). `region_notes` null = the accepted Step-3.5 admission state.
+- **Gates:** A13/A14 active + 0 (cells in admission state -> skipped); register_completeness PASS. The 10 `region_notes pair both null` release_verify flagged = the expected shell-build UNMASK (all 10 base regions were PENDING stubs that graduated to shells), dropped by `precommit_release_verify.drop_shell_build_unmasks`; the commit hook confirmed "no new violations (17 total)" -- the 17 are the unchanged Steps-6-8 empties.
+- **NEXT:** Step 4 (claude.ai) -- per-cell `grown_as` {perennial | annual} + plant_out/bloom windows + region_notes (T1 per region, A5), then `tools/derive_woody_ornamental_calendars.py` generates the calendars (A14).
+
 ## 2026-06-22 -- lavender (anchor 14) Steps 1-3 RELEASED [Claude Code release]
 
 **base `e4ce254c` -> `1753a301`** (full-file; data commit `5598c83`, gate-ruling commit `eb09df4`). The FIRST `perennial_woody_ornamental` crop's source set + scalars + species/variety set + companions. claude.ai authored (session `lavender_steps1-3_authoring`); Claude Code verified + released. NOT a flip (status `in_progress_gs_arc`, both launch_ready false).
