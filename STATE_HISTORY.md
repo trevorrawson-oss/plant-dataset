@@ -6,6 +6,14 @@
 
 ---
 
+## 2026-06-22 -- green-beans-bush (anchor 15) Step 3.5: direct-sow region shells [Claude Code]
+
+**base `af3b1627` -> `a39de1aa`** (data commit `8f3c1ed`). Pure structural build (Claude Code lane, no claude.ai). `apply_region_shells.py` ran `build_region_shells`, SHA-gated on LATEST `af3b1627`.
+- `start_method.start = "direct"` routed green-beans onto the **direct_sow** window shape; `calendar_basis` stays `frost_anchored`. All 10 region cells built FRESH to the reference gold-standard shape; `northern_tier` authored FROM SCRATCH (author-fresh post-wipe -- the promote-from-`zones{}` path is RETRO-ONLY, A2/v1.6).
+- Each cell = the region-primary shell: rule-object `plantings[]` with valid `track`, `resolved_by_zone` in the resolved-layer shape, `sources`/`anchoring_urls` dicts present, `region_notes_*` keys present-but-null. `region_notes` null = the accepted Step-3.5 admission state.
+- **Gates:** A2 shape gate clean (stub/missing 0, null-track 0, stale nested-cell 0); whole_crop_gate = 17 (10 region_notes-null admission + 6 A12 empty compounds + 1 tips). The 10 `region_notes pair both null` that release_verify flagged = the expected shell-build UNMASK (all 10 base regions graduated from PENDING stub -> shell), dropped by `precommit_release_verify.drop_shell_build_unmasks`; the commit hook confirmed "no new violations (17 total)." Only green-beans changed.
+- **NEXT:** Steps 4-5.5 (claude.ai) -- per-cell windows + grown_as (annual everywhere) + region_notes (T1 per region, A5), then `tools/derive_realized_successions.py` (A8) fills per-zone `successions_realized`; Step 5 biology side-by-side; Step 5.5 calendar coherence (`frost_anchored`; watch a real desert summer no-plant gap per region).
+
 ## 2026-06-22 -- green-beans-bush (anchor 15) Steps 1-3 RELEASED [Claude Code release]
 
 **base `1499251f` -> `af3b1627`** (data commit `7c9c65e`). The FIRST rail-rider of the remaining roster: a warm-season annual on the proven `warm_season_fruiting` rails (NO new archetype/tooling) + a succession crop. claude.ai authored (session `green_beans_steps_1_3`); Claude Code verified + released. NOT a flip (status `in_progress_gs_arc`, both launch_ready false).
