@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) woody-ornamental TOOLING built [Claude Code, non-release]
+
+**Tooling only -- NO `crops_data_final.json` change, canonical stays `e4ce254c`, no SHA flip, no submodule bump.** Trevor chose lavender as anchor 14 over blueberry (readiness: the spec + tooling plan were already approved/committed 2026-06-19, vs blueberry needing a fresh design cycle; lavender is also the most structurally distinct archetype left). Executed the committed tooling plan (`docs/superpowers/plans/2026-06-19-lavender-woody-ornamental-tooling.md`) test-first; 5 commits on dataset `main` `b6e5115..9395854`, pushed.
+
+### What shipped (`perennial_woody_ornamental`, the 7th calendar_basis; design spec D1-D12)
+- **`tools/woody_ornamental_calendar.py`** -- the calendar DERIVER (pure fn of grown_as + windows, sibling of `berry_calendar`/`tree_calendar`, reuses `tree_calendar._months`): PERENNIAL = dormant (frost-bracketed) / growing / bloom / `prune` (the hard cut-back, month after bloom end), frost-free -> growing year-round (evergreen analog); ANNUAL = plant / growing / bloom / season_over. NO harvest/renovation token (bloom IS the cut-for-use window). Plus `woody_ornamental_calendar_violations` (the A14 body).
+- **`tools/woody_ornamental_gate.py`** -- `woody_ornamental_violations` (A13 structural): hardiness_zone_min/max present; `gating_factors` EMPTY (D7 -- cold-hardiness lighter than citrus, NO A9 coverage gate); no tree machinery VALUES (rootstock/chill_hours_required/pollinizer; rejects values not 2.9 null-scaffold keys); no tree-only cell keys; token placement (prune/dormant perennial-only, season_over annual-only, no fruit/mow token); varieties carry no cross-pollination keys.
+- **`tools/derive_woody_ornamental_calendars.py`** -- the release-lane FILL pass; returns `(filled, skipped)` mirroring `derive_berry_calendars` (chose the global "mirror the berry tooling's shapes" constraint over the plan's stated `-> int`).
+- **`whole_crop_gate.py`** -- A13 + A14 wired in **after A12** (the tips gate landed 2026-06-21, AFTER the plan was written, so the plan's "after A11 ~line 310" anchor + the spec's "A12/A13" numbering were stale; the plan's own A13/A14 numbering was correct for current state). Uses the live `fail(...)` helper, NOT the plan's `violations.append`.
+- **`build_region_shells.py`** -- `_is_woody_ornamental` + `_build_woody_ornamental_shells`, dispatched BEFORE `_is_tree`. Ornamental cell strips harvest keys; no tree/suitability keys.
+
+### The first-run TRIGGER gotcha (flag for the Steps 1-3 kickoff)
+`_is_woody_ornamental` keys on `archetype == "woody_ornamental"` (or the post-flip basis). The lavender shell's default archetype is `companion_and_ornamental_flower` -- SHARED with zinnia AND the herbaceous perennials bee-balm/echinacea -- so neither archetype-as-is nor lifecycle can distinguish the woody subshrub. **claude.ai must SET `archetype = "woody_ornamental"` at Step 1-2** (mirrors strawberry's shell becoming `berries_herbaceous`), else Step 3.5 routes lavender down the annual path.
+
+### Verification
+- `python3 tools/test_*.py` across all 26 tool-test modules -> green (4 new/edited: woody_ornamental_calendar, woody_ornamental_gate, derive_woody_ornamental_calendars, build_region_shells).
+- Regression: `whole_crop_gate strawberry` + `lemon` still PASS (A13/A14 print + no-op off-basis); the 13 certified crops untouched (every new gate/deriver no-ops off `perennial_woody_ornamental`).
+- NEXT: lavender DATA ARC Steps 1-3 (kickoff bundle built at `Documents/plant-project/HANDOFF_lavender_steps1-3/`).
+
 ## 2026-06-22 -- tips back-fill (lemon/orange-navel/strawberry) + strawberry ca_interior harvest re-anchor [Claude Code release]
 
 **base `908bf71a` -> `e4ce254c`** (full-file; data commit `d4df4b0`). Two independent strawberry-touching changes folded into ONE green promote (the ca_interior kickoff's directive: fold with the tips fill). All 13 anchors PASS; release_verify clean.
