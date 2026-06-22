@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-06-22 -- lavender (anchor 14) Steps 1-3 RELEASED [Claude Code release]
+
+**base `e4ce254c` -> `1753a301`** (full-file; data commit `5598c83`, gate-ruling commit `eb09df4`). The FIRST `perennial_woody_ornamental` crop's source set + scalars + species/variety set + companions. claude.ai authored (session `lavender_steps1-3_authoring`); Claude Code verified + released. NOT a flip (status `in_progress_gs_arc`, both launch_ready false).
+
+### Apply + cross-check
+- Base crop SHA `d385fc4e` matched the kickoff `SLICE_INTEGRITY`. Handback = `lavender_steps1-3_patch.json` (52 crop_ops + 9 source_catalog_ops, drift-guarded). Replayed onto the base -> post crop SHA reproduced claude.ai's claim AND equaled the authored slice (both deliverables agreed); 0 escaped-unicode.
+- **`apply_patch.py` did NOT fit the new `crop_ops`/`source_catalog_ops` envelope** (it expects `{base_sha, patches}`; the new shape uses `_base_crop_sha` + crop-relative pointers + top-level catalog pointers). Used a controlled replay (single-segment crop pointers + top-level catalog adds, from-guarded) + the slice/SHA cross-check instead. **Tooling follow-up: teach `apply_patch` this handback shape.**
+- `archetype` set to `woody_ornamental` (the `build_region_shells` first-run trigger); `calendar_basis` left `frost_anchored` (flips at 3.5). `gating_factors []`, `self_fertile true`, no tree machinery.
+
+### Sources (T1 only)
+7 specific-page sub-IDs (`csu_ext_lavender_07245`, `usu_ext_english_lavender`, `ncsu_ext_lavandula_angustifolia`, `purdue_ext_foodlink_lavender`, `umn_ext_edible_flowers`, `osu_ext_prune_lavender`, `wsu_ext_lavender_prcr`) + 2 minted parents (`csu_ext`, `purdue_ext`); reused usu/osu/umn/ncsu/wsu parents. The lavandin low/high-camphor culinary claim CUT (only conflicting T2).
+
+### Claude Code release-lane edits (Trevor-approved before promote)
+- **`pruning_window`/`dormancy_window`: single backend `note` -> dual-register `note_seasoned`/`note_beginner` pairs** (what to do + why), grounded in CSU/USU/OSU (the cut-back) + WSU/NCSU (wet-feet rot). Trevor's call: "we should say what to do and why." The cut-back also gets a growth-stage + notification at Steps 6-8.
+- **Register rulings (the 4 new woody-ornamental prose fields; the gate demands a human, "do NOT auto-rule"):** `varieties.recommended[].hardiness_note` + `container_notes.drainage.saucer_practice` = USER-FACING-CATEGORICAL (encoded in `register_completeness_gate.py`, `eb09df4`); the two window notes = CP (resolved via the dual-register pairs above).
+- **3 adjudications accepted:** `start_method.start` = new enum `nursery_transplant` (safe -- no gate or consumer validates the enum; astro reads it via `z.unknown()`); pH preferred [6.5,7.5]/tolerated [6.0,8.0]; `establishment_years: 3` = years-to-full-size (blooms its first summer).
+
+### Release verification (protocol #6)
+- `whole_crop_gate lavender` = 17 violations, ALL the Steps-6-8 empties (growth_stages/notifications/pests/diseases/failure_diagnostics/weather_triggers/tips) -- pre-existing in the blank shell, confirmed NOT new by `release_verify` + the pre-commit hook ("no new violations, 17 total"). **A13/A14 (woody-ornamental) = 0**; B/C/D/E/F clean; `register_completeness` PASS (the 4 rulings cleared the HALT).
+- `release_verify` (vs `e4ce254c`): clean -- only lavender changed; catalog +9; reference lettuce-leaf byte-identical; no new violations.
+- **OPEN (non-blocking):** the PET-SAFETY note (NC State: low-severity human toxin + cat/dog/horse hazard) for the Steps 6-8 prose / a failure_diagnostics or notification beat; sync `register_bearing_field_inventory_v1_0.md` (plant-project) with the 2 categorical rulings now in the gate.
+- **NEXT:** lavender Step 3.5 (Claude Code builds the woody-ornamental region shells) -> Step 4 region fill.
+
 ## 2026-06-22 -- lavender (anchor 14) woody-ornamental TOOLING built [Claude Code, non-release]
 
 **Tooling only -- NO `crops_data_final.json` change, canonical stays `e4ce254c`, no SHA flip, no submodule bump.** Trevor chose lavender as anchor 14 over blueberry (readiness: the spec + tooling plan were already approved/committed 2026-06-19, vs blueberry needing a fresh design cycle; lavender is also the most structurally distinct archetype left). Executed the committed tooling plan (`docs/superpowers/plans/2026-06-19-lavender-woody-ornamental-tooling.md`) test-first; 5 commits on dataset `main` `b6e5115..9395854`, pushed.
