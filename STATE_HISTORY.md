@@ -6,6 +6,15 @@
 
 ---
 
+## 2026-06-23 -- zucchini-courgette Step 3.5 region shells BUILT [Claude Code mechanical]
+
+**base `526cb4df` -> `2a47731a`** (data commit `45c1336`; crop SHA `3af3b12e` -> `23a7977f`). CC mechanical (`tools/apply_region_shells.py`, the SHA-gated wrapper over the pure `build_region_shells` transform), session `zucchini_step3_5_region_shells`. The standard `warm_season_fruiting` annual path (NOT a perennial/tree/berry/indoor branch).
+- **Built:** each of the 10 regions got a beginner-track rule skeleton -- `{succession_id:1, label:"main", track:"beginner", start_indoors:[], plant_out:[], harvest_start:[], harvest_end:[], anchoring_urls:{}}` -- the TRANSPLANT shape (start_indoors + plant_out), selected because `start_method.start == "both"` (direct=False; the inverse of carrot/lettuce `direct` -> `direct_sow`). `region_notes` pairs scaffolded null. `resolved_by_zone` cells left as PENDING Step-4 fill targets (derived output, no biology invented). northern_tier built FROM SCRATCH (author-fresh, nothing to promote from `zones{}`). `calendar_basis` stays `frost_anchored`.
+- **Gates:** whole_crop_gate 17 violations -- the 10 region `stub/missing plantings` GRADUATED to `region_notes pair both null` (the accepted Step-3.5 admission state; Step 4/6-7 fill the notes), exempted by `precommit_release_verify.drop_shell_build_unmasks` (graduated = base-stubs - candidate-stubs = all 10). The other 7 (6 empty compounds + 1 tips) stay deferred to Steps 6-8. precommit OK (no new violations, 17 total). release_verify collateral clean (only zucchini changed, lettuce-leaf byte-identical, top-level + catalog unchanged).
+
+### Next
+zucchini Step 4 region fill (the per-region windows + `resolved_by_zone`/`calendar[]` materialization + A8 `successions_realized` derivation + `region_notes` + `cold_pause` winter off-season + colon `region_label`). OPEN: Step-4 authoring lane (claude.ai kickoff vs CC-direct WebFetch). Then Steps 6-8 -> Step 9 -> cert. Broccoli Steps 1-3 release pending (slice `2f81cd13`, re-preflight against `2a47731a`).
+
 ## 2026-06-23 -- zucchini-courgette Steps 1-3 RELEASED: the first of the last 2 rail-riders [claude.ai author lane -> Claude Code release]
 
 **base `0b767fc2` -> `526cb4df`** (data commit `810bcf5`). The first of the last 2 rail-riders -- a `warm_season_fruiting` annual + succession crop on the proven rails (NO new archetype / tooling / design spec). claude.ai authored Steps 1-3 (session `zucchini-courgette_steps1-3_author`), Claude Code released. NOT a flip (status null, both launch_ready false; the certified count stays 16 -- the cert flip is Step 11). Slice preflight: blank-shell `8e3faa1f` -> authored `11c3b048` (reproduced exactly) -> conformed `3af3b12e`.
