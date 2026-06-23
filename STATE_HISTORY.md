@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-06-23 -- zucchini-courgette Steps 1-3 RELEASED: the first of the last 2 rail-riders [claude.ai author lane -> Claude Code release]
+
+**base `0b767fc2` -> `526cb4df`** (data commit `810bcf5`). The first of the last 2 rail-riders -- a `warm_season_fruiting` annual + succession crop on the proven rails (NO new archetype / tooling / design spec). claude.ai authored Steps 1-3 (session `zucchini-courgette_steps1-3_author`), Claude Code released. NOT a flip (status null, both launch_ready false; the certified count stays 16 -- the cert flip is Step 11). Slice preflight: blank-shell `8e3faa1f` -> authored `11c3b048` (reproduced exactly) -> conformed `3af3b12e`.
+
+### Authored (Steps 1-3 scope; consumer prose + compounds deferred to 6-8, region fill to Step 4)
+- **Scalars/biology:** days_to_maturity [50,65] mid 55, spacing [24,36], germ [70,95], full_sun + sunlight_hours [6,10], moderate water, soil (loam core; well_draining; OM high) + ph (pref [6.0,6.5] tol [5.8,7.5]), container core (min 5 / depth 12 / rec 10), watering enums (base / low), start_method `both` + 3wk. Each numeric -> its own T1 (A1): umd_ext/osu_ext DTM, umd_ext spacing, osu_ext germ, umn_ext ph, uwi_hort container.
+- **self_fertile + pollination:** `self_fertile:true` + `pollinator_notes_*` (monoecious, single plant fruits, insect-pollinated; poor-pollination -> small / blossom-end-rot / misshapen; early male-flower drop normal). NO bloom_group/pollinizer -- a NOTE, not cross-pollination machinery. The 3 NEW top-level keys (key-delta audit == exactly +self_fertile / +pollinator_notes_seasoned / +pollinator_notes_beginner, 0 removed).
+- **succession_policy (full, carrot shape):** interval 3wk, successions 3, max 3, window_type continuous, **`pause_in_heat:false`** (heat-loving -- the fall succession is borer/mildew-driven, NOT a heat pause; the green-beans contrast to carrot), trigger last_frost, both tip registers. `successions_realized` stays OUT-OF-SCOPE (A8 derives it at Step 4 region fill).
+- **varieties (6, object `{name, recommended_note}`):** Black Beauty, Costata Romanesco, Raven, Goldrush (yellow), Cocozelle, Dunja.
+- **companions (complete-roster three-array, three-tier provenance):** good_seasoned rich 7 (corn / pole-beans / nasturtium research_backed; marigold / sweet-alyssum likely; borage / sage traditional) + good_beginner_seasoned light 3 (corn / beans / nasturtium); bad_seasoned 2 (potatoes / fennel traditional) + bad_beginner_seasoned 2; good_beginner / bad_beginner born empty.
+
+### Claude Code release lane
+- **The ONE conformance drift:** the certified rich companion item carries item-level flat keys `evidence_label` / `confidence` / `verified_against_sources` (mirroring `provenance.{label,confidence,verified_against_sources}`) -- the carrot/onion/green-beans template. The authored slice had only the nested `provenance{}`. CC added the 3 flat keys to all 9 rich items (7 good_seasoned + 2 bad_seasoned); values copied from each item's provenance, ZERO content change. crop SHA `11c3b048` -> `3af3b12e`.
+- **Confirmed-correct (no conformance needed):** the complete-roster companion-VISIBILITY model (good_seasoned = the full rich roster incl. the both-modes tight items; good_beginner_seasoned = the light `{name, why_beginner}` projection) -- green-beans/carrot/onion all OVERLAP, NOT disjoint, so claude.ai's interpretation matched the certified template. Varieties object shape, weeks_before int (3), recommended_pot_gallons populated (10, the cherry-tomato sprawler precedent), category/timing free-categorical: all gate-legal vs the certified crops, kept as authored.
+- **Adjudication recorded:** fertilizer = MODERATE feeder (corrects the kickoff's heavy-feeder guess; UMD "Medium requirement"); the fertilizer BLOCK is byte-identical to the shell, deferred to Steps 6-8, the sourced profile carried in the author findings doc.
+- **Gates:** register_completeness PASS; whole_crop_gate 17 violations ALL expected-deferred (A2 region-fill 10 -> Step 4; A12 empty-compounds 6 + tips 1 -> Steps 6-8); A5/A7/A8/B/C/D/E/F all clean in the authored scope (0 user-facing dash, 0 non-T1 [5 source IDs], 0 anchoring gaps, 0 CP mis-nests, dual-voice 0 null_values, A8 correctly out-of-scope). release_verify CLEAN (only zucchini changed, lettuce-leaf byte-identical + PASS, no new violations introduced, 0 catalog drift). pre-commit backstop OK.
+
+### Next
+zucchini Step 3.5 (region shells, CC mechanical) -> Step 4 (region fill: claude.ai author -> CC release; the A8 `successions_realized` derivation + `cold_pause` winter off-season + the colon `region_label`) -> Steps 6-8 (fertilizer block on the moderate profile; pests squash vine borer / squash bug / cucumber beetle; disease powdery mildew / bacterial wilt) -> Step 9 -> cert. Then broccoli Steps 1-3 release (authored + waiting, slice `2f81cd13`, re-preflight against `526cb4df`).
+
 ## 2026-06-23 -- blueberry (anchor 18) CERTIFIED: the FIRST berries_woody [Claude Code, Step 11 cert]
 
 **base `16596ff4` -> `0b767fc2`** (data commit `b26f897`). THE FLIP -- blueberry is certified, the **16th GS anchor** and the dataset's **FIRST woody fruiting shrub** (`berries_woody`). The new-archetype LONG POLE, taken from design to cert in one continuous arc (design spec -> test-first tooling -> Steps 1-3 -> 3.5 -> 4 -> 6-8 -> Step 9 -> cert).
