@@ -6,6 +6,34 @@
 
 ---
 
+## 2026-06-23 -- blueberry (anchor 18) Step 4 region fill RELEASED [claude.ai author lane -> Claude Code release]
+
+**base `f2863c7f` -> `7f74aa3c`** (data commit `a998126`). All 10 region cells filled with per-region T1 source findings (A5); claude.ai authored (session `blueberry_step4_region_fill`), Claude Code released. NOT a flip (status `in_progress`, both launch_ready false; the certified count stays 15). Slice preflight: base shell `3712d6fc`, post-author `738cd5a3` (reproduced exactly).
+
+### Region resolutions (recommended_type / leaf_habit)
+northern_tier=northern_highbush/deciduous · se_gulf=rabbiteye/evergreen · ca_interior=southern_highbush/deciduous · ca_north_coast=southern_highbush/deciduous · ca_south_coast=southern_highbush/evergreen · ca_desert=southern_highbush/evergreen (container, marginal) · warm_arid=southern_highbush/deciduous (container-first, mid-elevation) · low_desert_az=southern_highbush/evergreen (container only) · fl_peninsula=southern_highbush/evergreen (z11 below chill threshold) · hawaii_tropical=southern_highbush/evergreen (niche, container, 250-4000 ft). Frost-free z11 (fl_peninsula, hawaii) carry `resolved_from: null`.
+
+### leaf_habit = Option B (Trevor-approved, locked)
+A region-BIOLOGY binary: real winter dormancy -> deciduous, warm/frost-free -> evergreen; cultivar/semi-evergreen nuance lives in PROSE, not the structural flag. So southern highbush reads DECIDUOUS in the genuinely-dormant cooler CA cells (ca_interior, ca_north_coast) but EVERGREEN in the warm South -- leaf_habit is NOT type-locked.
+
+### Marginal-region honesty (source fidelity -- the onion/strawberry discipline)
+The desert cells (ca_desert, low_desert_az, warm_arid) + fl_peninsula z11 + hawaii carry honest container / mid-elevation / below-chill-threshold notes. No fabricated in-ground thriving windows.
+
+### Claude Code release lane
+- **Apply:** swapped the blueberry crop (only `regions{}` differs vs the shell; all top-level keys conserved); preflight base `3712d6fc` + slice `738cd5a3` both confirmed.
+- **Calendars GENERATED:** `derive_berry_woody_calendars` filled all 20 cells (claude.ai left `calendar[]` empty); A16 coherence = 0.
+- **Source minting (autonomous):** minted 2 genuinely-new T1 parents -- `rutgers_njaes` (Rutgers NJAES) + `uarizona_ext` (UArizona Coop Ext; was a present-but-null catalog placeholder, now populated). The other 9 cited parents (umaine/umass/clemson/uga/ufifas/`unh_ext`/`tamu_agrilife`/`ucanr_ext`/`uhawaii_ctahr`) were already catalogued + T1 -- claude.ai's "mint/re-point" flags were conservative. `ucanr_ext` anchors 3 different pages via per-cell `anchoring_urls` (the bare-parent + per-cell-URL pattern; no sub-id fragmentation).
+- **Gates:** A15 structural=0 (the coverage invariant -- every resolved type has >=2 cultivars; leaf_habit<->token placement; no tree mis-route); A16 calendar coherence=0; register_completeness PASS; release_verify CLEAN (only blueberry + the 2 catalog mints changed; lettuce-leaf byte-identical; NO new violations; cleared the 10 region_notes-both-null admission violations; GATE now 7 = the Steps 6-8 admission state -- 6 empty compounds + empty tips); precommit OK.
+- **Frost reconcile (the manual release check):** all 18 frosted cells' `resolved_from` match `zone_frost_data` (last_spring/first_fall) exactly; the 2 frost-free z11 cells null.
+- **Shape forks (resolved):** `plantings_provenance` as a STRING is the majority convention (cherry/green-beans/strawberry); `zone_8_presence`/`zone_10_desert_fold` left shell-null matches strawberry; the rule-arm `harvest_start`/`harvest_end` single-element arity accepted (no gate reads it; the deriver parses the resolved-cell `bloom`+`harvest` display strings); hawaii `plant_out`="year-round" tolerated (the deriver ignores `plant_out`).
+
+### Carried to Step 5 / cert (NOT verified yet -- verification_status does not inherit)
+- `chill_hours_delivered` per cell are regional CLIMATE ESTIMATES (the chill-gate basis, NOT frost-derived) -- need an independent fidelity fetch (UC chill calculators / extension chill maps) before any chill mark is verified. Conservative + consistent with the cited type chill requirements.
+- warm_arid SHB harvest "May-June" is a reasoned cooler-climate local shift from TAMU's Texas "April-May" (z8 high-desert runs later; frost-reconciled), NOT a cross-region copy -- confirm at Step 5.
+
+### Next
+blueberry Steps 6-8 (bulk dual-register prose: the elevated acid-soil beat + high-pH chlorosis `failure_diagnostics` + the 7 A12 compounds + N/A prose for the all-null `pollination{}` block), Step 9, Step 11 cert (the source-fidelity fetch + the flip).
+
 ## 2026-06-22 -- blueberry (anchor 18) Step 3.5 + the berries_woody TOOLSET [Claude Code structural lane, TDD]
 
 **base `8e5deafc` -> `f2863c7f`** (tooling commit `59d48f9`, data commit `49d5dd2`). The `berries_woody` archetype tooling built test-first, then the Step-3.5 region-shell build. NOT a flip (status `in_progress`, both launch_ready false; the certified count stays 15). This is the long-pole's tooling milestone (the lavender/strawberry new-archetype sequence: deriver + gates + shell-builder, then the data arc).
