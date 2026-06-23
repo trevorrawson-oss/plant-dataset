@@ -1,0 +1,1165 @@
+{
+  "slug": "broccoli",
+  "name": "Broccoli",
+  "category": "Brassicas",
+  "type": "crop",
+  "difficulty": "medium",
+  "days_to_maturity": [
+    55,
+    75
+  ],
+  "sunlight": "full_sun",
+  "sunlight_hours": [
+    6,
+    8
+  ],
+  "water": "Regular",
+  "spacing_inches": [
+    12,
+    24
+  ],
+  "soil": {
+    "preferred_texture_core": "loam",
+    "preferred_texture_seasoned": "Loam to sandy loam, fertile and well-drained, with plenty of organic matter.",
+    "tolerated_texture_core": "clay loam",
+    "tolerated_texture_seasoned": "Heavier clay loams are workable if drainage is improved with organic matter; broccoli's shallow roots dislike both waterlogging and drought.",
+    "problematic_texture_core": "pure sand",
+    "problematic_texture_seasoned": "Pure sand drains and dries too fast for a heavy-feeding, moisture-sensitive crop unless heavily amended and watered often.",
+    "preferred_description_beginner": "Broccoli likes rich, loose soil that holds moisture but drains well. Mix in compost before planting.",
+    "drainage_requirement": "well_drained",
+    "organic_matter_preference": "high",
+    "sources": [
+      "ncsu_ext",
+      "umd_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "umd_ext": {
+        "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+        "verified": "2026-06-23"
+      }
+    },
+    "preferred_description_seasoned": "Broccoli performs best in a fertile, well-drained loam high in organic matter. A consistent, even moisture supply matters for quality heads, so work in compost and avoid soils that either pond water or dry out fast."
+  },
+  "ph": {
+    "preferred_range": [
+      6.0,
+      6.5
+    ],
+    "tolerated_range": "5.5 - 6.8",
+    "note_beginner": "Broccoli grows best in slightly acidic to near-neutral soil. A simple soil test tells you where you stand.",
+    "sources": [
+      "ncsu_ext",
+      "osu_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "osu_ext": {
+        "url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+        "verified": "2026-06-23"
+      }
+    },
+    "note_seasoned": "Aim for a pH near 6.0 to 6.5. Broccoli still does fine across 5.5 to 6.8, and holding the soil at or above roughly 6.8 to 7.0 also helps suppress clubroot, a key brassica soil disease."
+  },
+  "germination_temp_f": [
+    40,
+    86
+  ],
+  "weeks_indoors": 5,
+  "zones": {
+    "3": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "4": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "6": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "5": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "4": [],
+        "6": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "6": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "3": [],
+        "8": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "7": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "3": [],
+        "8": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "8": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "2": [],
+        "8": [],
+        "9": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "9": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "10": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "11": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "10": [],
+        "11": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    }
+  },
+  "fertilizer": {
+    "frequency": "twice a season",
+    "type": "Nitrogen-rich fertilizer",
+    "timing": "starter at transplanting, then side-dress",
+    "example_product": "Blood meal, 21-0-0, or a balanced vegetable fertilizer",
+    "notify_days_after": 21,
+    "stage_id": "established",
+    "notes_seasoned": "Broccoli is a heavy feeder with a high nitrogen requirement and a small root zone, so place feed near the plant. Use a starter fertilizer at transplanting, side-dress with nitrogen about 3 weeks later, and feed again after cutting the central head to push side shoots. Avoid overdoing nitrogen, which can give soft, poor-quality growth.",
+    "notes_beginner": "Broccoli is hungry and needs steady feeding. Give it a feed when you transplant, again about 3 weeks later, and once more after you cut the main head so it makes side shoots.",
+    "notify_message_seasoned": "Time to side-dress your broccoli with nitrogen.",
+    "notify_message_beginner": "Time to feed your broccoli.",
+    "npk_hint_seasoned": "High N for leafy growth; e.g. 21-0-0 side-dress or blood meal. Starter feed at transplant.",
+    "npk_hint_beginner": "Use a nitrogen-rich feed such as blood meal or a balanced vegetable fertilizer.",
+    "amount_seasoned": "Side-dress about half a cup of 21-0-0 per 10 feet of row, then a lighter feed when the head reaches about quarter size.",
+    "amount_beginner": "Follow the label rate for a nitrogen-rich vegetable fertilizer.",
+    "sources": [
+      "ncsu_ext",
+      "usu_ext",
+      "umd_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+        "verified": "2026-06-23"
+      },
+      "umd_ext": {
+        "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+        "verified": "2026-06-23"
+      }
+    }
+  },
+  "recipes": [],
+  "lifecycle": "annual",
+  "first_planting_notify_days": 5,
+  "companions": {
+    "note_beginner": "Broccoli does well next to aromatic herbs, onions, and quick cool-season crops like lettuce. The main things to keep it away from are other cabbage-family plants, which share its diseases.",
+    "sources": [],
+    "anchoring_urls": {},
+    "note_seasoned": "Most broccoli companion pairings are traditional rather than research-tested. The pairings worth acting on are practical ones: aromatic herbs and alliums as scent-based deterrents, and lettuce or spinach as cool-season intercrops that use space and light before broccoli fills in. The well-grounded caution is to separate broccoli from other brassicas, which share clubroot and cabbage-family pests, a rotation and disease principle more than a tested adjacency effect.",
+    "good_beginner": [],
+    "good_beginner_seasoned": [
+      {
+        "name": "Dill",
+        "category": "herb",
+        "timing": "interplant nearby",
+        "why_seasoned": "A traditional brassica companion: aromatic herbs like dill are long held to confuse or deter cabbage pests by scent, and dill's flowers also draw beneficial insects. The effect is a folk-garden one rather than a documented broccoli yield benefit.",
+        "why_beginner": "Dill is a classic friend for broccoli. Its strong smell is said to put off cabbage pests, and its flowers bring in helpful insects.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "medium",
+          "reason": "Aromatic-herb pest confusion is a well-documented companion tradition for brassicas, but no T1 extension trial documents a dill-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "medium",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Onions",
+        "category": "allium",
+        "timing": "interplant nearby",
+        "why_seasoned": "Alliums are a traditional companion for brassicas, their scent thought to deter cabbage pests. It is a classic interplanting practice rather than a T1-tested pairing, and the two share no major pest.",
+        "why_beginner": "Onions are a traditional neighbor for broccoli; their smell is said to help keep cabbage pests away.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Allium scent-deterrence is classic companion lore; no T1 source documents an onion-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Lettuce",
+        "category": "leafy_green",
+        "timing": "interplant along edges",
+        "why_seasoned": "Lettuce is a shallow, quick, cool-season crop that shares broccoli's season and tucks along the bed edge, using space and light while the broccoli is still small. The pairing is space-driven and traditional, not a documented growth effect, and the two share no serious pest.",
+        "why_beginner": "Lettuce grows fast and low, so you can tuck it between young broccoli plants to use the space while the broccoli fills in.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Space-use intercropping lore; no T1 source documents a lettuce-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "good_seasoned": [
+      {
+        "name": "Dill",
+        "category": "herb",
+        "timing": "interplant nearby",
+        "why_seasoned": "A traditional brassica companion: aromatic herbs like dill are long held to confuse or deter cabbage pests by scent, and dill's flowers also draw beneficial insects. The effect is a folk-garden one rather than a documented broccoli yield benefit.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "medium",
+          "reason": "Aromatic-herb pest confusion is a well-documented companion tradition for brassicas, but no T1 extension trial documents a dill-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "medium",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Onions",
+        "category": "allium",
+        "timing": "interplant nearby",
+        "why_seasoned": "Alliums are a traditional companion for brassicas, their scent thought to deter cabbage pests. It is a classic interplanting practice rather than a T1-tested pairing, and the two share no major pest.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Allium scent-deterrence is classic companion lore; no T1 source documents an onion-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Lettuce",
+        "category": "leafy_green",
+        "timing": "interplant along edges",
+        "why_seasoned": "Lettuce is a shallow, quick, cool-season crop that shares broccoli's season and tucks along the bed edge, using space and light while the broccoli is still small. The pairing is space-driven and traditional, not a documented growth effect, and the two share no serious pest.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Space-use intercropping lore; no T1 source documents a lettuce-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Spinach",
+        "category": "leafy_green",
+        "timing": "interplant along edges",
+        "why_seasoned": "Another quick cool-season green that shares broccoli's window and fits the same space-driven intercrop role along the bed edge. Traditional and low-risk rather than a documented benefit.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Cool-season space-use intercrop lore; no T1 source documents a spinach-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Nasturtiums",
+        "category": "trap_crop",
+        "timing": "interplant nearby",
+        "why_seasoned": "Nasturtiums are often planted as a trap crop for cabbage aphids near brassicas. Trap cropping is a documented principle, but it works best for moderately mobile pests and is not a tested broccoli-nasturtium pairing, so treat it as a plausible aid rather than a proven control.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "likely",
+          "confidence": "low",
+          "reason": "Trap cropping for aphids is a documented mechanism, but the specific nasturtium-broccoli pairing is not formally tested in T1 trials.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "likely",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Marigolds",
+        "category": "pest_deterrent",
+        "timing": "interplant nearby",
+        "why_seasoned": "A traditional all-purpose companion said to deter cabbage moths and aphids. The broad pest-deterrent claim is folklore rather than a documented broccoli-specific effect.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "General pest-deterrent companion lore; no matching T1 pattern for broccoli.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Celery",
+        "category": "vegetable",
+        "timing": "interplant nearby",
+        "why_seasoned": "A long-standing brassica companion said to deter cabbage white butterflies. Traditional lore with no documented broccoli-specific support.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Traditional brassica pairing; no T1 source documents the deterrent effect for broccoli.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "bad_beginner": [],
+    "bad_beginner_seasoned": [
+      {
+        "name": "Other brassicas",
+        "category": "competition_disease",
+        "timing": "avoid adjacency and rotation",
+        "why_seasoned": "Cabbage, cauliflower, kale, Brussels sprouts and the other cole crops share broccoli's clubroot and cabbage-family pests, so grouping them concentrates disease and pest pressure. This is a real rotation and disease principle rather than a tested adjacency effect; the practical rule is to spread brassicas out and rotate them.",
+        "why_beginner": "Keep broccoli away from other cabbage-family plants like cabbage, cauliflower, and kale. They share the same pests and diseases, so planting them together makes problems worse.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "likely",
+          "confidence": "medium",
+          "reason": "Shared clubroot and shared cabbage-family pests are extension-documented; the specific bad-adjacency claim is a known agronomic principle, not formally pair-tested.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "likely",
+        "confidence": "medium",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "bad_seasoned": [
+      {
+        "name": "Other brassicas",
+        "category": "competition_disease",
+        "timing": "avoid adjacency and rotation",
+        "why_seasoned": "Cabbage, cauliflower, kale, Brussels sprouts and the other cole crops share broccoli's clubroot and cabbage-family pests, so grouping them concentrates disease and pest pressure. This is a real rotation and disease principle rather than a tested adjacency effect; the practical rule is to spread brassicas out and rotate them.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "likely",
+          "confidence": "medium",
+          "reason": "Shared clubroot and shared cabbage-family pests are extension-documented; the specific bad-adjacency claim is a known agronomic principle, not formally pair-tested.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "likely",
+        "confidence": "medium",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Strawberries",
+        "category": "traditional_caution",
+        "timing": "avoid interplanting",
+        "why_seasoned": "A traditional caution that broccoli and strawberries inhibit each other. There is no documented mechanism or T1 support; it persists as folklore.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Folk anti-companion claim with no pattern match or T1 support.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Tomatoes",
+        "category": "competition",
+        "timing": "avoid interplanting",
+        "why_seasoned": "Tomatoes and broccoli are both heavy feeders and a traditional list pairs them as competitors for nutrients and space. Inter-plant competition is a real general concept, but the specific bad pairing is not documented for broccoli, and the two also want different seasons. Treat it as low-priority caution.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Competition is a real general concept but the specific broccoli-tomato bad pairing is extrapolated, not T1-documented; seasonal mismatch makes overlap uncommon anyway.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      }
+    ]
+  },
+  "pests": [],
+  "diseases": [],
+  "watering": {
+    "frequency_seasoned": "Give about 1 to 1.5 inches weekly, kept even through the season.",
+    "frequency_beginner": "Water regularly so the soil stays evenly moist, roughly 1 to 1.5 inches a week.",
+    "amount_seasoned": "About 1 to 1.5 inches per week, more as heads bulk up.",
+    "amount_beginner": "Aim for roughly 1 to 1.5 inches of water a week.",
+    "method_seasoned": "Water at the soil line with drip or a soaker hose where possible.",
+    "method_beginner": "Water at the base of the plant, not over the head.",
+    "signs_overwater_seasoned": "Yellowing lower leaves and stunted, soft growth; broccoli is prone to root rot in soggy soil.",
+    "signs_overwater_beginner": "Leaves yellow and the plant looks waterlogged.",
+    "signs_underwater_seasoned": "Wilting, checked growth, and small or bitter heads; any stall in growth hurts quality.",
+    "signs_underwater_beginner": "Wilting and small heads.",
+    "watering_method": "drip_or_soaker",
+    "schedule_by_stage": [],
+    "drought_tolerance": "low",
+    "method_note_seasoned": "Keep developing heads dry when you water, since wet heads encourage rot.",
+    "method_note_beginner": "Try not to get the head wet when you water.",
+    "critical_periods_seasoned": "Even moisture through head formation is the most important window for quality.",
+    "critical_periods_beginner": "Water steadily while the head is forming.",
+    "sources": [
+      "ncsu_ext",
+      "usu_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+        "verified": "2026-06-23"
+      }
+    }
+  },
+  "harvest_ready_sources": [
+    "clemson_hgic",
+    "iastate_ext"
+  ],
+  "start_method": {
+    "start": "both",
+    "weeks_before": 5,
+    "hardening_off_seasoned": true,
+    "hardening_off_beginner": true,
+    "notes_seasoned": "For the spring crop, start seeds indoors about 5 to 7 weeks before setting out and transplant roughly 2 to 4 weeks before the last frost; broccoli tolerates light frost. For fall, start transplants in mid to late summer, about 4 to 6 weeks before setting them out as the heat breaks, or direct sow. Set out young, well-rooted transplants with 4 to 6 true leaves, since oversized or cold-shocked transplants are prone to buttoning (tiny premature heads). Harden plants off over 7 to 10 days.",
+    "notes_beginner": "You can start broccoli indoors or buy young plants. For a spring crop, start seeds about 5 to 7 weeks before you plant out, and set plants in the garden a couple of weeks before your last frost. For fall, start them in mid to late summer and plant out as the heat eases. Use small, healthy plants, not big leggy ones, and let them get used to the outdoors over a week before planting."
+  },
+  "container_notes": {
+    "container_ok": true,
+    "min_pot_gallons": 5,
+    "container_recommended": true,
+    "recommended_pot_gallons": 5,
+    "depth_inches_min": 12,
+    "shape_requirements": null,
+    "drainage": {
+      "drainage_holes_required": true,
+      "gravel_layer": false,
+      "saucer_practice": "Empty the saucer after watering so roots never sit in water; broccoli is prone to root rot."
+    },
+    "soil_mix": {
+      "type_beginner": "A good-quality potting mix, not garden soil.",
+      "amendments_beginner": "Mix in some compost for a steady supply of nutrients.",
+      "type_seasoned": "A light, well-drained commercial potting mix high in organic matter.",
+      "amendments_seasoned": "Blend in compost and a slow-release nitrogen source; container broccoli still feeds heavily."
+    },
+    "watering_adjustment_beginner": "Pots dry out faster than the ground, so check daily in warm weather.",
+    "fertilizer_adjustment_beginner": "Feed a bit more often than in the ground, since watering washes nutrients out of pots.",
+    "overwintering": {
+      "applicable": false,
+      "approach_beginner": "Not applicable. Broccoli finishes its cycle in one season and is not overwintered in a pot.",
+      "approach_seasoned": "Not applicable. Broccoli is grown as a single-season annual and is not held over winter in a container."
+    },
+    "container_specific_pests": [],
+    "container_suitable_varieties": [
+      "De Cicco",
+      "Green Magic",
+      "Calabrese"
+    ],
+    "notes_beginner": "Broccoli grows in a pot of at least 5 gallons that is 12 inches or more deep, one plant per pot. Keep it cool, watered, and fed. In warm spots, avoid dark pots and give some afternoon shade.",
+    "sources": [
+      "uwi_hort"
+    ],
+    "anchoring_urls": {
+      "uwi_hort": {
+        "url": "https://hort.extension.wisc.edu/articles/growing-vegetables-containers/",
+        "verified": "2026-06-23"
+      }
+    },
+    "notes_seasoned": "Broccoli is a large, heavy-feeding plant, so use a container of at least 5 gallons and 12 to 18 inches deep, one plant per pot. Because pots warm and dry quickly, keep moisture even, feed regularly, and in warm regions avoid heat-absorbing dark containers and shade the pot to keep roots cool.",
+    "watering_adjustment_seasoned": "Containers dry faster than beds; monitor moisture daily in heat and water before the mix dries out.",
+    "fertilizer_adjustment_seasoned": "Container broccoli needs more frequent feeding than in-ground plants because watering leaches nutrients.",
+    "self_watering_ok": true,
+    "self_watering_notes_seasoned": "A self-watering container suits broccoli well, since it smooths out the steady moisture the crop wants through head formation.",
+    "self_watering_notes_beginner": "A self-watering pot is a good match because it keeps the water steady, which broccoli likes."
+  },
+  "varieties": {
+    "recommended": [
+      {
+        "name": "Calabrese",
+        "days_to_maturity": 65,
+        "note": "The classic green Italian heading broccoli and the most widely grown type; a dependable open-pollinated choice with a good central head and side shoots."
+      },
+      {
+        "name": "Green Magic",
+        "days_to_maturity": 57,
+        "note": "An early, reliable hybrid with some heat tolerance, which makes it a good pick for the spring-into-warm-weather crop."
+      },
+      {
+        "name": "Belstar",
+        "days_to_maturity": 65,
+        "note": "A widely adapted hybrid that does well in both spring and fall, popular in organic gardens."
+      },
+      {
+        "name": "De Cicco",
+        "days_to_maturity": 60,
+        "note": "An heirloom with a smaller main head but heavy, prolonged side-shoot production, good for a long picking window."
+      },
+      {
+        "name": "Waltham 29",
+        "days_to_maturity": 74,
+        "note": "A cold-hardy heirloom bred for fall and overwintering, with uniform heads that finish in cool weather."
+      },
+      {
+        "name": "Sun King",
+        "days_to_maturity": 71,
+        "note": "A heat-tolerant hybrid that holds up better in warmth, useful at the warm edges of the season."
+      }
+    ],
+    "note_seasoned": "Match the variety to the slot: fast, heat-tolerant types like Green Magic for spring, and longer-cycle, cold-hardy types like Waltham 29 for fall. Side-shooting heirlooms such as De Cicco stretch the harvest, while hybrids give more uniform central heads. Where clubroot or other brassica diseases are a concern, look for resistant cultivars.",
+    "note_beginner": "Green Magic and Belstar are easy, dependable choices. For spring, pick a fast or heat-tolerant variety so it heads before it gets hot; for fall, a hardy one like Waltham 29 works well. De Cicco gives lots of small side shoots over a longer time.",
+    "sources": [
+      "ncsu_ext",
+      "umn_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "umn_ext": {
+        "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+        "verified": "2026-06-23"
+      }
+    }
+  },
+  "rotation": {
+    "family": "Brassica family (Brassicaceae), the cole crops",
+    "rotation_years": 3,
+    "avoid_after_seasoned": "Other brassicas (cabbage, cauliflower, kale, Brussels sprouts, collards, turnip, radish, kohlrabi), which share clubroot and cabbage-family pests.",
+    "avoid_after_beginner": "Other cabbage-family crops like cabbage, cauliflower, kale, and turnips.",
+    "good_after": "Legumes such as beans and peas, or unrelated crops like tomatoes, squash, or onions.",
+    "sources": [
+      "umn_ext",
+      "ncsu_ext"
+    ],
+    "anchoring_urls": {
+      "umn_ext": {
+        "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+        "verified": "2026-06-23"
+      },
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      }
+    },
+    "note_seasoned": "Rotate so brassicas do not follow brassicas for at least 3 years, and longer where clubroot is present, since the clubroot organism persists in soil for years. Keeping soil pH at or above about 6.8 also helps suppress it.",
+    "note_beginner": "Do not plant broccoli or other cabbage-family crops in the same spot year after year. Waiting a few years between them helps avoid soil diseases like clubroot."
+  },
+  "bolting": {
+    "risk": "high",
+    "triggers": "Summer heat (days at or above about 86°F and nights above about 77°F), oversized or cold-shocked transplants, and prolonged cool spells of 35 to 50°F.",
+    "prevention_seasoned": "Time the spring crop to head before summer heat and the fall crop to head as weather cools. Set out young transplants with 4 to 6 true leaves rather than large ones, and choose heat-tolerant, short-cycle varieties for spring.",
+    "prevention_beginner": "Grow broccoli in the cool parts of spring and fall so it heads before it gets hot. Use small, healthy plants and pick fast or heat-tolerant varieties for spring.",
+    "note_seasoned": "In broccoli, heat-driven bolting (a mature plant rushing to flower) and buttoning (a too-young or cold-stressed plant making a tiny premature head) are distinct problems; both make the crop unusable, and both are managed mainly through timing and transplant size.",
+    "note_beginner": "If broccoli gets too hot or too stressed, it flowers early or makes tiny useless heads. Good timing is the main fix."
+  },
+  "storage": {
+    "room_temp_seasoned": null,
+    "room_temp_beginner": null,
+    "fridge_seasoned": null,
+    "fridge_beginner": null,
+    "freezer_seasoned": null,
+    "freezer_beginner": null,
+    "sources": [],
+    "anchoring_urls": {},
+    "notes_seasoned": null,
+    "notes_beginner": null
+  },
+  "growth_stages": [],
+  "notifications": [],
+  "weather_triggers": [],
+  "tips_by_stage": {
+    "germination": [],
+    "seedling": [],
+    "established": [],
+    "head_forming": [],
+    "harvest": [],
+    "side_shoots": []
+  },
+  "yield_expectations": {
+    "per_plant_seasoned": null,
+    "per_plant_beginner": null,
+    "peak_production_seasoned": null,
+    "peak_production_beginner": null,
+    "sources": [],
+    "anchoring_urls": {},
+    "first_year_note_seasoned": null,
+    "first_year_note_beginner": null,
+    "factors_seasoned": []
+  },
+  "harvest_urgency": "high",
+  "moon_phase_preference": {
+    "phase": null,
+    "evidence_tier": null,
+    "source_note_seasoned": null
+  },
+  "days_to_maturity_mid": 65,
+  "failure_diagnostics": [],
+  "perennial": false,
+  "last_reviewed": "2026-06-23",
+  "last_reviewed_session": "phase_3_broccoli_steps1-3",
+  "sources_summary": {
+    "primary": [
+      {
+        "id": "clemson_hgic",
+        "name": "Clemson Cooperative Extension Home & Garden Information Center",
+        "url": "https://hgic.clemson.edu",
+        "publisher": "Clemson University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "iastate_ext",
+        "name": "Iowa State University Extension",
+        "url": "https://yardandgarden.extension.iastate.edu",
+        "publisher": "Iowa State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "ncsu_ext",
+        "name": "NC State Extension",
+        "url": "https://content.ces.ncsu.edu",
+        "publisher": "NC State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "osu_ext",
+        "name": "Ohio State University Extension (Ohioline)",
+        "url": "https://ohioline.osu.edu",
+        "publisher": "The Ohio State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "umd_ext",
+        "name": "University of Maryland Extension",
+        "url": "https://extension.umd.edu",
+        "publisher": "University of Maryland",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "umn_ext",
+        "name": "University of Minnesota Extension",
+        "url": "https://extension.umn.edu/vegetables",
+        "publisher": "University of Minnesota",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "usu_ext",
+        "name": "Utah State University Extension",
+        "url": "https://extension.usu.edu",
+        "publisher": "Utah State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "uwi_hort",
+        "name": "Wisconsin Horticulture, Division of Extension",
+        "url": "https://hort.extension.wisc.edu",
+        "publisher": "University of Wisconsin-Madison",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "wvu_ext",
+        "name": "West Virginia University Extension",
+        "url": "https://extension.wvu.edu",
+        "publisher": "West Virginia University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      }
+    ],
+    "frost_data": []
+  },
+  "succession_policy": {
+    "suitable": true,
+    "interval_weeks": 3,
+    "successions": 3,
+    "notify_days_before": 3,
+    "max_successions_per_season": 12,
+    "window_type": "continuous",
+    "pause_in_heat": true,
+    "trigger": "last_frost",
+    "tip_seasoned": "Broccoli crops in the cool shoulders of the year, so plant in small batches every 2 to 3 weeks within the spring window and again in late summer for fall, rather than all at once. The spring window is short because heads must size up before summer heat arrives, so most gardens fit only a sowing or two before the midsummer gap; the fall planting, heading into cooling weather, is often the more reliable crop.",
+    "tip_beginner": "Plant broccoli in spring and again in late summer for fall, in small batches a couple of weeks apart, instead of all at one time. Skip the hottest part of summer, since broccoli will not form good heads in the heat."
+  },
+  "archetype": "cool_season_annual",
+  "harvest_ready_anchoring_urls": {
+    "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/broccoli/",
+      "verified": "2026-06-23"
+    },
+    "iastate_ext": {
+      "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-broccoli-home-garden",
+      "verified": "2026-06-23"
+    }
+  },
+  "verification_status": {
+    "launch_ready_core": false,
+    "launch_ready_seasoned": false,
+    "status": null,
+    "last_audited": null
+  },
+  "regions": {
+    "northern_tier": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "plantings_provenance": null,
+      "resolved_by_zone": {
+        "3": {
+          "plant_out": null,
+          "start_indoors": null,
+          "harvest": null,
+          "harvest_start": null,
+          "harvest_end": null,
+          "first_plant_date": null,
+          "last_plant_date": null,
+          "calendar": [],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [],
+          "anchoring_urls": {},
+          "plantings": [],
+          "resolution_method": null,
+          "lifted_from_zone": null
+        },
+        "4": {
+          "plant_out": null,
+          "start_indoors": null,
+          "harvest": null,
+          "harvest_start": null,
+          "harvest_end": null,
+          "first_plant_date": null,
+          "last_plant_date": null,
+          "calendar": [],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [],
+          "anchoring_urls": {},
+          "plantings": [],
+          "resolution_method": null,
+          "lifted_from_zone": null
+        },
+        "5": {
+          "plant_out": null,
+          "start_indoors": null,
+          "harvest": null,
+          "harvest_start": null,
+          "harvest_end": null,
+          "first_plant_date": null,
+          "last_plant_date": null,
+          "calendar": [],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [],
+          "anchoring_urls": {},
+          "plantings": [],
+          "resolution_method": null,
+          "lifted_from_zone": null
+        },
+        "6": {
+          "plant_out": null,
+          "start_indoors": null,
+          "harvest": null,
+          "harvest_start": null,
+          "harvest_end": null,
+          "first_plant_date": null,
+          "last_plant_date": null,
+          "calendar": [],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [],
+          "anchoring_urls": {},
+          "plantings": [],
+          "resolution_method": null,
+          "lifted_from_zone": null
+        },
+        "7": {
+          "plant_out": null,
+          "start_indoors": null,
+          "harvest": null,
+          "harvest_start": null,
+          "harvest_end": null,
+          "first_plant_date": null,
+          "last_plant_date": null,
+          "calendar": [],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [],
+          "anchoring_urls": {},
+          "plantings": [],
+          "resolution_method": null,
+          "lifted_from_zone": null
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "se_gulf": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "8": {
+          "plant_out": null,
+          "resolution_method": null
+        },
+        "9": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "sources_pending_admission": [],
+      "region_notes_seasoned": null
+    },
+    "ca_interior": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "8": {
+          "plant_out": null,
+          "resolution_method": null
+        },
+        "9": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "ca_north_coast": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": null,
+          "resolution_method": null
+        },
+        "10": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "zone_8_presence": null,
+      "region_notes_seasoned": null
+    },
+    "ca_south_coast": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": null,
+          "resolution_method": null
+        },
+        "10": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "zone_8_presence": null,
+      "region_notes_seasoned": null
+    },
+    "ca_desert": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": null,
+          "resolution_method": null
+        },
+        "10": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "zone_10_desert_fold": null,
+      "region_notes_seasoned": null
+    },
+    "warm_arid": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "8": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "sources_pending_admission": [],
+      "region_notes_seasoned": null
+    },
+    "low_desert_az": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "sources_pending_admission": [],
+      "region_notes_seasoned": null
+    },
+    "fl_peninsula": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "10": {
+          "plant_out": null,
+          "resolution_method": null
+        },
+        "11": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "sources_pending_admission": [],
+      "region_notes_seasoned": null
+    },
+    "hawaii_tropical": {
+      "region_id": null,
+      "region_label": null,
+      "zone_span": [],
+      "sources": [],
+      "plantings": [],
+      "resolved_by_zone": {
+        "11": {
+          "plant_out": null,
+          "resolution_method": null
+        }
+      },
+      "region_notes_beginner": null,
+      "sources_pending_admission": [],
+      "region_notes_seasoned": null
+    }
+  },
+  "description_seasoned": "Broccoli is a cool-season brassica grown for its tight head of immature flower buds, harvested before the buds open. It performs best in the cool shoulders of spring and fall, bolts or fails to head in summer heat, and rewards a steady supply of moisture and nitrogen. After the central head is cut, most types keep producing smaller side shoots.",
+  "description_beginner": "Broccoli is a cool-weather vegetable grown for its green head, which is really a cluster of flower buds you pick before they open. It grows best in spring and fall, not summer heat, and keeps making smaller side shoots after you cut the main head.",
+  "harvest_ready_seasoned": "Cut the central head while the buds are tight, blue-green, and still closed, before any yellow flowers show, taking about 6 inches of stem. Side shoots then form for later picking.",
+  "harvest_ready_beginner": "Cut the main head while it is firm, green, and tight, before the little buds open into yellow flowers. More small shoots grow afterward.",
+  "soil_prep_seasoned": "Work plenty of compost into a fertile, well-drained bed before planting and confirm pH is around 6.0 to 6.5. Broccoli feeds heavily and roots shallowly, so a rich, moisture-retentive but well-drained soil pays off.",
+  "soil_prep_beginner": "Before planting, mix plenty of compost into loose, well-drained soil. Broccoli is a hungry plant and likes rich ground.",
+  "calendar_basis": "frost_anchored"
+}
