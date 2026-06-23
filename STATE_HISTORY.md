@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-23 -- blueberry (anchor 18) Steps 6-8 RELEASED: bulk prose + the 7 A12 compounds [claude.ai author lane -> Claude Code release]
+
+**base `7f74aa3c` -> `16596ff4`** (tooling commit `9569fc7`, data commit `6e6a371`). The last big AUTHORING leg: the bulk dual-register prose + the 7 empty compound blocks. claude.ai authored (session `blueberry_steps_6_8`), Claude Code released. NOT a flip (status `in_progress`, both launch_ready false; the certified count stays 15 -- the cert flip is Step 11). Slice preflight: base `52ea912a`, post-author `684f092b` (reproduced exactly).
+
+### Authored (the computed worklist: 25 register fields + 7 compounds)
+- **Register (25):** `storage` (REAL: ~10-14 day fridge, freezes dry-pack) + `yield_expectations` (REAL: highbush ~5-10 lb / rabbiteye ~12-25 lb mature, full prod yr 6-8, pick off bloom yr 1-2) + `factors_seasoned` SP list; `rotation` (N/A -- permanent shrub) + `pollination{}` nested notes (N/A -- the light model carries it via crop-level `pollinator_notes` + `self_fertile:false`, D4) + `moon_phase_preference` (N/A no-evidence); `container_notes` self-watering + overwintering (REAL, `self_watering_ok:true`).
+- **Compounds (7):** `growth_stages` (the 9-id woody cyclic arc -- planting/establishment/first_growth/dormancy/dormant_prune/blossom/fruit_set/harvest/post_harvest; ids == the pre-existing `tips_by_stage` keys, the HARD A12 constraint, Fork 1); `pests` (LEAD birds -> netting; SWD; maggot; aphids; scale); `diseases` (LEAD mummy berry; Phytophthora root rot; Botrytis; anthracnose; stem blight); `failure_diagnostics` (LEAD high-pH iron chlorosis = the D5 elevated acid-soil beat; no/few berries; wilt; stripped fruit; weak growth); `notifications` (7) + `weather_triggers` (5, load-bearing late-frost-on-bloom); `tips_by_stage` (14 tips across the 9 keys, `text_seasoned`/`text_beginner` shape).
+- **Wiring (the two referent decisions, Trevor-confirmed pre-authoring):** `fertilizer.stage_id = "first_growth"` (budbreak; the block's own prose anchors feeding to budbreak -- an A5-driven divergence from peach's `blossom`, not analogy); `watering.schedule_by_stage` = 3 entries (`first_growth`/`fruit_set`/`dormancy` = the active-growth -> fruit-sizing-critical -> reduced-dormant arc; Trevor override of the author-lane leave-empty rec, since every fruiting tree/berry anchor carries it -- peach 3 / strawberry 4 / apple 3).
+
+### Claude Code release lane
+- **NEW GATE RULING (Trevor-confirmed 2026-06-23):** `register_completeness` HALTed on `watering.schedule_by_stage[].rate` -- a per-stage watering AMOUNT ("1 to 2 inches of water per week including rain"), the sibling of the already-EXCLUDED `frequency`/`level`/`system` machinery (the dual-register prose in that block is `note_seasoned`/`_beginner`). Blueberry is the FIRST crop whose `rate` string crossed the `is_prose_shaped` length heuristic (peach/strawberry/apple sit just under it); the field was simply never ruled. Ruled USER-FACING-CATEGORICAL, path-guarded in `ruled_categorical` (tooling commit `9569fc7`). FOLLOW-UP: fold into the carried `register_bearing_field_inventory_v1_0.md` sync.
+- **Source minting (autonomous):** admitted 2 genuinely-new T1 parents -- `uconn_ext` (UConn IPM) + `aces_ext` (Auburn / Alabama Cooperative Extension System) -- for the minor-disease entries (FINDING bb-6_8-003; both 1862 land-grant extensions; admit chosen over a re-anchor round-trip). The other 5 new-on-crop parents (`iastate_ext`/`ncsu_ext`/`umd_ext`/`umn_ext`/`usu_ext`) were already catalogued. `ncstate_ext` (an invalid id claude.ai self-corrected to `ncsu_ext`, FINDING bb-6_8-002) confirmed absent in the slice.
+- **Gates:** whole_crop_gate **PASS (0)** -- A12 empty-compounds 0 + tips 0, A15 0, A16 0, gate-E 20 distinct sources all T1; `register_fill` PASS; `register_completeness` PASS (post-ruling); `release_verify` CLEAN (only blueberry + the 2 catalog mints changed; `regions{}`/`zones{}`/`succession_policy` byte-identical so A15/A16 stay 0; cleared the 7 empty-compound admission violations); precommit OK ("0 total, cleared 7"). **blueberry is now structurally cert-ready.**
+
+### Carried to Step 9 / Step 11 cert (NOT verified yet)
+- Step 9: whole-file dash/temp/spelling sweep.
+- Step 11 source-fidelity fetch MUST include the carried Step-4 items: the per-cell `chill_hours_delivered` CLIMATE ESTIMATES (vs a chill source) + the `warm_arid` SHB harvest month -- plus a sample of the 6-8 pages (yield ranges, chill 800-1000, storage 14-day, mesh sizes).
+- FINDING bb-6_8-001: legacy `zones{}` null shell -> release-lane collapse to `{}` (not gate-blocking; microgreens certs with `zones{}={}`); Phase C retirement scope is Trevor's call.
+
+### Next
+blueberry Step 9 (sweep) -> Step 11 cert: the source-fidelity fetch + the flip (`verification_status` -> `verified_gs_arc` + launch_ready x2 + open_findings). blueberry becomes the 16th certified anchor. Then the rail-riders zucchini + broccoli.
+
 ## 2026-06-23 -- blueberry (anchor 18) Step 4 region fill RELEASED [claude.ai author lane -> Claude Code release]
 
 **base `f2863c7f` -> `7f74aa3c`** (data commit `a998126`). All 10 region cells filled with per-region T1 source findings (A5); claude.ai authored (session `blueberry_step4_region_fill`), Claude Code released. NOT a flip (status `in_progress`, both launch_ready false; the certified count stays 15). Slice preflight: base shell `3712d6fc`, post-author `738cd5a3` (reproduced exactly).
