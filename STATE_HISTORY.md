@@ -6,6 +6,35 @@
 
 ---
 
+## 2026-06-23 -- blueberry (anchor 18) CERTIFIED: the FIRST berries_woody [Claude Code, Step 11 cert]
+
+**base `16596ff4` -> `0b767fc2`** (data commit `b26f897`). THE FLIP -- blueberry is certified, the **16th GS anchor** and the dataset's **FIRST woody fruiting shrub** (`berries_woody`). The new-archetype LONG POLE, taken from design to cert in one continuous arc (design spec -> test-first tooling -> Steps 1-3 -> 3.5 -> 4 -> 6-8 -> Step 9 -> cert).
+
+### The flip
+`verification_status` -> {status `verified_gs_arc`, phase `phase_3_blueberry_gold_standard_arc`, date 2026-06-23, launch_ready_core + launch_ready_seasoned true, last_audited 2026-06-23, source_set (20 T1: aces_ext/clemson_hgic/iastate_ext/ncsu_ext/osu_ext/psu_ext/rutgers_njaes/tamu_agrilife/uarizona_ext/ucanr_ext/uconn_ext/ufifas_ext/uga_ext/uhawaii_ctahr/umaine_ext/umass_ext/umd_ext/umn_ext/unh_ext/usu_ext), verification_log_ref, 3 open_findings all blocks_launch:false}; top-level last_reviewed / last_reviewed_session set. Only `verification_status` + the two review keys changed (guarded).
+
+### CERT VERIFICATION (independent source-fidelity WebFetch of 8 cited live T1 -- the defense the self-scan cannot be)
+ZERO contradictions found:
+- **NHB yield 5-10 lb/bush** -- Iowa State yield FAQ, EXACT match. Full production "fifth or sixth year" (dataset 6-8, consistent).
+- **rabbiteye yield** -- UGA C946 "2 gallons per plant by the sixth year" (~16-17 lb), inside the dataset's 12-25 lb range.
+- **pH 4.5-5.5** -- UMD EXACT; UGA C946 + UMaine 2253e 4.5-5.2; UNH 4.5-5.0; Clemson "below 6.0 above 5.5". The 4.5-5.5 is the canonical, UMD-exact.
+- **pollination** -- UMD "self-fertile but produce more and larger berries when 2+ cultivars" (matches the light D4 model + the pollinator_notes nuance; crop-level self_fertile:false is the conservative flag, rabbiteye being truly self-incompatible).
+- **iron chlorosis from high pH (>6.0)** -- UMD + Clemson (the D5 elevated acid-soil beat / failure_diagnostics LEAD).
+- **chill** -- Clemson: SHB 300-500, rabbiteye 400-700 (consistent with the dataset's broader cultivar-spanning ranges SHB 150-600 / rabbiteye 350-650, whose lower floors come from the low-chill cultivars Sharpblue/Jewel/Brightwell). **NHB 800-1000 = the universal standard**, internally coherent (chill_hours_note + every NHB variety chill); the northern extension pages (UMaine/UMass/UNH/PSU) frame NHB by COLD-HARDINESS (degrees F / min winter temp), not chill hours -- so the sample did not restate it, but nothing contradicts it.
+- **storage** -- dataset ~10-14 day home fridge; UGA C1269 "2-4 weeks at 32F" optimal (the dataset figure is the conservative home-conditions value). Consistent.
+- UArizona AZ1585 (the warm_arid / desert source) returned a binary-unparseable PDF -> carried as an open finding.
+
+### Gates
+whole_crop_gate **PASS** (G flip-state: launch_ready_core=True launch_ready_seasoned=True status=verified_gs_arc; 0 open-finding blockers; A15/A16 0; A12 0; gate-E 20 sources all T1); register_fill PASS; register_completeness PASS; release_verify CLEAN (only blueberry changed, lettuce-leaf byte-identical, no new violations); precommit OK; tool suite 29/29.
+
+### Open findings (all blocks_launch:false)
+- `blueberry_step11_chill_delivered_estimates`: per-cell `chill_hours_delivered` are regional CLIMATE ESTIMATES (the gate basis), conservative + consistent with each cell's recommended-type chill requirement; corroborate vs a chill-accumulation source at display-readiness (extension pages give the chill REQUIREMENT, not the DELIVERED chill; the UArizona PDF was unparseable).
+- `blueberry_step11_warm_arid_harvest`: warm_arid SHB harvest "May-June" is a reasoned cooler-climate local shift from TAMU's Texas "April-May" (A5-respected, not a cross-region copy); confirm once UArizona AZ1585 is fetchable in a readable form.
+- `blueberry_6_8_legacy_zones_shell`: the legacy `zones{}` dict is an all-null shell (author-fresh under region-primary); release-lane collapse to `{}` (not gate-blocking -- microgreens certs with zones{}={}); Phase C retirement scope is Trevor's call.
+
+### Next
+The last 2 rail-riders: zucchini + broccoli (QUICK -- annuals on the proven rails + the A8 successions_realized machinery; authoring + release only). 2 anchors to ~18. Plus the blueberry post-cert follow-ups (chill corroboration, warm_arid re-fetch, zones{} collapse) + the gated plant-astro HeroCard fix + the future berries_woody guide-page template.
+
 ## 2026-06-23 -- blueberry (anchor 18) Steps 6-8 RELEASED: bulk prose + the 7 A12 compounds [claude.ai author lane -> Claude Code release]
 
 **base `7f74aa3c` -> `16596ff4`** (tooling commit `9569fc7`, data commit `6e6a371`). The last big AUTHORING leg: the bulk dual-register prose + the 7 empty compound blocks. claude.ai authored (session `blueberry_steps_6_8`), Claude Code released. NOT a flip (status `in_progress`, both launch_ready false; the certified count stays 15 -- the cert flip is Step 11). Slice preflight: base `52ea912a`, post-author `684f092b` (reproduced exactly).
