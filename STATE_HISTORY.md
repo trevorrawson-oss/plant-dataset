@@ -6,6 +6,40 @@
 
 ---
 
+## 2026-06-23 -- zucchini-courgette (anchor 17) CERTIFIED: the warm-season rail-rider [Claude Code, Step 11 cert]
+
+**base `678312b2` -> `b0ccdd2d`** (data commit `df709dc`). THE FLIP -- zucchini-courgette is certified, the **17th GS anchor**, a `warm_season_fruiting` annual + succession crop (the warm-season twin of broccoli). Taken end-to-end THIS session (Steps 1-3 -> 3.5 -> 4-5.5 -> 6-8 -> Step 9 -> Step 11 cert). Guarded flip: only `verification_status` + `last_reviewed_session` changed.
+
+### The flip
+`verification_status` -> {status `verified_gs_arc`, phase `phase_3_zucchini_gold_standard_arc`, date 2026-06-23, launch_ready_core + launch_ready_seasoned true, last_audited 2026-06-23, source_set (16 T1: clemson_hgic/iastate_ext/nmsu_ext/osu_ext/sdsu_ext/tamu_agrilife/uariz_ext/uc_ipm/ucanr_ext/ucd_postharvest/ufifas_ext/uga_ext/uhawaii_ctahr/umd_ext/umn_ext/uwi_hort), verification_log_ref, 4 open_findings all blocks_launch:false}; top-level last_reviewed_session -> `zucchini_step11_cert`.
+
+### Step 9 sweep
+CLEAN -- 0 user-facing dash / em-dash / spelled-degrees across the whole crop; 10 °F symbols present.
+
+### Step 11 INDEPENDENT source-fidelity fetch (WebFetch of cited live T1 -- the defense the self-scan cannot be)
+ZERO contradictions:
+- **soil pH 6.0-6.5** -- UMN summer-squash page, EXACT ("the best soil pH range for vine crops is between 6.0 and 6.5").
+- **succession interval 3 weeks** -- UMN EXACT ("finish the planting three weeks later").
+- **spacing 24-36 in** -- UMN ("two or three feet").
+- **container min 5 gal / depth 12 in** -- UW-Madison Hort EXACT ("minimum volume of five gallons and a depth of 12 to 18 inches").
+- **CARRY-FORWARD RESOLVED -- warm_arid z8 = continuous:** NMSU CR457 ("plant squash after danger of frost; where the frost-free period exceeds 150 days, gardeners can make two plantings") -- one continuous warm-season window + an OPTIONAL second sowing for long seasons, NO mid-summer no-plant split. The authored continuous is confirmed.
+
+### open_findings (all blocks_launch:false)
+- `zucchini_step11_hawaii_z11_year_round`: hawaii bounded-continuous (NOT year_round); CTAHR B-91 is a scanned/image PDF that did not parse at the fetch (the same unparseable-PDF case as blueberry's UArizona AZ1585). The bounded-continuous default stands (z11 frost-free alone insufficient for year_round per the onion/zinnia rule); corroborate vs a parseable CTAHR source at display-readiness.
+- `zucchini_step11_cite_osu_403`: osu_ext squash page HTTP 403 at fetch -- sole-anchors germ [70,95] + pH tolerated [5.8,7.5]; standard figures, re-verify the URL.
+- `zucchini_step11_cite_ucd_403`: ucd_postharvest summer-squash HTTP 403 -- anchors the 41°F chilling figure; re-verify.
+- `zucchini_step11_yield_citation`: yield 6-10 lb/plant cited umn+iastate, but UMN is silent on yield and both iastate encyclopedia URLs 404'd -- re-anchor the yield citation (the figure is a standard prolific-zucchini value, no contradiction).
+ALL unreachable-at-fetch or unparseable, all standard figures, NONE a contradiction -- filed NOT-COVERED per cert citation-hygiene, exactly the blueberry pattern.
+
+### Gates
+whole_crop_gate **PASS** (G flip-state: launch_ready_core=True launch_ready_seasoned=True status=verified_gs_arc; 0 open-finding blockers; A12 0; E 16 sources all T1 / 0 uncatalogued; F 0 gaps); release_verify CLEAN (only zucchini changed, lettuce-leaf byte-identical, no new violations); precommit OK ("0 total"). **17 anchors certified.**
+
+### The arc (this session, both rail-riders in parallel)
+zucchini: Steps 1-3 (`526cb4df`) -> 3.5 (`2a47731a`) -> 4-5.5 (`642f4890`) -> 6-8 (`678312b2`, whole_crop_gate 17 -> 0; the shape_requirements bare-prose -> CP-pair conform [beginner via the copywriting skill] + the succession:spring rule-arm harvest reconcile to the green-beans pattern) -> CERT (`b0ccdd2d`). The warm-season rail-rider, the twin of the cool-season broccoli.
+
+### Next
+**broccoli is the LAST anchor.** Through region fill; Steps 6-8 kickoff READY to send (the cool-season analog, a leaner 35-null leg; Fork-1 ruling = adopt the 6 live tips_by_stage keys germination/seedling/established/head_forming/harvest/side_shoots as the growth_stages ids). Then Step 9 + Step 11 cert -> broccoli = anchor 18 = the GS roster is DONE (~18).
+
 ## 2026-06-23 -- zucchini-courgette Steps 6-8 RELEASED: consumer prose + the 7 compounds (whole_crop_gate 17 -> 0, structurally cert-ready) [claude.ai author lane -> Claude Code release]
 
 **base `78ef87cd` -> `678312b2`** (data commit `e963cc5`). The FINAL authoring leg. claude.ai authored (session `zucchini_steps6-8_author`) Steps 6 (seasoned depth-lift) + 7 (top-level/dict beginner siblings) + 8 (per-entry compound siblings + the dual-voice coverage gate); Claude Code released. Re-preflighted against the post-broccoli-4-5.5 LATEST -- zucchini untouched, crop still `fd8174de`. Slice preflight: `fd8174de` -> authored `4950084d` -> conformed `69c0a4c3`. NOT a flip (Step 11). Only zucchini changed; within `regions{}` only `region_notes_*` (windows/calendars/succession byte-identical).
