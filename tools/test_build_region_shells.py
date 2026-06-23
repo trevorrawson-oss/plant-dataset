@@ -518,4 +518,71 @@ assert c["regions"]["northern_tier"]["resolved_by_zone"]["5"]["plant_out"] == "A
 
 print("build_region_shells perennial_woody_ornamental: all tests passed")
 
+# ---- berries_woody (blueberry, anchor 18) shell build ----
+from build_region_shells import (build_region_shells, _is_berry_woody,
+                                 _build_berry_woody_shells)
+
+
+def _berry_woody_shell_crop():
+    """An author-fresh blueberry-shaped crop: the distinctive `berries_woody` archetype, the
+    frost_anchored wipe default, lifecycle PERMANENT (the tree-mis-route hazard), two cells."""
+    return {
+        "slug": "blueberry", "archetype": "berries_woody", "lifecycle": "permanent",
+        "calendar_basis": "frost_anchored",
+        "regions": {
+            "northern_tier": {"region_label": "Northern tier", "resolved_by_zone": {
+                "6": {"start_indoors": None, "direct_sow": None, "plantings": [], "calendar": [],
+                      "first_plant_date": None, "last_plant_date": None}}},
+            "se_gulf": {"region_label": "Southeast -- gulf", "resolved_by_zone": {
+                "9": {"start_indoors": None, "direct_sow": None}}}},
+    }
+
+
+# detector: True by archetype (first run) and by basis (re-run); False off-archetype
+assert _is_berry_woody(_berry_woody_shell_crop()) is True
+assert _is_berry_woody({"calendar_basis": "berries_woody"}) is True
+assert _is_berry_woody({"archetype": "warm_season_fruiting", "calendar_basis": "frost_anchored"}) is False
+# THE MIS-ROUTE HAZARD: blueberry is lifecycle=permanent, so _is_tree WOULD catch it. The dispatch
+# MUST check _is_berry_woody FIRST (like woody-ornamental) so it is not built as a tree.
+from build_region_shells import _is_tree, _is_berry_herbaceous, _is_woody_ornamental
+assert _is_tree(_berry_woody_shell_crop()) is True, "the tree mis-route hazard must be real"
+assert _is_berry_herbaceous(_berry_woody_shell_crop()) is False
+assert _is_woody_ornamental(_berry_woody_shell_crop()) is False
+
+# build flips the basis to berries_woody (NOT a tree basis) -> proves the dispatch is ordered right
+c = build_region_shells(_berry_woody_shell_crop())
+assert c["calendar_basis"] == "berries_woody", c["calendar_basis"]
+# dash resolution on the region label (shared convention)
+assert c["regions"]["se_gulf"]["region_label"] == "Southeast: gulf", c["regions"]["se_gulf"]["region_label"]
+
+cell = c["regions"]["northern_tier"]["resolved_by_zone"]["6"]
+# the chill-gated TYPE slots + their dual-register note, scaffolded null (D1/D2/D7)
+assert cell["recommended_type"] is None and cell["leaf_habit"] is None
+assert "type_note_seasoned" in cell and "type_note_beginner" in cell
+# chill_hours_delivered is the per-cell gate basis -- KEPT (the INVERSE of the berry/woody-ornamental cell)
+assert "chill_hours_delivered" in cell
+# render keys reused from the annual/berry names; calendar empty at admission
+assert cell["calendar"] == [] and cell["plant_out"] is None and cell["bloom"] is None
+assert cell["resolved_from"] == {} and cell["resolution_method"] is None
+assert cell["frost_risk_note_seasoned"] is None
+# blueberry HAS a harvest (a fruiting shrub) -- harvest keys present, UNLIKE the ornamental cell
+assert "harvest_start" in cell and "harvest_end" in cell and "harvest" in cell
+# annual-only keys stripped; NO tree-only mis-route key (suitability) introduced
+assert "start_indoors" not in cell and "direct_sow" not in cell and "plantings" not in cell
+assert "first_plant_date" not in cell and "last_plant_date" not in cell
+assert "suitability" not in cell
+
+# region-constant rule layer: ONE nursery-setting establishment entry, plant_out + bloom + harvest arms
+pls = c["regions"]["northern_tier"]["plantings"]
+assert len(pls) == 1 and pls[0]["track"] == "perennial" and pls[0]["label"] == "establishment"
+assert pls[0]["plant_out"] == [] and pls[0]["bloom"] == []
+assert pls[0]["harvest_start"] == [] and pls[0]["harvest_end"] == []
+
+# idempotent + no-clobber: a re-run does not wipe a filled value
+cell["plant_out"] = "Mar 1 - Apr 15"
+build_region_shells(c)
+assert c["regions"]["northern_tier"]["resolved_by_zone"]["6"]["plant_out"] == "Mar 1 - Apr 15", "re-run clobbered a filled cell"
+
+print("build_region_shells berries_woody: all tests passed")
+
 print("PASS build_region_shells")

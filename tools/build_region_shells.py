@@ -42,6 +42,8 @@ def build_region_shells(crop, session=SESSION, date=DATE):
     """
     if _is_woody_ornamental(crop):
         return _build_woody_ornamental_shells(crop)  # checked BEFORE _is_tree (defensive)
+    if _is_berry_woody(crop):
+        return _build_berry_woody_shells(crop)  # BEFORE _is_tree: blueberry is lifecycle=permanent
     if _is_tree(crop):
         return _build_tree_shells(crop)
     if _is_indoor(crop):
@@ -418,6 +420,100 @@ def _build_woody_ornamental_cell(cell):
     cell.setdefault("frost_risk_note_seasoned", None)  # late-frost-kills-tender-new-growth warning
     cell.setdefault("resolved_from", {})            # frost dates used (auditable)
     cell.setdefault("resolution_method", None)      # -> "perennial_woody_ornamental_precompute" once filled
+    cell.setdefault("sources", [])
+    cell.setdefault("anchoring_urls", {})
+
+
+# ---------------------------------------------------------------------------
+# BERRIES_WOODY region model (blueberry Step 3.5, anchor 18; the FIRST and only crop with this
+# archetype). A woody fruiting SHRUB whose growable TYPE is chill-gated by region (northern/southern
+# highbush, rabbiteye) and whose calendar SHAPE splits by per-cell leaf_habit (deciduous North /
+# evergreen South). Planted as a nursery transplant in a frost-anchored window, so frost resolution
+# stays ON (basis berries_woody, not a tree basis). The per-cell recommended_type + leaf_habit pick
+# the type + calendar shape the renderer + the A15/A16 gates branch on. UNLIKE the woody-ornamental
+# subshrub, blueberry HAS a harvest (a fruiting shrub), so the harvest keys stay. The per-cell
+# chill_hours_delivered is the gate basis (KEPT -- the inverse of the berry/woody-ornamental cell,
+# which strips it). northern_tier is built FROM SCRATCH like every region (no zones{} promote). See
+# the 2026-06-22 design spec (D1-D8).
+# ---------------------------------------------------------------------------
+
+# resolved-cell keys belonging to the ANNUAL sowing model only -- a crown-planted shrub has no indoor
+# start, no second sowing, no per-cell rule structure. Stripped. (The harvest keys are KEPT --
+# blueberry fruits, unlike the ornamental subshrub.)
+_BERRY_WOODY_CELL_DEAD = ("start_indoors", "direct_sow", "lifted_from_zone", "plantings",
+                          "notes", "zone_notes", "planting_note",
+                          "first_plant_date", "last_plant_date")
+
+
+def _is_berry_woody(crop):
+    """A woody fruiting shrub (blueberry, anchor 18; the first) takes the berries_woody region path.
+    Detected by the berries_woody basis marker (set by THIS builder, so re-runs stay on the path) or,
+    on the FIRST run before the flip, by the berries_woody archetype. MUST be dispatched BEFORE
+    _is_tree: blueberry is lifecycle=permanent, which _is_tree catches, so an un-ordered dispatch
+    would mis-route it to the tree builder (the same defensive-ordering case as woody-ornamental)."""
+    return (crop.get("calendar_basis") == "berries_woody"
+            or crop.get("archetype") == "berries_woody")
+
+
+def _build_berry_woody_shells(crop):
+    """Build every region cell to the berries_woody reference shape. Pure transform; no biology
+    invented; idempotent + no-clobber. Sets calendar_basis -> berries_woody, the marker that branches
+    Step 5.5 + the A15/A16 gates onto the berries_woody criteria."""
+    crop["calendar_basis"] = "berries_woody"
+    for r in (crop.get("regions") or {}).values():
+        if isinstance(r, dict):
+            _build_berry_woody_region(r)
+    return crop
+
+
+def _build_berry_woody_region(r):
+    lbl = r.get("region_label")
+    if isinstance(lbl, str) and " -- " in lbl:
+        r["region_label"] = lbl.replace(" -- ", ": ")
+    r.setdefault("region_notes_seasoned", None)
+    r.setdefault("region_notes_beginner", None)
+    if r.get("sources_pending_admission") == []:
+        r.pop("sources_pending_admission", None)
+    # region-constant RULE layer: a SINGLE nursery-setting establishment entry (no succession, no
+    # second_planting -- a blueberry is planted once for decades). plant_out feeds the Plant track,
+    # bloom the Bloom track, harvest_* the Harvest track. Only (re)build when it is not already the
+    # perennial entry -- never clobber a filled rule.
+    pl = r.get("plantings")
+    if not (isinstance(pl, list) and pl and isinstance(pl[0], dict)
+            and pl[0].get("track") == "perennial"):
+        r["plantings"] = [{
+            "succession_id": 1, "label": "establishment", "track": "perennial",
+            "plant_out": [], "bloom": [], "harvest_start": [], "harvest_end": [],
+            "anchoring_urls": {},
+        }]
+    r.setdefault("plantings_provenance", None)
+    for cell in (r.get("resolved_by_zone") or {}).values():
+        if isinstance(cell, dict):
+            _build_berry_woody_cell(cell)
+
+
+def _build_berry_woody_cell(cell):
+    """Reshape one resolved_by_zone cell to the berries_woody key-set, idempotent + no-clobber. The
+    per-zone recommended_type + leaf_habit make the region-dependent TYPE + calendar SHAPE first-class
+    (D1/D2). chill_hours_delivered is the per-cell gate basis (KEPT -- the inverse of the berry/woody-
+    ornamental cell). The render keys reuse the annual/tree/berry names (plant_out/bloom/harvest_*) so
+    the renderer reads them uniformly. The calendar is derived at Step 4 (A16). NO tree-only suitability."""
+    for dead in _BERRY_WOODY_CELL_DEAD:
+        cell.pop(dead, None)
+    cell.setdefault("recommended_type", None)       # northern_highbush | southern_highbush | rabbiteye (D1)
+    cell.setdefault("leaf_habit", None)             # deciduous (cold) | evergreen (warm South) (D2)
+    cell.setdefault("chill_hours_delivered", None)  # the region's chill -- the per-cell gate basis
+    cell.setdefault("type_note_seasoned", None)     # why this type here -- chill
+    cell.setdefault("type_note_beginner", None)
+    cell.setdefault("plant_out", None)              # nursery-setting window (frost-anchored)
+    cell.setdefault("bloom", None)
+    cell.setdefault("harvest_start", None)
+    cell.setdefault("harvest_end", None)
+    cell.setdefault("harvest", None)                # display span the calendar deriver parses
+    cell.setdefault("calendar", [])                 # 12-month cycle, derived at Step 4 (A16)
+    cell.setdefault("frost_risk_note_seasoned", None)  # late frost on open bloom (the low-chill-south risk)
+    cell.setdefault("resolved_from", {})            # frost dates used (auditable)
+    cell.setdefault("resolution_method", None)      # -> "berries_woody_precompute" once filled
     cell.setdefault("sources", [])
     cell.setdefault("anchoring_urls", {})
 

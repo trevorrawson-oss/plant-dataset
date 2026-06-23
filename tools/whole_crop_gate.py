@@ -362,6 +362,36 @@ print(f"  woody_ornamental calendar violations: {len(_woodycal)}")
 for m in _woodycal:
     fail(f"woody_ornamental calendar: {m}")
 
+# ---------------- A15. berries_woody structural cert (no-op off berries_woody) ----------------
+# Blueberry (anchor 18, the FIRST and only berries_woody crop) is a woody fruiting shrub whose
+# growable TYPE is chill-gated by region and whose calendar SHAPE splits by per-cell leaf_habit.
+# This asserts the structural invariants the generic checks do not encode -- lifecycle scalars +
+# the chill gate signature (gating_factors contains chill_hours, chill_hours_required set -- the
+# deliberate INVERSE of the woody-ornamental gate, which REJECTS chill_hours_required), the prose
+# backstop, self_fertile=false + no apple cross-pollination machinery, no tree machinery (rootstock),
+# and per-cell recommended_type/leaf_habit typing + the type COVERAGE invariant + token placement
+# (deciduous has dormant, evergreen has none, never season_over/renovation). chill_hours_delivered is
+# a KEPT cell key (the gate basis), not a tree mis-route. No-op off basis. (blueberry, 2026-06-22.)
+from berries_woody_gate import berries_woody_violations
+print("A15. berries_woody structural cert (lifecycle + chill gate + recommended_type/leaf_habit + coverage; no-op off scope)")
+_bwoody = berries_woody_violations(crop)
+print(f"  calendar_basis={crop.get('calendar_basis')!r} | berries_woody violations: {len(_bwoody)}")
+for m in _bwoody:
+    fail(f"berries_woody: {m}")
+
+# ---------------- A16. berries_woody calendar coherence (DERIVED-from-dates) ----------------
+# The blueberry calendar[] is a pure function of the cell's leaf_habit + bloom/harvest windows
+# (the tree_calendar lesson): deciduous -> the tree dormant/prune/bloom/growing/harvest/care cycle;
+# evergreen -> growing year-round with bloom/harvest/care (no dormant, no season_over). Recompute-
+# from-dates and fail on any mismatch. Empty calendars are the Step-3.5 admission state (skipped).
+# No-op off berries_woody.
+from berry_woody_calendar import berry_woody_calendar_violations
+print("A16. berries_woody calendar coherence (calendar == derive(leaf_habit, dates); no-op off scope)")
+_bwoodycal = berry_woody_calendar_violations(crop)
+print(f"  berries_woody calendar violations: {len(_bwoodycal)}")
+for m in _bwoodycal:
+    fail(f"berries_woody calendar: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
