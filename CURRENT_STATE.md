@@ -10,40 +10,39 @@
 ---
 
 
-**14 GS-arc anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, microgreens-mix, onion, strawberry, lavender) of a ~18 target. **IN PROGRESS: green-beans-bush (anchor 15)** -- Steps 1-3 + 3.5 + **Steps 4-5.5 region fill DONE 2026-06-22 (`fe470c61`, commit `bb9c5fc`).** All 10 region cells filled (20 zone-cells); succession tracks authored in MIXED geometry (the inverse of carrot: continuous north + split warm); A8 `successions_realized` derived per zone (5-12, cap 12). A **rail-rider** + **succession crop**. **ANCHOR REORDER (Trevor):** green-beans = anchor 15 ahead of blueberry (the `berries_woody` long-pole moves later). **NEXT = green-beans Steps 6-8 (consumer prose, incl. the deferred `container_notes.shape_requirements` CP pair) -> Step 9 -> Step 11 cert.** green-beans + 3 (zucchini/broccoli/blueberry) to ~18.
+**14 GS-arc anchors CERTIFIED** (cherry-tomato, beefsteak-tomato, carrot, lettuce-leaf, peach, apple, lemon, orange-navel, basil, zinnia, microgreens-mix, onion, strawberry, lavender) of a ~18 target. **IN PROGRESS: green-beans-bush (anchor 15)** -- Steps 1-3 + 3.5 + 4-5.5 + **Steps 6-8 DONE 2026-06-22 (`72cdeab4`, commit `49248e0`); whole_crop_gate now PASS (0) -- STRUCTURALLY COMPLETE.** All 7 A12 consumer compounds authored + the deferred `container_notes.shape_requirements` CP pair closed; CLEAN slice (no release-lane conformance). A **rail-rider** + **succession crop**. **ANCHOR REORDER (Trevor):** green-beans = anchor 15 ahead of blueberry. **NEXT = Step 9 (dash, already 0) -> Step 11 (cert + the `launch_ready` flip)** -- green-beans is ONE step from its cert. green-beans + 3 (zucchini/broccoli/blueberry) to ~18.
 
 
 ## Canonical pointer
-- **Current SHA:** `fe470c6195004eb61dd0cdef3f3876bb319cca814d6389d7a18691da04baf6bd`. `LATEST.txt` session: `green_beans_steps_4_5_5_region_fill` (2026-06-22).
+- **Current SHA:** `72cdeab41c709c8b4f6d1dec3a9251fec0759889753f354fd2ecccd15d3300b9`. `LATEST.txt` session: `green_beans_steps6_8` (2026-06-22).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `72cdeab4` -- feat(green-beans-bush): Steps 6-8 -- consumer prose + the 7 A12 compounds (anchor 15)
   - `fe470c61` -- feat(green-beans-bush): Steps 4-5.5 -- region fill + succession calendars (anchor 15)
   - `a39de1aa` -- feat(green-beans-bush): Step 3.5 -- direct-sow annual region shells (anchor 15)
   - `af3b1627` -- feat(green-beans-bush): Steps 1-3 released -- sources + scalars + varieties + companions (anchor 15)
   - `1499251f` -- feat(lavender): CERTIFIED -- anchor 14, the FIRST perennial_woody_ornamental
   - `b76e0aab` -- feat(lavender): Steps 6-8 -- consumer prose; whole_crop_gate PASS (0)
   - `993d762e` -- feat(lavender): Step 4 SCALE-UP -- 9 regions filled; REGION FILL 10/10
-  - `c840bf5a` -- feat(lavender): Step 4 PROOF region northern_tier (z3-7) -- region fill + derived calendars
 
-## What just happened (session `green_beans_steps_4_5_5_region_fill`, 2026-06-22)
+## What just happened (session `green_beans_steps6_8`, 2026-06-22)
 
-**GREEN-BEANS Steps 4-5.5 -- region fill + succession calendars.** claude.ai authored all 10 region cells (20 zone-cells); Claude Code ran the A8 succession derivation + 2 release-lane conformances + released (base `a39de1aa` -> `fe470c61`, commit `bb9c5fc`). NOT a flip (status `in_progress`).
-- **Region fill (A5 per-region SOURCE finding):** continuous -- northern_tier z3-7, ca_north/south_coast, hawaii (bounded Feb-Aug); split spring/fall -- se_gulf, ca_interior, ca_desert, low_desert_az, warm_arid (BRIDGE, no heat_pause); mixed -- fl_peninsula (z10 split / z11 continuous-inverted). §4 keying: continuous -> `succession_continuous` (deriver rule-3 day-precise); split -> `succession_spring`/`succession_fall` comma-lists (rule-2); fl carries both (the carrot mixed-geometry precedent, INVERTED distribution).
-- **A8 succession derivation:** per-zone `successions_realized` = 5-12 (cap 12); `succession_policy.successions` reconciled 6 -> 12 (max-over-zones). 20 cells.
-- **Findings (decided with Trevor):** northern last-sow T1-capped mid-Jul..early-Aug (anchor-at-extremes guard, NOT raw frost math; `resolved_from` byte-exact, cap documented in synthesis_note); z11 NOT `year_round` (both bounded -- VH021 South FL Sept-Apr + CTAHR "not year around"; onion/zinnia Hawaii precedent); **ca_interior SPLIT (Trevor Exeter ground-truth: real June heat stop, then fall replant)**; Option A heat-wall harvest-end -> legible `heat_pause` gaps, warm_arid z8 bridge exception (harvest tail meets fall sow).
-- **Claude Code release-lane CONFORMANCES (consumer copy untouched):** (1) `wait` -> `cold_pause` (73 tokens -- the certified warm-season-annual winter off-season convention; `wait` is illegible per Step 5.5; all in frost-bracketed z3-10 cells, the frost-free z11 cells already used `season_over`). (2) 4 CA `region_label` ` -- ` -> `: ` (gate-C dash; conformed to lettuce-leaf/carrot's colon labels).
-- **Gates:** whole_crop_gate 7 (only the Steps-6-8 A12 empties); A2 0 (filled), A5 0 (+0 wait-notes post-fix), A8 PASS (successions=12); release_verify clean (cleared 10 region_notes-null, no new); register PASS; source-tier 13 IDs all T1, 0 uncatalogued (no minting); frost-reconcile 18/18 match + 2 frost-free null.
-- **Open (blocks_launch:false):** hawaii z11 anchored to CTAHR B-91 (1943, still the cited Hawaii T1 but old) -- corroborate vs a current CTAHR vegetable publication at display-readiness.
+**GREEN-BEANS Steps 6-8 -- consumer prose depth-lift + beginner siblings + the 7 A12 compounds.** claude.ai authored; Claude Code released (base `fe470c61` -> `72cdeab4`, commit `49248e0`). **CLEAN slice -- NO release-lane conformance needed** (the released crop SHA equals claude.ai's authored `a9791c0f`). NOT a flip (launch_ready_core stays false; cert = Step 11).
+- **The 7 A12 compounds (all were empty):** growth_stages (6 bean stages: germination / seedling / vegetative / flowering / pod_set_fill / harvest), pests (4: Mexican bean beetle, aphids, spider mite, bean leaf beetle), diseases (5: rust, anthracnose, bacterial blights, root rots, white mold), failure_diagnostics (4: blossom-drop-heat [the ~90F pod-set wall, ties to the region heat_pause], poor-germ-cold-wet, all-leaves-no-pods [excess N], tough-stringy-pods), notifications (3), weather_triggers (2). **tips_by_stage RE-KEYED to the 6 growth_stages ids -- the A12 trap AVOIDED** (the kickoff's explicit re-key flag + carrot shape reference worked; stale shell keys deleted, `text_seasoned`/`text_beginner` shape, all lists non-empty).
+- **Also closed:** storage + yield_expectations (were fully null, filled from T1) + the **deferred `container_notes.shape_requirements` CP pair** (wide>deep-narrow / shallow-roots, from Steps 1-3). Step 6 depth-lift across the existing `_seasoned` fields; Steps 7-8 beginner siblings throughout.
+- **Sourcing:** 4 catalogued T1 parents (clemson_hgic incl. the HGIC 2200/2201 IPM factsheets, usu_ext, psu_ext, umd_ext); 0 non-T1, 0 minting. The SDSU yield figure (3-4 lb/10-ft) anchored to the corroborating USU estimate rather than minting SDSU (no catalog churn for a corroborated number -- Claude Code accepted).
+- **Gates:** whole_crop_gate **PASS (0)** -- green-beans is now STRUCTURALLY COMPLETE; A12 0, dual-voice coverage 0 missing / 0 null, register_completeness PASS, 0 dashes (405 copy strings), source-tier 13 IDs all T1; release_verify clean (cleared the 7 A12 empties, no new); precommit no-regression (0 total, cleared 7).
+- **Open (blocks_launch:false):** hawaii z11 on CTAHR B-91 (1943) -- corroborate at display-readiness (carried).
 
 
 ## Active work + next step
 
-- **NEXT = green-beans Steps 6-8 (claude.ai consumer prose depth-lift):** the 7 A12 empties (growth_stages / notifications / pests / diseases / failure_diagnostics / weather_triggers / tips_by_stage) + the dual-register beginner siblings + ANCHOR each block. **INCLUDE the deferred `container_notes.shape_requirements` CP pair** (the wide>deep-narrow/shallow-roots nuance dropped at Steps 1-3). Then Step 9 (dash), Step 11 (cert + the launch_ready flip). After green-beans: zucchini + broccoli (rail-riders -- FEED FORWARD the `wait`->`cold_pause` + colon-`region_label` conventions), then blueberry (the deferred new-archetype long-pole). GS arc target ~18.
+- **NEXT = green-beans Step 9 (dash resolution -- whole_crop_gate already shows 0 dashes, so a confirm pass) -> Step 11 (cert: the independent source-fidelity WebFetch of a sample of cited T1 + the verbatim re-scan + the `launch_ready` flip).** green-beans is gate-clean (whole_crop_gate PASS) -- ONE step from anchor-15 cert. After green-beans: zucchini + broccoli (rail-riders -- FEED FORWARD the `wait`->`cold_pause` + colon-`region_label` conventions; the A12 re-key + carrot-shape-reference kickoff pattern worked cleanly here), then blueberry (the deferred new-archetype long-pole). GS arc target ~18.
 - **green-beans display-readiness follow-ups:** corroborate hawaii z11 (CTAHR B-91, 1943) vs a current CTAHR publication; confirm the demoted container dims + rotation interval vs a bean-specific T1.
 - **Lavender post-cert follow-ups (non-blocking, carried):** tighten the se_gulf/hawaii anchors to primary LSU AgCenter / CTAHR URLs; plant-astro woody-ornamental GUIDE PAGE template.
 - **Tooling follow-ups (carried):** teach `apply_patch.py` the slice / `crop_ops`+`source_catalog_ops` handback envelope; sync `register_bearing_field_inventory_v1_0.md` with the lavender gate rulings.
 
 
-## Gate record (generated 2026-06-22, on canonical `fe470c61`)
+## Gate record (generated 2026-06-22, on canonical `72cdeab4`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**

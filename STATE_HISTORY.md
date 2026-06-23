@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-06-22 -- green-beans-bush (anchor 15) Steps 6-8 RELEASED: consumer prose + the 7 A12 compounds [Claude Code release]
+
+**base `fe470c61` -> `72cdeab4`** (data commit `49248e0`). The consumer-prose layer. claude.ai authored (session `green_beans_steps6_8`, post-author crop SHA `a9791c0f`); Claude Code released. **CLEAN slice -- NO release-lane conformance** (released crop SHA == authored `a9791c0f`). NOT a flip (launch_ready_core stays false; cert = Step 11). **whole_crop_gate is now PASS (0) -- green-beans is STRUCTURALLY COMPLETE.**
+
+### Authored (all 7 A12 compounds were empty + 2 null blocks + 1 deferred CP pair)
+- **growth_stages** -- 6 bean stages (germination / seedling / vegetative / flowering / pod_set_fill / harvest); the flowering->pod-set->fill arc is bean-specific (NOT carrot's 4; carrot was SHAPE-only per A1). Dual-register what_to_look_for / user_action / log_prompt + day_range_from_sow.
+- **tips_by_stage** -- RE-KEYED to the 6 growth_stages ids; **the A12 trap AVOIDED** (the kickoff's explicit re-key flag + the carrot shape reference worked). Stale shell keys (germination/seedling/established/flowering/harvest/end_of_season, all empty) DELETED; 9 tips, every list non-empty, every tip `text_seasoned`/`text_beginner` (not `tip_*`).
+- **pests (4)** Mexican bean beetle / aphids / two-spotted spider mite / bean leaf beetle; **diseases (5)** rust / anthracnose / bacterial blights (common+halo) / root rots / white mold -- 4-field dual-register (symptoms/cause/organic_treatment/prevention), legume wet-foliage caution.
+- **failure_diagnostics (4)** blossom_drop_heat (the ~90F pod-set wall, ties to the region heat_pause) / poor_germination_cold_wet / all_leaves_no_pods (structured `cause`="too much nitrogen", jargon-free so no separate beginner sibling) / tough_stringy_pods.
+- **notifications (3)** + **weather_triggers (2)** (FROST_WARNING both ends + HEAT_STRESS at flowering/pod_set_fill; active_stages reference real growth_stages ids).
+- **storage + yield_expectations** (were fully null) filled from T1; **container_notes.shape_requirements** (deferred from Steps 1-3) closed as the CP pair (wide>deep-narrow / shallow-roots). Step 6 depth-lift across existing `_seasoned` fields; Steps 7-8 beginner siblings throughout.
+
+### Sourcing
+4 catalogued T1 parents (clemson_hgic incl. HGIC 2200/2201 IPM factsheets, usu_ext, psu_ext, umd_ext); pages fetched live, anchoring URLs pinned per block. **0 non-T1, 0 minting.** The SDSU yield figure (3-4 lb/10-ft) is anchored to the corroborating USU estimate rather than minting SDSU as a parent (no catalog churn for a corroborated number -- Claude Code accepted claude.ai's posture). 5 strings reworded after the first verbatim scan (bean leaf beetle wing-cover, rust runs, root-rot species framing, white mold).
+
+### Release verification (protocol #6)
+- Preflight: authored slice crop SHA `a9791c0f` reproduced; collateral clean (only the 10 prose blocks changed; 122 other crops byte-identical).
+- whole_crop_gate **PASS (0)** -- A12 empties 0, tips-conformance clean, B dual-voice null_values 0, C/D 0 dashes / 0 bad-temp (405 copy strings), E source-tier 13 IDs all T1 0 uncatalogued, F anchoring 0 gaps.
+- register_completeness PASS; dual-voice coverage 0 missing / 0 null.
+- release_verify clean: only green-beans changed, lettuce-leaf byte-identical, CLEARED the 7 A12 empties, no new violations. precommit no-regression (0 total, cleared 7).
+
+### Open (blocks_launch:false)
+hawaii z11 anchored to CTAHR B-91 (1943) -- corroborate vs a current CTAHR vegetable publication at display-readiness (carried, unchanged).
+
+### NEXT
+Step 9 (dash resolution -- already 0, a confirm pass) -> Step 11 (cert: the independent source-fidelity WebFetch of a sample of cited T1 + the verbatim re-scan + the `launch_ready` flip). green-beans is ONE step from anchor-15 cert.
+
 ## 2026-06-22 -- green-beans-bush (anchor 15) Steps 4-5.5 RELEASED: region fill + succession calendars [Claude Code release]
 
 **base `a39de1aa` -> `fe470c61`** (data commit `bb9c5fc`). All 10 region cells filled (20 zone-cells). claude.ai authored (session `green_beans_steps_4_5_5_region_fill`, post-author crop SHA `695e4d0c`); Claude Code ran the A8 succession derivation + 2 release-lane conformances + released. NOT a flip (status `in_progress_gs_arc`).
