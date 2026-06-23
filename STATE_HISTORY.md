@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-06-22 -- blueberry (anchor 18) Step 3.5 + the berries_woody TOOLSET [Claude Code structural lane, TDD]
+
+**base `8e5deafc` -> `f2863c7f`** (tooling commit `59d48f9`, data commit `49d5dd2`). The `berries_woody` archetype tooling built test-first, then the Step-3.5 region-shell build. NOT a flip (status `in_progress`, both launch_ready false; the certified count stays 15). This is the long-pole's tooling milestone (the lavender/strawberry new-archetype sequence: deriver + gates + shell-builder, then the data arc).
+
+### Toolset (test-first; off-branch-safe, no-op unless calendar_basis/archetype is berries_woody; 28/28 tool tests)
+- **`berry_woody_calendar.py`** -- the calendar deriver + the A16 coherence gate. DECIDUOUS cells reuse `derive_tree_calendar` (the tree dormant/prune/bloom/growing/harvest/care cycle EXACTLY -- prune the month before bloom, care after harvest end); EVERGREEN cells grow year-round with bloom/harvest/care (no dormant, no season_over -- the citrus analog). REUSE the tree tokens, NO new token (D3). `berry_woody_calendar_violations` recompute-from-dates per cell; empty calendars are the admission state (skipped).
+- **`berries_woody_gate.py`** -- the A15 structural gate. Lifecycle scalars + the chill signature (gating_factors contains chill_hours AND chill_hours_required set -- the deliberate INVERSE of the woody-ornamental gate, which REJECTS chill_hours_required), the woody prose backstop, self_fertile=false + no apple cross-pollination machinery, per-cell recommended_type/leaf_habit typing, the type COVERAGE invariant (every per-cell recommended_type has >=1 matching variety -- the onion-A9 analog), token placement (deciduous carries dormant, evergreen carries none, NEVER season_over/renovation), no tree mis-route. NOTE chill_hours_delivered is a KEPT cell key (the per-cell gate basis); only `suitability`/rootstock mark a tree mis-route.
+- **`build_region_shells.py`** -- `_is_berry_woody` + `_build_berry_woody_shells`, dispatched BEFORE `_is_tree`. THE MIS-ROUTE HAZARD (a test asserts `_is_tree(blueberry) is True`): blueberry is lifecycle=permanent, which `_is_tree` catches, so an un-ordered dispatch would build it as a TREE -- the same defensive-ordering case as woody-ornamental. The cell key-set KEEPS the harvest keys (a fruiting shrub, unlike the ornamental) and adds chill_hours_delivered + recommended_type/leaf_habit/type_note_*.
+- **`whole_crop_gate.py`** -- wires A15 + A16 (after A14). Verified A15/A16 no-op for every non-berries_woody crop (strawberry + lettuce-leaf still PASS).
+
+### 3.5 shell build (`apply_region_shells.py blueberry`, SHA-gated off `8e5deafc`)
+Flipped `calendar_basis frost_anchored -> berries_woody`; built all 10 region cells to the berries_woody key-set (recommended_type/leaf_habit null at 3.5; chill_hours_delivered; type_note_*; plant_out/bloom/harvest_start/harvest_end/harvest; calendar:[]; frost_risk_note_seasoned; resolved_from:{}; resolution_method null); one perennial nursery-setting establishment plantings entry per region; annual-only keys stripped; northern_tier from-scratch (no zones{} promote). Collateral audit: only blueberry changed.
+
+### Gates (admission state -- NOT a flip)
+- register_completeness PASS; A15 + A16 fire and return 0 (cells admission-state, skipped).
+- whole_crop_gate 17 = the admission state: the 10 "region unfilled (plantings stub/missing)" violations of Steps 1-3 are REPLACED by 10 "region_notes pair both null" (the next-stage Step-4 marker; plantings is now the establishment entry) + 6 empty consumer compounds + 1 empty tips_by_stage (Steps 6-8).
+- release_verify raised the advisory CONCERN for exactly that unmask (NEW region_notes-both-null; CLEARED plantings-stub) -- reviewed, it is the standard 3.5 transition. precommit_release_verify OK (the `drop_shell_build_unmasks` exemption); the data commit's pre-commit hook passed.
+
+### Next
+Step 4 region fill: per-region recommended_type + leaf_habit + chill (SOURCE-decided per A5), bloom/harvest windows, GENERATE each calendar from windows + leaf_habit; BUILD the DEFERRED `derive_berry_woody_calendars.py` fill applier (deferred from 3.5 because it needs filled windows to act on). Then Steps 6-8, Step 9, Step 11 cert.
+
 ## 2026-06-22 -- blueberry (anchor 18, the FIRST berries_woody) Steps 1-3 RELEASED [Claude Code release]
 
 **base `196172a2` -> `8e5deafc`** (data commit `5b57436`). The NEW-archetype LONG POLE begins: a woody fruiting shrub (`berries_woody`), chill-gated type by region, hard acid-soil requirement. claude.ai authored (session `blueberry_steps_1_3`); Claude Code verified + released. **NOT a flip** (status `in_progress`, both launch_ready false; the certified count stays 15). Design spec: `docs/superpowers/specs/2026-06-22-blueberry-berries-woody-model-design.md` (D1-D8, Trevor-approved 2026-06-22).
