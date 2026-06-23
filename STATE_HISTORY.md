@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-22 -- blueberry (anchor 18, the FIRST berries_woody) Steps 1-3 RELEASED [Claude Code release]
+
+**base `196172a2` -> `8e5deafc`** (data commit `5b57436`). The NEW-archetype LONG POLE begins: a woody fruiting shrub (`berries_woody`), chill-gated type by region, hard acid-soil requirement. claude.ai authored (session `blueberry_steps_1_3`); Claude Code verified + released. **NOT a flip** (status `in_progress`, both launch_ready false; the certified count stays 15). Design spec: `docs/superpowers/specs/2026-06-22-blueberry-berries-woody-model-design.md` (D1-D8, Trevor-approved 2026-06-22).
+
+### Apply + cross-check
+- **Slice preflight:** the untouched-shell crop SHA `e2e27dcb` matched canonical (index 18). Handback = the full authored SLICE (`blueberry_steps_1_3_authored_slice.json`); the authoring post-author crop SHA `3ce28c8e` reproduced exactly via `sha256(json.dumps(crop, sort_keys=True, separators=(',',':'), ensure_ascii=False))` -- NOTE the dataset crop-SHA convention is **ensure_ascii=False** (the `°F` literal stays a UTF-8 char; an ensure_ascii=True dump gives a different hash). Spliced into canonical (crops 123 unchanged; `source_catalog` unchanged).
+- **Key delta:** exactly 3 spec-authorized new top-level keys (`gating_factors`, `type_selection_seasoned`, `type_selection_beginner`); 0 removed. `archetype=berries_woody` + `calendar_basis=frost_anchored` preserved (the basis flip to `berries_woody` is the Step 3.5 Claude Code lane, NOT now).
+- **Source-tier:** all 8 cited T1 parents (umaine_ext/psu_ext/osu_ext/msu_ext/umass_ext + clemson_hgic/uga_ext/ufifas_ext) already catalogued + T1; `msstate_ext` corroborates chill bands but was NOT minted (not a field-level source) -- NO catalog change.
+
+### Claude Code release-lane CONFORMANCE (`type` primitive; Trevor decision; released crop SHA `f0384047`)
+The slice left `type:"fruit_tree"` (the wipe artifact) UNTOUCHED + flagged. Trevor's call (2026-06-22): set **`type:"berry"`** -- a NEW top-level `type` vocab value (joins crop/herb/fruit_tree/microgreen/mushroom/flower), the precedent for the woody-berry family (raspberry/blackberry/elderberry are all still `fruit_tree` shells). Decisive because `crop.type` is NOT cosmetic in plant-astro: `crop.type === "fruit_tree"` routes the page to the TreeGuide template (`src/pages/guides/crops/[crop]/[zone].astro:127`) + tree hero logic (`HeroCard.astro:197`), and `type` is the displayed hero category label (`HeroCard.astro:104`, preferred over `category`). Released crop SHA `f0384047` = the authoring slice with the single `type` field -> "berry" (the only delta from `3ce28c8e`). A ~2-line HeroCard pluralizer fix ("berry" -> "Berries", since the naive pluralizer would render "Berrys") is staged in plant-astro -- GATED, NOT pushed.
+
+### Gates (Steps 1-3 admission state -- NOT a flip)
+- **register_completeness_gate: PASS** -- 0 unruled prose fields (the new `type_selection_*` pair is recognized).
+- **release_verify: CLEAN** -- only blueberry changed among crops; top-level(non-crops) + `source_catalog` unchanged; reference lettuce-leaf byte-identical; **NO new violations vs base**; dash/temperature scan clean; no novel keys.
+- **precommit_release_verify: OK** -- no regression (17 total, no new); ran as the pre-commit hook on the data commit too.
+- **whole_crop_gate: 17 violations = the INHERITED shell admission state** (10 unfilled regions [Step 4] + 6 empty consumer compounds + 1 empty `tips_by_stage` [Steps 6-8]); identical to the base shell, ZERO regressions. The `berries_woody` A-section does not exist yet (D8 tooling unbuilt) and would no-op anyway (basis still `frost_anchored`); `chill_hours` in `gating_factors` correctly does NOT trip the photoperiod A9.
+- **register_fill_gate: 45 unauthored** -- the expected pre-flip nulls (region_notes [Step 4]; the `pollination{}` 2.9 block + others [Steps 6-8]). The `pollination{}` block stays N/A (the light model carries pollination via `self_fertile:false` + `pollinator_notes_*`); give it N/A prose at 6-8 (never null at the flip).
+
+### Next (Claude Code)
+**Step 3.5+ TOOLING is the long pole and is currently UNBUILT** (the repo has `woody_ornamental_*` + `berry_herbaceous_*` + `tree_*`, NOT `berries_woody`). Build test-first per D8: `build_region_shells._build_berry_woody_shells`, the `berry_woody_calendar` deriver (deciduous `dormant`+`prune` cycle; evergreen continuous growing; REUSE tree tokens), the `berries_woody_violations` whole_crop_gate A-section (type COVERAGE invariant + leaf_habit<->calendar coherence + no season_over/renovation + self_fertile guard + no tree mis-route). Then Step 4 region fill (per-region `recommended_type`/`leaf_habit`/chill SOURCE-decided per A5; GENERATE each calendar from windows + leaf_habit; frost-reconcile vs `zone_frost_data`), Steps 6-8 (incl. the ELEVATED acid-soil beat + chlorosis `failure_diagnostics`), Step 9, Step 11 cert.
+
 ## 2026-06-22 -- green-beans-bush (anchor 15) CERTIFIED: the 2nd succession crop [Claude Code, Step 11 cert]
 
 **base `72cdeab4` -> `196172a2`** (data commit `040f6d3`). THE FLIP -- green-beans-bush is certified, the **15th GS anchor** and the **2nd succession crop** (after lettuce). A rail-rider (warm-season annual on the proven `warm_season_fruiting` rails, NO new archetype/tooling); the full arc (Steps 1-3 -> 3.5 -> 4-5.5 -> 6-8 -> cert) ran in a single day.
