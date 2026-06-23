@@ -6,6 +6,15 @@
 
 ---
 
+## 2026-06-23 -- broccoli Step 3.5 region shells BUILT [Claude Code mechanical]
+
+**base `85ad52e2` -> `20a34223`** (data commit `aab45c7`; crop SHA `1e89d3a3` -> `04698276`). CC mechanical (`tools/apply_region_shells.py`), session `broccoli_step3_5_region_shells`. The standard `cool_season_annual` path (generic annual builder, NOT a perennial/tree/berry/indoor branch -- same path zucchini took).
+- **Built:** each of the 10 regions got a beginner-track rule skeleton `{succession_id:1, label:"main", track:"beginner", start_indoors:[], plant_out:[], harvest_start:[], harvest_end:[], anchoring_urls:{}}` -- the TRANSPLANT shape (start_indoors + plant_out), selected because `start_method.start == "both"` (direct=False). `region_notes` pairs scaffolded null; `resolved_by_zone` cells PENDING Step-4 fill; northern_tier built FROM SCRATCH (author-fresh). `calendar_basis` stays `frost_anchored`.
+- **Gates:** whole_crop_gate 17 violations -- the 10 region `stub/missing` GRADUATED to `region_notes pair both null` (the accepted Step-3.5 admission state; Step 4/6-7 fill the notes), exempted by `precommit_release_verify.drop_shell_build_unmasks`. The other 7 (6 empty compounds + 1 tips) stay deferred to Steps 6-8. precommit OK (no new violations, 17 total). Same clean graduation signature as zucchini 3.5.
+
+### Next
+broccoli Step 4 region fill -- the SPRING+FALL double-window (`pause_in_heat:true` -> warm regions carry a mid-summer `heat_pause` no-grow gap, the lettuce/carrot pattern) + the per-region windows + `resolved_by_zone`/`calendar[12]` materialization + the A8 `successions_realized` derivation + the colon `region_label`. The Steps 4-5.5 region-fill kickoff is being assembled (the mirror of zucchini's). Then Steps 6-8 -> Step 9 -> cert.
+
 ## 2026-06-23 -- broccoli Steps 1-3 RELEASED: the second + last rail-rider [claude.ai author lane -> Claude Code release]
 
 **base `2a47731a` -> `85ad52e2`** (data commit `93bfd23`). The second of the last 2 rail-riders -- a `cool_season_annual` + succession crop on the proven lettuce/carrot rails (NO new archetype / tooling / design spec). claude.ai authored Steps 1-3 (session `phase_3_broccoli_steps1-3`, parallel to the zucchini session on the same `0b767fc2` base); Claude Code released, re-preflighting against the LIVE post-zucchini SHA (`2a47731a`) -- broccoli was untouched by the zucchini release, so its canonical crop was still the blank shell. NOT a flip (status null, both launch_ready false; certified count stays 16). Slice preflight: blank-shell `2f81cd13` -> authored `7d2da816` -> conformed `1e89d3a3`.
