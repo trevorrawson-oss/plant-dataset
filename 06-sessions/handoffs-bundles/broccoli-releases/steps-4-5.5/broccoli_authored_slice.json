@@ -1,0 +1,4512 @@
+{
+  "slug": "broccoli",
+  "name": "Broccoli",
+  "category": "Brassicas",
+  "type": "crop",
+  "difficulty": "medium",
+  "days_to_maturity": [
+    55,
+    75
+  ],
+  "sunlight": "full_sun",
+  "sunlight_hours": [
+    6,
+    8
+  ],
+  "water": "Regular",
+  "spacing_inches": [
+    12,
+    24
+  ],
+  "soil": {
+    "preferred_texture_core": "loam",
+    "preferred_texture_seasoned": "Loam to sandy loam, fertile and well-drained, with plenty of organic matter.",
+    "tolerated_texture_core": "clay loam",
+    "tolerated_texture_seasoned": "Heavier clay loams are workable if drainage is improved with organic matter; broccoli's shallow roots dislike both waterlogging and drought.",
+    "problematic_texture_core": "pure sand",
+    "problematic_texture_seasoned": "Pure sand drains and dries too fast for a heavy-feeding, moisture-sensitive crop unless heavily amended and watered often.",
+    "preferred_description_beginner": "Broccoli likes rich, loose soil that holds moisture but drains well. Mix in compost before planting.",
+    "drainage_requirement": "well_drained",
+    "organic_matter_preference": "high",
+    "sources": [
+      "ncsu_ext",
+      "umd_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "umd_ext": {
+        "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+        "verified": "2026-06-23"
+      }
+    },
+    "preferred_description_seasoned": "Broccoli performs best in a fertile, well-drained loam high in organic matter. A consistent, even moisture supply matters for quality heads, so work in compost and avoid soils that either pond water or dry out fast."
+  },
+  "ph": {
+    "preferred_range": [
+      6.0,
+      6.5
+    ],
+    "tolerated_range": [
+      5.5,
+      6.8
+    ],
+    "note_beginner": "Broccoli grows best in slightly acidic to near-neutral soil. A simple soil test tells you where you stand.",
+    "sources": [
+      "ncsu_ext",
+      "osu_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "osu_ext": {
+        "url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+        "verified": "2026-06-23"
+      }
+    },
+    "note_seasoned": "Aim for a pH near 6.0 to 6.5. Broccoli still does fine across 5.5 to 6.8, and holding the soil at or above roughly 6.8 to 7.0 also helps suppress clubroot, a key brassica soil disease."
+  },
+  "germination_temp_f": [
+    40,
+    86
+  ],
+  "weeks_indoors": 5,
+  "zones": {
+    "3": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "4": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "6": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "5": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "4": [],
+        "6": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "6": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "3": [],
+        "8": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "7": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "3": [],
+        "8": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "8": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "2": [],
+        "8": [],
+        "9": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "9": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "10": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    },
+    "11": {
+      "plant_out": null,
+      "start_indoors": null,
+      "harvest": null,
+      "notes": null,
+      "calendar": [],
+      "overlaps": {
+        "10": [],
+        "11": []
+      },
+      "first_plant_date": null,
+      "last_plant_date": null,
+      "harvest_start": null,
+      "harvest_end": null,
+      "planting_note": null,
+      "sources": [],
+      "plantings": [],
+      "anchoring_urls": {}
+    }
+  },
+  "fertilizer": {
+    "frequency": "twice a season",
+    "type": "Nitrogen-rich fertilizer",
+    "timing": "starter at transplanting, then side-dress",
+    "example_product": "Blood meal, 21-0-0, or a balanced vegetable fertilizer",
+    "notify_days_after": 21,
+    "stage_id": "established",
+    "notes_seasoned": "Broccoli is a heavy feeder with a high nitrogen requirement and a small root zone, so place feed near the plant. Use a starter fertilizer at transplanting, side-dress with nitrogen about 3 weeks later, and feed again after cutting the central head to push side shoots. Avoid overdoing nitrogen, which can give soft, poor-quality growth.",
+    "notes_beginner": "Broccoli is hungry and needs steady feeding. Give it a feed when you transplant, again about 3 weeks later, and once more after you cut the main head so it makes side shoots.",
+    "notify_message_seasoned": "Time to side-dress your broccoli with nitrogen.",
+    "notify_message_beginner": "Time to feed your broccoli.",
+    "npk_hint_seasoned": "High N for leafy growth; e.g. 21-0-0 side-dress or blood meal. Starter feed at transplant.",
+    "npk_hint_beginner": "Use a nitrogen-rich feed such as blood meal or a balanced vegetable fertilizer.",
+    "amount_seasoned": "Side-dress about half a cup of 21-0-0 per 10 feet of row, then a lighter feed when the head reaches about quarter size.",
+    "amount_beginner": "Follow the label rate for a nitrogen-rich vegetable fertilizer.",
+    "sources": [
+      "ncsu_ext",
+      "usu_ext",
+      "umd_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+        "verified": "2026-06-23"
+      },
+      "umd_ext": {
+        "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+        "verified": "2026-06-23"
+      }
+    }
+  },
+  "recipes": [],
+  "lifecycle": "annual",
+  "first_planting_notify_days": 5,
+  "companions": {
+    "note_beginner": "Broccoli does well next to aromatic herbs, onions, and quick cool-season crops like lettuce. The main things to keep it away from are other cabbage-family plants, which share its diseases.",
+    "sources": [],
+    "anchoring_urls": {},
+    "note_seasoned": "Most broccoli companion pairings are traditional rather than research-tested. The pairings worth acting on are practical ones: aromatic herbs and alliums as scent-based deterrents, and lettuce or spinach as cool-season intercrops that use space and light before broccoli fills in. The well-grounded caution is to separate broccoli from other brassicas, which share clubroot and cabbage-family pests, a rotation and disease principle more than a tested adjacency effect.",
+    "good_beginner": [],
+    "good_beginner_seasoned": [
+      {
+        "name": "Dill",
+        "why_beginner": "Dill is a classic friend for broccoli. Its strong smell is said to put off cabbage pests, and its flowers bring in helpful insects."
+      },
+      {
+        "name": "Onions",
+        "why_beginner": "Onions are a traditional neighbor for broccoli; their smell is said to help keep cabbage pests away."
+      },
+      {
+        "name": "Lettuce",
+        "why_beginner": "Lettuce grows fast and low, so you can tuck it between young broccoli plants to use the space while the broccoli fills in."
+      }
+    ],
+    "good_seasoned": [
+      {
+        "name": "Dill",
+        "category": "herb",
+        "timing": "interplant nearby",
+        "why_seasoned": "A traditional brassica companion: aromatic herbs like dill are long held to confuse or deter cabbage pests by scent, and dill's flowers also draw beneficial insects. The effect is a folk-garden one rather than a documented broccoli yield benefit.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "medium",
+          "reason": "Aromatic-herb pest confusion is a well-documented companion tradition for brassicas, but no T1 extension trial documents a dill-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "medium",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Onions",
+        "category": "allium",
+        "timing": "interplant nearby",
+        "why_seasoned": "Alliums are a traditional companion for brassicas, their scent thought to deter cabbage pests. It is a classic interplanting practice rather than a T1-tested pairing, and the two share no major pest.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Allium scent-deterrence is classic companion lore; no T1 source documents an onion-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Lettuce",
+        "category": "leafy_green",
+        "timing": "interplant along edges",
+        "why_seasoned": "Lettuce is a shallow, quick, cool-season crop that shares broccoli's season and tucks along the bed edge, using space and light while the broccoli is still small. The pairing is space-driven and traditional, not a documented growth effect, and the two share no serious pest.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Space-use intercropping lore; no T1 source documents a lettuce-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Spinach",
+        "category": "leafy_green",
+        "timing": "interplant along edges",
+        "why_seasoned": "Another quick cool-season green that shares broccoli's window and fits the same space-driven intercrop role along the bed edge. Traditional and low-risk rather than a documented benefit.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Cool-season space-use intercrop lore; no T1 source documents a spinach-broccoli benefit.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Nasturtiums",
+        "category": "trap_crop",
+        "timing": "interplant nearby",
+        "why_seasoned": "Nasturtiums are often planted as a trap crop for cabbage aphids near brassicas. Trap cropping is a documented principle, but it works best for moderately mobile pests and is not a tested broccoli-nasturtium pairing, so treat it as a plausible aid rather than a proven control.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "likely",
+          "confidence": "low",
+          "reason": "Trap cropping for aphids is a documented mechanism, but the specific nasturtium-broccoli pairing is not formally tested in T1 trials.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "likely",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Marigolds",
+        "category": "pest_deterrent",
+        "timing": "interplant nearby",
+        "why_seasoned": "A traditional all-purpose companion said to deter cabbage moths and aphids. The broad pest-deterrent claim is folklore rather than a documented broccoli-specific effect.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "General pest-deterrent companion lore; no matching T1 pattern for broccoli.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Celery",
+        "category": "vegetable",
+        "timing": "interplant nearby",
+        "why_seasoned": "A long-standing brassica companion said to deter cabbage white butterflies. Traditional lore with no documented broccoli-specific support.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Traditional brassica pairing; no T1 source documents the deterrent effect for broccoli.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "bad_beginner": [],
+    "bad_beginner_seasoned": [
+      {
+        "name": "Other brassicas",
+        "why_beginner": "Keep broccoli away from other cabbage-family plants like cabbage, cauliflower, and kale. They share the same pests and diseases, so planting them together makes problems worse."
+      }
+    ],
+    "bad_seasoned": [
+      {
+        "name": "Other brassicas",
+        "category": "competition_disease",
+        "timing": "avoid adjacency and rotation",
+        "why_seasoned": "Cabbage, cauliflower, kale, Brussels sprouts and the other cole crops share broccoli's clubroot and cabbage-family pests, so grouping them concentrates disease and pest pressure. This is a real rotation and disease principle rather than a tested adjacency effect; the practical rule is to spread brassicas out and rotate them.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "likely",
+          "confidence": "medium",
+          "reason": "Shared clubroot and shared cabbage-family pests are extension-documented; the specific bad-adjacency claim is a known agronomic principle, not formally pair-tested.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "likely",
+        "confidence": "medium",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Strawberries",
+        "category": "traditional_caution",
+        "timing": "avoid interplanting",
+        "why_seasoned": "A traditional caution that broccoli and strawberries inhibit each other. There is no documented mechanism or T1 support; it persists as folklore.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Folk anti-companion claim with no pattern match or T1 support.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      },
+      {
+        "name": "Tomatoes",
+        "category": "competition",
+        "timing": "avoid interplanting",
+        "why_seasoned": "Tomatoes and broccoli are both heavy feeders and a traditional list pairs them as competitors for nutrients and space. Inter-plant competition is a real general concept, but the specific bad pairing is not documented for broccoli, and the two also want different seasons. Treat it as low-priority caution.",
+        "notify_weeks_before": 0,
+        "provenance": {
+          "label": "traditional",
+          "confidence": "low",
+          "reason": "Competition is a real general concept but the specific broccoli-tomato bad pairing is extrapolated, not T1-documented; seasonal mismatch makes overlap uncommon anyway.",
+          "verified_against_sources": false,
+          "verified_date": null
+        },
+        "evidence_label": "traditional",
+        "confidence": "low",
+        "verified_against_sources": false,
+        "sources": [],
+        "anchoring_urls": {}
+      }
+    ]
+  },
+  "pests": [],
+  "diseases": [],
+  "watering": {
+    "frequency_seasoned": "Give about 1 to 1.5 inches weekly, kept even through the season.",
+    "frequency_beginner": "Water regularly so the soil stays evenly moist, roughly 1 to 1.5 inches a week.",
+    "amount_seasoned": "About 1 to 1.5 inches per week, more as heads bulk up.",
+    "amount_beginner": "Aim for roughly 1 to 1.5 inches of water a week.",
+    "method_seasoned": "Water at the soil line with drip or a soaker hose where possible.",
+    "method_beginner": "Water at the base of the plant, not over the head.",
+    "signs_overwater_seasoned": "Yellowing lower leaves and stunted, soft growth; broccoli is prone to root rot in soggy soil.",
+    "signs_overwater_beginner": "Leaves yellow and the plant looks waterlogged.",
+    "signs_underwater_seasoned": "Wilting, checked growth, and small or bitter heads; any stall in growth hurts quality.",
+    "signs_underwater_beginner": "Wilting and small heads.",
+    "watering_method": "drip_or_soaker",
+    "schedule_by_stage": [],
+    "drought_tolerance": "low",
+    "method_note_seasoned": "Keep developing heads dry when you water, since wet heads encourage rot.",
+    "method_note_beginner": "Try not to get the head wet when you water.",
+    "critical_periods_seasoned": "Even moisture through head formation is the most important window for quality.",
+    "critical_periods_beginner": "Water steadily while the head is forming.",
+    "sources": [
+      "ncsu_ext",
+      "usu_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/broccoli-in-the-garden",
+        "verified": "2026-06-23"
+      }
+    }
+  },
+  "harvest_ready_sources": [
+    "clemson_hgic",
+    "iastate_ext"
+  ],
+  "start_method": {
+    "start": "both",
+    "weeks_before": 5,
+    "hardening_off_seasoned": true,
+    "hardening_off_beginner": true,
+    "notes_seasoned": "For the spring crop, start seeds indoors about 5 to 7 weeks before setting out and transplant roughly 2 to 4 weeks before the last frost; broccoli tolerates light frost. For fall, start transplants in mid to late summer, about 4 to 6 weeks before setting them out as the heat breaks, or direct sow. Set out young, well-rooted transplants with 4 to 6 true leaves, since oversized or cold-shocked transplants are prone to buttoning (tiny premature heads). Harden plants off over 7 to 10 days.",
+    "notes_beginner": "You can start broccoli indoors or buy young plants. For a spring crop, start seeds about 5 to 7 weeks before you plant out, and set plants in the garden a couple of weeks before your last frost. For fall, start them in mid to late summer and plant out as the heat eases. Use small, healthy plants, not big leggy ones, and let them get used to the outdoors over a week before planting."
+  },
+  "container_notes": {
+    "container_ok": true,
+    "min_pot_gallons": 5,
+    "container_recommended": true,
+    "recommended_pot_gallons": 5,
+    "depth_inches_min": 12,
+    "shape_requirements": null,
+    "drainage": {
+      "drainage_holes_required": true,
+      "gravel_layer": false,
+      "saucer_practice": "Empty the saucer after watering so roots never sit in water; broccoli is prone to root rot."
+    },
+    "soil_mix": {
+      "type_beginner": "A good-quality potting mix, not garden soil.",
+      "amendments_beginner": "Mix in some compost for a steady supply of nutrients.",
+      "type_seasoned": "A light, well-drained commercial potting mix high in organic matter.",
+      "amendments_seasoned": "Blend in compost and a slow-release nitrogen source; container broccoli still feeds heavily."
+    },
+    "watering_adjustment_beginner": "Pots dry out faster than the ground, so check daily in warm weather.",
+    "fertilizer_adjustment_beginner": "Feed a bit more often than in the ground, since watering washes nutrients out of pots.",
+    "overwintering": {
+      "applicable": false,
+      "approach_beginner": "Not applicable. Broccoli finishes its cycle in one season and is not overwintered in a pot.",
+      "approach_seasoned": "Not applicable. Broccoli is grown as a single-season annual and is not held over winter in a container."
+    },
+    "container_specific_pests": [],
+    "container_suitable_varieties": [
+      "De Cicco",
+      "Green Magic",
+      "Calabrese"
+    ],
+    "notes_beginner": "Broccoli grows in a pot of at least 5 gallons that is 12 inches or more deep, one plant per pot. Keep it cool, watered, and fed. In warm spots, avoid dark pots and give some afternoon shade.",
+    "sources": [
+      "uwi_hort"
+    ],
+    "anchoring_urls": {
+      "uwi_hort": {
+        "url": "https://hort.extension.wisc.edu/articles/growing-vegetables-containers/",
+        "verified": "2026-06-23"
+      }
+    },
+    "notes_seasoned": "Broccoli is a large, heavy-feeding plant, so use a container of at least 5 gallons and 12 to 18 inches deep, one plant per pot. Because pots warm and dry quickly, keep moisture even, feed regularly, and in warm regions avoid heat-absorbing dark containers and shade the pot to keep roots cool.",
+    "watering_adjustment_seasoned": "Containers dry faster than beds; monitor moisture daily in heat and water before the mix dries out.",
+    "fertilizer_adjustment_seasoned": "Container broccoli needs more frequent feeding than in-ground plants because watering leaches nutrients.",
+    "self_watering_ok": true,
+    "self_watering_notes_seasoned": "A self-watering container suits broccoli well, since it smooths out the steady moisture the crop wants through head formation.",
+    "self_watering_notes_beginner": "A self-watering pot is a good match because it keeps the water steady, which broccoli likes."
+  },
+  "varieties": {
+    "recommended": [
+      {
+        "name": "Calabrese",
+        "days_to_maturity": 65,
+        "note": "The classic green Italian heading broccoli and the most widely grown type; a dependable open-pollinated choice with a good central head and side shoots."
+      },
+      {
+        "name": "Green Magic",
+        "days_to_maturity": 57,
+        "note": "An early, reliable hybrid with some heat tolerance, which makes it a good pick for the spring-into-warm-weather crop."
+      },
+      {
+        "name": "Belstar",
+        "days_to_maturity": 65,
+        "note": "A widely adapted hybrid that does well in both spring and fall, popular in organic gardens."
+      },
+      {
+        "name": "De Cicco",
+        "days_to_maturity": 60,
+        "note": "An heirloom with a smaller main head but heavy, prolonged side-shoot production, good for a long picking window."
+      },
+      {
+        "name": "Waltham 29",
+        "days_to_maturity": 74,
+        "note": "A cold-hardy heirloom bred for fall and overwintering, with uniform heads that finish in cool weather."
+      },
+      {
+        "name": "Sun King",
+        "days_to_maturity": 71,
+        "note": "A heat-tolerant hybrid that holds up better in warmth, useful at the warm edges of the season."
+      }
+    ],
+    "note_seasoned": "Match the variety to the slot: fast, heat-tolerant types like Green Magic for spring, and longer-cycle, cold-hardy types like Waltham 29 for fall. Side-shooting heirlooms such as De Cicco stretch the harvest, while hybrids give more uniform central heads. Where clubroot or other brassica diseases are a concern, look for resistant cultivars.",
+    "note_beginner": "Green Magic and Belstar are easy, dependable choices. For spring, pick a fast or heat-tolerant variety so it heads before it gets hot; for fall, a hardy one like Waltham 29 works well. De Cicco gives lots of small side shoots over a longer time.",
+    "sources": [
+      "ncsu_ext",
+      "umn_ext"
+    ],
+    "anchoring_urls": {
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      },
+      "umn_ext": {
+        "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+        "verified": "2026-06-23"
+      }
+    }
+  },
+  "rotation": {
+    "family": "Brassica family (Brassicaceae), the cole crops",
+    "rotation_years": 3,
+    "avoid_after_seasoned": "Other brassicas (cabbage, cauliflower, kale, Brussels sprouts, collards, turnip, radish, kohlrabi), which share clubroot and cabbage-family pests.",
+    "avoid_after_beginner": "Other cabbage-family crops like cabbage, cauliflower, kale, and turnips.",
+    "good_after": "Legumes such as beans and peas, or unrelated crops like tomatoes, squash, or onions.",
+    "sources": [
+      "umn_ext",
+      "ncsu_ext"
+    ],
+    "anchoring_urls": {
+      "umn_ext": {
+        "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+        "verified": "2026-06-23"
+      },
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+        "verified": "2026-06-23"
+      }
+    },
+    "note_seasoned": "Rotate so brassicas do not follow brassicas for at least 3 years, and longer where clubroot is present, since the clubroot organism persists in soil for years. Keeping soil pH at or above about 6.8 also helps suppress it.",
+    "note_beginner": "Do not plant broccoli or other cabbage-family crops in the same spot year after year. Waiting a few years between them helps avoid soil diseases like clubroot."
+  },
+  "bolting": {
+    "risk": "high",
+    "triggers": "Summer heat (days at or above about 86°F and nights above about 77°F), oversized or cold-shocked transplants, and prolonged cool spells of 35 to 50°F.",
+    "prevention_seasoned": "Time the spring crop to head before summer heat and the fall crop to head as weather cools. Set out young transplants with 4 to 6 true leaves rather than large ones, and choose heat-tolerant, short-cycle varieties for spring.",
+    "prevention_beginner": "Grow broccoli in the cool parts of spring and fall so it heads before it gets hot. Use small, healthy plants and pick fast or heat-tolerant varieties for spring.",
+    "note_seasoned": "In broccoli, heat-driven bolting (a mature plant rushing to flower) and buttoning (a too-young or cold-stressed plant making a tiny premature head) are distinct problems; both make the crop unusable, and both are managed mainly through timing and transplant size.",
+    "note_beginner": "If broccoli gets too hot or too stressed, it flowers early or makes tiny useless heads. Good timing is the main fix."
+  },
+  "storage": {
+    "room_temp_seasoned": null,
+    "room_temp_beginner": null,
+    "fridge_seasoned": null,
+    "fridge_beginner": null,
+    "freezer_seasoned": null,
+    "freezer_beginner": null,
+    "sources": [],
+    "anchoring_urls": {},
+    "notes_seasoned": null,
+    "notes_beginner": null
+  },
+  "growth_stages": [],
+  "notifications": [],
+  "weather_triggers": [],
+  "tips_by_stage": {
+    "germination": [],
+    "seedling": [],
+    "established": [],
+    "head_forming": [],
+    "harvest": [],
+    "side_shoots": []
+  },
+  "yield_expectations": {
+    "per_plant_seasoned": null,
+    "per_plant_beginner": null,
+    "peak_production_seasoned": null,
+    "peak_production_beginner": null,
+    "sources": [],
+    "anchoring_urls": {},
+    "first_year_note_seasoned": null,
+    "first_year_note_beginner": null,
+    "factors_seasoned": []
+  },
+  "harvest_urgency": "high",
+  "moon_phase_preference": {
+    "phase": null,
+    "evidence_tier": null,
+    "source_note_seasoned": null
+  },
+  "days_to_maturity_mid": 65,
+  "failure_diagnostics": [],
+  "perennial": false,
+  "last_reviewed": "2026-06-23",
+  "last_reviewed_session": "phase_3_broccoli_steps1-3",
+  "sources_summary": {
+    "primary": [
+      {
+        "id": "clemson_hgic",
+        "name": "Clemson Cooperative Extension Home & Garden Information Center",
+        "url": "https://hgic.clemson.edu",
+        "publisher": "Clemson University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "iastate_ext",
+        "name": "Iowa State University Extension",
+        "url": "https://yardandgarden.extension.iastate.edu",
+        "publisher": "Iowa State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "ncsu_ext",
+        "name": "NC State Extension",
+        "url": "https://content.ces.ncsu.edu",
+        "publisher": "NC State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "osu_ext",
+        "name": "Ohio State University Extension (Ohioline)",
+        "url": "https://ohioline.osu.edu",
+        "publisher": "The Ohio State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "umd_ext",
+        "name": "University of Maryland Extension",
+        "url": "https://extension.umd.edu",
+        "publisher": "University of Maryland",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "umn_ext",
+        "name": "University of Minnesota Extension",
+        "url": "https://extension.umn.edu/vegetables",
+        "publisher": "University of Minnesota",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "usu_ext",
+        "name": "Utah State University Extension",
+        "url": "https://extension.usu.edu",
+        "publisher": "Utah State University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "uwi_hort",
+        "name": "Wisconsin Horticulture, Division of Extension",
+        "url": "https://hort.extension.wisc.edu",
+        "publisher": "University of Wisconsin-Madison",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      },
+      {
+        "id": "wvu_ext",
+        "name": "West Virginia University Extension",
+        "url": "https://extension.wvu.edu",
+        "publisher": "West Virginia University",
+        "source_class": "university_extension",
+        "accessed": "2026-06"
+      }
+    ],
+    "frost_data": []
+  },
+  "succession_policy": {
+    "suitable": true,
+    "interval_weeks": 3,
+    "successions": 3,
+    "notify_days_before": 3,
+    "max_successions_per_season": 12,
+    "window_type": "continuous",
+    "pause_in_heat": true,
+    "trigger": "last_frost",
+    "tip_seasoned": "Broccoli crops in the cool shoulders of the year, so plant in small batches every 2 to 3 weeks within the spring window and again in late summer for fall, rather than all at once. The spring window is short because heads must size up before summer heat arrives, so most gardens fit only a sowing or two before the midsummer gap; the fall planting, heading into cooling weather, is often the more reliable crop.",
+    "tip_beginner": "Plant broccoli in spring and again in late summer for fall, in small batches a couple of weeks apart, instead of all at one time. Skip the hottest part of summer, since broccoli will not form good heads in the heat."
+  },
+  "archetype": "cool_season_annual",
+  "harvest_ready_anchoring_urls": {
+    "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/broccoli/",
+      "verified": "2026-06-23"
+    },
+    "iastate_ext": {
+      "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-broccoli-home-garden",
+      "verified": "2026-06-23"
+    }
+  },
+  "verification_status": {
+    "launch_ready_core": false,
+    "launch_ready_seasoned": false,
+    "status": null,
+    "last_audited": null
+  },
+  "regions": {
+    "northern_tier": {
+      "region_id": "northern_tier",
+      "region_label": "Northern Tier: Cold Zones",
+      "zone_span": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "sources": [
+        "umn_ext_broccoli",
+        "umd_ext_broccoli",
+        "iastate_ext_colecrops"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "spring",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "last_frost",
+              "offset_days": -49,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Spring crop: start transplants indoors about 5 to 7 weeks before set-out (UMN early to mid April; UMD 5 to 7 week transplants).",
+              "sources": [
+                "umn_ext_broccoli",
+                "umd_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                },
+                "umd_ext_broccoli": {
+                  "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "last_frost",
+              "offset_days": -21,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Set out spring transplants about 2 to 4 weeks before the last frost; broccoli tolerates light frost (UMD sets out 4 weeks pre-frost).",
+              "sources": [
+                "umd_ext_broccoli",
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umd_ext_broccoli": {
+                  "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+                  "verified": "2026-06-23"
+                },
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring heads mature in roughly 55 to 75 days from transplanting before summer heat.",
+              "sources": [
+                "umn_ext_broccoli",
+                "umd_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                },
+                "umd_ext_broccoli": {
+                  "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 80,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring harvest, with side shoots continuing after the central head is cut.",
+              "sources": [
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "fall",
+          "track": "second_planting",
+          "start_indoors": [
+            {
+              "from": "first_frost",
+              "offset_days": -110,
+              "window_days": 30,
+              "synthesis_note_seasoned": "Fall crop: sow the fall planting indoors or directly in the garden across July, per UMN.",
+              "sources": [
+                "umn_ext_broccoli",
+                "iastate_ext_colecrops"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                },
+                "iastate_ext_colecrops": {
+                  "url": "https://hortnews.extension.iastate.edu/2018/03/planting-broccoli-cabbage-and-cauliflower-home-garden",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "first_frost",
+              "offset_days": -75,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Set out fall transplants late July to mid August; heads form as weather cools and tolerate light fall frost (UMN).",
+              "sources": [
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 65,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall heads mature in cooling weather (UMN fall varieties 60 to 85 days).",
+              "sources": [
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "first_frost",
+              "offset_days": 14,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall harvest continues through the first light frosts (UMN).",
+              "sources": [
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 3,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "last_frost",
+              "offset_days": -49,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Spring crop: start transplants indoors about 5 to 7 weeks before set-out (UMN early to mid April; UMD 5 to 7 week transplants).",
+              "sources": [
+                "umn_ext_broccoli",
+                "umd_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                },
+                "umd_ext_broccoli": {
+                  "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "last_frost",
+              "offset_days": -21,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Set out spring transplants about 2 to 4 weeks before the last frost; broccoli tolerates light frost (UMD sets out 4 weeks pre-frost).",
+              "sources": [
+                "umd_ext_broccoli",
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umd_ext_broccoli": {
+                  "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+                  "verified": "2026-06-23"
+                },
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring heads mature in roughly 55 to 75 days from transplanting before summer heat.",
+              "sources": [
+                "umn_ext_broccoli",
+                "umd_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                },
+                "umd_ext_broccoli": {
+                  "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "first_frost",
+              "offset_days": 14,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall harvest continues through the first light frosts (UMN).",
+              "sources": [
+                "umn_ext_broccoli"
+              ],
+              "anchoring_urls": {
+                "umn_ext_broccoli": {
+                  "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "plantings_provenance": null,
+      "resolved_by_zone": {
+        "3": {
+          "plant_out": "Apr 24 - May 15",
+          "start_indoors": "Mar 27 - Apr 17",
+          "harvest": "Jun 25 - Sep 29",
+          "harvest_start": "Jun 25",
+          "harvest_end": "Sep 29",
+          "first_plant_date": "Apr 24",
+          "last_plant_date": "Jul 23",
+          "calendar": [
+            "cold_pause",
+            "cold_pause",
+            "cold_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "plant",
+            "growing",
+            "harvest",
+            "cold_pause",
+            "cold_pause",
+            "cold_pause"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "umn_ext_broccoli",
+            "umd_ext_broccoli",
+            "iastate_ext_colecrops"
+          ],
+          "anchoring_urls": {
+            "umn_ext_broccoli": {
+              "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+              "verified": "2026-06-23"
+            },
+            "umd_ext_broccoli": {
+              "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+              "verified": "2026-06-23"
+            },
+            "iastate_ext_colecrops": {
+              "url": "https://hortnews.extension.iastate.edu/2018/03/planting-broccoli-cabbage-and-cauliflower-home-garden",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "May 28 - Jun 27",
+            "plant_out": "Jul 2 - Jul 23",
+            "harvest_start": "Sep 5",
+            "harvest_end": "Sep 29",
+            "sources": [
+              "umn_ext_broccoli"
+            ],
+            "anchoring_urls": {
+              "umn_ext_broccoli": {
+                "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Apr 24, May 15",
+          "succession_fall": "Jul 2, Jul 23",
+          "resolved_from": {
+            "last_frost": "May 15",
+            "first_frost": "Sep 15"
+          }
+        },
+        "4": {
+          "plant_out": "Apr 10 - May 1",
+          "start_indoors": "Mar 13 - Apr 3",
+          "harvest": "Jun 11 - Oct 15",
+          "harvest_start": "Jun 11",
+          "harvest_end": "Oct 15",
+          "first_plant_date": "Apr 10",
+          "last_plant_date": "Aug 8",
+          "calendar": [
+            "cold_pause",
+            "cold_pause",
+            "cold_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "cold_pause",
+            "cold_pause"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "umn_ext_broccoli",
+            "umd_ext_broccoli",
+            "iastate_ext_colecrops"
+          ],
+          "anchoring_urls": {
+            "umn_ext_broccoli": {
+              "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+              "verified": "2026-06-23"
+            },
+            "umd_ext_broccoli": {
+              "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+              "verified": "2026-06-23"
+            },
+            "iastate_ext_colecrops": {
+              "url": "https://hortnews.extension.iastate.edu/2018/03/planting-broccoli-cabbage-and-cauliflower-home-garden",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Jun 13 - Jul 13",
+            "plant_out": "Jul 18 - Aug 8",
+            "harvest_start": "Sep 21",
+            "harvest_end": "Oct 15",
+            "sources": [
+              "umn_ext_broccoli"
+            ],
+            "anchoring_urls": {
+              "umn_ext_broccoli": {
+                "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Apr 10, May 1",
+          "succession_fall": "Jul 18, Aug 8",
+          "resolved_from": {
+            "last_frost": "May 1",
+            "first_frost": "Oct 1"
+          }
+        },
+        "5": {
+          "plant_out": "Mar 25 - Apr 15",
+          "start_indoors": "Feb 25 - Mar 18",
+          "harvest": "May 26 - Oct 29",
+          "harvest_start": "May 26",
+          "harvest_end": "Oct 29",
+          "first_plant_date": "Mar 25",
+          "last_plant_date": "Aug 22",
+          "calendar": [
+            "cold_pause",
+            "cold_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "cold_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "cold_pause",
+            "cold_pause"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "umn_ext_broccoli",
+            "umd_ext_broccoli",
+            "iastate_ext_colecrops"
+          ],
+          "anchoring_urls": {
+            "umn_ext_broccoli": {
+              "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+              "verified": "2026-06-23"
+            },
+            "umd_ext_broccoli": {
+              "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+              "verified": "2026-06-23"
+            },
+            "iastate_ext_colecrops": {
+              "url": "https://hortnews.extension.iastate.edu/2018/03/planting-broccoli-cabbage-and-cauliflower-home-garden",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Jun 27 - Jul 27",
+            "plant_out": "Aug 1 - Aug 22",
+            "harvest_start": "Oct 5",
+            "harvest_end": "Oct 29",
+            "sources": [
+              "umn_ext_broccoli"
+            ],
+            "anchoring_urls": {
+              "umn_ext_broccoli": {
+                "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Mar 25, Apr 15",
+          "succession_fall": "Aug 1, Aug 22",
+          "resolved_from": {
+            "last_frost": "Apr 15",
+            "first_frost": "Oct 15"
+          }
+        },
+        "6": {
+          "plant_out": "Mar 11 - Apr 1",
+          "start_indoors": "Feb 11 - Mar 4",
+          "harvest": "May 12 - Nov 14",
+          "harvest_start": "May 12",
+          "harvest_end": "Nov 14",
+          "first_plant_date": "Mar 11",
+          "last_plant_date": "Sep 7",
+          "calendar": [
+            "cold_pause",
+            "cold_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "cold_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "cold_pause"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "umn_ext_broccoli",
+            "umd_ext_broccoli",
+            "iastate_ext_colecrops"
+          ],
+          "anchoring_urls": {
+            "umn_ext_broccoli": {
+              "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+              "verified": "2026-06-23"
+            },
+            "umd_ext_broccoli": {
+              "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+              "verified": "2026-06-23"
+            },
+            "iastate_ext_colecrops": {
+              "url": "https://hortnews.extension.iastate.edu/2018/03/planting-broccoli-cabbage-and-cauliflower-home-garden",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Jul 13 - Aug 12",
+            "plant_out": "Aug 17 - Sep 7",
+            "harvest_start": "Oct 21",
+            "harvest_end": "Nov 14",
+            "sources": [
+              "umn_ext_broccoli"
+            ],
+            "anchoring_urls": {
+              "umn_ext_broccoli": {
+                "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Mar 11, Apr 1",
+          "succession_fall": "Aug 17, Sep 7",
+          "resolved_from": {
+            "last_frost": "Apr 1",
+            "first_frost": "Oct 31"
+          }
+        },
+        "7": {
+          "plant_out": "Feb 22 - Mar 15",
+          "start_indoors": "Jan 25 - Feb 15",
+          "harvest": "Apr 26 - Dec 4",
+          "harvest_start": "Apr 26",
+          "harvest_end": "Dec 4",
+          "first_plant_date": "Feb 22",
+          "last_plant_date": "Sep 27",
+          "calendar": [
+            "cold_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "cold_pause",
+            "cold_pause",
+            "cold_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "umn_ext_broccoli",
+            "umd_ext_broccoli",
+            "iastate_ext_colecrops"
+          ],
+          "anchoring_urls": {
+            "umn_ext_broccoli": {
+              "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+              "verified": "2026-06-23"
+            },
+            "umd_ext_broccoli": {
+              "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+              "verified": "2026-06-23"
+            },
+            "iastate_ext_colecrops": {
+              "url": "https://hortnews.extension.iastate.edu/2018/03/planting-broccoli-cabbage-and-cauliflower-home-garden",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Aug 2 - Sep 1",
+            "plant_out": "Sep 6 - Sep 27",
+            "harvest_start": "Nov 10",
+            "harvest_end": "Dec 4",
+            "sources": [
+              "umn_ext_broccoli"
+            ],
+            "anchoring_urls": {
+              "umn_ext_broccoli": {
+                "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Feb 22, Mar 15",
+          "succession_fall": "Sep 6, Sep 27",
+          "resolved_from": {
+            "last_frost": "Mar 15",
+            "first_frost": "Nov 15"
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "se_gulf": {
+      "region_id": "se_gulf",
+      "region_label": "Southeast: Gulf & Coastal Plain",
+      "zone_span": [
+        8,
+        9
+      ],
+      "sources": [
+        "uga_c963_chart",
+        "uga_c943_calendar",
+        "ufifas_vh021"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "spring",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "soil_workable",
+              "offset_days": 0,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Spring crop: start transplants indoors about 5 to 6 weeks before the January to February set-out window (UGA).",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "frost_free_spring",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Set out spring transplants in the mild late-winter window (UGA C963 mid-Georgia Jan 15 to Mar 1; about 2 weeks earlier in south Georgia).",
+              "sources": [
+                "uga_c963_chart",
+                "uga_c943_calendar"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                },
+                "uga_c943_calendar": {
+                  "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring heads mature before summer heat (UGA spring crop harvested June to July).",
+              "sources": [
+                "uga_c943_calendar"
+              ],
+              "anchoring_urls": {
+                "uga_c943_calendar": {
+                  "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 85,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the spring head and side-shoot harvest before heat stops heading.",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "fall",
+          "track": "second_planting",
+          "start_indoors": [
+            {
+              "from": "fall_open",
+              "offset_days": -42,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Fall crop: start transplants about 6 weeks before the September set-out (UGA).",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "heat_subsiding",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Set out fall transplants as heat subsides (UGA C963 mid-Georgia Sep 1 to Oct 15; later in south Georgia).",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall heads mature in cooling weather (UGA fall crop harvested October to December).",
+              "sources": [
+                "uga_c943_calendar"
+              ],
+              "anchoring_urls": {
+                "uga_c943_calendar": {
+                  "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 95,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall and early-winter harvest, frost-tolerant at the cooler zone-8 interior.",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 3,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "soil_workable",
+              "offset_days": 0,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Spring crop: start transplants indoors about 5 to 6 weeks before the January to February set-out window (UGA).",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "frost_free_spring",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Set out spring transplants in the mild late-winter window (UGA C963 mid-Georgia Jan 15 to Mar 1; about 2 weeks earlier in south Georgia).",
+              "sources": [
+                "uga_c963_chart",
+                "uga_c943_calendar"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                },
+                "uga_c943_calendar": {
+                  "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring heads mature before summer heat (UGA spring crop harvested June to July).",
+              "sources": [
+                "uga_c943_calendar"
+              ],
+              "anchoring_urls": {
+                "uga_c943_calendar": {
+                  "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 95,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall and early-winter harvest, frost-tolerant at the cooler zone-8 interior.",
+              "sources": [
+                "uga_c963_chart"
+              ],
+              "anchoring_urls": {
+                "uga_c963_chart": {
+                  "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "8": {
+          "plant_out": "Jan 15 - Mar 1",
+          "start_indoors": "Dec 4 - Dec 25",
+          "harvest": "Apr 15 - May 26, Nov 5 - Dec 15",
+          "harvest_start": "Apr 15",
+          "harvest_end": "Dec 15",
+          "first_plant_date": "Jan 15",
+          "last_plant_date": "Oct 15",
+          "calendar": [
+            "plant",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "heat_pause",
+            "heat_pause",
+            "heat_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "uga_c963_chart",
+            "uga_c943_calendar",
+            "ufifas_vh021"
+          ],
+          "anchoring_urls": {
+            "uga_c963_chart": {
+              "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+              "verified": "2026-06-23"
+            },
+            "uga_c943_calendar": {
+              "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+              "verified": "2026-06-23"
+            },
+            "ufifas_vh021": {
+              "url": "https://ask.ifas.ufl.edu/publication/VH021",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Jul 21 - Aug 11",
+            "plant_out": "Sep 1 - Oct 15",
+            "harvest_start": "Nov 5",
+            "harvest_end": "Dec 15",
+            "sources": [
+              "uga_c963_chart"
+            ],
+            "anchoring_urls": {
+              "uga_c963_chart": {
+                "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Jan 15, Feb 5, Feb 26",
+          "succession_fall": "Sep 1, Sep 22, Oct 13",
+          "heat_pause": {
+            "months": [
+              6,
+              7,
+              8
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "Mid-summer heat above roughly 86°F day / 77°F night stops broccoli from forming a usable crown, so no crop is grown between the spring and fall windows.",
+            "sources": [
+              "uga_c963_chart",
+              "ufifas_vh021"
+            ],
+            "anchoring_urls": {
+              "uga_c963_chart": {
+                "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                "verified": "2026-06-23"
+              },
+              "ufifas_vh021": {
+                "url": "https://ask.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "resolved_from": {
+            "last_frost": "Feb 15",
+            "first_frost": "Dec 1"
+          }
+        },
+        "9": {
+          "plant_out": "Jan 1 - Feb 15",
+          "start_indoors": "Nov 20 - Dec 11",
+          "harvest": "Apr 1 - May 12, Nov 20 - Dec 31",
+          "harvest_start": "Apr 1",
+          "harvest_end": "Dec 31",
+          "first_plant_date": "Jan 1",
+          "last_plant_date": "Oct 31",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "harvest",
+            "heat_pause",
+            "heat_pause",
+            "heat_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "uga_c963_chart",
+            "uga_c943_calendar",
+            "ufifas_vh021"
+          ],
+          "anchoring_urls": {
+            "uga_c963_chart": {
+              "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+              "verified": "2026-06-23"
+            },
+            "uga_c943_calendar": {
+              "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+              "verified": "2026-06-23"
+            },
+            "ufifas_vh021": {
+              "url": "https://ask.ifas.ufl.edu/publication/VH021",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Aug 4 - Aug 25",
+            "plant_out": "Sep 15 - Oct 31",
+            "harvest_start": "Nov 20",
+            "harvest_end": "Dec 31",
+            "sources": [
+              "uga_c963_chart"
+            ],
+            "anchoring_urls": {
+              "uga_c963_chart": {
+                "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Jan 1, Jan 22, Feb 12",
+          "succession_fall": "Sep 15, Oct 6, Oct 27",
+          "heat_pause": {
+            "months": [
+              6,
+              7,
+              8
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "Mid-summer heat above roughly 86°F day / 77°F night stops broccoli from forming a usable crown, so no crop is grown between the spring and fall windows.",
+            "sources": [
+              "uga_c963_chart",
+              "ufifas_vh021"
+            ],
+            "anchoring_urls": {
+              "uga_c963_chart": {
+                "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+                "verified": "2026-06-23"
+              },
+              "ufifas_vh021": {
+                "url": "https://ask.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "resolved_from": {
+            "last_frost": "Jan 31",
+            "first_frost": "Dec 15"
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "ca_interior": {
+      "region_id": "ca_interior",
+      "region_label": "California: Interior Valleys",
+      "zone_span": [
+        8,
+        9
+      ],
+      "sources": [
+        "ucanr_mg_timeplanting"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "spring",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring set-out window per UC ANR Master Gardener Handbook Table 13.2 (Interior Valleys column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring transplant set-out (UC ANR Table 13.2, Interior Valleys column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in about 60 to 90 days for the cool-season window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the head and side-shoot harvest for the window.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "fall",
+          "track": "second_planting",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Second set-out window per UC ANR Table 13.2 (Interior Valleys column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Second transplant set-out (UC ANR Table 13.2, Interior Valleys column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling weather for the second window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the second window's harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 3,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring set-out window per UC ANR Master Gardener Handbook Table 13.2 (Interior Valleys column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring transplant set-out (UC ANR Table 13.2, Interior Valleys column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in about 60 to 90 days for the cool-season window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the second window's harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "8": {
+          "plant_out": "Dec 1 - Feb 28",
+          "start_indoors": "Nov 1 - Nov 22",
+          "harvest": "Mar 1 - May 1, Sep 15 - Oct 25",
+          "harvest_start": "Mar 1",
+          "harvest_end": "Oct 25",
+          "first_plant_date": "Dec 1",
+          "last_plant_date": "Jul 31",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "heat_pause",
+            "heat_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "harvest",
+            "cold_pause",
+            "plant"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "May 20 - Jun 10",
+            "plant_out": "Jul 1 - Jul 31",
+            "harvest_start": "Sep 15",
+            "harvest_end": "Oct 25",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Dec 1, Dec 22, Jan 12, Feb 2, Feb 23",
+          "succession_fall": "Jul 1, Jul 22",
+          "resolved_from": {
+            "last_frost": "Feb 15",
+            "first_frost": "Dec 1"
+          },
+          "heat_pause": {
+            "months": [
+              5,
+              6
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "Spring heat ends the winter crop, and high summer heat above roughly 86°F day / 77°F night prevents heading until the July fall sowing.",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        },
+        "9": {
+          "plant_out": "Dec 1 - Feb 28",
+          "start_indoors": "Nov 1 - Nov 22",
+          "harvest": "Mar 1 - May 1, Sep 15 - Oct 25",
+          "harvest_start": "Mar 1",
+          "harvest_end": "Oct 25",
+          "first_plant_date": "Dec 1",
+          "last_plant_date": "Jul 31",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "heat_pause",
+            "heat_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "harvest",
+            "cold_pause",
+            "plant"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "May 20 - Jun 10",
+            "plant_out": "Jul 1 - Jul 31",
+            "harvest_start": "Sep 15",
+            "harvest_end": "Oct 25",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Dec 1, Dec 22, Jan 12, Feb 2, Feb 23",
+          "succession_fall": "Jul 1, Jul 22",
+          "resolved_from": {
+            "last_frost": "Jan 31",
+            "first_frost": "Dec 15"
+          },
+          "heat_pause": {
+            "months": [
+              5,
+              6
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "Spring heat ends the winter crop, and high summer heat above roughly 86°F day / 77°F night prevents heading until the July fall sowing.",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "ca_north_coast": {
+      "region_id": "ca_north_coast",
+      "region_label": "California: North & North Coast",
+      "zone_span": [
+        9,
+        10
+      ],
+      "sources": [
+        "ucanr_mg_timeplanting"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "spring",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring set-out window per UC ANR Master Gardener Handbook Table 13.2 (North and North Coast column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring transplant set-out (UC ANR Table 13.2, North and North Coast column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in about 60 to 90 days for the cool-season window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the head and side-shoot harvest for the window.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "fall",
+          "track": "second_planting",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Second set-out window per UC ANR Table 13.2 (North and North Coast column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Second transplant set-out (UC ANR Table 13.2, North and North Coast column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling weather for the second window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the second window's harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 3,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring set-out window per UC ANR Master Gardener Handbook Table 13.2 (North and North Coast column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring transplant set-out (UC ANR Table 13.2, North and North Coast column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in about 60 to 90 days for the cool-season window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the second window's harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": "Feb 1 - Apr 30",
+          "start_indoors": "Dec 20 - Jan 10",
+          "harvest": "Apr 15 - Jun 15, Sep 15 - Dec 1",
+          "harvest_start": "Apr 15",
+          "harvest_end": "Dec 1",
+          "first_plant_date": "Feb 1",
+          "last_plant_date": "Sep 30",
+          "calendar": [
+            "cold_pause",
+            "plant",
+            "plant",
+            "plant",
+            "harvest",
+            "growing",
+            "plant",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "May 20 - Jun 10",
+            "plant_out": "Jul 1 - Sep 30",
+            "harvest_start": "Sep 15",
+            "harvest_end": "Dec 1",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Feb 1, Feb 22, Mar 15, Apr 5, Apr 26",
+          "succession_fall": "Jul 1, Jul 22, Aug 12, Sep 2, Sep 23",
+          "resolved_from": {
+            "last_frost": "Jan 31",
+            "first_frost": "Dec 15"
+          }
+        },
+        "10": {
+          "plant_out": "Feb 1 - Apr 30",
+          "start_indoors": "Dec 20 - Jan 10",
+          "harvest": "Apr 15 - Jun 15, Sep 15 - Dec 1",
+          "harvest_start": "Apr 15",
+          "harvest_end": "Dec 1",
+          "first_plant_date": "Feb 1",
+          "last_plant_date": "Sep 30",
+          "calendar": [
+            "growing",
+            "plant",
+            "plant",
+            "plant",
+            "harvest",
+            "growing",
+            "plant",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "May 20 - Jun 10",
+            "plant_out": "Jul 1 - Sep 30",
+            "harvest_start": "Sep 15",
+            "harvest_end": "Dec 1",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Feb 1, Feb 22, Mar 15, Apr 5, Apr 26",
+          "succession_fall": "Jul 1, Jul 22, Aug 12, Sep 2, Sep 23",
+          "resolved_from": {
+            "last_frost": "Jan 15",
+            "first_frost": "Dec 31"
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "zone_8_presence": null,
+      "region_notes_seasoned": null
+    },
+    "ca_south_coast": {
+      "region_id": "ca_south_coast",
+      "region_label": "California: South Coast",
+      "zone_span": [
+        9,
+        10
+      ],
+      "sources": [
+        "ucanr_mg_timeplanting"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "spring",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring set-out window per UC ANR Master Gardener Handbook Table 13.2 (South Coast column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring transplant set-out (UC ANR Table 13.2, South Coast column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in about 60 to 90 days for the cool-season window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the head and side-shoot harvest for the window.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "fall",
+          "track": "second_planting",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Second set-out window per UC ANR Table 13.2 (South Coast column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Second transplant set-out (UC ANR Table 13.2, South Coast column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling weather for the second window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the second window's harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 3,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring set-out window per UC ANR Master Gardener Handbook Table 13.2 (South Coast column); start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring transplant set-out (UC ANR Table 13.2, South Coast column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in about 60 to 90 days for the cool-season window (UC ANR).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 90,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the second window's harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": "Jan 1 - Feb 28",
+          "start_indoors": "Dec 1 - Dec 22",
+          "harvest": "Mar 15 - May 15, Sep 1 - Oct 31",
+          "harvest_start": "Mar 15",
+          "harvest_end": "Oct 31",
+          "first_plant_date": "Jan 1",
+          "last_plant_date": "Jul 31",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "harvest",
+            "plant",
+            "plant",
+            "heat_pause",
+            "harvest",
+            "harvest",
+            "growing",
+            "growing"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Apr 20 - May 11",
+            "plant_out": "Jun 1 - Jul 31",
+            "harvest_start": "Sep 1",
+            "harvest_end": "Oct 31",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Jan 1, Jan 22, Feb 12",
+          "succession_fall": "Jun 1, Jun 22, Jul 13",
+          "resolved_from": {
+            "last_frost": "Jan 31",
+            "first_frost": "Dec 15"
+          },
+          "heat_pause": {
+            "months": [
+              8
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "Late-summer heat halts heading between the early-summer planting's harvest and the next winter window.",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        },
+        "10": {
+          "plant_out": "Jan 1 - Feb 28",
+          "start_indoors": "Dec 1 - Dec 22",
+          "harvest": "Mar 15 - May 15, Sep 1 - Oct 31",
+          "harvest_start": "Mar 15",
+          "harvest_end": "Oct 31",
+          "first_plant_date": "Jan 1",
+          "last_plant_date": "Jul 31",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "harvest",
+            "plant",
+            "plant",
+            "heat_pause",
+            "harvest",
+            "harvest",
+            "growing",
+            "growing"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Apr 20 - May 11",
+            "plant_out": "Jun 1 - Jul 31",
+            "harvest_start": "Sep 1",
+            "harvest_end": "Oct 31",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Jan 1, Jan 22, Feb 12",
+          "succession_fall": "Jun 1, Jun 22, Jul 13",
+          "resolved_from": {
+            "last_frost": "Jan 15",
+            "first_frost": "Dec 31"
+          },
+          "heat_pause": {
+            "months": [
+              8
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "Late-summer heat halts heading between the early-summer planting's harvest and the next winter window.",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "zone_8_presence": null,
+      "region_notes_seasoned": null
+    },
+    "ca_desert": {
+      "region_id": "ca_desert",
+      "region_label": "California: Desert Valleys",
+      "zone_span": [
+        9,
+        10
+      ],
+      "sources": [
+        "ucanr_mg_timeplanting"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "main",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall set-out in September per UC ANR Master Gardener Handbook Table 13.2 (Desert Valleys column). Start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall set-out in September per UC ANR Master Gardener Handbook Table 13.2 (Desert Valleys column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall set-out in September per UC ANR Master Gardener Handbook Table 13.2 (Desert Valleys column). Start transplants about 6 weeks ahead.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall set-out in September per UC ANR Master Gardener Handbook Table 13.2 (Desert Valleys column).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "ucanr_mg_timeplanting"
+              ],
+              "anchoring_urls": {
+                "ucanr_mg_timeplanting": {
+                  "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": "Sep 1 - Sep 30",
+          "start_indoors": "Jul 21 - Aug 11",
+          "harvest": "Nov 15 - Feb 28",
+          "harvest_start": "Nov 15",
+          "harvest_end": "Feb 28",
+          "first_plant_date": "Sep 1",
+          "last_plant_date": "Sep 30",
+          "calendar": [
+            "harvest",
+            "harvest",
+            "growing",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "plant",
+            "growing",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "succession_continuous": "Sep 1, Sep 15, Sep 30",
+          "resolved_from": {
+            "last_frost": "Jan 31",
+            "first_frost": "Dec 15"
+          },
+          "season_over": {
+            "months": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "classification": "heat_off_season",
+            "basis_seasoned": "The desert summer is far too hot for broccoli to head, so it is not grown from spring through late summer.",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        },
+        "10": {
+          "plant_out": "Sep 1 - Sep 30",
+          "start_indoors": "Jul 21 - Aug 11",
+          "harvest": "Nov 15 - Feb 28",
+          "harvest_start": "Nov 15",
+          "harvest_end": "Feb 28",
+          "first_plant_date": "Sep 1",
+          "last_plant_date": "Sep 30",
+          "calendar": [
+            "harvest",
+            "harvest",
+            "growing",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "plant",
+            "growing",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ucanr_mg_timeplanting"
+          ],
+          "anchoring_urls": {
+            "ucanr_mg_timeplanting": {
+              "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "succession_continuous": "Sep 1, Sep 15, Sep 30",
+          "resolved_from": {
+            "last_frost": "Jan 15",
+            "first_frost": "Dec 31"
+          },
+          "season_over": {
+            "months": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "classification": "heat_off_season",
+            "basis_seasoned": "The desert summer is far too hot for broccoli to head, so it is not grown from spring through late summer.",
+            "sources": [
+              "ucanr_mg_timeplanting"
+            ],
+            "anchoring_urls": {
+              "ucanr_mg_timeplanting": {
+                "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "zone_10_desert_fold": null,
+      "region_notes_seasoned": null
+    },
+    "warm_arid": {
+      "region_id": "warm_arid",
+      "region_label": "Warm Arid: Southern New Mexico & West Texas",
+      "zone_span": [
+        8
+      ],
+      "sources": [
+        "tamu_aggie_spring",
+        "tamu_fall_veg",
+        "nmsu_cr457b"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "spring",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "last_frost",
+              "offset_days": -49,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Spring crop: start transplants indoors about 5 to 7 weeks before the late-winter set-out (TAMU Aggie Horticulture Region II spring window Feb 15 to Mar 20).",
+              "sources": [
+                "tamu_aggie_spring",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "last_frost",
+              "offset_days": -14,
+              "window_days": 28,
+              "synthesis_note_seasoned": "Set out spring transplants in late winter once hard frost passes (TAMU Region II Feb 15 to Mar 20; NMSU warm-zone spring window).",
+              "sources": [
+                "tamu_aggie_spring",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring heads mature before desert-edge summer heat (about 60 to 80 days).",
+              "sources": [
+                "tamu_aggie_spring"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 85,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the spring head and side-shoot harvest before heat stops heading.",
+              "sources": [
+                "tamu_aggie_spring"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "fall",
+          "track": "second_planting",
+          "start_indoors": [
+            {
+              "from": "first_frost",
+              "offset_days": -100,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Fall crop: start transplants in midsummer for an August set-out (TAMU fall guide ~Aug 10 to 25).",
+              "sources": [
+                "tamu_fall_veg",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_fall_veg": {
+                  "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "first_frost",
+              "offset_days": -75,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Set out fall transplants in August as the worst heat eases (TAMU fall vegetable guide).",
+              "sources": [
+                "tamu_fall_veg"
+              ],
+              "anchoring_urls": {
+                "tamu_fall_veg": {
+                  "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall heads mature in cooling weather (about 60 to 80 days).",
+              "sources": [
+                "tamu_fall_veg"
+              ],
+              "anchoring_urls": {
+                "tamu_fall_veg": {
+                  "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "first_frost",
+              "offset_days": 7,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall and early-winter harvest, frost-tolerant to a light freeze.",
+              "sources": [
+                "tamu_fall_veg",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_fall_veg": {
+                  "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 3,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "last_frost",
+              "offset_days": -49,
+              "window_days": 21,
+              "synthesis_note_seasoned": "Spring crop: start transplants indoors about 5 to 7 weeks before the late-winter set-out (TAMU Aggie Horticulture Region II spring window Feb 15 to Mar 20).",
+              "sources": [
+                "tamu_aggie_spring",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "last_frost",
+              "offset_days": -14,
+              "window_days": 28,
+              "synthesis_note_seasoned": "Set out spring transplants in late winter once hard frost passes (TAMU Region II Feb 15 to Mar 20; NMSU warm-zone spring window).",
+              "sources": [
+                "tamu_aggie_spring",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Spring heads mature before desert-edge summer heat (about 60 to 80 days).",
+              "sources": [
+                "tamu_aggie_spring"
+              ],
+              "anchoring_urls": {
+                "tamu_aggie_spring": {
+                  "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "first_frost",
+              "offset_days": 7,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Fall and early-winter harvest, frost-tolerant to a light freeze.",
+              "sources": [
+                "tamu_fall_veg",
+                "nmsu_cr457b"
+              ],
+              "anchoring_urls": {
+                "tamu_fall_veg": {
+                  "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                  "verified": "2026-06-23"
+                },
+                "nmsu_cr457b": {
+                  "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "8": {
+          "plant_out": "Feb 15 - Mar 20",
+          "start_indoors": "Dec 28 - Jan 18",
+          "harvest": "Apr 20 - Jun 1, Oct 15 - Dec 7",
+          "harvest_start": "Apr 20",
+          "harvest_end": "Dec 7",
+          "first_plant_date": "Feb 15",
+          "last_plant_date": "Aug 26",
+          "calendar": [
+            "cold_pause",
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "heat_pause",
+            "heat_pause",
+            "plant",
+            "growing",
+            "harvest",
+            "harvest",
+            "harvest"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "tamu_aggie_spring",
+            "tamu_fall_veg",
+            "nmsu_cr457b"
+          ],
+          "anchoring_urls": {
+            "tamu_aggie_spring": {
+              "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+              "verified": "2026-06-23"
+            },
+            "tamu_fall_veg": {
+              "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+              "verified": "2026-06-23"
+            },
+            "nmsu_cr457b": {
+              "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "second_planting": {
+            "start_indoors": "Jul 11 - Aug 1",
+            "plant_out": "Aug 5 - Aug 26",
+            "harvest_start": "Oct 15",
+            "harvest_end": "Dec 7",
+            "sources": [
+              "tamu_fall_veg"
+            ],
+            "anchoring_urls": {
+              "tamu_fall_veg": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "succession_spring": "Feb 15, Mar 8",
+          "succession_fall": "Aug 5, Aug 26",
+          "heat_pause": {
+            "months": [
+              6,
+              7
+            ],
+            "classification": "heat_stop_heading",
+            "basis_seasoned": "High desert-edge summer heat above roughly 86°F day / 77°F night stops broccoli from heading, so no crop is grown between the spring and fall windows.",
+            "sources": [
+              "tamu_aggie_spring",
+              "tamu_fall_veg"
+            ],
+            "anchoring_urls": {
+              "tamu_aggie_spring": {
+                "url": "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html",
+                "verified": "2026-06-23"
+              },
+              "tamu_fall_veg": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+                "verified": "2026-06-23"
+              }
+            }
+          },
+          "resolved_from": {
+            "last_frost": "Feb 15",
+            "first_frost": "Dec 1"
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "low_desert_az": {
+      "region_id": "low_desert_az",
+      "region_label": "Low Desert: Arizona",
+      "zone_span": [
+        9
+      ],
+      "sources": [
+        "uariz_az1005"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "main",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season set-out from late summer through winter per U of A Cooperative Extension AZ1005 (Maricopa County), transplants or seed August through February. Start transplants about 6 weeks ahead.",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season set-out from late summer through winter per U of A Cooperative Extension AZ1005 (Maricopa County), transplants or seed August through February.",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season set-out from late summer through winter per U of A Cooperative Extension AZ1005 (Maricopa County), transplants or seed August through February. Start transplants about 6 weeks ahead.",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season set-out from late summer through winter per U of A Cooperative Extension AZ1005 (Maricopa County), transplants or seed August through February.",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "uariz_az1005"
+              ],
+              "anchoring_urls": {
+                "uariz_az1005": {
+                  "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "9": {
+          "plant_out": "Aug 1 - Feb 15",
+          "start_indoors": "Jul 1 - Jul 22",
+          "harvest": "Oct 15 - Apr 15",
+          "harvest_start": "Oct 15",
+          "harvest_end": "Apr 15",
+          "first_plant_date": "Aug 1",
+          "last_plant_date": "Feb 15",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "season_over",
+            "season_over",
+            "season_over",
+            "plant",
+            "plant",
+            "plant",
+            "plant",
+            "plant"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "uariz_az1005"
+          ],
+          "anchoring_urls": {
+            "uariz_az1005": {
+              "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "succession_continuous": "Aug 1, Aug 22, Sep 12, Oct 3, Oct 24, Nov 14, Dec 5, Dec 26, Jan 16, Feb 6",
+          "resolved_from": {
+            "last_frost": "Jan 31",
+            "first_frost": "Dec 15"
+          },
+          "season_over": {
+            "months": [
+              5,
+              6,
+              7
+            ],
+            "classification": "heat_off_season",
+            "basis_seasoned": "The low-desert summer is far too hot for broccoli to head, so it is not grown from late spring through midsummer.",
+            "sources": [
+              "uariz_az1005"
+            ],
+            "anchoring_urls": {
+              "uariz_az1005": {
+                "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "fl_peninsula": {
+      "region_id": "fl_peninsula",
+      "region_label": "Florida: Peninsula",
+      "zone_span": [
+        10,
+        11
+      ],
+      "sources": [
+        "ufifas_broccoli",
+        "ufifas_vh021"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "main",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season transplanting through the Florida winter per UF/IFAS (Central Florida mid-September to mid-February; South Florida October to December). Start transplants about 6 weeks ahead.",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season transplanting through the Florida winter per UF/IFAS (Central Florida mid-September to mid-February; South Florida October to December).",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season transplanting through the Florida winter per UF/IFAS (Central Florida mid-September to mid-February; South Florida October to December). Start transplants about 6 weeks ahead.",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Continuous cool-season transplanting through the Florida winter per UF/IFAS (Central Florida mid-September to mid-February; South Florida October to December).",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "ufifas_broccoli"
+              ],
+              "anchoring_urls": {
+                "ufifas_broccoli": {
+                  "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "10": {
+          "plant_out": "Sep 15 - Feb 15",
+          "start_indoors": "Aug 1 - Aug 22",
+          "harvest": "Nov 15 - Apr 30",
+          "harvest_start": "Nov 15",
+          "harvest_end": "Apr 30",
+          "first_plant_date": "Sep 15",
+          "last_plant_date": "Feb 15",
+          "calendar": [
+            "plant",
+            "plant",
+            "harvest",
+            "harvest",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "plant",
+            "plant",
+            "plant",
+            "plant"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ufifas_broccoli",
+            "ufifas_vh021"
+          ],
+          "anchoring_urls": {
+            "ufifas_broccoli": {
+              "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+              "verified": "2026-06-23"
+            },
+            "ufifas_vh021": {
+              "url": "https://ask.ifas.ufl.edu/publication/VH021",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "frost_anchored_resolved",
+          "succession_continuous": "Sep 15, Oct 6, Oct 27, Nov 17, Dec 8, Dec 29, Jan 19, Feb 9",
+          "resolved_from": {
+            "last_frost": "Jan 15",
+            "first_frost": "Dec 31"
+          },
+          "season_over": {
+            "months": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "classification": "heat_off_season",
+            "basis_seasoned": "The Florida summer is the off-season; rising heat makes broccoli bolt, so it is grown only through the cool winter months.",
+            "sources": [
+              "ufifas_broccoli"
+            ],
+            "anchoring_urls": {
+              "ufifas_broccoli": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        },
+        "11": {
+          "plant_out": "Oct 1 - Dec 31",
+          "start_indoors": "Sep 1 - Sep 22",
+          "harvest": "Dec 1 - Mar 15",
+          "harvest_start": "Dec 1",
+          "harvest_end": "Mar 15",
+          "first_plant_date": "Oct 1",
+          "last_plant_date": "Dec 31",
+          "calendar": [
+            "harvest",
+            "harvest",
+            "harvest",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "plant",
+            "plant",
+            "plant"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "ufifas_broccoli",
+            "ufifas_vh021"
+          ],
+          "anchoring_urls": {
+            "ufifas_broccoli": {
+              "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+              "verified": "2026-06-23"
+            },
+            "ufifas_vh021": {
+              "url": "https://ask.ifas.ufl.edu/publication/VH021",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "month_resolved_frost_free",
+          "succession_continuous": "Oct 1, Oct 22, Nov 12, Dec 3, Dec 24",
+          "resolved_from": {
+            "last_frost": null,
+            "first_frost": null
+          },
+          "season_over": {
+            "months": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "classification": "heat_off_season",
+            "basis_seasoned": "In the warmest peninsular zone broccoli is grown only in the short October to December window; the long warm season is the off-season.",
+            "sources": [
+              "ufifas_broccoli"
+            ],
+            "anchoring_urls": {
+              "ufifas_broccoli": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/broccoli/",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    },
+    "hawaii_tropical": {
+      "region_id": "hawaii_tropical",
+      "region_label": "Hawaii: Tropical",
+      "zone_span": [
+        11
+      ],
+      "sources": [
+        "uhawaii_ctahr_b91"
+      ],
+      "plantings": [
+        {
+          "succession_id": 1,
+          "label": "main",
+          "track": "beginner",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Lowland tropical broccoli is a winter cool-season crop per UH CTAHR bulletin B-91 (broccoli is an excellent low-elevation crop during winter; year-round only at high elevation). Start transplants about 6 weeks ahead.",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Lowland tropical broccoli is a winter cool-season crop per UH CTAHR bulletin B-91 (broccoli is an excellent low-elevation crop during winter; year-round only at high elevation).",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        },
+        {
+          "succession_id": 2,
+          "label": "succession",
+          "track": "succession",
+          "start_indoors": [
+            {
+              "from": "transplant_window",
+              "offset_days": -42,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Lowland tropical broccoli is a winter cool-season crop per UH CTAHR bulletin B-91 (broccoli is an excellent low-elevation crop during winter; year-round only at high elevation). Start transplants about 6 weeks ahead.",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "plant_out": [
+            {
+              "from": "transplant_window",
+              "offset_days": 0,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Lowland tropical broccoli is a winter cool-season crop per UH CTAHR bulletin B-91 (broccoli is an excellent low-elevation crop during winter; year-round only at high elevation).",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_start": [
+            {
+              "from": "plant_out",
+              "offset_days": 60,
+              "window_days": 0,
+              "synthesis_note_seasoned": "Heads mature in cooling/cool weather (about 60 to 100 days).",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "harvest_end": [
+            {
+              "from": "plant_out",
+              "offset_days": 100,
+              "window_days": 0,
+              "synthesis_note_seasoned": "End of the cool-season head and side-shoot harvest.",
+              "sources": [
+                "uhawaii_ctahr_b91"
+              ],
+              "anchoring_urls": {
+                "uhawaii_ctahr_b91": {
+                  "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                  "verified": "2026-06-23"
+                }
+              },
+              "uscrn_validation": null
+            }
+          ],
+          "anchoring_urls": {}
+        }
+      ],
+      "resolved_by_zone": {
+        "11": {
+          "plant_out": "Nov 1 - Dec 31",
+          "start_indoors": "Oct 1 - Oct 22",
+          "harvest": "Jan 15 - Mar 15",
+          "harvest_start": "Jan 15",
+          "harvest_end": "Mar 15",
+          "first_plant_date": "Nov 1",
+          "last_plant_date": "Dec 31",
+          "calendar": [
+            "harvest",
+            "harvest",
+            "harvest",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "season_over",
+            "plant",
+            "plant"
+          ],
+          "notes": null,
+          "zone_notes": null,
+          "planting_note": null,
+          "sources": [
+            "uhawaii_ctahr_b91"
+          ],
+          "anchoring_urls": {
+            "uhawaii_ctahr_b91": {
+              "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+              "verified": "2026-06-23"
+            }
+          },
+          "resolution_method": "month_resolved_frost_free",
+          "succession_continuous": "Nov 1, Nov 22, Dec 13",
+          "resolved_from": {
+            "last_frost": null,
+            "first_frost": null
+          },
+          "season_over": {
+            "months": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "classification": "heat_off_season",
+            "basis_seasoned": "At low tropical elevations broccoli heads only during the cool winter months; the warm remainder of the year is the off-season (CTAHR B-91).",
+            "sources": [
+              "uhawaii_ctahr_b91"
+            ],
+            "anchoring_urls": {
+              "uhawaii_ctahr_b91": {
+                "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+                "verified": "2026-06-23"
+              }
+            }
+          }
+        }
+      },
+      "region_notes_beginner": null,
+      "region_notes_seasoned": null
+    }
+  },
+  "description_seasoned": "Broccoli is a cool-season brassica grown for its tight head of immature flower buds, harvested before the buds open. It performs best in the cool shoulders of spring and fall, bolts or fails to head in summer heat, and rewards a steady supply of moisture and nitrogen. After the central head is cut, most types keep producing smaller side shoots.",
+  "description_beginner": "Broccoli is a cool-weather vegetable grown for its green head, which is really a cluster of flower buds you pick before they open. It grows best in spring and fall, not summer heat, and keeps making smaller side shoots after you cut the main head.",
+  "harvest_ready_seasoned": "Cut the central head while the buds are tight, blue-green, and still closed, before any yellow flowers show, taking about 6 inches of stem. Side shoots then form for later picking.",
+  "harvest_ready_beginner": "Cut the main head while it is firm, green, and tight, before the little buds open into yellow flowers. More small shoots grow afterward.",
+  "soil_prep_seasoned": "Work plenty of compost into a fertile, well-drained bed before planting and confirm pH is around 6.0 to 6.5. Broccoli feeds heavily and roots shallowly, so a rich, moisture-retentive but well-drained soil pays off.",
+  "soil_prep_beginner": "Before planting, mix plenty of compost into loose, well-drained soil. Broccoli is a hungry plant and likes rich ground.",
+  "calendar_basis": "frost_anchored"
+}
