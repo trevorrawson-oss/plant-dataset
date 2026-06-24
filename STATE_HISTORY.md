@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-06-24 -- AUDIT Phase A: npk_ratio field (F3) + chill shared-delivered table (F2) [Claude Code, cross-cutting refactor]
+
+**base `6e9538e1` -> `9739e373`** (data + tooling commit `3d85300`; docs(state) release commit follows). The first execution pass of the post-roster GS-arc audit (`plant-astro/docs/gs-arc-audit-2026-06-24.md`) Phase A -- the two cross-cutting STRUCTURAL fixes, done "fix the 18 + arm the bots" in one motion (write the gate test-first, wire it, then migrate the existing crops to green). 17 crops changed (npk); 3 of those also chill; microgreens untouched. **NOTHING ships live yet** -- the plant-astro card UI + submodule bump are batched + GATED on Trevor.
+
+### F3 -- NPK pill (`fertilizer.npk_ratio`)
+The pill (`FeedingCard .fert-npk` + app `ap-npk`) printed the whole `npk_hint` PROSE PARAGRAPH on all 18 anchors instead of a ratio. Fix = a dedicated render-ready `npk_ratio`:
+- `tools/migrate_npk_ratio.py` (deterministic, idempotent): the first `\d{1,3}-\d{1,3}-\d{1,3}` lifted from `npk_hint_seasoned` for the 13 ratio anchors -- cherry/beefsteak/carrot/green-beans `5-10-10`, lettuce `10-5-5`, peach/apple/zinnia/zucchini `10-10-10`, orange `2-1-1`, basil `5-10-5`, strawberry `16-16-16`, broccoli `21-0-0`.
+- The 4 ratio-less by design get explicit `npk_ratio: null` + a short `npk_tag`: lemon "Nitrogen-forward", onion "Nitrogen-forward early", lavender "Lean soil, minimal feed", blueberry "Acid-forming, ammonium N". (Terse compressions of the verified hint; flagged for a Trevor copy-eyeball.)
+- GATE **A17** `tools/npk_gate.py::npk_ratio_violations` (present-or-explicit-null + ratio format + tag-when-null; no-op off the npk_hint surface, so indoor microgreens is exempt). `register_completeness_gate` EXCLUDED roster rules `npk_ratio`/`npk_tag` USER-FACING-CATEGORICAL.
+
+### F2 -- chill refactor (shared `region_chill_delivered` table)
+`chill_hours_delivered` is a CLIMATE datum but was authored PER-CROP, so peach/apple/blueberry disagreed at the same region+zone (20/20 cells), and blueberry stored it as a STRING so its gauge never rendered. Fix = one shared, crop-invariant top-level table:
+- `tools/migrate_chill_shared_table.py` (idempotent -- merges any existing table so a re-run after the strip is a no-op): builds `region_chill_delivered` (region -> {zone -> [lo,hi]}, 10 regions / 20 zone cells) by consolidating the per-crop bands per cell as the UNION [min lo, max hi] (blueberry string bands parsed: "1200 or more"/"under 100"/"X to Y"); STRIPS the per-crop field (80 occurrences). chill-REQUIRED stays per-variety.
+- `perennial_gate.perennial_cert_violations(crop, chill_table)` -- the no-fruit split now reads the shared table (A3; whole_crop_gate passes `data["region_chill_delivered"]`). GATE **A18** `tools/chill_gate.py::chill_delivered_absent_violations` forbids any per-crop copy. `release_verify` section H = `chill_table_violations` (dataset-wide [lo,hi] shape). `build_region_shells` no longer scaffolds the dead per-cell field (deciduous region + cell, berry cell); `berries_woody_gate` comments de-reference it (it was never a REQUIRED key, only allowlisted). `woody_ornamental_gate`/`berry_herbaceous_gate` keep rejecting it as a leak (now redundant with A18, harmless).
+- **PLACEHOLDER:** the seeded numbers are a realistic union, NOT independently sourced (`region_chill_delivered_provenance` says so). claude.ai reconciles each cell to ONE T1-sourced value next (kickoff at `docs/handoffs/2026-06-24-chill-sourcing-kickoff.md`). The per-crop `chill_basis_*` prose was left as-is and must be reconciled against the final numbers.
+
+### Verification
+whole_crop_gate **18/18 PASS**; `register_completeness_gate` PASS; npk + chill gates 0 violations; `precommit_release_verify` "no regression" (apple/peach cleared 35 chill violations each, blueberry 21, under the new gate code); **31/31 tooling tests pass** (test-first for both new gates + the perennial/build_shells/berries_woody test updates). plant-astro: 240 vitest pass, `astro build` 312 pages clean against the canonical; rendered HTML spot-checked (cherry pill `N · P · K = 5-10-10`, lemon tag `Nitrogen-forward`, peach "banks 300 to 950; need 200 to 1050", citrus no gauge, feeding-reference 13 ratio pills no tag leakage).
+
+### Not in this pass (audit backlog)
+F1 green-beans calendar two-row fix is banked on plant-astro branch `fix/calendar-harvest-two-row` (plant-astro-only, no dataset change). Phase B = the systematic gate-then-fix classes (companions bare-string F4/F6, display blanks F5, tips coverage F7). Phase C = the un-gateable per-batch source-truth sample. The plant-astro submodule bump (-> `9739e373`) is prepared but GATED on Trevor.
+
 ## 2026-06-23 -- broccoli (anchor 18) CERTIFIED: the LAST GS anchor -- the ~18 ROSTER IS COMPLETE [Claude Code, Step 11 cert]
 
 **base `956fc987` -> `6e9538e1`** (data commit `1a1fb9d`). THE FINAL FLIP -- broccoli is certified, the **18th and LAST GS anchor**, a `cool_season_annual` + succession crop (the cool-season twin of zucchini). **The gold-standard arc roster (~18) is COMPLETE.** Guarded flip: only `verification_status` + `last_reviewed_session` changed.
