@@ -6,6 +6,41 @@
 
 ---
 
+## 2026-06-23 -- broccoli (anchor 18) CERTIFIED: the LAST GS anchor -- the ~18 ROSTER IS COMPLETE [Claude Code, Step 11 cert]
+
+**base `956fc987` -> `6e9538e1`** (data commit `1a1fb9d`). THE FINAL FLIP -- broccoli is certified, the **18th and LAST GS anchor**, a `cool_season_annual` + succession crop (the cool-season twin of zucchini). **The gold-standard arc roster (~18) is COMPLETE.** Guarded flip: only `verification_status` + `last_reviewed_session` changed.
+
+### The flip
+`verification_status` -> {status `verified_gs_arc`, phase `phase_3_broccoli_gold_standard_arc`, date 2026-06-23, launch_ready_core + launch_ready_seasoned true, last_audited 2026-06-23, source_set (19 T1: iastate_ext_colecrops/ncsu_ext/nmsu_ext_cr457b/osu_ext/tamu_agrilife_aggie_spring/tamu_agrilife_fall_veg/uariz_ext_az1005/ucanr_ext_mg_timeplanting/ufifas_ext_broccoli/ufifas_ext_vh021/uga_ext_c943_calendar/uga_ext_c963_chart/uhawaii_ctahr_b91/umd_ext/umd_ext_broccoli/umn_ext/umn_ext_broccoli/usu_ext/uwi_hort), verification_log_ref, 5 open_findings all blocks_launch:false}; top-level last_reviewed_session -> `broccoli_step11_cert`.
+
+### Step 9 sweep
+CLEAN -- 0 user-facing dash / em-dash / spelled-degrees; 23 °F symbols.
+
+### Step 11 INDEPENDENT source-fidelity fetch (WebFetch of cited live T1)
+ZERO contradictions:
+- **heading ceiling 86°F day / 77°F night stops crown formation** -- UMN broccoli page EXACT ("Hot weather (86 degrees Fahrenheit in the day and over 77 degrees Fahrenheit at night) can cause broccoli to grow no crown"). THE load-bearing biology -- it drives `bolting`, every region `heat_pause`, and the heat-watch trigger.
+- **buttoning from oversized transplants + 4-6 true leaves** -- USU EXACT ("Transplants should have 4-6 mature leaves... larger, more mature transplants are prone to form small, early heads (buttoning)").
+- **head size 4-8 in** -- within UMD's "3 to 8 inches across".
+- **fall out-yields spring** -- UMD ("fall broccoli often produces higher yields than spring plantings").
+- **DTM 55-75** -- UMD "55-65 from transplanting, longer for fall crop".
+- **watering 1-1.5 in/wk** -- within USU "1-2 inches per week".
+- **Minor non-contradicting note:** UMN in-row spacing 8-10 in (tight, small-head) vs the dataset's standard 12-24 in -- both valid broccoli spacings; the dataset's standard range stands, no change.
+
+### open_findings (all blocks_launch:false)
+hawaii bounded-winter (CTAHR B-91 unparseable scanned PDF -- the zucchini/blueberry case); warm_arid Dona Ana Path-A (split anchored on readable TAMU Region-II + AgriLife fall guide + NMSU CR457B [confirms ~60-day broccoli; zone-split dates in the unsurfaced parent CR-457 table]); se_gulf z9 heat_pause = independent climate-convergence attestation (own-sourced UGA + the 86/77F ceiling, NOT pasted from lettuce); rotation_years=3 conventional cole practice (clubroot principle is T1, the number conventional); the three PK docs companion-vocab sync (claude.ai-lane).
+
+### Gates
+whole_crop_gate **PASS** (G flip-state: launch_ready_core=True launch_ready_seasoned=True status=verified_gs_arc; 0 open-finding blockers; A12 0; E 19 sources all T1 / 0 uncatalogued; F 0 gaps); release_verify CLEAN (only broccoli changed, lettuce-leaf byte-identical, no new violations); precommit OK. **18 anchors certified.**
+
+### THE ROSTER (18, every archetype covered)
+cherry-tomato + beefsteak-tomato + carrot + lettuce-leaf + green-beans-bush + basil + zinnia + microgreens-mix + onion + zucchini-courgette + broccoli (annuals: warm-fruiting / cool-season / flower / herb / indoor / photoperiod) + strawberry (berries_herbaceous) + lavender (woody_ornamental) + blueberry (berries_woody) + peach + apple (deciduous trees) + lemon + orange-navel (evergreen trees). Every `calendar_basis`, every gate (A1-A16), every deriver proven on a certified exemplar.
+
+### This session (2026-06-23) -- both final rail-riders, blank shell to cert, in parallel
+zucchini: `526cb4df`(1-3) -> `2a47731a`(3.5) -> `642f4890`(4-5.5) -> `678312b2`(6-8) -> `b0ccdd2d`(cert, anchor 17). broccoli: `8e...`(1-3) -> ... -> `956fc987`(6-8) -> `6e9538e1`(cert, anchor 18). ~30 dataset commits, every one gate-clean + pushed. Release-lane learnings: the warm-vs-cool succession-geometry inverse (zucchini 7c/3s, broccoli 6s/4c); the sub-id mint for multi-page-per-publisher cells (broccoli); the shape_requirements dual-use (token vs CP pair) + the compound-schema re-key (both deterministic conforms to the zucchini template); window_type is vestigial (no tool reads it).
+
+### Next (a roadmap call, NOT a queued step)
+The GS-anchor build is DONE. Surface the certs (a plant-astro submodule bump brings zucchini + broccoli + blueberry to the site/app) + the gated plant-astro work (HeroCard berry pluralizer; the berries_woody guide template). The big remaining dataset arc = the ~120 non-GS crops on honest shells (region-fill + 6-8 + cert at scale, now that every template + the tooling is proven). Plus the batched post-cert follow-up backlog (the blocks_launch:false items across zucchini/broccoli/blueberry).
+
 ## 2026-06-23 -- broccoli Steps 6-8 RELEASED: consumer prose + the 7 compounds (whole_crop_gate -> 0, structurally cert-ready) [claude.ai author lane -> Claude Code release]
 
 **base `b0ccdd2d` -> `956fc987`** (data commit `ccdbfdc`). The FINAL authoring leg of the LAST anchor. claude.ai authored (session `broccoli_steps6-8`) Steps 6 (depth-lift verify pass -- broccoli authored most prose at 1-3) + 7 + 8 (beginner siblings + the dual-voice coverage gate); Claude Code released. Re-preflighted against the post-zucchini-cert LATEST -- broccoli untouched, crop still `a68e13ad`. Slice `a68e13ad` -> authored `8f93303a` -> conformed `30f7962e`. NOT a flip (Step 11). Only broccoli changed (the 12 in-lane 6-8 blocks; windows/calendars/succession byte-identical).
