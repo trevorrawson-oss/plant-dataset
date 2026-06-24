@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-06-24 -- AUDIT Phase C: source-truth sampling QA institutionalized + WI4 rider decisions [Claude Code, NO data change]
+
+**Tooling/docs only -- `crops_data_final.json` UNCHANGED (content SHA still `3009a3fc`); gate still 14/18.** Git HEAD moved `8808550 -> 60a49bf -> c89c696` but those are tooling+docs commits ON TOP of the 3009a3fc data release, NOT new releases (canonical data pointer in CURRENT_STATE remains valid; no regen needed).
+
+The Phase C execution pass of the post-roster audit (`plant-astro/docs/gs-arc-audit-2026-06-24.md` §7). Work this session, all independent of the still-pending claude.ai authoring (chill + Phase B content NOT yet landed, so WI1 release stays blocked):
+
+- **Source-truth QA WIDENED (audit §4 Layer-2):** 4 region-scoped WebFetch verification agents (CA / Desert SW / SE+FL+HI / Northern) checked ~40 cells against T1 extension calendars (AZ1005 grid machine-parsed, UF-IFAS, UGA, UMN, NMSU, UC ANR). **0 wrong-season errors** -- corpus confirmed sound on regional dates. Re-confirmed both known nits + found 1 new MINOR (low_desert_az carrot). Findings doc: `plant-astro/docs/gs-arc-source-truth-qa-2026-06-24.md`. Every finding re-verified vs effective plant windows + the deriver oracle before routing (scan->verify->fix).
+- **QA institutionalized (commit `60a49bf`):** `tools/source_truth_sample.py` (+test, the effective-window extractor, plant_out UNION calendar tokens) + `docs/source_truth_sampling_qa_v1_0.md` (the locked, un-gateable, sampled per-batch process for the scale phase).
+- **3 source-truth corrections SPECCED + ROUTED into the combined release (handoff riders 4-6):** carrot z3 harvest string (verified clean, no cascade, re-derivable) + lettuce ca_interior z8/z9 fall-window add + low_desert_az carrot heat-gap shift (last two cascade -> authoring lane). Exact T1-sourced values in the handoff.
+- **WI4 rider decisions (commit `c89c696`):** blueberry variety chill string->numeric DECIDED (scalar `chill_hours_required` = low-end gating threshold, tree-consistent, + `chill_hours_range`); RECOMMEND building a berries_woody chill card (blueberry is chill-gated but shows growers no chill info); npk_tag polish via copywriting (onion "High nitrogen early", blueberry "Acidic, ammonium-based"). All routed to the combined release.
+- **plant-astro (branch `fix/calendar-harvest-two-row`, NOT committed -- gated on Trevor):** WI3 app port -- the F1 two-row harvest-from-windows model ported to the app-preview "Your year" strip (`CropDetail.astro` + `demo.ts` exposes `harvestMonths` via the shared `harvestWindowMonths` helper; +1 test). Surfaces split/overlap harvests the single-token strip hid (verified: lettuce ca_interior z8 now shows 5 hidden winter-harvest months; continuous-harvest demo unchanged). 248 vitest + `astro build` 312 pages green.
+
 ## 2026-06-24 -- AUDIT Phase B: companion-shape (A19) + display-readiness (A20) gates + tips coverage (A12) + companion reshape (F4-F7) [Claude Code, gate-then-fix]
 
 **base `9739e373` -> `3009a3fc`** (data+tooling commit `5fa856b`; docs(state) release commit follows). The second execution pass of the post-roster GS-arc audit (`plant-astro/docs/gs-arc-audit-2026-06-24.md`) Phase B -- gate-then-fix the systematic STRUCTURAL/DISPLAY defect classes, test-first. The split: **Claude Code armed the gates + did every pure-structural fix to green; the authored/sourced CONTENT (display values, tips, companion `why`) is the claude.ai lane** (`docs/handoffs/2026-06-24-phase-b-authoring-kickoff.md`). 5 crops changed (companions only); microgreens + the other 12 anchors untouched. **NOTHING ships live yet** -- the plant-astro batch + submodule bump are GATED on Trevor.
