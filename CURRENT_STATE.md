@@ -10,37 +10,35 @@
 ---
 
 
-**17 GS-arc anchors CERTIFIED** of a ~18 target -- **zucchini-courgette JUST CERTIFIED (2026-06-23, `b0ccdd2d`): anchor 17, the warm-season rail-rider** (warm_season_fruiting annual + succession crop), taken end-to-end this session (Steps 1-3 -> 3.5 -> 4-5.5 -> 6-8 -> Step 9 -> Step 11 cert). The cert source-fidelity fetch found ZERO contradictions (4 open_findings all blocks_launch:false). **ONE ANCHOR LEFT: broccoli** (`cool_season_annual`, the cool-season twin) -- through region fill, its **Steps 6-8 kickoff is READY to send** (`~/Downloads/broccoli-steps-6-8-kickoff/`); then Step 9 + cert = ~18 and the roster is DONE.
+**17 GS-arc anchors CERTIFIED** of a ~18 target. **THE LAST ANCHOR IS STRUCTURALLY CERT-READY (2026-06-23, `956fc987`):** broccoli (`cool_season_annual`) is through **Steps 1-3 + 3.5 + 4-5.5 + 6-8** -- whole_crop_gate -> 0; only **Step 9 (sweep) + Step 11 (cert flip)** remain, both Claude Code. zucchini certified as anchor 17 earlier this session. **broccoli cert = anchor 18 = the gold-standard roster is DONE.**
 
 ## Canonical pointer
-- **Current SHA:** `b0ccdd2da34e72cbd1045f953993346ef8d1fe2eb2dae5534b70619252356193`. `LATEST.txt` session: `zucchini_step11_cert` (2026-06-23).
+- **Current SHA:** `956fc9879fdc6e86bf20671ef9329d71c3025494f118a3151f2885af5dc7451a`. `LATEST.txt` session: `broccoli_steps6-8_release` (2026-06-23).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `956fc987` -- feat(broccoli): Steps 6-8 -- consumer prose + the 7 compounds (whole_crop_gate -> 0, structurally cert-ready)
   - `b0ccdd2d` -- feat(zucchini-courgette): CERTIFIED -- anchor 17 (Step 11 flip); the warm-season rail-rider
   - `678312b2` -- feat(zucchini-courgette): Steps 6-8 -- consumer prose + the 7 compounds (whole_crop_gate 17 -> 0, structurally cert-ready)
   - `78ef87cd` -- feat(broccoli): Steps 4-5.5 -- region fill (10 regions: windows + calendars + succession geometry + A8 successions_realized) + 11 source-catalog sub-id mints
   - `642f4890` -- feat(zucchini-courgette): Steps 4-5.5 -- region fill (10 regions: windows + calendars + succession geometry + A8 successions_realized)
   - `20a34223` -- feat(broccoli): Step 3.5 -- region shells, all 10 regions (cool_season_annual transplant shape)
   - `85ad52e2` -- feat(broccoli): Steps 1-3 released -- sources + scalars + biology + varieties + companions (rail-rider, cool_season_annual + succession)
-  - `2a47731a` -- feat(zucchini-courgette): Step 3.5 -- region shells, all 10 regions (warm_season_fruiting transplant shape)
 
-## What just happened (session `zucchini_step11_cert`, 2026-06-23)
+## What just happened (session `broccoli_steps6-8_release`, 2026-06-23)
 
-**ZUCCHINI-COURGETTE CERTIFIED -- anchor 17, the warm-season rail-rider, the FULL arc this session.** THE FLIP (Claude Code release lane). base `678312b2` -> `b0ccdd2d` (data commit `df709dc`). Guarded: only `verification_status` + `last_reviewed_session` changed.
-- **The flip:** `verification_status` -> {status `verified_gs_arc`, phase `phase_3_zucchini_gold_standard_arc`, date 2026-06-23, launch_ready_core + launch_ready_seasoned true, last_audited 2026-06-23, source_set (16 T1), verification_log_ref, 4 open_findings all blocks_launch:false}.
-- **Step 9 sweep CLEAN** (0 user-facing dash/temp; 10 °F symbols).
-- **Step 11 INDEPENDENT source-fidelity fetch (WebFetch of cited live T1) -- ZERO contradictions:** soil pH 6.0-6.5 (UMN EXACT), succession interval "finish the planting three weeks later" (UMN EXACT), spacing 2-3 ft = 24-36 in (UMN), container min 5 gal / depth 12-18 in (UW-Madison Hort EXACT). **CARRY-FORWARD RESOLVED:** warm_arid z8 = continuous, confirmed by NMSU CR457 (plant after frost; two plantings where the frost-free period exceeds 150 days -- one continuous window + optional second sowing, NO mid-summer split).
-- **open_findings (all blocks_launch:false):** hawaii year_round (CTAHR B-91 unparseable scanned PDF -- the blueberry AZ1585 case; bounded-continuous default stands); osu_ext 403 (germ 70-95 / pH tolerated 5.8-7.5); ucd_postharvest 403 (41°F chilling); iastate 404 + UMN silent on yield (re-anchor the 6-10 lb/plant citation). All unreachable-at-fetch or unparseable, standard figures, NO contradiction.
-- **Gates:** whole_crop_gate PASS (G flip-state: launch_ready x2 + verified_gs_arc + 0 open-finding blockers); release_verify CLEAN. **17 anchors certified.** (Earlier this session: zucchini Steps 6-8 release -- whole_crop_gate 17 -> 0 + the shape_requirements CP-pair conform + the succession:spring harvest reconcile.)
+**BROCCOLI Steps 6-8 RELEASED -- the final authoring leg of the last anchor; whole_crop_gate -> 0, structurally cert-ready.** claude.ai authored Steps 6 (depth-lift verify pass) + 7 + 8 (beginner siblings + dual-voice coverage); Claude Code released. base `b0ccdd2d` -> `956fc987` (data commit `ccdbfdc`); crop SHA `a68e13ad` -> `30f7962e`. Only broccoli changed (the 12 in-lane 6-8 blocks; windows/calendars/succession byte-identical).
+- **Authored:** 10 region_notes_* pairs (the spring/fall/heat_pause cool-season structure, A5 own-source); storage; yield (expressed as HEAD SIZE 4-8 in + side-shoot narrative, deliberately NOT lb/10ft -- dodging the green-beans yield-weight contradiction class); container_notes.shape_requirements as a CP pair; moon_phase N/A; the 7 compounds -- growth_stages (6, ids == the live tips_by_stage keys, Fork-1 Option A), tips_by_stage (12), pests (cabbage-worm complex / aphids / flea beetles / cabbage root maggot), diseases (clubroot / black rot / downy mildew), failure_diagnostics (buttoning / bolting / no-head / hollow-stem), notifications, weather_triggers (Fork-2 title/body CP + machinery bare). Forks 1+2 applied per the rulings; shape_requirements proactively a CP pair (Decision 3).
+- **Release-lane conformance (the compound layer was authored to a NON-CERTIFIED schema -- content correct, keys not; a DETERMINISTIC re-key to the certified zucchini template, zero content change, no copy authoring):** bare seasoned compound fields (symptoms/cause/organic_treatment/prevention/what_to_look_for/user_action/log_prompt/what_happened/next_season_tip) -> `_seasoned` suffix (cleared 14 register_completeness HALTs); added `audience:"core"` to pests/diseases/failure_diagnostics + each tip; stripped the tips_by_stage metadata (tip_id/sources/evidence_tier/author/added_in/last_reviewed/...) to the clean `text_seasoned`/`text_beginner`/`audience` shape (cleared 12 anchoring violations from the stray per-tip sources). `label` left bare (already gate-legal). Surfaced + Trevor-acknowledged.
+- **Gates:** whole_crop_gate PASS (-> 0); register_completeness PASS; register_fill PASS; release_verify CLEAN (only broccoli changed, lettuce-leaf byte-identical, no new violations, A12 0, anchoring 0 gaps [168 leaves], E 21 IDs all T1).
 
-## Active work + next step -- ONE ANCHOR LEFT
+## Active work + next step -- broccoli Step 9 + cert (the LAST anchor)
 
-- **BROCCOLI = the last anchor.** Through region fill (Steps 1-3 + 3.5 + 4-5.5); its **Steps 6-8 kickoff is READY to send** (`~/Downloads/broccoli-steps-6-8-kickoff/`) -- a leaner 35-null leg (region_notes spring/fall/heat_pause, storage/yield, the 7 compounds: pests = cabbage-worm complex / aphids / flea beetles / cabbage root maggot; diseases = clubroot / black rot / downy mildew; failure = buttoning/bolting/no-head/hollow-stem). On handback CC releases (residual -> 0; expect the same shape_requirements CP-pair check + the A12 stage-id conformance [adopt the 6 live tips_by_stage keys: germination/seedling/established/head_forming/harvest/side_shoots, Fork-1 ruling]) -> Step 9 -> Step 11 cert. **broccoli = anchor 18 = the roster is DONE (~18).**
-- **Broccoli cert carry-forwards (blocks_launch:false):** F-broc-h11-001 (hawaii); F-broc-warmarid-001 (Dona Ana Path-A); se_gulf z9 heat_pause attestation; F-broc-001 (rotation_years); F-broc-005 (PK companion-vocab sync).
-- **Zucchini post-cert follow-ups (blocks_launch:false, the 4 open_findings):** re-verify the osu_ext + ucd_postharvest URLs (403 at fetch); re-anchor the yield citation (iastate 404 / UMN silent); corroborate hawaii bounded-continuous vs a parseable CTAHR source (B-91 unparseable).
+- **BROCCOLI = Step 9 + Step 11 cert (NEXT; both Claude Code):** Step 9 = whole-crop dash/temp sweep. Step 11 = the independent T1 source-fidelity WebFetch (resolve the carry-forwards: F-broc-h11-001 hawaii window vs CTAHR B-91; F-broc-warmarid-001 Dona Ana Path-A / NMSU CR457; the se_gulf z9 heat_pause attestation; the cert-sensitive numerics -- 86F/77F heading ceiling, head size, germ, 3yr rotation) + the flip. **broccoli cert = anchor 18 = the GS roster is DONE (~18).**
+- **Broccoli cert carry-forwards (blocks_launch:false):** F-broc-001 (rotation_years=3 conventional); F-broc-005 (three PK docs owed a companion-vocab sync); F-broc-h11-001 (hawaii); F-broc-warmarid-001 (Dona Ana Path-A); se_gulf z9 heat_pause attestation.
+- **Zucchini post-cert follow-ups (blocks_launch:false):** re-verify the osu_ext + ucd_postharvest URLs (403 at fetch); re-anchor the yield citation; corroborate hawaii bounded-continuous vs a parseable CTAHR source.
 - **blueberry post-cert follow-ups (non-blocking):** chill_hours_delivered corroboration; UArizona AZ1585 re-fetch; legacy `zones{}` -> `{}`. Fold `schedule_by_stage[].rate` into `register_bearing_field_inventory_v1_0.md`.
-- **plant-astro (GATED -- staged, NOT pushed):** HeroCard `type:"berry"` pluralizer fix + the `berries_woody` GUIDE PAGE template. A dataset submodule bump now surfaces zucchini (certified) + blueberry on the site/app.
+- **plant-astro (GATED -- staged, NOT pushed):** HeroCard `type:"berry"` pluralizer fix + the `berries_woody` GUIDE PAGE template. A dataset submodule bump now surfaces zucchini (certified) + blueberry; broccoli on cert.
 
-## Gate record (generated 2026-06-23, on canonical `b0ccdd2d`)
+## Gate record (generated 2026-06-23, on canonical `956fc987`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
