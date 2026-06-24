@@ -54,6 +54,11 @@ EXCLUDED_KEYS = {
     "rootstock_selection_basis",  # FLAG 1: size (pome) | soil_pest_tolerance (stone) -- per-archetype enum (apple)
     # USER-FACING-CATEGORICAL (dash-gated, no suffix)
     "sunlight","water","difficulty","triggers","spacing","depth","light",
+    # npk_ratio = the render-ready "N-P-K" pill string (e.g. "5-10-10"); npk_tag = the
+    # short qualitative fallback for ratio-less crops (e.g. "Nitrogen-forward"). Both
+    # single-form, read identically by both registers, derived once from the verified
+    # npk_hint -- USER-FACING-CATEGORICAL, not dual-register prose. (Phase A NPK, 2026-06-24.)
+    "npk_ratio","npk_tag",
     # CN-METADATA (evidence structure)
     "source","source_id","claim",
     # CN planting-window primitives (zones / regions resolved_by_zone)

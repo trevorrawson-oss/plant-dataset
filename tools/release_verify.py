@@ -198,6 +198,18 @@ def main():
     else:
         ok(f"no region calendar/heat_pause byte-identical to {a.ref} (all crop-specific values)")
 
+    # H. shared chill-delivered table (dataset-wide, slug-independent). The F2 refactor moved
+    # chill-delivered into one crop-invariant region_chill_delivered table; its [lo,hi] shape is
+    # validated here so a malformed (or string-typed) cell cannot ship.
+    print("H. shared chill-delivered table (region_chill_delivered shape)")
+    from chill_gate import chill_table_violations
+    ctv = chill_table_violations(cand)
+    if ctv:
+        for v in ctv:
+            concern(f"chill table: {v}")
+    else:
+        ok("region_chill_delivered is a well-formed region -> zone -> [lo,hi] table")
+
     print()
     if notes:
         print(f"  ({len(notes)} review note(s) above -- Step 5/5.5 items, NON-blocking)")

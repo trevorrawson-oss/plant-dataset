@@ -187,7 +187,9 @@ def _build_tree_region(r, evergreen=False, heat_gated=False):
             r.setdefault("heat_basis_seasoned", None)
             r.setdefault("heat_basis_beginner", None)
     else:
-        r.setdefault("chill_hours_delivered", [])
+        # Deciduous region: keep the per-crop chill_basis prose (the crop's interpretation
+        # of its chill situation), but NOT the chill-delivered number -- that climate datum
+        # lives in the shared region_chill_delivered table now (F2 refactor; A18).
         r.setdefault("chill_basis_seasoned", None)
         r.setdefault("chill_basis_beginner", None)
     # region-constant RULE layer: a SINGLE one-time establishment entry, track:"perennial"
@@ -221,14 +223,14 @@ def _build_tree_cell(cell, evergreen=False, heat_gated=False):
     cell.setdefault("suitability", None)
     cell.setdefault("suitability_note_seasoned", None)
     cell.setdefault("suitability_note_beginner", None)
-    # per-zone climate datum (refines the region band): chill for deciduous,
-    # min winter temp for a cold-gated evergreen.
+    # per-zone climate datum: min winter temp for a cold-gated evergreen. A DECIDUOUS
+    # cell carries NO per-cell chill field -- chill-delivered is a CLIMATE datum that now
+    # lives ONCE in the shared top-level region_chill_delivered table (F2 refactor,
+    # 2026-06-24); per-crop chill_hours_delivered is forbidden (whole_crop_gate A18).
     if evergreen:
         cell.setdefault("min_winter_temp_f", [])
         if heat_gated:
             cell.setdefault("heat_summer_basis", None)
-    else:
-        cell.setdefault("chill_hours_delivered", [])
     # resolved render fields (reuse the annual keys; the renderer's resolved reader is shared)
     cell.setdefault("plant_out", None)      # one-time bare-root dormant window
     cell.setdefault("bloom", None)          # absolute bloom window (region-resolved)
@@ -502,7 +504,9 @@ def _build_berry_woody_cell(cell):
         cell.pop(dead, None)
     cell.setdefault("recommended_type", None)       # northern_highbush | southern_highbush | rabbiteye (D1)
     cell.setdefault("leaf_habit", None)             # deciduous (cold) | evergreen (warm South) (D2)
-    cell.setdefault("chill_hours_delivered", None)  # the region's chill -- the per-cell gate basis
+    # NO per-cell chill_hours_delivered: chill-delivered is the shared region_chill_delivered
+    # table now (F2 refactor; A18). The chill GATE basis for blueberry is the crop-level
+    # chill_hours_required + gating_factors, not a per-cell number.
     cell.setdefault("type_note_seasoned", None)     # why this type here -- chill
     cell.setdefault("type_note_beginner", None)
     cell.setdefault("plant_out", None)              # nursery-setting window (frost-anchored)

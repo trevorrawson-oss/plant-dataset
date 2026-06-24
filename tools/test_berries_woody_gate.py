@@ -7,9 +7,10 @@ The calendar coherence (stored == derived) is the SEPARATE A16
 invariants: lifecycle scalars + the chill gate signature + prose backstop, self_fertile
 false, the per-cell recommended_type/leaf_habit typing, the type COVERAGE invariant, the
 token placement (deciduous has dormant, evergreen has none, never season_over/renovation),
-and no tree machinery / mis-route. NOTE the blueberry-specific INVERSIONS vs the woody-
-ornamental gate: chill_hours_required is LEGIT (the gate basis, not tree machinery), and
-chill_hours_delivered is a KEPT cell key (only suitability/rootstock are mis-route markers).
+and no tree machinery / mis-route. NOTE the blueberry-specific INVERSION vs the woody-
+ornamental gate: chill_hours_required is LEGIT (the gate basis, not tree machinery).
+chill-DELIVERED moved to the shared region_chill_delivered table (F2 refactor); A15 does
+NOT require a per-cell chill_hours_delivered, and whole_crop_gate A18 forbids one.
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -31,7 +32,7 @@ def well_formed():
             "varieties": {"recommended": [{"name": "Duke", "type": "northern_highbush"}]},
             "regions": {"northern_tier": {"resolved_by_zone": {
                 "6": {"recommended_type": "northern_highbush", "leaf_habit": "deciduous",
-                      "chill_hours_delivered": 900, "calendar": list(_DECID)}}}}}
+                      "calendar": list(_DECID)}}}}}
 
 
 def test_clean():
@@ -133,9 +134,10 @@ def test_tree_only_cell_key_suitability_rejected():
     assert any("suitability" in v for v in berries_woody_violations(c))
 
 
-def test_chill_hours_delivered_cell_key_ok():
-    # blueberry-specific: chill_hours_delivered is the gate basis, KEPT on the cell (NOT a mis-route)
-    assert berries_woody_violations(well_formed()) == []  # well_formed already carries it
+def test_chill_delivered_not_required_on_cell():
+    # F2 refactor: chill-delivered is the shared region_chill_delivered table now. A15 does NOT
+    # require a per-cell chill_hours_delivered (well_formed carries none) -- A18 owns its absence.
+    assert berries_woody_violations(well_formed()) == []
 
 
 def test_tree_machinery_rootstock_rejected():

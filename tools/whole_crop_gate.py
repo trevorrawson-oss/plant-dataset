@@ -148,7 +148,9 @@ for rk, r in regions.items():
 # reliably met). No-op for non-perennial crops. (v1.8 amendment §4-5.)
 from perennial_gate import perennial_cert_violations
 print("A3. perennial cert-gate branch (tree invariants; no-op for non-perennial)")
-_perennial = perennial_cert_violations(crop)
+# The no-fruit split reads the shared region_chill_delivered table (F2 refactor), not a
+# per-cell crop field. A missing top-level table surfaces as a per-cell "missing band" here.
+_perennial = perennial_cert_violations(crop, data.get("region_chill_delivered"))
 print(f"  calendar_basis={crop.get('calendar_basis')!r} | perennial violations: {len(_perennial)}")
 for m in _perennial:
     fail(f"perennial: {m}")
@@ -391,6 +393,32 @@ _bwoodycal = berry_woody_calendar_violations(crop)
 print(f"  berries_woody calendar violations: {len(_bwoodycal)}")
 for m in _bwoodycal:
     fail(f"berries_woody calendar: {m}")
+
+# ---------------- A17. npk_ratio present-or-explicit-null (UNIVERSAL, not archetype-gated) ----------------
+# The feeding pill (FeedingCard .fert-npk + app ap-npk) rendered the whole npk_hint PARAGRAPH
+# instead of a ratio (audit F3, all 18 anchors). A dedicated render-ready fertilizer.npk_ratio
+# (a bare "N-P-K" string, derived once from the verified hint) fixes it, with an explicit-null
+# sentinel + a short npk_tag fallback for the genuinely ratio-less crops (citrus/allium/lavender/
+# blueberry). No-op for a crop with no npk_hint surface (indoor microgreens). (Phase A, 2026-06-24.)
+from npk_gate import npk_ratio_violations
+print("A17. npk_ratio present-or-explicit-null (no-op off npk_hint surface)")
+_npk = npk_ratio_violations(crop)
+print(f"  npk_ratio violations: {len(_npk)}")
+for m in _npk:
+    fail(f"npk: {m}")
+
+# ---------------- A18. chill-delivered is crop-invariant (UNIVERSAL; the F2 refactor) ----------------
+# chill_hours_delivered is a CLIMATE datum that was authored PER CROP, so peach/apple/blueberry
+# disagreed at the same region+zone (audit F2). It now lives ONCE in the shared top-level
+# region_chill_delivered table; NO crop may carry it (region rollup or resolved cell). With no
+# per-crop overrides + one table, "crop-invariant per region+zone" holds by construction. The
+# table's own [lo,hi] shape is validated dataset-wide in release_verify. (Phase A, 2026-06-24.)
+from chill_gate import chill_delivered_absent_violations
+print("A18. chill-delivered crop-invariance (no per-crop chill_hours_delivered)")
+_chill = chill_delivered_absent_violations(crop)
+print(f"  per-crop chill_hours_delivered violations: {len(_chill)}")
+for m in _chill:
+    fail(f"chill: {m}")
 
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")

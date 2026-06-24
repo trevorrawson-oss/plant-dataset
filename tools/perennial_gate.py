@@ -43,15 +43,22 @@ def min_variety_chill(crop, default=400):
     return min(chills) if chills else default
 
 
-def perennial_cert_violations(crop):
+def perennial_cert_violations(crop, chill_table=None):
     """Return a list of violation strings for a permanent-tree crop ([] = clean).
     No-op (returns []) for any non-perennial calendar_basis. The universal invariants
     apply to every perennial base; the no-fruit DIRECTION SPLIT is keyed on
     gating_factors -- chill-gated crops get the chill Goldilocks split, a cold-only
-    evergreen does not (colder is monotonically worse -- no warm-edge no-chill failure)."""
+    evergreen does not (colder is monotonically worse -- no warm-edge no-chill failure).
+
+    `chill_table` is the shared, crop-invariant region_chill_delivered table
+    (region -> {zone -> [lo,hi]}); the no-fruit split reads the DELIVERED band from it,
+    NOT from a per-cell crop field (the F2 refactor). whole_crop_gate passes
+    data["region_chill_delivered"]; a chill-gated crop with no table entry for a
+    survives_no_fruit cell cannot apply the split (a violation)."""
     if crop.get("calendar_basis") not in PERENNIAL_BASES:
         return []
     V = []
+    chill_table = chill_table or {}
     chill_gated = "chill_hours" in gating_factors(crop)
     heat_gated = "heat_accumulation" in gating_factors(crop)
     floor = min_variety_chill(crop) if chill_gated else None
@@ -86,7 +93,7 @@ def perennial_cert_violations(crop):
                 V.append(f"{rk}.{z}: suitability {s!r} not in the 4-value enum")
                 continue
             cal = cell.get("calendar") or []
-            chill = cell.get("chill_hours_delivered")
+            chill = (chill_table.get(rk) or {}).get(z)  # shared region+zone delivered band
             chill_lo = chill[0] if (isinstance(chill, list) and chill) else None
             if s == "unsuitable":
                 if cal:
@@ -98,7 +105,7 @@ def perennial_cert_violations(crop):
                 # calendar (blooms in mild years) or be empty (no dependable crop) -- both honest.
                 if chill_gated:
                     if chill_lo is None:
-                        V.append(f"{rk}.{z}: survives_no_fruit cell missing chill_hours_delivered (cannot apply the no-fruit split)")
+                        V.append(f"{rk}.{z}: survives_no_fruit cell has no delivered band in region_chill_delivered (missing -- cannot apply the no-fruit split)")
                     elif chill_lo >= floor and not cal:
                         V.append(f"{rk}.{z}: survives_no_fruit with chill met ({chill_lo} >= {floor}) MUST carry a calendar (under-report)")
                     elif chill_lo < floor and cal:

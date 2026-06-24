@@ -16,8 +16,9 @@ generic checks do not encode:
   - NO tree structural machinery (rootstock / pollinizer) carries a value -- own-root shrub;
   - per-cell: recommended_type + leaf_habit typed, the type COVERAGE invariant (every per-cell
     recommended_type has >=1 matching variety -- the onion-A9 analog), NO tree-only cell key
-    (suitability; but chill_hours_delivered is KEPT as the gate basis), and the leaf_habit<->token
-    placement (deciduous carries dormant, evergreen carries none, NEVER season_over/renovation).
+    (suitability), and the leaf_habit<->token placement (deciduous carries dormant, evergreen
+    carries none, NEVER season_over/renovation). chill-DELIVERED is the shared
+    region_chill_delivered table now (F2 refactor); A18 forbids a per-cell chill_hours_delivered.
 Admission-safe: a cell with null recommended_type + null leaf_habit + empty calendar is the
 Step-3.5 admission state (skipped). See 2026-06-22-blueberry-berries-woody-model-design.md (D1-D8).
 """
@@ -30,8 +31,9 @@ PROSE_PAIRS = ("type_selection", "pollinator_notes", "chill_hours_note")  # _sea
 # chill_hours_required is NOT here -- for blueberry it is the legit gate basis (D1), the inverse
 # of the woody-ornamental gate.
 _TREE_CROP_KEYS = ("rootstock", "rootstock_options", "pollinizer")
-# tree-only resolved-cell keys. NOTE chill_hours_delivered is NOT here -- it is KEPT as the
-# per-cell gate basis (design 3c); only suitability marks a tree mis-route.
+# tree-only resolved-cell keys (mis-route markers). chill_hours_delivered is NOT a cell key at
+# all anymore -- chill-delivered moved to the shared region_chill_delivered table (F2 refactor),
+# and A18 forbids a per-crop copy; only suitability marks a tree mis-route here.
 _TREE_ONLY_CELL_KEYS = ("suitability",)
 _CROSS_POLLINATION_KEYS = ("bloom_group", "pollinizer", "pollinizer_distance_ft",
                            "bloom_window_relative")

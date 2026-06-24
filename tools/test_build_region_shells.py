@@ -200,8 +200,9 @@ for rk, r in r5.items():
         assert p0.get(w) == [], f"{rk}: {w} should be present-but-empty rule list, got {p0.get(w)!r}"
     # a tree is bare-root: no annual sowing keys on the rule entry
     assert "start_indoors" not in p0 and "direct_sow" not in p0, f"{rk}: annual sowing keys leaked onto a tree entry"
-    # chill-adequacy layer present-but-empty at shell stage
-    assert r.get("chill_hours_delivered") == [], f"{rk}: chill_hours_delivered should be present-but-empty"
+    # chill-delivered moved to the shared region_chill_delivered table (F2 refactor): NO
+    # per-cell/region chill_hours_delivered. The crop's chill_basis prose layer stays.
+    assert "chill_hours_delivered" not in r, f"{rk}: chill_hours_delivered must NOT live on the crop (shared table now)"
     assert "chill_basis_seasoned" in r and "chill_basis_beginner" in r, f"{rk}: chill_basis keys missing"
     # region_notes + dash resolution (shared with the annual model)
     assert "region_notes_seasoned" in r and "region_notes_beginner" in r, f"{rk}: region_notes keys"
@@ -213,7 +214,7 @@ for rk, r in r5.items():
         # survives != fruits is FIRST-CLASS: the per-zone suitability verdict slot exists
         assert "suitability" in cell, f"{rk}.{z}: tree cell missing the suitability verdict slot"
         assert "suitability_note_seasoned" in cell and "suitability_note_beginner" in cell, f"{rk}.{z}: suitability_note keys"
-        assert cell.get("chill_hours_delivered") == [], f"{rk}.{z}: cell chill_hours_delivered"
+        assert "chill_hours_delivered" not in cell, f"{rk}.{z}: cell must NOT carry chill_hours_delivered (shared table now)"
         assert cell.get("calendar") == [], f"{rk}.{z}: tree cell calendar should be present-but-empty"
         # render fields reuse the annual resolved-cell keys (renderer reads them uniformly)
         for w in ("plant_out", "bloom", "harvest_start", "harvest_end"):
@@ -236,9 +237,8 @@ assert built["regions"] == before6, "tree transform not idempotent on an already
 # a re-run must NOT wipe a cell Step 4 has already authored
 filled = build_region_shells(tree_author_fresh_crop())
 filled["regions"]["se_gulf"]["resolved_by_zone"]["9"].update(
-    {"suitability": "fruits_reliably", "chill_hours_delivered": [700, 900],
+    {"suitability": "fruits_reliably",
      "bloom": "Mar 1 - Mar 20", "resolution_method": "perennial_precompute"})
-filled["regions"]["se_gulf"]["chill_hours_delivered"] = [650, 950]
 keep = copy.deepcopy(filled["regions"]["se_gulf"])
 build_region_shells(filled)
 assert filled["regions"]["se_gulf"] == keep, "tree build clobbered an already-authored cell"
@@ -290,7 +290,7 @@ assert built7["regions"] == before7, "evergreen transform not idempotent on an a
 
 # the DECIDUOUS path stays exactly as before (peach/apple byte-identical regression)
 assert c5["calendar_basis"] == "perennial_chill_gated", "deciduous basis changed -- regression"
-assert r5["se_gulf"].get("chill_hours_delivered") == [], "deciduous chill layer changed -- regression"
+assert "chill_hours_delivered" not in r5["se_gulf"], "deciduous chill-delivered must move to the shared table (F2)"
 assert "min_winter_temp_f" not in r5["se_gulf"], "deciduous region wrongly got an evergreen climate field"
 
 # ---- fixture 8: HEAT-gated evergreen (orange-navel-like) -> +heat climate layer ----
@@ -559,8 +559,9 @@ cell = c["regions"]["northern_tier"]["resolved_by_zone"]["6"]
 # the chill-gated TYPE slots + their dual-register note, scaffolded null (D1/D2/D7)
 assert cell["recommended_type"] is None and cell["leaf_habit"] is None
 assert "type_note_seasoned" in cell and "type_note_beginner" in cell
-# chill_hours_delivered is the per-cell gate basis -- KEPT (the INVERSE of the berry/woody-ornamental cell)
-assert "chill_hours_delivered" in cell
+# chill-delivered moved to the shared region_chill_delivered table (F2 refactor): NO per-cell
+# chill_hours_delivered. The blueberry chill GATE basis is the crop-level chill_hours_required.
+assert "chill_hours_delivered" not in cell
 # render keys reused from the annual/berry names; calendar empty at admission
 assert cell["calendar"] == [] and cell["plant_out"] is None and cell["bloom"] is None
 assert cell["resolved_from"] == {} and cell["resolution_method"] is None
