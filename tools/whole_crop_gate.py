@@ -420,6 +420,35 @@ print(f"  per-crop chill_hours_delivered violations: {len(_chill)}")
 for m in _chill:
     fail(f"chill: {m}")
 
+# ---------------- A19. companion shape (UNIVERSAL; the F4/F6 armor) ----------------
+# Two render defects the audit found across the anchors: (F4) a companion stored as a BARE
+# STRING is silently dropped by CompanionsCard.normCompanions -> renders as nothing (lemon/
+# orange/basil/green-beans); (F6) goods placed ONLY in the beginner-only bucket (good_beginner)
+# never render in seasoned mode (apple). This gate requires every entry to be a well-formed
+# object with a `name`, and a crop's goods/bads to be reachable from a seasoned-readable bucket
+# (good_seasoned | good_beginner_seasoned). No-op for a crop with no companions dict (indoor).
+# The per-entry `why` copy is policed by the dual-voice gate B; this is the renderability shape.
+from companion_shape_gate import companion_shape_violations
+print("A19. companion shape (no bare strings + name + seasoned-readable bucket; no-op off companions)")
+_comp = companion_shape_violations(crop)
+print(f"  companion shape violations: {len(_comp)}")
+for m in _comp:
+    fail(f"companion: {m}")
+
+# ---------------- A20. display-readiness, archetype-aware (the F5 armor) ----------------
+# Cert validates BIOLOGY + sources but not that the fields each guide CARD reads are present, so
+# a crop can certify and render a BLANK Hero/Ph/Feeding card (audit F5: lemon sunlight/water/
+# fertilizer-grid; orange ph.preferred_range/container/fertilizer-grid). This asserts per-archetype
+# field PRESENCE -- universal sunlight/water, plus (non-indoor) sunlight_hours/ph.preferred_range/
+# spacing/fertilizer-grid + a real container_ok decision. Respects legitimate N/A (indoor surface,
+# in-ground container_ok==False). Enforces presence, never source-correctness.
+from display_readiness_gate import display_readiness_violations
+print("A20. display-readiness (archetype-aware field presence; the Hero/Ph/Feeding cards)")
+_disp = display_readiness_violations(crop)
+print(f"  display-readiness violations: {len(_disp)}")
+for m in _disp:
+    fail(f"display: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

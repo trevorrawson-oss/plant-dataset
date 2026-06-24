@@ -87,4 +87,13 @@ def tips_violations(crop):
                 V.append(f"tips_by_stage['{key}']: tip uses {wrong}, not text_seasoned -- "
                          f"the renderer reads text_seasoned/text_beginner (invisible otherwise)")
                 break
+    # COVERAGE (Phase B, audit F7): the inverse of the orphan check -- every growth_stage id
+    # must have a renderable tip, or the journey card draws a BLANK slot for that stage. A stage
+    # is covered iff tips_by_stage[id] is a non-empty list. (apple `scaffold_formation`, onion
+    # `bulb_initiation` were the only two gaps across the 18 GS anchors.)
+    covered = {k for k, lst in tbs.items() if isinstance(lst, list) and lst}
+    for gid in sorted(g for g in gids if g):
+        if gid not in covered:
+            V.append(f"tips_by_stage: growth_stage '{gid}' has NO renderable tip (coverage gap) "
+                     f"-- the journey card renders a blank tip slot for that stage")
     return V

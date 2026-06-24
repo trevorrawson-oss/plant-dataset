@@ -87,6 +87,33 @@ def test_tips_indoor_exempt():
     assert tips_violations(c) == []
 
 
+# ---- tips COVERAGE (Phase B, audit F7): every growth_stage id needs a renderable tip ----
+def test_tips_coverage_clean():
+    # well_formed has a tip for every growth_stage -> no coverage gap
+    assert tips_violations(well_formed()) == []
+
+
+def test_tips_coverage_flags_uncovered_stage():
+    # apple's `scaffold_formation` / onion's `bulb_initiation`: a real growth_stage with no
+    # tip key -> the journey card renders a blank slot. The old gate only caught the inverse
+    # (an orphaned tip key); this catches the missing-tip direction.
+    c = well_formed(); del c["tips_by_stage"]["harvest"]   # 'harvest' stage now has no tip
+    v = tips_violations(c)
+    assert any("harvest" in x and "coverage" in x.lower() for x in v), v
+
+
+def test_tips_coverage_empty_list_is_uncovered():
+    c = well_formed(); c["tips_by_stage"]["harvest"] = []   # present key, but no tip in it
+    v = tips_violations(c)
+    assert any("harvest" in x and "coverage" in x.lower() for x in v), v
+
+
+def test_tips_coverage_indoor_exempt():
+    c = well_formed(); c["calendar_basis"] = "non_seasonal_indoor"
+    del c["tips_by_stage"]["harvest"]
+    assert tips_violations(c) == []   # indoor exempt from coverage too
+
+
 if __name__ == "__main__":
     for n, f in sorted(globals().items()):
         if n.startswith("test_") and callable(f):
