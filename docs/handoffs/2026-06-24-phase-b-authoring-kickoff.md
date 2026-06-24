@@ -127,11 +127,41 @@ Entries needing `why` (all under `companions.<bucket>`):
    and Claude Code will wire the card + a gate to match.
 2. **npk_tag polish (onion / blueberry).** Current tags read fine ("Nitrogen-forward early",
    "Acid-forming, ammonium N"); a light copy pass is optional.
-3. **carrot northern_tier z3 harvest string** (Layer-2): the harvest string claims "May-Jun" but z3
-   plants Apr-Jul / harvests Sep-Oct (May-Jun is unreachable in zone 3). Correct the string to the
-   reachable window.
-4. **lettuce-leaf ca_interior window shape** (Layer-2): the window drops a plantable Sep-Oct and
-   over-extends to Mar 31; reshape to the real two-window cool-season pattern.
+### Layer-2 source-truth corrections (riders 3-5) -- NOW VERIFIED + T1-SOURCED by the Phase C QA pass
+
+The Phase C widened source-truth sample (4 region-scoped agents, ~40 cells; see
+`plant-astro/docs/gs-arc-source-truth-qa-2026-06-24.md`) **re-confirmed the two known nits and found
+one new MINOR.** Exact corrected values + sources below. Apply these as part of this combined release.
+(0 wrong-season errors found anywhere -- the corpus is sound on dates; these are the only 3 cells.)
+
+3. **carrot northern_tier z3 harvest string** -- VERIFIED CLEAN, no cascade, apply as-is.
+   - `harvest: "May - Jun, Sep - Oct"` -> `"Sep - Oct"`; `harvest_start: "Jun 23"` -> `"Sep 1"`
+     (keep `harvest_end: "Oct 15"`).
+   - Source: UMN Extension "Growing carrots and parsnips" (sow ~Apr 15 + fall mid-July; harvest
+     Sep-Oct; 65-80d DTM). A May-Jun harvest is unreachable from any z3 sowing.
+   - **No cascade:** plant months are unchanged, so `successions_realized: 6` does NOT move, and
+     `derive_annual_calendar` reproduces the stored calendar EXACTLY from the corrected `harvest`
+     (this turns a non-enforced drift cell into a re-derivable one). Pure coherence repair.
+
+4. **lettuce-leaf ca_interior z8 AND z9 plant window** -- add the dropped fall window (cascades).
+   - `plant_out: "Aug 1 - Aug 31, Nov 1 - Mar 31"` -> `"Aug 1 - Oct 31, Nov 1 - Mar 31"` (add the
+     plantable **Sep-Oct** fall sowing -> continuous Aug-Mar cool-season run). **The spring side through
+     Mar 31 is CORRECT -- do NOT trim it** (UC's spring lettuce window is Feb-Apr; the audit's
+     "over-extends to Mar 31" worry was NOT supported by the source).
+   - Source: UCCE Sacramento EHN 11 + UC Master Gardeners of Sacramento monthly tips ("transplant
+     lettuce February to April **or September to October**"); Sep-Oct is the prime Central Valley fall
+     window.
+   - **Cascade:** re-resolve via `table_13_2_month_resolution` so Sep/Oct become plant tokens, then
+     recompute `successions_realized` (currently 12, GLOBAL cap 12). The two-row harvest still renders
+     from the `harvest` string.
+
+5. **carrot low_desert_az z9 heat-gap shift** (NEW, MINOR) -- shift the summer gap one month earlier.
+   - Effective plant should be `Jan-Apr + Aug-Dec` with `heat_pause` **May-Jul** (currently includes a
+     wrong **May** plant and drops a valid **Aug**; heat_pause is currently Jun-Aug).
+   - Source: **UArizona AZ1005** "Vegetable Planting Calendar for Maricopa County" -- carrot sow marks
+     only Jan,Feb,Mar,Apr,Aug,Sep,Oct,Nov,Dec (grid machine-parsed; no May/Jun/Jul, soil >85F
+     germination ceiling).
+   - **Cascade:** re-resolve via `az1005_month_resolution`; recompute `successions_realized` (12).
 
 ---
 
