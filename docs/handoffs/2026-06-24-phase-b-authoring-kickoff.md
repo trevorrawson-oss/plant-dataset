@@ -120,21 +120,45 @@ Entries needing `why` (all under `companions.<bucket>`):
 
 ## SMALL RIDERS (optional; Claude Code deferred these as not-mechanical)
 
-1. **blueberry variety chill -> numeric.** Blueberry varieties store `chill_hours` as a string
-   ("~800-1000", "~250"); the tree varieties use a numeric `chill_hours_required` scalar. Normalizing
-   needs a **representation decision** (blueberry cultivars are genuinely ranges; trees are scalars) --
-   propose `chill_hours_required` as a scalar (low end? midpoint?) or a `chill_hours_range` `[lo,hi]`,
-   and Claude Code will wire the card + a gate to match.
-2. **npk_tag polish (onion / blueberry).** Current tags read fine ("Nitrogen-forward early",
-   "Acid-forming, ammonium N"); a light copy pass is optional.
-### Layer-2 source-truth corrections (riders 3-5) -- NOW VERIFIED + T1-SOURCED by the Phase C QA pass
+1. **blueberry variety chill -> numeric -- REPRESENTATION DECIDED by Claude Code (apply this).**
+   Blueberry's 13 `varieties.recommended` store `chill_hours` as an approximate range string
+   ("~800-1000", "~250", "~150-300"); the tree varieties use a numeric `chill_hours_required` scalar
+   that `chillBuckets` (tree.ts) reads. Normalize blueberry to BOTH, deterministically:
+   - **`chill_hours_required`** (numeric SCALAR) = the LOW end of the string. This is the chill-gating
+     threshold ("minimum hours to fruit reliably"), semantically identical to the tree scalar, so the
+     existing chill machinery reads it directly. (Duke "~800-1000" -> 800; Emerald "~250" -> 250;
+     Sharpblue "~150-300" -> 150; Powderblue "~550-650" -> 550; Brightwell "~350-400" -> 350.)
+   - **`chill_hours_range`** `[lo,hi]` = the parsed band, for the genuine-range strings (preserves the
+     cultivar character for display). Single-value strings ("~1000","~250") -> range omitted/null.
+   - **Drop the `chill_hours` string** (the "~" approximate is captured by the rounded scalar + range;
+     matches the trees, which carry null `chill_hours`).
+   - Deterministic transform -> a small migration; then Claude Code wires a gate (required-present +
+     numeric on chill-gated berry varieties) + the card (see rider 2).
+2. **Blueberry SHOULD get a chill card -- Claude Code RECOMMENDS building it (a follow-up, not a fold-in).**
+   Blueberry is chill-GATED: cultivar choice by region is the whole game (a ~1000 hr northern highbush
+   will not fruit in a ~250 hr climate; a ~150 hr southern highbush needs almost no winter chill). The
+   crop currently shows growers NO chill info -- a real gap that can cause failure. Build a
+   berries_woody analog of the tree `ChillHoursCard`: "your area banks ~X" (from the shared
+   `region_chill_delivered` table, Phase A) vs "these cultivars need ~Y" (the normalized scalar above),
+   grouping recommended cultivars by chill class (northern highbush / southern highbush / rabbiteye)
+   with a "best for your chill" highlight. COUPLED to rider 1 + the shared chill table -> build it in
+   the same motion as the combined release. (Trevor: this is a small new card on the berry guide; flagged
+   for your nod.)
+3. **npk_tag polish (onion / blueberry) -- POLISHED by Claude Code via the copywriting skill (apply):**
+   - onion `fertilizer.npk_tag`: "Nitrogen-forward early" -> **"High nitrogen early"** ("forward" was
+     jargon, "early" dangled; the taper-at-bulbing nuance stays in the npk_hint prose).
+   - blueberry `fertilizer.npk_tag`: "Acid-forming, ammonium N" -> **"Acidic, ammonium-based"**
+     ("ammonium N" was cryptic; "ammonium-based" reads as "use azalea/acid food" to a grower).
+   - (lemon "Nitrogen-forward" + lavender "Lean soil, minimal feed" read fine; leave them.)
+
+### Layer-2 source-truth corrections (riders 4-6) -- NOW VERIFIED + T1-SOURCED by the Phase C QA pass
 
 The Phase C widened source-truth sample (4 region-scoped agents, ~40 cells; see
 `plant-astro/docs/gs-arc-source-truth-qa-2026-06-24.md`) **re-confirmed the two known nits and found
 one new MINOR.** Exact corrected values + sources below. Apply these as part of this combined release.
 (0 wrong-season errors found anywhere -- the corpus is sound on dates; these are the only 3 cells.)
 
-3. **carrot northern_tier z3 harvest string** -- VERIFIED CLEAN, no cascade, apply as-is.
+4. **carrot northern_tier z3 harvest string** -- VERIFIED CLEAN, no cascade, apply as-is.
    - `harvest: "May - Jun, Sep - Oct"` -> `"Sep - Oct"`; `harvest_start: "Jun 23"` -> `"Sep 1"`
      (keep `harvest_end: "Oct 15"`).
    - Source: UMN Extension "Growing carrots and parsnips" (sow ~Apr 15 + fall mid-July; harvest
@@ -143,7 +167,7 @@ one new MINOR.** Exact corrected values + sources below. Apply these as part of 
      `derive_annual_calendar` reproduces the stored calendar EXACTLY from the corrected `harvest`
      (this turns a non-enforced drift cell into a re-derivable one). Pure coherence repair.
 
-4. **lettuce-leaf ca_interior z8 AND z9 plant window** -- add the dropped fall window (cascades).
+5. **lettuce-leaf ca_interior z8 AND z9 plant window** -- add the dropped fall window (cascades).
    - `plant_out: "Aug 1 - Aug 31, Nov 1 - Mar 31"` -> `"Aug 1 - Oct 31, Nov 1 - Mar 31"` (add the
      plantable **Sep-Oct** fall sowing -> continuous Aug-Mar cool-season run). **The spring side through
      Mar 31 is CORRECT -- do NOT trim it** (UC's spring lettuce window is Feb-Apr; the audit's
@@ -155,7 +179,7 @@ one new MINOR.** Exact corrected values + sources below. Apply these as part of 
      recompute `successions_realized` (currently 12, GLOBAL cap 12). The two-row harvest still renders
      from the `harvest` string.
 
-5. **carrot low_desert_az z9 heat-gap shift** (NEW, MINOR) -- shift the summer gap one month earlier.
+6. **carrot low_desert_az z9 heat-gap shift** (NEW, MINOR) -- shift the summer gap one month earlier.
    - Effective plant should be `Jan-Apr + Aug-Dec` with `heat_pause` **May-Jul** (currently includes a
      wrong **May** plant and drops a valid **Aug**; heat_pause is currently Jun-Aug).
    - Source: **UArizona AZ1005** "Vegetable Planting Calendar for Maricopa County" -- carrot sow marks
