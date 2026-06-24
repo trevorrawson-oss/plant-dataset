@@ -1,0 +1,145 @@
+# Phase B authoring kickoff (claude.ai authoring lane)
+
+**Created:** 2026-06-24 (Claude Code, audit Phase B / F4-F7)
+**Lane:** claude.ai AUTHORS the sourced values + copy; Claude Code already ARMED the gates and
+did the structural reshape, and will RELEASE (verify -> promote) the patch.
+**Depends on:** the Phase B gate commit (companion_shape_gate A19, display_readiness_gate A20,
+tips-coverage in A12, + the companion structural reshape). Confirm the canonical SHA in
+`CURRENT_STATE.md` before authoring.
+
+## The mission, in one line
+
+Fill the **4 crops still RED** under the new Phase B gates so `whole_crop_gate` returns to
+**18/18 green**: lemon + orange-navel display values (F5), apple + onion tips (F7), plus the
+companion **why** copy for the entries Claude Code reshaped from bare strings (F4/F6).
+
+## Why this exists + how to check your work
+
+The post-roster audit found systematic, gate-able defect classes. Claude Code wrote a scanner
+for each, wired it into `whole_crop_gate`, and fixed everything that was a pure STRUCTURAL
+reshape. What remains needs **authored, sourced content**, which is your lane. **The gate is the
+spec:** after your patch, every one of these must be 0:
+
+```
+python3 tools/whole_crop_gate.py lemon          # -> GATE: PASS
+python3 tools/whole_crop_gate.py orange-navel    # -> GATE: PASS
+python3 tools/whole_crop_gate.py apple           # -> GATE: PASS
+python3 tools/whole_crop_gate.py onion           # -> GATE: PASS
+```
+
+Deliver a patch per `docs/handoff_patch_format_v1_0.md` (+ source-catalog mints for any new T1
+IDs). Hard rule, as always: **T1 sources only** (university extension / IFAS / UC ANR / etc.).
+
+---
+
+## WORK ITEM 1 -- Display values, F5 (gate A20: `display_readiness_gate.py`)
+
+A crop can certify (biology + sources) and still render a BLANK Hero/Ph/Feeding card. Two citrus
+are RED. **Much of the answer already exists in each crop's own sourced prose** (the `note_seasoned`
+/ `notes_seasoned` strings cited below) -- this is mostly lifting a render-ready value out of prose
+you already authored, then confirming against the cited source.
+
+### lemon (6 blanks)
+| field | current | needs |
+|---|---|---|
+| `sunlight` | `null` | a sun enum (citrus is full sun) |
+| `sunlight_hours` | `[]` | `[lo, hi]` integer hours |
+| `water` | `null` | a water enum |
+| `fertilizer.type` | `null` | render-ready string |
+| `fertilizer.timing` | `null` | render-ready string |
+| `fertilizer.frequency` | `null` | render-ready string |
+
+The feeding grid is derivable from lemon's existing sourced `fertilizer.notes_seasoned` ("Feed in
+light, frequent doses from late winter or early spring through summer, then stop by late summer...").
+`npk_ratio` is already `null` + `npk_tag: "Nitrogen-forward"` (correct, ratio-less) -- leave it.
+
+### orange-navel (5 blanks)
+| field | current | needs |
+|---|---|---|
+| `ph.preferred_range` | `[]` | `[lo, hi]` (its `note_seasoned` says "roughly pH 6.0 to 7.0") |
+| `container_notes.container_ok` | `null` | a real **True/False decision** (if True, also `min_pot_gallons`) |
+| `fertilizer.type` | `null` | render-ready string |
+| `fertilizer.timing` | `null` | render-ready string |
+| `fertilizer.frequency` | `null` | render-ready string |
+
+`sunlight` / `sunlight_hours` / `water` / `spacing_inches` are already filled on orange -- do not touch.
+The feeding grid is derivable from orange's existing sourced `fertilizer.notes_seasoned`.
+
+**Archetype note:** the gate respects legitimate N/A -- in-ground trees may set `container_ok:false`
+(peach does); pick the honest answer for citrus (commonly container-friendly -> True + a pot size).
+
+---
+
+## WORK ITEM 2 -- Tips coverage, F7 (gate A12: `tips_violations`)
+
+Every `growth_stages` id must have a renderable tip (`text_seasoned` / `text_beginner`) or the
+journey card draws a blank slot. Two single-stage gaps remain:
+
+- **apple** `tips_by_stage.scaffold_formation` -- add a tip (training the scaffold/branch
+  framework in the early years). Stage id is `scaffold_formation`.
+- **onion** `tips_by_stage.bulb_initiation` -- add a tip (bulbing triggered by daylength +
+  temperature; keep water/N steady as bulbing starts). Stage id is `bulb_initiation`.
+
+Shape each new tip exactly like the crop's existing tips: a list of `{text_seasoned, text_beginner,
+sources, anchoring_urls}` under the stage-id key. (Use the crop's other `tips_by_stage` entries as
+the template; match the dual-register + anchoring conventions so gates B/F stay green.)
+
+---
+
+## WORK ITEM 3 -- Companion `why` copy, F4/F6 (gate A19: `companion_shape_gate.py`)
+
+Claude Code converted the bare-string / wrong-bucket companions to the certified OBJECT shape so
+the gate is green and the rows no longer vanish, but the reshaped entries currently carry **only a
+`name`** -- they render with a blank rationale until you author the `why`. (apple already kept its
+`why` -> renamed to `why_seasoned`; no new apple copy needed.) The sourced rationale already lives
+in each crop's companion `note_seasoned` / `note_beginner` -- this is restructuring it into per-entry
+`why`, not new claims.
+
+Entries needing `why` (all under `companions.<bucket>`):
+
+- **lemon** -- `bad_seasoned`: "Turfgrass within the drip line", "Moisture-holding mulch against the
+  trunk"; `bad_beginner_seasoned`: "Lawn grass", "Weeds at the trunk".
+- **orange-navel** -- `good_seasoned`: "Pigeon pea", "Fava bean"; `good_beginner_seasoned`: "Comfrey",
+  "Yarrow"; `good_beginner`: "White clover", "Nasturtium", "Marigold"; `bad_beginner_seasoned`:
+  "St. Augustine grass"; `bad_beginner`: "Turf grass", "Bermuda grass".
+- **basil** -- `good_beginner_seasoned`: "Marigolds", "Tomatoes", "Peppers"; `bad_beginner_seasoned`:
+  "Sage", "Fennel". (The strong tomato pairing was moved into the seasoned-readable bucket; give it
+  the richest `why`.)
+
+**Follow the certified carrot/onion pattern, and mind RegisterText:**
+- `*_seasoned` bucket entries carry `why_seasoned` (no `why_beginner` sibling).
+- `*_beginner_seasoned` (both-mode) entries: the card's `RegisterText` BLANKS seasoned mode if only
+  `why_beginner` is set. So either (a) give a both-mode entry `why_seasoned` (renders in both via the
+  fallback), or (b) use the carrot two-bucket pattern -- the same companion in `good_seasoned`
+  (`why_seasoned`) AND `good_beginner_seasoned` (`why_beginner`), reconciled by `name` in the card.
+- Optional but ideal: promote the best companions to the rich certified object (add `category` from
+  {pest_deterrent, structural, pollinator, soil_health}, `timing`, `provenance`, `sources`,
+  `anchoring_urls`) so they group + tag like carrot's.
+
+---
+
+## SMALL RIDERS (optional; Claude Code deferred these as not-mechanical)
+
+1. **blueberry variety chill -> numeric.** Blueberry varieties store `chill_hours` as a string
+   ("~800-1000", "~250"); the tree varieties use a numeric `chill_hours_required` scalar. Normalizing
+   needs a **representation decision** (blueberry cultivars are genuinely ranges; trees are scalars) --
+   propose `chill_hours_required` as a scalar (low end? midpoint?) or a `chill_hours_range` `[lo,hi]`,
+   and Claude Code will wire the card + a gate to match.
+2. **npk_tag polish (onion / blueberry).** Current tags read fine ("Nitrogen-forward early",
+   "Acid-forming, ammonium N"); a light copy pass is optional.
+3. **carrot northern_tier z3 harvest string** (Layer-2): the harvest string claims "May-Jun" but z3
+   plants Apr-Jul / harvests Sep-Oct (May-Jun is unreachable in zone 3). Correct the string to the
+   reachable window.
+4. **lettuce-leaf ca_interior window shape** (Layer-2): the window drops a plantable Sep-Oct and
+   over-extends to Mar 31; reshape to the real two-window cool-season pattern.
+
+---
+
+## What Claude Code already shipped (so you don't redo it)
+
+- Gates (test-first, wired into `whole_crop_gate`): **A19** companion shape, **A20** display-readiness
+  (archetype-aware), **A12** extended to tips COVERAGE. 33 tooling tests green.
+- Companion structural reshape on lemon / orange-navel / basil / green-beans-bush / apple -> all 5
+  pass A19 (bare strings objectified, apple's goods/bads moved into seasoned-readable buckets).
+- plant-astro `CompanionsCard` hardened (`src/lib/companions-normalize.ts`, unit-tested) so a
+  malformed companion can never silently vanish again.

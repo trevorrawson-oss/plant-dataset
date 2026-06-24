@@ -6,6 +6,36 @@
 
 ---
 
+## 2026-06-24 -- AUDIT Phase B: companion-shape (A19) + display-readiness (A20) gates + tips coverage (A12) + companion reshape (F4-F7) [Claude Code, gate-then-fix]
+
+**base `9739e373` -> `3009a3fc`** (data+tooling commit `5fa856b`; docs(state) release commit follows). The second execution pass of the post-roster GS-arc audit (`plant-astro/docs/gs-arc-audit-2026-06-24.md`) Phase B -- gate-then-fix the systematic STRUCTURAL/DISPLAY defect classes, test-first. The split: **Claude Code armed the gates + did every pure-structural fix to green; the authored/sourced CONTENT (display values, tips, companion `why`) is the claude.ai lane** (`docs/handoffs/2026-06-24-phase-b-authoring-kickoff.md`). 5 crops changed (companions only); microgreens + the other 12 anchors untouched. **NOTHING ships live yet** -- the plant-astro batch + submodule bump are GATED on Trevor.
+
+### A19 -- companion-shape gate (`companion_shape_gate.py`, test-first; `test_companion_shape_gate.py` 12 cases)
+Two render defects the audit found across anchors: (F4) a companion stored as a BARE STRING is silently dropped by `CompanionsCard.normCompanions` (it spreads the string, finds no `.name`, filters it out) -> the row renders as NOTHING (lemon/orange/basil/green-beans); (F6) goods placed ONLY in the beginner-only bucket `good_beginner` never render in seasoned mode (apple). The gate: every entry in every bucket must be an OBJECT with a non-empty `name`; and if a crop has any goods/bads, the SEASONED-READABLE buckets (`good_seasoned` U `good_beginner_seasoned`, and the bad analog) must be non-empty. No-op off the companions surface. The per-entry `why` is left to gate B (dual-voice) -- A19 is the renderability shape, not the copy.
+
+### A20 -- display-readiness gate (`display_readiness_gate.py`, test-first; `test_display_readiness_gate.py` 10 cases)
+Cert validates biology + sources but NOT that the fields each guide CARD reads are present, so a crop can certify and render a BLANK Hero/Ph/Feeding card (audit F5: lemon sunlight/sunlight_hours/water/fertilizer-grid; orange ph.preferred_range/container/fertilizer-grid). ARCHETYPE-AWARE: universal `sunlight`/`water`; non-indoor additionally requires `sunlight_hours` / `ph.preferred_range` / `spacing_inches` / `fertilizer.{type,timing,frequency}` / a real `container_ok` boolean (True => a `min_pot_gallons`|`depth_inches_min` dimension). Respects legitimate N/A: indoor (the IndoorCycleCard surface -- microgreens carries [] for those) and in-ground trees (`container_ok:false`, e.g. peach). Enforces PRESENCE, never source-correctness -- this promotes the standing "display-readiness is a separate bar from cert" memo into an actual gate.
+
+### A12 -- tips COVERAGE (`compound_population_gate.py::tips_violations` extended; +3 test cases)
+Was: no orphan keys + non-empty + `text_*` shape. Added the inverse: every `growth_stages` id must have a non-empty renderable tip, or `GrowingJourneyCard` draws a blank slot (audit F7). Indoor exempt. Caught exactly apple `scaffold_formation` + onion `bulb_initiation` across the 18 (the only 2 gaps).
+
+### Companion structural reshape (`migrate_companion_shape_phase_b.py`, deterministic + idempotent + self-verifying)
+- **green-beans-bush:** emptied the redundant legacy `good_beginner`/`bad_beginner` (pure dups of the object `*_beginner_seasoned` buckets). No copy.
+- **apple:** moved `good_beginner`/`bad_beginner` -> `*_beginner_seasoned` (the seasoned-readable both-mode bucket, fixes F6); renamed `plant`->`name`, `why`->`why_seasoned` (a register-neutral string renders in BOTH modes via `RegisterText`'s fallback; `why_beginner`-only would blank seasoned mode). Existing copy + sources/anchoring preserved.
+- **lemon:** objectified the bare-string `bad_*` buckets to {name}; dropped the `bad_beginner` dup. `why` -> claude.ai.
+- **orange-navel:** objectified the bare-string `good_*`/`bad_*` in place (register placement preserved). `why` -> claude.ai.
+- **basil:** objectified + un-inverted -- moved the strong tomato/pepper pairing (was beginner-only) + the fennel caution into the both-mode `*_beginner_seasoned` bucket so seasoned readers see them. `why` -> claude.ai.
+All 5 pass A19. Structural diff confirmed surgical: only the 5 crops' `companions` field changed, nothing else.
+
+### Gate-as-worklist (the honest RED)
+Wiring A19/A20/A12-coverage made `whole_crop_gate` go 18/18 -> **14/18**: lemon (6 display), orange-navel (5 display), apple (1 tip), onion (1 tip). This is the audit's INTENDED outcome -- the gates now catch real, pre-existing gaps that were always there but un-enforced; it is NOT a regression (the precommit no-regression net is clean: every changed crop only CLEARED violations -- apple -7, basil -5, green-beans -5, lemon -6, orange -10). `launch_ready` is a separate flip and was NOT touched. The 4 RED are the precise claude.ai work-list; the gate IS the acceptance spec.
+
+### plant-astro (branch `fix/calendar-harvest-two-row`, NOT pushed)
+`CompanionsCard` now imports a hardened, unit-tested `normCompanions` (`src/lib/companions-normalize.ts`, 7 cases) that coerces a bare string to {name} instead of dropping it -- defensive belt-and-suspenders so a malformed companion can never silently vanish again (the A19 gate is the fix at source). 247 vitest pass. The submodule bump (-> `3009a3fc`) + the rest of the batch (F1 green-beans calendar two-row + Phase A npk/chill card UI) stay GATED on Trevor.
+
+### Riders deferred to the handoff (optional)
+blueberry variety `chill_hours` string -> numeric (needs a scalar-vs-range representation call), npk_tag polish (onion/blueberry read fine), carrot northern_tier z3 harvest-string + lettuce-leaf ca_interior window-shape (Layer-2 source-truth nits).
+
 ## 2026-06-24 -- AUDIT Phase A: npk_ratio field (F3) + chill shared-delivered table (F2) [Claude Code, cross-cutting refactor]
 
 **base `6e9538e1` -> `9739e373`** (data + tooling commit `3d85300`; docs(state) release commit follows). The first execution pass of the post-roster GS-arc audit (`plant-astro/docs/gs-arc-audit-2026-06-24.md`) Phase A -- the two cross-cutting STRUCTURAL fixes, done "fix the 18 + arm the bots" in one motion (write the gate test-first, wire it, then migrate the existing crops to green). 17 crops changed (npk); 3 of those also chill; microgreens untouched. **NOTHING ships live yet** -- the plant-astro card UI + submodule bump are batched + GATED on Trevor.
