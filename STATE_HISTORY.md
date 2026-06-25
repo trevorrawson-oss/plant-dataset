@@ -6,6 +6,36 @@
 
 ---
 
+## 2026-06-25 -- WI3 berries_woody variety-chill gate (A21) + WI4 onion z3 harvest source-truth [Claude Code release]
+
+**Start-SHA (canonical):** `96dc6603c3f23a1043d3edbca3d31ca1626dc11b2785b362e0889274528ad672` (commit `5c16493`)
+**End-SHA (canonical):** `c0c1c6667e542172cfe37c182a963b83cd46b0313ed1b0f3f2c45c968e4903dc` (commit `14f54c4`)
+**Session:** `wi3_variety_chill_gate_wi4_onion_z3_harvest`. A small post-final-release pass closing the audit's last two loose-end classes (the deferred berry-chill gate + the three DOCUMENT-bucket Layer-2 flags). ONE data cell changed (onion `northern_tier.z3`); 123 crops intact. Gate stays **18/18**.
+
+### WI3 -- berries_woody variety-chill PRESENCE gate (A21, test-first; commit `fc6e5cd`)
+- New `whole_crop_gate` branch **A21** (`berries_woody_variety_chill_violations` in `tools/berries_woody_gate.py`). For a `berries_woody` crop, every `varieties.recommended` entry must carry a NUMERIC `chill_hours_required` + a `chill_hours_range` key that is null (single-value cultivar) OR a valid `[lo,hi]` pair with `lo <= hi` AND `lo == chill_hours_required`; a STRING `chill_hours` (the dropped legacy form) is a violation. No-op off `berries_woody`.
+- **Test-first:** wrote 12 failing tests (`test_berries_woody_gate.py`), confirmed RED (ImportError -- function absent), implemented the minimal GREEN, re-ran ALL PASS (29 tests in the file). Wired as A21 in `whole_crop_gate.py` (after A20). Verified A21 = 0 on blueberry, no-op (0) on carrot.
+- **Rationale:** A15 already polices the CROP-level chill gate basis (gating_factors + crop `chill_hours_required`); A21 is the per-VARIETY analog -- it locks the WI4 string->numeric migration (blueberry's 13 cultivars) so a future berry crop can't reship the `chill_hours` STRING that broke the gauge (audit F2). This was the explicitly-deferred gate from the prior release; now shipped.
+
+### WI4 -- the three Layer-2 flags source-VERIFIED against live T1 (commit `14f54c4`)
+Method: `source_truth_sample`-style fan-out. Pulled each cell's EFFECTIVE window + harvest, dispatched region-scoped T1 verification agents (carrot-northern + onion-northern, WebFetch UMN/USU/Iowa State/SDSU/NDSU), then re-verified each finding against `derive_annual_calendar` before any edit.
+- **onion northern_tier z3 -- CONFIRMED + APPLIED.** Flag: long-day storage onion harvest `Jul 30 - Aug 29` is too early for z3. T1 CONFIRMS: SDSU Extension ("Bulbs can be harvested August through October" for mid-Apr-mid-May planting -- comparable to the cell's May 1-22 transplant) + USU (bulb onions 100-120 day DTM -> early-Aug to mid-Sept field maturity from a May transplant) + the long-day post-solstice bulbing mechanism (NDSU "form bulbs when days are 14-16 hours long"). CORROBORATED internally: the cell's OWN `zone_notes` says "harvest late summer before the mid-September frost" and `resolved_from.first_frost` is Sep 15 -- the old window undershot its own framing. Applied: `harvest` `Jul 30 - Aug 29` -> `Aug 15 - Sep 15` (start `Aug 15`, end `Sep 15`); `calendar` Jul `harvest`->`growing` (still bulbing pre-harvest), Sep `season_over`->`harvest`. The new calendar `[cold_pause, indoors x3, plant, growing x2, harvest x2, season_over x3]`. **NO plant-token change (start_indoors Feb-Apr + plant May untouched); onion `succession_policy.suitable=False` -> A8 has nothing to recompute, ZERO `successions_realized` cascade.** CC-lane harvest correction (the carrot z3 precedent: a harvest-window fix with no plant-token/succession cascade stays in the CC lane, not the authoring lane).
+- **carrot northern_tier z4 + z5 -- verified MINOR, LEFT.** Flag: z4 spring harvest "Jun" optimistic (->Jul); z5 "May - Jun" too early (->Jun-Jul). T1 (Iowa State + UW-Extension A3686 + USU): carrots reach the fast-variety floor at "50 to 60 days after planting." z4 first_plant Apr 10 + 60d ~= Jun 9 (the stored harvest_start); z5 first_plant Mar 25 + 60d ~= May 24 (the stored harvest_start). Both are the optimistic-but-REACHABLE edge of the published DTM floor, within the ~1-month tolerance -- NOT a wrong-season error. claude.ai's "->Jul"/"->Jun-Jul" is the typical-variety read, not a T1 contradiction. Conservative rule = leave-within-1-month. Fall windows (z4 Sep-Oct, z5 Oct-Nov) independently confirmed (Wisconsin "through October" + overwinter-under-mulch). LEFT unchanged; remain DOCUMENT items.
+- **peach se_gulf chill prose -- confirmed non-contradicting, LEFT.** `chill_basis_seasoned` "roughly 600 to 1,000 chill hours inland" vs the T1 table `se_gulf.8 [650,1000]`: the "roughly" hedge + the bank-vs-cultivar-requirement framing make 600 a loose bracket of the [650,1000] cell, and the prose's OWN second clause already uses 650 ("around 650 to 900 hours fruit reliably inland"). Trevor's lean is leave-it; the only available tweak is the 3-char "600"->"650" for full first-clause/table consistency -- recorded for his discretion, not applied.
+
+### Verification (protocol #6)
+- **whole_crop_gate: 18/18 PASS** (all anchors `(0)`, A21 wired + green); **register_completeness_gate: PASS.**
+- **release_verify: C-H clean** (H `region_chill_delivered` chill_table_violations 0; the 2 review notes are pre-existing non-blocking z10 `wait`-month items on another crop, NOT introduced here -- onion z3 carries no `wait` token).
+- **34/34 tool test files PASS** (the full `tools/test_*.py` suite, incl. the 12 new A21 tests).
+- **precommit_release_verify (base 96dc6603 vs candidate c0c1c666): no regression** -- `cell release: crops changed = ['onion']`, onion 0 total / 0 new. Also auto-ran by the pre-commit hook at the data commit.
+- **Collateral audit (HEAD vs working tree):** exactly `onion.northern_tier.z3` changed; no other crop, no other onion cell, no top-level key drift, 123 crops intact.
+- **Canonical hygiene:** COMPACT (`separators=(",",":")`, ensure_ascii=False), no trailing newline (1 line); HEAD content SHA `c0c1c666` == LATEST.txt.
+
+### plant-astro (GATED on Trevor -- NOT pushed)
+- Submodule bump `96dc6603` -> `c0c1c666` to prepare. This pass adds NO plant-astro UI change -- the onion z3 corrected calendar re-renders automatically from the bumped data (PlantingCalendarCard reads the cell's `calendar[]` + harvest windows). Batches with the prior `fix/calendar-harvest-two-row` branch (F1 two-row calendar + Phase A/B card UI + blueberry BerryChillCard) + the Expo app port. Held for Trevor's single signoff (merge/push to main auto-deploys Netlify).
+
+---
+
 ## 2026-06-25 -- FINAL post-audit release: Phase B to 18/18 + chill T1 + source-truth corrections + WI4 [Claude Code release]
 
 **Start-SHA (canonical):** `3009a3fcfa021ef08e49c3411f59ca08a65059dcd932582b993f7c391f112cc4`
