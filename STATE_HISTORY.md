@@ -6,6 +6,10 @@
 
 ---
 
+## 2026-06-25 -- blueberry berries_woody calendar copy (#2): grown_as_note on all 20 cells [claude.ai author -> Claude Code release]
+
+**Base-SHA:** `c0c1c6667e542172...` -> **`b39f1453664c257f...`** (40 add ops, blueberry only). Authored the calendar-card woody-year copy: `grown_as_note_seasoned` + `grown_as_note_beginner` on all 20 resolved_by_zone cells (the BerryYearCalendarCard already renders these; NO plant-astro code change, only a submodule bump). Option B granularity (per-leaf-habit base, regionally tuned -- 10 distinct note-pairs): DECIDUOUS (northern_tier/ca_interior/ca_north_coast/warm_arid) carry the full woody rhythm with SEASON-RELATIVE prune ("late in the dormant season, just before bud break" -- no named month; the card shows the actual prune token); EVERGREEN (se_gulf/ca_south_coast/ca_desert/low_desert_az/fl_peninsula/hawaii_tropical) run bloom -> harvest -> care with NO dormancy/leaf-drop/prune language (those tokens do not exist on those cells). Each note restructured from the cell's existing T1-sourced region_notes (no new claims) + echoes its one regional fact (rabbiteye cross-pollination, container-only desert, very-early FL harvest, Hawaii rust). NO gate movement (prose the card renders); dual-voice green (both registers on all 20). release_verify CLEAN (only blueberry changed, lettuce-leaf byte-identical, no new violations, no user-facing dashes, chill table well-formed); whole_crop_gate blueberry PASS; 18/18 holds. Pre-vetted in the orchestration session before release -- the ca_interior "named-month prune" scan flag was a FALSE POSITIVE (the prune line is season-relative; the month was the bloom phrasing "blooms in late winter to early spring", which is accurate).
+
 ## 2026-06-25 -- WI3 berries_woody variety-chill gate (A21) + WI4 onion z3 harvest source-truth [Claude Code release]
 
 **Start-SHA (canonical):** `96dc6603c3f23a1043d3edbca3d31ca1626dc11b2785b362e0889274528ad672` (commit `5c16493`)
