@@ -132,3 +132,57 @@ def berries_woody_violations(crop):
         V.append(f"recommended_type {ct!r} appears in a resolved cell but no variety carries "
                  f"that type (coverage invariant)")
     return V
+
+
+def _is_number(v):
+    # a bool passes isinstance(_, int) in Python -- exclude it, it is not a chill value.
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def berries_woody_variety_chill_violations(crop):
+    """WI3 -- the variety-chill PRESENCE gate (whole_crop_gate A21). Fires ONLY for
+    calendar_basis == berries_woody (a no-op otherwise). Locks the WI4 string->numeric
+    migration so a future berries_woody crop cannot reship the legacy `chill_hours` STRING
+    that broke blueberry's chill gauge (audit F2/WI4). The crop-LEVEL chill gate basis is
+    A15's job; THIS branch polices the per-VARIETY chill shape that chillBuckets/tree.ts
+    reads. Every recommended variety must carry:
+      - a NUMERIC chill_hours_required (the chill-gating threshold; a string/None violates);
+      - a chill_hours_range key that is null (a single-value cultivar) OR a valid [lo,hi]
+        pair of numbers with lo<=hi AND lo == chill_hours_required (the scalar IS the range
+        low end -- the documented "= the chill-gating threshold" semantic);
+      - NO string `chill_hours` -- the dropped legacy form; its reappearance is the exact
+        regression this gate prevents.
+    """
+    if crop.get("calendar_basis") != "berries_woody":
+        return []
+    V = []
+    for i, v in enumerate((crop.get("varieties") or {}).get("recommended") or []):
+        if not isinstance(v, dict):
+            continue
+        name = v.get("name")
+        chr_ = v.get("chill_hours_required")
+        if not _is_number(chr_):
+            V.append(f"varieties.recommended[{i}] ({name!r}): chill_hours_required must be "
+                     f"numeric (the WI4 string->numeric lock); got {chr_!r}")
+        if isinstance(v.get("chill_hours"), str):
+            V.append(f"varieties.recommended[{i}] ({name!r}): a string chill_hours "
+                     f"({v.get('chill_hours')!r}) is the dropped legacy form -- use the numeric "
+                     f"chill_hours_required + chill_hours_range")
+        if "chill_hours_range" not in v:
+            V.append(f"varieties.recommended[{i}] ({name!r}): chill_hours_range key missing "
+                     f"(the migrated shape carries it -- null for a single-value cultivar)")
+        else:
+            rng = v.get("chill_hours_range")
+            if rng is None:
+                pass  # single-value cultivar -- legitimately null
+            elif (not isinstance(rng, list) or len(rng) != 2
+                  or not all(_is_number(x) for x in rng)):
+                V.append(f"varieties.recommended[{i}] ({name!r}): chill_hours_range must be "
+                         f"null or a [lo,hi] pair of numbers; got {rng!r}")
+            elif rng[0] > rng[1]:
+                V.append(f"varieties.recommended[{i}] ({name!r}): chill_hours_range lo>hi: {rng!r}")
+            elif _is_number(chr_) and chr_ != rng[0]:
+                V.append(f"varieties.recommended[{i}] ({name!r}): chill_hours_required {chr_} must "
+                         f"equal the chill_hours_range low end {rng[0]} (the scalar is the chill-"
+                         f"gating threshold = the range low end)")
+    return V

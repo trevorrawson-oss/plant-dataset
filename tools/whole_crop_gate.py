@@ -449,6 +449,20 @@ print(f"  display-readiness violations: {len(_disp)}")
 for m in _disp:
     fail(f"display: {m}")
 
+# ---------------- A21. berries_woody variety-chill presence (no-op off berries_woody) ----------------
+# WI3: locks the WI4 string->numeric chill migration so a future berries_woody crop cannot
+# reship the legacy `chill_hours` STRING that broke blueberry's chill gauge (audit F2). A15
+# polices the CROP-level chill gate basis; this polices the per-VARIETY shape chillBuckets/
+# tree.ts reads: every recommended variety carries a NUMERIC chill_hours_required + a
+# chill_hours_range (null or a [lo,hi] pair, lo == required), and NO string chill_hours.
+# No-op off berries_woody. (2026-06-25.)
+from berries_woody_gate import berries_woody_variety_chill_violations
+print("A21. berries_woody variety-chill presence (numeric chill_hours_required + range; no string; no-op off scope)")
+_bwchill = berries_woody_variety_chill_violations(crop)
+print(f"  berries_woody variety-chill violations: {len(_bwchill)}")
+for m in _bwchill:
+    fail(f"berries_woody variety-chill: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

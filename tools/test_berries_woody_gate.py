@@ -14,7 +14,8 @@ NOT require a per-cell chill_hours_delivered, and whole_crop_gate A18 forbids on
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from berries_woody_gate import berries_woody_violations
+from berries_woody_gate import (berries_woody_violations,
+                                berries_woody_variety_chill_violations)
 
 D, G, B, H, C, P, SO = "dormant", "growing", "bloom", "harvest", "care", "prune", "season_over"
 _DECID = [D, D, P, B, G, G, H, H, C, D, D, D]
@@ -156,6 +157,96 @@ def test_variety_cross_pollination_rejected():
     c = well_formed()
     c["varieties"]["recommended"][0]["pollinizer"] = "Bluecrop"
     assert any("pollin" in v.lower() for v in berries_woody_violations(c))
+
+
+# ---------------------------------------------------------------------------
+# WI3 -- the variety-chill PRESENCE gate (a separate whole_crop_gate branch, A21).
+# Locks the WI4 string->numeric migration: every recommended variety must carry a
+# NUMERIC chill_hours_required + a chill_hours_range ([lo,hi] or null for a single-
+# value cultivar); a STRING chill_hours (the dropped legacy form) is a violation; and
+# the scalar must equal the range low end (the documented "scalar = the chill-gating
+# threshold = the low end" semantic). No-op off berries_woody.
+# ---------------------------------------------------------------------------
+
+def wf_vchill():
+    """A berries_woody crop whose recommended varieties carry the migrated chill shape:
+    a genuine-range cultivar (range [lo,hi], required == lo) + a single-value cultivar
+    (range null)."""
+    c = well_formed()
+    c["varieties"]["recommended"] = [
+        {"name": "Duke", "type": "northern_highbush",
+         "chill_hours_required": 800, "chill_hours_range": [800, 1000]},
+        {"name": "Patriot", "type": "northern_highbush",
+         "chill_hours_required": 1000, "chill_hours_range": None}]
+    return c
+
+
+def test_vchill_clean():
+    assert berries_woody_variety_chill_violations(wf_vchill()) == [], \
+        berries_woody_variety_chill_violations(wf_vchill())
+
+
+def test_vchill_noop_off_basis():
+    c = wf_vchill(); c["calendar_basis"] = "frost_anchored"
+    assert berries_woody_variety_chill_violations(c) == []
+
+
+def test_vchill_string_required_rejected():
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_required"] = "800"
+    assert any("chill_hours_required" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_missing_required_rejected():
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_required"] = None
+    assert any("chill_hours_required" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_string_chill_hours_rejected():
+    # the dropped legacy string form must never reship (the WI4 lock)
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours"] = "800 to 1000"
+    assert any("chill_hours" in v and "string" in v.lower()
+               for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_required_bool_rejected():
+    # a bool is not a numeric chill value (isinstance(True, int) is True in Python)
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_required"] = True
+    assert any("chill_hours_required" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_range_must_be_pair():
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_range"] = [800]
+    assert any("chill_hours_range" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_range_lo_hi_order():
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_range"] = [1000, 800]
+    c["varieties"]["recommended"][0]["chill_hours_required"] = 1000
+    assert any("chill_hours_range" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_range_non_numeric_rejected():
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_range"] = ["lo", "hi"]
+    assert any("chill_hours_range" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_range_null_ok():
+    # a single-value cultivar legitimately carries a null range
+    c = wf_vchill()
+    assert not any("Patriot" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_range_key_required():
+    # the migrated shape carries the key even for single-value cultivars (null) -- a
+    # variety missing it entirely is an incomplete migration
+    c = wf_vchill(); del c["varieties"]["recommended"][1]["chill_hours_range"]
+    assert any("chill_hours_range" in v for v in berries_woody_variety_chill_violations(c))
+
+
+def test_vchill_scalar_must_equal_range_lo():
+    # the scalar is documented as the LOW end of the range (the chill-gating threshold)
+    c = wf_vchill(); c["varieties"]["recommended"][0]["chill_hours_required"] = 900
+    assert any("low end" in v or "range" in v for v in berries_woody_variety_chill_violations(c))
 
 
 if __name__ == "__main__":
