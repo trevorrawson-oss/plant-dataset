@@ -463,6 +463,35 @@ print(f"  berries_woody variety-chill violations: {len(_bwchill)}")
 for m in _bwchill:
     fail(f"berries_woody variety-chill: {m}")
 
+# ---------------- A22. perennial (tree) variety-chill TYPE lock (no-op off perennial_chill_gated) ----------------
+# The deciduous-tree analog of A21: every recommended variety must carry a NUMERIC
+# chill_hours_required (no string/legacy form). A string variety chill was previously ungated
+# for trees (A21 is berries_woody-only) AND silently dropped from min_variety_chill()'s no-fruit-
+# split floor, so it could reclassify calendar cells unseen. No-op off perennial_chill_gated.
+# (Closes incognito-audit B2. 2026-06-25.)
+from perennial_gate import perennial_variety_chill_violations
+print("A22. perennial variety-chill type lock (numeric chill_hours_required; no string; no-op off scope)")
+_pvchill = perennial_variety_chill_violations(crop)
+print(f"  perennial variety-chill violations: {len(_pvchill)}")
+for m in _pvchill:
+    fail(f"perennial variety-chill: {m}")
+
+# ---------------- A23. raw-display snake_case (UNIVERSAL; the render-verbatim armor) ----------------
+# A20 checks the feeding/watering/Hero fields are PRESENT; this checks the render-VERBATIM ones
+# read as PROSE. FeedingCard prints fertilizer.type/timing/frequency as-is (the F3 no-Title-Case
+# rule), CareGuideCard prints crop.sunlight as-is, CompanionsCard prints a companion's timing as-is;
+# watering.watering_method/drought_tolerance are display-intent prose. The 2026-06-25 scan found 8
+# anchors shipping snake_case TOKENS into these (onion fertilizer.type='nitrogen_forward',
+# sunlight='full_sun', ...) that render with underscores to growers -- a blind spot of both A20
+# (presence-only) and release_verify (dash/degree scan). NO-OP for the categorical token fields the
+# renderer maps/humanizes (start_method.start, companions[].category, shape_requirements, ...).
+from raw_display_gate import raw_display_violations
+print("A23. raw-display snake_case (render-verbatim fields read as prose; no-op for mapped tokens)")
+_rawdisp = raw_display_violations(crop)
+print(f"  raw-display snake_case violations: {len(_rawdisp)}")
+for m in _rawdisp:
+    fail(f"raw-display: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0

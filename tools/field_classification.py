@@ -84,3 +84,46 @@ def is_backend(key, path):
             or key.endswith("_anchoring_urls")
             or _basis_family(key)
             or any(s in path for s in BACKEND_PATH_SUBSTR))
+
+
+# ---- RAW-DISPLAY classification (raw_display_gate / whole_crop_gate A23, 2026-06-25) ----
+# A THIRD axis, orthogonal to is_backend's backend/user-facing line. Among USER-FACING
+# fields, this names the small set whose value a guide CARD prints VERBATIM -- no humanizer,
+# no label map -- so the value must be HUMAN-READABLE PROSE, never a snake_case token. These
+# are the fields the 2026-06-25 scan found contaminated (fertilizer.type='nitrogen_forward',
+# sunlight='full_sun', companion timing='plant_with', ...). The watering pair is display-INTENT:
+# not yet wired to a card, but Trevor confirmed it is meant to be human-readable, so it is gated
+# as honest prose (2026-06-25).
+#
+# The CONTRAST -- and why this is an allowlist, not "scan every user-facing string" -- is the
+# categorical TOKEN fields the renderer deliberately MAPS or humanizes, which are LEGITIMATELY
+# snake_case and must NOT be flagged:
+#   start_method.start        -> the isBareRoot/today.ts enum + a capitalized label
+#   companions[].category     -> CompanionsCard CATEGORY_META label map
+#   container shape_requirements, soil organic_matter_preference, drainage_requirement,
+#   gating_factors, suitability, day_length_type, ...  -> label-mapped / replace(/_/g,' ')
+# EXTEND RAW_DISPLAY_PATHS (and is_raw_display) only when a NEW card is shown to render a
+# dataset string verbatim. See docs/field_inventory_raw_display_note.md.
+RAW_DISPLAY_PATHS = {
+    "sunlight",                  # CareGuideCard prints crop.sunlight as-is (HeroCard/app humanize)
+    "fertilizer.type",           # FeedingCard feeding grid -- verbatim (the F3 "no Title Case" rule)
+    "fertilizer.timing",
+    "fertilizer.frequency",
+    "watering.watering_method",  # display-intent prose (not yet wired); honest-prose per Trevor
+    "watering.drought_tolerance",
+}
+
+
+def is_raw_display(key, path):
+    """True if (key, path) names a user-facing field a guide card renders VERBATIM, so its
+    value must be human-readable prose (no snake_case token). The inverse of the mapped/
+    humanized token fields. `path` is the dotted/bracketed location the gates build during
+    their walk. Used by raw_display_gate (whole_crop_gate A23)."""
+    if path in RAW_DISPLAY_PATHS:
+        return True
+    # companions[].timing (companions.<bucket>[i].timing) -> CompanionsCard renders the
+    # comp-timing div verbatim. Scoped to the companions subtree so it never collides with
+    # fertilizer.timing (covered exactly above) or any future categorical `timing`.
+    if key == "timing" and path.startswith("companions."):
+        return True
+    return False

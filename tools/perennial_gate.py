@@ -23,6 +23,11 @@ HEAT_BASIS_ENUM = {"high", "adequate", "marginal", "insufficient"}
 PERENNIAL_BASES = {"perennial_chill_gated", "perennial_evergreen"}
 
 
+def _is_number(v):
+    # a bool passes isinstance(_, int) in Python -- exclude it, it is not a chill value.
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
 def gating_factors(crop):
     """The crop's suitability gate(s). Authored explicitly on evergreen anchors; a
     `perennial_chill_gated` crop with none defaults to chill+cold (so peach/apple --
@@ -126,4 +131,38 @@ def perennial_cert_violations(crop, chill_table=None):
                     V.append(f"{rk}.{z}: heat_summer_basis {hb!r} not in {sorted(HEAT_BASIS_ENUM)}")
                 elif hb == "insufficient" and s == "fruits_reliably":
                     V.append(f"{rk}.{z}: heat_summer_basis 'insufficient' cannot be fruits_reliably (needs summer heat to sweeten the crop)")
+    return V
+
+
+def perennial_variety_chill_violations(crop):
+    """Variety-chill TYPE lock for deciduous fruit trees (whole_crop_gate A22). Fires ONLY for
+    calendar_basis == perennial_chill_gated (a no-op for evergreen citrus, which is NOT chill-
+    gated, and for annuals). The deciduous-tree analog of the berries_woody A21 lock: every
+    recommended variety must carry a NUMERIC chill_hours_required (a string/None violates) and
+    NO legacy string `chill_hours`.
+
+    Why this is a real gate, not just a display nicety: min_variety_chill() above silently SKIPS
+    non-numeric chill_hours_required values, so a string variety chill was previously unreported
+    AND dropped that variety from the no-fruit-split `floor` -- a bad string could silently shift
+    the floor and reclassify survives_no_fruit calendar cells. (Closes incognito-audit B2, the
+    deciduous-tree analog of the berries_woody string->numeric lock. 2026-06-25.)
+
+    Unlike the berries_woody lock this does NOT require a chill_hours_range key -- deciduous tree
+    varieties carry a single chill_hours_required scalar, no range shape.
+    """
+    if crop.get("calendar_basis") != "perennial_chill_gated":
+        return []
+    V = []
+    for i, v in enumerate((crop.get("varieties") or {}).get("recommended") or []):
+        if not isinstance(v, dict):
+            continue
+        name = v.get("name")
+        if not _is_number(v.get("chill_hours_required")):
+            V.append(f"varieties.recommended[{i}] ({name!r}): chill_hours_required must be "
+                     f"numeric (the chill-gating threshold + the no-fruit-split floor); "
+                     f"got {v.get('chill_hours_required')!r}")
+        if isinstance(v.get("chill_hours"), str):
+            V.append(f"varieties.recommended[{i}] ({name!r}): a string chill_hours "
+                     f"({v.get('chill_hours')!r}) is the dropped legacy form -- use a numeric "
+                     f"chill_hours_required")
     return V

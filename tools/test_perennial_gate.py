@@ -15,7 +15,7 @@ Invariants (v1.8 amendment §4-5; gold_standard_arc_checklist tree branch):
 """
 import os, sys, copy
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from perennial_gate import perennial_cert_violations
+from perennial_gate import perennial_cert_violations, perennial_variety_chill_violations
 
 
 # The shared chill-delivered table the gate reads instead of a per-cell field.
@@ -254,5 +254,43 @@ assert perennial_cert_violations(h) == [], perennial_cert_violations(h)
 # 22. REGRESSION: a cold-only evergreen (no heat_accumulation) is NOT subject to the heat check
 #     even though its cells carry no heat_summer_basis -- the branch is gating_factor-keyed.
 assert perennial_cert_violations(well_formed_evergreen()) == [], perennial_cert_violations(well_formed_evergreen())
+
+# ============ VARIETY-CHILL TYPE LOCK (perennial_chill_gated; incognito-audit B2) ============
+# The deciduous-tree analog of the berries_woody A21 lock. min_variety_chill() silently SKIPS
+# non-numeric chill values, so a string variety chill was previously ungated AND could corrupt
+# the no-fruit-split floor. This lock requires every recommended variety to carry a NUMERIC
+# chill_hours_required and no legacy string chill_hours. No-op off perennial_chill_gated.
+VC = perennial_variety_chill_violations
+
+# 23. well-formed tree (numeric chills) -> clean
+assert VC(well_formed_tree()) == [], VC(well_formed_tree())
+
+# 24. a STRING chill_hours_required (the legacy "400-500" form) -> violation
+t = well_formed_tree()
+t["varieties"]["recommended"][0]["chill_hours_required"] = "400-500"
+assert any("must be" in v and "numeric" in v and "Florida King" in v for v in VC(t)), VC(t)
+
+# 25. a legacy string `chill_hours` key on a variety -> violation
+t = well_formed_tree()
+t["varieties"]["recommended"][0]["chill_hours"] = "400-500 hours"
+assert any("legacy" in v and "Florida King" in v for v in VC(t)), VC(t)
+
+# 26. a missing (None) chill_hours_required -> violation (not numeric)
+t = well_formed_tree()
+t["varieties"]["recommended"][0]["chill_hours_required"] = None
+assert any("must be" in v and "numeric" in v for v in VC(t)), VC(t)
+
+# 27. a bool chill_hours_required (True passes isinstance(int)) -> violation (not a chill number)
+t = well_formed_tree()
+t["varieties"]["recommended"][0]["chill_hours_required"] = True
+assert any("must be" in v and "numeric" in v for v in VC(t)), VC(t)
+
+# 28. annual (frost_anchored) -> NO-OP even with a malformed variety chill
+assert VC({"calendar_basis": "frost_anchored",
+           "varieties": {"recommended": [{"name": "x", "chill_hours_required": "nope"}]}}) == []
+
+# 29. evergreen citrus (perennial_evergreen, NOT chill-gated) -> NO-OP. Citrus varieties carry
+#     no chill_hours_required by design; this lock must not demand it (would over-flag lemon/orange).
+assert VC(well_formed_evergreen()) == [], VC(well_formed_evergreen())
 
 print("PASS perennial_gate")
