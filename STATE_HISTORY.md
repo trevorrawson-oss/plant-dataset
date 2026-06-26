@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-06-26 -- audit-remediation Pass 2 (companions): why-fill (A26) + evidence (A27) + the provenance gate-field fix [Claude Code]
+
+**Base-SHA:** `144b2fb219663e97...` -> **`6c009feb1c0836cc...`** (companion fields on 14 crops; the other 109 + all top-level keys byte-identical). The B5b why-fill + B5c evidence-transparency back-fill of the incognito-audit remediation arc. claude.ai authored (source-verified), Claude Code reconciled + applied + gated. Commit `08880f6`.
+
+### What landed
+- **69 provenance writes** (62 add + 6 lavender malformed-replace + 1 in the pigeon-pea move) + **59 dual-register whys** (44 why_seasoned + 15 why_beginner) across carrot, basil, zucchini-courgette, green-beans-bush, broccoli, onion, strawberry, zinnia, peach, apple, lemon, blueberry, orange-navel, lavender. beefsteak-tomato + lettuce-leaf were already complete (skipped). 0 em-dashes in consumer why prose; JSON compact.
+- **orange-navel pigeon pea DEMOTED** good_seasoned -> bad_seasoned (Trevor-approved): research_backed/medium; Diaprepes citrus-root-weevil refuge (measured -- Lapointe 2003 via Strauss et al. 2024 HortTechnology) + potential citrus-root allelopathy; regional scope (Diaprepes is FL/Caribbean, not arid CA/AZ navel) stated in the prose; fava/clover recommended instead. A BUCKET MOVE, not an in-place edit.
+
+### The gate-field correction (the key finding -- do NOT relitigate)
+`companion_evidence_violations` (committed earlier in `c462c88`) was built checking the FLAT `evidence_label`/`confidence`. But `CompanionsCard.astro:201` renders `provenance.label` -- the flat keys are legacy (app-preview demo only). CORRECTED the gate to read `provenance.{label,confidence}`. Consequences of the old field: it (a) false-flagged the provenance-only crops beefsteak/lettuce as incomplete, and (b) undercounted lavender. True pre-back-fill debt = **75** violations: 63 entries missing provenance + lavender's 6 good_seasoned DOUBLY malformed (`{"confidence":"likely"/"traditional","basis":...}` -- no label AND `confidence` holding a LABEL value). claude.ai's gap map listed only the 6 null labels (=69); the corrected gate caught the corrupt confidence too. New entries write `provenance` ONLY (not the legacy flat keys); `verified_against_sources` BOOL = label in {research_backed,extension_backed,disputed}.
+
+### Reconciliation + the issues caught
+claude.ai delivered Pass 2 as CANDIDATE input (not drop-in), with a re-derived gap map (its own note: the kickoff worksheet was stale -- re-derive from canonical, match by (bucket,name)). CC reconciled all 16 fragments against canonical: 67/82 fit cleanly; 8 residual gaps + issues surfaced, fixed via an 8-gap follow-up brief:
+- basil Marigolds/Tomatoes shipped flat `evidence_label` only (no provenance object) -> follow-up authored provenance.
+- carrot Dill/Parsnips/Fennel (bad side) had provenance but no `why_seasoned` -> follow-up authored it.
+- orange-navel Comfrey/Yarrow/St.Augustine: authored `why_seasoned` where `why_beginner` was needed (the `*_beginner_seasoned` render-both rule) -> follow-up fixed the register.
+- `orange_navel_pass2.json` shipped a JSON syntax error (missing comma) -> CC patched locally.
+- CC merge bug: a flat-only main-fragment entry seeded a reason-less provenance that blocked the follow-up's complete one (basil lost its reason). Caught in spot-check, reverted canonical (`git checkout`), fixed the merge (prefer reason-bearing provenance), re-applied.
+
+### Wired + verified
+`companion_why_fill_violations` = **A26**, `companion_evidence_violations` = **A27**, both 0 across certified. whole_crop_gate 18/18 + A26/A27 green; 36/36 tool tests; release_verify "no new violations introduced" (the 2 pre-existing onion z10 `wait`-month notes are NOT mine -- a Pass-1 calendar item); pre-commit regression check clean.
+
+### Remaining (audit ~2/3 closed)
+Pass 1 (dates + the 13 heat_pause objects + cold-on-harvest direction) -> then wire `heat_pause_backing` (B3) + tighten A24. Pass 3 (42 register fields + lettuce `overwintering.applicable`) -> then wire `register_fill`. THEN the single plant-astro submodule bump. After that the audit's NO-GO-to-scale flips GO.
+
+---
+
 ## 2026-06-25 -- raw-display snake_case gate (A23) + tree variety-chill type lock (A22, incognito B2), combined release [Claude Code]
 
 **Base-SHA:** `b39f1453664c257f...` -> **`144b2fb219663e97...`** (the ONLY data change is 36 de-snake-cased display values across 13 crops; A22 is tooling-only). Two independent gate-hardening efforts committed together at Trevor's call (his other chat -- the blind incognito audit -- had finished B2 and was waiting).
