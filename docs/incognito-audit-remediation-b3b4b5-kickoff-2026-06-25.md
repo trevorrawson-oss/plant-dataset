@@ -74,13 +74,13 @@ crop today -- use its real cells as the 0-FP corpus and get it right before more
 ## Carry forward / process armor
 - Adversarially stress-test every new gate (scratch inject -> confirm bounce).
 - Keep the per-batch source-truth sample (the un-gateable dates layer).
-- **Fold these CONFIRMED certified-crop harvest-display nits into the NEXT authoring batch**
-  (found during B1; not gate-blockable without false-positiving them):
-  - `broccoli` northern_tier z5/z6/z7: a single continuous `harvest` display papers over the
-    summer bolting gap; that gap is also labeled `cold_pause` when it is heat-driven.
-  - `beefsteak-tomato` ca_south_coast.z9: the Dec frost cutoff is rounded into "Jul - Dec".
-  - Plus the audit's ~14 MINOR date nits (S-FL bulb onion, se_gulf beefsteak Sep token, z3
-    bean/carrot edges, low-desert fall succession). Combine, do not fragment.
+- **Corrections workflow (Trevor, 2026-06-25):** gate work is READ-ONLY on the JSON. As each
+  gate surfaces a data tension, APPEND it to `docs/incognito-audit-remediation-corrections-log.md`
+  -- do NOT fix it one-off. After B1..B5 are built, claude.ai authors ALL corrections in ONE
+  source-verified batch; Claude Code promotes + gates; update CURRENT_STATE/STATE_HISTORY once.
+  The log already holds B1's findings (broccoli nt z5-z7, beefsteak ca_south_coast.z9) + the
+  audit's ~14 date nits. Several are "GATE-UNLOCK": fixing the data lets the gate tighten after
+  (e.g. add cold-pause-on-harvest to A24 once broccoli/beefsteak displays are corrected).
 
 ## Discipline
 - TDD throughout (RED before GREEN). READ-ONLY on `crops_data_final.json` until an authoring
