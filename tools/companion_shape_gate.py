@@ -120,13 +120,16 @@ EVIDENCE_CONFIDENCE = {"low", "medium", "high"}
 
 def companion_evidence_violations(crop):
     """Return a list of companions lacking honest evidence ([] = clean). Decision (a),
-    Trevor 2026-06-25: every companion (good OR bad) must declare an `evidence_label` in
-    the ruled enum AND a `confidence` in {low,medium,high}. A speculative-but-LABELED
-    pairing (e.g. mechanistic/low) is allowed -- the bar is transparency, not only T1 --
-    so beginners keep folk-wisdom companions while a seasoned reader can see the evidence
-    weight. Skips non-dict / nameless entries (the shape gate A19 owns those). No-op when
-    the crop has no companions dict. Separate from the wired `companion_shape_violations`;
-    wired after the evidence-label back-fill lands."""
+    Trevor 2026-06-25: every companion (good OR bad) must declare its evidence honestly.
+    The field of record is the RENDERED one, `provenance` -- CompanionsCard reads
+    `provenance.label` (the flat `evidence_label`/`confidence` keys are LEGACY, app-preview
+    demo only, and are NOT checked: the canonical companion model carries evidence in
+    `provenance`, confirmed 2026-06-26 against the render + the field distribution). Each
+    entry needs a `provenance` object with `label` in the ruled enum AND `confidence` in
+    {low,medium,high}. A speculative-but-LABELED pairing (mechanistic/low) is allowed -- the
+    bar is transparency, not only T1. Skips non-dict / nameless entries (A19 owns those).
+    No-op off a companions dict. Separate from the wired `companion_shape_violations`; wired
+    after the evidence back-fill lands."""
     companions = crop.get("companions")
     if not isinstance(companions, dict):
         return []
@@ -135,15 +138,17 @@ def companion_evidence_violations(crop):
         for i, entry in enumerate(_entries(companions, bucket)):
             if not _nonempty_name(entry):
                 continue  # shape gate (A19) owns bare-string / nameless entries
-            label = entry.get("evidence_label")
-            if label not in EVIDENCE_LABELS:
-                V.append(f"companions.{bucket}[{i}] ({entry['name']!r}): evidence_label "
-                         f"{label!r} not in {sorted(EVIDENCE_LABELS)} (every companion must "
-                         f"declare its evidence honestly)")
-            conf = entry.get("confidence")
-            if conf not in EVIDENCE_CONFIDENCE:
-                V.append(f"companions.{bucket}[{i}] ({entry['name']!r}): confidence {conf!r} "
-                         f"not in {sorted(EVIDENCE_CONFIDENCE)}")
+            prov = entry.get("provenance")
+            if not isinstance(prov, dict):
+                V.append(f"companions.{bucket}[{i}] ({entry['name']!r}): no provenance object "
+                         f"(the rendered evidence -- needs label + confidence)")
+                continue
+            if prov.get("label") not in EVIDENCE_LABELS:
+                V.append(f"companions.{bucket}[{i}] ({entry['name']!r}): provenance.label "
+                         f"{prov.get('label')!r} not in {sorted(EVIDENCE_LABELS)} (declare evidence honestly)")
+            if prov.get("confidence") not in EVIDENCE_CONFIDENCE:
+                V.append(f"companions.{bucket}[{i}] ({entry['name']!r}): provenance.confidence "
+                         f"{prov.get('confidence')!r} not in {sorted(EVIDENCE_CONFIDENCE)}")
     return V
 
 

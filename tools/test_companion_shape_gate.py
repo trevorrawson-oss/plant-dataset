@@ -167,9 +167,9 @@ assert any("bad_beginner_seasoned" in x and "why_beginner" in x for x in v), v
 c = why_clean(); c["companions"]["good_seasoned"] = ["marigolds", {"plant": "Comfrey"}]
 assert companion_why_fill_violations(c) == [], companion_why_fill_violations(c)
 
-# W7. REAL DATA: the known why-fill debt (GATE-UNLOCK; back-fill target). apple is flagged;
-#     the total across certified is the logged debt. Asserting the exact count locks it -- a
-#     back-fill that closes some MUST update this number (that is the unlock signal).
+# W7. REAL DATA: the Pass-2 why-fill back-fill HAS LANDED (2026-06-26) -- every certified
+#     companion that renders in a register now carries that register's why. 0 = clean; this
+#     locks the back-fill (a regression that empties a rendered why re-fails it). Gate WIRED.
 _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_data_final.json")
 if os.path.exists(_path):
     import json
@@ -177,24 +177,24 @@ if os.path.exists(_path):
     _cert = [c for c in _data["crops"]
              if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
     _total = sum(len(companion_why_fill_violations(c)) for c in _cert)
-    _apple = next(c for c in _cert if c["slug"] == "apple")
-    assert companion_why_fill_violations(_apple), "apple should have why-fill gaps"
-    assert _total == 59, ("known companion why-fill debt changed (update after back-fill)", _total)
-    print(f"  companion_why_fill_violations: {_total} known render gaps across certified (GATE-UNLOCK): PASS")
+    assert _total == 0, ("companion why-fill regressed (was 0 after Pass-2 back-fill)", _total)
+    print(f"  companion_why_fill_violations: {_total} render gaps across certified (Pass-2 landed): PASS")
 
 print("companion_shape_gate: why-fill tests passed")
 
 
-# ============ B5: companion EVIDENCE TRANSPARENCY (decision a, Trevor 2026-06-25) ============
-# Every companion (good OR bad) must declare its evidence honestly: an `evidence_label` in the
-# ruled enum + a `confidence` in {low,medium,high}. This is the transparency bar -- a
-# speculative-but-LABELED pairing (mechanistic/low) is allowed (beginners keep folk-wisdom
-# companions); an UNLABELED one is not. Skips non-dict / nameless entries (shape gate A19).
+# ============ B5: companion EVIDENCE TRANSPARENCY (decision a; field = provenance) ============
+# Every companion (good OR bad) must declare its evidence honestly via the RENDERED field,
+# `provenance` (`{label, confidence, ...}`) -- CompanionsCard reads `provenance.label`. The flat
+# `evidence_label`/`confidence` keys are LEGACY (app-preview demo only) and are NOT checked here
+# (confirmed 2026-06-26 against the render + the canonical field distribution; the earlier flat-key
+# check false-flagged provenance-only crops like beefsteak/lettuce). A speculative-but-LABELED
+# pairing (mechanistic/low) is allowed; an UNLABELED one is not. Skips nameless entries (A19).
 from companion_shape_gate import companion_evidence_violations, EVIDENCE_LABELS, EVIDENCE_CONFIDENCE
 
 
 def ev(name, label="traditional", confidence="medium", **kw):
-    return {"name": name, "evidence_label": label, "confidence": confidence, **kw}
+    return {"name": name, "provenance": {"label": label, "confidence": confidence}, **kw}
 
 
 def evidence_clean():
@@ -206,49 +206,57 @@ def evidence_clean():
     }}
 
 
-# V0. all entries carry a valid label + confidence -> no violations.
+# V0. all entries carry a valid provenance label + confidence -> no violations.
 assert companion_evidence_violations(evidence_clean()) == [], companion_evidence_violations(evidence_clean())
 
 # V1. NO companions -> no-op.
 assert companion_evidence_violations({"slug": "x"}) == [], "no companions -> no-op"
 
-# V2. missing evidence_label (the 77-entry debt: key absent) -> violation.
-c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "Radishes", "confidence": "high"}]
+# V2. NO provenance object (the 63-entry debt) -> violation.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "Radishes"}]
 v = companion_evidence_violations(c)
-assert any("good_seasoned" in x and "evidence_label" in x for x in v), v
+assert any("good_seasoned" in x and "provenance" in x for x in v), v
 
-# V3. an evidence_label outside the enum -> violation.
+# V3. a provenance.label outside the enum -> violation.
 c = evidence_clean(); c["companions"]["good_seasoned"] = [ev("Radishes", "folk_wisdom", "high")]
 v = companion_evidence_violations(c)
-assert any("evidence_label" in x and "folk_wisdom" in x for x in v), v
+assert any("provenance.label" in x and "folk_wisdom" in x for x in v), v
 
-# V4. missing confidence -> violation.
-c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "Radishes", "evidence_label": "traditional"}]
+# V4. provenance present but label null (the 6 malformed lavender good_seasoned entries) -> violation.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "Salvia", "provenance": {"label": None, "confidence": "medium"}}]
 v = companion_evidence_violations(c)
-assert any("good_seasoned" in x and "confidence" in x for x in v), v
+assert any("provenance.label" in x for x in v), v
 
-# V5. a confidence outside {low,medium,high} -> violation.
+# V5. a provenance.confidence outside {low,medium,high} -> violation.
 c = evidence_clean(); c["companions"]["good_seasoned"] = [ev("Radishes", "traditional", "maybe")]
 v = companion_evidence_violations(c)
-assert any("confidence" in x and "maybe" in x for x in v), v
+assert any("provenance.confidence" in x and "maybe" in x for x in v), v
 
 # V6. a labeled-but-speculative pairing (mechanistic/low) is ALLOWED (decision a) -> clean.
 c = evidence_clean(); c["companions"]["good_seasoned"] = [ev("Tomatoes", "mechanistic", "low")]
 assert companion_evidence_violations(c) == [], companion_evidence_violations(c)
 
-# V7. non-dict / nameless entries are the shape gate's job -> skipped here.
+# V7. flat evidence_label/confidence WITHOUT provenance does NOT satisfy the gate (legacy field).
+c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "X", "evidence_label": "traditional", "confidence": "high"}]
+assert any("provenance" in x for x in companion_evidence_violations(c)), companion_evidence_violations(c)
+
+# V8. non-dict / nameless entries are the shape gate's job -> skipped here.
 c = evidence_clean(); c["companions"]["good_seasoned"] = ["marigolds", {"plant": "Comfrey"}]
 assert companion_evidence_violations(c) == [], companion_evidence_violations(c)
 
-# V8. the enums are the ruled vocab.
+# V9. the enums are the ruled vocab.
 assert EVIDENCE_LABELS == {"traditional", "extension_backed", "research_backed",
                            "likely", "mechanistic", "disputed"}, EVIDENCE_LABELS
 assert EVIDENCE_CONFIDENCE == {"low", "medium", "high"}, EVIDENCE_CONFIDENCE
 
-# V9. REAL DATA: the known evidence-transparency debt (GATE-UNLOCK; back-fill target).
+# V10. REAL DATA: provenance is the field of record (CompanionsCard reads provenance.label).
+# The Pass-2 evidence back-fill HAS LANDED (2026-06-26): every certified companion carries a
+# valid provenance {label, confidence}. Pre-back-fill this was 75 (63 missing provenance + the
+# 6 lavender good_seasoned doubly malformed -- no label AND confidence holding a label value;
+# claude.ai's gap map undercounted those as 6). 0 = clean; the gate is WIRED.
 if os.path.exists(_path):
     _ev_total = sum(len(companion_evidence_violations(c)) for c in _cert)
-    assert _ev_total == 159, ("known companion evidence debt changed (update after back-fill)", _ev_total)
-    print(f"  companion_evidence_violations: {_ev_total} known label/confidence gaps (GATE-UNLOCK): PASS")
+    assert _ev_total == 0, ("companion evidence regressed (was 0 after Pass-2 back-fill)", _ev_total)
+    print(f"  companion_evidence_violations: {_ev_total} provenance gaps across certified (Pass-2 landed): PASS")
 
 print("companion_shape_gate: evidence tests passed")

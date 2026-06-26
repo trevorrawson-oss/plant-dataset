@@ -437,6 +437,31 @@ print(f"  companion shape violations: {len(_comp)}")
 for m in _comp:
     fail(f"companion: {m}")
 
+# ---------------- A26. companion per-register why-fill (B5; Pass-2 back-fill landed 2026-06-26) ----
+# A19 is shape only; this catches the BARE-NAME render: a companion that renders in a register but
+# carries no `why` for THAT register (seasoned-readable -> why_seasoned, beginner-readable ->
+# why_beginner, both-bucket -> both). Does NOT enforce reachability (beginner-only companions are
+# legitimate curation, Trevor 2026-06-25). No-op off companions.
+from companion_shape_gate import companion_why_fill_violations
+print("A26. companion why-fill (each rendered companion carries its register's why)")
+_cwhy = companion_why_fill_violations(crop)
+print(f"  companion why-fill violations: {len(_cwhy)}")
+for m in _cwhy:
+    fail(f"companion why-fill: {m}")
+
+# ---------------- A27. companion evidence transparency (B5; decision a) ----------------
+# Every companion (good OR bad) must declare honest evidence via the RENDERED field `provenance`
+# ({label, confidence}); CompanionsCard reads provenance.label. Flat evidence_label/confidence are
+# legacy (app-preview) and NOT checked. Speculative-but-labeled (mechanistic/low) is allowed. No-op
+# off companions. (Field corrected to provenance 2026-06-26 -- the earlier flat check false-flagged
+# the provenance-only crops.)
+from companion_shape_gate import companion_evidence_violations
+print("A27. companion evidence transparency (provenance.label + confidence on every companion)")
+_cev = companion_evidence_violations(crop)
+print(f"  companion evidence violations: {len(_cev)}")
+for m in _cev:
+    fail(f"companion evidence: {m}")
+
 # ---------------- A20. display-readiness, archetype-aware (the F5 armor) ----------------
 # Cert validates BIOLOGY + sources but not that the fields each guide CARD reads are present, so
 # a crop can certify and render a BLANK Hero/Ph/Feeding card (audit F5: lemon sunlight/water/
