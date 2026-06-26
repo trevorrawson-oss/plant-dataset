@@ -7,10 +7,11 @@ CERTIFIED peach ship 46: the always-on whole_crop_gate TOLERATES null register p
 (`null_values: 0` does not catch an unauthored `_seasoned`/`_beginner` field). This gate
 catches them. It is the FILL half; `register_completeness_gate.py` is the RULED half.
 
-Deliberately a STANDALONE cert/Step-11 gate (NOT wired into the always-on whole_crop_gate),
-so an in-progress crop -- or a certified crop still awaiting a backfill (peach 6-8C) -- is
-not red-flagged in the routine gate record. Run it at the flip, and on-demand to derive a
-6-8 worklist or audit a certified crop.
+WIRED into the always-on whole_crop_gate as A29 (2026-06-26, after the Pass-3 register back-fill
+cleared the early anchors -> register_fill 0 across the 18). A new crop with unauthored register
+prose now bounces at cert. (Was standalone before, so an in-progress crop was not red-flagged;
+that is no longer the design -- a crop run through whole_crop_gate is expected fill-complete.)
+Still runnable on-demand to derive a worklist or audit a crop.
 
 Allowlist (legitimately null, never a violation):
   - `frost_risk_note_*`  -- seasoned-only, authored per-cell only where late frost is a risk.

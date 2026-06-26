@@ -550,6 +550,19 @@ print(f"  unruled prose field(s): {len(_regcomp)}")
 for m in _regcomp:
     fail(f"register-completeness: unruled prose field {m}")
 
+# ---------------- A29. register FILL (every ruled register field is authored; B5/Pass-3) ----------------
+# The FILL half (A25 is the RULED half): every `_seasoned`/`_beginner` register field must be authored
+# (not null/empty) -- the gap that let apple ship 30 null fields + peach 46. Skips the frost_risk_note /
+# legacy-zones allowlist + the structured-N/A `{applicable:false}` over-flag. Was standalone (so an
+# in-progress crop wasn't flagged); wired always-on here now that the Pass-3 back-fill cleared the early
+# anchors (register_fill 0 across the 18). A new crop with unauthored register prose now bounces at cert.
+from register_fill_gate import register_fill_violations
+print("A29. register fill (every ruled _seasoned/_beginner field is authored; not null)")
+_regfill = register_fill_violations(crop)
+print(f"  unauthored register field(s): {len(_regfill)}")
+for m in _regfill:
+    fail(f"register-fill: unauthored {m}")
+
 # ---------------- A23. raw-display snake_case (UNIVERSAL; the render-verbatim armor) ----------------
 # A20 checks the feeding/watering/Hero fields are PRESENT; this checks the render-VERBATIM ones
 # read as PROSE. FeedingCard prints fertilizer.type/timing/frequency as-is (the F3 no-Title-Case
