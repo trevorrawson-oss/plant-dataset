@@ -169,20 +169,131 @@ def annual_coherence_violations(crop):
     return hard, notes
 
 
+# Days per month for the "core month" (fully-covered) test. February uses 29 so a
+# span ending Feb 28 does NOT count February as fully covered -- the conservative
+# direction (fewer flags, never a false positive on a leap-agnostic boundary).
+_DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+
+def _month_day(tok):
+    """'Mon DD' -> (month, day); 'Mon' -> (month, None). Unparseable -> (None, None)."""
+    if not tok or not isinstance(tok, str):
+        return (None, None)
+    parts = tok.strip().split()
+    m = _month_num(parts[0])
+    d = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else None
+    return (m, d)
+
+
+def core_months(display):
+    """Months a SINGLE span of the display covers in FULL (day 1 .. last day), i.e.
+    unambiguously inside the window rather than clipped at a span boundary. A bare
+    'Mon' or a day-less 'MonA - MonB' range treats every month as fully covered
+    (no day info to clip). This is the month-rounding guard: a pause on a partly
+    covered boundary month is tolerated; a pause on a fully-covered core month is a
+    real contradiction. Wrap-aware (e.g. 'Nov 1 - Feb 28')."""
+    out = set()
+    if not display or not isinstance(display, str):
+        return out
+    for span in display.replace(";", ",").split(","):
+        span = span.strip()
+        if not span:
+            continue
+        if "-" in span:
+            a, b = span.split("-", 1)
+            ma, da = _month_day(a)
+            mb, db = _month_day(b)
+            if not ma or not mb:
+                continue
+            for m in _span(ma, mb):
+                start_ok = (m != ma) or (da is None or da <= 1)
+                end_ok = (m != mb) or (db is None or db >= _DAYS_IN_MONTH[m - 1])
+                if start_ok and end_ok:
+                    out.add(m)
+        else:
+            m, d = _month_day(span)
+            if m and d is None:        # a bare month = the whole month
+                out.add(m)
+    return out
+
+
+def declared_heat_months(cell):
+    """The cell's declared heat-exclusion months: the nested `heat_pause.months`
+    object (the authored, sourced form) or the flat `heat_pause_months` (the deriver
+    form). Empty set if neither is present (an UNBACKED heat_pause -- legitimate for
+    zucchini/green-beans summer cells today; backing them is B3, not this gate)."""
+    hp = cell.get("heat_pause")
+    if isinstance(hp, dict) and hp.get("months") is not None:
+        return set(hp["months"])
+    flat = cell.get("heat_pause_months")
+    if flat is not None:
+        return set(flat)
+    return set()
+
+
+# Frost/dormancy pause tokens that can never coincide with an outdoor planting window
+# at ANY granularity (checked coarse). heat_pause is handled separately (core-only +
+# declaration-aware) because a heat exclusion legitimately abuts planting/harvest at
+# span boundaries (month-rounding).
+_FROST_PAUSE_TOKENS = {"cold_pause", "wait"}
+
+_MON_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
 def annual_calendar_violations(crop):
-    """For every resolved cell with a NON-EMPTY calendar, recompute from the cell's
-    windows and flag any mismatch (the drift defense, like tree A4). No-op for non-
-    frost_anchored crops. Cells that declare a heat_pause must carry `heat_pause_months`
-    for the recompute to be exact (basil has none)."""
+    """B1 token-PLACEMENT drift gate (whole_crop_gate A24). A frost_anchored annual's
+    hand-authored calendar must not place a PAUSE token on a month its own windows say
+    is ACTIVE. No-op for non-frost_anchored crops. Returns a list of violation strings.
+
+    This is deliberately NOT a full re-derivation. The Step-5.5 deriver
+    (`derive_annual_calendar`) reproduces only the simplest single-season cells
+    (basil, zinnia); it cannot reproduce ~190/200 certified annual cells, which are
+    legitimately hand-authored multi-cycle / winter-wrapping / heat-inverted /
+    year-round-with-plant shapes plus pervasive month-rounding. Wiring the re-deriver
+    as a gate would cry wolf on almost every real cell. This gate instead checks the
+    audit-B1 defect classes directly, with empirically ZERO false positives across all
+    10 certified annuals (200 cells):
+
+      - cold_pause / wait on ANY plant_out month -> a frost/dormancy lockout cannot
+        coincide with an outdoor planting window (the pause-on-plant defect).
+      - heat_pause on a CORE plant_out or CORE harvest month NOT in the cell's declared
+        heat_pause.months -> a heat exclusion sitting on an unambiguous (fully covered)
+        planting/harvest month with no backing (the pause-on-plant / pause-on-harvest
+        heat defects). "Core" tolerates the month-rounding that legitimately puts a
+        heat_pause on a partly-covered span boundary; a declared heat month is excused.
+
+    Deliberately NOT checked (would false-positive certified crops, see the audit's
+    deriver-vs-stored diff): cold_pause on a harvest month (broccoli/beefsteak overstate
+    their harvest displays into the summer gap / frost tail); and thermal BACKING of a
+    self-consistent-but-unjustified heat_pause -- that is B3 (zucchini/green-beans ship
+    legitimate unbacked summer heat_pauses today). Heat_pause/declared-months ALIGNMENT
+    stays in `annual_coherence_violations` (A5)."""
     if crop.get("calendar_basis") != "frost_anchored":
         return []
     out = []
     for rk, r in (crop.get("regions") or {}).items():
         for z, cell in (r.get("resolved_by_zone") or {}).items():
             cal = cell.get("calendar")
-            if not cal:
-                continue
-            exp = derive_annual_calendar(cell, "frost_anchored")
-            if cal != exp:
-                out.append({"region": rk, "zone": z, "stored": cal, "derived": exp})
+            if not isinstance(cal, list) or len(cal) != 12:
+                continue                       # length/shape is A5's job
+            loc = f"{rk}.z{z}"
+            plant = parse_months(cell.get("plant_out"))
+            plant_core = core_months(cell.get("plant_out"))
+            harvest_core = core_months(cell.get("harvest"))
+            declared = declared_heat_months(cell)
+            for i in range(12):
+                tok = cal[i]
+                m = i + 1
+                mon = _MON_ABBR[i]
+                if tok in _FROST_PAUSE_TOKENS and m in plant:
+                    out.append(f"{loc}: {tok} on plant_out month {mon} "
+                               f"(a frost/dormancy pause cannot fall on an outdoor planting window)")
+                elif tok == "heat_pause" and m not in declared:
+                    if m in plant_core:
+                        out.append(f"{loc}: heat_pause on core plant_out month {mon} "
+                                   f"not in declared heat_pause.months (pause displaces planting)")
+                    elif m in harvest_core:
+                        out.append(f"{loc}: heat_pause on core harvest month {mon} "
+                                   f"not in declared heat_pause.months (pause displaces harvest)")
     return out

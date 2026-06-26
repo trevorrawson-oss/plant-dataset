@@ -134,3 +134,105 @@ assert h == [] and len(n) == 1 and "wait" in n[0], ("wait is a note not hard", h
 assert ac.annual_coherence_violations({"calendar_basis": "perennial_chill_gated"}) == ([], [])
 print("  annual_coherence_violations (always-on gate): PASS")
 print("PASS annual_calendar (deriver + coherence gate)")
+
+# ============ annual_calendar_violations (B1: token-PLACEMENT drift gate) ============
+# NOT a full re-derive (the deriver cannot reproduce ~190/200 hand-authored cells:
+# month-rounding + multi-cycle/winter-wrap/heat-inverted/year-round-with-plant shapes).
+# This gates exactly the audit B1 defect classes with empirically zero FPs on all 10
+# certified annuals: a PAUSE token must not displace an ACTIVE window.
+#   - cold_pause / wait on ANY plant_out month (frost/dormancy cannot coincide with an
+#     outdoor planting window at any granularity).
+#   - heat_pause on a CORE plant_out or CORE harvest month NOT in declared
+#     heat_pause.months (heat abuts planting/harvest at span boundaries via month-
+#     rounding, so only a FULLY-covered "core" month is an unambiguous contradiction;
+#     a declared heat month is excused -- that is the legitimate summer exclusion).
+# Thermal BACKING of a self-consistent-but-unjustified heat_pause is B3, not B1.
+
+def _crop(cell, basis="frost_anchored"):
+    return {"calendar_basis": basis, "regions": {"r": {"resolved_by_zone": {"5": cell}}}}
+
+# clean basil-shaped cell (reproduces exactly) -> no placement violations.
+clean_cell = {"plant_out": "May 8 - May 22", "harvest": "Jun - Sep",
+              "calendar": ["cold_pause", "cold_pause", "indoors", "indoors", "plant",
+                           "harvest", "harvest", "harvest", "harvest", "cold_pause",
+                           "cold_pause", "cold_pause"]}
+assert ac.annual_calendar_violations(_crop(clean_cell)) == [], \
+    ("clean cell flagged", ac.annual_calendar_violations(_crop(clean_cell)))
+
+# DEFECT pause-on-plant (cold): cold_pause sitting on a plant_out month.
+cold_on_plant = dict(clean_cell, plant_out="Apr 1 - May 31",
+                     calendar=["cold_pause", "cold_pause", "indoors", "indoors", "cold_pause",
+                               "harvest", "harvest", "harvest", "harvest", "cold_pause",
+                               "cold_pause", "cold_pause"])
+v = ac.annual_calendar_violations(_crop(cold_on_plant))
+assert len(v) == 1 and "cold_pause" in v[0] and "plant" in v[0], ("cold-on-plant not caught", v)
+
+# DEFECT pause-on-plant (wait): wait sitting on a plant_out month.
+wait_on_plant = dict(clean_cell, plant_out="May 1 - May 31",
+                     calendar=["cold_pause", "cold_pause", "indoors", "indoors", "wait",
+                               "harvest", "harvest", "harvest", "harvest", "cold_pause",
+                               "cold_pause", "cold_pause"])
+v = ac.annual_calendar_violations(_crop(wait_on_plant))
+assert len(v) == 1 and "wait" in v[0], ("wait-on-plant not caught", v)
+
+# DEFECT pause-on-harvest (heat): heat_pause on a CORE harvest month, no declared months.
+heat_on_harvest = {"plant_out": "Mar - Apr", "harvest": "Jun - Sep",
+                   "calendar": ["cold_pause", "cold_pause", "plant", "plant", "growing",
+                                "harvest", "heat_pause", "harvest", "harvest", "cold_pause",
+                                "cold_pause", "cold_pause"]}
+v = ac.annual_calendar_violations(_crop(heat_on_harvest))
+assert len(v) == 1 and "heat_pause" in v[0] and "harvest" in v[0], ("heat-on-harvest not caught", v)
+
+# DEFECT pause-on-plant (heat): heat_pause on a CORE plant_out month, no declared months.
+heat_on_plant = {"plant_out": "Apr - Jun", "harvest": "Aug - Sep",
+                 "calendar": ["cold_pause", "cold_pause", "plant", "plant", "heat_pause",
+                              "plant", "growing", "harvest", "harvest", "cold_pause",
+                              "cold_pause", "cold_pause"]}
+v = ac.annual_calendar_violations(_crop(heat_on_plant))
+assert len(v) == 1 and "heat_pause" in v[0] and "plant" in v[0], ("heat-on-plant not caught", v)
+
+# LEGIT: heat_pause on a BOUNDARY harvest month, no object (zucchini se_gulf shape).
+# harvest "May 25 - Jul 10" -> Jul only partly covered -> NOT core -> not flagged.
+boundary_heat = {"plant_out": "Apr 1 - May 15, Aug 1 - Aug 20", "harvest": "May 25 - Jul 10, Sep 25 - Nov 5",
+                 "calendar": ["cold_pause", "cold_pause", "indoors", "plant", "plant",
+                              "harvest", "heat_pause", "plant", "harvest", "harvest",
+                              "harvest", "cold_pause"]}
+assert ac.annual_calendar_violations(_crop(boundary_heat)) == [], \
+    ("boundary heat_pause false-positived", ac.annual_calendar_violations(_crop(boundary_heat)))
+
+# LEGIT: heat_pause DECLARED on a core harvest month (desert tomato shape) -> excused.
+declared_heat = {"plant_out": "Sep - Sep", "harvest": "Feb - Jun", "heat_pause": {"months": [6]},
+                 "calendar": ["growing", "harvest", "harvest", "harvest", "harvest", "heat_pause",
+                              "heat_pause", "heat_pause", "plant", "growing", "harvest", "plant"]}
+declared_heat["heat_pause"]["months"] = [6, 7, 8]
+assert ac.annual_calendar_violations(_crop(declared_heat)) == [], \
+    ("declared heat_pause flagged", ac.annual_calendar_violations(_crop(declared_heat)))
+
+# LEGIT: cold_pause inside a too-generous harvest envelope (broccoli nt.z7 shape).
+# We deliberately do NOT check cold_pause-on-harvest (the display overstates), so [] .
+broccoli_env = {"plant_out": "Feb 22 - Mar 15", "harvest": "Apr 26 - Dec 4",
+                "calendar": ["cold_pause", "plant", "plant", "harvest", "harvest", "cold_pause",
+                             "cold_pause", "cold_pause", "plant", "growing", "harvest", "harvest"]}
+assert ac.annual_calendar_violations(_crop(broccoli_env)) == [], \
+    ("broccoli cold-in-harvest-envelope false-positived", ac.annual_calendar_violations(_crop(broccoli_env)))
+
+# no-op for non-frost_anchored crops.
+assert ac.annual_calendar_violations({"calendar_basis": "perennial_chill_gated"}) == []
+print("  annual_calendar_violations (B1 placement gate, unit): PASS")
+
+# REAL-DATA GUARD: zero false positives across every certified frost_anchored annual.
+_path = os.path.join(HERE, "..", "crops_data_final.json")
+if os.path.exists(_path):
+    _data = json.load(open(_path))
+    def _certified(c):
+        v = c.get("verification_status") or {}
+        return (v.get("status") == "verified_gs_arc"
+                and v.get("launch_ready_core") and v.get("launch_ready_seasoned"))
+    _annuals = [c for c in _data["crops"]
+                if c.get("calendar_basis") == "frost_anchored" and _certified(c)]
+    assert len(_annuals) == 10, ("expected 10 certified annuals", len(_annuals))
+    for c in _annuals:
+        fp = ac.annual_calendar_violations(c)
+        assert fp == [], (f"FALSE POSITIVE on certified annual {c['slug']}", fp)
+    print(f"  annual_calendar_violations: 0 FP across {len(_annuals)} certified annuals: PASS")
+print("PASS annual_calendar (deriver + coherence gate + B1 placement gate)")

@@ -476,6 +476,25 @@ print(f"  perennial variety-chill violations: {len(_pvchill)}")
 for m in _pvchill:
     fail(f"perennial variety-chill: {m}")
 
+# ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
+# A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
+# ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
+# drift defense (annual_calendar_violations) existed in code with ZERO callers (audit B1).
+# It is NOT a full re-derive -- the Step-5.5 deriver reproduces only the simplest cells
+# (basil/zinnia); ~190/200 certified annual cells are legitimately hand-authored multi-
+# cycle/winter-wrap/heat-inverted shapes with month-rounding, so a strict re-derive would
+# cry wolf. Instead it gates the audit-B1 defect classes with empirically zero FPs on all
+# 10 certified annuals: cold_pause/wait on a plant_out month, and an undeclared heat_pause
+# on a CORE plant_out/harvest month (pause-on-plant / pause-on-harvest). Thermal BACKING of
+# a self-consistent heat_pause is B3; cold-on-harvest is unflaggable (display overstatement).
+# No-op off frost_anchored. (Closes incognito-audit B1. 2026-06-25.)
+from annual_calendar import annual_calendar_violations
+print("A24. annual calendar token placement (no pause on an active window; no-op off annual)")
+_aplace = annual_calendar_violations(crop)
+print(f"  annual calendar placement violations: {len(_aplace)}")
+for m in _aplace:
+    fail(f"annual-calendar placement: {m}")
+
 # ---------------- A23. raw-display snake_case (UNIVERSAL; the render-verbatim armor) ----------------
 # A20 checks the feeding/watering/Hero fields are PRESENT; this checks the render-VERBATIM ones
 # read as PROSE. FeedingCard prints fertilizer.type/timing/frequency as-is (the F3 no-Title-Case
