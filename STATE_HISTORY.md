@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-06-26 -- audit-remediation Pass 1 (dates + heat_pause): A28 backing + A24 cold-on-harvest tighten [Claude Code]
+
+**Base-SHA:** `6c009feb1c0836cc...` -> **`5fe0a15b7374d466...`** (5 crops changed; the other 118 + all top-level keys byte-identical). The source-heavy round of the incognito-audit remediation. claude.ai authored (T1-verified), Claude Code reconciled + applied + gated + wired. Commit `31c66bf` (state `<this>`).
+
+### What landed (5 crops)
+- **16 heat_pause objects** -- the 13 object-less zucchini/green-beans cells + broccoli's 3 northern_tier cells (relabeled cold_pause->heat_pause). Each: `months` (= calendar token months, A5-aligned), sourced `basis_seasoned` (snap-bean blossom-drop >90F + warm-night pollen suppression, Clemson HGIC/UDel/UMD; summer-squash flower/pollen heat injury, UDel/UMD), `sources` + matching `anchoring_urls`.
+- **broccoli z5/z6/z7** -- summer `cold_pause`->`heat_pause` + harvest displays SPLIT spring+fall (z5 `May 26 - Jun 30, Oct 1 - Oct 29`; z6 `May 12 - Jun 30, Oct 1 - Nov 14`; z7 `Apr 26 - May 31, Nov 1 - Dec 4`). The continuous display over-stated into the summer head-formation heat gap; sibling broccoli regions already used this shape (internal corroboration). T1: UMN/Iowa State/UMD.
+- **beefsteak-tomato** ca_south_coast.z9 Dec `cold_pause`->`harvest` (UC ANR 8017: SoCal coastal fall harvest Sep-Jan; sibling z10 already had Dec=harvest). se_gulf.z8 Sep `plant`->`growing` (UGA C963: fall tomato is Jul, not Sep; plant_out already correct at Jul 1-20).
+- **onion** fl_peninsula z10/z11 `plant_out` `Sep - Dec`->`Oct` (UF/IFAS VH021: S-FL bulbing = Oct; the Sep-Dec window was the North-FL window misapplied). **CC deterministic calendar recompute** of claude.ai's authored window: Sep `plant`->`season_over`, Nov/Dec `plant`->`growing`, Oct stays `plant`, first/last_plant_date->Oct 1/Oct 31. onion `succession_policy.suitable=False` so no successions_realized re-derive. **CONVENTION: claude.ai authors the date window; CC recomputes the calendar tokens** (the plant-window analog of the harvest-only CC-lane rule).
+
+### Gates hardened (the Pass-1 GATE-UNLOCKs)
+- `heat_pause_backing_violations` WIRED as **A28** (B3): wherever the calendar shows a heat_pause token, the cell must carry a backed object. backing 13->0.
+- `annual_calendar_violations` (A24) TIGHTENED: a `cold_pause` on a CORE harvest month is now a violation -- safe ONLY because Pass 1 corrected the broccoli/beefsteak displays that would have false-positived. Partial-boundary frost-tail tolerated (`core_months` day-aware). The old "broccoli_env legit" test case flipped to a defect case.
+
+### Verified + deferred
+whole_crop_gate 18/18 + A24-tightened + A28 green; 36/36 tool tests; release_verify "no new violations introduced" (2 pre-existing z10 `wait`-month notes are NOT mine). **Deferred (logged to corrections log):** carrot nt.z3 spring-harvest display gap; low-desert AZ z9 succession/heat_pause reconciliation (methodology choice); beefsteak ca_north_coast.z10 `wait`-on-harvest (a future A24 `wait` GATE-UNLOCK); optional beefsteak z9 Jan harvest tail. **Remaining for the audit:** Pass 3 (register prose) + wire register_fill + the single submodule bump.
+
+---
+
 ## 2026-06-26 -- audit-remediation Pass 2 (companions): why-fill (A26) + evidence (A27) + the provenance gate-field fix [Claude Code]
 
 **Base-SHA:** `144b2fb219663e97...` -> **`6c009feb1c0836cc...`** (companion fields on 14 crops; the other 109 + all top-level keys byte-identical). The B5b why-fill + B5c evidence-transparency back-fill of the incognito-audit remediation arc. claude.ai authored (source-verified), Claude Code reconciled + applied + gated. Commit `08880f6`.
