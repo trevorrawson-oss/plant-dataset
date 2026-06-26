@@ -106,3 +106,149 @@ assert companion_shape_violations(c) == [], companion_shape_violations(c)
 assert companion_shape_violations({"slug": "x", "companions": []}) == [], "non-dict companions -> no-op"
 
 print("companion_shape_gate: all tests passed")
+
+
+# ============ B5: per-register WHY-FILL (every rendered companion carries its why) ============
+# A companion that renders in a register but has no `why` for THAT register shows a bare
+# name with no reason (apple's why_seasoned:null; carrot omits why_seasoned entirely). The
+# card maps:  good_seasoned/bad_seasoned + good_beginner_seasoned/bad_beginner_seasoned ->
+# SEASONED;  good_beginner/bad_beginner + the *_beginner_seasoned buckets -> BEGINNER. So a
+# both-bucket (*_beginner_seasoned) entry needs BOTH whys; a *_seasoned entry needs
+# why_seasoned; a *_beginner entry needs why_beginner. Skips non-dict / nameless entries
+# (the shape gate A19 owns those). Does NOT touch reachability -- a beginner-only companion
+# is legitimate curation (Trevor 2026-06-25); it just must carry why_beginner.
+from companion_shape_gate import companion_why_fill_violations
+
+
+def why_clean():
+    """why-fill-clean: each entry carries the why for every register it renders in."""
+    return {"slug": "carrot", "companions": {
+        "good_seasoned": [obj("Radishes", why_seasoned="row marker")],
+        "good_beginner_seasoned": [obj("Onions", why_seasoned="allium scent masks the carrot",
+                                       why_beginner="their smell deters carrot pests")],
+        "good_beginner": [obj("Lettuce", why_beginner="quick ground cover between rows")],
+        "bad_seasoned": [obj("Dill", why_seasoned="cross-pollinates and stunts roots")],
+        "bad_beginner_seasoned": [obj("Fennel", why_seasoned="allelopathic to most crops",
+                                      why_beginner="fennel inhibits nearby plants")],
+        "bad_beginner": [obj("Parsnip", why_beginner="same pests and diseases as carrot")],
+    }}
+
+
+# W0. fully why-filled -> no violations.
+assert companion_why_fill_violations(why_clean()) == [], companion_why_fill_violations(why_clean())
+
+# W1. NO companions block -> no-op.
+assert companion_why_fill_violations({"slug": "x"}) == [], "no companions -> no-op"
+
+# W2. a seasoned-bucket entry missing why_seasoned -> violation.
+c = why_clean(); c["companions"]["good_seasoned"] = [obj("Radishes", why_seasoned=None)]
+v = companion_why_fill_violations(c)
+assert any("good_seasoned" in x and "why_seasoned" in x for x in v), v
+
+# W3. a beginner-bucket entry missing why_beginner -> violation.
+c = why_clean(); c["companions"]["good_beginner"] = [obj("Lettuce", why_beginner="  ")]
+v = companion_why_fill_violations(c)
+assert any("good_beginner" in x and "why_beginner" in x for x in v), v
+
+# W4. a BOTH-bucket entry missing why_seasoned (carrot's real shape: has why_beginner only)
+#     -> violation on the SEASONED register (it renders seasoned with a bare name).
+c = why_clean()
+c["companions"]["good_beginner_seasoned"] = [obj("Onions", why_beginner="smell deters pests")]
+v = companion_why_fill_violations(c)
+assert any("good_beginner_seasoned" in x and "why_seasoned" in x for x in v), v
+
+# W5. a BOTH-bucket entry missing why_beginner -> violation on the BEGINNER register.
+c = why_clean()
+c["companions"]["bad_beginner_seasoned"] = [obj("Fennel", why_seasoned="allelopathic")]
+v = companion_why_fill_violations(c)
+assert any("bad_beginner_seasoned" in x and "why_beginner" in x for x in v), v
+
+# W6. non-dict / nameless entries are the shape gate's job -> why-fill SKIPS them (no double-flag).
+c = why_clean(); c["companions"]["good_seasoned"] = ["marigolds", {"plant": "Comfrey"}]
+assert companion_why_fill_violations(c) == [], companion_why_fill_violations(c)
+
+# W7. REAL DATA: the known why-fill debt (GATE-UNLOCK; back-fill target). apple is flagged;
+#     the total across certified is the logged debt. Asserting the exact count locks it -- a
+#     back-fill that closes some MUST update this number (that is the unlock signal).
+_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_data_final.json")
+if os.path.exists(_path):
+    import json
+    _data = json.load(open(_path))
+    _cert = [c for c in _data["crops"]
+             if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
+    _total = sum(len(companion_why_fill_violations(c)) for c in _cert)
+    _apple = next(c for c in _cert if c["slug"] == "apple")
+    assert companion_why_fill_violations(_apple), "apple should have why-fill gaps"
+    assert _total == 59, ("known companion why-fill debt changed (update after back-fill)", _total)
+    print(f"  companion_why_fill_violations: {_total} known render gaps across certified (GATE-UNLOCK): PASS")
+
+print("companion_shape_gate: why-fill tests passed")
+
+
+# ============ B5: companion EVIDENCE TRANSPARENCY (decision a, Trevor 2026-06-25) ============
+# Every companion (good OR bad) must declare its evidence honestly: an `evidence_label` in the
+# ruled enum + a `confidence` in {low,medium,high}. This is the transparency bar -- a
+# speculative-but-LABELED pairing (mechanistic/low) is allowed (beginners keep folk-wisdom
+# companions); an UNLABELED one is not. Skips non-dict / nameless entries (shape gate A19).
+from companion_shape_gate import companion_evidence_violations, EVIDENCE_LABELS, EVIDENCE_CONFIDENCE
+
+
+def ev(name, label="traditional", confidence="medium", **kw):
+    return {"name": name, "evidence_label": label, "confidence": confidence, **kw}
+
+
+def evidence_clean():
+    return {"slug": "carrot", "companions": {
+        "good_seasoned": [ev("Radishes", "extension_backed", "high")],
+        "good_beginner_seasoned": [ev("Onions", "traditional", "medium")],
+        "bad_seasoned": [ev("Dill", "mechanistic", "low")],
+        "bad_beginner_seasoned": [ev("Fennel", "research_backed", "high")],
+    }}
+
+
+# V0. all entries carry a valid label + confidence -> no violations.
+assert companion_evidence_violations(evidence_clean()) == [], companion_evidence_violations(evidence_clean())
+
+# V1. NO companions -> no-op.
+assert companion_evidence_violations({"slug": "x"}) == [], "no companions -> no-op"
+
+# V2. missing evidence_label (the 77-entry debt: key absent) -> violation.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "Radishes", "confidence": "high"}]
+v = companion_evidence_violations(c)
+assert any("good_seasoned" in x and "evidence_label" in x for x in v), v
+
+# V3. an evidence_label outside the enum -> violation.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [ev("Radishes", "folk_wisdom", "high")]
+v = companion_evidence_violations(c)
+assert any("evidence_label" in x and "folk_wisdom" in x for x in v), v
+
+# V4. missing confidence -> violation.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [{"name": "Radishes", "evidence_label": "traditional"}]
+v = companion_evidence_violations(c)
+assert any("good_seasoned" in x and "confidence" in x for x in v), v
+
+# V5. a confidence outside {low,medium,high} -> violation.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [ev("Radishes", "traditional", "maybe")]
+v = companion_evidence_violations(c)
+assert any("confidence" in x and "maybe" in x for x in v), v
+
+# V6. a labeled-but-speculative pairing (mechanistic/low) is ALLOWED (decision a) -> clean.
+c = evidence_clean(); c["companions"]["good_seasoned"] = [ev("Tomatoes", "mechanistic", "low")]
+assert companion_evidence_violations(c) == [], companion_evidence_violations(c)
+
+# V7. non-dict / nameless entries are the shape gate's job -> skipped here.
+c = evidence_clean(); c["companions"]["good_seasoned"] = ["marigolds", {"plant": "Comfrey"}]
+assert companion_evidence_violations(c) == [], companion_evidence_violations(c)
+
+# V8. the enums are the ruled vocab.
+assert EVIDENCE_LABELS == {"traditional", "extension_backed", "research_backed",
+                           "likely", "mechanistic", "disputed"}, EVIDENCE_LABELS
+assert EVIDENCE_CONFIDENCE == {"low", "medium", "high"}, EVIDENCE_CONFIDENCE
+
+# V9. REAL DATA: the known evidence-transparency debt (GATE-UNLOCK; back-fill target).
+if os.path.exists(_path):
+    _ev_total = sum(len(companion_evidence_violations(c)) for c in _cert)
+    assert _ev_total == 159, ("known companion evidence debt changed (update after back-fill)", _ev_total)
+    print(f"  companion_evidence_violations: {_ev_total} known label/confidence gaps (GATE-UNLOCK): PASS")
+
+print("companion_shape_gate: evidence tests passed")

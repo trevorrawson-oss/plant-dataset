@@ -91,4 +91,76 @@ assert photoperiod_violations(c) == [], photoperiod_violations(c)
 # 8. the enum is exactly the 3 classes (day-neutral folds into intermediate_day)
 assert DAY_LENGTH_ENUM == {"long_day", "intermediate_day", "short_day"}, DAY_LENGTH_ENUM
 
+
+# ============ B4: WINDOW FIT (day_length_type <-> planting-season shape) ============
+# A9 typed + covered the day-length classes but never linked a cell's day_length_type to
+# its PLANTING-WINDOW shape, so a short-day onion with a long-day-shaped (spring) schedule
+# passed (audit B4). Onion's real cells are the 0-FP corpus:
+#   long_day        -> SPRING-planted (Mar-Jun), NOT fall (bulbs in summer's long days).
+#   short_day       -> FALL/WINTER-planted (Sep-Feb), NOT spring/summer (bulbs as short
+#                      winter days lengthen).
+#   intermediate_day-> fall-to-early-spring (Sep-Mar), NOT late-spring/summer.
+# Keyed on plant_out only; harvest shape is intentionally NOT checked (overstated harvest
+# displays would false-positive -- the broccoli/annual lesson). A cell with no parseable
+# plant_out is skipped (the window-fit gate does not own "plant_out must exist").
+
+def windows_crop():
+    """Photoperiod crop with FILLED cells whose plant_out windows FIT their type; the
+    intermediate cell exercises the 'early/mid/late <Month>' normalization."""
+    return {
+        "slug": "onion-win",
+        "calendar_basis": "frost_anchored",
+        "gating_factors": ["photoperiod"],
+        "varieties": {"recommended": [
+            {"name": "Walla Walla", "day_length_type": "long_day"},
+            {"name": "Candy", "day_length_type": "intermediate_day"},
+            {"name": "Texas 1015Y", "day_length_type": "short_day"}]},
+        "regions": {
+            "northern_tier": {"resolved_by_zone": {
+                "5": {"recommended_day_length_type": "long_day", "plant_out": "Apr 1 - Apr 22"}}},
+            "se_gulf": {"resolved_by_zone": {
+                "9": {"recommended_day_length_type": "short_day", "plant_out": "Nov 1 - Feb 15"}}},
+            "ca_interior": {"resolved_by_zone": {
+                "8": {"recommended_day_length_type": "intermediate_day",
+                      "plant_out": "Oct - Nov, Jan - early March"}}}},
+    }
+
+# 9. CLEAN window fit (incl. 'Jan - early March' normalization) -> no violations.
+assert photoperiod_violations(windows_crop()) == [], photoperiod_violations(windows_crop())
+
+# 10. DEFECT: long_day planted in FALL -> violation.
+c = windows_crop()
+c["regions"]["northern_tier"]["resolved_by_zone"]["5"]["plant_out"] = "Oct - Nov"
+assert any("northern_tier" in v and "long_day" in v for v in photoperiod_violations(c)), photoperiod_violations(c)
+
+# 11. DEFECT: long_day with a winter-only (Jan) schedule, no spring -> violation (audit B4 injection).
+c = windows_crop()
+c["regions"]["northern_tier"]["resolved_by_zone"]["5"]["plant_out"] = "Jan 1 - Jan 15"
+assert any("northern_tier" in v and "long_day" in v for v in photoperiod_violations(c)), photoperiod_violations(c)
+
+# 12. DEFECT: short_day planted in SPRING (long-day-shaped) -> violation.
+c = windows_crop()
+c["regions"]["se_gulf"]["resolved_by_zone"]["9"]["plant_out"] = "Apr - May"
+assert any("se_gulf" in v and "short_day" in v for v in photoperiod_violations(c)), photoperiod_violations(c)
+
+# 13. DEFECT: intermediate_day planted in summer -> violation.
+c = windows_crop()
+c["regions"]["ca_interior"]["resolved_by_zone"]["8"]["plant_out"] = "Jun - Jul"
+assert any("ca_interior" in v and "intermediate_day" in v for v in photoperiod_violations(c)), photoperiod_violations(c)
+
+# 14. SKIP: a filled cell with no parseable plant_out -> no window-fit violation from it.
+c = windows_crop()
+del c["regions"]["se_gulf"]["resolved_by_zone"]["9"]["plant_out"]
+assert photoperiod_violations(c) == [], ("missing plant_out should skip window-fit", photoperiod_violations(c))
+
+# 15. REAL DATA: onion (the only photoperiod crop) has 0 window-fit violations.
+_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_data_final.json")
+if os.path.exists(_path):
+    import json
+    _data = json.load(open(_path))
+    _onion = next((c for c in _data["crops"] if c["slug"] == "onion"), None)
+    assert _onion is not None, "onion not found"
+    assert photoperiod_violations(_onion) == [], ("onion window-fit FP", photoperiod_violations(_onion))
+    print("  window-fit: 0 FP across onion's 20 real cells: PASS")
+
 print("photoperiod_gate: all tests passed")

@@ -23,8 +23,6 @@ import json, sys, re, collections, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from field_classification import BACKEND_KEYS, BACKEND_KEY_RE, _basis_family
 
-PATH = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
-
 # --- Excluded ruling classes (register_bearing_field_inventory_v1_0.md §4 +
 #     USER-FACING-CATEGORICAL + CN planting-window primitives). A bare string
 #     whose key is here is RULED-excluded and allowed to be unsuffixed. ---
@@ -115,48 +113,79 @@ def deferred(pat, k):
 # null is empty-by-nature, not a finding. is_prose_shaped() returns False for non-str,
 # so bare nulls are never flagged here -- RULING-2 is satisfied by construction.
 
-data = json.load(open(PATH, encoding="utf-8"))
+def _is_ruled(pat, k):
+    """A string key is RULED (not an open prose gap) when register-suffixed, an excluded/
+    backend/categorical key, a zone primitive, or path/categorical-excluded -- the shared
+    predicate behind both the per-crop function and the dataset-wide run."""
+    return bool(k.endswith("_seasoned") or k.endswith("_beginner")
+                or k in EXCLUDED_KEYS
+                or k in BACKEND_KEYS or BACKEND_KEY_RE.match(k)  # shared backend KEY slice (kills source_quote/basis drift)
+                or _basis_family(k)  # bare *_basis evidence prose is backend (checklist A3; e.g. year_round_basis)
+                or re.match(r"zone_\d+_", k)  # zone-N boolean/range primitives
+                or excluded_by_path(pat)  # roster keeps its OWN narrow path notion
+                or ruled_categorical(pat, k))
 
-cand = collections.defaultdict(lambda: {"crops": set(), "sample": None})
-defr = collections.defaultdict(lambda: {"crops": set(), "sample": None})
-def walk(o, pat, crop):
-    if isinstance(o, dict):
-        for k, v in o.items():
-            if isinstance(v, str):
-                ruled = (k.endswith("_seasoned") or k.endswith("_beginner")
-                         or k in EXCLUDED_KEYS
-                         or k in BACKEND_KEYS or BACKEND_KEY_RE.match(k)  # shared backend KEY slice (kills source_quote/basis drift)
-                         or _basis_family(k)  # bare *_basis evidence prose is backend (checklist A3; e.g. year_round_basis)
-                         or re.match(r"zone_\d+_", k)  # zone-N boolean/range primitives
-                         or excluded_by_path(pat)  # roster keeps its OWN narrow path notion
-                         or ruled_categorical(pat, k))
-                if not ruled and is_prose_shaped(v):
+
+def register_completeness_violations(crop):
+    """Per-crop half of the roster-completeness gate ([] = clean). Returns the unruled
+    prose-field paths in ONE crop -- a prose-shaped string whose key matches no ruling
+    class (the bolting-class miss, generalized). The §5 companions `why`/`reason` deferral
+    is NOT reported (deferred-by-design, not an open gap). This is the function wired into
+    the always-on whole_crop_gate; the __main__ block runs it dataset-wide with samples."""
+    out = []
+
+    def walk(o, pat):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if (isinstance(v, str) and not _is_ruled(pat, k) and is_prose_shaped(v)
+                        and not deferred(pat, k)):
+                    out.append(pat + "." + k if pat else k)
+                walk(v, (pat + "." + k if pat else k))
+        elif isinstance(o, list):
+            for x in o:
+                walk(x, pat + "[]")
+
+    walk(crop, "")
+    return out
+
+
+if __name__ == "__main__":
+    PATH = sys.argv[1] if len(sys.argv) > 1 else "crops_data_final.json"
+    data = json.load(open(PATH, encoding="utf-8"))
+
+    cand = collections.defaultdict(lambda: {"crops": set(), "sample": None})
+    defr = collections.defaultdict(lambda: {"crops": set(), "sample": None})
+
+    def walk(o, pat, crop):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if isinstance(v, str) and not _is_ruled(pat, k) and is_prose_shaped(v):
                     p = pat + "." + k if pat else k
                     bucket = defr if deferred(pat, k) else cand
                     c = bucket[p]; c["crops"].add(crop)
                     if c["sample"] is None: c["sample"] = v[:75]
-            walk(v, (pat + "." + k if pat else k), crop)
-    elif isinstance(o, list):
-        for x in o:
-            walk(x, pat + "[]", crop)
+                walk(v, (pat + "." + k if pat else k), crop)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x, pat + "[]", crop)
 
-for c in data.get("crops", []):
-    walk(c, "", c.get("slug", "?"))
+    for c in data.get("crops", []):
+        walk(c, "", c.get("slug", "?"))
 
-print("roster-completeness gate -- prose fields with NO matching ruling:\n")
-for p in sorted(cand):
-    f = cand[p]
-    print("  UNRULED  %-46s  %3d crops  e.g. %r" % (p, len(f["crops"]), f["sample"]))
-if defr:
-    print("\n  (deferred by design -- inventory §5 companions reconciliation, NOT an open gap:)")
-    for p in sorted(defr):
-        print("  DEFERRED %-46s  %3d crops" % (p, len(defr[p]["crops"])))
+    print("roster-completeness gate -- prose fields with NO matching ruling:\n")
+    for p in sorted(cand):
+        f = cand[p]
+        print("  UNRULED  %-46s  %3d crops  e.g. %r" % (p, len(f["crops"]), f["sample"]))
+    if defr:
+        print("\n  (deferred by design -- inventory §5 companions reconciliation, NOT an open gap:)")
+        for p in sorted(defr):
+            print("  DEFERRED %-46s  %3d crops" % (p, len(defr[p]["crops"])))
 
-if cand:
-    print("\nGATE: HALT -- %d unruled prose pattern(s). A HUMAN must rule each in" % len(cand))
-    print("register_bearing_field_inventory_v1_0.md (CP / SP / CATEGORICAL / EXCLUDED)")
-    print("before the conversion or new-crop admission proceeds. Do NOT auto-rule.")
-    sys.exit(1)
-print("\nGATE: PASS -- 0 unruled prose fields (modulo %d deferred §5 companions entries)." % len(defr))
-print("Every prose field on every crop is ruled-and-converted or ruled-and-deferred.")
-sys.exit(0)
+    if cand:
+        print("\nGATE: HALT -- %d unruled prose pattern(s). A HUMAN must rule each in" % len(cand))
+        print("register_bearing_field_inventory_v1_0.md (CP / SP / CATEGORICAL / EXCLUDED)")
+        print("before the conversion or new-crop admission proceeds. Do NOT auto-rule.")
+        sys.exit(1)
+    print("\nGATE: PASS -- 0 unruled prose fields (modulo %d deferred §5 companions entries)." % len(defr))
+    print("Every prose field on every crop is ruled-and-converted or ruled-and-deferred.")
+    sys.exit(0)

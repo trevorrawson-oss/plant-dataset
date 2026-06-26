@@ -236,3 +236,83 @@ if os.path.exists(_path):
         assert fp == [], (f"FALSE POSITIVE on certified annual {c['slug']}", fp)
     print(f"  annual_calendar_violations: 0 FP across {len(_annuals)} certified annuals: PASS")
 print("PASS annual_calendar (deriver + coherence gate + B1 placement gate)")
+
+# ============ heat_pause_backing_violations (B3: thermal backing gate) ============
+# Closes audit B3: a self-consistent heat_pause (calendar token + matching months) with
+# ZERO climate justification ships clean. Heat tolerance is crop+region+zone physiology
+# (same desert zone: carrot pauses Mar-Aug while zucchini pauses Jul-Aug), so a heat
+# exclusion is backed AT THE CELL, not via a shared climate table. Wherever the calendar
+# SHOWS a heat_pause token, the cell must carry a backed heat_pause object:
+#   months (non-empty) + basis_seasoned prose + >=1 sources, each source anchored by a
+#   URL in anchoring_urls. PRESENCE/SHAPE check only -- month<->calendar ALIGNMENT stays
+#   in annual_coherence_violations (A5). No-op for non-frost_anchored crops.
+
+_HP_CAL = ["cold_pause", "cold_pause", "plant", "plant", "harvest", "harvest",
+           "heat_pause", "harvest", "harvest", "cold_pause", "cold_pause", "cold_pause"]
+
+def _hp_obj(**over):
+    o = {"months": [7], "classification": "heat_pause",
+         "basis_seasoned": "Summer sowing gap is a heat exclusion: high night temps fail fruit set.",
+         "sources": ["uga_ext"],
+         "anchoring_urls": {"uga_ext": {"url": "https://x/c943", "verified": "2026-06-05"}}}
+    o.update(over)
+    return o
+
+# CLEAN: heat_pause token backed by a full object -> [].
+backed = {"harvest": "Jun - Sep", "heat_pause": _hp_obj(), "calendar": list(_HP_CAL)}
+assert ac.heat_pause_backing_violations(_crop(backed)) == [], \
+    ("backed heat_pause flagged", ac.heat_pause_backing_violations(_crop(backed)))
+
+# DEFECT object-less: a heat_pause token but no heat_pause object (the zucchini/green-beans
+# shape today, and the audit's injected token+no-backing) -> 1 violation.
+objectless = {"harvest": "Jun - Sep", "calendar": list(_HP_CAL)}
+v = ac.heat_pause_backing_violations(_crop(objectless))
+assert len(v) == 1 and "heat_pause" in v[0] and "object" in v[0], ("object-less not caught", v)
+
+# DEFECT months missing/empty.
+no_months = {"harvest": "Jun - Sep", "heat_pause": _hp_obj(months=[]), "calendar": list(_HP_CAL)}
+v = ac.heat_pause_backing_violations(_crop(no_months))
+assert len(v) == 1 and "months" in v[0], ("empty months not caught", v)
+
+# DEFECT basis_seasoned prose missing (token + months + source, but no stated reason).
+no_basis = {"harvest": "Jun - Sep", "heat_pause": _hp_obj(basis_seasoned="  "), "calendar": list(_HP_CAL)}
+v = ac.heat_pause_backing_violations(_crop(no_basis))
+assert len(v) == 1 and "basis_seasoned" in v[0], ("missing basis not caught", v)
+
+# DEFECT sources empty (a stated reason but no Tier-1 citation).
+no_sources = {"harvest": "Jun - Sep", "heat_pause": _hp_obj(sources=[]), "calendar": list(_HP_CAL)}
+v = ac.heat_pause_backing_violations(_crop(no_sources))
+assert len(v) == 1 and "source" in v[0], ("empty sources not caught", v)
+
+# DEFECT source key with no anchoring URL (a citation that points nowhere).
+unanchored = {"harvest": "Jun - Sep",
+              "heat_pause": _hp_obj(sources=["nmsu_ext"], anchoring_urls={}),
+              "calendar": list(_HP_CAL)}
+v = ac.heat_pause_backing_violations(_crop(unanchored))
+assert len(v) == 1 and "nmsu_ext" in v[0] and "anchor" in v[0].lower(), ("unanchored source not caught", v)
+
+# LEGIT: no heat_pause token in the calendar -> no claim shown -> [] (even with a stray object).
+no_token = {"harvest": "Jun - Sep", "heat_pause": _hp_obj(),
+            "calendar": ["cold_pause", "cold_pause", "plant", "plant", "harvest", "harvest",
+                         "harvest", "harvest", "harvest", "cold_pause", "cold_pause", "cold_pause"]}
+assert ac.heat_pause_backing_violations(_crop(no_token)) == [], \
+    ("no-token cell flagged", ac.heat_pause_backing_violations(_crop(no_token)))
+
+# no-op for non-frost_anchored crops.
+assert ac.heat_pause_backing_violations({"calendar_basis": "perennial_chill_gated"}) == []
+print("  heat_pause_backing_violations (B3 backing gate, unit): PASS")
+
+# REAL-DATA guard: the fully-backed annuals (and the no-heat_pause annuals) are clean;
+# zucchini-courgette + green-beans-bush are the KNOWN object-less back-fill (GATE-UNLOCK,
+# logged to the corrections log) -- the gate must fire on exactly those 13 real cells.
+if os.path.exists(_path):
+    _by_slug = {c["slug"]: c for c in _annuals}
+    _expected_unbacked = {"zucchini-courgette": 5, "green-beans-bush": 8}
+    for c in _annuals:
+        v = ac.heat_pause_backing_violations(c)
+        exp = _expected_unbacked.get(c["slug"], 0)
+        assert len(v) == exp, (f"{c['slug']}: expected {exp} unbacked heat_pause, got {len(v)}", v)
+    assert set(_expected_unbacked) <= set(_by_slug), "expected back-fill crops missing from certified annuals"
+    print(f"  heat_pause_backing_violations: 8 backed annuals clean; "
+          f"13 known object-less (zucchini 5 + green-beans 8) fire: PASS")
+print("PASS annual_calendar (deriver + coherence + B1 placement + B3 backing)")

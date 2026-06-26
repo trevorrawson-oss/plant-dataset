@@ -38,22 +38,29 @@ def _allowlisted(path):
 
 def register_fill_violations(crop):
     """Return null/empty `_seasoned`/`_beginner` register fields that must be authored
-    before this crop flips ([] = complete). Allowlisted paths are excluded."""
+    before this crop flips ([] = complete). Allowlisted paths are excluded.
+
+    Structured N/A: a dict carrying `applicable: false` IS the authored N/A form, so its
+    null `_seasoned`/`_beginner` children are not violations (the overwintering N/A on
+    cherry/beefsteak/carrot). `applicable: null` (undecided) or `applicable: true` does
+    NOT excuse them -- a null child still violates (decide + author, or set false)."""
     V = []
 
-    def walk(o, path):
+    def walk(o, path, na):
         if isinstance(o, dict):
+            # entering an {applicable: false} subtree marks its register children as N/A.
+            child_na = na or (o.get("applicable") is False)
             for k, v in o.items():
-                walk(v, path + "/" + k)
+                walk(v, path + "/" + k, child_na)
         elif isinstance(o, list):
             for i, x in enumerate(o):
-                walk(x, "%s/%d" % (path, i))
+                walk(x, "%s/%d" % (path, i), na)
         elif isinstance(o, str) or o is None:
             if path.endswith(("_seasoned", "_beginner")) and (o is None or o == ""):
-                if not _allowlisted(path):
+                if not na and not _allowlisted(path):
                     V.append(path.lstrip("/"))
 
-    walk(crop, "")
+    walk(crop, "", False)
     return V
 
 

@@ -47,6 +47,113 @@ Same-season, ~3-6 weeks, none severe (0 wrong-season across 64 sampled cells).
 
 ---
 
-## From B3 / B4 / B5 -- (append as those gates surface tensions)
+## From B3 (heat_pause thermal backing, A25) -- 2026-06-25
 
-_(empty -- fill in during the B3/B4/B5 session)_
+The B3 gate (`heat_pause_backing_violations`, test-first, GREEN) requires every cell whose
+calendar SHOWS a `heat_pause` token to carry a backed `heat_pause` object: non-empty
+`months` + `basis_seasoned` prose + >=1 `sources`, each anchored by a URL in
+`anchoring_urls`. Decided WITH Trevor (2026-06-25): backing lives at the cell, not in a
+shared region-heat table, because heat tolerance is crop+region+zone physiology (in
+`ca_desert.z9`, carrot pauses Mar-Aug while zucchini pauses Jul-Aug -- same climate, six
+different windows across the crops). 51/64 certified heat_pause cells are already fully
+backed; **13 are object-less** -- bare calendar tokens on two warm-season crops. These are
+NOT biology-wrong (the summer pause is real); they ship the `heat_pause` calendar token
+with no `heat_pause` object at all, so the "too hot to sow" claim has no stated reason or
+citation. Back-fill a full `heat_pause` object on each (months matching the calendar token,
+`basis_seasoned` prose, >=1 Tier-1 source + `anchoring_urls`).
+
+**GATE-UNLOCK:** B3's gate is BUILT + TDD-green + adversarially proven, but **left UNWIRED**
+in `whole_crop_gate.py` (wiring it now would correctly turn these 13 cells RED and break the
+18/18 green invariant during a READ-ONLY arc). After this back-fill lands, **wire
+`annual_calendar.heat_pause_backing_violations` as A25 in `whole_crop_gate.py`** (one line,
+mirror A22/A24) -- the test already encodes the green target.
+
+**Coordinate with the broccoli summer-gap relabel (B1 section above):** if any broccoli
+`northern_tier` summer `cold_pause` cell is relabeled to `heat_pause`, that new token ALSO
+needs a backing object or A25 will (correctly) flag it. The relabel must ship WITH its
+backing, in this same batch.
+
+| Crop / cell | heat_pause months (calendar) | Correction question + source to check |
+|---|---|---|
+| `zucchini-courgette` se_gulf.z8 | [Jul] | Author a `heat_pause` object: why is deep summer a sowing/setting exclusion for summer squash in the humid SE? Source: UF-IFAS VH021 / UGA C963. |
+| `zucchini-courgette` se_gulf.z9 | [Jul] | same as se_gulf.z8 |
+| `zucchini-courgette` ca_desert.z9 | [Jul, Aug] | Desert mid-summer heat exclusion for summer squash. Source: UC ANR / UA AZ1005. |
+| `zucchini-courgette` ca_desert.z10 | [Jul, Aug] | same as ca_desert.z9 |
+| `zucchini-courgette` low_desert_az.z9 | [Jul, Aug] | Low-desert mid-summer heat exclusion. Source: UA AZ1005. |
+| `green-beans-bush` se_gulf.z8 | [Jun] | Snap beans drop blossoms above ~85-90°F; back the early-summer exclusion. Source: UGA C963 / UF-IFAS VH021. |
+| `green-beans-bush` se_gulf.z9 | [Jun, Jul] | same as se_gulf.z8 (two-month window) |
+| `green-beans-bush` ca_interior.z8 | [Jun] | Interior-CA early-summer blossom-drop exclusion. Source: UC ANR. |
+| `green-beans-bush` ca_interior.z9 | [Jun] | same as ca_interior.z8 |
+| `green-beans-bush` ca_desert.z9 | [Jun, Jul] | Desert blossom-drop exclusion. Source: UC ANR / UA AZ1005. |
+| `green-beans-bush` ca_desert.z10 | [Jun, Jul] | same as ca_desert.z9 |
+| `green-beans-bush` low_desert_az.z9 | [Jun, Jul, Aug] | Low-desert 3-month blossom-drop exclusion. Source: UA AZ1005. |
+| `green-beans-bush` fl_peninsula.z10 | [Jun, Jul] | South-FL summer blossom-drop exclusion. Source: UF-IFAS VH021 / EP452. |
+
+Note: the `months` authored on each object must equal the cell's calendar `heat_pause`
+months (A5 `annual_coherence_violations` already enforces that alignment), so use the
+"heat_pause months (calendar)" column verbatim.
+
+---
+
+## From B4 (photoperiod day_length_type <-> window fit, A9) -- 2026-06-25
+
+**No data tensions surfaced.** The window-fit rule (added to `photoperiod_violations`, A9)
+ran clean across onion's 20 real cells: every cell's `plant_out` season agrees with its
+`recommended_day_length_type` (long-day spring-planted, short-day fall/winter-planted,
+intermediate fall-to-early-spring). 0 false positives; the 4 injected mismatches (long-day
+fall/winter, short-day spring, intermediate summer -- incl. the audit's exact Jan-only
+injection) all bounce. Wired live (no back-fill needed); onion stays GATE: PASS.
+
+---
+
+## From B5 (register wiring + companion gates) -- 2026-06-25
+
+Trevor's calls this session: (1) the companion EVIDENCE bar = **option (a)** -- transparency, not
+T1-only: every companion must declare an honest `evidence_label` + `confidence`, and a labeled
+speculative pairing (mechanistic/low) is allowed (beginners keep folk-wisdom companions). (2) Build
+the per-register WHY-FILL gate; **drop the per-entry reachability gate** -- a beginner-only companion
+(`good_beginner`/`bad_beginner`) is legitimate curation, NOT a bug. So **orange-navel's beginner-only
+goods/bads are correct as-is; no action.**
+
+**Tooling DONE this session (test-first, all green, JSON untouched):**
+- `register_fill_gate` over-flag FIXED: it now skips `_seasoned`/`_beginner` children of an
+  `{applicable: false}` structured-N/A object (cherry/beefsteak/carrot overwintering). `applicable:
+  null` and `applicable: true` still violate.
+- `companion_shape_gate`: added `companion_why_fill_violations` + `companion_evidence_violations`
+  (separate from the wired A19 -- they are UNWIRED pending back-fill).
+- `register_completeness_gate`: extracted per-crop `register_completeness_violations(crop)` and
+  **WIRED it into `whole_crop_gate` as A25** (0 FP across all 123 crops -- pure armor, stays green).
+
+**GATE-UNLOCK -- after the back-fill below lands, wire these into `whole_crop_gate`:**
+`register_fill_violations`, `companion_why_fill_violations`, `companion_evidence_violations` (each
+the next free A-number; A25 register_completeness is already wired).
+
+### B5a. register_fill debt -- 42 unauthored register fields across 6 early-anchor crops
+These are real schema-2.9 dual-register prose gaps (the field is FILLED on 14/18 crops; null only on
+the early anchors that certified before the field existed). cherry-tomato 8, beefsteak-tomato 8,
+carrot 9, lettuce-leaf 11, apple 5, green-beans-bush 1. Patterns to author:
+
+| Field (×count) | Crops | Note |
+|---|---|---|
+| `fertilizer.amount_{seasoned,beginner}` (8) | cherry, beefsteak, carrot, lettuce | per-feeding amount prose |
+| `watering.method_note_{seasoned,beginner}` (8) | same 4 | supplementary watering note |
+| `watering.critical_periods_{seasoned,beginner}` (8) | same 4 | drought-sensitive stages |
+| `container_notes.self_watering_notes_{seasoned,beginner}` (8) | same 4 | self-watering guidance |
+| `start_method.hardening_off_beginner` (2) | carrot, lettuce | direct-sown: author N/A prose or set N/A |
+| `moon_phase_preference.source_note_seasoned` (1) | green-beans | |
+| `companions.*_beginner_seasoned[*].why_seasoned` (5) | apple | the present-null subset of B5b below |
+| `container_notes.overwintering.approach_{seasoned,beginner}` (2) | lettuce | **`applicable: null`** -- DECIDE applicability (set `applicable:false` + N/A, or author the approach); cherry/beefsteak/carrot already use `applicable:false` |
+
+### B5b. companion why-fill debt -- 59 bare-name renders across 14 crops
+A companion that renders in a register but lacks that register's `why` shows a bare name. 44 missing
+`why_seasoned`, 15 missing `why_beginner`. Worst: apple 10 (its `good_beginner_seasoned` entries have
+`why_seasoned: null` AND no `why_beginner` -- bare in both modes). Others: carrot/basil/zucchini/
+green-beans/broccoli/onion/strawberry/lavender/zinnia/orange-navel/peach/lemon/blueberry. Rule for the
+back-fill: a `*_seasoned`/`*_beginner_seasoned` entry needs `why_seasoned`; a `*_beginner`/
+`*_beginner_seasoned` entry needs `why_beginner` (both-bucket entries need both).
+
+### B5c. companion evidence-transparency debt -- 159 gaps (decision a)
+Across 140 certified companion entries: **77 lack `evidence_label`**, **82 lack `confidence`**. Author
+both on every entry: `evidence_label` in {traditional, extension_backed, research_backed, likely,
+mechanistic, disputed}; `confidence` in {low, medium, high}. (Where present today the values are all
+valid -- the debt is absent keys, not bad values.) Speculative-but-labeled is allowed.

@@ -53,4 +53,22 @@ assert any("region_notes_seasoned" in x for x in register_fill_violations(rn)), 
 na = {"slug": "x", "succession_policy": {"reason_seasoned": None}}
 assert any("reason_seasoned" in x for x in register_fill_violations(na)), register_fill_violations(na)
 
+# 9. STRUCTURED N/A: an {applicable: false} object IS the authored N/A, so its null
+# approach_*/note_* register children are NOT violations (the overwintering N/A on
+# cherry/beefsteak/carrot). The flag is the authored form -- do not demand prose too.
+struct_na = {"slug": "x", "container_notes": {"overwintering": {
+    "applicable": False, "approach_seasoned": None, "approach_beginner": None}}}
+assert register_fill_violations(struct_na) == [], register_fill_violations(struct_na)
+
+# 10. applicable: null is UNDECIDED, not authored -> its null register children STILL violate
+# (lettuce overwintering: someone must decide applicability + author or set applicable:false).
+undecided = {"slug": "x", "container_notes": {"overwintering": {
+    "applicable": None, "approach_seasoned": None, "approach_beginner": None}}}
+assert any("approach_seasoned" in x for x in register_fill_violations(undecided)), register_fill_violations(undecided)
+
+# 11. applicable: true means the feature APPLIES -> null prose is still a violation.
+applies = {"slug": "x", "container_notes": {"overwintering": {
+    "applicable": True, "approach_seasoned": None}}}
+assert any("approach_seasoned" in x for x in register_fill_violations(applies)), register_fill_violations(applies)
+
 print("PASS register_fill_gate")

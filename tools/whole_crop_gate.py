@@ -280,9 +280,11 @@ else:
 # invariant is load-bearing: every type a region resolves to must have >=1 recommended variety
 # carrying it (no "grow short-day here" with zero short-day varieties on the page). A null cell
 # recommended_day_length_type is the Step-3.5 admission state (skipped -- A2 owns region-fill).
-# No-op unless "photoperiod" in gating_factors. (onion anchor 12, 2026-06-16.)
+# B4 adds WINDOW FIT: a cell's day_length_type must agree with its plant_out season shape
+# (long-day spring-planted, short-day fall/winter-planted -- opposite seasons), keyed on
+# plant_out only. No-op unless "photoperiod" in gating_factors. (onion anchor 12, 2026-06-16.)
 from photoperiod_gate import photoperiod_violations
-print("A9. photoperiod day-length coverage (variety + cell typing + coverage; no-op off scope)")
+print("A9. photoperiod day-length coverage (variety + cell typing + coverage + window-fit; no-op off scope)")
 _photo = photoperiod_violations(crop)
 print(f"  gating_factors={(crop.get('gating_factors') or [])!r} | photoperiod violations: {len(_photo)}")
 for m in _photo:
@@ -494,6 +496,20 @@ _aplace = annual_calendar_violations(crop)
 print(f"  annual calendar placement violations: {len(_aplace)}")
 for m in _aplace:
     fail(f"annual-calendar placement: {m}")
+
+# ---------------- A25. register completeness (every prose field is RULED; scale armor) ----------------
+# The roster-completeness gate's per-crop half: a prose-shaped string whose key matches no ruling
+# class is the generalized bolting-class miss -- a bot authoring a NEW crop with a novel prose field
+# would otherwise ship it unruled. Ran standalone before; wired always-on here (0 FP across all 123
+# crops). The companion `why`/`reason` §5 deferral is excused. register_FILL (the authored-not-null
+# half) and the companion why-fill / evidence gates are NOT yet wired -- they await the B5 back-fill
+# (see the corrections log). (B5, 2026-06-25.)
+from register_completeness_gate import register_completeness_violations
+print("A25. register completeness (every prose field is ruled; halts on a novel unruled field)")
+_regcomp = register_completeness_violations(crop)
+print(f"  unruled prose field(s): {len(_regcomp)}")
+for m in _regcomp:
+    fail(f"register-completeness: unruled prose field {m}")
 
 # ---------------- A23. raw-display snake_case (UNIVERSAL; the render-verbatim armor) ----------------
 # A20 checks the feeding/watering/Hero fields are PRESENT; this checks the render-VERBATIM ones

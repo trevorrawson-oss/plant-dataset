@@ -297,3 +297,53 @@ def annual_calendar_violations(crop):
                         out.append(f"{loc}: heat_pause on core harvest month {mon} "
                                    f"not in declared heat_pause.months (pause displaces harvest)")
     return out
+
+
+def heat_pause_backing_violations(crop):
+    """B3 thermal-backing gate (whole_crop_gate A25). Wherever a frost_anchored annual's
+    calendar SHOWS a `heat_pause` token, the cell must carry a backed `heat_pause` object:
+    a non-empty `months` list, `basis_seasoned` prose stating the thermal reason, and >=1
+    `sources`, each anchored by a URL in `anchoring_urls`. Closes audit B3 (a self-consistent
+    heat_pause with zero climate justification ships clean -- a fabricated "too hot to sow"
+    claim shown to a grower).
+
+    A heat exclusion is a crop+region+zone PHYSIOLOGY claim, not a shared climate datum:
+    in the same desert zone, carrot pauses Mar-Aug while zucchini pauses Jul-Aug. So backing
+    lives at the cell (the chill prose-backstop pattern), not in a region table. This is a
+    PRESENCE/SHAPE check, not a re-derivation; month<->calendar ALIGNMENT stays in
+    `annual_coherence_violations` (A5), and placement stays in `annual_calendar_violations`
+    (A24). No-op for non-frost_anchored crops. Returns a list of violation strings."""
+    if crop.get("calendar_basis") != "frost_anchored":
+        return []
+    out = []
+    for rk, r in (crop.get("regions") or {}).items():
+        for z, cell in (r.get("resolved_by_zone") or {}).items():
+            cal = cell.get("calendar")
+            if not isinstance(cal, list) or "heat_pause" not in cal:
+                continue                       # no heat claim shown -> nothing to back
+            loc = f"{rk}.z{z}"
+            hp = cell.get("heat_pause")
+            if not isinstance(hp, dict):
+                out.append(f"{loc}: calendar shows heat_pause but the cell carries no "
+                           f"heat_pause object (unbacked -- needs months + basis_seasoned + source)")
+                continue
+            months = hp.get("months")
+            if not (isinstance(months, list) and len(months) > 0):
+                out.append(f"{loc}: heat_pause.months missing/empty (unbacked heat exclusion)")
+            basis = hp.get("basis_seasoned")
+            if not (isinstance(basis, str) and basis.strip()):
+                out.append(f"{loc}: heat_pause.basis_seasoned prose missing "
+                           f"(a heat exclusion needs a stated thermal reason)")
+            sources = hp.get("sources")
+            if not (isinstance(sources, list) and len(sources) >= 1
+                    and all(isinstance(s, str) and s.strip() for s in sources)):
+                out.append(f"{loc}: heat_pause.sources missing/empty (>=1 Tier-1 source required)")
+            else:
+                urls = hp.get("anchoring_urls")
+                urls = urls if isinstance(urls, dict) else {}
+                for s in sources:
+                    a = urls.get(s)
+                    if not (isinstance(a, dict) and isinstance(a.get("url"), str) and a["url"].strip()):
+                        out.append(f"{loc}: heat_pause source '{s}' has no anchoring_urls URL "
+                                   f"(citation not anchored)")
+    return out
