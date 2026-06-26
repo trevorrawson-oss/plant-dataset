@@ -522,6 +522,20 @@ print(f"  annual calendar placement violations: {len(_aplace)}")
 for m in _aplace:
     fail(f"annual-calendar placement: {m}")
 
+# ---------------- A28. heat_pause thermal backing (B3; Pass-1 back-fill landed 2026-06-26) ----------
+# A24 checks placement, A5 checks months<->calendar alignment, but neither requires a shown
+# heat_pause to be BACKED. This does: wherever a frost_anchored annual's calendar SHOWS a heat_pause
+# token, the cell must carry a heat_pause object with months + basis_seasoned prose + >=1 source each
+# anchored by a URL. A heat exclusion is crop+region+zone physiology (carrot pauses Mar-Aug while
+# zucchini pauses Jul-Aug in the same desert zone), so it is backed AT THE CELL, not via a shared
+# table. No-op off frost_anchored. (Closes incognito-audit B3.)
+from annual_calendar import heat_pause_backing_violations
+print("A28. heat_pause thermal backing (every shown heat_pause has months + basis + source; no-op off annual)")
+_hpb = heat_pause_backing_violations(crop)
+print(f"  heat_pause backing violations: {len(_hpb)}")
+for m in _hpb:
+    fail(f"heat_pause backing: {m}")
+
 # ---------------- A25. register completeness (every prose field is RULED; scale armor) ----------------
 # The roster-completeness gate's per-crop half: a prose-shaped string whose key matches no ruling
 # class is the generalized bolting-class miss -- a bot authoring a NEW crop with a novel prose field

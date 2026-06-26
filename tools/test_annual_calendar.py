@@ -208,13 +208,23 @@ declared_heat["heat_pause"]["months"] = [6, 7, 8]
 assert ac.annual_calendar_violations(_crop(declared_heat)) == [], \
     ("declared heat_pause flagged", ac.annual_calendar_violations(_crop(declared_heat)))
 
-# LEGIT: cold_pause inside a too-generous harvest envelope (broccoli nt.z7 shape).
-# We deliberately do NOT check cold_pause-on-harvest (the display overstates), so [] .
-broccoli_env = {"plant_out": "Feb 22 - Mar 15", "harvest": "Apr 26 - Dec 4",
-                "calendar": ["cold_pause", "plant", "plant", "harvest", "harvest", "cold_pause",
-                             "cold_pause", "cold_pause", "plant", "growing", "harvest", "harvest"]}
-assert ac.annual_calendar_violations(_crop(broccoli_env)) == [], \
-    ("broccoli cold-in-harvest-envelope false-positived", ac.annual_calendar_violations(_crop(broccoli_env)))
+# DEFECT (GATE-UNLOCK 2026-06-26): cold_pause on a CORE harvest month -- the old broccoli nt.z7
+# over-stated-continuous-harvest shape (a 3-month summer cold_pause sitting inside an "Apr 26 - Dec 4"
+# harvest display). Now that the certified data is corrected (the summer gap relabeled heat_pause +
+# the harvest split), this contradiction is FLAGGED. Was deliberately tolerated before the fix.
+cold_on_harvest = {"plant_out": "Feb 22 - Mar 15", "harvest": "Apr 26 - Dec 4",
+                   "calendar": ["cold_pause", "plant", "plant", "harvest", "harvest", "cold_pause",
+                                "cold_pause", "cold_pause", "plant", "growing", "harvest", "harvest"]}
+v = ac.annual_calendar_violations(_crop(cold_on_harvest))
+assert any("cold_pause" in x and "harvest" in x for x in v), ("cold-on-core-harvest not caught", v)
+
+# LEGIT: cold_pause on a PARTIAL boundary harvest month (the frost tail clips in) -> NOT flagged.
+# harvest "May 1 - Nov 5" -> Nov only partly covered -> NOT core -> the Nov cold_pause is month-rounding.
+cold_boundary = {"plant_out": "Mar - Apr", "harvest": "May 1 - Nov 5",
+                 "calendar": ["cold_pause", "cold_pause", "plant", "plant", "harvest", "harvest",
+                              "harvest", "harvest", "harvest", "harvest", "cold_pause", "cold_pause"]}
+assert ac.annual_calendar_violations(_crop(cold_boundary)) == [], \
+    ("boundary cold_pause false-positived", ac.annual_calendar_violations(_crop(cold_boundary)))
 
 # no-op for non-frost_anchored crops.
 assert ac.annual_calendar_violations({"calendar_basis": "perennial_chill_gated"}) == []
@@ -302,17 +312,12 @@ assert ac.heat_pause_backing_violations(_crop(no_token)) == [], \
 assert ac.heat_pause_backing_violations({"calendar_basis": "perennial_chill_gated"}) == []
 print("  heat_pause_backing_violations (B3 backing gate, unit): PASS")
 
-# REAL-DATA guard: the fully-backed annuals (and the no-heat_pause annuals) are clean;
-# zucchini-courgette + green-beans-bush are the KNOWN object-less back-fill (GATE-UNLOCK,
-# logged to the corrections log) -- the gate must fire on exactly those 13 real cells.
+# REAL-DATA guard: the Pass-1 heat_pause back-fill HAS LANDED (2026-06-26) -- every certified
+# annual that SHOWS a heat_pause token now carries a backed object (months + basis_seasoned +
+# anchored source), incl. the 13 formerly object-less zucchini/green-beans cells and broccoli's
+# 3 northern_tier cells relabeled cold_pause->heat_pause. 0 = clean; the gate is WIRED.
 if os.path.exists(_path):
-    _by_slug = {c["slug"]: c for c in _annuals}
-    _expected_unbacked = {"zucchini-courgette": 5, "green-beans-bush": 8}
-    for c in _annuals:
-        v = ac.heat_pause_backing_violations(c)
-        exp = _expected_unbacked.get(c["slug"], 0)
-        assert len(v) == exp, (f"{c['slug']}: expected {exp} unbacked heat_pause, got {len(v)}", v)
-    assert set(_expected_unbacked) <= set(_by_slug), "expected back-fill crops missing from certified annuals"
-    print(f"  heat_pause_backing_violations: 8 backed annuals clean; "
-          f"13 known object-less (zucchini 5 + green-beans 8) fire: PASS")
+    _total = sum(len(ac.heat_pause_backing_violations(c)) for c in _annuals)
+    assert _total == 0, ("heat_pause backing regressed (was 0 after the Pass-1 back-fill)", _total)
+    print(f"  heat_pause_backing_violations: {_total} unbacked across certified annuals (Pass-1 landed): PASS")
 print("PASS annual_calendar (deriver + coherence + B1 placement + B3 backing)")

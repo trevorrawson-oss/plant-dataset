@@ -157,3 +157,24 @@ Across 140 certified companion entries: **77 lack `evidence_label`**, **82 lack 
 both on every entry: `evidence_label` in {traditional, extension_backed, research_backed, likely,
 mechanistic, disputed}; `confidence` in {low, medium, high}. (Where present today the values are all
 valid -- the debt is absent keys, not bad values.) Speculative-but-labeled is allowed.
+
+---
+
+## From Pass 1 (dates + heat_pause) -- LANDED 2026-06-26; deferred items below
+
+Pass 1 landed (content SHA `6c009feb` -> `5fe0a15b`): 16 heat_pause objects (13 zucchini/green-beans +
+3 broccoli relabel), broccoli z5/z6/z7 cold_pause->heat_pause + harvest splits, beefsteak ca_south_coast.z9
+Dec->harvest + se_gulf.z8 Sep->growing, onion fl_peninsula z10/z11 plant_out->Oct + CC calendar recompute.
+Wired `heat_pause_backing` (A28); tightened A24 with cold-pause-on-core-harvest (the broccoli GATE-UNLOCK).
+
+**Deferred (claude.ai left under the conservative rule + one CC surfaced; NOT blockers):**
+- `carrot` northern_tier.z3 -- the Apr-Jun succession sowings show no matching spring/summer harvest
+  window (display-coherence gap, not a date error). Surface the earlier harvest windows.
+- `beefsteak-tomato` + `green-beans-bush` low_desert_az.z9 -- strict UA AZ1005 fall-succession alignment
+  (~Jul-Aug) would require reconciling the cell's Jun-Aug heat_pause back-edge WITH the fall window
+  together; a methodology choice, surfaced not silently applied.
+- `beefsteak-tomato` ca_north_coast.z10 -- a `wait` token sits on a harvest month (Nov); a separate
+  `wait`-legibility item (one of the 2 pre-existing z10 release_verify notes), out of Pass-1 scope.
+  **GATE-UNLOCK:** once the z10 `wait` tokens are resolved, A24's harvest rule can extend to `wait`.
+- (optional) `beefsteak-tomato` ca_south_coast.z9 -- UC ANR supports a harvest tail into January;
+  extending the `Jul - Dec` display to "Jul - Jan" is defensible but larger than the Dec->harvest fix.

@@ -262,12 +262,15 @@ def annual_calendar_violations(crop):
         planting/harvest month with no backing (the pause-on-plant / pause-on-harvest
         heat defects). "Core" tolerates the month-rounding that legitimately puts a
         heat_pause on a partly-covered span boundary; a declared heat month is excused.
+      - cold_pause on a CORE harvest month -> the harvest display over-states into a frost
+        month (the old broccoli nt / beefsteak ca_south_coast shape). GATE-UNLOCK wired
+        2026-06-26 once the Pass-1 data fix corrected those cells (the summer gap relabeled
+        heat_pause + the harvest split); "core" tolerates the partial frost-tail boundary.
 
-    Deliberately NOT checked (would false-positive certified crops, see the audit's
-    deriver-vs-stored diff): cold_pause on a harvest month (broccoli/beefsteak overstate
-    their harvest displays into the summer gap / frost tail); and thermal BACKING of a
-    self-consistent-but-unjustified heat_pause -- that is B3 (zucchini/green-beans ship
-    legitimate unbacked summer heat_pauses today). Heat_pause/declared-months ALIGNMENT
+    Deliberately NOT checked: cold_pause on a partly-covered boundary harvest month (the
+    legitimate frost tail -- month-rounding); a `wait` token on a harvest month (a separate
+    pause-legibility item, e.g. beefsteak ca_north_coast.z10, pending its own fix); thermal
+    BACKING of a heat_pause (B3, now its own gate A28). Heat_pause/declared-months ALIGNMENT
     stays in `annual_coherence_violations` (A5)."""
     if crop.get("calendar_basis") != "frost_anchored":
         return []
@@ -289,6 +292,10 @@ def annual_calendar_violations(crop):
                 if tok in _FROST_PAUSE_TOKENS and m in plant:
                     out.append(f"{loc}: {tok} on plant_out month {mon} "
                                f"(a frost/dormancy pause cannot fall on an outdoor planting window)")
+                elif tok == "cold_pause" and m in harvest_core:
+                    out.append(f"{loc}: cold_pause on core harvest month {mon} "
+                               f"(harvest display over-states into a frost month -- split the harvest "
+                               f"or relabel the gap)")
                 elif tok == "heat_pause" and m not in declared:
                     if m in plant_core:
                         out.append(f"{loc}: heat_pause on core plant_out month {mon} "
