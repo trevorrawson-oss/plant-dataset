@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-26 -- audit-remediation Pass 3 (register prose) + register_fill A29: the CORRECTIONS BATCH IS COMPLETE [Claude Code]
+
+**Base-SHA:** `5fe0a15b7374d466...` -> **`512e5a8d2cc6d5db...`** (5 crops changed; the other 118 + all top-level keys byte-identical). The final corrections pass of the incognito-audit remediation. claude.ai authored (source-verified), Claude Code reconciled + applied + gated + wired. Commit `9d1ac02` (state `<this>`).
+
+### What landed (5 crops)
+- **35 dual-register register-prose strings** on the early-anchor cluster (cherry-tomato/beefsteak/carrot/green-beans/lettuce -- certified before these schema-2.9 fields existed): `fertilizer.amount_{seasoned,beginner}` (sourced rates: tomatoes UGA 1 lb 10-10-10/100sqft side-dress; carrot UC IPM/CSU light-feeder; lettuce UMN/USU + Ca-nitrate-for-tipburn), `watering.method_note_*` (disease-driven foliar-wetness caution) + `watering.critical_periods_*` (germination/establishment/sizing windows), `container_notes.self_watering_notes_*`, carrot+lettuce `start_method.hardening_off_beginner` (N/A lines -- both direct-sown; lettuce adds a buy-transplants caveat, carrot omits it -- per-crop, not stamped), green-beans `moon_phase_preference.source_note_seasoned` (null-phase non-recommendation, ~60F soil floor).
+- **lettuce-leaf `container_notes.overwintering.applicable` null -> false** (structural-N/A; CC applied the author-lane decision). Basis: leaf lettuce is a single-season cool annual, not a biennial winter hold; cold-region "winter lettuce" = season-extension (lives in the calendar layer), mild-region winter = normal growing window. Drops the 2 lettuce overwintering approach fields (excused by the over-flag fix) -> lettuce register fields 11->9.
+
+### Gate wired
+`register_fill_violations` WIRED as **A29** (the FILL half; A25 = RULED half). It was standalone-by-design (in-progress crops not flagged); now that the back-fill cleared the early anchors (register_fill 0 across the 18) it is always-on -- a new crop with unauthored register prose bounces at cert. Docstring updated.
+
+### Verified + the batch
+whole_crop_gate 18/18 + A29 green; 36/36 tool tests; release_verify "no new violations introduced" + D user-facing-dash scan clean (its 2 "concerns" are multi-crop-batch reference heuristics -- expected-single-crop + reference-crop-changed -- NOT real violations; the 19 dashes my broad scan saw are PRE-EXISTING en-dashes in the non-user-facing `plantings/synthesis_note` layer). **The 3-pass corrections batch is COMPLETE** (Pass 1 `31c66bf`, Pass 2 `08880f6`, Pass 3 `9d1ac02`); every audit gate is wired (A22-A29 + A9/A23). **Audit armor closed -> GO to scale.** Only the single plant-astro submodule bump (`512e5a8d`) remains, to be batched with the owed UI (calendar-two-row, A23 token-renderer, built-crops.ts, Expo port). **CC note:** `self_watering_ok` null on the 4 (notes filled); nothing renders self_watering, left as-is. Deferred nits in the corrections log.
+
+---
+
 ## 2026-06-26 -- audit-remediation Pass 1 (dates + heat_pause): A28 backing + A24 cold-on-harvest tighten [Claude Code]
 
 **Base-SHA:** `6c009feb1c0836cc...` -> **`5fe0a15b7374d466...`** (5 crops changed; the other 118 + all top-level keys byte-identical). The source-heavy round of the incognito-audit remediation. claude.ai authored (T1-verified), Claude Code reconciled + applied + gated + wired. Commit `31c66bf` (state `<this>`).
