@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-06-27 -- C11/C16 RULING ARC: A25 tightened + A35 backend-key laundering + A36 CP-required (GATE-UNLOCK) [Claude Code]
+
+**TOOLING -- `crops_data_final.json` byte-identical at `512e5a8d` (READ-ONLY held; the 21 soil-texture beginner strings are a SEPARATE claude.ai authoring back-fill, NOT done here). Third landing of the 2026-06-27 remediation arc** (after the 9-fix mechanical batch `db55321` + truth-layer increment 1 `f08fc43`). Trevor RULED the candidate list (`docs/c11-c16-ruling-list-2026-06-27.md`); CC implemented it test-first across 3 commits. The DELIBERATE outcome: **whole_crop_gate drops to 11/18** -- the authorized GATE-UNLOCK (gate-as-worklist, like the Phase B / register passes).
+
+### Landed (roster now A2-A36; 3 commits)
+- **C11 core** (`register_completeness_gate.py`) -- ruled the 49 short-string keys into `EXCLUDED_KEYS` by class (USER-FACING-CATEGORICAL / ENUM+MACHINERY / CN-PRIMITIVE / numeric-as-string) + added `uscrn_validation` to `EXCLUDED_PATH_SUBSTR`; **tightened A25** to flag ANY unruled NON-EMPTY string regardless of length (the `is_prose_shaped` length filter no longer gates the flag -- closes the <25-char evasion). Non-string novelty stays OUT of A25 (the accepted blanket: A25 polices PROSE/strings only; numbers/lists are the shape gates' + A33/A34's domain). 0-FP reconciliation caught one miss (`recipes[].title`), now ruled. Inject `mystery_advice:"Water it lots"` -> bounces.
+- **C11(c) -> A35** `backend_key_laundering_violations` -- a non-empty string under a backend-named key (summary/claim/note) OUTSIDE a known-backend subtree (`BACKEND_PATH_SUBSTR`) launders past BOTH the dash/temp scan and A25 (both exempt these keys). The check is PATH-based ON PURPOSE: `claim` is itself in `BACKEND_KEYS`, so an `is_backend(key)` test would never catch it -- only "is this in a backend SUBTREE" does. Exempts the ruled-categorical `varieties.recommended[].note`. In the 18 these keys appear only in backend subtrees + that ruled note (0 FP). Inject a root-level `claim` with a forbidden `--` -> bounces.
+- **C16 -> A36** `cp_required_gate` -- enforces the ESTABLISHED dual-register consumer set: the **74 always-dual base-names** (HARDCODED, not data-derived -- a runtime rule would let a bot's omission change the rule and escape) PLUS the newly-ruled **soil-texture trio** (`preferred/problematic/tolerated_texture`). A populated `<base>_seasoned` whose `<base>_beginner` sibling is ABSENT is the dual-voice omission (gate B read it as legit SP). The MIXED base-names (`why`/`notes`/`synthesis_note`) are EXCLUDED -- legit SP contexts Trevor ruled SP (companion why renders both via B5 fallback; variety notes SP for now). Inject delete `description_beginner` on carrot -> bounces.
+
+### The GATE-UNLOCK (Trevor-authorized, explicit)
+A36 + the soil-texture CP ruling turns **7 crops RED on 21 cells**: green-beans-bush, broccoli, blueberry, onion, orange-navel, microgreens-mix, lavender -- each carries `soil.{preferred,problematic,tolerated}_texture_seasoned` with NO `_beginner` sibling. This is a gate-as-worklist, NOT a regression: each fails ONLY on cp-required soil-texture (0 collateral violations), and their data still carries `verified_gs_arc`. **The next CONTENT step is a claude.ai 21-string beginner back-fill** (`*_texture_beginner` on the 7); when it lands (CC applies + gates) A36 clears and whole_crop_gate returns to 18/18. Mirrors the Phase B precedent (wiring a gate RED to drive the authoring worklist).
+
+### C16 SP rulings (no action -- recorded so they are not relitigated)
+The 179 backend-SP fields (synthesis_note/`*_basis`/frost_risk_note/source_note/...) are correctly SP. `companions.*.why_seasoned` SP (B5 render rule). `succession_policy.reason_seasoned` SP. `varieties.recommended[].notes_seasoned` SP for now (the post-123 variety-delta CP redesign flips these later -- do NOT author throwaway beginner variety prose now).
+
+### Verified at landing
+whole_crop_gate 11/18 (the EXACT 7 GATE-UNLOCK crops FAIL(3), 0 collateral; carrot control + the other 10 green); full tool suite 42/42 (+ test_cp_required_gate); every C11/C16 injection bounces through the live gate; canonical SHA `512e5a8d` byte-identical; git tooling/test/doc/state only. Decision: NO-GO -> GO still ahead (soil-texture back-fill + truth-layer increment 2 + C13/C15 + plant-astro bump), path concrete and in flight.
+
+---
+
 ## 2026-06-27 -- truth-layer INCREMENT 1: A33 numeric_sanity + A34 cross_consistency (the deterministic C7 defense) [Claude Code]
 
 **TOOLING release -- `crops_data_final.json` byte-identical at `512e5a8d` (READ-ONLY held, zero canonical edits). Second landing of the 2026-06-27 remediation arc, AFTER the 9-fix mechanical batch (commit `db55321`).** The audit's NO-GO rested partly on the un-gateable truth layer (C6/C7/C14: GATE: PASS proves SHAPE, not CORRECTNESS). Brainstorm brought to Trevor; he picked "build the deterministic layers first in the CC lane." This is increment 1. TDD RED-before-GREEN; 0 false positives across ALL 123 crops (not just the 18); every C7 injection re-run through the live gate and bounces.

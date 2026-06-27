@@ -618,6 +618,18 @@ print(f"  laundering violations: {len(_launder)}")
 for m in _launder:
     fail(f"backend-key-laundering: {m}")
 
+# ---------------- A36. CP-required dual-register (C16) ----------------
+# A bot can downgrade a should-be-dual consumer field to seasoned-only by omitting the _beginner
+# sibling (gate B reads that as legit SP). This enforces the established dual-register consumer set
+# (74 base-names + the newly-ruled soil-texture trio). GATE-UNLOCK: the soil-texture fields are RED
+# on 7 crops until the claude.ai 21-string beginner back-fill lands (gate-as-worklist).
+from cp_required_gate import cp_required_violations
+print("A36. CP-required dual-register (established consumer set carries both registers)")
+_cpreq = cp_required_violations(crop)
+print(f"  CP-required (missing _beginner) violations: {len(_cpreq)}")
+for m in _cpreq:
+    fail(f"cp-required: {m}")
+
 # ---------------- A29. register FILL (every ruled register field is authored; B5/Pass-3) ----------------
 # The FILL half (A25 is the RULED half): every `_seasoned`/`_beginner` register field must be authored
 # (not null/empty) -- the gap that let apple ship 30 null fields + peach 46. Skips the frost_risk_note /
