@@ -73,4 +73,40 @@ assert fp == [], f"cross-consistency FP on certified anchors: {fp}"
 if _cert:
     print(f"  real data: 0 FP across {len(_cert)} certified anchors: PASS")
 
+# ---- increment 2, RULE 2 (Trevor: continue increment 2): harvest-requires-plant ----
+# A frost_anchored cell that renders a `harvest` token must also carry a plant-class token
+# (`plant`/`indoors`) -- you cannot harvest what was never planted. Catches the copy-paste that
+# drops the planting tokens (a C7-class self-contradiction). Every frost_anchored cell in the 18
+# that harvests also plants (0 FP). No-op off frost_anchored (trees/berries plant once at
+# establishment, not in the annual strip).
+
+def _annual_cell(cal):
+    return {"slug": "x", "calendar_basis": "frost_anchored",
+            "regions": {"se_gulf": {"resolved_by_zone": {"8": {"calendar": cal}}}}}
+
+
+# 9. a cell with harvest AND plant -> clean
+assert cross_consistency_violations(_annual_cell(
+    ["cold_pause", "plant", "growing", "harvest", "harvest", "season_over"])) == [], "harvest+plant clean"
+# indoors counts as a plant-class token
+assert cross_consistency_violations(_annual_cell(
+    ["indoors", "plant", "growing", "harvest"])) == [], "indoors+harvest clean"
+
+# 10. a cell with harvest but NO plant-class token -> violation (the dropped-planting defect)
+v = cross_consistency_violations(_annual_cell(["growing", "harvest", "harvest", "season_over"]))
+assert any("harvest" in m.lower() and "plant" in m.lower() and "se_gulf" in m for m in v), \
+    f"harvest with no plant must flag: {v}"
+
+# 11. a cell with NO harvest -> no-op (nothing to check)
+assert cross_consistency_violations(_annual_cell(["cold_pause", "growing", "growing"])) == []
+
+# 12. NON-frost_anchored (a tree) with harvest but no plant -> NOT flagged (planted once at establishment)
+tree = {"slug": "peach", "calendar_basis": "perennial_chill_gated",
+        "regions": {"se_gulf": {"resolved_by_zone": {"8": {"calendar": ["bloom", "harvest", "dormant"]}}}}}
+assert cross_consistency_violations(tree) == [], "tree harvest-without-annual-plant is legit"
+
+# 13. REAL DATA still 0 FP after rule 2 (re-assert; the 18 frost_anchored cells all plant+harvest)
+fp2 = [(c["slug"], cross_consistency_violations(c)) for c in _cert if cross_consistency_violations(c)]
+assert fp2 == [], f"cross-consistency FP after rule 2: {fp2}"
+
 print("cross_consistency_gate: all tests passed")

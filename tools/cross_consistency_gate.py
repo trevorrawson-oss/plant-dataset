@@ -13,11 +13,22 @@ certified anchor states it exactly; the tolerance leaves room for authoring drif
 only on a real contradiction). The decimal-required parse skips the "0 to 14 scale" boilerplate and
 single-value mentions ("around pH 6.5").
 
-INCREMENT 2 (designed, not yet built -- each needs its own 0-FP pass): harvest-before-plant in a
-cell's calendar; a `growing` token in a month the cell's own climate calls hard-frost; rotation
-`family` vs the crop's botanical family; a heat_pause whose prose/sources name a different crop.
+RULE 2 (increment 2) -- harvest-requires-plant: a frost_anchored cell that renders a `harvest`
+token must also carry a plant-class token (`plant`/`indoors`); you cannot harvest what was never
+planted. Catches the copy-paste that drops the planting tokens. No-op off frost_anchored (trees /
+berries plant once at establishment, not in the annual month-strip).
+
+INCREMENT 2, STILL OPEN (each bottoms out at biology/prose, NOT a clean deterministic gate --
+surfaced to Trevor for the LLM-biology-judge layer, not forced here): a `growing` token in a month
+the cell's own climate calls hard-frost (needs a per-crop cold-hardiness model -- broccoli/lettuce
+grow in cool months legitimately; brushes C14); rotation `family` vs the crop's botanical family
+(the `family`/`avoid_after` fields are null on the 18, `good_after` is free-text); a heat_pause
+whose prose/sources name a different crop (needs robust crop-name-in-prose detection).
 """
 import re
+
+# Plant-class calendar tokens (the annual month-strip): the crop is being established that month.
+_PLANT_TOKENS = {"plant", "indoors", "sow", "transplant", "direct_sow", "start_indoors"}
 
 # A decimal-bearing range: "6.0 to 6.8", "6.0-6.8", "5.5 – 6.5". BOTH endpoints must carry a decimal
 # point, so the "0 to 14" pH-scale boilerplate and bare integers are never mistaken for the range.
@@ -50,6 +61,20 @@ def cross_consistency_violations(crop):
                 V.append(f"ph.{reg} states pH {stated[0]}-{stated[1]} but ph.preferred_range is "
                          f"{pref} (disagree by > {_PH_TOLERANCE}); the prose and the rendered Hero "
                          f"pH stat contradict each other")
+
+    # RULE 2 -- harvest-requires-plant (frost_anchored only).
+    if crop.get("calendar_basis") == "frost_anchored":
+        for rk, r in (crop.get("regions") or {}).items():
+            if not isinstance(r, dict):
+                continue
+            for z, cell in (r.get("resolved_by_zone") or {}).items():
+                if not isinstance(cell, dict):
+                    continue
+                cal = cell.get("calendar") or []
+                if "harvest" in cal and not any(t in _PLANT_TOKENS for t in cal):
+                    V.append(f"{rk}.{z}: calendar renders a 'harvest' token but NO plant-class token "
+                             f"({sorted(_PLANT_TOKENS)}) -- you cannot harvest what was never planted "
+                             f"(a dropped-planting self-contradiction)")
     return V
 
 

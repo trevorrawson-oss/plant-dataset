@@ -6,6 +6,17 @@
 
 ---
 
+## 2026-06-27 -- truth-layer INCREMENT 2 rule 2: harvest-requires-plant (+ 3 checks routed to the LLM-judge) [Claude Code]
+
+**TOOLING -- canonical `512e5a8d` unchanged.** Continued truth-layer increment 2 (Trevor: each check its own 0-FP pass, surfaced for approval). Probed all 4 designed checks for 0-FP feasibility; **only ONE is a clean deterministic gate**, the other 3 bottom out at biology/prose.
+
+- **BUILT -> A34 cross_consistency RULE 2 `harvest-requires-plant`** (`cross_consistency_gate.py`). A frost_anchored cell that renders a `harvest` token must also carry a plant-class token (`plant`/`indoors`) -- you cannot harvest what was never planted (catches the copy-paste that drops planting tokens, a C7-class self-contradiction). 0-FP across all 123 crops (every frost_anchored cell that harvests also plants); no-op off frost_anchored (trees/berries plant once at establishment). Inject: strip the plant tokens off a carrot cell -> bounces. whole_crop_gate stays 11/18 (the GATE-UNLOCK; rule 2 added 0 FP); suite 42/42.
+- **ROUTED TO THE LLM-BIOLOGY-JUDGE LAYER (claude.ai lane, NOT forced as gates -- they need biology/prose the deterministic layer cannot cover 0-FP):** calendar-vs-climate (a `growing` token in a self-declared hard-frost month -- needs a per-crop cold-hardiness model; broccoli/lettuce grow in cool months legitimately; brushes C14, B3 not relitigated); rotation-family vs botanical family (`family`/`avoid_after` are null on the 18, `good_after` is free-text -- no structured data); wrong-crop heat_pause physiology (crop-name-in-prose detection, FP-prone). The FINDING: the deterministic cross-consistency layer mostly bottoms out at biology, confirming the brainstorm's layering (deterministic catches structural/numeric self-contradiction; biology fidelity = the LLM-judge, option 4).
+
+Two claude.ai kickoffs written this session (in chat): (1) the biology-fidelity LLM-judge QA pass; (2) the soil-texture 21-string `*_texture_beginner` GATE-UNLOCK back-fill.
+
+---
+
 ## 2026-06-27 -- C11/C16 RULING ARC: A25 tightened + A35 backend-key laundering + A36 CP-required (GATE-UNLOCK) [Claude Code]
 
 **TOOLING -- `crops_data_final.json` byte-identical at `512e5a8d` (READ-ONLY held; the 21 soil-texture beginner strings are a SEPARATE claude.ai authoring back-fill, NOT done here). Third landing of the 2026-06-27 remediation arc** (after the 9-fix mechanical batch `db55321` + truth-layer increment 1 `f08fc43`). Trevor RULED the candidate list (`docs/c11-c16-ruling-list-2026-06-27.md`); CC implemented it test-first across 3 commits. The DELIBERATE outcome: **whole_crop_gate drops to 11/18** -- the authorized GATE-UNLOCK (gate-as-worklist, like the Phase B / register passes).
