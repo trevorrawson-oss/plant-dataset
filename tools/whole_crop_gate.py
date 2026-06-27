@@ -94,6 +94,29 @@ print(f"  calendar presence violations: {len(_cpv)}")
 for m in _cpv:
     fail(f"calendar-presence: {m}")
 
+# ---------------- A33. numeric sanity (truth-layer, deterministic) ----------------
+# The cert suite validates SHAPE, never that a NUMBER is physically plausible -- the fabricated-crop
+# attack (C7) shipped days_to_maturity:[3,5], sunlight_hours:[0,1], tree-spacing on an annual. This
+# bounds every key numeric to a physical range (spacing archetype-aware). First deterministic layer
+# of the truth-layer defense; the prose<->number cross-consistency layer is increment 2.
+from numeric_sanity_gate import numeric_sanity_violations
+print("A33. numeric sanity (key numerics within physical bounds; spacing archetype-aware)")
+_nsv = numeric_sanity_violations(crop)
+print(f"  numeric sanity violations: {len(_nsv)}")
+for m in _nsv:
+    fail(f"numeric-sanity: {m}")
+
+# ---------------- A34. cross-consistency (truth-layer, deterministic cross-field) ----------------
+# C7's copy-template-don't-refit failure makes the crop contradict ITSELF (no external truth needed):
+# the fabricated crop's prose said pH 6.0-7.5 while ph.preferred_range was [3.0,3.4]. Rule 1 here
+# cross-checks the pH prose vs the structured range; increment 2 adds calendar/biology cross-checks.
+from cross_consistency_gate import cross_consistency_violations
+print("A34. cross-consistency (fields that must agree: pH prose vs structured range)")
+_ccv = cross_consistency_violations(crop)
+print(f"  cross-consistency violations: {len(_ccv)}")
+for m in _ccv:
+    fail(f"cross-consistency: {m}")
+
 
 # ---------------- generic §3 subset (EXTEND PER CROP) ----------------
 print("A. §3 cross-field consistency -- GENERIC SUBSET ONLY (author the full per-crop set)")

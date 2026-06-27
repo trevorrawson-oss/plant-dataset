@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-27 -- truth-layer INCREMENT 1: A33 numeric_sanity + A34 cross_consistency (the deterministic C7 defense) [Claude Code]
+
+**TOOLING release -- `crops_data_final.json` byte-identical at `512e5a8d` (READ-ONLY held, zero canonical edits). Second landing of the 2026-06-27 remediation arc, AFTER the 9-fix mechanical batch (commit `db55321`).** The audit's NO-GO rested partly on the un-gateable truth layer (C6/C7/C14: GATE: PASS proves SHAPE, not CORRECTNESS). Brainstorm brought to Trevor; he picked "build the deterministic layers first in the CC lane." This is increment 1. TDD RED-before-GREEN; 0 false positives across ALL 123 crops (not just the 18); every C7 injection re-run through the live gate and bounces.
+
+### Wired (roster now A2-A34)
+- **A33 `numeric_sanity_gate`** (`tools/numeric_sanity_gate.py` + test). Bounds every key numeric to a PHYSICAL range, margin over the observed 18: ph endpoints [3.0,10.0]; days_to_maturity [7,400]; sunlight_hours [1,18]; germination_temp_f [32,110]; variety chill_hours_required [0,2000]; min/recommended_pot_gallons [1,100]; depth_inches_min [1,60]; **spacing_inches ARCHETYPE-AWARE** -- non-tree (annual/herbaceous/woody-ornamental) [1,72], tree/woody (perennial_chill_gated/perennial_evergreen/berries_woody) [1,360]. Skips absent/empty/non-numeric. Catches C7's `days_to_maturity:[3,5]` (< 7), `sunlight_hours:[0,1]` (0 < 1), and tree-spacing `[120,144]` on a frost_anchored "rutabaga" (120 > 72) -- while a real tree at [216,240] passes (archetype split).
+- **A34 `cross_consistency_gate`** (`tools/cross_consistency_gate.py` + test). The crop must not contradict ITSELF (no external truth). Rule 1: the FIRST decimal pH range in `ph.note_seasoned`/`note_beginner` must match `ph.preferred_range` within 0.5 pH units. Every certified anchor states it exactly (carrot "6.0 to 6.8" == [6.0,6.8], blueberry "4.5 to 5.5" == [4.5,5.5], ...); the decimal-required regex skips the "0 to 14 scale" boilerplate + single-value mentions. Catches C7's prose 6.0-7.5 vs structured `[3.0,3.4]`. Increment 2 (harvest-before-plant; a `growing` token in a self-declared hard-frost month; rotation `family` vs botanical family; a heat_pause whose prose/sources name a different crop) is SCOPED, each its own 0-FP pass.
+
+### Also this session (not in this commit -- delivered for Trevor's ruling)
+`docs/c11-c16-ruling-list-2026-06-27.md` -- the candidate ruling list for C11 (49 short-string keys grouped by proposed EXCLUDED_KEYS class + the 202 non-string keys' blanket ruling) and C16 (the 186 SP-by-omission fields reduced to a 6-field-type decision: 179 are legit backend-SP). Trevor ruled it (see CURRENT_STATE locked decisions); implementation (tighten A25 + the CP-required gate) is the next queued discrete fixes, test-first, with the soil-texture CP back-fill a claude.ai GATE-UNLOCK.
+
+### Verified at landing
+whole_crop_gate 18/18 PASS; full tool suite 41/41 (was 39 + numeric_sanity + cross_consistency tests); A33 + A34 injections bounce through the live gate at commit time; both gates 0 violations across all 123 crops; canonical SHA `512e5a8d` byte-identical; git status tooling/test/doc/state only. Decision unchanged: GO is NOT yet restored (the C11/C16 ruling implementation + truth-layer increment 2 + the soil-texture back-fill are still ahead), path concrete.
+
+---
+
 ## 2026-06-27 -- incognito red-team REMEDIATION: 9 mechanical gate holes hardened (A30-A32 + 6 hardenings), 4 surfaced, truth-layer brainstormed [Claude Code]
 
 **TOOLING release -- `crops_data_final.json` byte-identical at `512e5a8d` (SHA confirmed unchanged at start AND end; READ-ONLY held, zero canonical edits). NOT a content release; LATEST.txt SHA unchanged, Date/Session bumped to mark the tooling landing.** Memory-ON remediation of `docs/incognito-redteam-audit-2026-06-27.md` (16 reproduced holes C1-C16, the audit that REFUTED the 2026-06-26 "armor CLOSED -> GO to scale" with NO-GO). Discipline: TDD RED-before-GREEN on every fix; all 18 anchors reconciled to 0 false positives BEFORE each wire; every audit injection re-run through the live `whole_crop_gate` to confirm it now bounces. Full writeup + brainstorm: `docs/incognito-redteam-remediation-2026-06-27.md`.
