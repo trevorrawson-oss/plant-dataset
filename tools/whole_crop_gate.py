@@ -65,13 +65,48 @@ sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from field_classification import is_backend
 
 
+# ---------------- A30. calendar_basis enum guard (the DISPATCH guard; run first) ----------------
+# calendar_basis is THE key every calendar gate dispatches on (A3/A4/A5/A6/A9/A10/A11/A13/A14/
+# A15/A16/A24/A28). An unvalidated typo/case-slip/synonym/novel value silently no-ops the whole
+# calendar layer while the suite still prints PASS (incognito-redteam C1). Validate it FIRST so a
+# bad basis is a hard violation, not a silent dispatch miss.
+from calendar_basis_gate import calendar_basis_violations
+print("A30. calendar_basis enum guard (the dispatch key is a known archetype base)")
+_cbv = calendar_basis_violations(crop)
+print(f"  calendar_basis={crop.get('calendar_basis')!r} | violations: {len(_cbv)}")
+for m in _cbv:
+    fail(f"calendar_basis: {m}")
+
+# ---------------- A31/A32. coverage floors (region roster + calendar presence) ----------------
+# A2 validates whatever regions/cells EXIST but never asserts enough exist, so regions:{} or a
+# calendar-stripped annual certify (incognito-redteam C3/C4). A31: a non-indoor crop carries the
+# full 10-region roster (indoor collapses to {}). A32: a frost_anchored cell carries a non-empty
+# calendar (tree empty cells are A3's job).
+from coverage_floor_gate import region_roster_violations, calendar_presence_violations
+print("A31. region roster floor (non-indoor crop carries the full 10-region roster)")
+_rrv = region_roster_violations(crop)
+print(f"  region roster violations: {len(_rrv)}")
+for m in _rrv:
+    fail(f"region-roster: {m}")
+print("A32. calendar presence floor (frost_anchored cells carry a non-empty calendar; no-op off annual)")
+_cpv = calendar_presence_violations(crop)
+print(f"  calendar presence violations: {len(_cpv)}")
+for m in _cpv:
+    fail(f"calendar-presence: {m}")
+
+
 # ---------------- generic §3 subset (EXTEND PER CROP) ----------------
 print("A. §3 cross-field consistency -- GENERIC SUBSET ONLY (author the full per-crop set)")
 ph = crop.get("ph") or {}
 if ph.get("preferred_range") and ph.get("tolerated_range"):
-    ok = (ph["tolerated_range"][0] <= ph["preferred_range"][0]
-          and ph["preferred_range"][1] <= ph["tolerated_range"][1])
-    print(f"  ph preferred {ph['preferred_range']} within tolerated {ph['tolerated_range']}: {'PASS' if ok else 'FAIL'}")
+    pr, tr = ph["preferred_range"], ph["tolerated_range"]
+    # Each range must be well-ordered (lo <= hi) BEFORE nesting is meaningful: an
+    # inverted preferred [9,4] passed nesting (5.8<=9 and 4<=7.5) and rendered the Hero
+    # pH stat "9.0 to 4.0" (incognito-redteam C9). Guard endpoint order on both ranges.
+    well_ordered = pr[0] <= pr[1] and tr[0] <= tr[1]
+    nested = tr[0] <= pr[0] and pr[1] <= tr[1]
+    ok = well_ordered and nested
+    print(f"  ph preferred {pr} within tolerated {tr}: {'PASS' if ok else 'FAIL'}")
     if not ok: fail("§3 ph range nesting")
 cn = crop.get("container_notes") or {}
 if cn.get("container_ok"):

@@ -57,7 +57,9 @@ def register_fill_violations(crop):
             for i, x in enumerate(o):
                 walk(x, "%s/%d" % (path, i), na)
         elif isinstance(o, str) or o is None:
-            if path.endswith(("_seasoned", "_beginner")) and (o is None or o == ""):
+            # `.strip()` -- a whitespace-only value ("   ", "\t\n") renders BLANK to a grower
+            # but the old `o == ""` test counted it as authored (incognito-redteam C8).
+            if path.endswith(("_seasoned", "_beginner")) and (o is None or o.strip() == ""):
                 if not na and not _allowlisted(path):
                     V.append(path.lstrip("/"))
 

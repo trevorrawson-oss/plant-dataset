@@ -52,12 +52,15 @@ def shell_admission():
 # 0. the well-formed crop -> no violations
 assert photoperiod_violations(well_formed_photoperiod()) == [], photoperiod_violations(well_formed_photoperiod())
 
-# 1. a crop WITHOUT photoperiod in gating_factors -> NO-OP even if varieties are untyped
+# 1. a crop WITHOUT photoperiod in gating_factors AND WITHOUT day-length machinery -> NO-OP.
+# (A real non-photoperiod crop -- carrot, tomato -- carries no day_length_type fields at all.
+# Note: a non-photoperiod crop that DOES carry day-length machinery is the C5 token-drop attack
+# below, no longer a no-op -- see tests 16-18.)
 non_photo = {"slug": "carrot", "calendar_basis": "frost_anchored", "gating_factors": [],
              "varieties": {"recommended": ["Nantes types", "Danvers"]},
-             "regions": {"se_gulf": {"resolved_by_zone": {"9": {"recommended_day_length_type": "bogus"}}}}}
-assert photoperiod_violations(non_photo) == [], "non-photoperiod crop must be a no-op"
-# also no-op when gating_factors is missing entirely
+             "regions": {"se_gulf": {"resolved_by_zone": {"9": {"suitability": "good"}}}}}
+assert photoperiod_violations(non_photo) == [], "non-photoperiod crop (no machinery) must be a no-op"
+# also no-op when gating_factors is missing entirely (and no machinery)
 assert photoperiod_violations({"slug": "x", "varieties": {"recommended": [123]}}) == [], "missing gating_factors -> no-op"
 
 # 2. a variety with a bad day_length_type -> violation
@@ -162,5 +165,52 @@ if os.path.exists(_path):
     assert _onion is not None, "onion not found"
     assert photoperiod_violations(_onion) == [], ("onion window-fit FP", photoperiod_violations(_onion))
     print("  window-fit: 0 FP across onion's 20 real cells: PASS")
+
+# ============ incognito-redteam C5: token-drop + null-cell-type evasions ============
+# (a) Drop "photoperiod" from gating_factors and the WHOLE gate no-ops while the day_length
+#     machinery (variety types, cell types) remains -> an invalid type ships. The gate must
+#     require the token whenever NON-NULL day-length machinery is present.
+# (b) Null a single FILLED cell's recommended_day_length_type to evade coverage + window-fit
+#     while it still renders a calendar. The null-skip is only legitimate for an UNFILLED cell.
+
+# 16. token-drop, variety machinery remains -> violation (the gate would otherwise no-op)
+c = well_formed_photoperiod(); c["gating_factors"] = []
+assert any("photoperiod" in v and "gating_factors" in v for v in photoperiod_violations(c)), \
+    f"C5a: variety day_length_type present but token dropped must flag: {photoperiod_violations(c)}"
+
+# 17. token-drop, CELL machinery remains (no variety types) -> violation
+c = {"slug": "x", "gating_factors": ["cold_hardiness"],
+     "varieties": {"recommended": [{"name": "v"}]},
+     "regions": {"se_gulf": {"resolved_by_zone": {"9": {"recommended_day_length_type": "short_day"}}}}}
+assert any("photoperiod" in v and "gating_factors" in v for v in photoperiod_violations(c)), \
+    f"C5a: cell recommended_day_length_type present but token dropped must flag: {photoperiod_violations(c)}"
+
+# 18. token dropped AND an invalid type would have shipped -> still flagged (the gate is not no-op'd)
+c = well_formed_photoperiod(); c["gating_factors"] = []
+c["varieties"]["recommended"][0]["day_length_type"] = "banana"
+assert photoperiod_violations(c), "C5a: a token-dropped crop with a bogus type must not ship clean"
+
+# 19. null type on a FILLED cell (carries a calendar) -> coverage evasion, violation
+c = well_formed_photoperiod()
+cell = c["regions"]["se_gulf"]["resolved_by_zone"]["9"]
+cell["recommended_day_length_type"] = None
+cell["calendar"] = ["growing", "growing", "harvest"]  # it still renders
+assert any("se_gulf" in v and "9" in v and "null" in v.lower() for v in photoperiod_violations(c)), \
+    f"C5b: null type on a calendar-bearing cell must flag: {photoperiod_violations(c)}"
+
+# 20. REGRESSION: null type on an UNFILLED cell (no calendar) stays a no-op (Step-3.5 admission)
+c = well_formed_photoperiod()
+cell = c["regions"]["se_gulf"]["resolved_by_zone"]["9"]
+cell["recommended_day_length_type"] = None  # no calendar key -> genuinely unfilled
+# se_gulf no longer resolves short_day; remove the short_day variety so coverage stays satisfied
+c["varieties"]["recommended"] = [v for v in c["varieties"]["recommended"]
+                                 if v["day_length_type"] != "short_day"]
+assert photoperiod_violations(c) == [], \
+    f"C5b regression: null type on an UNFILLED cell must remain a no-op: {photoperiod_violations(c)}"
+
+# 21. REGRESSION: real onion (token present, all 20 cells filled+typed) -> still 0 violations.
+# (covered by test 15's real-data load above; re-assert here for the C5 changes.)
+if os.path.exists(_path):
+    assert photoperiod_violations(_onion) == [], ("C5: onion FP", photoperiod_violations(_onion))
 
 print("photoperiod_gate: all tests passed")

@@ -25,10 +25,16 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from field_classification import is_raw_display
 
-# A value that is a bare snake_case token: lowercase/digit runs joined ONLY by underscores
-# (>= 1). "full_sun"/"twice_per_year" match; "Full sun"/"every 2 weeks"/"1-2x per year"/
-# "Nitrogen-forward" (spaces, capitals, hyphens) do not. The brief's exact predicate.
-SNAKE = re.compile(r"^[a-z0-9]+(?:_[a-z0-9]+)+$")
+# A render-verbatim value shows an underscore to a grower whenever it contains an
+# underscore-JOINED alphanumeric pair (`word_word`), in ANY case, with or without
+# surrounding spaces. The original anchored lowercase predicate
+# ^[a-z0-9]+(_[a-z0-9]+)+$ missed "Full_sun" (capital), "Slow_release_granular"
+# (capital), and "full sun_partial" (a space-bearing value whose `sun_partial` token
+# still renders an underscore) -- incognito-redteam C12. A case-insensitive bare-token
+# SEARCH is a strict superset of the old anchored match and closes all three. The 18
+# carry zero underscores in any render-verbatim field; hyphens ("Nitrogen-forward",
+# "10-10-10", "every 3-4 weeks") and spaces alone never match.
+SNAKE = re.compile(r"[A-Za-z0-9]+_[A-Za-z0-9]+")
 
 
 def raw_display_violations(crop):
@@ -44,7 +50,7 @@ def raw_display_violations(crop):
             for i, v in enumerate(node):
                 walk(v, f"{path}[{i}]", key)
         elif isinstance(node, str):
-            if SNAKE.match(node) and is_raw_display(key, path):
+            if is_raw_display(key, path) and SNAKE.search(node):
                 V.append(f"{path} = {node!r} -- snake_case token in a render-verbatim display "
                          f"field; author human-readable prose")
 

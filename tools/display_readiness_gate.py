@@ -31,6 +31,17 @@ def _present(v):
     return True
 
 
+def _valid_range(v):
+    """A display range (spacing_inches, days_to_maturity) is a 2-element list of POSITIVE
+    numbers with lo <= hi. Presence alone is not enough: a scalar 0, a negative pair, or an
+    inverted [hi,lo] are all "present" yet render nonsense onto the Hero/planner cards
+    (spacing_inches:0, days_to_maturity:[-5,-10] -- incognito-redteam C10). Bools excluded
+    (a bool is an int in Python but never a measurement)."""
+    return (isinstance(v, list) and len(v) == 2
+            and all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in v)
+            and 0 < v[0] <= v[1])
+
+
 def display_readiness_violations(crop):
     """Return a list of violation strings ([] = clean)."""
     V = []
@@ -42,6 +53,15 @@ def display_readiness_violations(crop):
     if not _present(crop.get("water")):
         V.append("water: absent (Watering card / Hero renders blank)")
 
+    # days_to_maturity is UNIVERSAL sanity (annuals + the indoor microgreens carry a real
+    # [lo,hi]; perennials carry [] as the N/A). Presence is NOT required -- [] is a legit
+    # perennial N/A -- but when present it must be a positive, well-ordered range (the whole
+    # cert suite left it unbounded: days_to_maturity:[-5,-10] rendered onto the planner).
+    dtm = crop.get("days_to_maturity")
+    if dtm not in (None, []) and not _valid_range(dtm):
+        V.append(f"days_to_maturity: present but not a [lo,hi] pair of positive days "
+                 f"(lo<=hi); got {dtm!r}")
+
     if is_indoor:
         return V  # the rest is N/A for the indoor (IndoorCycleCard) surface
 
@@ -50,8 +70,12 @@ def display_readiness_violations(crop):
         V.append("sunlight_hours: absent (Hero sun-hours stat renders blank)")
     if not _present((crop.get("ph") or {}).get("preferred_range")):
         V.append("ph.preferred_range: absent (Hero pH stat renders blank)")
-    if not _present(crop.get("spacing_inches")):
+    sp = crop.get("spacing_inches")
+    if not _present(sp):
         V.append("spacing_inches: absent (spacing stat / planner placeability)")
+    elif not _valid_range(sp):
+        V.append(f"spacing_inches: present but not a [lo,hi] pair of positive inches "
+                 f"(lo<=hi); got {sp!r}")
 
     fert = crop.get("fertilizer") or {}
     for fk in ("type", "timing", "frequency"):

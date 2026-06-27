@@ -66,6 +66,16 @@ def perennial_cert_violations(crop, chill_table=None):
     chill_table = chill_table or {}
     chill_gated = "chill_hours" in gating_factors(crop)
     heat_gated = "heat_accumulation" in gating_factors(crop)
+    # C2 (incognito-redteam 2026-06-27): a perennial_chill_gated crop IS chill-gated by
+    # definition, so "chill_hours" must be in its EFFECTIVE gating_factors (the no-fruit split
+    # basis). peach/apple ship gating_factors:null -> the default carries chill_hours -> covered;
+    # but an EXPLICIT list that drops the token silently flips chill_gated=False and skips the
+    # split (an over-promising calendar then ships). This is the missing mirror of
+    # berries_woody_gate.py:59, scoped to perennial_chill_gated only (a cold-only evergreen is
+    # legitimately not chill-gated, so it is exempt).
+    if crop.get("calendar_basis") == "perennial_chill_gated" and not chill_gated:
+        V.append("a perennial_chill_gated crop must keep 'chill_hours' in gating_factors "
+                 "(the no-fruit chill split basis); got %r" % (crop.get("gating_factors"),))
     floor = min_variety_chill(crop) if chill_gated else None
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):

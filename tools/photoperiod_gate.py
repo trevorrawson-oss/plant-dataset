@@ -58,13 +58,40 @@ def _window_fit_violation(rdlt, P):
     return None
 
 
+def _has_day_length_machinery(crop):
+    """True if the crop carries a NON-NULL day_length_type (variety) or
+    recommended_day_length_type (resolved cell) anywhere -- i.e. it declares day-length
+    typing, which ONLY this gate validates. Used to require the 'photoperiod' gating token
+    (a crop carrying real types but no token would silently no-op the whole gate -- C5)."""
+    vs = (crop.get("varieties") or {}).get("recommended") or []
+    if any(isinstance(v, dict) and v.get("day_length_type") is not None for v in vs):
+        return True
+    for r in (crop.get("regions") or {}).values():
+        if not isinstance(r, dict):
+            continue
+        for cell in (r.get("resolved_by_zone") or {}).values():
+            if isinstance(cell, dict) and cell.get("recommended_day_length_type") is not None:
+                return True
+    return False
+
+
 def photoperiod_violations(crop):
     """Return a list of violation strings for a photoperiod-gated crop ([] = clean).
-    No-op (returns []) unless "photoperiod" is in the crop's gating_factors. A null
-    `recommended_day_length_type` on a cell is the Step-3.5 admission state (skipped --
-    whole_crop_gate A2 owns "this region is unauthored"); A9 enforces typing + coverage
-    only on FILLED cells, exactly as the perennial branch skips a null `suitability`."""
+    No-op (returns []) unless "photoperiod" is in the crop's gating_factors -- EXCEPT a crop
+    that carries day-length machinery without the token is itself a violation (C5: dropping the
+    token silently disables variety typing + coverage + window-fit while the types still render).
+    A null `recommended_day_length_type` on an UNFILLED cell is the Step-3.5 admission state
+    (skipped -- whole_crop_gate A2 owns "this region is unauthored"); but a null type on a
+    FILLED cell (one that carries a calendar) evades coverage while still rendering, so it is
+    flagged. A9 enforces typing + coverage only on filled cells, like the perennial branch."""
     if "photoperiod" not in (crop.get("gating_factors") or []):
+        # C5 (incognito-redteam 2026-06-27): a crop carrying NON-NULL day-length machinery but
+        # missing the token would no-op this entire gate -- require the token in that case.
+        if _has_day_length_machinery(crop):
+            return ["gating_factors must contain 'photoperiod': the crop carries day_length_type "
+                    "machinery (variety and/or resolved cell), which ONLY A9 validates; dropping "
+                    "the token silently disables variety typing, the coverage invariant, and "
+                    "window-fit. got %r" % (crop.get("gating_factors"),)]
         return []
     V = []
 
@@ -93,7 +120,15 @@ def photoperiod_violations(crop):
                 continue
             rdlt = cell.get("recommended_day_length_type")
             if rdlt is None:
-                continue  # Step-3.5 admission state -- A2 owns region-fill
+                # C5: a null type is the Step-3.5 admission state ONLY on an UNFILLED cell. A
+                # FILLED cell (carries a calendar that renders) with a null type evades coverage
+                # + window-fit while the page still shows a calendar -- flag it. A2 owns the
+                # truly-unfilled (no-calendar) cells.
+                if cell.get("calendar"):
+                    V.append(f"{rk}.{z}: filled cell (carries a calendar) has a null "
+                             f"recommended_day_length_type -- evades the coverage invariant; a "
+                             f"photoperiod crop must type every cell it renders a calendar for")
+                continue
             if rdlt not in DAY_LENGTH_ENUM:
                 V.append(f"{rk}.{z}: recommended_day_length_type {rdlt!r} not in "
                          f"{sorted(DAY_LENGTH_ENUM)}")

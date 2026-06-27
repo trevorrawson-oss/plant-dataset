@@ -105,4 +105,38 @@ c["fertilizer"]["timing"] = "side_dress_periodically"
 c["sunlight"] = "full_sun"
 assert len(raw_display_violations(c)) >= 3, raw_display_violations(c)
 
+# ---- incognito-redteam C12: a CAPITAL or a SPACE dodged the anchored lowercase regex ----
+# The original ^[a-z0-9]+(_[a-z0-9]+)+$ missed any snake token with a capital or a leading
+# space; all three of these still render an underscore to a grower.
+
+# 15. capitalized snake_case (first letter) -> violation ("Full_sun")
+c = clean_crop(); c["sunlight"] = "Full_sun"
+assert any(x.startswith("sunlight") for x in raw_display_violations(c)), \
+    f"C12: 'Full_sun' must be flagged: {raw_display_violations(c)}"
+
+# 16. capitalized multi-segment snake_case -> violation ("Slow_release_granular")
+c = clean_crop(); c["fertilizer"]["type"] = "Slow_release_granular"
+assert any("fertilizer.type" in x for x in raw_display_violations(c)), \
+    f"C12: 'Slow_release_granular' must be flagged: {raw_display_violations(c)}"
+
+# 17. a space-bearing value whose token still shows an underscore -> violation ("full sun_partial")
+c = clean_crop(); c["sunlight"] = "full sun_partial"
+assert any(x.startswith("sunlight") for x in raw_display_violations(c)), \
+    f"C12: 'full sun_partial' must be flagged (sun_partial renders an underscore): {raw_display_violations(c)}"
+
+# 18. ALL-CAPS snake -> violation ("FULL_SUN")
+c = clean_crop(); c["sunlight"] = "FULL_SUN"
+assert any(x.startswith("sunlight") for x in raw_display_violations(c)), \
+    f"C12: 'FULL_SUN' must be flagged: {raw_display_violations(c)}"
+
+# 19. REGRESSION: a hyphenated capitalized value ("Nitrogen-forward") has no underscore -> clean
+c = clean_crop(); c["fertilizer"]["type"] = "Nitrogen-forward"
+assert raw_display_violations(c) == [], raw_display_violations(c)
+# 20. REGRESSION: a normal capitalized prose phrase ("Full sun to partial shade") -> clean
+c = clean_crop(); c["sunlight"] = "Full sun to partial shade"
+assert raw_display_violations(c) == [], raw_display_violations(c)
+# 21. REGRESSION: a mapped categorical token with a capital is still EXEMPT (is_raw_display gates it)
+c = clean_crop(); c["start_method"]["start"] = "Grafted_nursery_tree"
+assert raw_display_violations(c) == [], "start_method.start stays exempt regardless of case"
+
 print("raw_display_gate: all tests passed")

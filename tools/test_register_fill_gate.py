@@ -71,4 +71,27 @@ applies = {"slug": "x", "container_notes": {"overwintering": {
     "applicable": True, "approach_seasoned": None}}}
 assert any("approach_seasoned" in x for x in register_fill_violations(applies)), register_fill_violations(applies)
 
+# ---- incognito-redteam C8: whitespace-only defeats the emptiness test ----
+# The check was `o is None or o == ""`, so a value of spaces/tabs (renders BLANK to a
+# grower) counted as authored and PASSED. `.strip()` closes it.
+
+# 12. whitespace-only seasoned field -> violation (renders blank)
+ws = {"slug": "x", "description_seasoned": "   ", "description_beginner": "B."}
+assert any("description_seasoned" in x for x in register_fill_violations(ws)), register_fill_violations(ws)
+
+# 13. whitespace-only BEGINNER field -> violation (the dual-voice-pair evasion)
+wsb = {"slug": "x", "description_seasoned": "A.", "description_beginner": "\t\n "}
+assert any("description_beginner" in x for x in register_fill_violations(wsb)), register_fill_violations(wsb)
+
+# 14. a single real character is NOT whitespace -> NOT flagged by this gate (content-blank
+# like "." is a separate concern, surfaced to the truth-layer brainstorm; .strip() only
+# closes pure whitespace).
+dot = {"slug": "x", "soil": {"note_seasoned": "A real sentence.", "note_beginner": "x"}}
+assert register_fill_violations(dot) == [], register_fill_violations(dot)
+
+# 15. REGRESSION: structured N/A whitespace children stay excused (the {applicable:false} skip)
+struct_ws = {"slug": "x", "container_notes": {"overwintering": {
+    "applicable": False, "approach_seasoned": "   ", "approach_beginner": None}}}
+assert register_fill_violations(struct_ws) == [], register_fill_violations(struct_ws)
+
 print("PASS register_fill_gate")

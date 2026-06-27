@@ -100,4 +100,45 @@ assert any("container_ok" in x and ("pot" in x or "dimension" in x) for x in dis
 c = clean_indoor(); c["water"] = None
 assert any("water" in x.split(":")[0] for x in display_readiness_violations(c)), display_readiness_violations(c)
 
+# ---- incognito-redteam C10: presence-only, no sanity bound ----
+# spacing_inches:0 and days_to_maturity:[-5,-10] are "present" and render onto the
+# Hero/planner cards; days_to_maturity was unbounded by the entire cert suite.
+
+# 10. spacing_inches scalar 0 (the injection) -> violation (renders "0 in" / breaks the planner)
+c = clean_outdoor(); c["spacing_inches"] = 0
+assert any("spacing_inches" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
+# 11. spacing_inches negative/inverted -> violation
+c = clean_outdoor(); c["spacing_inches"] = [-5, -10]
+assert any("spacing_inches" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+c = clean_outdoor(); c["spacing_inches"] = [36, 12]  # inverted (lo > hi)
+assert any("spacing_inches" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
+# 12. days_to_maturity negative (the injection [-5,-10]) -> violation
+c = clean_outdoor(); c["days_to_maturity"] = [-5, -10]
+assert any("days_to_maturity" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
+# 13. days_to_maturity inverted [hi,lo] -> violation (renders "70 to 30 days")
+c = clean_outdoor(); c["days_to_maturity"] = [70, 30]
+assert any("days_to_maturity" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
+# 14. days_to_maturity zero lower bound -> violation (nothing matures in 0 days)
+c = clean_outdoor(); c["days_to_maturity"] = [0, 30]
+assert any("days_to_maturity" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
+# 15. REGRESSION: a valid [lo,hi] DTM is clean
+c = clean_outdoor(); c["days_to_maturity"] = [55, 70]
+assert display_readiness_violations(c) == [], display_readiness_violations(c)
+
+# 16. REGRESSION: an EMPTY days_to_maturity [] is the perennial N/A (peach/apple/lemon) -> clean
+c = clean_outdoor(); c["days_to_maturity"] = []
+assert display_readiness_violations(c) == [], display_readiness_violations(c)
+
+# 17. REGRESSION: an indoor crop carries a real DTM ([10,14] microgreens) -- still bounded, clean
+c = clean_indoor(); c["days_to_maturity"] = [10, 14]
+assert display_readiness_violations(c) == [], display_readiness_violations(c)
+# and an indoor crop with an INVALID DTM is still flagged (DTM sanity is universal)
+c = clean_indoor(); c["days_to_maturity"] = [-1, -1]
+assert any("days_to_maturity" in x for x in display_readiness_violations(c)), display_readiness_violations(c)
+
 print("display_readiness_gate: all tests passed")

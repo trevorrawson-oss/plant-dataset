@@ -293,4 +293,35 @@ assert VC({"calendar_basis": "frost_anchored",
 #     no chill_hours_required by design; this lock must not demand it (would over-flag lemon/orange).
 assert VC(well_formed_evergreen()) == [], VC(well_formed_evergreen())
 
+# ====== incognito-redteam C2: chill_hours gating_factors assertion (mirror berries_woody:59) ======
+# A3's no-fruit chill split keys on `chill_hours` in the EFFECTIVE gating_factors. peach/apple
+# ship gating_factors:null -> the default ["chill_hours","cold_hardiness"] -> covered. But a tree
+# carrying an EXPLICIT gating_factors that OMITS "chill_hours" flips chill_gated=False and SILENTLY
+# skips the split (an over-promising calendar then ships). berries_woody REQUIRES the token; this
+# adds the missing mirror for perennial_chill_gated.
+
+# 30. CONTROL: peach/apple shape (gating_factors absent -> default carries chill_hours) -> clean
+t = well_formed_tree()
+assert "gating_factors" not in t  # uses the default, like the live anchors
+assert P(t) == [], P(t)
+
+# 31. CONTROL: an EXPLICIT gating_factors that KEEPS chill_hours -> clean
+t = well_formed_tree(); t["gating_factors"] = ["chill_hours", "cold_hardiness"]
+assert P(t) == [], P(t)
+
+# 32. the attack: explicit gating_factors OMITS chill_hours on a perennial_chill_gated tree -> violation
+t = well_formed_tree(); t["gating_factors"] = ["cold_hardiness"]
+assert any("chill_hours" in v and "gating_factors" in v for v in P(t)), P(t)
+
+# 33. the attack with TEETH: omitting chill_hours was hiding an over-promise (chill-limited cell with a
+#     calendar). With the assertion, the crop bounces even though the split itself was no-op'd.
+t = well_formed_tree(); t["gating_factors"] = ["cold_hardiness"]
+below = copy.deepcopy(CHILL_TABLE); below["northern_tier"]["4"] = [200, 350]  # below the 400 floor
+# survives_no_fruit cell "4" already carries a calendar -> would be a silent over-promise pre-fix
+assert any("chill_hours" in v and "gating_factors" in v for v in P(t, below)), P(t, below)
+
+# 34. REGRESSION: a perennial_EVERGREEN (cold-only, legitimately no chill_hours) is NOT subject to
+#     the assertion -- the check is scoped to perennial_chill_gated only.
+assert perennial_cert_violations(well_formed_evergreen()) == [], perennial_cert_violations(well_formed_evergreen())
+
 print("PASS perennial_gate")
