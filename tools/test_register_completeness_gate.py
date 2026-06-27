@@ -44,4 +44,34 @@ if os.path.exists(_path):
         assert fp == [], (f"register_completeness FALSE POSITIVE on certified {c['slug']}", fp)
     print(f"  register_completeness_violations: 0 unruled across {len(cert)} certified: PASS")
 
+# ---- incognito-redteam C11 (Trevor ruling 2026-06-27): tighten A25 to flag ANY unruled STRING ----
+# regardless of length (the <25-char evasion), now that the 49 legit short-string keys are ruled.
+
+# 6. a novel SHORT-string field (the audit injection) -> flagged (was missed at <25 chars)
+short_novel = {"slug": "x", "mystery_advice": "Water it lots"}
+assert any("mystery_advice" in p for p in register_completeness_violations(short_novel)), \
+    f"C11(a): a short novel string must now flag: {register_completeness_violations(short_novel)}"
+
+# 7. a novel NON-STRING field -> NOT flagged (A25 polices PROSE/strings only; A33/A34 + shape
+#    gates own non-string novelty -- the accepted blanket ruling).
+nonstr_novel = {"slug": "x", "mystery_count": 42, "mystery_list": ["a", "b"]}
+assert register_completeness_violations(nonstr_novel) == [], \
+    f"C11(b): non-string novelty is out of A25's scope: {register_completeness_violations(nonstr_novel)}"
+
+# 8. an empty / whitespace-only unruled string -> NOT flagged (not a novel field)
+assert register_completeness_violations({"slug": "x", "blank": "", "ws": "   "}) == []
+
+# 9. the RULED short-string keys (Part 1) stay clean -- a crop carrying them is not flagged
+ruled_short = {"slug": "x",
+               "soil": {"drainage_requirement": "well_draining", "organic_matter_preference": "high",
+                        "preferred_texture_core": "loam"},
+               "harvest_urgency": "daily", "hardiness_zone_min": "8b",
+               "diseases": [{"audience": "core", "cause": "too much nitrogen"}],
+               "notifications": [{"offset_from": "last_frost", "trigger": "days_after_sow", "stage": "germination"}],
+               "regions": {"ca_desert": {"resolved_by_zone": {"10": {
+                   "resolved_from": {"first_frost": "Sep 15", "last_frost": "May 15"}}}}},
+               "varieties": {"recommended": [{"species": "Lavandula angustifolia", "bloom_group": "very_early"}]}}
+assert register_completeness_violations(ruled_short) == [], \
+    f"ruled short-string keys must stay clean: {register_completeness_violations(ruled_short)}"
+
 print("PASS register_completeness_gate (per-crop function)")

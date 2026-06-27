@@ -67,6 +67,23 @@ EXCLUDED_KEYS = {
     # SCHEMA 2.9 universal-plain (bare-by-design -- one plain line shown to BOTH
     # registers, no _seasoned/_beginner split; see schema_2_9 scope Section 9).
     "recommended_rootstock_note","establishment_note","what_to_ask_nursery","recommended_note",
+    # --- incognito-redteam C11 Part 1 (Trevor ruling 2026-06-27): the 49 short-string keys the
+    #     18 carry unruled, ruled into their classes so the tightened A25 (flag ANY unruled string)
+    #     does not flood. See docs/c11-c16-ruling-list-2026-06-27.md. ---
+    # USER-FACING-CATEGORICAL (short rendered token/label, read identically by both registers):
+    "drainage_requirement","organic_matter_preference","preferred_texture_core",
+    "problematic_texture_core","tolerated_texture_core","shape_requirements","grown_as",
+    "leaf_habit","recommended_type","bloom_group","season","days_or_season","size_class",
+    "harvest_urgency","level","system","species","subtitle","title","cane_type","gravel_layer",
+    "drought_tolerance","watering_method","start","day_length_type","recommended_day_length_type",
+    # ENUM / NOTIFICATION + AUDIT MACHINERY:
+    "audience","offset_from","trigger","stage","measures","cause","author",
+    "last_reviewed_operation","overrides_tip_id","verified_date","recommended_rootstock",
+    # CN CLIMATE / PLANTING-WINDOW PRIMITIVE (resolved_from dates + bloom window):
+    "first_frost","last_frost","window",
+    # NUMERIC-AS-STRING (zone / lifespan values carried as strings; categorical, not prose):
+    "hardiness_zone_max","hardiness_zone_min","reliable_fruit_zone_max","reliable_fruit_zone_min",
+    "productive_lifespan_years",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
@@ -75,7 +92,8 @@ EXCLUDED_KEYS = {
 # no siblings, never rendered); its whole subtree (`primary`, `frost_data`, `_note`, ...)
 # is EXCLUDED. Ruled by Trevor at the basil herb anchor, 2026-06-12.
 EXCLUDED_PATH_SUBSTR = ("plantings_provenance", "verification_status", "anchoring_urls",
-                        "sources_summary")
+                        "sources_summary",
+                        "uscrn_validation")  # C11 Part 1: the uscrn_* date/coverage machinery block
 
 def excluded_by_path(pat):
     return any(s in pat for s in EXCLUDED_PATH_SUBSTR)
@@ -137,7 +155,13 @@ def register_completeness_violations(crop):
     def walk(o, pat):
         if isinstance(o, dict):
             for k, v in o.items():
-                if (isinstance(v, str) and not _is_ruled(pat, k) and is_prose_shaped(v)
+                # C11 (Trevor ruling 2026-06-27): flag ANY unruled NON-EMPTY STRING, regardless of
+                # length -- the <25-char evasion (mystery_advice:"Water it lots") is closed now that
+                # the 49 legit short-string keys are ruled. is_prose_shaped is no longer the gate;
+                # an unruled string of any length is a novel field a human must rule (STOP-AND-ASK).
+                # Non-string novelty is out of scope (A25 polices PROSE only -- the shape/archetype
+                # gates + A33/A34 own numbers/lists); empty/whitespace strings are not novel fields.
+                if (isinstance(v, str) and v.strip() and not _is_ruled(pat, k)
                         and not deferred(pat, k)):
                     out.append(pat + "." + k if pat else k)
                 walk(v, (pat + "." + k if pat else k))
@@ -159,7 +183,7 @@ if __name__ == "__main__":
     def walk(o, pat, crop):
         if isinstance(o, dict):
             for k, v in o.items():
-                if isinstance(v, str) and not _is_ruled(pat, k) and is_prose_shaped(v):
+                if isinstance(v, str) and v.strip() and not _is_ruled(pat, k):  # C11: any unruled string
                     p = pat + "." + k if pat else k
                     bucket = defr if deferred(pat, k) else cand
                     c = bucket[p]; c["crops"].add(crop)
