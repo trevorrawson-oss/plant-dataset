@@ -601,12 +601,22 @@ for m in _hpb:
 # crops). The companion `why`/`reason` §5 deferral is excused. register_FILL (the authored-not-null
 # half) and the companion why-fill / evidence gates are NOT yet wired -- they await the B5 back-fill
 # (see the corrections log). (B5, 2026-06-25.)
-from register_completeness_gate import register_completeness_violations
+from register_completeness_gate import (register_completeness_violations,
+                                         backend_key_laundering_violations)
 print("A25. register completeness (every prose field is ruled; halts on a novel unruled field)")
 _regcomp = register_completeness_violations(crop)
 print(f"  unruled prose field(s): {len(_regcomp)}")
 for m in _regcomp:
     fail(f"register-completeness: unruled prose field {m}")
+
+# ---------------- A35. backend-key dash-laundering (C11(c)) ----------------
+# summary/claim/note are backend keys exempt from the dash/temp scan + A25; a user-facing string
+# under one OUTSIDE a known-backend subtree launders past both (incl. a forbidden `--`).
+print("A35. backend-key laundering (summary/claim/note outside a backend subtree)")
+_launder = backend_key_laundering_violations(crop)
+print(f"  laundering violations: {len(_launder)}")
+for m in _launder:
+    fail(f"backend-key-laundering: {m}")
 
 # ---------------- A29. register FILL (every ruled register field is authored; B5/Pass-3) ----------------
 # The FILL half (A25 is the RULED half): every `_seasoned`/`_beginner` register field must be authored

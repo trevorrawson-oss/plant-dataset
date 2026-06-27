@@ -11,7 +11,8 @@ Run: python3 tools/test_register_completeness_gate.py
 """
 import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from register_completeness_gate import register_completeness_violations
+from register_completeness_gate import (register_completeness_violations,
+                                         backend_key_laundering_violations)
 
 # 1. a crop whose prose is all register-suffixed / excluded -> clean.
 clean = {"slug": "x", "description_seasoned": "A long enough seasoned sentence of prose.",
@@ -73,5 +74,38 @@ ruled_short = {"slug": "x",
                "varieties": {"recommended": [{"species": "Lavandula angustifolia", "bloom_group": "very_early"}]}}
 assert register_completeness_violations(ruled_short) == [], \
     f"ruled short-string keys must stay clean: {register_completeness_violations(ruled_short)}"
+
+# ---- incognito-redteam C11 (c) (Trevor: pursue): backend-key dash-laundering ----
+# summary/claim/note are backend keys exempt from the dash/temp scan + A25. A user-facing string
+# under one OUTSIDE a known-backend subtree launders past those scans (incl. a forbidden `--`).
+
+# 10. claim at the crop root -> flagged (claim is in BACKEND_KEYS, so the check must be PATH-based)
+assert any("claim" in v for v in backend_key_laundering_violations(
+    {"slug": "x", "claim": "Tomatoes love full sun -- plant early."})), "root-level claim must flag"
+
+# 11. note / summary at a user-facing position -> flagged
+assert any("note" in v for v in backend_key_laundering_violations(
+    {"slug": "x", "soil": {"note": "Work in compost -- it helps."}})), "user-facing note must flag"
+assert any("summary" in v for v in backend_key_laundering_violations(
+    {"slug": "x", "summary": "A grower-facing summary that should be a ruled field."})), "root summary must flag"
+
+# 12. note INSIDE a known-backend subtree -> NOT flagged (legit machinery)
+assert backend_key_laundering_violations(
+    {"slug": "x", "regions": {"ca_desert": {"plantings_provenance": {"note": "deriver note -- ok"}}}}) == [], \
+    "note under plantings_provenance is legit backend"
+assert backend_key_laundering_violations(
+    {"slug": "x", "verification_status": {"open_findings": [{"summary": "audit -- ok", "note": "x"}]}}) == [], \
+    "summary/note under verification_status is legit backend"
+
+# 13. the ruled-categorical varieties.recommended[].note -> NOT flagged (Trevor's per-variety note)
+assert backend_key_laundering_violations(
+    {"slug": "x", "varieties": {"recommended": [{"name": "v", "note": "Fast brassica, 8 to 12 days; spicy."}]}}) == [], \
+    "varieties.recommended[].note is ruled categorical, exempt"
+
+# 14. REAL DATA: 0 FP across the 18 (summary/claim/note all live in backend subtrees or the ruled note)
+if os.path.exists(_path):
+    fp = [(c["slug"], backend_key_laundering_violations(c)) for c in cert if backend_key_laundering_violations(c)]
+    assert fp == [], f"C11(c) laundering FP on certified anchors: {fp}"
+    print(f"  backend_key_laundering: 0 FP across {len(cert)} certified: PASS")
 
 print("PASS register_completeness_gate (per-crop function)")

@@ -21,7 +21,13 @@ structure) + run dataset-wide as needed. Run:
 import json, sys, re, collections, os
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from field_classification import BACKEND_KEYS, BACKEND_KEY_RE, _basis_family
+from field_classification import BACKEND_KEYS, BACKEND_KEY_RE, _basis_family, BACKEND_PATH_SUBSTR
+
+# C11(c) (incognito-redteam, Trevor 2026-06-27): backend-named keys that carry a user-facing
+# string OUTSIDE a known-backend subtree launder past the dash/temp scan + A25 (they are exempt
+# from both BY KEY). The check is PATH-based on purpose: `claim` is itself in BACKEND_KEYS, so an
+# is_backend(key,...) test would never catch it -- only "is this in a backend SUBTREE" does.
+LAUNDERING_KEYS = {"summary", "claim", "note"}
 
 # --- Excluded ruling classes (register_bearing_field_inventory_v1_0.md §4 +
 #     USER-FACING-CATEGORICAL + CN planting-window primitives). A bare string
@@ -142,6 +148,33 @@ def _is_ruled(pat, k):
                 or re.match(r"zone_\d+_", k)  # zone-N boolean/range primitives
                 or excluded_by_path(pat)  # roster keeps its OWN narrow path notion
                 or ruled_categorical(pat, k))
+
+
+def backend_key_laundering_violations(crop):
+    """C11(c): a non-empty string under a backend-named key (summary/claim/note) that sits OUTSIDE
+    a known-backend subtree (BACKEND_PATH_SUBSTR) is a user-facing string laundering past the
+    dash/temp scan + A25, which both exempt these keys. Flag it for review -- rename to a ruled
+    field or confirm it is backend. Exempts the ruled-categorical varieties.recommended[].note.
+    Returns [] = clean. (The 18 carry these keys only in backend subtrees + that ruled note.)"""
+    V = []
+
+    def walk(o, pat):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                p = (pat + "." + k) if pat else k
+                if (k in LAUNDERING_KEYS and isinstance(v, str) and v.strip()
+                        and not any(s in p for s in BACKEND_PATH_SUBSTR)
+                        and not ruled_categorical(pat, k)):
+                    V.append(f"{p}: backend-named key {k!r} carries a user-facing string outside a "
+                             f"known-backend subtree (launders past the dash/temp + A25 scans); "
+                             f"rename to a ruled register field, or confirm it is backend")
+                walk(v, p)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x, pat + "[]")
+
+    walk(crop, "")
+    return V
 
 
 def register_completeness_violations(crop):
