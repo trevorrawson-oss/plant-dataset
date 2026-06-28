@@ -8,11 +8,12 @@ gate closes that: every base-name in the ESTABLISHED dual-register consumer set 
 already carry both registers for) PLUS the newly-ruled soil-texture fields must carry BOTH a
 `_seasoned` AND a `_beginner` sibling.
 
-GATE-UNLOCK (Trevor): the soil-texture fields (preferred/problematic/tolerated_texture) are ruled
-CP but the 7 crops carrying them have no `_beginner` yet -> the gate goes RED on those 21 cells
-until a claude.ai back-fill lands (gate-as-worklist, like the register passes). So on the live 18
-this gate returns EXACTLY the 21 soil-texture worklist items and ZERO established-set violations.
-SP-ruled fields (why_seasoned, reason_seasoned, the backend *_note/*_basis) are NOT in the CP set.
+GATE-UNLOCK (Trevor): the soil-texture fields (preferred/problematic/tolerated_texture) were ruled
+CP while the 7 crops carrying them had no `_beginner` yet -> the gate went RED on those 21 cells
+until a claude.ai back-fill landed (gate-as-worklist, like the register passes). That back-fill
+LANDED 2026-06-28, so the live 18 are now 0-FP on this gate (established set + soil texture both
+dual-complete). SP-ruled fields (why_seasoned, reason_seasoned, the backend *_note/*_basis) are NOT
+in the CP set. The synthetic omission tests below still prove the gate fires on a deleted sibling.
 """
 import json
 import os
@@ -54,18 +55,14 @@ for tex in ("preferred_texture", "problematic_texture", "tolerated_texture"):
 # 5. a whitespace/empty _seasoned -> not a populated field, not flagged here (A29 owns emptiness)
 assert cp_required_violations({"slug": "x", "description_seasoned": "   "}) == []
 
-# 6. REAL DATA: the ONLY violations across the 18 are the 21 soil-texture worklist items;
-#    the established 74-name consumer set is 0-FP (every _seasoned has its _beginner).
+# 6. REAL DATA: the GATE-UNLOCK is RESOLVED -- the soil-texture beginner back-fill landed
+#    (2026-06-28), so all 18 certified crops are now 0-FP on A36 (the established 74-name consumer
+#    set AND the soil-texture trio are both dual-complete). Originally this asserted the 21-item
+#    worklist; that worklist is cleared.
 if _cert:
-    all_v = [(c["slug"], m) for c in _cert for m in cp_required_violations(c)]
-    non_texture = [(s, m) for s, m in all_v if "_texture" not in m]
-    assert non_texture == [], f"established-set CP FALSE POSITIVES (should be 0): {non_texture}"
-    texture = [(s, m) for s, m in all_v if "_texture" in m]
-    assert len(texture) == 21, f"expected 21 soil-texture GATE-UNLOCK items (7 crops x 3), got {len(texture)}"
-    worklist_crops = sorted({s for s, _ in texture})
-    assert worklist_crops == ["blueberry", "broccoli", "green-beans-bush", "lavender",
-                              "microgreens-mix", "onion", "orange-navel"], worklist_crops
-    print(f"  real data: established set 0-FP; {len(texture)} soil-texture GATE-UNLOCK items "
-          f"across {len(worklist_crops)} crops (the claude.ai back-fill worklist): PASS")
+    fp = [(c["slug"], m) for c in _cert for m in cp_required_violations(c)]
+    assert fp == [], f"cp_required FALSE POSITIVES on the 18 (GATE-UNLOCK should be cleared): {fp}"
+    print(f"  real data: 0 cp_required violations across {len(_cert)} certified "
+          f"(GATE-UNLOCK cleared by the soil-texture back-fill): PASS")
 
 print("cp_required_gate: all tests passed")

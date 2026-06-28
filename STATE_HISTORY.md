@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-28 -- CONTENT: soil-texture beginner back-fill -> A36 GATE-UNLOCK cleared, 18/18 [Claude Code, claude.ai authored]
+
+**FIRST canonical CONTENT change of the 2026-06-27 remediation arc (everything before was tooling). Base-SHA `512e5a8d` -> `6dfd9798`; 7 crops changed, the other 116 + all top-level keys byte-identical.** claude.ai (authoring lane) wrote the 21 beginner strings; Claude Code reconciled + applied + gated. Clears the C16 GATE-UNLOCK wired 2026-06-27 (commit `9469748`).
+
+### What landed (7 crops, 21 strings)
+`soil.{preferred,problematic,tolerated}_texture_beginner` authored on green-beans-bush, broccoli, blueberry, onion, orange-navel, microgreens-mix, lavender — the 7 crops the C16 ruling turned RED on A36 (`cp_required_gate`). The beginner register restates each `_seasoned` fact in plain, jargon-explained language (e.g. orange-navel "a disease called root rot" for the seasoned "Phytophthora foot and root rot"; blueberry "take up water and nutrients less easily than most plants" for "lack the root hairs..."). Genuinely beginner-level, not a synonym swap.
+
+### How applied (CC lane)
+A scripted insert placed each `_beginner` immediately after its `_seasoned` sibling in the soil block; JSON written COMPACT (separators=(",",":"), ensure_ascii=False, no trailing newline). A strict diff-scope check confirmed: source_catalog + region_chill_delivered unchanged, the other 116 crops byte-identical, exactly 21 keys added across the 7 soil blocks, and each changed crop identical apart from those 3 keys.
+
+### Sourcing (decided, recorded)
+The beginner needs NO citation of its own. `_seasoned` and `_beginner` are two VOICES of one claim; sourcing attaches at the claim/block level — `soil.sources` + `soil.anchoring_urls` already cover the soil prose, shared by both registers (measured: 0 of ~2878 existing `_beginner` fields carry their own `_sources`). The back-fill adds NO new fact beyond the seasoned, so it is sourcing-complete by construction. No source-truth sample needed (no new claims/sources).
+
+### Verified at landing
+whole_crop_gate **18/18** (A36 cleared on all 7); `cp_required_gate` 0 violations across all 123; full tool suite 42/42 (`test_cp_required_gate` updated from asserting the transient 21-item worklist to the resolved 0-violation state; the synthetic omission tests still fire on a deleted sibling). release_verify vs base `512e5a8d`: **no new violations introduced**, user-facing dash/spelled-degrees scan clean, beginner-notes-present ok; the single non-blocking concern is the PRE-EXISTING beefsteak `wait`-months Step-5.5 review item (in the base, not from this change). **The content reaches the live site only via a plant-astro submodule bump to `6dfd9798` (gated on Trevor).**
+
+---
+
 ## 2026-06-27 -- truth-layer INCREMENT 2 rule 2: harvest-requires-plant (+ 3 checks routed to the LLM-judge) [Claude Code]
 
 **TOOLING -- canonical `512e5a8d` unchanged.** Continued truth-layer increment 2 (Trevor: each check its own 0-FP pass, surfaced for approval). Probed all 4 designed checks for 0-FP feasibility; **only ONE is a clean deterministic gate**, the other 3 bottom out at biology/prose.
