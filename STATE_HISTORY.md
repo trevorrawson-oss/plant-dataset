@@ -6,6 +6,14 @@
 
 ---
 
+## 2026-06-28 -- biology-fidelity judge v1.0 landed + CC-validated (advisory truth-layer QA) [claude.ai authored, Claude Code reviewed]
+
+**Docs-only (canonical `6dfd9798` unchanged).** The kickoff-biology chat delivered `biology_fidelity_judge_v1_0.md` + `biology_fidelity_calibration_probe.py` (saved to `docs/kickoffs/02-biology-fidelity-llm-judge/`). An 8-dimension advisory QA rubric (D1 family coherence, D2 calendar-vs-climate, D3 numeric species-fitness, D4 source-content fidelity/C6, D5 pause-physiology attribution, D6 internal contradiction, D7 dual-register-honesty/C16-candidates, D8 gestalt) for the un-gateable truth layer the deterministic gates can't reach. It houses the 3 increment-2 checks the remediation routed to biology (calendar-vs-climate -> D2, rotation-family -> D1, wrong-crop heat_pause -> D5) + C6/C7/C14.
+
+**CC validation:** ran its calibration probe against the live 18 -- the only 2 raw FP flags (onion `rotation.family:"Allium"`, microgreens `ph:[]`) are exactly the 2 traps it documented carve-outs for (colloquial-but-correct grouping; legit N/A blend) -> **0/18 calibrated**. Data claims verified (`rotation.family` is populated free-text, families correct, 0 uncatalogued sources across the 18). Respects B3 (no shared region-heat/cold envelope), positions the judge as ADVISORY (not a gate) with the A33/A34 promotion path (recurring deterministic patterns graduate to the CC gate lane). **CC verdict: nothing new to wire deterministically from v1.0 -- correct, the structural halves are already gates E/A33/A34, the rest is irreducibly semantic.** NEXT (claude.ai lane): the live 8-dimension run against the 18 to publish the per-dimension semantic FP rate before any bot batch. §6 decisions (advisory-vs-blocking, FP bar, sample interaction, CP/SP inventory timing) are Trevor's.
+
+---
+
 ## 2026-06-28 -- CONTENT: soil-texture beginner back-fill -> A36 GATE-UNLOCK cleared, 18/18 [Claude Code, claude.ai authored]
 
 **FIRST canonical CONTENT change of the 2026-06-27 remediation arc (everything before was tooling). Base-SHA `512e5a8d` -> `6dfd9798`; 7 crops changed, the other 116 + all top-level keys byte-identical.** claude.ai (authoring lane) wrote the 21 beginner strings; Claude Code reconciled + applied + gated. Clears the C16 GATE-UNLOCK wired 2026-06-27 (commit `9469748`).
