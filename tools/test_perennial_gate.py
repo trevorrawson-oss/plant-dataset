@@ -324,4 +324,32 @@ assert any("chill_hours" in v and "gating_factors" in v for v in P(t, below)), P
 #     the assertion -- the check is scoped to perennial_chill_gated only.
 assert perennial_cert_violations(well_formed_evergreen()) == [], perennial_cert_violations(well_formed_evergreen())
 
+# ====== re-audit #2 D5: heat_accumulation token-drop (missing mirror of the C2 chill guard) ======
+# A3's heat floor only runs when "heat_accumulation" in gating_factors; a crop carrying heat
+# machinery (cells with heat_summer_basis) that drops the token silently no-ops the floor.
+
+# 35. CONTROL: orange-like with heat machinery + the token -> clean
+assert perennial_cert_violations(well_formed_heat_evergreen()) == [], perennial_cert_violations(well_formed_heat_evergreen())
+# 36. drop heat_accumulation while heat_summer_basis cells remain -> violation
+h = well_formed_heat_evergreen(); h["gating_factors"] = ["cold_hardiness"]
+assert any("heat_accumulation" in v and "gating_factors" in v for v in perennial_cert_violations(h)), \
+    f"D5: heat machinery present but token dropped must flag: {perennial_cert_violations(h)}"
+# 37. a crop with NO heat machinery (lemon: cold-only) -> NOT required to carry the token
+assert perennial_cert_violations(well_formed_evergreen()) == [], "cold-only evergreen needs no heat token"
+
+# ====== re-audit #2 D4: suitability:null skips a FILLED tree cell entirely ======
+# The `if s is None: continue` admission shortcut sat above every invariant; a calendar-bearing cell
+# with null suitability rendered a 12-month fruit calendar in a zone the tree may die in.
+
+# 38. a cell with suitability=null but a NON-EMPTY calendar -> violation (filled cell needs a decision)
+t = well_formed_tree()
+t["regions"]["se_gulf"]["resolved_by_zone"]["8"]["suitability"] = None  # keeps its fruiting calendar
+assert any("suitability" in v and "8" in v and ("null" in v.lower() or "filled" in v.lower())
+           for v in P(t)), f"D4: null suitability on a calendar-bearing cell must flag: {P(t)}"
+# 39. REGRESSION: suitability=null on an UNFILLED cell (empty calendar) stays the admission no-op
+t = well_formed_tree()
+cell = t["regions"]["se_gulf"]["resolved_by_zone"]["8"]
+cell["suitability"] = None; cell["calendar"] = []
+assert P(t) == [], f"D4 regression: null suitability + empty calendar is the admission state: {P(t)}"
+
 print("PASS perennial_gate")

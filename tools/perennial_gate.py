@@ -76,6 +76,18 @@ def perennial_cert_violations(crop, chill_table=None):
     if crop.get("calendar_basis") == "perennial_chill_gated" and not chill_gated:
         V.append("a perennial_chill_gated crop must keep 'chill_hours' in gating_factors "
                  "(the no-fruit chill split basis); got %r" % (crop.get("gating_factors"),))
+    # D5 (re-audit #2): the heat floor below only runs when heat_gated; a crop carrying heat
+    # machinery (any cell with a heat_summer_basis) that drops the 'heat_accumulation' token would
+    # silently no-op it. Mirror of the C2 chill guard (and the C5 photoperiod machinery guard):
+    # heat machinery present => the token must be present.
+    if not heat_gated:
+        has_heat_cells = any(
+            isinstance(cell, dict) and cell.get("heat_summer_basis") is not None
+            for r in (crop.get("regions") or {}).values() if isinstance(r, dict)
+            for cell in (r.get("resolved_by_zone") or {}).values())
+        if has_heat_cells:
+            V.append("a crop carrying heat_summer_basis cells must keep 'heat_accumulation' in "
+                     "gating_factors (the heat floor basis); got %r" % (crop.get("gating_factors"),))
     floor = min_variety_chill(crop) if chill_gated else None
     for rk, r in (crop.get("regions") or {}).items():
         if not isinstance(r, dict):
@@ -100,9 +112,15 @@ def perennial_cert_violations(crop, chill_table=None):
                 continue
             s = cell.get("suitability")
             if s is None:
-                # unfilled shell cell (Step 3.5 admission state) -- the region-fill check
-                # (whole_crop_gate A2) owns "this region is unauthored"; A3 only enforces the
-                # tree invariants on FILLED cells, so a null suitability is skipped, not flagged.
+                # D4 (re-audit #2): a null suitability is the Step-3.5 admission state ONLY on an
+                # UNFILLED cell. A FILLED cell (one carrying a calendar that renders a 12-month fruit
+                # strip) with null suitability evaded EVERY suitability/no-fruit/heat invariant below
+                # while the calendar shipped -- a fruit calendar in a zone the tree may die in. Flag
+                # it; A2 still owns the truly-unfilled (no-calendar) cells.
+                if cell.get("calendar"):
+                    V.append(f"{rk}.{z}: filled cell (carries a calendar) has a null suitability -- "
+                             f"it renders a calendar while skipping the suitability/no-fruit/heat "
+                             f"invariants; a calendar-bearing cell must declare its suitability")
                 continue
             if s not in SUITABILITY_ENUM:
                 V.append(f"{rk}.{z}: suitability {s!r} not in the 4-value enum")
