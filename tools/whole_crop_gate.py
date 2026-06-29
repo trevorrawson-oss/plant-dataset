@@ -748,6 +748,11 @@ print("F. anchoring completeness (1A layer-scoped + sibling-pair predicate)")
 region_roots = [id((crop.get("regions") or {}).get(r)) for r in (crop.get("regions") or {})]
 gaps, claim_leaves = [], 0
 
+def _is_http_url(u):
+    """A real anchoring URL: an http(s) string, not a truthy placeholder ('TODO'/'pending')."""
+    return isinstance(u, str) and u.startswith(("http://", "https://"))
+
+
 def check_pair(srcs, au, where):
     global claim_leaves
     claim_leaves += 1
@@ -757,7 +762,11 @@ def check_pair(srcs, au, where):
     for s in srcs:
         if s not in au:
             gaps.append(f"{where}: {s} unanchored")
-        elif not au[s].get("url") or not au[s].get("verified"):
+        # re-audit #2 D9 (shape half): the url must be a real http(s) URL, not a truthy placeholder
+        # (`url:"TODO"`/`"pending"`). The CONTENT half -- whether the page supports the claim, and the
+        # honesty of `verified` (a date string in this dataset, not a bool) -- is the source-fidelity
+        # layer's job (the daily review + the periodic URL-liveness sweep), not a deterministic gate.
+        elif not _is_http_url(au[s].get("url")) or not au[s].get("verified"):
             gaps.append(f"{where}: {s} malformed entry")
 
 def anchor_walk(o, pat, in_zones, in_bolting):

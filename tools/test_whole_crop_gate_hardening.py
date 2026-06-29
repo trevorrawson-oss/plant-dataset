@@ -81,6 +81,42 @@ def test_c9_inverted_preferred_range():
     expect_fail(bad2, "ph", "C9: inverted tolerated_range [7.5,5.8]")
 
 
+# ============================================================================
+# re-audit #2 D9 (shape half) -- gate F must reject a truthy-placeholder anchoring URL.
+# `url:"TODO"`/`"pending"` are truthy and passed the old `not au[s].get("url")` check; an
+# anchoring URL must be a real http(s) URL. (The CONTENT half + `verified` honesty is the
+# source-fidelity layer's job, not this gate -- `verified` is a date string here, not a bool.)
+# ============================================================================
+def _first_anchored_source(crop):
+    """Find a (path-ish) anchoring_urls dict + a source id in it, to mutate its url."""
+    found = []
+
+    def walk(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k.endswith("anchoring_urls") and isinstance(v, dict):
+                    for sid, entry in v.items():
+                        if isinstance(entry, dict) and entry.get("url"):
+                            found.append((v, sid))
+                walk(v)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x)
+    walk(crop)
+    return found[0] if found else (None, None)
+
+
+def test_d9_placeholder_url():
+    print("D9: gate F rejects a truthy-placeholder anchoring url")
+    expect_pass(_crop("carrot"), "D9 control: unmutated carrot (real http urls)")
+    bad = _crop("carrot")
+    au, sid = _first_anchored_source(bad)
+    assert au is not None, "carrot should have an anchored source to mutate"
+    au[sid]["url"] = "TODO"          # truthy placeholder -- passed the old `not url` check
+    expect_fail(bad, "malformed", "D9: anchoring url 'TODO' (not an http URL)")
+
+
 if __name__ == "__main__":
     test_c9_inverted_preferred_range()
+    test_d9_placeholder_url()
     print("\nALL HARDENING TESTS PASSED")
