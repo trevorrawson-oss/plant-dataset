@@ -30,20 +30,26 @@ import re
 # Plant-class calendar tokens (the annual month-strip): the crop is being established that month.
 _PLANT_TOKENS = {"plant", "indoors", "sow", "transplant", "direct_sow", "start_indoors"}
 
-# A decimal-bearing range: "6.0 to 6.8", "6.0-6.8", "5.5 – 6.5". BOTH endpoints must carry a decimal
-# point, so the "0 to 14" pH-scale boilerplate and bare integers are never mistaken for the range.
-_PH_RANGE = re.compile(r"(\d+\.\d+)\s*(?:to|-|–|—)\s*(\d+\.\d+)")
-_PH_TOLERANCE = 0.5  # pH units of authoring drift tolerated before it counts as a contradiction
+# A pH range: "6.0 to 6.8", "6-7", "5.5 – 6.5". re-audit #2 D12: endpoints may be INTEGER or decimal
+# (the old decimal-only predicate let "pH 6 to 7" evade), and the "0 to 14" / "1 to 14" pH-SCALE
+# boilerplate is skipped by ITS VALUE (hi >= 12; real soil-pH ranges top out near 8) rather than by
+# requiring decimals.
+_PH_RANGE = re.compile(r"(\d+(?:\.\d+)?)\s*(?:to|-|–|—)\s*(\d+(?:\.\d+)?)")
+_PH_SCALE_HI = 12       # a stated "range" whose high end reaches this is the 0-to-14 pH scale, not a claim
+_PH_TOLERANCE = 0.5     # pH units of authoring drift tolerated before it counts as a contradiction
 
 
 def _stated_ph_range(note):
-    """The first decimal pH range in `note` as (lo, hi), or None if absent/unparseable."""
+    """The first REAL pH range in `note` as (lo, hi), or None. Skips the 0/1-to-14 scale boilerplate
+    (hi >= _PH_SCALE_HI) so a note that explains the scale before stating the crop's range is read
+    correctly."""
     if not isinstance(note, str):
         return None
-    m = _PH_RANGE.search(note)
-    if not m:
-        return None
-    return float(m.group(1)), float(m.group(2))
+    for m in _PH_RANGE.finditer(note):
+        lo, hi = float(m.group(1)), float(m.group(2))
+        if hi < _PH_SCALE_HI:
+            return lo, hi
+    return None
 
 
 def cross_consistency_violations(crop):

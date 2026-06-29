@@ -60,9 +60,23 @@ assert cross_consistency_violations(c) == [], "small authoring drift stays clean
 c = with_note([6.0, 6.8], "Soil pH runs on a scale from 0 to 14; aim for 6.0 to 6.8.")
 assert cross_consistency_violations(c) == [], "scale boilerplate must be skipped, real range matches"
 
-# 6. note present but NO parseable decimal pH range -> skip (a single value 'around 6.5' is not a range)
+# 6. note present but NO parseable range -> skip (a single value 'around 6.5' is not a range)
 c = with_note([6.0, 6.8], "Keep the soil slightly acidic, around pH 6.5.")
 assert cross_consistency_violations(c) == [], "no parseable range -> no false contradiction"
+
+# ---- re-audit #2 D12: the pH parse must catch INTEGER ranges, and still skip the 0/1-to-14 scale ----
+# 6a. INTEGER prose contradiction: "pH 6 to 7" vs structured [3.0,3.4] -> violation (was evaded)
+c = with_note([3.0, 3.4], "Aim for pH 6 to 7.")
+assert cross_consistency_violations(c), "D12: integer-range prose contradiction must flag"
+# 6b. integer prose that MATCHES (orange-navel ships "6 to 7" with [6.0,7.0]) -> clean
+c = with_note([6.0, 7.0], "Navel oranges prefer roughly pH 6 to 7.")
+assert cross_consistency_violations(c) == [], "matching integer range is clean"
+# 6c. the "1 to 14" scale form (cherry-tomato/lettuce ship it) is skipped, real range still checked
+c = with_note([6.0, 6.8], "pH runs on a scale of 1 to 14; aim for 6.0 to 6.8.")
+assert cross_consistency_violations(c) == [], "the 1-to-14 scale must be skipped"
+# 6d. a scale mention with NO real range -> no check (not a false contradiction)
+c = with_note([6.0, 6.8], "Soil pH is measured from 0 to 14.")
+assert cross_consistency_violations(c) == [], "scale-only note has no range to check"
 
 # 7. preferred_range absent -> skip
 assert cross_consistency_violations({"slug": "x", "ph": {"note_seasoned": "pH 6.0 to 6.8"}}) == []
