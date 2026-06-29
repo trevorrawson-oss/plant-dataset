@@ -17,9 +17,12 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from calendar_basis_gate import calendar_basis_violations, VALID_CALENDAR_BASES
 
-# 0. each of the 7 known bases -> clean
+# 0. each of the 7 known bases -> clean (non_seasonal_indoor must carry zone_independent:true per D1)
 for b in VALID_CALENDAR_BASES:
-    assert calendar_basis_violations({"slug": "x", "calendar_basis": b}) == [], b
+    crop = {"slug": "x", "calendar_basis": b}
+    if b == "non_seasonal_indoor":
+        crop["zone_independent"] = True
+    assert calendar_basis_violations(crop) == [], b
 
 # 1. the exact set is the 7 archetype bases (no accidental drift)
 assert VALID_CALENDAR_BASES == {
@@ -61,5 +64,39 @@ if os.path.exists(_path):
     fp = [(c["slug"], calendar_basis_violations(c)) for c in cert if calendar_basis_violations(c)]
     assert fp == [], f"calendar_basis FP on certified anchors: {fp}"
     print(f"  real data: 0 FP across {len(cert)} certified anchors: PASS")
+
+# ---- re-audit #2 D1/D8 (2026-06-28): the dispatch guard must validate the OTHER dispatch fields
+#      (zone_independent, archetype) against calendar_basis, not just the one key. ----
+
+# 9. D1: zone_independent:true on a non-indoor basis -> violation (the master kill-switch)
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "zone_independent": True}), "zone_independent on a non-indoor basis must flag"
+# and the inverse: a non_seasonal_indoor crop that is NOT zone_independent -> violation
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "non_seasonal_indoor",
+                                  "zone_independent": None}), "indoor crop must be zone_independent"
+# the consistent pairs are clean
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "non_seasonal_indoor",
+                                  "zone_independent": True}) == [], "indoor + zi=True is clean"
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "zone_independent": None}) == [], "non-indoor + zi=None is clean"
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "zone_independent": False}) == [], "zi=False is not 'true'"
+
+# 10. D8: a known archetype that maps to a DIFFERENT basis -> violation
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "archetype": "deciduous_fruit_tree"}), "archetype/basis mismatch must flag"
+# a NOVEL archetype -> violation (unknown archetype, like a novel basis)
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "archetype": "spaceship"}), "novel archetype must flag"
+# the matching archetype is clean; a null archetype is skipped (not over-flagged)
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "archetype": "warm_season_fruiting"}) == [], "matching archetype clean"
+assert calendar_basis_violations({"slug": "x", "calendar_basis": "frost_anchored",
+                                  "archetype": None}) == [], "null archetype skipped"
+
+# 11. REAL DATA still 0 FP after D1/D8 (the 18 carry consistent zone_independent + archetype)
+if os.path.exists(_path):
+    fp2 = [(c["slug"], calendar_basis_violations(c)) for c in cert if calendar_basis_violations(c)]
+    assert fp2 == [], f"D1/D8 FP on certified anchors: {fp2}"
 
 print("calendar_basis_gate: all tests passed")

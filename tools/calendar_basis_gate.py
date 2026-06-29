@@ -39,18 +39,52 @@ VALID_CALENDAR_BASES = {
     "non_seasonal_indoor",
 }
 
+# re-audit #2 D8 (2026-06-28): `archetype` is a SECOND author-controlled dispatch field that no
+# gate validated -- a known archetype on the wrong basis (deciduous_fruit_tree on a frost_anchored
+# carrot) shipped. Each certified archetype maps to exactly ONE calendar_basis; validate it.
+# EXTEND when a new archetype is certified.
+ARCHETYPE_BASIS = {
+    "warm_season_fruiting": "frost_anchored",
+    "cool_season_annual": "frost_anchored",
+    "culinary_herb": "frost_anchored",
+    "companion_and_ornamental_flower": "frost_anchored",
+    "deciduous_fruit_tree": "perennial_chill_gated",
+    "evergreen_fruit_tree": "perennial_evergreen",
+    "berries_herbaceous": "perennial_herbaceous",
+    "berries_woody": "berries_woody",
+    "woody_ornamental": "perennial_woody_ornamental",
+    "microgreen": "non_seasonal_indoor",
+}
+
 
 def calendar_basis_violations(crop):
     """Return a list ([] = clean) -- one violation if calendar_basis is not a known base.
     A missing/null/typo/case-slip/synonym/novel value all fail: the crop's calendar layer
     would otherwise be validated by nothing (every calendar gate dispatches on this field)."""
     cb = crop.get("calendar_basis")
-    if cb in VALID_CALENDAR_BASES:
-        return []
-    return [f"calendar_basis {cb!r} is not a known base {sorted(VALID_CALENDAR_BASES)}; an "
-            f"unknown/typo/case-slip/novel basis silently no-ops EVERY calendar gate "
-            f"(A3/A4/A5/A6/A9/A10/A11/A13/A14/A15/A16/A24/A28), so the crop's whole calendar "
-            f"layer would be validated by nothing"]
+    if cb not in VALID_CALENDAR_BASES:
+        return [f"calendar_basis {cb!r} is not a known base {sorted(VALID_CALENDAR_BASES)}; an "
+                f"unknown/typo/case-slip/novel basis silently no-ops EVERY calendar gate "
+                f"(A3/A4/A5/A6/A9/A10/A11/A13/A14/A15/A16/A24/A28), so the crop's whole calendar "
+                f"layer would be validated by nothing"]
+    V = []
+    # D1: `zone_independent` is the master kill-switch -- _is_indoor trusted it to exempt the whole
+    # region/calendar layer, but it was validated nowhere. It is true IFF the crop is non_seasonal_indoor.
+    zi = crop.get("zone_independent") is True
+    if zi != (cb == "non_seasonal_indoor"):
+        V.append(f"zone_independent={crop.get('zone_independent')!r} is inconsistent with "
+                 f"calendar_basis {cb!r}: ONLY a non_seasonal_indoor crop is zone_independent (and a "
+                 f"non_seasonal_indoor crop MUST be) -- the flag must not be a backdoor out of the "
+                 f"region/calendar floors")
+    # D8: a known archetype that maps to a DIFFERENT basis (or a novel archetype) is a dispatch lie.
+    arch = crop.get("archetype")
+    if arch is not None and ARCHETYPE_BASIS.get(arch) != cb:
+        expected = ARCHETYPE_BASIS.get(arch)
+        V.append(f"archetype {arch!r} "
+                 + (f"maps to calendar_basis {expected!r}, not {cb!r}" if expected
+                    else f"is not a known archetype {sorted(ARCHETYPE_BASIS)}")
+                 + " (archetype/calendar_basis dispatch mismatch)")
+    return V
 
 
 if __name__ == "__main__":

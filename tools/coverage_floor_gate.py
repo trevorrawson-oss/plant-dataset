@@ -25,7 +25,11 @@ CANONICAL_REGIONS = {
 
 
 def _is_indoor(crop):
-    return crop.get("calendar_basis") == "non_seasonal_indoor" or crop.get("zone_independent") is True
+    # re-audit #2 D1: key ONLY on calendar_basis (which A30 validates), NOT on the unvalidated
+    # `zone_independent` flag -- trusting the flag let a frost_anchored crop set zone_independent:true
+    # + regions:{} and exempt itself from the whole region/calendar floor. A30 now also asserts
+    # zone_independent is consistent with the basis, so the flag is no longer a backdoor here.
+    return crop.get("calendar_basis") == "non_seasonal_indoor"
 
 
 def region_roster_violations(crop):

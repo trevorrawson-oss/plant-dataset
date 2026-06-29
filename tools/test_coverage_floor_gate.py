@@ -59,13 +59,17 @@ assert region_roster_violations(typo), "an unknown region key must be flagged"
 # 5. indoor crop (non_seasonal_indoor) collapses regions to {} -> clean (legit N/A)
 indoor = {"slug": "microgreens-mix", "calendar_basis": "non_seasonal_indoor", "regions": {}}
 assert region_roster_violations(indoor) == [], region_roster_violations(indoor)
-# also via zone_independent flag
-zi = {"slug": "x", "zone_independent": True, "regions": {}}
-assert region_roster_violations(zi) == [], region_roster_violations(zi)
+# re-audit #2 D1: indoor exemption is now keyed on calendar_basis ONLY -- the zone_independent flag
+# alone (without the non_seasonal_indoor basis) does NOT exempt the floor (see 6b below).
 
 # 6. an indoor crop that ANOMALOUSLY carries regions -> violation (off-model)
 indoor_regions = {"slug": "x", "calendar_basis": "non_seasonal_indoor", "regions": _full_regions()}
 assert region_roster_violations(indoor_regions), "indoor crop with non-empty regions is off-model"
+
+# 6b. re-audit #2 D1: zone_independent:true on a NON-indoor basis must NOT exempt the roster floor
+#     (the floor keys on calendar_basis now, not the unvalidated flag).
+zi_kill = {"slug": "x", "calendar_basis": "frost_anchored", "zone_independent": True, "regions": {}}
+assert region_roster_violations(zi_kill), "zone_independent must not be a backdoor out of the region floor"
 
 # 7. REAL DATA: every certified anchor passes the roster floor (0 FP)
 fp = [(c["slug"], region_roster_violations(c)) for c in _cert if region_roster_violations(c)]
