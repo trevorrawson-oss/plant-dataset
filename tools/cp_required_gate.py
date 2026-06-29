@@ -40,10 +40,16 @@ CP_BASE_NAMES = frozenset({
     'symptoms', 'text', 'timing', 'tip', 'title', 'traits', 'type', 'type_note',
     'type_selection', 'user_action', 'watering_adjustment', 'what_happened', 'what_to_look_for',
     'year_one_notes',
-    # --- C16 GATE-UNLOCK (Trevor 2026-06-27): newly ruled CP; RED on the 7 crops until the
-    #     claude.ai 21-string beginner back-fill lands. ---
-    'preferred_texture', 'problematic_texture', 'tolerated_texture',
 })
+
+# re-audit #2 D21 (2026-06-28): the soil-texture trio is NOT CP. plant-astro renders
+# soil.{preferred,problematic,tolerated}_texture_seasoned as a list of texture CHIPS
+# (`(... as string[]).map(humanize)` -> "Thrives in / Tolerates / Struggles in"), i.e. categorical
+# token arrays, NOT dual-register prose. The real soil prose is `preferred_description_*` (in
+# CP_BASE_NAMES above, rendered as "What this crop wants"). The 2026-06-27 C16 ruling that put the
+# texture trio in CP was mis-targeted (the 7 string-valued crops are an un-migrated older
+# representation -- string `_core` + prose `_seasoned` -- pending a content migration to the list
+# form). So texture is deliberately OUT of the CP set.
 
 
 def cp_required_violations(crop):

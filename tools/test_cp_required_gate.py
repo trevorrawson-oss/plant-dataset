@@ -46,11 +46,17 @@ for sp in ("why_seasoned", "reason_seasoned", "frost_risk_note_seasoned", "synth
         f"{sp} is SP-ruled, must NOT be flagged"
     assert sp[:-9] not in CP_BASE_NAMES, f"{sp[:-9]} must not be in the CP set"
 
-# 4. the soil-texture GATE-UNLOCK: ruled CP, so a _seasoned with no _beginner -> violation (worklist)
-v = cp_required_violations({"slug": "x", "soil": {"preferred_texture_seasoned": "Fertile loam."}})
-assert any("preferred_texture" in m for m in v), f"soil texture is ruled CP -> flag until back-fill: {v}"
+# 4. re-audit #2 D21: the soil-texture trio is CATEGORICAL (rendered as chips), NOT CP prose -- the
+#    real soil prose is preferred_description. So a texture _seasoned with no _beginner does NOT flag.
 for tex in ("preferred_texture", "problematic_texture", "tolerated_texture"):
-    assert tex in CP_BASE_NAMES, f"{tex} must be in the CP set (Trevor C16 ruling)"
+    assert tex not in CP_BASE_NAMES, f"{tex} is categorical (chips), must NOT be in the CP set"
+assert cp_required_violations({"slug": "x", "soil": {"preferred_texture_seasoned": "Fertile loam."}}) == [], \
+    "soil texture is categorical, not a CP-prose field"
+# the real soil prose IS CP:
+assert "preferred_description" in CP_BASE_NAMES
+assert any("preferred_description" in m for m in cp_required_violations(
+    {"slug": "x", "soil": {"preferred_description_seasoned": "Deep loose loam."}})), \
+    "preferred_description (the real soil prose) IS CP"
 
 # 5. a whitespace/empty _seasoned -> not a populated field, not flagged here (A29 owns emptiness)
 assert cp_required_violations({"slug": "x", "description_seasoned": "   "}) == []
