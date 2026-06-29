@@ -700,15 +700,31 @@ for m in null_values:
 print("C/D. dash + temperature notation gates (user-facing strings)")
 dash_hits, degf_hits = [], []
 
+_DEGF_RE = re.compile(r"\bdegrees?\s*F\b|\bdeg\.?\s*F\b|°\s+F")
+
+
+def _scan_user_str(s, p):
+    if "--" in s or "—" in s:
+        dash_hits.append((p, s[:80]))
+    if _DEGF_RE.search(s):
+        degf_hits.append((p, s[:80]))
+
+
 def uf_walk(o, pat):
     if isinstance(o, dict):
         for k, v in o.items():
             p = f"{pat}.{k}" if pat else k
-            if isinstance(v, str) and not is_backend(k, pat):
-                if "--" in v or "—" in v:
-                    dash_hits.append((p, v[:80]))
-                if re.search(r"\bdegrees?\s*F\b|\bdeg\.?\s*F\b|°\s+F", v):
-                    degf_hits.append((p, v[:80]))
+            if not is_backend(k, pat):
+                if isinstance(v, str):
+                    _scan_user_str(v, p)
+                # re-audit #2 D16: a user-facing LIST element string is rendered too, but the old
+                # walk only tested dict VALUES, so a list laundering `--`/"degrees F" shipped. Scan
+                # the string elements of a user-facing list (backend lists, e.g. `sources`, are
+                # skipped by is_backend above). 0-FP on the 18.
+                elif isinstance(v, list):
+                    for i, x in enumerate(v):
+                        if isinstance(x, str):
+                            _scan_user_str(x, f"{p}[{i}]")
             uf_walk(v, p)
     elif isinstance(o, list):
         for i, x in enumerate(o):

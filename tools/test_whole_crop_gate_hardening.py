@@ -116,7 +116,23 @@ def test_d9_placeholder_url():
     expect_fail(bad, "malformed", "D9: anchoring url 'TODO' (not an http URL)")
 
 
+# ============================================================================
+# re-audit #2 D16 -- the C/D dash/temp scan must check USER-FACING LIST elements, not just
+# dict values. A novel list field laundering `--` / "degrees F" rendered to growers.
+# ============================================================================
+def test_d16_list_element_laundering():
+    print("D16: C/D dash/temp scan reaches user-facing list elements")
+    expect_pass(_crop("carrot"), "D16 control: unmutated carrot")
+    bad = _crop("carrot")
+    bad["care_bullets"] = ["Mulch deeply in spring.", "Water at 70 degrees F -- pinch the tips."]
+    expect_fail(bad, "dash", "D16: em-dash laundered in a list element")
+    bad2 = _crop("carrot")
+    bad2["care_bullets"] = ["Keep soil at 70 degrees F."]
+    expect_fail(bad2, "temp", "D16: 'degrees F' laundered in a list element")
+
+
 if __name__ == "__main__":
     test_c9_inverted_preferred_range()
     test_d9_placeholder_url()
+    test_d16_list_element_laundering()
     print("\nALL HARDENING TESTS PASSED")
