@@ -107,7 +107,48 @@ assert calendar_presence_violations({"slug": "x", "calendar_basis": "non_seasona
 # 13. REAL DATA: every certified anchor passes the calendar-presence floor (0 FP)
 fp = [(c["slug"], calendar_presence_violations(c)) for c in _cert if calendar_presence_violations(c)]
 assert fp == [], f"C4 calendar-presence FP on certified anchors: {fp}"
+
+# ===== re-audit #2 D2/D7: the zone layer below the region key was never validated =====
+# 14. D2: a region with an EMPTY resolved_by_zone (hollow) -> violation (A31 checked region keys only)
+hollow = {"slug": "x", "calendar_basis": "frost_anchored", "regions": _full_regions()}
+hollow["regions"]["se_gulf"]["resolved_by_zone"] = {}
+assert any("se_gulf" in v and "zone" in v.lower() for v in region_roster_violations(hollow)), \
+    f"D2: hollow resolved_by_zone must flag: {region_roster_violations(hollow)}"
+
+# 15. D7: a FICTITIOUS zone key -> violation (no zone roster existed)
+fic = {"slug": "x", "calendar_basis": "frost_anchored", "regions": _full_regions()}
+fic["regions"]["se_gulf"]["resolved_by_zone"] = {"banana_zone": {"calendar": ["growing"]}}
+assert any("se_gulf" in v and "banana_zone" in v for v in region_roster_violations(fic)), \
+    f"D7: fictitious zone key must flag: {region_roster_violations(fic)}"
+# valid USDA zone keys (3-11) stay clean
+ok_zones = {"slug": "x", "calendar_basis": "frost_anchored", "regions": _full_regions()}
+ok_zones["regions"]["se_gulf"]["resolved_by_zone"] = {"9": {"calendar": ["growing"]}, "10": {"calendar": ["growing"]}}
+assert region_roster_violations(ok_zones) == [], region_roster_violations(ok_zones)
+
+# ===== re-audit #2 D3: calendar-presence floor extended to the 3 NON-TREE perennial archetypes =====
+def _perennial(basis):
+    return {"slug": "x", "calendar_basis": basis, "regions": {
+        "se_gulf": {"resolved_by_zone": {"8": {"calendar": ["dormant", "growing", "harvest"]}}}}}
+
+
+# 16. a non-tree perennial (herbaceous/woody/berries_woody) with an EMPTY cell calendar -> violation
+for basis in ("perennial_herbaceous", "berries_woody", "perennial_woody_ornamental"):
+    c = _perennial(basis); c["regions"]["se_gulf"]["resolved_by_zone"]["8"]["calendar"] = []
+    assert any("se_gulf" in v and "8" in v for v in calendar_presence_violations(c)), \
+        f"D3: empty calendar on {basis} must flag: {calendar_presence_violations(c)}"
+    # a filled calendar on the same is clean
+    assert calendar_presence_violations(_perennial(basis)) == [], basis
+
+# 17. REGRESSION: a TREE (perennial_chill_gated/evergreen) with an empty cell is NOT flagged here
+#     (A3 governs tree empty cells -- unsuitable/chill-limited cells are legitimately empty)
+for basis in ("perennial_chill_gated", "perennial_evergreen"):
+    c = _perennial(basis); c["regions"]["se_gulf"]["resolved_by_zone"]["8"]["calendar"] = []
+    assert calendar_presence_violations(c) == [], f"tree {basis} empty cell is A3's job, not the floor"
+
+# 18. REAL DATA: the calendar-presence floor (now incl. the 3 perennials) is still 0-FP on the 18
+fp2 = [(c["slug"], calendar_presence_violations(c)) for c in _cert if calendar_presence_violations(c)]
+assert fp2 == [], f"D3 calendar-presence FP on certified anchors: {fp2}"
 if _cert:
-    print(f"  real data: 0 FP across {len(_cert)} certified anchors (both floors): PASS")
+    print(f"  real data: 0 FP across {len(_cert)} certified (region+zone+calendar floors): PASS")
 
 print("coverage_floor_gate: all tests passed")
