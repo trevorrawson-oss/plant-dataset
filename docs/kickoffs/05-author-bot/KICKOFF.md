@@ -31,6 +31,14 @@ THE TWO FAILURE MODES THAT KILL A DRAFT:
    a real source for a value, FLAG IT in a notes list -- do NOT fabricate one. The entire pipeline's
    trust rests on this; a fabricated citation is the worst possible output.
 
+SOURCE-OR-FLAG, NEVER EXTRACT (the research lane). Source ONLY from (1) the existing source_catalog
+and (2) pages you can read directly with WebFetch/WebSearch. If a value is not in the catalog and you
+cannot read a clean source for it (e.g. the only source is a scanned PDF), do NOT go hunting: FLAG it
+as modeled in verification_status.open_findings + the notes file, cite the nearest catalog id with
+the publication URL, and MOVE ON for the human review to resolve. NEVER shell out to download or
+extract data -- no curl/wget, no pip/venv, no pdftotext/pypdf/PDF libraries (these are denied and
+will fail). A flagged gap is the correct, honest outcome; a rabbit hole is not.
+
 READ THESE IN THE REPO (do not reinvent the conventions):
 - {{TEMPLATE}}'s full record in crops_data_final.json -- the structure + register pattern to mirror.
 - CURRENT_STATE.md "Live locked decisions / guardrails" -- the archetype/dispatch rules + every
