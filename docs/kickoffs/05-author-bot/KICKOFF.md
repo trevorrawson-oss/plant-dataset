@@ -39,6 +39,18 @@ the publication URL, and MOVE ON for the human review to resolve. NEVER shell ou
 extract data -- no curl/wget, no pip/venv, no pdftotext/pypdf/PDF libraries (these are denied and
 will fail). A flagged gap is the correct, honest outcome; a rabbit hole is not.
 
+COOL-SEASON PLANTING-TIMING GUARDRAIL (the broccoli-bug class, 2026-06-29). A cool-season crop must
+NOT be planted into summer heat that EXCLUDES its cool-season peers. Concretely: in each warm region,
+check your crop's plant months against the certified cool-season peers (lettuce-leaf, carrot) -- if
+they heat_pause through a month, your crop almost certainly should too (heads/roots/leaves are no
+more heat-tolerant). Plant the fall window when the peers do (typically Aug-Sep inland, Sep-Oct
+hotter), NOT a month early. Two hard checks: (a) every plant month appears in `plant_out`, and
+`plant_out` includes BOTH the spring AND fall windows (not just winter); (b) the calendar's plant
+tokens agree with `plant_out`. The ONLY exception is a genuinely long-season crop started indoors
+(like brussels sprouts: a June indoors-start + July transplant is fine because its `plant_out` says
+so). After authoring, the app-side guard `node ~/plant-app/scripts/audit-cool-season-timing.mjs`
+flags exactly this signature; aim for zero hits on your crop.
+
 READ THESE IN THE REPO (do not reinvent the conventions):
 - {{TEMPLATE}}'s full record in crops_data_final.json -- the structure + register pattern to mirror.
 - CURRENT_STATE.md "Live locked decisions / guardrails" -- the archetype/dispatch rules + every

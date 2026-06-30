@@ -14,3 +14,7 @@ crops_data_final.scratch.json
 
 # Personal local permission overrides (machine-specific allow/ask/deny -- not team policy)
 .claude/settings.local.json
+
+# Review artifacts (generated, not dataset content)
+CROP_REVIEW_*.html
+CROP_REVIEW_*.doc
