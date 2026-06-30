@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-06-30 -- bok-choy cleanup + certified -> ALL 50 CERTIFIED (scale-phase certification COMPLETE) (canonical `e8cc3931` -> `1bc569dc`) [Claude Code]
+
+**CONTENT release -- the capstone.** Certified bok-choy after finishing its consumer-facing lettuce-template cleanup, completing the roster: **50 / 50 certified** (18 hand-built anchors + 32 bot-authored crops). Surgical (only bok-choy's regions changed), GATE PASS, node-not-needed (bok-choy is in the timing-clean set). The 11 residual 'lettuce' mentions are all legitimate (lettuce as a real bok-choy companion + backend provenance naming lettuce-leaf as the calendar modeling peer).
+
+**bok-choy was the one crop held back from the big-cert batch** because the fix agent, while re-grounding 16 INTERNAL lettuce notes, surfaced ~10 CONSUMER-FACING ones it left in scope-bounds (tip_overrides.bolting on ca_north_coast/ca_desert/low_desert_az/hawaii describing LETTUCE bolting, a register-bearing microclimate note, lettuce anchoring_urls). A focused follow-up agent fixed all 13 (8 bolting tips re-voiced to bok-choy's dual cold-snap+heat bolt with region-appropriate guidance; microclimate note re-grounded; 4 anchoring_urls repointed umn growing-lettuce -> growing-chinese-cabbage-and-bok-choy and umd growing-lettuce -> growing-leafy-greens, both WebFetch-confirmed). Lesson: template bleed can hide in CONSUMER fields the structural gate does not inspect (tip_overrides, microclimate notes) -- worth a future check.
+
+**THE SCALE-PHASE ARC IS COMPLETE: 18 -> 50 certified in ~2 days** via the human-in-the-loop pipeline -- bot authors off a certified template + self-gates, deterministic screens (whole_crop_gate + family-bleed audit + cool-season timing audit) catch structure, family-wave biology-fidelity + source-truth audits catch substance, Trevor rules the judgment calls, then flip to verified_gs_arc. Defects caught + fixed along the way that no structural gate could see: the broccoli cool-season planting-timing bug (16 cells), beet/turnip null plant_out + harvest over-stretch, the citation-honesty class (~6 crops), okra's list-valued prose, bok-choy's consumer lettuce bleed, the pumpkin/butternut desert-model inconsistency.
+
+**Next.** Perennial pilot running (cherry/pear/raspberry + 5 fall annuals) -- the bot's first non-annual archetype; if clean, batch the ~12 remaining winter bare-root trees/berries. Then toward ~105. plant-astro bump pending (deploys all 50 certified + the broccoli timing fix).
+
+---
+
 ## 2026-06-30 -- BIG CERT: 27 drafts certified (greens/heads/alliums/cucurbits/nightshades/herbs/flowers + 2 legumes) after 7-wave audit + fix batch (canonical `ed8abc66` -> `e8cc3931`) [Claude Code]
 
 **CONTENT release -- the scale-phase certification is functionally COMPLETE.** Ran a 7-wave biology-fidelity + source-truth audit (7 parallel CC agents, WebFetch sources) over the 26 remaining drafts, plus a legumes wave (snow-peas, edamame). Verdict: ALL biology certify-grade, NO calendar defects like the roots, and the headline greens question resolved -- the long "May-Dec" harvest is CORRECT for cut-and-come-again cold-hardy greens (kale/collards/chard) and correctly SHORT/bolt-gapped for arugula/bok-choy/spinach.
