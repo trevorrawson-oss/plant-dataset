@@ -10,28 +10,28 @@
 ---
 
 
-**18 anchors certified** (`verified_gs_arc`); **32 `author_fresh_pilot` DRAFTS promoted** (not live -- the build renders only certified) -> a **50-crop roster**. Scaling toward ~105 via the CC bot pipeline; drafts certify in family waves (biology-fidelity judge + source-truth sample per wave). Anchor target is a roadmap call, not hardcoded.
+**22 anchors certified** (`verified_gs_arc`, launch flags true) + **28 `author_fresh_pilot` DRAFTS** = a **50-crop roster**. The ROOTS WAVE (radish/beet/turnip/parsnip) just certified -- the first family wave under the 5-by-5 process. Scaling toward ~105; remaining drafts certify in family waves. Anchor target is a roadmap call, not hardcoded.
 
 ## Canonical pointer
-- **Current SHA:** `4d683af310871069ae7a057137f0de3010af7439401b55aba5e40294783c8a11`. `LATEST.txt` session: `scale_batch2-4_19_crop_DRAFTS + cool-season_timing_fix (broccoli/kohlrabi/carrot/radish); roster 18 certified + 32 drafts = 50` (2026-06-30).
+- **Current SHA:** `ed8abc662c3d1e1d01ba5ca65333969561c74ad88b8aea645580ae092db52795`. `LATEST.txt` session: `roots-wave CERTIFIED (radish/beet/turnip/parsnip -> verified_gs_arc; beet+turnip calendar fix) -- 22 certified + 28 drafts = 50` (2026-06-30).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `4d683af3` -- feat(scale): promote batch 2-4 (19 DRAFTS) + cool-season timing fix -- roster 18+32=50
   - `6df285d4` -- feat(scale): batch 1 -- 13 crops authored as DRAFTS + promoted (6dfd9798 -> 6df285d4)
   - `6dfd9798` -- feat(soil): soil-texture beginner back-fill -- clears the A36 GATE-UNLOCK -> 18/18
   - `512e5a8d` -- feat(register): Pass 3 -- 35 dual-register prose fields + lettuce overwintering N/A; wire register_fill (A29)
   - `5fe0a15b` -- feat(dates+heat_pause): Pass 1 -- 16 heat_pause objects + broccoli/beefsteak calendar fixes + onion S-FL; wire A28 + tighten A24
   - `6c009feb` -- feat(companions): Pass 2 -- why-fill (A26) + evidence transparency (A27) + provenance gate-field fix
   - `144b2fb2` -- feat(gates): A23 raw-display snake_case (source fix + gate) + A22 tree variety-chill lock
-  - `b39f1453` -- feat(blueberry): #2 berries_woody calendar copy -- grown_as_note on all 20 cells
 
-## What just happened (session `scale_batch2-4 + cool-season timing fix`, 2026-06-30)
+## What just happened (session `roots-wave certification`, 2026-06-30)
 
-Promoted the **19 batch-2/3/4 DRAFTS** (garlic/leek/kohlrabi/bok-choy/parsnip/cilantro-coriander/edamame; eggplant/tomatillo/okra/parsley/dill/marigold; shallot/watermelon/cucumber/collards/sunflower/nasturtium) + applied the **cool-season planting-timing FIX** (broccoli/kohlrabi/carrot/radish -- the app-caught broccoli-bug class). Canonical `6df285d4` -> `4d683af3`, **surgical** (raw per-slug diff = exactly the 22 changed crops; 2 net-new cucumber/collards; all other crops byte-identical). Verified: each draft GATE PASS, **18/18** anchors hold, dataset-wide register PASS, the cool-season timing audit **0 hits across all 50** (down from 16), and a new **family-bleed audit 0 suspects** (every crop carries its OWN family, not its template's -- turnip/radish->Brassica, beet->Amaranthaceae confirmed). Built clean: derive successions in a throwaway, splice into a pristine snapshot.
+Certified the **ROOTS WAVE**: radish, beet, turnip, parsnip flipped to `verified_gs_arc` (launch flags true) -> **22 certified** (carrot already was). First family-wave certification under the 5-by-5: deterministic screens (gate + family-bleed + timing) -> biology-fidelity + source-truth audit -> Trevor's ruling -> flip. The audit caught a REAL defect: **beet + turnip had `plant_out` null in ALL 20 zones** (a batch-1 authoring gap -- only these two of the 32; the gate does not flag null plant_out) plus a cold-zone harvest over-stretch with no fall sow. FIXED first (targeted calendar repair modeled on the clean radish/carrot siblings: plant_out 20/20, fall sow added to the 4 cold cells each, harvest retightened; heat_pause/biology/pests preserved). radish + parsnip certified as-is. Canonical `4d683af3` -> `ed8abc66`, surgical (only the 4 roots changed). 22/22 certified GATE PASS, node timing audit 0 hits / 440 cool cells, carrot not regressed.
 
 ## Active work + next step
 
-**Certifying the 32 drafts in family waves** (Trevor 2026-06-30): each wave runs (a) the biology-fidelity judge + (b) a source-truth spot-check, surfaces calls for Trevor, then flips the clean ones. Order: **roots** (radish/beet/turnip/parsnip + the carrot fix) -> brassica greens -> brassica heads -> alliums -> cucurbits -> nightshades -> herbs -> flowers. **Parked follow-ups:** (1) cold_pause why-note -- author where meaningful (garlic 'dormant, mulch it') + the app extends the heat_pause footnote+tap to cold (decision 4); (2) check the garlic overwinter (year-wrapping) calendar RENDER; (3) **legumes parked** until a few more certified bean anchors span the variety axes (bush/pole, snap/dry/shell). **plant-astro bump** pending to deploy the live broccoli timing fix.
+**Continue family-wave certification** of the remaining 28 drafts. Next waves: brassica greens (kale, collards, swiss-chard, arugula, bok-choy) -- NOTE check the 'May-Dec' continuous harvest there, which is likely CORRECT for cut-and-come-again cold-hardy greens (unlike the roots) -> brassica heads (cabbage, cauliflower, kohlrabi, brussels-sprouts) -> alliums (garlic, leek, shallot) -> cucurbits (pumpkin, butternut-squash, watermelon, cucumber) -> nightshades (eggplant, tomatillo, okra) -> herbs (parsley, dill, cilantro-coriander) -> flowers (marigold, sunflower, nasturtium) -> spinach. Each wave: biology+source-truth audit -> Trevor rules -> flip clean ones. **Parked:** plant-astro bump to deploy the broccoli timing fix (Trevor has it noted, no rush); cold_pause why-note (data+app); garlic overwinter render check; legumes until more bean anchors.
 
-## Gate record (generated 2026-06-30, on canonical `4d683af3`)
+## Gate record (generated 2026-06-30, on canonical `ed8abc66`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -44,12 +44,16 @@ Promoted the **19 batch-2/3/4 DRAFTS** (garlic/leek/kohlrabi/bok-choy/parsnip/ci
 - **lemon: `PASS` (0)**
 - **blueberry: `PASS` (0)**
 - **lettuce-leaf: `PASS` (0)**
+- **radish: `PASS` (0)**
 - **onion: `PASS` (0)**
 - **strawberry: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
+- **parsnip: `PASS` (0)**
+- **turnip: `PASS` (0)**
 - **microgreens-mix: `PASS` (0)**
 - **lavender: `PASS` (0)**
 - **zinnia: `PASS` (0)**
+- **beet: `PASS` (0)**
 - **register_completeness_gate: `PASS`**
 
 ## Region fill state (generated)
@@ -65,12 +69,16 @@ Promoted the **19 batch-2/3/4 DRAFTS** (garlic/leek/kohlrabi/bok-choy/parsnip/ci
 - **lemon: 10/10 region cells filled**
 - **blueberry: 10/10 region cells filled**
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
+- **radish: 10/10 region cells filled**; 20 heat_pause
 - **onion: 10/10 region cells filled**
 - **strawberry: 10/10 region cells filled**
 - **orange-navel: 10/10 region cells filled**
+- **parsnip: 10/10 region cells filled**; 11 heat_pause
+- **turnip: 10/10 region cells filled**; 13 heat_pause
 - **microgreens-mix: 0/0 region cells filled**
 - **lavender: 10/10 region cells filled**
 - **zinnia: 10/10 region cells filled**
+- **beet: 10/10 region cells filled**; 13 heat_pause
 
 ## Flip gates (generated)
 - **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -85,16 +93,23 @@ Promoted the **19 batch-2/3/4 DRAFTS** (garlic/leek/kohlrabi/bok-choy/parsnip/ci
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **blueberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **radish:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **onion:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **strawberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **parsnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **turnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **microgreens-mix:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lavender:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **zinnia:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **18 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **22 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
 
+- **ROOTS WAVE CERTIFIED (2026-06-30, `4d683af3` -> `ed8abc66`, CONTENT release):** radish/beet/turnip/parsnip -> verified_gs_arc (launch flags true), 22 certified total. First family-wave cert under the 5-by-5. The biology+source-truth audit CAUGHT a real defect the gates miss: **beet + turnip `plant_out` null in ALL zones** (batch-1 gap, ONLY these two of the 32) + cold-zone harvest over-stretch + missing fall sow. FIXED via targeted calendar repair (plant_out filled, fall sow added to 4 cold cells, harvest retightened, modeled on clean radish/carrot siblings; heat_pause/biology preserved). Surgical (4 roots changed). The 5-by-5 process WORKS -- deterministic screens find structure, the audit finds substance.
+- **GENERALLY-SAFE-NOW, REFINE-AT-VARIETY-EXPANSION (Trevor 2026-06-30):** the bar for draft fixes + certification during the scale phase is correct STRUCTURE + reasonable regional windows, NOT fine date precision -- verbatim: 'we will fix a lot of the fine detailed dates when we expand into varieties, we should be generally safe for now.' Ship generally-safe; refine exact days at the variety-delta pass. (Parsnip DTM kept at 100-130 vs Clemson 120-180 under this rule.)
+- **VERIFICATION PLUMBING (gate by EXIT CODE, not grep):** `whole_crop_gate.py` exits 0 on PASS / non-zero on fail -- that is the reliable signal (see `tools`/`gate18.sh`). A `... | grep -q 'GATE: PASS'` loop is FLAKY (counts the 'X violations: 0' summary lines and/or SIGPIPE-interacts), and has falsely reported 0/N several times this arc. Also: never run the successions deriver repeatedly on ONE shared multi-crop file (cumulative re-serialization churn breaks later gates) -- derive in a throwaway + extract, or on per-crop fresh copies.
 - **SCALE -- 19 DRAFTS promoted + cool-season timing FIX (2026-06-30, `6df285d4` -> `4d683af3`, CONTENT release):** batch 2-4 (19 author_fresh_pilot drafts, launch flags false) + the broccoli-bug timing fix (broccoli/kohlrabi/carrot/radish). Surgical promote (22 crops; derive-in-throwaway + splice-into-pristine-snapshot to dodge the deriver re-serialization churn -- same technique as the batch-1 13-crop promote). Roster: 18 certified + 32 drafts = 50. NOT live (build filters to certified). Batch-1 (13) promoted 2026-06-29 (`6df285d4`).
 - **GATE ON THE BIOLOGY, NOT THE TEMPLATE (Trevor 2026-06-30):** a crop carries `gating_factors` (e.g. photoperiod) only if its OWN biology gates that way, regardless of its structural template. Evidence: garlic (vernalization), leek (no bulbing), edamame (maturity-group) DROPPED onion's photoperiod; shallot (bulbs by day-length) correctly KEPT it. A principle, not a data change -- the crops already comply (confirmed no complications, Trevor 2026-06-30).
 - **FAMILY-BLEED AUDIT = standing pre-cert screen + 5-by-5 FAMILY-WAVE certification (2026-06-30):** a deterministic check that each crop's `rotation.family` matches its true botanical family (NOT the template's), + a foreign-signature-pest cross-check + byte-identical-list detection -- catches the 'carrot-on-turnip' template-bleed class. Ran clean on the 32 (0 real suspects). Certification runs in family waves: structural/family/timing are deterministically screened; the per-crop SUBSTANCE (biology-fidelity judge + source-truth sample) is the per-wave human+judge review. (Caveat: flea beetle is polyphagous, not a brassica signature -- the audit excludes it.)
@@ -135,4 +150,5 @@ Promoted the **19 batch-2/3/4 DRAFTS** (garlic/leek/kohlrabi/bok-choy/parsnip/ci
 - **DISPLAY-READINESS FIELDS ARE A SEPARATE BAR FROM CERT (garden-calculator-surfaced):** the calculator gates PLACEABILITY on `spacing_inches` (+ `companions`) and CONTAINER on `container_ok==true` AND `min_pot_gallons != null`; cert validates BIOLOGY/sources and does NOT require them. **Audit display-readiness PER consuming surface** (A20 = presence; A23 = render-verbatim prose).
 - **CERT mechanics / THE FLIP:** source-verbatim (vs cited URLs) is the flip gate; `verification_status` block (status verified_gs_arc + phase + launch_ready x2 + last_audited + source_set + verification_log_ref + open_findings all blocks_launch:false). CERT RE-VERIFICATION = an INDEPENDENT SOURCE FETCH FOR FIDELITY (WebFetch a sample of cited URLs, check the NUMBERS).
 - **GOTCHA: canonical JSON is COMPACT** (`json.dumps(separators=(",",":"), ensure_ascii=False)`, no trailing newline, never indent=2). **Dataset commits go in `~/plant-dataset` on `main`** (the submodule is detached-HEAD); push is AUTONOMOUS (announce-then-execute). The plant-astro merge/push stays GATED on Trevor.
+
 

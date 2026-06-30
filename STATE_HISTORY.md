@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-06-30 -- ROOTS WAVE CERTIFIED (radish/beet/turnip/parsnip -> verified_gs_arc) + beet/turnip calendar fix (canonical `4d683af3` -> `ed8abc66`) [Claude Code]
+
+**CONTENT release.** First family-wave certification under the 5-by-5 process Trevor approved. Certified the ROOTS WAVE -- radish, beet, turnip, parsnip flipped to `verified_gs_arc` with launch_ready_core/seasoned true -> **22 certified** (carrot already was). Surgical (only the 4 roots changed; raw per-slug diff confirmed). 22/22 certified GATE PASS (exit-code), node cool-season timing audit 0 hits / 440 cells, carrot not regressed.
+
+**The 5-by-5 worked -- it caught a real defect the gates miss.** The roots biology-fidelity + source-truth audit (a CC general-purpose agent, WebFetch sources) returned: radish certify-ready (2/2 source-truth), parsnip certify-ready after a DTM-headline note (2/2), beet + turnip HOLD on a calendar defect (biology certify-grade). Verified the defect: **beet + turnip had `plant_out` null in ALL 20 zones** -- scanned all 32 drafts, ONLY these two (the carrot/radish timing fix had filled it for those; beet/turnip were never touched). The gate does NOT flag null plant_out. Plus a cold-zone harvest over-stretch (continuous 'May - Dec' from one spring sow of a ~60-day root) with no fall sow. (Heads-up logged: kale/collards/swiss-chard show a similar long harvest, but for cut-and-come-again cold-hardy greens that is likely CORRECT -- to confirm in the greens wave.)
+
+**The fix (targeted, agent).** A calendar-only repair modeled on the clean radish/carrot siblings: plant_out filled 20/20 both, a spring+fall split added to the 4 cold cells each (northern_tier z4-z7), ca_north_coast z9/z10 extended to the continuous mild-season window, harvest retightened (z7 'May - Dec' -> 'May - Jun, Oct - Dec'). Fall sow judged NOT appropriate at northern z3 (coldest -- continuous window, late-July tail is the fall crop) and the cool CA north coast (continuous mild season, matches carrot/radish). Deep diff: ONLY calendar/harvest/plant_out changed; heat_pause objects + why-notes, DTM, family, pests/prose all preserved.
+
+**Trevor's rulings (2026-06-30).** Certify radish + parsnip as-is; fix beet+turnip then certify; parsnip DTM keep 100-130. Standing bar set: 'we will fix a lot of the fine detailed dates when we expand into varieties, we should be generally safe for now' -> correct structure + reasonable windows now, exact-day precision deferred to the variety-delta pass.
+
+**Plumbing lessons (logged as a locked guardrail).** Gate by the gate's EXIT CODE, not `grep -q 'GATE: PASS'` (the grep loop counts 'X violations: 0' summary lines and SIGPIPE-interacts -- falsely reported 0/N multiple times); never run the successions deriver repeatedly on one shared multi-crop file (re-serialization churn).
+
+**Next.** Continue family waves: brassica greens next (and settle the greens 'May-Dec' harvest question). PENDING: plant-astro bump to deploy the broccoli timing fix (Trevor noted, no rush). 28 drafts remain to certify.
+
+---
+
 ## 2026-06-30 -- SCALE batch 2-4: 19 DRAFTS promoted + cool-season timing FIX (canonical `6df285d4` -> `4d683af3`) + family-bleed audit + 5-by-5 family-wave cert plan [Claude Code]
 
 **CONTENT release (`6df285d4` -> `4d683af3`).** Overnight the CC author-bot pipeline ran two more batches: batch 3 (eggplant, tomatillo, okra, parsley, dill, marigold) and batch 4 (shallot, watermelon, cucumber, collards, sunflower, nasturtium), each self-gating GATE PASS on delivery. Combined with batch 2 (garlic/leek/kohlrabi/bok-choy/parsnip/cilantro-coriander/edamame, authored 2026-06-29 but not yet promoted), that is **19 new DRAFTS**. This session PROMOTED all 19 (author_fresh_pilot, launch flags false) AND applied the **cool-season planting-timing FIX** (broccoli/kohlrabi/carrot/radish -- the app-caught broccoli-bug class: a cool-season cell planting into peer-excluding summer heat with a contradicting plant_out). Roster: **18 certified + 32 drafts = 50** (toward ~105). No new crop is live -- the build renders only `verified_gs_arc`.
