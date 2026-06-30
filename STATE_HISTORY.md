@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-06-30 -- BIG CERT: 27 drafts certified (greens/heads/alliums/cucurbits/nightshades/herbs/flowers + 2 legumes) after 7-wave audit + fix batch (canonical `ed8abc66` -> `e8cc3931`) [Claude Code]
+
+**CONTENT release -- the scale-phase certification is functionally COMPLETE.** Ran a 7-wave biology-fidelity + source-truth audit (7 parallel CC agents, WebFetch sources) over the 26 remaining drafts, plus a legumes wave (snow-peas, edamame). Verdict: ALL biology certify-grade, NO calendar defects like the roots, and the headline greens question resolved -- the long "May-Dec" harvest is CORRECT for cut-and-come-again cold-hardy greens (kale/collards/chard) and correctly SHORT/bolt-gapped for arugula/bok-choy/spinach.
+
+**The one recurring class the audit caught: CITATION HONESTY** -- a claim attributed to a named source that does not actually state it. This, not bad biology, is the author_fresh_pilot->certified gap. Fixes (12 crops, all surgical + gate-verified): pumpkin+butternut desert model unified to plant-through-fall per Trevor's ruling (dropped ca_desert heat_pause to match the hotter low_desert_az; re-derived; cure "dry"->"humid"); spinach harvest_start/end reconciled to the authoritative two-season harvest STRING (7 cells, nulled where disjoint); garlic nitrogen-cutoff month corrected (UGA = first week of APRIL, not May, fixing an internal contradiction); parsley (10 heat_pause cells) + cauliflower (molybdenum/whiptail) false source attributions removed/softened; nasturtium dropped unsupported "beans" from a research_backed companion + added a heat-tolerant-IN-SHADE note for the Gulf/FL summer (Trevor's nuance from his own search: UF/IFAS frames it as shade-tolerant, not paused); sunflower 2 over-claimed allelopathy booleans -> false; tomatillo blossom-drop threshold 95->90F (matched its own diagnostic + SDSU); okra description_seasoned unwrapped from a LIST to a string + DTM widened 50-65 -> 50-70; collards low_desert_az harvest_start aligned.
+
+**Certified 27** (the 25 audited minus bok-choy, + snow-peas + edamame) -> verified_gs_arc, launch flags true. **49 certified / 50.** Surgical (raw per-slug diff = exactly the 27 changed). 27/27 + 18/18 GATE PASS (exit-code), node cool-season timing audit 0 hits / 440 cells.
+
+**bok-choy HELD (the 50th).** The fix agent re-grounded 16 INTERNAL lettuce-template notes but surfaced ~10 CONSUMER-FACING ones it left in scope-bounds (tip_overrides.bolting on 4 regions describing LETTUCE bolting, a register-bearing microclimate note, lettuce anchoring_urls). Cannot certify a live crop showing lettuce tips -> held + a focused cleanup agent dispatched -> will certify to 50/50.
+
+**Two gate/plumbing findings logged.** (1) OKRA GATE HOLE: whole_crop_gate PASSED a core prose field (description_seasoned) that was a 1-element LIST, not a string -- same class as the red-team list-valued prose holes; backlog a cheap "core prose must be str" check. (2) snow-peas/edamame showed NO bean-template bleed (snow-peas even avoided the green-beans yield-number error that broke that cert) -- the relevant signal that the green-beans template re-points to other legume genera cleanly, informing the future bean GS-arc.
+
+**Legume policy (Trevor 2026-06-30):** snow-peas + edamame certified; the 3 bean/pea SHELLS (broad-beans-fava, sugar-snap-peas, pole-beans) HELD until the current crops are done, then a GS-arc on more bean anchors so the Phaseolus variety range expands without issue.
+
+**Next.** bok-choy -> 50/50. Perennial pilot running (cherry/pear/raspberry + 5 fall annuals) -- the bot's first trees/berries; if clean, batch the ~13 winter bare-root trees/berries. plant-astro bump pending (now 49 certified + the broccoli fix). collard-greens shell duplicates the authored collards (reconcile).
+
+---
+
 ## 2026-06-30 -- ROOTS WAVE CERTIFIED (radish/beet/turnip/parsnip -> verified_gs_arc) + beet/turnip calendar fix (canonical `4d683af3` -> `ed8abc66`) [Claude Code]
 
 **CONTENT release.** First family-wave certification under the 5-by-5 process Trevor approved. Certified the ROOTS WAVE -- radish, beet, turnip, parsnip flipped to `verified_gs_arc` with launch_ready_core/seasoned true -> **22 certified** (carrot already was). Surgical (only the 4 roots changed; raw per-slug diff confirmed). 22/22 certified GATE PASS (exit-code), node cool-season timing audit 0 hits / 440 cells, carrot not regressed.

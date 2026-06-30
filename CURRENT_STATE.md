@@ -10,103 +10,188 @@
 ---
 
 
-**22 anchors certified** (`verified_gs_arc`, launch flags true) + **28 `author_fresh_pilot` DRAFTS** = a **50-crop roster**. The ROOTS WAVE (radish/beet/turnip/parsnip) just certified -- the first family wave under the 5-by-5 process. Scaling toward ~105; remaining drafts certify in family waves. Anchor target is a roadmap call, not hardcoded.
+**49 anchors certified** (`verified_gs_arc`, launch flags true) + **1 draft** (bok-choy, cleanup pending) = the **50-crop roster essentially all certified**. The scale-phase certification is functionally COMPLETE -- the original 18 anchors + all 32 bot-authored drafts (minus bok-choy, in final cleanup) are live-eligible. Next frontier: perennials (trees/berries). Anchor target is a roadmap call, not hardcoded.
 
 ## Canonical pointer
-- **Current SHA:** `ed8abc662c3d1e1d01ba5ca65333969561c74ad88b8aea645580ae092db52795`. `LATEST.txt` session: `roots-wave CERTIFIED (radish/beet/turnip/parsnip -> verified_gs_arc; beet+turnip calendar fix) -- 22 certified + 28 drafts = 50` (2026-06-30).
+- **Current SHA:** `e8cc393110a23d82555243f7b8fd88b25258c85f459452c022acbcdc1a4ca30b`. `LATEST.txt` session: `BIG CERT -- greens/heads/alliums/cucurbits/nightshades/herbs/flowers + snow-peas/edamame certified (27) after biology+source-truth audit + fix batch; 49 certified + bok-choy draft (cleanup pending) = 50` (2026-06-30).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `ed8abc66` -- feat(certify): roots wave -- radish/beet/turnip/parsnip -> verified_gs_arc (22 certified)
   - `4d683af3` -- feat(scale): promote batch 2-4 (19 DRAFTS) + cool-season timing fix -- roster 18+32=50
   - `6df285d4` -- feat(scale): batch 1 -- 13 crops authored as DRAFTS + promoted (6dfd9798 -> 6df285d4)
   - `6dfd9798` -- feat(soil): soil-texture beginner back-fill -- clears the A36 GATE-UNLOCK -> 18/18
   - `512e5a8d` -- feat(register): Pass 3 -- 35 dual-register prose fields + lettuce overwintering N/A; wire register_fill (A29)
   - `5fe0a15b` -- feat(dates+heat_pause): Pass 1 -- 16 heat_pause objects + broccoli/beefsteak calendar fixes + onion S-FL; wire A28 + tighten A24
   - `6c009feb` -- feat(companions): Pass 2 -- why-fill (A26) + evidence transparency (A27) + provenance gate-field fix
-  - `144b2fb2` -- feat(gates): A23 raw-display snake_case (source fix + gate) + A22 tree variety-chill lock
 
-## What just happened (session `roots-wave certification`, 2026-06-30)
+## What just happened (session `big-cert: 27 drafts certified`, 2026-06-30)
 
-Certified the **ROOTS WAVE**: radish, beet, turnip, parsnip flipped to `verified_gs_arc` (launch flags true) -> **22 certified** (carrot already was). First family-wave certification under the 5-by-5: deterministic screens (gate + family-bleed + timing) -> biology-fidelity + source-truth audit -> Trevor's ruling -> flip. The audit caught a REAL defect: **beet + turnip had `plant_out` null in ALL 20 zones** (a batch-1 authoring gap -- only these two of the 32; the gate does not flag null plant_out) plus a cold-zone harvest over-stretch with no fall sow. FIXED first (targeted calendar repair modeled on the clean radish/carrot siblings: plant_out 20/20, fall sow added to the 4 cold cells each, harvest retightened; heat_pause/biology/pests preserved). radish + parsnip certified as-is. Canonical `4d683af3` -> `ed8abc66`, surgical (only the 4 roots changed). 22/22 certified GATE PASS, node timing audit 0 hits / 440 cool cells, carrot not regressed.
+Ran a 7-wave biology-fidelity + source-truth audit over the 26 remaining drafts + the 2 legumes (28 total), then a fix batch, then certified **27** (greens/heads/alliums/cucurbits/nightshades/herbs/flowers + snow-peas + edamame); `ed8abc66` -> `e8cc3931`, **49 certified**. bok-choy HELD (consumer-facing lettuce-template contamination in tip_overrides.bolting + a microclimate note; being cleaned -> will certify to make 50/50). The audit found NO calendar defects like the roots; the one recurring class was **citation honesty** (a claim attributed to a source that doesn't quite say it). 12 fixes applied (surgical, gate-verified): pumpkin+butternut desert model unified to plant-through-fall (Trevor ruling) + cure dry->humid; spinach harvest fields reconciled (7 cells); garlic N-cutoff month corrected (April per UGA); parsley/cauliflower false-source claims de-attributed; nasturtium beans-drop + shade-note (Trevor: heat-tolerant in shade, not paused); sunflower booleans; tomatillo 95->90F; okra list->string + DTM; collards harvest. 27/27 + 18/18 GATE PASS, node timing audit 0/440, surgical (only 27 crops changed). snow-peas (no bean-template bleed -- did NOT repeat the green-beans yield error) + edamame (3 disclosed minor prose items) certify-ready.
 
 ## Active work + next step
 
-**Continue family-wave certification** of the remaining 28 drafts. Next waves: brassica greens (kale, collards, swiss-chard, arugula, bok-choy) -- NOTE check the 'May-Dec' continuous harvest there, which is likely CORRECT for cut-and-come-again cold-hardy greens (unlike the roots) -> brassica heads (cabbage, cauliflower, kohlrabi, brussels-sprouts) -> alliums (garlic, leek, shallot) -> cucurbits (pumpkin, butternut-squash, watermelon, cucumber) -> nightshades (eggplant, tomatillo, okra) -> herbs (parsley, dill, cilantro-coriander) -> flowers (marigold, sunflower, nasturtium) -> spinach. Each wave: biology+source-truth audit -> Trevor rules -> flip clean ones. **Parked:** plant-astro bump to deploy the broccoli timing fix (Trevor has it noted, no rush); cold_pause why-note (data+app); garlic overwinter render check; legumes until more bean anchors.
+1) **bok-choy cleanup** (consumer lettuce contamination) -> certify = 50/50. 2) **PERENNIAL PILOT running** (Trevor 2026-06-30): the bot's FIRST trees/berries -- cherry-sweet (<-peach), pear-european (<-apple), raspberry (<-blueberry) + 5 fall annuals (celery, potato, spring-onion, calendula, viola). Validates the perennial archetype (perennial_chill_gated / berries_woody, ~35 extra fields: chill/bloom/pollination/rootstock/hardiness/years-to-harvest). If the 3 perennials gate-clean, batch the remaining ~10 winter bare-root trees (apricot/cherries/nectarine/plum/pears/fig/persimmon/pomegranate/mulberry/pawpaw) + 3 berries (raspberry done, blackberry/elderberry) the next night. **Parked:** the okra gate hole (core prose field as a list -- gate missed it; TDD a 'core prose fields must be strings' check); legumes (the 3 bean/pea SHELLS: fava/sugar-snap/pole-beans) held until a bean GS-arc; plant-astro bump (broccoli fix + the now-49 certified) when Trevor's ready; collard-greens shell duplicates the authored collards (reconcile slug); cold_pause why-note.
 
-## Gate record (generated 2026-06-30, on canonical `ed8abc66`)
+## Gate record (generated 2026-06-30, on canonical `e8cc3931`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
+- **kale: `PASS` (0)**
+- **spinach: `PASS` (0)**
 - **carrot: `PASS` (0)**
 - **basil: `PASS` (0)**
 - **zucchini-courgette: `PASS` (0)**
 - **green-beans-bush: `PASS` (0)**
 - **broccoli: `PASS` (0)**
+- **garlic: `PASS` (0)**
 - **peach: `PASS` (0)**
 - **apple: `PASS` (0)**
 - **lemon: `PASS` (0)**
 - **blueberry: `PASS` (0)**
+- **butternut-squash: `PASS` (0)**
+- **snow-peas: `PASS` (0)**
 - **lettuce-leaf: `PASS` (0)**
+- **swiss-chard: `PASS` (0)**
+- **arugula: `PASS` (0)**
 - **radish: `PASS` (0)**
+- **cauliflower: `PASS` (0)**
+- **cabbage: `PASS` (0)**
 - **onion: `PASS` (0)**
+- **edamame: `PASS` (0)**
+- **parsley: `PASS` (0)**
+- **cilantro-coriander: `PASS` (0)**
+- **dill: `PASS` (0)**
+- **eggplant: `PASS` (0)**
+- **tomatillo: `PASS` (0)**
+- **watermelon: `PASS` (0)**
 - **strawberry: `PASS` (0)**
+- **pumpkin: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
 - **parsnip: `PASS` (0)**
+- **kohlrabi: `PASS` (0)**
 - **turnip: `PASS` (0)**
+- **leek: `PASS` (0)**
+- **brussels-sprouts: `PASS` (0)**
+- **okra: `PASS` (0)**
 - **microgreens-mix: `PASS` (0)**
+- **shallot: `PASS` (0)**
+- **marigold: `PASS` (0)**
+- **nasturtium: `PASS` (0)**
 - **lavender: `PASS` (0)**
+- **sunflower: `PASS` (0)**
 - **zinnia: `PASS` (0)**
 - **beet: `PASS` (0)**
+- **cucumber: `PASS` (0)**
+- **collards: `PASS` (0)**
 - **register_completeness_gate: `PASS`**
 
 ## Region fill state (generated)
 - **cherry-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
 - **beefsteak-tomato: 10/10 region cells filled**; 8 heat_pause, 6 second_planting
+- **kale: 10/10 region cells filled**; 13 heat_pause
+- **spinach: 10/10 region cells filled**; 18 heat_pause
 - **carrot: 10/10 region cells filled**; 13 heat_pause
 - **basil: 10/10 region cells filled**
 - **zucchini-courgette: 10/10 region cells filled**; 5 heat_pause
 - **green-beans-bush: 10/10 region cells filled**; 8 heat_pause
 - **broccoli: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
+- **garlic: 10/10 region cells filled**
 - **peach: 10/10 region cells filled**
 - **apple: 10/10 region cells filled**
 - **lemon: 10/10 region cells filled**
 - **blueberry: 10/10 region cells filled**
+- **butternut-squash: 10/10 region cells filled**
+- **snow-peas: 10/10 region cells filled**; 18 heat_pause
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
+- **swiss-chard: 10/10 region cells filled**; 6 heat_pause
+- **arugula: 10/10 region cells filled**; 15 heat_pause
 - **radish: 10/10 region cells filled**; 20 heat_pause
+- **cauliflower: 10/10 region cells filled**; 9 heat_pause
+- **cabbage: 10/10 region cells filled**; 9 heat_pause
 - **onion: 10/10 region cells filled**
+- **edamame: 10/10 region cells filled**; 4 heat_pause
+- **parsley: 10/10 region cells filled**; 10 heat_pause
+- **cilantro-coriander: 10/10 region cells filled**; 15 heat_pause
+- **dill: 10/10 region cells filled**; 15 heat_pause
+- **eggplant: 10/10 region cells filled**; 3 heat_pause
+- **tomatillo: 10/10 region cells filled**; 5 heat_pause
+- **watermelon: 10/10 region cells filled**
 - **strawberry: 10/10 region cells filled**
+- **pumpkin: 10/10 region cells filled**
 - **orange-navel: 10/10 region cells filled**
 - **parsnip: 10/10 region cells filled**; 11 heat_pause
+- **kohlrabi: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
 - **turnip: 10/10 region cells filled**; 13 heat_pause
+- **leek: 10/10 region cells filled**
+- **brussels-sprouts: 10/10 region cells filled**; 5 heat_pause
+- **okra: 10/10 region cells filled**
 - **microgreens-mix: 0/0 region cells filled**
+- **shallot: 10/10 region cells filled**
+- **marigold: 10/10 region cells filled**
+- **nasturtium: 10/10 region cells filled**; 6 heat_pause
 - **lavender: 10/10 region cells filled**
+- **sunflower: 10/10 region cells filled**
 - **zinnia: 10/10 region cells filled**
 - **beet: 10/10 region cells filled**; 13 heat_pause
+- **cucumber: 10/10 region cells filled**; 5 heat_pause
+- **collards: 10/10 region cells filled**; 8 heat_pause
 
 ## Flip gates (generated)
 - **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **beefsteak-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **kale:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **spinach:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **carrot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **basil:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **zucchini-courgette:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **green-beans-bush:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **broccoli:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **garlic:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **peach:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **apple:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **blueberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **butternut-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **snow-peas:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **swiss-chard:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **arugula:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **radish:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cauliflower:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cabbage:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **onion:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **edamame:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **parsley:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cilantro-coriander:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **dill:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **eggplant:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **tomatillo:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **watermelon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **strawberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **pumpkin:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **parsnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **kohlrabi:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **turnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **leek:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **brussels-sprouts:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **okra:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **microgreens-mix:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **shallot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **marigold:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **nasturtium:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lavender:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **sunflower:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **zinnia:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **22 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **49 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
 
+- **BIG CERT -- 27 drafts certified (2026-06-30, `ed8abc66` -> `e8cc3931`):** greens/heads/alliums/cucurbits/nightshades/herbs/flowers + snow-peas + edamame -> verified_gs_arc. 49 certified; bok-choy held (consumer lettuce contamination, cleanup pending) = 50th. Process: 7-wave biology+source-truth audit (CC agents, WebFetch sources) -> 12 surgical fixes -> flip. NO root-style calendar defects found. snow-peas/edamame: no bean-template bleed (the relevant signal for the future legume GS-arc -- the template re-points to other genera cleanly).
+- **CITATION-HONESTY is the author_fresh_pilot->certified gap (2026-06-30):** the audit's one recurring catch was claims attributed to a named source that doesn't actually state them (sunflower booleans, nasturtium 'beans', cauliflower molybdenum/whiptail, parsley heat-scorch, garlic N-month). NOT bad biology -- overclaim/mis-pin. The cert audit must include the source-truth sample (WebFetch the cited URL, confirm it backs the number) -- that is what these reviews exist to catch.
+- **OKRA GATE HOLE -- core prose field as a list (2026-06-30, BACKLOG):** okra shipped `description_seasoned` as a 1-element LIST not a string; whole_crop_gate PASSED it (renders with brackets). Same class as the red-team list-valued prose holes. TODO (TDD): a cheap 'core consumer prose fields must be str' check. Fixed in okra by unwrapping.
+- **PERENNIAL ARCHETYPE pilot (2026-06-30):** trees = `perennial_chill_gated` (off peach/apple), berries = `berries_woody` (off blueberry); ~35 perennial-only fields (chill_hours_*, bloom_time, pollination/self_fertile, hardiness/reliable_fruit zones, rootstock_*, establishment/years_to_first_harvest, growth_stages_year_one, dormancy/pruning_window, cane_type for berries). Author by MIRRORING the certified perennial template fully + refit. Piloting 3 before batching the ~13 winter bare-root trees/berries (Trevor: pilot-then-batch; winter planting is months out, no rush).
 - **ROOTS WAVE CERTIFIED (2026-06-30, `4d683af3` -> `ed8abc66`, CONTENT release):** radish/beet/turnip/parsnip -> verified_gs_arc (launch flags true), 22 certified total. First family-wave cert under the 5-by-5. The biology+source-truth audit CAUGHT a real defect the gates miss: **beet + turnip `plant_out` null in ALL zones** (batch-1 gap, ONLY these two of the 32) + cold-zone harvest over-stretch + missing fall sow. FIXED via targeted calendar repair (plant_out filled, fall sow added to 4 cold cells, harvest retightened, modeled on clean radish/carrot siblings; heat_pause/biology preserved). Surgical (4 roots changed). The 5-by-5 process WORKS -- deterministic screens find structure, the audit finds substance.
 - **GENERALLY-SAFE-NOW, REFINE-AT-VARIETY-EXPANSION (Trevor 2026-06-30):** the bar for draft fixes + certification during the scale phase is correct STRUCTURE + reasonable regional windows, NOT fine date precision -- verbatim: 'we will fix a lot of the fine detailed dates when we expand into varieties, we should be generally safe for now.' Ship generally-safe; refine exact days at the variety-delta pass. (Parsnip DTM kept at 100-130 vs Clemson 120-180 under this rule.)
 - **VERIFICATION PLUMBING (gate by EXIT CODE, not grep):** `whole_crop_gate.py` exits 0 on PASS / non-zero on fail -- that is the reliable signal (see `tools`/`gate18.sh`). A `... | grep -q 'GATE: PASS'` loop is FLAKY (counts the 'X violations: 0' summary lines and/or SIGPIPE-interacts), and has falsely reported 0/N several times this arc. Also: never run the successions deriver repeatedly on ONE shared multi-crop file (cumulative re-serialization churn breaks later gates) -- derive in a throwaway + extract, or on per-crop fresh copies.
@@ -150,5 +235,6 @@ Certified the **ROOTS WAVE**: radish, beet, turnip, parsnip flipped to `verified
 - **DISPLAY-READINESS FIELDS ARE A SEPARATE BAR FROM CERT (garden-calculator-surfaced):** the calculator gates PLACEABILITY on `spacing_inches` (+ `companions`) and CONTAINER on `container_ok==true` AND `min_pot_gallons != null`; cert validates BIOLOGY/sources and does NOT require them. **Audit display-readiness PER consuming surface** (A20 = presence; A23 = render-verbatim prose).
 - **CERT mechanics / THE FLIP:** source-verbatim (vs cited URLs) is the flip gate; `verification_status` block (status verified_gs_arc + phase + launch_ready x2 + last_audited + source_set + verification_log_ref + open_findings all blocks_launch:false). CERT RE-VERIFICATION = an INDEPENDENT SOURCE FETCH FOR FIDELITY (WebFetch a sample of cited URLs, check the NUMBERS).
 - **GOTCHA: canonical JSON is COMPACT** (`json.dumps(separators=(",",":"), ensure_ascii=False)`, no trailing newline, never indent=2). **Dataset commits go in `~/plant-dataset` on `main`** (the submodule is detached-HEAD); push is AUTONOMOUS (announce-then-execute). The plant-astro merge/push stays GATED on Trevor.
+
 
 
