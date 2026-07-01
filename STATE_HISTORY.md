@@ -6,6 +6,10 @@
 
 ---
 
+## 2026-06-30 -- calendar fix LANDED: committed + pushed + plant-astro bumped (ac0ac26 / cfbbd10) [Claude Code]
+
+The P0 calendar-coherence fix in the entry below was committed to plant-dataset `main` as **ac0ac26** (content `84321950`) -- the pre-commit release-verify net passed (per-crop no-new-violations; parsnip cleared 17, cucumber/zucchini 7, etc.). Pushed to origin (`0f6d5af..ac0ac26`). The plant-astro dataset submodule was bumped `0f6d5af -> ac0ac26` (plant-astro commit **cfbbd10**, pushed `3b87b86..cfbbd10`), re-deploying the live 13 with corrected calendars. Trevor confirmed push + bump. The authoring queue (20-crop batch in small waves, 8 pilot crops, berries_woody_gate sign-off) + the D8 backed-heat_pause follow-up (13 tagged warm-crop cells) now reopen.
+
 ## 2026-06-30 -- P0 CALENDAR-COHERENCE FIX -- new A37 gate + surgical normalizer (canonical `1bc569dc` -> `84321950`; UNCOMMITTED, pending Trevor sign-off) [Claude Code]
 
 **CONTENT release (applied to canonical, gate-clean + diff-verified, HELD for Trevor's commit).** Fixed the two systemic calendar bugs from the prior entry -- at the SOURCE, but NOT as originally scoped.
