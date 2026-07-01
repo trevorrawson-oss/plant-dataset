@@ -659,6 +659,21 @@ print(f"  raw-display snake_case violations: {len(_rawdisp)}")
 for m in _rawdisp:
     fail(f"raw-display: {m}")
 
+# ---------------- A37. calendar coherence (calendar-LOGIC, not structure) ----------------
+# A5 checks token ENUM + length; A24 checks pause-on-active-window PLACEMENT; nothing checked the
+# 12-token sequence is temporally COHERENT. Two impossible patterns shipped in certified anchors +
+# the live 13 (Trevor, 2026-06-30): Bug 1 a `growing` unreachable from plant/indoors without first
+# passing harvest/season_over (frost_anchored; garlic overwintering / winter-wrap / perennials are
+# 0-FP by the walk-through rule); Bug 2 a one-month hole in a continuous `harvest` display window
+# (all crops). Spec: docs/calendar-coherence-fix-design-2026-06-30.md. GATE-AS-WORKLIST: RED on
+# canonical until the normalizer runs, then the permanent guardrail against reintroduction.
+from calendar_coherence_gate import calendar_coherence_violations
+print("A37. calendar coherence (growing-after-harvest + one-month harvest hole)")
+_calcoh = calendar_coherence_violations(crop)
+print(f"  calendar-coherence violations: {len(_calcoh)}")
+for m in _calcoh:
+    fail(f"calendar-coherence: {m}")
+
 # ---------------- B. dual-voice coverage ----------------
 print("B. dual-voice coverage gate (structural walk)")
 populated = sp_only = ruled_empty = oos = 0
