@@ -1,0 +1,179 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Crop Pipeline Review 2026-07-01</title>
+<style>
+:root{--ink:#1c1c1a;--muted:#6b7280;--line:#e5e7eb;--bg:#fbfbf9;--accent:#2f6f4e;--terra:#aa5b1e;--terrabg:#fbf1e8;--greenbg:#eef6f0;--blue:#2563eb;--bluebg:#eef2ff}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.5;max-width:920px;margin:0 auto;padding:40px 28px 80px;background:var(--bg)}
+h1{font-size:26px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+.glance{background:var(--greenbg);border:1px solid #cfe5d6;border-radius:10px;padding:14px 18px;font-size:14.5px;margin-bottom:30px}
+.glance b{color:var(--accent)}
+h2{font-size:19px;margin:38px 0 14px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+.dec{border:1px solid var(--line);border-left:4px solid var(--terra);background:#fff;border-radius:8px;padding:14px 18px;margin:12px 0}
+.dec .q{font-weight:650;font-size:15.5px;margin-bottom:6px}
+.dec .body{font-size:14px;color:#33332f;margin-bottom:8px}
+.dec .rec{font-size:13.5px;background:var(--terrabg);border-radius:6px;padding:8px 11px}
+.dec .rec b{color:var(--terra)}
+.num{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;background:var(--terra);color:#fff;border-radius:50%;font-size:12px;font-weight:700;margin-right:8px;vertical-align:middle}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 4px}
+th{text-align:left;background:#f3f4f1;padding:7px 10px;border-bottom:2px solid var(--line);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:#555}
+td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfcfb}
+.pass{color:var(--accent);font-weight:650}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:20px;background:#eef2ff;color:#3730a3}
+.tag.new{background:var(--terrabg);color:var(--terra)}
+code{background:#f3f4f1;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.fix td{font-size:12.5px}
+.notable{font-size:13.5px}
+.notable li{margin-bottom:5px}
+.crop{font-weight:650}
+.fyi{background:#f7f7f5;border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:13px;color:#444}
+.fyi h3{margin:0 0 8px;font-size:14px}
+.foot{margin-top:40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head><body>
+<h1>Crop Pipeline Review</h1>
+<div class="sub">2026-07-01 &middot; 30 crops authored overnight (roster now 80 with content) &middot; 12 fruit trees + 3 berries + 15 annuals &middot; prepared for your review</div>
+<div class="glance">
+<b>At a glance:</b> 22 crops were authored overnight and your 8 pilot crops re-normalized &mdash; <b>30 new records</b>,
+taking the roster from <b>50 to 80 with content</b> (45 honest shells remain). <b>29 of 30 are gate-clean</b>
+individually; the one holdout is <b>elderberry</b> (biology complete, needs a 3rd berries gate sub-form &mdash; decision 1).
+Batch-wide the numbers are clean: <b>A37 calendar-coherence 0 across all 125</b> after a 13-change normalizer pass,
+<b>0 regressions</b> (nothing that passed before fails now), <b>0 template contamination</b> (the bleed scan's 11
+hits were all legit sibling comparisons), and <b>no duplicate slugs</b>. The 21 crops authored <i>after</i> the
+calendar fix came out A37-clean on their own. Nothing is live or committed &mdash; the <b>canonical is byte-untouched</b>.
+Your time is the <b>5 decisions</b> below; the rest is detail.
+</div>
+<h2>Decisions for you</h2>
+<div class='dec'><div class='q'><span class='num'>1</span>Elderberry &mdash; build the 3rd <code>berries_woody</code> sub-form (SHRUB)?</div><div class='body'>Elderberry's biology is complete and passes every gate except one class (<b>21 A15 violations</b>): it is <b>partially self-fertile</b> (<code>self_fertile=true</code>) and its one real cultivated type is <code>american_elderberry</code> &mdash; and the gate only knows <b>bush</b> (blueberry, self-infertile) and <b>cane</b> (raspberry, biennial). Elderberry is a multi-stem shrub that fits neither.</div><div class='rec'><b>My recommendation:</b> Build a <b>SHRUB sub-form</b> keyed on a new <code>cane_type</code> (e.g. <code>multistem_perennial</code>) that accepts partial self-fertility + the <code>american_elderberry</code> type. I'll TDD it (inject the defect, watch it bounce) and leave it uncommitted. <b>~30 min once you say go</b> &mdash; then it's 30/30 clean.</div></div>
+<div class='dec'><div class='q'><span class='num'>2</span>Sign off the bush/cane <code>berries_woody_gate.py</code> generalization</div><div class='body'>The raspberry pilot exposed that gate A15 was hardcoded to blueberry; it was generalized additively to <b>bush-vs-cane</b> (keyed on <code>cane_type</code>), RED/GREEN-verified, and is <b>still uncommitted</b>. blackberry + raspberry both ride on it, and the elderberry sub-form (decision 1) extends it.</div><div class='rec'><b>My recommendation:</b> Sign off so decision 1 and this commit land together. (Nothing reaches the site until you also bump plant-astro &mdash; separate step.)</div></div>
+<div class='dec'><div class='q'><span class='num'>3</span>potato <code>ca_desert</code> November &mdash; <code>cold_pause</code> or <code>season_over</code>?</div><div class='body'>The normalizer replaced an impossible <code>growing</code> token (nothing planted before it) with <code>cold_pause</code> in the low desert for z9/z10 November &mdash; an inter-crop pause before a January planting. Potato foliage is frost-tender, so <code>cold_pause</code> is defensible, but the low desert in November is mild, so <code>season_over</code> is arguable.</div><div class='rec'><b>My recommendation:</b> Keep <code>cold_pause</code> (it signals &ldquo;waiting for the next window,&rdquo; not &ldquo;done for the year&rdquo;) unless you'd rather it read <code>season_over</code>. One-line change either way; 2 cells.</div></div>
+<div class='dec'><div class='q'><span class='num'>4</span>D8 &mdash; back the new warm crops' summer gaps with a real <code>heat_pause</code> later?</div><div class='body'>The normalizer's heat_pause-tagging set is the original four warm crops (eggplant/watermelon/pumpkin/butternut). The new warm crops (cantaloupe, honeydew, peppers) aren't in it, so their FL/desert summer gaps normalize to <code>season_over</code> &mdash; coherent and honest, just not tagged &ldquo;too hot.&rdquo;</div><div class='rec'><b>My recommendation:</b> Leave as <code>season_over</code> for now (A28 rejects an unbacked <code>heat_pause</code> anyway); add the properly-backed <code>heat_pause</code> in the authoring lane at variety-pass time. <b>No action needed now.</b></div></div>
+<div class='dec'><div class='q'><span class='num'>5</span>Then: which of the 30 to certify</div><div class='body'>All 30 are gate-clean DRAFTS (<code>author_fresh_pilot</code>, not live) except elderberry (pending decision 1). Certification is the launch-flip, gated on your biology-fidelity read + a per-crop source-truth spot-check &mdash; the same family-wave arc that took us 18&rarr;50. The recurring catch last time was <b>citation honesty</b> (a number pinned to a source that doesn't quite say it), so the spots to eyeball: the trees' self-fruitful-vs-cross-pollinated calls, and the melons' bacterial-wilt susceptibility.</div><div class='rec'><b>My recommendation:</b> Tell me which to flip; I'll run the source-truth sample + launch-flip in waves (trees / berries / nightshades / cucurbits). No rush &mdash; 30 is a lot, waves are cleaner.</div></div>
+<h2>The calendar-coherence normalizer pass (done &amp; verified)</h2>
+<p style="font-size:14px">The A37 fix from the P0 work now runs as a central pass over each new batch. Across all 30 new crops it made <b>13 surgical changes / 12 cells</b> &mdash; and 12 of the 13 were in the four pre-fix <b>pilot</b> crops + cantaloupe. The 21 crops authored <i>after</i> the calendar fix landed came out A37-clean on their own (the post-fix pipeline held). Every change was litmus-checked: fix only the logically-impossible sequence, preserve legit planting gaps and mild-winter harvest. <b>Verified:</b> A37 0 across all 125, 0 regressions, canonical untouched.</p>
+<table class="fix"><tr><th>Crop</th><th>Cell(s)</th><th>Change</th><th>Harvest string</th><th>Why it is correct</th></tr>
+<tr><td class='crop'>calendula</td><td>se_gulf z8</td><td>bridge Feb harvest hole</td><td><code>Nov-Jan, Mar-Apr</code> &rarr; <code>Nov-Apr</code></td><td>deep-winter continuous bloom</td></tr>
+<tr><td class='crop'>calendula</td><td>se_gulf z9</td><td>Sep <code>growing</code> &rarr; <code>season_over</code></td><td></td><td>summer shoulder before fall replant</td></tr>
+<tr><td class='crop'>cantaloupe</td><td>fl_peninsula z10/z11</td><td>Jun/Jul <code>growing</code> &rarr; <code>season_over</code> (x3)</td><td></td><td>FL double-crop summer bridge (matches watermelon)</td></tr>
+<tr><td class='crop'>potato</td><td>ca_desert z9/z10</td><td>Nov <code>growing</code> &rarr; <code>cold_pause</code></td><td></td><td>inter-crop winter pause (see decision 3)</td></tr>
+<tr><td class='crop'>potato</td><td>fl_peninsula z10/z11</td><td>May <code>growing</code> &rarr; <code>season_over</code></td><td></td><td>summer gap after spring crop</td></tr>
+<tr><td class='crop'>spring-onion</td><td>se_gulf z8/z9</td><td>bridge Jan harvest hole</td><td><code>Feb-Mar, Oct-Dec</code> &rarr; <code>Oct-Mar</code></td><td>mild-Gulf continuous</td></tr>
+<tr><td class='crop'>viola</td><td>ca_south_coast z9/z10</td><td>Aug <code>growing</code> &rarr; <code>season_over</code></td><td></td><td>summer heat gap before fall replant</td></tr>
+</table>
+<p style="font-size:13px;color:#444">No summer holes bridged, no invented harvest, no over-correction &mdash; the two impossible patterns removed, the legit seasonal biology left intact.</p>
+<h2>The 30 crops</h2>
+<table><tr><th>Crop</th><th>Template</th><th>Gate</th><th>Sources</th><th>Flags</th></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Fruit trees</td></tr>
+<tr><td class='crop'>apricot</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>24</td><td>0</td></tr>
+<tr><td class='crop'>cherry-sour</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>16</td><td>3</td></tr>
+<tr><td class='crop'>nectarine</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>24</td><td>0</td></tr>
+<tr><td class='crop'>plum</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>9</td><td>0</td></tr>
+<tr><td class='crop'>pear-asian</td><td>&larr; apple</td><td><span class='pass'>PASS</span></td><td>24</td><td>0</td></tr>
+<tr><td class='crop'>fig</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>5</td><td>0</td></tr>
+<tr><td class='crop'>persimmon</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>8</td><td>0</td></tr>
+<tr><td class='crop'>pomegranate</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>4</td><td>0</td></tr>
+<tr><td class='crop'>mulberry</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>4</td><td>0</td></tr>
+<tr><td class='crop'>pawpaw</td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>10</td><td>0</td></tr>
+<tr><td class='crop'>cherry-sweet <span class='tag'>pilot</span></td><td>&larr; peach</td><td><span class='pass'>PASS</span></td><td>16</td><td>3</td></tr>
+<tr><td class='crop'>pear-european <span class='tag'>pilot</span></td><td>&larr; apple</td><td><span class='pass'>PASS</span></td><td>24</td><td>0</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Berries</td></tr>
+<tr><td class='crop'>blackberry</td><td>&larr; blueberry</td><td><span class='pass'>PASS</span></td><td>10</td><td>4</td></tr>
+<tr><td class='crop'>raspberry <span class='tag'>pilot</span></td><td>&larr; blueberry</td><td><span class='pass'>PASS</span></td><td>8</td><td>3</td></tr>
+<tr><td class='crop'>elderberry</td><td>&larr; blueberry</td><td><span style='color:#aa5b1e;font-weight:650'>needs sub-form</span></td><td>3</td><td>6</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Nightshades</td></tr>
+<tr><td class='crop'>bell-pepper</td><td>&larr; cherry-tomato</td><td><span class='pass'>PASS</span></td><td>16</td><td>8</td></tr>
+<tr><td class='crop'>jalapeno</td><td>&larr; cherry-tomato</td><td><span class='pass'>PASS</span></td><td>19</td><td>9</td></tr>
+<tr><td class='crop'>cayenne-pepper</td><td>&larr; cherry-tomato</td><td><span class='pass'>PASS</span></td><td>20</td><td>10</td></tr>
+<tr><td class='crop'>roma-tomato</td><td>&larr; cherry-tomato</td><td><span class='pass'>PASS</span></td><td>37</td><td>0</td></tr>
+<tr><td class='crop'>grape-tomato</td><td>&larr; cherry-tomato</td><td><span class='pass'>PASS</span></td><td>44</td><td>2</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Cucurbits</td></tr>
+<tr><td class='crop'>cantaloupe</td><td>&larr; watermelon</td><td><span class='pass'>PASS</span></td><td>23</td><td>6</td></tr>
+<tr><td class='crop'>honeydew-melon</td><td>&larr; watermelon</td><td><span class='pass'>PASS</span></td><td>15</td><td>6</td></tr>
+<tr><td class='crop'>spaghetti-squash</td><td>&larr; butternut-squash</td><td><span class='pass'>PASS</span></td><td>17</td><td>5</td></tr>
+<tr><td class='crop'>acorn-squash</td><td>&larr; butternut-squash</td><td><span class='pass'>PASS</span></td><td>17</td><td>5</td></tr>
+<tr><td class='crop'>yellow-summer-squash</td><td>&larr; zucchini-courgette</td><td><span class='pass'>PASS</span></td><td>23</td><td>2</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Annuals (pilot)</td></tr>
+<tr><td class='crop'>celery <span class='tag'>pilot</span></td><td>&larr; carrot</td><td><span class='pass'>PASS</span></td><td>7</td><td>4</td></tr>
+<tr><td class='crop'>potato <span class='tag'>pilot</span></td><td>&larr; carrot</td><td><span class='pass'>PASS</span></td><td>12</td><td>3</td></tr>
+<tr><td class='crop'>spring-onion <span class='tag'>pilot</span></td><td>&larr; radish</td><td><span class='pass'>PASS</span></td><td>23</td><td>4</td></tr>
+<tr><td class='crop'>calendula <span class='tag'>pilot</span></td><td>&larr; zinnia</td><td><span class='pass'>PASS</span></td><td>5</td><td>4</td></tr>
+<tr><td class='crop'>viola <span class='tag'>pilot</span></td><td>&larr; zinnia</td><td><span class='pass'>PASS</span></td><td>6</td><td>6</td></tr>
+</table>
+<p style="font-size:12.5px;color:#6b7280">All sources are catalogued Tier-1 (university extension). &ldquo;Flags&rdquo; = honest open_findings, all non-blocking; the substantive ones are below, the routine conventions are folded into the FYI block. Trees run low-flag because they inherit the certified perennial template cleanly; the melons/peppers carry the usual modeled-regional-window flags.</p>
+<h2>Notable per-crop flags (the substance)</h2>
+<p style="font-size:13.5px;color:#444">Filtered to the judgment-worthy items &mdash; the systemic conventions (modeled regional windows, page-level pest citations, container figures, Hawaii, derived harvest) are folded into the FYI block below. Trees with 0 flags are omitted.</p>
+<p style='margin:12px 0 3px'><span class='crop'>cherry-sour</span></p><ul class='notable'>
+<li>PERENNIAL PILOT -- authored by FILLING the cherry-sour shell modeled on the certified peach (genus Prunus, archetype deciduous_fruit_tree) and refit off the cherry-sweet pilot. Key refit: SELF-FRUITFUL pollination (one tree crops;</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>blackberry</span></p><ul class='notable'>
+<li>PILOT/TOOLING: blackberry is a CANE berries_woody fruit and passes the already-generalized berries_woody_gate (A15) CANE path (cane_type real value -&gt; self_fertile bool, recommended_type enum {summer_bearing, everbearing}); the gate was generalized additively during the raspberry pilot and is NOT modified for blackberry.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>raspberry</span></p><ul class='notable'>
+<li>PILOT/TOOLING: the berries_woody gate (A15, berries_woody_gate.py) originally hardcoded two blueberry-specific assumptions that conflict with raspberry biology -- it required self_fertile==False (raspberry is self-fertile=true) and restricted recommended_type to the blueberry chill-class enum {northern_highbush, southern_highbush,…</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>elderberry</span></p><ul class='notable'>
+<li>A15 BUSH type enum is {northern_highbush, southern_highbush, rabbiteye}; elderberry's one real type is 'american_elderberry', so every resolved cell trips 'recommended_type not in enum'.</li>
+<li>Elderberry is PARTIALLY self-fertile (sets some fruit alone, far better with a second cultivar). Modeled as self_fertile true (honest), which trips the BUSH branch's 'self_fertile must be false'.</li>
+<li>gating_factors carries 'chill_hours' and per-variety chill_hours_required is a uniform nominal 400 to satisfy A15/A21, but elderberry is NOT chill-type-gated: one type everywhere, cultivars chosen by yield/season, not chill. Chill is retained only as the real winter-dormancy requirement A15 mandates.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>bell-pepper</span></p><ul class='notable'>
+<li>Bell pepper carries a backed midsummer heat_pause (months [7,8]) and a spring/fall split in the hot South (se_gulf z8/z9, fl_peninsula z10/z11) AND the deserts (ca_desert z9/z10, low_desert_az z9), a WIDER footprint than the eggplant pilot (which paused only in the desert extreme). The thermal basis is bell pepper's well-documented…</li>
+<li>days_to_maturity is [60,90] FROM TRANSPLANT (Solanaceae template convention shared with cherry-tomato and eggplant). Green fruit is ~60-70 days from transplant;</li>
+<li>ca_north_coast (cool, foggy) and northern_tier z3/z4 are MARGINAL for bell pepper, which needs more summer heat than those regions reliably deliver. Calendars are provided (peppers CAN be grown there with early varieties, black mulch, and warm microclimates), but yields are realistically modest and the region_notes say so.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>jalapeno</span></p><ul class='notable'>
+<li>Jalapeno carries a backed heat_pause in the SAME cells as the certified cherry-tomato (se_gulf z8/z9, ca_desert z9/z10, warm_arid z8, low_desert_az z9, fl_peninsula z10/z11). This is INDEPENDENTLY DERIVED, not copied: peppers share tomato's blossom-drop physiology (fruit set fails above ~90F day / 75F night, sourced to NMSU and UMD), so…</li>
+<li>ca_interior (Central Valley) carries NO heat_pause and a continuous Jun/Jul-Oct harvest, matching the certified tomato there, on the judgment that with steady irrigation peppers stay just within reach of fruit set and a peak heat wave only transiently stalls set. This is a modeling choice: a grower in a severe Central Valley summer may…</li>
+<li>days_to_maturity is [70,80] to the GREEN stage FROM TRANSPLANT (Clemson 70-85; TAM 70-80).</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>cayenne-pepper</span></p><ul class='notable'>
+<li>days_to_maturity is [70,80] FROM TRANSPLANT to the GREEN harvest stage (Clemson/UGA/UMD 70-85; U.</li>
+<li>Heat is stated as ~30,000-50,000 Scoville heat units (matching the task brief and common usage). Extension pages (UF/IFAS, Penn State) give a slightly wider ~25,000-50,000 SHU;</li>
+<li>Cayenne, more heat-tolerant than tomato, RUNS THROUGH the upper-Gulf (se_gulf z8) and warm-arid (z8) summers that pause tomato, and carries a backed heat_pause (A28) ONLY in the true low deserts (ca_desert z9/z10 [6,7,8], low_desert_az z9 [7,8]) and the deep-Gulf / peninsular-Florida humid heat (se_gulf z9 [7,8], fl_peninsula z10/z11…</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>grape-tomato</span></p><ul class='notable'>
+<li>Calendar layer (zones + regions: month tokens, plant_out/harvest windows, heat_pause placement) inherited structurally from the certified cherry-tomato template, since grape tomato is the same species and frost-anchored culture (indeterminate, transplant after last frost, ~6 weeks indoors, harvest through summer to frost) with the same…</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>cantaloupe</span></p><ul class='notable'>
+<li>ph.preferred_range is [6.0, 6.8]. The two strongest cited melon sources (UMN, UGA B1179) give a 6.0-6.5 sweet spot;</li>
+<li>spacing_inches is [24,36], representing in-row plant/hill spacing (Clemson/UMN 18-24 in-row; UGA 2-3 ft in-row;</li>
+<li>Cantaloupe is modeled with NO heat_pause in any cell. It is heat-loving and produces through southern and desert summer heat, so the hot regions (ca_desert, low_desert_az, warm_arid, se_gulf, fl_peninsula) run a continuous summer crop or a spring-plus-late-summer split for crop turnover, not a heat exclusion.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>honeydew-melon</span></p><ul class='notable'>
+<li>spacing_inches is [36,48]. Honeydew rows run 6 to 8 feet apart with plants 18 to 24 inches in the row, or hills about 4 feet apart (Clemson HGIC 1304;</li>
+<li>Unlike cantaloupe, honeydew does NOT slip from the vine, so the record teaches ripeness as a learned multi-cue judgment (creamy-white to yellow rind + waxy-to-slightly-tacky surface + slight blossom-end softening + faint sweet aroma + creamy ground spot) and instructs cutting the fruit from the vine. There is no single clean signal, and…</li>
+<li>Like watermelon and unlike the pumpkin cousin, honeydew is modeled with NO heat_pause in any cell: it is the most heat-loving of the common melons and produces through southern and desert summer heat. The hot regions run a continuous summer crop or a spring-plus-late-summer split for crop turnover;</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>spaghetti-squash</span></p><ul class='notable'>
+<li>spacing_inches is [24,48]. Spaghetti squash is spaced 24-36 in in the row with 3-5 ft (36-60 in) between rows, and vines run 6-8 ft;</li>
+<li>The variety days_to_maturity values (Vegetable Spaghetti 95, Tivoli 98, Small Wonder 85, Orangetti 90, Stripetti 100) are modeled from widely published breeder / seed-catalog norms and AAS standing (Tivoli AAS), not pinned to a per-variety T1 extension page. Vegetable Spaghetti as the OP standard and Small Wonder as the compact early…</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>acorn-squash</span></p><ul class='notable'>
+<li>spacing_inches is [24,48]. Acorn squash is spaced about 18-24 in for bush types and 24-36 in in the row with 3-6 ft between rows for vining types, and vining plants run 4-8 ft;</li>
+<li>The variety days_to_maturity values (Table Queen 80, Table Ace 78, Table King 80, Honey Bear 95, Celebration 95) are modeled from widely published breeder / seed-catalog norms and AAS standing (Table King, Honey Bear AAS), not pinned to a per-variety T1 extension page. Table Queen as the OP standard and the bush Table King / Honey Bear…</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>celery</span></p><ul class='notable'>
+<li>Judgment calls: pH preferred set to 6.0-6.8 (sources cluster 5.8-6.8, tolerating to ~7.0); category set to 'Leafy Greens' (no stalk/petiole category exists in the taxonomy;</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>potato</span></p><ul class='notable'>
+<li>Heat_pause thermal backing is anchored to potato's cool-tuber physiology (UC IPM, cool-weather crop; cool-season-only desert/Florida planting calendars) plus each region's planting source, rather than to a single numeric soil-temperature ceiling, which no fetched T1 home-garden page stated explicitly.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>spring-onion</span></p><ul class='notable'>
+<li>content.ces.ncsu.edu 'Green Bunch Onions' returns HTTP 403 on direct fetch; its content (DTM, spacing, harvest size) was obtained via search and corroborated.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>calendula</span></p><ul class='notable'>
+<li>COMPANION FRAMING (not a sourcing gap, a load-bearing honesty boundary): calendula is the pot marigold, NOT a true marigold (Tagetes), and is NOT claimed to suppress root-knot nematodes (the documented Tagetes effect). Its companion value is framed as pollinator and beneficial-insect (aphid-predator) support (likely/medium), a…</li>
+<li>The heat_pause months per warm-region cell are aligned to the certified cool-season peers (lettuce-leaf, carrot) at the same region and zone and backed by the crop-level heat physiology sources (USU Extension: prefers below about 85°F, stops blooming in extreme heat; UW Extension: languishes in prolonged hot summer;</li>
+</ul>
+<h2>Systemic conventions &mdash; FYI, no action</h2>
+<div class="fyi">
+<h3>You've already blessed these; they recur across the batch and are flagged honestly:</h3>
+&bull; <b>Modeled regional windows</b> &mdash; per-zone planting/harvest built from days-to-maturity + frost anchors + representative extension dates where no per-crop regional chart exists.<br>
+&bull; <b>Harvest months derived</b> from the sourced planting window + days-to-maturity (extension charts publish planting, not harvest).<br>
+&bull; <b>Page-level pest/disease citations</b> &mdash; anchored to the comprehensive crop page that names the pest, not a pest-specific page, where the latter was unreadable.<br>
+&bull; <b>Container figures &amp; portal-level URLs, CC-derived successions</b> &mdash; routine modeling, all flagged.<br>
+&bull; <b>Marginal warm-region fits</b> (FL z11, low desert, lowland Hawaii) carry best-effort windows with honest marginality language.<br>
+&bull; <b>Deciduous warm-cell dormancy</b> (berries/trees) &mdash; the leaf-habit deriver fills <code>dormant</code> on near-frost-free cells; a known, blessed artifact.
+</div>
+<div class="foot">Generated by Claude Code &middot; canonical SHA 84321950 (byte-untouched) &middot; the 30 drafts are verified in <code>_handoff/batch_2026-06-30/</code>, awaiting your review. Nothing committed. Open in a browser, or in Word / Google Docs.</div>
+</body></html>

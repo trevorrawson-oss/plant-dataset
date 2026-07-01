@@ -18,3 +18,6 @@ crops_data_final.scratch.json
 # Review artifacts (generated, not dataset content)
 CROP_REVIEW_*.html
 CROP_REVIEW_*.doc
+
+# Session handoff staging (gitignored -- durable for a fresh chat, not committed)
+_handoff/
