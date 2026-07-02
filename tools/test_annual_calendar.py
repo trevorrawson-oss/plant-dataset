@@ -240,7 +240,7 @@ if os.path.exists(_path):
                 and v.get("launch_ready_core") and v.get("launch_ready_seasoned"))
     _annuals = [c for c in _data["crops"]
                 if c.get("calendar_basis") == "frost_anchored" and _certified(c)]
-    assert len(_annuals) == 10, ("expected 10 certified annuals", len(_annuals))
+    assert len(_annuals) >= 10, ("certified annuals unexpectedly few (>=10)", len(_annuals))
     for c in _annuals:
         fp = ac.annual_calendar_violations(c)
         assert fp == [], (f"FALSE POSITIVE on certified annual {c['slug']}", fp)

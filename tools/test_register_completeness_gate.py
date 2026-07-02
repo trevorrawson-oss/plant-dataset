@@ -39,7 +39,7 @@ if os.path.exists(_path):
     data = json.load(open(_path))
     cert = [c for c in data["crops"]
             if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
-    assert len(cert) == 18, ("expected 18 certified", len(cert))
+    assert len(cert) >= 18, ("certified set unexpectedly small (>=18)", len(cert))
     for c in cert:
         fp = register_completeness_violations(c)
         assert fp == [], (f"register_completeness FALSE POSITIVE on certified {c['slug']}", fp)

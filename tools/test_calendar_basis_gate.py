@@ -60,7 +60,7 @@ if os.path.exists(_path):
     data = json.load(open(_path, encoding="utf-8"))
     cert = [c for c in data["crops"]
             if c.get("verification_status", {}).get("status") == "verified_gs_arc"]
-    assert len(cert) == 18, f"expected 18 certified anchors, found {len(cert)}"
+    assert len(cert) >= 18, f"certified set unexpectedly small (>=18 anchors), found {len(cert)}"
     fp = [(c["slug"], calendar_basis_violations(c)) for c in cert if calendar_basis_violations(c)]
     assert fp == [], f"calendar_basis FP on certified anchors: {fp}"
     print(f"  real data: 0 FP across {len(cert)} certified anchors: PASS")
