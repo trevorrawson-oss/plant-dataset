@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-02 -- Wave-2b pears CERTIFIED (citation repair: dead PSU URL retired) (CONTENT release; `b250be2b` -> `3ee13bac`) [Claude Code]
+
+**CONTENT release -- the Wave-2 pear citation repair + cert.** pear-asian + pear-european -> `verified_gs_arc` + launch flags (58 -> 60). Held from Wave 2 for the dead-citation repair; now fixed + certified.
+
+**The repair (deterministic).** A focused CC agent found + WebFetch-VERIFIED live T1 replacements; then a deterministic pass: (1) RETIRED the dead `psu_ext` pear URL (a Penn State home-pear page that redirected to a generic page) across all ~23 fields per pear -- most fields kept a genuinely-backing live co-source (fire blight->Clemson, culture->UMN, etc.); (2) re-anchored the claims that needed it -- codling moth (its umn_ext co-source did NOT actually cover it) + pear scab (sole-source dead) -> UC IPM (uc_ipm, live: codling-moth + apple-and-pear-scab pages); (3) pinned pollination under A38 -- pear-asian -> WSU pear-pollination + UC ANR Small Farms Asian-pears brochure (which backs all 4 cultivar claims verbatim: partial self-fruitfulness, 20th Century/Shinseiki set alone in CA, Niitaka pollen-sterile, Ya Li/Tsu Li early-Chinese bloom timing); pear-european -> WSU + UMN growing-pears; (4) SOFTENED pear-asian's headline 'almost entirely self-unfruitful' -> 'only partially self-fruitful ... light, unreliable crop' to match UC ANR (the notes already carried the cultivar nuance); (5) open_findings: chill modeled (ucd_fruitnut 403s, both), pear-european Magness sub-claim backed by UMD-not-the-pin, + the repair record.
+
+**Verify + promote.** EXACTLY 2 crops changed, both gate PASS with A38=0, all 12 canonical perennial_chill_gated trees green, 0 regressions, release_verify B clean + C coherent + D no em-dashes; 11 CONCERNs the expected artifacts. `b250be2b` -> `3ee13bac`.
+
+**LESSON REINFORCED:** A38 checks source-key RESOLUTION, not page-SEMANTICS -- the dead-but-resolving PSU URL PASSED A38; the source-truth review caught it, and the fix required verifying each replacement URL is live AND states the claim. Motivates the roster-wide URL-liveness sweep flagged for post-123.
+
+**NEXT:** Wave 3 -- mulberry, pawpaw (the last 2 batch trees) + the 3 berries (blackberry, raspberry, elderberry). 20 of 30 batch drafts remain.
+
+---
+
 ## 2026-07-02 -- Wave-2 pome/other trees CERTIFIED (3: fig/persimmon/pomegranate); pears HELD for citation repair (CONTENT release; `bf432149` -> `b250be2b`) [Claude Code]
 
 **CONTENT release -- the SECOND cert wave of the overnight batch.** Certified fig, persimmon, pomegranate -> `verified_gs_arc` + launch flags (55 -> 58). The 2 pears (pear-asian, pear-european) were HELD for citation repair (Wave 2b).

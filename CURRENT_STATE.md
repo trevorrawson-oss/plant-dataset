@@ -10,34 +10,34 @@
 ---
 
 
-**58 certified anchors** (`b250be2b`), first 13 LIVE. **2026-07-02: Wave 2 (pome/other trees) certified** -- fig, persimmon, pomegranate -> `verified_gs_arc` (55 -> 58). Pollination pinned under A38 (fig parthenocarpy on UF/IFAS MG214; persimmon's Asian-self/American-dioecious split; pomegranate self-fruitful). The 2 PEARS were HELD for a **Wave-2b citation repair** (a dead PSU URL pinned across fields -- caught by the source-truth review, which A38 cannot see). Canonical `bf432149` -> `b250be2b` (CONTENT release: committed + pushed + plant-astro bumped). 22 of 30 batch drafts remain (incl. the 2 held pears). NEXT: Wave 2b (pears) then Wave 3 (mulberry/pawpaw + 3 berries). Anchor target is a roadmap call.
+**60 certified anchors** (`3ee13bac`), first 13 LIVE. **2026-07-02: Wave 2b -- the 2 pears certified** after a citation repair (pear-asian, pear-european -> `verified_gs_arc`, 58 -> 60). The dead PSU pear URL was RETIRED across ~23 fields/pear; codling moth + pear scab re-anchored to UC IPM (verified live); pollination pinned under A38 (WSU + UC ANR/UMN); pear-asian's self-unfruitful framing softened to the UC ANR 'partially self-fruitful'. Canonical `b250be2b` -> `3ee13bac` (CONTENT release: committed + pushed + plant-astro bumped). This closes the pome/tree family except mulberry + pawpaw (Wave 3, with the berries). 20 of 30 batch drafts remain. Anchor target is a roadmap call.
 
 ## Canonical pointer
-- **Current SHA:** `b250be2bfb7ad2d10b26ebc310694c6dd2162cf87a0dc6d87afd84622966cfa3`. `LATEST.txt` session: `Wave-2 pome/other-tree cert -- fig/persimmon/pomegranate -> verified_gs_arc (55 -> 58). Pollination pinned under A38 (fig->MG214 parthenocarpy; persimmon->Asian-self/American-dioecious split; pomegranate->self-fruitful). The 2 pears HELD for Wave-2b citation repair (dead PSU URL pinned across fields). 3 crops changed, all PASS + A38=0, 0 regressions, release_verify clean.` (2026-07-02).
+- **Current SHA:** `3ee13bac99037d62b1215dcff3772bf28870130f782b7426c48d68d38fe1364a`. `LATEST.txt` session: `Wave-2b pear cert (citation repair) -- pear-asian/pear-european -> verified_gs_arc (58 -> 60). Retired the dead psu_ext pear URL across ~23 fields/pear; re-anchored codling moth + pear scab to UC IPM (verified live); pollination pinned under A38 (pear-asian->WSU + UC ANR Asian-pears brochure; pear-european->WSU + UMN); pear-asian self-unfruitful framing softened. 2 crops changed, PASS + A38=0, 0 regressions, release_verify clean.` (2026-07-02).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `b250be2b` -- feat(certify): Wave 2 pome/other trees -> 58 certified (fig/persimmon/pomegranate)
   - `bf432149` -- feat(certify): Wave 1 stone fruit -> 55 certified (apricot/nectarine/plum/cherry-sour/cherry-sweet)
   - `84321950` -- fix(calendar): P0 calendar-coherence -- A37 gate + surgical normalizer (130 changes/106 cells)
   - `1bc569dc` -- feat(certify): bok-choy -> ALL 50 CERTIFIED (scale-phase certification complete)
   - `e8cc3931` -- feat(certify): big cert -- 27 drafts (greens/heads/alliums/cucurbits/nightshades/herbs/flowers + snow-peas/edamame) -> 49 certified
   - `ed8abc66` -- feat(certify): roots wave -- radish/beet/turnip/parsnip -> verified_gs_arc (22 certified)
   - `4d683af3` -- feat(scale): promote batch 2-4 (19 DRAFTS) + cool-season timing fix -- roster 18+32=50
-  - `6df285d4` -- feat(scale): batch 1 -- 13 crops authored as DRAFTS + promoted (6dfd9798 -> 6df285d4)
 
-## What just happened (session `Wave-2 pome/other-tree cert`, 2026-07-02)
+## What just happened (session `Wave-2b pear citation repair + cert`, 2026-07-02)
 
-**Certified fig, persimmon, pomegranate -> `verified_gs_arc` + launch flags; 55 -> 58; canonical `bf432149` -> `b250be2b`.** A source-truth review (5 parallel CC agents, each WebFetching the crop's cited T1 pages) confirmed every pollination call on the 3 is BACKED: fig parthenocarpy + the Smyrna/San Pedro caprification split near-verbatim on UF/IFAS MG214; persimmon's Asian-self/parthenocarpic vs American-dioecious split BACKED both halves (Clemson/UGA/NCSU), the boolean self-documenting the default; pomegranate self-fruitful verbatim on UGA. Pollination pinned to its cited page under A38; modeled/secondary-citation items (fig-mosaic uncited, persimmon chill-700/male-distance/anthracnose-source, pomegranate flower-nuances + chill) recorded as open_findings.
+**Certified pear-asian + pear-european -> `verified_gs_arc`; 58 -> 60; canonical `b250be2b` -> `3ee13bac`.** These were HELD from Wave 2 because both pinned a DEAD Penn State pear URL (redirected to a generic page) across ~23 fields, with codling moth + pear scab left unbacked. A focused CC agent found + WebFetch-verified live T1 replacements; then a deterministic pass RETIRED the dead PSU pin everywhere (most fields kept a live co-source), re-anchored codling moth + pear scab to UC IPM (live), pinned pollination under A38 (pear-asian -> WSU + UC ANR Small Farms Asian-pears brochure, backing all 4 cultivar claims verbatim; pear-european -> WSU + UMN), softened pear-asian's 'almost entirely self-unfruitful' headline to the UC ANR 'partially self-fruitful', and recorded chill-modeled + Magness-uncited items as open_findings.
 
-**The 2 pears were HELD.** Both pin a DEAD PSU URL (`extension.psu.edu/pear-production-in-home-fruit-plantings`, redirects to a generic page) across fire blight / pear scab / pear psylla / codling moth / the pollination diagnostic; pear-asian also over-states its self-unfruitfulness + rests cultivar claims on an uncited UC ANR page. Biology sound, citations need repair -> Wave 2b. LESSON: A38 checks source RESOLUTION, not page-semantics -- a dead URL that still resolves passes A38; the source-truth review is what catches it.
+**Verify + promote.** Exactly 2 crops changed, both gate PASS (A38=0), all 12 canonical trees green, 0 regressions, release_verify clean. Committed + pushed + plant-astro submodule bumped.
 
-**Verify + promote.** Surgical splice: exactly 3 crops changed, all gate PASS (A38=0), all 10 canonical trees green, 0 regressions, release_verify clean (11 expected artifacts). Committed + pushed + plant-astro submodule bumped.
+**LESSON REINFORCED:** A38 checks source RESOLUTION, not page-semantics -- a dead-but-resolving URL passes A38; the source-truth review catches it. Motivates the post-123 URL-liveness sweep.
 
 ## Active work + next step
 
-**Wave 2 (pome/other trees) CERTIFIED (2026-07-02).** 58 certified. fig/persimmon/pomegranate in canonical + visible to plant-astro.
+**Wave 2b (pears) CERTIFIED (2026-07-02).** 60 certified. 10 of the 12 batch trees are now certified (5 stone + fig/persimmon/pomegranate + 2 pears); only mulberry + pawpaw remain.
 
-**NEXT: Wave 2b -- pear citation repair.** pear-asian + pear-european: re-point the dead PSU URL to a live PSU pear page, re-anchor codling moth (UC IPM), add UC ANR Small Farms for pear-asian's cultivar claims, soften the 'almost entirely self-unfruitful' framing to the extension 'partially self-fruitful, better with 2 varieties'; then re-verify + certify. THEN Wave 3 (mulberry, pawpaw + the 3 berries: blackberry/raspberry/elderberry), Wave 4 nightshades, Wave 5 cucurbits, Wave 6 other annuals. 22 of 30 batch drafts remain in `_handoff/batch_2026-06-30/` (incl. the 2 held pears). **A38 WORKLIST:** the remaining batch trees (2 pears + mulberry + pawpaw) are RED under A38 until their waves pin them. **BACKLOG:** a roster-wide URL-liveness sweep (the dead-URL-that-still-resolves class, e.g. the pear PSU URL) -- flagged for POST-123. The cross-crop field-addition arc stays DEFERRED until the roster is complete. **NEW-CHAT PICKUP:** canonical `b250be2b` (58 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
+**NEXT: Wave 3 -- mulberry, pawpaw + the 3 berries** (blackberry, raspberry CANE + elderberry SHRUB): source-truth review (pollination/parthenocarpy/chill/signature disease + the elderberry cook-safety + partial self-fertility) -> pin pollination under A38 (mulberry/pawpaw) -> flip. Then Wave 4 nightshades, Wave 5 cucurbits, Wave 6 other annuals. 20 of 30 batch drafts remain in `_handoff/batch_2026-06-30/`. **A38 WORKLIST:** mulberry + pawpaw are the last 2 batch trees RED under A38 until Wave 3 pins them (the 3 berries are berries_woody, out of A38 scope). **BACKLOG:** roster-wide URL-liveness sweep (dead-but-resolving class) flagged for POST-123. Cross-crop field-addition arc DEFERRED until roster complete. **NEW-CHAT PICKUP:** canonical `3ee13bac` (60 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
 
-## Gate record (generated 2026-07-02, on canonical `b250be2b`)
+## Gate record (generated 2026-07-02, on canonical `3ee13bac`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **kale: `PASS` (0)**
@@ -73,6 +73,8 @@
 - **pumpkin: `PASS` (0)**
 - **plum: `PASS` (0)**
 - **apricot: `PASS` (0)**
+- **pear-european: `PASS` (0)**
+- **pear-asian: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
 - **fig: `PASS` (0)**
 - **pomegranate: `PASS` (0)**
@@ -134,6 +136,8 @@
 - **pumpkin: 10/10 region cells filled**
 - **plum: 10/10 region cells filled**
 - **apricot: 10/10 region cells filled**
+- **pear-european: 10/10 region cells filled**
+- **pear-asian: 10/10 region cells filled**
 - **orange-navel: 10/10 region cells filled**
 - **fig: 10/10 region cells filled**
 - **pomegranate: 10/10 region cells filled**
@@ -194,6 +198,8 @@
 - **pumpkin:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **plum:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **apricot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **pear-european:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **pear-asian:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **fig:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **pomegranate:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -217,9 +223,11 @@
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **58 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **60 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
+
+- **WAVE-2b PEARS CERTIFIED (citation repair) (2026-07-02, CONTENT release, `b250be2b` -> `3ee13bac`, committed + pushed + plant-astro bumped):** pear-asian + pear-european -> `verified_gs_arc` (58 -> 60), held from Wave 2 for the dead-citation repair. A focused CC agent WebFetch-verified live T1 replacements; deterministic pass: RETIRED the dead `psu_ext` pear URL across ~23 fields/pear (most kept a live co-source), re-anchored codling moth (its umn_ext co-source did NOT actually cover it) + pear scab -> UC IPM (live), pinned pollination under A38 (pear-asian -> WSU + UC ANR Small Farms Asian-pears brochure, all 4 cultivar claims verbatim; pear-european -> WSU + UMN), softened pear-asian's 'almost entirely self-unfruitful' -> UC ANR's 'partially self-fruitful'. open_findings: chill modeled (ucd 403s), pear-european Magness backed-by-UMD-not-the-pin. Verify: 2 crops changed, PASS + A38=0, all 12 canonical trees green, 0 regressions, release_verify clean. **LESSON (reinforces the Wave-2 dead-URL one): A38 checks source-key RESOLUTION, not page-SEMANTICS -- a dead-but-resolving URL PASSES A38; only the source-truth review catches it, and the fix requires verifying each replacement URL is live AND states the claim.** WORKLIST: mulberry + pawpaw the last 2 batch trees RED under A38 until Wave 3.
 
 - **WAVE-2 POME/OTHER TREES CERTIFIED (3) + THE DEAD-URL LESSON (2026-07-02, CONTENT release, `bf432149` -> `b250be2b`, committed + pushed + plant-astro bumped):** fig, persimmon, pomegranate -> `verified_gs_arc` (55 -> 58), the 2nd cert wave. 5 parallel source-truth agents: fig parthenocarpy + Smyrna/San Pedro split near-verbatim on UF/IFAS MG214; persimmon Asian-self/American-dioecious split BACKED both halves (Clemson/UGA/NCSU, boolean self-documenting); pomegranate self-fruitful on UGA. Pollination pinned under A38; modeled/secondary items -> open_findings. **PEARS HELD for Wave 2b:** both pin a DEAD `psu_ext` pear URL that REDIRECTS to a generic page (pinned across fire blight / scab / psylla / codling moth / pollination); pear-asian also over-states self-unfruitfulness + rests cultivar claims on an uncited UC ANR page. **LESSON (sharpens the Wave-1 mis-pinned-key one): A38 checks source-key RESOLUTION, not page-SEMANTICS -- a dead URL that still resolves PASSES A38; only the source-truth (human/agent) review catches a citation pointing at the wrong/generic page.** Motivates a roster-wide URL-liveness sweep (dead-but-resolving class), FLAGGED for post-123. Verify: 3 crops changed, all PASS + A38=0, all 10 canonical trees green, 0 regressions, release_verify clean. WORKLIST: remaining batch trees (2 pears + mulberry + pawpaw) RED under A38 until their waves.
 
