@@ -1,3 +1,3 @@
-SHA: 8432195016415dfe12acb396c3a8493152315a41ceddd8e6bd108c6eb1a282e5
-Date: 2026-06-30
-Session: P0 calendar-coherence fix -- new A37 gate (growing-after-harvest + one-month harvest-hole) + surgical normalizer: 130 changes / 106 cells (105 impossible-growing tokens + 25 harvest-hole bridges), A37 -> 0, 50/50 certified PASS, zero collateral. Both systemic calendar-derivation bugs fixed at the source.
+SHA: bf4321493e6fd61ee185c0beb3e146af96a0d2f1327cca3ae96dcb036a7eb1e9
+Date: 2026-07-02
+Session: Wave-1 stone-fruit cert -- apricot/nectarine/plum/cherry-sour/cherry-sweet -> verified_gs_arc (50 -> 55 certified). New A38 pollination-source gate (tree-cert standard); pollination pinned to its cited page on the 5 + peach/apple (amend, no re-cert); Balaton dropped (cherry-sour), plum pollinizer distance set, open_findings recorded. release_verify clean (11 expected artifacts), 0 regressions, exactly 7 crops changed.

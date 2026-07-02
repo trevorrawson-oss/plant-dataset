@@ -10,10 +10,10 @@
 ---
 
 
-**50 certified anchors** (`84321950`), first 13 LIVE. **2026-07-02: the elderberry `berries_woody` SHRUB sub-form landed (TDD, `f76be82`), taking the overnight 30-crop batch to 30/30 gate-clean.** That, the stale certified-count test floor (`b56ab98`), and the cross-crop field-addition arc docs (`fad407c`) are committed + PUSHED -- a TOOLING/DOCS release, canonical byte-UNCHANGED (`84321950`). The 30 remain DRAFTS staged in `_handoff/batch_2026-06-30/`; all 5 batch-review decisions are RULED. NEXT: certification, 5-by-5 by family, Wave 1 = stone fruit (apricot/nectarine/plum/cherry-sour/cherry-sweet). Anchor target is a roadmap call.
+**55 certified anchors** (`bf432149`), first 13 LIVE. **2026-07-02: Wave 1 of stone-fruit certification landed** -- apricot, nectarine, plum, cherry-sour, cherry-sweet -> `verified_gs_arc` (50 -> 55), the FIRST flip of the overnight 30-crop batch. Gated by a new **A38 pollination-source pin** (tree-cert standard, TDD): a perennial_chill_gated crop's `pollination` call must cite a T1 page; pinned on the 5 + peach/apple (amend, no re-cert). Canonical `84321950` -> `bf432149` (CONTENT release: committed + pushed + plant-astro bumped). 25 of the 30 batch drafts remain staged in `_handoff/batch_2026-06-30/`; NEXT is Wave 2 (pome/other trees). Anchor target is a roadmap call.
 
 ## Canonical pointer
-- **Current SHA:** `8432195016415dfe12acb396c3a8493152315a41ceddd8e6bd108c6eb1a282e5`. `LATEST.txt` session: `P0 calendar-coherence fix -- new A37 gate (growing-after-harvest + one-month harvest-hole) + surgical normalizer: 130 changes / 106 cells (105 impossible-growing tokens + 25 harvest-hole bridges), A37 -> 0, 50/50 certified PASS, zero collateral. Both systemic calendar-derivation bugs fixed at the source.` (2026-06-30).
+- **Current SHA:** `bf4321493e6fd61ee185c0beb3e146af96a0d2f1327cca3ae96dcb036a7eb1e9`. `LATEST.txt` session: `Wave-1 stone-fruit cert -- apricot/nectarine/plum/cherry-sour/cherry-sweet -> verified_gs_arc (50 -> 55 certified). New A38 pollination-source gate (tree-cert standard); pollination pinned to its cited page on the 5 + peach/apple (amend, no re-cert); Balaton dropped (cherry-sour), plum pollinizer distance set, open_findings recorded. release_verify clean (11 expected artifacts), 0 regressions, exactly 7 crops changed.` (2026-07-02).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
   - `84321950` -- fix(calendar): P0 calendar-coherence -- A37 gate + surgical normalizer (130 changes/106 cells)
   - `1bc569dc` -- feat(certify): bok-choy -> ALL 50 CERTIFIED (scale-phase certification complete)
@@ -23,19 +23,19 @@
   - `6df285d4` -- feat(scale): batch 1 -- 13 crops authored as DRAFTS + promoted (6dfd9798 -> 6df285d4)
   - `6dfd9798` -- feat(soil): soil-texture beginner back-fill -- clears the A36 GATE-UNLOCK -> 18/18
 
-## What just happened (session `elderberry SHRUB sub-form + cleanup`, 2026-07-02)
+## What just happened (session `Wave-1 stone-fruit cert + A38 gate`, 2026-07-02)
 
-**Decision 1 -- the 3rd `berries_woody` SHRUB sub-form (elderberry) -- built test-first (RED before GREEN) and committed `f76be82`.** A SHRUB sub-form keyed on `cane_type:"multistem_perennial"` (intercepted FIRST in a new `_subform()` so bush/cane routing -- incl. blackberry/raspberry's `both_summer_and_everbearing`, a real value NOT in CANE_TYPE_ENUM -- is byte-untouched); `SHRUB_TYPE_ENUM = {american_elderberry, european_elderberry}`; partial self-fertility accepted (`self_fertile=true`, the cane bar); chill KEPT as the honest D1 gate basis (decision-1 OPTION A). A chill-less shrub carries `chill_hours_required:0` (0 is not None, so the presence check passes) with NO carve-out -- locked by a regression test (Trevor's edge case). The elderberry DRAFT was re-marked `cane_type -> multistem_perennial` in staging ONLY; **canonical was never written (`84321950`).** VERIFIED by exit code: 39/39 gate unit tests, 30/30 batch gate-clean (elderberry was the lone holdout), 0 regressions across all 125 (80 PASS / 45 unfilled shells FAIL), and an adversarial bad-shrub-type injection on the REAL elderberry record BOUNCED. Decision 2 (the bush/cane generalization) signed off + committed WITH it.
+**Certified the 5 stone fruit (apricot, nectarine, plum, cherry-sour, cherry-sweet) -> `verified_gs_arc` + launch flags; 50 -> 55 certified; canonical `84321950` -> `bf432149`.** A source-truth review (5 parallel CC agents, each WebFetching the crop's cited T1 pages) confirmed every pollination call is BACKED, no fabricated citations; the two trickiest held up (plum's European-self / Japanese-needs-pollinizer split verbatim on MU G6001; sweet-cherry self-incompatibility + named self-fertile cultivars near-verbatim on WSU). The review surfaced a SYSTEMIC gap -- tree pollination was backed only crop-wide, never field-pinned -> built **A38** (TDD): a perennial_chill_gated crop's `pollination` object must pin its call to a cited T1 source URL (evergreen/annual no-ops; tooling `8352a7b`). Pinned the 5 + amended peach/apple IN-PLACE (no re-cert). Caught + fixed two mis-pinned keys (cherry-sour `umn_ext` -> a pest page; cherry-sweet `wsu_ext` -> a rootstock page) by using the correct pollination-page URLs. Applied Trevor's rulings: Balaton dropped from cherry-sour's self-fruitful list (partial self-fertility; re-add at variety expansion), plum distance set to 100, and the modeled/deferred items (plum boolean, chill low-ends, brown-rot ranking, region-chill) recorded as open_findings.
 
-**Cleanup + docs.** Floored the 3 stale certified-count test guards (`==18`/`==10` -> `>=`, so the real-data FP guards survive every future cert wave; `b56ab98`; full `tools/` suite now 44/44 green). Tracked the cross-crop FIELD-ADDITION arc -- `docs/gs_cross_crop_field_addition_v0.md` (the "column GS arc" method) + `docs/field_addition_register.md` (live queue; entry #1 = germination `day_range_from_sow`, deferred to a complete roster) -- plus a `CLAUDE.md` `## Adding a cross-crop field` pointer (`fad407c`). The arc itself stays DEFERRED until the roster is complete. `f76be82` + `b56ab98` + `fad407c` PUSHED to origin/main.
+**Verify + promote.** Surgical splice into a pristine snapshot; EXACTLY 7 crops changed (5 + peach/apple), all 7 gate PASS (A38=0), all canonical trees green, 0 PASS->FAIL regressions, release_verify clean (11 expected artifacts: multi-crop-vs-single-crop assumption + tree fields novel vs the annual reference). Committed + pushed + plant-astro submodule bumped.
 
 ## Active work + next step
 
-**All 5 batch-review decisions RULED (2026-07-02).** (1) elderberry SHRUB sub-form -- DONE (Option A). (2) bush/cane gate -- signed off + committed. (3) potato `ca_desert` Nov -- `cold_pause` KEPT (a quick common-parlance check folded into the potato cert slot). (4) D8 -- the new warm crops (cantaloupe/honeydew/bell-pepper/jalapeno/cayenne) stay `season_over` for now, with a properly-backed `heat_pause` OWED at variety-pass (a CONDITIONAL approval; recorded to auto-memory so a future session honors it; A28 rejects a bare one). (5) cert waves -- 5-by-5 by family, 6 waves.
+**Wave 1 (stone fruit) CERTIFIED (2026-07-02).** 55 certified. The 5 are in canonical + visible to plant-astro (the submodule bump makes them readable for the artwork/preview surfaces).
 
-**NEXT: certification of the 30 drafts, in 6 family waves of 5.** Wave 1 = stone fruit (apricot, nectarine, plum, cherry-sour, cherry-sweet); watch the pollination citation-honesty calls (self-fruitful vs needs-a-pollinizer). Certification is an in-canonical flip, so each wave's crops are promoted into canonical (as drafts) then flipped -- the FIRST content release of the batch, which regenerates this state trio + `release_verify` + Trevor sign-off + the plant-astro submodule bump. The cross-crop field-addition arc (germination `day_range_from_sow` etc.) stays DEFERRED until the full roster is certified. **NEW-CHAT PICKUP:** canonical is `84321950` (unchanged); the 30 drafts are durable + 30/30 gate-clean in `_handoff/batch_2026-06-30/`; nothing about the batch is in canonical yet.
+**NEXT: Wave 2 -- pome/other trees** (pear-asian, pear-european, fig, persimmon, pomegranate): the same source-truth review (pollination + chill + signature disease) -> pin pollination under A38 -> flip. Then Wave 3 (mulberry/pawpaw + the 3 berries), Wave 4 nightshades, Wave 5 cucurbits, Wave 6 other annuals. 25 of the 30 batch drafts remain staged in `_handoff/batch_2026-06-30/`. **A38 WORKLIST:** the 7 non-Wave-1 batch trees (fig, mulberry, pawpaw, pear-asian, pear-european, persimmon, pomegranate) are RED under A38 until their waves pin them (drafts, not in canonical, non-blocking). The cross-crop field-addition arc stays DEFERRED until the roster is complete. **NEW-CHAT PICKUP:** canonical is `bf432149` (55 certified); the remaining batch drafts are durable + gate-verified in `_handoff/batch_2026-06-30/`.
 
-## Gate record (generated 2026-06-30, on canonical `84321950`)
+## Gate record (generated 2026-07-02, on canonical `bf432149`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **kale: `PASS` (0)**
@@ -69,13 +69,18 @@
 - **watermelon: `PASS` (0)**
 - **strawberry: `PASS` (0)**
 - **pumpkin: `PASS` (0)**
+- **plum: `PASS` (0)**
+- **apricot: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
 - **parsnip: `PASS` (0)**
 - **kohlrabi: `PASS` (0)**
+- **cherry-sweet: `PASS` (0)**
 - **turnip: `PASS` (0)**
 - **leek: `PASS` (0)**
 - **brussels-sprouts: `PASS` (0)**
 - **okra: `PASS` (0)**
+- **nectarine: `PASS` (0)**
+- **cherry-sour: `PASS` (0)**
 - **microgreens-mix: `PASS` (0)**
 - **shallot: `PASS` (0)**
 - **marigold: `PASS` (0)**
@@ -122,13 +127,18 @@
 - **watermelon: 10/10 region cells filled**
 - **strawberry: 10/10 region cells filled**
 - **pumpkin: 10/10 region cells filled**
+- **plum: 10/10 region cells filled**
+- **apricot: 10/10 region cells filled**
 - **orange-navel: 10/10 region cells filled**
 - **parsnip: 10/10 region cells filled**; 11 heat_pause
 - **kohlrabi: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
+- **cherry-sweet: 10/10 region cells filled**
 - **turnip: 10/10 region cells filled**; 13 heat_pause
 - **leek: 10/10 region cells filled**
 - **brussels-sprouts: 10/10 region cells filled**; 5 heat_pause
 - **okra: 10/10 region cells filled**
+- **nectarine: 10/10 region cells filled**
+- **cherry-sour: 10/10 region cells filled**
 - **microgreens-mix: 0/0 region cells filled**
 - **shallot: 10/10 region cells filled**
 - **marigold: 10/10 region cells filled**
@@ -174,13 +184,18 @@
 - **watermelon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **strawberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **pumpkin:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **plum:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **apricot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **parsnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **kohlrabi:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cherry-sweet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **turnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **leek:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **brussels-sprouts:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **okra:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **nectarine:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cherry-sour:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **microgreens-mix:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **shallot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **marigold:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -191,9 +206,11 @@
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **50 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **55 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
+
+- **WAVE-1 STONE-FRUIT CERTIFIED + A38 POLLINATION-SOURCE GATE (2026-07-02, CONTENT release, `84321950` -> `bf432149`, committed + pushed + plant-astro bumped):** the 5 stone fruit (apricot/nectarine/plum/cherry-sour/cherry-sweet) -> `verified_gs_arc` (50 -> 55), the first flip of the overnight batch. Process: 5 parallel CC source-truth agents (WebFetch the cited T1 pages) -> all CERTIFY_WITH_NOTE, every pollination call BACKED, no fabricated citations; plum's European/Japanese split (MU G6001) + sweet-cherry self-incompatibility (WSU) held up verbatim. **A38 `perennial_pollination_source_violations` (TDD, tooling `8352a7b`):** a perennial_chill_gated crop's `pollination` object must pin its call to a cited T1 source (non-empty `sources` -> resolving `anchoring_urls[key].url`); evergreen/annual no-ops -- the deterministic half of 'source-verbatim is the flip gate'. GATE-UNLOCK: peach/apple + all batch trees went RED until pinned; peach/apple amended IN-PLACE (no re-cert, per the field-addition 'amend certified crops, never re-cert' principle). LESSON: A38 checks source-key RESOLUTION, not page-semantics -- pinning caught cherry-sour's `umn_ext` (pest page) + cherry-sweet's `wsu_ext` (rootstock page) mis-pointed keys; the human/agent review owns which URL actually backs the claim. Rulings: Balaton dropped from cherry-sour (partial self-fertility, re-add at variety expansion); plum `self_fertile=true` defaults to European (type-aware flag owed at variety-pass) + distance 100; modeled chill low-ends + apricot brown-rot ranking + region-chill -> open_findings. WORKLIST: 7 non-Wave-1 batch trees RED under A38 until their waves.
 
 - **ELDERBERRY SHRUB SUB-FORM (the 3rd `berries_woody` sub-form) + BATCH CLEANUP (2026-07-02, TOOLING/DOCS release, canonical `84321950` byte-UNCHANGED, pushed `f76be82`+`b56ab98`+`fad407c`, TDD RED-before-GREEN):** decision 1 built as a SHRUB sub-form keyed on `cane_type:"multistem_perennial"`, intercepted FIRST in `_subform()` so bush/cane routing (incl. the `both_summer_and_everbearing` cane fruits) is untouched; `SHRUB_TYPE_ENUM={american_elderberry, european_elderberry}`, partial self-fertility (`self_fertile=true`, cane bar), chill kept as the honest D1 gate basis (OPTION A). A chill-less shrub carries `chill_hours_required:0` (0 is not None) with NO carve-out -- locked by a test (Trevor's edge case). elderberry draft re-marked in staging only; 39/39 unit tests, 30/30 batch gate-clean (was the lone holdout), 0 regressions across 125, adversarial bad-type injection on the REAL record BOUNCED. Decision 2 (bush/cane generalization) committed WITH it. CLEANUP: the 3 stale certified-count guards floored (`==` -> `>=`, survive every cert wave); the cross-crop FIELD-ADDITION arc docs tracked (`docs/field_addition_register.md` register + `docs/gs_cross_crop_field_addition_v0.md` method) + a CLAUDE.md `## Adding a cross-crop field` pointer -- ARC DEFERRED to a complete roster (never mid-cert). Decisions 3 (potato ca_desert Nov `cold_pause` KEPT), 4 (D8 new-warm-crops `season_over` now, backed `heat_pause` OWED at variety-pass -- CONDITIONAL), 5 (cert 5-by-5 by family) RULED. LESSON: the 2nd/3rd member of an archetype surfaces the gate's over-fit -- the SHRUB branch generalized additively, every bush/cane invariant preserved.
 

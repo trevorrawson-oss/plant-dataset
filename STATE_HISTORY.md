@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-02 -- Wave-1 stone-fruit CERTIFIED (5 crops) + A38 pollination-source gate (CONTENT release; `84321950` -> `bf432149`) [Claude Code]
+
+**CONTENT release -- the FIRST flip of the overnight batch.** Certified the 5 stone fruit (apricot, nectarine, plum, cherry-sour, cherry-sweet) -> `verified_gs_arc` + launch flags (50 -> 55 certified).
+
+**Source-truth review (the load-bearing substance QA).** Fired 5 parallel CC agents, one per crop, each WebFetching the cited T1 pages to confirm the pollination call + chill + signature disease. All 5 came back CERTIFY_WITH_NOTE: biology sound, every pollination call BACKED by the cited source, no fabricated citations. The two trickiest held up -- plum's European-self / Japanese-needs-pollinizer split is verbatim on MU G6001; sweet-cherry's self-incompatibility + named self-fertile cultivars (Stella/Lapins/Sweetheart) near-verbatim on WSU. Catches: cherry-sour listed Balaton among the self-fruitful cultivars (it is only PARTIALLY self-fertile -> DROPPED, re-add at variety expansion); and a SYSTEMIC finding that tree pollination was backed only crop-wide, never field-pinned.
+
+**A38 pollination-source gate (TDD, RED-first; the systemic fix).** A perennial_chill_gated crop's `pollination` object must pin its call to cited T1 source(s) (non-empty `sources`, each resolving to `anchoring_urls[key].url`); evergreen/annual no-ops. The deterministic half of "source-verbatim is the flip gate." Committed as tooling `8352a7b` (GATE-UNLOCK: peach/apple + the batch trees went RED until pinned). Pinned pollination on the 5 (Trevor's B ruling) + amended peach/apple IN-PLACE (no re-cert, per the field-addition "amend certified crops, never re-cert" principle). CAUGHT during pinning: cherry-sour's `umn_ext` and cherry-sweet's `wsu_ext` keys pointed at a pest / rootstock page, NOT pollination -- pinned instead to the correct pollination-page URLs the agents verified (A38 checks resolution, not page-semantics; the human/agent review owns page-correctness).
+
+**Trevor's rulings applied (C/D/E).** plum crop-level `self_fertile=true` defaults to European (prose carries the full split; a type-aware flag owed at variety-pass) -> open_finding. plum `pollinizer_distance_ft` null -> 100 (match prose). Modeled chill low-ends (nectarine 300, sweet-cherry 200; nursery-attested, not T1) + apricot's uncited brown-rot-ranking -> open_findings. Both cherries' region-chill warm-region findings kept OPEN (cold-direction now T1-confirmed; per-region-local pages + exact chill bands still modeled).
+
+**Promote + verify.** Surgical splice into a pristine `84321950` snapshot (5 shells -> certified + peach/apple amended); EXACTLY 7 crops changed, all 7 gate PASS with A38=0, all canonical perennial_chill_gated trees green, 0 PASS->FAIL regressions, release_verify B (no new violations) clean + apricot shell's ~140 violations cleared, C calendars coherent, D no em-dashes/spelled-degrees. The 11 release_verify CONCERNs are expected artifacts (multi-crop vs single-crop-promote assumption + tree fields `chill_basis_*` novel vs the annual reference lettuce-leaf). `84321950` -> `bf432149`.
+
+**Worklist left.** The 7 non-Wave-1 batch trees (fig, mulberry, pawpaw, pear-asian, pear-european, persimmon, pomegranate) are RED under A38 until their cert waves pin them -- drafts, not in canonical, non-blocking. NEXT: Wave 2 (pome/other trees: pear-asian, pear-european, fig, persimmon, pomegranate).
+
+---
+
 ## 2026-07-02 -- elderberry SHRUB sub-form LANDED + batch cleanup (TOOLING/DOCS; canonical `84321950` unchanged; pushed) [Claude Code]
 
 **No content release -- a TOOLING + DOCS release; canonical never written (`84321950`).** Picked up the staged overnight 30-crop batch (`_handoff/batch_2026-06-30/`, 29/30 gate-clean) and Trevor's 5 rulings.
