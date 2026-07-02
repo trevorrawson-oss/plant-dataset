@@ -39,6 +39,11 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
   commit messages, code comments, this file). American English. Temps render as `°F`. "plant" is
   lowercase except at sentence start or in "Plant Pro".
 
+## Adding a cross-crop field
+Before adding any field across crops, follow `docs/gs_cross_crop_field_addition_v0.md` (the column
+GS-arc method) and check `docs/field_addition_register.md` (the live queue + trigger conditions).
+Run column passes against a STABLE / complete roster, never mid-certification.
+
 ## Workflow / git
 - Dataset commits go on `main` here. **Don't commit until Trevor approves** each change; when a
   discrete task is done, summarize what changed and what's next. Trevor confirms every push.
