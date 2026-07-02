@@ -15,7 +15,8 @@ Invariants (v1.8 amendment §4-5; gold_standard_arc_checklist tree branch):
 """
 import os, sys, copy
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from perennial_gate import perennial_cert_violations, perennial_variety_chill_violations
+from perennial_gate import (perennial_cert_violations, perennial_variety_chill_violations,
+                            perennial_pollination_source_violations)
 
 
 # The shared chill-delivered table the gate reads instead of a per-cell field.
@@ -351,5 +352,45 @@ t = well_formed_tree()
 cell = t["regions"]["se_gulf"]["resolved_by_zone"]["8"]
 cell["suitability"] = None; cell["calendar"] = []
 assert P(t) == [], f"D4 regression: null suitability + empty calendar is the admission state: {P(t)}"
+
+# ====== A38: perennial pollination-source pinning (Wave-1 tree-cert standard, 2026-07-02) ======
+# A perennial_chill_gated crop's `pollination` object must PIN its load-bearing pollination
+# call to cited T1 source(s): non-empty `sources`, each key resolving to anchoring_urls[key].url.
+
+# 40. a tree with a pollination object but NO sources -> violation
+t = well_formed_tree()
+t["pollination"] = {"self_fertile": True, "needs_pollinizer": False,
+                    "notes_seasoned": "self-fruitful", "notes_beginner": "one tree fruits"}
+assert any("pollination" in v and "source" in v.lower()
+           for v in perennial_pollination_source_violations(t)), \
+    f"A38: unpinned pollination must flag: {perennial_pollination_source_violations(t)}"
+
+# 41. pollination sources that resolve to anchoring_urls -> clean
+t = well_formed_tree()
+t["pollination"] = {"self_fertile": True, "sources": ["clemson_hgic"],
+                    "anchoring_urls": {"clemson_hgic": {
+                        "url": "https://hgic.clemson.edu/factsheet/peaches-nectarines/",
+                        "verified": "2026-06-30"}}}
+assert perennial_pollination_source_violations(t) == [], \
+    f"A38: pinned pollination must pass: {perennial_pollination_source_violations(t)}"
+
+# 42. a source key that does NOT resolve to a URL -> violation (honest source-verbatim)
+t = well_formed_tree()
+t["pollination"] = {"sources": ["clemson_hgic"], "anchoring_urls": {}}
+assert any("anchoring_urls" in v for v in perennial_pollination_source_violations(t)), \
+    f"A38: an unresolved source key must flag: {perennial_pollination_source_violations(t)}"
+
+# 43. missing pollination object entirely -> violation
+t = well_formed_tree(); t.pop("pollination", None)
+assert any("pollination object missing" in v for v in perennial_pollination_source_violations(t)), \
+    f"A38: missing pollination object must flag: {perennial_pollination_source_violations(t)}"
+
+# 44. NO-OP off perennial_chill_gated (an annual is untouched)
+assert perennial_pollination_source_violations(
+    {"slug": "carrot", "calendar_basis": "frost_anchored"}) == [], "A38: annual must be a no-op"
+
+# 45. NO-OP for evergreen citrus (scoped to perennial_chill_gated only, not all perennials)
+assert perennial_pollination_source_violations(
+    {"slug": "lemon-x", "calendar_basis": "perennial_evergreen"}) == [], "A38: evergreen out of scope"
 
 print("PASS perennial_gate")

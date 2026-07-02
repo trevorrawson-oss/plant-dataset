@@ -561,6 +561,18 @@ print(f"  perennial variety-chill violations: {len(_pvchill)}")
 for m in _pvchill:
     fail(f"perennial variety-chill: {m}")
 
+# ---------------- A38. perennial POLLINATION-SOURCE pinning (tree-cert standard; no-op off perennial_chill_gated) ----------------
+# Wave-1 tree-cert precedent (2026-07-02): a perennial_chill_gated crop's `pollination` object must
+# PIN its load-bearing pollination call to cited T1 source(s) -- non-empty `sources`, each resolving
+# to an anchoring_urls[key].url. The deterministic half of "source-verbatim is the flip gate"; the
+# Wave-1 source-truth review found tree pollination backed only crop-wide, never field-pinned.
+from perennial_gate import perennial_pollination_source_violations
+print("A38. perennial pollination-source pinning (pollination.sources -> cited URL; no-op off scope)")
+_ppoll = perennial_pollination_source_violations(crop)
+print(f"  perennial pollination-source violations: {len(_ppoll)}")
+for m in _ppoll:
+    fail(f"perennial pollination-source: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual

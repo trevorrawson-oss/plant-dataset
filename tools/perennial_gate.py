@@ -194,3 +194,33 @@ def perennial_variety_chill_violations(crop):
                      f"({v.get('chill_hours')!r}) is the dropped legacy form -- use a numeric "
                      f"chill_hours_required")
     return V
+
+
+def perennial_pollination_source_violations(crop):
+    """Tree-cert citation standard (Wave-1, 2026-07-02): a perennial_chill_gated crop's
+    `pollination` object must PIN its load-bearing pollination call to cited T1 source(s) --
+    a non-empty `sources` list, each key resolving to `anchoring_urls[key].url`. No-op off
+    perennial_chill_gated (evergreen citrus is out of scope; its pollination is a different,
+    largely self-fruitful story). Set as the tree-cert precedent after the Wave-1 source-truth
+    review found tree pollination calls backed only crop-wide, never field-pinned (the
+    citation-honesty gap). This is the deterministic half of "source-verbatim is the flip gate."
+    """
+    if crop.get("calendar_basis") != "perennial_chill_gated":
+        return []
+    p = crop.get("pollination")
+    if not isinstance(p, dict):
+        return ["pollination object missing (a perennial_chill_gated crop must declare + "
+                "source its pollination call)"]
+    srcs = p.get("sources")
+    if not srcs:
+        return ["pollination.sources empty (the pollination call must be pinned to >=1 "
+                "cited T1 source)"]
+    V = []
+    au = p.get("anchoring_urls") if isinstance(p.get("anchoring_urls"), dict) else {}
+    for k in srcs:
+        entry = au.get(k)
+        url = entry.get("url") if isinstance(entry, dict) else None
+        if not url:
+            V.append(f"pollination source {k!r} has no anchoring_urls[{k!r}].url "
+                     f"(each source key must resolve to a cited URL)")
+    return V
