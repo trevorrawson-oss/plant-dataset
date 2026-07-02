@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-02 -- Wave-3 trees+berries CERTIFIED (4: pawpaw/blackberry/raspberry/elderberry); mulberry HELD (CONTENT release; `3ee13bac` -> `898d5eaf`) [Claude Code]
+
+**CONTENT release -- the 3rd cert wave.** pawpaw + blackberry + raspberry + elderberry -> `verified_gs_arc` + launch flags (60 -> 64). mulberry HELD for a Wave-3b citation repair.
+
+**Source-truth review (5 parallel CC agents, WebFetch of cited T1 pages).** HEADLINE: elderberry's COOK-BEFORE-EATING SAFETY claim is VERIFIED verbatim on Penn State Extension (leaves/stems/seeds contain the cyanogenic glycoside sambunigrin; 'elderberries must not be consumed raw'; 'cooking destroys the toxins') -- sambunigrin named correctly, every safety-bearing field anchored to psu_ext. pawpaw self-incompatibility + 'two grafted trees of the same cultivar will not cross-pollinate' + fly/beetle (carrion-scent) pollination + chill 400-1000 all verbatim on the KSU FAQ. blackberry + raspberry self-fertile + primocane/floricane + SWD strongly multi-sourced (NCSU 'nearly all caneberry cultivars are self-fruitful' / USU / UMN / Cornell), all-T1, zero non-T1.
+
+**The 4 -- small fixes applied.** pawpaw: pollination pinned to KSU FAQ + PSU under A38 (was uncited); 30ft distance + 2 minor pests -> open_findings. blackberry: pollination repointed from the guide-root / uga_ext (which don't state it) to the NCSU /fruit-development sub-page + PSU bramble page (which do); stale 'uncatalogued_sources' finding CLOSED (osu_ext + uada_ext ARE catalogued). raspberry: USU added to pollination.sources (the page that says 'self-fruitful'; the cited umn/ncsu backed only the bee-fill half); chill_hours_range high end TIGHTENED 1600 -> 1200 (Trevor: the 1600 was unsupported, drop it). elderberry: 3 stale `_gate_` open_findings CLOSED (the SHRUB sub-form resolved them); GI-symptom single-anchor note added.
+
+**mulberry HELD (Wave 3b).** Its headline 'self-fruitful + parthenocarpic' is horticulturally true for named fruiting cultivars but is NOT on any cited T1 page, and the cited consumer pages (UF/IFAS Gardening Solutions, NCSU) lean the other way ('dioecious, plant two'); wind-pollination is backed only by an uncited UF/IFAS page. NEEDS a citation repair -- same pattern as the Wave-2 pears.
+
+**Verify + promote.** EXACTLY 4 crops changed, all gate PASS (pawpaw A38 pin green), all 13 canonical perennial_chill_gated trees green, 0 regressions, release_verify B clean + C coherent + D no em-dashes. `3ee13bac` -> `898d5eaf`.
+
+**NEXT:** Wave 3b (mulberry citation repair), then the annuals: Wave 4 nightshades, Wave 5 cucurbits, Wave 6 other annuals. 16 of 30 batch drafts remain (mulberry + 15 annuals).
+
+---
+
 ## 2026-07-02 -- Wave-2b pears CERTIFIED (citation repair: dead PSU URL retired) (CONTENT release; `b250be2b` -> `3ee13bac`) [Claude Code]
 
 **CONTENT release -- the Wave-2 pear citation repair + cert.** pear-asian + pear-european -> `verified_gs_arc` + launch flags (58 -> 60). Held from Wave 2 for the dead-citation repair; now fixed + certified.
