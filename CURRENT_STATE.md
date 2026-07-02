@@ -10,32 +10,34 @@
 ---
 
 
-**55 certified anchors** (`bf432149`), first 13 LIVE. **2026-07-02: Wave 1 of stone-fruit certification landed** -- apricot, nectarine, plum, cherry-sour, cherry-sweet -> `verified_gs_arc` (50 -> 55), the FIRST flip of the overnight 30-crop batch. Gated by a new **A38 pollination-source pin** (tree-cert standard, TDD): a perennial_chill_gated crop's `pollination` call must cite a T1 page; pinned on the 5 + peach/apple (amend, no re-cert). Canonical `84321950` -> `bf432149` (CONTENT release: committed + pushed + plant-astro bumped). 25 of the 30 batch drafts remain staged in `_handoff/batch_2026-06-30/`; NEXT is Wave 2 (pome/other trees). Anchor target is a roadmap call.
+**58 certified anchors** (`b250be2b`), first 13 LIVE. **2026-07-02: Wave 2 (pome/other trees) certified** -- fig, persimmon, pomegranate -> `verified_gs_arc` (55 -> 58). Pollination pinned under A38 (fig parthenocarpy on UF/IFAS MG214; persimmon's Asian-self/American-dioecious split; pomegranate self-fruitful). The 2 PEARS were HELD for a **Wave-2b citation repair** (a dead PSU URL pinned across fields -- caught by the source-truth review, which A38 cannot see). Canonical `bf432149` -> `b250be2b` (CONTENT release: committed + pushed + plant-astro bumped). 22 of 30 batch drafts remain (incl. the 2 held pears). NEXT: Wave 2b (pears) then Wave 3 (mulberry/pawpaw + 3 berries). Anchor target is a roadmap call.
 
 ## Canonical pointer
-- **Current SHA:** `bf4321493e6fd61ee185c0beb3e146af96a0d2f1327cca3ae96dcb036a7eb1e9`. `LATEST.txt` session: `Wave-1 stone-fruit cert -- apricot/nectarine/plum/cherry-sour/cherry-sweet -> verified_gs_arc (50 -> 55 certified). New A38 pollination-source gate (tree-cert standard); pollination pinned to its cited page on the 5 + peach/apple (amend, no re-cert); Balaton dropped (cherry-sour), plum pollinizer distance set, open_findings recorded. release_verify clean (11 expected artifacts), 0 regressions, exactly 7 crops changed.` (2026-07-02).
+- **Current SHA:** `b250be2bfb7ad2d10b26ebc310694c6dd2162cf87a0dc6d87afd84622966cfa3`. `LATEST.txt` session: `Wave-2 pome/other-tree cert -- fig/persimmon/pomegranate -> verified_gs_arc (55 -> 58). Pollination pinned under A38 (fig->MG214 parthenocarpy; persimmon->Asian-self/American-dioecious split; pomegranate->self-fruitful). The 2 pears HELD for Wave-2b citation repair (dead PSU URL pinned across fields). 3 crops changed, all PASS + A38=0, 0 regressions, release_verify clean.` (2026-07-02).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `bf432149` -- feat(certify): Wave 1 stone fruit -> 55 certified (apricot/nectarine/plum/cherry-sour/cherry-sweet)
   - `84321950` -- fix(calendar): P0 calendar-coherence -- A37 gate + surgical normalizer (130 changes/106 cells)
   - `1bc569dc` -- feat(certify): bok-choy -> ALL 50 CERTIFIED (scale-phase certification complete)
   - `e8cc3931` -- feat(certify): big cert -- 27 drafts (greens/heads/alliums/cucurbits/nightshades/herbs/flowers + snow-peas/edamame) -> 49 certified
   - `ed8abc66` -- feat(certify): roots wave -- radish/beet/turnip/parsnip -> verified_gs_arc (22 certified)
   - `4d683af3` -- feat(scale): promote batch 2-4 (19 DRAFTS) + cool-season timing fix -- roster 18+32=50
   - `6df285d4` -- feat(scale): batch 1 -- 13 crops authored as DRAFTS + promoted (6dfd9798 -> 6df285d4)
-  - `6dfd9798` -- feat(soil): soil-texture beginner back-fill -- clears the A36 GATE-UNLOCK -> 18/18
 
-## What just happened (session `Wave-1 stone-fruit cert + A38 gate`, 2026-07-02)
+## What just happened (session `Wave-2 pome/other-tree cert`, 2026-07-02)
 
-**Certified the 5 stone fruit (apricot, nectarine, plum, cherry-sour, cherry-sweet) -> `verified_gs_arc` + launch flags; 50 -> 55 certified; canonical `84321950` -> `bf432149`.** A source-truth review (5 parallel CC agents, each WebFetching the crop's cited T1 pages) confirmed every pollination call is BACKED, no fabricated citations; the two trickiest held up (plum's European-self / Japanese-needs-pollinizer split verbatim on MU G6001; sweet-cherry self-incompatibility + named self-fertile cultivars near-verbatim on WSU). The review surfaced a SYSTEMIC gap -- tree pollination was backed only crop-wide, never field-pinned -> built **A38** (TDD): a perennial_chill_gated crop's `pollination` object must pin its call to a cited T1 source URL (evergreen/annual no-ops; tooling `8352a7b`). Pinned the 5 + amended peach/apple IN-PLACE (no re-cert). Caught + fixed two mis-pinned keys (cherry-sour `umn_ext` -> a pest page; cherry-sweet `wsu_ext` -> a rootstock page) by using the correct pollination-page URLs. Applied Trevor's rulings: Balaton dropped from cherry-sour's self-fruitful list (partial self-fertility; re-add at variety expansion), plum distance set to 100, and the modeled/deferred items (plum boolean, chill low-ends, brown-rot ranking, region-chill) recorded as open_findings.
+**Certified fig, persimmon, pomegranate -> `verified_gs_arc` + launch flags; 55 -> 58; canonical `bf432149` -> `b250be2b`.** A source-truth review (5 parallel CC agents, each WebFetching the crop's cited T1 pages) confirmed every pollination call on the 3 is BACKED: fig parthenocarpy + the Smyrna/San Pedro caprification split near-verbatim on UF/IFAS MG214; persimmon's Asian-self/parthenocarpic vs American-dioecious split BACKED both halves (Clemson/UGA/NCSU), the boolean self-documenting the default; pomegranate self-fruitful verbatim on UGA. Pollination pinned to its cited page under A38; modeled/secondary-citation items (fig-mosaic uncited, persimmon chill-700/male-distance/anthracnose-source, pomegranate flower-nuances + chill) recorded as open_findings.
 
-**Verify + promote.** Surgical splice into a pristine snapshot; EXACTLY 7 crops changed (5 + peach/apple), all 7 gate PASS (A38=0), all canonical trees green, 0 PASS->FAIL regressions, release_verify clean (11 expected artifacts: multi-crop-vs-single-crop assumption + tree fields novel vs the annual reference). Committed + pushed + plant-astro submodule bumped.
+**The 2 pears were HELD.** Both pin a DEAD PSU URL (`extension.psu.edu/pear-production-in-home-fruit-plantings`, redirects to a generic page) across fire blight / pear scab / pear psylla / codling moth / the pollination diagnostic; pear-asian also over-states its self-unfruitfulness + rests cultivar claims on an uncited UC ANR page. Biology sound, citations need repair -> Wave 2b. LESSON: A38 checks source RESOLUTION, not page-semantics -- a dead URL that still resolves passes A38; the source-truth review is what catches it.
+
+**Verify + promote.** Surgical splice: exactly 3 crops changed, all gate PASS (A38=0), all 10 canonical trees green, 0 regressions, release_verify clean (11 expected artifacts). Committed + pushed + plant-astro submodule bumped.
 
 ## Active work + next step
 
-**Wave 1 (stone fruit) CERTIFIED (2026-07-02).** 55 certified. The 5 are in canonical + visible to plant-astro (the submodule bump makes them readable for the artwork/preview surfaces).
+**Wave 2 (pome/other trees) CERTIFIED (2026-07-02).** 58 certified. fig/persimmon/pomegranate in canonical + visible to plant-astro.
 
-**NEXT: Wave 2 -- pome/other trees** (pear-asian, pear-european, fig, persimmon, pomegranate): the same source-truth review (pollination + chill + signature disease) -> pin pollination under A38 -> flip. Then Wave 3 (mulberry/pawpaw + the 3 berries), Wave 4 nightshades, Wave 5 cucurbits, Wave 6 other annuals. 25 of the 30 batch drafts remain staged in `_handoff/batch_2026-06-30/`. **A38 WORKLIST:** the 7 non-Wave-1 batch trees (fig, mulberry, pawpaw, pear-asian, pear-european, persimmon, pomegranate) are RED under A38 until their waves pin them (drafts, not in canonical, non-blocking). The cross-crop field-addition arc stays DEFERRED until the roster is complete. **NEW-CHAT PICKUP:** canonical is `bf432149` (55 certified); the remaining batch drafts are durable + gate-verified in `_handoff/batch_2026-06-30/`.
+**NEXT: Wave 2b -- pear citation repair.** pear-asian + pear-european: re-point the dead PSU URL to a live PSU pear page, re-anchor codling moth (UC IPM), add UC ANR Small Farms for pear-asian's cultivar claims, soften the 'almost entirely self-unfruitful' framing to the extension 'partially self-fruitful, better with 2 varieties'; then re-verify + certify. THEN Wave 3 (mulberry, pawpaw + the 3 berries: blackberry/raspberry/elderberry), Wave 4 nightshades, Wave 5 cucurbits, Wave 6 other annuals. 22 of 30 batch drafts remain in `_handoff/batch_2026-06-30/` (incl. the 2 held pears). **A38 WORKLIST:** the remaining batch trees (2 pears + mulberry + pawpaw) are RED under A38 until their waves pin them. **BACKLOG:** a roster-wide URL-liveness sweep (the dead-URL-that-still-resolves class, e.g. the pear PSU URL) -- flagged for POST-123. The cross-crop field-addition arc stays DEFERRED until the roster is complete. **NEW-CHAT PICKUP:** canonical `b250be2b` (58 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
 
-## Gate record (generated 2026-07-02, on canonical `bf432149`)
+## Gate record (generated 2026-07-02, on canonical `b250be2b`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **kale: `PASS` (0)**
@@ -72,6 +74,9 @@
 - **plum: `PASS` (0)**
 - **apricot: `PASS` (0)**
 - **orange-navel: `PASS` (0)**
+- **fig: `PASS` (0)**
+- **pomegranate: `PASS` (0)**
+- **persimmon: `PASS` (0)**
 - **parsnip: `PASS` (0)**
 - **kohlrabi: `PASS` (0)**
 - **cherry-sweet: `PASS` (0)**
@@ -130,6 +135,9 @@
 - **plum: 10/10 region cells filled**
 - **apricot: 10/10 region cells filled**
 - **orange-navel: 10/10 region cells filled**
+- **fig: 10/10 region cells filled**
+- **pomegranate: 10/10 region cells filled**
+- **persimmon: 10/10 region cells filled**
 - **parsnip: 10/10 region cells filled**; 11 heat_pause
 - **kohlrabi: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
 - **cherry-sweet: 10/10 region cells filled**
@@ -187,6 +195,9 @@
 - **plum:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **apricot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **orange-navel:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **fig:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **pomegranate:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **persimmon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **parsnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **kohlrabi:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cherry-sweet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -206,9 +217,11 @@
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **55 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **58 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
+
+- **WAVE-2 POME/OTHER TREES CERTIFIED (3) + THE DEAD-URL LESSON (2026-07-02, CONTENT release, `bf432149` -> `b250be2b`, committed + pushed + plant-astro bumped):** fig, persimmon, pomegranate -> `verified_gs_arc` (55 -> 58), the 2nd cert wave. 5 parallel source-truth agents: fig parthenocarpy + Smyrna/San Pedro split near-verbatim on UF/IFAS MG214; persimmon Asian-self/American-dioecious split BACKED both halves (Clemson/UGA/NCSU, boolean self-documenting); pomegranate self-fruitful on UGA. Pollination pinned under A38; modeled/secondary items -> open_findings. **PEARS HELD for Wave 2b:** both pin a DEAD `psu_ext` pear URL that REDIRECTS to a generic page (pinned across fire blight / scab / psylla / codling moth / pollination); pear-asian also over-states self-unfruitfulness + rests cultivar claims on an uncited UC ANR page. **LESSON (sharpens the Wave-1 mis-pinned-key one): A38 checks source-key RESOLUTION, not page-SEMANTICS -- a dead URL that still resolves PASSES A38; only the source-truth (human/agent) review catches a citation pointing at the wrong/generic page.** Motivates a roster-wide URL-liveness sweep (dead-but-resolving class), FLAGGED for post-123. Verify: 3 crops changed, all PASS + A38=0, all 10 canonical trees green, 0 regressions, release_verify clean. WORKLIST: remaining batch trees (2 pears + mulberry + pawpaw) RED under A38 until their waves.
 
 - **WAVE-1 STONE-FRUIT CERTIFIED + A38 POLLINATION-SOURCE GATE (2026-07-02, CONTENT release, `84321950` -> `bf432149`, committed + pushed + plant-astro bumped):** the 5 stone fruit (apricot/nectarine/plum/cherry-sour/cherry-sweet) -> `verified_gs_arc` (50 -> 55), the first flip of the overnight batch. Process: 5 parallel CC source-truth agents (WebFetch the cited T1 pages) -> all CERTIFY_WITH_NOTE, every pollination call BACKED, no fabricated citations; plum's European/Japanese split (MU G6001) + sweet-cherry self-incompatibility (WSU) held up verbatim. **A38 `perennial_pollination_source_violations` (TDD, tooling `8352a7b`):** a perennial_chill_gated crop's `pollination` object must pin its call to a cited T1 source (non-empty `sources` -> resolving `anchoring_urls[key].url`); evergreen/annual no-ops -- the deterministic half of 'source-verbatim is the flip gate'. GATE-UNLOCK: peach/apple + all batch trees went RED until pinned; peach/apple amended IN-PLACE (no re-cert, per the field-addition 'amend certified crops, never re-cert' principle). LESSON: A38 checks source-key RESOLUTION, not page-semantics -- pinning caught cherry-sour's `umn_ext` (pest page) + cherry-sweet's `wsu_ext` (rootstock page) mis-pointed keys; the human/agent review owns which URL actually backs the claim. Rulings: Balaton dropped from cherry-sour (partial self-fertility, re-add at variety expansion); plum `self_fertile=true` defaults to European (type-aware flag owed at variety-pass) + distance 100; modeled chill low-ends + apricot brown-rot ranking + region-chill -> open_findings. WORKLIST: 7 non-Wave-1 batch trees RED under A38 until their waves.
 

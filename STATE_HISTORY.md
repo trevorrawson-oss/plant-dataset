@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-02 -- Wave-2 pome/other trees CERTIFIED (3: fig/persimmon/pomegranate); pears HELD for citation repair (CONTENT release; `bf432149` -> `b250be2b`) [Claude Code]
+
+**CONTENT release -- the SECOND cert wave of the overnight batch.** Certified fig, persimmon, pomegranate -> `verified_gs_arc` + launch flags (55 -> 58). The 2 pears (pear-asian, pear-european) were HELD for citation repair (Wave 2b).
+
+**Source-truth review (5 parallel CC agents, WebFetch of cited T1 pages).** fig/persimmon/pomegranate/pear-european came back CERTIFY_WITH_NOTE; pear-asian NEEDS_FIX. fig parthenocarpy + the Smyrna/San Pedro caprification split is quoted near-verbatim from UF/IFAS MG214 (incl. Blastophaga psenes); persimmon's Asian-self/parthenocarpic vs American-dioecious split BACKED on both halves (Clemson/UGA/NCSU), the boolean-defaults-Asian is self-documented in the prose, Meader self-fruitful exception on NC State; pomegranate self-fruitful verbatim on UGA. Every pollination call on the 3 certified is BACKED; no fabricated citations.
+
+**The pear catch (why held).** Both pears pin `psu_ext = extension.psu.edu/pear-production-in-home-fruit-plantings`, which REDIRECTS to a generic home-gardening page (no pear content) -- a dead citation pinned across fire blight, pear scab, pear psylla, codling moth, and the pollination diagnostic. pear-asian additionally: codling moth unbacked by either cited URL, chill range modeled (ucd_fruitnut 403s), the headline "almost entirely self-unfruitful" slightly over-states the extension "partially self-fruitful, better with 2 varieties" framing, and the cultivar claims (Niitaka pollen-sterile, Ya Li/Tsu Li bloom-timing) rest on an UNCITED UC ANR Small Farms page. Biology sound; citations need repair. LESSON: A38 checks source-key RESOLUTION, not page-SEMANTICS -- a dead URL that still resolves (to a generic page) PASSES A38; only the source-truth review catches it (the Wave-1 mis-pinned-key lesson, sharpened).
+
+**Certified-3 finalize + verify.** Pinned pollination to its cited page under A38 (fig->uf_ifas_edis MG214; persimmon->clemson/uga/ncsu; pomegranate->uga); modeled/secondary-citation items -> open_findings (fig-mosaic uncited; persimmon chill-700/male-distance/anthracnose-source; pomegranate flower-nuances + chill; all blocks_launch:false). Surgical splice: EXACTLY 3 crops changed, all gate PASS with A38=0, all 10 canonical perennial_chill_gated trees green, 0 regressions, release_verify B clean (fig shell ~140 cleared) + C coherent + D no em-dashes; 11 CONCERNs the expected artifacts (multi-crop + chill_basis-vs-annual-reference). `bf432149` -> `b250be2b`.
+
+**NEXT:** Wave 2b -- pear-asian + pear-european citation repair (re-point the dead PSU URL to a live PSU pear page, re-anchor codling moth to UC IPM, add UC ANR Small Farms for pear-asian's cultivar claims, soften the self-unfruitful framing) -> re-verify -> certify. Then Wave 3 (mulberry, pawpaw + the 3 berries). ROSTER-WIDE URL-liveness sweep flagged for post-123.
+
+---
+
 ## 2026-07-02 -- Wave-1 stone-fruit CERTIFIED (5 crops) + A38 pollination-source gate (CONTENT release; `84321950` -> `bf432149`) [Claude Code]
 
 **CONTENT release -- the FIRST flip of the overnight batch.** Certified the 5 stone fruit (apricot, nectarine, plum, cherry-sour, cherry-sweet) -> `verified_gs_arc` + launch flags (50 -> 55 certified).
