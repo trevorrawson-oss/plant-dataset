@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-02 -- Wave-3b mulberry CERTIFIED (pollination reframe) -- TREE+BERRY ROSTER COMPLETE (CONTENT release; `898d5eaf` -> `55c91fb`) [Claude Code]
+
+**CONTENT release -- the mulberry citation repair + cert.** mulberry -> `verified_gs_arc` + launch flags (64 -> 65). Held from Wave 3 for the pollination reframe; now fixed + certified. This closes the ENTIRE tree + berry roster.
+
+**The reframe.** A focused CC agent confirmed: NO strong T1 extension pub states named mulberries are self-fruitful/parthenocarpic (only a hedged UMD Ask-Extension Q&A, below the T1 bar); and the cited T1 pages AFFIRMATIVELY state a monoecious-OR-dioecious variability (UF/IFAS 'Marvelous Mulberries' verbatim: 'either monoecious ... or dioecious'; NCSU morus-rubra: 'usually appearing on separate trees (dioecious)'; UF/IFAS Gardening Solutions: 'if you select a dioecious type ... plant both a male and female tree'). So the record's absolute 'self-fruitful/parthenocarpic' headline was REFRAMED to lead with the T1-backed wind-pollination + dioecious variability, keeping named-cultivar self-fruitfulness as a hedged practical note. Pollination pinned under A38 (uf_ifas Marvelous Mulberries + ncsu_ext morus-rubra). self_fertile=true RETAINED as the named-cultivar home-garden default -- a TYPE-SPLIT (cf. plum European-self/Japanese-cross, persimmon Asian-self/American-dioecious), disclosed via open_finding. chill [100,500] + popcorn-severity also -> open_findings. LESSON: when the strong claim isn't T1-citable, check what the sources AFFIRMATIVELY say and reframe to that (here: dioecious variability), rather than propping the headline on a weak Q&A.
+
+**Verify + promote.** Only mulberry changed, gate PASS + A38=0, all 14 canonical perennial_chill_gated trees green, 0 regressions, release_verify B clean + C coherent + D no em-dashes; 10 CONCERNs the tree-vs-annual-reference chill_basis artifacts. `898d5eaf` -> `55c91fb`.
+
+**MILESTONE: tree + berry roster COMPLETE.** 65 certified = the pre-batch 50 + 5 stone (W1) + 3 pome/other (W2) + 2 pears (W2b) + 4 trees/berries (W3) + mulberry (W3b). All 12 batch trees + peach/apple anchors + all 3 berries certified. The 15 remaining batch drafts are ALL annuals.
+
+**NEXT:** the annuals -- Wave 4 nightshades (bell-pepper/jalapeno/cayenne-pepper/roma-tomato/grape-tomato), Wave 5 cucurbits (cantaloupe/honeydew/spaghetti-squash/acorn-squash/yellow-summer-squash), Wave 6 other annuals (celery/potato/spring-onion/calendula/viola). ROSTER-WIDE URL-liveness sweep flagged for post-123.
+
+---
+
 ## 2026-07-02 -- Wave-3 trees+berries CERTIFIED (4: pawpaw/blackberry/raspberry/elderberry); mulberry HELD (CONTENT release; `3ee13bac` -> `898d5eaf`) [Claude Code]
 
 **CONTENT release -- the 3rd cert wave.** pawpaw + blackberry + raspberry + elderberry -> `verified_gs_arc` + launch flags (60 -> 64). mulberry HELD for a Wave-3b citation repair.
