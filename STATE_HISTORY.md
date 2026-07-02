@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-02 -- Wave-5 cucurbits CERTIFIED (5) (CONTENT release; `bbc3c8af` -> `681037b7`) [Claude Code]
+
+**CONTENT release.** cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash -> `verified_gs_arc` + launch flags (70 -> 75). No holds this wave.
+
+**Source-truth review (5 parallel CC agents).** cantaloupe CERTIFY_CLEAN -- the flagged bacterial-wilt susceptibility ('most susceptible cucurbit / watermelon nearly immune') is near-verbatim from UMD/UMN. honeydew's does-not-slip/must-cut/multi-cue ripeness triple-sourced (ISU/USU/Clemson); the record's 'andromonoecious' flower wording is MORE precise than 'monoecious' for Cucumis melo -- KEPT (don't regress). acorn's 3 flips off butternut all honestly sourced: do-not-cure VERBATIM (Iowa State 'Do not cure acorn squash...' + UMass), SVB-susceptible (UIUC pepo-vs-moschata), shortest-keeper (unanimous). spaghetti + yellow verified; yellow's zucchini inheritance exemplary.
+
+**Fixes applied.** acorn: DTM attribution corrected (Illinois winter-squash page, not the cited SVB blog) -> open_finding. spaghetti: pollinator_notes uncited-inline (backed by same-species UMN) -> open_finding. yellow: 2 DEAD UMN URLs re-pointed live (bacterial-wilt -> /disease-management/bacterial-wilt; cucumber-beetle -> /cucumber-beetles); harvest_ready anchored to umd_ext + umn_ext (+ harvest_ready_anchoring_urls, which the gate correctly requires -- it caught the missing anchor mid-build). honeydew: 404 UMN log URL -> open_finding.
+
+**SYSTEMIC (post-123).** yellow's regional-calendar cells cite iastate /encyclopedia/squash + /encyclopedia/summer-squash URLs that now 404 (same dead-URL class as the tomatoes' B577 PDF; the certified cucumber/zucchini templates likely share them). Flagged for the post-123 URL-liveness sweep. NOTE: the gate catches `<field>_sources` without a matching `<field>_anchoring_urls` but does NOT catch a per-cell anchoring_urls[key].url == null (how sdsu url:null slipped) -- reinforces the future 'every cited source resolves to a non-null URL' gate idea.
+
+**Verify + promote.** EXACTLY 5 crops changed, all gate PASS, 0 regressions, release_verify B clean + C coherent + D no em-dashes; 1 CONCERN the multi-crop collateral. `bbc3c8af` -> `681037b7`.
+
+**NEXT:** Wave 6 -- the LAST 5 (celery, potato, spring-onion, calendula, viola). 5 of 30 batch drafts remain. Watch calendula's pot-marigold-NOT-Tagetes honesty boundary + potato's ca_desert cold_pause (decision 3, kept).
+
+---
+
 ## 2026-07-02 -- Wave-4 nightshades CERTIFIED (5) + tomato heat-citation SYSTEMIC FLAG (CONTENT release; `55c91fb` -> `bbc3c8af`) [Claude Code]
 
 **CONTENT release -- the FIRST annual cert wave.** bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato -> `verified_gs_arc` + launch flags (65 -> 70).

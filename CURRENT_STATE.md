@@ -10,34 +10,32 @@
 ---
 
 
-**70 certified anchors** (`bbc3c8af`), first 13 LIVE. **2026-07-02: Wave 4 nightshades certified** -- bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato -> `verified_gs_arc` (65 -> 70), the first annual wave. bell-pepper clean; jalapeno/cayenne Scoville + disease-citation fixes; roma+grape heat_pause re-anchored to PSU (dropping a broken UGA PDF + a null-URL source). SYSTEMIC: the certified/live cherry-tomato + beefsteak share the broken tomato heat citations -> FLAGGED for the post-123 URL-liveness sweep (not amended now). Canonical `55c91fb` -> `bbc3c8af` (CONTENT release: committed + pushed + plant-astro bumped). 10 batch drafts remain (Wave 5 cucurbits + Wave 6 other annuals). Anchor target is a roadmap call.
+**75 certified anchors** (`681037b7`), first 13 LIVE. **2026-07-02: Wave 5 cucurbits certified** -- cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash -> `verified_gs_arc` (70 -> 75), no holds. cantaloupe clean (bacterial-wilt ranking near-verbatim on UMD/UMN); acorn's do-not-cure/SVB/shortest-keeper flips all sourced; small attribution fixes + yellow's 2 dead UMN URLs re-pointed. Systemic dead-URL items flagged for the post-123 sweep. Canonical `bbc3c8af` -> `681037b7` (CONTENT release: committed + pushed + plant-astro bumped). 5 batch drafts remain -- the last 5 (Wave 6). Anchor target is a roadmap call.
 
 ## Canonical pointer
-- **Current SHA:** `bbc3c8af9ff11ed6c4c3024c5f6483efd53f7cbf3f421ac30021f8c48839d8cc`. `LATEST.txt` session: `Wave-4 nightshade cert -- bell-pepper/jalapeno/cayenne/roma-tomato/grape-tomato -> verified_gs_arc (65 -> 70). bell-pepper clean; jalapeno Scoville+disease-reanchor; cayenne Scoville 30k->25k; roma+grape heat_pause re-anchored to PSU (broken UGA PDF + null sdsu source dropped). SYSTEMIC: certified cherry-tomato/beefsteak share the broken heat citations -> flagged for post-123 URL sweep. 5 crops changed, PASS, 0 regressions, release_verify clean. NEXT: Wave 5 cucurbits.` (2026-07-02).
+- **Current SHA:** `681037b73ea6c9aa3c898ce62c4102026c48002cf63e7182b712af5692183c79`. `LATEST.txt` session: `Wave-5 cucurbit cert -- cantaloupe/honeydew/spaghetti-squash/acorn-squash/yellow-summer-squash -> verified_gs_arc (70 -> 75). cantaloupe clean (bacterial-wilt near-verbatim UMD/UMN); acorn do-not-cure/SVB/shortest-keeper flips all sourced; small attribution fixes + yellow's 2 dead UMN URLs re-pointed live + harvest_ready anchored. Systemic dead-URL items (yellow iastate /encyclopedia; honeydew log 404) flagged for post-123. 5 crops changed, PASS, 0 regressions, release_verify clean. NEXT: Wave 6 (last 5: celery/potato/spring-onion/calendula/viola).` (2026-07-02).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `bbc3c8af` -- feat(certify): Wave 4 nightshades -> 70 certified (peppers + roma/grape tomatoes)
   - `55c91fb9` -- feat(certify): Wave 3b mulberry -> 65 certified (pollination reframe); tree+berry roster complete
   - `898d5eaf` -- feat(certify): Wave 3 trees+berries -> 64 certified (pawpaw/blackberry/raspberry/elderberry)
   - `3ee13bac` -- feat(certify): Wave 2b pears -> 60 certified (pear-asian/pear-european, citation repair)
   - `b250be2b` -- feat(certify): Wave 2 pome/other trees -> 58 certified (fig/persimmon/pomegranate)
   - `bf432149` -- feat(certify): Wave 1 stone fruit -> 55 certified (apricot/nectarine/plum/cherry-sour/cherry-sweet)
   - `84321950` -- fix(calendar): P0 calendar-coherence -- A37 gate + surgical normalizer (130 changes/106 cells)
-  - `1bc569dc` -- feat(certify): bok-choy -> ALL 50 CERTIFIED (scale-phase certification complete)
 
-## What just happened (session `Wave-4 nightshade cert`, 2026-07-02)
+## What just happened (session `Wave-5 cucurbit cert`, 2026-07-02)
 
-**Certified bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato -> `verified_gs_arc`; 65 -> 70; canonical `55c91fb` -> `bbc3c8af`.** 5 parallel CC source-truth agents. bell-pepper CERTIFY_CLEAN (heat/blossom-drop physiology multi-sourced; findings honest). The peppers' heat_pause is independently pepper-derived (NMSU/UMD), not copied from tomato. Fixes: jalapeno variety Scoville note reconciled to Clemson 2,500-8,000 + bacterial-spot/Phytophthora re-anchored from a mis-scoped NCSU insect-pests URL to the correct NCSU disease pages; cayenne Scoville widened 30k -> the cited 25,000-50,000 (UF/IFAS+PSU); roma+grape heat_pause re-anchored to PSU 'Heat Stress and Tomatoes' (dropped a broken UGA B577 PDF + a null-URL sdsu_ext); roma's erroneous 0-findings corrected.
-
-**SYSTEMIC (post-123).** The tomato heat-cell citation defect is INHERITED from the certified/live cherry-tomato (+ beefsteak): they carry the same broken B577 PDF + sdsu_ext url:null. Almost certainly roster-wide -> flagged for the post-123 URL-liveness sweep. Candidate future gate: every cited source must resolve to a non-null URL (the gate doesn't check this today).
+**Certified cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash -> `verified_gs_arc`; 70 -> 75; canonical `bbc3c8af` -> `681037b7`; no holds.** 5 parallel CC source-truth agents. cantaloupe CERTIFY_CLEAN -- the flagged bacterial-wilt susceptibility ('most susceptible cucurbit / watermelon nearly immune') is near-verbatim from UMD/UMN. honeydew's does-not-slip/multi-cue ripeness triple-sourced; its 'andromonoecious' wording is more precise than 'monoecious' for Cucumis melo (kept). acorn's 3 flips off butternut all sourced (do-not-cure VERBATIM on Iowa State/UMass; SVB-susceptible; shortest-keeper). Fixes: acorn DTM attribution + spaghetti pollinator_notes -> open_findings; yellow's 2 dead UMN URLs re-pointed live + harvest_ready anchored (the gate caught the missing harvest_ready_anchoring_urls mid-build). Systemic dead-URL items (yellow iastate /encyclopedia 404s; honeydew 404 log URL) flagged for the post-123 sweep.
 
 **Verify + promote.** Exactly 5 crops changed, all gate PASS, 0 regressions, release_verify clean. Committed + pushed + plant-astro bumped.
 
 ## Active work + next step
 
-**Wave 4 (nightshades) CERTIFIED (2026-07-02).** 70 certified. The tree+berry roster + 5 nightshades done.
+**Wave 5 (cucurbits) CERTIFIED (2026-07-02).** 75 certified. Trees + berries + nightshades + cucurbits done.
 
-**NEXT: Wave 5 cucurbits** (cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash -- monoecious/bee-pollinated; watch the melons' bacterial-wilt claims + acorn's do-not-cure/vine-borer flips), then Wave 6 other annuals (celery, potato, spring-onion, calendula, viola). 10 of 30 batch drafts remain in `_handoff/batch_2026-06-30/`. **BACKLOG (post-123):** roster-wide URL-liveness sweep -- now with concrete targets: `sdsu_ext` url:null + the broken UGA B577 PlantingChart PDF on the certified tomatoes' heat cells (cherry-tomato, beefsteak) + wherever else B577 is cited. Consider a deterministic gate: every cited source resolves to a non-null URL. The D8 heat_pause for the melons/peppers is still owed at variety-pass. Cross-crop field-addition arc DEFERRED. **NEW-CHAT PICKUP:** canonical `bbc3c8af` (70 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
+**NEXT: Wave 6 -- the LAST 5** (celery, potato, spring-onion, calendula, viola). Watch calendula's pot-marigold-NOT-Tagetes honesty boundary (must NOT claim the Tagetes nematode effect) + potato's greening/solanine safety claim + ca_desert `cold_pause` (decision 3, kept). 5 of 30 batch drafts remain in `_handoff/batch_2026-06-30/`. After Wave 6, ALL 30 batch drafts are certified (roster ~80). **BACKLOG (post-123):** the URL-liveness sweep now has concrete targets across crops -- `sdsu_ext` url:null + broken UGA B577 PDF (certified tomatoes) + yellow's dead iastate /encyclopedia + honeydew's log 404 + the acorn DTM / spaghetti pollinator anchoring. Consider a deterministic gate: every cited source resolves to a non-null URL. D8 heat_pause for the melons/peppers still owed at variety-pass. Cross-crop field-addition arc DEFERRED. **NEW-CHAT PICKUP:** canonical `681037b7` (75 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
 
-## Gate record (generated 2026-07-02, on canonical `bbc3c8af`)
+## Gate record (generated 2026-07-02, on canonical `681037b7`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **roma-tomato: `PASS` (0)**
@@ -57,7 +55,10 @@
 - **blueberry: `PASS` (0)**
 - **grape-tomato: `PASS` (0)**
 - **cayenne-pepper: `PASS` (0)**
+- **yellow-summer-squash: `PASS` (0)**
 - **butternut-squash: `PASS` (0)**
+- **acorn-squash: `PASS` (0)**
+- **spaghetti-squash: `PASS` (0)**
 - **snow-peas: `PASS` (0)**
 - **lettuce-leaf: `PASS` (0)**
 - **swiss-chard: `PASS` (0)**
@@ -74,6 +75,7 @@
 - **eggplant: `PASS` (0)**
 - **tomatillo: `PASS` (0)**
 - **watermelon: `PASS` (0)**
+- **cantaloupe: `PASS` (0)**
 - **strawberry: `PASS` (0)**
 - **pumpkin: `PASS` (0)**
 - **plum: `PASS` (0)**
@@ -91,6 +93,7 @@
 - **pawpaw: `PASS` (0)**
 - **parsnip: `PASS` (0)**
 - **kohlrabi: `PASS` (0)**
+- **honeydew-melon: `PASS` (0)**
 - **cherry-sweet: `PASS` (0)**
 - **turnip: `PASS` (0)**
 - **leek: `PASS` (0)**
@@ -130,7 +133,10 @@
 - **blueberry: 10/10 region cells filled**
 - **grape-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
 - **cayenne-pepper: 10/10 region cells filled**; 6 heat_pause
+- **yellow-summer-squash: 10/10 region cells filled**; 5 heat_pause
 - **butternut-squash: 10/10 region cells filled**
+- **acorn-squash: 10/10 region cells filled**
+- **spaghetti-squash: 10/10 region cells filled**
 - **snow-peas: 10/10 region cells filled**; 18 heat_pause
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
 - **swiss-chard: 10/10 region cells filled**; 6 heat_pause
@@ -147,6 +153,7 @@
 - **eggplant: 10/10 region cells filled**; 3 heat_pause
 - **tomatillo: 10/10 region cells filled**; 5 heat_pause
 - **watermelon: 10/10 region cells filled**
+- **cantaloupe: 10/10 region cells filled**
 - **strawberry: 10/10 region cells filled**
 - **pumpkin: 10/10 region cells filled**
 - **plum: 10/10 region cells filled**
@@ -164,6 +171,7 @@
 - **pawpaw: 10/10 region cells filled**
 - **parsnip: 10/10 region cells filled**; 11 heat_pause
 - **kohlrabi: 10/10 region cells filled**; 10 heat_pause, 14 second_planting
+- **honeydew-melon: 10/10 region cells filled**
 - **cherry-sweet: 10/10 region cells filled**
 - **turnip: 10/10 region cells filled**; 13 heat_pause
 - **leek: 10/10 region cells filled**
@@ -202,7 +210,10 @@
 - **blueberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **grape-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cayenne-pepper:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **yellow-summer-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **butternut-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **acorn-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **spaghetti-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **snow-peas:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **swiss-chard:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -219,6 +230,7 @@
 - **eggplant:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **tomatillo:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **watermelon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cantaloupe:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **strawberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **pumpkin:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **plum:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -236,6 +248,7 @@
 - **pawpaw:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **parsnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **kohlrabi:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **honeydew-melon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cherry-sweet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **turnip:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **leek:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -253,9 +266,11 @@
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **70 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **75 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
+
+- **WAVE-5 CUCURBITS CERTIFIED (5) (2026-07-02, CONTENT release, `bbc3c8af` -> `681037b7`, committed + pushed + plant-astro bumped):** cantaloupe/honeydew/spaghetti-squash/acorn-squash/yellow-summer-squash -> `verified_gs_arc` (70 -> 75), no holds. cantaloupe CERTIFY_CLEAN (bacterial-wilt susceptibility near-verbatim on UMD/UMN -- the flagged melon claim held). honeydew does-not-slip/multi-cue ripeness triple-sourced; 'andromonoecious' kept (more precise than 'monoecious' for Cucumis melo). acorn's 3 flips off butternut all sourced (do-not-cure VERBATIM Iowa State/UMass). Fixes: acorn DTM attribution + spaghetti pollinator_notes -> open_findings; yellow's 2 dead UMN URLs re-pointed live + harvest_ready anchored (the gate enforces `<field>_sources` <-> `<field>_anchoring_urls`, caught mid-build). SYSTEMIC dead-URL items (yellow iastate /encyclopedia 404; honeydew log 404) flagged for post-123. NOTE: the gate does NOT catch a per-cell anchoring_urls[key].url == null (how sdsu url:null slipped) -- reinforces the 'every cited source resolves to a non-null URL' gate idea. Verify: 5 crops changed, all PASS, 0 regressions, release_verify clean. After Wave 6 (celery/potato/spring-onion/calendula/viola), ALL 30 batch drafts certified.
 
 - **WAVE-4 NIGHTSHADES CERTIFIED (5) + TOMATO HEAT-CITATION SYSTEMIC FLAG (2026-07-02, CONTENT release, `55c91fb` -> `bbc3c8af`, committed + pushed + plant-astro bumped):** bell-pepper/jalapeno/cayenne/roma-tomato/grape-tomato -> `verified_gs_arc` (65 -> 70), the first annual wave. bell-pepper CERTIFY_CLEAN. Peppers' heat_pause independently pepper-derived (NMSU H-240 / UMD), not copied from tomato. Fixes: jalapeno Scoville note -> Clemson 2,500-8,000 + disease entries re-anchored off a mis-scoped NCSU insect-pests URL (which correctly STAYS on the pests[]); cayenne Scoville 30k -> the cited 25,000-50,000; roma+grape heat_pause re-anchored to PSU 'Heat Stress and Tomatoes' (dropped a broken UGA B577 PDF + a null-URL sdsu_ext). **SYSTEMIC FLAG: the tomato heat-cell citation defect is INHERITED from the certified/live cherry-tomato (+ beefsteak) -- same broken B577 PDF + sdsu_ext url:null; roster-wide (B577 spans many GA cells). Ruled to the post-123 URL-liveness sweep, NOT amended piecemeal now. Candidate future gate: every cited source must resolve to a non-null URL (the gate doesn't check this, so sdsu url:null passes -- the same 'checks resolution not semantics' class as A38).** LESSON: the cherry-tomato template's broken heat citations propagated byte-identical to every tomato modeled off it; a certified/live crop can carry a null-URL citation the gate misses. Verify: 5 crops changed, all PASS, 0 regressions, release_verify clean.
 
