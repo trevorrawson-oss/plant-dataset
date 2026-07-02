@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-02 -- Wave-4 nightshades CERTIFIED (5) + tomato heat-citation SYSTEMIC FLAG (CONTENT release; `55c91fb` -> `bbc3c8af`) [Claude Code]
+
+**CONTENT release -- the FIRST annual cert wave.** bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato -> `verified_gs_arc` + launch flags (65 -> 70).
+
+**Source-truth review (5 parallel CC agents).** bell-pepper CERTIFY_CLEAN (heat/blossom-drop physiology multi-sourced: ISU >85F-day/<60F-night, UMN, UMD; all 8 open_findings honest). The peppers' heat_pause is INDEPENDENTLY pepper-derived (NMSU H-240 'blossoms may not set below 60F or above 90F'; UMD 'above 75F nights slow pod production'), not copied from tomato. Scoville: jalapeno 2,500-8,000 (Clemson), cayenne 25,000-50,000 (UF/IFAS + PSU).
+
+**Fixes applied.** jalapeno: variety Scoville note 2,500-5,000 -> 2,500-8,000; bacterial-spot + Phytophthora disease entries re-anchored from a mis-scoped NCSU insect-pests URL to the correct NCSU disease pages (the insect-pests URL correctly STAYS on the pests[] entries). cayenne: Scoville prose widened 30,000 -> 25,000-50,000 to match the cited pages. roma + grape: heat_pause harvest_end cells cited a BROKEN UGA B577 PlantingChart PDF (logo-only) + Clemson factsheet (no threshold) + a NULL-URL sdsu_ext -> re-anchored to PSU 'Heat Stress and Tomatoes' + Clemson tomato; roma's erroneous 0-open_findings corrected.
+
+**SYSTEMIC FLAG (post-123).** The heat-cell citation defect is INHERITED from the certified/LIVE cherry-tomato template: cherry-tomato (+ beefsteak) carry the same broken B577 PDF + `sdsu_ext` url:null on their heat harvest_end cells (zones 8/9/10). The null-URL sdsu source + the broken B577 chart are almost certainly ROSTER-WIDE (B577 is cited across many GA-region cells). Trevor's ruling: FLAG for the post-123 URL-liveness sweep, don't amend the live tomatoes piecemeal now. Candidate for a future gate (every cited source must resolve to a non-null URL -- the gate currently doesn't check this, so sdsu url:null passes).
+
+**Verify + promote.** EXACTLY 5 crops changed, all gate PASS, 0 regressions, release_verify B clean + C coherent + D no em-dashes; 1 CONCERN the multi-crop collateral. `55c91fb` -> `bbc3c8af`.
+
+**NEXT:** Wave 5 cucurbits (cantaloupe/honeydew/spaghetti-squash/acorn-squash/yellow-summer-squash), Wave 6 other annuals (celery/potato/spring-onion/calendula/viola). 10 of 30 batch drafts remain. D8 heat_pause for the melons/peppers still owed at variety-pass.
+
+---
+
 ## 2026-07-02 -- Wave-3b mulberry CERTIFIED (pollination reframe) -- TREE+BERRY ROSTER COMPLETE (CONTENT release; `898d5eaf` -> `55c91fb`) [Claude Code]
 
 **CONTENT release -- the mulberry citation repair + cert.** mulberry -> `verified_gs_arc` + launch flags (64 -> 65). Held from Wave 3 for the pollination reframe; now fixed + certified. This closes the ENTIRE tree + berry roster.

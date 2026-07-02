@@ -10,34 +10,39 @@
 ---
 
 
-**65 certified anchors** (`55c91fb`), first 13 LIVE. **2026-07-02: Wave 3b -- mulberry certified after a pollination reframe -> the TREE + BERRY ROSTER is COMPLETE** (all 12 batch trees + peach/apple anchors + all 3 berries; 64 -> 65). The non-T1-citable 'self-fruitful/parthenocarpic' headline was reframed to the T1-backed wind + monoecious/dioecious framing (UF/IFAS + NCSU); self_fertile=true kept as the named-cultivar default (a type-split, cf. plum/persimmon). Canonical `898d5eaf` -> `55c91fb` (CONTENT release: committed + pushed + plant-astro bumped). 15 batch drafts remain, ALL annuals. NEXT: Wave 4 nightshades. Anchor target is a roadmap call.
+**70 certified anchors** (`bbc3c8af`), first 13 LIVE. **2026-07-02: Wave 4 nightshades certified** -- bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato -> `verified_gs_arc` (65 -> 70), the first annual wave. bell-pepper clean; jalapeno/cayenne Scoville + disease-citation fixes; roma+grape heat_pause re-anchored to PSU (dropping a broken UGA PDF + a null-URL source). SYSTEMIC: the certified/live cherry-tomato + beefsteak share the broken tomato heat citations -> FLAGGED for the post-123 URL-liveness sweep (not amended now). Canonical `55c91fb` -> `bbc3c8af` (CONTENT release: committed + pushed + plant-astro bumped). 10 batch drafts remain (Wave 5 cucurbits + Wave 6 other annuals). Anchor target is a roadmap call.
 
 ## Canonical pointer
-- **Current SHA:** `55c91fb93124be496d64bdf1b4932379e55606f9670ea03dfaa81311139471ca`. `LATEST.txt` session: `Wave-3b mulberry cert (pollination reframe) -- mulberry -> verified_gs_arc (64 -> 65). TREE+BERRY ROSTER COMPLETE (all 12 batch trees + 3 berries). Reframed the non-T1-citable 'self-fruitful/parthenocarpic' headline to the T1-backed wind + monoecious/dioecious framing (UF/IFAS + NCSU); self_fertile=true retained as the named-cultivar default (type-split). 1 crop changed, PASS + A38=0, 0 regressions, release_verify clean. NEXT: the annuals (Waves 4-6).` (2026-07-02).
+- **Current SHA:** `bbc3c8af9ff11ed6c4c3024c5f6483efd53f7cbf3f421ac30021f8c48839d8cc`. `LATEST.txt` session: `Wave-4 nightshade cert -- bell-pepper/jalapeno/cayenne/roma-tomato/grape-tomato -> verified_gs_arc (65 -> 70). bell-pepper clean; jalapeno Scoville+disease-reanchor; cayenne Scoville 30k->25k; roma+grape heat_pause re-anchored to PSU (broken UGA PDF + null sdsu source dropped). SYSTEMIC: certified cherry-tomato/beefsteak share the broken heat citations -> flagged for post-123 URL sweep. 5 crops changed, PASS, 0 regressions, release_verify clean. NEXT: Wave 5 cucurbits.` (2026-07-02).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `55c91fb9` -- feat(certify): Wave 3b mulberry -> 65 certified (pollination reframe); tree+berry roster complete
   - `898d5eaf` -- feat(certify): Wave 3 trees+berries -> 64 certified (pawpaw/blackberry/raspberry/elderberry)
   - `3ee13bac` -- feat(certify): Wave 2b pears -> 60 certified (pear-asian/pear-european, citation repair)
   - `b250be2b` -- feat(certify): Wave 2 pome/other trees -> 58 certified (fig/persimmon/pomegranate)
   - `bf432149` -- feat(certify): Wave 1 stone fruit -> 55 certified (apricot/nectarine/plum/cherry-sour/cherry-sweet)
   - `84321950` -- fix(calendar): P0 calendar-coherence -- A37 gate + surgical normalizer (130 changes/106 cells)
   - `1bc569dc` -- feat(certify): bok-choy -> ALL 50 CERTIFIED (scale-phase certification complete)
-  - `e8cc3931` -- feat(certify): big cert -- 27 drafts (greens/heads/alliums/cucurbits/nightshades/herbs/flowers + snow-peas/edamame) -> 49 certified
 
-## What just happened (session `Wave-3b mulberry reframe + cert`, 2026-07-02)
+## What just happened (session `Wave-4 nightshade cert`, 2026-07-02)
 
-**Certified mulberry -> `verified_gs_arc`; 64 -> 65; canonical `898d5eaf` -> `55c91fb`. This closes the tree + berry roster.** mulberry was held from Wave 3 because its headline 'self-fruitful + parthenocarpic' pollination claim isn't citable at strong T1 (only a hedged UMD Ask-Extension Q&A). A focused agent confirmed the cited T1 pages AFFIRMATIVELY state a monoecious-or-dioecious variability instead (UF/IFAS 'Marvelous Mulberries' verbatim; NCSU morus-rubra 'usually dioecious'). So the pollination was REFRAMED to lead with the T1-backed wind-pollination + dioecious variability, keeping named-cultivar self-fruitfulness as a hedged practical note; pollination pinned under A38 (uf_ifas + ncsu_ext). self_fertile=true retained as the named-cultivar home-garden default -- a TYPE-SPLIT like plum (European/Japanese) and persimmon (Asian/American), disclosed via open_finding.
+**Certified bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato -> `verified_gs_arc`; 65 -> 70; canonical `55c91fb` -> `bbc3c8af`.** 5 parallel CC source-truth agents. bell-pepper CERTIFY_CLEAN (heat/blossom-drop physiology multi-sourced; findings honest). The peppers' heat_pause is independently pepper-derived (NMSU/UMD), not copied from tomato. Fixes: jalapeno variety Scoville note reconciled to Clemson 2,500-8,000 + bacterial-spot/Phytophthora re-anchored from a mis-scoped NCSU insect-pests URL to the correct NCSU disease pages; cayenne Scoville widened 30k -> the cited 25,000-50,000 (UF/IFAS+PSU); roma+grape heat_pause re-anchored to PSU 'Heat Stress and Tomatoes' (dropped a broken UGA B577 PDF + a null-URL sdsu_ext); roma's erroneous 0-findings corrected.
 
-**Verify + promote.** Only mulberry changed, gate PASS + A38=0, all 14 canonical trees green, 0 regressions, release_verify clean (10 tree-vs-annual chill_basis artifacts). Committed + pushed + plant-astro bumped.
+**SYSTEMIC (post-123).** The tomato heat-cell citation defect is INHERITED from the certified/live cherry-tomato (+ beefsteak): they carry the same broken B577 PDF + sdsu_ext url:null. Almost certainly roster-wide -> flagged for the post-123 URL-liveness sweep. Candidate future gate: every cited source must resolve to a non-null URL (the gate doesn't check this today).
+
+**Verify + promote.** Exactly 5 crops changed, all gate PASS, 0 regressions, release_verify clean. Committed + pushed + plant-astro bumped.
 
 ## Active work + next step
 
-**TREE + BERRY ROSTER COMPLETE (2026-07-02).** 65 certified. All 12 batch trees (5 stone + 3 pome/other + 2 pears + mulberry + pawpaw) + peach/apple anchors + all 3 berries (blackberry/raspberry/elderberry) certified.
+**Wave 4 (nightshades) CERTIFIED (2026-07-02).** 70 certified. The tree+berry roster + 5 nightshades done.
 
-**NEXT: the annuals.** Wave 4 nightshades (bell-pepper, jalapeno, cayenne-pepper, roma-tomato, grape-tomato), Wave 5 cucurbits (cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash), Wave 6 other annuals (celery, potato, spring-onion, calendula, viola). All 15 remaining batch drafts are annuals (frost_anchored -- A38 is a no-op for them; verify pollination/self-fertility + heat/pest/disease). 15 of 30 batch drafts remain in `_handoff/batch_2026-06-30/`. **BACKLOG:** roster-wide URL-liveness sweep flagged for POST-123 (the dead-but-resolving class; the mulberry/pear repairs are precedents). The D8 heat_pause commitment for the new warm crops (cantaloupe/honeydew/peppers) is still owed at variety-pass. Cross-crop field-addition arc DEFERRED. **NEW-CHAT PICKUP:** canonical `55c91fb` (65 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
+**NEXT: Wave 5 cucurbits** (cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash -- monoecious/bee-pollinated; watch the melons' bacterial-wilt claims + acorn's do-not-cure/vine-borer flips), then Wave 6 other annuals (celery, potato, spring-onion, calendula, viola). 10 of 30 batch drafts remain in `_handoff/batch_2026-06-30/`. **BACKLOG (post-123):** roster-wide URL-liveness sweep -- now with concrete targets: `sdsu_ext` url:null + the broken UGA B577 PlantingChart PDF on the certified tomatoes' heat cells (cherry-tomato, beefsteak) + wherever else B577 is cited. Consider a deterministic gate: every cited source resolves to a non-null URL. The D8 heat_pause for the melons/peppers is still owed at variety-pass. Cross-crop field-addition arc DEFERRED. **NEW-CHAT PICKUP:** canonical `bbc3c8af` (70 certified); batch drafts durable in `_handoff/batch_2026-06-30/`.
 
-## Gate record (generated 2026-07-02, on canonical `55c91fb9`)
+## Gate record (generated 2026-07-02, on canonical `bbc3c8af`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
+- **roma-tomato: `PASS` (0)**
+- **bell-pepper: `PASS` (0)**
+- **jalapeno: `PASS` (0)**
 - **kale: `PASS` (0)**
 - **spinach: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -50,6 +55,8 @@
 - **apple: `PASS` (0)**
 - **lemon: `PASS` (0)**
 - **blueberry: `PASS` (0)**
+- **grape-tomato: `PASS` (0)**
+- **cayenne-pepper: `PASS` (0)**
 - **butternut-squash: `PASS` (0)**
 - **snow-peas: `PASS` (0)**
 - **lettuce-leaf: `PASS` (0)**
@@ -106,6 +113,9 @@
 ## Region fill state (generated)
 - **cherry-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
 - **beefsteak-tomato: 10/10 region cells filled**; 8 heat_pause, 6 second_planting
+- **roma-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
+- **bell-pepper: 10/10 region cells filled**; 7 heat_pause
+- **jalapeno: 10/10 region cells filled**; 8 heat_pause
 - **kale: 10/10 region cells filled**; 13 heat_pause
 - **spinach: 10/10 region cells filled**; 18 heat_pause
 - **carrot: 10/10 region cells filled**; 13 heat_pause
@@ -118,6 +128,8 @@
 - **apple: 10/10 region cells filled**
 - **lemon: 10/10 region cells filled**
 - **blueberry: 10/10 region cells filled**
+- **grape-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
+- **cayenne-pepper: 10/10 region cells filled**; 6 heat_pause
 - **butternut-squash: 10/10 region cells filled**
 - **snow-peas: 10/10 region cells filled**; 18 heat_pause
 - **lettuce-leaf: 10/10 region cells filled**; 15 heat_pause
@@ -173,6 +185,9 @@
 ## Flip gates (generated)
 - **cherry-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **beefsteak-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **roma-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **bell-pepper:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **jalapeno:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **kale:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **spinach:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **carrot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -185,6 +200,8 @@
 - **apple:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **blueberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **grape-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **cayenne-pepper:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **butternut-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **snow-peas:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **lettuce-leaf:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -236,9 +253,11 @@
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **65 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **70 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
+
+- **WAVE-4 NIGHTSHADES CERTIFIED (5) + TOMATO HEAT-CITATION SYSTEMIC FLAG (2026-07-02, CONTENT release, `55c91fb` -> `bbc3c8af`, committed + pushed + plant-astro bumped):** bell-pepper/jalapeno/cayenne/roma-tomato/grape-tomato -> `verified_gs_arc` (65 -> 70), the first annual wave. bell-pepper CERTIFY_CLEAN. Peppers' heat_pause independently pepper-derived (NMSU H-240 / UMD), not copied from tomato. Fixes: jalapeno Scoville note -> Clemson 2,500-8,000 + disease entries re-anchored off a mis-scoped NCSU insect-pests URL (which correctly STAYS on the pests[]); cayenne Scoville 30k -> the cited 25,000-50,000; roma+grape heat_pause re-anchored to PSU 'Heat Stress and Tomatoes' (dropped a broken UGA B577 PDF + a null-URL sdsu_ext). **SYSTEMIC FLAG: the tomato heat-cell citation defect is INHERITED from the certified/live cherry-tomato (+ beefsteak) -- same broken B577 PDF + sdsu_ext url:null; roster-wide (B577 spans many GA cells). Ruled to the post-123 URL-liveness sweep, NOT amended piecemeal now. Candidate future gate: every cited source must resolve to a non-null URL (the gate doesn't check this, so sdsu url:null passes -- the same 'checks resolution not semantics' class as A38).** LESSON: the cherry-tomato template's broken heat citations propagated byte-identical to every tomato modeled off it; a certified/live crop can carry a null-URL citation the gate misses. Verify: 5 crops changed, all PASS, 0 regressions, release_verify clean.
 
 - **WAVE-3b MULBERRY CERTIFIED (pollination REFRAME) -- TREE+BERRY ROSTER COMPLETE (2026-07-02, CONTENT release, `898d5eaf` -> `55c91fb`, committed + pushed + plant-astro bumped):** mulberry -> `verified_gs_arc` (64 -> 65), held from Wave 3 for the pollination reframe. A focused agent confirmed NO strong T1 pub states named mulberries are self-fruitful/parthenocarpic (only a hedged UMD Ask-Extension Q&A), and the cited T1 pages AFFIRMATIVELY state monoecious-OR-dioecious variability (UF/IFAS Marvelous Mulberries verbatim; NCSU morus-rubra 'usually dioecious'; UF/IFAS Gardening Solutions 'if dioecious, plant male+female'). REFRAMED the pollination to lead with the T1-backed wind + dioecious variability, keeping named-cultivar self-fruitfulness as a hedged note; self_fertile=true retained as the named-cultivar default -- a TYPE-SPLIT (cf. plum/persimmon). Pinned under A38 (uf_ifas + ncsu_ext). **LESSON: when the strong claim isn't T1-citable, reframe to what the sources AFFIRMATIVELY say (here dioecious variability), don't prop the headline on a weak Q&A.** MILESTONE: all 12 batch trees + peach/apple + all 3 berries certified; the 15 remaining batch drafts are ALL annuals (Waves 4-6). Verify: 1 crop changed, PASS + A38=0, all 14 canonical trees green, 0 regressions, release_verify clean.
 
