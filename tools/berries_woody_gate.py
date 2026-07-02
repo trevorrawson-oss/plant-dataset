@@ -22,8 +22,46 @@ generic checks do not encode:
 Admission-safe: a cell with null recommended_type + null leaf_habit + empty calendar is the
 Step-3.5 admission state (skipped). See 2026-06-22-blueberry-berries-woody-model-design.md (D1-D8).
 """
-TYPE_ENUM = {"northern_highbush", "southern_highbush", "rabbiteye"}
+# berries_woody has three structural sub-forms, distinguished by `cane_type`:
+#   BUSH (blueberry, anchor 18): cane_type "not_applicable"; a crown-forming shrub whose growable
+#     TYPE is the chill class (northern/southern highbush, rabbiteye) and which is partially self-
+#     incompatible (the cross-pollination light model -> self_fertile MUST be False).
+#   CANE (raspberry pilot 2026-06-30; blackberry to follow): cane_type a real cane value
+#     (summer_bearing / everbearing / both); a biennial-cane fruit whose growable TYPE is the cane
+#     type and which is SELF-FERTILE (self_fertile True). The recommended_type vocabulary and the
+#     self_fertile expectation key on this sub-form so the archetype generalizes past blueberry while
+#     every blueberry invariant (coverage, no-tree-machinery, leaf_habit token placement) is preserved.
+#   SHRUB (elderberry, 2026-07-02): cane_type "multistem_perennial"; a multi-stem shrub with ONE
+#     type everywhere ("american_elderberry", room for european) that is PARTIALLY self-fertile
+#     (self_fertile True, like cane) and is NOT chill-class-typed -- chill is retained (Option A)
+#     only as the honest winter-dormancy requirement the D1 basis mandates, never a faked
+#     per-region gating role. A chill-less shrub carries chill_hours_required 0 (0 is not None,
+#     so the D1 presence check passes) -- no carve-out needed.
+BUSH_TYPE_ENUM = {"northern_highbush", "southern_highbush", "rabbiteye"}
+CANE_TYPE_ENUM = {"summer_bearing", "everbearing"}
+SHRUB_TYPE_ENUM = {"american_elderberry", "european_elderberry"}
+TYPE_ENUM = BUSH_TYPE_ENUM | CANE_TYPE_ENUM | SHRUB_TYPE_ENUM  # union (kept for external importers)
 LEAF_ENUM = {"deciduous", "evergreen"}
+# the cane_type marker that routes the SHRUB sub-form (elderberry); bush = "not_applicable",
+# cane = any other real value (e.g. "both_summer_and_everbearing").
+SHRUB_CANE_TYPE = "multistem_perennial"
+
+
+def _subform(crop):
+    """The berries_woody sub-form, keyed on cane_type. The SHRUB marker is intercepted FIRST;
+    bush (blueberry) carries 'not_applicable'; any OTHER real cane_type value (incl.
+    'both_summer_and_everbearing') is a cane fruit (raspberry/blackberry) -- routing unchanged."""
+    ct = crop.get("cane_type")
+    if ct == SHRUB_CANE_TYPE:
+        return "shrub"
+    if ct in (None, "", "not_applicable"):
+        return "bush"
+    return "cane"
+
+
+def _is_cane_fruit(crop):
+    """Back-compat shim (no external importers today; keep the public helper stable)."""
+    return _subform(crop) == "cane"
 LIFECYCLE_SCALARS = ("establishment_years", "years_to_first_harvest",
                      "years_to_full_production", "productive_lifespan_years")
 PROSE_PAIRS = ("type_selection", "pollinator_notes", "chill_hours_note")  # _seasoned + _beginner
@@ -48,6 +86,9 @@ def berries_woody_violations(crop):
     if crop.get("calendar_basis") != "berries_woody":
         return []
     V = []
+    subform = _subform(crop)
+    type_enum = {"bush": BUSH_TYPE_ENUM, "cane": CANE_TYPE_ENUM,
+                 "shrub": SHRUB_TYPE_ENUM}[subform]
 
     # 1. lifecycle scalars present (Step-2 data; admission-safe).
     for f in LIFECYCLE_SCALARS:
@@ -69,10 +110,19 @@ def berries_woody_violations(crop):
             if not _nonempty(crop.get(k)):
                 V.append(f"prose pair {k} empty (backstop; register_fill owns the full set)")
 
-    # 6. cross-pollination: the light model -- self_fertile false, no apple machinery.
-    if crop.get("self_fertile") is not False:
-        V.append(f"self_fertile must be false (blueberry needs cross-pollination, the light "
-                 f"model); got {crop.get('self_fertile')!r}")
+    # 6. cross-pollination: the light model -- no apple machinery, and the sub-form's self_fertile
+    # expectation. BUSH (blueberry) is partially self-incompatible -> self_fertile MUST be False.
+    # CANE (raspberry/blackberry) is self-fertile -> self_fertile MUST be a bool (True is correct);
+    # both forbid a null/garbage value.
+    sf = crop.get("self_fertile")
+    if subform == "bush":
+        if sf is not False:
+            V.append(f"self_fertile must be false (bush berry needs cross-pollination, the light "
+                     f"model); got {sf!r}")
+    else:  # cane + shrub are (partially) self-fertile -> a bool (True correct)
+        if not isinstance(sf, bool):
+            V.append(f"self_fertile must be a bool ({subform} fruits are self-fertile, expected "
+                     f"True); got {sf!r}")
 
     # 3b. no tree structural machinery on an own-root shrub (reject VALUES, not 2.9 null keys).
     for k in _TREE_CROP_KEYS:
@@ -109,8 +159,8 @@ def berries_woody_violations(crop):
             cal = cell.get("calendar") or []
             if rt is None and lh is None and not cal:
                 continue  # Step-3.5 admission state
-            if rt not in TYPE_ENUM:
-                V.append(f"{rk}.{z}: recommended_type {rt!r} not in {sorted(TYPE_ENUM)}")
+            if rt not in type_enum:
+                V.append(f"{rk}.{z}: recommended_type {rt!r} not in {sorted(type_enum)}")
             else:
                 cell_types.add(rt)
             if lh not in LEAF_ENUM:

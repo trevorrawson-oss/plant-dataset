@@ -249,6 +249,85 @@ def test_vchill_scalar_must_equal_range_lo():
     assert any("low end" in v or "range" in v for v in berries_woody_variety_chill_violations(c))
 
 
+# ---------------------------------------------------------------------------
+# SHRUB sub-form (elderberry, the 3rd berries_woody sub-form; 2026-07-02, decision 1).
+# A multi-stem shrub: cane_type 'multistem_perennial', PARTIALLY self-fertile
+# (self_fertile True), ONE type everywhere ('american_elderberry', room for european),
+# NOT chill-class-typed. Option A: chill stays the gate basis (D1), the value is the
+# honest winter-dormancy requirement -- never a faked gating role. Discriminated off
+# cane_type, intercepting ONLY the shrub marker so the existing bush/cane routing (and
+# the 'both_summer_and_everbearing' cane fruits) is untouched.
+# ---------------------------------------------------------------------------
+
+def well_formed_shrub():
+    """A clean SHRUB sub-form crop, mirroring well_formed() with the shrub overrides."""
+    c = well_formed()
+    c["cane_type"] = "multistem_perennial"
+    c["self_fertile"] = True  # partially self-fertile (honest True)
+    c["varieties"]["recommended"] = [{"name": "Adams", "type": "american_elderberry"}]
+    cell = c["regions"]["northern_tier"]["resolved_by_zone"]["6"]
+    cell["recommended_type"] = "american_elderberry"  # one type everywhere
+    return c
+
+
+def test_shrub_clean():
+    assert berries_woody_violations(well_formed_shrub()) == [], \
+        berries_woody_violations(well_formed_shrub())
+
+
+def test_shrub_chill_zero_ok():
+    # a SHRUB that needs NO winter chill carries chill_hours_required 0 (0 is not None, so
+    # the D1 chill-basis presence check passes) -- no gate carve-out needed. Locks that the
+    # SHRUB branch accepts zero chill, not just elderberry's ~400h (Trevor's edge case).
+    c = well_formed_shrub()
+    c["chill_hours_required"] = 0
+    assert berries_woody_violations(c) == [], berries_woody_violations(c)
+
+
+def test_shrub_bad_type_rejected():
+    # adversarial: a SHRUB cell recommending a type outside SHRUB_TYPE_ENUM must bounce.
+    c = well_formed_shrub()
+    c["regions"]["northern_tier"]["resolved_by_zone"]["6"]["recommended_type"] = "mystery_shrub"
+    assert any("recommended_type" in v for v in berries_woody_violations(c))
+
+
+def test_shrub_self_fertile_garbage_rejected():
+    # adversarial: a non-bool self_fertile on a shrub must bounce (same bar as cane).
+    c = well_formed_shrub(); c["self_fertile"] = "partly"
+    assert any("self_fertile" in v for v in berries_woody_violations(c))
+
+
+def test_shrub_coverage_invariant():
+    # a valid shrub type with no matching variety trips the coverage invariant (proves the
+    # SHRUB enum admits european_elderberry AND the invariant still fires for the shrub branch).
+    c = well_formed_shrub()
+    c["regions"]["northern_tier"]["resolved_by_zone"]["6"]["recommended_type"] = "european_elderberry"
+    assert any("coverage" in v and "european_elderberry" in v
+               for v in berries_woody_violations(c))
+
+
+def test_cane_clean():
+    # regression: the _subform refactor must not disturb cane routing. A cane fixture
+    # (cane_type a real non-shrub value, incl. the 'both_...' form) stays clean.
+    c = well_formed()
+    c["cane_type"] = "both_summer_and_everbearing"
+    c["self_fertile"] = True
+    c["varieties"]["recommended"] = [{"name": "Heritage", "type": "everbearing"}]
+    c["regions"]["northern_tier"]["resolved_by_zone"]["6"]["recommended_type"] = "everbearing"
+    assert berries_woody_violations(c) == [], berries_woody_violations(c)
+
+
+def test_vchill_shrub_zero_ok():
+    # A21 needs NO change for a chill-less shrub: a variety with chill_hours_required 0 and a
+    # null range is a valid numeric shape (0 is not None and _is_number(0) is True).
+    c = well_formed_shrub()
+    c["varieties"]["recommended"] = [
+        {"name": "Adams", "type": "american_elderberry",
+         "chill_hours_required": 0, "chill_hours_range": None}]
+    assert berries_woody_variety_chill_violations(c) == [], \
+        berries_woody_variety_chill_violations(c)
+
+
 if __name__ == "__main__":
     for n, f in sorted(globals().items()):
         if n.startswith("test_") and callable(f):
