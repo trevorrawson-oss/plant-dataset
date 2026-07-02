@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-02 -- Wave-6 final-annuals CERTIFIED (5) -- ALL 30 BATCH DRAFTS DONE (CONTENT release; `681037b7` -> `f7ab0ac2`) [Claude Code]
+
+**CONTENT release -- closes the 30-crop batch.** celery, potato, spring-onion, calendula, viola -> `verified_gs_arc` + launch flags (75 -> 80). No holds. This certifies the LAST 5 of the 30-crop overnight batch: all 30 batch drafts are now certified.
+
+**Source-truth review (5 parallel CC agents).** calendula: the pot-marigold-vs-Tagetes honesty boundary HELD -- distinguished from true marigold (Tagetes) verbatim on UW-Madison, and the record AFFIRMATIVELY DISCLAIMS the Tagetes root-knot-nematode effect ('NOT a proven soil-nematode fighter') rather than claiming it (the crux of this review). potato: the greening/solanine CONSUMER-SAFETY chain is properly, redundantly T1-sourced (Clemson + UMN, UC IPM corroboration) -- airtight; late blight (Phytophthora infestans) + Colorado potato beetle backed VERBATIM. celery: blackheart-as-localized-Ca-deficiency-from-uneven-watering + DTM 80-120-from-transplant (MSU verbatim) + Cercospora apii early blight (UC IPM verbatim) all backed. spring-onion: harvest-young 6-8in + DTM 50-70 (UF/IFAS '50-75 green') + full pest/disease complex all mapped to live-verified sources; the NCSU-403 open_finding is truthful and NCSU is NOT cited (corroboration-only), zero citation risk. viola: edible-petals + pesticide-free handled conservatively (remove bitter white heel); crown-rot complex backed (Clemson).
+
+**Fixes applied.** potato: RE-ANCHORED the 13 thermal cells (heat_threshold + 12 heat_pause) + 6 region_notes from uc_ipm -> clemson_hgic because the cited UC IPM cultural-tips page calls potato a 'warm-weather plant' and carries no soil-temp numbers; the 60-70F optimum / ~80F ceiling stay MODELED per OF003 (elevated low -> medium); uc_ipm KEPT where legit (greening corroboration + CA/regional planting cells + no_tubers diagnostic); DTM-low-bound modeled -> open_finding; 'solanine' kept as the textbook alkaloid name (Clemson says 'an alkaloid'). viola: DROPPED clemson_hgic from the 2 edibility anchors (storage + tips flowering[1]) -- that Clemson pansies page has NO edibility content; umn_ext_edible_flowers fully backs it; disease-anchor upgrade (dedicated Clemson pansy-diseases factsheet) recorded as an open_finding for the variety pass (keeps viola consistent with the zinnia/marigold flower archetype). celery: blanching claim in varieties is uncited (standard horticulture, not on the 2 T1 pages read) -> open_finding; tamu_agrilife source is in an http/https redirect loop, UNREACHABLE -> post-123 URL sweep. calendula: DTM [45,60] modeled (no source publishes days-to-bloom) -> open_finding. spring-onion: certified clean.
+
+**Verify + promote.** EXACTLY 5 crops changed, all gate PASS, 0 regressions, release_verify clean (1 CONCERN = the multi-crop collateral; each per-slug run: no new violations introduced, reference lettuce-leaf byte-identical, catalog + top-level unchanged, shell empty-calendar violations cleared by the authored drafts). `681037b7` -> `f7ab0ac2`. 75 -> 80 certified.
+
+**NEXT:** 45 honest shells remain -- the next authoring target (Trevor's evening 20-crop batch). Post-123 backlog: the URL-liveness sweep now has concrete targets (sdsu_ext url:null + broken UGA B577 PDF on the certified tomatoes; yellow's dead iastate /encyclopedia; honeydew 404 log URL; tamu_agrilife redirect loop; acorn DTM / spaghetti pollinator anchoring) + candidate 'every cited source resolves to a non-null URL' gate. D8 heat_pause for melons/peppers still owed at variety-pass.
+
+---
+
 ## 2026-07-02 -- Wave-5 cucurbits CERTIFIED (5) (CONTENT release; `bbc3c8af` -> `681037b7`) [Claude Code]
 
 **CONTENT release.** cantaloupe, honeydew-melon, spaghetti-squash, acorn-squash, yellow-summer-squash -> `verified_gs_arc` + launch flags (70 -> 75). No holds this wave.
