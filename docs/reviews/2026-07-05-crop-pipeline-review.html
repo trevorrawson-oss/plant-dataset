@@ -1,0 +1,151 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Crop Pipeline Review 2026-07-05</title>
+<style>
+:root{--ink:#1c1c1a;--muted:#6b7280;--line:#e5e7eb;--bg:#fbfbf9;--accent:#2f6f4e;--terra:#aa5b1e;--terrabg:#fbf1e8;--greenbg:#eef6f0;--blue:#2563eb;--bluebg:#eef2ff}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.5;max-width:920px;margin:0 auto;padding:40px 28px 80px;background:var(--bg)}
+h1{font-size:26px;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:14px;margin-bottom:24px}
+.glance{background:var(--greenbg);border:1px solid #cfe5d6;border-radius:10px;padding:14px 18px;font-size:14.5px;margin-bottom:30px}
+.glance b{color:var(--accent)}
+h2{font-size:19px;margin:38px 0 14px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+.dec{border:1px solid var(--line);border-left:4px solid var(--terra);background:#fff;border-radius:8px;padding:14px 18px;margin:12px 0}
+.dec .q{font-weight:650;font-size:15.5px;margin-bottom:6px}
+.dec .body{font-size:14px;color:#33332f;margin-bottom:8px}
+.dec .rec{font-size:13.5px;background:var(--terrabg);border-radius:6px;padding:8px 11px}
+.dec .rec b{color:var(--terra)}
+.num{display:inline-block;width:22px;height:22px;line-height:22px;text-align:center;background:var(--terra);color:#fff;border-radius:50%;font-size:12px;font-weight:700;margin-right:8px;vertical-align:middle}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 4px}
+th{text-align:left;background:#f3f4f1;padding:7px 10px;border-bottom:2px solid var(--line);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:#555}
+td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfcfb}
+.pass{color:var(--accent);font-weight:650}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:20px;background:#eef2ff;color:#3730a3}
+.tag.new{background:var(--terrabg);color:var(--terra)}
+code{background:#f3f4f1;padding:1px 5px;border-radius:4px;font-size:12.5px}
+.fix td{font-size:12.5px}
+.notable{font-size:13.5px}
+.notable li{margin-bottom:5px}
+.crop{font-weight:650}
+.fyi{background:#f7f7f5;border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:13px;color:#444}
+.fyi h3{margin:0 0 8px;font-size:14px}
+.foot{margin-top:40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head><body>
+<h1>Crop Pipeline Review</h1>
+<div class="sub">2026-07-05 &middot; batch <code>2026-07-02</code> &middot; 34 crops authored (roster now 114 with content: 80 certified + 34 drafts) &middot; 20 edibles/herbs + 7 microgreens + 7 companion flowers &middot; prepared for your walk-through</div>
+<div class="glance">
+<b>At a glance:</b> 34 crops were authored overnight in two runs &mdash; the recommended <b>20 edibles + herbs</b>, then (you were still up, said keep going) <b>14 clean fills</b>: 7 microgreens + 7 companion flowers. The roster goes from <b>80 certified to 114 with content</b>; <b>11 honest shells remain</b> &mdash; exactly the deferred design-cases (5 mushrooms, artichoke, asparagus, avocado, olive, sweet-corn, and the collard-greens duplicate). All 34 are gate-clean DRAFTS (<code>author_fresh_pilot</code>, not live): I independently re-gated them here <b>34/34 PASS</b>, with <b>0 regressions</b> on the 80 certified and the <b>canonical byte-untouched</b> (<code>f7ab0ac2</code>). Your time is the <b>5 decisions</b> below &mdash; really <b>2</b> that shape certification (the cucumber parent-vs-type call and the perennial-herb lane) plus 3 quick confirmations; the rest is detail. When we certify, the recurring catch is <b>citation honesty</b>, so the per-crop notes flag exactly where to eyeball a source.
+</div>
+
+<h2>Decisions for you</h2>
+<div class='dec'><div class='q'><span class='num'>1</span>Parent-vs-type ruling for the three cucumbers</div><div class='body'><code>slicing-cucumber</code> (and to a lesser degree <code>pickling</code>/<code>english</code>) overlaps the certified generic <code>cucumber</code>: same species, so pH, spacing, and some pests legitimately match. The type-specific deltas (DTM, fruit, varieties, habit, calendars) are all re-derived and distinct. The slicing agent flagged this for a ruling rather than guess.</div><div class='rec'><b>My recommendation:</b> Keep <code>cucumber</code> as the generic parent alongside the three market-types &mdash; the exact cherry/beefsteak/roma/grape-tomato precedent (one species, distinct records). The overlap is legitimate same-species biology, not template bleed (the bleed scan came back 0). Certify all four.</div></div>
+<div class='dec'><div class='q'><span class='num'>2</span>Ratify the herbaceous-perennial lane (the batch's one recurring call)</div><div class='body'>Five crops are hardy herbaceous perennials with no clean certified template (the only herbaceous-perennial anchor, strawberry, has a fruit-specific gate): <b>mint, chives, lemongrass</b> in the <code>culinary_herb</code> lane and <b>bee-balm, echinacea</b> in the <code>companion_and_ornamental_flower</code> lane. Each is modeled honestly the same way &mdash; <code>perennial=true</code>, <code>succession_policy.suitable=false</code> (plant once, divide), winter-dormancy + spring-establishment + season-long harvest/bloom calendars (A37-coherent) &mdash; and each filed an <code>open_finding</code> asking you to ratify the lane.</div><div class='rec'><b>My recommendation:</b> Ratify the in-lane modeling now (it is honest and gate-clean) so these certify with the batch; formalize a dedicated <code>herbaceous_perennial</code> archetype later, alongside artichoke/asparagus, to house all five at once. No re-authoring needed either way.</div></div>
+<div class='dec'><div class='q'><span class='num'>3</span><code>collard-greens</code> &mdash; retire the shell (you already confirmed)</div><div class='body'>It is an empty shell duplicating the certified <code>collards</code> (Brassica oleracea, Acephala group) with no biological distinction &mdash; the exact <code>beetroot</code>&rarr;<code>beet</code> precedent. It was correctly NOT authored, so it sits as one of the 11 remaining gate-failing shells (a shell fails by design). The removal itself is a canonical edit (a promote-lane task gated on you).</div><div class='rec'><b>My recommendation:</b> Retire/merge it the next time we touch the canonical &mdash; a one-line catalog removal, cleanest folded into the first certify wave.</div></div>
+<div class='dec'><div class='q'><span class='num'>4</span>Keep <code>artichoke</code> + <code>asparagus</code> (and the other design-cases) deferred</div><div class='body'>artichoke's shell is placeholder-stamped <code>warm_season_fruiting</code>/<code>frost_anchored</code>, which is wrong: it is a herbaceous perennial grown for flower buds that maps to strawberry's <code>perennial_herbaceous</code> basis &mdash; but as the 2nd member it trips strawberry's single-example gate (A10/A11), and its vernalization-to-bud + crown biology need a deliberate strawberry-anchored refit + additive gate generalization (the elderberry-shrub pattern).</div><div class='rec'><b>My recommendation:</b> Keep deferred; do artichoke + asparagus together in their own careful pass (roadmap Tier-2A), not a template fill. Same for the 5 mushrooms (novel indoor archetype), avocado/olive (subtropical trees), and sweet-corn. Written up in <code>docs/kickoffs/07-remaining-gs-anchors.md</code>.</div></div>
+<div class='dec'><div class='q'><span class='num'>5</span>Roster-wide spelled-degrees cleanup + gate hardening (not blocking)</div><div class='body'>heirloom-tomato inherited 17 spelled-out &ldquo;degrees F&rdquo; strings BYTE-IDENTICAL from the certified <code>beefsteak-tomato</code> (~9 in consumer beginner prose), and the gate's C/D temperature scan does NOT cover those fields, so it passed them. I normalized heirloom-tomato to <code>&deg;F</code> (re-gated clean), but the certified tomato line (beefsteak, likely cherry/roma/grape) and certified <code>green-beans-bush</code> still carry it. Same &ldquo;certified crop carries a defect the gate misses&rdquo; class as the tomato B577 heat-citation.</div><div class='rec'><b>My recommendation:</b> Schedule a deterministic roster-wide <code>degrees F</code>&rarr;<code>&deg;F</code> normalize + extend the C/D scan to the beginner-prose fields (failure_diagnostics / notifications / tips). A tooling-lane task, folded into the post-123 URL-liveness sweep; does NOT block this batch's certification.</div></div>
+
+<h2>The 34 crops</h2>
+<table><tr><th>Crop</th><th>Template</th><th>Gate</th><th>Sources</th><th>Flags</th></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Warm-season fruiting annuals (frost_anchored)</td></tr>
+<tr><td class='crop'>slicing-cucumber</td><td>&larr; cucumber</td><td><span class='pass'>PASS</span></td><td>11</td><td>4</td></tr>
+<tr><td class='crop'>pickling-cucumber</td><td>&larr; cucumber</td><td><span class='pass'>PASS</span></td><td>13</td><td>6</td></tr>
+<tr><td class='crop'>english-cucumber</td><td>&larr; cucumber</td><td><span class='pass'>PASS</span></td><td>17</td><td>6</td></tr>
+<tr><td class='crop'>banana-pepper</td><td>&larr; bell-pepper</td><td><span class='pass'>PASS</span></td><td>16</td><td>9</td></tr>
+<tr><td class='crop'>habanero</td><td>&larr; cayenne-pepper</td><td><span class='pass'>PASS</span></td><td>17</td><td>9</td></tr>
+<tr><td class='crop'>heirloom-tomato</td><td>&larr; beefsteak-tomato</td><td><span class='pass'>PASS</span></td><td>41</td><td>5</td></tr>
+<tr><td class='crop'>pole-beans</td><td>&larr; green-beans-bush</td><td><span class='pass'>PASS</span></td><td>12</td><td>6</td></tr>
+<tr><td class='crop'>sweet-potato <span class='tag new'>stretch</span></td><td>&larr; potato</td><td><span class='pass'>PASS</span></td><td>7</td><td>4</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Evergreen citrus trees (perennial_evergreen)</td></tr>
+<tr><td class='crop'>grapefruit</td><td>&larr; orange-navel</td><td><span class='pass'>PASS</span></td><td>10</td><td>6</td></tr>
+<tr><td class='crop'>mandarin-clementine</td><td>&larr; orange-navel</td><td><span class='pass'>PASS</span></td><td>12</td><td>6</td></tr>
+<tr><td class='crop'>lime</td><td>&larr; lemon</td><td><span class='pass'>PASS</span></td><td>10</td><td>7</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Cool-season legumes (frost_anchored)</td></tr>
+<tr><td class='crop'>sugar-snap-peas</td><td>&larr; snow-peas</td><td><span class='pass'>PASS</span></td><td>27</td><td>8</td></tr>
+<tr><td class='crop'>broad-beans-fava</td><td>&larr; snow-peas</td><td><span class='pass'>PASS</span></td><td>25</td><td>10</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Woody Mediterranean herbs (woody_ornamental &larr; lavender)</td></tr>
+<tr><td class='crop'>rosemary</td><td>&larr; lavender</td><td><span class='pass'>PASS</span></td><td>10</td><td>5</td></tr>
+<tr><td class='crop'>sage</td><td>&larr; lavender</td><td><span class='pass'>PASS</span></td><td>8</td><td>5</td></tr>
+<tr><td class='crop'>thyme</td><td>&larr; lavender</td><td><span class='pass'>PASS</span></td><td>9</td><td>6</td></tr>
+<tr><td class='crop'>oregano</td><td>&larr; lavender</td><td><span class='pass'>PASS</span></td><td>7</td><td>6</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Leafy-herb-lane herbs</td></tr>
+<tr><td class='crop'>mint <span class='tag new'>perennial</span></td><td>&larr; parsley</td><td><span class='pass'>PASS</span></td><td>21</td><td>7</td></tr>
+<tr><td class='crop'>chives <span class='tag new'>perennial</span></td><td>&larr; parsley</td><td><span class='pass'>PASS</span></td><td>21</td><td>8</td></tr>
+<tr><td class='crop'>lemongrass <span class='tag new'>perennial</span></td><td>&larr; basil</td><td><span class='pass'>PASS</span></td><td>7</td><td>5</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Microgreens (non_seasonal_indoor &larr; microgreens-mix; zone-independent)</td></tr>
+<tr><td class='crop'>arugula-microgreens</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>3</td><td>5</td></tr>
+<tr><td class='crop'>broccoli-microgreens</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>6</td><td>4</td></tr>
+<tr><td class='crop'>cilantro-microgreens</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>8</td><td>6</td></tr>
+<tr><td class='crop'>radish-microgreens</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>3</td><td>6</td></tr>
+<tr><td class='crop'>pea-shoots</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>4</td><td>3</td></tr>
+<tr><td class='crop'>sunflower-sprouts</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>4</td><td>4</td></tr>
+<tr><td class='crop'>wheatgrass</td><td>&larr; microgreens-mix</td><td><span class='pass'>PASS</span></td><td>4</td><td>5</td></tr>
+<tr><td colspan='5' style='background:#f3f4f1;font-weight:650;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#555'>Companion flowers (frost_anchored)</td></tr>
+<tr><td class='crop'>cosmos</td><td>&larr; zinnia</td><td><span class='pass'>PASS</span></td><td>10</td><td>6</td></tr>
+<tr><td class='crop'>borage</td><td>&larr; calendula</td><td><span class='pass'>PASS</span></td><td>6</td><td>8</td></tr>
+<tr><td class='crop'>chamomile</td><td>&larr; calendula</td><td><span class='pass'>PASS</span></td><td>5</td><td>6</td></tr>
+<tr><td class='crop'>sweet-alyssum</td><td>&larr; viola</td><td><span class='pass'>PASS</span></td><td>7</td><td>8</td></tr>
+<tr><td class='crop'>sweet-pea</td><td>&larr; nasturtium</td><td><span class='pass'>PASS</span></td><td>4</td><td>6</td></tr>
+<tr><td class='crop'>bee-balm <span class='tag new'>perennial</span></td><td>&larr; zinnia</td><td><span class='pass'>PASS</span></td><td>3</td><td>7</td></tr>
+<tr><td class='crop'>echinacea <span class='tag new'>perennial</span></td><td>&larr; sunflower</td><td><span class='pass'>PASS</span></td><td>5</td><td>6</td></tr>
+</table>
+<p style="font-size:12.5px;color:#6b7280">All sources are catalogued Tier-1 (university extension). &ldquo;Flags&rdquo; = honest <code>open_findings</code>, all non-blocking; the substantive ones are below, the routine conventions are folded into the FYI block. Microgreens run low-source (indoor single-species pages are thin) and carry empty regions/zones by archetype. Citrus show only the benign tree-vs-annual-reference artifact in <code>release_verify</code> (re-verified clean vs <code>--ref orange-navel</code>).</p>
+
+<h2>Notable per-crop flags (the substance)</h2>
+<p style="font-size:13.5px;color:#444">Filtered to the judgment-worthy items and the citation-honesty boundaries to eyeball at certify &mdash; the systemic conventions are folded into the FYI block below.</p>
+<p style='margin:12px 0 3px'><span class='crop'>sweet-potato</span> <span class='tag new'>#1 stretch</span></p><ul class='notable'>
+<li>The one real refit of the batch: archetype flipped cool-season &rarr; warm-season, genus flipped to <i>Ipomoea</i> (Convolvulaceae, NOT a nightshade), planted from slips on ridges, with mandatory curing + WARM 55-60&deg;F storage (the opposite of potato's cool/dark). Pests refit to sweet potato weevil.</li>
+<li>HONESTY BOUNDARY (sample this): ALL nightshade content was correctly dropped &mdash; no late blight, no Colorado potato beetle, and critically no greening/solanine (that is potato, not sweet potato). This is a batch-1-style boundary: confirm nothing nightshade leaked in.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>habanero</span></p><ul class='notable'>
+<li>Species flipped to <i>Capsicum chinense</i> (not <i>annuum</i>); Scoville 100k-350k triple-sourced; long 90-100 day maturity; honest northern marginality. Spot-check the Scoville and the maturity against the cited pages.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>broad-beans-fava</span></p><ul class='notable'>
+<li>Genus flip to <i>Vicia faba</i>; fall-sown / overwintered cold hardiness; chocolate spot disease; and a T1-sourced <b>favism (G6PD deficiency) consumer-safety note</b> &mdash; a real honesty boundary, verify it is sourced, not asserted.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>english-cucumber</span></p><ul class='notable'>
+<li>Parthenocarpic + gynoecious seedless set with pollination EXCLUDED, protected-culture training, and the pest complex shifted to mites/whiteflies/mildews. Confirm the pollination-excluded framing reads right for the type.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>grapefruit</span> / <span class='crop'>mandarin-clementine</span> / <span class='crop'>lime</span></p><ul class='notable'>
+<li>The citrus cold/heat gradient was re-derived per type: satsuma-mandarin widens the cold range (zones 9&rarr;8); lime narrows it as the most frost-tender citrus; grapefruit's high heat need makes the cool north coast a survives-but-no-fruit region.</li>
+<li>HONESTY BOUNDARY: the grapefruit drug-interaction was FLAGGED (no clean T1 page was readable), NOT asserted. Sample this &mdash; it is the right, honest call.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>heirloom-tomato</span></p><ul class='notable'>
+<li>The warned-about tomato heat-citation defect did NOT propagate: the agent re-anchored all 8 heat_pause cells to LIVE Penn State &ldquo;Heat Stress and Tomatoes&rdquo; + Missouri IPM, dropped the null-URL <code>sdsu_ext</code>, repointed the dead <code>B577</code> PDF &rarr; live UGA <code>C943</code>, and ended with 0 null anchoring URLs.</li>
+<li>Also normalized 17 inherited spelled-out &ldquo;degrees F&rdquo; strings to <code>&deg;F</code> (the certified beefsteak still carries them &mdash; Decision 5).</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>sweet-pea</span></p><ul class='notable'>
+<li>Cool-season climbing legume with <b>TOXIC seeds (lathyrism)</b> &mdash; the exact opposite of the edible, warm-season nasturtium it templates from. A consumer-safety boundary; confirm the toxicity note is present and the edibility framing was fully dropped.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>wheatgrass</span> / <span class='crop'>borage</span> / <span class='crop'>chamomile</span></p><ul class='notable'>
+<li><b>wheatgrass</b> is framed as JUICED with no medical/health claims; sulforaphane/nutrition is flagged where it rests on research literature rather than the fetched extension page.</li>
+<li><b>borage</b> = bee magnet + edible-flower moderation honesty; <b>chamomile</b> leads with German (annual) and distinguishes Roman (perennial).</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>mint</span> / <span class='crop'>chives</span> / <span class='crop'>lemongrass</span> / <span class='crop'>bee-balm</span> / <span class='crop'>echinacea</span> <span class='tag new'>Decision 2</span></p><ul class='notable'>
+<li>The five hardy herbaceous perennials modeled in existing lanes (<code>perennial=true</code>, succession suitable=false, dormant-winter + spring-establishment calendars). Each filed an <code>open_finding</code> asking you to ratify the lane &mdash; this is Decision 2.</li>
+</ul>
+<p style='margin:12px 0 3px'><span class='crop'>sage</span> / <span class='crop'>broad-beans-fava</span></p><ul class='notable'>
+<li>Both cite <code>rhs</code> (Royal Horticultural Society, UK) &mdash; a non-US, non-.edu source catalogued as tier T1 before this batch. Low priority, but worth a source-truth sample or a tier reconsideration (Finding G).</li>
+</ul>
+
+<h2>Systemic findings &amp; watch-items for the certify session</h2>
+<div class="fyi">
+<h3>Cross-cutting items the certify session should carry:</h3>
+&bull; <b>Citation honesty is the recurring catch</b> &mdash; the source-truth review should WebFetch the cited URLs and confirm the numbers on: habanero Scoville, fava favism, grapefruit drug-interaction (flagged), sweet-potato no-solanine, the citrus cold/heat gradient.<br>
+&bull; <b>Certified-crop defects the gate misses</b> (fold into the post-123 cleanup, Decision 5): spelled &ldquo;degrees F&rdquo; in beginner prose on <code>beefsteak-tomato</code> + <code>green-beans-bush</code>; the tomato <code>B577</code>/<code>sdsu_ext</code> heat-citation (heirloom fixed its own copy, the certified line still owes it).<br>
+&bull; <b>Crop-specific pubs folded onto existing catalog ids</b> (habanero UF/IFAS CV130 + NMSU CR706; the citrus CH pubs; sweet-potato Clemson 1322 + UGA C1014) &mdash; the <code>source_catalog</code> is read-only from the author lane, so dedicated ids can be admitted at promote (Finding F). Gate E still passed (0 uncatalogued, 0 non-T1).<br>
+&bull; <b>Woody herbs re-stamped</b> rosemary/sage/thyme/oregano from placeholder <code>culinary_herb</code> to lavender's <code>woody_ornamental</code>, calendars machine-derived (A14 = 0 by construction).<br>
+&bull; <b>One subagent died at startup</b> (the first grapefruit dispatch, ~5s, 0 tool uses) &mdash; transient; re-dispatched and completed cleanly, no partial file written.
+</div>
+
+<h2>Systemic conventions &mdash; FYI, no action</h2>
+<div class="fyi">
+<h3>You've already blessed these; they recur across the batch and are flagged honestly:</h3>
+&bull; <b>Modeled regional windows</b> &mdash; per-zone planting/harvest built from days-to-maturity + frost anchors + representative extension dates where no per-crop regional chart exists.<br>
+&bull; <b>Harvest months derived</b> from the sourced planting window + days-to-maturity (extension charts publish planting, not harvest).<br>
+&bull; <b>Page-level pest/disease citations</b> &mdash; anchored to the comprehensive crop page that names the pest where a pest-specific page was unreadable.<br>
+&bull; <b>Container figures &amp; portal-level URLs, CC-derived successions</b> &mdash; routine modeling, all flagged.<br>
+&bull; <b>Marginal warm-region fits</b> (FL z11, low desert, lowland Hawaii) carry best-effort windows with honest marginality language.<br>
+&bull; <b>Microgreens carry empty regions/zones</b> by archetype (indoor, zone-independent) &mdash; the blessed <code>non_seasonal_indoor</code> shape.
+</div>
+<div class="foot">Generated by Claude Code &middot; canonical SHA <code>f7ab0ac2</code> (byte-untouched) &middot; the 34 drafts are staged + independently re-gated (34/34 PASS) in <code>_handoff/batch_2026-07-02/</code>, awaiting the certify walk-through. Nothing committed. Open in a browser, or in Word / Google Docs.</div>
+</body></html>
