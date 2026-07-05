@@ -10,37 +10,40 @@
 ---
 
 
-**80 certified anchors** (`f7ab0ac2`), first 13 LIVE. **2026-07-02: Wave 6 final annuals certified -- ALL 30 BATCH DRAFTS DONE** -- celery, potato, spring-onion, calendula, viola -> `verified_gs_arc` (75 -> 80), no holds. calendula's pot-marigold-vs-Tagetes honesty boundary HELD (nematode effect affirmatively disclaimed); potato's greening/solanine consumer-safety chain triple-sourced (Clemson+UMN+UC-IPM) + its 13 thermal cells re-anchored uc_ipm->clemson_hgic (the UC IPM page says "warm-weather plants"); viola's empty clemson edibility anchor dropped. Canonical `681037b7` -> `f7ab0ac2` (CONTENT release: committed + pushed + plant-astro bumped). 0 batch drafts remain; 45 honest shells left -- the next authoring target. Anchor target is a roadmap call.
+**85 certified anchors** (`4116eb24`), first 13 LIVE. **2026-07-05: Batch-2 Wave-1 certified -- opens the 34-draft batch 2** -- slicing-cucumber, pickling-cucumber, english-cucumber, banana-pepper, habanero -> `verified_gs_arc` (80 -> 85). FIRST canonical touch of batch 2 (Trevor Ruling 3): retired the empty `collard-greens` shell (catalog 125 -> 124) + renamed certified `collards` -> "Collards (Collard Greens)" (the lettuce-leaf pattern). habanero's honesty boundary HELD (Capsicum chinense species flip + Scoville 100,000-350,000 SHU + 90-100 d DTM + all 5 variety SHUs verified VERBATIM); english-cucumber's parthenocarpic + gynoecious + EXCLUDE-POLLINATION crux verified verbatim on two independent T1 pages; banana-pepper CERTIFY_CLEAN. 6 crops changed (5 flips + collards rename), 0 PASS->FAIL regressions, release_verify B clean (collateral CONCERN only). 29 batch-2 drafts remain (Waves 2-7) + 10 design-case shells. Canonical `f7ab0ac2` -> `4116eb24` (CONTENT release: promoted + state trio; commit + push + plant-astro bump on Trevor's go-ahead). Anchor target is a roadmap call.
 
 ## Canonical pointer
-- **Current SHA:** `f7ab0ac22b24e34cb7a2f7912ee7b7a5ac6705d504ad5973ba4570679c437574`. `LATEST.txt` session: `Wave-6 final-annuals cert -- celery/potato/spring-onion/calendula/viola -> verified_gs_arc (75 -> 80). ALL 30 batch drafts now certified. calendula pot-marigold-vs-Tagetes honesty boundary HELD (nematode effect affirmatively disclaimed); potato greening/solanine consumer-safety chain triple-sourced (Clemson+UMN+UC-IPM) + the 13 thermal cells re-anchored uc_ipm->clemson_hgic because the UC IPM page says "warm-weather plants" (OF003 elevated); viola edibility clemson_hgic anchor dropped (that page has no edibility content, UMN backs it); celery blanching-uncited + spring-onion clean. 5 crops changed, all PASS, 0 regressions, release_verify clean (collateral CONCERN only). NEXT: 45 honest shells remain -- next authoring target (Trevor's evening 20-crop batch).` (2026-07-02).
+- **Current SHA:** `4116eb2447756b325364b5f3742fe98abc3d85da046f00c5edbc71ba3a68bcbc`. `LATEST.txt` session: `Batch-2 Wave-1 cert -- slicing-cucumber/pickling-cucumber/english-cucumber + banana-pepper + habanero -> verified_gs_arc (80 -> 85). FIRST canonical touch of batch 2: retired the empty collard-greens shell (catalog 125 -> 124) + renamed the certified collards -> "Collards (Collard Greens)" (the lettuce-leaf pattern). habanero honesty boundary HELD -- C. chinense species flip + Scoville 100,000-350,000 SHU (double-sourced as cited: UF CV130 + Penn State) + 90-100 d DTM from transplant + all 5 variety SHUs verified VERBATIM (UF CV130 / NMSU CR706 / UMD). english-cucumber parthenocarpic + gynoecious + EXCLUDE-POLLINATION crux verified verbatim (UF CV268 + Penn State). banana-pepper CERTIFY_CLEAN (disease<->pest anchoring correct, no fabricated Scoville). Fixes: 2 dead UMN URLs swapped live on slicing + 1 on pickling; dropped a non-covering Clemson co-cite on slicing angular leaf spot; habanero sources_summary uf_ifas_edis -> CV130 deep link + jalapeno contrast 2,000->2,500 + Scoville narrative triple->double-sourced; english softened downy 'most susceptible' + removed unverified Tyria PM-tolerance + filed a variety-attribution open_finding. 6 crops changed (5 flips + collards rename), 0 PASS->FAIL regressions, release_verify B clean (lone CONCERN = the multi-crop collateral, amplified by the intentional collard-greens drop shifting release_verify's by-position zip). DEFERRED: the UGA B577 planting-chart logo-PDF (inherited byte-identical from the certified cucumber) -> post-114 URL-liveness sweep. NEXT: Wave 2 (heirloom-tomato, pole-beans, sweet-potato, sugar-snap-peas, broad-beans-fava).` (2026-07-05).
 - **Predecessor chain** (most-recent commits touching `crops_data_final.json`; content SHAs):
+  - `f7ab0ac2` -- feat(certify): Wave 6 final annuals -> ALL 30 batch drafts certified (80 certified)
   - `681037b7` -- feat(certify): Wave 5 cucurbits -> 75 certified (melons + squashes)
   - `bbc3c8af` -- feat(certify): Wave 4 nightshades -> 70 certified (peppers + roma/grape tomatoes)
   - `55c91fb9` -- feat(certify): Wave 3b mulberry -> 65 certified (pollination reframe); tree+berry roster complete
   - `898d5eaf` -- feat(certify): Wave 3 trees+berries -> 64 certified (pawpaw/blackberry/raspberry/elderberry)
   - `3ee13bac` -- feat(certify): Wave 2b pears -> 60 certified (pear-asian/pear-european, citation repair)
   - `b250be2b` -- feat(certify): Wave 2 pome/other trees -> 58 certified (fig/persimmon/pomegranate)
-  - `bf432149` -- feat(certify): Wave 1 stone fruit -> 55 certified (apricot/nectarine/plum/cherry-sour/cherry-sweet)
 
-## What just happened (session `Wave-6 final-annuals cert`, 2026-07-02)
+## What just happened (session `Batch-2 Wave-1 cert`, 2026-07-05)
 
-**Certified celery, potato, spring-onion, calendula, viola -> `verified_gs_arc`; 75 -> 80; canonical `681037b7` -> `f7ab0ac2`; no holds. This closes the 30-crop overnight batch -- ALL 30 batch drafts certified.** 5 parallel CC source-truth agents. calendula: the pot-marigold-vs-Tagetes honesty boundary HELD -- distinguished from Tagetes verbatim (UW-Madison) and the Tagetes root-knot-nematode effect AFFIRMATIVELY DISCLAIMED, not claimed. potato: the greening/solanine consumer-safety chain is airtight, triple-sourced (Clemson + UMN + UC IPM); late blight + Colorado potato beetle backed verbatim. celery/spring-onion/viola all PASS. Fixes: potato's 13 thermal cells (heat_threshold + 12 heat_pause) + 6 region_notes RE-ANCHORED uc_ipm -> clemson_hgic (the cited UC IPM page calls potato a 'warm-weather plant' with no soil-temp numbers; the 60-70F optimum / ~80F ceiling stay modeled, OF003 elevated low -> medium; uc_ipm KEPT for its legit uses -- greening corroboration, CA/regional planting cells, no_tubers diagnostic); viola dropped clemson_hgic from its 2 edibility anchors (that page has no edibility content, umn_ext_edible_flowers backs it); celery blanching-uncited + calendula DTM-modeled -> open_findings; tamu_agrilife (celery) unreachable -> post-123. spring-onion certified clean.
+**Certified slicing-cucumber, pickling-cucumber, english-cucumber, banana-pepper, habanero -> `verified_gs_arc`; 80 -> 85; canonical `f7ab0ac2` -> `4116eb24`; no holds. This OPENS batch 2 (the 34 `author_fresh_pilot` drafts, target ~114).** 5 parallel CC source-truth agents (WebFetch of each crop's cited T1 pages). habanero (the flagged honesty-boundary crop): species Capsicum chinense (not annuum), Scoville 100,000-350,000 SHU, DTM 90-100 d from transplant, heat_pause basis day >95F / night >75F, and all five variety SHUs -- all VERIFIED VERBATIM on the cited UF CV130 / NMSU CR706 / UMD / NCSU pages. english-cucumber: the parthenocarpic + gynoecious + seedless + POLLINATION-MUST-BE-EXCLUDED crux verified verbatim (UF CV268 + Penn State). banana-pepper CERTIFY_CLEAN (no fabricated Scoville; disease<->pest anchoring correct -- the jalapeno mis-scope defect absent). Fixes: slicing 2 dead UMN URLs swapped live + dropped a non-covering Clemson co-cite on angular leaf spot; pickling 1 dead UMN URL swapped; english softened downy 'most susceptible' + removed an unverified Tyria PM-tolerance line + filed a variety-attribution open_finding; habanero repointed sources_summary uf_ifas_edis -> the CV130 deep link + corrected the jalapeno contrast 2,000->2,500 + the Scoville narrative triple->double-sourced.
 
-**Verify + promote.** Exactly 5 crops changed, all gate PASS, 0 regressions, release_verify clean (multi-crop collateral CONCERN only; no new violations, reference byte-identical). Committed + pushed + plant-astro bumped.
+**FIRST canonical touch of batch 2 (Trevor Ruling 3):** dropped the empty `collard-greens` shell (catalog 125 -> 124, the intentional DROP) + renamed the certified `collards` -> "Collards (Collard Greens)" (the `lettuce-leaf` = "Lettuce (Leaf)" pattern).
+
+**Verify + promote.** whole_crop_gate all 6 changed slugs PASS; full-roster sweep 80 PASS/45 FAIL -> 85 PASS/39 FAIL, 0 PASS->FAIL regressions, exactly the 5 wave-1 crops FAIL->PASS, only collard-greens removed; derive --check up to date; register_completeness exit 0; release_verify B 'no new violations', reference lettuce-leaf byte-identical, source_catalog unchanged -- the lone CONCERN is the multi-crop collateral (amplified because release_verify zips crops BY POSITION and the collard-greens drop shifts later indices). Independent slug-keyed byte-diff confirms EXACTLY 6 crops changed. Canonical PROMOTED (cp, COMPACT); commit + push + plant-astro bump on Trevor's go-ahead.
 
 ## Active work + next step
 
-**Wave 6 (final annuals) CERTIFIED (2026-07-02) -- ALL 30 BATCH DRAFTS DONE.** 80 certified. The full 30-crop overnight batch (waves 1-6: trees, berries, nightshades, cucurbits, roots/greens/final-annuals) is certified.
+**Batch-2 Wave-1 CERTIFIED (2026-07-05).** 85 certified. This opens the 34-draft batch 2 (the `author_fresh_pilot` drafts in `_handoff/batch_2026-07-02/`), run in family waves of ~5 per the certify playbook `docs/kickoffs/09-certify-batch/KICKOFF.md`.
 
-**NEXT: authoring lane.** 45 honest shells remain -- the next authoring target (Trevor's evening 20-crop batch). No batch drafts left in `_handoff/batch_2026-06-30/`. **BACKLOG (post-123):** the URL-liveness sweep has concrete targets across crops -- `sdsu_ext` url:null + broken UGA B577 PDF (certified tomatoes cherry-tomato/beefsteak), yellow's dead iastate /encyclopedia, honeydew's log 404, `tamu_agrilife` (celery) http/https redirect loop, acorn DTM / spaghetti pollinator anchoring. Consider a deterministic gate: every cited source resolves to a non-null URL. D8 heat_pause for melons/peppers still owed at variety-pass. Cross-crop field-addition arc DEFERRED. **NEW-CHAT PICKUP:** canonical `f7ab0ac2` (80 certified); the batch is fully consumed.
+**NEXT: Wave 2** -- heirloom-tomato, pole-beans, sweet-potato, sugar-snap-peas, broad-beans-fava. 29 of the 34 batch-2 drafts remain (Waves 2-7). Watch: sweet-potato archetype flip (warm-season Ipomoea, NO greening/solanine -- that is nightshade), fava favism (G6PD) safety note, heirloom-tomato heat-citation (already repaired in the draft). Wave 3 citrus (grapefruit/mandarin-clementine/lime) use `--ref orange-navel` in release_verify. **Deferred design-cases (10 shells, roadmap Tier 2):** artichoke, asparagus, avocado, olive, sweet-corn, the 5 mushrooms -- need archetype design first, NOT in this batch. **BACKLOG (post-114):** the URL-liveness sweep (now incl. the UGA B577 logo-PDF inherited onto the certified cucumber + slicing/pickling; the tomatoes' B577/sdsu; yellow's dead iastate; honeydew 404; tamu_agrilife redirect loop) + a candidate 'every cited source resolves to a non-null live URL' gate; the roster-wide spelled-degrees -> degrees-F cleanup + gate C/D hardening (certified beefsteak-tomato + green-beans-bush still owe it); D8 heat_pause for melons/peppers at variety-pass; the cross-crop field-addition arc. **NEW-CHAT PICKUP:** canonical `4116eb24` (85 certified); 29 batch-2 drafts remain.
 
-## Gate record (generated 2026-07-02, on canonical `f7ab0ac2`)
+## Gate record (generated 2026-07-05, on canonical `4116eb24`)
 - **cherry-tomato: `PASS` (0)**
 - **beefsteak-tomato: `PASS` (0)**
 - **roma-tomato: `PASS` (0)**
 - **bell-pepper: `PASS` (0)**
 - **jalapeno: `PASS` (0)**
+- **slicing-cucumber: `PASS` (0)**
 - **kale: `PASS` (0)**
 - **spinach: `PASS` (0)**
 - **carrot: `PASS` (0)**
@@ -54,7 +57,11 @@
 - **lemon: `PASS` (0)**
 - **blueberry: `PASS` (0)**
 - **grape-tomato: `PASS` (0)**
+- **banana-pepper: `PASS` (0)**
 - **cayenne-pepper: `PASS` (0)**
+- **habanero: `PASS` (0)**
+- **pickling-cucumber: `PASS` (0)**
+- **english-cucumber: `PASS` (0)**
 - **yellow-summer-squash: `PASS` (0)**
 - **butternut-squash: `PASS` (0)**
 - **acorn-squash: `PASS` (0)**
@@ -124,6 +131,7 @@
 - **roma-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
 - **bell-pepper: 10/10 region cells filled**; 7 heat_pause
 - **jalapeno: 10/10 region cells filled**; 8 heat_pause
+- **slicing-cucumber: 10/10 region cells filled**; 5 heat_pause
 - **kale: 10/10 region cells filled**; 13 heat_pause
 - **spinach: 10/10 region cells filled**; 18 heat_pause
 - **carrot: 10/10 region cells filled**; 13 heat_pause
@@ -137,7 +145,11 @@
 - **lemon: 10/10 region cells filled**
 - **blueberry: 10/10 region cells filled**
 - **grape-tomato: 10/10 region cells filled**; 8 heat_pause, 8 second_planting
+- **banana-pepper: 10/10 region cells filled**; 7 heat_pause
 - **cayenne-pepper: 10/10 region cells filled**; 6 heat_pause
+- **habanero: 10/10 region cells filled**; 5 heat_pause
+- **pickling-cucumber: 10/10 region cells filled**; 5 heat_pause
+- **english-cucumber: 10/10 region cells filled**; 5 heat_pause
 - **yellow-summer-squash: 10/10 region cells filled**; 5 heat_pause
 - **butternut-squash: 10/10 region cells filled**
 - **acorn-squash: 10/10 region cells filled**
@@ -206,6 +218,7 @@
 - **roma-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **bell-pepper:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **jalapeno:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **slicing-cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **kale:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **spinach:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **carrot:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -219,7 +232,11 @@
 - **lemon:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **blueberry:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **grape-tomato:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **banana-pepper:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cayenne-pepper:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **habanero:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **pickling-cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
+- **english-cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **yellow-summer-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **butternut-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **acorn-squash:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
@@ -281,9 +298,11 @@
 - **beet:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **cucumber:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
 - **collards:** launch_ready_core=True launch_ready_seasoned=True status=`verified_gs_arc`
-- **80 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
+- **85 anchors certified** (launch_ready true + status `verified_gs_arc`). (Target denominator is a roadmap call -- see the headline slot -- not derivable here.)
 
 ## Live locked decisions / guardrails
+
+- **BATCH-2 WAVE-1 CERTIFIED (5) + collard-greens RETIRE -- OPENS BATCH 2 (2026-07-05, CONTENT release, `f7ab0ac2` -> `4116eb24`, promoted + state trio; commit + push + plant-astro bump on Trevor's go-ahead):** slicing-cucumber/pickling-cucumber/english-cucumber + banana-pepper + habanero -> `verified_gs_arc` (80 -> 85), the first wave of the 34-draft batch 2. FIRST canonical touch of batch 2 (Trevor Ruling 3): dropped the empty `collard-greens` shell (catalog 125 -> 124, intentional DROP) + renamed certified `collards` -> "Collards (Collard Greens)" (the lettuce-leaf pattern). habanero (flagged honesty-boundary crop) VERIFIED VERBATIM: Capsicum chinense species flip, Scoville 100,000-350,000 SHU (double-sourced as cited: UF CV130 + Penn State), DTM 90-100 d from transplant (UF CV130), heat_pause basis day >95F / night >75F (UMD), all 5 variety SHUs (NMSU CR706 + Clemson). english-cucumber crux HELD: parthenocarpic + gynoecious + seedless + POLLINATION-MUST-BE-EXCLUDED verbatim on UF CV268 + Penn State ('if pollination does occur ... distorted and a bitter tasting fruit'). banana-pepper CERTIFY_CLEAN: no fabricated Scoville (qualitative prose), disease<->pest anchoring CORRECT (the jalapeno insect-page mis-scope defect ABSENT). Fixes: slicing 2 dead UMN URLs swapped live (.../striped-cucumber-beetles -> .../cucumber-beetles; .../diseases/bacterial-wilt-cucurbits -> .../disease-management/bacterial-wilt) + dropped a non-covering Clemson co-cite on angular leaf spot; pickling same bacterial-wilt swap; english softened downy 'most susceptible' -> Clemson wording + removed unverified Tyria PM-tolerance + filed a variety-attribution open_finding; habanero repointed sources_summary uf_ifas_edis -> CV130 deep link + jalapeno contrast 2,000->2,500 + Scoville triple->double-sourced. **DEFERRED (roster-wide, inherited byte-identical from the certified generic cucumber):** the UGA B577 planting-chart URL resolves to a CAES logo PDF (slicing + pickling regional cells) -> post-114 URL-liveness sweep. Verify: 6 crops changed (5 flips + collards rename), all gate PASS, 0 PASS->FAIL regressions (80/45 -> 85/39), release_verify B clean (lone CONCERN = the multi-crop collateral, amplified because release_verify zips crops BY POSITION so the collard-greens drop shifts later indices; independent slug-keyed byte-diff confirms EXACTLY 6 changed). LESSON: a certified crop can carry an inherited dead-but-resolving citation the gate misses (the cucumber B577 logo-PDF) -- same class as the tomatoes' B577/sdsu; the source-truth review is what catches it.
 
 - **WAVE-6 FINAL-ANNUALS CERTIFIED (5) -- 30-CROP BATCH COMPLETE (2026-07-02, CONTENT release, `681037b7` -> `f7ab0ac2`, committed + pushed + plant-astro bumped):** celery/potato/spring-onion/calendula/viola -> `verified_gs_arc` (75 -> 80), no holds. ALL 30 batch drafts now certified. calendula's pot-marigold-vs-Tagetes honesty boundary HELD (Tagetes nematode effect affirmatively DISCLAIMED, not claimed -- the crux held). potato greening/solanine consumer-safety chain triple-sourced (Clemson+UMN+UC-IPM), airtight. FIX: potato's 13 thermal cells + 6 region_notes re-anchored uc_ipm -> clemson_hgic because the cited UC IPM page calls potato a 'warm-weather plant' with no soil-temp numbers (60-70F / ~80F stay MODELED, OF003 elevated low -> medium); uc_ipm KEPT for its legit uses (greening corroboration, CA/regional planting cells, no_tubers diagnostic) -- the same 'anchor resolution vs semantics' lesson as the tomato heat cells (a resolving URL can still be the wrong page). viola: dropped clemson_hgic from the 2 edibility anchors (that pansies page has no edibility content; umn_ext_edible_flowers backs it). celery: blanching claim in varieties uncited (standard horticulture) -> open_finding; tamu_agrilife in an http/https redirect loop -> post-123 URL sweep. Verify: 5 crops changed, all PASS, 0 regressions, release_verify clean. NEXT: 45 honest shells remain -- next authoring target.
 
@@ -359,3 +378,4 @@
 - **DISPLAY-READINESS FIELDS ARE A SEPARATE BAR FROM CERT (garden-calculator-surfaced):** the calculator gates PLACEABILITY on `spacing_inches` (+ `companions`) and CONTAINER on `container_ok==true` AND `min_pot_gallons != null`; cert validates BIOLOGY/sources and does NOT require them. **Audit display-readiness PER consuming surface** (A20 = presence; A23 = render-verbatim prose).
 - **CERT mechanics / THE FLIP:** source-verbatim (vs cited URLs) is the flip gate; `verification_status` block (status verified_gs_arc + phase + launch_ready x2 + last_audited + source_set + verification_log_ref + open_findings all blocks_launch:false). CERT RE-VERIFICATION = an INDEPENDENT SOURCE FETCH FOR FIDELITY (WebFetch a sample of cited URLs, check the NUMBERS).
 - **GOTCHA: canonical JSON is COMPACT** (`json.dumps(separators=(",",":"), ensure_ascii=False)`, no trailing newline, never indent=2). **Dataset commits go in `~/plant-dataset` on `main`** (the submodule is detached-HEAD); push is AUTONOMOUS (announce-then-execute). The plant-astro merge/push stays GATED on Trevor.
+
