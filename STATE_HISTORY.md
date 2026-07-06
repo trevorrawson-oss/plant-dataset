@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §C spelled-degrees -> °F + §B offline non-null-URL gate (CONTENT release; `035b950d` -> `e5b1aa88`) [Claude Code]
+
+**The OFFLINE half of the §B/§C backlog pass.** Brainstormed -> Trevor-ratified -> spec + plan (`docs/superpowers/`) -> TDD. The 1,030-URL online liveness sweep is a deferred follow-on. Roster stays 114 certified.
+
+**Scope scan first (the design grounder).** §C: 12 crops flagged, but ONE (onion) is a false positive -- its "38 to 39 degrees" are LATITUDE (day-length/photoperiod prose), not temperature. §B: the 20,224 anchoring-url *entries* dedupe to 1,030 distinct URLs; **57 null urls, ALL in the legacy `zones{}` layer** (the current `regions{}` layer has zero); "fill from catalog" would be LESS accurate -- 18 of the 57 are `uga_b577`, whose catalog url is the exact DEAD B577 PDF the kickoff flags, plus `mu_ext`/`sdsu_ext`/`uc_mg` are bare homepages. **Trevor's Q ("what's most accurate / will anyone see it?") -> answer: the nulls are in the unrendered legacy layer, and backfilling would SPREAD the dead uga_b577; the accurate fix is to repoint the SOURCES in the deferred liveness sweep.**
+
+**Ratified decisions.** (1) Offline pass now; defer the online liveness sweep. (2) Leave the 57 legacy `zones{}` nulls alone; scope the non-null-URL gate to the LIVE layers (`regions{}` + claim), `zones{}` excluded. (3) onion = clarify latitude to `°N`, NOT convert to `°F`.
+
+**Tooling (TDD, committed Tasks 1-2).** `tools/temp_scan.py` -- the ONE shared spelled-temperature scanner+fixer: `spelled_temp_hits(s)` (gate side) + `convert_temps(s)` (fixer side), inverses. Replaces the two narrow inline regexes (`whole_crop_gate._DEGF_RE` + `release_verify`), which only caught `degrees F`/`deg F`/`° F` and MISSED `90 degrees`, bare `50 F`, and `degrees Fahrenheit` -- the exact forms that shipped. Excludes only EXPLICIT latitude adjacency (`°N`, `degrees north`); a bare `NN degrees` is intentionally flagged so a human clarifies it. **TDD caught a real bug:** `degrees?\s*[NS]` matched the trailing 's' of a plain "degrees" (via the optional `s?`), wrongly excluding every temperature -- fixed to `\s+`. `tools/url_health_gate.py` -- offline `url_health_violations(crop)`: every LIVE-layer `anchoring_urls` entry has a non-null url; legacy `zones{}` skipped. Offline only (liveness is the deferred `--online` sweep). Green on canonical (live layer clean).
+
+**Data (this promote).** §C spelled-degrees -> `°F` on 11 crops (beefsteak-tomato, bok-choy, cherry/grape/roma-tomato, lettuce-leaf, orange-navel, pear-european, raspberry, strawberry, tomatillo -- 120 forms), applied via `convert_temps` on a scratch copy then main-loop spot-checked (conversions read cleanly, prose unmangled). onion's 3 latitude references (all in one `photoperiod.explainer_seasoned` string) hand-clarified to `°N` ("above 38 to 39°N", "below 35°N", "32 to 42°N"). **green-beans-bush (named in the kickoff) confirmed CLEAN** -- no spelled degrees.
+
+**Verify + promote.** SHA-guarded splice from `035b950d`: EXACTLY the 12 slugs changed (11 temp + onion), all other crops + every top-level key (incl. `source_catalog`) byte-identical, 114 certified unchanged. Gates: `temp_scan` 0, `url_health_gate` 0, `register_completeness` 0, `whole_crop_gate` 12/12 -- all exit 0; `release_verify` per slug = **0 NEW concerns vs base** (each crop's 9-10 `plantings_provenance` concerns are pre-existing benign collateral, identical on base). Canonical COMPACT, no trailing newline. `035b950d` -> `e5b1aa88`.
+
+**NEXT (Task 4, same session): wire `spelled_temp_hits` into `whole_crop_gate` C/D + `release_verify` D** -- the gate hardening, done AFTER the data cleanup so the roster stays green, with an adversarial injection proving it catches a regression. Then Trevor confirms the push (this repo's `main` + the plant-astro bump). **DEFERRED follow-ons:** the §B online URL-liveness sweep (WebFetch ~1,030 distinct URLs; repoint `uga_b577` dead PDF / citrus TAMU redirects / lime bare `ucanr.edu` / cucumber B577 logo-PDF; build `url_health_gate --online`; then optionally backfill the legacy `zones{}` nulls); §D `rhs` tier (answered in principle by §A's ASPCA precedent); the 108-crop `pet_safe` rollout.
+
+---
+
 ## 2026-07-06 -- POST-114 §A: `pet_safe` cross-crop field, 6-crop PILOT (CONTENT release; `3358d496` -> `035b950d`) [Claude Code]
 
 **The flagship post-114 column pass (field_addition_register row 3): a structured, consumer-facing pet-friendly / not-pet-friendly dimension for a quick icon.** Brainstormed the contract -> Trevor ratified -> spec + plan (`docs/superpowers/`) -> TDD gate -> diverse 6-crop pilot -> SHA-guarded amend-not-recert promote. Roster stays 114 certified.
