@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 1: ALLIUMS (CONTENT release; `e5b1aa88` -> `ff3df754`) [Claude Code]
+
+**The warnings-only rollout begins** (spec `docs/superpowers/specs/2026-07-06-pet-safe-rollout-design.md`, plan `...-pet-safe-rollout.md`). Author `pet_safe` ONLY on toxic/caution crops; safe crops confirmed + left blank; the research-log JSON (`docs/superpowers/plans/2026-07-06-pet-safe-rollout-log.json`) is the completeness record. New tooling: `tools/pet_safe_coverage.py` (asserts every certified crop is logged + log/dataset agree; TDD). **Wave 1: garlic, leek, onion, shallot, spring-onion -> all `toxic`[cats,dogs,horses]**, each INDIVIDUALLY ASPCA-verified (no cluster assumption): garlic (A. sativum), leek (A. ampeloprasum), onion/shallot/spring-onion (A. cepa; onion/shallot/spring-onion co-tagged NCSU allium-cepa); N-propyl disulfide -> hemolytic anemia. SHA-guarded (exactly the 5 changed, 114 certified unchanged). Gates: pet_safe_gate 0 (toxic now 7 incl. pilot), whole_crop_gate 5/5, register 0. Log: 11/114 checked. Main-loop research (safety-critical; no subagents, per the standing flag). Trevor chose per-wave review of the toxic/caution verdicts before each promote. NEXT: Wave 2 nightshade foliage (expect caution).
+
+---
+
 ## 2026-07-06 -- POST-114 §C spelled-degrees -> °F + §B offline non-null-URL gate (CONTENT release; `035b950d` -> `e5b1aa88`) [Claude Code]
 
 **The OFFLINE half of the §B/§C backlog pass.** Brainstormed -> Trevor-ratified -> spec + plan (`docs/superpowers/`) -> TDD. The 1,030-URL online liveness sweep is a deferred follow-on. Roster stays 114 certified.
