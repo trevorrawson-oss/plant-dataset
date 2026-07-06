@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-07-06 -- Batch-2 AUDIT + lime start amendment (CONTENT release; `b67b0101` -> `3358d496`) [Claude Code]
+
+**A post-completion audit of the batch (Trevor-scoped) + the one amendment it surfaced. Roster stays 114 certified; batch 2 remains COMPLETE.**
+
+**Audit scope (Trevor, 2026-07-06):** structural + regression, PLUS a source re-audit of the 7 degraded-review crops (Wave 7's four + sunflower-sprouts/pea-shoots/cilantro), PLUS a **growing-process anchor sweep across all 34** batch-2 crops on the fields that feed the app's upcoming **seed->harvest timing spine**: `start_method` (+ a propagule-honesty flag), `germination_temp_f`, `spacing_inches`, `growth_stages`. Read-only by design -- surface findings, don't fix (the one fix below was then applied deliberately). Rationale: an error in a stage ladder / DTM / mislabeled start method propagates straight into computed timing, so verifying the anchors *before* authoring timing fields on top is the cheapest catch.
+
+**Results.**
+- **(A) Structural + regression: CLEAN.** All 114 certified crops pass `whole_crop_gate` (0 fail); the 10 non-certified are the expected design-case shells; all 4 safety additions present in canonical; canonical == LATEST == origin/main == plant-astro submodule pointer (in sync); 124 crops, 0 duplicate slugs, all 113 distinct cited sources catalogued + T1.
+- **(C) Growing-process anchor sweep: PROPAGULE HONESTY PASS + one real gap.** No crop is falsely labeled seed/direct when it is vegetatively propagated -- sweet-potato ("grown from slips... not from seed"), mint ("from a division... not from seed"), lemongrass ("from a division... or a grocery-store stalk"), citrus ("grafted nursery tree") are all honest IN PROSE. The propagule detail lives in `start_method` prose, not the structured `start` enum, so the new `propagule` field can be populated straight from it. **The one real finding (FIXED, below): `lime.start_method.start` was NULL** while grapefruit/mandarin carried `grafted_nursery_tree`. Timing-spine notes surfaced (NOT changed): sweet-pea in-row spacing `[3,6]` in vs Cornell ~8 in (NCSU's "3-6 ft" is *spread*, a different metric; `[3,6]` in is a legit intensive choice); lemongrass 4-stage ladder (archetype-appropriate for a tender perennial); the DTM convention split (woody perennials + citrus carry `days_to_maturity=[]`, herbaceous perennials carry values -- the from-sow-vs-from-transplant anchor flag must handle both); germ single-value bands on rosemary/thyme `[70,70]`.
+- **(B) Degraded-7 re-audit: confirmed, no new errors.** Microgreen anchors confirmed live vs USU (cilantro 21-28 days EXACT; sunflower/pea within their shoot-cut framing; germ bands bracket 74F). sweet-pea toxicity re-confirmed with a **fresh NCSU fetch** (W7's was WebSearch-only, since WebFetch was blocked then; it is working again now) -- "Sweet Peas are poisonous and should not be planted near edible peas", seeds poisonous, lathyrism symptoms, verbatim. The other flowers' W7 findings + main-loop self-verifications hold.
+
+**The lime amendment (the only fix, applied deliberately, SHA-guarded).** Set `lime.start_method.start = "grafted_nursery_tree"` (it was null; lime's own notes already said "plant a young nursery tree"; now consistent with its citrus siblings). Amend-not-recert: a per-field provenance note was appended to lime's `verification_log_ref`. Verify: `whole_crop_gate` lime PASS (exit 0), `derive --check` up to date; SHA-guarded splice from base `b67b0101` asserted EXACTLY lime changed (123 others + `source_catalog` byte-identical), crop-count 124 + certified 114 unchanged. `b67b0101` -> `3358d496`. Canonical COMPACT, no trailing newline.
+
+**Deliverables.** Audit findings written to `docs/2026-07-06-batch2-audit-findings.md` (for the timing-spine session to reference). The post-114 backlog kickoff is at `docs/kickoffs/10-post-114-backlog/KICKOFF.md`.
+
+**NEXT:** Trevor confirms the push. Two pushes pending: (1) this repo's `main` (the lime-amendment commit); (2) the **plant-astro** pointer bump `2279dde` (which ALSO carries Trevor's 3 unpushed illustration commits -- his decision whether to publish those with the data bump). Then the post-114 backlog.
+
+---
+
 ## 2026-07-06 -- Batch-2 Wave-7 CERTIFIED (4) -- FINAL WAVE -> BATCH COMPLETE (CONTENT release; `8ae25ff5` -> `b67b0101`) [Claude Code]
 
 **CONTENT release -- the FINALE.** sweet-alyssum, sweet-pea (annual flowers) + bee-balm, echinacea (Trevor-ratified hardy perennials) -> `verified_gs_arc` + launch flags (110 -> 114). No holds. **114 certified. THE 34-DRAFT BATCH-2 CERTIFY ARC IS COMPLETE (7 waves, 80 -> 114).**
