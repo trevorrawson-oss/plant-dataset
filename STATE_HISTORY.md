@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 3: STONE FRUIT (CONTENT release; `eb5e651f` -> `4702c999`) [Claude Code]
+
+**Wave 3: apricot, cherry-sour, cherry-sweet, plum, peach, nectarine -> all `caution`[cats,dogs,horses]** -- cyanogenic glycosides (amygdalin) in pits/seeds/leaves, flesh safe (`toxic_parts` set). ASPCA apricot/cherry/plum entries (Prunus, "includes Plum, Peach, Cherry") + NCSU prunus-persica for peach/nectarine (#problem c/d/h). No judgment calls. **Trevor switched to LIGHT-TOUCH review** (auto-promote clear waves; stop only for judgment calls/surprises). SHA-guarded (exactly the 6 changed). Gates green. Log 29/114 (safe 6, toxic 7, caution 16). NEXT: Wave 4 citrus.
+
+---
+
 ## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 2: NIGHTSHADES (CONTENT release; `ff3df754` -> `eb5e651f`) [Claude Code]
 
 **Wave 2, and the no-cluster rule paid off: the "nightshade cluster" SPLIT.** 12 crops, each individually verified. **7 -> `caution`[cats,dogs,horses]** (authored): the 4 tomatoes (beefsteak/grape/heirloom/roma -- same *S. lycopersicum* as the pilot cherry-tomato, reusing that ASPCA tomato-plant + NCSU anchor) + eggplant + potato + tomatillo -- all solanine, foliage/green-parts/unripe toxic, edible fruit/tuber safe (`toxic_parts` set). **5 -> `safe`** (log-only, blank; Trevor-ruled): the peppers (bell/banana/cayenne/habanero/jalapeno = *Capsicum annuum*) -- NCSU gives Capsicum NO pet tag (unlike its tagged relatives eggplant/potato), and ASPCA's only "pepper" entry is the different Ornamental Pepper (*Solanum pseudocapsicum*); capsaicin is a mild irritant only. A blind cluster would have wrongly warned all 5 peppers. tomatillo ruled caution[c,d,h] via the solanine it shares with pet-tagged potato/eggplant (NCSU tags tomatillo human-only). SHA-guarded (exactly the 7 authored changed; the 5 safe peppers are log-only, canonical untouched). Gates: pet_safe_gate 0, whole_crop_gate 7/7, register 0. Log 23/114 (safe 6, toxic 7, caution 10). NEXT: Wave 3 stone fruit (cyanogenic pits/leaves).
