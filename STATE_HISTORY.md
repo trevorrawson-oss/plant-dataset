@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 7 (FINAL) + ROLLOUT COMPLETE (CONTENT release; `fa88960c` -> `8e568c5b`) [Claude Code]
+
+**THE pet_safe ROLLOUT IS COMPLETE.** All 114 certified crops individually checked against ASPCA (+ NCSU); the research-log JSON is the completeness record (`pet_safe_coverage` gate exit 0, 114/114). **FINAL TALLY: 75 safe (blank/graceful-omit), 7 toxic, 32 caution = 39 not-pet-friendly crops marked.** Warnings-only: only the toxic/caution crops carry a `pet_safe` block; safe crops are confirmed-and-blank.
+
+**Wave 7 (33 crops): 5 caution + 28 safe.** apple/pear-asian/pear-european/elderberry/fig -> caution[cats,dogs,horses]: apple + pears (cyanogenic amygdalin seeds; **pear Trevor-ruled consistent-with-apple** despite no direct pear source, anchored to the ASPCA apple entry); elderberry (raw/unripe berries+stems+leaves cyanogenic, cooked ripe safe); fig (*F. carica* furanocoumarin sap dermatitis -- **another ASPCA species-mismatch:** ASPCA's "fig" is the ornamental *F. benjamina*). 28 safe: squash/beans/cucumbers/melons/berries/persimmon/pomegranate/mulberry/pawpaw/okra/strawberry.
+
+**THE NO-CLUSTER PAYOFF (Trevor's fear, vindicated).** Every crop was verified individually, and families SPLIT: nightshades -> 7 caution + 5 safe peppers (Capsicum has no pet tag; ASPCA's "pepper"=ornamental *Solanum pseudocapsicum*); Apiaceae -> parsley/parsnip caution but carrot/celery/dill/cilantro safe; Lamiaceae -> oregano/mint caution but sage/thyme/basil safe. **Species-mismatch traps caught** (like the pilot's chamomile): marigold=*Tagetes* (safe, no pet tag) is NOT ASPCA's "garden marigold"=*Calendula* (our separate crop); fig=*F. carica* not ASPCA's *F. benjamina*. A blind cluster would have mis-marked peppers, carrots, celery, marigold, and more.
+
+**The 39 warnings.** TOXIC (7): chives, borage (pilot) + garlic, leek, onion, shallot, spring-onion (alliums). CAUTION (32): sweet-pea, chamomile, cherry-tomato (pilot) + 4 tomatoes/eggplant/potato/tomatillo (nightshade solanine) + 6 stone fruit (cyanogenic pits) + 5 citrus (essential oils) + lavender + oregano/mint/parsley/lemongrass/parsnip (herbs/furanocoumarins) + apple/pear-asian/pear-european/elderberry/fig.
+
+**New tooling:** `tools/pet_safe_coverage.py` (+ test) -- the warnings-only completeness gate (every certified crop logged; log/dataset agree). Each wave SHA-guarded (7 waves, each promote asserted exactly its authored slugs changed; safe crops are log-only, canonical untouched). Gates: pet_safe_coverage 0, pet_safe_gate 0, whole_crop_gate 114/114, register 0, temp_scan/url_health 0 (no regressions). Main-loop research throughout (safety-critical; no subagents, per the standing flag). `e5b1aa88` -> `8e568c5b` across 7 wave promotes.
+
+**NEXT:** Trevor confirms the push; then plant-astro adds the not-pet-friendly icon (graceful-omit; a positive "pet friendly" icon is backfillable from the log). Remaining backlog: §B online URL-liveness sweep, §D rhs tier, §E design-case archetypes.
+
+---
+
 ## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 6: FOOD-CROP SWEEP A (CONTENT release; `bd524a86` -> `fa88960c`) [Claude Code]
 
 **Wave 6 (36 crops: herbs / leafy greens / microgreens / root veg / brassicas). 5 caution + 31 safe.** `caution`[cats,dogs,horses] (mild essential oils / furanocoumarins): **oregano, mint, parsley, lemongrass** (ASPCA-toxic herbs) + **parsnip** (NCSU furanocoumarins). **The Apiaceae and Lamiaceae families SPLIT per-crop -- the no-cluster payoff again:** parsley/parsnip caution but carrot/celery/dill/cilantro safe; oregano/mint caution but sage/thyme/basil safe. 31 safe (log only): the rest of the herbs + all leafy greens (arugula/bok-choy/celery/collards/kale/lettuce/spinach/swiss-chard) + all 8 microgreens (inherit safe parents) + root veg (beet/carrot/radish/sweet-potato/turnip) + all brassicas (broccoli/brussels/cabbage/cauliflower/kohlrabi). Sources: ASPCA + NCSU per crop. SHA-guarded (exactly the 5 authored changed). Gates green. Log 81/114 (safe 47, toxic 7, caution 27). NEXT: Wave 7 food-crop sweep B (33; watch raw elderberry).

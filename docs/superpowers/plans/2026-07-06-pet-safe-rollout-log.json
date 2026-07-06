@@ -530,5 +530,167 @@
   "kohlrabi": {
     "verdict": "safe",
     "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "apple": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
+    "note": "The fruit is fine, but the seeds, stems, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
+  },
+  "pear-asian": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
+    "note": "The flesh is fine, but the seeds contain the same cyanide compounds as apple seeds and are best kept from cats, dogs, and horses."
+  },
+  "pear-european": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
+    "note": "The flesh is fine, but the seeds contain the same cyanide compounds as apple seeds and are best kept from cats, dogs, and horses."
+  },
+  "elderberry": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://plants.ces.ncsu.edu/plants/sambucus-canadensis/",
+    "note": "Cooked ripe elderberries are used in foods, but the raw or unripe berries, leaves, and stems contain cyanide compounds and are toxic to cats, dogs, and horses."
+  },
+  "fig": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+    "note": "The fruit is fine, but the milky sap and leaves can irritate the skin and stomach of cats, dogs, and horses."
+  },
+  "acorn-squash": {
+    "verdict": "safe",
+    "source": "ncsu:cucurbita-pepo non-toxic c/d/h"
+  },
+  "butternut-squash": {
+    "verdict": "safe",
+    "source": "ncsu:cucurbita non-toxic"
+  },
+  "pumpkin": {
+    "verdict": "safe",
+    "source": "ncsu:cucurbita-pepo non-toxic c/d/h"
+  },
+  "spaghetti-squash": {
+    "verdict": "safe",
+    "source": "ncsu:cucurbita non-toxic"
+  },
+  "yellow-summer-squash": {
+    "verdict": "safe",
+    "source": "ncsu:cucurbita-pepo non-toxic"
+  },
+  "zucchini-courgette": {
+    "verdict": "safe",
+    "source": "ncsu:cucurbita-pepo non-toxic c/d/h"
+  },
+  "broad-beans-fava": {
+    "verdict": "safe",
+    "source": "ncsu:vicia-faba no pet tag (favism human-only)"
+  },
+  "edamame": {
+    "verdict": "safe",
+    "source": "ncsu:glycine-max no pet tag"
+  },
+  "green-beans-bush": {
+    "verdict": "safe",
+    "source": "ncsu:phaseolus-vulgaris no pet tag (raw-bean lectin human-only)"
+  },
+  "pole-beans": {
+    "verdict": "safe",
+    "source": "ncsu:phaseolus-vulgaris no pet tag"
+  },
+  "snow-peas": {
+    "verdict": "safe",
+    "source": "garden pea (Pisum sativum) non-toxic"
+  },
+  "sugar-snap-peas": {
+    "verdict": "safe",
+    "source": "garden pea (Pisum sativum) non-toxic"
+  },
+  "cucumber": {
+    "verdict": "safe",
+    "source": "ncsu:cucumis-sativus non-toxic c/d/h"
+  },
+  "english-cucumber": {
+    "verdict": "safe",
+    "source": "ncsu:cucumis-sativus non-toxic"
+  },
+  "pickling-cucumber": {
+    "verdict": "safe",
+    "source": "ncsu:cucumis-sativus non-toxic"
+  },
+  "slicing-cucumber": {
+    "verdict": "safe",
+    "source": "ncsu:cucumis-sativus non-toxic"
+  },
+  "cantaloupe": {
+    "verdict": "safe",
+    "source": "Cucumis melo, non-toxic cucurbit (like cucumber)"
+  },
+  "honeydew-melon": {
+    "verdict": "safe",
+    "source": "Cucumis melo, non-toxic cucurbit"
+  },
+  "watermelon": {
+    "verdict": "safe",
+    "source": "Citrullus lanatus, non-toxic cucurbit (commonly pet-safe)"
+  },
+  "blackberry": {
+    "verdict": "safe",
+    "source": "Rubus, non-toxic (commonly pet-safe berry)"
+  },
+  "blueberry": {
+    "verdict": "safe",
+    "source": "ncsu:vaccinium-corymbosum no pet tag"
+  },
+  "raspberry": {
+    "verdict": "safe",
+    "source": "Rubus, non-toxic (commonly pet-safe berry)"
+  },
+  "persimmon": {
+    "verdict": "safe",
+    "source": "ncsu:diospyros-virginiana no pet tag"
+  },
+  "pomegranate": {
+    "verdict": "safe",
+    "source": "ncsu:punica-granatum no pet tag"
+  },
+  "mulberry": {
+    "verdict": "safe",
+    "source": "ncsu:morus-rubra non-toxic c/d/h (human unripe/sap only)"
+  },
+  "pawpaw": {
+    "verdict": "safe",
+    "source": "ncsu:asimina-triloba no pet tag (human GI only)"
+  },
+  "okra": {
+    "verdict": "safe",
+    "source": "ncsu:abelmoschus-esculentus no pet tag"
+  },
+  "strawberry": {
+    "verdict": "safe",
+    "source": "Fragaria, non-toxic (commonly pet-safe berry)"
   }
 }
