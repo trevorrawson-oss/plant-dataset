@@ -105,4 +105,34 @@ assert counts == {"safe": 1, "toxic": 1, "caution": 0}, counts
 counts, unset = coverage_report(crops, {"rosemary", "chives"})
 assert unset == [], unset
 
+# --- CLI exit-code behavior (subprocess; gate by exit code) ---
+import json as _json
+import subprocess
+import tempfile
+
+_GATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pet_safe_gate.py")
+
+
+def _run(fixture):
+    fd, p = tempfile.mkstemp(suffix=".json")
+    os.close(fd)
+    with open(p, "w", encoding="utf-8") as f:
+        _json.dump(fixture, f)
+    try:
+        r = subprocess.run([sys.executable, _GATE, p, "--slugs", "rosemary"],
+                           capture_output=True, text=True)
+        return r.returncode
+    finally:
+        os.unlink(p)
+
+
+_clean = {"crops": [safe_crop()], "source_catalog": CATALOG}
+_bad = {"crops": [dict(safe_crop(), pet_safe=dict(safe_crop()["pet_safe"], status="oops"))],
+        "source_catalog": CATALOG}
+_missing = {"crops": [{"slug": "rosemary"}], "source_catalog": CATALOG}  # coverage gap
+
+assert _run(_clean) == 0, "clean fixture should exit 0"
+assert _run(_bad) == 1, "bad-enum fixture should exit 1"
+assert _run(_missing) == 1, "coverage gap (required slug missing pet_safe) should exit 1"
+
 print("pet_safe_gate tests: OK")
