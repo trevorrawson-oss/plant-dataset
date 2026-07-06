@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 4: CITRUS (CONTENT release; `4702c999` -> `0fdbc7d2`) [Claude Code]
+
+**Wave 4: lemon, lime, orange-navel, grapefruit, mandarin-clementine -> all `caution`[cats,dogs,horses]** -- essential oils + psoralens in peel/leaves/stems (mild GI/dermatitis), fruit safe (`toxic_parts` set). ASPCA per-species (lemon/lime/orange/grapefruit); mandarin (*C. reticulata*, no ASPCA/NCSU page) anchored to the ASPCA orange citrus caution (same-genus, like shallot->onion). Light-touch (no judgment calls). SHA-guarded (exactly the 5 changed). Gates green. Log 34/114 (safe 6, toxic 7, caution 21). NEXT: Wave 5 flowers (mixed).
+
+---
+
 ## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 3: STONE FRUIT (CONTENT release; `eb5e651f` -> `4702c999`) [Claude Code]
 
 **Wave 3: apricot, cherry-sour, cherry-sweet, plum, peach, nectarine -> all `caution`[cats,dogs,horses]** -- cyanogenic glycosides (amygdalin) in pits/seeds/leaves, flesh safe (`toxic_parts` set). ASPCA apricot/cherry/plum entries (Prunus, "includes Plum, Peach, Cherry") + NCSU prunus-persica for peach/nectarine (#problem c/d/h). No judgment calls. **Trevor switched to LIGHT-TOUCH review** (auto-promote clear waves; stop only for judgment calls/surprises). SHA-guarded (exactly the 6 changed). Gates green. Log 29/114 (safe 6, toxic 7, caution 16). NEXT: Wave 4 citrus.
