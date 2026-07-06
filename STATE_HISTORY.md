@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 6: FOOD-CROP SWEEP A (CONTENT release; `bd524a86` -> `fa88960c`) [Claude Code]
+
+**Wave 6 (36 crops: herbs / leafy greens / microgreens / root veg / brassicas). 5 caution + 31 safe.** `caution`[cats,dogs,horses] (mild essential oils / furanocoumarins): **oregano, mint, parsley, lemongrass** (ASPCA-toxic herbs) + **parsnip** (NCSU furanocoumarins). **The Apiaceae and Lamiaceae families SPLIT per-crop -- the no-cluster payoff again:** parsley/parsnip caution but carrot/celery/dill/cilantro safe; oregano/mint caution but sage/thyme/basil safe. 31 safe (log only): the rest of the herbs + all leafy greens (arugula/bok-choy/celery/collards/kale/lettuce/spinach/swiss-chard) + all 8 microgreens (inherit safe parents) + root veg (beet/carrot/radish/sweet-potato/turnip) + all brassicas (broccoli/brussels/cabbage/cauliflower/kohlrabi). Sources: ASPCA + NCSU per crop. SHA-guarded (exactly the 5 authored changed). Gates green. Log 81/114 (safe 47, toxic 7, caution 27). NEXT: Wave 7 food-crop sweep B (33; watch raw elderberry).
+
+---
+
 ## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 5: FLOWERS (CONTENT release; `0fdbc7d2` -> `bd524a86`) [Claude Code]
 
 **Wave 5 (the mixed wave): only 1 warning.** lavender -> `caution`[cats,dogs,horses] (linalool essential oils, mild GI; ASPCA). The other 10 -> `safe` (log only): zinnia/nasturtium/sunflower/calendula/sweet-alyssum/viola (ASPCA non-toxic), marigold/cosmos/echinacea/bee-balm (NCSU no pet tag). **Species-nuance handled (like the pilot's chamomile):** our marigold=*Tagetes* (NCSU: human phototoxic sap, NO pet tag -> safe like the peppers) is NOT ASPCA's "garden marigold"=*Calendula* (which is our SEPARATE calendula crop, also safe). SHA-guarded (only lavender changed). Gates green. Log 45/114 (safe 16, toxic 7, caution 22). NEXT: Waves 6-7 food-crop sweep (~69, expect mostly safe).

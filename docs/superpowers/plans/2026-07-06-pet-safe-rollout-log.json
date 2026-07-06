@@ -356,5 +356,179 @@
   "bee-balm": {
     "verdict": "safe",
     "source": "ncsu:monarda-didyma -- no pet tag (edible)"
+  },
+  "oregano": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/oregano",
+    "note": "The essential oils can cause mild vomiting or diarrhea in cats, dogs, and horses if eaten in quantity."
+  },
+  "parsley": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/parsley",
+    "note": "Large amounts contain furanocoumarins that can make skin sun-sensitive in cats, dogs, and horses."
+  },
+  "mint": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/mint",
+    "note": "The essential oils can cause mild vomiting or diarrhea in cats, dogs, and horses with large amounts."
+  },
+  "lemongrass": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon-grass",
+    "note": "The essential oils can upset a cat or dog's stomach; large amounts can be more serious for horses."
+  },
+  "parsnip": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://plants.ces.ncsu.edu/plants/pastinaca-sativa/",
+    "note": "All parts contain furanocoumarins that can make skin sun-sensitive in cats, dogs, and horses."
+  },
+  "basil": {
+    "verdict": "safe",
+    "source": "ncsu:ocimum-basilicum non-toxic c/d"
+  },
+  "cilantro-coriander": {
+    "verdict": "safe",
+    "source": "ncsu:coriandrum-sativum non-toxic c/d/h"
+  },
+  "dill": {
+    "verdict": "safe",
+    "source": "aspca:dill non-toxic c/d/h"
+  },
+  "sage": {
+    "verdict": "safe",
+    "source": "aspca:sage non-toxic c/d/h"
+  },
+  "thyme": {
+    "verdict": "safe",
+    "source": "ncsu:thymus-vulgaris non-toxic c/d/h"
+  },
+  "arugula": {
+    "verdict": "safe",
+    "source": "ncsu:eruca no pet tag"
+  },
+  "bok-choy": {
+    "verdict": "safe",
+    "source": "Brassica rapa, no toxicity listing (non-toxic brassica like B. oleracea)"
+  },
+  "celery": {
+    "verdict": "safe",
+    "source": "ncsu:apium-graveolens no pet tag"
+  },
+  "collards": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "kale": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "lettuce-leaf": {
+    "verdict": "safe",
+    "source": "ncsu:lactuca-sativa no pet tag"
+  },
+  "spinach": {
+    "verdict": "safe",
+    "source": "ncsu:spinacia-oleracea no pet tag (human oxalate only)"
+  },
+  "swiss-chard": {
+    "verdict": "safe",
+    "source": "aspca:beets (Beta vulgaris) non-toxic"
+  },
+  "arugula-microgreens": {
+    "verdict": "safe",
+    "source": "parent arugula (Eruca) safe"
+  },
+  "broccoli-microgreens": {
+    "verdict": "safe",
+    "source": "parent broccoli (B. oleracea) safe"
+  },
+  "cilantro-microgreens": {
+    "verdict": "safe",
+    "source": "parent cilantro safe"
+  },
+  "microgreens-mix": {
+    "verdict": "safe",
+    "source": "brassica/herb mix, all parents safe"
+  },
+  "pea-shoots": {
+    "verdict": "safe",
+    "source": "garden pea (Pisum sativum) non-toxic (distinct from toxic Lathyrus sweet-pea)"
+  },
+  "radish-microgreens": {
+    "verdict": "safe",
+    "source": "parent radish (Raphanus) safe"
+  },
+  "sunflower-sprouts": {
+    "verdict": "safe",
+    "source": "parent sunflower (Helianthus) ASPCA non-toxic"
+  },
+  "wheatgrass": {
+    "verdict": "safe",
+    "source": "wheat/grass (Triticum) non-toxic; cats graze grass"
+  },
+  "beet": {
+    "verdict": "safe",
+    "source": "aspca:beets (Beta vulgaris) non-toxic c/d/h"
+  },
+  "carrot": {
+    "verdict": "safe",
+    "source": "ncsu:daucus-carota no pet tag"
+  },
+  "radish": {
+    "verdict": "safe",
+    "source": "ncsu:raphanus-sativus no pet tag"
+  },
+  "sweet-potato": {
+    "verdict": "safe",
+    "source": "aspca:sweet-potato-vine (Ipomoea batatas) non-toxic"
+  },
+  "turnip": {
+    "verdict": "safe",
+    "source": "Brassica rapa, no toxicity listing (non-toxic brassica)"
+  },
+  "broccoli": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "brussels-sprouts": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "cabbage": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "cauliflower": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
+  },
+  "kohlrabi": {
+    "verdict": "safe",
+    "source": "ncsu:brassica-oleracea no pet tag"
   }
 }
