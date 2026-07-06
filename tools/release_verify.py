@@ -31,6 +31,7 @@ import json, re, sys, subprocess, os, argparse
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from field_classification import is_backend  # the ONE shared backend predicate
+from temp_scan import spelled_temp_hits  # §C: shared spelled-temperature scanner (widened D scan)
 MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 EMDASH = chr(8212)
 PAUSE_TOKENS = {"heat_pause", "cold_pause", "season_over"}
@@ -63,7 +64,7 @@ def scan_user_facing(o, path="", key=""):
         for i, x in enumerate(o):
             hits += scan_user_facing(x, f"{path}[{i}]", key)  # list items inherit parent key
     elif isinstance(o, str):
-        flag = ("--" in o or EMDASH in o or re.search(r"\bdegrees?\s*F\b", o))
+        flag = ("--" in o or EMDASH in o or bool(spelled_temp_hits(o)))  # §C: widened, latitude-aware
         if flag and not is_backend(key, path):
             hits.append((path, o[:60]))
     return hits

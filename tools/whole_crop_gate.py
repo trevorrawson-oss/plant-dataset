@@ -63,6 +63,7 @@ def fail(msg):
 import os as _os
 sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from field_classification import is_backend
+from temp_scan import spelled_temp_hits  # §C: the shared spelled-temperature scanner (widened C/D)
 
 
 # ---------------- A30. calendar_basis enum guard (the DISPATCH guard; run first) ----------------
@@ -733,7 +734,7 @@ _DEGF_RE = re.compile(r"\bdegrees?\s*F\b|\bdeg\.?\s*F\b|°\s+F")
 def _scan_user_str(s, p):
     if "--" in s or "—" in s:
         dash_hits.append((p, s[:80]))
-    if _DEGF_RE.search(s):
+    if spelled_temp_hits(s):  # §C: widened from _DEGF_RE (now catches '90 degrees'/bare '50 F'), latitude-aware
         degf_hits.append((p, s[:80]))
 
 
