@@ -33,6 +33,15 @@ assert register_completeness_violations(deferred_reason) == [], register_complet
 categorical = {"slug": "x", "water": "High", "difficulty": "Easy"}
 assert register_completeness_violations(categorical) == [], register_completeness_violations(categorical)
 
+# 4b. pet_safe.note + pet_safe.toxic_parts are RULED USER-FACING-CATEGORICAL (single-form icon
+#     copy, Trevor 2026-07-06). `note` is a laundering key, so BOTH checks must pass clean.
+pet = {"slug": "x", "pet_safe": {
+    "status": "caution",
+    "note": "Ripe tomatoes are fine, but the leaves and unripe fruit are toxic to cats and dogs.",
+    "toxic_parts": "green foliage and unripe fruit"}}
+assert register_completeness_violations(pet) == [], register_completeness_violations(pet)
+assert backend_key_laundering_violations(pet) == [], backend_key_laundering_violations(pet)
+
 # 5. REAL DATA: all 18 certified crops are 0-FP (so the gate can wire green into whole_crop_gate).
 _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_data_final.json")
 if os.path.exists(_path):
