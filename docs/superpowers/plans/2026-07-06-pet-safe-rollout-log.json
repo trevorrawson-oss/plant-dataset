@@ -1,0 +1,8 @@
+{
+  "rosemary": {"verdict": "safe", "source": "aspca:rosemary", "note": "ASPCA non-toxic to cats/dogs/horses"},
+  "chives": {"verdict": "toxic", "affects": ["cats","dogs","horses"], "source": "aspca:chives+ncsu", "note": "allium, hemolysis"},
+  "sweet-pea": {"verdict": "caution", "affects": ["horses"], "source": "ncsu:lathyrus-odoratus+aspca", "note": "seeds/pods lathyrism; ASPCA horses-only"},
+  "chamomile": {"verdict": "caution", "affects": ["cats","dogs","horses"], "source": "ncsu:matricaria-chamomilla+aspca", "note": "German low-severity; Roman is ASPCA-toxic"},
+  "cherry-tomato": {"verdict": "caution", "affects": ["cats","dogs","horses"], "source": "aspca:tomato-plant+ncsu", "note": "foliage/unripe toxic, ripe fruit safe"},
+  "borage": {"verdict": "toxic", "affects": ["cats","dogs","horses"], "source": "aspca:borage+ncsu", "note": "PAs, liver/lung"}
+}
