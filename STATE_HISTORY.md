@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 5: FLOWERS (CONTENT release; `0fdbc7d2` -> `bd524a86`) [Claude Code]
+
+**Wave 5 (the mixed wave): only 1 warning.** lavender -> `caution`[cats,dogs,horses] (linalool essential oils, mild GI; ASPCA). The other 10 -> `safe` (log only): zinnia/nasturtium/sunflower/calendula/sweet-alyssum/viola (ASPCA non-toxic), marigold/cosmos/echinacea/bee-balm (NCSU no pet tag). **Species-nuance handled (like the pilot's chamomile):** our marigold=*Tagetes* (NCSU: human phototoxic sap, NO pet tag -> safe like the peppers) is NOT ASPCA's "garden marigold"=*Calendula* (which is our SEPARATE calendula crop, also safe). SHA-guarded (only lavender changed). Gates green. Log 45/114 (safe 16, toxic 7, caution 22). NEXT: Waves 6-7 food-crop sweep (~69, expect mostly safe).
+
+---
+
 ## 2026-07-06 -- POST-114 §A pet_safe ROLLOUT Wave 4: CITRUS (CONTENT release; `4702c999` -> `0fdbc7d2`) [Claude Code]
 
 **Wave 4: lemon, lime, orange-navel, grapefruit, mandarin-clementine -> all `caution`[cats,dogs,horses]** -- essential oils + psoralens in peel/leaves/stems (mild GI/dermatitis), fruit safe (`toxic_parts` set). ASPCA per-species (lemon/lime/orange/grapefruit); mandarin (*C. reticulata*, no ASPCA/NCSU page) anchored to the ASPCA orange citrus caution (same-genus, like shallot->onion). Light-touch (no judgment calls). SHA-guarded (exactly the 5 changed). Gates green. Log 34/114 (safe 6, toxic 7, caution 21). NEXT: Wave 5 flowers (mixed).

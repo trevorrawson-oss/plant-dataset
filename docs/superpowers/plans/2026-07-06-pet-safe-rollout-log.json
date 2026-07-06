@@ -306,5 +306,55 @@
     ],
     "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/orange",
     "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses. (mandarin=Citrus reticulata, anchored to the ASPCA orange citrus caution)"
+  },
+  "lavender": {
+    "verdict": "caution",
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lavender",
+    "note": "Its essential oils (linalool) can cause mild stomach upset in cats, dogs, and horses if eaten."
+  },
+  "zinnia": {
+    "verdict": "safe",
+    "source": "aspca:zinnia non-toxic to c/d/h"
+  },
+  "nasturtium": {
+    "verdict": "safe",
+    "source": "aspca:nasturtium non-toxic to c/d/h"
+  },
+  "sunflower": {
+    "verdict": "safe",
+    "source": "aspca:sunflower (Helianthus) non-toxic to c/d/h"
+  },
+  "calendula": {
+    "verdict": "safe",
+    "source": "aspca:garden-marigold (Calendula officinalis) non-toxic to c/d"
+  },
+  "sweet-alyssum": {
+    "verdict": "safe",
+    "source": "aspca:alyssum non-toxic to c/d"
+  },
+  "viola": {
+    "verdict": "safe",
+    "source": "aspca:pansy (Viola tricolor) non-toxic to pets"
+  },
+  "marigold": {
+    "verdict": "safe",
+    "source": "ncsu:tagetes-patula -- NO pet tag (human phototoxic sap only); safe like Capsicum peppers. NOTE our marigold=Tagetes, not ASPCA's Calendula 'garden marigold'"
+  },
+  "cosmos": {
+    "verdict": "safe",
+    "source": "ncsu:cosmos-bipinnatus -- no pet tag"
+  },
+  "echinacea": {
+    "verdict": "safe",
+    "source": "ncsu:echinacea-purpurea -- no pet tag (edible/livestock-support)"
+  },
+  "bee-balm": {
+    "verdict": "safe",
+    "source": "ncsu:monarda-didyma -- no pet tag (edible)"
   }
 }
