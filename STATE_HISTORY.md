@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W1 TOMATOES batch (5) (CONTENT release; `6f584c3b` -> `ff81e234`) [Claude Code]
+
+**The post-spine watering fill begins.** With the timing spine complete (114/114), register #5 authors per-stage `watering.schedule_by_stage[]` across the 70 certified crops still carrying an empty placeholder. Trevor approved the 12-batch plan (warm_season_fruiting first, since alpha testers are planting those now) and ruled the perennial judgment call: citrus (5) and woody herbs (5) DO get per-stage watering, in the sparse tree pattern, as the final two batches. This batch is the 5 tomatoes.
+
+**Method held.** Each crop authored INDIVIDUALLY from its OWN certified crop-level watering prose (`frequency_*`/`amount_*`/`method_*`/`critical_periods_*`/`signs_*`) + its own 6 growth-stage ids -- NOT an archetype template. Full-stage coverage like the winter set: `germination` + `seedling` (the indoor tray stages), `established`, `flowering`, `harvest`, `end_of_season`. Entry shape `{stage_id, system, rate, frequency, level, note_seasoned, note_beginner}`; dual-register notes; `°F` where temps appear; no em-dashes.
+
+**Per-crop distinctions surfaced (the blanket-authoring guard -- these are why it is not a template):**
+- **cherry-tomato** -- thin skin, so `harvest` is `critical` with `frequency: steady_to_prevent_cracking`; its prose calls out cracking when a soak follows a dry spell.
+- **grape-tomato** -- thick skin, crack-RESISTANT; `harvest` deliberately left `standard` (freq `weekly_even_moisture`), tracking its own prose "cracks far less than cherry types." The one crop in the batch whose harvest stage is not critical.
+- **roma-tomato** -- paste type; `harvest` `critical` with the blossom-end-rot emphasis (freq `steady_never_dry_to_wet`).
+- **beefsteak-tomato** + **heirloom-tomato** -- large-fruited; `established`/`harvest` frequencies are soil-check-driven (`check_soil_2_to_3_inches_down`, `steady_through_fruit_sizing`), per their prose "driven by soil moisture at 2-3 inch depth, not a fixed schedule"; 18-24 in roots watered "to depth"; the long sizing window makes BER + cracking worst on big fruit, so `harvest` is `critical`.
+- All five: `flowering` = `critical` (drought triggers blossom drop / pedicel abscission, and the dry-to-wet swing starts the BER cycle); `end_of_season` = `low` (`taper_as_production_slows` as nights fall below 50°F and fruit set stops).
+
+**DATA FINDINGS (surfaced, not acted on beyond the note):**
+1. All 80 unfilled crops carry `schedule_by_stage` as an EMPTY `[]` placeholder (key present, not absent) -- **EXCEPT `mandarin-clementine`, which carries `null`.** Normalize it to the authored list when the citrus batch (B11) lands; the splice guard (`== []`) will otherwise correctly refuse it.
+2. Pre-existing, untouched: the 21 trees/berries that already had `schedule_by_stage` use tree-era stage ids (e.g. apple `fruit_sizing`/`dormant`) that do NOT match those crops' own `growth_stages` ids. Not this batch's job; flagged for whoever reconciles tree stages.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 5 tomatoes changed (changed-set == targets), all other crops + every top-level key byte-identical, crop count 124, canonical COMPACT (`separators=(",",":")`, `ensure_ascii=False`, no trailing newline), +15268 bytes. `6f584c3b` -> `ff81e234`.
+
+**Gates.** whole_crop_gate PASS x5 (polices dual-register + no em-dash + `°F` on the new consumer prose); register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) unchanged, catalog unchanged, reference lettuce-leaf byte-identical -- the single "expected only cherry-tomato" concern is release_verify's single-crop default firing on a legitimate 5-crop batch (same as the 29-crop spine batch), NOT a real collateral change.
+
+**Coverage: watering 49/114** (44 prior = 23 winter + 21 trees/berries; +5 tomatoes). NEXT: W2 peppers(5)+eggplant, W3 cukes(4)+summer squash(2), W4 winter squash/pumpkin(4)+melons(3), W5 legumes/okra/tomatillo/sweet-potato(6), B6 cool stragglers(4: celery/potato/snow-peas/sugar-snap-peas), B7 herbs(5), B8-B9 flowers(13), B10 microgreens(8), B11 citrus(5, sparse), B12 woody herbs(5, sparse). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- SPRING/SUMMER spine: EMPTY-DTM PERENNIALS batch (29) -- >> TIMING SPINE COMPLETE (114/114) << (CONTENT release; `72850894` -> `6f584c3b`) [Claude Code]
 
 **The final spine batch. With it, all 114 certified crops carry the timing spine.** These 29 are the empty-DTM perennials -- `days_to_maturity==[]`, so `propagule` is the only spine field that applies: NO `dtm_anchor` (the gate forbids it on empty-DTM crops), NO ladder (perennial), NO `sow_depth` (not seed-grown; `bare_root`/`transplant`/`crown` are not in the gate's SEED_LIKE set, so depth is not required).
