@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) B10 MICROGREENS batch (8) (CONTENT release; `288a0b58` -> `2a793ea9`) [Claude Code]
+
+**Tenth watering batch: the microgreens.** microgreens-mix / sunflower-sprouts / pea-shoots / radish / broccoli / arugula-microgreens / wheatgrass / cilantro-microgreens. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + the shared tray-cycle 5-stage set (`sow`, `germination`, `blackout`, `light`, `harvest` -- keyed by `stage_id`, not `id`; the splice handles both).
+
+**Shared craft (genuinely near-identical process across the 8):** mist 1-2x daily through sow/germination/blackout to hold wrung-sponge surface moisture, then switch to BOTTOM-WATERING once greened so the dense foliage stays dry; never saturated; the BLACKOUT-TO-LIGHT transition is the CRITICAL window (the `light` stage, where the dense humid canopy plus a single overwatering seeds damping-off across the whole tray); constant gentle airflow; `drought_tolerance: none` for all (they can neither dry out nor be overwatered).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard -- concentrated in the stages where each crop's prose actually diverges):**
+- **pea-shoots** -- seed is pre-SOAKED, so err DRIER early and let the mix dry between mistings; the densest canopy and "the worst mold offender" of the microgreens (called out at `sow`, `germination`, and `light`).
+- **wheatgrass** -- a MAT, not a canopy (soaked seed); the crown must not stay wet; slimy-seed/slimy-mat is its mold sign; `harvest` note keeps the base from sitting wet.
+- **arugula-microgreens** -- MUCILAGINOUS (sticky) seed holds extra water at the surface, so lighter misting and no pooling (`sow`, `blackout`).
+- **cilantro-microgreens** -- LONG germination + a weeks-long cycle ("many more misting days than a fast crop"; damping-off "a bigger threat over the long cycle"); `germination` and `harvest` carry the extended-finish language.
+- **radish-microgreens** -- only a BRIEF blackout (fast crop), noted at `blackout`.
+- **sunflower-sprouts** -- weighted blackout cover + clinging HULLS that must stay dry (`blackout`, `light`).
+- **broccoli-microgreens** -- dense foliage; sub-irrigation named explicitly (`light`).
+- **microgreens-mix** -- the generic baseline.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 8 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +20513 bytes. `288a0b58` -> `2a793ea9`.
+
+**Gates.** whole_crop_gate PASS x8; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 104/114** (96 prior + 8). ONLY THE 10 PERENNIALS REMAIN -- Trevor's approved judgment call (sparse tree pattern): B11 citrus(5: grapefruit/lemon/lime/mandarin-clementine/orange-navel) + B12 woody herbs(5: lavender/oregano/rosemary/sage/thyme). **REMINDER for B11:** `mandarin-clementine`'s `schedule_by_stage` placeholder is `null`, not `[]` -- the B11 splice guard must special-case it. Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) B9 FLOWERS (consistent-moisture annuals + 2 perennials) batch (6) -- >> FLOWERS COMPLETE (13/13) << (CONTENT release; `e149c97a` -> `288a0b58`) [Claude Code]
 
 **Ninth watering batch, second flower batch -- completes the flowers (13/13).** calendula / sweet-alyssum / sweet-pea / viola (consistent-moisture annuals) + bee-balm / echinacea (herbaceous perennials). Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (annuals run germination -> seed; bee-balm `establishment`/`spring_regrowth`/`vegetative`/`budding`/`flowering`/`dormancy`; echinacea `establishment`/`vegetative`/`budding`/`flowering`/`seed_and_dormancy`).
