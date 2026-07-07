@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) GREENS+FAVA batch (5) -- WINTER COMPLETELY WRAPPED (CONTENT release; `54b720fc` -> `b6215df3`) [Claude Code]
+
+**Final winter watering batch. With this, WINTER IS COMPLETELY WRAPPED: all 23 fall/winter crops carry BOTH the timing spine AND per-stage watering (23/23 + 23/23).**
+
+- **lettuce-leaf** -- shallow root, no single critical stage but consistent moisture across the whole short cycle; the highest-stakes window is the final rapid leaf expansion (stress = tipburn from cut calcium transport + bitterness + bolt); water every 2-3 days.
+- **spinach** -- steady moisture delays bolt; shallow-rooted, bolts faster under drought and warm/long days.
+- **arugula** -- like spinach but the tell is flavor: drought makes it bolt AND turn hotter/harsher; steady water keeps the peppery bite mild.
+- **swiss-chard** -- slow germination is critical (uncrusted surface), then a long cutting season; heat-tolerant but stalls into tough leaves if dry; deeper soakings.
+- **broad-beans-fava** -- a different legume shape (6 stages): drought-tolerant once established (vegetative asks little, and overwatering feeds chocolate spot/rust), then flowering + pod_development are the moisture-critical windows that set and fill the pods; base-water to keep foliage dry.
+
+**Verify.** SHA-guarded: EXACTLY the 5 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `54b720fc` -> `b6215df3`. Gates: whole_crop_gate PASS on all 5 (A36 0, A25 0, C/D dash+temp 0 on new prose), register_completeness_gate PASS. amend-not-recert field_additions per crop.
+
+**MILESTONE -- WINTER COMPLETELY WRAPPED.** All 23 fall/winter crops carry the full timing spine (propagule/dtm_anchor/sow_depth/ladder/thin/harvest_window) AND per-stage `watering.schedule_by_stage` (system/rate/frequency/level + dual-register notes). Watering fill done in 5 archetype batches, every crop authored individually from its own certified prose (Trevor's blanket-authoring guard held throughout).
+
+**NEXT -- THE APP HANDOFF (Trevor: wrap winter, then hand off).** (1) Push the 10 dataset releases (Trevor confirms). (2) In plant-app: `npm run build:guides` (reads the local dataset) + repoint `StartFromSeedCard.tsx` + `seed-trays.ts` from `weeks_before` to `weeks_indoors` (the [[weeks-indoors-canonical]] decision), so the app designs against the fully-authored winter set. Then the remaining ~91 crops (spring/summer/perennials) get spine + watering. Trevor confirms push (10 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- WATERING FILL (register #5) BRASSICAS batch (8) (CONTENT release; `1b34b15f` -> `54b720fc`) [Claude Code]
 
 **Third watering archetype (the biggest): broccoli/cauliflower/cabbage/kale/brussels-sprouts/kohlrabi/bok-choy/collards. Each authored individually from its own certified watering prose + stages; the distinct failure modes are what prove it is per-crop.**
