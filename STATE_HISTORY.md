@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W5 LEGUMES/OKRA/TOMATILLO/SWEET-POTATO batch (6) -- >> WARM_SEASON_FRUITING COMPLETE (30/30) << (CONTENT release; `d19a755c` -> `ccf0bd1f`) [Claude Code]
+
+**Fifth watering batch, and it completes the whole warm_season_fruiting group (30/30) -- the in-season crops alpha testers are planting now.** edamame / green-beans-bush / pole-beans + okra + tomatillo + sweet-potato. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (three distinct stage sets in one batch).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard -- these six span three archetypes):**
+- **okra** -- the ONLY drought-tolerant crop in the whole warm group (`drought_tolerance: high`, deep taproot). `established` freq `weekly_deep_then_dry` ("deep, infrequent soakings follow the taproot and build a tougher plant"), yet BOTH `flowering` and `harvest` are `critical`: okra sets and sizes the most pods on steady moisture, and "production stalls" through the long picking if it bakes dry. The tension (tough but wants steady water at pod set) is stated directly.
+- **tomatillo** -- `drought_tolerance: moderate`, deeper/tougher than tomatoes. SIGNATURE move: EASE OFF after fruit set to CONCENTRATE FLAVOR (`harvest` freq `ease_after_set_for_flavor`, "too much late water grows soft, bland fruit; let the top inch dry between deep waterings"). Also the inversion that overwatering stresses it SOONER than a short dry spell, and the heat-driven blossom-drop caveat at `end_of_season` (a temperature problem, not a watering one).
+- **sweet-potato** -- slip crop, 5 stages (`establishment`, `vine_growth`, `root_initiation`, `root_bulking`, `harvest`). TWO make-or-break windows: `establishment` (slips rooting) and `root_bulking` -- both `critical`. The dry-THEN-wet swing during bulking is exactly what CRACKS and misshapes the storage roots (`root_bulking` freq `steady_never_dry_to_wet`), and the crop TAPERS in the last 2-3 weeks so skins set and roots do not split (`harvest` freq `taper_before_harvest`). Waterlogging is worse than short drought here; ridge culture throughout.
+- **legumes** (edamame / bush / pole beans, 6 stages) -- `flowering` + pod-fill both `critical` (drought aborts blossoms and shrinks/strings the pods); morning base watering to dry foliage; the `germination` note flags that bean seed rots in cold, waterlogged ground.
+  - **pole-beans** -- the standout: a LONG multi-week pod-set-through-fill run, so `pod_set_fill` and `harvest` carry freq `steady_all_season` ("keep the water steady the whole time, not just once; a dry spell mid-run stalls the running crop"). Trellised canopy dries faster -> less foliar disease.
+  - **edamame** -- pod fill is "the single biggest avoidable hit to an edamame crop"; humid-weather foliar disease + cold-wet root rot.
+  - **green-beans-bush** -- shorter, more concentrated cropping window vs pole.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 6 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +17423 bytes. `d19a755c` -> `ccf0bd1f`.
+
+**Gates.** whole_crop_gate PASS x6; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 74/114** (68 prior + 6). >> **warm_season_fruiting 30/30 COMPLETE** -- the full in-season warm group is done. << NEXT: cool-season stragglers(4: celery/potato/snow-peas/sugar-snap-peas), culinary herbs(5: chives/cilantro/dill/mint/parsley), flowers(13), microgreens(8), citrus(5)+woody herbs(5, sparse tree pattern). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W4 WINTER SQUASH/PUMPKIN + MELONS batch (7) (CONTENT release; `7412babc` -> `d19a755c`) [Claude Code]
 
 **Fourth watering batch: the vining, storage-and-ripening cucurbits.** butternut / acorn / spaghetti-squash + pumpkin + watermelon / cantaloupe / honeydew-melon. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own 6 stage ids (`germination`, `seedling`, `vining`, `flowering`, `fruit_development`, `harvest` -- the vining-cucurbit set, distinct from W3 summer squash's `established`/`end_of_season`). Direct-sown, so `germination` is seedbed watering.
