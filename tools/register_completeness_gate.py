@@ -97,6 +97,13 @@ EXCLUDED_KEYS = {
     # The other timing-spine fields (sow_depth_inches/thin_to_inches/harvest_window_days/
     # divide_every_years/day_range_from_sow) are numeric arrays/ints -- out of the C11 string check.
     "propagule","dtm_anchor",
+    # CLIMATE-THRESHOLD ENUMS (register #7, 2026-07-07; notifications/WeatherKit): controlled-vocab
+    # backend enums the deterministic weather-trigger + alert-message layer consumes, siblings of
+    # `start`/`propagule`/`dtm_anchor` -- machine-read, NOT dual-register prose. heat_effect = what
+    # the heat does (bolting/poor_fruit_set/crown_failure/quality_loss/heat_tolerant); frost_effect =
+    # killed|foliage_damaged. The paired numeric thresholds (heat_threshold_f/frost_tolerance_f) are
+    # ints -- out of the C11 string check, like germination_temp_f. See docs/climate_thresholds_contract.md.
+    "heat_effect","frost_effect",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /

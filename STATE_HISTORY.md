@@ -6,6 +6,51 @@
 
 ---
 
+## 2026-07-07 -- REGISTER #7 CLIMATE THRESHOLDS -- PHASE 1: contract + TDD gate + 6-crop pilot (CONTENT release; `b15a5a0f` -> `d3a6912f`) [Claude Code]
+
+**The head-start for the notifications/WeatherKit build (~week of 2026-07-14).** Register #7 promotes per-crop heat cutoff / frost tolerance from PROSE into STRUCTURED numeric fields, so a cheap DETERMINISTIC weather trigger (`forecast_high > heat_threshold_f`, `forecast_low < frost_tolerance_f`) fires without an LLM (memory `notifications-ai-architecture`). This is a column GS arc; **Phase 1 only — the ~108-crop ROLLOUT is HELD for Trevor's sign-off on the semantic decisions below.**
+
+**Prompted by a design question, not a decree.** Trevor reopened #6 (seedling light) as a question ("is it standard or does it vary?"); research showed seedling light is *standard-with-exceptions* (bright ~16h, prevent legginess; exceptions = spinach/long-day photoperiod cap, microgreens blackout, N/A for direct-sown/perennials), while the *germination* light/dark need genuinely varies per crop. Trevor chose to do **#7 first** (time-sensitive) and run **#6 in a fresh session**. So this session pivoted from watering (#5, now complete) to #7.
+
+**FIELDS (crop-level, siblings of the existing `germination_temp_f`):**
+- `heat_threshold_f` — int °F, or `null`. Forecast daily HIGH at/above which the crop hits its primary heat stress. **key absent = TODO; `null` = reviewed, legitimately N/A (heat-lover)**.
+- `heat_effect` — enum { `bolting`, `poor_fruit_set`, `crown_failure`, `quality_loss`, `heat_tolerant` }; present iff the `heat_threshold_f` key is present (`heat_tolerant` is the N/A marker, pairs with `null`).
+- `frost_tolerance_f` — int °F. Temperature at/below which the crop takes cold/frost damage (the "protect or harvest" number). Near-universal.
+- `frost_effect` — enum { `killed` (frost-tender, plant dies), `foliage_damaged` (hardy/perennial, survives) }.
+
+**Semantics locked:** single VALUE each (a threshold crossing point, NOT a band like `germination_temp_f`, which is an optimal range); `heat_threshold_f` is a daytime-HIGH trigger (night-temp effects OUT of scope v1); coherence invariant `frost_tolerance_f < heat_threshold_f` when both numeric (deliberately NOT `heat > germ_max` — kale germinates to 85°F but its quality threshold is 82°F, different phenomena); amend-not-recert. Full spec: `docs/climate_thresholds_contract.md`.
+
+**GATE — `tools/climate_threshold_gate.py` (TDD RED→GREEN, per the hard rule):** validates types/ranges/enums + the coherence invariant + a coverage report (`--coverage` prints SET / N-A / TODO). Adversarially proven on a SCRATCH copy: 7 defect classes (frost≥heat, bad enum, orphan effect with no threshold, non-int, `null`-but-not-`heat_tolerant`, missing effect, out-of-range) all BOUNCE; the clean pilot passes GREEN.
+
+**C11 RULING (stop-and-ask, surfaced for confirmation):** `heat_effect` + `frost_effect` are controlled-vocab backend enums (siblings of `start`/`propagule`/`dtm_anchor`), so ruled into `register_completeness_gate.py` EXCLUDED_KEYS with a comment block. The numeric `heat_threshold_f`/`frost_tolerance_f` need no ruling (ints, out of the C11 string check, like `germination_temp_f`). register_completeness still PASS.
+
+**PILOT (6 diverse crops, every number sourced from the crop's OWN certified prose):**
+| crop | heat | frost |
+|---|---|---|
+| broccoli | 86 `crown_failure` (">=86°F stalls heading") | 28 `foliage_damaged` ("hard freeze damages exposed heads") |
+| cherry-tomato | 92 `poor_fruit_set` ("too hot >90°F to set; drop >95°F") | 32 `killed` ("a single frost kills the plant outright") |
+| kale | 82 `quality_loss` ("above ~80-85°F tough and bitter") | 20 `foliage_damaged` ("deep freeze below ~20°F damages leaves") |
+| okra | **null** `heat_tolerant` (tropical, no ceiling) | 32 `killed` ("even a light frost kills it") |
+| basil | **null** `heat_tolerant` (heat managed with shade) | 32 `killed` ("blackens and dies at or below 32°F") |
+| lemon | **null** `heat_tolerant` (evergreen, heat-tolerant w/ water) | 28 `foliage_damaged` ("high-20s°F leaves and fruit damaged") |
+
+Exercises heat `SET` ×3 (three distinct effects) + heat `N/A` ×3 (the honesty case) + frost `killed` (tender) vs `foliage_damaged` (hardy/perennial) + a `[]`-germ perennial. Chilling-injury numbers logged for the proposed #7b: basil 50, okra 45, cherry-tomato 50.
+
+**DECISIONS FLAGGED FOR TREVOR (contract §3, confirm before rollout):**
+1. **Keep the two `*_effect` enums, or go pure-numeric?** RECOMMEND keep — the register's own broccoli-crown-failure vs tomato-blossom-drop example shows the bare number can't write an accurate deterministic alert; the enum is what makes the message correct without an LLM.
+2. **Add `chilling_sensitivity_f` as #7b?** Non-freezing chilling injury is a real, separate, actionable warm-crop trigger (basil 50 / okra 45 / pepper 40, all ABOVE freezing, so `frost_tolerance_f` misses it; folding it in would be inaccurate). RECOMMEND yes as a fast follow-on; numbers already in-prose. Left out of v1 to keep this to the two register-named fields.
+3. **Confirm the C11 enum ruling** (heat_effect/frost_effect → EXCLUDED_KEYS).
+
+Also noted: the dataset already carries partial notification scaffolding (`hard_freeze`/`FROST_PROTECT`/"Hard freeze ahead" tip tokens on broccoli) — these fields give those triggers their firing numbers.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 6 pilot crops changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +627 bytes; `heat_threshold_f: null` serialized as JSON null. `b15a5a0f` -> `d3a6912f`.
+
+**Gates.** climate_threshold_gate PASS (coverage heat SET 3 / N-A 3 / TODO 118, frost SET 6 / TODO 118); whole_crop_gate PASS ×6; register_completeness PASS; release_verify vs HEAD no new violations + no novel keys. Pre-commit backstop expected green.
+
+**NEXT:** Trevor confirms the 3 decisions → archetype-batched rollout of the two fields across the remaining ~108 certified crops (heat-lovers take `heat_tolerant`/`null`; cool-season + pollen-limited fruiters take a threshold) → fold into the per-crop checklist (GS-arc §5) → publish the coverage report. Register #6 (seedling light) Trevor will run in a fresh session. This is the 13th unpushed commit; Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) B12 WOODY HERBS batch (5) -- >> REGISTER #5 COMPLETE: 114/114 CERTIFIED << (CONTENT release; `895e322a` -> `b15a5a0f`) [Claude Code]
 
 **Twelfth and FINAL watering batch -- register #5 is now complete across all 114 certified crops.** lavender / oregano / rosemary / sage / thyme, the second perennial judgment-call batch. Same SPARSE tree pattern as B11: 3 key-stage entries each using a SUBSET of the crop's real `growth_stages` ids -- `establishment`, `vegetative`, `dormancy`.
