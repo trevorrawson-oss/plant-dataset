@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) B11 CITRUS batch (5) (CONTENT release; `2a793ea9` -> `895e322a`) [Claude Code]
+
+**Eleventh watering batch, and the FIRST of the two perennial judgment-call batches Trevor approved.** grapefruit / lemon / lime / mandarin-clementine / orange-navel. Trevor's ruling: the evergreen citrus and woody herbs DO get per-stage watering, in the SPARSE tree pattern.
+
+**The sparse-pattern decision (how the tree precedent was applied):** each crop gets 3 key-stage entries using a SUBSET of its REAL `growth_stages` ids -- `establishment`, `fruit_set_development` (critical), `mature_bearing` -- following the BLUEBERRY precedent (clean subset-of-real-ids), NOT the full 6-stage coverage of the annual batches, and deliberately NOT the APPLE precedent's orphan ids (`fruit_sizing`/`dormant`, which don't exist in apple's growth_stages -- the inconsistency flagged in W1). Rationale: a citrus tree's watering has three meaningful regimes (young-tree establishment, the critical fruit window, and the mature deep-infrequent steady state), not six; forcing full coverage would pad repetitive content. Using real ids keeps the app's per-stage lookup mappable.
+
+**Shared archetype:** DEEP-AND-INFREQUENT soak-and-dry; `drought_tolerance: none`, but the failure mode is OVER-watering -> FOOT ROT, so never wet the trunk/crown/graft union; water the broad shallow root zone out to the canopy dripline; `fruit_set_development` = `critical` (bloom through set and sizing, where moisture swings drop flowers/fruit and split the crop).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard):**
+- **grapefruit** -- large canopy; the fruit hangs and sizes for most of a year, so long-haul steady moisture matters more than any single soak; desert heat; late-season stress leaves fruit dry and pithy.
+- **lemon** -- "keeping the soil constantly wet kills more trees than underwatering" (its single most damaging mistake); an established tree may want water only every 1-2 weeks when cool.
+- **lime** -- carries the UF/IFAS cadence (every other day week 1 -> 1-2x/week the first months -> only prolonged dry spells when mature); avoid OVERHEAD watering at bloom (postbloom fruit drop + greasy spot).
+- **mandarin-clementine** -- smaller root zone; THIN-SKINNED fruit shrivels/splits under uneven moisture. **Its placeholder was `null` (not `[]`)** -- now normalized to the authored list, resolving the W1 data finding.
+- **orange-navel** -- fruit sizing through summer; heat SUNBURN on exposed fruit if underwatered in a heat wave.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 5 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +11325 bytes. The splice guard accepts both `[]` and `null` placeholders and asserts each entry id is a subset of the crop's real growth-stage ids in stage order. `2a793ea9` -> `895e322a`.
+
+**Gates.** whole_crop_gate PASS x5; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 109/114** (104 prior + 5). LAST BATCH: B12 woody herbs(5: lavender/oregano/rosemary/sage/thyme), same sparse tree pattern (`establishment`/`vegetative`/`dormancy`), `drought_tolerance: high`, "overwatering is the number one killer." Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) B10 MICROGREENS batch (8) (CONTENT release; `288a0b58` -> `2a793ea9`) [Claude Code]
 
 **Tenth watering batch: the microgreens.** microgreens-mix / sunflower-sprouts / pea-shoots / radish / broccoli / arugula-microgreens / wheatgrass / cilantro-microgreens. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + the shared tray-cycle 5-stage set (`sow`, `germination`, `blackout`, `light`, `harvest` -- keyed by `stage_id`, not `id`; the splice handles both).
