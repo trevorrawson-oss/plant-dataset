@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) ROOTS batch: carrot/beet/turnip/parsnip/radish (CONTENT release; `7918e301` -> `5c763d47`) [Claude Code]
+
+**Start of the "bigger fill" -- per-stage `watering.schedule_by_stage[]` ("how much to water after sprouts grow"), the second layer that, once done across the winter set, COMPLETELY WRAPS winter (Trevor's depth-first strategy). Roots first (carrot = the pilot).**
+
+**Shape.** Each stage entry = `{stage_id, system, rate, frequency, level, note_seasoned, note_beginner}`, matching the 21 trees/perennials that already carry it. All fields are pre-ruled (stage_id excluded; system/rate/frequency/level in the ruling sets; note_seasoned/note_beginner suffix-ruled), so it passes register-completeness + dual-register + dash/temp with no gate changes.
+
+**BLANKET-AUTHORING GUARD (Trevor's explicit concern).** Archetype is ONLY a commit grouping, never a content template. Each crop's schedule_by_stage is authored from ITS OWN certified crop-level watering prose (frequency/amount/method/critical_periods) + its own stages. Proven distinct across the 5 roots: carrot crust-sensitive (2-3 wk germ); beet 1-2 wk germ + root-sizing failure = woodiness/ZONING (pale rings)/cracking; turnip 7-10 day germ + a seedling note to base-water and keep foliage dry against downy mildew/white rust/leaf spot + bitterness/pithiness; parsnip LONG 2-3 wk erratic germ ("a single dry-out kills"; cover the row) + harvest note that parsnips winter-stand and sweeten after frost; radish opposite of parsnip -- "no slack, steady the whole short cycle", drought = pithy + sharply hot, pull promptly. The germination durations, critical windows, disease caveat, and harvest behavior all differ per crop.
+
+**Verify.** SHA-guarded: EXACTLY the 5 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `7918e301` -> `5c763d47`. Gates: whole_crop_gate PASS on all 5 (A36 dual-register 0, A25 register-completeness 0 unruled, C/D dash+temp 0 on the new prose), register_completeness_gate PASS, timing_spine unaffected. amend-not-recert field_additions per crop.
+
+**PROGRESS: winter watering 5/23.** NEXT archetypes (individually authored, distinctions surfaced before each commit): alliums (garlic/shallot/onion/leek/spring-onion), then brassicas, then greens + fava. When the fill wraps winter -> app handoff (`npm run build:guides` + the `weeks_before`->`weeks_indoors` consumer repoint). Trevor confirms push (7 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- FALL/WINTER timing-spine LADDER-AUTHORING TIER (9 crops) -- WINTER SPINE COMPLETE (CONTENT release; `fab330ce` -> `7918e301`) [Claude Code]
 
 **The last spine tier for winter: the 9 crops with NO `day_range_from_sow` -- authored the germination->harvest ladder FROM SCRATCH + the anchor, the brussels-sprouts method scaled per crop. With this the WINTER SPINE is complete (23/124 = the full fall/winter set).**
