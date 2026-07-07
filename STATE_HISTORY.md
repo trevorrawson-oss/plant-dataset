@@ -6,6 +6,21 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) ALLIUMS batch: garlic/onion/shallot/leek/spring-onion (CONTENT release; `5c763d47` -> `1b34b15f`) [Claude Code]
+
+**Second watering archetype. The alliums have DIFFERENT stage structures from each other (garlic 6, onion/shallot 5, leek 5, spring-onion 4), so each schedule_by_stage maps to that crop's own stages -- the clearest case yet that this is per-crop, not templated.**
+
+Per-crop distinctions (each from its own certified watering prose):
+- **garlic** (planting/early_growth/established/bulb_forming/harvest/curing): the full fall cycle -- water in at planting, natural through winter dormancy, resume even moisture as spring shoots appear, ~1 in/wk through spring leaf growth + bulbing (critical, "every leaf becomes a wrapper"), then TAPER, then a two-week DRY-DOWN before harvest (system=none_dry_down) so wrappers cure tight, then NO water during curing (system=none).
+- **onion**: bulb_sizing is the most water-sensitive phase; maturity_curing = stop watering once the tops fall (dry-down for storage).
+- **shallot**: same 5 stages but bulb_initiation = the single SET dividing into a CLUMP (drought here cuts bulb COUNT, not just size), bulb_sizing keeps the top 8-12 in near field capacity; same tops-fall dry-down.
+- **leek**: shaft_lengthening is the critical phase (USU ~18-in depth every 7 days); maturity_harvest EXPLICITLY needs NO dry-down (leeks are harvested green and winter-stand) -- the opposite of the bulb onions.
+- **spring-onion**: germination_emergence is critical (fine seedbed must not dry mid-germination), steady moisture across the short crop, no dry-down, pull young.
+
+**Verify.** SHA-guarded: EXACTLY the 5 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `5c763d47` -> `1b34b15f`. Gates: whole_crop_gate PASS on all 5 (A36 dual-register 0, A25 register-completeness 0 unruled, C/D dash+temp 0 on new prose), register_completeness_gate PASS. amend-not-recert field_additions per crop.
+
+**PROGRESS: winter watering 10/23** (roots + alliums). NEXT: brassicas (8), then greens + fava (5). Then the app handoff. Trevor confirms push (8 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- WATERING FILL (register #5) ROOTS batch: carrot/beet/turnip/parsnip/radish (CONTENT release; `7918e301` -> `5c763d47`) [Claude Code]
 
 **Start of the "bigger fill" -- per-stage `watering.schedule_by_stage[]` ("how much to water after sprouts grow"), the second layer that, once done across the winter set, COMPLETELY WRAPS winter (Trevor's depth-first strategy). Roots first (carrot = the pilot).**
