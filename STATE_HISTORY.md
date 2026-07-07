@@ -6,6 +6,19 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: STRUCTURING STRAGGLERS batch (4) (CONTENT release; `ecaf7a7a` -> `c44b0790`) [Claude Code]
+
+**Third post-winter batch. The last of the structuring tier -- all 4 already had ladders, so this is pure field-structuring, not ladder-authoring. With it the entire STRUCTURING TIER is complete; everything remaining in the spine is ladder-authoring or empty-DTM perennials.** Each crop authored INDIVIDUALLY from its own certified prose (blanket-authoring guard held); the four are deliberately un-alike:
+
+- **celery** (seed, from_transplant): fine seed **surface-sown or barely covered** -> `sow_depth_inches=[0.0625,0.125]` (the shallowest in the campaign; start_method "barely covering the fine seed... needs light"); always transplant-started (weeks_before 10) and DTM 80-120 d "after transplanting" -> `from_transplant`; set out at final spacing (`thinning.needs_thinning=false`) so **NO `thin_to`**; matures over a window, cut over a few weeks + outer-stalk picking -> `harvest_window_days=[14,28]`.
+- **potato** (**TUBER**, from_planting): grown from certified **seed-potato pieces** planted 3-5 in deep, 10-12 in apart -> `propagule=tuber`, `sow_depth_inches=[3,5]`; DTM 90-120 d "from planting" -> `from_planting`; pieces set at final spacing so **NO `thin_to`**; one-shot main dig (garlic precedent) so **NO `harvest_window`**. `start_method.start` left `"direct"` (garlic-pilot ruling: the honest propagule lives in prose; the enum is not re-litigated here).
+- **snow-peas** (seed, from_sow): direct-sown ~1-1.5 in deep -> `sow_depth_inches=[1,1.5]`; `spacing_inches [1,3]` is the sown-in-place in-row spacing -> `thin_to_inches=[1,3]`; harvest stage "crop over a few weeks" -> `harvest_window_days=[14,28]`.
+- **sugar-snap-peas** (seed, from_sow): direct-sown ~1-1.5 in deep **and 1-2 in apart** -> `sow_depth_inches=[1,1.5]`, `thin_to_inches=[1,2]`; harvest stage "snap types crop over a longer window than snow peas, often three to four weeks" -> `harvest_window_days=[21,28]` (deliberately wider than snow-peas' -- the prose distinguishes them).
+
+**Verify.** SHA-guarded: EXACTLY the 4 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `ecaf7a7a` -> `c44b0790`. Gates: timing_spine_gate **0 violations / 0 warnings** (coverage 45/124), whole_crop_gate PASS on all 4, register_completeness_gate PASS. amend-not-recert `field_additions` per crop (sources umn_ext/umd_ext/clemson_hgic, the structural trio).
+
+**SPINE PROGRESS: 45/114 certified. STRUCTURING TIER COMPLETE.** Remaining spine work is all ladder-authoring (warm-no-ladder 19: peppers/cucumbers/squash/melons/eggplant + flowers 13 + microgreens 8) and the empty-DTM perennials (fruit trees 19 + berries 5 + woody herbs 5). Then the watering fill (register #5) across the spring/summer set. origin at `7cdbafc`; this + the two prior spring/summer batches unpushed (3 ahead).
+
 ## 2026-07-07 -- SPRING/SUMMER spine: CULINARY-HERB structuring batch (7) (CONTENT release; `3b5342a6` -> `ecaf7a7a`) [Claude Code]
 
 **Second post-winter batch. All 7 have ladders (structuring). The value here is the lifecycle split -- the first herbaceous perennials of the campaign.**
