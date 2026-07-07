@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W3 CUCUMBERS + SUMMER SQUASH batch (6) (CONTENT release; `2ddfe92b` -> `7412babc`) [Claude Code]
+
+**Third watering batch: the direct-sown cucurbit fruiting crops.** cucumber / english / pickling / slicing-cucumber + yellow-summer-squash + zucchini-courgette. Each `watering.schedule_by_stage[]` authored INDIVIDUALLY from that crop's own certified watering prose + its own 6 stage ids (`germination`, `seedling`, `established`, `flowering`, `harvest`, `end_of_season`).
+
+**Direct-sown, not tray-started.** Unlike the W1/W2 Solanaceae (indoor-started, tray germination), these cucurbits are direct-sown primary, so `germination` is authored as SEEDBED watering ("keep the seedbed evenly moist until emergence... do not let the surface crust over the seed") -- the carrot/roots direct-sow model, not the tomato tray model. english-cucumber's germination note allows for either (cells under cover OR direct), matching its covered-crop reality.
+
+**Per-crop distinctions surfaced (the blanket-authoring guard):**
+- **english-cucumber** -- the outlier. Bred MILD, so it largely dodges the stress-bitterness of open-field slicers; its dry-water failure mode is CURLED / PINCHED / poorly-FILLED fruit, NOT bitterness (stated explicitly at `flowering`/`harvest`: "rather than the sharp bitterness of open-field types"). Often grown UNDER COVER / in containers, so `established` + `end_of_season` carry the daily-under-cover watering and the VENTING note for the humid still air that favors mildew and gray mold. Critical window = heavy fruiting (freq `steady_through_heavy_fruiting`), not flower-set.
+- **pickling-cucumber** -- fruit picked SMALL, so the skin is a big share of each pickle and bitterness from uneven water is concentrated / shows strongly (surfaced at `established` and `harvest`).
+- **cucumber + slicing-cucumber** -- the generic sweet-slicer BITTERNESS profile (`harvest` freq `steady_never_bitter`): over 95% water, shallow-rooted, show drought stress fast; a dry-to-soaked swing during sizing gives bitter, pinched, curled fruit. (Their source prose is near-identical; authored crop-by-crop, honestly similar.)
+- **yellow-summer-squash + zucchini-courgette** -- the most POWDERY-MILDEW-prone crops in the garden, so base watering is called out as "the single most useful habit"; the dry-water failure mode is MISSHAPEN / pinched fruit narrow at the blossom end (`harvest` freq `steady_never_misshapen`), NOT bitterness; ~1 in/week ≈ two-thirds of a gallon per square foot per their prose.
+- All six: `flowering` + `harvest` = `critical` (fruit set through sizing is the water-critical stretch); `end_of_season` = `low` (`taper_as_production_slows` as mildew/cool nights wind the vine down).
+
+**Splice + guards.** SHA-guarded: EXACTLY the 6 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +18831 bytes. `2ddfe92b` -> `7412babc`.
+
+**Gates.** whole_crop_gate PASS x6; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 61/114** (55 prior + 6). warm_season_fruiting: 17/30 (5 tomatoes + 6 peppers/eggplant + 6 cukes/squash). NEXT: W4 winter squash/pumpkin(4: butternut/acorn/spaghetti/pumpkin) + melons(3: watermelon/cantaloupe/honeydew), W5 legumes/okra/tomatillo/sweet-potato(6), then cool stragglers(4), herbs(5), flowers(13), microgreens(8), citrus(5)+woody herbs(5). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W2 PEPPERS + EGGPLANT batch (6) (CONTENT release; `ff81e234` -> `2ddfe92b`) [Claude Code]
 
 **Second watering batch: the Solanaceae fruiting crops that are not tomatoes.** bell / banana / cayenne / jalapeno peppers + habanero + eggplant. Each `watering.schedule_by_stage[]` authored INDIVIDUALLY from that crop's own certified watering prose + its own 6 growth-stage ids (`germination`, `seedling`, `transplanting`, `flowering`, `fruiting`, `harvest` -- a different stage set from the tomatoes' `established`/`end_of_season`). Indoor-start tray stages -> water-in at transplant -> the critical flowering/fruiting window -> continued-harvest.
