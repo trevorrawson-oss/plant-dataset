@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W7 CULINARY HERBS batch (5) (CONTENT release; `26b4e5a3` -> `8d8f4807`) [Claude Code]
+
+**Seventh watering batch: the five culinary herbs.** chives + cilantro-coriander + dill + mint + parsley. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (annuals run germination -> bolting; the perennials chives and mint carry dormancy stages).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard -- these five herbs have genuinely OPPOSITE water personalities, the strongest divergence of any batch so far):**
+- **mint** -- the MOISTURE LOVER. `drought_tolerance: low`; its own prose calls it "the rare kitchen herb that thrives in damp ground and part shade, the opposite of rosemary or thyme." Even, generous 1-2 in/week (USU figure), must NOT dry out (dull/bronzed leaves + spider mites if it does), but disease-prone so water the soil not the leaves. Perennial division, stages `establishment`/`vegetative`/`harvest`/`dormancy`/`spring_regrowth` (`dormancy` minimal, `spring_regrowth` resumes generous water).
+- **cilantro** -- `drought_tolerance: low`, shallow-rooted, BOLT-prone. Even moisture is specifically framed to DELAY BOLT (freq `weekly_even_to_delay_bolt`); the `bolting` stage is the plant running to coriander seed (ease off, dry finish if you want the seed).
+- **dill** -- `drought_tolerance: moderate` (tougher than cilantro), bolts/grows lank under heat-dry; even moisture SLOWS the bolt (freq `weekly_even_to_slow_bolt`); dill seed heads are wanted, so a dry finish at `bolting`.
+- **parsley** -- `drought_tolerance: moderate`, TAPROOT that rides out short dry spells better than shallow greens; famously SLOW germination 2-5 weeks (`germination` `critical`, "the classic reason a parsley stand fails"); biennial `second_year_bolting` stage.
+- **chives** -- perennial clump, `drought_tolerance: moderate` once established but steady moisture keeps the leaves tender; slow germ 2-3 weeks (`critical`); the winter risk is crown rot, so a dormant clump must NOT sit in wet soil (`dormancy` freq `minimal_dont_sit_wet`); edible `flowering` stage.
+- All five: base/soil-line watering to keep the foliage dry against each herb's leaf diseases (bacterial leaf spot, powdery mildew, Septoria, mint rust, downy mildew/rust/botrytis).
+
+**Splice + guards.** SHA-guarded: EXACTLY the 5 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +12880 bytes. `26b4e5a3` -> `8d8f4807`.
+
+**Gates.** whole_crop_gate PASS x5; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 83/114** (78 prior + 5). NEXT: flowers(13), microgreens(8), citrus(5)+woody herbs(5, sparse tree pattern). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W6 COOL-SEASON STRAGGLERS batch (4) (CONTENT release; `ccf0bd1f` -> `26b4e5a3`) [Claude Code]
 
 **Sixth watering batch: the cool-season crops the warm campaign left behind.** celery + potato + snow-peas + sugar-snap-peas. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (three distinct stage sets).
