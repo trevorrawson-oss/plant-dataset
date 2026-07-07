@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "canonical": "8e568c5b",
+    "purpose": "Online liveness ledger for the §B sweep. status: live|dead-404|logo-pdf|redirect-loop|bare-live|forbidden-403|unknown. offender=true means needs repoint/drop.",
+    "generated_by": "WebFetch main-loop sweep, 2026-07-06"
+  },
+  "results": {
+    "https://secure.caes.uga.edu/extension/publications/files/html/b577/b577plantingchart.pdf": {"status": "logo-pdf", "offender": true, "note": "89.6KB Logo_Extension_Horizontal_FC_CAES, not a planting chart", "sources": ["uga_b577"]},
+    "https://secure.caes.uga.edu/extension/publications/files/html/B577/B577PlantingChart.pdf": {"status": "logo-pdf", "offender": true, "note": "same logo PDF (uppercase variant)", "sources": ["uga_calendar", "uga_ext"]},
+    "https://aggie-hort.tamu.edu/citrus/grapefruit.htm": {"status": "redirect-loop", "offender": true, "note": "aggie-hort <-> aggie-horticulture 301 loop", "sources": ["tamu_agrilife"], "crops": ["grapefruit"]},
+    "https://aggie-hort.tamu.edu/citrus/cultivars/L2304.htm": {"status": "redirect-loop", "offender": true, "note": "same loop", "sources": ["tamu_agrilife"], "crops": ["grapefruit"]},
+    "https://aggie-hort.tamu.edu/archives/parsons/earthkind/ekgarden14.html": {"status": "redirect-loop", "offender": true, "note": "same loop; was spring veg guide", "sources": ["tamu_agrilife_aggie_spring"], "crops": ["broccoli", "kohlrabi"]},
+    "https://aggie-horticulture.tamu.edu/vegetable/guides/texas-home-vegetable-gardening-guide/": {"status": "dead-404", "offender": true, "note": "404 Not Found", "sources": ["tamu_agrilife"], "crops": ["slicing-cucumber", "pickling-cucumber", "cucumber"]},
+    "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/": {"status": "live", "offender": false, "note": "Citrus - Fruit & Nut Resources; live; good repoint target", "sources": ["tamu_agrilife"], "crops": ["mandarin-clementine", "lime"]},
+    "https://extension.arizona.edu/publication/low-desert-citrus-varieties": {"status": "live", "offender": false, "note": "403 to WebFetch was BOT-BLOCKING not death; WebSearch confirms page live with full grapefruit-variety content. NOT an offender.", "sources": ["az_coop_ext"], "crops": ["grapefruit", "mandarin-clementine", "orange-navel"]},
+    "https://extension.arizona.edu/publication/growing-tomatoes": {"status": "live", "offender": false, "note": "az2078 Feb 2024, live", "sources": ["uariz_ext"]},
+    "https://extension.arizona.edu/publication/vegetable-planting-calendar-maricopa-county": {"status": "live", "offender": false, "note": "az1005 live", "sources": ["uariz_ext"]},
+    "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf": {"status": "live", "offender": false, "note": "634KB valid PDF (az1005 veg calendar)", "sources": ["uariz_ext_az1005"]},
+    "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1005-2018.pdf": {"status": "live", "offender": false, "note": "same az1005, older path, live", "sources": ["uariz_ext"]},
+    "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az2061-2023-%2008-28-23_0.pdf": {"status": "live", "offender": false, "note": "2.9MB valid PDF (az2061 herbs)", "sources": ["uariz_ext_az2061"]},
+    "https://aggie-hort.tamu.edu/archives/parsons/vegetables/parsnip.html": {"status": "redirect-loop", "offender": true, "note": "ALL aggie-hort.tamu.edu paths loop with aggie-horticulture; dead", "crops": ["parsnip"]},
+    "https://aggie-hort.tamu.edu/plantanswers/vegetables/pepper.html": {"status": "redirect-loop", "offender": true, "note": "loop; dead", "crops": ["cayenne-pepper"]},
+    "https://aggie-hort.tamu.edu/archives/parsons/vegetables/celery.html": {"status": "redirect-loop", "offender": true, "note": "loop; dead (inferred, host-universal)", "crops": ["celery"]},
+    "https://aggie-hort.tamu.edu/archives/parsons/vegetables/tomato.html": {"status": "redirect-loop", "offender": true, "note": "loop; dead (inferred, host-universal)", "crops": ["cherry-tomato", "grape-tomato", "roma-tomato", "tomatillo"]},
+    "https://aggie-hort.tamu.edu/citrus/cultivars/L2304.htm": {"status": "redirect-loop", "offender": true, "note": "loop; dead", "crops": ["grapefruit", "orange-navel"]},
+    "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/": {"status": "live", "offender": false, "note": "UGA Vegetable Garden Calendar C943; live; Georgia planting windows by month. CONFIRMED B577 REPLACEMENT; already used under uga_ext_c943_calendar elsewhere.", "role": "b577-replacement"},
+    "https://agrilifeextension.tamu.edu/asset-external/texas-home-vegetable-gardening-guide/": {"status": "live", "offender": false, "note": "LIVE (heuristic over-flagged by name); Texas Home Vegetable Gardening Guide, Agrilife Learn"},
+    "https://agrilifeextension.tamu.edu/library/gardening/texas-home-vegetable-gardening-guide/": {"status": "live", "offender": false, "note": "LIVE; Texas Vegetable Gardening guide"},
+    "https://aggie-horticulture.tamu.edu/vegetable/": {"status": "live", "offender": false, "note": "LIVE Vegetable Resources index"},
+    "https://www.ctahr.hawaii.edu/new/fjgi/Garden/pop-basil.htm": {"status": "dead-404", "offender": true, "note": "404; legacy .htm", "crops": ["basil"]},
+    "https://elp.tamu.edu/files/2010/10/TX-AgriLife-EPC-Planting-Calendar-Dec-2012.pdf": {"status": "dead-404", "offender": true, "note": "404; El Paso planting calendar PDF", "crops": ["TBD"]},
+    "https://extensionpublications.unl.edu/assets/html/g1650/build/g1650.htm": {"status": "redirect-live", "offender": "soft", "note": "301 cross-host to extensionpubs.unl.edu/publication/g1650/na/html/view (LIVE, Growing Tomatoes). Not broken; optional repoint to canonical.", "redirect_to": "https://extensionpubs.unl.edu/publication/g1650/na/html/view"},
+    "https://edis.ifas.ufl.edu/publication/VH021": {"status": "redirect-live", "offender": "soft", "note": "edis.ifas.ufl.edu/* systematically 301s to ask.ifas.ufl.edu/* (LIVE). 18 edis URLs. Not broken; optional repoint.", "redirect_to": "https://ask.ifas.ufl.edu/publication/VH021"},
+    "_sampled_healthy_hosts": {"status": "live", "offender": false, "note": "1+ top-cited deep-link verified LIVE per host: plants.ces.ncsu.edu, www.aspca.org, extension.umn.edu, hgic.clemson.edu, ask.ifas.ufl.edu (HS132), www.canr.msu.edu, ipm.ucanr.edu, ipm.missouri.edu, yardandgarden.extension.iastate.edu, hort.extension.wisc.edu, blogs.ifas.ufl.edu, lsuagcenter.com, marylandgrows.umd.edu, extensionpubs.unl.edu, extension.arizona.edu, pubs.nmsu.edu(listed). Modern template paths on these hosts presumed-live (not each individually fetched)."},
+    "https://ucanr.edu": {"status": "bare-live", "offender": "role-dependent", "note": "live bare homepage; offender only on specific claims (lime watering/container_notes/rotation), OK as CA/HI regional-calendar anchor", "sources": ["ucanr_ext"]},
+    "https://extension.sdstate.edu": {"status": "bare-live", "offender": "role-dependent", "note": "live bare homepage", "sources": ["sdsu_ext"]},
+    "https://extension.arizona.edu": {"status": "bare-live", "offender": "role-dependent", "note": "live bare homepage (lime uariz_ext)", "sources": ["uariz_ext", "uarizona_ext"]}
+  }
+}
