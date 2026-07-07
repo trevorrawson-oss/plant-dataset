@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) B8 FLOWERS (drought-adapted annuals) batch (7) (CONTENT release; `8d8f4807` -> `e149c97a`) [Claude Code]
+
+**Eighth watering batch, first of two flower batches: the lean, drought-adapted annual flowers.** borage / chamomile / cosmos / marigold / nasturtium / sunflower / zinnia. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + the shared annual-flower 6-stage set (`germination`, `seedling`, `established`, `budding`, `flowering`, `seed_saving`; sunflower uses `seed_ripening`).
+
+**The archetype:** keep evenly moist through germination + seedling establishment (the critical window), then EASE OFF -- these are drought-adapted, want deep-infrequent watering (freq `weekly_deep_infrequent`), and over-watering favors foliage over flower and raises disease. But the divergence within it is real:
+
+**Per-crop distinctions surfaced (the blanket-authoring guard):**
+- **cosmos** -- keep the LEANEST. `budding` freq `ease_off_to_flower`; too much water runs it to "lush, dark, flowerless growth."
+- **marigold** -- the tall African types break stems under overhead watering and their dense wet heads get gray mold, so `flowering` is base-water; dwarf French types rot readily if kept saturated.
+- **nasturtium** -- the one that breaks the drought-tolerant mold: in summer HEAT it wants MORE water, not less (`flowering` freq `more_in_heat`), because drought-in-heat stalls bloom and turns the edible leaves/flowers BITTER.
+- **sunflower** -- deep TAPROOT; the roughly 20 days BEFORE and AFTER flowering are the CRITICAL window (`budding` + `flowering` both `critical`, freq `steady_head_and_seed_fill`) -- water builds the head then fills the seed; `seed_ripening` tapers as the head dries.
+- **chamomile** -- surface-sown, so `germination` is `critical` (seed must not dry mid-sprout); then the LEANEST of the group at half-to-1 in/week; botrytis gray mold on wet flowers.
+- **borage** -- `drought_tolerance: moderate to high`; "overwatering does more harm than a little drought"; steady only if hot-dry at heavy bloom.
+- **zinnia** -- `drought_tolerance: high`; base watering called out as "the single biggest lever" against the powdery mildew that plagues it late season.
+- All seven: base watering against powdery mildew; `seed_saving` = `low` (self-sowers finish dry).
+
+**Splice + guards.** SHA-guarded: EXACTLY the 7 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +19724 bytes. `8d8f4807` -> `e149c97a`.
+
+**Gates.** whole_crop_gate PASS x7; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 90/114** (83 prior + 7). NEXT: B9 flowers (consistent-moisture annuals + 2 perennials, 6: calendula/sweet-alyssum/sweet-pea/viola + bee-balm/echinacea), then microgreens(8), citrus(5)+woody herbs(5, sparse tree pattern). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W7 CULINARY HERBS batch (5) (CONTENT release; `26b4e5a3` -> `8d8f4807`) [Claude Code]
 
 **Seventh watering batch: the five culinary herbs.** chives + cilantro-coriander + dill + mint + parsley. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (annuals run germination -> bolting; the perennials chives and mint carry dormancy stages).
