@@ -6,6 +6,16 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: WARM-SEASON STRUCTURING batch (11) (CONTENT release; `b6215df3` -> `3b5342a6`) [Claude Code]
+
+**First batch of the post-winter spine campaign.** Target: **91 certified crops** remain (the 10 uncertified shells -- 5 mushrooms + avocado/olive/sweet-corn/artichoke/asparagus -- are §E design-case, EXCLUDED). This batch = the warm-season crops that already carry a `day_range_from_sow` ladder, so structuring only: 5 tomatoes + edamame + green-beans-bush + pole-beans + okra + sweet-potato + tomatillo.
+
+Per-crop (from certified prose): propagule=seed for all EXCEPT **sweet-potato = slip** ("rooted sprouts"). dtm_anchor by method: tomatoes + tomatillo = `from_transplant` (indoor-started); edamame/beans/okra = `from_sow` (direct); **sweet-potato = `from_planting`** (the slip is the propagule you plant, per the runbook's propagule-crop rule). sow_depth from prose (tomato ~1/4in seed; the deep stem-burying at transplant is a separate step; bean ~1-1.5in; edamame ~1.5in + inoculant; okra ~1in, soak first; sweet-potato slip 3-4in). thin_to = spacing for the thinned direct crops (beans/edamame/okra), absent for the 1-per-station transplants + sweet-potato. harvest_window: long for the indeterminate tomatoes/pole-beans/okra/tomatillo, short for edamame + bush beans, absent for sweet-potato (one-shot dig). okra is `both` -> authored to the direct primary.
+
+**Verify.** SHA-guarded: EXACTLY the 11 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `b6215df3` -> `3b5342a6`. Gates: timing_spine_gate 0 violations (coverage 34/124), whole_crop_gate PASS, register_completeness_gate PASS. No NEW warnings -- the tomato/tomatillo `from_transplant` harvest-vs-DTM advisories were already in the Phase-1 baseline. amend-not-recert field_additions per crop.
+
+**SPINE PROGRESS: 34/114 certified.** REMAINING: rest of structuring (culinary herbs 7 + cool-season celery/potato/snow-peas/sugar-snap-peas); ladder-authoring (warm-no-ladder 19 = peppers/cucumbers/squash/melons/eggplant + flowers 13 + microgreens 8); empty-DTM perennials (fruit trees 19 + berries 5 + woody herbs 5). Then the register-#5 watering fill across all of them. origin at `7cdbafc` (winter pushed); this batch unpushed.
+
 ## 2026-07-07 -- WATERING FILL (register #5) GREENS+FAVA batch (5) -- WINTER COMPLETELY WRAPPED (CONTENT release; `54b720fc` -> `b6215df3`) [Claude Code]
 
 **Final winter watering batch. With this, WINTER IS COMPLETELY WRAPPED: all 23 fall/winter crops carry BOTH the timing spine AND per-stage watering (23/23 + 23/23).**
