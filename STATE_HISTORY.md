@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-07-07 -- FALL/WINTER timing-spine slice 1: 8 direct-sown SEED crops (CONTENT release; `89cb013b` -> `b0e53ddc`) [Claude Code]
+
+**First scaled slice after the garlic pilot.** The direct-sown, ladder-already-present cool-season crops -- pure structuring from certified prose, the fastest archetype. carrot, beet, turnip, parsnip, radish, arugula, spring-onion, broad-beans-fava.
+
+**Authored** (each STRUCTURED from the crop's certified start_method prose): propagule=seed, dtm_anchor=from_sow, sow_depth_inches (quoted from prose -- carrot [0.125,0.25] "1/8 to 1/4 inch", beet [0.5,0.5] "about 1/2 inch", turnip [0.25,0.5], parsnip [0.5,0.5], radish [0.25,0.5], arugula [0.25,0.5], spring-onion [0.25,0.5], fava [1,2] "1 to 2 inches"), thin_to_inches = each crop's final spacing (fava [4,6] per its "4-6 apart, then thin" prose). day_range_from_sow ladders were already present at cert. INTENTIONALLY ABSENT: harvest_window_days + divide_every_years (roots/greens pulled-or-cut when sized; annual); weeks_indoors left as-is. Per-stage watering DEFERRED to register #5. amend-not-recert field_additions timing_spine entries, each sourced to the crop's OWN cited T1 planting guides (clemson_hgic/umn_ext/umd_ext/usu_ext, all in source_set).
+
+**Scope decision (Trevor 2026-07-07): timing-first, then watering; light parked.** Asked whether we capture seedling/germination/watering/light. Answer: this pass fills the TIMING spine (propagule, germination window + stage ladder, sow depth, DTM anchor) but NOT per-stage watering or per-stage light. Ruled: do the structural timing first, then a dedicated watering pass. ROADMAP updated: register #5 = `watering.schedule_by_stage[]` per-stage backfill for annuals ("how much to water after sprouts grow" -- rate/frequency/method/notes per stage; exists on ~20 trees today, queued after the timing spine); #6 = per-stage/seedling LIGHT as a NEW-field candidate (only crop-level sunlight/sunlight_hours exist today; would be its own column GS arc).
+
+**Verify.** SHA-guarded: EXACTLY the 8 crops changed among crops, all others + every top-level key byte-identical, crop count 124, canonical COMPACT no trailing newline. `89cb013b` -> `b0e53ddc`. Gates: timing_spine_gate 0 violations (coverage 9/124 = garlic + these 8; the 8 pre-existing anchor-dependent harvest-vs-DTM warnings unchanged), whole_crop_gate PASS on all 8, register_completeness_gate roster PASS, release_verify "no new violations introduced" (its 1 CONCERN = the expected multi-crop batch collateral -- release_verify is single-crop-oriented; the SHA-guard is the authority that exactly 8 changed), all unit tests green.
+
+**NEXT (Trevor-confirmed order + one priority bump).** Structuring tier: leek (from_transplant), onion (from_planting/sets), lettuce-leaf (from_sow) -- each needs a sourced sow_depth (their prose omits it). Then the ladder-authoring tier: brassicas (broccoli/cauliflower/cabbage/kale/kohlrabi/bok-choy/collards/brussels-sprouts) + swiss-chard/spinach -- these have NO day_range_from_sow ladder, so author the full germination + stage ladder AND the anchor (mostly from_transplant for the coles). **PRIORITY BUMP: brussels-sprouts (from_transplant) pulled forward -- Trevor is planting seedlings in trays this week.** Trevor confirms push (`cb6afdd` shallot + `46da603` garlic + this = 3 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- GARLIC timing-spine authored: the propagule PILOT (CONTENT release; `e5fdfeb3` -> `89cb013b`) [Claude Code]
 
 **First crop of the seed->harvest timing-spine authoring campaign (Plan 3), and the pilot that pressure-tested the field shapes + gates before scaling.** On top of the same-day Phase 1 (contract + gate) + shallot fix.
