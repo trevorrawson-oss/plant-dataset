@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: EMPTY-DTM PERENNIALS batch (29) -- >> TIMING SPINE COMPLETE (114/114) << (CONTENT release; `72850894` -> `6f584c3b`) [Claude Code]
+
+**The final spine batch. With it, all 114 certified crops carry the timing spine.** These 29 are the empty-DTM perennials -- `days_to_maturity==[]`, so `propagule` is the only spine field that applies: NO `dtm_anchor` (the gate forbids it on empty-DTM crops), NO ladder (perennial), NO `sow_depth` (not seed-grown; `bare_root`/`transplant`/`crown` are not in the gate's SEED_LIKE set, so depth is not required).
+
+**Propagule assigned by reading EACH crop's prose, not by an archetype template:**
+- **bare_root (15):** apple, apricot, cherry-sour, cherry-sweet, nectarine, peach, pear-asian, pear-european, plum, persimmon, mulberry (grafted deciduous trees, planted as dormant bare-root, graft union kept above grade -- the graft detail stays in prose); **fig** (own-rooted bare-root, no graft union, unlike the stone/pome trees); **pomegranate** (bare-root primary, "or cutting-grown"); **blackberry + raspberry** (prose: "bare-root canes are the common, economical choice").
+- **transplant (13):** **pawpaw** (CONTAINER only -- "from a container rather than bare-root; deep brittle taproot resents disturbance" -- the one tree in the set that is not bare-root); grapefruit, lemon, lime, mandarin-clementine, orange-navel (grafted nursery citrus -> transplant per the runbook, rootstock/graft in prose); **blueberry** ("container-grown is the common backyard choice"); **elderberry** ("nursery plants or cuttings"); lavender, oregano, rosemary, sage, thyme (nursery transplant / cutting / division, not seed; named cultivars do not come true).
+- **crown (1):** strawberry (planted as bare-root crowns -- "position each crown with its midpoint at soil height"; renewed by runners).
+
+**`divide_every_years` is N/A for all 29** -- none is a divide-to-renew crop (that was mint/chives/lemongrass/bee-balm/echinacea, done in earlier batches; brambles renew by cane cycling, strawberry by runners, woody herbs are replaced from cuttings). **`harvest_window` deferred** -- optional, and with no ladder/DTM to anchor it against it adds little structural value here; better as a later focused polish than a quick partial-prose pass.
+
+**Adjacent anchor fix:** `lemon.start_method.start` was `null` (an anchor gap exactly like `lime` before the batch-2 audit fixed it) -> set to `"grafted_nursery_tree"` (prose: "Plant a grafted nursery tree"), the documented lime precedent.
+
+**Verify.** SHA-guarded: EXACTLY the 29 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `72850894` -> `6f584c3b`. Gates: **timing_spine_gate `--all-certified`: propagule_set 114/124 = 114/114 certified, `todo(required)=0`, 0 violations** (15 advisories, all pre-existing -- none new); whole_crop_gate PASS on all 29; register_completeness_gate PASS; release_verify -- no new violations, top-level byte-identical (its lone "expected only cherry-tomato" CONCERN is the tool's single-crop reference default firing on a legitimate 29-crop batch, not a defect; the 2 calendar review notes are pre-existing, unrelated to propagule). amend-not-recert `field_additions` per crop.
+
+**>> SPINE PROGRESS: 114/114 certified -- THE TIMING SPINE IS COMPLETE. <<** Every certified crop now carries: `propagule`; `dtm_anchor` + a from-sow `day_range_from_sow` ladder where it grows from a datable event; `sow_depth_inches` / `thin_to_inches` / `harvest_window_days` / `divide_every_years` where meaningful. NEXT: register #5 WATERING FILL for the spring/summer crops (per-stage `watering.schedule_by_stage` prose -- the winter 5-batch pattern), then register #6 light (cheap default) and #7 thresholds. origin at `7cdbafc`; 8 ahead unpushed.
+
 ## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING MICROGREENS batch (8) (CONTENT release; `4cd6e62e` -> `72850894`) [Claude Code]
 
 **Fourth ladder-authoring batch. Completes the annual/seed ladder tier -- everything left in the spine is empty-DTM perennials.** microgreens-mix, sunflower-sprouts, pea-shoots, radish-microgreens, broccoli-microgreens, arugula-microgreens, wheatgrass, cilantro-microgreens.
