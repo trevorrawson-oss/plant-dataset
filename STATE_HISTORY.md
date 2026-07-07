@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-07 -- FALL/WINTER timing-spine LADDER-AUTHORING TIER (9 crops) -- WINTER SPINE COMPLETE (CONTENT release; `fab330ce` -> `7918e301`) [Claude Code]
+
+**The last spine tier for winter: the 9 crops with NO `day_range_from_sow` -- authored the germination->harvest ladder FROM SCRATCH + the anchor, the brussels-sprouts method scaled per crop. With this the WINTER SPINE is complete (23/124 = the full fall/winter set).**
+
+- **Heading brassicas (`from_transplant`, transplant-timed for good heads):** broccoli, cauliflower, cabbage. Ladders: germination [5,14] -> transplant ~5 wk -> harvest = DTM from transplant + ~35d indoor (broccoli 90-110, cauliflower 85-135, cabbage 95-155 d from sow; broccoli also carries a post-harvest `side_shoots` stage).
+- **Leafy/fast brassicas + greens (`from_sow`, direct-sown default; the 'both' crops can also be transplanted -- noted in provenance):** kale, kohlrabi, bok-choy, collards + swiss-chard, spinach. Harvest = DTM from sow.
+- All `propagule=seed`. `sow_depth_inches` from prose where stated (kohlrabi/bok-choy "1/4 to 1/2 in", chard/spinach "half an inch") else the standard brassica [0.25,0.5] (broccoli/cauliflower/cabbage/kale/collards -- confirmed via the brussels-sprouts UMN fetch; universal across the crops' cited brassica sources). `thin_to_inches` = final spacing. `harvest_window_days` on the cut-and-come greens (kale/collards [60,120], chard [60,150], spinach [14,35], bok-choy [14,28]); absent on the one-shot kohlrabi bulb. Intermediate stage boundaries MODELED from the certified DTM + archetype -- same construction as every existing certified ladder.
+
+**Verify.** SHA-guarded: EXACTLY the 9 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `fab330ce` -> `7918e301`. Gates: timing_spine_gate 0 violations (coverage 23/124), whole_crop_gate PASS on all 9, register_completeness_gate PASS. warnings=9: the 6 `from_sow` crops add NONE (harvest=DTM, in-band); the lone new one is broccoli's harvest-vs-DTM advisory -- the EXPECTED `from_transplant` anchor offset (harvest-from-sow 90 vs DTM-from-transplant [55,75]), a known false-positive of the simple check. Could make the check anchor-aware (add the weeks_indoors offset when dtm_anchor=from_transplant) to silence these -- deferred, non-blocking.
+
+**MILESTONE -- WINTER SPINE COMPLETE.** All 23 fall/winter crops now carry the timing spine: 5 alliums (garlic/shallot/onion/leek/spring-onion) + 8 brassicas (broccoli/cauliflower/cabbage/kale/brussels-sprouts/kohlrabi/bok-choy/collards) + 4 greens (lettuce-leaf/spinach/swiss-chard/arugula) + fava + 5 roots (carrot/beet/turnip/parsnip/radish).
+
+**NEXT (per the Trevor strategy: wrap winter completely before the rest).** The register-#5 WATERING FILL -- `watering.schedule_by_stage[]` per-stage watering ("how much to water after sprouts grow") across the winter set. Then the remaining ~91 crops (spring/summer/perennials) get the spine. Trevor confirms push (6 releases pending at origin `f690821`: `cb6afdd`/`46da603`/`95186a5`/`2e78d84`/`9f447f7`/this).
+
 ## 2026-07-07 -- FALL/WINTER timing-spine STRUCTURING TIER: leek/onion/lettuce-leaf/shallot (CONTENT release; `340d0b43` -> `fab330ce`) [Claude Code]
 
 **The cool-season crops that already had a `day_range_from_sow` ladder -- so only crop-level structuring, but this tier exercises all three DTM anchors.** Depths sourced from each crop's own cited T1 extension pages (WebFetch/WebSearch, umn/umd/usu/clemson).
