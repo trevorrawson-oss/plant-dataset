@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING MICROGREENS batch (8) (CONTENT release; `4cd6e62e` -> `72850894`) [Claude Code]
+
+**Fourth ladder-authoring batch. Completes the annual/seed ladder tier -- everything left in the spine is empty-DTM perennials.** microgreens-mix, sunflower-sprouts, pea-shoots, radish-microgreens, broccoli-microgreens, arugula-microgreens, wheatgrass, cilantro-microgreens.
+
+**The special archetype.** All 8 carry `spacing_inches==[]` (dense broadcast sow, area-density, not per-plant spacing), which the timing_spine_gate treats as **exempt from both `sow_depth_inches` and `thin_to_inches`** -- the seed is pressed to the tray surface, there is no planting depth and no in-row spacing. They share one 5-stage tray cycle `sow -> germination -> blackout -> light -> harvest` (a real `harvest` stage_id, so the gate anchors correctly, unlike the flowers), are sown in trays (`start=indoors`) and cut days later -> `propagule=seed`, `dtm_anchor=from_sow`, a short from-sow ladder with **harvest ~= DTM** (no advisories). **Single cut** -- the stand does not regrow -> **NO `harvest_window`** (one-shot tray).
+
+Per-crop (from each crop's DTM + germ speed): radish/arugula fastest `[7,12]`, wheatgrass `[7,10]`, broccoli `[8,12]`, mix `[10,14]`, sunflower-sprouts `[8,14]` (large seed, presoak -> germ from day 2), pea-shoots `[10,16]` (presoak), **cilantro-microgreens the slowest `[21,28]`** (confirmed vs USU in the batch-2 audit). `field_additions` sources include `usu_ext` (Utah State, the microgreen anchor authority).
+
+**Verify.** SHA-guarded: EXACTLY the 8 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `4cd6e62e` -> `72850894`. Gates: timing_spine_gate **0 violations, 0 new advisories** (coverage 85/124), whole_crop_gate PASS on all 8, register_completeness_gate PASS. amend-not-recert `field_additions` per crop.
+
+**SPINE PROGRESS: 85/114 certified. ALL SEED/ANNUAL LADDERS DONE.** The only remaining spine work is the **empty-DTM perennials (29): fruit trees 19 + berries 5 + woody herbs 5** -- propagule-from-prose only, `days_to_maturity==[]` so NO `dtm_anchor`, NO ladder, NO `sow_depth` (not seed-grown); `harvest_window`/`divide_every_years` where meaningful. Then the watering fill. origin at `7cdbafc`; 7 ahead unpushed.
+
 ## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING FLOWERS batch (13) (CONTENT release; `dceb991b` -> `4cd6e62e`) [Claude Code]
 
 **Third ladder-authoring batch. Split by lifecycle: 11 annuals + 2 herbaceous perennials.**
