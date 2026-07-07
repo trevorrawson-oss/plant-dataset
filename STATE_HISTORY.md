@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-07 -- GARLIC timing-spine authored: the propagule PILOT (CONTENT release; `e5fdfeb3` -> `89cb013b`) [Claude Code]
+
+**First crop of the seed->harvest timing-spine authoring campaign (Plan 3), and the pilot that pressure-tested the field shapes + gates before scaling.** On top of the same-day Phase 1 (contract + gate) + shallot fix.
+
+**Authored (STRUCTURED from garlic's certified start_method prose -- the audit's rule: structure, don't re-research).** propagule=clove ("grown from cloves, not seed"); dtm_anchor=from_planting (propagule crop, DTM [180,270] non-empty); sow_depth_inches=[2,3] ("planted 2-3 in deep"). INTENTIONALLY ABSENT (documented in the field_additions note): thin_to_inches (planted at final 4-6 in spacing, never thinned), harvest_window_days (one-shot bulb dig; the harvest stage [250,275] carries the timing window), divide_every_years (annual, replanted from cloves), weeks_indoors (prose: "no indoor start"). start stays "direct" (accurate -- planted directly outdoors, no indoor phase; propagule=clove now carries the propagule detail, exactly this field's purpose per the audit). The 6-stage day_range_from_sow ladder was already present at cert. Provenance: amend-not-recert field_additions timing_spine entry, sourced usu_ext/umn_ext/umd_ext (all T1, all in garlic's source_set).
+
+**C11 STOP-AND-ASK ruling (Trevor-approved).** Adding propagule + dtm_anchor tripped the C11 novel-unruled-string gate (Trevor 2026-06-27: a human must rule each novel field). Ruled BOTH as backend enums -- structured tokens the app's crop-timing.ts consumes + maps to labels, exact siblings of `start`/`day_length_type` -- by adding them to register_completeness_gate EXCLUDED_KEYS with a documented comment. Regression-locked: test_register_completeness_gate.py case 9b (RED on garlic's 2 unruled fields -> GREEN after the ruling). The other timing-spine fields are numeric arrays/ints, out of the C11 string check by shape.
+
+**Verified END-TO-END (not asserted).** npm run build:guides (reads ~/plant-dataset/crops_data_final.json directly) regenerated guides.json; a throwaway test drove the REAL plant-app crop-timing.ts on garlic: effectiveDtm=[180,270] + dtmAnchor=from_planting -> **harvest range 180-270 days from planting**, and daysToHarvestFromStage resolves at every stage (bulb_forming -> 0-65 d, established -> 40-125 d). guides.json + the temp test were reverted/removed after (the real build:guides handoff runs after this commits). CAVEAT flagged, not changed: garlic's DTM min 180 (6 mo) is early for fall-planted garlic vs the ladder's ~8-9 mo -- within the gate's harvest-vs-DTM tolerance (no warning), pre-existing certified DTM.
+
+**Verify.** SHA-guarded: EXACTLY garlic changed among crops, all other crops + every top-level key byte-identical, crop count 124, canonical COMPACT no trailing newline. `e5fdfeb3` -> `89cb013b`. Gates: timing_spine_gate 0 violations (garlic covered; the 8 pre-existing anchor-dependent harvest-vs-DTM warnings unchanged), whole_crop_gate garlic PASS, register_completeness_gate roster PASS, release_verify clean (only garlic changed, no new violations introduced, reference lettuce-leaf byte-identical), all unit tests green.
+
+**NEXT.** The fall/winter batch (brassicas, alliums shallot/onion, cool greens, fava, overwinter roots). The weeks_before->weeks_indoors consumer repoint (plant-app StartFromSeedCard.tsx + seed-trays.ts) + a real build:guides are owed at the next app handoff. Trevor confirms push (cb6afdd shallot + this garlic release both pending at origin `f690821`).
+
 ## 2026-07-07 -- TIMING-SPINE PHASE 1: contract + gate (TDD) + shallot ladder correction (amend-not-recert CONTENT release; `4abf43a5` -> `e5fdfeb3`) [Claude Code]
 
 **The one-time cross-crop layer for the seed->harvest timing-spine authoring (Plan 3), built BEFORE any per-crop authoring -- and the first defect it caught, fixed.** Runbook `plant-app/docs/superpowers/plans/2026-07-06-plan3-timing-spine-authoring-runbook.md`; anchor-truth `docs/2026-07-06-batch2-audit-findings.md`; consumer contract `plant-app/src/lib/guides.ts` + `crop-timing.ts` (branch `feat/crop-guide-foundation`).

@@ -84,6 +84,14 @@ ruled_short = {"slug": "x",
 assert register_completeness_violations(ruled_short) == [], \
     f"ruled short-string keys must stay clean: {register_completeness_violations(ruled_short)}"
 
+# 9b. TIMING-SPINE ENUMS (Plan 3, 2026-07-07): propagule + dtm_anchor are RULED backend enums
+#     (structured tokens the app's crop-timing.ts consumes + maps, siblings of `start`); a crop
+#     carrying them must stay clean. The other timing-spine fields are numeric arrays (out of the
+#     C11 string check by shape).
+timing_enums = {"slug": "x", "propagule": "clove", "dtm_anchor": "from_planting"}
+assert register_completeness_violations(timing_enums) == [], \
+    f"timing-spine enums propagule/dtm_anchor must be ruled: {register_completeness_violations(timing_enums)}"
+
 # ---- incognito-redteam C11 (c) (Trevor: pursue): backend-key dash-laundering ----
 # summary/claim/note are backend keys exempt from the dash/temp scan + A25. A user-facing string
 # under one OUTSIDE a known-backend subtree launders past those scans (incl. a forbidden `--`).

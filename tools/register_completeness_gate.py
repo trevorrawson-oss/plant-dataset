@@ -90,6 +90,13 @@ EXCLUDED_KEYS = {
     # NUMERIC-AS-STRING (zone / lifespan values carried as strings; categorical, not prose):
     "hardiness_zone_max","hardiness_zone_min","reliable_fruit_zone_max","reliable_fruit_zone_min",
     "productive_lifespan_years",
+    # TIMING-SPINE ENUMS (Plan 3, 2026-07-07; garlic propagule pilot): structured enum tokens the
+    # app's crop-timing.ts consumes + maps to labels, siblings of `start` -- machine-read, not
+    # dual-register prose. propagule = what you physically plant (clove/set/tuber/slip/...);
+    # dtm_anchor = what days_to_maturity counts from (from_sow/from_transplant/from_planting).
+    # The other timing-spine fields (sow_depth_inches/thin_to_inches/harvest_window_days/
+    # divide_every_years/day_range_from_sow) are numeric arrays/ints -- out of the C11 string check.
+    "propagule","dtm_anchor",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
