@@ -6,6 +6,18 @@
 
 ---
 
+## 2026-07-07 -- BRUSSELS-SPROUTS: from_transplant + from-scratch ladder (CONTENT release; `b0e53ddc` -> `340d0b43`) [Claude Code]
+
+**First crop of the fall/winter LADDER-AUTHORING tier (crops with no `day_range_from_sow`), and the first `from_transplant` crop. PRIORITIZED -- Trevor is sowing seedling trays this week, so he needed real timing now.** Demonstrates the harder path: author the full stage ladder from scratch + the transplant anchor + a real harvest window.
+
+**Source-checked (not just modeled).** WebFetched UMN Extension "Growing Brussels sprouts" (in the crop's source_set): confirmed seed depth "1/4 to 1/2 inch", germination "about two weeks", harvest "over the next few weeks", spacing 18 in.
+
+**Authored.** propagule=seed (started from seed in trays, then transplanted), dtm_anchor=from_transplant (DTM [90,180] counts from transplant), sow_depth_inches=[0.25,0.5], harvest_window_days=[28,60]. day_range_from_sow ladder FROM SCRATCH: germination [7,14] (UMN "about two weeks", faster at warm tray temps), seedling [14,42] (transplant at ~5-6 wk per certified prose + weeks_indoors=5), established [42,120], sprout_formation [100,160], harvest [125,215] (= DTM 90-180 from transplant + ~35d indoor). thin_to_inches/divide_every_years absent (transplant crop, planted at final 18-24 in spacing). PROVENANCE HONESTY: germ + harvest anchors are SOURCED (UMN germ; certified DTM + weeks_indoors); the intermediate boundaries (established, sprout_formation) are MODELED from those anchors + the brassica archetype -- the same construction as every existing certified ladder. amend-not-recert field_additions timing_spine entry (umn_ext/clemson_hgic/umd_ext, all T1).
+
+**Verify.** SHA-guarded EXACTLY brussels-sprouts, byte-identical elsewhere, count 124, COMPACT no trailing newline. `b0e53ddc` -> `340d0b43`. Gates: timing_spine_gate 0 violations (coverage 10/124; harvest entry 125 falls inside the DTM band so no harvest-vs-DTM warning despite the from_transplant offset), whole_crop_gate brussels-sprouts PASS, register_completeness PASS. END-TO-END: `npm run build:guides` + the real plant-app `crop-timing.ts` returns harvest 90-180 days AFTER TRANSPLANT and resolves the stage->harvest countdown at every stage (guides.json + temp test reverted after; real build:guides handoff runs post-commit). Practical read for Trevor's July trays: germination ~1-2 wk, transplant ~5-6 wk, harvest ~mid-Nov into Feb.
+
+**NEXT.** Structuring tier: leek (from_transplant), onion (from_planting, sets), lettuce-leaf (from_sow) -- each needs a sourced sow_depth (their prose omits it). Then the remaining brassicas (broccoli/cauliflower/cabbage/kale/kohlrabi/bok-choy/collards) + swiss-chard/spinach via this same from-scratch-ladder method. Trevor confirms push (`cb6afdd` + `46da603` + `95186a5` + this = 4 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- FALL/WINTER timing-spine slice 1: 8 direct-sown SEED crops (CONTENT release; `89cb013b` -> `b0e53ddc`) [Claude Code]
 
 **First scaled slice after the garlic pilot.** The direct-sown, ladder-already-present cool-season crops -- pure structuring from certified prose, the fastest archetype. carrot, beet, turnip, parsnip, radish, arugula, spring-onion, broad-beans-fava.
