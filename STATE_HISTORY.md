@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W4 WINTER SQUASH/PUMPKIN + MELONS batch (7) (CONTENT release; `7412babc` -> `d19a755c`) [Claude Code]
+
+**Fourth watering batch: the vining, storage-and-ripening cucurbits.** butternut / acorn / spaghetti-squash + pumpkin + watermelon / cantaloupe / honeydew-melon. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own 6 stage ids (`germination`, `seedling`, `vining`, `flowering`, `fruit_development`, `harvest` -- the vining-cucurbit set, distinct from W3 summer squash's `established`/`end_of_season`). Direct-sown, so `germination` is seedbed watering.
+
+**THE KEY DISTINCTION -- two different DRY-FINISHES at the `harvest` stage (the heart of the blanket-authoring guard for this batch):**
+- **winter squash + pumpkin** (butternut/acorn/spaghetti/pumpkin) -- taper at harvest to HARDEN THE RIND so the fruit CURES and STORES. Encoded `harvest` freq `taper_to_cure_rind`, level `low` ("that dry finish firms the skin so they store well through winter"). `drought_tolerance: low`, mildew-prone, 1-1.5 in/week. PUMPKIN diverges: wetter at 1-2 in/week, "highly mildew-prone," and Phytophthora fruit rot (not just crown/fruit rot).
+- **melons** (watermelon/cantaloupe/honeydew) -- taper in the last 1-2 weeks to CONCENTRATE SUGARS and SWEETEN. Encoded `harvest` freq `taper_to_sweeten`, level `low` ("the trick that makes it sweet; over-watering near ripeness dilutes flavor and can split the fruit"). `drought_tolerance: moderate` (all three), deep-rooted, fruit mostly water, 1-2 in/week.
+
+**Melon per-crop distinctions:**
+- **watermelon** -- fruit ~92% water; `fruit_development` failure mode is HOLLOW HEART + blossom-end problems.
+- **cantaloupe** -- carries the Iowa State cadence ("1 to 2 inches every 7 to 10 days in dry weather"), tapers to "about half as much per application," and the `fruit_development` note keeps the caveat that a plant wilting in moist soil may be bacterial/Fusarium wilt, not thirst.
+- **honeydew** -- the "long fruit-sizing stretch"; gummy stem blight.
+- All seven: `flowering` + `fruit_development` = `critical` (fruit set, then the sizing peak); `vining` = `standard` deep soak; the divergence lives entirely at `harvest`.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 7 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +20979 bytes. `7412babc` -> `d19a755c`.
+
+**Gates.** whole_crop_gate PASS x7; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 68/114** (61 prior + 7). warm_season_fruiting: 24/30 -- ONLY W5 (6: legumes/okra/tomatillo/sweet-potato) remains to complete the full in-season warm-fruiting group. NEXT: W5 edamame/green-beans-bush/pole-beans/okra/tomatillo/sweet-potato, then cool stragglers(4), herbs(5), flowers(13), microgreens(8), citrus(5)+woody herbs(5). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W3 CUCUMBERS + SUMMER SQUASH batch (6) (CONTENT release; `2ddfe92b` -> `7412babc`) [Claude Code]
 
 **Third watering batch: the direct-sown cucurbit fruiting crops.** cucumber / english / pickling / slicing-cucumber + yellow-summer-squash + zucchini-courgette. Each `watering.schedule_by_stage[]` authored INDIVIDUALLY from that crop's own certified watering prose + its own 6 stage ids (`germination`, `seedling`, `established`, `flowering`, `harvest`, `end_of_season`).
