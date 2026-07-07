@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING CUCURBITS batch (13) (CONTENT release; `898b581f` -> `dceb991b`) [Claude Code]
+
+**Second ladder-authoring batch. With it the WARM-NO-LADDER tier is complete (19 = 6 Solanaceae + 13 cucurbits).** cucumbers (cucumber/english/pickling/slicing) + summer squash (yellow-summer/zucchini) + winter squash & pumpkin (acorn/butternut/spaghetti/pumpkin) + melons (cantaloupe/honeydew/watermelon).
+
+**The clock (vs the peppers).** Cucurbits are all `start=both` in the record, but their prose is unanimous that **direct-sowing is the primary method** (they resent root disturbance; indoor start is only a 2-3 wk short-season option) -> `dtm_anchor=from_sow`, a clean from-sow clock with **no indoor offset**, so **harvest ~= DTM** and NONE of the 13 trip the harvest-vs-DTM advisory (unlike the from_transplant Solanaceae).
+
+**Per-crop distinctions (authored individually from each crop's prose):**
+- **harvest model splits by archetype:** cucumbers + summer squash are EVERBEARING (picked young/often over weeks) -> `harvest_window_days=[30,60]`; winter squash + pumpkin are **ONE-SHOT maturity harvests** (picked once at full rind hardness, cured for storage) -> **NO `harvest_window`** (the potato precedent); melons ripen **per-fruit** at slip/ripeness over a window -> `[14,28]`.
+- **`thin_to` ABSENT for all 13:** cucurbits are hill/station-sown and thinned to **N plants per hill** (butternut 1-2, melons 2, pumpkin 2-3), not to a clean in-row inch spacing; `spacing_inches` already carries the hill/plant spacing. Fabricating a `thin_to` inch value would misrepresent the hill geometry (contrast the row-sown beans/peas, which did get `thin_to`).
+- **germ + DTM span:** melons (honeydew/watermelon) start warmer, germ `[5,12]`, vs cukes `[3,10]`; pickling-cucumber is the fastest (DTM `[48,58]`), pumpkin the longest (`[85,120]`).
+- crop-level (all 13): `propagule=seed`, `dtm_anchor=from_sow`, `sow_depth_inches=[0.5,1]` (brackets every crop's prose, "half an inch" .. "about 1 inch").
+
+**Verify.** SHA-guarded: EXACTLY the 13 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `898b581f` -> `dceb991b`. Gates: timing_spine_gate **0 violations, 0 new advisories** (coverage 64/124), whole_crop_gate PASS on all 13, register_completeness_gate PASS. amend-not-recert `field_additions` per crop.
+
+**SPINE PROGRESS: 64/114 certified. WARM-NO-LADDER TIER COMPLETE.** NEXT: flowers 13 + microgreens 8 (ladder-authoring), then the empty-DTM perennials (trees 19 + berries 5 + woody herbs 5), then the watering fill. origin at `7cdbafc`; 5 ahead unpushed.
+
 ## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING SOLANACEAE batch (6) (CONTENT release; `c44b0790` -> `898b581f`) [Claude Code]
 
 **First ladder-authoring batch of the spring/summer campaign** -- from-scratch germination->harvest ladders (the winter-brassica method), not just structuring. bell/banana/cayenne/jalapeno/habanero peppers + eggplant.
