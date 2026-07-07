@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING FLOWERS batch (13) (CONTENT release; `dceb991b` -> `4cd6e62e`) [Claude Code]
+
+**Third ladder-authoring batch. Split by lifecycle: 11 annuals + 2 herbaceous perennials.**
+
+**11 ANNUALS** (borage, calendula, chamomile, cosmos, marigold, nasturtium, sunflower, sweet-alyssum, sweet-pea, viola, zinnia): `propagule=seed`, `dtm_anchor=from_sow` (a flower's DTM = days-to-bloom-*from-seed*, the seed-packet convention, regardless of indoor/direct start), full from-sow ladder with **flowering ~= DTM**. `thin_to_inches = spacing_inches` (flowers are row/broadcast-sown and thinned to an in-row spacing -- chamomile prose literally "thin to 8 to 12 in" -- UNLIKE the hill-sown cucurbits, which got no thin_to). `sow_depth_inches` authored per-crop from prose: SURFACE/light germinators chamomile + sweet-alyssum `[0.0625,0.125]` ("press in without covering" / "barely cover, needs light"), viola same but covered to EXCLUDE light (cool+dark); big seeds sunflower `[1,1.5]`, nasturtium + sweet-pea `[0.5,1]`; the quarter-inch bunch `[0.25,0.5]`. `harvest_window_days` = the bloom/cutting window: long `[30,90]` for the deadheaded season-long bloomers, **sunflower short `[14,30]`** (a single main head, not everbearing), chamomile/sweet-pea `[30,60]`.
+
+**2 HERBACEOUS PERENNIALS** (bee-balm, echinacea): `propagule=division` (prose: the simplest/most reliable start is a spring division or nursery transplant; named cultivars will not come true from seed), `dtm_anchor=from_planting` (DTM = establishment -> first bloom), `divide_every_years` (bee-balm 3, an aggressive spreader divided to renew/control; echinacea 4, taprooted and resents disturbance), `harvest_window_days` = bloom window (bee-balm `[28,45]`, echinacea `[42,70]`). **NO `sow_depth`** (division, not seed-sown). **NO ladder** -- their stage sets carry multi-year cycle stages (`spring_regrowth`, `dormancy`, `seed_and_dormancy`); the runbook is explicit: do not force a fake annual timeline onto a perennial.
+
+**Caveat surfaced for the app.** None of the annual-flower stage sets contain an id `harvest` -- the last stage is `seed_saving`/`seed_ripening`/`decline_seed`. So `crop-timing.ts`'s `daysToHarvestFromStage` (which keys on id `harvest`, else the last stage) anchors on that seed stage, NOT the `flowering` bloom stage a cut-flower grower cares about. The app may want to prefer a `flowering` anchor for ornamentals. **Even so**, the ladders are tight enough that every annual's seed-set stage lands WITHIN the +/-15% DTM band, so the batch adds **0 new advisories** (still 15 total, all pre-existing from the Solanaceae + the 8 baseline).
+
+**Verify.** SHA-guarded: EXACTLY the 13 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `dceb991b` -> `4cd6e62e`. Gates: timing_spine_gate **0 violations, 0 new advisories** (coverage 77/124), whole_crop_gate PASS on all 13, register_completeness_gate PASS. amend-not-recert `field_additions` per crop.
+
+**SPINE PROGRESS: 77/114 certified.** NEXT: microgreens 8 (ladder-authoring; `spacing_inches==[]` -> exempt from `sow_depth` + `thin_to`; short ladders), then the empty-DTM perennials (trees 19 + berries 5 + woody herbs 5), then the watering fill. origin at `7cdbafc`; 6 ahead unpushed.
+
 ## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING CUCURBITS batch (13) (CONTENT release; `898b581f` -> `dceb991b`) [Claude Code]
 
 **Second ladder-authoring batch. With it the WARM-NO-LADDER tier is complete (19 = 6 Solanaceae + 13 cucurbits).** cucumbers (cucumber/english/pickling/slicing) + summer squash (yellow-summer/zucchini) + winter squash & pumpkin (acorn/butternut/spaghetti/pumpkin) + melons (cantaloupe/honeydew/watermelon).
