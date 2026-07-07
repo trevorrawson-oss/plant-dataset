@@ -6,6 +6,17 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: CULINARY-HERB structuring batch (7) (CONTENT release; `3b5342a6` -> `ecaf7a7a`) [Claude Code]
+
+**Second post-winter batch. All 7 have ladders (structuring). The value here is the lifecycle split -- the first herbaceous perennials of the campaign.**
+
+- **4 annuals:** basil (seed, from_transplant -- 'both', indoor-start primary; tiny shallow seed [0.125,0.25]; cut-and-come), parsley (seed, from_transplant; biennial grown for leaves; slow germ, prose ~1/4in), cilantro-coriander (seed, from_sow, direct-sown deep taproot; bolts fast in heat), dill (seed, from_sow, direct).
+- **3 herbaceous perennials:** chives, mint, lemongrass -- all **propagule=division** (prose: division / nursery clump / rooted sprig / grocery stalk; seed does not come true for mint), **dtm_anchor=from_planting**, **sow_depth ABSENT** (division is not seed-sown, so the gate does not require it), **divide_every_years=3** (divide to renew/multiply), cut-and-come harvest_window. This establishes the herbaceous-perennial pattern for the campaign.
+
+**Verify.** SHA-guarded: EXACTLY the 7 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `3b5342a6` -> `ecaf7a7a`. Gates: timing_spine_gate 0 violations (coverage 41/124), whole_crop_gate PASS on all 7, register_completeness_gate PASS. amend-not-recert field_additions per crop.
+
+**SPINE PROGRESS: 41/114 certified.** The structuring tier is nearly done -- only the cool-season stragglers remain (celery/potato/snow-peas/sugar-snap-peas). Then: ladder-authoring (warm-no-ladder 19 + flowers 13 + microgreens 8) and empty-DTM perennials (fruit trees 19 + berries 5 + woody herbs 5). Then the watering fill across all of them. origin at `7cdbafc`; the warm-structuring + this herb batch are unpushed (2 ahead).
+
 ## 2026-07-07 -- SPRING/SUMMER spine: WARM-SEASON STRUCTURING batch (11) (CONTENT release; `b6215df3` -> `3b5342a6`) [Claude Code]
 
 **First batch of the post-winter spine campaign.** Target: **91 certified crops** remain (the 10 uncertified shells -- 5 mushrooms + avocado/olive/sweet-corn/artichoke/asparagus -- are §E design-case, EXCLUDED). This batch = the warm-season crops that already carry a `day_range_from_sow` ladder, so structuring only: 5 tomatoes + edamame + green-beans-bush + pole-beans + okra + sweet-potato + tomatillo.
