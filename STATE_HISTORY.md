@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) B9 FLOWERS (consistent-moisture annuals + 2 perennials) batch (6) -- >> FLOWERS COMPLETE (13/13) << (CONTENT release; `e149c97a` -> `288a0b58`) [Claude Code]
+
+**Ninth watering batch, second flower batch -- completes the flowers (13/13).** calendula / sweet-alyssum / sweet-pea / viola (consistent-moisture annuals) + bee-balm / echinacea (herbaceous perennials). Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (annuals run germination -> seed; bee-balm `establishment`/`spring_regrowth`/`vegetative`/`budding`/`flowering`/`dormancy`; echinacea `establishment`/`vegetative`/`budding`/`flowering`/`seed_and_dormancy`).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard):**
+- **sweet-pea** -- `drought_tolerance: low` with HIGH water needs; does NOT tolerate drying (stalls growth, shortens stems, DROPS BUDS). The entire budding-to-bloom period is `critical` (`budding` + `flowering` both critical, freq `steady_never_dry`, "consistency matters more than volume"); `decline_seed` tapers as heat ends the run.
+- **viola** -- shallow-rooted; the signature rule is NEVER water in the evening (freq `even_morning_only`, "wet leaves and crowns overnight rot the plant") -- crown/root rot is its chief weakness. Morning watering only, surface allowed to dry slightly between.
+- **sweet-alyssum** -- shallow, moderate drought; the signature is the post-SHEARING recovery flush (`flowering` freq `even_plus_shear_reflush`, "shear it back and water a bit more to push a fresh wave as it cools"); stem/root rot its main weakness.
+- **calendula** -- COOL-weather consistent moisture (freq `consistent_cool_weather`, less in winter, more as it sizes up in spring); `budding` `critical` (drought at first bud cuts flower size/count).
+- **THE TWO PERENNIALS ARE OPPOSITES:**
+  - **bee-balm** -- the MOISTURE LOVER (`drought_tolerance: low to moderate`, "unlike drought-adapted Mediterranean herbs, resents drying out"); drought both stalls flowering AND worsens powdery mildew + spider mites; `establishment` `critical`, don't-dry throughout (freq `even_never_dry`).
+  - **echinacea** -- the drought-adapted TAPROOT: BACK OFF SHARPLY after year 1 (freq `back_off_rainfall_only` -> `rainfall_plus_drought_only`, "thrives on rainfall alone, supplemental water only in prolonged drought"); overwatering / constant moisture is CROWN ROT, "the plant's main killer"; `establishment` the ONE critical window; leave seedheads standing for a dry winter finish.
+- All six: base watering against mildew and crown rot.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 6 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +18000 bytes. `e149c97a` -> `288a0b58`.
+
+**Gates.** whole_crop_gate PASS x6; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 96/114** (90 prior + 6). >> **FLOWERS 13/13 COMPLETE.** << NEXT: microgreens(8), then citrus(5) + woody herbs(5, sparse tree pattern) -- the perennial judgment-call batches Trevor approved. Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) B8 FLOWERS (drought-adapted annuals) batch (7) (CONTENT release; `8d8f4807` -> `e149c97a`) [Claude Code]
 
 **Eighth watering batch, first of two flower batches: the lean, drought-adapted annual flowers.** borage / chamomile / cosmos / marigold / nasturtium / sunflower / zinnia. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + the shared annual-flower 6-stage set (`germination`, `seedling`, `established`, `budding`, `flowering`, `seed_saving`; sunflower uses `seed_ripening`).
