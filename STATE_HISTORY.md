@@ -6,6 +6,21 @@
 
 ---
 
+## 2026-07-07 -- FALL/WINTER timing-spine STRUCTURING TIER: leek/onion/lettuce-leaf/shallot (CONTENT release; `340d0b43` -> `fab330ce`) [Claude Code]
+
+**The cool-season crops that already had a `day_range_from_sow` ladder -- so only crop-level structuring, but this tier exercises all three DTM anchors.** Depths sourced from each crop's own cited T1 extension pages (WebFetch/WebSearch, umn/umd/usu/clemson).
+
+- **leek** (`from_transplant`): propagule=seed (indoor-started, transplanted ~10-15 wk old per UMN), sow_depth_inches=[0.25,0.5] SEED depth (USU/UMD "1/4 to 1/2 inch"; the 6-inch dibble hole in the prose is the TRANSPLANT blanching depth -- explicitly NOT the seed depth), harvest_window_days=[30,90] (dug fresh "from fall into winter"; UMN "into late fall" + frost-standing).
+- **onion** (`from_planting`): grown 3 ways (seed/transplant/set) -- authored to the SET primary (UMN "easiest of all"): propagule=set, sow_depth_inches=[1,2] (UMN 2in / UMD 1in / Clemson 1.5in), harvest_window absent (one-shot dig when tops flop + cure, like garlic). ALTERNATIVES recorded in provenance: seed=from_sow, transplant=from_transplant.
+- **lettuce-leaf** (`from_sow`): propagule=seed, sow_depth_inches=[0.125,0.25] (shallow, light-germinating -- UMD ~1/4in, "leave uncovered or very lightly covered"), thin_to_inches=[6,8], harvest_window_days=[21,42] (cut-and-come-again, outer leaves / cut-back over ~3-6 wk before bolting).
+- **shallot** (`from_planting`): propagule=set (prose "grow from sets"), sow_depth_inches=[1,2] (prose "push sets 1 to 2 inches deep"), one-shot dig. Its ladder order was corrected earlier in `cb6afdd`; this adds the spine fields. Can also be seed-started (weeks_indoors=8) -- authored to the set primary.
+
+**Verify.** SHA-guarded: EXACTLY the 4 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `340d0b43` -> `fab330ce`. Gates: timing_spine_gate 0 violations (coverage 14/124), whole_crop_gate PASS on all 4, register_completeness_gate PASS. No NEW warnings (the one lettuce harvest-vs-DTM warning is the pre-existing cut-and-come advisory from the Phase 1 baseline; it is `from_sow` and legitimately harvests early).
+
+**STRATEGY RULED (Trevor 2026-07-07): depth-first on the winter set.** Finish the timing SPINE across all winter crops, then a winter-crop WATERING fill (register #5 per-stage watering) -- completely wrapping the in-season set (the crops being planted now) before moving to the rest of the 114. Rationale: fully-authored vertical slice for the app design; seasonally aligned; spring/summer wait for their season. Cost: each winter crop touched twice (spine, then watering) -- negligible.
+
+**NEXT (finish the winter spine).** The from-scratch-ladder winter crops: broccoli, cauliflower, cabbage, kale, kohlrabi, bok-choy, collards + swiss-chard, spinach -- author the germination + stage ladder AND the anchor (mostly from_transplant for the coles), the brussels-sprouts method. Then the register-#5 watering fill across the ~22-crop winter set. Trevor confirms push (`cb6afdd` + `46da603` + `95186a5` + `2e78d84` + this = 5 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- BRUSSELS-SPROUTS: from_transplant + from-scratch ladder (CONTENT release; `b0e53ddc` -> `340d0b43`) [Claude Code]
 
 **First crop of the fall/winter LADDER-AUTHORING tier (crops with no `day_range_from_sow`), and the first `from_transplant` crop. PRIORITIZED -- Trevor is sowing seedling trays this week, so he needed real timing now.** Demonstrates the harder path: author the full stage ladder from scratch + the transplant anchor + a real harvest window.
