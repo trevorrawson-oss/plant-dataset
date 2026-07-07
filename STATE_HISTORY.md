@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W2 PEPPERS + EGGPLANT batch (6) (CONTENT release; `ff81e234` -> `2ddfe92b`) [Claude Code]
+
+**Second watering batch: the Solanaceae fruiting crops that are not tomatoes.** bell / banana / cayenne / jalapeno peppers + habanero + eggplant. Each `watering.schedule_by_stage[]` authored INDIVIDUALLY from that crop's own certified watering prose + its own 6 growth-stage ids (`germination`, `seedling`, `transplanting`, `flowering`, `fruiting`, `harvest` -- a different stage set from the tomatoes' `established`/`end_of_season`). Indoor-start tray stages -> water-in at transplant -> the critical flowering/fruiting window -> continued-harvest.
+
+**Per-crop distinctions surfaced (the blanket-authoring guard -- these six share an archetype but diverge sharply):**
+- **jalapeno** -- THE signature case. Its own prose carries a trait peculiar to hot peppers: a mild, deliberate water pull as the pods ripen raises their heat, so a jalapeno grown slightly lean and dry late is often the hottest. Encoded at `harvest` as `frequency: ease_dry_late_for_heat`, surfaced in BOTH registers ("letting jalapenos run a little dry as they ripen makes them hotter... but do not dry the plant out completely"). Leaner target: 1 in/week to 6-8 in, like eggplant, not the 1-2 in of the sweet peppers.
+- **habanero** -- the ONLY pepper with `drought_tolerance: moderate` (the other four are `low`). Prose: "handles heat and short dry spells better than most peppers," "tolerates a missed watering better than a bell pepper." Encoded as `harvest` `level: low` (freq `weekly_more_in_heat`); the `fruiting` note names the forgiveness without leaning on it during set. Also flagged as the slowest pepper to germinate.
+- **eggplant** -- NOT prone to blossom-end rot, unlike all five peppers. Its dry-wet failure mode is dropped blossoms and small/bitter/misshapen fruit, stated explicitly in the `flowering`/`fruiting` notes ("unlike peppers, eggplant is not prone to blossom-end rot, so the failure mode of dry-wet swings here is dropped blossoms, not fruit rot"). Susceptible to Phytophthora + bacterial wilts, not BER. 1 in/week to 6-8 in.
+- **bell / banana / cayenne** -- the classic pepper BER profile: 1-2 in/week to 6 in, `drought_tolerance: low`, Phytophthora on heavy/wet ground, mulch as the single most useful BER habit. banana notes its "long, tapered fruit"; cayenne is the warm-season crop transpiring "through the hottest part of the year."
+- All six: `flowering` + `fruiting` = `critical` (blossom drop / abscission and, for peppers, the BER window); `germination`/`seedling` = `standard` with the slow hot-pepper/eggplant sprout noted for cayenne/jalapeno/habanero/eggplant.
+
+**Splice + guards.** SHA-guarded: EXACTLY the 6 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +18555 bytes. `ff81e234` -> `2ddfe92b`.
+
+**Gates.** whole_crop_gate PASS x6; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default "expected only cherry-tomato" concern, as before). Pre-commit release-verify backstop also green.
+
+**Coverage: watering 55/114** (49 prior + 6). warm_season_fruiting: 11/30 filled (5 tomatoes + 6 here). NEXT: W3 cukes(4)+summer squash(2), W4 winter squash/pumpkin(4)+melons(3), W5 legumes/okra/tomatillo/sweet-potato(6), then cool stragglers(4), herbs(5), flowers(13), microgreens(8), citrus(5)+woody herbs(5). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W1 TOMATOES batch (5) (CONTENT release; `6f584c3b` -> `ff81e234`) [Claude Code]
 
 **The post-spine watering fill begins.** With the timing spine complete (114/114), register #5 authors per-stage `watering.schedule_by_stage[]` across the 70 certified crops still carrying an empty placeholder. Trevor approved the 12-batch plan (warm_season_fruiting first, since alpha testers are planting those now) and ruled the perennial judgment call: citrus (5) and woody herbs (5) DO get per-stage watering, in the sparse tree pattern, as the final two batches. This batch is the 5 tomatoes.
