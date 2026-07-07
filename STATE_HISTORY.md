@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) W6 COOL-SEASON STRAGGLERS batch (4) (CONTENT release; `ccf0bd1f` -> `26b4e5a3`) [Claude Code]
+
+**Sixth watering batch: the cool-season crops the warm campaign left behind.** celery + potato + snow-peas + sugar-snap-peas. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (three distinct stage sets).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard):**
+- **celery** -- THE thirstiest of the common vegetables and the least forgiving of any dry spell (marsh-descended, shallow-rooted, "no slack period where it tolerates drying"). 4 stages (`germination`, `seedling`, `established`, `harvest`); `established` + `harvest` both `critical` with freq `constant_never_dry` (1-2 in/week applied OFTEN, not one deep soak). Any dry-down turns the petioles stringy, pithy, and bitter IRREVERSIBLY; heat-plus-drought triggers bolting; base watering with the canopy and crowded crown kept dry against blight and pink rot.
+- **potato** -- 5 stages (`sprouting`, `vegetative`, `tuber_initiation`, `bulking`, `harvest`). `sprouting` is `standard` but flagged that waterlogging ROTS the seed pieces (freq `moderate_dont_overwater`). `tuber_initiation` + `bulking` both `critical`: the dry-then-wet swing gives knobby growth, growth cracks, HOLLOW HEART, and worsens SCAB (freq `steady_never_dry_to_wet`). `harvest` TAPERS as the vines yellow to set skins for storage (freq `taper_to_set_skins`, level `low`). (Structurally parallels sweet-potato from W5, but the specific defect set -- scab + hollow heart + growth cracks + blight -- is potato's own.)
+- **snow-peas + sugar-snap-peas** -- pea vines, 6 stages. The distinctive part: cool-weather `vegetative` "asks relatively little," so it is freq `modest_in_cool_weather` with an explicit "do not overwater a cool-season crop before it flowers" (a LOW pre-flower need, unlike the warm crops). `flowering` + `pod_development` both `critical`; morning base watering against powdery mildew and Ascochyta; Clemson's 6-inch depth; pea seed rots in cold, wet ground. **Pea divergence at pod fill:** snow-peas drought gives small, tough, STRINGY flat pods; sugar-snap drought leaves the pods thin and poorly filled so they "never plump up into a proper snap pod."
+
+**Splice + guards.** SHA-guarded: EXACTLY the 4 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +11204 bytes. `ccf0bd1f` -> `26b4e5a3`.
+
+**Gates.** whole_crop_gate PASS x4; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**Coverage: watering 78/114** (74 prior + 4). NEXT: W7 culinary herbs(5: chives/cilantro/dill/mint/parsley), then flowers(13), microgreens(8), citrus(5)+woody herbs(5, sparse tree pattern). Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) W5 LEGUMES/OKRA/TOMATILLO/SWEET-POTATO batch (6) -- >> WARM_SEASON_FRUITING COMPLETE (30/30) << (CONTENT release; `d19a755c` -> `ccf0bd1f`) [Claude Code]
 
 **Fifth watering batch, and it completes the whole warm_season_fruiting group (30/30) -- the in-season crops alpha testers are planting now.** edamame / green-beans-bush / pole-beans + okra + tomatillo + sweet-potato. Each `watering.schedule_by_stage[]` from that crop's own certified watering prose + its own stage ids (three distinct stage sets in one batch).
