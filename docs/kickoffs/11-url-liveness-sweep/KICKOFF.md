@@ -64,11 +64,12 @@ whole reason to run it in a fresh chat.
    corrected `source_catalog` URLs (or drop the dead ones). Not before (would spread the dead PDF).
 
 ## Companion cleanups (optional, same session -- also "finish the 114")
-- **onion photoperiod latitude fan** (a §C leftover Trevor flagged): `onion.photoperiod.explainer_seasoned`
-  gives long-day ">38 to 39°N", short-day "<35°N", intermediate "32 to 42°N" -- the intermediate band
-  overshoots into long-day territory (42°N) and overlaps both. **Trevor to confirm the fix**; if yes,
-  verify onion day-length-by-latitude against a T1 extension source and tighten (likely intermediate
-  ~32-38°N), SHA-guarded onion-only. (The `°N` notation itself is correct -- only the numbers.)
+- **onion photoperiod latitude fan -- RESOLVED 2026-07-06, NO CHANGE NEEDED (do not re-chase).**
+  `onion.photoperiod.explainer_seasoned`'s overlapping bands (long-day ">38 to 39°N", short-day "<35°N",
+  intermediate "32 to 42°N") LOOK like an error but are correct: extension sources (USU Extension + others)
+  confirm intermediate onions are "best 35-38°N but adapted for production to latitude 42°N," and the
+  three bands genuinely overlap because day-length response is a gradient. Verified against source; the
+  numbers + the `°N` notation are accurate. Nothing to fix here.
 - **§D `rhs` source-tier** (sage + broad-beans-fava): answered in principle by §A's ASPCA precedent (a
   non-`.edu` domain authority is admissible for the claim it is the authority on). For sage, NCSU already
   co-states the pruning caution verbatim, so `rhs` is droppable there with zero loss; re-check
