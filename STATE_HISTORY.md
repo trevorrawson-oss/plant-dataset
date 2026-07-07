@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) BRASSICAS batch (8) (CONTENT release; `1b34b15f` -> `54b720fc`) [Claude Code]
+
+**Third watering archetype (the biggest): broccoli/cauliflower/cabbage/kale/brussels-sprouts/kohlrabi/bok-choy/collards. Each authored individually from its own certified watering prose + stages; the distinct failure modes are what prove it is per-crop.**
+
+- **cauliflower** -- the least forgiving: a single dry check even on a young plant triggers buttoning, so the seedling + established + curd stages are all `critical`.
+- **cabbage** -- head_forming critical; harvest note is the split-avoidance (ease off at maturity; a sudden soak on a ready head splits it; twist/harvest if heavy rain threatens).
+- **kohlrabi** -- bulbing critical: steady or a dry-then-wet swing makes the bulb woody/cracks it; harvest promptly at tennis-ball size.
+- **bok-choy** -- shallow-rooted, established critical: drought/heat triggers bolt + bitterness (UMN); pull young.
+- **broccoli** -- head_forming critical for quality (heat/drought -> loose/bitter); a side_shoots stage that keeps cropping for weeks after the main head.
+- **brussels-sprouts** -- established (frame) + sprout_formation both critical over the long season; harvest bottom-up, frost-sweetened.
+- **kale / collards** -- the cut-and-come leaf-production stage is the quality window (even = tender/mild, drought = tough/strong); collards note extra water in summer heat; both carry an overwintering stage = minimal water in cold, frost-sweetened.
+
+**Verify.** SHA-guarded: EXACTLY the 8 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `1b34b15f` -> `54b720fc`. Gates: whole_crop_gate PASS on all 8 (A36 0, A25 0, C/D dash+temp 0 on new prose), register_completeness_gate PASS. amend-not-recert field_additions per crop.
+
+**PROGRESS: winter watering 18/23** (roots + alliums + brassicas). NEXT (final winter watering batch): greens + fava (5: lettuce-leaf/spinach/swiss-chard/arugula/broad-beans-fava). Then winter is COMPLETELY WRAPPED (spine + watering) -> the app handoff. Trevor confirms push (9 releases pending at origin `f690821`).
+
 ## 2026-07-07 -- WATERING FILL (register #5) ALLIUMS batch: garlic/onion/shallot/leek/spring-onion (CONTENT release; `5c763d47` -> `1b34b15f`) [Claude Code]
 
 **Second watering archetype. The alliums have DIFFERENT stage structures from each other (garlic 6, onion/shallot 5, leek 5, spring-onion 4), so each schedule_by_stage maps to that crop's own stages -- the clearest case yet that this is per-crop, not templated.**
