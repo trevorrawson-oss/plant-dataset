@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-07-07 -- REGISTER #7 CLIMATE THRESHOLDS -- ROLLOUT COMPLETE (106 outdoor certified crops) (CONTENT release; `d3a6912f` -> `6659042d`) [Claude Code]
+
+**Register #7 is done: `heat_threshold_f` + `heat_effect` + `frost_tolerance_f` + `frost_effect` + `chilling_sensitivity_f` on all 106 outdoor certified crops.** The notifications/WeatherKit build now has structured firing numbers for deterministic heat/frost/chilling alerts, no LLM required.
+
+**Decisions confirmed (from the Phase-1 flags):** Trevor confirmed keeping the two `*_effect` enums (decision #1 — they make the deterministic alert MESSAGE accurate: "your lettuce may bolt" vs "your tomato may drop blossoms", without an LLM) and adding `chilling_sensitivity_f` (decision #2). The C11 enum ruling (#3) stands.
+
+**`chilling_sensitivity_f`** — the new third field. Numeric-only (chilling damage is uniform, so no effect enum — unlike heat's crown/bolt/set split), `null` = reviewed-N/A (cold-adapted crop). SET only for the classic chilling-sensitive GROWING plants: Solanaceae 45-50, cucurbits 41-50, okra 45, sweet-potato 50, basil 50, lemongrass 40. Cold-tolerant legumes (beans/edamame) and every cool-season / hardy / perennial crop are N/A.
+
+**Rollout mechanics.** 6 archetype batches via a reusable `apply_climate.py` splicer (guards each field absent, count 124, canonical COMPACT): warm-fruiting (30), cool-season (25), herbs (12), flowers (13), woody perennials — citrus/berries/trees (24), + a 2-crop pilot-chill top-up (broccoli/kale). Each number sourced from the crop's own certified prose where present. The gate got the chilling checks (range + `frost < chilling < heat` coherence, TDD-verified) and an `INDOOR_SLUGS` set.
+
+**Semantic calls made during the pass (documented in the contract's ROLLOUT section so the notification engine reads the numbers correctly):**
+- **Fruit-tree `frost_tolerance_f` = the spring BLOSSOM/bud frost point (~28°F, `foliage_damaged`)**, NOT winter wood hardiness. That is the actionable in-season alert ("cover the bloom"); winter wood hardiness is a zone/site concern the crop's zone data covers, and a dormant tree ignores a 28°F night. Tender subtropical trees are the exception and use their wood hardiness (fig 18, pomegranate 12). The `frost_effect` enum disambiguates `killed` (annual dies) vs `foliage_damaged` (perennial blossoms/leaves damaged, plant survives) — the enum earning its keep a second time.
+- **"Chill hours" ≠ chilling injury.** The "hours below 45°F" prose on apples/pears/berries is a dormancy REQUIREMENT (the tree needs that cold), not damage → those crops get `chilling` N/A, never a value.
+- **Storage vs growing-plant chilling.** Much cucurbit/tomato "chilling below 50°F" prose is post-harvest storage advice; `chilling_sensitivity_f` is the GROWING-plant threshold (same physiology, close numbers), with frost handling the freeze-kill case.
+- **Microgreens (8) = N/A-indoor.** Indoor tray crops, no outdoor weather exposure, so all three fields are legitimately N/A (same class as the uncertified mushrooms). Fields left absent; the gate's `INDOOR_SLUGS` reports them as N/A-indoor rather than TODO (no enum contortion).
+- **Very-hardy crops without a crop-specific in-prose number** (overwintering alliums, hardy herbs, deciduous-tree winter hardiness) use their established USDA-zone hardiness — standard horticulture, archetype-sourced, not invented precision.
+
+**Coverage (of 114 certified; 8 microgreens N/A-indoor, excluded):** heat SET 46 / N-A 60; frost SET 106; chilling SET 29 / N-A 77. The only TODO is the 10 uncertified §E shells (artichoke, asparagus, avocado, olive, sweet-corn + 5 mushrooms), out of scope.
+
+**Splice + guards.** SHA-guarded across the batches: EXACTLY 106 outdoor certified crops changed vs base, all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline). `d3a6912f` -> `6659042d`.
+
+**Gates.** climate_threshold_gate PASS (0 violations); register_completeness PASS; whole_crop_gate PASS (broad archetype sample); release_verify vs HEAD no new violations, top-level unchanged (the "reference lettuce-leaf CHANGED" concern is expected — lettuce got its thresholds like every other crop). Pre-commit backstop expected green.
+
+**FOLLOW-ONS:** fold the three fields into the per-crop GS-arc checklist so newly-certified crops (and the 10 uncertified shells at their certification) get them natively; optional `*_night_f` companion for the night-temperature effects deferred from v1 (tomato/pepper warm-night poor set, cold-night <55°F pollen failure). Register #6 (seedling light) Trevor runs in a fresh session. This rollout is the 14th unpushed commit; Trevor confirms every push.
+
+---
+
 ## 2026-07-07 -- REGISTER #7 CLIMATE THRESHOLDS -- PHASE 1: contract + TDD gate + 6-crop pilot (CONTENT release; `b15a5a0f` -> `d3a6912f`) [Claude Code]
 
 **The head-start for the notifications/WeatherKit build (~week of 2026-07-14).** Register #7 promotes per-crop heat cutoff / frost tolerance from PROSE into STRUCTURED numeric fields, so a cheap DETERMINISTIC weather trigger (`forecast_high > heat_threshold_f`, `forecast_low < frost_tolerance_f`) fires without an LLM (memory `notifications-ai-architecture`). This is a column GS arc; **Phase 1 only — the ~108-crop ROLLOUT is HELD for Trevor's sign-off on the semantic decisions below.**

@@ -1,7 +1,9 @@
-# Climate-thresholds field contract (register #7) — v0 (Phase 1)
+# Climate-thresholds field contract (register #7) — v1 (rollout complete)
 
-**Status:** contract + TDD gate + diverse pilot done; **the semantic decisions below are Trevor's to
-confirm before the full-roster rollout.** Follows the column-GS-arc method
+**Status:** **ROLLOUT COMPLETE 2026-07-07** — all 106 outdoor certified crops carry the three fields
+(the 8 microgreens are N/A-indoor; the 10 uncertified §E shells are out of scope). Trevor confirmed
+decision #1 (keep the `*_effect` enums) and #2 (add `chilling_sensitivity_f`); see the ROLLOUT section
+at the bottom for the semantic calls made during the pass. Follows the column-GS-arc method
 (`docs/gs_cross_crop_field_addition_v0.md`): lock the field spec, prove it on a diverse pilot
 (including the legitimately-N/A case), gate it, then roll out with a coverage report.
 
@@ -96,3 +98,45 @@ Author the two fields across the remaining ~108 certified crops from each crop's
 archetype, SHA-guarded, gate-clean — then fold into the per-crop checklist (GS-arc §5) and publish the
 coverage report. Heat-lovers (okra, sweet corn, melons, sweet potato, eggplant, edamame, the warm
 flowers) take `heat_tolerant`/`null`; cool-season crops and pollen-limited fruiters take a threshold.
+
+---
+
+## ROLLOUT (2026-07-07) — all three fields across 106 outdoor certified crops
+
+Trevor: keep the effect enums (yes), add `chilling_sensitivity_f` (yes). Rolled out in 6 archetype
+batches (warm-fruiting 30, cool-season 25, herbs 12, flowers 13, woody perennials 24, + pilot-chill 2),
+each SHA-guarded and gate-clean. Coverage now: heat SET 46 / N-A 60, frost SET 106, chilling SET 29 /
+N-A 77; the only TODO is the 10 uncertified shells.
+
+**`chilling_sensitivity_f`** — added as decided. Numeric-only (no effect enum; chilling damage is
+uniform). `null` = reviewed-N/A (cold-adapted crop). SET only for the classic chilling-sensitive
+GROWING plants (Solanaceae ~45-50, cucurbits 41-50, okra 45, sweet-potato 50, basil 50, lemongrass 40);
+cold-tolerant legumes (beans/edamame) and all cool-season/hardy/perennial crops are N/A.
+
+**Semantic calls made during rollout (documented so the notification engine reads them right):**
+- **Fruit-tree `frost_tolerance_f` = the spring blossom/bud frost point (~28°F, `foliage_damaged`)**,
+  NOT winter wood hardiness. Rationale: that is the actionable in-season weather alert ("cover the
+  bloom / expect blossom loss"); winter wood hardiness is a zone/site concern the crop's zone data
+  already covers, and a dormant tree ignores a 28°F night. Tender subtropical trees are the exception
+  and use their wood hardiness (fig 18, pomegranate 12) since that IS their actionable freeze alert.
+  The `frost_effect` enum disambiguates: `killed` (annual dies) vs `foliage_damaged` (perennial
+  blossoms/leaves damaged, plant survives) — this is the second place the effect enum earns its keep.
+- **"Chill hours" ≠ chilling injury.** The "hours below 45°F" prose on apples/pears/berries/etc. is a
+  dormancy *requirement* (the tree NEEDS that cold), not damage — so those crops get `chilling` N/A,
+  never a `chilling_sensitivity_f` value.
+- **Storage vs growing-plant chilling.** Much cucurbit/tomato "chilling below 50°F" prose is
+  post-harvest storage advice; `chilling_sensitivity_f` is the GROWING-plant threshold (same
+  physiology, close numbers), and the frost field handles the freeze-kill case separately.
+- **Microgreens (8) = N/A-indoor.** Indoor tray crops with no outdoor weather exposure, so all three
+  fields are legitimately N/A (same class as the uncertified mushrooms). The gate's `INDOOR_SLUGS`
+  set reports them as N/A-indoor rather than TODO; the fields are left absent (not contorting the
+  enum semantics).
+- **Very-hardy crops without a crop-specific in-prose number** (overwintering alliums, hardy herbs,
+  deciduous-tree winter hardiness) use their established USDA-zone hardiness — standard horticulture,
+  noted as archetype-sourced, not invented precision.
+
+## Follow-ons
+- Fold the three fields into the per-crop GS-arc checklist (GS-arc §5) so newly-certified crops get
+  them natively. The 10 uncertified §E shells pick them up at certification.
+- Optional `*_night_f` companion for the night-temperature effects deferred from v1 (tomato/pepper
+  warm-night poor set, cold-night <55°F pollen failure).
