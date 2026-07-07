@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-07-07 -- WATERING FILL (register #5) B12 WOODY HERBS batch (5) -- >> REGISTER #5 COMPLETE: 114/114 CERTIFIED << (CONTENT release; `895e322a` -> `b15a5a0f`) [Claude Code]
+
+**Twelfth and FINAL watering batch -- register #5 is now complete across all 114 certified crops.** lavender / oregano / rosemary / sage / thyme, the second perennial judgment-call batch. Same SPARSE tree pattern as B11: 3 key-stage entries each using a SUBSET of the crop's real `growth_stages` ids -- `establishment`, `vegetative`, `dormancy`.
+
+**Shared archetype -- MEDITERRANEAN, the OPPOSITE of mint (W7):** `drought_tolerance: high`; deep-and-infrequent; taper SHARPLY after the first establishment season; every one of the five states outright that "the most common way to kill it is overwatering, when in doubt water less"; water at the base and keep foliage/crown dry; `dormancy` = minimal, and the crown must not sit in wet winter soil (crown/root rot).
+
+**Per-crop distinctions surfaced (the blanket-authoring guard):**
+- **lavender** -- the only one with SPECIFIC amounts: ~1 gallon/plant/week establishing, ~1/2 gallon every two weeks once mature until buds form, then 1-2x/week through bloom (the bloom uptick folded into the `vegetative` note); Phytophthora root/crown rot.
+- **oregano** + **thyme** -- container plants dry faster; FLAVOR weakens in soft, over-watered growth (the flavor angle unique to these two).
+- **rosemary** -- "proper drainage is the real secret"; yellowing needles/browning tips as the over-wet tell.
+- **sage** -- powdery mildew from wet foliage; "produces a bit more leaf with occasional deep watering."
+
+**Splice + guards.** SHA-guarded: EXACTLY the 5 changed (changed-set == targets), all other crops + every top-level key byte-identical, count 124, canonical COMPACT (no trailing newline), +8924 bytes. `895e322a` -> `b15a5a0f`.
+
+**Gates.** whole_crop_gate PASS x5; register_completeness PASS; dash/temp scan 0 on the new prose; release_verify vs HEAD = no new violations, top-level(non-crops) + catalog unchanged, reference byte-identical (only the single-crop-default concern). Pre-commit release-verify backstop green.
+
+**>> REGISTER #5 WATERING FILL COMPLETE: watering 114/114 CERTIFIED. <<** The 10 crops still without `schedule_by_stage` are exactly the UNCERTIFIED §E shells (artichoke, asparagus, avocado, olive, sweet-corn + the 5 mushrooms), correctly excluded from a certified-only field. Register #5 was authored across 12 batches today (W1 tomatoes, W2 peppers+eggplant, W3 cukes+summer squash, W4 winter squash+melons, W5 legumes/okra/tomatillo/sweet-potato -- completing warm_season_fruiting 30/30 -- W6 cool stragglers, W7 herbs, B8+B9 flowers 13/13, B10 microgreens, B11 citrus, B12 woody herbs), each crop authored INDIVIDUALLY from its own certified watering prose (never an archetype template; per-crop distinctions surfaced every batch), SHA-guarded to exactly the intended crops, and gate-clean (whole_crop_gate + register_completeness + dash/temp + release_verify + the pre-commit backstop, every batch). The 44 crops that already had per-stage watering (23 winter + 21 trees/berries) were untouched.
+
+**NEXT (Trevor's confirmed order):** register #6 SEEDLING LIGHT -- the CHEAP default (bright, ~14-16 h under lights + a few documented exceptions, NOT a per-crop authored column, per Trevor's ruling) -- then register #7 STRUCTURED CLIMATE THRESHOLDS (`heat_threshold_f`/`frost_tolerance_f` promoted from prose for the notifications + WeatherKit build; see memory `notifications-ai-architecture`). Trevor confirms every push: 12 watering commits are held for his confirmation.
+
+---
+
 ## 2026-07-07 -- WATERING FILL (register #5) B11 CITRUS batch (5) (CONTENT release; `2a793ea9` -> `895e322a`) [Claude Code]
 
 **Eleventh watering batch, and the FIRST of the two perennial judgment-call batches Trevor approved.** grapefruit / lemon / lime / mandarin-clementine / orange-navel. Trevor's ruling: the evergreen citrus and woody herbs DO get per-stage watering, in the SPARSE tree pattern.
