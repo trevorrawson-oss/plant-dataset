@@ -6,6 +6,20 @@
 
 ---
 
+## 2026-07-07 -- SPRING/SUMMER spine: LADDER-AUTHORING SOLANACEAE batch (6) (CONTENT release; `c44b0790` -> `898b581f`) [Claude Code]
+
+**First ladder-authoring batch of the spring/summer campaign** -- from-scratch germination->harvest ladders (the winter-brassica method), not just structuring. bell/banana/cayenne/jalapeno/habanero peppers + eggplant.
+
+**Why these six share a clock.** All are indoor-started ONLY (`start=indoors`, `weeks_before` 8-10; peppers/eggplant cannot be direct-sown in most of the country) -> `dtm_anchor=from_transplant`. Critically, their `growth_stages` carry an explicit **`transplanting` stage** that marks the 8-10 week indoor phase. That stage can only be placed on the **full from-sow clock** (day 0 = sow indoors): germ from sow, seedling grows indoors, transplant lands ~`weeks_before`*7, and **harvest = DTM_from_transplant + weeks_before*7**. This is the same true-from-sow model broccoli uses, and it necessarily puts the harvest stage ABOVE the from-transplant DTM -> all 6 trip the **harvest-vs-DTM ADVISORY** (warnings-only, gate exit 0; the documented from_transplant offset).
+
+- **peppers** (wb=8 -> +56 d, except habanero wb=10 -> +70 d): germ 7-14 d (habanero SLOWEST at 10-21 d, `Capsicum chinense`, per prose); harvest = DTM+indoor -> bell [116,146] (DTM 60-90), banana [126,141] (70-85), cayenne/jalapeno [126,136] (70-80), habanero [160,170] (90-100).
+- **eggplant** (wb=8 -> +56 d): germ 7-14 d ("slower and warmer than tomato"); harvest [121,141] (DTM 65-85).
+- crop-level (all 6): `propagule=seed`, `sow_depth_inches=[0.25,0.5]` (prose "about a quarter inch"), **NO `thin_to`** (transplanted at final 12-24 in spacing, not thinned), `harvest_window_days=[30,90]` (everbearing, picked over the season -- matches the tomato/tomatillo siblings).
+
+**Verify.** SHA-guarded: EXACTLY the 6 crops changed, all others + every top-level key byte-identical, count 124, COMPACT no trailing newline. `c44b0790` -> `898b581f`. Gates: timing_spine_gate **0 violations** (coverage 51/124; the 6 new harvest-vs-DTM entries are advisories, exit 0), whole_crop_gate PASS on all 6, register_completeness_gate PASS. amend-not-recert `field_additions` per crop.
+
+**SPINE PROGRESS: 51/114 certified.** NEXT (same warm-no-ladder tier): the CUCURBITS (13: cucumbers 4 + squash/pumpkin 6 + melons 3) -- all `start=both` but direct-sow-primary (cucurbits resent transplanting) -> `from_sow`, clean from-sow clock, harvest ~= DTM. Then flowers 13 + microgreens 8, then the empty-DTM perennials, then the watering fill. origin at `7cdbafc`; 4 ahead unpushed.
+
 ## 2026-07-07 -- SPRING/SUMMER spine: STRUCTURING STRAGGLERS batch (4) (CONTENT release; `ecaf7a7a` -> `c44b0790`) [Claude Code]
 
 **Third post-winter batch. The last of the structuring tier -- all 4 already had ladders, so this is pure field-structuring, not ladder-authoring. With it the entire STRUCTURING TIER is complete; everything remaining in the spine is ladder-authoring or empty-DTM perennials.** Each crop authored INDIVIDUALLY from its own certified prose (blanket-authoring guard held); the four are deliberately un-alike:
