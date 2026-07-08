@@ -1,0 +1,26 @@
+{
+ "base_sha": "9da54073c5ee694c20512b86321aa144ecfbe6f9f60f9ebf4c8691874dd8c04f",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='pawpaw')].germination_temp_f",
+   "from": [],
+   "value": [
+    75,
+    85
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='pawpaw')].start_method.notes_beginner",
+   "from": "Plant in spring, as the tree is starting to grow or soon after, and use a potted tree, not a bare-root one. Pawpaw has a deep, easily broken taproot and does not like having its roots disturbed, so a tree grown in a pot moves much more successfully than one dug from a field. Dig a hole as wide as the pot and no deeper, keep the root ball intact, set the tree at the same depth it was in the pot, fill back in with the soil you dug out mixed with compost, water it in well, and mulch. Shade the young tree for its first year or two and keep the soil evenly moist.",
+   "value": "Plant in spring, as the tree is starting to grow or soon after, and use a potted tree, not a bare-root one. Pawpaw has a deep, easily broken taproot and does not like having its roots disturbed, so a tree grown in a pot moves much more successfully than one dug from a field. Dig a hole as wide as the pot and no deeper, keep the root ball intact, set the tree at the same depth it was in the pot, fill back in with the soil you dug out mixed with compost, water it in well, and mulch. Shade the young tree for its first year or two and keep the soil evenly moist. Growing pawpaw from seed is a slow project. Never let the seed dry out, and give it about three months of cold, moist chilling in the refrigerator (or sow it outdoors in fall) before it will sprout. After chilling, sow one seed about an inch deep in a tall, deep pot so its long taproot has room, and keep it warm, around 75 to 85°F; the root grows down first and the shoot can take about two months to appear. Shade the seedling and keep it moist. Because of that deep, easily damaged taproot, most gardeners start with a potted tree instead."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='pawpaw')].start_method.notes_seasoned",
+   "from": "Plant in spring, as new growth is starting or just after, from a container rather than bare-root. Pawpaw has a deep, brittle taproot and resents disturbance, so a potted tree transplants far more reliably than a field-dug or bare-root one. Dig a hole as wide as the root ball and no deeper, disturb the roots as little as possible, set the tree at the same depth it grew in the pot, backfill with the native soil enriched with compost, water in well, and mulch. Shade the young tree for its first season or two and keep it consistently moist.",
+   "value": "Plant in spring, as new growth is starting or just after, from a container rather than bare-root. Pawpaw has a deep, brittle taproot and resents disturbance, so a potted tree transplants far more reliably than a field-dug or bare-root one. Dig a hole as wide as the root ball and no deeper, disturb the roots as little as possible, set the tree at the same depth it grew in the pot, backfill with the native soil enriched with compost, water in well, and mulch. Shade the young tree for its first season or two and keep it consistently moist. From seed, pawpaw is a patient project: the seed is short-lived and must never dry out, and it needs about 70 to 100 days of cold, moist stratification near 40°F (or a fall outdoor sowing) to break dormancy. After stratifying, sow one seed about an inch deep in a tall tree pot or root trainer to accommodate the deep, fragile taproot, and hold it warm at roughly 75 to 85°F; the taproot emerges first and the shoot may not break the surface for around nine weeks. Shade the seedling its first year or two. Given the brittle taproot and long timeline, most growers still start from a potted grafted tree."
+  }
+ ]
+}
