@@ -6,7 +6,40 @@
 
 ---
 
-## 2026-07-07 -- REGISTER #7 CLIMATE THRESHOLDS -- ROLLOUT COMPLETE (106 outdoor certified crops) (CONTENT release; `d3a6912f` -> `6659042d`) [Claude Code]
+## 2026-07-07 -- REGISTER #6 SEEDLING/GERMINATION LIGHT -- COMPLETE (all 114 certified crops) (CONTENT release; `6659042d` -> `6990f1da`) [Claude Code]
+
+**Register #6 is done: `germination_light` + `seedling_light` (+ the reserved `seedling_light_cap_hours`) on all 114 certified crops.** The app now has structured germination guidance (surface-sow vs cover-to-exclude-light) + seedling-light guidance (avoid leggy seedlings), deterministic, no LLM.
+
+**Reopened as a question, brainstormed to a contract first.** Trevor reopened #6 as "is it standard or does it vary?" The research (logged in prior #7 state) had already settled the shape: SEEDLING light is standard (bright ~14-16h) with typed exceptions; GERMINATION light/dark need genuinely varies per crop. We brainstormed and locked the field contract (`docs/seedling_light_contract.md`) BEFORE authoring -- enum values, the null/N-A policy, coverage-state definitions, all signed off.
+
+**THE FIELDS (crop-level, siblings of `germination_temp_f`):**
+- `germination_light` -- enum { `light_required`, `dark_preferring`, `neutral` }, or `null`. The genuinely per-crop fact (does the SEED need light/dark/neither to sprout).
+- `seedling_light` -- enum { `bright_default`, `photoperiod_capped`, `na`, `blackout_then_bright` }. A default + typed exceptions (the seedling-under-lights regime).
+- `seedling_light_cap_hours` -- int, present iff `seedling_light == photoperiod_capped`.
+
+**THE N-A RULE (Trevor's source-of-truth call): `germination_light` SET iff realistically home-seed-startable, NOT iff `propagule == 'seed'`.** `propagule` still records the RECOMMENDED path; `germination_light` records the seed-germination fact IF you go from seed. So `propagule == 'seed'` MUST be SET; the seed-startable herbs (lavender/rosemary/thyme/sage/oregano/mint/chives/bee-balm/echinacea/pawpaw) are SET despite a transplant/division propagule -- do not erase a real, sourceable seed behavior just because we recommend buying a transplant. `null` = genuinely no home-from-seed path (grafted trees + brambles, citrus, blueberry, elderberry, garlic/onion/shallot/potato/sweet-potato/strawberry, lemongrass).
+
+**`seedling_light` is FULLY `weeks_indoors`-driven** (deterministic, gate-checkable, aligned to the app's indoor-start flow): `wi>0` -> `bright_default` (indoor tray-start phase); `wi in {0,None}` seed -> `na` (seedling stage is outdoors, direct-sown); non-seed -> `na`; microgreens -> `blackout_then_bright`. `photoperiod_capped` is RESERVED with 0 live members -- spinach (the textbook case) is direct-sown in our data so it is `na`; the reserved value + cap_hours are kept defined and proven via a synthetic RED-test injection, ready the moment a tray-started long-day bolt-sensitive crop lands.
+
+**Microgreens (8) are IN-scope for #6** (the opposite of #7, where they were N/A-indoor): `germination_light = neutral` (blackout is a stem-elongation technique, not a species requirement), `seedling_light = blackout_then_bright`. Seedling light is literally their whole growing method.
+
+**Classification method (Trevor: accuracy over cost).** Every one of the 85 SET crops individually adjudicated; grouped T1 sourcing (own certified prose where explicit + Johnny's/UC-ANR for the exceptions). Results: `light_required` 9 (celery/chamomile/sweet-alyssum/lettuce/lavender/oregano/rosemary/echinacea/mint), `dark_preferring` 4 (viola/calendula/nasturtium/sweet-pea), `neutral` 72, `null` 29. The neutral middle is documented covered-sown seed behavior, adjudicated not assumed.
+
+**Lettuce corrected pilot -> rollout: `bright_default` -> `na`** (Trevor-approved consistency fix). Lettuce is `wi=0` (direct-sow in our data), same bucket as arugula/spinach/chard; its `germination_light: light_required` still stands (a direct-sown crop can still need light to germinate).
+
+**Prose-verify-and-fill: no fills needed.** All 8 seed-propagule light/dark exceptions already carry the actionable sowing instruction (light ones say surface-sow/light; dark ones give the correct burial depth -- viola/calendula explicit, nasturtium ½in / sweet-pea 1in). The enum STRUCTURES existing prose so the app can act deterministically; it does not replace it. (Origin: Trevor's lettuce check -- "without the guidance I'd just sprinkle seeds on the ground" -- the guidance was already in lettuce's watering-stage note "sown barely covered, and germinates best in light".) The ~10 transplant-recommended herbs' fuller seed-start prose is a tracked follow-on.
+
+**The TDD gate + C11 ruling.** `tools/seedling_light_gate.py` (RED before GREEN): enum membership; present-only coherence (a seed crop may not be `null`); `cap_hours` present iff `photoperiod_capped`; `--coverage` report; microgreens IN-scope. 6 defect classes injected into scratch copies of the REAL canonical all bounced (exit 1); the clean canonical stayed green. C11: `germination_light`/`seedling_light` ruled into `register_completeness_gate.py` EXCLUDED_KEYS (backend enums, siblings of `heat_effect`/`frost_effect`); `cap_hours` numeric needs no ruling; regression PASS.
+
+**Splice + guards.** 7-crop pilot + 107-crop rollout, each field guarded absent, count 124, COMPACT no trailing newline. SHA-guarded: EXACTLY the 114 certified changed across the two passes; all top-level keys + the 10 uncertified §E shells byte-identical. Round-trip fidelity verified (re-serializing the untouched canonical reproduces the original bytes). `6659042d` -> `6990f1da`.
+
+**Coverage (of 114 certified):** `germination_light` SET 85 / N-A 29; `seedling_light` bright_default 49 / na 57 / blackout_then_bright 8; `photoperiod_capped` 0. Only TODO = the 10 uncertified §E shells (pick up the fields at certification).
+
+**Gates.** seedling_light_gate PASS (0 violations); register_completeness PASS; whole_crop_gate PASS across a broad archetype sample; release_verify vs HEAD no new violations (the batch-collateral "expected only broccoli" + broccoli-vs-cherry-tomato region-key-diff concerns are expected/pre-existing -- #6 touched only crop-level fields, not regions).
+
+**FOLLOW-ONS:** (a) **Register-coverage HARD gate -- RETROACTIVE #4-#7 + #6** (Trevor decided to build; DEFERRED to after #6 lands or a fresh-session kickoff; `field_addition_register.md` #8): today the register fields are guarded only softly (standalone gates fire WHEN PRESENT; "fold into checklist" is a process step), so a new crop can certify OMITTING them. Close it with a universal present-or-explicit-null cert gate modeled on `whole_crop_gate` A17 (npk) / A20 (display-readiness) -- every `verified_gs_arc` crop must carry each shipped register field or its defined null/N-A, turned on per field only after that field's rollout completes. (b) Seed-start METHOD prose (depth/temp/timing) for the ~10 transplant-recommended herbs whose `germination_light` is SET but seed-start prose is absent -- new register candidate. (c) Optional: promote `photoperiod_capped` from reserved to live if a tray-started long-day bolt-sensitive crop enters the roster. Trevor confirms every push: this is unpushed, held for confirmation.
+
+---
 
 **Register #7 is done: `heat_threshold_f` + `heat_effect` + `frost_tolerance_f` + `frost_effect` + `chilling_sensitivity_f` on all 106 outdoor certified crops.** The notifications/WeatherKit build now has structured firing numbers for deterministic heat/frost/chilling alerts, no LLM required.
 

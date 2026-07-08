@@ -104,6 +104,15 @@ EXCLUDED_KEYS = {
     # killed|foliage_damaged. The paired numeric thresholds (heat_threshold_f/frost_tolerance_f) are
     # ints -- out of the C11 string check, like germination_temp_f. See docs/climate_thresholds_contract.md.
     "heat_effect","frost_effect",
+    # SEEDLING/GERMINATION-LIGHT ENUMS (register #6, 2026-07-07; plant-app seedling + germination
+    # guidance): controlled-vocab backend enums the app's deterministic light-guidance layer consumes,
+    # siblings of `start`/`propagule`/`dtm_anchor`/`heat_effect`/`frost_effect` -- machine-read, NOT
+    # dual-register prose. germination_light = does the SEED need light/dark/neither to sprout
+    # (light_required|dark_preferring|neutral, or null=no-home-seed-path); seedling_light = the seedling
+    # light regime (bright_default|photoperiod_capped|na|blackout_then_bright). The paired numeric
+    # seedling_light_cap_hours is an int -- out of the C11 string check, like germination_temp_f /
+    # heat_threshold_f. See docs/seedling_light_contract.md.
+    "germination_light","seedling_light",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
