@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-07-08 -- HEAT-GAP INDOORS FLIP -- COMPLETE (22 cells) (CONTENT release; `9d1193eb` -> `1372c299`) [Claude Code]
+
+**During a summer `heat_pause`, the annual calendar now shows the actionable `indoors` (start your fall seedlings) instead of the passive `heat_pause` on any month that is a core month of a real indoor-start window.** An action-over-passive rule.
+
+**ORIGIN:** Trevor asked why broccoli `ca_interior` (interior valley) z9 shows "indoors in Nov but not July." Investigation: July IS the fall crop's indoor-start (`second_planting.start_indoors "Jun 20 - Aug 18"`), but the 12-month `calendar[]` showed July as `heat_pause` (the `indoors` token is lowest-precedence and was masked). The passive "too hot, wait" state hid the actionable "time to start indoors for fall."
+
+**THE INSIGHT (Trevor, brainstormed):** keep ONE token per cell, but let the actionable token win over the passive one **where a real action exists** -- "no reason to say indoors if it's a crop you don't plant indoors." Decisions locked in `docs/superpowers/specs/2026-07-08-heat-gap-indoors-flip-design.md`: (1) event-driven, not a fixed "after N months" rule (Trevor: a fixed rule "could be wrong if some areas have 4 months of heat pause and then indoors") -- self-adjusts to the real dates; (2) **core-month trigger** (a hot month flips only if fully inside an indoor window), which reproduces "establish the pause, then flip" for free -- broccoli z9 `core_months("Jun 20 - Aug 18") = {Jul}`, so May/Jun stay `heat_pause` and Jul flips, exactly Trevor's picture; (3) reads BOTH `start_indoors` and `second_planting.start_indoors`; (4) the flip lives in canonical; (5) the note is hybrid + app-derived.
+
+**SCOPE = 22 cells / 26 token flips:** broccoli + kohlrabi `ca_interior` (Jul) + `ca_south_coast` (Aug); beefsteak + heirloom-tomato `fl_peninsula` (Aug+Sep, driven by the PRIMARY `start_indoors` -- the rule is not limited to `second_planting`); celery across `se_gulf`/`ca_interior`/`ca_desert`/`warm_arid`/`low_desert_az`/`fl_peninsula`. All 5 crops carry `heat_threshold_f` + `heat_effect` (the note's inputs). Decoupled from the `second_planting` de-mux finding (needs only the indoor-start dates, which are already correct).
+
+**DERIVER (`tools/annual_calendar.py`):** new `indoor_core_months(cell)` (core months of start_indoors | second_planting.start_indoors); heat source switched to `declared_heat_months` (nested-or-flat); `heat_flip = heat & indoor_core_months(cell)` emitted at highest token precedence in `derive_annual_calendar`. Backward-compatible (no current cell flipped until the patch).
+
+**GATES (TDD, RED before GREEN, then adversarially proven on scratch copies of the REAL canonical):** (A5) `annual_coherence_violations` relaxed from exact `calendar heat_pause == heat_pause.months` to `calendar heat_pause == heat_pause.months MINUS the months flipped to indoors` -- the climate fact (all hot months) is preserved; one may display the action; a hot month shown as anything else, or a `heat_pause` token outside `heat_pause.months`, still fails. (A5b, NEW) `heat_flip_backing_violations` (wired into `whole_crop_gate`) -- an `indoors` on a hot month must be a core month of a real indoor-start window; Trevor's "action must be real" guard. Adversarial: an unbacked May->indoors bounces A5b; a Jul->plant bounces A5 (both on a scratch copy of the real canonical).
+
+**NOTE = hybrid, APP-DERIVED (kickoff #17, `docs/kickoffs/17-heat-gap-indoors-note.md`):** composed at plant-astro build time from `heat_effect` (crown_failure->"form heads", poor_fruit_set->"set fruit", quality_loss->"grow well") + `heat_threshold_f` (the transplant temp) + the fall framing; no derived prose stored in canonical; an optional per-cell `heat_gap_note_*` override slot is reserved (Trevor: "if they sound too generic we can come back for b"). The render trigger is data-derivable: an `indoors` calendar month whose index is in the cell's `heat_pause.months`.
+
+**Applied** SHA-guarded via `tools/apply_patch.py` + `tools/batches/heat_gap_indoors_flip.json` (22 `replace` ops on per-zone `calendar` arrays, each `from`-guarded, base `9d1193eb`). Footprint: ONLY `calendar[]` tokens on the 22 cells changed; every token diff is `heat_pause -> indoors`; all 116 other crops + every top-level key byte-identical; `stage ids`/`day_range_from_sow` untouched; count 124; COMPACT; 0 escaped-unicode. Gates on the real canonical: `gate_all` PASS (114/114), `whole_crop_gate` A5b PASS, `release_verify` clean, pre-commit backstop no-regression x5. Spec + plan in `docs/superpowers/`.
+
+**SEPARATE parked follow-up:** `second_planting` de-multiplexing (`docs/2026-07-08-second-planting-demux-findings.md`) -- the top-level main-window split was only partially rolled out; ~983 multi-window top-level fields have NO `second_planting` object and must be **extract-then-clean** migrated (not stripped), data in plant-dataset + render flip in plant-astro. NOT folded into this work.
+
+**Status:** the 3 gate commits + the canonical patch + this state trio are committed; Trevor approved T4/T5/T6 + push. PUSHED.
+
 ## 2026-07-08 -- MICROGREENS growth_stages SCHEMA MIGRATION -- COMPLETE (8 crops) (CONTENT release; `86ccf8c3` -> `9d1193eb`) [Claude Code]
 
 **All 114 certified crops now use the standard per-stage `growth_stages` shape.** The 8 microgreens-family crops from the 2026-07-02 indoor batch (arugula-microgreens, broccoli-microgreens, cilantro-microgreens, microgreens-mix, pea-shoots, radish-microgreens, sunflower-sprouts, wheatgrass) were migrated from an older non-standard per-stage shape to the shape every other crop uses.
