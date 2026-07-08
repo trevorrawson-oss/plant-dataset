@@ -17,6 +17,7 @@ Bounds (observed-range -> chosen-bound, margin both sides):
   sunlight_hours          3-12     -> [1, 18]        (a crop needs >= 1h; indoor carries [] -> skip)
   germination_temp_f      35-95    -> [32, 110]
   variety chill_required  0-1050   -> [0, 2000]
+  variety days_to_maturity 21-140  -> [7, 400]     (per-cultivar DTM, bounded like the crop number)
   min/recommended_pot_gal 1-20     -> [1, 100]
   depth_inches_min        1-18     -> [1, 60]
   spacing_inches (annual) 2-48     -> [1, 72]   | (tree/woody) 48-300 -> [1, 360]
@@ -71,11 +72,15 @@ def numeric_sanity_violations(crop):
     sp_hi = 360 if basis in _TREE_BASES else 72
     check(crop.get("spacing_inches"), f"spacing_inches (basis={basis})", 1, sp_hi)
 
-    # per-variety chill (numeric form only; A21/A22 own the type lock)
+    # per-variety numerics: chill (A21/A22 own the type lock) + a per-variety days_to_maturity, which
+    # refines the crop's DTM per cultivar and must be bounded the SAME as the crop-level number -- A33
+    # bounded the crop DTM but never the variety DTM, so a fabricated variety (3-day / 500-day) slipped.
     for i, v in enumerate((crop.get("varieties") or {}).get("recommended") or []):
         if isinstance(v, dict):
             check(v.get("chill_hours_required"),
                   f"varieties.recommended[{i}].chill_hours_required", 0, 2000)
+            check(v.get("days_to_maturity"),
+                  f"varieties.recommended[{i}].days_to_maturity", 7, 400)
 
     return V
 

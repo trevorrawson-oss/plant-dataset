@@ -74,6 +74,20 @@ tree2 = {"slug": "peach", "calendar_basis": "perennial_chill_gated",
          "varieties": {"recommended": [{"name": "x", "chill_hours_required": 9000}]}}
 assert any("chill_hours_required" in v for v in numeric_sanity_violations(tree2)), numeric_sanity_violations(tree2)
 
+# 9b. per-variety days_to_maturity is bounded like the crop-level number: a 3-day or 500-day variety
+# DTM is absurd -> violation; a normal 75 is fine; a season-typed variety (no DTM) is skipped. (A33
+# bounded the crop DTM + variety chill but never variety DTM -- the fabricated-crop slip. 2026-07-07.)
+c = {"slug": "x", "calendar_basis": "frost_anchored",
+     "varieties": {"recommended": [{"name": "TooFast", "days_to_maturity": 3}]}}
+assert any("days_to_maturity" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+c = {"slug": "x", "calendar_basis": "frost_anchored",
+     "varieties": {"recommended": [{"name": "TooSlow", "days_to_maturity": 500}]}}
+assert any("days_to_maturity" in v for v in numeric_sanity_violations(c)), numeric_sanity_violations(c)
+c = {"slug": "x", "calendar_basis": "frost_anchored",
+     "varieties": {"recommended": [{"name": "California Wonder", "days_to_maturity": 75},
+                                    {"name": "Duke", "season": "early"}]}}
+assert numeric_sanity_violations(c) == [], numeric_sanity_violations(c)
+
 # 10. REAL DATA: every certified anchor is numerically sane (0 false positives)
 fp = [(c["slug"], numeric_sanity_violations(c)) for c in _cert if numeric_sanity_violations(c)]
 assert fp == [], f"numeric-sanity FP on certified anchors: {fp}"
