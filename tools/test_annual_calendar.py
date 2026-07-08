@@ -348,3 +348,20 @@ _noflip = {"plant_out": "Sep 1 - Oct 1", "start_indoors": None,
 _c = ac.derive_annual_calendar(_noflip)
 assert _c[5] == _c[6] == _c[7] == "heat_pause", ("no indoor action -> no flip", _c)
 print("  heat-gap flip: no indoor action -> no flip: PASS")
+
+# ============ A5 coherence allows a BACKED indoors flip: Task 2 ============
+# A hot month shown as `indoors` (the heat-gap flip) is coherent, not a mismatch.
+_a5_flip = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [5, 6, 7]},
+    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "indoors",
+                 "plant", "plant", "harvest", "harvest", "plant"]}}}}}
+_h, _n = ac.annual_coherence_violations(_a5_flip)
+assert _h == [], ("A5 must allow a hot month flipped to indoors", _h)
+# A5 still flags a hot month rendered as NEITHER heat_pause NOR indoors.
+_a5_bad = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [5, 6, 7]},
+    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "plant",
+                 "plant", "plant", "harvest", "harvest", "plant"]}}}}}
+_h, _n = ac.annual_coherence_violations(_a5_bad)
+assert len(_h) == 1 and "heat_pause" in _h[0], ("A5 must flag a hot month shown as plant", _h)
+print("  A5 coherence: allows backed indoors flip, flags mislabeled hot month: PASS")

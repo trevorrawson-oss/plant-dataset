@@ -164,9 +164,14 @@ def annual_coherence_violations(crop):
                 hard.append(f"{loc}: invalid calendar token(s) {bad}")
             hp = (cell.get("heat_pause") or {}).get("months")
             if hp is not None:
-                cal_hp = [i + 1 for i in range(12) if cal[i] == "heat_pause"]
-                if sorted(hp) != sorted(cal_hp):
-                    hard.append(f"{loc}: heat_pause.months {sorted(hp)} != calendar heat_pause {sorted(cal_hp)}")
+                hp = set(hp)
+                cal_hp = {i + 1 for i in range(12) if cal[i] == "heat_pause"}
+                flipped = hp & {i + 1 for i in range(12) if cal[i] == "indoors"}
+                if cal_hp != hp - flipped:
+                    hard.append(f"{loc}: calendar heat_pause {sorted(cal_hp)} != heat_pause.months "
+                                f"{sorted(hp)} minus flipped-to-indoors {sorted(flipped)} "
+                                f"(each hot month must show heat_pause or a backed indoors flip; "
+                                f"no heat_pause token outside heat_pause.months)")
             if "wait" in cal:
                 notes.append(f"{loc}: `wait` token (pause-legibility review)")
     return hard, notes
