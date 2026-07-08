@@ -1,0 +1,109 @@
+{
+ "base_sha": "00e0b6b1ba52db8847e5def8c03439ea65b8b843efeea47a8daec3159a07ec5b",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='chives')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='chives')].tray_sowing",
+   "from": "na",
+   "value": "multisow_clump"
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='chives')].pot_up",
+   "value": "not_needed"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='mint')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='mint')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='mint')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='bee-balm')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='bee-balm')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='bee-balm')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='echinacea')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='echinacea')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='echinacea')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='chives')].start_method.notes_beginner",
+   "from": "The easiest way to start chives is to buy a small pot or split a clump from a friend, which is ready to cut almost right away. You can also grow them from seed, but the seed is slow, taking a couple of weeks or more, so start it indoors about 6 to 8 weeks before the last frost, or sow it outside once the soil is warm. Plant outside in spring in cold areas, or in fall through winter where summers are hot. Space plants about 8 to 12 inches apart, and remember one clump can be split into many.",
+   "value": "The easiest way to start chives is to buy a small pot or split a clump from a friend, which is ready to cut almost right away. You can also grow them from seed, but the seed is slow, taking a couple of weeks or more, so start it indoors about 6 to 8 weeks before the last frost, sowing a small pinch of seeds in each cell and growing them on as a little clump that you plant out whole without separating, or sow it outside once the soil is warm. Plant outside in spring in cold areas, or in fall through winter where summers are hot. Space plants about 8 to 12 inches apart, and remember one clump can be split into many."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='chives')].start_method.notes_seasoned",
+   "from": "Chives are easiest to establish from a division or a nursery clump, which gives a cuttable plant in weeks, but they also grow readily from seed. The seed is slow, germinating over about 2 to 3 weeks (up to 4 to 6 in cool soil), so start it indoors 6 to 8 weeks before the last frost and transplant the young clumps out after hardening off, or direct-sow once the soil warms. Plant outdoors in spring after hard-frost danger passes in cold regions, or in fall through late winter in mild and hot regions. Set clumps 8 to 12 inches apart; they widen over the years and are the easiest herb to propagate by simply lifting and splitting an established clump.",
+   "value": "Chives are easiest to establish from a division or a nursery clump, which gives a cuttable plant in weeks, but they also grow readily from seed. The seed is slow, germinating over about 2 to 3 weeks (up to 4 to 6 in cool soil), so start it indoors 6 to 8 weeks before the last frost, sowing a pinch of about 8 to 10 seeds per cell and growing them on as an undivided clump that transplants out whole after hardening off, with no thinning (RHS), or direct-sow once the soil warms. Plant outdoors in spring after hard-frost danger passes in cold regions, or in fall through late winter in mild and hot regions. Set clumps 8 to 12 inches apart; they widen over the years and are the easiest herb to propagate by simply lifting and splitting an established clump."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='mint')].start_method.notes_beginner",
+   "from": "The easy way to start mint is from a small plant, a cutting, or a piece dug from a friend's patch, not from seed (seed-grown mint is a gamble and often tastes of nothing in particular). Just root a sprig in a glass of water or plant a division in spring. Because mint spreads fast, plant it in a pot or a buried, bottomless container so it cannot run through your whole garden.",
+   "value": "The easy way to start mint is from a small plant, a cutting, or a piece dug from a friend's patch, not from seed (seed-grown mint is a gamble and often tastes of nothing in particular). If you do want to try seed anyway, press the tiny seed onto the surface and do not cover it, since it needs light to sprout, and start it indoors about 6 to 8 weeks before your last frost. Just root a sprig in a glass of water or plant a division in spring. Because mint spreads fast, plant it in a pot or a buried, bottomless container so it cannot run through your whole garden."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='mint')].start_method.notes_seasoned",
+   "from": "Start mint from a division, a rooted cutting, or a nursery transplant, not from seed: named mints such as peppermint are hybrids and, as Clemson notes, mint seed does not come true to type, so seedlings are variable. Divide and reset established clumps in early spring (Utah State, Minnesota), or root stem or stolon cuttings in water or moist mix at almost any time in the growing season (Wisconsin, Maryland). Set plants out around the last spring frost; mint is very hardy, so timing is forgiving. Whatever you plant, put it in a sunken bottomless pot or a lined bed, because mint spreads aggressively by runners.",
+   "value": "Start mint from a division, a rooted cutting, or a nursery transplant, not from seed: named mints such as peppermint are hybrids and, as Clemson notes, mint seed does not come true to type, so seedlings are variable. Divide and reset established clumps in early spring (Utah State, Minnesota), or root stem or stolon cuttings in water or moist mix at almost any time in the growing season (Wisconsin, Maryland). Set plants out around the last spring frost; mint is very hardy, so timing is forgiving. Whatever you plant, put it in a sunken bottomless pot or a lined bed, because mint spreads aggressively by runners. If you do start from seed, surface-sow it because the seed needs light to germinate, keep it around 60 to 70°F, and start indoors 6 to 8 weeks before setting out; expect the variable, off-type seedlings noted above."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='echinacea')].start_method.notes_beginner",
+   "from": "There are three easy ways to get coneflowers going. The simplest is to plant a division or a young nursery plant in spring; it usually flowers that first summer. You can also grow them from seed, but chill the seed first (a few weeks damp in the fridge, or sow outdoors in fall) so it sprouts well, then start indoors around 65 to 70 °F. Seedlings sprout in about 10 to 20 days but can take a year or two to reach full size, except quick types like 'PowWow Wild Berry' that bloom the first year. Every few years, dig and split a big clump in spring or fall to keep it healthy.",
+   "value": "There are three easy ways to get coneflowers going. The simplest is to plant a division or a young nursery plant in spring; it usually flowers that first summer. You can also grow them from seed, but chill the seed first (a few weeks damp in the fridge, or sow outdoors in fall) so it sprouts well, then start indoors around 65 to 70 °F, barely covering the seed since a little light aids germination. Seedlings sprout in about 10 to 20 days but can take a year or two to reach full size, except quick types like 'PowWow Wild Berry' that bloom the first year. Every few years, dig and split a big clump in spring or fall to keep it healthy."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='echinacea')].start_method.notes_seasoned",
+   "from": "Echinacea can be established three ways. The simplest is a spring-planted division or nursery transplant, which typically flowers the same summer and fills in fully the next year. From seed, cold, moist stratification greatly improves and evens germination (a few weeks of chilling, or an outdoor fall/winter sowing), after which seed sown indoors at about 65 to 70 °F germinates in roughly 10 to 20 days and is transplant-ready in 20 to 28 days; seedlings may take two or more years to reach full size, though first-year-flowering selections like 'PowWow Wild Berry' bloom their first season from an early start. Divide established clumps every 3 to 4 years in spring or fall to renew vigor.",
+   "value": "Echinacea can be established three ways. The simplest is a spring-planted division or nursery transplant, which typically flowers the same summer and fills in fully the next year. From seed, cold, moist stratification greatly improves and evens germination (a few weeks of chilling, or an outdoor fall/winter sowing), after which seed sown indoors at about 65 to 70 °F, surface-sown or only barely covered since light aids germination, germinates in roughly 10 to 20 days and is transplant-ready in 20 to 28 days; seedlings may take two or more years to reach full size, though first-year-flowering selections like 'PowWow Wild Berry' bloom their first season from an early start. Divide established clumps every 3 to 4 years in spring or fall to renew vigor."
+  }
+ ]
+}
