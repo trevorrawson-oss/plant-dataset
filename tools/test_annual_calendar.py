@@ -365,3 +365,21 @@ _a5_bad = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zo
 _h, _n = ac.annual_coherence_violations(_a5_bad)
 assert len(_h) == 1 and "heat_pause" in _h[0], ("A5 must flag a hot month shown as plant", _h)
 print("  A5 coherence: allows backed indoors flip, flags mislabeled hot month: PASS")
+
+# ============ A5b heat_flip_backing_violations (action-must-be-real): Task 3 ============
+# A heat_pause month may show `indoors` ONLY where a real indoor-start window covers it.
+_backed = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [5, 6, 7]},
+    "second_planting": {"start_indoors": "Jun 20 - Aug 18"},
+    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "indoors",
+                 "plant", "plant", "harvest", "harvest", "plant"]}}}}}
+assert ac.heat_flip_backing_violations(_backed) == [], \
+    ("backed July flip must pass", ac.heat_flip_backing_violations(_backed))
+_unbacked = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [5, 6, 7]},
+    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "indoors",
+                 "plant", "plant", "harvest", "harvest", "plant"]}}}}}
+_v = ac.heat_flip_backing_violations(_unbacked)
+assert any("Jul" in x and "indoors" in x for x in _v), ("unbacked July flip must be caught", _v)
+assert ac.heat_flip_backing_violations({"calendar_basis": "perennial_chill_gated"}) == []
+print("  A5b flip-backing: backed passes, unbacked caught, no-op non-annual: PASS")

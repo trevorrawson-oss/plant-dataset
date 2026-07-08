@@ -242,6 +242,16 @@ for m in _acoh:
 for m in _anote:
     print(f"  note: {m}")
 
+# ---------------- A5b. heat-gap indoors-flip backing (action-must-be-real) ----------------
+# A heat_pause month may display `indoors` (the action-over-passive flip) ONLY where a real
+# indoor-start window covers it as a CORE month; an unbacked flip is a fabricated action.
+from annual_calendar import heat_flip_backing_violations
+print("A5b. heat-gap indoors-flip backing (an `indoors` on a hot month needs a real indoor-start; no-op off annual)")
+_hflip = heat_flip_backing_violations(crop)
+print(f"  unbacked heat_pause->indoors flips: {len(_hflip)}")
+for m in _hflip:
+    fail(f"heat-flip-backing: {m}")
+
 # ---------------- A6. non_seasonal_indoor cycle presence (no-op for non-indoor) ----------------
 # An indoor crop (microgreens/sprouts/mushrooms) has NO frost/region/zone axis -- its source of
 # truth is the indoor_cycle block (the relative sow->harvest cycle). This is the Step 5.5

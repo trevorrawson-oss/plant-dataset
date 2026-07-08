@@ -373,3 +373,30 @@ def heat_pause_backing_violations(crop):
                         out.append(f"{loc}: heat_pause source '{s}' has no anchoring_urls URL "
                                    f"(citation not anchored)")
     return out
+
+
+def heat_flip_backing_violations(crop):
+    """The action-must-be-real guard (whole_crop_gate A5b). A heat_pause month may display
+    `indoors` (the action-over-passive flip) ONLY where a real indoor-start window
+    (top-level start_indoors OR second_planting.start_indoors) has that month as a CORE
+    month. An `indoors` on a hot month with no such backing is a fabricated action shown
+    to a grower. No-op for non-frost_anchored crops. Returns a list of violation strings."""
+    if crop.get("calendar_basis") != "frost_anchored":
+        return []
+    out = []
+    for rk, r in (crop.get("regions") or {}).items():
+        for z, cell in (r.get("resolved_by_zone") or {}).items():
+            cal = cell.get("calendar")
+            if not isinstance(cal, list) or len(cal) != 12:
+                continue
+            hp = (cell.get("heat_pause") or {}).get("months")
+            if not hp:
+                continue
+            hp = set(hp)
+            backed = indoor_core_months(cell)
+            for i in range(12):
+                if cal[i] == "indoors" and (i + 1) in hp and (i + 1) not in backed:
+                    out.append(f"{rk}.z{z}: {_MON_ABBR[i]} shows `indoors` on a heat_pause month "
+                               f"with no indoor-start window covering it "
+                               f"(start_indoors / second_planting.start_indoors) -- unbacked flip")
+    return out
