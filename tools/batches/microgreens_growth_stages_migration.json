@@ -1,0 +1,1109 @@
+{
+ "base_sha": "86ccf8c32679113261a9ffc1f9075f02aa2ea0fe1aaa63fefe518fbc17971f52",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='arugula-microgreens')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Sow",
+     "name_beginner": "Plant",
+     "description_seasoned": "Dense even broadcast, about 10 g per 1020 tray, on pre-moistened medium; no presoak, mist the seed.",
+     "description_beginner": "Scatter seeds thickly on damp medium (about 10 grams a tray); do not soak, just mist.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds imbibe and split under a weighted cover at about 74 °F.",
+     "description_beginner": "Seeds sprout under a covered, warm tray.",
+     "day_range_from_sow": [
+      1,
+      3
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Short dark period, about 1 to 2 days for arugula, that stretches stems and evens the stand before light.",
+     "description_beginner": "A day or two in the dark that make the stems stretch evenly.",
+     "day_range_from_sow": [
+      2,
+      4
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into 18 hours of light at 68 to 72 °F; cotyledons green and the first true leaf may form.",
+     "description_beginner": "Uncovered into bright light so the leaves turn green.",
+     "day_range_from_sow": [
+      4,
+      8
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Single cut at cotyledon to first-true-leaf, about 6 to 8 days; eaten fresh.",
+     "description_beginner": "Snip and eat when the little leaves are open, usually about a week.",
+     "day_range_from_sow": [
+      7,
+      12
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Scatter arugula seed thickly and evenly across a tray of pre-moistened growing mix, aiming for a dense single layer (about 10 grams, or two teaspoons, per standard 10 by 20 inch tray). Do not soak these small seeds first; just mist the surface with water. Unlike garden planting, microgreens are sown shoulder to shoulder on top of the mix, not spaced out or buried.",
+     "what_to_look_for_beginner": "An even, dense scatter of seed across the whole surface with no bare patches and no thick clumps. The mix underneath should look evenly damp and dark, not soggy or pooling.",
+     "log_prompt_beginner": "Tray sown and misted?",
+     "user_action_seasoned": "Broadcast about 10 g of seed per 1020 tray in a dense, even layer on pre-moistened medium. No presoak for small brassica seed; mist the surface to settle it. Surface-sow, do not cover with mix.",
+     "what_to_look_for_seasoned": "A uniform, dense seed layer with no gaps or clumping on evenly moist medium.",
+     "log_prompt_seasoned": "Tray sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      1,
+      3
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray to keep it dark and humid, and set a second empty tray with a light weight (a couple of pounds) on top; the gentle pressure pushes roots down into the mix and gives you a fuller, more even stand. Keep it somewhere warm, around 74°F. Mist if the surface starts to look dry, but do not let it get waterlogged.",
+     "what_to_look_for_beginner": "The seeds swell, split, and push out tiny white roots, then pale looped stems that lift the cover slightly. Under the cover everything looks pale and leggy, which is exactly right at this stage.",
+     "log_prompt_beginner": "Any little sprouts under the cover yet?",
+     "user_action_seasoned": "Stack a weighted blackout cover (a few pounds) over the tray at around 74°F. The weight drives root contact and evens germination. Mist only to keep the surface from drying; avoid saturation.",
+     "what_to_look_for_seasoned": "Seeds imbibe and split; white radicles emerge, followed by pale hooked hypocotyls lifting the weighted cover.",
+     "log_prompt_seasoned": "Germination started under the cover?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      2,
+      4
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered and in the dark for another day or two after most seeds have sprouted. This short dark stretch makes all the stems reach upward together, so they grow tall and even instead of short and patchy. Keep misting lightly if the surface dries.",
+     "what_to_look_for_beginner": "A dense mat of pale, stretched stems standing tall and lifting the cover. The stems will be yellowish or white, not green yet, and that is normal in the dark.",
+     "log_prompt_beginner": "Stems tall and even under there?",
+     "user_action_seasoned": "Hold the blackout cover 1 to 2 days post-germination for arugula. The dark period elongates hypocotyls uniformly and evens the stand before light. Mist to maintain surface moisture.",
+     "what_to_look_for_seasoned": "Uniformly elongated, blanched stems lifting the cover; a tall, even stand pre-greening.",
+     "log_prompt_seasoned": "Stand evened up under blackout?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      4,
+      8
+     ],
+     "audience": "core",
+     "user_action_beginner": "Take the cover off and move the tray into bright light, ideally about 18 hours a day, at a comfortable room temperature around 68 to 72°F. The pale stems will green up fast. Switch to watering from the bottom now (pour water into the tray beneath) rather than misting the leaves, which helps prevent mold as the canopy fills in.",
+     "what_to_look_for_beginner": "The stems and seed leaves turn from pale to bright green within a day or so. Soon a small, ruffled first true leaf may appear at the center, and the tray starts to smell peppery.",
+     "log_prompt_beginner": "Are they greening up nicely?",
+     "user_action_seasoned": "Uncover into about 18 hours of light at 68-72°F. Cotyledons green rapidly and the first true leaf may begin. Bottom-water from here to keep the canopy dry and suppress damping-off.",
+     "what_to_look_for_seasoned": "Rapid greening of cotyledons; first true leaf may form. Peppery aroma develops.",
+     "log_prompt_seasoned": "Cotyledons greened up?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      7,
+      12
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest when the seed leaves are open and green, usually about 6 to 8 days after sowing, with or without a first true leaf. Gather a handful and cut the stems just above the soil line with clean scissors. Rinse gently and eat them fresh; microgreens do not regrow after cutting, so harvest the whole tray.",
+     "what_to_look_for_beginner": "Open, fully green seed leaves standing about one to two inches tall, sometimes with a tiny true leaf just showing. They should taste bright and peppery.",
+     "log_prompt_beginner": "Time to snip and taste? Log your harvest.",
+     "user_action_seasoned": "Single-cut at the cotyledon to first-true-leaf stage, about 6 to 8 days. Cut just above the medium with clean scissors, rinse, and refrigerate or eat fresh. No regrowth; harvest the full tray.",
+     "what_to_look_for_seasoned": "Cotyledons fully expanded and green at 1-2 in, first true leaf just emerging; peppery flavor developed.",
+     "log_prompt_seasoned": "First cut? Log your harvest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='broccoli-microgreens')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Sow",
+     "name_beginner": "Plant",
+     "description_seasoned": "Dense, even, dry broadcast of broccoli seed on pre-moistened medium; no presoak.",
+     "description_beginner": "Scatter broccoli seeds thickly on damp medium; no soaking needed.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds imbibe and split under a weighted cover at about 74 °F; broccoli germinates fast, often within a day or two.",
+     "description_beginner": "Seeds sprout quickly under a covered, warm tray.",
+     "day_range_from_sow": [
+      1,
+      3
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Dark period of about 3 to 4 days (roughly 2 to 4 by conditions) that stretches stems and evens the stand before light.",
+     "description_beginner": "A few days in the dark that make the stems stretch evenly.",
+     "day_range_from_sow": [
+      2,
+      4
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into 16 to 18 hours of light at 68 to 72 °F; cotyledons green and the first true leaf may form.",
+     "description_beginner": "Uncovered into bright light so the leaves turn green.",
+     "day_range_from_sow": [
+      4,
+      9
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Single cut at cotyledon to first-true-leaf, about 8 to 12 days from sowing; eaten fresh.",
+     "description_beginner": "Snip and eat when the little leaves are open, usually in about 8 to 12 days.",
+     "day_range_from_sow": [
+      8,
+      12
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Scatter broccoli seed thickly and evenly across a tray of pre-moistened growing mix, aiming for a dense single layer with no bare gaps. These small seeds need no soaking; just mist the surface to settle them. Microgreens are sown right on top of the mix, packed close together, not spaced out or buried like a garden planting.",
+     "what_to_look_for_beginner": "An even, crowded scatter of seed covering the whole surface, over mix that looks uniformly damp and dark but has no standing water.",
+     "log_prompt_beginner": "Tray sown and misted?",
+     "user_action_seasoned": "Dry-broadcast broccoli seed densely and evenly on pre-moistened medium in a single layer. No presoak for small brassica seed; mist to settle. Surface-sow, do not cover.",
+     "what_to_look_for_seasoned": "A uniform, dense seed layer with no clumping on evenly moist medium.",
+     "log_prompt_seasoned": "Tray sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      1,
+      3
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray to hold in darkness and humidity, and set a lightly weighted empty tray on top; the gentle pressure roots the seeds evenly. Keep it warm, around 74°F. Broccoli is quick off the mark, often sprouting within a day or two, so check daily. Mist only if the surface looks dry.",
+     "what_to_look_for_beginner": "Seeds swelling and splitting, with tiny white roots and pale looped stems appearing quickly, often lifting the cover within a day or two.",
+     "log_prompt_beginner": "Any fast little sprouts under the cover?",
+     "user_action_seasoned": "Weighted blackout cover at around 74°F. Broccoli germinates fast, frequently within 24 to 48 hours. Mist only to prevent surface drying; avoid saturation.",
+     "what_to_look_for_seasoned": "Rapid imbibition and splitting; white radicles and blanched hypocotyls emerging early, lifting the cover.",
+     "log_prompt_seasoned": "Germination started (broccoli is quick)?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      2,
+      4
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered in the dark for about three to four days after most seeds sprout. This dark stretch pulls all the stems up tall and even so the tray fills in uniformly. Keep misting lightly if the surface dries.",
+     "what_to_look_for_beginner": "A dense mat of pale, stretched stems standing tall and lifting the cover. They will be white to yellow, not green yet, which is exactly right in the dark.",
+     "log_prompt_beginner": "Stems tall and even under there?",
+     "user_action_seasoned": "Hold blackout about 3 to 4 days to elongate hypocotyls uniformly and even the stand before light. Mist to maintain surface moisture.",
+     "what_to_look_for_seasoned": "Uniformly elongated, blanched stems lifting the cover; a tall, even pre-greening stand.",
+     "log_prompt_seasoned": "Stand evened up under blackout?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      4,
+      9
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright light, ideally 16 to 18 hours a day, at a comfortable 68 to 72°F. The pale stems green up within a day. Start watering from the bottom now (add water to the tray beneath) rather than misting the leaves, which keeps the canopy dry and fends off mold.",
+     "what_to_look_for_beginner": "Stems and seed leaves turning from pale to bright green within a day, standing up straight. A small first true leaf may appear at the center of some.",
+     "log_prompt_beginner": "Are they greening up nicely?",
+     "user_action_seasoned": "Uncover into 16 to 18 hours of light at 68-72°F. Cotyledons green and the first true leaf may begin. Bottom-water to keep the canopy dry and suppress damping-off.",
+     "what_to_look_for_seasoned": "Rapid greening of cotyledons; first true leaf may form.",
+     "log_prompt_seasoned": "Cotyledons greened up?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      8,
+      12
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest when the seed leaves are open and green, usually about 8 to 12 days from sowing. Gather a handful and cut the stems just above the soil line with clean scissors. Rinse gently and eat fresh; microgreens do not regrow after cutting, so harvest the whole tray. Broccoli microgreens are mild, so they suit almost any dish.",
+     "what_to_look_for_beginner": "Open, fully green seed leaves standing about one to two inches tall, sometimes with a tiny true leaf showing. The flavor is fresh and mild.",
+     "log_prompt_beginner": "Ready to snip and taste? Log your harvest.",
+     "user_action_seasoned": "Single-cut at the cotyledon to first-true-leaf stage, about 8 to 12 days. Cut just above the medium with clean scissors, rinse, and refrigerate or use fresh. No regrowth; harvest the full tray.",
+     "what_to_look_for_seasoned": "Cotyledons fully expanded and green at 1-2 in, first true leaf just emerging; mild flavor.",
+     "log_prompt_seasoned": "First cut? Log your harvest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='cilantro-microgreens')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Sow",
+     "name_beginner": "Plant",
+     "description_seasoned": "Dense even broadcast on pre-moistened medium using whole or split coriander seed; no presoak required.",
+     "description_beginner": "Scatter seeds thickly on damp medium; no soaking needed.",
+     "day_range_from_sow": [
+      0,
+      2
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds imbibe slowly and unevenly under a weighted cover at about 74 °F; cilantro is among the slowest microgreens to germinate.",
+     "description_beginner": "Seeds sprout slowly and unevenly under a covered, warm tray. Be patient.",
+     "day_range_from_sow": [
+      3,
+      8
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Long dark period, roughly 7 to 14 days, that evens the notoriously uneven stand and stretches stems before light.",
+     "description_beginner": "A week or more in the dark that evens out the slow, patchy sprouting.",
+     "day_range_from_sow": [
+      5,
+      12
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into 18 hours of light at 68 to 72 °F; cotyledons green and the first true leaf may form.",
+     "description_beginner": "Uncovered into bright light so the leaves turn green.",
+     "day_range_from_sow": [
+      10,
+      22
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Single cut at cotyledon to first true leaf, about 21 to 28 days from sowing; eaten fresh for true cilantro flavor.",
+     "description_beginner": "Snip and eat when the little leaves are open, about 3 to 4 weeks in.",
+     "day_range_from_sow": [
+      21,
+      28
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      2
+     ],
+     "audience": "core",
+     "user_action_beginner": "Scatter coriander seed (the spice that becomes cilantro) thickly and evenly across a tray of pre-moistened mix. Each round seed is actually two seeds in one shell; you can gently crack them for faster, more even sprouting, but it is not required. No soaking needed. Sow densely on top of the mix and mist the surface.",
+     "what_to_look_for_beginner": "An even, crowded scatter of round tan seed across the whole surface, over evenly damp mix with no standing water.",
+     "log_prompt_beginner": "Tray sown and misted?",
+     "user_action_seasoned": "Broadcast whole or split coriander seed densely and evenly on pre-moistened medium. Each schizocarp holds two seeds; cracking can improve germination speed and evenness. No presoak. Surface-sow and mist.",
+     "what_to_look_for_seasoned": "A dense, even layer of coriander seed on moist medium, no bare patches.",
+     "log_prompt_seasoned": "Tray sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      3,
+      8
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray for darkness and humidity, with a lightly weighted empty tray on top. Keep it warm, around 74°F. Here is the key with cilantro: it is the slowest microgreen and sprouts slowly and unevenly over several days, so be patient and do not assume a tray has failed. Mist if the surface dries.",
+     "what_to_look_for_beginner": "A few white roots and pale stems appearing here and there at first, with more following over the next several days. Patchy early germination is completely normal for cilantro.",
+     "log_prompt_beginner": "Any slow sprouts starting? Patience with cilantro.",
+     "user_action_seasoned": "Weighted blackout cover at around 74°F. Cilantro is among the slowest-germinating microgreens, imbibing slowly and unevenly over several days. Do not judge viability early. Mist only to prevent surface drying.",
+     "what_to_look_for_seasoned": "Slow, staggered radicle emergence over several days; early patchiness expected.",
+     "log_prompt_seasoned": "Staggered germination beginning?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      5,
+      12
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered in the dark for a long stretch, roughly one to two weeks. This unusually long dark period gives the slow, patchy sprouts time to catch up and even out before they see light. Keep the surface lightly misted so it never dries out over these many days.",
+     "what_to_look_for_beginner": "A stand of pale, stretched stems slowly filling in and evening out under the cover over a week or more. Still pale, not green.",
+     "log_prompt_beginner": "Stand filling in and evening out?",
+     "user_action_seasoned": "Hold blackout roughly 7 to 14 days, far longer than fast crops, to even the notoriously uneven stand and elongate stems before light. Maintain surface moisture across the extended period.",
+     "what_to_look_for_seasoned": "Blanched stems gradually evening the stand under an extended blackout; pre-greening.",
+     "log_prompt_seasoned": "Stand evening under the long blackout?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      10,
+      22
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright light, about 18 hours a day, at a comfortable 68 to 72°F. The stems green up, though cilantro still grows more slowly than other microgreens, so give it time. Water from the bottom now rather than misting the leaves to keep the canopy dry.",
+     "what_to_look_for_beginner": "Seed leaves turning green over a day or two, standing on slender stems, with the fresh, citrusy smell of cilantro developing.",
+     "log_prompt_beginner": "Greening up and smelling like cilantro?",
+     "user_action_seasoned": "Uncover into about 18 hours of light at 68-72°F. Cotyledons green and the first true leaf may form, though growth stays slower than other microgreens. Bottom-water to keep the canopy dry.",
+     "what_to_look_for_seasoned": "Cotyledons greening; slender stems; first true leaf may form; characteristic cilantro aroma.",
+     "log_prompt_seasoned": "Cotyledons greened up?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      21,
+      28
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest when the seed leaves are open and green, usually about three to four weeks from sowing, later than any other microgreen. The narrow, forked seed leaves carry true cilantro flavor. Cut just above the soil line with clean scissors, eat fresh, and cut the whole tray since it does not regrow.",
+     "what_to_look_for_beginner": "Open, narrow, forked green seed leaves about one to two inches tall, tasting brightly of cilantro. A few late sprouts among them are fine.",
+     "log_prompt_beginner": "Finally ready to snip? Log your harvest.",
+     "user_action_seasoned": "Single-cut at the cotyledon to first-true-leaf stage, about 21 to 28 days, the longest cycle of the microgreens. Cut with clean scissors and use fresh for full cilantro flavor. No regrowth; harvest the full tray.",
+     "what_to_look_for_seasoned": "Open forked cotyledons at 1-2 in; full cilantro flavor; minor lag acceptable.",
+     "log_prompt_seasoned": "First cut at last? Log your harvest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='microgreens-mix')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Sow",
+     "name_beginner": "Plant",
+     "description_seasoned": "Dense even broadcast on pre-moistened medium; large seeds presoaked.",
+     "description_beginner": "Scatter seeds thickly on damp medium; soak only big seeds first.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds imbibe and split under a weighted cover at about 74 °F.",
+     "description_beginner": "Seeds sprout under a covered, warm tray.",
+     "day_range_from_sow": [
+      1,
+      4
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Dark period (about 1 to 4 days by type) that stretches stems and evens the stand before light.",
+     "description_beginner": "A few days in the dark that make the stems stretch evenly.",
+     "day_range_from_sow": [
+      2,
+      5
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into 18 hours of light at 68 to 72 °F; cotyledons green and the first true leaf may form.",
+     "description_beginner": "Uncovered into bright light so the leaves turn green.",
+     "day_range_from_sow": [
+      5,
+      10
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Single cut at cotyledon to first-true-leaf; eaten fresh.",
+     "description_beginner": "Snip and eat when the little leaves are open.",
+     "day_range_from_sow": [
+      10,
+      14
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Scatter the seed mix thickly and evenly across a tray of pre-moistened growing mix in a dense single layer. Most mixes are small-seeded and need no soaking; if your blend includes large seeds like pea or sunflower, soak just those for a few hours first. Sow right on top of the mix, packed close, and mist the surface.",
+     "what_to_look_for_beginner": "An even, crowded scatter of mixed seed covering the whole surface, over uniformly damp mix with no standing water.",
+     "log_prompt_beginner": "Mix sown and misted?",
+     "user_action_seasoned": "Broadcast the mix densely and evenly on pre-moistened medium. Presoak only the large-seeded components (pea, sunflower) if present; small seed goes on dry. Surface-sow and mist to settle.",
+     "what_to_look_for_seasoned": "A dense, even seed layer of the blend on moist medium, no bare patches.",
+     "log_prompt_seasoned": "Tray sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      1,
+      4
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray for darkness and humidity, with a lightly weighted empty tray on top to root the seeds down. Keep it warm, around 74°F. Because a mix blends different seeds, expect them to sprout at slightly different times, so do not worry if germination looks a little uneven at first. Mist if the surface dries.",
+     "what_to_look_for_beginner": "Seeds swelling and splitting, with white roots and pale stems appearing over a day or two, faster kinds leading and slower ones catching up.",
+     "log_prompt_beginner": "Any of the mix sprouting yet?",
+     "user_action_seasoned": "Weighted blackout cover at around 74°F. A blend germinates over a slightly wider window than a single crop; some unevenness early is normal. Mist only to prevent surface drying.",
+     "what_to_look_for_seasoned": "Staggered imbibition and splitting across the blend; radicles and blanched stems emerging, lifting the cover.",
+     "log_prompt_seasoned": "Germination underway across the blend?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      2,
+      5
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered in the dark for a few days after most seeds have sprouted, usually one to four days depending on what is in the mix. This dark stretch lets the different seedlings even out and reach up together before light. Keep misting lightly if the surface dries.",
+     "what_to_look_for_beginner": "A mat of pale, stretched stems at slightly different heights, evening out as they lift the cover together. Still pale, not green.",
+     "log_prompt_beginner": "Stand evening out under there?",
+     "user_action_seasoned": "Hold blackout roughly 1 to 4 days by blend type to even the staggered stand and elongate stems before light. Mist to maintain surface moisture.",
+     "what_to_look_for_seasoned": "Elongated, blanched stems evening out across the blend, lifting the cover pre-greening.",
+     "log_prompt_seasoned": "Blend evened up under blackout?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      5,
+      10
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright light, about 18 hours a day, at a comfortable 68 to 72°F. The mix greens up over a day or so, often in a pretty range of colors and leaf shapes. Water from the bottom now rather than misting the leaves to keep the varied canopy dry and mold-free.",
+     "what_to_look_for_beginner": "Seed leaves turning green across the tray in a mix of colors and shapes, with the first true leaves starting on the faster kinds.",
+     "log_prompt_beginner": "Greening up in all those colors?",
+     "user_action_seasoned": "Uncover into about 18 hours of light at 68-72°F. The blend greens over about a day, with varied color and leaf form. Bottom-water to keep the canopy dry and suppress damping-off.",
+     "what_to_look_for_seasoned": "Cotyledons greening across the blend; varied pigmentation; first true leaves on early components.",
+     "log_prompt_seasoned": "Blend greened up?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      10,
+      14
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest when most of the seed leaves are open and green, usually about 10 to 14 days from sowing. Because a mix matures a little unevenly, cut the whole tray together when the bulk of it looks ready. Cut just above the soil line with clean scissors, rinse, and eat fresh; microgreens do not regrow.",
+     "what_to_look_for_beginner": "A colorful stand of open seed leaves about one to two inches tall, the majority green and ready even if a few lag behind.",
+     "log_prompt_beginner": "Most of it ready to snip? Log your harvest.",
+     "user_action_seasoned": "Single-cut when the majority of the blend is at the cotyledon to first-true-leaf stage, about 10 to 14 days. Cut the full tray together despite minor unevenness, rinse, and use fresh. No regrowth.",
+     "what_to_look_for_seasoned": "Most of the blend at open cotyledon to first-true-leaf, 1-2 in tall; harvest whole despite minor lag.",
+     "log_prompt_seasoned": "Harvesting the whole tray? Log it."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='pea-shoots')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Presoak and sow",
+     "name_beginner": "Soak and plant",
+     "description_seasoned": "Soak the large seed about 8 to 12 hours, drain, then broadcast densely on pre-moistened medium.",
+     "description_beginner": "Soak the peas overnight, drain, then scatter them thickly on damp medium.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds imbibe and split under a weighted cover at about 70 °F.",
+     "description_beginner": "Seeds sprout under a covered, warm tray.",
+     "day_range_from_sow": [
+      2,
+      5
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Dark period of about 3 days that stretches the stems and evens the stand before light.",
+     "description_beginner": "About three days in the dark that make the shoots stretch evenly.",
+     "day_range_from_sow": [
+      3,
+      7
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into 18 hours of light at 68 to 72 °F; the shoots green and put out tendrils.",
+     "description_beginner": "Uncovered into bright light so the shoots turn green.",
+     "day_range_from_sow": [
+      6,
+      12
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Cut at about 4 to 6 inches, when tendrils and the first true leaves show; eaten fresh.",
+     "description_beginner": "Snip and eat when the shoots are a few inches tall with little curling tendrils.",
+     "day_range_from_sow": [
+      10,
+      16
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Pea seeds are large, so give them a head start: soak them in cool water overnight (about 8 to 12 hours), then drain them well. Scatter the drained peas thickly across a tray of pre-moistened mix in a dense single layer, packed close but not piled on top of each other. Because they hold a lot of water, pea shoots mold easily, so drain thoroughly and do not oversoak the mix.",
+     "what_to_look_for_beginner": "Plump, swollen peas that have roughly doubled in size after soaking, spread in an even, crowded layer across the surface. The mix should be damp but with no standing water.",
+     "log_prompt_beginner": "Peas soaked and sown?",
+     "user_action_seasoned": "Presoak seed 8 to 12 hours, drain fully, then broadcast densely on pre-moistened medium in a single layer. Peas are the most mold-prone microgreen; drain hard and keep the medium moist, not saturated.",
+     "what_to_look_for_seasoned": "Fully imbibed, swollen seed in a dense even layer on moist, well-drained medium.",
+     "log_prompt_seasoned": "Presoaked and sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      2,
+      5
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray to keep it dark, and stack a lightly weighted empty tray on top; the gentle weight pushes the roots down and gives you sturdy, even shoots. Keep it warm, around 70°F. Peas are prone to mold, so give them a little airflow and only mist if the surface is drying out.",
+     "what_to_look_for_beginner": "The peas split and push out thick white roots, then pale, sturdy shoots that begin to lift the cover. A little white fuzz right at the seeds is usually harmless root hairs, not mold, if it disappears when you mist.",
+     "log_prompt_beginner": "Any sprouts pushing up the cover?",
+     "user_action_seasoned": "Weighted blackout cover at around 70°F. Keep the medium moist but favor airflow over misting to limit the mold pressure peas are prone to.",
+     "what_to_look_for_seasoned": "Radicles emerge and thick blanched shoots lift the weighted cover. Distinguish root-hair fuzz (transient) from mycelium at the seed.",
+     "log_prompt_seasoned": "Germination underway under weight?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      3,
+      7
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered in the dark for about three days after sprouting. This dark stretch pulls all the shoots up tall and even before they see light. Keep an eye out for mold in the humid dark: good airflow around the tray is your best defense.",
+     "what_to_look_for_beginner": "A crowd of pale, chunky shoots several inches tall, lifting the cover as they reach up together. They will be white to pale yellow, not green yet.",
+     "log_prompt_beginner": "Shoots stretching up tall and even?",
+     "user_action_seasoned": "Hold blackout about 3 days to elongate and even the stand. Watch closely for damping-off and mold in the humid dark; airflow is the primary control for peas.",
+     "what_to_look_for_seasoned": "Tall, uniform, blanched shoots lifting the cover; a dense even pre-greening stand.",
+     "log_prompt_seasoned": "Stand elongated and even?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      6,
+      12
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright light, about 18 hours a day, at a comfortable 68 to 72°F. The pale shoots green up within a day and start unfurling little curling tendrils. Water from the bottom now instead of misting the leaves, which keeps the dense canopy dry and holds mold at bay.",
+     "what_to_look_for_beginner": "Shoots turning from pale to deep green, standing tall, with thin curling tendrils and the first true leaves opening at the tips. The tray smells fresh and sweet, like garden peas.",
+     "log_prompt_beginner": "Greening up and putting out tendrils?",
+     "user_action_seasoned": "Uncover into about 18 hours of light at 68-72°F. Shoots green and produce tendrils. Switch to bottom-watering to keep the canopy dry and suppress mold.",
+     "what_to_look_for_seasoned": "Rapid greening, tendril formation, and first true leaves. Sweet pea aroma develops.",
+     "log_prompt_seasoned": "Greened up, tendrils showing?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      10,
+      16
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest when the shoots are about 4 to 6 inches tall with tendrils and their first true leaves, usually around 10 to 16 days. Gather a bunch and cut just above the soil line with clean scissors. Pea shoots are sweet and crunchy raw; eat them fresh, as they do not regrow after cutting.",
+     "what_to_look_for_beginner": "Sturdy green shoots four to six inches tall with curling tendrils and open leaves. The stems should still be tender and snap easily, and taste sweet and pea-like.",
+     "log_prompt_beginner": "Tall enough to snip? Log your harvest.",
+     "user_action_seasoned": "Cut at 4 to 6 inches once tendrils and first true leaves show, about 10 to 16 days. Single cut just above the medium with clean scissors. No regrowth; harvest the full tray and use fresh.",
+     "what_to_look_for_seasoned": "Shoots at 4-6 in with tendrils and first true leaves; stems still tender, sweet pea flavor.",
+     "log_prompt_seasoned": "Cutting at 4-6 in? Log your harvest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='radish-microgreens')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Sow",
+     "name_beginner": "Plant",
+     "description_seasoned": "Dense even broadcast of dry radish seed on pre-moistened medium, roughly 40 grams per 1020 tray; no presoak.",
+     "description_beginner": "Scatter radish seeds thickly on damp medium. No soaking needed.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Large radish seed imbibes and splits fast under a weighted cover at about 70 to 75 °F; germination is strong and even.",
+     "description_beginner": "The big seeds sprout quickly under a covered, warm tray.",
+     "day_range_from_sow": [
+      1,
+      3
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Short dark period (about 1 to 3 days) that stretches stems and evens the stand before light.",
+     "description_beginner": "A day or two in the dark that makes the stems stretch evenly.",
+     "day_range_from_sow": [
+      2,
+      4
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into 18 hours of light at about 68 to 72 °F; cotyledons green and the first true leaf may show.",
+     "description_beginner": "Uncovered into bright light so the leaves turn green.",
+     "day_range_from_sow": [
+      4,
+      8
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Single cut at cotyledon to first-true-leaf, often about a week from sowing; eaten fresh.",
+     "description_beginner": "Snip and eat when the little leaves are open, usually about a week after planting.",
+     "day_range_from_sow": [
+      7,
+      12
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Scatter radish seed thickly and evenly across a tray of pre-moistened mix. Radish seed is large and vigorous, so use a generous amount, roughly 40 grams (about a quarter cup) per standard 10 by 20 inch tray, in a dense single layer. No soaking needed; just mist the surface to settle the seed.",
+     "what_to_look_for_beginner": "Big, round seeds spread in a thick, even layer across the whole surface, over evenly damp mix with no pooling water.",
+     "log_prompt_beginner": "Tray sown and misted?",
+     "user_action_seasoned": "Dry-broadcast large radish seed densely on pre-moistened medium, roughly 40 g per 1020 tray, in a single even layer. No presoak; mist to settle. Surface-sow.",
+     "what_to_look_for_seasoned": "A dense, even layer of large seed with no gaps on moist medium.",
+     "log_prompt_seasoned": "Tray sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      1,
+      3
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray to keep it dark and humid, with a lightly weighted empty tray on top to root the seeds down evenly. Keep it warm, around 70 to 75°F. Radish is one of the easiest microgreens, germinating strongly and evenly, so expect quick action. Mist only if the surface dries.",
+     "what_to_look_for_beginner": "The big seeds swelling, splitting, and pushing out thick white roots, then sturdy pale stems that lift the cover, usually all at once.",
+     "log_prompt_beginner": "Any sprouts pushing up already?",
+     "user_action_seasoned": "Weighted blackout cover at 70-75°F. Large radish seed imbibes and splits fast, with strong, even germination. Mist only to prevent surface drying.",
+     "what_to_look_for_seasoned": "Rapid, uniform imbibition; thick radicles and blanched stems lifting the cover.",
+     "log_prompt_seasoned": "Germination underway?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      2,
+      4
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered in the dark for a short stretch, about one to three days after sprouting. Radish stretches fast, so it needs less dark time than most. This brief dark period evens out the stand before light. Keep misting lightly if the surface dries.",
+     "what_to_look_for_beginner": "A thick mat of pale, stretched stems standing tall and lifting the cover. They will be white or pale pink, not green yet.",
+     "log_prompt_beginner": "Stems tall and even under there?",
+     "user_action_seasoned": "Hold blackout about 1 to 3 days; radish elongates quickly and needs a shorter dark period than slower crops. Mist to maintain surface moisture.",
+     "what_to_look_for_seasoned": "Uniformly elongated, blanched (often pink-tinged) stems lifting the cover.",
+     "log_prompt_seasoned": "Stand evened up under blackout?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      4,
+      8
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright light, about 18 hours a day, at a comfortable 68 to 72°F. The pale stems green up fast, and many varieties keep a pretty pink or purple tint on the stems. Water from the bottom now instead of misting the leaves to keep the canopy dry.",
+     "what_to_look_for_beginner": "Seed leaves turning bright green within a day, often over pink or purple stems, and the tray taking on a sharp, spicy smell.",
+     "log_prompt_beginner": "Greening up, with pink stems showing?",
+     "user_action_seasoned": "Uncover into about 18 hours of light at 68-72°F. Cotyledons green rapidly; stems often retain pink or purple pigment. Bottom-water to keep the canopy dry.",
+     "what_to_look_for_seasoned": "Rapid greening of cotyledons over pigmented stems; pungent aroma develops.",
+     "log_prompt_seasoned": "Cotyledons greened up?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      7,
+      12
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest when the seed leaves are open and green, usually about a week after sowing. Gather a handful and cut just above the soil line with clean scissors. Radish microgreens pack a spicy, peppery kick; eat them fresh, and remember they do not regrow, so cut the whole tray.",
+     "what_to_look_for_beginner": "Open green seed leaves about one to two inches tall, on colorful stems, with a bold peppery bite when you taste one.",
+     "log_prompt_beginner": "Time to snip that spice? Log your harvest.",
+     "user_action_seasoned": "Single-cut at the cotyledon to first-true-leaf stage, often about 7 days. Cut just above the medium with clean scissors, rinse, and use fresh. Pungent flavor. No regrowth; harvest the full tray.",
+     "what_to_look_for_seasoned": "Cotyledons open at 1-2 in on pigmented stems; sharp, peppery flavor.",
+     "log_prompt_seasoned": "First cut? Log your harvest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='sunflower-sprouts')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Soak and sow",
+     "name_beginner": "Soak and plant",
+     "description_seasoned": "Presoak seed 8 to 12 hours, then broadcast densely and evenly on pre-moistened medium; do not bury.",
+     "description_beginner": "Soak the seed 8 to 12 hours, then scatter it thickly on damp medium; do not cover with soil.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds imbibe and root under a covered, weighted tray at about 74 °F.",
+     "description_beginner": "Seeds sprout under a covered, weighted, warm tray.",
+     "day_range_from_sow": [
+      2,
+      4
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Weighted blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "About 3 to 4 dark days under 2 to 5 pounds of weight that stretch the stems evenly and help the hulls split off the cotyledons.",
+     "description_beginner": "About 3 to 4 days in the dark under a weight, which makes the stems stretch evenly and helps the shells come off.",
+     "day_range_from_sow": [
+      3,
+      6
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into about 18 hours of light at about 72 °F; cotyledons green and plump, and any clinging hulls are rubbed or rinsed off.",
+     "description_beginner": "Uncovered into bright light so the seed leaves turn green; brush off any leftover shells.",
+     "day_range_from_sow": [
+      5,
+      10
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Harvest and eat",
+     "description_seasoned": "Single cut at the base at the plump-cotyledon stage, before the first true leaves expand; eaten fresh.",
+     "description_beginner": "Snip at the base when the seed leaves are full and before true leaves form; eat fresh.",
+     "day_range_from_sow": [
+      8,
+      14
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Sunflower seeds are large, so soak them first: cover them with cool water for 8 to 12 hours, then drain. Scatter the drained seed thickly and evenly across a tray of pre-moistened mix in a dense single layer. Do not bury them; they sit right on top of the mix. A crowded, even layer helps the seedlings push their seed coats off later.",
+     "what_to_look_for_beginner": "Plump, swollen seeds spread in a thick, even layer across the surface, over damp mix with no standing water.",
+     "log_prompt_beginner": "Seeds soaked and sown?",
+     "user_action_seasoned": "Presoak seed 8 to 12 hours, drain, then broadcast densely and evenly on pre-moistened medium in a single layer. Do not cover with mix. A dense stand aids hull shedding downstream.",
+     "what_to_look_for_seasoned": "Fully imbibed, swollen seed in a dense even layer on moist, well-drained medium.",
+     "log_prompt_seasoned": "Presoaked and sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      2,
+      4
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray to keep it dark, and set a weighted empty tray on top; sunflowers need real weight to root down and to help split their seed coats. Keep it warm, around 74°F. Mist if the surface dries, but do not let it get soggy.",
+     "what_to_look_for_beginner": "Seeds splitting and pushing out thick white roots, then sturdy pale stems, many still wearing their black-and-white seed coats like little helmets.",
+     "log_prompt_beginner": "Any sprouts pushing up the cover?",
+     "user_action_seasoned": "Weighted blackout cover at around 74°F; sunflowers benefit from firm weight for rooting and hull splitting. Mist only to prevent surface drying.",
+     "what_to_look_for_seasoned": "Radicles emerge and thick blanched stems lift the cover; many hypocotyls still bearing pericarps (hulls).",
+     "log_prompt_seasoned": "Germination underway under weight?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      3,
+      6
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered and weighted in the dark for about three to four days after sprouting. Use 2 to 5 pounds of weight (a second tray with a brick or a water jug works). The weight makes the stems push up strong and even, and it helps pop the seed coats off the leaves. Mist lightly if the surface dries.",
+     "what_to_look_for_beginner": "Tall, pale, sturdy stems lifting the weighted cover together, many shedding or ready to shed their seed coats. Still pale, not green.",
+     "log_prompt_beginner": "Stems tall and shedding their shells?",
+     "user_action_seasoned": "Hold weighted blackout about 3 to 4 days under 2 to 5 lb. The weight elongates stems evenly and helps shear the hulls off the cotyledons. Mist to maintain surface moisture.",
+     "what_to_look_for_seasoned": "Uniformly elongated blanched stems lifting the weight; hulls loosening or dropping from cotyledons.",
+     "log_prompt_seasoned": "Stand elongated, hulls splitting?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      5,
+      10
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright light, about 18 hours a day, around 72°F. The seed leaves plump up and turn green. Gently rub or rinse off any seed coats still clinging to the leaves; leaving them on invites mold. Water from the bottom now rather than over the leaves.",
+     "what_to_look_for_beginner": "Thick, plump seed leaves turning deep green, standing on crisp white stems, with the last black seed coats brushing off easily.",
+     "log_prompt_beginner": "Greening up, shells brushed off?",
+     "user_action_seasoned": "Uncover into about 18 hours of light at around 72°F. Cotyledons green and plump. Rub or rinse off clinging hulls to prevent mold. Bottom-water to keep the canopy dry.",
+     "what_to_look_for_seasoned": "Cotyledons greening and thickening; residual hulls shed; crisp white hypocotyls.",
+     "log_prompt_seasoned": "Cotyledons greened, hulls cleared?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      8,
+      14
+     ],
+     "audience": "core",
+     "user_action_beginner": "Harvest at the plump seed-leaf stage, before the first true leaves open, usually about 8 to 14 days. Wait too long and the shoots turn bitter. Cut just above the soil line with clean scissors. Sunflower shoots are thick, crunchy, and nutty; eat them fresh, and cut the whole tray since they do not regrow.",
+     "what_to_look_for_beginner": "Fat, green seed leaves on thick crunchy stems two to four inches tall, with no true leaves showing yet. They should taste nutty and fresh, not bitter.",
+     "log_prompt_beginner": "Plump and ready before they turn? Log your harvest.",
+     "user_action_seasoned": "Single-cut at the base at the plump-cotyledon stage, before true leaves expand, about 8 to 14 days; later cuts turn bitter. Cut with clean scissors, rinse, and use fresh. No regrowth; harvest the full tray.",
+     "what_to_look_for_seasoned": "Plump green cotyledons on thick stems, pre-true-leaf; nutty, crunchy, not yet bitter.",
+     "log_prompt_seasoned": "Cutting before true leaves? Log your harvest."
+    }
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='wheatgrass')].growth_stages",
+   "from": [
+    {
+     "stage_id": "sow",
+     "name_seasoned": "Soak and sow",
+     "name_beginner": "Soak and plant",
+     "description_seasoned": "Wheat berries soaked 8 to 12 hours (optionally sprouted a day), then spread thickly in an even single layer on pre-moistened medium.",
+     "description_beginner": "Wheat berries soaked for 8 to 12 hours, then spread in one even layer on damp medium.",
+     "day_range_from_sow": [
+      0,
+      1
+     ]
+    },
+    {
+     "stage_id": "germination",
+     "name_seasoned": "Germination",
+     "name_beginner": "Sprouting",
+     "description_seasoned": "Seeds root and sprout under a covered tray at about 60 to 70 °F.",
+     "description_beginner": "Seeds sprout under a covered tray in a warm room.",
+     "day_range_from_sow": [
+      1,
+      3
+     ]
+    },
+    {
+     "stage_id": "blackout",
+     "name_seasoned": "Blackout",
+     "name_beginner": "Dark phase",
+     "description_seasoned": "Short dark period (about 2 to 3 days) that evens the stand and stretches the young shoots before light.",
+     "description_beginner": "A couple of days in the dark that bring the grass up evenly before you give it light.",
+     "day_range_from_sow": [
+      2,
+      4
+     ]
+    },
+    {
+     "stage_id": "light",
+     "name_seasoned": "Light / greening",
+     "name_beginner": "Light",
+     "description_seasoned": "Uncovered into bright indirect light; the blades green up and grow toward cutting height.",
+     "description_beginner": "Uncovered into bright light so the grass turns deep green and grows tall.",
+     "day_range_from_sow": [
+      4,
+      7
+     ]
+    },
+    {
+     "stage_id": "harvest",
+     "name_seasoned": "Harvest",
+     "name_beginner": "Cut and juice",
+     "description_seasoned": "Single cut near the base at about 6 to 7 inches, at the jointing stage when a second blade begins; juiced fresh.",
+     "description_beginner": "Cut the grass near the soil at about 6 to 7 inches tall, then juice it fresh.",
+     "day_range_from_sow": [
+      7,
+      10
+     ]
+    }
+   ],
+   "value": [
+    {
+     "id": "sow",
+     "name": "Sow",
+     "day_range_from_sow": [
+      0,
+      1
+     ],
+     "audience": "core",
+     "user_action_beginner": "Soak wheat berries in cool water for 8 to 12 hours, then drain. Spread the drained berries in a single even layer across a tray of pre-moistened mix, close together but ideally not piled in a thick heap, which can trap moisture and cause mold. Wheatgrass is grown for juicing, so a clean, even mat is the goal.",
+     "what_to_look_for_beginner": "Plump, swollen wheat berries spread in one even layer across the surface, over damp mix with no standing water and no thick clumps.",
+     "log_prompt_beginner": "Berries soaked and spread?",
+     "user_action_seasoned": "Soak wheat berries 8 to 12 hours (optionally pre-sprout one day), drain, then spread in a dense single layer on pre-moistened medium. Avoid deep piling, which promotes matting and mold. Surface-sow.",
+     "what_to_look_for_seasoned": "Fully imbibed berries in a single even layer on moist, well-drained medium; no deep piles.",
+     "log_prompt_seasoned": "Soaked and sown?"
+    },
+    {
+     "id": "germination",
+     "name": "Germination",
+     "day_range_from_sow": [
+      1,
+      3
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cover the tray to keep it dark and humid while the berries root and sprout. Keep it in a warm room, around 60 to 70°F. Wheatgrass roots into a dense mat, so give it a little airflow and mist only lightly; a constantly wet mat is the main cause of mold at the base.",
+     "what_to_look_for_beginner": "White roots knitting into a mat across the tray, then pale green-tipped shoots beginning to stand up under the cover.",
+     "log_prompt_beginner": "Roots and shoots starting under the cover?",
+     "user_action_seasoned": "Cover for darkness at 60-70°F while berries root and sprout. The dense root mat is mold-prone; favor light misting and airflow over saturation.",
+     "what_to_look_for_seasoned": "Roots forming a mat; blanched shoots with green tips emerging under the cover.",
+     "log_prompt_seasoned": "Germination underway?"
+    },
+    {
+     "id": "blackout",
+     "name": "Blackout",
+     "day_range_from_sow": [
+      2,
+      4
+     ],
+     "audience": "core",
+     "user_action_beginner": "Keep the tray covered in the dark for a couple of days after sprouting to bring the grass up tall and even before it sees light. Watch the base of the mat closely: if it stays soggy it can grow moldy, so keep airflow going and do not overwater.",
+     "what_to_look_for_beginner": "A dense stand of pale, upright shoots several inches tall lifting the cover, growing evenly together. Still pale, not deep green.",
+     "log_prompt_beginner": "Grass coming up tall and even?",
+     "user_action_seasoned": "Hold blackout about 2 to 3 days to even the stand and elongate shoots. Monitor the root mat for saturation; airflow is the primary mold control.",
+     "what_to_look_for_seasoned": "Uniform, elongated pale shoots lifting the cover; dense even stand pre-greening.",
+     "log_prompt_seasoned": "Stand evened up under blackout?"
+    },
+    {
+     "id": "light",
+     "name": "Light",
+     "day_range_from_sow": [
+      4,
+      7
+     ],
+     "audience": "core",
+     "user_action_beginner": "Uncover the tray and move it into bright, indirect light. The blades turn deep green and grow toward cutting height. Keep watering from the bottom or lightly at the base, never soaking the crowns, and keep the air moving to hold mold off the dense mat.",
+     "what_to_look_for_beginner": "Blades turning from pale to deep, rich green and standing tall, growing noticeably taller each day.",
+     "log_prompt_beginner": "Turning deep green and growing tall?",
+     "user_action_seasoned": "Uncover into bright indirect light. Blades green and gain height. Bottom-water and maintain airflow; avoid crown wetting on the dense mat.",
+     "what_to_look_for_seasoned": "Blades greening to deep green and elongating toward cutting height.",
+     "log_prompt_seasoned": "Blades greened and gaining height?"
+    },
+    {
+     "id": "harvest",
+     "name": "Harvest",
+     "day_range_from_sow": [
+      7,
+      10
+     ],
+     "audience": "core",
+     "user_action_beginner": "Cut when the grass is about 6 to 7 inches tall and just starting to split into a second blade (the jointing stage), usually 7 to 10 days in. Snip near the base with clean scissors and juice it fresh right away; wheatgrass is juiced, not eaten whole. One good cut is standard, and a tray may offer a lighter second cut before it fades.",
+     "what_to_look_for_beginner": "Deep green blades six to seven inches tall, with a second blade just beginning to appear from the center. That jointing point is peak sweetness for juicing.",
+     "log_prompt_beginner": "Tall enough to cut and juice? Log it.",
+     "user_action_seasoned": "Single-cut near the base at about 6 to 7 inches, at the jointing stage as the second blade begins, roughly 7 to 10 days. Juice fresh immediately. A modest second cut is sometimes possible before decline.",
+     "what_to_look_for_seasoned": "Blades at 6-7 in with a second blade initiating (jointing); optimal juicing point.",
+     "log_prompt_seasoned": "Cutting at jointing? Log your harvest."
+    }
+   ]
+  }
+ ]
+}

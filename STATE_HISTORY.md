@@ -6,6 +6,28 @@
 
 ---
 
+## 2026-07-08 -- MICROGREENS growth_stages SCHEMA MIGRATION -- COMPLETE (8 crops) (CONTENT release; `86ccf8c3` -> `9d1193eb`) [Claude Code]
+
+**All 114 certified crops now use the standard per-stage `growth_stages` shape.** The 8 microgreens-family crops from the 2026-07-02 indoor batch (arugula-microgreens, broccoli-microgreens, cilantro-microgreens, microgreens-mix, pea-shoots, radish-microgreens, sunflower-sprouts, wheatgrass) were migrated from an older non-standard per-stage shape to the shape every other crop uses.
+
+**THE GAP:** those 8 shipped `growth_stages` with `stage_id` + `name_seasoned`/`name_beginner` + `description_seasoned`/`description_beginner`, while the standard (cherry-tomato/beefsteak) is `id`, `name`, `day_range_from_sow`, `audience`, `user_action_beginner`/`_seasoned`, `what_to_look_for_beginner`/`_seasoned`, `log_prompt_beginner`/`_seasoned`. The plant-app renderer reads the standard keys, so these cards showed **blank titles + empty "Do this"/"Look for" sections**; plant-app patched around it 2026-07-07 (commit `a3a0145`). This fixes the data at source so that workaround can be retired.
+
+**Why no gate caught it:** `whole_crop_gate` has ZERO `growth_stages`/per-stage-field references (grep-confirmed) -- it never inspected the per-stage shape, which is exactly why the old shape certified. The two gates that DO read stage ids (`timing_spine_gate`, `compound_population_gate`) both use `s.get("id") or s.get("stage_id")`, so the rename was safe for them. `register_completeness` passes because the six copy fields are `_beginner`/`_seasoned`-suffixed (auto-ruled) and `id`/`name`/`audience` are EXCLUDED_KEYS.
+
+**Scope decision (no new gate):** exactly these 8 crops were old-shape (roster scan confirmed). A roster-wide per-stage shape gate is tempting armor but would FLOOD: 29 other certified crops (bell-pepper, kale, the cucurbits, brassicas, etc.) merely lack `audience` on some stages under an otherwise-standard shape (204 of 678 stages lack `audience`). Forcing a shape gate now repeats the a25-tightening-floods pattern -- it needs its own ruling pass, not this migration. So: NO new field, NO new gate, NO gate change.
+
+**The `name` collapse (Trevor's call, 2026-07-08):** the old shape had TWO stage titles (`name_seasoned`/`name_beginner`); the standard has ONE non-toggling `name` (638/678 stages roster-wide already single; these 8 were the ONLY crops with per-register titles). The app card title does NOT switch with the beginner/seasoned toggle -- only the six copy fields do (a register-aware title would be a schema + app-renderer change, out of scope). Trevor chose **clean humanized-id labels** (Sow / Germination / Blackout / Light / Harvest, uniform across all 8) "to match the rest of our crops"; the presoak/weighting/greening cues live in the copy fields.
+
+**Authoring:** `audience=core` (the only value in the dataset); the six copy fields authored in the **beefsteak-tomato voice** (the newer anchor whose casual beginner log-prompts match the requested style -- beginner = warm, explains the why, one parenthetical teaching aside; seasoned = terse/mechanistic). Each crop authored from its OWN certified `description_*` (raw material for `what_to_look_for_*`) + its distinct biology: radish 40g large-seed fast germ + pink stems; cilantro slowest microgreen, 7-14 day blackout, "be patient"; sunflower 2-5 lb weighted blackout to split hulls + rub/rinse off; pea most mold-prone (airflow the control); wheatgrass grown for JUICE not eaten, cut at the jointing stage. **stage ids + `day_range_from_sow` byte-preserved** (timing spine / tray-stage cards / blackout->bright ranges untouched -- invariant-checked in the builder and post-apply).
+
+**Applied** SHA-guarded via `tools/apply_patch.py` + `tools/batches/microgreens_growth_stages_migration.json` (8 `replace` ops, each `from`-guarded on that crop's exact old `growth_stages` array; base_sha `86ccf8c3`). Footprint verified: EXACTLY the 8 crops' `growth_stages` changed, all 116 other crops + every top-level key byte-identical, old-shape keys gone, exact 10-key set per stage, count 124, COMPACT (no trailing newline), 0 escaped-unicode, literal degree glyph. Reviewable artifact: `scratchpad/authored_content.json` (the copy) + `build_patch.py` (the fuser).
+
+**Gates (real canonical `9d1193eb`):** gate_all PASS (114/114), whole_crop_gate PASS x8, register_completeness PASS (0 unruled prose), timing_spine 0 violations/0 warnings, temp_scan 0, release_verify clean (D. dash/degree scan ok; the 2 review notes are pre-existing non-blocking Step-5.5 calendar items), explicit scan of the new copy = 0 em-dashes / 0 mis-spaced degrees.
+
+**APP HANDOFF (flagged):** `docs/kickoffs/16-microgreens-growth-stages-app-rebuild.md` -- plant-app needs `npm run build:guides` + the promotion checklist's count assertions + `npx jest` to pull the rebuilt guides; the `a3a0145` workaround can be reverted once real titles/copy render.
+
+**Status:** applied to the working tree + full state trio; held **UNCOMMITTED / UNPUSHED** for Trevor's review + push (CLAUDE.md: Trevor confirms every push).
+
 ## 2026-07-08 -- REGISTER #11 SEED-START INDOOR OFFER -- COMPLETE (12 seed-startable non-seed crops) (CONTENT release; `00e0b6b1` -> `86ccf8c3`) [Claude Code]
 
 **The seed-startable non-seed crops now fully OFFER the indoor-from-seed path** -- method prose + `seedling_light` + `tray_sowing` + `pot_up` + `weeks_indoors`, not just `germination_light`. The app can render a complete "How to start [crop] indoors from seed" walkthrough (plus a `weeks_indoors`-computable start date) alongside the recommended transplant/set/division path.
