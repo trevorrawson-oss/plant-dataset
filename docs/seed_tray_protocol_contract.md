@@ -250,4 +250,22 @@ artifact of release_verify's single-`--slug` default, expected; the calendar rev
 `wait` gaps on cherry-tomato's untouched regions). Byte-isolation: exactly the 7 intended crops differ
 from HEAD, none added/removed, all else byte-identical.
 
-**NOT committed, NOT pushed** -- held for Trevor's go on the rollout.
+The pilot + a 6-batch archetype rollout (see STATE_HISTORY 2026-07-07 #9) carried `tray_sowing` + `pot_up`
+to all 114 certified crops (`6990f1da` -> `17ff6b67`, pushed). `multisow_clump` shipped RESERVED (0 live).
+
+## REGISTER #10 (2026-07-07) -- multisow_clump gets its first live member (`17ff6b67` -> `00e0b6b1`)
+
+The RESERVED `multisow_clump` value is now LIVE on **spring-onion**. #9 had left spring-onion (+ leek) as
+`multi_sow_thin_to_one` because their authored prose is the individual-transplant method, so flipping the
+enum alone would contradict the crop's own content. Scallions are the textbook multisow crop, so the fix
+was an ADDITIVE amend: a THIRD `start_method` route authored into both registers (sow a pinch of ~6-10
+seeds per cell, grow + transplant the whole clump undivided with no thinning, space clumps 4-6 in, harvest
+the biggest first and let the rest size up), then `tray_sowing` -> `multisow_clump` (`pot_up` stays
+`not_needed`). Sourced from RHS + Johnny's bunching-onion guide (the multisowing method popularized by
+Charles Dowding); cited "(RHS)" inline to match the crop's existing "(UMN)" institutional-cite style.
+**Legal (Trevor check):** facts + methods are not copyrightable (17 U.S.C. 102(b) / Feist) -- the prose is
+ORIGINAL, not copied wording, and does NOT rely on the Old Farmer's Almanac (dropped from the citation).
+Gates: seed_tray_gate PASS (multisow_clump 1 live / 0 reserved), whole_crop_gate spring-onion PASS,
+register_completeness / register_coverage / gate_all PASS, release_verify CLEAN (only spring-onion changed).
+
+**NOT pushed** -- #10 committed, held for Trevor's push confirmation.

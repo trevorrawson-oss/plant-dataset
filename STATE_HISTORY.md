@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-07-07 -- REGISTER #10 MULTISOW-CLUMP SHOWCASE -- COMPLETE (spring-onion) (CONTENT release; `17ff6b67` -> `00e0b6b1`) [Claude Code]
+
+**Register #9's RESERVED `multisow_clump` value now has its first LIVE member: spring-onion.** The seed-tray flow can now surface plant's forward-thinking multisow method for scallions.
+
+**What changed (one crop, additive amend):** spring-onion (Spring Onion / Scallion) `tray_sowing` flipped `multi_sow_thin_to_one` -> `multisow_clump`; a THIRD start_method route was authored into both registers (the seed-tray multisow method): sow a pinch of ~6-10 seeds per cell, grow and transplant the whole clump undivided (no thinning), space clumps 4-6 inches apart, harvest the biggest from each clump first and let the rest size up. `pot_up` stays `not_needed` (clump goes straight out, no intermediate pot-up).
+
+**Why spring-onion (and why an amend, not a flip alone):** #9 had left leek AND spring-onion as `multi_sow_thin_to_one` because their authored prose was the individual-transplant method, and flipping the enum alone would have contradicted the crop's own content. Scallions are the textbook multisow crop, so the honest fix was to AUTHOR the multisow route into spring-onion's prose (making the enum value backed by real how-to), coherent alongside the existing direct-sow + individual-transplant routes.
+
+**Sourcing + the legal check (Trevor raised it):** the method + numbers are sourced from RHS + Johnny's bunching-onion guide (the multisowing method popularized by Charles Dowding), corroborated by UMN/Almanac. **Copyright:** facts and methods are not copyrightable (17 U.S.C. 102(b); Feist) -- the prose is ORIGINAL (written from scratch, not copied wording), so this is the same fact-sourced/original-prose model the whole dataset uses. On Trevor's steer we (a) do NOT rely on the Old Farmer's Almanac (it was only one corroborating research source; the prose never cited it), and (b) softened the inline attribution from "Charles Dowding and RHS" to just "(RHS)", matching the crop's existing "(UMN)" institutional-cite style (the dataset cites institutions, not individuals).
+
+**Gates + guards.** SHA-guarded: EXACTLY spring-onion changed, all else byte-identical, count 124, COMPACT no trailing newline. seed_tray_gate PASS (multisow_clump now 1 live member / 0 reserved); whole_crop_gate spring-onion PASS (dual-register complete, dash/temp clean); register_completeness PASS; register_coverage PASS; gate_all PASS (114/114); release_verify CLEAN (single-slug: only spring-onion changed, no new violations, no `--`/em-dash/spelled-degrees). `17ff6b67` -> `00e0b6b1`.
+
+**Register #10 COMPLETE -- `multisow_clump` is no longer reserved.** Follow-on (optional): extend the multisow method to other genuinely-clump alliums if the roster gains them. Trevor confirms every push: this is COMMITTED but UNPUSHED, held for confirmation.
+
+---
+
 ## 2026-07-07 -- REGISTER #9 SEED-TRAY CELL PROTOCOL -- COMPLETE (all 114 certified crops) (CONTENT release; `6990f1da` -> `17ff6b67`) [Claude Code]
 
 **Register #9 is done: `tray_sowing` + `pot_up` on all 114 certified crops.** The app now has the missing middle of the seed -> transplant journey -- structured "sow a few seeds per cell -> thin to the strongest -> pot up before hardening off" guidance, deterministic, no LLM.
