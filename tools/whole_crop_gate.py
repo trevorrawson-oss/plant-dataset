@@ -590,6 +590,36 @@ print(f"  register-coverage violations: {len(_regcov)}")
 for m in _regcov:
     fail(f"register-coverage: {m}")
 
+# ---------------- A40/A41/A42. register VALUE-shape (the companion to A39's presence floor) ----------------
+# A39 requires the register fields be PRESENT-or-null; these validate that the value, when present, is
+# well-SHAPED -- the standalone register gates (previously on-demand only) wired into the always-on suite
+# so a garbage register VALUE on a newly-certified crop cannot pass cert. Each fires only when the field
+# is present (A39 owns presence), so uncertified §E shells that carry none no-op here. All three are 0 on
+# the current canonical (green first run). (register #8 follow-on, 2026-07-07.)
+#   A40 timing spine : enum / [min,max] / ladder monotonicity / amend-not-recert provenance (T1 sources)
+#   A41 climate      : range / enum / heat_effect<->threshold / frost<chilling<heat coherence
+#   A42 seedling/germ: enum / germ-null<->seed coherence / cap_hours <=> photoperiod_capped
+from timing_spine_gate import timing_spine_violations
+print("A40. timing-spine value shape (enum/pair/ladder/provenance; fires only when a field is present)")
+_tsv = timing_spine_violations(crop, data.get("source_catalog", {}))
+print(f"  timing-spine value-shape violations: {len(_tsv)}")
+for m in _tsv:
+    fail(f"timing-spine: {m}")
+
+from climate_threshold_gate import check_crop as _climate_shape_violations
+print("A41. climate-threshold value shape (range/enum/coherence; fires only when a field is present)")
+_ctv = _climate_shape_violations(crop)
+print(f"  climate-shape violations: {len(_ctv)}")
+for m in _ctv:
+    fail(f"climate-shape: {m}")
+
+from seedling_light_gate import check_crop as _seedling_shape_violations
+print("A42. seedling/germination-light value shape (enum/coherence/cap; fires only when present)")
+_slv = _seedling_shape_violations(crop)
+print(f"  seedling-light value-shape violations: {len(_slv)}")
+for m in _slv:
+    fail(f"seedling-light: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
