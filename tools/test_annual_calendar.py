@@ -321,3 +321,30 @@ if os.path.exists(_path):
     assert _total == 0, ("heat_pause backing regressed (was 0 after the Pass-1 back-fill)", _total)
     print(f"  heat_pause_backing_violations: {_total} unbacked across certified annuals (Pass-1 landed): PASS")
 print("PASS annual_calendar (deriver + coherence + B1 placement + B3 backing)")
+
+# ============ heat-gap indoors flip (action-over-passive): Task 1 ============
+# During a heat_pause, a month that is a CORE month of a real indoor-start window
+# (start_indoors OR second_planting.start_indoors) shows `indoors` -- the actionable
+# "start fall seedlings now" -- instead of the passive heat_pause. broccoli ca_interior z9:
+# pause May-Jul, fall indoor window Jun 20 - Aug 18 -> core month July -> July flips.
+# (Nov 1 - Nov 22 is NOT a core month, so the partial spring window never triggers a flip.)
+_bz9 = {
+    "plant_out": "Dec 1 - Feb 28", "start_indoors": "Nov 1 - Nov 22",
+    "harvest": "Mar 1 - May 1", "harvest_start": "Mar 1", "harvest_end": "May 1",
+    "heat_pause": {"months": [5, 6, 7]},
+    "second_planting": {"start_indoors": "Jun 20 - Aug 18", "plant_out": "Aug 1 - Sep 30",
+                        "harvest_start": "Oct 15", "harvest_end": "Dec 15"},
+}
+assert ac.indoor_core_months(_bz9) == {7}, ("indoor core months", ac.indoor_core_months(_bz9))
+_cal = ac.derive_annual_calendar(_bz9)
+assert _cal[4] == "heat_pause", ("May stays pause", _cal)
+assert _cal[5] == "heat_pause", ("Jun stays pause (window opens the 20th, not core)", _cal)
+assert _cal[6] == "indoors", ("Jul flips heat_pause->indoors", _cal)
+print("  heat-gap flip: broccoli z9 July heat_pause->indoors: PASS")
+
+_noflip = {"plant_out": "Sep 1 - Oct 1", "start_indoors": None,
+           "harvest": "Nov 1 - Dec 1", "harvest_start": "Nov 1", "harvest_end": "Dec 1",
+           "heat_pause": {"months": [6, 7, 8]}}
+_c = ac.derive_annual_calendar(_noflip)
+assert _c[5] == _c[6] == _c[7] == "heat_pause", ("no indoor action -> no flip", _c)
+print("  heat-gap flip: no indoor action -> no flip: PASS")

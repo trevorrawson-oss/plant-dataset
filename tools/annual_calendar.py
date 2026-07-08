@@ -83,7 +83,8 @@ def derive_annual_calendar(cell, calendar_basis="frost_anchored"):
         if hs and he:
             H = set(_span(hs, he))
     I = parse_months(cell.get("start_indoors"))
-    heat = set(cell.get("heat_pause_months") or ())
+    heat = declared_heat_months(cell)                 # nested heat_pause.months OR flat heat_pause_months
+    heat_flip = heat & indoor_core_months(cell)       # action-over-passive: hot months that are core indoor months
 
     plant_out = parse_months(cell.get("plant_out"))
     if plant_out:
@@ -108,7 +109,9 @@ def derive_annual_calendar(cell, calendar_basis="frost_anchored"):
 
     cal = []
     for m in range(1, 13):
-        if m in heat:
+        if m in heat_flip:
+            cal.append("indoors")            # NEW: a real indoor-start action overrides the passive pause
+        elif m in heat:
             cal.append("heat_pause")
         elif m in P:
             cal.append("plant")
@@ -214,6 +217,17 @@ def core_months(display):
             m, d = _month_day(span)
             if m and d is None:        # a bare month = the whole month
                 out.add(m)
+    return out
+
+
+def indoor_core_months(cell):
+    """Core (fully day-covered) months of any REAL indoor-start window on this cell:
+    top-level `start_indoors` OR `second_planting.start_indoors`. These are the months
+    where an indoor-start ACTION is genuinely underway -- the action-over-passive flip
+    trigger (a heat_pause month here shows `indoors`, not the passive pause)."""
+    out = set(core_months(cell.get("start_indoors")))
+    sp = cell.get("second_planting") or {}
+    out |= core_months(sp.get("start_indoors"))
     return out
 
 
