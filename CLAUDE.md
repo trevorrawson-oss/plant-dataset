@@ -31,7 +31,8 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
   defect class into a SCRATCH COPY, confirm it bounces — before trusting it. A gate isn't done
   until a defect has been sneaked at it and caught.
 - **Release verification before any promote** (protocol #6): `whole_crop_gate` 18/18 +
-  `release_verify` + the per-batch source-truth sample. A green gate is NOT a clean release.
+  `tools/gate_all.py` (the whole suite on **every** certified crop) + `release_verify` + the
+  per-batch source-truth sample. A green gate is NOT a clean release.
 - **State trio at every content release**: regenerate CURRENT_STATE.md via
   `tools/gen_current_state.py` (then fill its prose slots), append STATE_HISTORY.md (most-recent
   first), bump LATEST.txt (SHA + session).
@@ -42,7 +43,10 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
 ## Adding a cross-crop field
 Before adding any field across crops, follow `docs/gs_cross_crop_field_addition_v0.md` (the column
 GS-arc method) and check `docs/field_addition_register.md` (the live queue + trigger conditions).
-Run column passes against a STABLE / complete roster, never mid-certification.
+Run column passes against a STABLE / complete roster, never mid-certification. Once a field's rollout
+is complete it becomes a HARD cert requirement: `whole_crop_gate` A39 enforces presence-or-null and
+A40-A42 enforce value shape for the register fields, run roster-wide by `tools/gate_all.py` -- a new
+crop cannot certify without them (no backfill treadmill).
 
 ## Workflow / git
 - Dataset commits go on `main` here. **Don't commit until Trevor approves** each change; when a

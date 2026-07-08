@@ -44,7 +44,13 @@ This is the same rigor, rotated 90°.
    discipline downstream.)
 5. **Fold into the per-crop checklist.** Once a field is "standard," it joins the per-crop GS-arc
    definition so **newly-certified crops get it natively** — otherwise every new crop the bots
-   certify reopens a backfill treadmill.
+   certify reopens a backfill treadmill. This fold is now **programmatically enforced**, not just a
+   process note: when a field's rollout is complete, its **coverage** joins `whole_crop_gate` **A39**
+   (present-or-explicit-null, `tools/register_coverage_gate.py`) and its **value shape** joins **A40-A42**
+   (the standalone register gates wired into the always-on suite). `tools/gate_all.py` runs the whole
+   suite on **every** certified crop, so a new crop cannot certify while omitting a shipped register
+   field or shipping a garbage value for one. (Turn a field's requirement on only **after** its rollout
+   completes — an in-progress column stays soft, per register #8.)
 
 ## 3. The key wrinkle — amending already-certified crops
 
