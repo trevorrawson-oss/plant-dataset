@@ -1,0 +1,51 @@
+{
+ "base_sha": "a71fe9d753e030c7bd293a57353709db72e21f66626c2778669ce937b367ced4",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='onion')].germination_light",
+   "from": null,
+   "value": "neutral"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='onion')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='onion')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='onion')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='shallot')].germination_light",
+   "from": null,
+   "value": "neutral"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='shallot')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='shallot')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='shallot')].pot_up",
+   "value": "optional"
+  }
+ ]
+}
