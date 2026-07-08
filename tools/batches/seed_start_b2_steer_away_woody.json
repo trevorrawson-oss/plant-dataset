@@ -1,0 +1,75 @@
+{
+ "base_sha": "888e8c55edf7caac7a7353d522f0895472a1d03d3169a0057c18541ada976edc",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='lavender')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='lavender')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='lavender')].weeks_indoors",
+   "from": null,
+   "value": 10
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='lavender')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='rosemary')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='rosemary')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='rosemary')].weeks_indoors",
+   "from": null,
+   "value": 10
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='rosemary')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='lavender')].start_method.notes_beginner",
+   "from": "The easy and reliable way to grow lavender is to buy a small plant, or take a cutting from an existing one. Growing it from seed is slow and unpredictable, and seed-grown plants often do not match the parent, so most gardeners skip it.",
+   "value": "The easy and reliable way to grow lavender is to buy a small plant, or take a cutting from an existing one. Growing it from seed is slow and unpredictable, and seed-grown plants often do not match the parent, so most gardeners skip it. If you do want to grow it from seed, chill the seed in the refrigerator for a few weeks first, then surface-sow it and do not cover it, since it needs light to sprout; keep it around 70°F, start indoors about 10 weeks before your last frost, and be patient, because it comes up slowly and unevenly."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='lavender')].start_method.notes_seasoned",
+   "from": "Lavender is almost always started from a nursery transplant or from softwood cuttings taken after bloom, not from seed. English lavender does not come true from seed and germination is slow and variable (roughly 100 to 200 days from seeding to a plantable size), so named cultivars are propagated vegetatively.",
+   "value": "Lavender is almost always started from a nursery transplant or from softwood cuttings taken after bloom, not from seed. English lavender does not come true from seed and germination is slow and variable (roughly 100 to 200 days from seeding to a plantable size), so named cultivars are propagated vegetatively. To raise it from seed anyway, cold-stratify the seed for three to six weeks (moist, in the refrigerator) to improve and even germination, then surface-sow at about 70°F since light aids germination, starting indoors roughly 10 weeks before the last frost; expect slow, erratic emergence."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='rosemary')].start_method.notes_beginner",
+   "from": "The easy, reliable way to grow rosemary is to buy a small plant or take a cutting from an existing one. Growing it from seed is slow and unpredictable, and seed-grown plants often do not match the parent, so most gardeners skip it.",
+   "value": "The easy, reliable way to grow rosemary is to buy a small plant or take a cutting from an existing one. Growing it from seed is slow and unpredictable, and seed-grown plants often do not match the parent, so most gardeners skip it. If you do want to try seed, surface-sow it and do not cover it, since the seed needs light to sprout, keep it warm around 70°F, and start indoors about 10 weeks before your last frost; expect slow, uneven germination."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='rosemary')].start_method.notes_seasoned",
+   "from": "Rosemary is almost always started from a nursery transplant or from stem cuttings, not from seed. Seed germinates slowly and unevenly and can take about three years to reach a mature plant, and named cultivars do not come true from seed, so growers propagate them from cuttings. Take tip cuttings a few inches long, root them with warmth (bottom heat around 70 to 75°F), and they root in a couple of weeks.",
+   "value": "Rosemary is almost always started from a nursery transplant or from stem cuttings, not from seed. Seed germinates slowly and unevenly and can take about three years to reach a mature plant, and named cultivars do not come true from seed, so growers propagate them from cuttings. Take tip cuttings a few inches long, root them with warmth (bottom heat around 70 to 75°F), and they root in a couple of weeks. To grow from seed instead, surface-sow at about 70°F since the seed needs light, starting indoors roughly 10 weeks before the last frost; germination is slow and uneven and the seedlings size up gradually, which is why most growers still choose cuttings."
+  }
+ ]
+}
