@@ -10,8 +10,8 @@ present-or-explicit-null pattern as whole_crop_gate A17 (npk_ratio) / A20 (displ
 to the register fields: every CERTIFIED crop (verification_status.status == 'verified_gs_arc') must
 carry each shipped register field OR its defined null/N-A. Uncertified §E shells are exempt (they
 certify with their register sets folded into the per-crop checklist -- this gate is what MAKES that
-enforceable). Turn a field's requirement on ONLY after its rollout is complete; all four are complete
-on the stable 114 roster, so all four are enforced here.
+enforceable). Turn a field's requirement on ONLY after its rollout is complete; #4-#7 + #9 are all
+complete on the stable 114 roster, so all five register sets are enforced here.
 
 The per-field N-A predicates are REUSED (imported, never re-encoded) from the standalone gates:
   #4 timing_spine_gate.dtm_empty  -> empty-DTM perennials carry no dtm_anchor (nothing to anchor)
@@ -27,6 +27,8 @@ Required per certified crop (else a coverage violation):
   #5  watering.schedule_by_stage (non-empty)
   #6  germination_light + seedling_light (key present; null is a legit present value)
   #7  heat_threshold_f + frost_tolerance_f + chilling_sensitivity_f (key present; exempt INDOOR_SLUGS)
+  #9  tray_sowing (key present; 'na' is a legit present value). pot_up is enforced by seed_tray_gate's
+      present-iff-real-value coherence via gate_all, so it is not separately required here.
 
 The ladder (day_range_from_sow) / thin_to_inches / harvest_window_days / divide_every_years are
 archetype-OPTIONAL (register #1 graceful-omit + thinning/window/division only where they apply), so
@@ -89,6 +91,12 @@ def register_coverage_violations(crop):
             if f not in crop:
                 V.append(f"{slug}: #7 {f} missing (present-or-null required; INDOOR_SLUGS are the only N/A)")
 
+    # ---- #9 seed-tray cell protocol ('na' is a PRESENT value -> require the key, not a value) ----
+    # pot_up presence is enforced by seed_tray_gate's present-iff-real-value coherence (run roster-wide
+    # by gate_all), so A39 requires only the tray_sowing key.
+    if "tray_sowing" not in crop:
+        V.append(f"{slug}: #9 tray_sowing missing ('na' is a real value for direct-sown/nursery/microgreen)")
+
     return V
 
 
@@ -129,7 +137,7 @@ def main():
         for x in violations:
             print("  -", x)
         sys.exit(1)
-    print("\nregister_coverage_gate: PASS (every certified crop carries the #4-#7 register fields or their N/A)")
+    print("\nregister_coverage_gate: PASS (every certified crop carries the #4-#7 + #9 register fields or their N/A)")
     sys.exit(0)
 
 

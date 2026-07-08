@@ -45,6 +45,8 @@ def full_annual():
         "heat_threshold_f": 92,
         "frost_tolerance_f": 32,
         "chilling_sensitivity_f": 50,
+        "tray_sowing": "multi_sow_thin_to_one",   # #9: present-or-na (na is a present value)
+        "pot_up": "recommended",
     }
 
 
@@ -73,6 +75,7 @@ def empty_dtm_perennial():
         "heat_threshold_f": 95,
         "frost_tolerance_f": 28,
         "chilling_sensitivity_f": None,  # N-A: null is a PRESENT value
+        "tray_sowing": "na",             # #9: 'na' is a present value (nursery stock, no tray phase)
     }
 
 
@@ -88,6 +91,7 @@ def microgreen():
         "watering": {"schedule_by_stage": [{"stage": "germination"}]},
         "germination_light": "neutral",
         "seedling_light": "blackout_then_bright",
+        "tray_sowing": "na",             # #9: microgreens are 'na' (broadcast mat, no cells)
         # no climate fields -- INDOOR_SLUGS are N-A-indoor
     }
 
@@ -150,6 +154,13 @@ for f in ("heat_threshold_f", "frost_tolerance_f", "chilling_sensitivity_f"):
     c = _missing(f)
     assert any(f in v for v in register_coverage_violations(c)), (f, register_coverage_violations(c))
 
+# #9 seed-tray protocol (present-or-na; na is a present value, so require the KEY)
+c = _missing("tray_sowing")
+assert any("tray_sowing" in v for v in register_coverage_violations(c)), register_coverage_violations(c)
+# a certified crop carrying tray_sowing == 'na' is CLEAN (na is a present value, like a null germination_light)
+c = full_annual(); c["tray_sowing"] = "na"; c.pop("pot_up", None)
+assert not any("tray_sowing" in v for v in register_coverage_violations(c)), register_coverage_violations(c)
+
 
 # ---------------------------------------------------------------- N-A must NOT be forced (green)
 # empty-DTM perennial missing dtm_anchor/sow_depth is CLEAN (already asserted above), but prove the
@@ -192,7 +203,7 @@ _data = json.load(open(_CANON, encoding="utf-8"))
 _target = next(c for c in _data["crops"]
                if c.get("verification_status", {}).get("status") == "verified_gs_arc"
                and c.get("slug") == "cherry-tomato")
-for field in ("germination_light", "heat_threshold_f", "propagule"):
+for field in ("germination_light", "heat_threshold_f", "propagule", "tray_sowing"):
     scratch = copy.deepcopy(_data)
     tc = next(c for c in scratch["crops"] if c.get("slug") == "cherry-tomato")
     tc.pop(field, None)

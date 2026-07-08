@@ -113,6 +113,13 @@ EXCLUDED_KEYS = {
     # seedling_light_cap_hours is an int -- out of the C11 string check, like germination_temp_f /
     # heat_threshold_f. See docs/seedling_light_contract.md.
     "germination_light","seedling_light",
+    # SEED-TRAY CELL-PROTOCOL ENUMS (register #9, 2026-07-07; plant-app seed-tray flow): controlled-vocab
+    # backend enums the app's deterministic sow-density/thinning + pot-up guidance consumes, siblings of
+    # seedling_light/propagule -- machine-read, NOT dual-register prose. tray_sowing = the cell-sowing +
+    # thinning protocol (multi_sow_thin_to_one|single_sow|multisow_clump|na); pot_up = the intermediate
+    # pot-up need (recommended|optional|not_needed), present iff tray_sowing is a real tray value. Both
+    # are enum strings, so BOTH are ruled here. See docs/seed_tray_protocol_contract.md.
+    "tray_sowing","pot_up",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
