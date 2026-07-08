@@ -574,6 +574,22 @@ print(f"  perennial pollination-source violations: {len(_ppoll)}")
 for m in _ppoll:
     fail(f"perennial pollination-source: {m}")
 
+# ---------------- A39. register coverage (certified crop carries the shipped register fields or N/A) ----------------
+# The register passes (#4 timing spine, #5 watering.schedule_by_stage, #6 germination/seedling light,
+# #7 climate thresholds) were guarded only SOFTLY: each field's standalone gate validates shape WHEN
+# PRESENT, so a newly-certified crop could silently OMIT a whole register set (the backfill-treadmill the
+# field-register warns about). This is the present-or-explicit-null coverage floor -- the A17/A20 pattern
+# extended to the register fields -- requiring every verified_gs_arc crop to carry each shipped register
+# field OR its defined null/N-A. No-op for an uncertified §E shell (exempt until its own certification).
+# Per-field N-A predicates are REUSED from timing_spine_gate (dtm_empty/is_microgreen/SEED_LIKE) +
+# climate_threshold_gate (INDOOR_SLUGS). (register #8; kickoff docs/kickoffs/13-register-coverage-gate.md.)
+from register_coverage_gate import register_coverage_violations
+print("A39. register coverage (certified crop carries #4-#7 register fields or their N/A; no-op off certified)")
+_regcov = register_coverage_violations(crop)
+print(f"  register-coverage violations: {len(_regcov)}")
+for m in _regcov:
+    fail(f"register-coverage: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual

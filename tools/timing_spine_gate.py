@@ -27,6 +27,21 @@ ARRAY_FIELDS = ("sow_depth_inches", "thin_to_inches", "harvest_window_days")
 DTM_ALIGN_TOL = 0.15  # +/-15% widened DTM band for the harvest-entry sanity warning
 
 
+# --- archetype N-A predicates (module-level so the register-coverage gate imports, never re-encodes) ---
+def dtm_empty(crop):
+    """True for a crop with an empty days_to_maturity: perennials/trees/woody herbs with no annual
+    maturity to anchor -> legitimately carry NO dtm_anchor and NO day_range_from_sow ladder."""
+    dtm = crop.get("days_to_maturity")
+    return isinstance(dtm, list) and len(dtm) == 0
+
+
+def is_microgreen(crop):
+    """True for a surface-sown tray crop (empty spacing_inches) -> exempt from sow_depth_inches /
+    thin_to_inches (there is no planting depth or thinning for a broadcast tray)."""
+    spacing = crop.get("spacing_inches")
+    return isinstance(spacing, list) and len(spacing) == 0
+
+
 def _is_pair(v):
     return isinstance(v, list) and len(v) == 2 and all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in v)
 
@@ -55,10 +70,8 @@ def timing_spine_violations(crop, catalog=None):
     V = []
     slug = crop.get("slug", "?")
     catalog = catalog or {}
-    dtm = crop.get("days_to_maturity")
-    dtm_empty = isinstance(dtm, list) and len(dtm) == 0
-    spacing = crop.get("spacing_inches")
-    is_microgreen = isinstance(spacing, list) and len(spacing) == 0
+    _dtm_empty = dtm_empty(crop)
+    _is_microgreen = is_microgreen(crop)
 
     # --- enums
     prop = crop.get("propagule")
@@ -68,7 +81,7 @@ def timing_spine_violations(crop, catalog=None):
     if anchor is not None and anchor not in DTM_ANCHOR_ENUM:
         V.append(f"{slug}: dtm_anchor {anchor!r} not in {sorted(DTM_ANCHOR_ENUM)}")
     # empty-DTM perennials (citrus, woody herbs) must NOT carry an anchor
-    if dtm_empty and anchor is not None:
+    if _dtm_empty and anchor is not None:
         V.append(f"{slug}: dtm_anchor {anchor!r} present but days_to_maturity is empty (no annual maturity to anchor)")
 
     # --- [min,max] arrays
@@ -111,7 +124,7 @@ def timing_spine_violations(crop, catalog=None):
                     break
 
     # --- sow_depth required for seed-like propagules (microgreens surface-sown -> exempt)
-    if prop in SEED_LIKE and not is_microgreen and crop.get("sow_depth_inches") is None:
+    if prop in SEED_LIKE and not _is_microgreen and crop.get("sow_depth_inches") is None:
         V.append(f"{slug}: propagule {prop!r} requires sow_depth_inches (planting depth)")
 
     # --- propagule <-> start_method consistency
