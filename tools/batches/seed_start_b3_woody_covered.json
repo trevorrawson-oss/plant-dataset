@@ -1,0 +1,98 @@
+{
+ "base_sha": "7922be8b372e43c923f7acb9dddc51b691141e554c56212f6e4a50979f76904c",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='oregano')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='oregano')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='oregano')].weeks_indoors",
+   "from": null,
+   "value": 8
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='oregano')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='sage')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='sage')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='sage')].weeks_indoors",
+   "from": null,
+   "value": 8
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='sage')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='thyme')].seedling_light",
+   "from": "na",
+   "value": "bright_default"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='thyme')].tray_sowing",
+   "from": "na",
+   "value": "multi_sow_thin_to_one"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='thyme')].weeks_indoors",
+   "from": null,
+   "value": 10
+  },
+  {
+   "op": "add",
+   "json_path": "crops[?(@.slug=='thyme')].pot_up",
+   "value": "optional"
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='oregano')].start_method.notes_beginner",
+   "from": "The easy, reliable way to grow oregano is to buy a small plant, divide an existing clump, or root a cutting in spring. You can grow it from seed, but the seed is tiny and needs light (do not cover it), and seed-grown plants vary in flavor, so for good culinary oregano most gardeners start from a plant.",
+   "value": "The easy, reliable way to grow oregano is to buy a small plant, divide an existing clump, or root a cutting in spring. You can grow it from seed, but the seed is tiny and needs light (do not cover it), and seed-grown plants vary in flavor, so for good culinary oregano most gardeners start from a plant. If you do start from seed, sow it indoors about 8 weeks before your last frost."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='oregano')].start_method.notes_seasoned",
+   "from": "Oregano is most reliably started from a nursery transplant, a division of an established clump, or a softwood cutting; all can be done in spring. It also grows readily from seed (germinating in about four days in warm soil), but the tiny seed needs light to germinate so should not be covered, and seed-grown plants vary in flavor and do not come true, so named culinary types like Greek oregano are propagated vegetatively.",
+   "value": "Oregano is most reliably started from a nursery transplant, a division of an established clump, or a softwood cutting; all can be done in spring. It also grows readily from seed (germinating in about four days in warm soil), but the tiny seed needs light to germinate so should not be covered, and seed-grown plants vary in flavor and do not come true, so named culinary types like Greek oregano are propagated vegetatively. Start seed indoors about 8 weeks before the last frost."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='thyme')].start_method.notes_beginner",
+   "from": "The easy, reliable way to grow thyme is to buy a small plant, divide an existing clump, or root a cutting. You can grow it from seed, but the seed is tiny and slow and does not come up evenly, so most gardeners buy a plant instead.",
+   "value": "The easy, reliable way to grow thyme is to buy a small plant, divide an existing clump, or root a cutting. You can grow it from seed, but the seed is tiny and slow and does not come up evenly, so most gardeners buy a plant instead. If you do start from seed, scatter the fine seed and barely cover it, and start indoors about 10 weeks before your last frost, keeping it warm and moist until it sprouts."
+  },
+  {
+   "op": "replace",
+   "json_path": "crops[?(@.slug=='thyme')].start_method.notes_seasoned",
+   "from": "Thyme is most reliably started from a nursery transplant, a division of an established clump, or a softwood cutting (cuttings root in about three to four weeks); it can be grown from seed, but the fine seed is slow and germination is uneven, so most gardeners skip it. Divide established plants in spring, and mixing the tiny seed with sand helps it spread evenly if you do direct-sow.",
+   "value": "Thyme is most reliably started from a nursery transplant, a division of an established clump, or a softwood cutting (cuttings root in about three to four weeks); it can be grown from seed, but the fine seed is slow and germination is uneven, so most gardeners skip it. Divide established plants in spring, and mixing the tiny seed with sand helps it spread evenly if you do direct-sow. To start seed indoors, scatter and barely cover the fine seed about 10 weeks before the last frost, and expect slow, uneven germination over two to three weeks."
+  }
+ ]
+}
