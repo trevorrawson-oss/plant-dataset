@@ -6,6 +6,38 @@
 
 ---
 
+## 2026-07-07 -- REGISTER #9 SEED-TRAY CELL PROTOCOL -- COMPLETE (all 114 certified crops) (CONTENT release; `6990f1da` -> `17ff6b67`) [Claude Code]
+
+**Register #9 is done: `tray_sowing` + `pot_up` on all 114 certified crops.** The app now has the missing middle of the seed -> transplant journey -- structured "sow a few seeds per cell -> thin to the strongest -> pot up before hardening off" guidance, deterministic, no LLM.
+
+**THE GAP (Trevor 2026-07-07, verified in the canonical):** tray-started crops carried `start_method.hardening_off_*` (the harden-off step) but NO structured sow-density/cell-thinning/pot-up guidance. The existing `thinning{}` object is a DIFFERENT concept -- direct-sown seedbed/row thinning to a final in-ground `to_spacing` (present on carrot/beet; absent on tomato/pepper/broccoli). So a tray-starter was told to harden off but never told to over-sow each cell and cull to one.
+
+**THE FIELDS (crop-level, siblings of `seedling_light`):**
+- `tray_sowing` -- enum { `multi_sow_thin_to_one` (default: sow 2-3/cell, thin to strongest), `single_sow` (large seed 1-2/cell, little thinning), `multisow_clump` (sown + transplanted as a clump, RESERVED), `na` (no cell-tray phase) }.
+- `pot_up` -- enum { `recommended`, `optional`, `not_needed` }, present iff `tray_sowing` is a real tray value (absent for `na`).
+
+**Brainstormed + contract-locked with Trevor in TWO rounds** (`docs/seed_tray_protocol_contract.md`):
+- **Round 1:** microgreens = `na` (no cells, never thin/pot-up; their density story stays in prose + `seedling_light`); `pot_up` a separate field (not folded into the enum); `single_sow` kept distinct (folding would tell cucurbit growers to over-sow big expensive seed); `na` keys off `seedling_light`.
+- **Round 2 (pilot-driven):** **`pot_up` is a 3-value ENUM, not a bool** -- broccoli exposed that a true/false could not say "optional" (a fast brassica does not NEED pot-up but you CAN). The factual note the user sees IS the per-value message. And **`multisow_clump` is RESERVED with 0 live members** (see below).
+
+**`tray_sowing` keys DETERMINISTICALLY off register #6's `seedling_light`** (the same move #6 made off `weeks_indoors`): `bright_default` (49 crops, all `propagule==seed` AND `wi>0`) -> a real tray value; `na`/`blackout_then_bright` (65) -> `na`. No per-crop invention of who has a tray phase; gate-checkable.
+
+**`multisow_clump` is RESERVED (0 live members), exactly like #6's `photoperiod_capped`.** The prose scan was decisive: NO crop's authored prose supports seed-tray multisowing. Trevor was drawn to the forward-thinking multisow angle for leek, but leek's own certified prose is unambiguously the traditional individual-transplant method (one pencil-thick seedling per 6-inch dibble hole; the whole blanching method depends on it), and spring-onion's is too ("transplant an inch apart", "thin to one plant per inch" -- its "clump" language is the mature bunching HABIT + division of established perennial clumps, not seed-tray multisowing). Forcing either into `multisow_clump` would CONTRADICT its own T1-sourced content. So **leek = `multi_sow_thin_to_one`**, and `multisow_clump` is kept defined + gate-tested (a synthetic fixture proves it), empty until a crop genuinely needs it. The multisow showcase is tracked as a separate content follow-on (register #10 candidate).
+
+**SOURCING = each crop's OWN certified prose (accuracy over cost).** A prose scan across all 45 rollout tray-started crops CONFIRMED the archetype calls and caught 3 leek-style refinements: **cauliflower `pot_up=recommended`** (own prose "pot up before roots crowd, since a root-bound cauliflower seedling is prone to buttoning"), **zinnia `pot_up=not_needed`** ("they resent root disturbance; transplant shock can cause double varieties to throw single blooms"), **parsley `pot_up=not_needed`** ("parsley sends down a slender taproot"). All 12 cucurbits carry the smoking gun ("cucurbits resent root disturbance and a checked seedling sulks for weeks; use larger cells and set plants out young, before the roots circle the pot" -> `single_sow` + `not_needed`); english-cucumber even says "sow one seed per cell"; sunflower/nasturtium/sweet-pea all name their disturbance-resenting taproot. The pilot already T1-anchored cucumber (Johnny's "1-2 seeds/cell") + the tomato/broccoli archetypes from their own prose.
+
+**The TDD gate + C11 ruling + A39 fold.** `tools/seed_tray_gate.py` (RED before GREEN): enum membership (both fields); present-only `na` <-> `seedling_light` coherence (a real tray value requires `bright_default`; `na` requires `na`/`blackout_then_bright`); `pot_up` present iff a real tray value; `--coverage`. 6 defect classes injected into scratch copies of the REAL canonical all bounced (incl a `pot_up: true` bool-regression guard); the clean canonical stayed green. C11: BOTH `tray_sowing` + `pot_up` (enum strings) ruled into `register_completeness_gate.py` EXCLUDED_KEYS; regression PASS. **A39:** `tray_sowing` added to `register_coverage_gate.py` (wired as `whole_crop_gate` A39; its test TDD RED->GREEN) -- every certified crop must carry `tray_sowing` (present-or-`na`), so a new crop cannot certify without the seed-tray protocol; `pot_up` presence is enforced by the standalone gate's coherence via `gate_all`.
+
+**Splice + guards.** 7-crop pilot + 6 archetype-batched rollout passes (b1 solanaceae 11, b2 brassica 7, b3 herb/flower 10, b4 cucurbit 12, b5 largeseed/okra/allium 5, b6 na 62) via reusable splicer `tools/apply_tray_sowing.py` + per-batch JSON in `tools/batches/` (guards: field-absent, in-memory gate pre-check, count 124, COMPACT no trailing newline, byte-diff EXACTLY the intended crops each batch). SHA-guarded: EXACTLY the 114 certified changed, the 10 uncertified §E shells + all top-level keys byte-identical, only keys added = `tray_sowing` + `pot_up`. `6990f1da` -> `17ff6b67`.
+
+**Coverage (of 114 certified):** `tray_sowing` multi_sow_thin_to_one 33 / single_sow 16 / multisow_clump 0 (reserved) / na 65; `pot_up` recommended 13 / optional 15 / not_needed 21 / absent(=na) 65. Only TODO = the 10 uncertified §E shells (pick up the fields at certification, now A39-enforced).
+
+**Gates.** seed_tray_gate PASS (0 violations); register_completeness PASS (C11 ruling holds, now covering both enums); register_coverage PASS; gate_all PASS (114/114); whole_crop_gate PASS across an archetype spot-check (bell-pepper/cauliflower/zinnia/watermelon/sunflower/spring-onion/garlic/lavender); release_verify vs HEAD no new violations (the "expected only cherry-tomato" batch-collateral concern is release_verify's single-`--slug` default, expected; the calendar review notes are pre-existing `wait` gaps on untouched regions).
+
+**FOLLOW-ON:** **multisow-clump SHOWCASE** -- author the seed-tray multisow method (sow ~4 seeds/cell, transplant the clump undivided, harvest the biggest first) into a bunching onion, cited to RHS/Almanac/Dowding, to give `multisow_clump` a real live member and surface plant's forward-thinking. Tracked as `field_addition_register.md` #10 (candidate); a separate content arc, NOT part of #9's enum rollout. Trevor confirms every push: this is COMMITTED but UNPUSHED, held for confirmation.
+
+---
+
 ## 2026-07-07 -- REGISTER #6 SEEDLING/GERMINATION LIGHT -- COMPLETE (all 114 certified crops) (CONTENT release; `6659042d` -> `6990f1da`) [Claude Code]
 
 **Register #6 is done: `germination_light` + `seedling_light` (+ the reserved `seedling_light_cap_hours`) on all 114 certified crops.** The app now has structured germination guidance (surface-sow vs cover-to-exclude-light) + seedling-light guidance (avoid leggy seedlings), deterministic, no LLM.
