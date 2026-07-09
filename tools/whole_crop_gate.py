@@ -631,14 +631,16 @@ for m in _slv:
     fail(f"seedling-light: {m}")
 
 # ---------------- A43. second_planting de-mux invariant (spec 2026-07-09) ----------------
-# Rule B (LIVE, Stage-1 close): a suitable!=true cell with >=2 comma-joined windows in a
-# PLANTING field (start_indoors/plant_out) and NO second_planting cannot certify -- blocks
-# the old multiplexed shape and any new crop re-introducing it. " or "-joined alternatives
-# and harvest-only doubling (reflush/bimodal) are legitimate and exempt. Rule A (dedup:
-# a cell WITH second_planting is single-window at top level, envelope primary-only) is
-# wired at the Stage-3 clean close by flipping _DEMUX_RULES to frozenset("AB").
+# BOTH RULES LIVE (Stage-3 clean close, 2026-07-09). Rule B: a suitable!=true cell with
+# >=2 comma-joined windows in a PLANTING field (start_indoors/plant_out) and NO
+# second_planting cannot certify -- blocks the old multiplexed shape and any new crop
+# re-introducing it. " or "-joined alternatives and harvest-only doubling (reflush/
+# bimodal) are legitimate and exempt. Rule A (dedup): a cell WITH second_planting is
+# single-window at top level, and its envelope sits INSIDE the primary windows
+# (containment -- harvest_end in the first harvest span, last_plant_date in the first
+# plant span -- so fava's shared harvest window passes while a fall-spanning envelope fires).
 from second_planting_gate import check_crop as _demux_violations
-_DEMUX_RULES = frozenset("B")
+_DEMUX_RULES = frozenset("AB")
 print(f"A43. second_planting de-mux invariant (rules={''.join(sorted(_DEMUX_RULES))})")
 _dmx = _demux_violations(crop, _DEMUX_RULES)
 print(f"  de-mux violations: {len(_dmx)}")
