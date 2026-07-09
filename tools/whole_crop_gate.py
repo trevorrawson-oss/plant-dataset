@@ -630,6 +630,21 @@ print(f"  seedling-light value-shape violations: {len(_slv)}")
 for m in _slv:
     fail(f"seedling-light: {m}")
 
+# ---------------- A43. second_planting de-mux invariant (spec 2026-07-09) ----------------
+# Rule B (LIVE, Stage-1 close): a suitable!=true cell with >=2 comma-joined windows in a
+# PLANTING field (start_indoors/plant_out) and NO second_planting cannot certify -- blocks
+# the old multiplexed shape and any new crop re-introducing it. " or "-joined alternatives
+# and harvest-only doubling (reflush/bimodal) are legitimate and exempt. Rule A (dedup:
+# a cell WITH second_planting is single-window at top level, envelope primary-only) is
+# wired at the Stage-3 clean close by flipping _DEMUX_RULES to frozenset("AB").
+from second_planting_gate import check_crop as _demux_violations
+_DEMUX_RULES = frozenset("B")
+print(f"A43. second_planting de-mux invariant (rules={''.join(sorted(_DEMUX_RULES))})")
+_dmx = _demux_violations(crop, _DEMUX_RULES)
+print(f"  de-mux violations: {len(_dmx)}")
+for m in _dmx:
+    fail(f"demux: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
