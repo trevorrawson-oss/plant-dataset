@@ -1,0 +1,920 @@
+{
+ "base_sha": "1372c29991c03bd5b28d154003408d8c2cf1bf2c3ad2ac6b3cb41b3f5575952a",
+ "patches": [
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Nov 30",
+    "sources": [
+     "uga_c963_vegetable_gardening",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "uga_c963_vegetable_gardening": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=C963",
+      "verified": "2026-06-30"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "uga_c963_vegetable_gardening",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "uga_c963_vegetable_gardening": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=C963",
+      "verified": "2026-06-30"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "ucanr_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-30"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/agriculture/peppers/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 20",
+    "sources": [
+     "ucanr_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-30"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/agriculture/peppers/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "uariz_ext_az1005"
+    ],
+    "anchoring_urls": {
+     "uariz_ext_az1005": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 5",
+    "sources": [
+     "uga_ext",
+     "uga_c963_vegetable_gardening",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "uga_ext": {
+      "url": "https://extension.uga.edu",
+      "verified": "2026-06-30"
+     },
+     "uga_c963_vegetable_gardening": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=C963",
+      "verified": "2026-06-30"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Oct 20",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "uga_ext",
+     "uga_c963_vegetable_gardening",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "uga_ext": {
+      "url": "https://extension.uga.edu",
+      "verified": "2026-06-30"
+     },
+     "uga_c963_vegetable_gardening": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=C963",
+      "verified": "2026-06-30"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 20",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-30"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 25",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-30"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 25 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 20",
+    "sources": [
+     "uariz_ext_az1005"
+    ],
+    "anchoring_urls": {
+     "uariz_ext_az1005": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Nov 30",
+    "sources": [
+     "uga_c963_vegetable_gardening",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "uga_c963_vegetable_gardening": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C963/vegetable-gardening-in-georgia/",
+      "verified": "2026-06-30"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "uga_c963_vegetable_gardening",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "uga_c963_vegetable_gardening": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C963/vegetable-gardening-in-georgia/",
+      "verified": "2026-06-30"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "ucanr_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-30"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/agriculture/peppers/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 20",
+    "sources": [
+     "ucanr_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-30"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/agriculture/peppers/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "uariz_ext_az1005"
+    ],
+    "anchoring_urls": {
+     "uariz_ext_az1005": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 15",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uf_ifas_vh021",
+     "uf_ifas_edis"
+    ],
+    "anchoring_urls": {
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas_edis": {
+      "url": "https://ask.ifas.ufl.edu/publication/CV130",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uf_ifas_vh021",
+     "uf_ifas_edis"
+    ],
+    "anchoring_urls": {
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas_edis": {
+      "url": "https://ask.ifas.ufl.edu/publication/CV130",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mgsantaclara.ucanr.edu/garden-help/vegetables/eggplant/",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 20",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mgsantaclara.ucanr.edu/garden-help/vegetables/eggplant/",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "uariz_ext_az1005"
+    ],
+    "anchoring_urls": {
+     "uariz_ext_az1005": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 15 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 15 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 31",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 30",
+    "harvest_start": "Nov",
+    "harvest_end": "Dec",
+    "sources": [
+     "ucanr_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/site/uc-master-gardener-program-alameda-county/article/guide-growing-tomatillos",
+      "verified": "2026-06-29"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 30",
+    "harvest_start": "Nov",
+    "harvest_end": "Dec",
+    "sources": [
+     "ucanr_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/site/uc-master-gardener-program-alameda-county/article/guide-growing-tomatillos",
+      "verified": "2026-06-29"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 20",
+    "harvest_start": "Nov",
+    "harvest_end": "Dec",
+    "sources": [
+     "uariz_ext",
+     "ucanr_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/pubs",
+      "verified": "2026-06-29"
+     },
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/site/uc-master-gardener-program-alameda-county/article/guide-growing-tomatillos",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Oct 1",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Oct 1",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.hawaii_tropical.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Aug 31",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "uhawaii_ctahr"
+    ],
+    "anchoring_urls": {
+     "uhawaii_ctahr": {
+      "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/b-91.pdf",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  }
+ ]
+}
