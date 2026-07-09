@@ -10,11 +10,12 @@ jalapeno hot cells, chives/mint); " or "-joined alternatives count once (woody-h
 establishment shape, or-normalized alliums/chard).
 
 Rule A (wired at Stage-3 close) -- DEDUP INVARIANT: a cell WITH second_planting
-must be single-span in start_indoors/plant_out/harvest, and its envelope must not
-still carry the fall cycle: harvest_end must not parse-equal
-second_planting.harvest_end, and last_plant_date must not sit inside the
-second_planting plant_out window. (A targeted floor for the two real envelope
-defect classes, not a general date audit.)
+must be single-span in start_indoors/plant_out/harvest, and its envelope must sit
+INSIDE the primary windows: harvest_end must parse inside the FIRST harvest span,
+last_plant_date inside the FIRST plant_out span (containment, not fall-value
+equality, so a legitimately shared harvest window -- fava -- passes while an
+envelope left spanning the fall cycle fires). (A targeted floor for the two real
+envelope defect classes, not a general date audit.)
 
 check_crop(crop, rules) -> [violation strings]. Standalone CLI for fixtures +
 roster sweeps: python3 tools/second_planting_gate.py [crops.json] [--rules AB]

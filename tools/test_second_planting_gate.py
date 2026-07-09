@@ -48,12 +48,16 @@ assert check_crop(mixed, B) == []
 
 # --- Rule A fires: still-doubled top-level alongside second_planting
 assert len(check_crop(mixed, A)) == 1, check_crop(mixed, A)
-# --- Rule A fires: envelope still carries the fall cycle (harvest_end == sp.harvest_end)
+# --- Rule A fires: harvest_end outside the primary harvest window (containment)
 env = crop(False, cell(second_planting=dict(SP), harvest_end="Nov 30"))
 assert any("harvest_end" in v for v in check_crop(env, A)), check_crop(env, A)
-# --- Rule A fires: last_plant_date sits inside the second_planting window
+# --- Rule A fires: last_plant_date outside the primary plant window
 env2 = crop(False, cell(second_planting=dict(SP), last_plant_date="Sep 20"))
 assert any("last_plant_date" in v for v in check_crop(env2, A)), check_crop(env2, A)
+# --- Rule B fires on suitable=None too (only suitable=True is exempt -- lock
+#     the `is not True` semantic against a future `== False` regression)
+bad_none = crop(None, cell(plant_out="Mar 15 - Apr 15, Sep 1 - Sep 20"))
+assert len(check_crop(bad_none, B)) == 1, check_crop(bad_none, B)
 # --- Rule A clean: fully de-muxed cell
 clean = crop(False, cell(second_planting=dict(SP)))
 assert check_crop(clean, AB) == [], check_crop(clean, AB)
