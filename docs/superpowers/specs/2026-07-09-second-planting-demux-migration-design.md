@@ -38,8 +38,9 @@ authored correctly from the start. Runs BEFORE the new-crop work for that reason
 
 - **Population 1 -- DEDUP: 64 cells / 7 crops** (cherry/grape/roma/beefsteak/heirloom
   tomato, broccoli, kohlrabi). **NOT celery** -- celery has no second_planting anywhere;
-  the kickoff's roster line was wrong. 116 still-doubled top-level fields
-  (start_indoors 30, plant_out 38, harvest 48). CAVEAT: doubled *harvest* strings are
+  the kickoff's roster line was wrong. 120 still-doubled top-level fields
+  (start_indoors 30, plant_out 38, harvest 52; the kickoff-era h=48 undercount was the
+  same weak-parser artifact that hid fava -- single-month/full-name spans). CAVEAT: doubled *harvest* strings are
   month-granular while `second_planting.harvest_start/end` are day-granular (e.g.
   `"Sep - Nov"` vs `"Sep 6 - Nov 8"`, 40 such fields), so the clean drops the SECOND
   comma-span by position and asserts OVERLAP with the second_planting span -- never
@@ -156,7 +157,7 @@ bell-pepper `se_gulf` z8 (pop 2). Trevor gates the bump. Work happens in ~/plant
 never in the embedded submodule copy.
 
 **Stage 3 -- plant-dataset: CLEAN + Rule A.**
-Batches: pop-1 dedup (116 fields across 64 cells / 7 crops) + pop-2 clean (94 cells:
+Batches: pop-1 dedup (120 window fields across 64 cells / 7 crops) + pop-2 clean (94 cells:
 window strings -> primary span; envelopes narrowed per Decision C). Sanity assert per
 field: dropped second span OVERLAPS the cell's second_planting span. Wire Rule A into
 A43. Full suite + state trio + Trevor-gated commit/push; then another astro submodule

@@ -1109,7 +1109,7 @@ git push
 ```bash
 python3 tools/build_demux_batches.py --stage clean
 ```
-Expected: two batch files; s3_b1 covers the 7 pop-1 crops (64 cells; 116 window-string replaces + envelope ops), s3_b2 the 18 pop-2 crops (94 cells). The generator's cell-count assert (64/94) and per-field overlap asserts are the drift guard. Record both op counts.
+Expected: two batch files; s3_b1 covers the 7 pop-1 crops (64 cells; 120 window-string replaces = si 30 + po 38 + h 52, + envelope ops: 64 last_plant_date + 52 harvest_end = 236 total), s3_b2 the 18 pop-2 crops (94 cells). The generator's cell-count assert (64/94) and per-field overlap asserts are the drift guard. Record both op counts.
 
 - [ ] **Step 2: Apply s3_b1 to scratch, verify, promote, commit (ASK TREVOR FIRST)**
 
@@ -1166,5 +1166,5 @@ Expected: **exit 1** with `demux: A dedup: se_gulf.8 plant_out ...`. Then `rm "$
 
 - Spec coverage: §2 rulings -> Tasks 3 (classify/or-norm/fix/precision/provenance), §4 parser -> Task 1, §5 extraction -> Task 3, §6 gate + TDD classes -> Tasks 2/8/11, §7 stages -> Tasks 5-10, §8 convention -> Task 12, §9 discipline -> Global Constraints + per-task verify steps, §10 DoD -> Tasks 7 (B==0), 10 (AB==0), 12 (close).
 - Rule A envelope check is deliberately the two-defect floor (spec §6 refinement noted in the module docstring).
-- Counts cross-checked: 40+29+25=94 adds (fava 4 shared-harvest in b3); 13 or-norm ops (onion ci 2x2, onion cnc 2, shallot 2, chard 5); pop-1 116 doubled fields.
+- Counts cross-checked: 40+29+25=94 adds (fava 4 shared-harvest in b3); 13 or-norm ops (onion ci 2x2, onion cnc 2, shallot 2, chard 5); pop-1 120 doubled window fields (h=52; the 48 was a weak-parser undercount, corrected at S3 verification).
 - Fava ruling (Trevor 2026-07-09) + fall-span-first pop-1 handling (broccoli z9) folded in after the Task-2 baseline sweep surfaced both; Rule A envelope = containment formulation.
