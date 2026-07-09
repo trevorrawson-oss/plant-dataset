@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Complete the second_planting split (90 TWO_CROP cells extracted, 64 pop-1 cells deduped, 11 alt-window cells or-normalized) and gate the old comma-string shape out of existence, staged so the UI never loses the fall crop.
+**Goal:** Complete the second_planting split (94 TWO_CROP cells extracted, 64 pop-1 cells deduped, 11 alt-window cells or-normalized) and gate the old comma-string shape out of existence, staged so the UI never loses the fall crop.
 
 **Architecture:** One shared window parser (`tools/plant_windows.py`) feeds both a deterministic batch generator (`tools/build_demux_batches.py`, emits `apply_patch.py` batches, never writes canonical) and the new gate (`tools/second_planting_gate.py`, wired as whole_crop_gate A43 in two stages). Three releases: S1 populate (additive) -> S2 plant-astro read-flip -> S3 clean.
 
@@ -268,15 +268,26 @@ assert check_crop(mixed, B) == []
 
 # --- Rule A fires: still-doubled top-level alongside second_planting
 assert len(check_crop(mixed, A)) == 1, check_crop(mixed, A)
-# --- Rule A fires: envelope still carries the fall cycle (harvest_end == sp.harvest_end)
+# --- Rule A fires: envelope still carries the fall cycle (harvest_end outside the
+#     primary harvest window -- containment formulation, spec §6)
 env = crop(False, cell(second_planting=dict(SP), harvest_end="Nov 30"))
 assert any("harvest_end" in v for v in check_crop(env, A)), check_crop(env, A)
-# --- Rule A fires: last_plant_date sits inside the second_planting window
+# --- Rule A fires: last_plant_date outside the primary plant window
 env2 = crop(False, cell(second_planting=dict(SP), last_plant_date="Sep 20"))
 assert any("last_plant_date" in v for v in check_crop(env2, A)), check_crop(env2, A)
 # --- Rule A clean: fully de-muxed cell
 clean = crop(False, cell(second_planting=dict(SP)))
 assert check_crop(clean, AB) == [], check_crop(clean, AB)
+# --- Rule A clean: fava shared-harvest shape (spec §2 B-fava) -- the fall crop
+#     overwinters into the SAME spring harvest window; containment passes it
+FAVA_SP = {"start_indoors": None, "plant_out": "Aug - Sep",
+           "harvest_start": "Apr", "harvest_end": "Jun",
+           "sources": ["x"], "anchoring_urls": {"x": {"url": "https://e.edu", "verified": "2026-07-09"}}}
+fava = crop(False, {"start_indoors": None, "plant_out": "Feb", "harvest": "Apr - Jun",
+                    "harvest_start": "Apr 1", "harvest_end": "Jun 30",
+                    "first_plant_date": "Feb 1", "last_plant_date": "Feb 28",
+                    "second_planting": dict(FAVA_SP)})
+assert check_crop(fava, AB) == [], check_crop(fava, AB)
 # --- no second_planting, no multi-window: silent under both rules
 assert check_crop(crop(False, cell()), AB) == []
 
@@ -348,16 +359,19 @@ def check_crop(crop, rules=frozenset("AB")):
                 if window_count(cell.get(f)) >= 2:
                     v.append(f"A dedup: {rk}.{z} {f} still multi-window alongside "
                              f"second_planting ({slug})")
+            # envelope CONTAINMENT (spec §6): the envelope must sit inside the
+            # PRIMARY (first) window. Containment, not not-equal-to-the-fall-
+            # values, so fava's legitimately shared harvest window passes.
+            hv = spans(cell.get("harvest"))
             he = single_date(cell.get("harvest_end"))
-            sp_he = single_date(sp.get("harvest_end"))
-            if he and sp_he and he == sp_he:
-                v.append(f"A envelope: {rk}.{z} harvest_end still spans the fall "
-                         f"cycle ({slug})")
+            if he and hv and not in_span(he, hv[0]):
+                v.append(f"A envelope: {rk}.{z} harvest_end outside the primary "
+                         f"harvest window ({slug})")
+            po = spans(cell.get("plant_out"))
             lpd = single_date(cell.get("last_plant_date"))
-            sp_po = spans(sp.get("plant_out"))
-            if lpd and sp_po and in_span(lpd, sp_po[0]):
-                v.append(f"A envelope: {rk}.{z} last_plant_date sits inside the "
-                         f"second_planting window ({slug})")
+            if lpd and po and not in_span(lpd, po[0]):
+                v.append(f"A envelope: {rk}.{z} last_plant_date outside the primary "
+                         f"plant window ({slug})")
     return v
 
 
@@ -389,10 +403,10 @@ Expected: `second_planting_gate tests: OK`
 - [ ] **Step 5: Baseline sweeps on the real canonical (evidence, not asserts)**
 
 Run: `python3 tools/second_planting_gate.py crops_data_final.json --rules B`
-Expected: exit 1; violations span exactly **101 cells** (90 TWO_CROP + 11 ALT_WINDOW). The LINE count runs slightly higher (a cell with both planting fields doubled emits 2 lines, e.g. onion ca_interior) -- record the exact line count as the baseline for the per-batch drop checks in Tasks 5-7. Zero violations on any suitable=true, woody-herb, chives/mint, reflush, or perennial-tree crop -- spot-check the output for lavender/mint/peach/carrot absence.
+Expected: exit 1; violations span exactly **105 cells** (94 TWO_CROP incl. broad-beans-fava's 4 + 11 ALT_WINDOW). The LINE count runs slightly higher (a cell with both planting fields doubled emits 2 lines, e.g. onion ca_interior) -- record the exact line count as the baseline for the per-batch drop checks in Tasks 5-7. Zero violations on any suitable=true, woody-herb, chives/mint, reflush, or perennial-tree crop -- spot-check the output for lavender/mint/peach/carrot absence.
 
 Run: `python3 tools/second_planting_gate.py crops_data_final.json --rules A`
-Expected: exit 1; violations ONLY on the 7 pop-1 crops' 48 mixed cells (the 16 fully de-muxed pop-1 cells must NOT appear -- if any do, STOP: the envelope floor is misfiring; investigate before wiring anything).
+Expected: exit 1; violations ONLY on the 7 pop-1 crops (beefsteak/cherry/grape/heirloom/roma tomato, broccoli, kohlrabi) -- pre-clean, ALL ~64 of their cells legitimately fire (48 have still-doubled strings; envelope fields were never narrowed anywhere, so the containment checks fire even on the 16 string-clean cells). Any violation on a crop OUTSIDE those 7 = STOP and investigate.
 
 - [ ] **Step 6: Commit (ASK TREVOR FIRST)**
 
@@ -411,7 +425,7 @@ git commit -m "feat(gate): second_planting de-mux gate module (A43 rules A+B, un
 
 **Interfaces:**
 - Consumes: `plant_windows` (all helpers).
-- Produces: CLI `python3 tools/build_demux_batches.py --stage populate|clean [--only <batchname>]` writing `tools/batches/second_planting_<name>.json` in apply_patch canonical format (`base_sha` = SHA of the canonical it just read). Pure functions used by tests: `classify(cell) -> "TWO_CROP"|"REFLUSH"|"ALT_WINDOW"|None`, `second_planting_value(cell) -> dict`, `or_norm_ops(slug, rk, z, cell) -> [op]`, `clean_ops(slug, rk, z, cell) -> [op]`.
+- Produces: CLI `python3 tools/build_demux_batches.py --stage populate|clean [--only <batchname>]` writing `tools/batches/second_planting_<name>.json` in apply_patch canonical format (`base_sha` = SHA of the canonical it just read). Pure functions used by tests: `classify(cell) -> "TWO_CROP"|"REFLUSH"|"ALT_WINDOW"|None`, `second_planting_value(cell, shared_harvest=False) -> dict`, `or_norm_ops(slug, rk, z, cell) -> [op]`, `clean_ops(slug, rk, z, cell) -> [op]`.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -475,6 +489,36 @@ pops = {o["json_path"].rsplit(".", 1)[-1]: o for o in clean_ops("potato", "ca_in
 assert pops["harvest_end"]["value"] == "Jun"     # primary end, authored granularity
 assert pops["last_plant_date"]["value"] == "Mar"  # primary plant_out end text
 
+# fava shared-harvest ruling (spec §2 B-fava): extract + clean
+FAVA = {"start_indoors": None, "plant_out": "Feb, Sep", "harvest": "Apr - May",
+        "harvest_start": "Apr 1", "harvest_end": "May 31",
+        "first_plant_date": "Feb 1", "last_plant_date": "Sep 20",
+        "sources": ["s"], "anchoring_urls": {}}
+fsp = second_planting_value(FAVA, shared_harvest=True)
+assert fsp["plant_out"] == "Sep" and fsp["harvest_start"] == "Apr" and fsp["harvest_end"] == "May", fsp
+fops = {o["json_path"].rsplit(".", 1)[-1]: o
+        for o in clean_ops("broad-beans-fava", "warm_arid", "8", dict(FAVA, second_planting=fsp))}
+assert fops["plant_out"]["value"] == "Feb"
+assert "harvest" not in fops                      # shared single-span window, untouched
+assert fops["last_plant_date"]["value"] == "Feb"  # narrowed to the primary end
+assert "harvest_end" not in fops                  # May 31 sits inside "Apr - May"
+
+# fall-span-FIRST pop-1 shape (broccoli ca_interior z9): keep the NON-sp span
+BROC = {"start_indoors": "Nov 1 - Nov 22",
+        "plant_out": "Aug 1 - Sep 30, Dec 1 - Feb 28",
+        "harvest": "Mar 1 - May 1, Oct 15 - Dec 15",
+        "harvest_start": "Mar 1", "harvest_end": "Dec 15",
+        "first_plant_date": "Aug 1", "last_plant_date": "Feb 28",
+        "second_planting": {"start_indoors": "Jun 20 - Aug 18",
+                            "plant_out": "Aug 1 - Sep 30",
+                            "harvest_start": "Oct 15", "harvest_end": "Dec 15",
+                            "sources": ["s"], "anchoring_urls": {}}}
+bops = {o["json_path"].rsplit(".", 1)[-1]: o for o in clean_ops("broccoli", "ca_interior", "9", BROC)}
+assert bops["plant_out"]["value"] == "Dec 1 - Feb 28", bops["plant_out"]  # NOT s[0]
+assert bops["harvest"]["value"] == "Mar 1 - May 1"
+assert bops["harvest_end"]["value"] == "May 1"
+assert bops["first_plant_date"]["value"] == "Dec 1"  # was the fall crop's Aug 1
+
 print("build_demux_batches tests: OK")
 ```
 
@@ -516,13 +560,19 @@ S1_BATCHES = {
                          "eggplant", "habanero", "jalapeno", "tomatillo"],
     "s1_b2_cucurbits": ["acorn-squash", "butternut-squash", "cantaloupe",
                         "honeydew-melon", "pumpkin", "spaghetti-squash", "watermelon"],
-    "s1_b3_rest": ["onion", "pole-beans", "potato", "shallot", "swiss-chard"],
+    "s1_b3_rest": ["broad-beans-fava", "onion", "pole-beans", "potato", "shallot", "swiss-chard"],
 }
 # spec §3 pinned scope -- generator ABORTS on drift (re-measure before overriding).
 # REFLUSH = 12: the 8 hot-region pepper cells + chives 1 + mint 3 (harvest-only
 # doubling is the same structural pattern; all exempt, zero ops either way).
-EXPECT = {"TWO_CROP": 90, "ALT_WINDOW": 11, "REFLUSH": 12}
-POP1_CELLS, POP2_CELLS = 64, 90
+# TWO_CROP = 94 includes broad-beans-fava's 4 shared-harvest cells (§2 B-fava).
+EXPECT = {"TWO_CROP": 94, "ALT_WINDOW": 11, "REFLUSH": 12}
+POP1_CELLS, POP2_CELLS = 64, 94
+# spec §2 B-fava (Trevor 2026-07-09): a true two-sowing crop whose fall sowing
+# overwinters into the SAME spring harvest window (authored in calendar[] +
+# zone_notes). Its plant-doubled/harvest-single cells are TWO_CROP, not
+# ALT_WINDOW, and the extracted second_planting carries the shared window.
+SHARED_HARVEST_SLUGS = {"broad-beans-fava"}
 PLANTING = ("start_indoors", "plant_out")
 FIELDS = ("start_indoors", "plant_out", "harvest")
 # pop-1 legacy crops (dedup lane); everything else with second_planting = pop-2
@@ -560,23 +610,30 @@ def classify(cell):
     return "ALT_WINDOW"
 
 
-def second_planting_value(cell):
-    """Spec §5: the second spans, provenance inherited, granularity preserved."""
+def second_planting_value(cell, shared_harvest=False):
+    """Spec §5: the second spans, provenance inherited, granularity preserved.
+    shared_harvest (spec §2 B-fava): harvest has ONE span shared by both sowings;
+    the fall crop overwinters into it, so it becomes the second_planting's window."""
     po, hv = spans(cell.get("plant_out")), spans(cell.get("harvest"))
     si = spans(cell.get("start_indoors"))
     assert len(po) == 2, f"TWO_CROP cell needs exactly 2 plant_out spans: {po}"
-    assert len(hv) == 2, f"TWO_CROP cell needs exactly 2 harvest spans: {hv}"
     assert len(si) in (0, 1, 2), f"unexpected start_indoors span count: {si}"
     assert _start_key(po[0]) < _start_key(po[1]), f"plant_out not spring-first: {po}"
-    assert _start_key(hv[0]) < _start_key(hv[1]), f"harvest not spring-first: {hv}"
-    # the fall planting must precede its harvest (harvest may wrap into Jan)
-    assert po[1].start_month <= hv[1].start_month or hv[1].start_month <= 2, \
-        f"fall plant does not precede fall harvest: {po[1]} vs {hv[1]}"
+    if shared_harvest:
+        assert len(hv) == 1, f"shared-harvest cell needs exactly 1 harvest span: {hv}"
+        h2 = hv[0]
+    else:
+        assert len(hv) == 2, f"TWO_CROP cell needs exactly 2 harvest spans: {hv}"
+        assert _start_key(hv[0]) < _start_key(hv[1]), f"harvest not spring-first: {hv}"
+        # the fall planting must precede its harvest (harvest may wrap into Jan)
+        assert po[1].start_month <= hv[1].start_month or hv[1].start_month <= 2, \
+            f"fall plant does not precede fall harvest: {po[1]} vs {hv[1]}"
+        h2 = hv[1]
     return {
         "start_indoors": si[1].raw if len(si) == 2 else None,
         "plant_out": po[1].raw,
-        "harvest_start": hv[1].start_text,
-        "harvest_end": hv[1].end_text,
+        "harvest_start": h2.start_text,
+        "harvest_end": h2.end_text,
         "sources": cell.get("sources"),
         "anchoring_urls": cell.get("anchoring_urls"),
     }
@@ -600,10 +657,15 @@ def or_norm_ops(slug, rk, z, cell):
 
 
 def clean_ops(slug, rk, z, cell):
-    """Stage-3 ops for ONE second_planting cell: window strings -> primary span;
-    envelope narrowed to primary (spec §2 Decision C). Asserts the dropped span
-    overlaps the second_planting counterpart (never byte-equality: pop-1 harvest
-    strings are month-granular vs day-granular sp values)."""
+    """Stage-3 ops for ONE second_planting cell: window strings -> PRIMARY span;
+    envelope narrowed to primary (spec §2 Decision C).
+
+    The primary is the span that does NOT overlap the second_planting counterpart
+    -- NEVER blindly s[0]: pop-1 hot-region cells are fall-span-FIRST (broccoli
+    ca_interior z9 plant_out "Aug 1 - Sep 30, Dec 1 - Feb 28" -- the Dec window is
+    the primary). Overlap is month-granular (never byte-equality: pop-1 harvest
+    strings are month-granular vs day-granular sp values). Envelope checks mirror
+    gate Rule A's CONTAINMENT formulation, so fava's shared harvest window no-ops."""
     sp = cell["second_planting"]
     ops = []
 
@@ -611,10 +673,13 @@ def clean_ops(slug, rk, z, cell):
         ops.append({"op": "replace", "json_path": _path(slug, rk, z, key),
                     "from": frm, "value": val})
 
-    po, hv = spans(cell.get("plant_out")), spans(cell.get("harvest"))
+    primary = {}
     for f in FIELDS:
         s = spans(cell.get(f))
-        if len(s) < 2:
+        if not s:
+            continue
+        if len(s) == 1:
+            primary[f] = s[0]
             continue
         assert len(s) == 2, f"3+ spans unexpected: {slug} {rk}.{z} {f}"
         if f == "harvest":
@@ -622,25 +687,30 @@ def clean_ops(slug, rk, z, cell):
                    if sp.get("harvest_start") else None)
         else:
             ref = sp.get(f)
-        if ref:
-            refspan = spans(ref)
-            assert refspan and months_overlap(s[1], refspan[0]), \
-                f"dropped span does not overlap second_planting: {slug} {rk}.{z} {f}"
-        rep(f, cell[f], s[0].raw)
+        assert ref, f"doubled {f} but second_planting has no counterpart: {slug} {rk}.{z}"
+        refspan = spans(ref)[0]
+        ov = [i for i, x in enumerate(s) if months_overlap(x, refspan)]
+        assert len(ov) == 1, \
+            f"ambiguous fall-span match: {slug} {rk}.{z} {f} spans={s} ref={refspan} ov={ov}"
+        keep = s[1 - ov[0]]
+        primary[f] = keep
+        rep(f, cell[f], keep.raw)
 
-    # envelope: only touched when it currently reflects the fall cycle
-    sp_po = spans(sp.get("plant_out") or "")
+    # envelope: narrowed to the primary window wherever it falls OUTSIDE it
+    # (containment, mirroring gate Rule A; handles fall-first primaries + fava)
+    po1, hv1 = primary.get("plant_out"), primary.get("harvest")
     lpd = single_date(cell.get("last_plant_date"))
-    if lpd and sp_po and in_span(lpd, sp_po[0]) and po:
-        rep("last_plant_date", cell["last_plant_date"], po[0].end_text)
-    he = single_date(cell.get("harvest_end"))
-    sp_he = single_date(sp.get("harvest_end") or "")
-    if he and hv and ((sp_he and he == sp_he) or (len(hv) == 2 and in_span(he, hv[1]))):
-        rep("harvest_end", cell["harvest_end"], hv[0].end_text)
-    # first_plant_date / harvest_start must already be primary -- assert, never edit
+    if lpd and po1 and not in_span(lpd, po1):
+        rep("last_plant_date", cell["last_plant_date"], po1.end_text)
     fpd = single_date(cell.get("first_plant_date"))
-    assert not (fpd and sp_po and in_span(fpd, sp_po[0])), \
-        f"first_plant_date sits in the fall window: {slug} {rk}.{z}"
+    if fpd and po1 and not in_span(fpd, po1):
+        rep("first_plant_date", cell["first_plant_date"], po1.start_text)
+    he = single_date(cell.get("harvest_end"))
+    if he and hv1 and not in_span(he, hv1):
+        rep("harvest_end", cell["harvest_end"], hv1.end_text)
+    hs = single_date(cell.get("harvest_start"))
+    if hs and hv1 and not in_span(hs, hv1):
+        rep("harvest_start", cell["harvest_start"], hv1.start_text)
     return ops
 
 
@@ -669,12 +739,15 @@ def main():
                 pat = classify(cell)
                 if pat is None:
                     continue
+                shared = slug in SHARED_HARVEST_SLUGS
+                if pat == "ALT_WINDOW" and shared:
+                    pat = "TWO_CROP"  # §2 B-fava ruling
                 counts[pat] += 1
                 if pat == "TWO_CROP":
                     b = slug_batch[slug]  # KeyError = unexpected crop -> abort
                     batches.setdefault(b, []).append(
                         {"op": "add", "json_path": _path(slug, rk, z, "second_planting"),
-                         "value": second_planting_value(cell)})
+                         "value": second_planting_value(cell, shared_harvest=shared)})
                 elif pat == "ALT_WINDOW":
                     batches.setdefault("s1_b3_rest", []).extend(
                         or_norm_ops(slug, rk, z, cell))
@@ -723,9 +796,9 @@ Expected output (op counts are the acceptance check):
 ```
 wrote .../second_planting_s1_b1_solanaceae.json: 40 ops
 wrote .../second_planting_s1_b2_cucurbits.json: 29 ops
-wrote .../second_planting_s1_b3_rest.json: 34 ops
+wrote .../second_planting_s1_b3_rest.json: 38 ops
 ```
-(34 = 21 TWO_CROP adds + 13 or-norm/fix replaces.) If the EXPECT assert trips instead, the canonical moved since the spec was measured -- STOP and re-scope with Trevor. Spot-read `second_planting_s1_b1_solanaceae.json`: bell-pepper se_gulf z8 op must equal the spec §6 worked example. Do NOT run `--stage clean` yet (its cells don't have second_planting until S1 lands; the assert will rightly abort).
+(38 = 25 TWO_CROP adds incl. fava's 4 shared-harvest cells + 13 or-norm/fix replaces.) If the EXPECT assert trips instead, the canonical moved since the spec was measured -- STOP and re-scope with Trevor. Spot-read `second_planting_s1_b1_solanaceae.json`: bell-pepper se_gulf z8 op must equal the spec §6 worked example. Do NOT run `--stage clean` yet (its cells don't have second_planting until S1 lands; the assert will rightly abort).
 
 - [ ] **Step 6: Commit (ASK TREVOR FIRST -- batch JSONs are generated artifacts; commit the tool + tests now, batches land with their applies)**
 
@@ -918,15 +991,16 @@ Same 5 steps as Task 5 with:
 
 ---
 
-### Task 7: Apply S1-B3 rest (21 cells + 13 or-norm/fix ops)
+### Task 7: Apply S1-B3 rest (25 cells + 13 or-norm/fix ops)
 
 Same 5 steps as Task 5 with:
-- Generate: `python3 tools/build_demux_batches.py --stage populate --only s1_b3_rest` -> `34 ops`.
-- Slugs: `onion,pole-beans,potato,shallot,swiss-chard`
+- Generate: `python3 tools/build_demux_batches.py --stage populate --only s1_b3_rest` -> `38 ops`.
+- Slugs: `broad-beans-fava,onion,pole-beans,potato,shallot,swiss-chard`
+- Extra fava check: broad-beans-fava warm_arid z8 gains second_planting `{plant_out "Sep", start_indoors null, harvest_start "Apr", harvest_end "May"}` (shared window per spec §2 B-fava); its top-level strings unchanged in this stage.
 - After apply, Rule B on the scratch must report **0 violations, exit 0** (all TWO_CROP populated, all ALT_WINDOW or-normalized): `python3 tools/second_planting_gate.py "$SCRATCH/s1_b3.json" --rules B`
 - Extra check: onion `ca_north_coast` z9/z10 `plant_out` == `"Nov - March"`; shallot `ca_interior` z8 `plant_out` == `"Oct - Nov or Jan - March"`; onion `ca_interior` `start_indoors` == `"Sep or Dec"`.
 - Source-truth sample: pole-beans se_gulf fall window vs its cited page.
-- Commit: `feat(demux): S1-B3 populate 21 cells + or-normalize 11 alt-window cells (onion continuity fix)`
+- Commit: `feat(demux): S1-B3 populate 25 cells (incl. fava shared-harvest) + or-normalize 11 alt-window cells (onion continuity fix)`
 
 - [ ] Generate, apply, verify, confirm Rule B == 0 roster-wide, source-truth sample, promote + commit (ASK TREVOR FIRST)
 
@@ -991,7 +1065,7 @@ Expected: all PASS; gate_all 114/114 (lettuce-leaf = the standing reference-crop
 
 - [ ] **Step 4: State trio (hand-edited) + commit + push (ASK TREVOR; HE CONFIRMS THE PUSH)**
 
-Prepend the Stage-1 entry to `CURRENT_STATE.md` (surgical hand edit, NO gen_current_state), append `STATE_HISTORY.md` most-recent-first, confirm `LATEST.txt` carries the post-Task-7 SHA + session line. Entry must record: 90 cells populated + 11 or-normalized + onion fix, celery-roster correction, A43 Rule B live, Rule A deferred to Stage 3, plant-astro flip = next.
+Prepend the Stage-1 entry to `CURRENT_STATE.md` (surgical hand edit, NO gen_current_state), append `STATE_HISTORY.md` most-recent-first, confirm `LATEST.txt` carries the post-Task-7 SHA + session line. Entry must record: 94 cells populated (incl. fava shared-harvest ruling) + 11 or-normalized + onion fix, celery-roster correction, A43 Rule B live, Rule A deferred to Stage 3, plant-astro flip = next.
 
 ```bash
 git add tools/whole_crop_gate.py CURRENT_STATE.md STATE_HISTORY.md
@@ -1035,7 +1109,7 @@ git push
 ```bash
 python3 tools/build_demux_batches.py --stage clean
 ```
-Expected: two batch files; s3_b1 covers the 7 pop-1 crops (64 cells; 116 window-string replaces + envelope ops), s3_b2 the 17 pop-2 crops (90 cells). The generator's cell-count assert (64/90) and per-field overlap asserts are the drift guard. Record both op counts.
+Expected: two batch files; s3_b1 covers the 7 pop-1 crops (64 cells; 116 window-string replaces + envelope ops), s3_b2 the 18 pop-2 crops (94 cells). The generator's cell-count assert (64/94) and per-field overlap asserts are the drift guard. Record both op counts.
 
 - [ ] **Step 2: Apply s3_b1 to scratch, verify, promote, commit (ASK TREVOR FIRST)**
 
@@ -1043,7 +1117,7 @@ Same shape as Task 5 steps 2-5 with `--stage clean`, slugs `beefsteak-tomato,bro
 
 - [ ] **Step 3: Apply s3_b2 to scratch, verify, promote, commit (ASK TREVOR FIRST)**
 
-Slugs = the 17 pop-2 crops. Acceptance: bell-pepper `se_gulf` z8 equals the spec §6 AFTER column byte-for-byte (including `last_plant_date "Apr 15"`, `harvest_end "Jun 30"`); `--rules A` AND `--rules B` both report **0 violations roster-wide** on the scratch. Commit: `feat(demux): S3-B2 pop-2 clean -- 90 cells primary-only, envelopes narrowed`.
+Slugs = the 18 pop-2 crops (incl. broad-beans-fava). Acceptance: bell-pepper `se_gulf` z8 equals the spec §6 AFTER column byte-for-byte (including `last_plant_date "Apr 15"`, `harvest_end "Jun 30"`); fava warm_arid z8 keeps `harvest "Apr - May"` untouched (shared window) with `last_plant_date` narrowed to `"Feb"`; `--rules A` AND `--rules B` both report **0 violations roster-wide** on the scratch. Commit: `feat(demux): S3-B2 pop-2 clean -- 94 cells primary-only, envelopes narrowed`.
 
 ---
 
@@ -1092,4 +1166,5 @@ Expected: **exit 1** with `demux: A dedup: se_gulf.8 plant_out ...`. Then `rm "$
 
 - Spec coverage: §2 rulings -> Tasks 3 (classify/or-norm/fix/precision/provenance), §4 parser -> Task 1, §5 extraction -> Task 3, §6 gate + TDD classes -> Tasks 2/8/11, §7 stages -> Tasks 5-10, §8 convention -> Task 12, §9 discipline -> Global Constraints + per-task verify steps, §10 DoD -> Tasks 7 (B==0), 10 (AB==0), 12 (close).
 - Rule A envelope check is deliberately the two-defect floor (spec §6 refinement noted in the module docstring).
-- Counts cross-checked: 40+29+21=90 adds; 13 or-norm ops (onion ci 2x2, onion cnc 2, shallot 2, chard 5); pop-1 116 doubled fields.
+- Counts cross-checked: 40+29+25=94 adds (fava 4 shared-harvest in b3); 13 or-norm ops (onion ci 2x2, onion cnc 2, shallot 2, chard 5); pop-1 116 doubled fields.
+- Fava ruling (Trevor 2026-07-09) + fall-span-first pop-1 handling (broccoli z9) folded in after the Task-2 baseline sweep surfaced both; Rule A envelope = containment formulation.

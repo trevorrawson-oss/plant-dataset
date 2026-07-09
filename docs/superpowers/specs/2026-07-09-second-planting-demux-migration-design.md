@@ -27,7 +27,8 @@ authored correctly from the start. Runs BEFORE the new-crop work for that reason
 | B-reflush | **REFLUSH cells are EXEMPT** (8 cells: cayenne 4, habanero 3, jalapeno 1). One spring planting, harvest string doubled: the same plant pauses fruit set in summer heat (matches their `poor_fruit_set` heat_effect) and sets again in fall. Harvest-only doubling with single planting fields is a legitimate shape. |
 | B-alt | **ALT_WINDOW cells get OR-NORMALIZED, not migrated** (11 cells: onion 4, shallot 2, swiss-chard 5). Two planting windows converging on ONE harvest ("plant sets in fall OR late winter") are alternatives, not a discrete second crop. Comma becomes `" or "`, matching the woody-herb precedent. onion `ca_interior` `start_indoors: "Sep, Dec"` -> `"Sep or Dec"` likewise. |
 | B-fix | **onion `ca_north_coast` z9/z10 continuity fix:** `plant_out "Nov - Jan, Jan - March"` -> `"Nov - March"`. The chunks overlap at Jan and the cell's own zone_notes say "plant November through March". Logged as a zone_notes-backed correction inside the batch. |
-| B-order | Primary = first comma-span. **Verified on all 90 TWO_CROP cells: spans are date-ordered spring-first**, no 3+-window fields. (The only fall-first fields in the roster are ALT_WINDOW cells, which are not extracted.) |
+| B-order | Primary = first comma-span. **Verified on all TWO_CROP cells: spans are date-ordered spring-first**, no 3+-window fields. (The only fall-first fields in the roster are ALT_WINDOW cells, which are not extracted.) |
+| B-fava | **broad-beans-fava gets a REAL second_planting with the SHARED harvest window** (4 cells: ca_north_coast z9/z10, northern_tier z6, warm_arid z8; Trevor 2026-07-09). Fava is a true two-sowing crop ("sow in February... and again in September"): the fall sowing overwinters and harvests in the SAME spring window -- authored in the cell's own calendar[] tokens (two plant events, one harvest window) and zone_notes. Extraction: plant_out = the fall span, start_indoors null, harvest_start/end = the shared single harvest span's endpoints. NOT or-normalized ("or" would misstate "and again" as either/or). Honest imprecision logged: on the north coast the overwintered crop peaks EARLY in the shared window; month-granular data cannot slice that (future sourcing item, corrections log). Declarative SHARED_HARVEST ruling in the generator, like the onion continuity fix. |
 | C | **Envelopes narrow to the primary window** on every cell with a second_planting, at the CLEAN stage: `first_plant_date`/`last_plant_date` = primary plant window ends; `harvest_start`/`harvest_end` = primary harvest window ends. The fall cycle's envelope lives entirely in `second_planting{}`. REFLUSH/ALT_WINDOW cells keep their full envelope (one crop cycle). |
 | D | **Fixed four-key shape, `start_indoors: null` for direct-sown second plantings.** No `direct_sow` variant; top-level already expresses direct-sow as `plant_out` + null `start_indoors` on these crops and second_planting mirrors it. `SECOND_PLANTING_KEYS` unchanged. |
 | E | **Provenance inherited:** each new `second_planting{}` copies the cell's `sources[]` + `anchoring_urls{}` verbatim (the cited pages cover both windows; Population-1 precedent). |
@@ -43,10 +44,13 @@ authored correctly from the start. Runs BEFORE the new-crop work for that reason
   `"Sep - Nov"` vs `"Sep 6 - Nov 8"`, 40 such fields), so the clean drops the SECOND
   comma-span by position and asserts OVERLAP with the second_planting span -- never
   byte-equality.
-- **Population 2 -- EXTRACT: 90 TWO_CROP cells / 17 crops:** acorn-squash 5,
-  banana-pepper 8, bell-pepper 8, butternut-squash 5, cantaloupe 3, cayenne-pepper 3,
-  eggplant 6, habanero 3, honeydew-melon 3, jalapeno 6, pole-beans 9, potato 4,
-  pumpkin 5, spaghetti-squash 5, swiss-chard 8, tomatillo 6, watermelon 3.
+- **Population 2 -- EXTRACT: 94 TWO_CROP cells / 18 crops:** acorn-squash 5,
+  banana-pepper 8, bell-pepper 8, broad-beans-fava 4 (shared-harvest ruling, §2 B-fava),
+  butternut-squash 5, cantaloupe 3, cayenne-pepper 3, eggplant 6, habanero 3,
+  honeydew-melon 3, jalapeno 6, pole-beans 9, potato 4, pumpkin 5, spaghetti-squash 5,
+  swiss-chard 8, tomatillo 6, watermelon 3. (Fava was invisible to the kickoff-era
+  scans -- single-month windows + a target-list-limited iteration; the gate's
+  roster-wide Rule B sweep surfaced it.)
 - **OR-NORMALIZE: 11 ALT_WINDOW cells + the 2-cell onion continuity fix** (§2 B-alt/B-fix;
   the 2 fix cells are among the 11).
 - **EXEMPT (the gate must never flag):** 297 suitable=true cells; 59 woody-herb "or"
@@ -104,9 +108,11 @@ rules are TDD'd upfront; each is WIRED when it becomes globally true:
   window spans in `start_indoors` OR `plant_out` and NO `second_planting` is a
   violation. Harvest-only doubling allowed (reflush/bimodal). `" or "` allowed.
 - **Rule A -- dedup invariant** (wired at Stage-3 close): a cell WITH `second_planting`
-  must be single-span in all three top-level window fields, and its envelope
-  (`first_plant_date`/`last_plant_date`/`harvest_start`/`harvest_end`) must sit within
-  the primary windows.
+  must be single-span in all three top-level window fields, and its envelope must sit
+  within the primary windows -- formulated as CONTAINMENT: `harvest_end` parses inside
+  the FIRST harvest span, `last_plant_date` inside the FIRST plant_out span.
+  (Containment rather than not-equal-to-the-fall-values: fava's legitimately SHARED
+  harvest window passes naturally while both real envelope defect classes still fire.)
 - The existing SECOND_PLANTING_KEYS presence check stays as-is.
 
 **TDD, RED before GREEN, adversarially proven on scratch copies of the real canonical:**
@@ -124,8 +130,9 @@ A defect class is only trusted once it has been sneaked at the gate and caught.
 Three archetype batches via `tools/apply_patch.py` + `tools/batches/`:
 - S1-B1 solanaceae: banana/bell/cayenne/habanero/jalapeno pepper, eggplant, tomatillo (40 cells).
 - S1-B2 cucurbits: acorn/butternut/spaghetti squash, pumpkin, cantaloupe, honeydew, watermelon (29 cells).
-- S1-B3 rest: pole-beans, potato, swiss-chard TWO_CROP (21 cells) + the 13 or-norm/fix
-  replace ops (onion, shallot, swiss-chard ALT_WINDOW).
+- S1-B3 rest: pole-beans, potato, swiss-chard, broad-beans-fava TWO_CROP (25 cells,
+  fava via the §2 B-fava shared-harvest ruling) + the 13 or-norm/fix replace ops
+  (onion, shallot, swiss-chard ALT_WINDOW).
 Each batch: SHA-guarded, footprint-exact byte-diff (ONLY the intended crops, ONLY the
 intended keys), count 124, COMPACT, no escaped-unicode regression. After S1-B3: wire
 Rule B as A43. Release: whole_crop_gate 18/18 + gate_all 114/114 + release_verify +
@@ -149,7 +156,7 @@ bell-pepper `se_gulf` z8 (pop 2). Trevor gates the bump. Work happens in ~/plant
 never in the embedded submodule copy.
 
 **Stage 3 -- plant-dataset: CLEAN + Rule A.**
-Batches: pop-1 dedup (116 fields across 64 cells / 7 crops) + pop-2 clean (90 cells:
+Batches: pop-1 dedup (116 fields across 64 cells / 7 crops) + pop-2 clean (94 cells:
 window strings -> primary span; envelopes narrowed per Decision C). Sanity assert per
 field: dropped second span OVERLAPS the cell's second_planting span. Wire Rule A into
 A43. Full suite + state trio + Trevor-gated commit/push; then another astro submodule
@@ -175,11 +182,11 @@ establishment windows use `" or "`; a same-plant split harvest is comma-joined i
 
 ## 10. Definition of done
 
-1. 90 TWO_CROP cells carry a populated, provenance-bearing `second_planting{}`.
+1. 94 TWO_CROP cells carry a populated, provenance-bearing `second_planting{}`.
 2. 11 ALT_WINDOW cells or-normalized; onion continuity fix in.
 3. plant-astro reads `second_planting{}`; no comma-split second-track synthesis remains;
    `npm run build` green.
-4. All 154 second_planting cells (64 + 90) primary-only at top level with narrowed
+4. All 158 second_planting cells (64 + 94) primary-only at top level with narrowed
    envelopes; `calendar[]` byte-identical throughout.
 5. A43 both rules wired, TDD-proven (6 defect classes), gate_all 114/114 green.
 6. Authoring convention documented; kickoff #18 closeable; memory
