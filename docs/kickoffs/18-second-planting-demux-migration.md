@@ -168,3 +168,23 @@ de-mux before the new crops.)
 - plant-astro: `src/components/guides/{PlantingCalendarCard,SuccessionCard}.astro`
 - memories: `second-planting-demux-followup`, `dataset-shape-change-breaks-frontends`,
   `current-state-md-drift`
+
+---
+
+## 12. CLOSED (2026-07-09) + the new-crop authoring convention
+
+Migration complete: `1372c299 -> 50288c02` (3 populate + 2 clean batches, A43 both
+rules live). Final scope: 94 extracted / 18 crops (kickoff's 106/21 was re-ruled:
+reflush + chives/mint exempt, fava ADDED with a shared-harvest ruling; Population 1
+= 5 tomatoes + broccoli + kohlrabi, NOT celery). Full record:
+`docs/superpowers/specs/2026-07-09-second-planting-demux-migration-design.md` + the
+2026-07-09 STATE_HISTORY entries.
+
+**AUTHORING CONVENTION (enforced by whole_crop_gate A43 -- a new crop cannot certify
+otherwise):** a suitable=false two-season crop is authored with primary-only
+top-level windows + a populated `second_planting{}` (four keys: plant_out,
+start_indoors (null if direct-sown), harvest_start, harvest_end + inherited
+sources/anchoring_urls). Alternative establishment windows are `" or "`-joined,
+never comma-joined. A same-plant split harvest (reflush) is comma-joined in
+`harvest` ONLY, with single-window planting fields. Envelope fields
+(first/last_plant_date, harvest_start/end) describe the PRIMARY cycle only.
