@@ -1,0 +1,668 @@
+{
+ "base_sha": "30a7550aecea56cdd7fab651252b7a194bff982676cbcb2d35ba0943c50f62e9",
+ "patches": [
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 5 - Aug 10",
+    "harvest_start": "Aug 24",
+    "harvest_end": "Oct 9",
+    "sources": [
+     "uga_ext",
+     "ufifas_ext"
+    ],
+    "anchoring_urls": {
+     "uga_ext": {
+      "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+      "verified": "2026-06-22"
+     },
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 5",
+    "harvest_start": "Sep 20",
+    "harvest_end": "Nov 4",
+    "sources": [
+     "uga_ext",
+     "ufifas_ext"
+    ],
+    "anchoring_urls": {
+     "uga_ext": {
+      "url": "https://fieldreport.caes.uga.edu/wp-content/uploads/2023/06/vegetable-planting-chart-for-Georgia-C963-UGA-extension.pdf",
+      "verified": "2026-06-22"
+     },
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Aug 31",
+    "harvest_start": "Aug 20",
+    "harvest_end": "Oct 30",
+    "sources": [
+     "ucanr_ext"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Aug 15",
+    "harvest_start": "Aug 20",
+    "harvest_end": "Oct 14",
+    "sources": [
+     "ucanr_ext"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Aug 31",
+    "harvest_start": "Sep 20",
+    "harvest_end": "Nov 4",
+    "sources": [
+     "ucanr_ext"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 15",
+    "harvest_start": "Sep 20",
+    "harvest_end": "Nov 19",
+    "sources": [
+     "ucanr_ext"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.warm_arid.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 15 - Aug 15",
+    "harvest_start": "Sep 4",
+    "harvest_end": "Oct 19",
+    "sources": [
+     "nmsu_ext"
+    ],
+    "anchoring_urls": {
+     "nmsu_ext": {
+      "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep 1 - Sep 30",
+    "harvest_start": "Oct 21",
+    "harvest_end": "Dec 4",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 30",
+    "harvest_start": "Sep 20",
+    "harvest_end": "Nov 29",
+    "sources": [
+     "ufifas_ext"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.northern_tier.resolved_by_zone.6.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep",
+    "harvest_start": "May",
+    "harvest_end": "Jun",
+    "sources": [
+     "umn_ext",
+     "ncsu_ext",
+     "msu_ext"
+    ],
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-beans",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/vicia-faba/",
+      "verified": "2026-07-02"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/resources",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.ca_north_coast.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug - Sep",
+    "harvest_start": "Apr",
+    "harvest_end": "Jun",
+    "sources": [
+     "ucanr_santa_clara_mg",
+     "ucanr_ext_mg_timeplanting",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_santa_clara_mg": {
+      "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/fava-beans",
+      "verified": "2026-07-02"
+     },
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-07-02"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://marinmg.ucanr.edu",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.ca_north_coast.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug - Sep",
+    "harvest_start": "Apr",
+    "harvest_end": "Jun",
+    "sources": [
+     "ucanr_santa_clara_mg",
+     "ucanr_ext_mg_timeplanting",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_santa_clara_mg": {
+      "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/fava-beans",
+      "verified": "2026-07-02"
+     },
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-07-02"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://marinmg.ucanr.edu",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.warm_arid.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep",
+    "harvest_start": "Apr",
+    "harvest_end": "May",
+    "sources": [
+     "ncsu_ext",
+     "nmsu_donaana_mg",
+     "tamu_agrilife_fall_veg"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/vicia-faba/",
+      "verified": "2026-07-02"
+     },
+     "nmsu_donaana_mg": {
+      "url": "https://donaanamastergardeners.nmsu.edu/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife_fall_veg": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+      "verified": "2026-07-02"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ucanr_ext_mg_timeplanting",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://marinmg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ucanr_ext_mg_timeplanting",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://marinmg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ucanr_ext_mg_timeplanting",
+     "ucanr_san_diego_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "ucanr_san_diego_mg": {
+      "url": "https://www.mastergardenersd.org/swiss-chard/",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ucanr_ext_mg_timeplanting",
+     "ucanr_san_diego_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "ucanr_san_diego_mg": {
+      "url": "https://www.mastergardenersd.org/swiss-chard/",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ucanr_ext_mg_timeplanting",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "ucanr_ext_mg_timeplanting",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext_mg_timeplanting": {
+      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "clemson_hgic",
+     "uga_ext_c943_calendar",
+     "lsu_agcenter"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "verified": "2026-06-29"
+     },
+     "uga_ext_c943_calendar": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C943/",
+      "verified": "2026-06-29"
+     },
+     "lsu_agcenter": {
+      "url": "https://www.lsuagcenter.com/topics/lawn_garden/home_gardening/vegetables",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep - Oct",
+    "harvest_start": "Nov",
+    "harvest_end": "Jan",
+    "sources": [
+     "clemson_hgic",
+     "uga_ext_c943_calendar",
+     "msstate_ext"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "verified": "2026-06-29"
+     },
+     "uga_ext_c943_calendar": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C943/",
+      "verified": "2026-06-29"
+     },
+     "msstate_ext": {
+      "url": "https://extension.msstate.edu/publications/fall-gardening-mississippi",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Feb - Mar, Sep",
+   "value": "Feb - Mar or Sep"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Sep - Nov, Feb",
+   "value": "Sep - Nov or Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Sep - Nov, Feb",
+   "value": "Sep - Nov or Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Sep - Nov, Feb",
+   "value": "Sep - Nov or Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Sep - Nov, Feb",
+   "value": "Sep - Nov or Feb"
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug",
+    "harvest_start": "Nov",
+    "harvest_end": "Dec",
+    "sources": [
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug",
+    "harvest_start": "Nov",
+    "harvest_end": "Dec",
+    "sources": [
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.warm_arid.resolved_by_zone.8.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug",
+    "harvest_start": "Nov",
+    "harvest_end": "Nov",
+    "sources": [
+     "nmsu_ext_cr457b",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "nmsu_ext_cr457b": {
+      "url": "https://pubs.nmsu.edu/_circulars/CR457B/",
+      "verified": "2026-06-30"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Sep",
+    "harvest_start": "Dec",
+    "harvest_end": "Dec",
+    "sources": [
+     "uariz_ext",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/sites/default/files/attachment/IrishPotatoes.pdf",
+      "verified": "2026-06-30"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.ca_interior.resolved_by_zone.8.start_indoors",
+   "from": "Sep, Dec",
+   "value": "Sep or Dec"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Oct - Nov, Jan - March",
+   "value": "Oct - Nov or Jan - March"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.ca_interior.resolved_by_zone.9.start_indoors",
+   "from": "Sep, Dec",
+   "value": "Sep or Dec"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Oct - Nov, Jan - March",
+   "value": "Oct - Nov or Jan - March"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.ca_north_coast.resolved_by_zone.9.plant_out",
+   "from": "Nov - Jan, Jan - March",
+   "value": "Nov - March"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.ca_north_coast.resolved_by_zone.10.plant_out",
+   "from": "Nov - Jan, Jan - March",
+   "value": "Nov - March"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Oct - Nov, Jan - March",
+   "value": "Oct - Nov or Jan - March"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Oct - Nov, Jan - March",
+   "value": "Oct - Nov or Jan - March"
+  }
+ ]
+}
