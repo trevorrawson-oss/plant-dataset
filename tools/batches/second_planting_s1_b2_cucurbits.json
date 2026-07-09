@@ -1,0 +1,666 @@
+{
+ "base_sha": "3c03010be71198ac02e4e7763c0b5c638122584b978ad140c6296b654c7f821c",
+ "patches": [
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 1",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 15 - Sep 15",
+    "harvest_start": "Nov 15",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 1",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 15 - Sep 15",
+    "harvest_start": "Nov 15",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 1",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 15 - Sep 15",
+    "harvest_start": "Nov 15",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 15 - Aug 15",
+    "harvest_start": "Oct 15",
+    "harvest_end": "Nov 30",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 15 - Aug 15",
+    "harvest_start": "Oct 10",
+    "harvest_end": "Nov 25",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 10",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 15",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "ucanr_ext",
+     "uc_mg"
+    ],
+    "anchoring_urls": {
+     "ucanr_ext": {
+      "url": "https://ucanr.edu",
+      "verified": "2026-06-29"
+     },
+     "uc_mg": {
+      "url": "https://mg.ucanr.edu",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 1 - Jul 31",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Nov 1",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 1",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 15 - Sep 15",
+    "harvest_start": "Nov 15",
+    "harvest_end": "Dec 15",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.low_desert_az.resolved_by_zone.9.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Jul 15 - Aug 10",
+    "harvest_start": "Oct 20",
+    "harvest_end": "Nov 30",
+    "sources": [
+     "uariz_ext"
+    ],
+    "anchoring_urls": {
+     "uariz_ext": {
+      "url": "https://extension.arizona.edu",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.10.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 1",
+    "harvest_start": "Nov 1",
+    "harvest_end": "Dec 20",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.11.second_planting",
+   "value": {
+    "start_indoors": null,
+    "plant_out": "Aug 1 - Sep 10",
+    "harvest_start": "Nov 15",
+    "harvest_end": "Dec 25",
+    "sources": [
+     "ufifas_ext",
+     "uf_ifas_vh021"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://edis.ifas.ufl.edu",
+      "verified": "2026-06-30"
+     },
+     "uf_ifas_vh021": {
+      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  }
+ ]
+}
