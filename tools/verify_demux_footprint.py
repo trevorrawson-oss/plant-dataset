@@ -54,8 +54,10 @@ def main():
                 continue
             if compact(b.get(key)) != compact(c.get(key)):
                 problems.append(f"{slug}: top-level key changed: {key}")
-        for rk in set(b.get("regions", {})) | set(c.get("regions", {})):
-            br, cr = b["regions"].get(rk, {}), c["regions"].get(rk, {})
+        bregs = b.get("regions") or {}
+        cregs = c.get("regions") or {}
+        for rk in set(bregs) | set(cregs):
+            br, cr = bregs.get(rk) or {}, cregs.get(rk) or {}
             for key in set(br) | set(cr):
                 if key == "resolved_by_zone":
                     continue
