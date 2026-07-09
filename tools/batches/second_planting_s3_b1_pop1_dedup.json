@@ -1,0 +1,1421 @@
+{
+ "base_sha": "35983df01f6b780c702727ab0959ba0aef1660b0570a0d5de5dddc482333839d",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.northern_tier.resolved_by_zone.6.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 22"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.northern_tier.resolved_by_zone.7.last_plant_date",
+   "from": "Jul 27",
+   "value": "Apr 5"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.8.start_indoors",
+   "from": "Feb 11 - Feb 25, May 25 - Jun 8",
+   "value": "Feb 11 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 25 - Apr 15, Jul 6 - Jul 20",
+   "value": "Mar 25 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Sep - Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 8",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.9.start_indoors",
+   "from": "Jan 21 - Feb 4, Jun 20 - Jul 4",
+   "value": "Jan 21 - Feb 4"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 4 - Mar 25, Aug 1 - Aug 15",
+   "value": "Mar 4 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Oct - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 15",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.9.start_indoors",
+   "from": "Oct 15 - Nov 15, Jul 15 - Aug 15",
+   "value": "Oct 15 - Nov 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.10.start_indoors",
+   "from": "Oct 15 - Nov 15, Jul 15 - Aug 15",
+   "value": "Oct 15 - Nov 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.warm_arid.resolved_by_zone.8.start_indoors",
+   "from": "Feb 5 - Feb 19, Jun 3 - Jun 17",
+   "value": "Feb 5 - Feb 19"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Mar 19 - Apr 8, Jul 15 - Aug 4",
+   "value": "Mar 19 - Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Sep - Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 4",
+   "value": "Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Nov 5",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.low_desert_az.resolved_by_zone.9.start_indoors",
+   "from": "Jan 18 - Feb 1, Jun 1 - Jun 30",
+   "value": "Jan 18 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Mar 1 - Mar 21, Sep 1 - Sep 30",
+   "value": "Mar 1 - Mar 21"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Oct - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 21"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cherry-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 15",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.8.start_indoors",
+   "from": "Feb 11 - Feb 25, May 20 - Jun 8",
+   "value": "Feb 11 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 25 - Apr 15, Jul 1 - Jul 20",
+   "value": "Mar 25 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "Jun, Oct - Nov",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.9.start_indoors",
+   "from": "Jan 21 - Feb 4, Jun 13 - Jun 27",
+   "value": "Jan 21 - Feb 4"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 4 - Mar 25, Jul 25 - Aug 8",
+   "value": "Mar 4 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Jun, Oct - Dec",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 8",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.9.start_indoors",
+   "from": "Oct 20 - Feb 1, Jul 21 - Aug 19",
+   "value": "Oct 20 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.10.start_indoors",
+   "from": "Oct 20 - Feb 1, Jul 21 - Aug 19",
+   "value": "Oct 20 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.warm_arid.resolved_by_zone.8.start_indoors",
+   "from": "Feb 5 - Feb 19, Jun 3 - Jun 17",
+   "value": "Feb 5 - Feb 19"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Mar 19 - Apr 8, Jul 15 - Aug 4",
+   "value": "Mar 19 - Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "Jun - Jul, Oct - Nov",
+   "value": "Jun - Jul"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 4",
+   "value": "Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Nov 5",
+   "value": "Jul"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.low_desert_az.resolved_by_zone.9.start_indoors",
+   "from": "Dec 28 - Jan 18, Jul 21 - Aug 19",
+   "value": "Dec 28 - Jan 18"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 8 - Mar 1, Sep 1 - Sep 30",
+   "value": "Feb 8 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Dec - Jan",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.northern_tier.resolved_by_zone.6.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 22"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.northern_tier.resolved_by_zone.7.last_plant_date",
+   "from": "Jul 27",
+   "value": "Apr 5"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.8.start_indoors",
+   "from": "Feb 11 - Feb 25, May 25 - Jun 8",
+   "value": "Feb 11 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 25 - Apr 15, Jul 6 - Jul 20",
+   "value": "Mar 25 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Sep - Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 8",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.9.start_indoors",
+   "from": "Jan 21 - Feb 4, Jun 20 - Jul 4",
+   "value": "Jan 21 - Feb 4"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 4 - Mar 25, Aug 1 - Aug 15",
+   "value": "Mar 4 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Oct - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 15",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.9.start_indoors",
+   "from": "Oct 15 - Nov 15, Jul 15 - Aug 15",
+   "value": "Oct 15 - Nov 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.10.start_indoors",
+   "from": "Oct 15 - Nov 15, Jul 15 - Aug 15",
+   "value": "Oct 15 - Nov 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.warm_arid.resolved_by_zone.8.start_indoors",
+   "from": "Feb 5 - Feb 19, Jun 3 - Jun 17",
+   "value": "Feb 5 - Feb 19"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Mar 19 - Apr 8, Jul 15 - Aug 4",
+   "value": "Mar 19 - Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Sep - Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 4",
+   "value": "Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Nov 5",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.low_desert_az.resolved_by_zone.9.start_indoors",
+   "from": "Jan 18 - Feb 1, Jun 1 - Jun 30",
+   "value": "Jan 18 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Mar 1 - Mar 21, Sep 1 - Sep 30",
+   "value": "Mar 1 - Mar 21"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Oct - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 21"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='roma-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 15",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.3.last_plant_date",
+   "from": "Jul 23",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.4.last_plant_date",
+   "from": "Aug 8",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.5.harvest",
+   "from": "May 26 - Jun 30, Oct 1 - Oct 29",
+   "value": "May 26 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.5.last_plant_date",
+   "from": "Aug 22",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.5.harvest_end",
+   "from": "Oct 29",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.6.harvest",
+   "from": "May 12 - Jun 30, Oct 1 - Nov 14",
+   "value": "May 12 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.6.last_plant_date",
+   "from": "Sep 7",
+   "value": "Apr 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.6.harvest_end",
+   "from": "Nov 14",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.7.harvest",
+   "from": "Apr 26 - May 31, Nov 1 - Dec 4",
+   "value": "Apr 26 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.7.last_plant_date",
+   "from": "Sep 27",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.northern_tier.resolved_by_zone.7.harvest_end",
+   "from": "Dec 4",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "Apr 15 - May 26, Nov 5 - Dec 15",
+   "value": "Apr 15 - May 26"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Dec 15",
+   "value": "May 26"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Apr 1 - May 12, Nov 20 - Dec 31",
+   "value": "Apr 1 - May 12"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 31",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 31",
+   "value": "May 12"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Aug 1 - Sep 30, Dec 1 - Feb 28",
+   "value": "Dec 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.8.harvest",
+   "from": "Mar 1 - May 1, Oct 15 - Dec 15",
+   "value": "Mar 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.8.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.8.harvest_end",
+   "from": "Dec 15",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Aug 1 - Sep 30, Dec 1 - Feb 28",
+   "value": "Dec 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.9.harvest",
+   "from": "Mar 1 - May 1, Oct 15 - Dec 15",
+   "value": "Mar 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_interior.resolved_by_zone.9.harvest_end",
+   "from": "Dec 15",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_north_coast.resolved_by_zone.9.harvest",
+   "from": "Apr 15 - Jun 15, Sep 15 - Dec 1",
+   "value": "Apr 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_north_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Apr 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_north_coast.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_north_coast.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - Jun 15, Sep 15 - Dec 1",
+   "value": "Apr 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_north_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Apr 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_north_coast.resolved_by_zone.10.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_south_coast.resolved_by_zone.9.plant_out",
+   "from": "Sep 1 - Oct 31, Jan 1 - Feb 28",
+   "value": "Jan 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_south_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 31",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_south_coast.resolved_by_zone.10.plant_out",
+   "from": "Sep 1 - Oct 31, Jan 1 - Feb 28",
+   "value": "Jan 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.ca_south_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Oct 31",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "Apr 20 - Jun 1, Oct 15 - Dec 7",
+   "value": "Apr 20 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 26",
+   "value": "Mar 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broccoli')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Dec 7",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.8.start_indoors",
+   "from": "Feb 11 - Feb 25, May 20 - Jun 8",
+   "value": "Feb 11 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 25 - Apr 15, Jul 1 - Jul 20",
+   "value": "Mar 25 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "Jun, Oct - Nov",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.9.start_indoors",
+   "from": "Jan 21 - Feb 4, Jun 13 - Jun 27",
+   "value": "Jan 21 - Feb 4"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 4 - Mar 25, Jul 25 - Aug 8",
+   "value": "Mar 4 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Jun, Oct - Dec",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 8",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.9.start_indoors",
+   "from": "Oct 20 - Feb 1, Jul 21 - Aug 19",
+   "value": "Oct 20 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.10.start_indoors",
+   "from": "Oct 20 - Feb 1, Jul 21 - Aug 19",
+   "value": "Oct 20 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.warm_arid.resolved_by_zone.8.start_indoors",
+   "from": "Feb 5 - Feb 19, Jun 3 - Jun 17",
+   "value": "Feb 5 - Feb 19"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Mar 19 - Apr 8, Jul 15 - Aug 4",
+   "value": "Mar 19 - Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "Jun - Jul, Oct - Nov",
+   "value": "Jun - Jul"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 4",
+   "value": "Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Nov 5",
+   "value": "Jul"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.low_desert_az.resolved_by_zone.9.start_indoors",
+   "from": "Dec 28 - Jan 18, Jul 21 - Aug 19",
+   "value": "Dec 28 - Jan 18"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 8 - Mar 1, Sep 1 - Sep 30",
+   "value": "Feb 8 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Dec - Jan",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='heirloom-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.northern_tier.resolved_by_zone.6.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 22"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.northern_tier.resolved_by_zone.7.last_plant_date",
+   "from": "Jul 27",
+   "value": "Apr 5"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.8.start_indoors",
+   "from": "Feb 11 - Feb 25, May 25 - Jun 8",
+   "value": "Feb 11 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 25 - Apr 15, Jul 6 - Jul 20",
+   "value": "Mar 25 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Sep - Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Jul 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 8",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.9.start_indoors",
+   "from": "Jan 21 - Feb 4, Jun 20 - Jul 4",
+   "value": "Jan 21 - Feb 4"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 4 - Mar 25, Aug 1 - Aug 15",
+   "value": "Mar 4 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Oct - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 15",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.9.start_indoors",
+   "from": "Oct 15 - Nov 15, Jul 15 - Aug 15",
+   "value": "Oct 15 - Nov 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.10.start_indoors",
+   "from": "Oct 15 - Nov 15, Jul 15 - Aug 15",
+   "value": "Oct 15 - Nov 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+   "value": "Dec 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Feb - Jun, Nov - Jan",
+   "value": "Feb - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.warm_arid.resolved_by_zone.8.start_indoors",
+   "from": "Feb 5 - Feb 19, Jun 3 - Jun 17",
+   "value": "Feb 5 - Feb 19"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Mar 19 - Apr 8, Jul 15 - Aug 4",
+   "value": "Mar 19 - Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Sep - Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 4",
+   "value": "Apr 8"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Nov 5",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.low_desert_az.resolved_by_zone.9.start_indoors",
+   "from": "Jan 18 - Feb 1, Jun 1 - Jun 30",
+   "value": "Jan 18 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Mar 1 - Mar 21, Sep 1 - Sep 30",
+   "value": "Mar 1 - Mar 21"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Oct - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 21"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='grape-tomato')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 15",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.3.last_plant_date",
+   "from": "Jul 23",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.4.last_plant_date",
+   "from": "Aug 8",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.5.harvest",
+   "from": "May 26 - Jun 30, Oct 1 - Oct 29",
+   "value": "May 26 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.5.last_plant_date",
+   "from": "Aug 22",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.5.harvest_end",
+   "from": "Oct 29",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.6.harvest",
+   "from": "May 12 - Jun 30, Oct 1 - Nov 14",
+   "value": "May 12 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.6.last_plant_date",
+   "from": "Sep 7",
+   "value": "Apr 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.6.harvest_end",
+   "from": "Nov 14",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.7.harvest",
+   "from": "Apr 26 - May 31, Nov 1 - Dec 4",
+   "value": "Apr 26 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.7.last_plant_date",
+   "from": "Sep 27",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.northern_tier.resolved_by_zone.7.harvest_end",
+   "from": "Dec 4",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "Apr 15 - May 26, Nov 5 - Dec 15",
+   "value": "Apr 15 - May 26"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Dec 15",
+   "value": "May 26"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Apr 1 - May 12, Nov 20 - Dec 31",
+   "value": "Apr 1 - May 12"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 31",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 31",
+   "value": "May 12"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Aug 1 - Sep 30, Dec 1 - Feb 28",
+   "value": "Dec 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.8.harvest",
+   "from": "Mar 1 - May 1, Oct 1 - Nov 30",
+   "value": "Mar 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.8.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.8.harvest_end",
+   "from": "Nov 30",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Aug 1 - Sep 30, Dec 1 - Feb 28",
+   "value": "Dec 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.9.harvest",
+   "from": "Mar 1 - May 1, Oct 1 - Nov 30",
+   "value": "Mar 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_interior.resolved_by_zone.9.harvest_end",
+   "from": "Nov 30",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_north_coast.resolved_by_zone.9.harvest",
+   "from": "Apr 15 - Jun 15, Sep 15 - Dec 1",
+   "value": "Apr 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_north_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Apr 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_north_coast.resolved_by_zone.9.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_north_coast.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - Jun 15, Sep 15 - Dec 1",
+   "value": "Apr 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_north_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Apr 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_north_coast.resolved_by_zone.10.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.9.plant_out",
+   "from": "Sep 1 - Oct 31, Jan 1 - Feb 28",
+   "value": "Jan 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.9.harvest",
+   "from": "Mar 15 - May 15, Nov 1 - Dec 31",
+   "value": "Mar 15 - May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 31",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.9.harvest_end",
+   "from": "Dec 31",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.10.plant_out",
+   "from": "Sep 1 - Oct 31, Jan 1 - Feb 28",
+   "value": "Jan 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.10.harvest",
+   "from": "Mar 15 - May 15, Nov 1 - Dec 31",
+   "value": "Mar 15 - May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Oct 31",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.ca_south_coast.resolved_by_zone.10.harvest_end",
+   "from": "Dec 31",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "Apr 20 - Jun 1, Oct 15 - Dec 7",
+   "value": "Apr 20 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 26",
+   "value": "Mar 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='kohlrabi')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Dec 7",
+   "value": "Jun 1"
+  }
+ ]
+}
