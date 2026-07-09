@@ -196,6 +196,7 @@ def main():
     batches = {}
     if a.stage == "populate":
         counts = {"TWO_CROP": 0, "ALT_WINDOW": 0, "REFLUSH": 0}
+        migrated = 0
         slug_batch = {s: b for b, ss in S1_BATCHES.items() for s in ss}
         for crop in crops:
             slug = crop.get("slug")
@@ -203,6 +204,8 @@ def main():
                 continue
             for rk, z, cell in _cells(crop):
                 if isinstance(cell.get("second_planting"), dict):
+                    if slug not in POP1_SLUGS:
+                        migrated += 1
                     continue
                 pat = classify(cell)
                 if pat is None:
@@ -219,7 +222,18 @@ def main():
                 elif pat == "ALT_WINDOW":
                     batches.setdefault("s1_b3_rest", []).extend(
                         or_norm_ops(slug, rk, z, cell))
-        assert counts == EXPECT, f"scope drift vs spec: {counts} != {EXPECT}"
+        # TWO_CROP is pinned as remaining+migrated so sequential per-batch
+        # regeneration against the moving canonical passes across the whole
+        # B1->B2->B3 sequence; ALT_WINDOW/REFLUSH pins hold through the whole
+        # populate stage because the or-norm ops land in the LAST batch
+        # (s1_b3) and REFLUSH is never touched. (ALT_WINDOW would read 0
+        # only if populate were re-run after S1-B3's promote, which the
+        # workflow never does; if that ever changes, make ALT batch-aware
+        # the same way.)
+        assert (counts["TWO_CROP"] + migrated == EXPECT["TWO_CROP"]
+                and counts["ALT_WINDOW"] == EXPECT["ALT_WINDOW"]
+                and counts["REFLUSH"] == EXPECT["REFLUSH"]), \
+            f"scope drift vs spec: {counts} + migrated={migrated} != {EXPECT}"
     else:  # clean
         n1 = n2 = 0
         for crop in crops:
