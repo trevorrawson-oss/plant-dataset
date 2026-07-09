@@ -1,0 +1,2177 @@
+{
+ "base_sha": "287b86cb5d6d833d9717700b71ccf6a82a1973ad60cd3465b1ba2d62a38ca406",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 15 - Apr 15, Sep 1 - Sep 20",
+   "value": "Mar 15 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "May 15 - Jun 30, Nov 1 - Nov 30",
+   "value": "May 15 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Sep 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 30",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Sep 1 - Sep 20",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Apr 15 - Jun 30, Nov 1 - Dec 10",
+   "value": "Apr 15 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 20",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Nov 1 - Dec 10",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 20 - Feb 28, Sep 1 - Sep 20",
+   "value": "Jan 20 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 20 - Jun 15, Nov 1 - Dec 20",
+   "value": "Apr 20 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Dec 20",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 15",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Nov 1 - Dec 10",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 20",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 1 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 15 - Feb 28, Sep 1 - Sep 20",
+   "value": "Jan 15 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 30",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jul 31, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.hawaii_tropical.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='bell-pepper')].regions.hawaii_tropical.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 15 - Apr 10, Sep 1 - Sep 15",
+   "value": "Mar 15 - Apr 10"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "Jun 1 - Jun 30, Nov 1 - Dec 5",
+   "value": "Jun 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Sep 15",
+   "value": "Apr 10"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Dec 5",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 1 - Mar 25, Sep 1 - Sep 20",
+   "value": "Mar 1 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "May 20 - Jun 30, Oct 20 - Dec 10",
+   "value": "May 20 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Feb 25, Sep 1 - Sep 20",
+   "value": "Feb 1 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Apr 20 - May 31, Nov 1 - Dec 20",
+   "value": "Apr 20 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Dec 20",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 25 - Feb 20, Sep 1 - Sep 20",
+   "value": "Jan 25 - Feb 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - May 31, Nov 1 - Dec 25",
+   "value": "Apr 15 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Dec 25",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Feb 25, Aug 25 - Sep 15",
+   "value": "Feb 1 - Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Apr 20 - May 31, Nov 1 - Dec 20",
+   "value": "Apr 20 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 20",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 30",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jul 15, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jul 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.hawaii_tropical.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='jalapeno')].regions.hawaii_tropical.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jul 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 15 - Apr 15, Sep 1 - Sep 20",
+   "value": "Mar 15 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "May 20 - Jun 30, Nov 1 - Nov 30",
+   "value": "May 20 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Sep 20",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Nov 30",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Sep 1 - Sep 20",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Apr 25 - Jun 30, Nov 1 - Dec 10",
+   "value": "Apr 25 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 20",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Nov 1 - Dec 10",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 20 - Feb 28, Sep 1 - Sep 20",
+   "value": "Jan 20 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 20 - Jun 15, Nov 1 - Dec 20",
+   "value": "Apr 20 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Dec 20",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 15",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Nov 1 - Dec 10",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 20",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 5 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 5 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 15 - Feb 28, Sep 1 - Sep 20",
+   "value": "Jan 15 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 5 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 5 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 30",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jul 31, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.hawaii_tropical.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='banana-pepper')].regions.hawaii_tropical.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Jan 20 - Feb 20, Sep 1 - Sep 20",
+   "value": "Jan 20 - Feb 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - Jun 15, Nov 1 - Dec 31",
+   "value": "Apr 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 15, Sep 1 - Sep 20",
+   "value": "Jan 1 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jun 15, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 30",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jul 15, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jul 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.hawaii_tropical.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cayenne-pepper')].regions.hawaii_tropical.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jul 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Jan 20 - Feb 20, Sep 1 - Sep 20",
+   "value": "Jan 20 - Feb 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 20 - Jun 30, Nov 15 - Dec 31",
+   "value": "Apr 20 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 15, Sep 1 - Sep 20",
+   "value": "Jan 1 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 30",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "May 1 - Jul 31, Nov 1 - Dec 31",
+   "value": "May 1 - Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='habanero')].regions.hawaii_tropical.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Jul 1 - Jul 31",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 15 - Jun 15, Oct 1 - Nov 1",
+   "value": "May 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 15 - Feb 15, Jul 1 - Jul 31",
+   "value": "Jan 15 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - May 31, Oct 1 - Nov 1",
+   "value": "Apr 15 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Jul 31",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Nov 1",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Jul 1 - Jul 31",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Jun 1 - Jun 30, Oct 1 - Nov 1",
+   "value": "Jun 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "May 1 - Jun 1, Nov 1 - Dec 1",
+   "value": "May 1 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 1, Aug 15 - Sep 15",
+   "value": "Jan 1 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - May 1, Nov 15 - Dec 15",
+   "value": "Apr 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='butternut-squash')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 15",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Jul 1 - Jul 31",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 15 - Jun 15, Oct 1 - Nov 1",
+   "value": "May 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 15 - Feb 15, Jul 1 - Jul 31",
+   "value": "Jan 15 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - May 31, Oct 1 - Nov 1",
+   "value": "Apr 15 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Jul 31",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Nov 1",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Jul 1 - Jul 31",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Jun 1 - Jun 30, Oct 1 - Nov 1",
+   "value": "Jun 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "May 1 - Jun 1, Nov 1 - Dec 1",
+   "value": "May 1 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 1, Aug 15 - Sep 15",
+   "value": "Jan 1 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - May 1, Nov 15 - Dec 15",
+   "value": "Apr 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='acorn-squash')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 15",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Jul 1 - Jul 31",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 15 - Jun 15, Oct 1 - Nov 1",
+   "value": "May 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 15 - Feb 15, Jul 1 - Jul 31",
+   "value": "Jan 15 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - May 31, Oct 1 - Nov 1",
+   "value": "Apr 15 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Jul 31",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Nov 1",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Jul 1 - Jul 31",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Jun 1 - Jun 30, Oct 1 - Nov 1",
+   "value": "Jun 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "May 1 - Jun 1, Nov 1 - Dec 1",
+   "value": "May 1 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 1, Aug 15 - Sep 15",
+   "value": "Jan 1 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - May 1, Nov 15 - Dec 15",
+   "value": "Apr 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='spaghetti-squash')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 15",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Mar 15 - May 1, Jul 5 - Aug 10",
+   "value": "Mar 15 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "May 4 - Jun 15, Aug 24 - Oct 9",
+   "value": "May 4 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 10",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Oct 9",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Mar 1 - Apr 15, Aug 1 - Sep 5",
+   "value": "Mar 1 - Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Apr 20 - Jun 5, Sep 20 - Nov 4",
+   "value": "Apr 20 - Jun 5"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 5",
+   "value": "Apr 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Nov 4",
+   "value": "Jun 5"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Apr 1 - May 31, Jul 1 - Aug 31",
+   "value": "Apr 1 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.8.harvest",
+   "from": "May 21 - Jun 15, Aug 20 - Oct 30",
+   "value": "May 21 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 31",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.8.harvest_end",
+   "from": "Oct 30",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Apr 1 - May 31, Jul 1 - Aug 15",
+   "value": "Apr 1 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.9.harvest",
+   "from": "May 21 - Jun 15, Aug 20 - Oct 14",
+   "value": "May 21 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 15",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_interior.resolved_by_zone.9.harvest_end",
+   "from": "Oct 14",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Jan 15 - Mar 31, Aug 1 - Aug 31",
+   "value": "Jan 15 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Mar 20 - May 25, Sep 20 - Nov 4",
+   "value": "Mar 20 - May 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 31",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Nov 4",
+   "value": "May 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 15",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Mar 1 - May 25, Sep 20 - Nov 19",
+   "value": "Mar 1 - May 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 15",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Nov 19",
+   "value": "May 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Apr 1 - May 15, Jul 15 - Aug 15",
+   "value": "Apr 1 - May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "May 21 - Jul 14, Sep 4 - Oct 19",
+   "value": "May 21 - Jul 14"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 15",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Oct 19",
+   "value": "Jul 14"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 31, Sep 1 - Sep 30",
+   "value": "Feb 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Mar 23 - May 30, Oct 21 - Dec 4",
+   "value": "Mar 23 - May 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 4",
+   "value": "May 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Apr 30, Aug 1 - Sep 30",
+   "value": "Feb 1 - Apr 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Mar 23 - Jun 15, Sep 20 - Nov 29",
+   "value": "Mar 23 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Apr 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pole-beans')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Nov 29",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.northern_tier.resolved_by_zone.6.plant_out",
+   "from": "Feb - Mar, Sep",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.northern_tier.resolved_by_zone.6.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.ca_north_coast.resolved_by_zone.9.plant_out",
+   "from": "Feb, Aug - Sep",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.ca_north_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.ca_north_coast.resolved_by_zone.10.plant_out",
+   "from": "Feb, Aug - Sep",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.ca_north_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Feb, Sep",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='broad-beans-fava')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.9.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.9.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.10.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.10.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_north_coast.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.9.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.9.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.10.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.10.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.10.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_south_coast.resolved_by_zone.10.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.8.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.8.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.8.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.9.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.ca_interior.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.8.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.8.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.8.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.8.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.9.plant_out",
+   "from": "Feb - Mar, Sep - Oct",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.9.harvest",
+   "from": "Apr - Aug, Nov - Jan",
+   "value": "Apr - Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.9.last_plant_date",
+   "from": "Oct 15",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='swiss-chard')].regions.se_gulf.resolved_by_zone.9.harvest_end",
+   "from": "Jan 31",
+   "value": "Aug"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.8.plant_out",
+   "from": "Feb - Mar, Aug",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Nov - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 31",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.8.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.9.plant_out",
+   "from": "Feb - Mar, Aug",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.9.harvest",
+   "from": "May - Jun, Nov - Dec",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 31",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.ca_interior.resolved_by_zone.9.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.warm_arid.resolved_by_zone.8.plant_out",
+   "from": "Feb - Mar, Aug",
+   "value": "Feb - Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.warm_arid.resolved_by_zone.8.harvest",
+   "from": "May - Jun, Nov",
+   "value": "May - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.warm_arid.resolved_by_zone.8.last_plant_date",
+   "from": "Aug 31",
+   "value": "Mar"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.warm_arid.resolved_by_zone.8.harvest_end",
+   "from": "Nov 30",
+   "value": "Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Jan - Feb, Sep",
+   "value": "Jan - Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Apr - May, Dec",
+   "value": "Apr - May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='potato')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 31",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 20",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Nov 1 - Dec 10",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 20 - Feb 28, Sep 1 - Sep 20",
+   "value": "Jan 20 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 20 - Jun 15, Nov 1 - Dec 20",
+   "value": "Apr 20 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Dec 20",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Sep 15",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Nov 1 - Dec 10",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 15 - Sep 15",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 15 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 15 - Mar 1, Aug 15 - Sep 15",
+   "value": "Jan 15 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jun 30, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Mar 31, Aug 1 - Sep 30",
+   "value": "Jan 1 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - Jul 31, Nov 1 - Dec 31",
+   "value": "Apr 1 - Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.hawaii_tropical.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 30",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='eggplant')].regions.hawaii_tropical.resolved_by_zone.11.harvest_end",
+   "from": "Dec 31",
+   "value": "Jul 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Feb 28, Sep 1 - Sep 30",
+   "value": "Feb 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "Apr - May, Nov - Dec",
+   "value": "Apr - May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Dec 15",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 15 - Feb 15, Sep 1 - Sep 30",
+   "value": "Jan 15 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr - May, Nov - Dec",
+   "value": "Apr - May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 30",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Dec 15",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Feb 28, Sep 1 - Sep 20",
+   "value": "Feb 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Apr - May, Nov - Dec",
+   "value": "Apr - May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Sep 20",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Dec 15",
+   "value": "May"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Sep 1 - Oct 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr - Jun, Nov - Jan",
+   "value": "Apr - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Oct 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 15 - Feb 15, Sep 1 - Oct 1",
+   "value": "Jan 15 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr - Jun, Nov - Jan",
+   "value": "Apr - Jun"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Oct 1",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.hawaii_tropical.resolved_by_zone.11.plant_out",
+   "from": "Feb 1 - Feb 28, Aug 1 - Aug 31",
+   "value": "Feb 1 - Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.hawaii_tropical.resolved_by_zone.11.harvest",
+   "from": "May - Jul, Nov - Jan",
+   "value": "May - Jul"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='tomatillo')].regions.hawaii_tropical.resolved_by_zone.11.last_plant_date",
+   "from": "Aug 31",
+   "value": "Feb 28"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 15, Jul 15 - Aug 15",
+   "value": "Feb 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Oct 15 - Nov 30",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 15",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 30",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - Jun 1, Nov 1 - Dec 15",
+   "value": "Apr 15 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 15",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 15, Aug 1 - Sep 15",
+   "value": "Jan 1 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - May 15, Nov 1 - Dec 15",
+   "value": "Apr 1 - May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='watermelon')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 15",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 15, Jul 15 - Aug 15",
+   "value": "Feb 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May 1 - Jun 30, Oct 10 - Nov 25",
+   "value": "May 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 15",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 25",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - Jun 1, Nov 1 - Dec 10",
+   "value": "Apr 15 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 10",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 15, Aug 1 - Sep 15",
+   "value": "Jan 1 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - May 15, Nov 1 - Dec 15",
+   "value": "Apr 1 - May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='cantaloupe')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 15",
+   "value": "May 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.9.plant_out",
+   "from": "Feb 1 - Mar 1, Jul 1 - Jul 31",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.9.harvest",
+   "from": "May 15 - Jun 15, Oct 1 - Nov 1",
+   "value": "May 15 - Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.10.plant_out",
+   "from": "Jan 15 - Feb 15, Jul 1 - Jul 31",
+   "value": "Jan 15 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.10.harvest",
+   "from": "Apr 15 - May 31, Oct 1 - Nov 1",
+   "value": "Apr 15 - May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.10.last_plant_date",
+   "from": "Jul 31",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.ca_desert.resolved_by_zone.10.harvest_end",
+   "from": "Nov 1",
+   "value": "May 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Jul 1 - Jul 31",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "Jun 1 - Jun 30, Oct 1 - Nov 1",
+   "value": "Jun 1 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Jul 31",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 1",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 1, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "May 1 - Jun 1, Nov 1 - Dec 1",
+   "value": "May 1 - Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 1",
+   "value": "Jun 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 1, Aug 15 - Sep 15",
+   "value": "Jan 1 - Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 1 - May 1, Nov 15 - Dec 15",
+   "value": "Apr 1 - May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 15",
+   "value": "Feb 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='pumpkin')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 15",
+   "value": "May 1"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.low_desert_az.resolved_by_zone.9.plant_out",
+   "from": "Feb 15 - Mar 15, Jul 15 - Aug 10",
+   "value": "Feb 15 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.low_desert_az.resolved_by_zone.9.harvest",
+   "from": "May 20 - Jun 30, Oct 20 - Nov 30",
+   "value": "May 20 - Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.low_desert_az.resolved_by_zone.9.last_plant_date",
+   "from": "Aug 10",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.low_desert_az.resolved_by_zone.9.harvest_end",
+   "from": "Nov 30",
+   "value": "Jun 30"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.10.plant_out",
+   "from": "Feb 1 - Mar 15, Aug 1 - Sep 1",
+   "value": "Feb 1 - Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.10.harvest",
+   "from": "May 1 - Jun 20, Nov 1 - Dec 20",
+   "value": "May 1 - Jun 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.10.last_plant_date",
+   "from": "Sep 1",
+   "value": "Mar 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.10.harvest_end",
+   "from": "Dec 20",
+   "value": "Jun 20"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.11.plant_out",
+   "from": "Jan 1 - Feb 15, Aug 1 - Sep 10",
+   "value": "Jan 1 - Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.11.harvest",
+   "from": "Apr 15 - May 25, Nov 15 - Dec 25",
+   "value": "Apr 15 - May 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.11.last_plant_date",
+   "from": "Sep 10",
+   "value": "Feb 15"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='honeydew-melon')].regions.fl_peninsula.resolved_by_zone.11.harvest_end",
+   "from": "Dec 25",
+   "value": "May 25"
+  }
+ ]
+}
