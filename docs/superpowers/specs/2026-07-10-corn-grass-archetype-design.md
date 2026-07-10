@@ -77,7 +77,7 @@ pollination, tassel → silk (each silk = one kernel), a 4×4 grid beats a singl
 cross-pollination isolation caveat (keep sweet corn away from popcorn/field corn or kernels go
 starchy). The field is only the machine-readable flag + parameter.
 
-**The gate** — `tools/planting_layout_gate.py` (new), `planting_layout_violations(crop)` +
+**The gate** — `tools/planting_layout_gate.py` (new), `check_crop(crop)` (aliased `_layout_violations` in the A44 wiring) +
 `test_planting_layout_gate.py`, TDD RED-before-GREEN, adversarially proven on a scratch copy of the
 real canonical; wired into `whole_crop_gate` as a new A-number and run roster-wide by `gate_all`:
 
