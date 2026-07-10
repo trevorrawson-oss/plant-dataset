@@ -658,6 +658,17 @@ print(f"  de-mux violations: {len(_dmx)}")
 for m in _dmx:
     fail(f"demux: {m}")
 
+# ---------------- A44. planting_layout conditional field (spec 2026-07-10) ----------------
+# Corn's block-planting fact, structured. No-op off scope (absent/null planting_layout). Enforces
+# enum membership + block<->pollination_block_min_rows coherence. Conditional field, NOT an A39
+# register requirement -- absence is never a violation (planner arc may promote it later).
+from planting_layout_gate import check_crop as _layout_violations
+print("A44. planting_layout conditional field (enum + block<->min_rows coherence; no-op off scope)")
+_layout = _layout_violations(crop)
+print(f"  planting_layout violations: {len(_layout)}")
+for m in _layout:
+    fail(f"planting_layout: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
