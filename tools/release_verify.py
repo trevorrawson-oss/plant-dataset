@@ -123,13 +123,19 @@ def main():
             cal = zc.get("calendar")
             if not isinstance(cal, list) or len(cal) != 12:
                 continue  # unfilled / no calendar
-            # heat_pause object must match the calendar's heat_pause months: a true
-            # incoherence (the two were authored independently) -> HARD concern.
+            # heat_pause object must ALIGN with the calendar -- but a declared heat month may
+            # legitimately show heat_pause OR a backed action flip (`indoors` = start fall
+            # seedlings, #17; `plant` = fall hot-set set-out, 2026-07-10). Mirror the
+            # authoritative A5 gate (annual_coherence_violations): cal_hp == months - flipped.
+            # A naive months==heat_pause-tokens equality here false-flags every action flip.
             hp = (zc.get("heat_pause") or {}).get("months")
             if hp is not None:
-                cal_hp = [i + 1 for i in range(12) if cal[i] == "heat_pause"]
-                if sorted(hp) != sorted(cal_hp):
-                    concern(f"{r}.z{z}: heat_pause.months {sorted(hp)} != calendar heat_pause {sorted(cal_hp)} (INCOHERENT)")
+                hp = set(hp)
+                cal_hp = {i + 1 for i in range(12) if cal[i] == "heat_pause"}
+                flipped = hp & {i + 1 for i in range(12) if cal[i] in ("indoors", "plant")}
+                if cal_hp != hp - flipped:
+                    concern(f"{r}.z{z}: heat_pause.months {sorted(hp)} != calendar heat_pause "
+                            f"{sorted(cal_hp)} + action-flipped {sorted(flipped)} (INCOHERENT)")
                     cohere_clean = False
             # a `wait` is a pause-legibility REVIEW item (Step 5.5 classifies it as a
             # legit between-window gap or a cold/heat_pause). Surfaced, not blocking.

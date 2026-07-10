@@ -357,13 +357,16 @@ _a5_flip = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_z
                  "plant", "plant", "harvest", "harvest", "plant"]}}}}}
 _h, _n = ac.annual_coherence_violations(_a5_flip)
 assert _h == [], ("A5 must allow a hot month flipped to indoors", _h)
-# A5 still flags a hot month rendered as NEITHER heat_pause NOR indoors.
+# A5 still flags a hot month rendered as a NON-action token (neither heat_pause nor an
+# indoors/plant flip). NOTE (2026-07-10): a hot month shown as `plant` is now a legitimate fall
+# set-out flip -- an UNBACKED one is caught by A5b, not A5 -- so this negative case uses `growing`,
+# a token that is never a valid override of a declared hot month.
 _a5_bad = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
     "heat_pause": {"months": [5, 6, 7]},
-    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "plant",
+    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "growing",
                  "plant", "plant", "harvest", "harvest", "plant"]}}}}}
 _h, _n = ac.annual_coherence_violations(_a5_bad)
-assert len(_h) == 1 and "heat_pause" in _h[0], ("A5 must flag a hot month shown as plant", _h)
+assert len(_h) == 1 and "heat_pause" in _h[0], ("A5 must flag a hot month shown as growing", _h)
 print("  A5 coherence: allows backed indoors flip, flags mislabeled hot month: PASS")
 
 # ============ A5b heat_flip_backing_violations (action-must-be-real): Task 3 ============
@@ -383,3 +386,53 @@ _v = ac.heat_flip_backing_violations(_unbacked)
 assert any("Jul" in x and "indoors" in x for x in _v), ("unbacked July flip must be caught", _v)
 assert ac.heat_flip_backing_violations({"calendar_basis": "perennial_chill_gated"}) == []
 print("  A5b flip-backing: backed passes, unbacked caught, no-op non-annual: PASS")
+
+# ============ plant-flip (item A) + overlap indoors backing (item B): 2026-07-10 ============
+# Item A: a declared-heat month may show `plant` (a fall hot-set SET-OUT), the action-over-passive
+# analog of #17's indoors flip. A5 tolerates it; A5b backs it via plant_out / sp.plant_out overlap.
+# Item B: a partial mid-month indoor window (no CORE month, e.g. 'Jul 15 - Aug 15') backs an
+# `indoors` flip in the months it overlaps -- A5b relaxed core -> overlap.
+
+# --- A5: a BACKED plant-flip on a hot month is coherent (was previously an A5 violation) ---
+_a5_plant = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [6, 7, 8]},
+    "second_planting": {"plant_out": "Jul 1 - Jul 20"},
+    "calendar": ["plant", "plant", "plant", "harvest", "harvest", "heat_pause", "plant",
+                 "heat_pause", "growing", "harvest", "harvest", "cold_pause"]}}}}}
+_h, _n = ac.annual_coherence_violations(_a5_plant)
+assert _h == [], ("A5 must allow a hot month flipped to plant", _h)
+
+# --- A5: a hot month shown as a NON-action token (growing) is still a violation ---
+_a5_growing = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [5, 6, 7]},
+    "calendar": ["plant", "plant", "harvest", "harvest", "heat_pause", "heat_pause", "growing",
+                 "plant", "plant", "harvest", "harvest", "plant"]}}}}}
+_h, _n = ac.annual_coherence_violations(_a5_growing)
+assert len(_h) == 1 and "heat_pause" in _h[0], ("A5 must flag a hot month shown as growing", _h)
+print("  A5 coherence: allows backed plant-flip, flags growing-on-hot: PASS")
+
+# --- A5b: a plant on a hot month backed by sp.plant_out overlap passes; unbacked caught ---
+_pb_backed = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [6, 7, 8]},
+    "second_planting": {"plant_out": "Jul 1 - Jul 20"},
+    "calendar": ["plant", "plant", "plant", "harvest", "harvest", "heat_pause", "plant",
+                 "heat_pause", "growing", "harvest", "harvest", "cold_pause"]}}}}}
+assert ac.heat_flip_backing_violations(_pb_backed) == [], \
+    ("backed plant-flip must pass", ac.heat_flip_backing_violations(_pb_backed))
+_pb_unbacked = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [6, 7, 8]},
+    "calendar": ["plant", "plant", "plant", "harvest", "harvest", "heat_pause", "plant",
+                 "heat_pause", "growing", "harvest", "harvest", "cold_pause"]}}}}}
+_v = ac.heat_flip_backing_violations(_pb_unbacked)
+assert any("Jul" in x and "plant" in x for x in _v), ("unbacked plant-flip must be caught", _v)
+
+# --- A5b: an indoors on a hot month backed by an OVERLAP-only window (no core month) passes ---
+_ib_overlap = {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"9": {
+    "heat_pause": {"months": [6, 7, 8]},
+    "second_planting": {"start_indoors": "Jul 15 - Aug 15"},
+    "calendar": ["growing", "harvest", "harvest", "harvest", "harvest", "heat_pause", "indoors",
+                 "indoors", "plant", "growing", "harvest", "plant"]}}}}}
+assert ac.heat_flip_backing_violations(_ib_overlap) == [], \
+    ("overlap-only indoor window must back the heat indoors flip",
+     ac.heat_flip_backing_violations(_ib_overlap))
+print("  A5b: plant-on-hot backing + overlap-only indoors backing: PASS")

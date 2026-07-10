@@ -1,0 +1,229 @@
+{
+  "base_sha": "bead0bc3c7fd1d2c2e1222dec05333f8766a87ef7e90c533a00ae6d168a81cd2",
+  "patches": [
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.8.calendar",
+      "from": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "heat_pause",
+        "heat_pause",
+        "heat_pause",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ],
+      "value": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "heat_pause",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='beefsteak-tomato')].regions.se_gulf.resolved_by_zone.9.calendar",
+      "from": [
+        "indoors",
+        "indoors",
+        "plant",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "heat_pause",
+        "heat_pause",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest"
+      ],
+      "value": [
+        "indoors",
+        "indoors",
+        "plant",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "plant",
+        "growing",
+        "growing",
+        "harvest",
+        "harvest"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='cherry-tomato')].regions.se_gulf.resolved_by_zone.8.calendar",
+      "from": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ],
+      "value": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "plant",
+        "growing",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='grape-tomato')].regions.se_gulf.resolved_by_zone.8.calendar",
+      "from": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ],
+      "value": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "plant",
+        "growing",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.8.calendar",
+      "from": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "heat_pause",
+        "heat_pause",
+        "heat_pause",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ],
+      "value": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "heat_pause",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='heirloom-tomato')].regions.se_gulf.resolved_by_zone.9.calendar",
+      "from": [
+        "indoors",
+        "indoors",
+        "plant",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "heat_pause",
+        "heat_pause",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest"
+      ],
+      "value": [
+        "indoors",
+        "indoors",
+        "plant",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "plant",
+        "growing",
+        "growing",
+        "harvest",
+        "harvest"
+      ]
+    },
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='roma-tomato')].regions.se_gulf.resolved_by_zone.8.calendar",
+      "from": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "heat_pause",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ],
+      "value": [
+        "cold_pause",
+        "indoors",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "plant",
+        "growing",
+        "growing",
+        "harvest",
+        "harvest",
+        "cold_pause"
+      ]
+    }
+  ]
+}

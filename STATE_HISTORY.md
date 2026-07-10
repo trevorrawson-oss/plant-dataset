@@ -6,6 +6,76 @@
 
 ---
 
+## 2026-07-10 -- WINDOW-VS-TOKEN RECONCILIATION (plant-app feedback A + B) -- `bead0bc3` -> `928c9d7c`
+
+**Trigger.** plant-app handoff `docs/kickoffs/inbox-2026-07-10-from-plant-app-window-token-feedback.md`
+(post-#19 token-override-contract sweep) surfaced two dataset-side window/`calendar[]` contradictions.
+Both fixed and released to the working tree (UNCOMMITTED, pending Trevor).
+
+**Item A -- 7 se_gulf tomato cells, fall set-out plant flip (the #17 principle, generalized to `plant`).**
+The `second_planting.plant_out` fall window carried only `heat_pause` -- no `plant` token anywhere in
+the window, so a token-faithful renderer showed no fall set-out month. DECISION (delegated to me by the
+handoff): the WINDOW is the authored intent, the calendar was stale. Evidence -- in all 7 cells
+`sp.plant_out` is DTM-coherent with the sourced `sp.harvest_start` (cherry/roma/grape z8 Jul 6-20 ->
+Sep 6 ~55-62 d; beefsteak/heirloom z8 Jul 1-20 -> Sep 29; beefsteak/heirloom z9 Jul 25-Aug 8 -> Oct 23
+~80 d), whereas the stray `plant` tokens the calendar carried (Aug for z8 c/r/g, Sep for z9 b/h) imply a
+harvest a month later than the sourced date. Source: `uga_ext` (UGA fall-tomato July transplant). The
+tension is #17's exactly: one token per month, two truths (July is climate-hot AND is the fall set-out).
+Resolution = action-over-passive, generalized from `indoors` to `plant`: the set-out month shows `plant`,
+`heat_pause.months` kept INTACT (climate fact preserved). Rejected dropping July from heat_pause.months
+(climatically absurd for the [6,7,8] cells -- would call peak-heat July not-hot while Jun/Aug stay hot;
+also destroys sourced data). Edits: cherry/roma/grape z8 `Jul heat_pause->plant`, `Aug plant->growing`;
+beefsteak/heirloom z8 `Jul->plant`; beefsteak/heirloom z9 `Jul+Aug->plant`, `Sep plant->growing`.
+
+**Item B -- 44 cells, indoors flip (heat + cold), overlap-based.** Real indoor-start windows with zero
+`indoors` token. ROOT CAUSE of #17's miss: every window is a partial mid-month span (`Jul 15-Aug 15`,
+`Aug 1-21`, `Feb 15-Mar 15`) with NO strict `core_months` in the pause -- #17's core-only trigger never
+fired; the app's overlap render found them. Heat-side (`heat_pause->indoors`): ca_desert tomatoes z9/z10
+Jul+Aug; broccoli/kohlrabi se_gulf z8 (Jul+Aug), z9 (Aug), warm_arid z8 (Jul), northern_tier z6 (Jul),
+z7 (Aug); fl_peninsula cherry/roma/grape z10/z11 (Aug); jalapeno z10 (Aug), z11 (Jul+Aug). Cold-side
+(`cold_pause->indoors`, the #17 mirror): broccoli/kohlrabi northern_tier z3 (Mar), z4 (Mar), z5 (Feb),
+z6 (Feb), z7 (Jan); cucurbit block (slicing/pickling/english-cucumber, zucchini-courgette,
+yellow-summer-squash) ca_interior z9 (Feb), ca_south_coast z10 (Feb). broccoli/kohlrabi nt z6/z7 take
+BOTH a heat and a cold flip. SCOPE = exactly the handoff's curated cells; a blind uniform overlap sweep
+= 134 flips dragging in lemongrass (no-seed, 11 regions) + boundary-tail artifacts -- REJECTED. The
+same-rule extras (23 heat + 50 cold + 23 plant) are FLAGGED in
+`docs/reviews/notes/2026-07-10/window_token_flip_flagged_extras.md` for a ruling pass, NOT flipped.
+
+**Gate changes (`tools/annual_calendar.py`; TDD RED->GREEN, adversarial on a scratch copy of the real
+canonical).** (1) A5 `annual_coherence_violations`: `flipped` set `{indoors}` -> `{indoors,plant}` -- a
+declared heat month may show either action token; a hot month shown as a non-action (growing/harvest/wait)
+still flags (coverage of unbacked-action MOVES to A5b, not lost). (2) A5b `heat_flip_backing_violations`:
+new helpers `indoor_overlap_months` / `plant_overlap_months`; indoors backing relaxed CORE -> OVERLAP
+(superset -- all 26 existing #17 flips verified still backed; the 39 extended-nursery indoors on
+non-heat months are untouched, which is why the check stays SCOPED to heat months, not general);
+NEW `plant`-on-heat backing via plant_out/sp.plant_out overlap. Deriver `derive_annual_calendar` NOT in
+the gate path -> UNTOUCHED. Adversarial proof (whole_crop_gate on scratch canonical, beefsteak se_gulf z8):
+D1 unbacked plant-on-hot (Jun->plant) -> A5b FAIL; D2 unbacked indoors-on-hot (Aug) -> A5b FAIL;
+D3 growing-on-hot (Jun) -> A5 FAIL; P1 intended Jul->plant (backed) -> PASS. Tests: `test_annual_calendar.py`
+extended (old `_a5_bad` plant-on-hot switched to growing-on-hot, documented); GREEN.
+
+**release_verify Check C fix.** The dry-bean entry flagged Check C as stale vs the #17 A5 relaxation; my
+change made it false-flag 6 cells loudly. Fixed to mirror A5 (`cal_hp == months - flipped`, flipped =
+indoors|plant); still catches a genuine incoherence (adversarially confirmed: Jul->growing on cherry
+se_gulf z8 flagged). `test_precommit_release_verify.py` still GREEN.
+
+**Release.** Two SHA-guarded COMPACT splices (`window_token_A_plant_flip.json` base `bead0bc3`;
+`window_token_B_indoors_flip.json` re-based to the afterA sha `ae909d23`). Independent byte-diff footprint
+audit: EXACTLY 51 calendars changed (7 A + 44 B), 0 unintended, `second_planting`/`heat_pause`/every other
+key byte-identical, count 125, 0 escaped-unicode (COMPACT). Final canonical
+`928c9d7c1d8b900ea1a5bd52c230fd67bf5aa79275d375e5a8321c315d2edb6a`. Gates: gate_all PASS (115 certified),
+whole_crop_gate PASS x13 (A43 unaffected -- only calendar tokens moved), calendar_coherence 0/125,
+release_verify no new violations + Check C clean (1 residual = benign single-`--slug` multi-crop collateral).
+
+**Handback to the app session:** new sha256 above; BOTH A and B landed. App should rebuild guides.json +
+re-run its token-override contract sweep -- its narrow indoors/plant exception should stop firing on these
+cells and `scripts/audit-planting-windows.mjs` Signal A should clear the 7 item-A cells. Only calendar
+TOKEN VALUES changed (`heat_pause`/`cold_pause`/`plant` -> `indoors`/`plant`/`growing`), all pre-existing
+valid tokens -> no renderer/shape change. FOLLOWUPS: flagged-extras ruling pass (lead with the lemongrass
+start_indoors data-model question); a cold-side action-backing gate (A5b has no cold-pause analog).
+
+---
+
 ## 2026-07-10 -- DRY-BEAN GS ANCHOR -- FIRST GREENFIELD CROP ON THE REGISTER STACK (CONTENT release; `50288c02` -> `bead0bc3`, 124 -> 125) [Claude Code]
 
 **First net-new crop authored since the register stack (timing spine / seedling / seed-tray / climate thresholds) rolled out across the roster** -- prior register work was all column passes onto existing crops, so `dry-bean` is the first test of authoring a greenfield crop that carries the FULL register stack from birth (the §E new-crop checklist fold-in). Modeled structurally on certified `green-beans-bush` (radish<-carrot method): same species *Phaseolus vulgaris*, re-pointed snap -> dry-down/cure harvest. Executed via superpowers brainstorm -> spec -> plan -> execute (spec `1feb9ee`, plan `36c3a01`). PROCESS/RULINGS worth preserving: (1) crop-level DTM `[90,100]` mid 95 is a Trevor-ratified SYNTHESIS -- no single T1 dry-bean DTM figure exists; USU/UMN/Clemson/NMSU/UGA anchor the dry harvest on POD STATE (pods dry, beans rattle, before shatter), so the number is triangulated from T1 season-length + pod-state facts, the honest-synthesis discipline green-beans-bush used for its yield correction. (2) `harvest_window_days` OMITTED (one-shot dry harvest; potato/winter-squash precedent) -- the app harvest WINDOW rides the `harvest` growth stage's `day_range_from_sow [90,100]`, NOT that field (Trevor's requirement that the app show a window, not a point). (3) The `harvest` stage id is LOAD-BEARING: `timing_spine_gate._harvest_index` anchors ladder-monotonicity + the +/-15%% DTM band on the stage whose id is exactly `"harvest"`, else the last stage -- so `dry_down`(70,92) -> `harvest`(90,100) -> `cure_thresh`(95,112) with cure legitimately past DTM (A40 exempts post-harvest stages, its comment names curing). UC ANR 8402 (Trevor-supplied) confirmed the model: "days to maturity = planting to CUTTING; another 1 to 2 weeks to dry before threshing" == the dry_down->harvest->cure ladder; also gave the CA window (mid-May to early July) + per-type DTM (black 105+ late, navy/white 75-90). (4) REGION MODEL GAP surfaced + ruled: the frost_anchored ANNUAL model has NO clean per-region `suitable=false` (A32 requires a non-empty 12-month calendar; the per-cell `suitability` enum is TREE-only; no "unsuitable" token in the annual enum). For the 3 humid regions where dry beans genuinely fail (CTAHR: "dried beans ... not commonly grown in Hawaii"; UF/IFAS beans are cool-season; SE grows cowpeas as its dry legume), Trevor chose **Option C** -- keep them plantable with a blunt indoor-drying advisory (warm oven / dehydrator) rather than a hard flag the model can't express, since the plant grows and it's the field-DRYING that molds. Logged a followup: extend the annual model with a per-cell suitability + A32 exemption (field-addition-register candidate), which would let these flip to a true `suitable=false`; plus a humid-region indoor-drying how-to ARTICLE to link from those guides. REGIONS refit via `annual_calendar.derive_annual_calendar` (single-window cells are the simplest case it handles cleanly) -- 10 single sow->dry-down calendars, deserts shift-early with a T1-backed `heat_pause` (U-Arizona AZ1005 pinto; UC ANR), Hawaii year-round. GATES: authored + gated entirely in scratch (canonical READ-ONLY until the splice); whole_crop_gate PASS, timing_spine 0/0, calendar_coherence 0/125, A43 clean, release_verify clean (G: no region calendar/heat_pause byte-identical to green-beans-bush -- all crop-specific), adversarial RED proof green (5 defect classes bounce). SHA-guarded COMPACT splice via `apply_patch.py` (add at `$.crops[124]`) + independent footprint audit (EXACTLY dry-bean added, 124 others byte-identical, COMPACT, count 125); gate_all PASS 115 certified. source_set 13 T1 / 0 non-T1 / 0 new catalog. Commits: `429e19e` research, `86e23c8` regional sources, `eb3f80d` gate proof, `ad9e50b` splice+cert. UNPUSHED (Trevor confirms push + a plant-astro submodule bump for the new crop, kickoff #20).

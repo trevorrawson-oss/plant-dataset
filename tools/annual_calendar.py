@@ -166,11 +166,15 @@ def annual_coherence_violations(crop):
             if hp is not None:
                 hp = set(hp)
                 cal_hp = {i + 1 for i in range(12) if cal[i] == "heat_pause"}
-                flipped = hp & {i + 1 for i in range(12) if cal[i] == "indoors"}
+                # A declared heat month may be shown as heat_pause OR as a backed action token
+                # (`indoors` = start fall seedlings; `plant` = fall hot-set set-out) -- the
+                # action-over-passive flip. Backing is A5b's job; A5 only checks alignment: a hot
+                # month shown as a NON-action, non-pause token (growing/harvest/wait) is a mismatch.
+                flipped = hp & {i + 1 for i in range(12) if cal[i] in ("indoors", "plant")}
                 if cal_hp != hp - flipped:
                     hard.append(f"{loc}: calendar heat_pause {sorted(cal_hp)} != heat_pause.months "
-                                f"{sorted(hp)} minus flipped-to-indoors {sorted(flipped)} "
-                                f"(each hot month must show heat_pause or a backed indoors flip; "
+                                f"{sorted(hp)} minus flipped-to-action {sorted(flipped)} "
+                                f"(each hot month must show heat_pause or a backed indoors/plant flip; "
                                 f"no heat_pause token outside heat_pause.months)")
             if "wait" in cal:
                 notes.append(f"{loc}: `wait` token (pause-legibility review)")
@@ -234,6 +238,25 @@ def indoor_core_months(cell):
     sp = cell.get("second_planting") or {}
     out |= core_months(sp.get("start_indoors"))
     return out
+
+
+def indoor_overlap_months(cell):
+    """Every month a real indoor-start window (top-level `start_indoors` OR
+    `second_planting.start_indoors`) OVERLAPS at all (parse_months), not just the fully-covered
+    core. This is the BACKING basis for the action-over-passive `indoors` flip (A5b): a partial
+    mid-month window (e.g. 'Jul 15 - Aug 15', which has NO core month) still legitimately backs an
+    `indoors` token in the months it touches -- the same month-rounding the whole calendar uses.
+    Superset of indoor_core_months (the deriver's stricter flip TRIGGER)."""
+    sp = cell.get("second_planting") or {}
+    return parse_months(cell.get("start_indoors")) | parse_months(sp.get("start_indoors"))
+
+
+def plant_overlap_months(cell):
+    """Every month a real set-out window (top-level `plant_out` OR `second_planting.plant_out`)
+    overlaps -- the BACKING basis (A5b) for a `plant` token shown on a declared heat month (a fall
+    hot-set set-out during the summer pause, the action-over-passive analog of the indoors flip)."""
+    sp = cell.get("second_planting") or {}
+    return parse_months(cell.get("plant_out")) | parse_months(sp.get("plant_out"))
 
 
 def declared_heat_months(cell):
@@ -376,11 +399,18 @@ def heat_pause_backing_violations(crop):
 
 
 def heat_flip_backing_violations(crop):
-    """The action-must-be-real guard (whole_crop_gate A5b). A heat_pause month may display
-    `indoors` (the action-over-passive flip) ONLY where a real indoor-start window
-    (top-level start_indoors OR second_planting.start_indoors) has that month as a CORE
-    month. An `indoors` on a hot month with no such backing is a fabricated action shown
-    to a grower. No-op for non-frost_anchored crops. Returns a list of violation strings."""
+    """The action-must-be-real guard (whole_crop_gate A5b). A heat_pause month may display an
+    ACTION token overriding the passive pause ONLY where the matching real window covers it:
+      - `indoors` (the #17 start-fall-seedlings flip) -- backed by an indoor-start window
+        (top-level start_indoors OR second_planting.start_indoors) OVERLAPPING the month.
+      - `plant` (the fall hot-set SET-OUT flip, 2026-07-10) -- backed by a set-out window
+        (top-level plant_out OR second_planting.plant_out) OVERLAPPING the month.
+    OVERLAP, not core: the item-B/A windows are partial mid-month spans (e.g. 'Jul 15 - Aug 15')
+    with no fully-covered core month, and month-rounding legitimately puts the action token on a
+    touched month (overlap is a superset of core, so every #17 core-backed flip still passes). An
+    action token on a hot month with no matching window is a fabricated action shown to a grower.
+    Kept SCOPED to declared heat_pause months (a general "every indoors backed" rule over-fires on
+    legit extended spring nursery runs). No-op for non-frost_anchored crops. Returns violations."""
     if crop.get("calendar_basis") != "frost_anchored":
         return []
     out = []
@@ -393,10 +423,18 @@ def heat_flip_backing_violations(crop):
             if not hp:
                 continue
             hp = set(hp)
-            backed = indoor_core_months(cell)
+            backed_indoors = indoor_overlap_months(cell)
+            backed_plant = plant_overlap_months(cell)
             for i in range(12):
-                if cal[i] == "indoors" and (i + 1) in hp and (i + 1) not in backed:
+                m = i + 1
+                if m not in hp:
+                    continue
+                if cal[i] == "indoors" and m not in backed_indoors:
                     out.append(f"{rk}.z{z}: {_MON_ABBR[i]} shows `indoors` on a heat_pause month "
                                f"with no indoor-start window covering it "
                                f"(start_indoors / second_planting.start_indoors) -- unbacked flip")
+                elif cal[i] == "plant" and m not in backed_plant:
+                    out.append(f"{rk}.z{z}: {_MON_ABBR[i]} shows `plant` on a heat_pause month "
+                               f"with no set-out window covering it "
+                               f"(plant_out / second_planting.plant_out) -- unbacked flip")
     return out
