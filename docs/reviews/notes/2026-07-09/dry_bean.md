@@ -64,3 +64,48 @@ Black Turtle ~95, Pinto ~95, Navy ~90, Kidney ~105 (noted as the long end), Jaco
 ## Catalog
 
 No new `source_catalog` entries required — every cited source is already present (Task 2 = `[]`).
+
+## Addendum 2026-07-10 -- UC ANR Publication 8402 (Trevor-supplied T1)
+
+**"Common Dry Bean Production in California," 2nd ed., UC ANR Pub 8402 (Long, Temple; Feb 2010).**
+Maps to `ucanr_ext` (already cataloged) -- add as an anchoring_url on the crop + the CA regions.
+Source: https://beans.ucdavis.edu/sites/g/files/dgvnsk13961/files/inline-files/80592.pdf
+
+- **CA Central Valley (ca_interior) planting window:** "planted from mid-May to early July"; "earlier
+  than May 20 in cooler soils ... increase[s] the likelihood of soilborne root and seedling disease."
+  -> dry-bean CA sow window ~**May 15 - Jul 1** (LATER than the snap `Apr 1 - May 31`). Answers "late
+  spring in ca_interior" = ~May 15-31.
+- **Confirms the ladder model:** "Days to maturity refers to the number of days from planting to
+  **cutting**. The plants need another **1 to 2 weeks** after that for the crop to dry before
+  threshing." == our `dry_down -> harvest(cut) -> cure_thresh` structure.
+- **Per-type DTM (planting->cutting):** light red kidney 65-90; dark red kidney 75-105; cranberry
+  65-75; pink 75-90; **black (Black Turtle T-39) 105+, late**; large white 75-90; yellow 90-105.
+  -> variety DTMs updated: Black Turtle 100, Navy 85, Pinto 90, Kidney 100, Jacob's Cattle 90. Crop
+  composite [90,100] (Trevor-ratified) stands as the common-bush middle; the picker shows the spread.
+- Commercial CA rows are 30 in (spacing_inches stays the home-garden [2,4] in-row; not changed).
+
+## Addendum 2026-07-10 -- regional suitability sources (Trevor: "any more sources for those areas?")
+
+All already-cataloged T1 services; new anchoring_urls only.
+
+- **hawaii_tropical -> suitable:false.** UH CTAHR HGV-8 (`uhawaii_ctahr`), *Home Garden Beans* (Ebesu,
+  2004), VERBATIM: "The bean types used for dried beans, such as navy, kidney, pinto, garbanzo, mung,
+  adzuki, and others, are not commonly grown in Hawaii." URL: https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-8.pdf
+- **low_desert_az -> suitable, shift-early.** U of Arizona AZ1005 (`uariz_ext`), Vegetable Planting
+  Calendar for Maricopa County: lists "Beans, Pinto 60-90 days" (+ Lima 60-100, Snap 60-90) as a
+  low-desert crop -> spring + fall windows, summer excluded. URL: https://extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf
+- **ca_desert -> suitable, shift-early** (mirrors AZ low desert; ucanr_ext desert guidance).
+- **fl_peninsula -> suitable:false (recommended).** UF/IFAS (`ufifas_ext`) treats beans as a COOL-SEASON
+  crop (S. FL Sep-Apr, summer excluded) and presents no dry-bean culture; humid summer molds field-drying
+  pods. URL: https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/cool-beans/
+- **se_gulf -> suitable:false (recommended).** SE/Gulf dry legume is southern peas/cowpeas (Clemson/MSU/
+  LSU, planted Apr-Aug); common dry beans face the same humid-summer drying limit.
+- **CA interior/coast, warm_arid, northern_tier -> suitable** (UC Davis 8402 / NMSU / frost-window fit;
+  northern z3-4 = fast types only).
+
+## Followup idea (Trevor, 2026-07-10) -- humid-region indoor-drying article
+
+Option C chosen for fl_peninsula / hawaii_tropical / se_gulf: keep plantable + a strong region note that
+the plant grows but the humid summer molds field-drying pods, so **finish drying indoors (warm oven ~
+low heat, or a dehydrator)**. Trevor: worth a dedicated how-to ARTICLE on indoor bean-drying for humid
+climates, then LINK it from these region guides. Future content task (plant-astro), not blocking cert.
