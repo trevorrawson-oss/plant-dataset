@@ -26,7 +26,7 @@ nested under already-cataloged institutions, same pattern as `uga_b577` / `uariz
 | `spacing_inches` | `[8, 12]` (in-row) | UMN "8 to 12 inches apart"; Iowa State "8 to 12 inches apart"; UGA "8 to 12 in. between each seed in the row"; NMSU "8—12 [inches] between plants" — four independent T1 sources converge exactly | `umn_ext`, `iastate_ext`, `uga_ext` (C905), `nmsu_ext_cr457b` | https://extension.umn.edu/vegetables/growing-sweet-corn ; https://yardandgarden.extension.iastate.edu/how-to/growing-sweet-corn-home-garden ; https://fieldreport.caes.uga.edu/publications/C905/growing-home-garden-sweet-corn/ ; https://pubs.nmsu.edu/_circulars/CR457B/ |
 | `sow_depth_inches` | `[1, 2]` (shallower, ~0.5–1 in, for sh2 in warm soil) | UGA "approximately 1 in. deep"; Iowa State "1 inch in heavy soils" to "2 inches" in light sandy soils; NMSU "1—2 [inches]" standard, "1/2—1" for supersweet (sh2) | `uga_ext` (C905), `iastate_ext`, `nmsu_ext_cr457b` | (as above) |
 | `thin_to_inches` | `[8, 12]` (most guides sow at final spacing; TAMU sows dense 3–4 in and thins to 12 in) | TAMU: "Plant the corn seeds about 1 inch deep and 3 to 4 inches apart in the row... After the plants are up, thin them to 1 foot apart" | `tamu_agrilife` | https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2013/09/EHT-044.pdf |
-| `germination_temp_f` | `[60, 90]` (practical recommend-to-plant floor 60°F; su types tolerate down to 50–55°F, se/sh2 need ≥60°F; UGA frames the full operational range as 60–90°F) | UMN: "seeds germinate best when soil temperatures are close to 60°F"; NC State: "Minimum soil temperatures for germination are 50°F for su varieties and 60°F for se, sh2, and sy varieties"; Iowa State: su/se "55 to 60°F", sh2 "at least 60°F"; UGA: "soil temperatures between 60–90°F" | `umn_ext`, `ncsu_ext`, `iastate_ext`, `uga_ext` (C905) | https://extension.umn.edu/vegetables/growing-sweet-corn ; https://content.ces.ncsu.edu/organic-sweet-corn-production ; https://fieldreport.caes.uga.edu/publications/C905/growing-home-garden-sweet-corn/ |
+| `germination_temp_f` | `[60, 90]` (practical recommend-to-plant floor 60°F; su types tolerate down to 50–55°F, se/sh2 need ≥60°F; UGA frames the full operational range as 60–90°F) | UMN: "seeds germinate best when soil temperatures are close to 60°F"; NC State: "Minimum soil temperatures for germination are 50°F for su varieties and 60°F for se, sh2, and sy varieties"; Iowa State: su/se "55 to 60°F", sh2 "at least 60°F"; UGA: "soil temperatures between 60–90°F" | `umn_ext`, `ncsu_ext`, `iastate_ext`, `uga_ext` (C905) | https://extension.umn.edu/vegetables/growing-sweet-corn ; https://content.ces.ncsu.edu/organic-sweet-corn-production ; https://yardandgarden.extension.iastate.edu/how-to/growing-sweet-corn-home-garden ; https://fieldreport.caes.uga.edu/publications/C905/growing-home-garden-sweet-corn/ |
 | `planting_layout` | `"block"` (NOT single/double rows) | UMN: "Plant in blocks of at least four rows rather than a long single row for proper pollination"; TAMU: "Sweet corn grows best when planted in several short rows instead of one long row" | `umn_ext`, `tamu_agrilife` | https://extension.umn.edu/vegetables/growing-sweet-corn |
 | `pollination_block_min_rows` | `4` | NC State (verbatim): **"Plant the corn in blocks of at least 4 rows to insure good pollination"**; UMN (verbatim): **"Plant in blocks of at least four rows"**; independently corroborated by UGA/USU/WSU/OK State per multi-source search sweep | `ncsu_ext`, `umn_ext` | https://content.ces.ncsu.edu/organic-sweet-corn-production ; https://extension.umn.edu/vegetables/growing-sweet-corn |
 | isolation (context, not a listed field but load-bearing for the block-planting design rationale) | sh2 isolated from su/se by ≥250–300 ft OR ≥14 days' difference in tasseling/maturity date; all sweet corn isolated from field/pop/ornamental corn by ≥300 yd | NC State: "Plant supersweet varieties at least 300 feet from non-supersweet varieties, or stagger planting dates... two weeks apart"; "separated from different types of corn... by at least 300 yards"; Iowa State FAQ: "at least 250 feet apart" or "14 days should separate the tasseling time" | `ncsu_ext`, `iastate_ext` | https://content.ces.ncsu.edu/organic-sweet-corn-production ; https://yardandgarden.extension.iastate.edu/faq/what-are-differences-between-various-types-sweet-corn |
@@ -47,7 +47,7 @@ Convergent T1 figures:
 - TAMU: "Most sweet corn varieties... mature between 60 to 90 days after seeding"
 - U of A Yavapai (Backyard Gardener #223): "maturity range of 60 to 90 days depending on variety"
 - MSU (Michigan) bucket system: "Early (less than 70 days), mid-season (70–84 days) and late (more
-  than 84 days)"
+  than 84 days)" — `msu_ext`, https://www.canr.msu.edu/news/a_primer_on_decoding_the_sweet_corn_section_of_your_seed_catalogue
 - UGA's own Home Garden Planting Chart (B577) lists **Corn 80–100 days** (a fuller-season regional
   pick for Georgia's long season)
 - NMSU CR457B Table 2: **81 days** flat for su/se/sh2 alike (a single regional cultivar set)
@@ -100,7 +100,8 @@ the added `se` gene for higher, more stable sugar and tender kernels, holds 1–
 su; supersweet/shrunken-2 (**sh2**) has the `sh2` gene, 4–10x the sugar of su, converts to starch
 very slowly, longest storage — but has a tougher seed coat and needs warmer soil to germinate.
 Source: MSU (Michigan) Extension "primer on decoding the sweet corn section of your seed
-catalogue"; NC State organic sweet corn production page.
+catalogue" (`msu_ext`, https://www.canr.msu.edu/news/a_primer_on_decoding_the_sweet_corn_section_of_your_seed_catalogue);
+NC State organic sweet corn production page (`ncsu_ext`, https://content.ces.ncsu.edu/organic-sweet-corn-production).
 
 | sugar type | representative variety | days_to_maturity | source | source_id | url |
 |---|---|---|---|---|---|
@@ -160,7 +161,26 @@ These three become `add` ops in the Task 6 catalog batch if Trevor wants the ext
 precision; the crop can also cert with just the parent institution ids if that level of
 granularity isn't needed.
 
-## 8. Open findings / flags for Trevor (summary)
+## 8. Per-stage watering — silking = critical-moisture window (sourced; capture target for the `watering` field)
+
+Corn's water demand is not flat across the season: daily use climbs through the vegetative stage,
+peaks across tasseling → silking → pollination, stays high into kernel/ear fill, then tapers at the
+dough/dent stages. Moisture stress during the silking/pollination window is the single most
+damaging timing for yield of any stage: it desiccates silks and pollen and produces poor kernel
+set (blanks, tip dieback, small/incomplete ears) — the same underlying mechanism already pinned
+under `heat_effect`/`heat_threshold_f` in §1, but driven by water rather than heat.
+
+| field | value | source | source_id | url |
+|---|---|---|---|---|
+| critical-moisture window | peaks `tasseling` → `silking` → `kernel_fill`: daily water use grows to ~0.32 in/day (individual days over 0.40 in/day) approaching pollination, then "remain[s] high during the early reproductive stages, often... in the 0.30 to 0.35 inches per day range until the dough stage," before declining toward ~0.20 in/day by full dent | UNL Extension G1850 "Irrigation Management for Corn" (verbatim): "Water use rates grow to 0.32 inches per day when averaged over a three- to five-day period... Individual day water use rates can reach over 0.40 inches per day"; "Water requirements remain high during the early reproductive stages, often remaining in the 0.30 to 0.35 inches per day range until the dough stage" | `unl_ext` | https://extensionpubs.unl.edu/publication/g1850/2008/html/view |
+| moisture-stress effect at silking/pollination | severe water stress during silking desiccates silks and pollen and causes poor pollination — "the greatest yield reduction" of any stress-timing window; stress arriving just before pollination instead trims potential kernels-per-row, and stress after successful pollination shows up as lost/aborted kernels (ear-tip dieback) rather than fertilization failure | UNL (verbatim): "Severe water stress during silking tends to desiccate the silks and pollen grains causing poor pollination. Water stress during silking will result in the greatest yield reduction."; UMN (verbatim): "Water stress before pollination affects the number of potential kernels per row"; losing kernels after pollination "is the most likely result" of dry conditions once pollination has already succeeded | `unl_ext`, `umn_ext` | https://extensionpubs.unl.edu/publication/g1850/2008/html/view ; https://extension.umn.edu/growing-corn/dry-conditions-during-corn-pollination |
+
+**Maps to:** the `watering` field's per-stage/critical-window shape — cross-references the
+`growth_stages` ladder in §3 (`tasseling` `[43,55]`, `silking` `[48,60]`, `kernel_fill` `[55,72]`).
+This closes the "per-stage watering / silking = critical-moisture window" capture target; the
+`watering` field's exact copy/register shape is a separate, later authoring task.
+
+## 9. Open findings / flags for Trevor (summary)
 
 1. **Crop-level `days_to_maturity` `[60,90]` mid `75`** is a synthesis (no single T1 page states
    one number) — same honest-synthesis discipline as dry-bean's DTM. Needs ratification.
@@ -188,3 +208,8 @@ granularity isn't needed.
 7. **4th su example** (Silver Queen, ~92 days) is well cross-referenced by name across all three
    regional variety lists but has no T1-pinned DTM number — optional addition, flagged as not
    T1-precise.
+8. **§8's critical-moisture window is pinned only at the whole-window level** (tasseling → silking
+   → kernel_fill, plus the silking-specific stress mechanism) — it is not broken out day-by-day or
+   tied to a specific inches/week garden-scale recommendation the way §4's harvest-window figures
+   are. Sufficient to close the "silking = critical-moisture window" capture target; a finer-grained
+   per-stage `watering` register (if the field's shape calls for one) is a separate authoring task.
