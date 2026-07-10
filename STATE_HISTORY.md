@@ -6,6 +6,10 @@
 
 ---
 
+## 2026-07-09 -- ADDENDUM: PlantingCalendarCard month rows made second_planting-aware (plant-astro `cabfa46`) [Claude Code]
+
+**Trevor's post-deploy finding + ruling:** on broccoli zone-9 the main card's derived rows said "too late" for Aug/Sep and hid the fall harvest -- the 2026-06-05 MASKING design colliding with the cleaned primary-only strings (pre-clean it accidentally showed Aug/Sep only because broccoli's fall chunk was stored first). Ruling: Aug/Sep say **plant**, the fall harvest shows, BOTH modes. Fix: the card's plant/indoors/harvest month sets now UNION both cycles (primary strings + second_planting windows); too-early/too-late apply only outside both; existing precedence kept (plant > indoors > heat-gap indoors > pause). **The second-cycle masking on the main card is RETIRED** (the seasoned SuccessionCard remains the two-track split view). Regression: lettuce/onion byte-identical; fava's shared window idempotent; build green. Dataset untouched (no trio; this entry is the record).
+
 ## 2026-07-09 -- SECOND_PLANTING DE-MUX STAGE 3 (CLEAN) COMPLETE -- MIGRATION CLOSED, A43 FULL (CONTENT release x2; `35983df0` -> `287b86cb` -> `50288c02`) [Claude Code]
 
 **Kickoff #18's data migration is complete: every one of the 158 second_planting cells is primary-only at top level with envelopes narrowed; the fall cycle lives entirely in the structure; A43 enforces both rules roster-wide (frozenset("AB"), rules-AB sweep = 0 on all 124 crops).**
