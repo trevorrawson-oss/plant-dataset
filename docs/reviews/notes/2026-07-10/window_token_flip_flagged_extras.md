@@ -83,3 +83,29 @@ one is the natural companion to that ruling.
    `cold_pause`->`indoors` (anchor the run); watermelon/cantaloupe nt z4 got a stray pre-window
    April `indoors`->`cold_pause`; onion low_desert z9 got a stray pre-window August
    `indoors`->`season_over`.
+
+---
+
+## DEFERRED FOLLOW-UPS RESOLVED (2026-07-10, later same day; canonical `35b5e5c6` -> `a080d03f`)
+
+- **Hawaii/potato/flowers plant-flip per-crop look = NO FLIPS.** Examined all 10 deferred plant
+  candidates (borage/calendula/chamomile hawaii_tropical z11 + calendula/chamomile ca_south_coast
+  z9/z10, potato fl_peninsula z11, sweet-alyssum/viola northern_tier z6). In EVERY case the set-out
+  is already visible via an in-window `plant` token on a non-heat month (Hawaii: Nov-Dec;
+  ca_south_coast: Sep-Apr; potato: Nov-Jan; alyssum/viola: Sep), and the flagged heat month is a
+  genuinely-hot minority BOUNDARY of the window -- unlike item A (token mis-placed OUTSIDE its
+  window) or ruling #3's warm_arid tomatoes (DOMINANT window month hidden). "Claim only on
+  invisibility" applies: left conservative, no change.
+
+- **lemongrass `weeks_indoors` = NON-ISSUE (the flag was a mis-read).** Top-level `weeks_indoors`
+  is already `8`, matching `start_method.weeks_before=8`. The earlier "None" came from querying the
+  wrong path (`timing.weeks_indoors`); the field is top-level and correctly populated. Zero crops
+  roster-wide have `weeks_indoors=None` with `start_method.weeks_before` set. No change.
+
+- **onion low_desert_az z9 = FIXED (confirmed drift).** `Sep:plant Oct:plant` -> `indoors`. Those
+  months are OUTSIDE the plant envelope (first/last plant Nov 1-Feb 28) and INSIDE `start_indoors
+  "Sep-Oct"` -- they are the seed-start, not the set-out. Every sibling desert onion cell renders its
+  pre-transplant seed-start months as `indoors` (se_gulf z8/z9 `indoors=[Sep,Oct]`, ca_desert
+  `indoors=[Sep]`); low_desert z9 was the lone cell showing them as `plant`. Fix aligns it with the
+  se_gulf sibling (indoors Sep-Oct, plant Nov-Feb) and passes A5c. SHA-guarded splice
+  `tools/batches/onion_lowdesert_seedstart_fix.json`; footprint = ONLY that calendar, count 125.

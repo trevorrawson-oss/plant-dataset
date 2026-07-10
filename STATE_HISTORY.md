@@ -6,6 +6,43 @@
 
 ---
 
+## 2026-07-10 -- DEFERRED FOLLOW-UPS CLEANED UP -- `35b5e5c6` -> `a080d03f`
+
+Closed the three deferred followups Trevor asked to clean up (from the rulings release).
+
+**(1) Hawaii/potato/flowers plant-flip per-crop look = NO FLIPS.** All 10 deferred plant candidates
+(borage/calendula/chamomile hawaii_tropical z11; calendula/chamomile ca_south_coast z9/z10; potato
+fl_peninsula z11; sweet-alyssum/viola northern_tier z6) have their set-out ALREADY VISIBLE via an
+in-window `plant` token on a non-heat month (Hawaii Nov-Dec; ca_south_coast Sep-Apr; potato Nov-Jan;
+alyssum/viola Sep). The flagged heat month is a genuinely-hot MINORITY boundary of the window --
+distinct from item A (token mis-placed OUTSIDE its window -> flip) and ruling #3 warm_arid tomatoes
+(DOMINANT window month hidden -> flip). "Claim only on invisibility" -> left conservative, no change.
+(sweet-alyssum nt z6 was the closest call, Aug 15-31 vs Sep 1-10, but kept consistent with viola.)
+
+**(2) lemongrass `weeks_indoors` = NON-ISSUE (my earlier flag was a mis-read).** The top-level
+`weeks_indoors` is already `8`, matching `start_method.weeks_before=8`. The "None" in the rulings
+note came from querying `timing.weeks_indoors` (the timing dict is empty) instead of the top-level
+field. A roster scan found 0 crops with `weeks_indoors=None` AND `start_method.weeks_before` set.
+No change; corrected the record.
+
+**(3) onion low_desert_az z9 = FIXED (confirmed drift).** `Sep:plant Oct:plant` -> `indoors`. Sep-Oct
+are OUTSIDE the plant/set-out envelope (first/last plant Nov 1-Feb 28) and INSIDE `start_indoors
+"Sep-Oct"` -- they are the SEED-START, not the set-out. Cross-checked every desert/arid onion sibling:
+se_gulf z8/z9 (`start_indoors 'Sep 17-Nov 1'`) renders `indoors=[Sep,Oct]`; ca_desert z9/z10
+(`start_indoors 'Sep'`) renders `indoors=[Sep]`; warm_arid z8 renders `indoors=[Dec,Jan]`. low_desert
+z9 was the ONLY onion cell showing its clean pre-transplant seed-start months as `plant`. Fix aligns
+it with the se_gulf sibling (indoors Sep-Oct, plant Nov-Feb) and passes A5c (run [Sep,Oct] overlaps
+start_indoors 'Sep-Oct'). SHA-guarded COMPACT splice `tools/batches/onion_lowdesert_seedstart_fix.json`;
+footprint = ONLY onion low_desert_az z9 calendar, count 125.
+
+**Release.** Canonical `35b5e5c6` -> `a080d03f`. Gates: gate_all PASS (115 certified),
+calendar_coherence 0/125, release_verify no new violations (3 residual concerns = pre-existing
+onion-vs-`kale` novel region-key STRUCTURAL diffs -- zone_8_presence / zone_10_desert_fold, not
+introduced by this change), test_annual_calendar GREEN. Also committed the plant-app handback doc
+`docs/kickoffs/22-to-plant-app-window-token-A-B-rulings-handback.md`.
+
+---
+
 ## 2026-07-10 -- WINDOW-VS-TOKEN RULINGS (Trevor's calls on the A+B flagged extras) -- `928c9d7c` -> `35b5e5c6`
 
 **Trigger.** Trevor (via the plant-app session) ruled on the four flagged-extras groups from the A+B

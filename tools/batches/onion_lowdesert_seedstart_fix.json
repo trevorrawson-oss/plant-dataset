@@ -1,0 +1,37 @@
+{
+  "base_sha": "35b5e5c6b344bfa42052b143bf6686d338386a7c37cbb212135fd02b700dcb53",
+  "patches": [
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.slug=='onion')].regions.low_desert_az.resolved_by_zone.9.calendar",
+      "from": [
+        "plant",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "season_over",
+        "season_over",
+        "season_over",
+        "plant",
+        "plant",
+        "plant",
+        "plant"
+      ],
+      "value": [
+        "plant",
+        "plant",
+        "growing",
+        "harvest",
+        "harvest",
+        "season_over",
+        "season_over",
+        "season_over",
+        "indoors",
+        "indoors",
+        "plant",
+        "plant"
+      ]
+    }
+  ]
+}
