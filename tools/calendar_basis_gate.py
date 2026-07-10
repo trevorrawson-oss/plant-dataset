@@ -45,6 +45,11 @@ VALID_CALENDAR_BASES = {
 # EXTEND when a new archetype is certified.
 ARCHETYPE_BASIS = {
     "warm_season_fruiting": "frost_anchored",
+    "warm_season_grass": "frost_anchored",  # sweet corn (kickoff #21, block-planted grass): a new
+    # warm-season annual archetype riding the SAME frost_anchored basis + annual calendar machinery
+    # as warm_season_fruiting (no new dispatch gates); wind-pollinated block planting is carried by
+    # planting_layout (A44), not a new calendar layer. Registered when sweet-corn became the first
+    # grass-family crop on the roster.
     "cool_season_annual": "frost_anchored",
     "culinary_herb": "frost_anchored",
     "companion_and_ornamental_flower": "frost_anchored",

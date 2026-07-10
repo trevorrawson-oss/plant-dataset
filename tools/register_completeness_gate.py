@@ -120,6 +120,14 @@ EXCLUDED_KEYS = {
     # pot-up need (recommended|optional|not_needed), present iff tray_sowing is a real tray value. Both
     # are enum strings, so BOTH are ruled here. See docs/seed_tray_protocol_contract.md.
     "tray_sowing","pot_up",
+    # PLANTING-LAYOUT ENUM (conditional field, spec 2026-07-10; the block-planting rollout): a
+    # controlled-vocab backend enum the app's garden-planner layer consumes -- block|row|hill|grid|
+    # single, present only on crops with a non-default spatial pattern (corn = 'block'). Machine-read
+    # categorical token, NOT dual-register prose -- ruled EXCLUDED like the other register enums
+    # (heat_effect/frost_effect/tray_sowing). Its coherence + block<->pollination_block_min_rows shape
+    # is enforced by planting_layout_gate (whole_crop_gate A44); pollination_block_min_rows is an int,
+    # out of this string check. Added when sweet-corn became the first crop to carry the field.
+    "planting_layout",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
