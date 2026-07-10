@@ -42,6 +42,11 @@ fields and repoint every fall-cycle feature to `second_planting{}`.
 - broad-beans-fava: second_planting whose harvest window EQUALS the primary's (fall sowing
   overwinters into the same spring window) -- render once, not twice.
 - Month-granular envelope values (`last_plant_date "Feb"`, `harvest_end "Jun"`) now more common.
+- **AUDIT YOUR DATE PARSERS for the bare-month gap:** plant-astro had THREE separate parsers
+  that required "Mon D" and silently returned nothing for bare months ("Nov", "Jul - Oct") --
+  the last one left celery's harvest row blank site-wide and muted 566 cells' harvest rendering
+  until 2026-07-09 (astro a27c14b). If the app parses window/envelope strings anywhere, prove it
+  handles: bare months, full month names ("Nov - March"), " or " joins, day precision, commas.
 
 **Product rulings to mirror from the plant-astro flip (Trevor, 2026-07-09):**
 1. Fall/second track renders ONLY from `second_planting` (present -> render; absent -> none).
