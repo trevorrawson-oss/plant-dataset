@@ -436,3 +436,48 @@ assert ac.heat_flip_backing_violations(_ib_overlap) == [], \
     ("overlap-only indoor window must back the heat indoors flip",
      ac.heat_flip_backing_violations(_ib_overlap))
 print("  A5b: plant-on-hot backing + overlap-only indoors backing: PASS")
+
+# ============ indoors-run backing gate (ruling #4, 2026-07-10) ============
+# Every maximal contiguous indoors RUN must overlap a real start_indoors/sp.start_indoors window.
+# Run-level (not per-month) so a legit multi-week nursery grow-out rides on the run's anchor.
+
+def _crop1(cell):  # wrap a single cell as a frost_anchored crop
+    return {"calendar_basis": "frost_anchored", "regions": {"r": {"resolved_by_zone": {"3": cell}}}}
+
+# backed: indoors run [Apr] overlaps window 'Apr 10-17'
+_r_backed = {"start_indoors": "Apr 10 - Apr 17",
+    "calendar": ["cold_pause","cold_pause","cold_pause","indoors","plant","growing","harvest",
+                 "harvest","harvest","cold_pause","cold_pause","cold_pause"]}
+assert ac.indoors_run_backing_violations(_crop1(_r_backed)) == [], \
+    ("backed indoors run must pass", ac.indoors_run_backing_violations(_crop1(_r_backed)))
+
+# grow-out: run [Apr, May] -- May has no window but Apr (the sow month) overlaps -> whole run backed
+_r_growout = {"start_indoors": "Apr 10 - Apr 17",
+    "calendar": ["cold_pause","cold_pause","cold_pause","indoors","indoors","plant","growing",
+                 "harvest","harvest","cold_pause","cold_pause","cold_pause"]}
+assert ac.indoors_run_backing_violations(_crop1(_r_growout)) == [], \
+    ("nursery grow-out run must ride on its anchor", ac.indoors_run_backing_violations(_crop1(_r_growout)))
+
+# shifted (the drift class): run [May] only, window 'Apr 10-17' -> May doesn't overlap -> flagged
+_r_shifted = {"start_indoors": "Apr 10 - Apr 17",
+    "calendar": ["cold_pause","cold_pause","cold_pause","cold_pause","indoors","plant","growing",
+                 "harvest","harvest","cold_pause","cold_pause","cold_pause"]}
+_v = ac.indoors_run_backing_violations(_crop1(_r_shifted))
+assert any("May" in x and "indoors" in x for x in _v), ("shifted indoors run must be caught", _v)
+
+# fully unbacked: indoors with no window at all
+_r_none = {"start_indoors": None,
+    "calendar": ["cold_pause","cold_pause","indoors","cold_pause","plant","growing","harvest",
+                 "harvest","harvest","cold_pause","cold_pause","cold_pause"]}
+_v = ac.indoors_run_backing_violations(_crop1(_r_none))
+assert any("Mar" in x for x in _v), ("unbacked indoors (no window) must be caught", _v)
+
+# wrap-around run Dec-Jan backed by a December window
+_r_wrap = {"start_indoors": "Dec 20 - Jan 11",
+    "calendar": ["indoors","plant","growing","harvest","harvest","season_over","season_over",
+                 "season_over","plant","plant","plant","indoors"]}
+assert ac.indoors_run_backing_violations(_crop1(_r_wrap)) == [], \
+    ("wrap-around indoors run backed by a Dec window", ac.indoors_run_backing_violations(_crop1(_r_wrap)))
+
+assert ac.indoors_run_backing_violations({"calendar_basis": "perennial_chill_gated"}) == []
+print("  indoors-run backing (ruling #4): backed/grow-out pass, shifted+unbacked caught, wrap ok: PASS")

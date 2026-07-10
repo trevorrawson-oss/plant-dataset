@@ -252,6 +252,17 @@ print(f"  unbacked heat_pause->indoors flips: {len(_hflip)}")
 for m in _hflip:
     fail(f"heat-flip-backing: {m}")
 
+# ---------------- A5c. indoors-run backing (general, roster-wide; action-must-be-real) ----------------
+# Every contiguous `indoors` RUN must overlap a real start_indoors / second_planting.start_indoors
+# window (run-level so a legit nursery grow-out rides on its anchor; catches a shifted/orphaned run).
+# The cold-side companion to A5b, and the general no-fabricated-indoors guard (ruling #4, 2026-07-10).
+from annual_calendar import indoors_run_backing_violations
+print("A5c. indoors-run backing (every `indoors` run must overlap a real indoor-start window; no-op off annual)")
+_irun = indoors_run_backing_violations(crop)
+print(f"  unbacked indoors runs: {len(_irun)}")
+for m in _irun:
+    fail(f"indoors-run-backing: {m}")
+
 # ---------------- A6. non_seasonal_indoor cycle presence (no-op for non-indoor) ----------------
 # An indoor crop (microgreens/sprouts/mushrooms) has NO frost/region/zone axis -- its source of
 # truth is the indoor_cycle block (the relative sow->harvest cycle). This is the Step 5.5

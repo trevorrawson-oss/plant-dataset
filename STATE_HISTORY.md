@@ -6,6 +6,74 @@
 
 ---
 
+## 2026-07-10 -- WINDOW-VS-TOKEN RULINGS (Trevor's calls on the A+B flagged extras) -- `928c9d7c` -> `35b5e5c6`
+
+**Trigger.** Trevor (via the plant-app session) ruled on the four flagged-extras groups from the A+B
+release. A+B was committed FIRST (`aea89148`, canonical `928c9d7c`) to unblock the app's guides.json
+rebuild; these rulings are the follow-up release. Committed pending push.
+
+**Ruling 1 -- boundary policy = CONSERVATIVE (no change).** The 23 heat-side + non-lemongrass cold
+boundary `indoors` candidates stay un-flipped: edge months of windows already visible via another
+indoors token, "claim only on invisibility" (the line the app draws).
+
+**Ruling 2 -- lemongrass = INVESTIGATED, NO CHANGE (premise did not hold).** Trevor's premise
+(division-propagated -> should not carry start_indoors) is FALSE for lemongrass: its
+`start_method.notes_seasoned` says "Start or pot up divisions indoors roughly 8 weeks before the last
+frost to have a well-rooted plant ready to set out" (start=`transplant`, `weeks_before`=8,
+hardening_off=true). It is division-propagated but genuinely started indoors as a POTTED DIVISION --
+the seed-tray register fields (tray_sowing/germination_light/seedling_light) are correctly na/null (no
+SEED path), but the indoor-start TIMING is real and prose-backed. Its 17 indoors runs already overlap
+their windows (never flagged by the new A5c gate). REMOVING it would destroy sourced data -> declined,
+surfaced instead. Minor cleanup candidate (not done): `weeks_indoors` null while
+`start_method.weeks_before`=8. If `start_indoors` should be SEED-only, that is a schema-wide call.
+
+**Ruling 3 -- plant-flip extras = 13 FLIPPED (all DTM-coherent per cell).** Extended item A's
+action-over-passive plant flip to: tomatoes (beefsteak/cherry/grape/heirloom/roma) warm_arid z8 Jul
+(window Jul 15-Aug 4, harvest Sep 13 / Oct 13, nmsu-sourced); lettuce-leaf warm_arid z8 Aug (Aug 15-Sep 1
+-> Oct 4); cucurbits (cucumber/english/pickling/slicing-cucumber, yellow-summer-squash, zucchini-courgette)
+low_desert_az z9 Aug (Aug 15-Sep 15 -> Oct-Nov); jalapeno low_desert_az z9 Aug (Aug 25-Sep 15 -> Nov 1,
+uariz-sourced). Each set-out month sitting on heat_pause -> `plant`, heat_pause.months intact. The
+Hawaii/potato/flowers plant candidates are left for a per-crop look (NOT flipped). DERIVED CASCADE:
+lettuce-leaf warm_arid z8 `successions_realized` re-derived 7 -> 9 -- the succession deriver splits the
+sow window at heat_pause/cold_pause calendar months; flipping Aug out of heat_pause opens the fall sow
+sub-window (Aug 15-Sep 1) that the old calendar hid, so 7 was an undercount. `derive_realized_successions.py`
+--check confirmed it the ONLY stale cell roster-wide; re-derived in place (COMPACT).
+
+**Ruling 4 -- cold-side gate = SHIPPED as A5c `indoors_run_backing_violations` (with a deviation).**
+Trevor asked for "every `indoors` token roster-wide must overlap a start_indoors/sp.start_indoors
+window." Investigating found that literal rule would RED the suite on **39 existing indoors tokens** --
+legitimate multi-week nursery GROW-OUT months (seedlings held indoors AFTER the sow window, up to
+set-out; e.g. beefsteak nt z3 sow Mar 27-Apr 3, indoors through May, set out June). Implemented his
+INTENT ("no fabricated indoors") as a RUN-level rule instead: every maximal contiguous (wrap-aware)
+`indoors` run must overlap a real window, so grow-out months ride on the run's anchor at the sow month.
+This still catches a SHIFTED run (indoors off its window) and a fully unbacked run. No cold_pause.months
+object needed (the cold flips' runs overlap their winter start_indoors). Wired into whole_crop_gate as
+A5c; TDD (RED before GREEN: backed/grow-out/wrap pass, shifted+unbacked caught). Wiring it RED-proved on
+the REAL canonical, surfacing **10 drifted cells** (an indoors run sitting off its window) -> reconciled
+in the same batch: 7 nt tomato cells (cherry/roma/grape z3 Apr, beefsteak/heirloom z4 Mar + z6 Feb)
+`cold_pause`->`indoors` (the sow-window month was hiding the seed-start); watermelon/cantaloupe nt z4
+stray pre-window Apr `indoors`->`cold_pause`; onion low_desert_az z9 stray pre-window Aug
+`indoors`->`season_over` (minimal fix; its Sep-Dec plant run vs Sep-Oct start_indoors is murky --
+flagged for review).
+
+**Gate code (`tools/annual_calendar.py`).** New `_indoors_runs` (wrap-aware run splitter) +
+`indoors_run_backing_violations` (A5c). Uses the existing `indoor_overlap_months`. Deriver untouched.
+`test_annual_calendar.py` extended (5 new run-rule asserts). Wired at whole_crop_gate A5c.
+
+**Release.** One SHA-guarded COMPACT splice `tools/batches/window_token_rulings.json` (23 calendars:
+13 R3 plant flips + 10 R4 drift) applied on `928c9d7c`, then `derive_realized_successions.py` updated the
+1 dependent successions_realized. Byte-diff footprint = EXACTLY 23 calendars + 1 successions_realized, 0
+unintended, count 125, COMPACT. Final canonical `35b5e5c6b344bfa42052b143bf6686d338386a7c37cbb212135fd02b700dcb53`.
+Gates: gate_all PASS (115 certified), calendar_coherence 0/125, release_verify no new violations (1
+residual = benign single-`--slug` multi-crop collateral; confirmed clean under `--ref kale`
+byte-identical), test_annual_calendar + test_precommit_release_verify + test_whole_crop_gate_hardening GREEN.
+
+**Handback:** rebuild guides.json off `35b5e5c6` (supersedes `928c9d7c`). Only calendar tokens (+ one
+derived successions int) changed; all valid existing tokens -> no shape change. FOLLOWUPS: Hawaii/potato/
+flowers plant-flip per-crop look; lemongrass weeks_indoors population gap; onion low_desert_az z9 review.
+
+---
+
 ## 2026-07-10 -- WINDOW-VS-TOKEN RECONCILIATION (plant-app feedback A + B) -- `bead0bc3` -> `928c9d7c`
 
 **Trigger.** plant-app handoff `docs/kickoffs/inbox-2026-07-10-from-plant-app-window-token-feedback.md`

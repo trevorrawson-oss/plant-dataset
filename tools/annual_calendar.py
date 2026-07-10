@@ -438,3 +438,59 @@ def heat_flip_backing_violations(crop):
                                f"with no set-out window covering it "
                                f"(plant_out / second_planting.plant_out) -- unbacked flip")
     return out
+
+
+def _indoors_runs(cal):
+    """Maximal contiguous runs of `indoors` months (1-12), wrap-aware (Dec adjoins Jan)."""
+    isind = [t == "indoors" for t in cal]
+    if not any(isind):
+        return []
+    if all(isind):
+        return [list(range(1, 13))]
+    start = next(i for i in range(12) if not isind[i])   # rotate to a non-indoors anchor
+    runs, cur = [], []
+    for k in range(12):
+        i = (start + k) % 12
+        if isind[i]:
+            cur.append(i + 1)
+        elif cur:
+            runs.append(cur)
+            cur = []
+    if cur:
+        runs.append(cur)
+    return runs
+
+
+def indoors_run_backing_violations(crop):
+    """Ruling #4 (2026-07-10) -- the GENERAL indoors-backing gate. Every maximal contiguous
+    (wrap-aware) RUN of `indoors` months must OVERLAP a real indoor-start window (top-level
+    `start_indoors` OR `second_planting.start_indoors`). Enforces "no fabricated indoors": an
+    indoors token must trace to a real sow window.
+
+    RUN-level, not per-month, on purpose: a legitimate multi-week nursery grow-out shows `indoors`
+    for the seedling-hold months AFTER the sow window (e.g. sow Apr 10-17, tend seedlings indoors
+    through May, set out June -> the Apr+May run). Those grow-out months carry no window of their
+    own; they ride on the run's anchor at the sow month. A per-month overlap rule would false-flag
+    ~34 legit grow-out months across the roster; the run rule accepts them while still catching a
+    SHIFTED run (indoors sitting off its window, the drift class) and a fully unbacked run.
+
+    Companion to A5b `heat_flip_backing_violations` (which backs indoors/plant on HEAT months and
+    also carries the plant-flip backing); this one backs `indoors` ROSTER-WIDE, so it subsumes the
+    cold-side flips too -- no cold_pause.months object is needed (the cold flip's run overlaps its
+    winter start_indoors window). No-op for non-frost_anchored crops. Returns violation strings."""
+    if crop.get("calendar_basis") != "frost_anchored":
+        return []
+    out = []
+    for rk, r in (crop.get("regions") or {}).items():
+        for z, cell in (r.get("resolved_by_zone") or {}).items():
+            cal = cell.get("calendar")
+            if not isinstance(cal, list) or len(cal) != 12:
+                continue
+            windows = indoor_overlap_months(cell)
+            for run in _indoors_runs(cal):
+                if not (set(run) & windows):
+                    months = ", ".join(_MON_ABBR[m - 1] for m in run)
+                    out.append(f"{rk}.z{z}: `indoors` run [{months}] overlaps no indoor-start "
+                               f"window (start_indoors / second_planting.start_indoors) -- "
+                               f"unbacked indoors (ruling #4)")
+    return out
