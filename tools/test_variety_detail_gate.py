@@ -100,6 +100,18 @@ assert variety_violations(tcrop([tvar(), tvar(id="mutsu", name="Mutsu", triploid
                                              bloom_group="mid", bloom_window_relative=[0.44, 0.62],
                                              chill_hours_required=600, use="cooking, fresh eating")])) == []
 
+# tree coherence: a very_early variety whose start sits ABOVE a late variety's start -> WARNING, not violation
+early_hi = tvar(id="dorsett", name="Dorsett", bloom_group="very_early",
+                bloom_window_relative=[0.8, 0.95], chill_hours_required=100, is_reference=False)
+late_lo = tvar(id="fuji", name="Fuji", bloom_group="late",
+               bloom_window_relative=[0.1, 0.25], chill_hours_required=600)
+c_incoh = tcrop([late_lo, early_hi])
+assert variety_violations(c_incoh) == [], variety_violations(c_incoh)   # shape is valid
+assert any("bloom" in w.lower() for w in variety_warnings(c_incoh)), variety_warnings(c_incoh)
+
+# the real monotonic ladder (early low-start .. late high-start) -> no warning
+assert variety_warnings(TREE_CLEAN) == [], variety_warnings(TREE_CLEAN)
+
 # 0. off-scope crop (no maturity_class anywhere) -> silent, even with junk
 off = {"slug": "bell-pepper", "days_to_maturity": [60, 90],
        "varieties": {"recommended": [{"name": "X", "days_to_maturity": 999}]}}

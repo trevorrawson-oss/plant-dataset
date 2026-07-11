@@ -158,6 +158,9 @@ def variety_warnings(crop):
         return W
     slug = crop.get("slug", "?")
     vars_ = _variety_objs(crop)
+    if archetype(crop) == "tree_fruit":
+        return _tree_warnings(slug, vars_)
+    # --- annual archetype (unchanged) ---
     band = crop.get("days_to_maturity")
     if isinstance(band, list) and len(band) == 2 and all(_int(b) for b in band):
         lo, hi = band[0] - DTM_MARGIN, band[1] + DTM_MARGIN
@@ -175,6 +178,28 @@ def variety_warnings(crop):
             W.append(f"{slug}/{fastest[0]}: fastest variety (DTM {fastest[1]}) labeled 'late'")
         if slowest[2] == "early":
             W.append(f"{slug}/{slowest[0]}: slowest variety (DTM {slowest[1]}) labeled 'early'")
+    return W
+
+
+BLOOM_RANK = {"very_early": 0, "early": 1, "mid": 2, "late": 3, "very_late": 4}
+
+
+def _tree_warnings(slug, vars_):
+    """Advisory: bloom_group ordering must agree with bloom_window_relative start ordering."""
+    W = []
+    pairs = []
+    for x in vars_:
+        g = BLOOM_RANK.get(x.get("bloom_group"))
+        bwr = x.get("bloom_window_relative")
+        if g is not None and isinstance(bwr, list) and len(bwr) == 2:
+            pairs.append((x.get("name", "?"), g, bwr[0]))
+    for i in range(len(pairs)):
+        for j in range(len(pairs)):
+            ni, gi, si = pairs[i]
+            nj, gj, sj = pairs[j]
+            if gi < gj and si > sj:
+                W.append(f"{slug}/{ni}: bloom_group '{list(BLOOM_RANK)[gi]}' earlier than "
+                         f"{nj} '{list(BLOOM_RANK)[gj]}' but relative start {si} > {sj} (order mismatch)")
     return W
 
 
