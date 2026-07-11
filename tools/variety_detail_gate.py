@@ -24,18 +24,35 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from timing_spine_gate import dtm_empty  # season-only predicate (empty days_to_maturity); do not re-encode
 
 MATURITY_CLASS = {"early", "mid", "late"}
+CONFIDENCE = {"T1", "T2", "T3", "T4"}
+# annual (dry-bean) archetype
 SEED_TYPE = {"open_pollinated", "hybrid", "heirloom"}
 SEED_SIZE = {"small", "medium", "large"}
 PLANT_HABIT = {"bush", "half_runner", "pole"}
 PRIMARY_USE = {"soup", "baked", "chili", "fresh_shell", "multi"}
-CONFIDENCE = {"T1", "T2", "T3", "T4"}
+# tree_fruit (apple) archetype
+BLOOM_GROUP = {"very_early", "early", "mid", "late", "very_late"}
+SELF_FRUITFUL = {"no", "partial", "yes"}
+
 DTM_FLOOR, DTM_CEIL = 7, 400   # mirrors numeric_sanity A33; the only HARD numeric bound
 DTM_MARGIN = 10                # advisory band widening; low-stakes (sourced values never warn)
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
-REQUIRED = ("id", "name", "maturity_class", "seed_type", "seed_color", "seed_size",
-            "plant_habit", "primary_use", "confidence_tier", "note_beginner", "note_seasoned", "sources")
-ENUMS = (("maturity_class", MATURITY_CLASS), ("seed_type", SEED_TYPE), ("seed_size", SEED_SIZE),
-         ("plant_habit", PLANT_HABIT), ("primary_use", PRIMARY_USE), ("confidence_tier", CONFIDENCE))
+
+COMMON_CORE = ("id", "name", "maturity_class", "confidence_tier",
+               "note_beginner", "note_seasoned", "sources")
+ANNUAL_TRAITS = ("seed_type", "seed_color", "seed_size", "plant_habit", "primary_use")
+TREE_TRAITS = ("bloom_group", "bloom_window_relative", "bloom_duration_days",
+               "chill_hours_required", "use")
+COMMON_ENUMS = (("maturity_class", MATURITY_CLASS), ("confidence_tier", CONFIDENCE))
+ANNUAL_ENUMS = (("seed_type", SEED_TYPE), ("seed_size", SEED_SIZE),
+                ("plant_habit", PLANT_HABIT), ("primary_use", PRIMARY_USE))
+TREE_ENUMS = (("bloom_group", BLOOM_GROUP),)
+
+
+def archetype(crop):
+    """Crop declares its variety archetype; absence defaults to annual_dtm (dry-bean stays untouched)."""
+    a = crop.get("variety_archetype")
+    return a if a in ("annual_dtm", "tree_fruit") else "annual_dtm"
 
 
 def _variety_objs(crop):
@@ -62,15 +79,18 @@ def variety_violations(crop):
     if not in_scope(crop):
         return V
     slug = crop.get("slug", "?")
+    arch = archetype(crop)
     season_only = dtm_empty(crop)
+    required = COMMON_CORE + (TREE_TRAITS if arch == "tree_fruit" else ANNUAL_TRAITS)
+    enums = COMMON_ENUMS + (TREE_ENUMS if arch == "tree_fruit" else ANNUAL_ENUMS)
     vars_ = _variety_objs(crop)
     ids, ref_count = [], 0
     for x in vars_:
         nm = x.get("name") or x.get("id") or "?"
-        for f in REQUIRED:
+        for f in required:
             if f not in x or x[f] in (None, "", []):
                 V.append(f"{slug}/{nm}: missing required variety field {f!r}")
-        for f, enum in ENUMS:
+        for f, enum in enums:
             if f in x and x[f] not in enum:
                 V.append(f"{slug}/{nm}: {f} {x[f]!r} not in {sorted(enum)}")
         vid = x.get("id")
@@ -83,20 +103,35 @@ def variety_violations(crop):
             V.append(f"{slug}/{nm}: is_reference {ir!r} must be a bool")
         elif ir:
             ref_count += 1
-        dtm = x.get("days_to_maturity")
-        if dtm is None:
-            if not season_only:
-                V.append(f"{slug}/{nm}: days_to_maturity missing (crop is DTM-based)")
-        elif not _int(dtm):
-            V.append(f"{slug}/{nm}: days_to_maturity {dtm!r} must be an int")
-        elif not (DTM_FLOOR <= dtm <= DTM_CEIL):
-            V.append(f"{slug}/{nm}: days_to_maturity {dtm} outside [{DTM_FLOOR},{DTM_CEIL}]")
+        if arch == "annual_dtm":
+            V += _annual_dtm_checks(slug, nm, x, season_only)
+        else:
+            V += _tree_checks(slug, nm, x)
     if ref_count != 1:
         V.append(f"{slug}: exactly one variety must have is_reference true (found {ref_count})")
     dupes = sorted({i for i in ids if ids.count(i) > 1})
     if dupes:
         V.append(f"{slug}: duplicate variety id(s) {dupes}")
     return V
+
+
+def _annual_dtm_checks(slug, nm, x, season_only):
+    """days_to_maturity presence/int/[7,400] for the annual archetype (unchanged behavior)."""
+    V = []
+    dtm = x.get("days_to_maturity")
+    if dtm is None:
+        if not season_only:
+            V.append(f"{slug}/{nm}: days_to_maturity missing (crop is DTM-based)")
+    elif not _int(dtm):
+        V.append(f"{slug}/{nm}: days_to_maturity {dtm!r} must be an int")
+    elif not (DTM_FLOOR <= dtm <= DTM_CEIL):
+        V.append(f"{slug}/{nm}: days_to_maturity {dtm} outside [{DTM_FLOOR},{DTM_CEIL}]")
+    return V
+
+
+def _tree_checks(slug, nm, x):
+    """Tree-fruit block validators (bloom/chill/triploid). Filled in Task 2."""
+    return []
 
 
 def variety_warnings(crop):

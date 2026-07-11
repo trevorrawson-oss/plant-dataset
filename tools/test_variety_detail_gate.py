@@ -38,6 +38,43 @@ CLEAN = crop([variety(), _navy])
 assert variety_violations(CLEAN) == [], variety_violations(CLEAN)
 assert variety_warnings(CLEAN) == [], variety_warnings(CLEAN)
 
+from variety_detail_gate import archetype
+
+def tvar(**over):
+    v = {"id": "golden-delicious", "name": "Golden Delicious", "maturity_class": "mid",
+         "is_reference": True, "confidence_tier": "T1", "note_beginner": "b", "note_seasoned": "s",
+         "sources": ["umn_ext"], "bloom_group": "mid", "bloom_window_relative": [0.42, 0.6],
+         "bloom_duration_days": 10, "chill_hours_required": 700, "use": "fresh eating", "triploid": False}
+    v.update(over)
+    return v
+
+def tcrop(varieties, slug="apple"):
+    return {"slug": slug, "variety_archetype": "tree_fruit", "days_to_maturity": [],
+            "varieties": {"recommended": varieties}}
+
+_mcintosh = tvar(id="mcintosh", name="McIntosh", bloom_group="early",
+                 bloom_window_relative=[0.2, 0.36], chill_hours_required=900,
+                 use="fresh eating, sauce", is_reference=False)
+
+# archetype dispatch
+assert archetype(tcrop([tvar()])) == "tree_fruit"
+assert archetype(CLEAN) == "annual_dtm"          # no variety_archetype key -> default
+assert archetype({"slug": "x", "variety_archetype": "bogus", "varieties": {"recommended": []}}) == "annual_dtm"
+
+# a clean tree crop -> no violations
+TREE_CLEAN = tcrop([tvar(), _mcintosh])
+assert variety_violations(TREE_CLEAN) == [], variety_violations(TREE_CLEAN)
+
+# a tree crop is NOT required to carry the bean traits (they are annual-only now)
+assert not any("seed_type" in v or "plant_habit" in v for v in variety_violations(TREE_CLEAN)), variety_violations(TREE_CLEAN)
+
+# a tree crop MISSING a tree-required field -> violation
+notree = tvar(); del notree["bloom_group"]
+assert any("bloom_group" in v for v in variety_violations(tcrop([notree, _mcintosh])))
+
+# a tree variety does NOT need days_to_maturity (grafted / season-only)
+assert not any("days_to_maturity" in v for v in variety_violations(TREE_CLEAN)), variety_violations(TREE_CLEAN)
+
 # 0. off-scope crop (no maturity_class anywhere) -> silent, even with junk
 off = {"slug": "bell-pepper", "days_to_maturity": [60, 90],
        "varieties": {"recommended": [{"name": "X", "days_to_maturity": 999}]}}
