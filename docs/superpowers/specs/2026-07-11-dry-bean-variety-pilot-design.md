@@ -98,6 +98,27 @@ onto cert. But "soft" only stays safe if it is not left open-ended. Two invarian
   guarantee on a variety DTM is the A33 `[7,400]` floor, so a sourced typo (Navy@185) could otherwise
   reach a user. This is a sequencing rule on the Spec-2 plant-astro handoff, not a Spec-1 deliverable.
 
+### 3.6 Prior art: existing variety models (the pilot is FLAT, not delta)
+Plan grounding surfaced ~5 coexisting variety shapes in the roster today, plus a separate
+`varieties_detail[]` field on 26 tree/berry crops. Notably, 10 crops (5 citrus + 5 woody herbs) carry
+an exploratory **`delta{value, parent, changed}` override overlay** (June 2026 lemon/lavender work).
+Trevor's call 2026-07-11: that delta model was **idea-building, not a committed convention** -- do NOT
+adopt or extend it.
+
+**Decision: flat, self-contained per-variety values, override-by-ABSENCE.** A load-bearing value must
+be the actual value the app uses, not a diff resolved against a parent. The `delta` structure stores a
+cached `parent` copy inside each variety (drifts stale) and forces read-time resolution -- a crop-default
+edit would silently shift every variety's effective DTM. Flat storage keeps the good half of the
+"override where they differ" principle (section 3.1) via ABSENCE -- a variety omits the fields it does
+not override and inherits the crop default -- without the fragile half. A "differs from default" UI cue,
+if ever wanted, is DERIVED at render time (compare variety value to crop value), never stored.
+
+The five shapes, for the record (reconciled in Spec 2): 37 simple `{name, days_to_maturity, note}`
+(dry-bean's own group); 30 plain name-strings; 10 exploratory `delta`; 39 assorted
+`{name, recommended_note, ...}` / tree-bloom; + `varieties_detail[]` on 26 trees/berries. The Full-T1
+schema (section 4) is a clean SUPERSET of dry-bean's own simple-DTM shape, so the pilot extends dry-bean
+without conflict; the fragmentation is a rollout problem, not a pilot problem.
+
 ## 4. Per-variety schema (Full T1)
 
 | field | type | required | notes |
@@ -175,6 +196,18 @@ Checks (all soft in the pilot):
 missing dual-register note, two `is_reference`, absurd/`[7,400]`-violating DTM, an *unsourced*
 out-of-band value, and a class/DTM mismatch each surface before the gate is trusted.
 
+**Companion gate change (REQUIRED, or the splice fails `gate_all`):** the new per-variety STRING keys
+(`id`, `seed_type`, `maturity_class`, `seed_color`, `seed_size`, `plant_habit`, `primary_use`,
+`confidence_tier`, and optional `disease_notes`/`regional_fit`) will trip `register_completeness`'s
+C11/A25 "any unruled non-empty string" check and flood the gate -- exactly what sweet-corn's
+`planting_layout` needed a sanctioned ruling for. Add path-guarded entries to
+`register_completeness_gate.py` `ruled_categorical()` (the same mechanism that already rules
+`varieties.recommended[].use`/`.note`/`.hardiness_note`), scoped to the `varieties.recommended` path,
+each with a one-line Trevor-ruling comment in the house style. `is_reference` (bool),
+`days_to_maturity` (int), `sources` (list), and `note_beginner`/`note_seasoned` (auto-ruled by suffix)
+need no ruling. This is its own TDD RED->GREEN change with a regression assert, landed BEFORE the
+content splice.
+
 ## 7. Authoring and release plan
 
 1. Build the soft gate first (TDD), RED-proven on a scratch copy.
@@ -204,7 +237,10 @@ only by an unread coverage report.
 
 ## 9. Scope boundaries (explicitly OUT of Spec 1)
 
-- Roster rollout across the 30 string-list crops and ~280 DTM-less variety entries (-> Spec 2).
+- **Reconciling the 5 existing variety shapes** (section 3.6): the 30 string-list crops, the ~280
+  DTM-less entries, the 39 assorted `recommended_note` shapes, folding in `varieties_detail[]` (26
+  trees/berries), and migrating or retiring the 10 exploratory `delta` crops -> all Spec 2 (the column
+  pass that touches every crop anyway).
 - The app variety-driven timing recompute and region x variety feature (-> plant-astro, Spec 2).
   **Handoff carries INV-2 (section 3.5): plant-astro must not consume a crop's variety DTM as
   load-bearing until that crop's variety data is gate-clean / the gate is hard.**
