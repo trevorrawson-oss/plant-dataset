@@ -147,15 +147,30 @@ assert any("mystery_field" in p for p in register_completeness_violations(_novel
     register_completeness_violations(_novel)
 
 # ---- apple variety pilot (2026-07-11): the new tree-archetype string keys are RULED ----
-from register_completeness_gate import ruled_categorical
+# Test through the COMPOSED gate predicate _is_ruled(pat, key), not ruled_categorical alone --
+# bloom_group is already globally excluded via EXCLUDED_KEYS (line 82, June-2026 C11 ruling),
+# and _is_ruled checks EXCLUDED_KEYS BEFORE calling ruled_categorical, so a bloom_group clause
+# inside ruled_categorical would be dead code / never reached for that key. Asserting through
+# _is_ruled reflects how the real gate resolves both keys.
+from register_completeness_gate import ruled_categorical, _is_ruled
 
-# apple tree-variety pilot: bloom_group + self_fruitful are RULED categorical under varieties.recommended
-P = "$.crops[?(@.slug=='apple')].varieties.recommended[0]"
-assert ruled_categorical(P, "bloom_group"), "bloom_group must be ruled"
-assert ruled_categorical(P, "self_fruitful"), "self_fruitful must be ruled"
+P_rec = "$.crops[?(@.slug=='apple')].varieties.recommended[0]"
+P_other = "$.crops[?(@.slug=='apple')]"
+
+# bloom_group is ruled at ANY path -- it's globally excluded via EXCLUDED_KEYS, not path-scoped.
+# (Do NOT assert bloom_group is False at any path -- that would contradict the June-2026 ruling.)
+assert _is_ruled(P_rec, "bloom_group"), "bloom_group must be ruled (globally, via EXCLUDED_KEYS)"
+
+# self_fruitful is ruled ONLY when path-scoped to varieties.recommended (the new Task-4 clause).
+assert _is_ruled(P_rec, "self_fruitful"), "self_fruitful must be ruled under varieties.recommended"
+assert not _is_ruled(P_other, "self_fruitful"), "self_fruitful path guard: unruled outside varieties.recommended"
+
 # guard against over-broad rulings: an unrelated string key stays UNRULED
-assert not ruled_categorical(P, "totally_new_prose_key"), "unrelated key must stay unruled"
-# path guard: bloom_group outside varieties.recommended is NOT auto-ruled here
-assert not ruled_categorical("$.crops[?(@.slug=='apple')].bloom_group", "bloom_group")
+assert not _is_ruled(P_rec, "totally_new_prose_key"), "unrelated key must stay unruled"
+
+# pin the ruled_categorical helper's own path-scoping directly (self_fruitful only; bloom_group
+# is intentionally NOT in ruled_categorical -- it's handled upstream by EXCLUDED_KEYS)
+assert ruled_categorical(P_rec, "self_fruitful"), "self_fruitful must be ruled_categorical-scoped"
+assert not ruled_categorical(P_other, "self_fruitful"), "self_fruitful ruled_categorical path guard holds"
 
 print("PASS register_completeness_gate (per-crop function)")
