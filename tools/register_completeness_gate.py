@@ -82,6 +82,7 @@ EXCLUDED_KEYS = {
     "leaf_habit","recommended_type","bloom_group","season","days_or_season","size_class",
     "harvest_urgency","level","system","species","subtitle","title","cane_type","gravel_layer",
     "drought_tolerance","watering_method","start","day_length_type","recommended_day_length_type",
+    "variety_archetype",  # apple tree-variety pilot (Trevor 2026-07-11): crop-level schema-dispatch enum (annual_dtm|tree_fruit) read by variety_detail_gate; structural token, never user-facing prose
     # ENUM / NOTIFICATION + AUDIT MACHINERY:
     "audience","offset_from","trigger","stage","measures","cause","author",
     "last_reviewed_operation","overrides_tip_id","verified_date","recommended_rootstock",

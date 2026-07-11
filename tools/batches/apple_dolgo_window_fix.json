@@ -1,0 +1,5 @@
+{"base_sha": "42743be1389f6ff5fb689f94838635256b0e4d862d6b977280a8c32c211596f4", "patches": [
+  {"op": "replace",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='dolgo')].bloom_window_relative",
+   "from": [0.15, 0.4], "value": [0.15, 0.55]}
+]}

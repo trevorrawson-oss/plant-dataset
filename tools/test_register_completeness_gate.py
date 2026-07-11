@@ -165,6 +165,10 @@ assert _is_ruled(P_rec, "bloom_group"), "bloom_group must be ruled (globally, vi
 assert _is_ruled(P_rec, "self_fruitful"), "self_fruitful must be ruled under varieties.recommended"
 assert not _is_ruled(P_other, "self_fruitful"), "self_fruitful path guard: unruled outside varieties.recommended"
 
+# apple tree-variety pilot: variety_archetype (crop-level schema-dispatch enum) is ruled globally
+# via EXCLUDED_KEYS -- it's a structural token, never user-facing prose
+assert _is_ruled(P_other, "variety_archetype"), "variety_archetype must be ruled (EXCLUDED_KEYS)"
+
 # guard against over-broad rulings: an unrelated string key stays UNRULED
 assert not _is_ruled(P_rec, "totally_new_prose_key"), "unrelated key must stay unruled"
 
