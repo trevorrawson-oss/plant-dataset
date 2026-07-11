@@ -125,4 +125,25 @@ if os.path.exists(_path):
     assert fp == [], f"C11(c) laundering FP on certified anchors: {fp}"
     print(f"  backend_key_laundering: 0 FP across {len(cert)} certified: PASS")
 
+# ---- dry-bean variety pilot (2026-07-11): the new flat per-variety string keys are RULED ----
+_pilot_variety_crop = {
+    "slug": "dry-bean",
+    "varieties": {"recommended": [{
+        "id": "black-turtle", "name": "Black Turtle",
+        "maturity_class": "late", "seed_type": "open_pollinated",
+        "seed_color": "black", "seed_size": "small", "plant_habit": "bush",
+        "primary_use": "soup", "confidence_tier": "T1",
+        "disease_notes": "some white mold pressure in humidity",
+        "regional_fit": "long warm seasons",
+        "note_beginner": "x", "note_seasoned": "y",
+    }]},
+}
+_unruled = register_completeness_violations(_pilot_variety_crop)
+assert _unruled == [], ("pilot variety keys must be ruled, got:", _unruled)
+
+# a genuinely novel unruled variety key still flags (the ruling is scoped, not a blanket pass)
+_novel = {"slug": "x", "varieties": {"recommended": [{"mystery_field": "Water it a whole lot, friend."}]}}
+assert any("mystery_field" in p for p in register_completeness_violations(_novel)), \
+    register_completeness_violations(_novel)
+
 print("PASS register_completeness_gate (per-crop function)")
