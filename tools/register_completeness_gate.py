@@ -174,6 +174,14 @@ def ruled_categorical(pat, k):
         # descriptors, path-scoped to varieties.recommended, siblings of the already-ruled .use/.note/.hardiness_note.
         # note_beginner/note_seasoned auto-rule by suffix; is_reference (bool)/days_to_maturity (int)/sources (list)
         # are non-string, out of A25 scope. Override-by-ABSENCE flat model (the exploratory delta overlay is retired).
+    if (k in ("bloom_group", "self_fruitful")
+            and "varieties.recommended" in pat):
+        return True  # apple tree-variety pilot (Trevor 2026-07-11): tree-archetype categorical labels --
+        # bloom_group (very_early..very_late relative bloom class, T1-sourced) + self_fruitful
+        # (no/partial/yes override of crop self_fertile). Terse single-form attributes, path-scoped to
+        # varieties.recommended, siblings of the already-ruled .use/.note/.hardiness_note + the dry-bean
+        # bundle. bloom_window_relative (list) / bloom_duration_days,chill_hours_required (int) / triploid
+        # (bool) are non-string, out of A25 scope; note_beginner/note_seasoned auto-rule by suffix.
     return False
 
 # --- DEFERRED by design: companions array-split provenance (inventory §5 -- its own

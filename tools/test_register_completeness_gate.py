@@ -146,4 +146,16 @@ _novel = {"slug": "x", "varieties": {"recommended": [{"mystery_field": "Water it
 assert any("mystery_field" in p for p in register_completeness_violations(_novel)), \
     register_completeness_violations(_novel)
 
+# ---- apple variety pilot (2026-07-11): the new tree-archetype string keys are RULED ----
+from register_completeness_gate import ruled_categorical
+
+# apple tree-variety pilot: bloom_group + self_fruitful are RULED categorical under varieties.recommended
+P = "$.crops[?(@.slug=='apple')].varieties.recommended[0]"
+assert ruled_categorical(P, "bloom_group"), "bloom_group must be ruled"
+assert ruled_categorical(P, "self_fruitful"), "self_fruitful must be ruled"
+# guard against over-broad rulings: an unrelated string key stays UNRULED
+assert not ruled_categorical(P, "totally_new_prose_key"), "unrelated key must stay unruled"
+# path guard: bloom_group outside varieties.recommended is NOT auto-ruled here
+assert not ruled_categorical("$.crops[?(@.slug=='apple')].bloom_group", "bloom_group")
+
 print("PASS register_completeness_gate (per-crop function)")
