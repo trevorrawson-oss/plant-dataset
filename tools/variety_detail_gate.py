@@ -130,8 +130,26 @@ def _annual_dtm_checks(slug, nm, x, season_only):
 
 
 def _tree_checks(slug, nm, x):
-    """Tree-fruit block validators (bloom/chill/triploid). Filled in Task 2."""
-    return []
+    """Tree-fruit block: bloom-window shape, positive-int chill/duration, triploid bool, self_fruitful enum."""
+    V = []
+    bwr = x.get("bloom_window_relative")
+    if bwr is not None:
+        if (not isinstance(bwr, list) or len(bwr) != 2
+                or not all(isinstance(n, (int, float)) and not isinstance(n, bool) for n in bwr)
+                or not (0.0 <= bwr[0] < bwr[1] <= 1.0)):
+            V.append(f"{slug}/{nm}: bloom_window_relative {bwr!r} must be [start,end] floats "
+                     f"in [0,1] with start < end")
+    for f in ("bloom_duration_days", "chill_hours_required"):
+        val = x.get(f)
+        if val is not None and (not _int(val) or val <= 0):
+            V.append(f"{slug}/{nm}: {f} {val!r} must be a positive int")
+    trip = x.get("triploid")
+    if not isinstance(trip, bool):
+        V.append(f"{slug}/{nm}: triploid {trip!r} must be a bool")
+    sf = x.get("self_fruitful")
+    if sf is not None and sf not in SELF_FRUITFUL:
+        V.append(f"{slug}/{nm}: self_fruitful {sf!r} not in {sorted(SELF_FRUITFUL)}")
+    return V
 
 
 def variety_warnings(crop):

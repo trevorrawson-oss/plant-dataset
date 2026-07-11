@@ -75,6 +75,31 @@ assert any("bloom_group" in v for v in variety_violations(tcrop([notree, _mcinto
 # a tree variety does NOT need days_to_maturity (grafted / season-only)
 assert not any("days_to_maturity" in v for v in variety_violations(TREE_CLEAN)), variety_violations(TREE_CLEAN)
 
+# tree-block: bloom_window_relative must be two floats in [0,1] with start < end
+for bad in [[0.5], [0.5, 1.2], [0.6, 0.4], [0.6, 0.6], "0.4-0.6"]:
+    c = tcrop([tvar(bloom_window_relative=bad), _mcintosh])
+    assert any("bloom_window_relative" in v for v in variety_violations(c)), (bad, variety_violations(c))
+
+# tree-block: chill_hours_required + bloom_duration_days must be positive ints
+assert any("chill_hours_required" in v for v in variety_violations(tcrop([tvar(chill_hours_required=0), _mcintosh])))
+assert any("chill_hours_required" in v for v in variety_violations(tcrop([tvar(chill_hours_required="700"), _mcintosh])))
+assert any("bloom_duration_days" in v for v in variety_violations(tcrop([tvar(bloom_duration_days=0), _mcintosh])))
+
+# tree-block: triploid must be a bool
+assert any("triploid" in v for v in variety_violations(tcrop([tvar(triploid="yes"), _mcintosh])))
+
+# tree-block: bad bloom_group enum
+assert any("bloom_group" in v for v in variety_violations(tcrop([tvar(bloom_group="earlyish"), _mcintosh])))
+
+# tree-block: self_fruitful optional, but if present must be in enum; valid value is clean
+assert any("self_fruitful" in v for v in variety_violations(tcrop([tvar(self_fruitful="sometimes"), _mcintosh])))
+assert variety_violations(tcrop([tvar(self_fruitful="partial"), _mcintosh])) == [], "valid self_fruitful is clean"
+
+# a triploid variety (real edge case) is clean
+assert variety_violations(tcrop([tvar(), tvar(id="mutsu", name="Mutsu", triploid=True, is_reference=False,
+                                             bloom_group="mid", bloom_window_relative=[0.44, 0.62],
+                                             chill_hours_required=600, use="cooking, fresh eating")])) == []
+
 # 0. off-scope crop (no maturity_class anywhere) -> silent, even with junk
 off = {"slug": "bell-pepper", "days_to_maturity": [60, 90],
        "varieties": {"recommended": [{"name": "X", "days_to_maturity": 999}]}}
