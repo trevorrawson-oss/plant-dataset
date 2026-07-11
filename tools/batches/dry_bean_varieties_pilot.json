@@ -1,0 +1,234 @@
+{
+ "base_sha": "0bcb4fd0462a464d306eccfb56677fe4321a48edf91d32acc9525c5d4dd7ab19",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].varieties",
+   "from": {
+    "recommended": [
+     {
+      "name": "Black Turtle",
+      "days_to_maturity": 100,
+      "note": "The classic black bean: small, dense, shiny black seed with an earthy flavor. One of the later types to mature (UC Davis classes black beans as late), so give it a full season."
+     },
+     {
+      "name": "Pinto",
+      "days_to_maturity": 90,
+      "note": "The everyday tan-and-brown speckled bean; a bush or half-runner type that dries down well over a warm season."
+     },
+     {
+      "name": "Navy",
+      "days_to_maturity": 85,
+      "note": "Small white bean for soups and baked beans; one of the faster dry types (UC Davis: large-white types ~75 to 90 days), good where the season runs a little shorter."
+     },
+     {
+      "name": "Kidney",
+      "days_to_maturity": 100,
+      "note": "Large red kidney-shaped bean; among the longest to mature, so it wants a full warm season to dry down."
+     },
+     {
+      "name": "Jacob's Cattle",
+      "days_to_maturity": 90,
+      "note": "A New England heirloom with white-and-maroon speckled seed; dependable, and good either dry or fresh-shelled."
+     }
+    ],
+    "note_seasoned": "Nearly all common dry beans are bush or half-runner forms of Phaseolus vulgaris, so they share this crop's culture; they differ mainly in seed color, size, and days to maturity. Match the variety to your season: navy and black turtle dry down fastest, kidney runs the longest.",
+    "note_beginner": "Most dry beans are grown the same way; they just look different and take slightly different amounts of time. If your season is short, choose a faster type like navy or black turtle rather than kidney.",
+    "sources": [
+     "clemson_hgic",
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+      "verified": "2026-06-22"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/beans-in-the-garden",
+      "verified": "2026-06-22"
+     }
+    }
+   },
+   "value": {
+    "recommended": [
+     {
+      "id": "black-turtle",
+      "name": "Black Turtle",
+      "days_to_maturity": 105,
+      "maturity_class": "late",
+      "seed_type": "heirloom",
+      "seed_color": "black",
+      "seed_size": "small",
+      "plant_habit": "bush",
+      "primary_use": "soup",
+      "is_reference": true,
+      "confidence_tier": "T1",
+      "note_beginner": "The classic black bean and a longtime heirloom, a staple across the Americas for thousands of years (you may also see it sold as the turtle bean). Small, shiny, dark seeds with an earthy flavor. It is one of the slower dry beans to finish, so give it a long, warm season and do not rush the harvest.",
+      "note_seasoned": "Small, dense black seed on a bush plant; an Americas heirloom that long predates modern cultivars. UC Davis lists Black Turtle at 105 or more days and classes it as late, so plan on a full season to dry down. Earthy flavor, holds its shape when cooked.",
+      "sources": [
+       "ucanr_ext",
+       "msu_ext"
+      ],
+      "anchoring_urls": {
+       "ucanr_ext": {
+        "url": "https://beans.ucdavis.edu/sites/g/files/dgvnsk13961/files/inline-files/80592.pdf",
+        "verified": "2026-07-11"
+       },
+       "msu_ext": {
+        "url": "https://www.canr.msu.edu/news/black-beans-and-rice-history-and-fun-facts",
+        "verified": "2026-07-11"
+       }
+      }
+     },
+     {
+      "id": "pinto",
+      "name": "Pinto",
+      "days_to_maturity": 103,
+      "maturity_class": "mid",
+      "seed_type": "open_pollinated",
+      "seed_color": "tan speckled",
+      "seed_size": "medium",
+      "plant_habit": "half_runner",
+      "primary_use": "multi",
+      "is_reference": false,
+      "confidence_tier": "T1",
+      "note_beginner": "The everyday tan-and-brown speckled bean behind refried beans and chili. A dependable bush or half-runner type that dries down over a full warm season.",
+      "note_seasoned": "Tan speckled seed on a bush or half-runner habit; a mid-season dry bean around 100 to 105 days in trials. The staple field bean: forgiving, productive, widely adapted.",
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://vegetables.wsu.edu/dry-bean-varieties-for-niche-markets-in-the-usa/",
+        "verified": "2026-07-11"
+       }
+      }
+     },
+     {
+      "id": "navy",
+      "name": "Navy",
+      "days_to_maturity": 85,
+      "maturity_class": "early",
+      "seed_type": "open_pollinated",
+      "seed_color": "white",
+      "seed_size": "small",
+      "plant_habit": "bush",
+      "primary_use": "baked",
+      "is_reference": false,
+      "confidence_tier": "T1",
+      "note_beginner": "A small white bean for soups and baked beans. One of the faster dry beans to finish, so it is a good pick if your season runs a little short.",
+      "note_seasoned": "Small white seed; the fastest of the common dry types at roughly 85 days, at the early end of the maturity range UC Davis reports for white beans. Bush habit, a good choice where the season is shorter.",
+      "sources": [
+       "ucanr_ext"
+      ],
+      "anchoring_urls": {
+       "ucanr_ext": {
+        "url": "https://beans.ucdavis.edu/sites/g/files/dgvnsk13961/files/inline-files/80592.pdf",
+        "verified": "2026-07-11"
+       }
+      }
+     },
+     {
+      "id": "kidney",
+      "name": "Kidney",
+      "days_to_maturity": 100,
+      "maturity_class": "mid",
+      "seed_type": "open_pollinated",
+      "seed_color": "red",
+      "seed_size": "large",
+      "plant_habit": "bush",
+      "primary_use": "chili",
+      "is_reference": false,
+      "confidence_tier": "T1",
+      "note_beginner": "The large red kidney-shaped bean for chili and stews. It wants a full warm season to dry down.",
+      "note_seasoned": "Large red kidney seed; a moderately late dry bean around 100 days, in the dark-red-kidney range UC Davis reports. Holds its shape well in long-cooked dishes.",
+      "sources": [
+       "ucanr_ext"
+      ],
+      "anchoring_urls": {
+       "ucanr_ext": {
+        "url": "https://beans.ucdavis.edu/sites/g/files/dgvnsk13961/files/inline-files/80592.pdf",
+        "verified": "2026-07-11"
+       }
+      }
+     },
+     {
+      "id": "jacobs-cattle",
+      "name": "Jacob's Cattle",
+      "days_to_maturity": 107,
+      "maturity_class": "late",
+      "seed_type": "heirloom",
+      "seed_color": "white and maroon speckled",
+      "seed_size": "medium",
+      "plant_habit": "bush",
+      "primary_use": "multi",
+      "is_reference": false,
+      "confidence_tier": "T1",
+      "note_beginner": "A New England heirloom with striking white-and-maroon speckled seeds. It is one of the longest to finish, so give it a full season; good either dried or cooked fresh from the shell.",
+      "note_seasoned": "White-and-maroon speckled heirloom seed; one of the latest of the set at about 107 days in trials (WSU). Dual-purpose, dry or fresh-shell; reliable in the Northeast.",
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://vegetables.wsu.edu/dry-bean-varieties-for-niche-markets-in-the-usa/",
+        "verified": "2026-07-11"
+       }
+      }
+     }
+    ],
+    "note_seasoned": "Nearly all common dry beans are bush or half-runner forms of Phaseolus vulgaris, so they share this crop's culture; they differ mainly in seed color, size, and days to maturity. Match the variety to your season: navy dries down fastest, while black turtle and Jacob's cattle run the longest.",
+    "note_beginner": "Most dry beans are grown the same way; they just look different and take slightly different amounts of time. If your season is short, choose a faster type like navy rather than a long-season type like black turtle or kidney.",
+    "sources": [
+     "clemson_hgic",
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+      "verified": "2026-06-22"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/beans-in-the-garden",
+      "verified": "2026-06-22"
+     }
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].verification_status.source_set",
+   "from": [
+    "clemson_hgic",
+    "msu_ext",
+    "nmsu_ext",
+    "psu_ext",
+    "uariz_ext",
+    "ucanr_ext",
+    "ufifas_ext",
+    "uga_ext",
+    "uhawaii_ctahr",
+    "uiuc_ext",
+    "umd_ext",
+    "umn_ext",
+    "usu_ext"
+   ],
+   "value": [
+    "clemson_hgic",
+    "msu_ext",
+    "nmsu_ext",
+    "psu_ext",
+    "uariz_ext",
+    "ucanr_ext",
+    "ufifas_ext",
+    "uga_ext",
+    "uhawaii_ctahr",
+    "uiuc_ext",
+    "umd_ext",
+    "umn_ext",
+    "usu_ext",
+    "wsu_ext"
+   ]
+  }
+ ]
+}
