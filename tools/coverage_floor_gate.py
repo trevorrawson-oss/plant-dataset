@@ -15,6 +15,11 @@ Both are archetype-aware: an indoor / zone_independent crop legitimately collaps
 (A31 exempts it), and tree empty cells are governed by A3's no-fruit split (A32 is frost_anchored
 only).
 """
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from zone_span_gate import EXPECTED_SPANS
 
 # The canonical 10-region roster -- identical across all 17 non-indoor certified anchors and the
 # top-level `region_chill_delivered` table. THE coverage floor for a region-resolved crop.
@@ -23,10 +28,12 @@ CANONICAL_REGIONS = {
     "hawaii_tropical", "low_desert_az", "northern_tier", "se_gulf", "warm_arid",
 }
 
-# re-audit #2 D7: the resolved_by_zone KEY roster -- USDA hardiness zones 3-11. A31 validated
-# region keys but no zone roster existed, so a fictitious zone ("banana_zone") or a hollow
-# resolved_by_zone (D2) certified. Every resolved cell in the 17 non-indoor anchors keys 3-11.
-CANONICAL_ZONES = {"3", "4", "5", "6", "7", "8", "9", "10", "11"}
+# The resolved_by_zone KEY roster -- every zone any region legitimately resolves, DERIVED from the
+# single source of truth (zone_span_gate.EXPECTED_SPANS) so it can never drift from the spans again.
+# The 2026-07-12 hawaii z12/z13 widen is picked up automatically. A cell in a zone outside every
+# span is a fictitious-zone certification -- the defect this floor + A45 exist to catch. (re-audit
+# #2 D7 origin; re-based onto EXPECTED_SPANS at the 2026-07-12 zone-span reconciliation.)
+CANONICAL_ZONES = {z for span in EXPECTED_SPANS.values() for z in span}
 
 # re-audit #2 D3: the calendar-presence floor (A32) was frost_anchored-only, so the 3 NON-TREE
 # perennial archetypes could ship every cell calendar:[]. Trees (perennial_chill_gated/evergreen)

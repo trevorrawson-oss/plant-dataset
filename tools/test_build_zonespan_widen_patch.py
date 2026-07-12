@@ -74,6 +74,29 @@ check("widened crop passes A45", check_crop(widened["crops"][0]) == [])
 # 6. Crop without regions -> zero ops, no crash.
 check("regionless crop no-ops", build_widen_ops({"crops": [{"slug": "x"}]}) == [])
 
+# 7. Chill-table clone ops: donor band copied to each new zone; already-present skipped;
+#    value is a fresh copy (not a reference to the donor list).
+data2 = {"crops": [], "region_chill_delivered": {
+    "low_desert_az": {"9": [100, 400]},
+    "se_gulf": {"8": [650, 1000], "9": [350, 650]},
+    "hawaii_tropical": {"11": [0, 150]},
+    "ca_south_coast": {"9": [200, 550], "10": [50, 350], "11": [0, 99]},  # 11 present -> skip
+}}
+cops = {o["json_path"]: o for o in build_widen_ops(data2)}
+check("az chill z10 cloned from z9",
+      cops.get("$.region_chill_delivered.low_desert_az.10", {}).get("value") == [100, 400])
+check("se_gulf chill z10 cloned from z9",
+      cops.get("$.region_chill_delivered.se_gulf.10", {}).get("value") == [350, 650])
+check("hawaii chill z12 cloned from z11",
+      cops.get("$.region_chill_delivered.hawaii_tropical.12", {}).get("value") == [0, 150])
+check("hawaii chill z13 cloned from z11",
+      cops.get("$.region_chill_delivered.hawaii_tropical.13", {}).get("value") == [0, 150])
+check("present chill band skipped (ca_south_coast z11)",
+      "$.region_chill_delivered.ca_south_coast.11" not in cops)
+check("chill clone is a copy not a reference",
+      cops["$.region_chill_delivered.low_desert_az.10"]["value"]
+      is not data2["region_chill_delivered"]["low_desert_az"]["9"])
+
 if fails:
     print(f"\n{len(fails)} test(s) FAILED"); sys.exit(1)
 print("\nall build_zonespan_widen_patch tests passed")
