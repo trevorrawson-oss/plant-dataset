@@ -24,6 +24,8 @@ def stale_crop(slug="alpha"):
         "ca_interior":   {"zone_span": ["8", "9"],   # already correct -> no op
                           "resolved_by_zone": {"8": copy.deepcopy(DONOR_ROW),
                                                 "9": copy.deepcopy(DONOR_ROW)}},
+        "hawaii_tropical": {"zone_span": ["11"],     # multi-donor: z10/z12/z13 all <- z11
+                            "resolved_by_zone": {"11": copy.deepcopy(DONOR_ROW)}},
     }
     return {"slug": slug, "verification_status": {"status": "verified_gs_arc"},
             "regions": regions}
@@ -46,6 +48,16 @@ check("clone marked lifted_from_zone=9", row["lifted_from_zone"] == "9")
 check("clone copies donor content", row["plant_out"] == DONOR_ROW["plant_out"])
 check("clone is a COPY not a reference",
       row is not data["crops"][0]["regions"]["low_desert_az"]["resolved_by_zone"]["9"])
+
+# 1b. Multi-donor region: hawaii z10/z12/z13 all clone from the single donor z11.
+for nz in ("10", "12", "13"):
+    hp = f"$.crops[?(@.slug=='alpha')].regions.hawaii_tropical.resolved_by_zone.{nz}"
+    check(f"hawaii z{nz} clone emitted from z11",
+          hp in by_path and by_path[hp]["op"] == "add"
+          and by_path[hp]["value"]["lifted_from_zone"] == "11")
+check("hawaii span widened 11 -> 10,11,12,13",
+      by_path["$.crops[?(@.slug=='alpha')].regions.hawaii_tropical.zone_span"]["value"]
+      == ["10", "11", "12", "13"])
 
 # 2. Span replaces: stale, int-typed, empty all normalized; correct one skipped.
 sp = lambda rid: f"$.crops[?(@.slug=='alpha')].regions.{rid}.zone_span"

@@ -21,12 +21,12 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from zone_span_gate import EXPECTED_SPANS
 
-# The canonical 10-region roster -- identical across all 17 non-indoor certified anchors and the
+# The canonical 10-region roster -- identical across all non-indoor certified anchors and the
 # top-level `region_chill_delivered` table. THE coverage floor for a region-resolved crop.
-CANONICAL_REGIONS = {
-    "ca_desert", "ca_interior", "ca_north_coast", "ca_south_coast", "fl_peninsula",
-    "hawaii_tropical", "low_desert_az", "northern_tier", "se_gulf", "warm_arid",
-}
+# DERIVED from zone_span_gate.EXPECTED_SPANS (the single source of truth for the region universe)
+# so adding a region there -- e.g. a future RGV / maritime-PNW region -- extends the roster in
+# lockstep and cannot split-brain against A45 (the drift class this arc exists to kill).
+CANONICAL_REGIONS = set(EXPECTED_SPANS)
 
 # The resolved_by_zone KEY roster -- every zone any region legitimately resolves, DERIVED from the
 # single source of truth (zone_span_gate.EXPECTED_SPANS) so it can never drift from the spans again.

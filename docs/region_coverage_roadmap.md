@@ -148,3 +148,11 @@ structural release like this widen trips both checks by design, even when sectio
 multi-crop / roster-wide mode so section A does not raise benign concerns on structural
 releases. The pre-commit backstop (`precommit_release_verify.py`) already handles the
 multi-crop case correctly and remains the binding regression gate.
+
+Second candidate: a `region_chill_delivered` <-> `EXPECTED_SPANS` zone-parity check. Today
+the chill table's zone coverage is kept in step with the spans only by the widen builder at
+build time, and A3 (`perennial_gate`) backstops only the chill-gated `survives_no_fruit`
+tree case. If a future span grows and a chill band is missed, a non-tree or
+`fruits_reliably`/`unsuitable` cell in the new zone would leave the table silently short a
+band with no gate objecting. Worth an A45-adjacent parity check if the chill table becomes a
+harder cross-crop requirement.
