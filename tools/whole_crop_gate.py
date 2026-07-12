@@ -669,6 +669,20 @@ print(f"  planting_layout violations: {len(_layout)}")
 for m in _layout:
     fail(f"planting_layout: {m}")
 
+# ---------------- A45. region zone_span parity (spec 2026-07-12) ----------------
+# The 2023 USDA map relabeled the marquee cities (Phoenix 9b->10a, Honolulu ->z12) and
+# NOTHING read zone_span, so spans went silently stale and 300+ ZIPs lost region
+# resolution in the app. Pins every populated region cell to the canonical str-typed
+# span (zone_span_gate.EXPECTED_SPANS) + requires resolved_by_zone key parity +
+# lifted_from_zone donor integrity. Widening a span is a deliberate paired edit:
+# EXPECTED_SPANS + cloned rows together. No-op on unpopulated shells.
+from zone_span_gate import check_crop as _zonespan_violations
+print("A45. region zone_span parity (expected span + resolved_by_zone key parity + donor integrity)")
+_zsp = _zonespan_violations(crop)
+print(f"  zone_span violations: {len(_zsp)}")
+for m in _zsp:
+    fail(f"zone-span: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual

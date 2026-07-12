@@ -25,7 +25,8 @@ def stale_crop(slug="alpha"):
                           "resolved_by_zone": {"8": copy.deepcopy(DONOR_ROW),
                                                 "9": copy.deepcopy(DONOR_ROW)}},
     }
-    return {"slug": slug, "regions": regions}
+    return {"slug": slug, "verification_status": {"status": "verified_gs_arc"},
+            "regions": regions}
 
 fails = []
 def check(name, cond):
@@ -96,6 +97,24 @@ check("present chill band skipped (ca_south_coast z11)",
 check("chill clone is a copy not a reference",
       cops["$.region_chill_delivered.low_desert_az.10"]["value"]
       is not data2["region_chill_delivered"]["low_desert_az"]["9"])
+
+# 8. Uncertified crop is SKIPPED entirely (no span/row ops) -- shells carry empty-calendar
+#    cells that would trip A32 if cloned; they are widened only when authored + certified.
+shell = stale_crop("shell")
+shell["verification_status"] = {"status": "shell"}  # not verified_gs_arc
+check("uncertified crop emits no ops",
+      build_widen_ops({"crops": [shell]}) == [])
+# a certified crop in the SAME batch still gets widened (skip is per-crop, not all-or-nothing).
+mixed = {"crops": [shell, stale_crop("cert")]}
+mixed_paths = {o["json_path"] for o in build_widen_ops(mixed)}
+check("certified crop in mixed batch still widened",
+      any(".slug=='cert'" in p for p in mixed_paths))
+check("uncertified crop in mixed batch untouched",
+      not any(".slug=='shell'" in p for p in mixed_paths))
+# a crop with NO verification_status key is treated as uncertified (skipped).
+noskey = stale_crop("nostatus"); noskey.pop("verification_status")
+check("missing verification_status -> skipped",
+      build_widen_ops({"crops": [noskey]}) == [])
 
 if fails:
     print(f"\n{len(fails)} test(s) FAILED"); sys.exit(1)

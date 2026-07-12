@@ -48,7 +48,15 @@ DONORS = {
 
 
 def check_crop(crop):
-    """A45: expected span + span<->resolved_by_zone parity + donor integrity."""
+    """A45: expected span + span<->resolved_by_zone parity + donor integrity.
+
+    Enforced on CERTIFIED crops only (the same certified-only model gate_all uses):
+    uncertified shells legitimately carry narrow / unfilled spans until they are
+    authored + certified, at which point the full EXPECTED_SPANS is required. The
+    widen builder skips shells for the same reason (cloning their empty cells would
+    trip A32), so exempting them here keeps gate and builder in agreement."""
+    if (crop.get("verification_status") or {}).get("status") != "verified_gs_arc":
+        return []
     out = []
     slug = crop.get("slug", "?")
     for rid, cell in (crop.get("regions") or {}).items():

@@ -33,6 +33,14 @@ def build_widen_ops(data):
     normalized shape. Idempotent: widened input -> []."""
     ops = []
     for crop in data.get("crops", []):
+        # Only widen CERTIFIED crops. Uncertified shells carry empty-calendar warm cells
+        # (unfilled placeholders) -- cloning those into the new zones would propagate empty
+        # frost_anchored cells and trip A32 (calendar-presence). Shells are exempt from the
+        # cert suite until authored (same rule gate_all uses), and the app unions zone_spans
+        # across crops, so the new zones still resolve from the certified roster. A shell
+        # picks up the full span + filled cells when it is authored + certified.
+        if (crop.get("verification_status") or {}).get("status") != "verified_gs_arc":
+            continue
         slug = crop.get("slug")
         for rid, cell in (crop.get("regions") or {}).items():
             rbz = cell.get("resolved_by_zone") or {}

@@ -20,7 +20,9 @@ def make_crop():
             "resolved_by_zone": {z: {"plant_out": "Mar 1 - Mar 21",
                                      "lifted_from_zone": None} for z in span},
         }
-    return {"slug": "synthetic", "regions": regions}
+    return {"slug": "synthetic",
+            "verification_status": {"status": "verified_gs_arc"},
+            "regions": regions}
 
 fails = []
 def check(name, cond):
@@ -84,6 +86,15 @@ c = make_crop()
 c["regions"]["warm_arid"]["resolved_by_zone"] = {}
 c["regions"]["warm_arid"]["zone_span"] = []
 check("empty shell tolerated", not any("warm_arid" in v for v in check_crop(c)))
+
+# 11b. Uncertified crop is EXEMPT: a shell with a stale/narrow span does not bounce
+#      (enforced on the certified roster only, matching gate_all). It IS flagged once certified.
+c = make_crop()
+c["regions"]["low_desert_az"]["zone_span"] = ["9"]  # stale
+c["verification_status"] = {"status": "shell"}
+check("uncertified crop exempt from A45", check_crop(c) == [])
+c.pop("verification_status")
+check("missing verification_status exempt", check_crop(c) == [])
 
 # 12. SWEEP ACCEPTANCE: every Tier-1 gap from the source report is covered.
 TIER1 = [("AZ", "10", "low_desert_az"), ("HI", "12", "hawaii_tropical"),
