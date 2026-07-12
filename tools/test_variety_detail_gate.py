@@ -10,7 +10,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from variety_detail_gate import (in_scope, variety_violations, variety_warnings, coverage_report)
+from variety_detail_gate import (archetype, in_scope, variety_violations, variety_warnings, coverage_report)
 
 REQUIRED = ("id", "name", "maturity_class", "seed_type", "seed_color", "seed_size",
             "plant_habit", "primary_use", "confidence_tier", "note_beginner", "note_seasoned", "sources")
@@ -37,8 +37,6 @@ _navy = variety(id="navy", name="Navy", days_to_maturity=85, maturity_class="ear
 CLEAN = crop([variety(), _navy])
 assert variety_violations(CLEAN) == [], variety_violations(CLEAN)
 assert variety_warnings(CLEAN) == [], variety_warnings(CLEAN)
-
-from variety_detail_gate import archetype
 
 def tvar(**over):
     v = {"id": "golden-delicious", "name": "Golden Delicious", "maturity_class": "mid",
@@ -111,6 +109,47 @@ assert any("bloom" in w.lower() for w in variety_warnings(c_incoh)), variety_war
 
 # the real monotonic ladder (early low-start .. late high-start) -> no warning
 assert variety_warnings(TREE_CLEAN) == [], variety_warnings(TREE_CLEAN)
+
+def pvar(**over):
+    v = {"id": "super-star", "name": "Super Star", "maturity_class": "mid", "is_reference": True,
+         "confidence_tier": "T1", "note_beginner": "b", "note_seasoned": "s", "sources": ["tamu_agrilife"],
+         "days_to_maturity": 105, "day_length_type": "intermediate_day", "use": "sweet all-purpose"}
+    v.update(over)
+    return v
+
+def pcrop(varieties, slug="onion"):
+    return {"slug": slug, "variety_archetype": "photoperiod_annual", "days_to_maturity": [90, 120],
+            "varieties": {"recommended": varieties}}
+
+_wallawalla = pvar(id="walla-walla", name="Walla Walla", day_length_type="long_day",
+                   days_to_maturity=110, use="sweet fresh-eating", is_reference=False)
+
+# dispatch
+assert archetype(pcrop([pvar()])) == "photoperiod_annual"
+
+# clean photoperiod crop -> no violations
+PP_CLEAN = pcrop([pvar(), _wallawalla])
+assert variety_violations(PP_CLEAN) == [], variety_violations(PP_CLEAN)
+
+# photoperiod does NOT require bean traits or tree fields
+assert not any("seed_type" in v or "bloom_group" in v for v in variety_violations(PP_CLEAN)), variety_violations(PP_CLEAN)
+
+# bad day_length_type enum -> violation
+assert any("day_length_type" in v for v in variety_violations(pcrop([pvar(day_length_type="all_day"), _wallawalla])))
+
+# missing required photoperiod field (day_length_type / use) -> violation
+for f in ("day_length_type", "use"):
+    v = pvar(); del v[f]
+    assert any(f in x for x in variety_violations(pcrop([v, _wallawalla]))), (f, variety_violations(pcrop([v, _wallawalla])))
+
+# photoperiod IS a DTM archetype: missing DTM -> violation; absurd DTM (violates [7,400]) -> violation
+v = pvar(); del v["days_to_maturity"]
+assert any("days_to_maturity" in x for x in variety_violations(pcrop([v, _wallawalla])))
+assert any("days_to_maturity" in x for x in variety_violations(pcrop([pvar(days_to_maturity=850), _wallawalla])))
+
+# class/DTM coherence warning applies to photoperiod too (fastest labeled 'late')
+fast_late = pvar(id="q", name="Q", days_to_maturity=80, maturity_class="late", is_reference=False)
+assert any("late" in w for w in variety_warnings(pcrop([pvar(), fast_late]))), variety_warnings(pcrop([pvar(), fast_late]))
 
 # 0. off-scope crop (no maturity_class anywhere) -> silent, even with junk
 off = {"slug": "bell-pepper", "days_to_maturity": [60, 90],

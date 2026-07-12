@@ -47,12 +47,21 @@ COMMON_ENUMS = (("maturity_class", MATURITY_CLASS), ("confidence_tier", CONFIDEN
 ANNUAL_ENUMS = (("seed_type", SEED_TYPE), ("seed_size", SEED_SIZE),
                 ("plant_habit", PLANT_HABIT), ("primary_use", PRIMARY_USE))
 TREE_ENUMS = (("bloom_group", BLOOM_GROUP),)
+# photoperiod_annual (onion) archetype
+DAY_LENGTH = {"long_day", "intermediate_day", "short_day"}
+PHOTOPERIOD_TRAITS = ("day_length_type", "use")
+PHOTOPERIOD_ENUMS = (("day_length_type", DAY_LENGTH),)
+
+# archetype dispatch: required trait block + enum block per archetype; DTM_ARCHETYPES carry days_to_maturity
+ARCHETYPE_TRAITS = {"annual_dtm": ANNUAL_TRAITS, "photoperiod_annual": PHOTOPERIOD_TRAITS, "tree_fruit": TREE_TRAITS}
+ARCHETYPE_ENUMS = {"annual_dtm": ANNUAL_ENUMS, "photoperiod_annual": PHOTOPERIOD_ENUMS, "tree_fruit": TREE_ENUMS}
+DTM_ARCHETYPES = ("annual_dtm", "photoperiod_annual")
 
 
 def archetype(crop):
     """Crop declares its variety archetype; absence defaults to annual_dtm (dry-bean stays untouched)."""
     a = crop.get("variety_archetype")
-    return a if a in ("annual_dtm", "tree_fruit") else "annual_dtm"
+    return a if a in ("annual_dtm", "photoperiod_annual", "tree_fruit") else "annual_dtm"
 
 
 def _variety_objs(crop):
@@ -81,8 +90,8 @@ def variety_violations(crop):
     slug = crop.get("slug", "?")
     arch = archetype(crop)
     season_only = dtm_empty(crop)
-    required = COMMON_CORE + (TREE_TRAITS if arch == "tree_fruit" else ANNUAL_TRAITS)
-    enums = COMMON_ENUMS + (TREE_ENUMS if arch == "tree_fruit" else ANNUAL_ENUMS)
+    required = COMMON_CORE + ARCHETYPE_TRAITS[arch]
+    enums = COMMON_ENUMS + ARCHETYPE_ENUMS[arch]
     vars_ = _variety_objs(crop)
     ids, ref_count = [], 0
     for x in vars_:
@@ -103,9 +112,9 @@ def variety_violations(crop):
             V.append(f"{slug}/{nm}: is_reference {ir!r} must be a bool")
         elif ir:
             ref_count += 1
-        if arch == "annual_dtm":
-            V += _annual_dtm_checks(slug, nm, x, season_only)
-        else:
+        if arch in DTM_ARCHETYPES:
+            V += _dtm_checks(slug, nm, x, season_only)
+        elif arch == "tree_fruit":
             V += _tree_checks(slug, nm, x)
     if ref_count != 1:
         V.append(f"{slug}: exactly one variety must have is_reference true (found {ref_count})")
@@ -115,8 +124,8 @@ def variety_violations(crop):
     return V
 
 
-def _annual_dtm_checks(slug, nm, x, season_only):
-    """days_to_maturity presence/int/[7,400] for the annual archetype (unchanged behavior)."""
+def _dtm_checks(slug, nm, x, season_only):
+    """days_to_maturity presence/int/[7,400] for the DTM archetypes (annual_dtm + photoperiod_annual)."""
     V = []
     dtm = x.get("days_to_maturity")
     if dtm is None:
