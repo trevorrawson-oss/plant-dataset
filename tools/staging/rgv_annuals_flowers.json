@@ -1,0 +1,4376 @@
+{
+  "cosmos": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -14,
+            "window_days": 14,
+            "synthesis_note_seasoned": "Optional early-color indoor start about 2 weeks before the spring set-out; Cosmos is a heat-tolerant warm-season annual so direct sowing after the Valley's rare late-February frost date works just as well. Cosmos is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Cosmos's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Cosmos RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Spring set-out is placed in early March, shortly after the Valley's rare-frost date (~late February); a second, fall set-out is placed in early October. Cosmos is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Cosmos's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Cosmos RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 60 days from the earliest spring set-out.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Cosmos blooms right through the Valley's hot summer with no heat pause (mirroring its own fl_peninsula and Southeast/Gulf cells, which show continuous summer bloom for this heat-tolerant annual); bloom is shown continuing to the end of the calendar year.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "spring_fall_succession",
+        "track": "succession",
+        "interval_weeks": 2,
+        "max_successions": 12,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 70,
+            "synthesis_note_seasoned": "For continuous bloom, sow a fresh batch every 2 to 3 weeks from the spring set-out through midsummer; Cosmos thrives in Valley summer heat, so there is no midsummer pause (conservative placement, mirroring the crop's own warm-region succession pattern).",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom about 60 days from each sowing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Blooms continue through the Valley summer with no heat pause.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      },
+      "10": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/cosmos/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, plant Cosmos in early March, shortly after the Valley's rare late-February frost date, and again in early October for a second flush. Unlike cool-season flowers, Cosmos loves heat, so it keeps blooming right through the brutal Valley summer with no need to stop planting or wait for bloom. Cosmos does not have its own Rio Grande Valley planting chart from Texas A&M AgriLife, so this window is a conservative placement built from its heat-tolerant, warm-season nature and the general frost-free Valley season, not a source-stated RGV date.",
+    "region_notes_seasoned": "Cosmos is not covered in either TAMU AgriLife RGV vegetable planting table (those address vegetables, not ornamental annuals), so this cell is CONSERVATIVE: authored from Cosmos's thermal class (warm-season, heat-tolerant, no heat pause per its own fl_peninsula and Southeast/Gulf cells) plus the general TAMU AgriLife frost-free Valley season model, not a crop-specific TAMU-stated RGV date. Spring set-out is placed in early March, just after the Valley's rare late-February frost date; a second set-out follows in early October. Bloom is continuous through the hot Valley summer, matching the shape of Cosmos's own frost-free-region cells elsewhere in this dataset. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "marigold": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -14,
+            "window_days": 14,
+            "synthesis_note_seasoned": "Optional early-color indoor start about 2 weeks before the spring set-out; Marigold is a heat-tolerant warm-season annual so direct sowing after the Valley's rare late-February frost date works just as well. Marigold is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Marigold's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Marigold RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Spring set-out is placed in early March, shortly after the Valley's rare-frost date (~late February); a second, fall set-out is placed in early October. Marigold is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Marigold's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Marigold RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 60 days from the earliest spring set-out.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Marigold blooms right through the Valley's hot summer with no heat pause (mirroring its own fl_peninsula and Southeast/Gulf cells, which show continuous summer bloom for this heat-tolerant annual); bloom is shown continuing to the end of the calendar year.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "spring_fall_succession",
+        "track": "succession",
+        "interval_weeks": 2,
+        "max_successions": 12,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 70,
+            "synthesis_note_seasoned": "For continuous bloom, sow a fresh batch every 2 to 3 weeks from the spring set-out through midsummer; Marigold thrives in Valley summer heat, so there is no midsummer pause (conservative placement, mirroring the crop's own warm-region succession pattern).",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom about 60 days from each sowing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Blooms continue through the Valley summer with no heat pause.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+            "verified": "2026-06-29"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      },
+      "10": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/marigolds/",
+            "verified": "2026-06-29"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, plant Marigold in early March, shortly after the Valley's rare late-February frost date, and again in early October for a second flush. Unlike cool-season flowers, Marigold loves heat, so it keeps blooming right through the brutal Valley summer with no need to stop planting or wait for bloom. Marigold does not have its own Rio Grande Valley planting chart from Texas A&M AgriLife, so this window is a conservative placement built from its heat-tolerant, warm-season nature and the general frost-free Valley season, not a source-stated RGV date.",
+    "region_notes_seasoned": "Marigold is not covered in either TAMU AgriLife RGV vegetable planting table (those address vegetables, not ornamental annuals), so this cell is CONSERVATIVE: authored from Marigold's thermal class (warm-season, heat-tolerant, no heat pause per its own fl_peninsula and Southeast/Gulf cells) plus the general TAMU AgriLife frost-free Valley season model, not a crop-specific TAMU-stated RGV date. Spring set-out is placed in early March, just after the Valley's rare late-February frost date; a second set-out follows in early October. Bloom is continuous through the hot Valley summer, matching the shape of Marigold's own frost-free-region cells elsewhere in this dataset. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "sunflower": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -14,
+            "window_days": 14,
+            "synthesis_note_seasoned": "Optional early-color indoor start about 2 weeks before the spring set-out; Sunflower is a heat-tolerant warm-season annual so direct sowing after the Valley's rare late-February frost date works just as well. Sunflower is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Sunflower's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Sunflower RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Spring set-out is placed in early March, shortly after the Valley's rare-frost date (~late February); a second, fall set-out is placed in early October. Sunflower is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Sunflower's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Sunflower RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 60 days from the earliest spring set-out.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Sunflower blooms right through the Valley's hot summer with no heat pause (mirroring its own fl_peninsula and Southeast/Gulf cells, which show continuous summer bloom for this heat-tolerant annual); bloom is shown continuing to the end of the calendar year.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "spring_fall_succession",
+        "track": "succession",
+        "interval_weeks": 2,
+        "max_successions": 12,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 70,
+            "synthesis_note_seasoned": "For continuous bloom, sow a fresh batch every 2 to 3 weeks from the spring set-out through midsummer; Sunflower thrives in Valley summer heat, so there is no midsummer pause (conservative placement, mirroring the crop's own warm-region succession pattern).",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom about 60 days from each sowing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Blooms continue through the Valley summer with no heat pause.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+            "verified": "2026-06-29"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      },
+      "10": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sunflowers/",
+            "verified": "2026-06-29"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, plant Sunflower in early March, shortly after the Valley's rare late-February frost date, and again in early October for a second flush. Unlike cool-season flowers, Sunflower loves heat, so it keeps blooming right through the brutal Valley summer with no need to stop planting or wait for bloom. Sunflower does not have its own Rio Grande Valley planting chart from Texas A&M AgriLife, so this window is a conservative placement built from its heat-tolerant, warm-season nature and the general frost-free Valley season, not a source-stated RGV date.",
+    "region_notes_seasoned": "Sunflower is not covered in either TAMU AgriLife RGV vegetable planting table (those address vegetables, not ornamental annuals), so this cell is CONSERVATIVE: authored from Sunflower's thermal class (warm-season, heat-tolerant, no heat pause per its own fl_peninsula and Southeast/Gulf cells) plus the general TAMU AgriLife frost-free Valley season model, not a crop-specific TAMU-stated RGV date. Spring set-out is placed in early March, just after the Valley's rare late-February frost date; a second set-out follows in early October. Bloom is continuous through the hot Valley summer, matching the shape of Sunflower's own frost-free-region cells elsewhere in this dataset. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "zinnia": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas_south_cal"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -14,
+            "window_days": 14,
+            "synthesis_note_seasoned": "Optional early-color indoor start about 2 weeks before the spring set-out; Zinnia is a heat-tolerant warm-season annual so direct sowing after the Valley's rare late-February frost date works just as well. Zinnia is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Zinnia's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Zinnia RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Spring set-out is placed in early March, shortly after the Valley's rare-frost date (~late February); a second, fall set-out is placed in early October. Zinnia is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental annuals). This cell is a CONSERVATIVE placement built from Zinnia's thermal class (a warm-season, heat-tolerant annual) plus the general TAMU AgriLife frost-free Valley season model, not a stated Zinnia RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 60 days from the earliest spring set-out.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Zinnia blooms right through the Valley's hot summer with no heat pause (mirroring its own fl_peninsula and Southeast/Gulf cells, which show continuous summer bloom for this heat-tolerant annual); bloom is shown continuing to the end of the calendar year.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "spring_fall_succession",
+        "track": "succession",
+        "interval_weeks": 2,
+        "max_successions": 12,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 70,
+            "synthesis_note_seasoned": "For continuous bloom, sow a fresh batch every 2 to 3 weeks from the spring set-out through midsummer; Zinnia thrives in Valley summer heat, so there is no midsummer pause (conservative placement, mirroring the crop's own warm-region succession pattern).",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom about 60 days from each sowing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Blooms continue through the Valley summer with no heat pause.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas_south_cal"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas_south_cal": {
+                "url": "https://ask.ifas.ufl.edu/publication/EP452",
+                "verified": "2026-06-15"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas_south_cal"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas_south_cal": {
+            "url": "https://ask.ifas.ufl.edu/publication/EP452",
+            "verified": "2026-06-15"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      },
+      "10": {
+        "plant_out": "Mar 1 - Mar 22, Oct 1 - Oct 22",
+        "start_indoors": "Feb 15 - Mar 1",
+        "harvest": "Apr 30 - Dec 31",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 22",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas_south_cal"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas_south_cal": {
+            "url": "https://ask.ifas.ufl.edu/publication/EP452",
+            "verified": "2026-06-15"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, plant Zinnia in early March, shortly after the Valley's rare late-February frost date, and again in early October for a second flush. Unlike cool-season flowers, Zinnia loves heat, so it keeps blooming right through the brutal Valley summer with no need to stop planting or wait for bloom. Zinnia does not have its own Rio Grande Valley planting chart from Texas A&M AgriLife, so this window is a conservative placement built from its heat-tolerant, warm-season nature and the general frost-free Valley season, not a source-stated RGV date.",
+    "region_notes_seasoned": "Zinnia is not covered in either TAMU AgriLife RGV vegetable planting table (those address vegetables, not ornamental annuals), so this cell is CONSERVATIVE: authored from Zinnia's thermal class (warm-season, heat-tolerant, no heat pause per its own fl_peninsula and Southeast/Gulf cells) plus the general TAMU AgriLife frost-free Valley season model, not a crop-specific TAMU-stated RGV date. Spring set-out is placed in early March, just after the Valley's rare late-February frost date; a second set-out follows in early October. Bloom is continuous through the hot Valley summer, matching the shape of Zinnia's own frost-free-region cells elsewhere in this dataset. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "basil": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "spring",
+        "track": "beginner",
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -28,
+            "window_days": 14,
+            "synthesis_note_seasoned": "Start indoors about 4 weeks before the spring set-out. Basil is not in either TAMU RGV vegetable planting table. This cell is a CONSERVATIVE placement built from basil's thermal class (a warm-season, frost-tender herb prone to downy mildew in humid heat) plus the general TAMU AgriLife frost-free Valley season model, not a stated basil RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Spring set-out placed in early March, shortly after the Valley's rare late-February frost date. Basil is not in either TAMU RGV vegetable planting table. This cell is a CONSERVATIVE placement built from basil's thermal class (a warm-season, frost-tender herb prone to downy mildew in humid heat) plus the general TAMU AgriLife frost-free Valley season model, not a stated basil RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 30,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First harvest about 30 days after set-out.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Basil's own fl_peninsula cell shows a mid-summer season_over gap (not a heat_pause) driven by downy mildew pressure in peak humidity; this cell mirrors that shape conservatively for the Valley's similarly hot, humid summer.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "fall",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 30,
+            "synthesis_note_seasoned": "Fall set-out placed in mid-September into mid-October, as the peak summer rains and downy-mildew pressure ease. Basil is not in either TAMU RGV vegetable planting table. This cell is a CONSERVATIVE placement built from basil's thermal class (a warm-season, frost-tender herb prone to downy mildew in humid heat) plus the general TAMU AgriLife frost-free Valley season model, not a stated basil RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 30,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First fall harvest about 30 days after set-out.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Fall harvest continues through the mild Valley winter; basil is frost-tender but the Valley rarely if ever frosts.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 3,
+        "label": "spring_succession",
+        "track": "succession",
+        "interval_weeks": 3,
+        "max_successions": 3,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 60,
+            "synthesis_note_seasoned": "Succession sowings every 3 weeks through the spring window keep young, tender leaves coming before the summer downy-mildew gap.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 30,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First harvest about 30 days after each sowing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Ends as the summer mildew gap approaches.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                "verified": "2026-06-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Mar 1 - Mar 22, Sep 15 - Oct 15",
+        "start_indoors": "Feb 1 - Feb 15",
+        "harvest": "Apr 1 - Jun 30, Nov 1 - Dec 31",
+        "harvest_start": "Apr 1",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 15",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://edis.ifas.ufl.edu/publication/VH021",
+            "verified": "2026-06-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 11
+      },
+      "10": {
+        "plant_out": "Mar 1 - Mar 22, Sep 15 - Oct 15",
+        "start_indoors": "Feb 1 - Feb 15",
+        "harvest": "Apr 1 - Jun 30, Nov 1 - Dec 31",
+        "harvest_start": "Apr 1",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Oct 15",
+        "calendar": [
+          "season_over",
+          "indoors",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://edis.ifas.ufl.edu/publication/VH021",
+            "verified": "2026-06-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 11
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow basil in two arms: spring (set out in early March, shortly after the Valley's rare late-February frost date) and fall (set out mid-September into mid-October). Skip planting new basil in the peak of summer: the Valley's heat and humidity bring on a leaf disease called downy mildew, so older plants decline in July and August even though it never frosts here. Basil does not have its own Rio Grande Valley planting chart from Texas A&M AgriLife, so this window is a conservative placement built from its thermal class and general frost-free Valley timing, not a source-stated RGV date. Water at the base of the plant, never overhead, and look for mildew-resistant varieties.",
+    "region_notes_seasoned": "Basil is not covered in either TAMU AgriLife RGV vegetable planting table, so this cell is CONSERVATIVE: authored from basil's thermal class (a warm-season, frost-tender herb prone to downy mildew in humid heat) plus the general TAMU AgriLife frost-free Valley season model, mirroring the season_over (not heat_pause) summer gap already authored on basil's own fl_peninsula cell for the same disease-driven reason. Spring set-out is placed in early March, just after the Valley's rare late-February frost date, with harvest running into June; a fall set-out follows mid-September into mid-October as peak-summer humidity eases, with harvest continuing through the mild Valley winter. July and August are a genuine planting and quality gap here, not a frost gap: the Valley's heat and humidity strongly favor basil downy mildew. Windows are authored identically for zones 9 and 10."
+  },
+  "borage": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "ncsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Borage). Borage is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Borage's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Borage RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 56,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 8 weeks from the earliest set-out date, per Borage's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 4,
+        "max_successions": 9,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 4 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 56,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 2
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/borago-officinalis/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 2
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Borage in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Borage is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Borage from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Borage in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Borage (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Borage date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "calendula": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "usu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Calendula). Calendula is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Calendula's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Calendula RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "usu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 49,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 7 weeks from the earliest set-out date, per Calendula's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "usu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "usu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 3,
+        "max_successions": 12,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 3 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "usu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 49,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "usu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "usu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "usu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "usu_ext": {
+            "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+            "verified": "2026-06-30"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "usu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "usu_ext": {
+            "url": "https://extension.usu.edu/yardandgarden/research/calendula-in-the-garden",
+            "verified": "2026-06-30"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Calendula in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Calendula is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Calendula from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Calendula in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Calendula (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Calendula date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "chamomile": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uwi_hort"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Chamomile). Chamomile is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Chamomile's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Chamomile RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uwi_hort"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uwi_hort": {
+                "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 56,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 8 weeks from the earliest set-out date, per Chamomile's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "uwi_hort"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uwi_hort": {
+                "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "uwi_hort"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uwi_hort": {
+                "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 4,
+        "max_successions": 9,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 4 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "uwi_hort"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uwi_hort": {
+                "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 56,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "uwi_hort"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uwi_hort": {
+                "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "uwi_hort"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uwi_hort": {
+                "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uwi_hort"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uwi_hort": {
+            "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 2
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uwi_hort"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uwi_hort": {
+            "url": "https://hort.extension.wisc.edu/articles/chamomile-matricaria-chamomilla/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 2
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Chamomile in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Chamomile is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Chamomile from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Chamomile in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Chamomile (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Chamomile date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "nasturtium": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Nasturtium). Nasturtium is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Nasturtium's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Nasturtium RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 56,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 8 weeks from the earliest set-out date, per Nasturtium's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 2,
+        "max_successions": 12,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 2 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 56,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+                "verified": "2026-06-29"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+            "verified": "2026-06-29"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/nasturtiums/",
+            "verified": "2026-06-29"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Nasturtium in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Nasturtium is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Nasturtium from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Nasturtium in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Nasturtium (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Nasturtium date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "sweet-alyssum": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Sweet alyssum). Sweet alyssum is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Sweet alyssum's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Sweet alyssum RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 42,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 6 weeks from the earliest set-out date, per Sweet alyssum's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 3,
+        "max_successions": 11,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 3 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 42,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 1 - Feb 28",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Feb 28",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/sweet-alyssum/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Sweet alyssum in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Sweet alyssum is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Sweet alyssum from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Sweet alyssum in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Sweet alyssum (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Sweet alyssum date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "sweet-pea": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "ncsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Sweet pea). Sweet pea is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Sweet pea's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Sweet pea RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 77,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 11 weeks from the earliest set-out date, per Sweet pea's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -21,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Sweet pea is typically started indoors a few weeks before set-out; placed here conservatively ahead of the Oct 1 - Nov 15 set-out window.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 3,
+        "max_successions": 3,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 3 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 77,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Sep 3 - Sep 24",
+        "harvest": "Jan 1 - Mar 15",
+        "harvest_start": "Jan 1",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "plant",
+          "plant",
+          "growing"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Sep 3 - Sep 24",
+        "harvest": "Jan 1 - Mar 15",
+        "harvest_start": "Jan 1",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "plant",
+          "plant",
+          "growing"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/lathyrus-odoratus/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Sweet pea in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Sweet pea is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Sweet pea from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Sweet pea in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Sweet pea (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Sweet pea date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "viola": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "clemson_hgic"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Direct-sown/set out Oct 1 - Nov 15 in the Rio Grande Valley, a conservative cool-season placement (no crop-specific RGV table row exists for Viola). Viola is not in either TAMU RGV vegetable planting table (those cover vegetables, not ornamental flowers/herbs). This cell is a CONSERVATIVE placement built from Viola's thermal class (a cool-season annual; RGV summer is a genuine off-season) plus the general TAMU AgriLife fall/winter Valley season model, not a stated Viola RGV planting date.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 21,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom conservatively placed about 3 weeks from the earliest set-out date, per Viola's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter; the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop, not a frost gap.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": -21,
+            "window_days": 21,
+            "synthesis_note_seasoned": "Viola is typically started indoors a few weeks before set-out; placed here conservatively ahead of the Oct 1 - Nov 15 set-out window.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      },
+      {
+        "succession_id": 2,
+        "label": "fall_winter_succession",
+        "track": "succession",
+        "interval_weeks": 3,
+        "max_successions": 11,
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Succession sowings every 3 weeks through the Oct 1 - Nov 15 window keep fresh, vigorous plants coming through the cool season.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 21,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom per sowing, same lag as the main planting.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom continues through the mild Valley winter, ending before summer heat returns.",
+            "sources": [
+              "tamu_agrilife",
+              "clemson_hgic"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+                "verified": "2026-06-30"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Sep 10",
+        "harvest": "Dec 1 - Mar 15",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "clemson_hgic"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+            "verified": "2026-06-30"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Sep 10",
+        "harvest": "Dec 1 - Mar 15",
+        "harvest_start": "Dec 1",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "clemson_hgic"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/factsheet/pansies-and-johnny-jump-ups/",
+            "verified": "2026-06-30"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow Viola in the cool season, not summer: plant Oct 1 through Nov 15 and enjoy bloom through the mild Valley winter. It rarely if ever frosts here, so the challenge is heat, not cold. Viola is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter cool-season model as the rest of the Valley winter garden, not a crop-specific TAMU date. Skip planting Viola from spring through summer: Valley heat keeps it from growing and blooming well.",
+    "region_notes_seasoned": "Viola in the RGV runs on the winter-garden calendar: set out Oct 1 through Nov 15, with bloom running through the mild Valley winter. No RGV-specific TAMU table row exists for Viola (the TAMU RGV vegetable guides cover vegetables, not ornamental flowers/herbs), so this window mirrors the general TAMU AgriLife cool-season fall/winter model rather than a stated Viola date, conservatively placed. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded: the brutal Valley summer is a genuine planting and bloom gap for this cool-season crop. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+  },
+  "lemongrass": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "year_round": true,
+        "year_round_basis": "frost_free_climate_derived: the Rio Grande Valley is essentially frost-free (USDA zones 9-10), matching the frost-free basis lemongrass's own fl_peninsula and hawaii_tropical cells already use for year-round growth. Lemongrass is not in either TAMU RGV vegetable table (it is a tropical grass, not a TAMU-charted vegetable); this is a CONSERVATIVE climate-derived placement, not a stated RGV date.",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 365,
+            "synthesis_note_seasoned": "Lemongrass is a tropical grass that grows and can be planted year round in frost-free climates, per its own fl_peninsula and hawaii_tropical cells; the Valley's essentially frost-free winters support the same pattern conservatively.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/lemongrass/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First harvest of usable stalks roughly 90 days after planting a division.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/lemongrass/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Year-round cell: no seasonal end. Harvest continuously once established.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/lemongrass/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Year round",
+        "harvest": "Year round",
+        "harvest_start": "Year round",
+        "harvest_end": "Year round",
+        "first_plant_date": "Year round",
+        "last_plant_date": "Year round",
+        "calendar": [
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing"
+        ],
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/lemongrass/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null
+      },
+      "10": {
+        "plant_out": "Year round",
+        "harvest": "Year round",
+        "harvest_start": "Year round",
+        "harvest_end": "Year round",
+        "first_plant_date": "Year round",
+        "last_plant_date": "Year round",
+        "calendar": [
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing"
+        ],
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/lemongrass/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, lemongrass can be planted and harvested essentially any time of year: it is a tropical grass and the Valley is essentially frost-free. Lemongrass is not in either TAMU RGV vegetable planting table (it is not a TAMU-charted vegetable), so this year-round cell is a conservative placement built from the Valley's frost-free climate and lemongrass's own known behavior in other frost-free regions of this dataset, not a stated RGV date. Divide and pot up new starts any time; established clumps keep producing stalks continuously.",
+    "region_notes_seasoned": "Lemongrass is not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, climate-derived from the Valley's essentially frost-free winters (USDA zones 9-10) plus lemongrass's own fl_peninsula and hawaii_tropical cells, both of which already carry a year-round, frost-free basis for this tropical grass. No frost boundary and no heat pause apply, so growth and harvest are continuous. Windows are authored identically for zones 9 and 10, since the frost-free basis does not differentiate between them."
+  },
+  "mint": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 30,
+            "synthesis_note_seasoned": "Mint is a vigorous, cold-hardy spreading perennial; conservatively placed with a March establishment planting, mirroring mint's own hawaii_tropical cell. Mint is not in either TAMU RGV vegetable table, so this is a CONSERVATIVE placement built from its thermal class (a hardy, spreading perennial herb, largely year-round in frost-free climates) plus the general Valley frost-free season model.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 30,
+            "window_days": 0,
+            "synthesis_note_seasoned": "New divisions establish and are ready to harvest within about a month; established clumps are cut nearly year round.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Mint is cold-hardy and heat-tolerant with mulching, so harvest continues nearly year round in the frost-free Valley.",
+            "sources": [
+              "tamu_agrilife",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "uf_ifas": {
+                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Mar",
+        "harvest": "Jan - Dec",
+        "harvest_start": "Jan 1",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Mar 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Mar",
+        "harvest": "Jan - Dec",
+        "harvest_start": "Jan 1",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Mar 1",
+        "last_plant_date": "Mar 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "uf_ifas"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, mint grows nearly year round: it is a hardy, spreading perennial herb, and the Valley rarely if ever frosts. Establish new divisions or pots in March and harvest nearly continuously afterward. Mint is not in either TAMU RGV vegetable table, so this is a conservative placement built from mint's own known behavior in other frost-free regions of this dataset, not a stated RGV date. Grow mint in a container. It spreads aggressively and will take over a bed.",
+    "region_notes_seasoned": "Mint is not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, mirroring the near-year-round shape of mint's own fl_peninsula and hawaii_tropical cells (a single establishment month, harvest the rest of the year). March is placed as the establishment month for new divisions; established plantings are harvested nearly continuously in the Valley's essentially frost-free climate. Windows are authored identically for zones 9 and 10."
+  },
+  "chives": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "umn_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 59,
+            "synthesis_note_seasoned": "Chives are a cold-hardy allium that grows nearly year round in frost-free climates, mirroring the Jan-Feb establishment window on chives's own hawaii_tropical cell. Chives are not in either TAMU RGV vegetable table, so this is a CONSERVATIVE placement built from its thermal class (a hardy, clump-forming perennial allium) plus the general Valley frost-free season model.",
+            "sources": [
+              "tamu_agrilife",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "umn_ext": {
+                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 45,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First harvest a few weeks after establishment; established clumps are cut nearly year round.",
+            "sources": [
+              "tamu_agrilife",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "umn_ext": {
+                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Chives are cold-hardy and tolerate the Valley's mild winter well, so harvest continues most of the year.",
+            "sources": [
+              "tamu_agrilife",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "umn_ext": {
+                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Jan - Feb",
+        "harvest": "Mar - Dec",
+        "harvest_start": "Mar 1",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Jan 1",
+        "last_plant_date": "Feb 28",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "umn_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "umn_ext": {
+            "url": "https://extension.umn.edu/vegetables/growing-chives",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Jan - Feb",
+        "harvest": "Mar - Dec",
+        "harvest_start": "Mar 1",
+        "harvest_end": "Dec 31",
+        "first_plant_date": "Jan 1",
+        "last_plant_date": "Feb 28",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "umn_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "umn_ext": {
+            "url": "https://extension.umn.edu/vegetables/growing-chives",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, chives grow nearly year round: they are a cold-hardy allium, and the Valley rarely if ever frosts. Establish new plants in January and February and harvest nearly continuously afterward. Chives are not in either TAMU RGV vegetable table, so this is a conservative placement built from chives's own known behavior in other frost-free regions of this dataset, not a stated RGV date.",
+    "region_notes_seasoned": "Chives are not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, mirroring the near-year-round shape of chives's own hawaii_tropical cell (a Jan-Feb establishment window, harvest March through December). Windows are authored identically for zones 9 and 10, since chives's cold hardiness and the Valley's essentially frost-free climate do not differentiate between them."
+  },
+  "bee-balm": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "ncsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 30,
+            "synthesis_note_seasoned": "Bee balm is a herbaceous perennial that dies back to the crown after its spring bloom regardless of climate; this cell mirrors the Jan 15 - Feb 14 set-out window already on bee balm's own hawaii_tropical cell. Bee balm is not in either TAMU RGV vegetable table, so this is a CONSERVATIVE placement built from its thermal class (a hardy flowering perennial) plus the general Valley frost-free season model.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 45,
+            "window_days": 0,
+            "synthesis_note_seasoned": "First bloom in early spring, per bee balm's own known bloom timing.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom ends in late spring as the plant's own natural cycle moves to dieback, not because of Valley heat or frost.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Jan 15 - Feb 14",
+        "harvest": "Mar - May",
+        "harvest_start": "Mar 1",
+        "harvest_end": "May 31",
+        "first_plant_date": "Jan 15",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Jan 15 - Feb 14",
+        "harvest": "Mar - May",
+        "harvest_start": "Mar 1",
+        "harvest_end": "May 31",
+        "first_plant_date": "Jan 15",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/monarda-didyma/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, plant bee balm in mid-January into mid-February and expect bloom in early spring (March through May). Bee balm is a hardy perennial that dies back after its bloom regardless of climate, so the rest of the year is a genuine rest period for the plant, not a frost gap; it rarely if ever frosts in the Valley. Bee balm is not in either TAMU RGV vegetable table, so this is a conservative placement mirroring bee balm's own known behavior in other frost-free regions of this dataset, not a stated RGV date.",
+    "region_notes_seasoned": "Bee balm is not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, mirroring the shape of bee balm's own hawaii_tropical cell (set out mid-January into mid-February, bloom March through May, dieback the rest of the year), with the RGV-specific correction that the post-bloom rest is authored as season_over rather than cold_pause: the Valley is frost-free, and bee balm's dieback is a herbaceous-perennial life-cycle fact, not a frost response, even in bee balm's own frost-free hawaii_tropical cell. Windows are authored identically for zones 9 and 10."
+  },
+  "echinacea": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "ncsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "label": "primary",
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 28,
+            "synthesis_note_seasoned": "Echinacea is a herbaceous perennial with its own seasonal growth-and-dieback cycle regardless of climate; this cell mirrors the February set-out window already on echinacea's own hawaii_tropical cell. Echinacea is not in either TAMU RGV vegetable table, so this is a CONSERVATIVE placement built from its thermal class (a hardy flowering perennial) plus the general Valley frost-free season model.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/purple-coneflower/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Plants develop through spring and reach bloom by early summer, per echinacea's own known growth timing.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/purple-coneflower/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "plant_out",
+            "offset_days": 0,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Bloom runs through late summer, ending as the plant's own natural cycle moves toward winter dieback, not because of Valley frost.",
+            "sources": [
+              "tamu_agrilife",
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              },
+              "ncsu_ext": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/purple-coneflower/",
+                "verified": "2026-07-02"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Feb",
+        "harvest": "May - Sep",
+        "harvest_start": "May 1",
+        "harvest_end": "Sep 30",
+        "first_plant_date": "Feb 1",
+        "last_plant_date": "Feb 28",
+        "calendar": [
+          "season_over",
+          "plant",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Feb",
+        "harvest": "May - Sep",
+        "harvest_start": "May 1",
+        "harvest_end": "Sep 30",
+        "first_plant_date": "Feb 1",
+        "last_plant_date": "Feb 28",
+        "calendar": [
+          "season_over",
+          "plant",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          },
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+            "verified": "2026-07-02"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, plant echinacea in February; it develops through spring and blooms May through September. Echinacea is a hardy perennial with its own seasonal growth cycle, so the winter months are a genuine rest period for the plant, not a frost gap; it rarely if ever frosts in the Valley. Echinacea is not in either TAMU RGV vegetable table, so this is a conservative placement mirroring echinacea's own known behavior in other frost-free regions of this dataset, not a stated RGV date.",
+    "region_notes_seasoned": "Echinacea is not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, mirroring the shape of echinacea's own hawaii_tropical cell (set out in February, developing through spring, blooming May through September), with the RGV-specific correction that the winter rest is authored as season_over rather than cold_pause: the Valley is frost-free, and echinacea's winter dieback is a herbaceous-perennial life-cycle fact, not a frost response, even in echinacea's own frost-free hawaii_tropical cell. Windows are authored identically for zones 9 and 10."
+  }
+}
