@@ -1,0 +1,967 @@
+{
+  "grapefruit": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "container_or_balled_spring",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 200,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 430,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        },
+        "sources": [
+          "tamu_agrilife"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "The Rio Grande Valley fruits grapefruit reliably and at its best: this is the Valley's signature crop, and Texas commercial citrus is concentrated almost entirely here, roughly 70 percent grapefruit. Hard freezes are rare, and the long, hot subtropical summer banks abundant heat to sweeten deeply, low-acid fruit over its long hang from October into spring (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Grapefruit does great here. This is the Valley's most famous fruit tree, and the mild, almost frost-free winters and long hot summers are exactly what it needs for sweet, juicy fruit from fall into spring.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "heat_summer_basis": "high",
+        "bloom": "Mar - Apr",
+        "harvest_start": "Oct",
+        "harvest_end": "May",
+        "harvest": "Oct - May (holds and sweetens on the tree into late spring)",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "bloom",
+          "bloom",
+          "harvest",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley. An occasional hard freeze can reach into the high 20s°F and damage hanging fruit or a young tree, but most winters need no protection at all.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "The Rio Grande Valley fruits grapefruit reliably and at its best: this is the Valley's signature crop, and Texas commercial citrus is concentrated almost entirely here, roughly 70 percent grapefruit. Hard freezes are rare, and the long, hot subtropical summer banks abundant heat to sweeten deeply, low-acid fruit over its long hang from October into spring (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Grapefruit does great here. This is the Valley's most famous fruit tree, and the mild, almost frost-free winters and long hot summers are exactly what it needs for sweet, juicy fruit from fall into spring.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "heat_summer_basis": "high",
+        "bloom": "Mar - Apr",
+        "harvest_start": "Oct",
+        "harvest_end": "May",
+        "harvest": "Oct - May (holds and sweetens on the tree into late spring)",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "bloom",
+          "bloom",
+          "harvest",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley. An occasional hard freeze can reach into the high 20s°F and damage hanging fruit or a young tree, but most winters need no protection at all.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Grapefruit is the Rio Grande Valley's signature fruit tree. Winters are mild and almost never freeze, and the long hot summer makes the fruit deeply sweet. Harvest runs from October into spring, and fruit holds well on the tree the longer you leave it.",
+    "region_notes_seasoned": "The Rio Grande Valley is grapefruit's premier U.S. home outside peninsular Florida: Texas citrus acreage is concentrated almost entirely here, and grapefruit is roughly 70 percent of it. Essentially frost-free winters and long, intensely hot summers combine to bank ample heat for full sugar development in low-acid red grapefruit over a long hang, October into spring. Cold protection is a rare, occasional need, not a routine one.",
+    "min_winter_temp_f": [
+      28,
+      40
+    ],
+    "cold_basis_seasoned": "Valley winters rarely reach freezing, and a hard freeze reaching the high 20s°F, the point at which grapefruit fruit is damaged, is a rare, short-lived event in nearly all years (Texas A&M AgriLife Extension). Cold protection is the exception, not routine winter work.",
+    "cold_basis_beginner": "Winters here are mild and hard freezes are rare. On the rare cold night, cover young trees or hanging fruit; most winters need no protection at all.",
+    "heat_summer_basis": "high",
+    "heat_basis_seasoned": "The Valley's long, intensely hot subtropical summers bank abundant heat, more than enough to fully sweeten grapefruit over its long hang from October into spring; heat is never the limiting factor here. Humidity favors cosmetic rind issues such as rind blemishes, a cosmetic concern rather than a yield one.",
+    "heat_basis_beginner": "Summers here are long and very hot, plenty for sweet, well-ripened grapefruit. The humid air can leave a few cosmetic marks on the skin, but that does not hurt the fruit inside."
+  },
+  "orange-navel": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "container_or_balled_spring",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 210,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 300,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        },
+        "sources": [
+          "tamu_agrilife"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "The Rio Grande Valley fruits navel oranges reliably: winters are essentially frost-free, and the long, hot subtropical summer banks ample heat to fully sweeten and color the fruit. Oranges make up roughly 30 percent of the Valley's citrus acreage alongside grapefruit's 70 percent (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Navel oranges do well here. Winters are mild and almost never freeze, and the hot Valley summer ripens sweet, well-colored fruit from fall into the heart of winter.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "heat_summer_basis": "high",
+        "bloom": "Feb - Mar",
+        "harvest_start": "Oct",
+        "harvest_end": "Jan",
+        "harvest": "Oct - Jan (early to midseason navel, peak in the heart of winter)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley. An occasional hard freeze can reach into the high 20s°F and damage hanging fruit or a young tree, but most winters need no protection at all.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "The Rio Grande Valley fruits navel oranges reliably: winters are essentially frost-free, and the long, hot subtropical summer banks ample heat to fully sweeten and color the fruit. Oranges make up roughly 30 percent of the Valley's citrus acreage alongside grapefruit's 70 percent (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Navel oranges do well here. Winters are mild and almost never freeze, and the hot Valley summer ripens sweet, well-colored fruit from fall into the heart of winter.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "heat_summer_basis": "high",
+        "bloom": "Feb - Mar",
+        "harvest_start": "Oct",
+        "harvest_end": "Jan",
+        "harvest": "Oct - Jan (early to midseason navel, peak in the heart of winter)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley. An occasional hard freeze can reach into the high 20s°F and damage hanging fruit or a young tree, but most winters need no protection at all.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Navel oranges are one of the Rio Grande Valley's classic fruit trees. Winters are mild and almost never freeze, and harvest runs from October into January, the early part of the citrus season here.",
+    "region_notes_seasoned": "The Rio Grande Valley grows navel oranges reliably alongside its signature grapefruit: essentially frost-free winters and a long, intensely hot summer bank ample heat to sweeten and color the fruit fully. Harvest runs October into January, ahead of the Valley's later-season citrus. Cold protection is a rare, occasional need.",
+    "min_winter_temp_f": [
+      28,
+      40
+    ],
+    "cold_basis_seasoned": "Valley winters rarely reach freezing, and a hard freeze reaching the high 20s°F, the point at which navel fruit is damaged, is a rare, short-lived event in nearly all years (Texas A&M AgriLife Extension).",
+    "cold_basis_beginner": "Winters here are mild and hard freezes are rare. On the rare cold night, cover young trees or hanging fruit; most winters need no protection at all.",
+    "heat_summer_basis": "high",
+    "heat_basis_seasoned": "The Valley's long, intensely hot summers bank abundant heat, more than enough to fully sweeten and color a navel; heat is never the limiting factor here. Very hot bloom-time weather can drive some spring fruit-drop, so steady irrigation through bloom and fruit set helps hold the crop.",
+    "heat_basis_beginner": "Summers here are long and very hot, plenty for sweet, deeply colored navel oranges. Keep the tree watered well in spring, since very hot weather right at bloom time can drop some young fruit."
+  },
+  "mandarin-clementine": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "container_or_balled_spring",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 210,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 340,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        },
+        "sources": [
+          "tamu_agrilife"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "The Rio Grande Valley fruits mandarins and clementines reliably: winters are essentially frost-free, satsuma-type mandarin is the hardiest common citrus, and the long, hot subtropical summer banks ample heat for rich flavor and color (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Mandarins and clementines do great here. Winters are mild and almost never freeze, satsuma-type mandarins are the toughest citrus for an occasional cold snap, and the hot Valley summer makes for rich, sweet fruit.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "heat_summer_basis": "high",
+        "bloom": "Feb - Mar",
+        "harvest_start": "Oct",
+        "harvest_end": "Feb",
+        "harvest": "Oct - Feb (satsuma and clementine run earliest; later hybrids extend into February)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley. Satsuma-type mandarin can withstand cold into the high teens °F once fully dormant, but is damaged near 24°F in an early cold snap before full dormancy sets in, so an occasional December freeze is the one real risk (Texas A&M AgriLife Extension).",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "The Rio Grande Valley fruits mandarins and clementines reliably: winters are essentially frost-free, satsuma-type mandarin is the hardiest common citrus, and the long, hot subtropical summer banks ample heat for rich flavor and color (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Mandarins and clementines do great here. Winters are mild and almost never freeze, satsuma-type mandarins are the toughest citrus for an occasional cold snap, and the hot Valley summer makes for rich, sweet fruit.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "heat_summer_basis": "high",
+        "bloom": "Feb - Mar",
+        "harvest_start": "Oct",
+        "harvest_end": "Feb",
+        "harvest": "Oct - Feb (satsuma and clementine run earliest; later hybrids extend into February)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley. Satsuma-type mandarin can withstand cold into the high teens °F once fully dormant, but is damaged near 24°F in an early cold snap before full dormancy sets in, so an occasional December freeze is the one real risk (Texas A&M AgriLife Extension).",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Mandarins and clementines are an easy, reliable Rio Grande Valley fruit tree. Winters are mild and almost never freeze, and harvest runs from October into February, satsuma types first and later hybrids last.",
+    "region_notes_seasoned": "The Rio Grande Valley fruits mandarins and clementines reliably, and satsuma-type mandarin is the hardiest common citrus, tolerating cold that would damage grapefruit or lemon. Essentially frost-free winters and a long, hot summer bank ample heat for rich flavor and color. Harvest runs October into February, earliest types first and late hybrids extending the season.",
+    "min_winter_temp_f": [
+      28,
+      40
+    ],
+    "cold_basis_seasoned": "Valley winters rarely reach freezing. Satsuma-type mandarin, the hardiest common citrus, can withstand cold into the high teens °F once fully dormant, but an early cold snap before full dormancy, in the mid-20s°F, can still cause damage (Texas A&M AgriLife Extension). Even so, this is the most cold-tolerant citrus in the Valley lineup.",
+    "cold_basis_beginner": "Winters here are mild and hard freezes are rare. Mandarins and clementines handle cold better than most other citrus, but an early, hard cold snap in December can still hurt the tree before it has fully settled into winter.",
+    "heat_summer_basis": "high",
+    "heat_basis_seasoned": "The Valley's long, intensely hot summers bank abundant heat for excellent mandarin and clementine flavor and color; heat is never the limiting factor here. Very hot bloom-time weather can drive some spring fruit-drop, so steady irrigation through bloom and fruit set helps hold the crop.",
+    "heat_basis_beginner": "Summers here are long and very hot, plenty for sweet, richly colored mandarins and clementines. Keep the tree watered well in spring, since very hot weather right at bloom time can drop some young fruit."
+  },
+  "lemon": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "container_or_balled_spring",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 60,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 180,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 300,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        },
+        "sources": [
+          "tamu_agrilife"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Lemon is the most cold-tender common citrus, only marginal on much of the Gulf Coast, but the Rio Grande Valley's near-total absence of hard freezes lets it fruit reliably here. Multiple bloom flushes keep fruit setting through much of the year, with the main crop ripening fall into winter (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Lemon does well in the Valley, even though it is the most cold-sensitive citrus overall. Winters here are mild enough that it fruits reliably, and the tree can flower and set fruit in more than one flush through the year.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "bloom": "Feb - Apr",
+        "harvest_start": "Oct",
+        "harvest_end": "Feb",
+        "harvest": "Oct - Feb (main crop; scattered fruit can ripen nearly year-round from repeat bloom flushes)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley, which matters more for lemon than for any other citrus here: it is the most cold-tender of the common types. On the rare hard freeze, cover the tree or move a container lemon under cover for the night.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Lemon is the most cold-tender common citrus, only marginal on much of the Gulf Coast, but the Rio Grande Valley's near-total absence of hard freezes lets it fruit reliably here. Multiple bloom flushes keep fruit setting through much of the year, with the main crop ripening fall into winter (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Lemon does well in the Valley, even though it is the most cold-sensitive citrus overall. Winters here are mild enough that it fruits reliably, and the tree can flower and set fruit in more than one flush through the year.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "bloom": "Feb - Apr",
+        "harvest_start": "Oct",
+        "harvest_end": "Feb",
+        "harvest": "Oct - Feb (main crop; scattered fruit can ripen nearly year-round from repeat bloom flushes)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley, which matters more for lemon than for any other citrus here: it is the most cold-tender of the common types. On the rare hard freeze, cover the tree or move a container lemon under cover for the night.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Lemon fruits reliably in the Rio Grande Valley. Unlike on the Gulf Coast, where lemon is often just a marginal, freeze-risk crop, the Valley's mild winters let it produce well. It flowers more than once a year, so you may see fruit at different stages, with the main harvest from fall into winter.",
+    "region_notes_seasoned": "Lemon is the most cold-tender common citrus, and it is only marginal in colder parts of the Gulf South, but the Rio Grande Valley's near-total absence of hard freezes lets it fruit reliably. Repeat bloom flushes through spring keep fruit setting across much of the year, with the main crop ripening October into February. Heat is ample and never a limiting factor for lemon.",
+    "min_winter_temp_f": [
+      28,
+      40
+    ],
+    "cold_basis_seasoned": "Lemon is the most cold-tender common citrus: fruit and foliage damage in the high 20s°F, a threshold that Gulf Coast winters cross most years. The Rio Grande Valley rarely reaches that threshold, which is exactly why it fruits reliably here where it does not elsewhere in Texas (Texas A&M AgriLife Extension).",
+    "cold_basis_beginner": "Lemon is hurt by cold more easily than other citrus, but Valley winters are mild enough that this rarely matters. On the rare hard freeze, cover the tree or bring a container lemon indoors for the night."
+  },
+  "lime": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "container_or_balled_spring",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 60,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 180,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 300,
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+                "verified": "2026-07-13"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        },
+        "sources": [
+          "tamu_agrilife"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Lime is the most cold-tender common citrus, unsuitable or barely marginal through most of the Gulf South, but the Rio Grande Valley's near-total absence of hard freezes lets Persian lime fruit reliably here. Multiple bloom flushes keep fruit setting through much of the year, with the main crop ripening fall into winter (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Lime does well in the Valley, which is notable since it is the most cold-sensitive citrus of all. Grow Persian lime, the hardiest true lime; winters here are mild enough for it to fruit reliably, with flushes of fruit through much of the year.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "bloom": "Feb - Apr",
+        "harvest_start": "Oct",
+        "harvest_end": "Feb",
+        "harvest": "Oct - Feb (main crop; Persian lime can also set fruit through summer)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley, which matters more for lime than for any other citrus here: it is the most cold-tender of the common types, damaged by the lightest freezes elsewhere in Texas. On the rare hard freeze, cover the tree or move a container lime under cover for the night.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Most of the year (container or balled; spring ideal)",
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Lime is the most cold-tender common citrus, unsuitable or barely marginal through most of the Gulf South, but the Rio Grande Valley's near-total absence of hard freezes lets Persian lime fruit reliably here. Multiple bloom flushes keep fruit setting through much of the year, with the main crop ripening fall into winter (Texas A&M AgriLife Extension).",
+        "suitability_note_beginner": "Lime does well in the Valley, which is notable since it is the most cold-sensitive citrus of all. Grow Persian lime, the hardiest true lime; winters here are mild enough for it to fruit reliably, with flushes of fruit through much of the year.",
+        "min_winter_temp_f": [
+          28,
+          40
+        ],
+        "bloom": "Feb - Apr",
+        "harvest_start": "Oct",
+        "harvest_end": "Feb",
+        "harvest": "Oct - Feb (main crop; Persian lime can also set fruit through summer)",
+        "calendar": [
+          "harvest",
+          "bloom",
+          "bloom",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest"
+        ],
+        "frost_risk_note_seasoned": "Frost is rarely a practical concern in the Valley, which matters more for lime than for any other citrus here: it is the most cold-tender of the common types, damaged by the lightest freezes elsewhere in Texas. On the rare hard freeze, cover the tree or move a container lime under cover for the night.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Lime fruits reliably in the Rio Grande Valley. Elsewhere in Texas it is often too tender to grow outdoors at all, but the Valley's mild, nearly frost-free winters let a Persian lime thrive. It flowers more than once a year, with the main harvest from fall into winter.",
+    "region_notes_seasoned": "Lime is the most cold-tender common citrus, unsuitable or only a container crop through most of Texas, but the Rio Grande Valley's near-total absence of hard freezes lets Persian lime fruit reliably here. Repeat bloom flushes through spring keep fruit setting across much of the year, with the main crop ripening October into February. Heat is ample and never a limiting factor for lime.",
+    "min_winter_temp_f": [
+      28,
+      40
+    ],
+    "cold_basis_seasoned": "Lime is the most cold-tender common citrus: foliage and fruit damage in the high 20s°F, and wood dies outright in the harder freezes common across the rest of Texas. The Rio Grande Valley rarely reaches either threshold, which is exactly why lime fruits reliably here where it does not elsewhere in the state (Texas A&M AgriLife Extension).",
+    "cold_basis_beginner": "Lime is hurt by cold more easily than any other citrus, but Valley winters are mild enough that this rarely matters. On the rare hard freeze, cover the tree or bring a container lime indoors for the night."
+  }
+}
