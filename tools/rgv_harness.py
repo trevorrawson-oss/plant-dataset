@@ -60,6 +60,19 @@ def scratch_canonical(staged_cells, path):
     by = {c["slug"]: c for c in data["crops"]}
     for slug, cell in staged_cells.items():
         by[slug].setdefault("regions", {})["rgv"] = cell
+    # Splice the rgv chill band + provenance (a top-level promote-time addition). A3's perennial
+    # no-fruit split reads region_chill_delivered["rgv"][zone] for a survives_no_fruit tree cell;
+    # without it A3 flags "no delivered band -- cannot apply the no-fruit split". Injecting it here
+    # (from the Task-3 staging file, keyed by dotted json path) makes the scratch canonical faithful
+    # to the post-promote state so chill-gated trees gate correctly. No-op for annual cells.
+    band_path = os.path.join(HERE, "staging", "rgv_chill_band.json")
+    if os.path.exists(band_path):
+        for k, v in json.load(open(band_path, encoding="utf-8")).items():
+            parts = k.split(".")
+            if len(parts) == 2:
+                data.setdefault(parts[0], {})[parts[1]] = v
+            else:
+                data[parts[0]] = v
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, separators=(",", ":"), ensure_ascii=False)
     return path
