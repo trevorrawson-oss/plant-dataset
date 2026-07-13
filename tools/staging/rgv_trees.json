@@ -1634,14 +1634,14 @@
         "plant_out": null,
         "resolution_method": "perennial_precompute",
         "suitability": "unsuitable",
-        "suitability_note_seasoned": "The Rio Grande Valley is essentially frost-free and delivers close to zero winter chill in warm years, well short of pawpaw's roughly 400-hour dormancy-breaking requirement, per Texas A&M AgriLife Extension chill data. The Valley's long, intensely hot summers are also the opposite of the cool, humid, part-shade conditions pawpaw's native range provides. Unsuitable; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_seasoned": "The Rio Grande Valley is essentially frost-free and delivers close to zero winter chill in warm years, well short of pawpaw's roughly 400-hour dormancy-breaking requirement, per Texas A&M AgriLife Extension chill data. The Valley's long, intensely hot summers in open sun are also a poor match for the cool, shaded understory of pawpaw's native range. Unsuitable; grow fig, persimmon, pomegranate, or citrus instead.",
         "suitability_note_beginner": "Pawpaw needs real winter cold to break dormancy and a cooler, shadier summer than the Rio Grande Valley provides. It is not a workable crop here. Grow fig, persimmon, pomegranate, or citrus instead.",
         "bloom": null,
         "harvest_start": null,
         "harvest_end": null,
         "harvest": null,
         "calendar": [],
-        "frost_risk_note_seasoned": "Frost is not the limiting factor here; insufficient winter chill and the Valley's extreme summer heat and lack of shade/humidity are the binding constraints on pawpaw.",
+        "frost_risk_note_seasoned": "Frost is not the limiting factor here; insufficient winter chill and the Valley's extreme summer heat in open sun, lacking the shaded understory pawpaw needs, are the binding constraints.",
         "resolved_from": {
           "last_frost": null,
           "first_frost": null
@@ -1665,14 +1665,14 @@
         "plant_out": null,
         "resolution_method": "perennial_precompute",
         "suitability": "unsuitable",
-        "suitability_note_seasoned": "The Rio Grande Valley is essentially frost-free and delivers close to zero winter chill in warm years, well short of pawpaw's roughly 400-hour dormancy-breaking requirement, per Texas A&M AgriLife Extension chill data. The Valley's long, intensely hot summers are also the opposite of the cool, humid, part-shade conditions pawpaw's native range provides. Unsuitable; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_seasoned": "The Rio Grande Valley is essentially frost-free and delivers close to zero winter chill in warm years, well short of pawpaw's roughly 400-hour dormancy-breaking requirement, per Texas A&M AgriLife Extension chill data. The Valley's long, intensely hot summers in open sun are also a poor match for the cool, shaded understory of pawpaw's native range. Unsuitable; grow fig, persimmon, pomegranate, or citrus instead.",
         "suitability_note_beginner": "Pawpaw needs real winter cold to break dormancy and a cooler, shadier summer than the Rio Grande Valley provides. It is not a workable crop here. Grow fig, persimmon, pomegranate, or citrus instead.",
         "bloom": null,
         "harvest_start": null,
         "harvest_end": null,
         "harvest": null,
         "calendar": [],
-        "frost_risk_note_seasoned": "Frost is not the limiting factor here; insufficient winter chill and the Valley's extreme summer heat and lack of shade/humidity are the binding constraints on pawpaw.",
+        "frost_risk_note_seasoned": "Frost is not the limiting factor here; insufficient winter chill and the Valley's extreme summer heat in open sun, lacking the shaded understory pawpaw needs, are the binding constraints.",
         "resolved_from": {
           "last_frost": null,
           "first_frost": null
@@ -1694,7 +1694,7 @@
       }
     },
     "region_notes_beginner": "Pawpaw is not a workable crop in the Rio Grande Valley. It needs real winter cold to break dormancy and cooler, shadier summers than the Valley has; neither piece is a fit here. Plant fig, persimmon, pomegranate, or citrus instead.",
-    "region_notes_seasoned": "Pawpaw is unsuitable for the Rio Grande Valley: the Valley's near-zero winter chill falls far short of pawpaw's roughly 400-hour dormancy-breaking need, and the Valley's long, intensely hot summer is the opposite of the cool, humid, part-shade native range pawpaw requires, the same combination that rules it out of peninsular Florida and the Arizona low desert. The Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "region_notes_seasoned": "Pawpaw is unsuitable for the Rio Grande Valley: the Valley's near-zero winter chill falls far short of pawpaw's roughly 400-hour dormancy-breaking need, and the Valley's long, intensely hot summer in open sun is a poor match for the cool, shaded understory pawpaw's native range provides, the same combination that rules it out of peninsular Florida and the Arizona low desert. The Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
     "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
     "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
   },
@@ -2221,8 +2221,8 @@
         "plant_out": "Jan - Feb (dormant, bare-root or cutting-grown)",
         "resolution_method": "perennial_precompute",
         "suitability": "fruits_reliably",
-        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. Unlike the arid low desert, the Valley's humidity and rain can bring some fruit splitting and disease pressure, the way they do on the humid Gulf coast, so favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern for the Valley's humid, rather than arid, summer.",
-        "suitability_note_beginner": "Pomegranates fruit well in the Rio Grande Valley. Winters give plenty of the little cold this fruit needs. Because the Valley is humid rather than dry, watch for some splitting and fruit disease in wet spells, and pick an open, breezy, well-drained spot. The exact months here are a careful estimate, not confirmed Valley-specific data.",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. The Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of rain a year against the Gulf coast's 50 to 60, so pomegranate crops reliably here much as it does in the low desert. An occasional wet late-summer spell can cause some fruit splitting, but that is a modest, manageable risk here, not the season-defining humidity problem the wetter Gulf coast poses; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern.",
+        "suitability_note_beginner": "Pomegranates fruit well in the Rio Grande Valley. Winters give plenty of the little cold this fruit needs, and the Valley's hot, fairly dry climate suits pomegranate much like the desert Southwest does. An occasional wet spell late in summer can cause a little fruit splitting, but that is a minor, manageable risk here, not the bigger problem it is on the humid Gulf coast; pick an open, breezy, well-drained spot. The exact months here are a careful estimate, not confirmed Valley-specific data.",
         "bloom": "Mar 25 - Apr 30",
         "harvest_start": "Aug 20",
         "harvest_end": "Oct 10",
@@ -2260,8 +2260,8 @@
         "plant_out": "Jan - Feb (dormant, bare-root or cutting-grown)",
         "resolution_method": "perennial_precompute",
         "suitability": "fruits_reliably",
-        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. Unlike the arid low desert, the Valley's humidity and rain can bring some fruit splitting and disease pressure, the way they do on the humid Gulf coast, so favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern for the Valley's humid, rather than arid, summer.",
-        "suitability_note_beginner": "Pomegranates fruit well in the Rio Grande Valley. Winters give plenty of the little cold this fruit needs. Because the Valley is humid rather than dry, watch for some splitting and fruit disease in wet spells, and pick an open, breezy, well-drained spot. The exact months here are a careful estimate, not confirmed Valley-specific data.",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. The Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of rain a year against the Gulf coast's 50 to 60, so pomegranate crops reliably here much as it does in the low desert. An occasional wet late-summer spell can cause some fruit splitting, but that is a modest, manageable risk here, not the season-defining humidity problem the wetter Gulf coast poses; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern.",
+        "suitability_note_beginner": "Pomegranates fruit well in the Rio Grande Valley. Winters give plenty of the little cold this fruit needs, and the Valley's hot, fairly dry climate suits pomegranate much like the desert Southwest does. An occasional wet spell late in summer can cause a little fruit splitting, but that is a minor, manageable risk here, not the bigger problem it is on the humid Gulf coast; pick an open, breezy, well-drained spot. The exact months here are a careful estimate, not confirmed Valley-specific data.",
         "bloom": "Mar 25 - Apr 30",
         "harvest_start": "Aug 20",
         "harvest_end": "Oct 10",
@@ -2296,8 +2296,8 @@
         }
       }
     },
-    "region_notes_beginner": "Pomegranates do well in the Rio Grande Valley. Winters give it plenty of the little cold it needs. Because the Valley is humid rather than bone-dry like the desert Southwest, some splitting and fruit disease can show up in wet spells, so pick an open, breezy, well-drained spot and water evenly. The exact months given here are a careful estimate, not confirmed Valley-specific data.",
-    "region_notes_seasoned": "Pomegranate fruits reliably in the Rio Grande Valley: Valley winters easily clear its roughly 100-hour chill need, and Texas A&M AgriLife Extension reports fruiting types surviving most winters across central, southern, and southeastern Texas. This is a real, fruiting dooryard crop here, not just a survivor, though the Valley's humidity and rain (unlike the arid low desert where pomegranate is classically prime) can still bring some splitting and fruit disease, so favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively adapted from a reliably-fruiting desert pattern for the Valley's humid summer.",
+    "region_notes_beginner": "Pomegranates do well in the Rio Grande Valley. Winters give it plenty of the little cold it needs, and the Valley's hot, fairly dry climate suits pomegranate much like the desert Southwest does. An occasional wet spell late in summer can cause a little fruit splitting, but that is a minor, manageable risk here, not the bigger problem it is on the humid Gulf coast; pick an open, breezy, well-drained spot and water evenly. The exact months given here are a careful estimate, not confirmed Valley-specific data.",
+    "region_notes_seasoned": "Pomegranate fruits reliably in the Rio Grande Valley: Valley winters easily clear its roughly 100-hour chill need, and Texas A&M AgriLife Extension reports fruiting types surviving most winters across central, southern, and southeastern Texas. This is a real, fruiting dooryard crop here, not just a survivor: the Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of annual rainfall against the Gulf coast's 50 to 60, so it crops here much as it does in the low desert, where pomegranate is classically prime. An occasional wet late-summer spell can still cause some fruit splitting, but that is a modest, manageable risk, not the season-defining humidity problem of the wetter Gulf coast; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively adapted from a reliably-fruiting desert pattern.",
     "chill_basis_seasoned": "The Rio Grande Valley banks roughly 0 to 300 chill hours in a typical winter, per Texas A&M AgriLife Extension, far more than pomegranate's roughly 100-hour need, so chill is never the limiting factor here.",
     "chill_basis_beginner": "Valley winters easily give pomegranate the small amount of cold it needs, so chill is never a problem; humidity and rain, not cold, are what to manage here."
   },
@@ -2448,11 +2448,16 @@
           "first_frost": null
         },
         "sources": [
-          "tamu_agrilife"
+          "ncsu_ext",
+          "uf_ifas"
         ],
         "anchoring_urls": {
-          "tamu_agrilife": {
-            "url": "https://agrilifeextension.tamu.edu",
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
             "verified": "2026-07-13"
           }
         }
@@ -2487,11 +2492,16 @@
           "first_frost": null
         },
         "sources": [
-          "tamu_agrilife"
+          "ncsu_ext",
+          "uf_ifas"
         ],
         "anchoring_urls": {
-          "tamu_agrilife": {
-            "url": "https://agrilifeextension.tamu.edu",
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+            "verified": "2026-07-13"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
             "verified": "2026-07-13"
           }
         }
