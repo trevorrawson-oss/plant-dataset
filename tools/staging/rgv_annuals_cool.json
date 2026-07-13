@@ -1,0 +1,4753 @@
+{
+  "arugula": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Arugula set out Oct 1 - Nov 15 in the Rio Grande Valley, per a conservative cool-season placement (no crop-specific RGV table row; general fall/winter model). No RGV-specific table row exists for arugula; the window mirrors the general TAMU cool-season fall/winter model (other quick winter greens plant Sep-Feb) rather than a stated arugula date, and is authored conservatively.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 30,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 30 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 40,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 40 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Oct 31 - Dec 25",
+        "harvest_start": "Oct 31",
+        "harvest_end": "Dec 25",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Oct 31 - Dec 25",
+        "harvest_start": "Oct 31",
+        "harvest_end": "Dec 25",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow arugula in the cool season, not summer. Plant Oct 1 through Nov 15 and harvest from Oct 31 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Arugula is not in either TAMU RGV vegetable table, so this window is a conservative placement built from the same fall/winter model as the rest of the winter garden, not a crop-specific TAMU date. Skip planting arugula from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Arugula in the RGV runs on the winter-garden calendar: direct-sow Oct 1 through Nov 15, with harvest running Oct 31 through Dec 25. No RGV-specific table row exists for arugula; the window mirrors the general TAMU cool-season fall/winter model (other quick winter greens plant Sep-Feb) rather than a stated arugula date, and is authored conservatively. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "beet": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 77,
+            "synthesis_note_seasoned": "Beets set out Oct 15 - Dec 31 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Direct-sown mid-October through December (TAMU RGV Homeowner Guide); 50 to 90 days to harvest (Bilingual LRGV table) carries the root harvest from early December into spring.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 50,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 50 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 90 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Dec 31",
+        "harvest": "Dec 4 - Mar 31",
+        "harvest_start": "Dec 4",
+        "harvest_end": "Mar 31",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Oct 15 - Dec 31",
+        "harvest": "Dec 4 - Mar 31",
+        "harvest_start": "Dec 4",
+        "harvest_end": "Mar 31",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow beets in the cool season, not summer. Plant Oct 15 through Dec 31 and harvest from Dec 4 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Beets are one of the easiest winter roots here: sow directly in the ground from mid-October through the end of December and keep pulling them through winter and into spring. Skip planting beets from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Beets in the RGV run on the winter-garden calendar: direct-sow Oct 15 through Dec 31, with harvest running Dec 4 through Mar 31. Direct-sown mid-October through December (TAMU RGV Homeowner Guide); 50 to 90 days to harvest (Bilingual LRGV table) carries the root harvest from early December into spring. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "bok-choy": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 91,
+            "synthesis_note_seasoned": "Bok choy set out Oct 1 - Dec 31 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Direct-sown October through December, about 90 days to harvest (Bilingual LRGV table); no RGV Homeowner Guide row exists for bok choy specifically, so this cell rests on the Bilingual table alone.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 90 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 90 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Dec 31",
+        "harvest": "Dec 30 - Mar 31",
+        "harvest_start": "Dec 30",
+        "harvest_end": "Mar 31",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Dec 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 7
+      },
+      "10": {
+        "plant_out": "Oct 1 - Dec 31",
+        "harvest": "Dec 30 - Mar 31",
+        "harvest_start": "Dec 30",
+        "harvest_end": "Mar 31",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Dec 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 7
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow bok choy in the cool season, not summer. Plant Oct 1 through Dec 31 and harvest from Dec 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Bok choy likes the same cool, mild stretch as the other winter greens: direct-sow it from October through December for a steady 90-day crop. Skip planting bok choy from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Bok choy in the RGV runs on the winter-garden calendar: direct-sow Oct 1 through Dec 31, with harvest running Dec 30 through Mar 31. Direct-sown October through December, about 90 days to harvest (Bilingual LRGV table); no RGV Homeowner Guide row exists for bok choy specifically, so this cell rests on the Bilingual table alone. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "broad-beans-fava": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Fava beans set out Oct 1 - Nov 15 in the Rio Grande Valley, per a conservative cool-season placement (no crop-specific RGV table row; general fall/winter model). No RGV table row exists for fava beans; this cell uses a conservative fall direct-sow window (cool-season legume, needs a long cool stretch to pod) rather than a stated TAMU date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 80,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 80 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 100 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 20 - Feb 23",
+        "harvest_start": "Dec 20",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Dec 20 - Feb 23",
+        "harvest_start": "Dec 20",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow fava beans in the cool season, not summer. Plant Oct 1 through Nov 15 and harvest from Dec 20 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Fava beans are not in either TAMU RGV table, so treat this as a conservative estimate: sow direct in fall and expect a long, slow winter crop that finishes as the weather warms. Skip planting fava beans from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Fava beans in the RGV run on the winter-garden calendar: direct-sow Oct 1 through Nov 15, with harvest running Dec 20 through Feb 23. No RGV table row exists for fava beans; this cell uses a conservative fall direct-sow window (cool-season legume, needs a long cool stretch to pod) rather than a stated TAMU date. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "broccoli": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Broccoli set out Oct 1 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Start seed in flats about six weeks ahead; TAMU's RGV Homeowner Guide calls for transplanting no earlier than early October, best by mid-October. 80 to 100 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 80,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 80 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 100 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Start seed indoors Aug 20 - Oct 4, about 42 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 20 - Feb 23",
+        "harvest_start": "Dec 20",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 20 - Feb 23",
+        "harvest_start": "Dec 20",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow broccoli in the cool season, not summer. Transplant Oct 1 through Nov 15 and harvest from Dec 20 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Start broccoli seed indoors in late summer, then move transplants out in October as the worst heat breaks; TAMU AgriLife says not to rush it, since transplants set out too early in the heat struggle. Skip planting broccoli from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Broccoli in the RGV runs on the winter-garden calendar: transplant Oct 1 through Nov 15, with harvest running Dec 20 through Feb 23. Start seed in flats about six weeks ahead; TAMU's RGV Homeowner Guide calls for transplanting no earlier than early October, best by mid-October. 80 to 100 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "brussels-sprouts": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 90,
+            "synthesis_note_seasoned": "Brussels sprouts set out Sep 1 - Nov 30 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Transplanted September through November (Bilingual LRGV table); at 110 to 140 days to harvest this is the slowest of the RGV cole crops, so seedlings are started well ahead in midsummer heat, indoors.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 110,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 110 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 140,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 140 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 90,
+            "synthesis_note_seasoned": "Start seed indoors Jul 21 - Oct 19, about 42 days before transplanting, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 1 - Nov 30",
+        "start_indoors": "Jul 21 - Oct 19",
+        "harvest": "Dec 20 - Apr 19",
+        "harvest_start": "Dec 20",
+        "harvest_end": "Apr 19",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Nov 30",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Sep 1 - Nov 30",
+        "start_indoors": "Jul 21 - Oct 19",
+        "harvest": "Dec 20 - Apr 19",
+        "harvest_start": "Dec 20",
+        "harvest_end": "Apr 19",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Nov 30",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow brussels sprouts in the cool season, not summer. Transplant Sep 1 through Nov 30 and harvest from Dec 20 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Brussels sprouts need the whole cool season to size up: start transplants indoors in high summer and set them out from September through November for a slow winter crop. Skip planting brussels sprouts from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Brussels sprouts in the RGV run on the winter-garden calendar: transplant Sep 1 through Nov 30, with harvest running Dec 20 through Apr 19. Transplanted September through November (Bilingual LRGV table); at 110 to 140 days to harvest this is the slowest of the RGV cole crops, so seedlings are started well ahead in midsummer heat, indoors. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "cabbage": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Cabbage set out Oct 1 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted on the same schedule as broccoli per TAMU's RGV Homeowner Guide (October, best by mid-month); 90 to 120 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 90 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 120,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 120 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Start seed indoors Aug 20 - Oct 4, about 42 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 30 - Mar 15",
+        "harvest_start": "Dec 30",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 30 - Mar 15",
+        "harvest_start": "Dec 30",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow cabbage in the cool season, not summer. Transplant Oct 1 through Nov 15 and harvest from Dec 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Cabbage transplants go in the ground alongside broccoli, October into mid-November, for solid heads through winter. Skip planting cabbage from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Cabbage in the RGV runs on the winter-garden calendar: transplant Oct 1 through Nov 15, with harvest running Dec 30 through Mar 15. Transplanted on the same schedule as broccoli per TAMU's RGV Homeowner Guide (October, best by mid-month); 90 to 120 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "carrot": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 61,
+            "synthesis_note_seasoned": "Carrots set out Oct 15 - Dec 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Direct-sown mid-October through mid-December (TAMU RGV Homeowner Guide); 90 to 100 days to harvest (Bilingual LRGV table) puts roots ready from mid-January into spring.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 90 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 100 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Dec 15",
+        "harvest": "Jan 13 - Mar 25",
+        "harvest_start": "Jan 13",
+        "harvest_end": "Mar 25",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 15 - Dec 15",
+        "harvest": "Jan 13 - Mar 25",
+        "harvest_start": "Jan 13",
+        "harvest_end": "Mar 25",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow carrots in the cool season, not summer. Plant Oct 15 through Dec 15 and harvest from Jan 13 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Carrots go straight into the ground from mid-October through mid-December; give them loose soil and they will size up steadily over the cool months. Skip planting carrots from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Carrots in the RGV run on the winter-garden calendar: direct-sow Oct 15 through Dec 15, with harvest running Jan 13 through Mar 25. Direct-sown mid-October through mid-December (TAMU RGV Homeowner Guide); 90 to 100 days to harvest (Bilingual LRGV table) puts roots ready from mid-January into spring. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "cauliflower": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Cauliflower set out Oct 1 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; 90 to 120 days to harvest (Bilingual LRGV table). Less heat-tolerant than cabbage, so timing matters more.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 90 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 120,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 120 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Start seed indoors Aug 20 - Oct 4, about 42 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 30 - Mar 15",
+        "harvest_start": "Dec 30",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 30 - Mar 15",
+        "harvest_start": "Dec 30",
+        "harvest_end": "Mar 15",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow cauliflower in the cool season, not summer. Transplant Oct 1 through Nov 15 and harvest from Dec 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Cauliflower follows broccoli's calendar here too: start seed indoors in late summer, transplant October into mid-November, and keep it cool and steady, since heat stress ruins curd quality. Skip planting cauliflower from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Cauliflower in the RGV runs on the winter-garden calendar: transplant Oct 1 through Nov 15, with harvest running Dec 30 through Mar 15. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; 90 to 120 days to harvest (Bilingual LRGV table). Less heat-tolerant than cabbage, so timing matters more. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "celery": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 75,
+            "synthesis_note_seasoned": "Celery set out Sep 1 - Nov 15 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Transplanted crop (Bilingual LRGV table gives the transplanted-celery row as Sep 1 - Nov 30; this cell narrows the tail to mid-November, since celery's long 90 to 110 day season means a late-window transplant risks not finishing before spring heat). Germination and early growth are slow, so seed starts about 12 weeks ahead of set-out.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 90 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 110,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 110 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -84,
+            "window_days": 75,
+            "synthesis_note_seasoned": "Start seed indoors Jun 9 - Aug 23, about 84 days before transplanting, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 1 - Nov 15",
+        "start_indoors": "Jun 9 - Aug 23",
+        "harvest": "Nov 30 - Mar 5",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Mar 5",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Sep 1 - Nov 15",
+        "start_indoors": "Jun 9 - Aug 23",
+        "harvest": "Nov 30 - Mar 5",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Mar 5",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow celery in the cool season, not summer. Transplant Sep 1 through Nov 15 and harvest from Nov 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Celery is a slow starter: seed goes indoors in early summer, long before it feels like gardening weather, so transplants are ready for the September-through-mid-November set-out window. Skip planting celery from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Celery in the RGV runs on the winter-garden calendar: transplant Sep 1 through Nov 15, with harvest running Nov 30 through Mar 5. Transplanted crop (Bilingual LRGV table gives the transplanted-celery row as Sep 1 - Nov 30; this cell narrows the tail to mid-November, since celery's long 90 to 110 day season means a late-window transplant risks not finishing before spring heat). Germination and early growth are slow, so seed starts about 12 weeks ahead of set-out. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "cilantro-coriander": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 127,
+            "synthesis_note_seasoned": "Cilantro set out Oct 1 - Feb 5 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Direct-sown October through early February (TAMU RGV Homeowner Guide); 50 to 60 days to harvest (Bilingual LRGV table). The long window supports succession sowing rather than one planting.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 50,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 50 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 60 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Feb 5",
+        "harvest": "Nov 20 - Apr 6",
+        "harvest_start": "Nov 20",
+        "harvest_end": "Apr 6",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Feb 5",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 10
+      },
+      "10": {
+        "plant_out": "Oct 1 - Feb 5",
+        "harvest": "Nov 20 - Apr 6",
+        "harvest_start": "Nov 20",
+        "harvest_end": "Apr 6",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Feb 5",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 10
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow cilantro in the cool season, not summer. Plant Oct 1 through Feb 5 and harvest from Nov 20 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Cilantro bolts fast once it warms up, so succession-sow it through the whole cool season, October into early February, for a steady supply of leaf. Skip planting cilantro from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Cilantro in the RGV runs on the winter-garden calendar: direct-sow Oct 1 through Feb 5, with harvest running Nov 20 through Apr 6. Direct-sown October through early February (TAMU RGV Homeowner Guide); 50 to 60 days to harvest (Bilingual LRGV table). The long window supports succession sowing rather than one planting. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "collards": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Collards set out Oct 1 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; only 40 to 60 days to harvest (Bilingual LRGV table), the quickest of the RGV cole crops.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 40,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 40 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 60 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Start seed indoors Aug 20 - Oct 4, about 42 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Nov 10 - Jan 14",
+        "harvest_start": "Nov 10",
+        "harvest_end": "Jan 14",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Nov 10 - Jan 14",
+        "harvest_start": "Nov 10",
+        "harvest_end": "Jan 14",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow collards in the cool season, not summer. Transplant Oct 1 through Nov 15 and harvest from Nov 10 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Collards go in on broccoli's calendar too, but they mature much faster: transplant October into mid-November and start picking leaves within a couple of months. Skip planting collards from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Collards in the RGV run on the winter-garden calendar: transplant Oct 1 through Nov 15, with harvest running Nov 10 through Jan 14. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; only 40 to 60 days to harvest (Bilingual LRGV table), the quickest of the RGV cole crops. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "dill": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 75,
+            "synthesis_note_seasoned": "Dill set out Oct 1 - Dec 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Direct-sown October through mid-December, though TAMU's RGV Homeowner Guide flags late October to early November as the better window since heat reduces germination; 60 to 70 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 60 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 70,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 70 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Dec 15",
+        "harvest": "Nov 30 - Feb 23",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 6
+      },
+      "10": {
+        "plant_out": "Oct 1 - Dec 15",
+        "harvest": "Nov 30 - Feb 23",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 6
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow dill in the cool season, not summer. Plant Oct 1 through Dec 15 and harvest from Nov 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Dill does best sown in late October or early November here; TAMU AgriLife notes that lingering heat can hurt germination if it goes in too early. Skip planting dill from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Dill in the RGV runs on the winter-garden calendar: direct-sow Oct 1 through Dec 15, with harvest running Nov 30 through Feb 23. Direct-sown October through mid-December, though TAMU's RGV Homeowner Guide flags late October to early November as the better window since heat reduces germination; 60 to 70 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "garlic": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 31,
+            "synthesis_note_seasoned": "Garlic set out Oct 15 - Nov 15 in the Rio Grande Valley, per a conservative cool-season placement (no crop-specific RGV table row; general fall/winter model). No RGV-specific table row exists for garlic; this cell uses a conservative fall clove-set window (general Gulf Coast/South Texas practice) rather than a stated TAMU date, with a long 180 to 210 day maturity typical of softneck garlic in low-chill climates.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 180,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 180 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 210,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 210 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Nov 15",
+        "harvest": "Apr 13 - Jun 13",
+        "harvest_start": "Apr 13",
+        "harvest_end": "Jun 13",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "season_over",
+          "season_over",
+          "season_over",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Oct 15 - Nov 15",
+        "harvest": "Apr 13 - Jun 13",
+        "harvest_start": "Apr 13",
+        "harvest_end": "Jun 13",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "season_over",
+          "season_over",
+          "season_over",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow garlic in the cool season, not summer. Plant Oct 15 through Nov 15 and harvest from Apr 13 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Garlic is not in either TAMU RGV vegetable table, so plant cloves conservatively in fall, October into mid-November, and expect a long wait: garlic is an eight-to-ten-month crop even in mild winters. Skip planting garlic from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Garlic in the RGV runs on the winter-garden calendar: direct-sow Oct 15 through Nov 15, with harvest running Apr 13 through Jun 13. No RGV-specific table row exists for garlic; this cell uses a conservative fall clove-set window (general Gulf Coast/South Texas practice) rather than a stated TAMU date, with a long 180 to 210 day maturity typical of softneck garlic in low-chill climates. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "kale": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Kale set out Oct 1 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; 50 to 60 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 50,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 50 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 60 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Start seed indoors Aug 20 - Oct 4, about 42 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Nov 20 - Jan 14",
+        "harvest_start": "Nov 20",
+        "harvest_end": "Jan 14",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Nov 20 - Jan 14",
+        "harvest_start": "Nov 20",
+        "harvest_end": "Jan 14",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow kale in the cool season, not summer. Transplant Oct 1 through Nov 15 and harvest from Nov 20 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Kale rides broccoli's transplant calendar but grows fast: set it out October into mid-November and start harvesting leaves within two months. Skip planting kale from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Kale in the RGV runs on the winter-garden calendar: transplant Oct 1 through Nov 15, with harvest running Nov 20 through Jan 14. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; 50 to 60 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "kohlrabi": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Kohlrabi set out Oct 1 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; 75 to 100 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 75,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 75 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 100 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -42,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Start seed indoors Aug 20 - Oct 4, about 42 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 15 - Feb 23",
+        "harvest_start": "Dec 15",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "start_indoors": "Aug 20 - Oct 4",
+        "harvest": "Dec 15 - Feb 23",
+        "harvest_start": "Dec 15",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow kohlrabi in the cool season, not summer. Transplant Oct 1 through Nov 15 and harvest from Dec 15 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Kohlrabi goes out on the same October schedule as broccoli; give the swelling stem room and it will be ready in ten to fourteen weeks. Skip planting kohlrabi from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Kohlrabi in the RGV runs on the winter-garden calendar: transplant Oct 1 through Nov 15, with harvest running Dec 15 through Feb 23. Transplanted on broccoli's schedule per TAMU's RGV Homeowner Guide; 75 to 100 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "leek": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 31,
+            "synthesis_note_seasoned": "Leeks set out Oct 15 - Nov 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted mid-October through mid-November (TAMU RGV Homeowner Guide, started in flats about 10 weeks ahead); 75 to 100 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 75,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 75 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 100 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -70,
+            "window_days": 31,
+            "synthesis_note_seasoned": "Start seed indoors Aug 6 - Sep 6, about 70 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Nov 15",
+        "start_indoors": "Aug 6 - Sep 6",
+        "harvest": "Dec 29 - Feb 23",
+        "harvest_start": "Dec 29",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Oct 15 - Nov 15",
+        "start_indoors": "Aug 6 - Sep 6",
+        "harvest": "Dec 29 - Feb 23",
+        "harvest_start": "Dec 29",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow leeks in the cool season, not summer. Transplant Oct 15 through Nov 15 and harvest from Dec 29 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Leeks need a long head start indoors: seed goes into flats in late summer, then transplants go out mid-October into mid-November for a slow winter crop. Skip planting leeks from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Leeks in the RGV run on the winter-garden calendar: transplant Oct 15 through Nov 15, with harvest running Dec 29 through Feb 23. Transplanted mid-October through mid-November (TAMU RGV Homeowner Guide, started in flats about 10 weeks ahead); 75 to 100 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "lettuce-leaf": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 166,
+            "synthesis_note_seasoned": "Leaf lettuce set out Sep 1 - Feb 14 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Direct-sown September through mid-February (Bilingual LRGV table); 40 to 60 days to harvest supports rolling succession sowings rather than a single planting.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 40,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 40 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 60 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 1 - Feb 14",
+        "harvest": "Oct 11 - Apr 15",
+        "harvest_start": "Oct 11",
+        "harvest_end": "Apr 15",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      },
+      "10": {
+        "plant_out": "Sep 1 - Feb 14",
+        "harvest": "Oct 11 - Apr 15",
+        "harvest_start": "Oct 11",
+        "harvest_end": "Apr 15",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow leaf lettuce in the cool season, not summer. Plant Sep 1 through Feb 14 and harvest from Oct 11 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Leaf lettuce is a succession crop here: sow it every few weeks from September clear through mid-February and you will have cut-and-come-again greens all winter. Skip planting leaf lettuce from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Leaf lettuce in the RGV runs on the winter-garden calendar: direct-sow Sep 1 through Feb 14, with harvest running Oct 11 through Apr 15. Direct-sown September through mid-February (Bilingual LRGV table); 40 to 60 days to harvest supports rolling succession sowings rather than a single planting. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "onion": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 47,
+            "synthesis_note_seasoned": "Onions set out Oct 15 - Dec 1 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Transplanted mid-October through early December (TAMU RGV Homeowner Guide), started in flats about 10 weeks ahead; 100 to 150 days to harvest (Bilingual LRGV table). The short-day 1015Y variety, TAMU notes, wants to be in the ground no later than end of October for its roughly 150-day cycle.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 100 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 150,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 150 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {},
+        "start_indoors": [
+          {
+            "from": "transplant_window",
+            "offset_days": -70,
+            "window_days": 47,
+            "synthesis_note_seasoned": "Start seed indoors Aug 6 - Sep 22, about 70 days before transplanting, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ]
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Dec 1",
+        "start_indoors": "Aug 6 - Sep 22",
+        "harvest": "Jan 23 - Apr 30",
+        "harvest_start": "Jan 23",
+        "harvest_end": "Apr 30",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 1",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "recommended_day_length_type": "short_day",
+        "day_length_note_seasoned": "At this far-south Valley latitude, grow short-day onions such as Texas 1015Y: they begin bulbing at 10 to 12 hours of daylight, which the Valley reaches in winter, and TAMU AgriLife names 1015Y specifically for this region.",
+        "day_length_note_beginner": "Grow short-day onions here, like the Texas 1015Y: they start forming bulbs on the short winter days the Valley gets, unlike northern long-day types."
+      },
+      "10": {
+        "plant_out": "Oct 15 - Dec 1",
+        "start_indoors": "Aug 6 - Sep 22",
+        "harvest": "Jan 23 - Apr 30",
+        "harvest_start": "Jan 23",
+        "harvest_end": "Apr 30",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 1",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "indoors",
+          "indoors",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "recommended_day_length_type": "short_day",
+        "day_length_note_seasoned": "At this far-south Valley latitude, grow short-day onions such as Texas 1015Y: they begin bulbing at 10 to 12 hours of daylight, which the Valley reaches in winter, and TAMU AgriLife names 1015Y specifically for this region.",
+        "day_length_note_beginner": "Grow short-day onions here, like the Texas 1015Y: they start forming bulbs on the short winter days the Valley gets, unlike northern long-day types."
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow onions in the cool season, not summer. Transplant Oct 15 through Dec 1 and harvest from Jan 23 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Bulb onions are transplanted here, not direct-sown: start seed indoors in early August, then set transplants out mid-October through early December; TAMU AgriLife notes the short-day 1015Y variety does best planted no later than the end of October. Skip planting onions from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Onions in the RGV run on the winter-garden calendar: transplant Oct 15 through Dec 1, with harvest running Jan 23 through Apr 30. Transplanted mid-October through early December (TAMU RGV Homeowner Guide), started in flats about 10 weeks ahead; 100 to 150 days to harvest (Bilingual LRGV table). The short-day 1015Y variety, TAMU notes, wants to be in the ground no later than end of October for its roughly 150-day cycle. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "parsley": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 152,
+            "synthesis_note_seasoned": "Parsley set out Sep 15 - Feb 14 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Direct-sown mid-September through mid-February (Bilingual LRGV table); 90 to 100 days to harvest reflects parsley's naturally slow germination and establishment, with harvest continuing into spring as a biennial herb.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 90,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 90 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 100 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 15 - Feb 14",
+        "harvest": "Dec 14 - May 25",
+        "harvest_start": "Dec 14",
+        "harvest_end": "May 25",
+        "first_plant_date": "Sep 15",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 6
+      },
+      "10": {
+        "plant_out": "Sep 15 - Feb 14",
+        "harvest": "Dec 14 - May 25",
+        "harvest_start": "Dec 14",
+        "harvest_end": "May 25",
+        "first_plant_date": "Sep 15",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 6
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow parsley in the cool season, not summer. Plant Sep 15 through Feb 14 and harvest from Dec 14 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Parsley is slow to get going but worth the patience: sow direct from mid-September through mid-February and expect three months or more before the first real harvest. Skip planting parsley from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Parsley in the RGV runs on the winter-garden calendar: direct-sow Sep 15 through Feb 14, with harvest running Dec 14 through May 25. Direct-sown mid-September through mid-February (Bilingual LRGV table); 90 to 100 days to harvest reflects parsley's naturally slow germination and establishment, with harvest continuing into spring as a biennial herb. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "parsnip": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 107,
+            "synthesis_note_seasoned": "Parsnips set out Sep 15 - Dec 31 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Direct-sown mid-September through December (Bilingual LRGV table); 100 to 120 days to harvest is long even by root-crop standards, so plant early in the window for a spring harvest.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 100,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 100 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 120,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 120 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 15 - Dec 31",
+        "harvest": "Dec 24 - Apr 30",
+        "harvest_start": "Dec 24",
+        "harvest_end": "Apr 30",
+        "first_plant_date": "Sep 15",
+        "last_plant_date": "Dec 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Sep 15 - Dec 31",
+        "harvest": "Dec 24 - Apr 30",
+        "harvest_start": "Dec 24",
+        "harvest_end": "Apr 30",
+        "first_plant_date": "Sep 15",
+        "last_plant_date": "Dec 31",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow parsnips in the cool season, not summer. Plant Sep 15 through Dec 31 and harvest from Dec 24 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Parsnips take their time: sow direct from mid-September through the end of December and let the roots develop slowly through the cool months, sweetest after a cool spell. Skip planting parsnips from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Parsnips in the RGV run on the winter-garden calendar: direct-sow Sep 15 through Dec 31, with harvest running Dec 24 through Apr 30. Direct-sown mid-September through December (Bilingual LRGV table); 100 to 120 days to harvest is long even by root-crop standards, so plant early in the window for a spring harvest. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "radish": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 166,
+            "synthesis_note_seasoned": "Radishes set out Sep 1 - Feb 14 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Direct-sown September through mid-February (Bilingual LRGV table); at 25 to 30 days to harvest, radishes support tight succession sowing across the entire cool season.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 25,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 25 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 30,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 30 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 1 - Feb 14",
+        "harvest": "Sep 26 - Mar 16",
+        "harvest_start": "Sep 26",
+        "harvest_end": "Mar 16",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      },
+      "10": {
+        "plant_out": "Sep 1 - Feb 14",
+        "harvest": "Sep 26 - Mar 16",
+        "harvest_start": "Sep 26",
+        "harvest_end": "Mar 16",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 12
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow radishes in the cool season, not summer. Plant Sep 1 through Feb 14 and harvest from Sep 26 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Radishes are the fastest crop in the winter garden here: sow direct any time from September through mid-February and pull roots in under a month. Skip planting radishes from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Radishes in the RGV run on the winter-garden calendar: direct-sow Sep 1 through Feb 14, with harvest running Sep 26 through Mar 16. Direct-sown September through mid-February (Bilingual LRGV table); at 25 to 30 days to harvest, radishes support tight succession sowing across the entire cool season. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "shallot": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Shallots set out Oct 1 - Nov 15 in the Rio Grande Valley, per a conservative cool-season placement (no crop-specific RGV table row; general fall/winter model). No RGV-specific table row exists for shallots; this cell uses a conservative fall set-planting window (mirroring the allium family's onion/garlic timing) rather than a stated TAMU date, with a 120 to 150 day maturity typical of shallot sets.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 120,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 120 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 150,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 150 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Jan 29 - Apr 14",
+        "harvest_start": "Jan 29",
+        "harvest_end": "Apr 14",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "recommended_day_length_type": "short_day",
+        "day_length_note_seasoned": "At this far-south Valley latitude, grow short-day shallots: they begin bulbing at 10 to 12 hours of daylight, which the Valley reaches in winter, the same photoperiod band as the region's short-day onions.",
+        "day_length_note_beginner": "Grow short-day shallots here: they bulb on the short winter days the Valley gets, the same type used for short-day onions."
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Jan 29 - Apr 14",
+        "harvest_start": "Jan 29",
+        "harvest_end": "Apr 14",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "season_over"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "recommended_day_length_type": "short_day",
+        "day_length_note_seasoned": "At this far-south Valley latitude, grow short-day shallots: they begin bulbing at 10 to 12 hours of daylight, which the Valley reaches in winter, the same photoperiod band as the region's short-day onions.",
+        "day_length_note_beginner": "Grow short-day shallots here: they bulb on the short winter days the Valley gets, the same type used for short-day onions."
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow shallots in the cool season, not summer. Plant Oct 1 through Nov 15 and harvest from Jan 29 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Shallots are not in either TAMU RGV table, so this is a conservative estimate built on the same fall set-planting as onions and garlic: bulbs go in October into mid-November for a late-winter harvest. Skip planting shallots from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Shallots in the RGV run on the winter-garden calendar: direct-sow Oct 1 through Nov 15, with harvest running Jan 29 through Apr 14. No RGV-specific table row exists for shallots; this cell uses a conservative fall set-planting window (mirroring the allium family's onion/garlic timing) rather than a stated TAMU date, with a 120 to 150 day maturity typical of shallot sets. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "snow-peas": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Snow peas set out Oct 1 - Nov 15 in the Rio Grande Valley, per a conservative cool-season placement (no crop-specific RGV table row; general fall/winter model). No RGV-specific table row names snow peas; this cell uses a conservative fall direct-sow window matching the general cool-season English-pea pattern, with a 60 to 70 day maturity typical of the type.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 60 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 70,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 70 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Nov 30 - Jan 24",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Jan 24",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Nov 30 - Jan 24",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Jan 24",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow snow peas in the cool season, not summer. Plant Oct 1 through Nov 15 and harvest from Nov 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Snow peas are not in a TAMU RGV vegetable table by that name, so treat this window conservatively: sow direct in fall alongside the other cool-season crops for a quick winter crop of flat, edible pods. Skip planting snow peas from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Snow peas in the RGV run on the winter-garden calendar: direct-sow Oct 1 through Nov 15, with harvest running Nov 30 through Jan 24. No RGV-specific table row names snow peas; this cell uses a conservative fall direct-sow window matching the general cool-season English-pea pattern, with a 60 to 70 day maturity typical of the type. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "spinach": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 92,
+            "synthesis_note_seasoned": "Spinach set out Oct 15 - Jan 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Direct-sown mid-October through mid-January (TAMU RGV Homeowner Guide); 45 to 60 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 45,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 45 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 60 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Jan 15",
+        "harvest": "Nov 29 - Mar 16",
+        "harvest_start": "Nov 29",
+        "harvest_end": "Mar 16",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Jan 15",
+        "calendar": [
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 7
+      },
+      "10": {
+        "plant_out": "Oct 15 - Jan 15",
+        "harvest": "Nov 29 - Mar 16",
+        "harvest_start": "Nov 29",
+        "harvest_end": "Mar 16",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Jan 15",
+        "calendar": [
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 7
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow spinach in the cool season, not summer. Plant Oct 15 through Jan 15 and harvest from Nov 29 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Spinach is a true cool-season crop: sow direct from mid-October through mid-January and keep cutting leaves through the cool months before it bolts in spring heat. Skip planting spinach from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Spinach in the RGV runs on the winter-garden calendar: direct-sow Oct 15 through Jan 15, with harvest running Nov 29 through Mar 16. Direct-sown mid-October through mid-January (TAMU RGV Homeowner Guide); 45 to 60 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "spring-onion": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 61,
+            "synthesis_note_seasoned": "Green onions set out Oct 15 - Dec 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window; maturity time is standard scallion biology, not a TAMU-stated day count. Direct-sown mid-October through mid-December, the same window TAMU's RGV Homeowner Guide gives for bunching onions; the 60 to 70 day maturity reflects standard scallion biology rather than a TAMU-stated day count, since the guide does not give bunching onions a separate DTH figure.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 60 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 70,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 70 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Dec 15",
+        "harvest": "Dec 14 - Feb 23",
+        "harvest_start": "Dec 14",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 5
+      },
+      "10": {
+        "plant_out": "Oct 15 - Dec 15",
+        "harvest": "Dec 14 - Feb 23",
+        "harvest_start": "Dec 14",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 5
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow green onions in the cool season, not summer. Plant Oct 15 through Dec 15 and harvest from Dec 14 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Green onions (bunching onions) go in the ground mid-October through mid-December, on the same schedule TAMU gives for bulb onions, but they are quick: harvest as scallions in about two months. Skip planting green onions from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Green onions in the RGV run on the winter-garden calendar: direct-sow Oct 15 through Dec 15, with harvest running Dec 14 through Feb 23. Direct-sown mid-October through mid-December, the same window TAMU's RGV Homeowner Guide gives for bunching onions; the 60 to 70 day maturity reflects standard scallion biology rather than a TAMU-stated day count, since the guide does not give bunching onions a separate DTH figure. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "sugar-snap-peas": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 45,
+            "synthesis_note_seasoned": "Sugar snap peas set out Oct 1 - Nov 15 in the Rio Grande Valley, per a conservative cool-season placement (no crop-specific RGV table row; general fall/winter model). No RGV-specific table row names sugar snap peas; this cell uses a conservative fall direct-sow window matching the general cool-season English-pea pattern, with a 60 to 70 day maturity typical of the type.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 60,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 60 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 70,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 70 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Nov 30 - Jan 24",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Jan 24",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      },
+      "10": {
+        "plant_out": "Oct 1 - Nov 15",
+        "harvest": "Nov 30 - Jan 24",
+        "harvest_start": "Nov 30",
+        "harvest_end": "Jan 24",
+        "first_plant_date": "Oct 1",
+        "last_plant_date": "Nov 15",
+        "calendar": [
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "harvest"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 4
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow sugar snap peas in the cool season, not summer. Plant Oct 1 through Nov 15 and harvest from Nov 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Sugar snap peas are not in a TAMU RGV vegetable table by that name either, so this window is conservative: sow direct in fall with the other cool-season crops for crisp, edible-pod peas by winter. Skip planting sugar snap peas from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Sugar snap peas in the RGV run on the winter-garden calendar: direct-sow Oct 1 through Nov 15, with harvest running Nov 30 through Jan 24. No RGV-specific table row names sugar snap peas; this cell uses a conservative fall direct-sow window matching the general cool-season English-pea pattern, with a 60 to 70 day maturity typical of the type. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "swiss-chard": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 166,
+            "synthesis_note_seasoned": "Swiss chard set out Sep 1 - Feb 14 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Direct-sown September through mid-February (Bilingual LRGV table); about 50 days to first harvest, then a long cut-and-come-again picking season through the cool months.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 50,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 50 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 50,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 50 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Sep 1 - Feb 14",
+        "harvest": "Oct 21 - Apr 5",
+        "harvest_start": "Oct 21",
+        "harvest_end": "Apr 5",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      },
+      "10": {
+        "plant_out": "Sep 1 - Feb 14",
+        "harvest": "Oct 21 - Apr 5",
+        "harvest_start": "Oct 21",
+        "harvest_end": "Apr 5",
+        "first_plant_date": "Sep 1",
+        "last_plant_date": "Feb 14",
+        "calendar": [
+          "plant",
+          "plant",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/08/Bilingual-Vegetable-Planting-Guide.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        }
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow swiss chard in the cool season, not summer. Plant Sep 1 through Feb 14 and harvest from Oct 21 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Swiss chard is one of the most forgiving winter greens here: sow direct any time from September through mid-February and keep cutting outer leaves for months. Skip planting swiss chard from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Swiss chard in the RGV runs on the winter-garden calendar: direct-sow Sep 1 through Feb 14, with harvest running Oct 21 through Apr 5. Direct-sown September through mid-February (Bilingual LRGV table); about 50 days to first harvest, then a long cut-and-come-again picking season through the cool months. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  },
+  "turnip": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "main",
+        "track": "beginner",
+        "plant_out": [
+          {
+            "from": "transplant_window",
+            "offset_days": 0,
+            "window_days": 61,
+            "synthesis_note_seasoned": "Turnips set out Oct 15 - Dec 15 in the Rio Grande Valley, per RGV Homeowner Vegetable Guide window, corroborated by the Bilingual LRGV planting table's days-to-harvest. Direct-sown mid-October through mid-December (TAMU RGV Homeowner Guide); 50 to 70 days to harvest (Bilingual LRGV table).",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_start": [
+          {
+            "from": "plant_out",
+            "offset_days": 50,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Earliest harvest at about 50 days, from the earliest set-out date.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "harvest_end": [
+          {
+            "from": "plant_out",
+            "offset_days": 70,
+            "window_days": 0,
+            "synthesis_note_seasoned": "Latest harvest at about 70 days, from the latest set-out date, before RGV's spring heat closes the window.",
+            "sources": [
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "tamu_agrilife": {
+                "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+                "verified": "2026-07-13"
+              }
+            },
+            "uscrn_validation": null
+          }
+        ],
+        "anchoring_urls": {}
+      }
+    ],
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Oct 15 - Dec 15",
+        "harvest": "Dec 4 - Feb 23",
+        "harvest_start": "Dec 4",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      },
+      "10": {
+        "plant_out": "Oct 15 - Dec 15",
+        "harvest": "Dec 4 - Feb 23",
+        "harvest_start": "Dec 4",
+        "harvest_end": "Feb 23",
+        "first_plant_date": "Oct 15",
+        "last_plant_date": "Dec 15",
+        "calendar": [
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "season_over",
+          "plant",
+          "plant",
+          "plant"
+        ],
+        "notes": null,
+        "zone_notes": null,
+        "planting_note": null,
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+            "verified": "2026-07-13"
+          }
+        },
+        "resolution_method": "month_resolved_frost_free",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "successions_realized": 3
+      }
+    },
+    "region_notes_beginner": "In the Rio Grande Valley, grow turnips in the cool season, not summer. Plant Oct 15 through Dec 15 and harvest from Dec 4 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Turnips go straight into the ground mid-October through mid-December, the same window TAMU gives for beets and carrots, for roots and greens through the cool season. Skip planting turnips from spring through summer: the Valley heat keeps them from growing well here.",
+    "region_notes_seasoned": "Turnips in the RGV run on the winter-garden calendar: direct-sow Oct 15 through Dec 15, with harvest running Dec 4 through Feb 23. Direct-sown mid-October through mid-December (TAMU RGV Homeowner Guide); 50 to 70 days to harvest (Bilingual LRGV table). Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+  }
+}
