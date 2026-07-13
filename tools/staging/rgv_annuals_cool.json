@@ -1510,7 +1510,7 @@
             "from": "transplant_window",
             "offset_days": 0,
             "window_days": 75,
-            "synthesis_note_seasoned": "Celery set out Sep 1 - Nov 15 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Transplanted crop (Bilingual LRGV table gives the transplanted-celery row as Sep 1 - Nov 30; this cell narrows the tail to mid-November, since celery's long 90 to 110 day season means a late-window transplant risks not finishing before spring heat). Germination and early growth are slow, so seed starts about 12 weeks ahead of set-out.",
+            "synthesis_note_seasoned": "Celery set out Sep 1 - Nov 15 in the Rio Grande Valley, per Bilingual LRGV planting table (Vegetable Crops of the Lower Rio Grande Valley). Transplanted crop (Bilingual LRGV table gives the transplanted-celery row as Sep 1 - Nov 30; this cell narrows the tail to mid-November because celery's succession policy stages 4 transplants at about 3-week intervals, and the full Sep 1 - Nov 30 window would realize a 5th planting, exceeding the crop's succession cap). Germination and early growth are slow, so seed starts about 12 weeks ahead of set-out.",
             "sources": [
               "tamu_agrilife"
             ],
@@ -1664,8 +1664,8 @@
         "successions_realized": 4
       }
     },
-    "region_notes_beginner": "In the Rio Grande Valley, grow celery in the cool season, not summer. Transplant Sep 1 through Nov 15 and harvest from Nov 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Celery is a slow starter: seed goes indoors in early summer, long before it feels like gardening weather, so transplants are ready for the September-through-mid-November set-out window. Skip planting celery from spring through summer: the Valley heat keeps it from growing well here.",
-    "region_notes_seasoned": "Celery in the RGV runs on the winter-garden calendar: transplant Sep 1 through Nov 15, with harvest running Nov 30 through Mar 5. Transplanted crop (Bilingual LRGV table gives the transplanted-celery row as Sep 1 - Nov 30; this cell narrows the tail to mid-November, since celery's long 90 to 110 day season means a late-window transplant risks not finishing before spring heat). Germination and early growth are slow, so seed starts about 12 weeks ahead of set-out. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
+    "region_notes_beginner": "In the Rio Grande Valley, grow celery in the cool season, not summer. Transplant Sep 1 through Nov 15 and harvest from Nov 30 into spring; it rarely if ever frosts here, so the challenge is heat, not cold. Celery is a slow starter: seed goes indoors in early summer, long before it feels like gardening weather. Set out transplants in four rounds about three weeks apart, starting Sep 1; the window shown here stops in mid-November, one round short of the full TAMU table, because a fifth round would be more plantings than celery's succession plan calls for. Skip planting celery from spring through summer: the Valley heat keeps it from growing well here.",
+    "region_notes_seasoned": "Celery in the RGV runs on the winter-garden calendar: transplant Sep 1 through Nov 15, with harvest running Nov 30 through Mar 5. Transplanted crop (Bilingual LRGV table gives the transplanted-celery row as Sep 1 - Nov 30; this cell narrows the tail to mid-November because celery's succession policy stages 4 transplants at about 3-week intervals, and the full Sep 1 - Nov 30 window would realize a 5th planting, exceeding the crop's succession cap). Germination and early growth are slow, so seed starts about 12 weeks ahead of set-out. Frost is essentially absent here, so timing is heat-bounded rather than cold-bounded. Windows are authored identically for zones 9 and 10: the TAMU AgriLife sources describe a single Valley-wide planting calendar, not a zone-9/zone-10 split."
   },
   "cilantro-coriander": {
     "region_id": "rgv",
@@ -2239,9 +2239,9 @@
         "first_plant_date": "Oct 15",
         "last_plant_date": "Nov 15",
         "calendar": [
-          "season_over",
-          "season_over",
-          "season_over",
+          "growing",
+          "growing",
+          "growing",
           "harvest",
           "harvest",
           "harvest",
@@ -2250,7 +2250,7 @@
           "season_over",
           "plant",
           "plant",
-          "season_over"
+          "growing"
         ],
         "notes": null,
         "zone_notes": null,
@@ -2278,9 +2278,9 @@
         "first_plant_date": "Oct 15",
         "last_plant_date": "Nov 15",
         "calendar": [
-          "season_over",
-          "season_over",
-          "season_over",
+          "growing",
+          "growing",
+          "growing",
           "harvest",
           "harvest",
           "harvest",
@@ -2289,7 +2289,7 @@
           "season_over",
           "plant",
           "plant",
-          "season_over"
+          "growing"
         ],
         "notes": null,
         "zone_notes": null,
@@ -3741,7 +3741,7 @@
           "season_over",
           "plant",
           "plant",
-          "season_over"
+          "growing"
         ],
         "notes": null,
         "zone_notes": null,
@@ -3783,7 +3783,7 @@
           "season_over",
           "plant",
           "plant",
-          "season_over"
+          "growing"
         ],
         "notes": null,
         "zone_notes": null,
