@@ -3670,7 +3670,7 @@
                 "verified": "2026-07-13"
               },
               "uf_ifas": {
-                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
                 "verified": "2026-07-02"
               }
             },
@@ -3694,7 +3694,7 @@
                 "verified": "2026-07-13"
               },
               "uf_ifas": {
-                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
                 "verified": "2026-07-02"
               }
             },
@@ -3718,7 +3718,7 @@
                 "verified": "2026-07-13"
               },
               "uf_ifas": {
-                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
                 "verified": "2026-07-02"
               }
             },
@@ -3854,7 +3854,7 @@
                 "verified": "2026-07-13"
               },
               "umn_ext": {
-                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "url": "https://extension.umn.edu/vegetables/growing-chives",
                 "verified": "2026-07-02"
               }
             },
@@ -3878,7 +3878,7 @@
                 "verified": "2026-07-13"
               },
               "umn_ext": {
-                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "url": "https://extension.umn.edu/vegetables/growing-chives",
                 "verified": "2026-07-02"
               }
             },
@@ -3902,7 +3902,7 @@
                 "verified": "2026-07-13"
               },
               "umn_ext": {
-                "url": "https://www.ctahr.hawaii.edu/site/info.aspx",
+                "url": "https://extension.umn.edu/vegetables/growing-chives",
                 "verified": "2026-07-02"
               }
             },
@@ -3925,11 +3925,11 @@
           "plant",
           "harvest",
           "harvest",
-          "harvest",
-          "harvest",
-          "harvest",
-          "harvest",
-          "harvest",
+          "heat_pause",
+          "heat_pause",
+          "heat_pause",
+          "heat_pause",
+          "heat_pause",
           "harvest",
           "harvest",
           "harvest"
@@ -3955,6 +3955,31 @@
         "resolved_from": {
           "last_frost": null,
           "first_frost": null
+        },
+        "heat_pause": {
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "classification": "heat_pause",
+          "basis_seasoned": "Chives are a cool-preferring perennial that grows best in mild weather. The Rio Grande Valley's summer runs hotter and drier than the Florida peninsula's, so this cell adopts chives's own fl_peninsula heat_pause precedent (rather than mirroring the no-pause hawaii_tropical shape used elsewhere in this cell) as the more climate-analogous, more conservative choice for a hot-summer subtropical climate. In the Valley's extreme summer heat the plants slow, the foliage scorches, and many clumps go semi-dormant, so the cutting calendar pauses through the hottest months and picks back up as the weather cools. Clumps already in the ground are best carried with afternoon shade, mulch, and steady water. The exact pause months are modeled from chives's own fl_peninsula evidence and the Valley's summer heat pattern, not a chives-specific Valley chart.",
+          "sources": [
+            "uf_ifas",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "uf_ifas": {
+              "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/16/spice-up-your-life-chives/",
+              "verified": "2026-07-02"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/vegetables/growing-chives",
+              "verified": "2026-07-02"
+            }
+          }
         }
       },
       "10": {
@@ -3969,11 +3994,11 @@
           "plant",
           "harvest",
           "harvest",
-          "harvest",
-          "harvest",
-          "harvest",
-          "harvest",
-          "harvest",
+          "heat_pause",
+          "heat_pause",
+          "heat_pause",
+          "heat_pause",
+          "heat_pause",
           "harvest",
           "harvest",
           "harvest"
@@ -3999,11 +4024,36 @@
         "resolved_from": {
           "last_frost": null,
           "first_frost": null
+        },
+        "heat_pause": {
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "classification": "heat_pause",
+          "basis_seasoned": "Chives are a cool-preferring perennial that grows best in mild weather. The Rio Grande Valley's summer runs hotter and drier than the Florida peninsula's, so this cell adopts chives's own fl_peninsula heat_pause precedent (rather than mirroring the no-pause hawaii_tropical shape used elsewhere in this cell) as the more climate-analogous, more conservative choice for a hot-summer subtropical climate. In the Valley's extreme summer heat the plants slow, the foliage scorches, and many clumps go semi-dormant, so the cutting calendar pauses through the hottest months and picks back up as the weather cools. Clumps already in the ground are best carried with afternoon shade, mulch, and steady water. The exact pause months are modeled from chives's own fl_peninsula evidence and the Valley's summer heat pattern, not a chives-specific Valley chart.",
+          "sources": [
+            "uf_ifas",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "uf_ifas": {
+              "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/16/spice-up-your-life-chives/",
+              "verified": "2026-07-02"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/vegetables/growing-chives",
+              "verified": "2026-07-02"
+            }
+          }
         }
       }
     },
     "region_notes_beginner": "In the Rio Grande Valley, chives grow nearly year round: they are a cold-hardy allium, and the Valley rarely if ever frosts. Establish new plants in January and February and harvest nearly continuously afterward. Chives are not in either TAMU RGV vegetable table, so this is a conservative placement built from chives's own known behavior in other frost-free regions of this dataset, not a stated RGV date.",
-    "region_notes_seasoned": "Chives are not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, mirroring the near-year-round shape of chives's own hawaii_tropical cell (a Jan-Feb establishment window, harvest March through December). Windows are authored identically for zones 9 and 10, since chives's cold hardiness and the Valley's essentially frost-free climate do not differentiate between them."
+    "region_notes_seasoned": "Chives are not covered in either TAMU AgriLife RGV vegetable planting table; this cell is CONSERVATIVE, mirroring the near-year-round shape of chives's own hawaii_tropical cell (a Jan-Feb establishment window, harvest March through December). Windows are authored identically for zones 9 and 10, since chives's cold hardiness and the Valley's essentially frost-free climate do not differentiate between them. Unlike hawaii_tropical, this cell adopts a summer heat_pause (May through September) from chives's own fl_peninsula cell rather than Hawaii's no-pause shape: the Rio Grande Valley's summer runs hotter and drier than the Florida peninsula's, so Florida's own precedent (chives semi-dormant in peak heat) is the more climate-analogous, more conservative choice for this cool-preferring perennial."
   },
   "bee-balm": {
     "region_id": "rgv",
@@ -4222,7 +4272,7 @@
                 "verified": "2026-07-13"
               },
               "ncsu_ext": {
-                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/purple-coneflower/",
+                "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
                 "verified": "2026-07-02"
               }
             },
@@ -4246,7 +4296,7 @@
                 "verified": "2026-07-13"
               },
               "ncsu_ext": {
-                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/purple-coneflower/",
+                "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
                 "verified": "2026-07-02"
               }
             },
@@ -4270,7 +4320,7 @@
                 "verified": "2026-07-13"
               },
               "ncsu_ext": {
-                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/purple-coneflower/",
+                "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
                 "verified": "2026-07-02"
               }
             },
