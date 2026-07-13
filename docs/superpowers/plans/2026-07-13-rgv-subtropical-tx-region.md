@@ -338,7 +338,7 @@ git commit -m "feat(rgv): author 79 frost_anchored annual RGV cells (winter-gard
 - Consumes: the tree-fruiting template, the citrus sourcing rows, `rgv_harness.gate_crop`.
 - Produces: `tools/staging/rgv_citrus.json` (grapefruit, lemon, lime, mandarin-clementine, orange-navel).
 
-- [ ] **Step 1: Author each citrus cell** with `suitability="fruits_reliably"`, authored `bloom` (spring) + `harvest` windows per the TAMU South-Texas citrus calendar (grapefruit/orange: late fall-winter harvest; lemon/lime: multiple flushes), `chill_basis_*` (citrus is not chill-limited; note year-round evergreen), dual-register notes. Keys `"9"`,`"10"`; `resolution_method` frost-free variant.
+- [ ] **Step 1: Author each citrus cell** with `suitability="fruits_reliably"`, authored `bloom` (spring) + `harvest` windows per the TAMU South-Texas citrus calendar (grapefruit/orange: late fall-winter harvest; lemon/lime: multiple flushes), `min_winter_temp_f` (`[lo,hi]`) + `cold_basis_{seasoned,beginner}` -- citrus is `perennial_evergreen` (cold-gated, not chill-gated) and does **not** carry `chill_basis_*`; for the heat-gated three (grapefruit, orange-navel, mandarin-clementine -- NOT lemon/lime) also add `heat_summer_basis` + `heat_basis_{seasoned,beginner}` -- plus dual-register notes. Keys `"9"`,`"10"`; `resolution_method` frost-free variant. `docs/rgv_cell_contract.md` §3 is the authoritative citrus template (§3.1 sub-shape table, §3.3 heat-gated worked example, §3.4 lemon/lime delta).
 
 - [ ] **Step 2: Gate each in isolation**
 

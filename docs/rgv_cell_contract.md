@@ -117,6 +117,7 @@ vocabulary this arc retires for RGV). Each entry carries its own `sources` + `an
 | `resolved_from` | required | `{"last_frost": null, "first_frost": null}` -- hard invariant, see §1 |
 | `second_planting` | conditional | only for a warm-season crop with a real spring+fall split around a heat_pause (§2.5 Variant B); shape = `{plant_out, start_indoors, harvest_start, harvest_end, sources, anchoring_urls}` -- all four window keys required if the object is present at all |
 | `heat_pause` | conditional | only if a T1-backed summer heat pause is authored -- see the summer-gap rule, §2.5 |
+| `season_over` (object) | conditional/RARE | not the `season_over` **calendar token** (common, §2.6) -- this is a structured object, shape `{"months":[...], "classification":..., "basis_seasoned":..., "sources":[...], "anchoring_urls":{...}}`, seen in the §2.4 worked example. Mirror the `heat_pause` discipline: author it only when a real T1 source states the *why* behind the summer planting gap. MOST cells omit it -- only 11 zone-rows in the whole canonical carry it (all on `broccoli`, across its `ca_desert`/`low_desert_az`/`fl_peninsula`/`hawaii_tropical` regions), so treat authoring it as the exception, not the default |
 | `succession_continuous` / `succession_spring` / `succession_fall` | conditional | present only if the crop runs succession sowings (crop-dependent, not RGV-specific) |
 | `successions_realized` | conditional | derived count; present only if the crop is in succession scope (`tools/derive_realized_successions.py`); absent entirely for an out-of-scope crop |
 | `sources`, `anchoring_urls` | required | zone-row citation |
@@ -300,9 +301,11 @@ still anchors to `transplant_window`, never `frost_free_spring`/`heat_subsiding`
 
 `second_planting` requires all four of `plant_out`/`start_indoors`/`harvest_start`/`harvest_end`
 present if the key is present at all (`whole_crop_gate`'s `SECOND_PLANTING_KEYS` check). `plantings[]`
-carries a matching second `succession_id` entry (`track: "fall"` or `"second_planting"`, same
-`transplant_window`-anchored shape as §2.2) -- see `broccoli.regions.se_gulf.plantings[1]` for the
-exact rule-layer pattern to mirror (frost anchors swapped for transplant-window anchors).
+carries a matching second `succession_id` entry with `track: "second_planting"` **always** --
+`"fall"` is the entry's `label`, not its `track` (confirmed against
+`broccoli.regions.se_gulf.plantings[1]`, which carries `label: "fall"`, `track: "second_planting"`),
+same `transplant_window`-anchored shape as §2.2 -- see that cell for the exact rule-layer pattern to
+mirror (frost anchors swapped for transplant-window anchors).
 
 ### 2.6 The summer-gap rule (binding on every annual cell, both variants)
 
@@ -561,7 +564,9 @@ A3 (`perennial_gate.py` -- suitability enum membership, single perennial establi
 `fruits_reliably`/`marginal` must carry a non-empty calendar, the heat-gated floor when
 `heat_accumulation` is in `gating_factors`), A4 (tree-calendar coherence -- `calendar[]` must be
 *derivable* from `bloom`+`harvest` dates, not hand-typed independently), A31 (region-roster floor).
-A32 does **not** apply to trees (A32 is `frost_anchored`-only; trees are exempt and governed by A3).
+A32 does **not** apply to trees (`coverage_floor_gate.CALENDAR_PRESENCE_BASES` = `frost_anchored`,
+`perennial_herbaceous`, `berries_woody`, `perennial_woody_ornamental` -- Archetype 1's scope, §2 --
+not the tree archetypes; trees are exempt and governed by A3 instead).
 
 ---
 

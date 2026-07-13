@@ -112,6 +112,11 @@ rows). RGV-authored values replace the donor values; the frost-free convention (
 `resolved_from` / `resolution_method`. `whole_crop_gate` run per crop during build validates the
 exact per-field shape, so the archetype template is enforced, not assumed.
 
+*(Correction: the `chill_basis_*` shape above is for the `perennial_chill_gated` trees only; citrus
+(`perennial_evergreen`) instead carries `cold_basis_{seasoned,beginner}` + `min_winter_temp_f`, plus
+conditional `heat_summer_basis` / `heat_basis_{seasoned,beginner}` for the heat-gated three
+(grapefruit, orange-navel, mandarin-clementine) -- see `docs/rgv_cell_contract.md` §3.4.)*
+
 - `region_id`: `rgv`
 - `region_label`: `"Rio Grande Valley: Subtropical South Texas"` (final wording in build)
 
