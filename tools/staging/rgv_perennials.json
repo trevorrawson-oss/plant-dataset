@@ -1,0 +1,1485 @@
+{
+ "rosemary": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "ncsu_ext",
+   "uf_ifas",
+   "uwi_hort",
+   "tamu_agrilife"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Oct - Mar",
+     "Oct - Mar"
+    ],
+    "bloom": [
+     "Feb - Apr",
+     "Feb - Apr"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/rosemary/",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): the Rio Grande Valley's zones 9 and 10 are within rosemary's hardy range with room to spare, so it is an evergreen in-ground perennial growing year-round with no dormancy. Bloom (Feb - Apr) is reused from this crop's own se_gulf zone 9/10 rows, phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, dry sunny sites, and Texas-suited cultivars such as Arp for cold-snap resilience, though cold is a minor factor this far south. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no rosemary-specific RGV chart exists.",
+    "synthesis_note_beginner": "Rosemary lives outdoors year-round in the Rio Grande Valley. It flowers around February to April, and you can snip leaves through most of the year. Give it full sun, fast-draining soil, and do not overwater; plant in the cooler months if you can."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": false,
+   "note": "Frost-free region (RGV zone_span 9-10): plant_out and bloom are month-resolved, not frost-relative; resolved_from carries null for both zones. Windows reused from this crop's own se_gulf z9/z10 rows (the RGV donor region this arc retires), which are themselves phenology-modeled, not read from an herb-specific per-region chart, plus Texas A&M AgriLife's statewide 'Growing Herbs in Texas' guidance for general Texas culture (full sun, well-drained soil). blocks_launch:false open finding carried over: no RGV-specific per-herb bloom-month chart exists; community correction invited."
+  },
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Rosemary is a hardy evergreen perennial in the frost-free Rio Grande Valley and grows here year-round with no winter dieback to speak of. Texas A&M AgriLife Extension notes rosemary is a hardy evergreen shrub that only suffers damage well below freezing, so the Valley's mild winters are not a concern; the real risk is the Valley's heat and periodic humidity, which can bring on root and crown rot in poorly drained soil. Plant in full sun on a raised bed or mound of sharply drained soil, and water deeply but infrequently.",
+    "grown_as_note_beginner": "Rosemary grows outdoors all year in the Rio Grande Valley since it almost never freezes here. Give it full sun and fast-draining soil, ideally a raised bed, and do not overwater it, since soggy soil is what actually hurts this plant here, not cold.",
+    "bloom": "Feb - Apr",
+    "calendar": [
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold injury is not a practical concern for rosemary here; excellent drainage and restrained watering matter far more than any cold protection.",
+    "resolved_from": null,
+    "sources": [
+     "ncsu_ext",
+     "uf_ifas",
+     "uwi_hort",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/rosemary/",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): the Rio Grande Valley's zones 9 and 10 are within rosemary's hardy range with room to spare, so it is an evergreen in-ground perennial growing year-round with no dormancy. Bloom (Feb - Apr) is reused from this crop's own se_gulf zone 9/10 rows, phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, dry sunny sites, and Texas-suited cultivars such as Arp for cold-snap resilience, though cold is a minor factor this far south. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no rosemary-specific RGV chart exists.",
+    "synthesis_note_beginner": "Rosemary lives outdoors year-round in the Rio Grande Valley. It flowers around February to April, and you can snip leaves through most of the year. Give it full sun, fast-draining soil, and do not overwater; plant in the cooler months if you can."
+   },
+   "10": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Rosemary is a hardy evergreen perennial in the frost-free Rio Grande Valley and grows here year-round with no winter dieback to speak of. Texas A&M AgriLife Extension notes rosemary is a hardy evergreen shrub that only suffers damage well below freezing, so the Valley's mild winters are not a concern; the real risk is the Valley's heat and periodic humidity, which can bring on root and crown rot in poorly drained soil. Plant in full sun on a raised bed or mound of sharply drained soil, and water deeply but infrequently.",
+    "grown_as_note_beginner": "Rosemary grows outdoors all year in the Rio Grande Valley since it almost never freezes here. Give it full sun and fast-draining soil, ideally a raised bed, and do not overwater it, since soggy soil is what actually hurts this plant here, not cold.",
+    "bloom": "Feb - Apr",
+    "calendar": [
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold injury is not a practical concern for rosemary here; excellent drainage and restrained watering matter far more than any cold protection.",
+    "resolved_from": null,
+    "sources": [
+     "ncsu_ext",
+     "uf_ifas",
+     "uwi_hort",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/rosemary/",
+      "verified": "2026-07-02"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): the Rio Grande Valley's zones 9 and 10 are within rosemary's hardy range with room to spare, so it is an evergreen in-ground perennial growing year-round with no dormancy. Bloom (Feb - Apr) is reused from this crop's own se_gulf zone 9/10 rows, phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, dry sunny sites, and Texas-suited cultivars such as Arp for cold-snap resilience, though cold is a minor factor this far south. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no rosemary-specific RGV chart exists.",
+    "synthesis_note_beginner": "Rosemary lives outdoors year-round in the Rio Grande Valley. It flowers around February to April, and you can snip leaves through most of the year. Give it full sun, fast-draining soil, and do not overwater; plant in the cooler months if you can."
+   }
+  },
+  "region_notes_beginner": "Rosemary grows outdoors all year in the Rio Grande Valley since it almost never freezes here. Plant it in full sun on a raised bed with fast-draining soil, and water deeply but not often, since wet feet are the real risk, not cold. It flowers late winter into spring, and you can trim it lightly after that.",
+  "region_notes_seasoned": "In the Rio Grande Valley, rosemary is a true year-round evergreen perennial: winters are essentially frost-free and well within its hardy range, so there is no dieback to recover from each spring. The Valley's heat is not a problem for this Mediterranean shrub, but drainage is the make-or-break factor: plant it in full sun on a raised bed or mound of sharply drained soil, and water deeply but rarely rather than on a frequent schedule. It blooms late winter into spring, and a light shaping prune after bloom keeps it full."
+ },
+ "oregano": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "uf_ifas",
+   "ncsu_ext",
+   "clemson_hgic",
+   "tamu_agrilife"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Oct - Mar",
+     "Oct - Mar"
+    ],
+    "bloom": [
+     "May - Jul",
+     "May - Jul"
+    ],
+    "anchoring_urls": {
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "verified": "2026-07-02"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): oregano overwinters as a low woody sub-shrub through the Valley's mild winters with no dieback. Bloom (May - Jul) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, 10 to 12 inch spacing, and dividing/replanting every 3 to 4 years as the plant becomes woody. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+    "synthesis_note_beginner": "Oregano lives through the Valley winter and comes back every year. Plant it in the cooler months, and it flowers in early to mid-summer. Every few years, once it gets woody, dig it up and replant a fresh piece."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": false,
+   "note": "Frost-free region (RGV zone_span 9-10): plant_out and bloom are month-resolved, not frost-relative; resolved_from carries null for both zones. Windows reused from this crop's own se_gulf z9/z10 rows (the RGV donor region this arc retires), which are themselves phenology-modeled, not read from an herb-specific per-region chart, plus Texas A&M AgriLife's statewide 'Growing Herbs in Texas' guidance for general Texas culture (full sun, well-drained soil). blocks_launch:false open finding carried over: no RGV-specific per-herb bloom-month chart exists; community correction invited."
+  },
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Oregano is a durable perennial in the Rio Grande Valley's frost-free winters. Texas A&M AgriLife's herb-growing guidance for the state calls for full sun and well-drained soil, spaced about 10 to 12 inches apart, and notes it is a perennial that becomes woody after a few years and is best dug and replanted at that point. Give it a raised bed or mound with sharp drainage and open airflow; the Valley's summer humidity, more than its heat, is what brings on root and stem rot in a low, poorly drained spot.",
+    "grown_as_note_beginner": "Oregano grows year-round in the Valley and comes back reliably each year since it almost never freezes. Plant it in full sun with fast-draining soil, and expect to dig and replant it every three to four years once it gets woody, per Texas A&M AgriLife's Texas herb guidance.",
+    "bloom": "May - Jul",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Frost is a minor concern in the Valley; heat, humidity, or waterlogged soil are the real risks here, so plant in the cooler months and keep drainage sharp.",
+    "resolved_from": null,
+    "sources": [
+     "uf_ifas",
+     "ncsu_ext",
+     "clemson_hgic",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "verified": "2026-07-02"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): oregano overwinters as a low woody sub-shrub through the Valley's mild winters with no dieback. Bloom (May - Jul) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, 10 to 12 inch spacing, and dividing/replanting every 3 to 4 years as the plant becomes woody. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+    "synthesis_note_beginner": "Oregano lives through the Valley winter and comes back every year. Plant it in the cooler months, and it flowers in early to mid-summer. Every few years, once it gets woody, dig it up and replant a fresh piece."
+   },
+   "10": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Oregano is a durable perennial in the Rio Grande Valley's frost-free winters. Texas A&M AgriLife's herb-growing guidance for the state calls for full sun and well-drained soil, spaced about 10 to 12 inches apart, and notes it is a perennial that becomes woody after a few years and is best dug and replanted at that point. Give it a raised bed or mound with sharp drainage and open airflow; the Valley's summer humidity, more than its heat, is what brings on root and stem rot in a low, poorly drained spot.",
+    "grown_as_note_beginner": "Oregano grows year-round in the Valley and comes back reliably each year since it almost never freezes. Plant it in full sun with fast-draining soil, and expect to dig and replant it every three to four years once it gets woody, per Texas A&M AgriLife's Texas herb guidance.",
+    "bloom": "May - Jul",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Frost is a minor concern in the Valley; heat, humidity, or waterlogged soil are the real risks here, so plant in the cooler months and keep drainage sharp.",
+    "resolved_from": null,
+    "sources": [
+     "uf_ifas",
+     "ncsu_ext",
+     "clemson_hgic",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "verified": "2026-07-02"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): oregano overwinters as a low woody sub-shrub through the Valley's mild winters with no dieback. Bloom (May - Jul) is reused from this crop's own se_gulf zone 9/10 rows, frost/phenology-modeled rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends full sun, 10 to 12 inch spacing, and dividing/replanting every 3 to 4 years as the plant becomes woody. plant_out follows the general cool-season, avoid-peak-heat convention. Flagged blocks_launch:false: no oregano-specific RGV chart exists.",
+    "synthesis_note_beginner": "Oregano lives through the Valley winter and comes back every year. Plant it in the cooler months, and it flowers in early to mid-summer. Every few years, once it gets woody, dig it up and replant a fresh piece."
+   }
+  },
+  "region_notes_beginner": "Oregano grows year-round in the Valley and comes back reliably since it almost never freezes. Plant it in full sun with fast-draining soil and good airflow. It flowers in late spring and summer. Every few years, once the plant gets woody, dig it up and replant a fresh piece, per Texas A&M AgriLife's guidance for growing herbs in Texas.",
+  "region_notes_seasoned": "Oregano is a reliable perennial in the Rio Grande Valley: the frost-free winters mean no real dieback, and the plant persists year to year. Give it full sun and sharply drained soil, ideally a raised bed or mound with open airflow, since humidity and wet soil, not heat, are what cause root and stem rot here. It flowers from late spring into summer. As with oregano everywhere, the crown gets woody after a few years, so plan to dig and replant a fresh division every three to four years, per Texas A&M AgriLife's Texas herb guidance."
+ },
+ "sage": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "clemson_hgic",
+   "ncsu_ext",
+   "uf_ifas",
+   "tamu_agrilife"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Oct - Mar",
+     "Oct - Mar"
+    ],
+    "bloom": [
+     "Apr - May",
+     "Apr - May"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sage-the-wisest-herb/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sage/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): the Valley's mild winters keep sage alive year-round with no dieback. Bloom (Apr - May) is reused from this crop's own se_gulf zone 9/10 rows (modeled from general culture plus frost dates in that donor cell, itself flagged blocks_launch:false there), carried over as the closest sourced analog since no sage-specific RGV chart exists. Texas A&M AgriLife's statewide herb guidance calls for full sun and transplant establishment. plant_out follows the general cool-season, avoid-peak-heat convention.",
+    "synthesis_note_beginner": "Sage can grow year-round in the Valley, flowering in spring. Plant it in a raised bed with great drainage and full sun, and pick the plain green kind, which handles heat and humidity better than the variegated types."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": false,
+   "note": "Frost-free region (RGV zone_span 9-10): plant_out and bloom are month-resolved, not frost-relative; resolved_from carries null for both zones. Windows reused from this crop's own se_gulf z9/z10 rows (the RGV donor region this arc retires), which are themselves phenology-modeled, not read from an herb-specific per-region chart, plus Texas A&M AgriLife's statewide 'Growing Herbs in Texas' guidance for general Texas culture (full sun, well-drained soil). blocks_launch:false open finding carried over: no RGV-specific per-herb bloom-month chart exists; community correction invited."
+  },
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Sage is grown as a perennial in the Valley's frost-free winters, but it is a dry-climate Mediterranean shrub, and the limiting factor here is humidity, not cold. Texas A&M AgriLife's guidance for the state describes sage as a shrub-like perennial best started as a transplant; give it full sun and excellent drainage, a raised bed or mound, and open airflow to head off root and stem rot in the Valley's humid stretches. Favor the plain green culinary sage over tender variegated forms, which cope less well with heat and damp.",
+    "grown_as_note_beginner": "Sage can live year-round in the Valley since it almost never freezes, but it does not like wet, humid conditions. Plant it in full sun on a raised bed or mound with fast-draining soil, and stick with plain green sage rather than the fancier variegated kinds, which rot more easily here.",
+    "bloom": "Apr - May",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Frost is a minor factor in the Valley; heat and humidity are the real risks, bringing rot and mildew in a poorly drained spot. Grow in raised beds or containers with excellent drainage and airflow.",
+    "resolved_from": null,
+    "sources": [
+     "clemson_hgic",
+     "ncsu_ext",
+     "uf_ifas",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sage-the-wisest-herb/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sage/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): the Valley's mild winters keep sage alive year-round with no dieback. Bloom (Apr - May) is reused from this crop's own se_gulf zone 9/10 rows (modeled from general culture plus frost dates in that donor cell, itself flagged blocks_launch:false there), carried over as the closest sourced analog since no sage-specific RGV chart exists. Texas A&M AgriLife's statewide herb guidance calls for full sun and transplant establishment. plant_out follows the general cool-season, avoid-peak-heat convention.",
+    "synthesis_note_beginner": "Sage can grow year-round in the Valley, flowering in spring. Plant it in a raised bed with great drainage and full sun, and pick the plain green kind, which handles heat and humidity better than the variegated types."
+   },
+   "10": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Sage is grown as a perennial in the Valley's frost-free winters, but it is a dry-climate Mediterranean shrub, and the limiting factor here is humidity, not cold. Texas A&M AgriLife's guidance for the state describes sage as a shrub-like perennial best started as a transplant; give it full sun and excellent drainage, a raised bed or mound, and open airflow to head off root and stem rot in the Valley's humid stretches. Favor the plain green culinary sage over tender variegated forms, which cope less well with heat and damp.",
+    "grown_as_note_beginner": "Sage can live year-round in the Valley since it almost never freezes, but it does not like wet, humid conditions. Plant it in full sun on a raised bed or mound with fast-draining soil, and stick with plain green sage rather than the fancier variegated kinds, which rot more easily here.",
+    "bloom": "Apr - May",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Frost is a minor factor in the Valley; heat and humidity are the real risks, bringing rot and mildew in a poorly drained spot. Grow in raised beds or containers with excellent drainage and airflow.",
+    "resolved_from": null,
+    "sources": [
+     "clemson_hgic",
+     "ncsu_ext",
+     "uf_ifas",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sage-the-wisest-herb/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+      "verified": "2026-07-02"
+     },
+     "uf_ifas": {
+      "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/sage/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): the Valley's mild winters keep sage alive year-round with no dieback. Bloom (Apr - May) is reused from this crop's own se_gulf zone 9/10 rows (modeled from general culture plus frost dates in that donor cell, itself flagged blocks_launch:false there), carried over as the closest sourced analog since no sage-specific RGV chart exists. Texas A&M AgriLife's statewide herb guidance calls for full sun and transplant establishment. plant_out follows the general cool-season, avoid-peak-heat convention.",
+    "synthesis_note_beginner": "Sage can grow year-round in the Valley, flowering in spring. Plant it in a raised bed with great drainage and full sun, and pick the plain green kind, which handles heat and humidity better than the variegated types."
+   }
+  },
+  "region_notes_beginner": "Sage can grow year-round in the Valley since it almost never freezes, but the humidity is the real challenge, not the cold. Plant it in a raised bed or pot with great drainage and full sun, and choose the plain green kind, which holds up better than fancier variegated sage. It flowers in spring, and you may need to replace it every couple of years.",
+  "region_notes_seasoned": "Sage is grown as a perennial in the frost-free Rio Grande Valley, where cold is simply not a factor. The real challenge is the Valley's humidity: sage is a dry-climate Mediterranean herb, so give it full sun, excellent drainage, and open airflow, ideally in a raised bed or mound, to keep root and stem rot and powdery mildew at bay. It flowers in spring. Favor plain green culinary sage over tender variegated types, and treat it as a shorter-lived perennial that may need replacing every couple of years in a humid stretch."
+ },
+ "thyme": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "uf_ifas",
+   "clemson_hgic",
+   "ncsu_ext",
+   "tamu_agrilife"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Oct - Mar",
+     "Oct - Mar"
+    ],
+    "bloom": [
+     "Apr - Jun",
+     "Apr - Jun"
+    ],
+    "anchoring_urls": {
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/23/spice-up-your-life-a-beginners-guide-to-growing-thyme/",
+      "verified": "2026-07-02"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): thyme overwinters as a low sub-shrub through the Valley's mild winters with no dieback. Bloom (Apr - Jun) is reused from this crop's own se_gulf zone 9/10 rows, phenology-modeled from thyme's early-to-mid-summer flowering rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends dry, sunny sites, 12 inch spacing, constant harvest, and renewal every 3 to 4 years. plant_out follows the general cool-season, avoid-peak-heat convention.",
+    "synthesis_note_beginner": "Thyme grows as a low perennial year-round in the Valley, flowering in spring into summer. Plant it high in fast-draining soil with room for airflow, and harvest often to keep it from getting woody."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": false,
+   "note": "Frost-free region (RGV zone_span 9-10): plant_out and bloom are month-resolved, not frost-relative; resolved_from carries null for both zones. Windows reused from this crop's own se_gulf z9/z10 rows (the RGV donor region this arc retires), which are themselves phenology-modeled, not read from an herb-specific per-region chart, plus Texas A&M AgriLife's statewide 'Growing Herbs in Texas' guidance for general Texas culture (full sun, well-drained soil). blocks_launch:false open finding carried over: no RGV-specific per-herb bloom-month chart exists; community correction invited."
+  },
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Thyme persists as a low woody perennial through the Valley's frost-free winters. Texas A&M AgriLife's Texas herb guidance calls for dry soil in full sun, spacing plants about 12 inches apart, and renewing the planting every 3 to 4 years as it becomes woody; constant harvesting helps keep it from getting leggy. Plant it high, on a mound or raised bed in gritty, sharply drained soil, and water at the base rather than overhead, since humid stretches, not cold, are what bring on root rot and foliar fungus here.",
+    "grown_as_note_beginner": "Thyme grows as a low perennial year-round in the Valley since it almost never freezes. Plant it high on a mound or raised bed in fast-draining soil, water at the base, and harvest it often to keep it tidy. Renew the planting every few years once it gets woody.",
+    "bloom": "Apr - Jun",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Cold is not the issue in the Valley; humidity and wet soil are. Plant on a mound or raised bed with sharp drainage, keep airflow open, and water only at the base.",
+    "resolved_from": null,
+    "sources": [
+     "uf_ifas",
+     "clemson_hgic",
+     "ncsu_ext",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/23/spice-up-your-life-a-beginners-guide-to-growing-thyme/",
+      "verified": "2026-07-02"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): thyme overwinters as a low sub-shrub through the Valley's mild winters with no dieback. Bloom (Apr - Jun) is reused from this crop's own se_gulf zone 9/10 rows, phenology-modeled from thyme's early-to-mid-summer flowering rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends dry, sunny sites, 12 inch spacing, constant harvest, and renewal every 3 to 4 years. plant_out follows the general cool-season, avoid-peak-heat convention.",
+    "synthesis_note_beginner": "Thyme grows as a low perennial year-round in the Valley, flowering in spring into summer. Plant it high in fast-draining soil with room for airflow, and harvest often to keep it from getting woody."
+   },
+   "10": {
+    "plant_out": "Oct - Mar",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Thyme persists as a low woody perennial through the Valley's frost-free winters. Texas A&M AgriLife's Texas herb guidance calls for dry soil in full sun, spacing plants about 12 inches apart, and renewing the planting every 3 to 4 years as it becomes woody; constant harvesting helps keep it from getting leggy. Plant it high, on a mound or raised bed in gritty, sharply drained soil, and water at the base rather than overhead, since humid stretches, not cold, are what bring on root rot and foliar fungus here.",
+    "grown_as_note_beginner": "Thyme grows as a low perennial year-round in the Valley since it almost never freezes. Plant it high on a mound or raised bed in fast-draining soil, water at the base, and harvest it often to keep it tidy. Renew the planting every few years once it gets woody.",
+    "bloom": "Apr - Jun",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Cold is not the issue in the Valley; humidity and wet soil are. Plant on a mound or raised bed with sharp drainage, keep airflow open, and water only at the base.",
+    "resolved_from": null,
+    "sources": [
+     "uf_ifas",
+     "clemson_hgic",
+     "ncsu_ext",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/23/spice-up-your-life-a-beginners-guide-to-growing-thyme/",
+      "verified": "2026-07-02"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "verified": "2026-07-02"
+     },
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+      "verified": "2026-07-02"
+     },
+     "tamu_agrilife": {
+      "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/growingherbsintexas_4-1.pdf",
+      "verified": "2026-07-13"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (frost-free): thyme overwinters as a low sub-shrub through the Valley's mild winters with no dieback. Bloom (Apr - Jun) is reused from this crop's own se_gulf zone 9/10 rows, phenology-modeled from thyme's early-to-mid-summer flowering rather than read from a Valley-specific chart. Texas A&M AgriLife's statewide herb guidance recommends dry, sunny sites, 12 inch spacing, constant harvest, and renewal every 3 to 4 years. plant_out follows the general cool-season, avoid-peak-heat convention.",
+    "synthesis_note_beginner": "Thyme grows as a low perennial year-round in the Valley, flowering in spring into summer. Plant it high in fast-draining soil with room for airflow, and harvest often to keep it from getting woody."
+   }
+  },
+  "region_notes_beginner": "Thyme grows year-round in the Valley as a low perennial since it almost never freezes, but the humidity can cause rot, so plant it high on a mound or raised bed in fast-draining soil with room for air to move. It flowers in spring and early summer. Harvest it often and replant a fresh piece every few years once it gets woody.",
+  "region_notes_seasoned": "Thyme is a durable low perennial in the frost-free Rio Grande Valley; cold is not a concern here. Humidity is the real limiting factor, so plant thyme high, on a mound or raised bed in gritty, sharply drained soil, space plants for airflow, and water at the base rather than overhead. It flowers from spring into early summer. Per Texas A&M AgriLife's Texas herb guidance, harvest it often to prevent legginess and renew the planting every 3 to 4 years as it becomes woody."
+ },
+ "lavender": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "lsu_agcenter",
+   "uf_ifas_nwdistrict",
+   "osu_ext_prune_lavender"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Oct - Nov",
+     "Oct - Nov"
+    ],
+    "bloom": [
+     "Apr - Jun",
+     "Apr - Jun"
+    ],
+    "anchoring_urls": {
+     "lsu_agcenter": {
+      "url": "https://www.nola.com/entertainment_life/home_garden/dan-gill-explains-how-to-grow-lavender-in-our-humidity/article_cf08fe38-1d02-11ee-839c-130b5aa5f73b.html",
+      "verified": "2026-06-22"
+     },
+     "uf_ifas_nwdistrict": {
+      "url": "https://nwdistrict.ifas.ufl.edu/hort/2020/04/29/growing-lavender-in-the-coastal-south/",
+      "verified": "2026-06-22"
+     },
+     "osu_ext_prune_lavender": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "verified": "2026-06-22"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (container-preferred, often short-lived, frost-free): the Valley has no winter cold at all, so unlike the northern crops lavender fails from FREEZING here, it fails from HEAT AND HUMIDITY, the same failure mode LSU AgCenter documents across the humid Gulf South. Bloom (Apr - Jun) and the container-preferred framing are reused from this crop's own se_gulf zone 9/10 rows (already flagged blocks_launch:false there: no Gulf-state T1 source gives a clean reliably-perennial in-ground bloom window because the plant is genuinely marginal in this climate), which is the closest sourced analog for a hot, humid, frost-free Valley. plant_out is the fall cool-season establishment window.",
+    "synthesis_note_beginner": "In the Valley, lavender struggles with heat and humidity, not cold. Grow it in a pot with excellent drainage, pick a heat- and humidity-tolerant type, and plant in fall. It flowers spring into early summer."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": false,
+   "note": "Frost-free region (RGV zone_span 9-10): plant_out and bloom are month-resolved, not frost-relative; resolved_from carries null for both zones. Windows reused from this crop's own se_gulf z9/z10 rows (the RGV donor region this arc retires), which are themselves phenology-modeled, not read from an herb-specific per-region chart, plus Texas A&M AgriLife's statewide 'Growing Herbs in Texas' guidance for general Texas culture (full sun, well-drained soil). blocks_launch:false open finding carried over: no RGV-specific per-herb bloom-month chart exists; community correction invited."
+  },
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Oct - Nov",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Lavender is perennial in name only in the Rio Grande Valley, and best grown in a container. Cold is not the problem this far south; the Valley's heat and humidity are genuinely hard on this dry-climate Mediterranean plant, and LSU AgCenter is blunt that lavender is a challenge across the humid Gulf South for exactly this reason: plants grow acceptably through the cooler months, but once heat and humidity build they trigger root and crown rot. English lavender largely fails in this climate; choose heat- and humidity-tolerant types such as Spanish lavender, Goodwin Creek Grey, or the hybrid Phenomenal, planted in a well-drained container so drainage and airflow can be controlled. Expect it to be short-lived and be prepared to replace plants that decline over a hot, humid stretch.",
+    "grown_as_note_beginner": "Lavender is genuinely hard to grow in the Rio Grande Valley. It is not the cold that hurts it here, since the Valley almost never freezes; it is the heat and humidity, which rot the roots. Grow it in a pot with excellent drainage and good airflow, choose a tough type like Spanish lavender or Phenomenal, and do not expect it to last for many years.",
+    "bloom": "Apr - Jun",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Cold is not the problem in the Valley; heat and humidity are, and they bring on root and crown rot. Grow in a well-drained container, keep air moving, water sparingly, and be prepared to replace plants that decline over a humid summer.",
+    "resolved_from": null,
+    "sources": [
+     "lsu_agcenter",
+     "uf_ifas_nwdistrict",
+     "osu_ext_prune_lavender"
+    ],
+    "anchoring_urls": {
+     "lsu_agcenter": {
+      "url": "https://www.nola.com/entertainment_life/home_garden/dan-gill-explains-how-to-grow-lavender-in-our-humidity/article_cf08fe38-1d02-11ee-839c-130b5aa5f73b.html",
+      "verified": "2026-06-22"
+     },
+     "uf_ifas_nwdistrict": {
+      "url": "https://nwdistrict.ifas.ufl.edu/hort/2020/04/29/growing-lavender-in-the-coastal-south/",
+      "verified": "2026-06-22"
+     },
+     "osu_ext_prune_lavender": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "verified": "2026-06-22"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (container-preferred, often short-lived, frost-free): the Valley has no winter cold at all, so unlike the northern crops lavender fails from FREEZING here, it fails from HEAT AND HUMIDITY, the same failure mode LSU AgCenter documents across the humid Gulf South. Bloom (Apr - Jun) and the container-preferred framing are reused from this crop's own se_gulf zone 9/10 rows (already flagged blocks_launch:false there: no Gulf-state T1 source gives a clean reliably-perennial in-ground bloom window because the plant is genuinely marginal in this climate), which is the closest sourced analog for a hot, humid, frost-free Valley. plant_out is the fall cool-season establishment window.",
+    "synthesis_note_beginner": "In the Valley, lavender struggles with heat and humidity, not cold. Grow it in a pot with excellent drainage, pick a heat- and humidity-tolerant type, and plant in fall. It flowers spring into early summer."
+   },
+   "10": {
+    "plant_out": "Oct - Nov",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Lavender is perennial in name only in the Rio Grande Valley, and best grown in a container. Cold is not the problem this far south; the Valley's heat and humidity are genuinely hard on this dry-climate Mediterranean plant, and LSU AgCenter is blunt that lavender is a challenge across the humid Gulf South for exactly this reason: plants grow acceptably through the cooler months, but once heat and humidity build they trigger root and crown rot. English lavender largely fails in this climate; choose heat- and humidity-tolerant types such as Spanish lavender, Goodwin Creek Grey, or the hybrid Phenomenal, planted in a well-drained container so drainage and airflow can be controlled. Expect it to be short-lived and be prepared to replace plants that decline over a hot, humid stretch.",
+    "grown_as_note_beginner": "Lavender is genuinely hard to grow in the Rio Grande Valley. It is not the cold that hurts it here, since the Valley almost never freezes; it is the heat and humidity, which rot the roots. Grow it in a pot with excellent drainage and good airflow, choose a tough type like Spanish lavender or Phenomenal, and do not expect it to last for many years.",
+    "bloom": "Apr - Jun",
+    "calendar": [
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "Cold is not the problem in the Valley; heat and humidity are, and they bring on root and crown rot. Grow in a well-drained container, keep air moving, water sparingly, and be prepared to replace plants that decline over a humid summer.",
+    "resolved_from": null,
+    "sources": [
+     "lsu_agcenter",
+     "uf_ifas_nwdistrict",
+     "osu_ext_prune_lavender"
+    ],
+    "anchoring_urls": {
+     "lsu_agcenter": {
+      "url": "https://www.nola.com/entertainment_life/home_garden/dan-gill-explains-how-to-grow-lavender-in-our-humidity/article_cf08fe38-1d02-11ee-839c-130b5aa5f73b.html",
+      "verified": "2026-06-22"
+     },
+     "uf_ifas_nwdistrict": {
+      "url": "https://nwdistrict.ifas.ufl.edu/hort/2020/04/29/growing-lavender-in-the-coastal-south/",
+      "verified": "2026-06-22"
+     },
+     "osu_ext_prune_lavender": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "verified": "2026-06-22"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (container-preferred, often short-lived, frost-free): the Valley has no winter cold at all, so unlike the northern crops lavender fails from FREEZING here, it fails from HEAT AND HUMIDITY, the same failure mode LSU AgCenter documents across the humid Gulf South. Bloom (Apr - Jun) and the container-preferred framing are reused from this crop's own se_gulf zone 9/10 rows (already flagged blocks_launch:false there: no Gulf-state T1 source gives a clean reliably-perennial in-ground bloom window because the plant is genuinely marginal in this climate), which is the closest sourced analog for a hot, humid, frost-free Valley. plant_out is the fall cool-season establishment window.",
+    "synthesis_note_beginner": "In the Valley, lavender struggles with heat and humidity, not cold. Grow it in a pot with excellent drainage, pick a heat- and humidity-tolerant type, and plant in fall. It flowers spring into early summer."
+   }
+  },
+  "region_notes_beginner": "Lavender is genuinely hard to grow in the Rio Grande Valley. It is not the cold that hurts it here (the Valley almost never freezes); it is the heat and humidity, which rot the roots. Grow it in a pot with excellent drainage and good airflow, choose a tough type like Spanish lavender or Phenomenal, plant in fall, and do not expect it to last for many years. Treat it as a container specialty rather than a reliable garden perennial.",
+  "region_notes_seasoned": "The Rio Grande Valley is a genuinely hard climate for lavender, and honesty matters more than optimism here. Unlike its northern cousins, the Valley's lavender does not struggle with cold (it is essentially frost-free); it struggles with heat and humidity, which bring on root and crown rot exactly as LSU AgCenter documents across the humid Gulf South. Grow it in a container with sharply drained mix so drainage and airflow can be controlled, choose a heat- and humidity-tolerant type such as Spanish lavender, Goodwin Creek Grey, or the hybrid Phenomenal rather than common English lavender, and plant in fall. Expect it to be short-lived in the ground even with care, and treat it as a raised-bed or container specialty plant, not a dependable multi-year perennial."
+ },
+ "blackberry": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "tamu_agrilife",
+   "uga_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Dec - Feb",
+     "Dec - Feb"
+    ],
+    "bloom": [
+     "Feb",
+     "Feb"
+    ],
+    "harvest_start": [
+     "Apr"
+    ],
+    "harvest_end": [
+     "May"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/blackberries/",
+      "verified": "2026-07-13"
+     },
+     "uga_ext": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=c766",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "RGV author-fresh (Task 7, 2026-07-13). recommended_type/leaf_habit/windows adapted from this crop's own fl_peninsula z10 row (its closest sourced analog: a warm, low-chill, frost-free-adjacent zone using the same summer_bearing/deciduous shape), re-anchored to Texas A&M AgriLife's own blackberry small-acreage guide plus the statewide 'Berry and Nut Crops' acreage table (0 commercial Lower Valley acres, dooryard framing). z9=z10 (no TAMU RGV-internal zone split found); resolved_from null (frost-free). calendar[] DERIVED by berry_woody_calendar (leaf_habit=deciduous).",
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Dec - Feb",
+    "harvest": "Apr - May",
+    "harvest_start": "Apr",
+    "harvest_end": "May",
+    "calendar": [
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "tamu_agrilife",
+     "uga_ext"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/blackberries/",
+      "verified": "2026-07-13"
+     },
+     "uga_ext": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=c766",
+      "verified": "2026-06-30"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "summer_bearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Blackberry is the most viable berry crop for the Rio Grande Valley. Low-chill Texas-bred erect and semi-erect types, historically Brazos and Rosborough and now newer thornless low-chill cultivars such as Natchez, Ouachita, and Kiowa, fruit reliably in the Valley's mild winters. Texas A&M AgriLife's statewide crop survey records no commercial blackberry acreage in the Lower Rio Grande Valley, so treat this as a genuine dooryard, home-garden crop rather than a commercial one, not because it fails here but because Valley growers have not commercialized it.",
+    "type_note_beginner": "Blackberry is the best berry bet for the Rio Grande Valley. Low-chill kinds bred for Texas and the South, like Natchez, Ouachita, or Kiowa, fruit well in the Valley's mild winters. It is strictly a backyard crop here, not something grown commercially in the Valley, but that is about local farming history, not about whether it grows.",
+    "bloom": "Feb",
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold is not a concern for blackberry here; a rare late-winter cold snap could nip open bloom in February, so a site with a little wind protection is a plus.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "Here a blackberry is grown as a deciduous cane fruit: the canes drop their leaves and rest briefly through the Valley's mild winter, banking what little chill they need, while the perennial crown and roots live for 15 to 20 years and each cane lives only two, growing one year and fruiting the next before dying. Prune in the dormant season, matching the cut to the cultivar's habit. Planted once, a patch fruits for two decades.",
+    "grown_as_note_beginner": "Your blackberry loses its leaves and rests briefly through the mild Valley winter. The roots live for years, but each cane lives only two: it grows one year, then fruits and dies. Prune it in winter, and plant once for a patch that keeps producing for many years."
+   },
+   "10": {
+    "plant_out": "Dec - Feb",
+    "harvest": "Apr - May",
+    "harvest_start": "Apr",
+    "harvest_end": "May",
+    "calendar": [
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "tamu_agrilife",
+     "uga_ext"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/blackberries/",
+      "verified": "2026-07-13"
+     },
+     "uga_ext": {
+      "url": "https://extension.uga.edu/publications/detail.html?number=c766",
+      "verified": "2026-06-30"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "summer_bearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Blackberry is the most viable berry crop for the Rio Grande Valley. Low-chill Texas-bred erect and semi-erect types, historically Brazos and Rosborough and now newer thornless low-chill cultivars such as Natchez, Ouachita, and Kiowa, fruit reliably in the Valley's mild winters. Texas A&M AgriLife's statewide crop survey records no commercial blackberry acreage in the Lower Rio Grande Valley, so treat this as a genuine dooryard, home-garden crop rather than a commercial one, not because it fails here but because Valley growers have not commercialized it.",
+    "type_note_beginner": "Blackberry is the best berry bet for the Rio Grande Valley. Low-chill kinds bred for Texas and the South, like Natchez, Ouachita, or Kiowa, fruit well in the Valley's mild winters. It is strictly a backyard crop here, not something grown commercially in the Valley, but that is about local farming history, not about whether it grows.",
+    "bloom": "Feb",
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold is not a concern for blackberry here; a rare late-winter cold snap could nip open bloom in February, so a site with a little wind protection is a plus.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "Here a blackberry is grown as a deciduous cane fruit: the canes drop their leaves and rest briefly through the Valley's mild winter, banking what little chill they need, while the perennial crown and roots live for 15 to 20 years and each cane lives only two, growing one year and fruiting the next before dying. Prune in the dormant season, matching the cut to the cultivar's habit. Planted once, a patch fruits for two decades.",
+    "grown_as_note_beginner": "Your blackberry loses its leaves and rests briefly through the mild Valley winter. The roots live for years, but each cane lives only two: it grows one year, then fruits and dies. Prune it in winter, and plant once for a patch that keeps producing for many years."
+   }
+  },
+  "region_notes_beginner": "Blackberry is the best berry to grow in the Rio Grande Valley. Choose a low-chill Texas or Southern type, like Natchez, Ouachita, or Kiowa, and plant dormant canes in winter. It blooms in February and you will pick berries in April and May. It is a backyard crop here, not a commercial one, but it grows well in home gardens.",
+  "region_notes_seasoned": "Blackberry is the Rio Grande Valley's most reliable berry: low-chill Texas-bred cultivars, from the historic Brazos and Rosborough to newer thornless types like Natchez, Ouachita, and Kiowa, fruit well in the Valley's mild, near-frost-free winters. It is grown here as a genuine dooryard crop, home gardens rather than commercial acreage, per Texas A&M AgriLife's statewide crop survey, but that reflects local farming patterns, not a limit on how well it grows. Plant dormant canes in winter, choose a low-chill, rosette-resistant cultivar, and expect a spring bloom and an early-summer harvest."
+ },
+ "raspberry": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "tamu_agrilife",
+   "uga_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Dec - Feb",
+     "Dec - Feb"
+    ],
+    "bloom": [
+     "Jan - Feb",
+     "Jan - Feb"
+    ],
+    "harvest_start": [
+     "Mar"
+    ],
+    "harvest_end": [
+     "Apr"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://txmg.org/hendersonmg/plant-library/raspberry-dormanred/",
+      "verified": "2026-06-30"
+     },
+     "uga_ext": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C766/",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "RGV author-fresh (Task 7, 2026-07-13). recommended_type/leaf_habit/windows adapted from this crop's own fl_peninsula z11 row (its closest sourced analog: a warm, low-chill, frost-free subtropical zone already carrying the identical honest 'marginal, Dorman Red, cooking-quality' framing), re-anchored to the same Texas A&M AgriLife Master Gardener Dorman Red source that crop already cites. z9=z10 (no TAMU RGV-internal zone split found); resolved_from null (frost-free). calendar[] DERIVED by berry_woody_calendar (leaf_habit=deciduous).",
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Dec - Feb",
+    "harvest": "Mar - Apr",
+    "harvest_start": "Mar",
+    "harvest_end": "Apr",
+    "calendar": [
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune"
+    ],
+    "sources": [
+     "tamu_agrilife",
+     "uga_ext"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://txmg.org/hendersonmg/plant-library/raspberry-dormanred/",
+      "verified": "2026-06-30"
+     },
+     "uga_ext": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C766/",
+      "verified": "2026-06-30"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "everbearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "The Rio Grande Valley is at or beyond the limit for raspberries: insufficient winter chill and intense summer heat defeat standard reds. Only a heat-tolerant, low-chill trailing type such as Dorman Red, a Texas-bred selection recommended by Texas A&M AgriLife's Master Gardener plant library, can be attempted, and only for a small early-spring crop of fair, mostly cooking-quality fruit. Treat it as a novelty, not a staple; blackberry is the far better caneberry choice here.",
+    "type_note_beginner": "Raspberries are a tough sell in the Rio Grande Valley. Most types will not grow here at all, since the Valley does not get enough winter chill and gets too hot in summer. The one worth trying is a heat-tolerant, low-chill type called Dorman Red, and even then expect a small crop, best used for cooking, not a heavy fresh harvest. Grow blackberries instead if you want a reliable caneberry.",
+    "bloom": "Jan - Feb",
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold is not the limiting factor for raspberry here; heat and insufficient winter chill, not frost, end the season and constrain what will fruit at all.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "In the Valley a raspberry is grown as a deciduous, heat-tolerant trailing cane fruit, planted while dormant in winter; it blooms in late winter and ripens a small early-spring crop before the worst heat arrives, then is pruned and retrained in the dormant season. Only the low-chill, heat-tolerant types persist here, and even those are best treated as a short-lived novelty rather than a dependable planting.",
+    "grown_as_note_beginner": "In the Valley, raspberries are grown as a heat-tolerant trailing type, planted in winter while dormant. They flower in late winter and ripen in early spring before the worst heat. Only special low-chill types will keep going here, and even those may not last many years."
+   },
+   "10": {
+    "plant_out": "Dec - Feb",
+    "harvest": "Mar - Apr",
+    "harvest_start": "Mar",
+    "harvest_end": "Apr",
+    "calendar": [
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune"
+    ],
+    "sources": [
+     "tamu_agrilife",
+     "uga_ext"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://txmg.org/hendersonmg/plant-library/raspberry-dormanred/",
+      "verified": "2026-06-30"
+     },
+     "uga_ext": {
+      "url": "https://fieldreport.caes.uga.edu/publications/C766/",
+      "verified": "2026-06-30"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "everbearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "The Rio Grande Valley is at or beyond the limit for raspberries: insufficient winter chill and intense summer heat defeat standard reds. Only a heat-tolerant, low-chill trailing type such as Dorman Red, a Texas-bred selection recommended by Texas A&M AgriLife's Master Gardener plant library, can be attempted, and only for a small early-spring crop of fair, mostly cooking-quality fruit. Treat it as a novelty, not a staple; blackberry is the far better caneberry choice here.",
+    "type_note_beginner": "Raspberries are a tough sell in the Rio Grande Valley. Most types will not grow here at all, since the Valley does not get enough winter chill and gets too hot in summer. The one worth trying is a heat-tolerant, low-chill type called Dorman Red, and even then expect a small crop, best used for cooking, not a heavy fresh harvest. Grow blackberries instead if you want a reliable caneberry.",
+    "bloom": "Jan - Feb",
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold is not the limiting factor for raspberry here; heat and insufficient winter chill, not frost, end the season and constrain what will fruit at all.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "In the Valley a raspberry is grown as a deciduous, heat-tolerant trailing cane fruit, planted while dormant in winter; it blooms in late winter and ripens a small early-spring crop before the worst heat arrives, then is pruned and retrained in the dormant season. Only the low-chill, heat-tolerant types persist here, and even those are best treated as a short-lived novelty rather than a dependable planting.",
+    "grown_as_note_beginner": "In the Valley, raspberries are grown as a heat-tolerant trailing type, planted in winter while dormant. They flower in late winter and ripen in early spring before the worst heat. Only special low-chill types will keep going here, and even those may not last many years."
+   }
+  },
+  "region_notes_beginner": "Raspberries are marginal in the Rio Grande Valley: it is too warm in winter and too hot in summer for most types. The one that has a chance is a heat-tolerant kind called Dorman Red, grown on a trellis like a trailing blackberry, for a small early-spring crop best used in cooking. If you want a reliable caneberry here, grow blackberries instead.",
+  "region_notes_seasoned": "The Rio Grande Valley is marginal raspberry country: standard reds get nowhere near enough chill and cannot handle the Valley's heat and disease pressure, so the only dependable option is a heat-tolerant, low-chill trailing raspberry such as Dorman Red. Expect a small early-spring crop of fair, mostly cooking-quality fruit on a short-lived planting, trained on a trellis like a trailing blackberry. Blackberry remains the far better caneberry choice for the Valley."
+ },
+ "elderberry": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "mu_ext",
+   "psu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Dec - Feb",
+     "Dec - Feb"
+    ],
+    "bloom": [
+     "Feb - Apr",
+     "Feb - Apr"
+    ],
+    "harvest_start": [
+     "May"
+    ],
+    "harvest_end": [
+     "Jun"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/publications/af1017",
+      "verified": "2026-06-30"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/elderberry-in-the-garden-and-the-kitchen",
+      "verified": "2026-06-30"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "RGV author-fresh (Task 7, 2026-07-13). recommended_type/leaf_habit/windows adapted from this crop's own fl_peninsula row (its closest sourced analog for a warm, low-chill, near-frost-free zone), re-framed from that cell's 'marginal/experiment' language to an 'adaptable, native' framing per task instruction, since American elderberry (Sambucus canadensis) is native throughout Texas including South Texas riparian habitat -- a materially different climate fit than a temperate crop pushed south (blueberry/raspberry). z9=z10 (no TAMU RGV-internal zone split found); resolved_from null (frost-free). calendar[] DERIVED by berry_woody_calendar (leaf_habit=deciduous).",
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Dec - Feb",
+    "harvest": "May - Jun",
+    "harvest_start": "May",
+    "harvest_end": "Jun",
+    "calendar": [
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "mu_ext",
+     "psu_ext"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/publications/af1017",
+      "verified": "2026-06-30"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/elderberry-in-the-garden-and-the-kitchen",
+      "verified": "2026-06-30"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "american_elderberry",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "American elderberry is native to riparian habitat throughout Texas, including the Rio Grande Valley, and is a genuinely adaptable choice here; there is no separate warm-climate type as there is for blueberry. It grows and fruits in the Valley, though it wants steady moisture and benefits from some afternoon shade in the most intense summer heat. Plant two different cultivars for cross-pollination.",
+    "type_note_beginner": "American elderberry is a Texas native, including along the Rio Grande, so it is a solid, adaptable choice for the Valley. It is the one common type; there is no special warm-climate version. Give it plenty of water and a little afternoon shade in the hottest part of summer, and plant two different varieties for a good crop.",
+    "bloom": "Feb - Apr",
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold is not a concern for elderberry here; keeping the plant watered through the long, intense summer heat is the real management task.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "Elderberry is a permanent deciduous shrub in the Valley too, planted once and kept for years, though in the mild winters here it rests only briefly. It blooms earlier than farther north and ripens earlier as well; keep it well watered through the intense summer heat, renew old canes in late winter, and plant two different cultivars for good fruit set.",
+    "grown_as_note_beginner": "Your elderberry is a long-lived bush you plant once and keep for years. In the mild Valley winters it rests only briefly, flowers earlier than up North, and ripens earlier too. Keep it well watered in the heat, prune old stems in late winter, and plant two different varieties."
+   },
+   "10": {
+    "plant_out": "Dec - Feb",
+    "harvest": "May - Jun",
+    "harvest_start": "May",
+    "harvest_end": "Jun",
+    "calendar": [
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "mu_ext",
+     "psu_ext"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/publications/af1017",
+      "verified": "2026-06-30"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/elderberry-in-the-garden-and-the-kitchen",
+      "verified": "2026-06-30"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "american_elderberry",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "American elderberry is native to riparian habitat throughout Texas, including the Rio Grande Valley, and is a genuinely adaptable choice here; there is no separate warm-climate type as there is for blueberry. It grows and fruits in the Valley, though it wants steady moisture and benefits from some afternoon shade in the most intense summer heat. Plant two different cultivars for cross-pollination.",
+    "type_note_beginner": "American elderberry is a Texas native, including along the Rio Grande, so it is a solid, adaptable choice for the Valley. It is the one common type; there is no special warm-climate version. Give it plenty of water and a little afternoon shade in the hottest part of summer, and plant two different varieties for a good crop.",
+    "bloom": "Feb - Apr",
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so cold is not a concern for elderberry here; keeping the plant watered through the long, intense summer heat is the real management task.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "Elderberry is a permanent deciduous shrub in the Valley too, planted once and kept for years, though in the mild winters here it rests only briefly. It blooms earlier than farther north and ripens earlier as well; keep it well watered through the intense summer heat, renew old canes in late winter, and plant two different cultivars for good fruit set.",
+    "grown_as_note_beginner": "Your elderberry is a long-lived bush you plant once and keep for years. In the mild Valley winters it rests only briefly, flowers earlier than up North, and ripens earlier too. Keep it well watered in the heat, prune old stems in late winter, and plant two different varieties."
+   }
+  },
+  "region_notes_beginner": "Elderberry is a good, adaptable choice for the Rio Grande Valley since it is a Texas native, including along the Rio Grande. Grow American elderberry, the one common type, with plenty of water and a little afternoon shade in the hottest part of summer. It flowers and fruits earlier here than up North. Plant two different varieties so they pollinate each other.",
+  "region_notes_seasoned": "Elderberry is a genuinely adaptable choice for the Rio Grande Valley: American elderberry is native to riparian habitat throughout Texas, including along the Rio Grande itself, so it is well suited to the Valley's climate. It grows and fruits reliably here, blooming and ripening earlier than it does farther north. Give it steady moisture, some afternoon shade during the most intense summer heat, and plant two different cultivars, since elderberry needs cross-pollination to set a full crop."
+ },
+ "blueberry": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "ufifas_ext",
+   "tamu_agrilife"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Dec - Feb",
+     "Dec - Feb"
+    ],
+    "bloom": [
+     "Jan - Feb",
+     "Jan - Feb"
+    ],
+    "harvest_start": [
+     "Apr"
+    ],
+    "harvest_end": [
+     "May"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://ask.ifas.ufl.edu/publication/MG359",
+      "verified": "2026-06-23"
+     },
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/vegetable/guides/the-crops-of-texas/berry-and-nut-crops/",
+      "verified": "2026-07-13"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "RGV author-fresh (Task 7, 2026-07-13). recommended_type=southern_highbush (NOT the rabbiteye Texas A&M AgriLife recommends for most of the state) is a deliberate authoring call: rabbiteye's lowest-chill cultivar in this dataset's own catalog needs 350 chill hours, above the rgv_chill_band.json high edge of 300, while southern highbush cultivars (150-300 hours) at least overlap the Valley's near-zero-to-modest delivered band in a good year. Windows/leaf_habit adapted from this crop's own hawaii_tropical and fl_peninsula z11 rows (its closest sourced analogs: near-zero-chill, frost-free, container-culture-only precedent already established for this exact crop). z9=z10 (no TAMU RGV-internal zone split found); resolved_from null (frost-free). calendar[] DERIVED by berry_woody_calendar (leaf_habit=evergreen). Candid per task instruction: do not overstate suitability; no `suitability` field exists on this basis to encode marginality directly, so the caution lives entirely in type_note_*/grown_as_note_*/region_notes_* prose.",
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Dec - Feb",
+    "harvest": "Apr - May",
+    "harvest_start": "Apr",
+    "harvest_end": "May",
+    "calendar": [
+     "bloom",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "sources": [
+     "ufifas_ext",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://ask.ifas.ufl.edu/publication/MG359",
+      "verified": "2026-06-23"
+     },
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/vegetable/guides/the-crops-of-texas/berry-and-nut-crops/",
+      "verified": "2026-07-13"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "southern_highbush",
+    "leaf_habit": "evergreen",
+    "type_note_seasoned": "Blueberry is the least-suited berry crop in the Rio Grande Valley, and growers should not expect reliable fruit. Two separate problems stack here: Texas A&M AgriLife's statewide crop guidance records 0 acres of commercial blueberry production in the Lower Valley and notes rabbiteye, Texas's usual recommendation for most of the state, is grown in acid soils, while Valley soils run alkaline; and the Valley's near-zero winter chill falls short even of rabbiteye's minimum, let alone standard highbush types. The only remotely viable option is the lowest-chill southern highbush selections, grown in containers filled with an amended acidic mix, and even that is a genuine stretch, not a dependable crop.",
+    "type_note_beginner": "Blueberry is the hardest berry to grow well in the Rio Grande Valley, and you should not expect a reliable harvest. Two things work against it: Valley soil is alkaline, and blueberries need acid soil, and Valley winters do not get cold enough even for the low-chill types normally recommended for Texas. Your best (still uncertain) shot is a very-low-chill southern highbush variety grown in a container filled with acidic potting mix, not planted in the ground.",
+    "bloom": "Jan - Feb",
+    "frost_risk_note_seasoned": "Frost is not a factor for blueberry in the Valley; the limiting factors are insufficient winter chill and alkaline native soil, so bloom and fruiting are erratic even with a well-chosen container planting.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "In the Valley, blueberry is a niche, uncertain crop grown almost always in a container with an amended acidic mix, since native soils are alkaline and unsuited to this plant regardless of chill. Only the very lowest-chill southern highbush cultivars have any real chance, and even they may bloom and fruit erratically given how little chill the Valley banks most winters. Treat any harvest as a bonus, not an expectation, and plant more than one cultivar for better pollination.",
+    "grown_as_note_beginner": "In the Valley, grow blueberry only in a container with a special acidic potting mix, since the ground here is too alkaline for it. Pick the lowest-chill southern highbush variety you can find, and know that even then, fruiting may be hit or miss because Valley winters rarely get cold enough. Plant more than one variety."
+   },
+   "10": {
+    "plant_out": "Dec - Feb",
+    "harvest": "Apr - May",
+    "harvest_start": "Apr",
+    "harvest_end": "May",
+    "calendar": [
+     "bloom",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing"
+    ],
+    "sources": [
+     "ufifas_ext",
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "ufifas_ext": {
+      "url": "https://ask.ifas.ufl.edu/publication/MG359",
+      "verified": "2026-06-23"
+     },
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/vegetable/guides/the-crops-of-texas/berry-and-nut-crops/",
+      "verified": "2026-07-13"
+     }
+    },
+    "resolution_method": "berries_woody_precompute",
+    "recommended_type": "southern_highbush",
+    "leaf_habit": "evergreen",
+    "type_note_seasoned": "Blueberry is the least-suited berry crop in the Rio Grande Valley, and growers should not expect reliable fruit. Two separate problems stack here: Texas A&M AgriLife's statewide crop guidance records 0 acres of commercial blueberry production in the Lower Valley and notes rabbiteye, Texas's usual recommendation for most of the state, is grown in acid soils, while Valley soils run alkaline; and the Valley's near-zero winter chill falls short even of rabbiteye's minimum, let alone standard highbush types. The only remotely viable option is the lowest-chill southern highbush selections, grown in containers filled with an amended acidic mix, and even that is a genuine stretch, not a dependable crop.",
+    "type_note_beginner": "Blueberry is the hardest berry to grow well in the Rio Grande Valley, and you should not expect a reliable harvest. Two things work against it: Valley soil is alkaline, and blueberries need acid soil, and Valley winters do not get cold enough even for the low-chill types normally recommended for Texas. Your best (still uncertain) shot is a very-low-chill southern highbush variety grown in a container filled with acidic potting mix, not planted in the ground.",
+    "bloom": "Jan - Feb",
+    "frost_risk_note_seasoned": "Frost is not a factor for blueberry in the Valley; the limiting factors are insufficient winter chill and alkaline native soil, so bloom and fruiting are erratic even with a well-chosen container planting.",
+    "resolved_from": null,
+    "grown_as_note_seasoned": "In the Valley, blueberry is a niche, uncertain crop grown almost always in a container with an amended acidic mix, since native soils are alkaline and unsuited to this plant regardless of chill. Only the very lowest-chill southern highbush cultivars have any real chance, and even they may bloom and fruit erratically given how little chill the Valley banks most winters. Treat any harvest as a bonus, not an expectation, and plant more than one cultivar for better pollination.",
+    "grown_as_note_beginner": "In the Valley, grow blueberry only in a container with a special acidic potting mix, since the ground here is too alkaline for it. Pick the lowest-chill southern highbush variety you can find, and know that even then, fruiting may be hit or miss because Valley winters rarely get cold enough. Plant more than one variety."
+   }
+  },
+  "region_notes_beginner": "Blueberry is the toughest berry to grow well in the Rio Grande Valley. The soil here is too alkaline for it, and Valley winters usually do not get cold enough even for the low-chill types normally recommended in Texas. If you want to try, grow a very-low-chill southern highbush variety in a container filled with acidic potting mix, not in the ground, and expect it to be a fussy experiment rather than a sure thing. Plant more than one variety.",
+  "region_notes_seasoned": "Blueberry is genuinely the least-suited berry for the Rio Grande Valley, and this cell is conservative on purpose. Texas A&M AgriLife's statewide guidance recommends rabbiteye for most of Texas, grown in acid soils, but the Valley's soils are alkaline and its winter chill delivery falls below even rabbiteye's requirement. The only real option is a very-low-chill southern highbush selection grown in a container of amended acidic mix, kept well away from native soil, and even that should be treated as an experiment, not a dependable harvest. Expect difficulty, plant more than one cultivar, and set expectations accordingly."
+ },
+ "strawberry": {
+  "region_id": "rgv",
+  "region_label": "Rio Grande Valley: Subtropical South Texas",
+  "zone_span": [
+   "9",
+   "10"
+  ],
+  "sources": [
+   "tamu_agrilife"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "annual",
+    "plant_out": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "Oct - Nov",
+      "synthesis_note": "Set transplants in fall for the Valley's winter-annual strawberry crop, the same fall-plant system used across the warm South. This is a month-resolved window in a frost-free zone, not anchored to a last spring frost; the exact onset is a thinner data point in the available T1 source, so this window matches the standard South Texas winter-annual timing carried by the Valley's Gulf-adjacent neighbor regions.",
+      "sources": [
+       "tamu_agrilife"
+      ],
+      "anchoring_urls": {
+       "tamu_agrilife": {
+        "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+        "verified": "2026-07-13"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "Feb - Mar",
+      "synthesis_note": "Flowering follows the fall planting by several weeks and precedes the late-March-into-April harvest documented by Texas A&M AgriLife's small-acreage strawberry guide.",
+      "sources": [
+       "tamu_agrilife"
+      ],
+      "anchoring_urls": {
+       "tamu_agrilife": {
+        "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+        "verified": "2026-07-13"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "Mar",
+      "synthesis_note": "Texas A&M AgriLife's Aggie Horticulture small-acreage strawberry guide places harvest in late March to early April for the adapted South Texas zone (south of Houston, San Antonio, and Del Rio), which includes the Valley.",
+      "sources": [
+       "tamu_agrilife"
+      ],
+      "anchoring_urls": {
+       "tamu_agrilife": {
+        "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+        "verified": "2026-07-13"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "Apr",
+      "synthesis_note": "Fruiting continues into April before warming spring weather ends the season; the planting is then pulled and discarded, with new plants set the following fall.",
+      "sources": [
+       "tamu_agrilife"
+      ],
+      "anchoring_urls": {
+       "tamu_agrilife": {
+        "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+        "verified": "2026-07-13"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {}
+   }
+  ],
+  "plantings_provenance": "RGV author-fresh (Task 7, 2026-07-13). grown_as=annual (winter annual), the same fall-plant, pulled-annual system as this crop's own se_gulf and fl_peninsula rows. Harvest window (Mar - Apr) is T1-sourced verbatim from Texas A&M AgriLife's Aggie Horticulture small-acreage strawberry guide ('harvest late March to early April'), which places the Valley within its adapted South Texas zone. The fall plant_out window (Oct - Nov) is flagged thin in that same source (not stated to the exact week) and is authored conservatively, matching the standard South Texas winter-annual planting timing already sourced on this crop's se_gulf/fl_peninsula rows. Bloom (Feb - Mar) is a reasonable same-source-family inference preceding the sourced harvest window by the typical several-week strawberry bloom-to-ripening lag, not a separately sourced T1 figure -- flagged conservative/open in the region notes. z9=z10 (no TAMU RGV-internal zone split found); resolved_from null (frost-free). calendar[] DERIVED by berry_calendar (grown_as=annual).",
+  "resolved_by_zone": {
+   "9": {
+    "plant_out": "Oct - Nov",
+    "resolution_method": "absolute_month_tamu_planting_guidance",
+    "grown_as": "annual",
+    "grown_as_note_seasoned": "The Rio Grande Valley grows strawberries as a winter annual, not a perennial bed, the same system used across the warm South. Texas A&M AgriLife's Aggie Horticulture small-acreage guide places strawberries as adapted south of Houston, San Antonio, and Del Rio, which includes the Valley, with harvest concentrated late March into early April. Set transplants in fall, fruit them over winter into spring, then pull and discard the planting before summer heat arrives and replant fresh the following fall, since the best fruit comes from young plants. Grow on raised beds with plastic mulch for drainage and clean fruit.",
+    "grown_as_note_beginner": "In the Rio Grande Valley, strawberries are a winter crop you grow and then replace, not a bed that lives for years. Plant in fall, pick berries in late winter and early spring, then pull the plants out when summer heat arrives and plant new ones the next fall. Raised beds covered with plastic keep the roots drained and the berries clean.",
+    "bloom": "Feb - Mar",
+    "harvest_start": "Mar",
+    "harvest_end": "Apr",
+    "harvest": "Mar - Apr",
+    "calendar": [
+     "growing",
+     "bloom",
+     "harvest",
+     "harvest",
+     "season_over",
+     "season_over",
+     "season_over",
+     "season_over",
+     "season_over",
+     "plant",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so freeze injury to blossoms is rarely a concern; the season is bounded by summer heat on the back end, not by spring frost.",
+    "resolved_from": null,
+    "sources": [
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+      "verified": "2026-07-13"
+     }
+    }
+   },
+   "10": {
+    "plant_out": "Oct - Nov",
+    "resolution_method": "absolute_month_tamu_planting_guidance",
+    "grown_as": "annual",
+    "grown_as_note_seasoned": "The Rio Grande Valley grows strawberries as a winter annual, not a perennial bed, the same system used across the warm South. Texas A&M AgriLife's Aggie Horticulture small-acreage guide places strawberries as adapted south of Houston, San Antonio, and Del Rio, which includes the Valley, with harvest concentrated late March into early April. Set transplants in fall, fruit them over winter into spring, then pull and discard the planting before summer heat arrives and replant fresh the following fall, since the best fruit comes from young plants. Grow on raised beds with plastic mulch for drainage and clean fruit.",
+    "grown_as_note_beginner": "In the Rio Grande Valley, strawberries are a winter crop you grow and then replace, not a bed that lives for years. Plant in fall, pick berries in late winter and early spring, then pull the plants out when summer heat arrives and plant new ones the next fall. Raised beds covered with plastic keep the roots drained and the berries clean.",
+    "bloom": "Feb - Mar",
+    "harvest_start": "Mar",
+    "harvest_end": "Apr",
+    "harvest": "Mar - Apr",
+    "calendar": [
+     "growing",
+     "bloom",
+     "harvest",
+     "harvest",
+     "season_over",
+     "season_over",
+     "season_over",
+     "season_over",
+     "season_over",
+     "plant",
+     "growing",
+     "growing"
+    ],
+    "frost_risk_note_seasoned": "The Valley is essentially frost-free, so freeze injury to blossoms is rarely a concern; the season is bounded by summer heat on the back end, not by spring frost.",
+    "resolved_from": null,
+    "sources": [
+     "tamu_agrilife"
+    ],
+    "anchoring_urls": {
+     "tamu_agrilife": {
+      "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+      "verified": "2026-07-13"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "In the Rio Grande Valley, strawberries are a winter crop, not a bed that comes back for years. Plant transplants in fall, on raised beds covered with plastic so the roots drain and the berries stay clean. Texas A&M AgriLife places the Valley's harvest in late March to early April. When hot weather returns in late spring, pull the plants out and plant fresh ones the next fall, because young plants make the best fruit. The Valley almost never freezes, so cold is not something to worry about. Avoid planting where tomatoes, peppers, or eggplant grew in the last couple of years, to limit soil disease.",
+  "region_notes_seasoned": "The Rio Grande Valley grows strawberries as a winter annual, the same system used across the warm South. Texas A&M AgriLife's Aggie Horticulture small-acreage guide places the Valley within strawberry's adapted South Texas zone (south of Houston, San Antonio, and Del Rio), with harvest concentrated late March into early April. Set transplants in fall on raised beds under plastic mulch for drainage and clean fruit; the exact fall planting date is a thinner data point in the available source, so this window follows the standard South Texas winter-annual timing. Pull and discard the planting once spring heat arrives, since the best fruit comes from young plants, and replant fresh the following fall. The Valley is essentially frost-free, so blossom freeze injury is rarely a practical concern; rotate away from recent tomato, pepper, or eggplant beds to limit soilborne disease."
+ }
+}
