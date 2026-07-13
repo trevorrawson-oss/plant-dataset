@@ -424,7 +424,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -479,7 +479,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -707,7 +707,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -779,7 +779,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -1024,7 +1024,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -1079,7 +1079,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -1801,13 +1801,13 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
           "harvest",
           "harvest",
-          "season_over",
+          "heat_pause",
           "plant",
           "plant",
           "harvest",
@@ -1845,6 +1845,27 @@
               "verified": "2026-07-13"
             }
           }
+        },
+        "heat_pause": {
+          "months": [
+            7
+          ],
+          "classification": "heat_stop_setting",
+          "basis_seasoned": "Warm nights above 75°F cause pepper flowers to drop before they set fruit (University of Maryland Extension: evening temperatures above 75°F slow or stop pepper pod production). Cayenne tolerates heat better than tomato, but the Valley's peak July heat still pauses fruit set before the fall planting takes over in August. (Jul sits outside both plant windows.)",
+          "sources": [
+            "umd_ext",
+            "clemson_hgic"
+          ],
+          "anchoring_urls": {
+            "umd_ext": {
+              "url": "https://extension.umd.edu/resource/poor-blossom-and-fruit-set-vegetables",
+              "verified": "2026-06-30"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/pepper/",
+              "verified": "2026-06-30"
+            }
+          }
         }
       },
       "10": {
@@ -1856,13 +1877,13 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
           "harvest",
           "harvest",
-          "season_over",
+          "heat_pause",
           "plant",
           "plant",
           "harvest",
@@ -1898,6 +1919,27 @@
             "tamu_agrilife": {
               "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
               "verified": "2026-07-13"
+            }
+          }
+        },
+        "heat_pause": {
+          "months": [
+            7
+          ],
+          "classification": "heat_stop_setting",
+          "basis_seasoned": "Warm nights above 75°F cause pepper flowers to drop before they set fruit (University of Maryland Extension: evening temperatures above 75°F slow or stop pepper pod production). Cayenne tolerates heat better than tomato, but the Valley's peak July heat still pauses fruit set before the fall planting takes over in August. (Jul sits outside both plant windows.)",
+          "sources": [
+            "umd_ext",
+            "clemson_hgic"
+          ],
+          "anchoring_urls": {
+            "umd_ext": {
+              "url": "https://extension.umd.edu/resource/poor-blossom-and-fruit-set-vegetables",
+              "verified": "2026-06-30"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/pepper/",
+              "verified": "2026-06-30"
             }
           }
         }
@@ -2084,7 +2126,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -2157,7 +2199,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -2445,7 +2487,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -2504,7 +2546,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -3080,7 +3122,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -3120,7 +3162,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -3375,7 +3417,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -3434,7 +3476,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -3666,7 +3708,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -3738,7 +3780,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -4300,13 +4342,13 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
           "harvest",
           "harvest",
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -4355,13 +4397,13 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
           "harvest",
           "harvest",
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -4583,7 +4625,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -4655,7 +4697,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -5147,7 +5189,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -5218,7 +5260,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "growing",
@@ -5661,7 +5703,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -5720,7 +5762,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -6637,7 +6679,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -6709,7 +6751,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -6996,7 +7038,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -7055,7 +7097,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -7794,7 +7836,7 @@
       }
     },
     "region_notes_beginner": "In the Rio Grande Valley, plant sweet potatoes Mar 25 - Apr 30, once the soil is warm. Harvest runs Jul 1 - Dec 1, a long summer-into-fall picking season since it rarely if ever frosts here. There is no fall replanting for sweet potatoes: one spring planting carries the whole Valley season.",
-    "region_notes_seasoned": "Sweet potatoes in the RGV is a single spring planting, no fall replanting: set out Mar 25 - Apr 30, per the RGV Homeowner Vegetable Guide. Harvest runs Jul 1 - Dec 1; production continues well past the raw 90 to 120 day maturity figure because there is no frost to force an end date, only fading vigor late in the season. Frost is essentially absent here, so the growing season is bounded by plant vigor, not by a first-frost date. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
+    "region_notes_seasoned": "Sweet potatoes in the RGV are a single spring planting, no fall replanting: set out Mar 25 - Apr 30, per the RGV Homeowner Vegetable Guide. Harvest runs Jul 1 - Dec 1; production continues well past the raw 90 to 120 day maturity figure because there is no frost to force an end date, only fading vigor late in the season. Frost is essentially absent here, so the growing season is bounded by plant vigor, not by a first-frost date. Windows are authored identically for zones 9 and 10: TAMU AgriLife's Valley guidance is one Valley-wide calendar, not a zone-9/zone-10 split."
   },
   "tomatillo": {
     "region_id": "rgv",
@@ -7974,14 +8016,14 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
           "harvest",
           "harvest",
           "season_over",
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -8029,14 +8071,14 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Mar 20",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
           "harvest",
           "harvest",
           "season_over",
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "harvest",
@@ -8546,7 +8588,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -8605,7 +8647,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -8879,7 +8921,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
@@ -8938,7 +8980,7 @@
         "first_plant_date": "Feb 14",
         "last_plant_date": "Sep 15",
         "calendar": [
-          "season_over",
+          "indoors",
           "plant",
           "plant",
           "plant",
