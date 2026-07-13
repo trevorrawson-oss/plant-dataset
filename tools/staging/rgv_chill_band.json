@@ -1,0 +1,13 @@
+{
+  "region_chill_delivered.rgv": {
+    "9": [
+      0,
+      300
+    ],
+    "10": [
+      0,
+      300
+    ]
+  },
+  "region_chill_delivered_provenance": "T1-SOURCED (Phase A chill-sourcing, 2026-06-24). Model: Utah / modified-Weinberger chill hours, accumulated hours with temperature between 32 and 45 degrees F over the winter dormant season (the model the cited extensions use and the definition carried in this dataset's chill prose). One crop-invariant winter-chill-DELIVERED band per region+zone, reconciled to published T1 extension chill-accumulation data, NEVER derived from the USDA winter-low zone. Sources by region: northern_tier / ca_interior reconciled to UC Davis Fruit & Nut Research & Information Center chill-accumulation data (ucd_fruitnut); ca_north_coast / ca_south_coast / ca_desert to UC ANR and UC Statewide IPM California chill data (ucanr_ext, uc_ipm); se_gulf to University of Georgia Cooperative Extension chill-hour station data (uga_ext); warm_arid to Texas A&M AgriLife Extension Texas chill-hour maps and University of Arizona Cooperative Extension elevation chill bands (tamu_agrilife, uarizona_ext); low_desert_az to University of Arizona Cooperative Extension low-desert chill data (uarizona_ext); fl_peninsula / hawaii_tropical to UF/IFAS Extension low-chill and near-zero-chill data (uf_ifas_hs1153). rgv (2026-07-13, RGV / subtropical-South-Texas region arc, zones 9-10) reconciled to Texas A&M AgriLife Extension South Texas / Lower Rio Grande Valley chill-hour guidance (tamu_agrilife): AgriLife Extension horticulturist Larry Stein places Rio Grande Valley orchard chill requirements at roughly 200 to 300 chill hours, and the Valley's subtropical, near-frost-free winters (about 340 frost-free days) bank essentially no chill in warm winters, so the delivered band is [0, 300] for both zone 9 and zone 10, corroborated by LSU AgCenter's 200 to 300 chill-hour figure for the comparably subtropical coastal-south-Louisiana Gulf climate (lsu_agcenter); RGV sits just above the deep-tropical fl_peninsula z11 / hawaii_tropical [0, 150] floor and below the se_gulf band, and the 0 low edge (warm winters bank near-zero chill) is what drives the A3 no-fruit split for temperate stone and pome fruit. Bands are the climate's typical winter delivery envelope, widened across zones where station data and crop-author estimates differ; per-variety chill-REQUIRED (chill_hours_required / chill_hours_range) is the separate axis and is unchanged."
+}
