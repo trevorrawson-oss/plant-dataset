@@ -1,0 +1,2505 @@
+{
+  "apple": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uariz_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "window_days": 42,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-11"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 21,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-11"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 95,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-11"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 135,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-11"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uariz_ext": {
+            "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+            "verified": "2026-06-11"
+          }
+        },
+        "sources": [
+          "uariz_ext"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, and a warm winter can come close to zero, per Texas A&M AgriLife Extension. Even the very lowest-chill apple selections need around 100 hours, so an unusually cool Valley winter might let one set a partial crop, but the Valley cannot be counted on for it most years. The tree grows fine in the heat; choose fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "In the Rio Grande Valley, winters are usually too warm to give apple trees the cold they need, even the lowest-chill kinds. The tree will grow, but most years you will not get apples. Grow fig, persimmon, pomegranate, or citrus instead for reliable fruit.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, and a warm winter can come close to zero, per Texas A&M AgriLife Extension. Even the very lowest-chill apple selections need around 100 hours, so an unusually cool Valley winter might let one set a partial crop, but the Valley cannot be counted on for it most years. The tree grows fine in the heat; choose fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "In the Rio Grande Valley, winters are usually too warm to give apple trees the cold they need, even the lowest-chill kinds. The tree will grow, but most years you will not get apples. Grow fig, persimmon, pomegranate, or citrus instead for reliable fruit.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Apple is a poor bet for the Rio Grande Valley. Winters are usually too mild to give it the cold it needs, so trees rarely fruit here even though they grow fine. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Apple does not fruit dependably in the Rio Grande Valley: winter chill (roughly 0 to 300 hours) falls below even the lowest-chill apple selections' roughly 100-hour need in most years, since a warm Valley winter banks close to zero. Trees may grow and even flower in a cooler year, but a dependable crop cannot be counted on; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "apricot": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uariz_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "window_days": 35,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -5,
+            "window_days": 21,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 80,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 110,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uariz_ext": {
+            "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, far short of even a low-chill apricot's roughly 350-hour need, per Texas A&M AgriLife Extension. The tree can grow here, but it will not set a dependable crop. Grow fig, persimmon, pomegranate, or citrus instead for reliable fruit.",
+        "suitability_note_beginner": "Apricots need more winter cold than the Rio Grande Valley usually gives. The tree may grow, but it will not fruit reliably here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, far short of even a low-chill apricot's roughly 350-hour need, per Texas A&M AgriLife Extension. The tree can grow here, but it will not set a dependable crop. Grow fig, persimmon, pomegranate, or citrus instead for reliable fruit.",
+        "suitability_note_beginner": "Apricots need more winter cold than the Rio Grande Valley usually gives. The tree may grow, but it will not fruit reliably here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Apricot is a poor choice for the Rio Grande Valley. Winters are too mild to give it the cold it needs, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Apricot does not fruit dependably in the Rio Grande Valley: winter chill (roughly 0 to 300 hours) falls well below even low-chill apricot's roughly 350-hour requirement. Trees may survive but rarely crop; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "cherry-sour": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "iastate_ext",
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "usu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "window_days": 42
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -3,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "window_days": 21
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 60,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 85,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "usu_ext": {
+            "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+            "verified": "2026-06-30"
+          },
+          "iastate_ext": {
+            "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, far below sour cherry's roughly 700-hour requirement, per Texas A&M AgriLife Extension, and the Valley's intense summer heat and humidity add further stress on top of the chill gap. The tree may survive but will not set a dependable crop; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_beginner": "Sour cherry needs far more winter cold than the Rio Grande Valley gives, and the hot, humid summers are hard on it too. It will not fruit reliably here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, far below sour cherry's roughly 700-hour requirement, per Texas A&M AgriLife Extension, and the Valley's intense summer heat and humidity add further stress on top of the chill gap. The tree may survive but will not set a dependable crop; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_beginner": "Sour cherry needs far more winter cold than the Rio Grande Valley gives, and the hot, humid summers are hard on it too. It will not fruit reliably here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Sour cherry is a poor choice for the Rio Grande Valley. Winters are far too mild for the cold it needs, and summers are too hot and humid besides, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Sour cherry does not fruit dependably in the Rio Grande Valley: winter chill (roughly 0 to 300 hours) falls far below its roughly 700-hour requirement, and extreme summer heat and humidity compound the gap. Trees may survive but rarely crop; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "cherry-sweet": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "iastate_ext",
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "usu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "window_days": 42
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -3,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            },
+            "window_days": 21
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 60,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 85,
+            "sources": [
+              "usu_ext",
+              "iastate_ext"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+                "verified": "2026-06-30"
+              },
+              "iastate_ext": {
+                "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "usu_ext": {
+            "url": "https://extension.usu.edu/yardandgarden/research/backyard-fruit-production-in-utah",
+            "verified": "2026-06-30"
+          },
+          "iastate_ext": {
+            "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, below even the low-chill sweet cherry's roughly 250-hour need, per Texas A&M AgriLife Extension, and the Valley's intense summer heat and humidity add further stress. The tree may survive but will not set a dependable crop; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_beginner": "Sweet cherry needs more winter cold than the Rio Grande Valley usually gives, and the hot, humid summers are hard on it too. It will not fruit reliably here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, below even the low-chill sweet cherry's roughly 250-hour need, per Texas A&M AgriLife Extension, and the Valley's intense summer heat and humidity add further stress. The tree may survive but will not set a dependable crop; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_beginner": "Sweet cherry needs more winter cold than the Rio Grande Valley usually gives, and the hot, humid summers are hard on it too. It will not fruit reliably here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Sweet cherry is a poor choice for the Rio Grande Valley. Winters are too mild for the cold it needs, and summers are too hot and humid besides, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Sweet cherry does not fruit dependably in the Rio Grande Valley: winter chill (roughly 0 to 300 hours) falls below even low-chill sweet cherry's roughly 250-hour need, and extreme summer heat and humidity compound the gap. Trees may survive but rarely crop; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "nectarine": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uariz_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "window_days": 35,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2025-05/az1269_Deciduous-Fruit-and-Nuts-for-the-Low-Desert.pdf",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 21,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2025-05/az1269_Deciduous-Fruit-and-Nuts-for-the-Low-Desert.pdf",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 80,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2025-05/az1269_Deciduous-Fruit-and-Nuts-for-the-Low-Desert.pdf",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 110,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://extension.arizona.edu/sites/default/files/2025-05/az1269_Deciduous-Fruit-and-Nuts-for-the-Low-Desert.pdf",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uariz_ext": {
+            "url": "https://extension.arizona.edu/sites/default/files/2025-05/az1269_Deciduous-Fruit-and-Nuts-for-the-Low-Desert.pdf",
+            "verified": "2026-06-10"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, right at the edge of even the lowest-chill nectarine selections' roughly 300-hour need. An unusually cool Valley winter might approach that edge, but a typical warm winter delivers far less, so fruiting cannot be counted on. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "Only the very lowest-chill nectarine varieties could ever fruit in the Rio Grande Valley, and even those would need an unusually cool winter. Most years, expect growth but no fruit. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, right at the edge of even the lowest-chill nectarine selections' roughly 300-hour need. An unusually cool Valley winter might approach that edge, but a typical warm winter delivers far less, so fruiting cannot be counted on. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "Only the very lowest-chill nectarine varieties could ever fruit in the Rio Grande Valley, and even those would need an unusually cool winter. Most years, expect growth but no fruit. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Nectarine is a poor bet for the Rio Grande Valley. Only an unusually cold winter would give even the lowest-chill varieties enough cold, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Nectarine sits right at the chill edge in the Rio Grande Valley: the Valley's roughly 0 to 300 chill hours reaches only as high as the lowest-chill nectarine selections' roughly 300-hour need, and only in an unusually cool winter, since a typical warm Valley winter banks far less. Trees may survive but a dependable crop cannot be counted on; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "peach": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uf_ifas",
+      "uf_ifas_edis"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -30,
+            "window_days": 30,
+            "sources": [
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "uf_ifas": {
+                "url": "https://ask.ifas.ufl.edu/publication/MG374",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 21,
+            "sources": [
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "uf_ifas": {
+                "url": "https://ask.ifas.ufl.edu/publication/MG374",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 75,
+            "sources": [
+              "uf_ifas_edis"
+            ],
+            "anchoring_urls": {
+              "uf_ifas_edis": {
+                "url": "https://ask.ifas.ufl.edu/publication/HS1459",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 100,
+            "sources": [
+              "uf_ifas_edis"
+            ],
+            "anchoring_urls": {
+              "uf_ifas_edis": {
+                "url": "https://ask.ifas.ufl.edu/publication/HS1459",
+                "verified": "2026-06-10"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uf_ifas": {
+            "url": "https://ask.ifas.ufl.edu/publication/MG374",
+            "verified": "2026-06-10"
+          },
+          "uf_ifas_edis": {
+            "url": "https://ask.ifas.ufl.edu/publication/HS1459",
+            "verified": "2026-06-10"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, below even the lowest-chill peach cultivar's roughly 400-hour need in every winter, cool or warm, per Texas A&M AgriLife Extension. The tree may grow but will not set a dependable crop. Grow fig, persimmon, pomegranate, or citrus instead for reliable fruit.",
+        "suitability_note_beginner": "Peach needs more winter cold than the Rio Grande Valley gives, even in a cool winter. The tree will grow, but it will not give peaches here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, below even the lowest-chill peach cultivar's roughly 400-hour need in every winter, cool or warm, per Texas A&M AgriLife Extension. The tree may grow but will not set a dependable crop. Grow fig, persimmon, pomegranate, or citrus instead for reliable fruit.",
+        "suitability_note_beginner": "Peach needs more winter cold than the Rio Grande Valley gives, even in a cool winter. The tree will grow, but it will not give peaches here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Peach is a poor choice for the Rio Grande Valley. Even a cool winter here does not give enough cold for the lowest-chill varieties, so trees rarely fruit. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Peach does not fruit dependably in the Rio Grande Valley: winter chill (roughly 0 to 300 hours) falls below even the lowest-chill peach cultivar's roughly 400-hour requirement in every Valley winter, cool or warm. Trees may survive but rarely crop; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "pear-asian": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uariz_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -35,
+            "window_days": 35,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -3,
+            "window_days": 21,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 120,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 160,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uariz_ext": {
+            "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+            "verified": "2026-06-30"
+          }
+        },
+        "sources": [
+          "uariz_ext"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, right around the edge of even the lowest-chill Asian pear selections' roughly 250-hour need. Only an unusually cool Valley winter would approach that, and a typical warm winter delivers far less, so fruiting cannot be counted on. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "Only the lowest-chill Asian pear varieties could ever fruit in the Rio Grande Valley, and even those would need an unusually cool winter. Most years, expect growth but no fruit. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, right around the edge of even the lowest-chill Asian pear selections' roughly 250-hour need. Only an unusually cool Valley winter would approach that, and a typical warm winter delivers far less, so fruiting cannot be counted on. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "Only the lowest-chill Asian pear varieties could ever fruit in the Rio Grande Valley, and even those would need an unusually cool winter. Most years, expect growth but no fruit. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Asian pear is a poor bet for the Rio Grande Valley. Only an unusually cold winter would give even the lowest-chill varieties enough cold, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Asian pear sits right at the chill edge in the Rio Grande Valley: the Valley's roughly 0 to 300 chill hours reaches only as high as the lowest-chill Asian pear selections' roughly 250-hour need, and only in an unusually cool winter. Trees may survive but a dependable crop cannot be counted on; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "pear-european": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uariz_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -35,
+            "window_days": 35,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -3,
+            "window_days": 21,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 120,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 160,
+            "sources": [
+              "uariz_ext"
+            ],
+            "anchoring_urls": {
+              "uariz_ext": {
+                "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uariz_ext": {
+            "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1269.pdf",
+            "verified": "2026-06-30"
+          }
+        },
+        "sources": [
+          "uariz_ext"
+        ]
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, and even the lowest-chill European pear selections need around 200 hours; only a cooler-than-typical Valley winter would approach that, and warm winters bank close to zero. Fire blight pressure in Valley humidity is a further complication. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "European pear rarely fruits in the Rio Grande Valley: winters are usually too mild for the cold it needs, and the humid climate can bring fire blight too. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, and even the lowest-chill European pear selections need around 200 hours; only a cooler-than-typical Valley winter would approach that, and warm winters bank close to zero. Fire blight pressure in Valley humidity is a further complication. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "European pear rarely fruits in the Rio Grande Valley: winters are usually too mild for the cold it needs, and the humid climate can bring fire blight too. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "European pear is a poor choice for the Rio Grande Valley. Winters are usually too mild to give enough chill, and the humid climate invites fire blight, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "European pear does not fruit dependably in the Rio Grande Valley: winter chill (roughly 0 to 300 hours) falls below even low-chill European pear needs in most years, since a warm Valley winter banks close to zero, and fire blight pressure in Valley humidity compounds the case. Trees may survive but rarely crop; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "plum": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "ucanr_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "window_days": 42,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -7,
+            "window_days": 21,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 100,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 150,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "ucanr_ext": {
+            "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, right around the edge of even the lowest-chill Japanese plum selections' roughly 250-hour need. Only an unusually cool Valley winter would approach that, and a typical warm winter delivers far less, so fruiting cannot be counted on. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "Only the lowest-chill plum varieties could ever fruit in the Rio Grande Valley, and even those would need an unusually cool winter. Most years, expect growth but no fruit. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Rio Grande Valley winters bank only about 0 to 300 chill hours, per Texas A&M AgriLife Extension, right around the edge of even the lowest-chill Japanese plum selections' roughly 250-hour need. Only an unusually cool Valley winter would approach that, and a typical warm winter delivers far less, so fruiting cannot be counted on. Grow fig, persimmon, pomegranate, or citrus instead for dependable fruit.",
+        "suitability_note_beginner": "Only the lowest-chill plum varieties could ever fruit in the Rio Grande Valley, and even those would need an unusually cool winter. Most years, expect growth but no fruit. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; insufficient winter chill, not cold, is the binding constraint here.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Plum is a poor bet for the Rio Grande Valley. Only an unusually cold winter would give even the lowest-chill varieties enough cold, so trees rarely fruit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Plum sits right at the chill edge in the Rio Grande Valley: the Valley's roughly 0 to 300 chill hours reaches only as high as the lowest-chill Japanese plum selections' roughly 250-hour need, and only in an unusually cool winter. Trees may survive but a dependable crop cannot be counted on; the Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "pawpaw": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "ksu_pawpaw",
+      "lsu_agcenter",
+      "tamu_agrilife",
+      "uiuc_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "container_spring",
+            "from": "last_frost",
+            "offset_days": 0,
+            "window_days": 45,
+            "sources": [
+              "ksu_pawpaw",
+              "uiuc_ext"
+            ],
+            "anchoring_urls": {
+              "ksu_pawpaw": {
+                "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+                "verified": "2026-06-30"
+              },
+              "uiuc_ext": {
+                "url": "https://extension.illinois.edu/blogs/good-growing/2024-08-02-pawpaw-americas-tropical-treasure",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -3,
+            "window_days": 35,
+            "sources": [
+              "ksu_pawpaw",
+              "uiuc_ext"
+            ],
+            "anchoring_urls": {
+              "ksu_pawpaw": {
+                "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+                "verified": "2026-06-30"
+              },
+              "uiuc_ext": {
+                "url": "https://extension.illinois.edu/blogs/good-growing/2024-08-02-pawpaw-americas-tropical-treasure",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 150,
+            "sources": [
+              "ksu_pawpaw",
+              "uiuc_ext"
+            ],
+            "anchoring_urls": {
+              "ksu_pawpaw": {
+                "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+                "verified": "2026-06-30"
+              },
+              "uiuc_ext": {
+                "url": "https://extension.illinois.edu/blogs/good-growing/2024-08-02-pawpaw-americas-tropical-treasure",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 178,
+            "sources": [
+              "ksu_pawpaw",
+              "uiuc_ext"
+            ],
+            "anchoring_urls": {
+              "ksu_pawpaw": {
+                "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+                "verified": "2026-06-30"
+              },
+              "uiuc_ext": {
+                "url": "https://extension.illinois.edu/blogs/good-growing/2024-08-02-pawpaw-americas-tropical-treasure",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "ksu_pawpaw": {
+            "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/pawpaw-planting-guide.php",
+            "verified": "2026-06-30"
+          },
+          "uiuc_ext": {
+            "url": "https://extension.illinois.edu/blogs/good-growing/2024-08-02-pawpaw-americas-tropical-treasure",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "The Rio Grande Valley is essentially frost-free and delivers close to zero winter chill in warm years, well short of pawpaw's roughly 400-hour dormancy-breaking requirement, per Texas A&M AgriLife Extension chill data. The Valley's long, intensely hot summers are also the opposite of the cool, humid, part-shade conditions pawpaw's native range provides. Unsuitable; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_beginner": "Pawpaw needs real winter cold to break dormancy and a cooler, shadier summer than the Rio Grande Valley provides. It is not a workable crop here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not the limiting factor here; insufficient winter chill and the Valley's extreme summer heat and lack of shade/humidity are the binding constraints on pawpaw.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": null,
+        "resolution_method": "perennial_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "The Rio Grande Valley is essentially frost-free and delivers close to zero winter chill in warm years, well short of pawpaw's roughly 400-hour dormancy-breaking requirement, per Texas A&M AgriLife Extension chill data. The Valley's long, intensely hot summers are also the opposite of the cool, humid, part-shade conditions pawpaw's native range provides. Unsuitable; grow fig, persimmon, pomegranate, or citrus instead.",
+        "suitability_note_beginner": "Pawpaw needs real winter cold to break dormancy and a cooler, shadier summer than the Rio Grande Valley provides. It is not a workable crop here. Grow fig, persimmon, pomegranate, or citrus instead.",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Frost is not the limiting factor here; insufficient winter chill and the Valley's extreme summer heat and lack of shade/humidity are the binding constraints on pawpaw.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife",
+          "lsu_agcenter"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifetoday.tamu.edu/2022/02/15/texas-fruit-crops-need-rain-chill-hours/",
+            "verified": "2026-07-13"
+          },
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/articles/page1766001059887",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Pawpaw is not a workable crop in the Rio Grande Valley. It needs real winter cold to break dormancy and cooler, shadier summers than the Valley has; neither piece is a fit here. Plant fig, persimmon, pomegranate, or citrus instead.",
+    "region_notes_seasoned": "Pawpaw is unsuitable for the Rio Grande Valley: the Valley's near-zero winter chill falls far short of pawpaw's roughly 400-hour dormancy-breaking need, and the Valley's long, intensely hot summer is the opposite of the cool, humid, part-shade native range pawpaw requires, the same combination that rules it out of peninsular Florida and the Arizona low desert. The Valley is far better suited to fig, persimmon, pomegranate, or citrus.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks only about 0 to 300 winter chill hours in a typical year, and a warm winter can deliver close to zero, per Texas A&M AgriLife Extension (Valley orchard chill runs roughly 200 to 300 hours), corroborated by LSU AgCenter's comparable figure for the similarly subtropical Gulf coast. That is far below what standard temperate stone and pome fruit varieties need to break dormancy and set fruit reliably.",
+    "chill_basis_beginner": "Valley winters give very little winter cold, something like 0 to 300 chill hours some years, and a warm winter can give almost none. That is not enough for most standard fruit tree varieties to flower and fruit reliably here."
+  },
+  "fig": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "clemson_hgic",
+      "tamu_agrilife",
+      "uf_ifas_edis",
+      "uga_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "dormant_plant",
+            "from": "last_frost",
+            "offset_days": -21,
+            "sources": [
+              "uga_ext",
+              "clemson_hgic",
+              "uf_ifas_edis"
+            ],
+            "anchoring_urls": {
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+                "verified": "2026-06-30"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/fig/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas_edis": {
+                "url": "https://edis.ifas.ufl.edu/publication/MG214",
+                "verified": "2026-06-30"
+              }
+            },
+            "window_days": 42
+          }
+        ],
+        "bloom": [
+          {
+            "label": "leaf_out",
+            "from": "last_frost",
+            "offset_days": 14,
+            "sources": [
+              "uga_ext",
+              "clemson_hgic",
+              "uf_ifas_edis"
+            ],
+            "anchoring_urls": {
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+                "verified": "2026-06-30"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/fig/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas_edis": {
+                "url": "https://edis.ifas.ufl.edu/publication/MG214",
+                "verified": "2026-06-30"
+              }
+            },
+            "window_days": 21
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 90,
+            "sources": [
+              "uga_ext",
+              "clemson_hgic",
+              "uf_ifas_edis"
+            ],
+            "anchoring_urls": {
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+                "verified": "2026-06-30"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/fig/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas_edis": {
+                "url": "https://edis.ifas.ufl.edu/publication/MG214",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 210,
+            "sources": [
+              "uga_ext",
+              "clemson_hgic",
+              "uf_ifas_edis"
+            ],
+            "anchoring_urls": {
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+                "verified": "2026-06-30"
+              },
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/fig/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas_edis": {
+                "url": "https://edis.ifas.ufl.edu/publication/MG214",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "uga_ext": {
+            "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+            "verified": "2026-06-30"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/factsheet/fig/",
+            "verified": "2026-06-30"
+          },
+          "uf_ifas_edis": {
+            "url": "https://edis.ifas.ufl.edu/publication/MG214",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Dec - Feb (dormant plant)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet a fig's roughly 100-hour chill need, and the long, intensely hot growing season ripens a full crop, per Texas A&M AgriLife Extension fig production guidance and the Valley's near-zero-chill, essentially frost-free climate. Humid spells still bring fig rust and souring, so favor closed-eye, rust-tolerant varieties (Celeste, LSU Purple, Alma) and a well-drained, nematode-free site. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate carried over from the similarly warm, humid Gulf coast, where fig fruits reliably.",
+        "suitability_note_beginner": "Figs do very well in the Rio Grande Valley. Winters give plenty of the little cold a fig needs, and the long hot season ripens a full crop. Watch for rust and souring in humid weather, and pick a tight-eye, rust-tolerant variety and a well-drained spot. The exact months here are a careful estimate based on the similar Gulf coast climate, not Valley-specific data.",
+        "bloom": "Mar 1 - Mar 25",
+        "harvest_start": "Jun",
+        "harvest_end": "Oct",
+        "harvest": "Jun - Oct",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant"
+        ],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; humidity-driven rust and souring, not cold, are the real season-long watch-outs.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-figs/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Dec - Feb (dormant plant)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet a fig's roughly 100-hour chill need, and the long, intensely hot growing season ripens a full crop, per Texas A&M AgriLife Extension fig production guidance and the Valley's near-zero-chill, essentially frost-free climate. Humid spells still bring fig rust and souring, so favor closed-eye, rust-tolerant varieties (Celeste, LSU Purple, Alma) and a well-drained, nematode-free site. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate carried over from the similarly warm, humid Gulf coast, where fig fruits reliably.",
+        "suitability_note_beginner": "Figs do very well in the Rio Grande Valley. Winters give plenty of the little cold a fig needs, and the long hot season ripens a full crop. Watch for rust and souring in humid weather, and pick a tight-eye, rust-tolerant variety and a well-drained spot. The exact months here are a careful estimate based on the similar Gulf coast climate, not Valley-specific data.",
+        "bloom": "Mar 1 - Mar 25",
+        "harvest_start": "Jun",
+        "harvest_end": "Oct",
+        "harvest": "Jun - Oct",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant"
+        ],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; humidity-driven rust and souring, not cold, are the real season-long watch-outs.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-figs/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Figs are one of the easiest, most dependable fruits for the Rio Grande Valley. Winters give it plenty of the little cold it needs, and the long hot season ripens a full crop. The things to watch are rust and souring in humid weather and nematodes in sandy soil, so pick a tight-eye, rust-tolerant variety and a clean, well-drained spot. The exact months given here are a careful estimate from the similar Gulf coast climate, not confirmed Valley-specific data.",
+    "region_notes_seasoned": "The Rio Grande Valley is excellent fig country: near-zero-chill winters easily meet a fig's tiny chill need, and the long, brutally hot growing season ripens a full crop, per Texas A&M AgriLife Extension. As on the humid Gulf coast, rust and souring in humid weather and root-knot nematodes in sandy soil are the real management issues, not cold, so favor closed-eye, rust-tolerant varieties and a nematode-free site. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively carried over from the comparable warm, humid Gulf coast pattern.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks roughly 0 to 300 chill hours in a typical winter, per Texas A&M AgriLife Extension, far more than a fig's roughly 100-hour need, so chill is never the limiting factor here.",
+    "chill_basis_beginner": "Valley winters easily give a fig the small amount of cold it needs, so chill is never a problem; heat and humidity, not cold, shape fig growing here."
+  },
+  "persimmon": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "clemson_hgic",
+      "tamu_agrilife",
+      "uga_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -49,
+            "window_days": 49,
+            "sources": [
+              "clemson_hgic",
+              "uga_ext"
+            ],
+            "anchoring_urls": {
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+                "verified": "2026-06-30"
+              },
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 21,
+            "window_days": 21,
+            "sources": [
+              "clemson_hgic",
+              "uga_ext"
+            ],
+            "anchoring_urls": {
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+                "verified": "2026-06-30"
+              },
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 150,
+            "sources": [
+              "clemson_hgic",
+              "uga_ext"
+            ],
+            "anchoring_urls": {
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+                "verified": "2026-06-30"
+              },
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 200,
+            "sources": [
+              "clemson_hgic",
+              "uga_ext"
+            ],
+            "anchoring_urls": {
+              "clemson_hgic": {
+                "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+                "verified": "2026-06-30"
+              },
+              "uga_ext": {
+                "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/factsheet/persimmon/",
+            "verified": "2026-06-30"
+          },
+          "uga_ext": {
+            "url": "https://fieldreport.caes.uga.edu/publications/C784/",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Dec - Jan (dormant, bare-root)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet persimmon's modest roughly 100-hour chill need, and Texas A&M AgriLife Extension resources report both American and Asian types adapted to most of Texas, including the warm south. Disease and drainage, not chill, are the variables to manage in this humid climate. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate carried over from the similarly warm, humid Gulf coast, where both types fruit reliably.",
+        "suitability_note_beginner": "Persimmons do well in the Rio Grande Valley. Winters easily give the small amount of cold this fruit needs. Watch for disease in the humid weather and give it well-drained soil. The exact months here are a careful estimate from the similar Gulf coast climate, not Valley-specific data.",
+        "bloom": "Apr 10 - May 1",
+        "harvest_start": "Sep 20",
+        "harvest_end": "Nov 20",
+        "harvest": "Sep 20 - Nov 20",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care"
+        ],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; wet-weather disease and heavy soils, not cold, are the real watch-outs.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/asset-external/path-to-the-plate-persimmons/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Dec - Jan (dormant, bare-root)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet persimmon's modest roughly 100-hour chill need, and Texas A&M AgriLife Extension resources report both American and Asian types adapted to most of Texas, including the warm south. Disease and drainage, not chill, are the variables to manage in this humid climate. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate carried over from the similarly warm, humid Gulf coast, where both types fruit reliably.",
+        "suitability_note_beginner": "Persimmons do well in the Rio Grande Valley. Winters easily give the small amount of cold this fruit needs. Watch for disease in the humid weather and give it well-drained soil. The exact months here are a careful estimate from the similar Gulf coast climate, not Valley-specific data.",
+        "bloom": "Apr 10 - May 1",
+        "harvest_start": "Sep 20",
+        "harvest_end": "Nov 20",
+        "harvest": "Sep 20 - Nov 20",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care"
+        ],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; wet-weather disease and heavy soils, not cold, are the real watch-outs.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/asset-external/path-to-the-plate-persimmons/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Persimmons are a reliable fruit for the Rio Grande Valley. Winters give it plenty of the small amount of cold it needs. Keep an eye on wet-weather disease and use trees grafted on native roots if your soil is heavy. The exact months given here are a careful estimate from the similar Gulf coast climate, not confirmed Valley-specific data.",
+    "region_notes_seasoned": "Persimmon fruits reliably in the Rio Grande Valley: Valley winters easily clear its modest roughly 100-hour chill need, and Texas A&M AgriLife Extension reports both American and Asian persimmon adapted to most of Texas, including the warm south. Anthracnose and trunk canker in wet weather and heavier soils are the real variables here, not chill; native rootstock helps on heavier ground. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively carried over from the comparable warm, humid Gulf coast pattern.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks roughly 0 to 300 chill hours in a typical winter, per Texas A&M AgriLife Extension, far more than persimmon's modest roughly 100-hour need, so chill is never the limiting factor and both American and Asian types can fruit.",
+    "chill_basis_beginner": "Valley winters easily give persimmon the small amount of cold it needs, so chill is never a problem for either the American or the Asian type."
+  },
+  "pomegranate": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "tamu_agrilife",
+      "ucanr_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -49,
+            "window_days": 49,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=43913",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": 10,
+            "window_days": 30,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=43913",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 130,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=43913",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 165,
+            "sources": [
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=43913",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "ucanr_ext": {
+            "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=43913",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Jan - Feb (dormant, bare-root or cutting-grown)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. Unlike the arid low desert, the Valley's humidity and rain can bring some fruit splitting and disease pressure, the way they do on the humid Gulf coast, so favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern for the Valley's humid, rather than arid, summer.",
+        "suitability_note_beginner": "Pomegranates fruit well in the Rio Grande Valley. Winters give plenty of the little cold this fruit needs. Because the Valley is humid rather than dry, watch for some splitting and fruit disease in wet spells, and pick an open, breezy, well-drained spot. The exact months here are a careful estimate, not confirmed Valley-specific data.",
+        "bloom": "Mar 25 - Apr 30",
+        "harvest_start": "Aug 20",
+        "harvest_end": "Oct 10",
+        "harvest": "Aug 20 - Oct 10",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant"
+        ],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; humidity-driven splitting and fruit disease, not cold, are the real watch-outs.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-pomegranates/",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Jan - Feb (dormant, bare-root or cutting-grown)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "fruits_reliably",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. Unlike the arid low desert, the Valley's humidity and rain can bring some fruit splitting and disease pressure, the way they do on the humid Gulf coast, so favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern for the Valley's humid, rather than arid, summer.",
+        "suitability_note_beginner": "Pomegranates fruit well in the Rio Grande Valley. Winters give plenty of the little cold this fruit needs. Because the Valley is humid rather than dry, watch for some splitting and fruit disease in wet spells, and pick an open, breezy, well-drained spot. The exact months here are a careful estimate, not confirmed Valley-specific data.",
+        "bloom": "Mar 25 - Apr 30",
+        "harvest_start": "Aug 20",
+        "harvest_end": "Oct 10",
+        "harvest": "Aug 20 - Oct 10",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant"
+        ],
+        "frost_risk_note_seasoned": "Frost is not a practical concern in the Valley; humidity-driven splitting and fruit disease, not cold, are the real watch-outs.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-pomegranates/",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Pomegranates do well in the Rio Grande Valley. Winters give it plenty of the little cold it needs. Because the Valley is humid rather than bone-dry like the desert Southwest, some splitting and fruit disease can show up in wet spells, so pick an open, breezy, well-drained spot and water evenly. The exact months given here are a careful estimate, not confirmed Valley-specific data.",
+    "region_notes_seasoned": "Pomegranate fruits reliably in the Rio Grande Valley: Valley winters easily clear its roughly 100-hour chill need, and Texas A&M AgriLife Extension reports fruiting types surviving most winters across central, southern, and southeastern Texas. This is a real, fruiting dooryard crop here, not just a survivor, though the Valley's humidity and rain (unlike the arid low desert where pomegranate is classically prime) can still bring some splitting and fruit disease, so favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively adapted from a reliably-fruiting desert pattern for the Valley's humid summer.",
+    "chill_basis_seasoned": "The Rio Grande Valley banks roughly 0 to 300 chill hours in a typical winter, per Texas A&M AgriLife Extension, far more than pomegranate's roughly 100-hour need, so chill is never the limiting factor here.",
+    "chill_basis_beginner": "Valley winters easily give pomegranate the small amount of cold it needs, so chill is never a problem; humidity and rain, not cold, are what to manage here."
+  },
+  "mulberry": {
+    "region_id": "rgv",
+    "region_label": "Rio Grande Valley: Subtropical South Texas",
+    "zone_span": [
+      "9",
+      "10"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "tamu_agrilife",
+      "uf_ifas"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "bare_root_dormant",
+            "from": "last_frost",
+            "offset_days": -42,
+            "window_days": 42,
+            "sources": [
+              "ncsu_ext",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "primary",
+            "from": "last_frost",
+            "offset_days": -7,
+            "window_days": 21,
+            "sources": [
+              "ncsu_ext",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 60,
+            "sources": [
+              "ncsu_ext",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "primary",
+            "from": "bloom_start",
+            "offset_days": 110,
+            "sources": [
+              "ncsu_ext",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+                "verified": "2026-06-30"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
+                "verified": "2026-06-30"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/morus-rubra/",
+            "verified": "2026-06-30"
+          },
+          "uf_ifas": {
+            "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mulberry/",
+            "verified": "2026-06-30"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "9": {
+        "plant_out": "Late winter to early spring (dormant, bare-root)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "marginal",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet the roughly 100-hour chill need of low-chill mulberry types, and the Valley's warm, humid, near-frost-free climate closely parallels where mulberry fruits reliably elsewhere in the South. Texas A&M AgriLife guidance did not specifically address mulberry for the Valley, though, so this is graded marginal rather than a confirmed reliable crop: choose low-chill red or hybrid types and expect an early, heavy harvest in a typical year, but treat exact Valley timing as a conservative, transplanted estimate rather than confirmed local data.",
+        "suitability_note_beginner": "Mulberries likely do well in the Rio Grande Valley: winters give plenty of the little cold they need, and the climate looks a lot like other places mulberry thrives. But there is no Valley-specific guidance confirming it, so treat this as a good bet, not a sure thing, and pick a low-chill red or hybrid variety.",
+        "bloom": "Mar 1 - Mar 20",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Jun 15",
+        "harvest": "Apr 30 - Jun 15",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "frost_risk_note_seasoned": "Frost is a minor early concern at most; mulberry's late leaf-out and quick recovery keep it largely clear even at the coldest edge of a Valley winter.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        }
+      },
+      "10": {
+        "plant_out": "Late winter to early spring (dormant, bare-root)",
+        "resolution_method": "perennial_precompute",
+        "suitability": "marginal",
+        "suitability_note_seasoned": "Rio Grande Valley winters comfortably meet the roughly 100-hour chill need of low-chill mulberry types, and the Valley's warm, humid, near-frost-free climate closely parallels where mulberry fruits reliably elsewhere in the South. Texas A&M AgriLife guidance did not specifically address mulberry for the Valley, though, so this is graded marginal rather than a confirmed reliable crop: choose low-chill red or hybrid types and expect an early, heavy harvest in a typical year, but treat exact Valley timing as a conservative, transplanted estimate rather than confirmed local data.",
+        "suitability_note_beginner": "Mulberries likely do well in the Rio Grande Valley: winters give plenty of the little cold they need, and the climate looks a lot like other places mulberry thrives. But there is no Valley-specific guidance confirming it, so treat this as a good bet, not a sure thing, and pick a low-chill red or hybrid variety.",
+        "bloom": "Mar 1 - Mar 20",
+        "harvest_start": "Apr 30",
+        "harvest_end": "Jun 15",
+        "harvest": "Apr 30 - Jun 15",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "frost_risk_note_seasoned": "Frost is a minor early concern at most; mulberry's late leaf-out and quick recovery keep it largely clear even at the coldest edge of a Valley winter.",
+        "resolved_from": {
+          "last_frost": null,
+          "first_frost": null
+        },
+        "sources": [
+          "tamu_agrilife"
+        ],
+        "anchoring_urls": {
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-13"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Mulberry is a likely, but not fully confirmed, fruit for the Rio Grande Valley. Winters give it plenty of the little cold it needs, and the climate resembles other places it does well, but there is no Valley-specific guidance to confirm exact timing. Pick a low-chill red or hybrid variety and watch white types for popcorn disease in humid weather.",
+    "region_notes_seasoned": "Mulberry is marginal, not confirmed reliable, for the Rio Grande Valley: Valley winters easily clear the roughly 100-hour chill need of low-chill mulberry types, and the warm, humid, near-frost-free climate closely parallels where mulberry fruits well elsewhere in the South, but Texas A&M AgriLife guidance does not specifically address mulberry for the Valley. Choose low-chill red or hybrid types and watch susceptible white types for popcorn disease in the humid warmth. Exact Valley bloom and harvest months are not published for this crop at all; this window is a conservative estimate carried over from the comparable warm, humid Gulf coast pattern, not confirmed Valley-specific data.",
+    "chill_basis_seasoned": "The Rio Grande Valley comfortably meets the roughly 100-hour chill need of low-chill mulberry types, so chill is not a concern; the honesty gap here is the exact Valley-specific timing, which Texas A&M AgriLife guidance does not separately address, not whether the region is cold enough.",
+    "chill_basis_beginner": "Valley winters give plenty of the little cold low-chill mulberry needs. What is uncertain is the exact timing here, not whether it's cold enough."
+  }
+}
