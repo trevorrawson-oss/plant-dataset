@@ -11,6 +11,15 @@
 **Spec:** `docs/superpowers/specs/2026-07-12-leek-variety-archetype-design.md`
 **Memory:** `onion-variety-pilot-photoperiod`, `shallot-variety-dtm-held`, `trevor-north-star-accuracy-authority`
 
+**Base SHA (rebased 2026-07-14):** `d0832254` (was `e45bcf3c` at authoring). The RGV / subtropical-TX
+region shipped since this plan was written (canonical `7e29f4f4` -> `d0832254`, commit `4e2e9e7`), so
+leek now also carries a `regions.rgv` cell (zone_span `["9","10"]`). Footprint re-verified against the
+live canonical: leek's live keys, crop-level `days_to_maturity` `[90,150]`, `gating_factors` `[]`, and
+its 6 named varieties are all as the plan assumes; no `variety_archetype`/`winter_hardiness` yet. The
+new `regions.rgv` subtree is NOT touched by this pilot (the patch mutates only `variety_archetype`,
+`winter_hardiness`, `gating_factors`, `varieties`, `verification_status.source_set`), so the
+single-crop footprint assumption and the Task-5 Step-2 changed-keys assertion still hold verbatim.
+
 ## Global Constraints
 
 - **Canonical JSON is COMPACT**: `separators=(",",":")`, `ensure_ascii=False`, no trailing newline, never `indent=2`. Never reformat it.
@@ -394,7 +403,7 @@ Expected: `leek hardiness-gate adversarial proof: OK`.
 - [ ] **Step 3: Confirm canonical untouched (READ-ONLY held)**
 
 Run: `shasum -a 256 crops_data_final.json | cut -d' ' -f1`
-Expected: `e45bcf3c...` (unchanged). No commit (scratch only). Paste the proof output into the Task-6 STATE_HISTORY entry as recorded RED evidence.
+Expected: `d0832254...` (unchanged). No commit (scratch only). Paste the proof output into the Task-6 STATE_HISTORY entry as recorded RED evidence.
 
 ---
 
@@ -450,7 +459,7 @@ git commit -m "build(leek): variety-pilot patch builder (6 varieties + winter_ha
 python3 tools/build_leek_varieties_patch.py
 python3 tools/apply_patch.py tools/batches/leek_varieties_pilot.json --out crops_data_final.scratch.json
 ```
-Expected: footprint = leek's `varieties` + `variety_archetype` + `winter_hardiness` + `gating_factors` + source_set only; SHA gate passes (base `e45bcf3c`); catalog +none (or the signed-off additions); escaped-unicode 0.
+Expected: footprint = leek's `varieties` + `variety_archetype` + `winter_hardiness` + `gating_factors` + source_set only; SHA gate passes (base `d0832254`); catalog +none (or the signed-off additions); escaped-unicode 0.
 
 - [ ] **Step 2: Audit the footprint (exactly leek moved; count 125; COMPACT)**
 
