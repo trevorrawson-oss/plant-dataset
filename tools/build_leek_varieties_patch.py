@@ -10,9 +10,10 @@ DESIGN (see the AUTHORED CONTENT scratchpad leek_authoring_content.md, controlle
 T1-researched 2026-07-14):
 - Per-variety `sources`/`anchoring_urls` carry T1 ONLY. Every variety cites >=1 catalogued T1 source.
 - cold_hardiness_class is T1 for ALL 6 (the archetype spine): RHS + USU + UMN + Cornell.
-- Per-variety DTM integer: T1 only for Lancelot (Cornell VVFG, 100 from transplant). The other 5 are
-  seed-trade (T2). Per-variety `confidence_tier` = weakest load-bearing datapoint (onion rule) =>
-  Lancelot T1, other 5 T2.
+- Per-variety DTM integer: T1 for 4 (King Richard 85, Lancelot 100, Tadorna 110, Bandit 120) from the
+  Cornell CCE 2020 leek variety trial (doc_944, Table 3 "DTM from Transplant"); T2 for the 2 OP
+  heirlooms (Large American Flag, Giant Musselburgh) not in the extension trials. Per-variety
+  `confidence_tier` = weakest load-bearing datapoint (onion rule) => 4 T1 / 2 T2.
 - `min_temp_f`: OMITTED on all 6 (no per-variety T1 °F exists; UMN's "near 20°F" is crop-level, lives
   in the winter_hardiness model prose). T1-or-OMIT rule (the shallot lesson).
 - exactly ONE is_reference:true => Lancelot (the "good first choice if unsure" default).
