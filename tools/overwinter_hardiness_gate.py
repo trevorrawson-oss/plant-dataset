@@ -25,7 +25,14 @@ from variety_detail_gate import COLD_HARDINESS, _variety_objs  # reuse enum + va
 
 
 def in_scope(crop):
-    """A crop opts into the hardiness engine by declaring `winter_hardiness` in gating_factors."""
+    """A crop opts into the hardiness engine by declaring `winter_hardiness` in gating_factors.
+
+    NOTE (garlic/artichoke inheritance): this token is a DIFFERENT opt-in from variety_detail_gate's
+    shape scope (which keys off `maturity_class` presence). For leek they align. A future inheritor that
+    carries the token but not the shape scope would have its cold_hardiness_class read here without
+    variety_detail_gate having shape-validated it; the coverage check degrades gracefully (invalid values
+    are enum-filtered, never mis-counted), but a token-in-scope-implies-shape-in-scope check is the clean
+    hardening when this engine goes roster-wide (INV-1)."""
     return "winter_hardiness" in (crop.get("gating_factors") or [])
 
 

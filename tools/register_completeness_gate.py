@@ -82,7 +82,7 @@ EXCLUDED_KEYS = {
     "leaf_habit","recommended_type","bloom_group","season","days_or_season","size_class",
     "harvest_urgency","level","system","species","subtitle","title","cane_type","gravel_layer",
     "drought_tolerance","watering_method","start","day_length_type","recommended_day_length_type",
-    "variety_archetype",  # variety pilots (apple 2026-07-11, onion 2026-07-12): crop-level schema-dispatch enum (annual_dtm|tree_fruit|photoperiod_annual) read by variety_detail_gate; structural token, never user-facing prose
+    "variety_archetype",  # variety pilots (apple 2026-07-11, onion 2026-07-12, leek 2026-07-14): crop-level schema-dispatch enum (annual_dtm|photoperiod_annual|hardiness_annual|tree_fruit) read by variety_detail_gate; structural token, never user-facing prose
     "cold_hardiness_class",  # hardiness_annual archetype (leek variety pilot 2026-07-14): per-variety overwintering-viability enum (tender|hardy|very_hardy) read by variety_detail_gate + overwinter_hardiness_gate; structural token, sibling of day_length_type
     # ENUM / NOTIFICATION + AUDIT MACHINERY:
     "audience","offset_from","trigger","stage","measures","cause","author",
