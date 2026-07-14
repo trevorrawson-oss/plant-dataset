@@ -21,8 +21,8 @@ HANDED OFF (different owner, a first-class item here, not a footnote).
 | # | Item | Owner | Status | Impact |
 |---|------|-------|--------|--------|
 | 1 | Zone-span widen (2023-map reconciliation, A45 gate) | dataset | SHIPPED 2026-07-12 | ~320 ZIPs regain region resolution |
-| 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; decide TX z10 ZIP3 fencing (keep RGV on the se_gulf interim vs fence to generic until item 3) | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed |
-| 3 | Rio Grande Valley / subtropical TX region (new authored region; TAMU AgriLife RGV calendars are strong T1) | dataset | QUEUED | 95 ZIPs off the se_gulf interim |
+| 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`) | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence is what actually resolves RGV ZIPs to `rgv` in-app |
+| 3 | Rio Grande Valley / subtropical TX region (new authored region; TAMU AgriLife RGV calendars are strong T1) | dataset | **SHIPPED 2026-07-13** (canonical `d0832254`) | 95 TX z10 ZIPs off the se_gulf interim; app-side 785xx ZIP3 fence is the paired follow-up (item 2 / kickoff #26) |
 | 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | QUEUED | ~750 ZIPs; generic frost-anchored dates most misleading here (cool summers) |
 | 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | OPEN | GENERIC-OK is a legitimate ruling where honest |
 | 6 | Puerto Rico (2 z11 / 47 z12 / 126 z13) | product call (Trevor) | OPEN | market-scope question first; also needs z12/13 support end to end |
@@ -88,14 +88,34 @@ the z10 rows; the New Orleans fringe (->z10) sits inside se_gulf's LSU-sourced b
 heat-sensitive crops (lettuce-leaf, cherry-tomato) already carry explicit summer
 `heat_pause` objects -- the donors encode the hot-summer reality the new label describes.
 
-## The RGV interim ruling (Trevor-approved 2026-07-12)
+## The RGV interim ruling (Trevor-approved 2026-07-12) -- SUPERSEDED 2026-07-13
 
-Widening se_gulf to z10 auto-matches the 95 TX Rio Grande Valley z10 ZIPs (TX is in the
-app's se_gulf state mapping). This ships as an EXPLICITLY INTERIM answer: Gulf-coast
-winter-garden dates are directionally right for RGV and better than a bare zone label,
-and se_gulf's source set already includes tamu_agrilife. Item 3 replaces it with a real
-RGV region; item 2 may instead fence TX z10 via ZIP3 hints if the app side prefers
-generic dates meanwhile.
+**RETIRED.** This section documented the temporary answer; item 3 below shipped the real
+region on 2026-07-13, so the interim no longer applies. Left here for the historical
+record only -- do not re-derive RGV dates from se_gulf.
+
+Widening se_gulf to z10 auto-matched the 95 TX Rio Grande Valley z10 ZIPs (TX is in the
+app's se_gulf state mapping). That shipped as an EXPLICITLY INTERIM answer: Gulf-coast
+winter-garden dates were directionally right for RGV and better than a bare zone label,
+and se_gulf's source set already included tamu_agrilife. Item 3 has now replaced it with
+a real, authored RGV region; item 2's remaining app-side task is the 785xx ZIP3 fence
+(kickoff #26), not a "keep interim vs. fence to generic" decision.
+
+## Item 3 record: RGV region SHIPPED (2026-07-13, canonical `d0832254`)
+
+A real, authored Rio Grande Valley / subtropical South Texas region `rgv` (`zone_span`
+`["9","10"]`) landed across all 108 certified region-carrying crops in one atomic,
+SHA-guarded commit (`4e2e9e7`; canonical `7e29f4f4` -> `d0832254`; count 125 unchanged,
+116 certified unchanged -- a roster-wide column, not a new crop). Class split: 79
+frost_anchored annuals, 5 flagship citrus (lime marginal), 14 chill-gated trees (A3
+no-fruit split, pawpaw unsuitable), 5 woody herbs, 4 berries, strawberry -- all T1-sourced
+to TAMU AgriLife LRGV / South-Texas guides. No new gate was needed: A45 `zone_span_gate`,
+A3, and A31/A32 were already region-generic from the 2026-07-12 reconciliation. Full
+detail in `STATE_HISTORY.md` (2026-07-13 entry) and `CURRENT_STATE.md`'s top block; spec+
+plan `docs/superpowers/{specs,plans}/2026-07-13-rgv-subtropical-tx-region*`; field-addition
+register row 15. Paired app-side follow-up: the plant-app 785xx ZIP3 fence (item 2,
+kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`) -- the dataset side is done, but
+RGV ZIPs do not actually resolve to `rgv` in the app until that fence lands.
 
 ## The warm-edge chill caveat (Trevor-approved 2026-07-12)
 
