@@ -23,7 +23,7 @@ HANDED OFF (different owner, a first-class item here, not a footnote).
 | 1 | Zone-span widen (2023-map reconciliation, A45 gate) | dataset | SHIPPED 2026-07-12 | ~320 ZIPs regain region resolution |
 | 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`) | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence is what actually resolves RGV ZIPs to `rgv` in-app |
 | 3 | Rio Grande Valley / subtropical TX region (new authored region; TAMU AgriLife RGV calendars are strong T1) | dataset | **SHIPPED 2026-07-13** (canonical `d0832254`) | 95 TX z10 ZIPs off the se_gulf interim; app-side 785xx ZIP3 fence is the paired follow-up (item 2 / kickoff #26) |
-| 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | QUEUED | ~750 ZIPs; generic frost-anchored dates most misleading here (cool summers) |
+| 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | **SHIPPED 2026-07-14** (canonical `8dd4ac4c`) | ~750 ZIPs off generic frost-anchored dates; app-side west-side ZIP3 fence is the paired follow-up (kickoff #28) |
 | 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | OPEN | GENERIC-OK is a legitimate ruling where honest |
 | 6 | Puerto Rico (2 z11 / 47 z12 / 126 z13) | product call (Trevor) | OPEN | market-scope question first; also needs z12/13 support end to end |
 
@@ -116,6 +116,36 @@ plan `docs/superpowers/{specs,plans}/2026-07-13-rgv-subtropical-tx-region*`; fie
 register row 15. Paired app-side follow-up: the plant-app 785xx ZIP3 fence (item 2,
 kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`) -- the dataset side is done, but
 RGV ZIPs do not actually resolve to `rgv` in the app until that fence lands.
+
+## Item 4 record: maritime PNW region SHIPPED (2026-07-14, canonical `8dd4ac4c`)
+
+A real, authored maritime Pacific Northwest region `pnw` (`zone_span` `["8","9"]`, WA/OR
+west of the Cascades) landed across all 108 certified region-carrying crops in one atomic,
+SHA-guarded promote (canonical `060d8711` -> `8dd4ac4c`; 110 patches; count 125 unchanged,
+116 certified unchanged -- a roster-wide column, not a new crop). **The key inversion from
+RGV: PNW is FROST-ANCHORED (not frost-free)**, so cells use `resolution_method=
+"frost_anchored_resolved"` + real `resolved_from` frost dates (z8 Sea-Tac NOAA, z9 Astoria)
++ the standard `annual_calendar` deriver + `cold_pause` winters -- no Hawaii-shape
+hand-authoring, far lighter than RGV. Class split (all T1, WSU/OSU): 79 frost_anchored
+annuals (summer is the growing window, no `heat_pause`; cool crops thrive/overwinter, warm
+crops transplant-led + honest-marginal per OSU EM9027, with okra/sweet-potato/melons
+carrying OSU "not suitable"); 14 chill-gated trees (the A3 FRUIT flip -- PNW chill
+`[968,1950]` amply clears the floor, so trees `fruits_reliably` (apple/pears/cherries/plum/
+fig/mulberry/persimmon) or `marginal` (peach/apricot/nectarine on cool-wet-spring disease,
+pomegranate/pawpaw on heat), never `survives_no_fruit`-empty -- the opposite of RGV); 5
+citrus cold-limited; 5 woody herbs (lavender thrives); 4 berries (WA #1 raspberry, premier
+blueberry) + strawberry. No new gate: reuses A45/A3/A31/A32. New region-generic tooling
+`tools/region_harness.py` + `tools/region_cell_audit.py` + `tools/build_region_promote.py`
+(parametrized from the RGV tools; `cold_pause` allowed for the frost-anchored region). Full
+detail in `STATE_HISTORY.md` (2026-07-14 entry) + `CURRENT_STATE.md`'s top block; spec+plan
+`docs/superpowers/{specs,plans}/2026-07-14-maritime-pnw-region*`; dry-run `docs/reviews/
+notes/2026-07-14/pnw_promote_dryrun.md`; field-addition register row 17. Paired app-side
+follow-up: the plant-app west-side ZIP3 fence (kickoff `docs/kickoffs/28-pnw-plant-app-zip3-
+fence.md`) so the hot-dry east-of-the-Cascades z8 pockets (Spokane / Columbia Basin) do NOT
+resolve to a maritime calendar -- the mirror of RGV's 785xx fence; the dataset side is done
+but WA/OR z8-9 ZIPs do not resolve to `pnw` in the app until that fence lands. **With item 4
+shipped, the region program is down to item 5 (the judged-belt / Tier-2 ruling pass) + item
+6 (PR, a product call).**
 
 ## The warm-edge chill caveat (Trevor-approved 2026-07-12)
 

@@ -27,6 +27,7 @@ EXPECTED_SPANS = {
     "northern_tier":   ["3", "4", "5", "6", "7"],
     "warm_arid":       ["8"],
     "ca_interior":     ["8", "9"],
+    "pnw":             ["8", "9"],
     "se_gulf":         ["8", "9", "10"],
     "rgv":             ["9", "10"],
     "ca_north_coast":  ["9", "10"],
