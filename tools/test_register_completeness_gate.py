@@ -169,6 +169,11 @@ assert not _is_ruled(P_other, "self_fruitful"), "self_fruitful path guard: unrul
 # via EXCLUDED_KEYS -- it's a structural token, never user-facing prose
 assert _is_ruled(P_other, "variety_archetype"), "variety_archetype must be ruled (EXCLUDED_KEYS)"
 
+# leek variety pilot (hardiness_annual archetype, 2026-07-14): cold_hardiness_class (per-variety
+# overwintering-viability enum: tender|hardy|very_hardy) is ruled globally via EXCLUDED_KEYS -- a
+# structural token read by variety_detail_gate + overwinter_hardiness_gate, sibling of day_length_type.
+assert _is_ruled(P_rec, "cold_hardiness_class"), "cold_hardiness_class must be ruled (EXCLUDED_KEYS, hardiness_annual archetype)"
+
 # guard against over-broad rulings: an unrelated string key stays UNRULED
 assert not _is_ruled(P_rec, "totally_new_prose_key"), "unrelated key must stay unruled"
 
