@@ -1,0 +1,1506 @@
+{
+ "lavender": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "osu_ext_prune_lavender",
+   "wsu_ext_lavender_prcr",
+   "usu_ext_english_lavender",
+   "ucanr_marin_mg"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Mar 21 - Apr 11",
+     "Mar 29 - Apr 19"
+    ],
+    "bloom": [
+     "May 30 - Jul 11",
+     "Jun 7 - Jul 19"
+    ],
+    "anchoring_urls": {
+     "osu_ext_prune_lavender": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "verified": "2026-07-14"
+     },
+     "wsu_ext_lavender_prcr": {
+      "url": "https://ppo.puyallup.wsu.edu/lavender/",
+      "verified": "2026-07-14"
+     },
+     "usu_ext_english_lavender": {
+      "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+      "verified": "2026-07-14"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "Region-constant arms spanning both pnw zones. Lavender is hardy to zone 5 (USU), so it sits comfortably inside its hardy range across both zone 8 and zone 9; plant_out runs 3 weeks off each zone's last spring frost, the same establishment window used for this crop's other cold-anchored regions. Bloom is phenology-anchored to lavender's early-summer flowering window (UC Marin Master Gardeners: late spring into summer; RHS: flowers in summer), resolved per zone from real NOAA frost dates rather than a PNW-specific lavender chart (none exists; region T1 pass Section F flags perennial herbs as thin for named planting-window sourcing).",
+    "synthesis_note_beginner": "These cover both pnw zones. Plant lavender in spring, a few weeks after your last frost, and it blooms in early summer."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": true,
+   "note": "plant_out + bloom arms are frost/phenology-resolved per zone off the region's real NOAA frost normals (z8 last frost Mar 21 / first frost Nov 12, Sea-Tac; z9 last frost Mar 29 / first frost Nov 9, Astoria), then spanned across the region. PNW-specific per-herb planting-window sourcing is thin (no WSU/OSU chart names this crop by calendar month; region T1 sourcing pass Section F), so bloom is MODELED from the crop's own established phenology anchor (already used in this crop's other frost-anchored regions) resolved against these real frost dates, never analogized from a warmer region's literal month read."
+  },
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar 21 - Apr 11",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and genuinely thriving. English lavender and the hardy lavandins are comfortably inside their hardy range here, and the region's characteristic dry, sunny summer, most pronounced in rain-shadow pockets like Sequim on the Olympic Peninsula, gives this Mediterranean herb exactly the full sun and low summer humidity it wants. The one real risk is winter wet, not cold: WSU Puyallup's ornamental plant pathology program names Phytophthora root and crown rot as lavender's main disease concern here, tied to soggy conditions, not the mild winter cold itself.",
+    "grown_as_note_beginner": "Lavender does great in this zone, genuinely one of the best regions in the country for it. The region's dry summers, especially in rain-shadow spots like Sequim, suit it perfectly. The only real danger is wet feet in winter, so plant it on a raised, well-drained mound in full sun.",
+    "bloom": "May 30 - Jul 11",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost is not a concern for established lavender here; a wet, poorly drained winter is the real threat and can bring on root and crown rot. Prune hard once the chance of frost has passed and again after the main summer bloom fades, always leaving some green growth, and space plants 2 to 3 feet apart for airflow to limit fungal disease (OSU).",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "sources": [
+     "osu_ext_prune_lavender",
+     "wsu_ext_lavender_prcr",
+     "usu_ext_english_lavender",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "osu_ext_prune_lavender": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "verified": "2026-07-14"
+     },
+     "wsu_ext_lavender_prcr": {
+      "url": "https://ppo.puyallup.wsu.edu/lavender/",
+      "verified": "2026-07-14"
+     },
+     "usu_ext_english_lavender": {
+      "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+      "verified": "2026-07-14"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: lavender is hardy to zone 5 (USU), so zone 8 sits well inside its comfortable range. bloom is phenology-anchored to the early-summer flowering window this crop already uses in its other cold-anchored regions (last_frost + 70 to 112 days, the offset verified against northern_tier zones 5 to 7), giving May 30 to Jul 11 off this zone's last frost (Mar 21). PNW-specific numeric lavender sourcing is thin (no WSU/OSU chart names lavender by calendar month; region T1 pass Section F), so this window is MODELED from the crop's own established phenology anchor plus real NOAA frost-normal dates, the same method already used for lavender's northern_tier and se_gulf cells. WSU Puyallup's ornamental-pathology page corroborates lavender as an easy-care plant here with few pests or diseases beyond wet-soil root rot; the region's dry-summer character (rain-shadow pockets like Sequim are widely known lavender country) is the qualitative inverse of this crop's humid-region struggle (se_gulf, rgv). prune lands the month after bloom end (Aug), matching OSU's post-bloom pruning guidance. blocks_launch:false open finding: exact calendar-month precision is modeled, not lifted from a lavender-specific PNW planting chart (none exists); flagged for community correction.",
+    "synthesis_note_beginner": "In zone 8 of the maritime Pacific Northwest, lavender does very well. Plant it in spring, a few weeks after your last frost, on a raised, sharply drained, sunny spot. It blooms in early summer and gets its hard trim once the flowers fade. The region's dry, sunny pockets, like Sequim, are genuinely famous lavender country."
+   },
+   "9": {
+    "plant_out": "Mar 29 - Apr 19",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and a good climate overall. English lavender and the hardy lavandins are comfortably inside their hardy range on the milder coast too, and the region's generally dry summer suits this Mediterranean herb well, though the immediate coast runs a touch cooler and cloudier than the region's driest rain-shadow pockets further inland. The one real risk is winter wet, not cold: WSU Puyallup's ornamental plant pathology program names Phytophthora root and crown rot as lavender's main disease concern here.",
+    "grown_as_note_beginner": "Lavender does well here too. The region's dry summers suit it, though the immediate coast is a bit cooler and cloudier than the driest inland pockets. The main danger is wet feet in winter, so plant it on a raised, well-drained mound in full sun.",
+    "bloom": "Jun 7 - Jul 19",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost is not a concern for established lavender here; a wet, poorly drained winter is the real threat and can bring on root and crown rot. Prune hard once the chance of frost has passed and again after the main summer bloom fades, always leaving some green growth, and space plants 2 to 3 feet apart for airflow to limit fungal disease (OSU).",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "sources": [
+     "osu_ext_prune_lavender",
+     "wsu_ext_lavender_prcr",
+     "usu_ext_english_lavender",
+     "ucanr_marin_mg"
+    ],
+    "anchoring_urls": {
+     "osu_ext_prune_lavender": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "verified": "2026-07-14"
+     },
+     "wsu_ext_lavender_prcr": {
+      "url": "https://ppo.puyallup.wsu.edu/lavender/",
+      "verified": "2026-07-14"
+     },
+     "usu_ext_english_lavender": {
+      "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+      "verified": "2026-07-14"
+     },
+     "ucanr_marin_mg": {
+      "url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: zone 9 also sits comfortably inside lavender's zone-5-plus hardy range. bloom uses the same last_frost + 70 to 112 day phenology offset as zone 8, giving Jun 7 to Jul 19 off this zone's later last frost (Mar 29); the region T1 pass documents that pnw z9's freeze-free window is genuinely shorter and its spring cooler than z8's despite the milder USDA zone number (marine moderation controls extreme lows, not frost frequency), so this bloom window is intentionally later than zone 8's, not copied or made more generous. PNW-specific numeric lavender sourcing is thin (region T1 pass Section F); MODELED from the crop's own phenology anchor plus real NOAA frost dates. prune lands the month after bloom end (Aug). blocks_launch:false open finding: exact calendar-month precision is modeled, not lifted from a lavender-specific PNW chart; flagged for community correction.",
+    "synthesis_note_beginner": "In zone 9, lavender also does well. Plant it in spring, a few weeks after your last frost, on a raised, sharply drained, sunny spot. It blooms in early summer, just a bit later than the warmer inland zone, and gets its hard trim once the flowers fade."
+   }
+  },
+  "region_notes_beginner": "Lavender is a genuine strength crop in the maritime Pacific Northwest. The region's dry, sunny summer, most famously in rain-shadow spots like Sequim on the Olympic Peninsula, is exactly the Mediterranean climate this herb wants, and both zones here are comfortably within its winter-hardy range. Plant in spring a few weeks after your last frost, in a raised, sharply drained, sunny spot. It blooms in early summer, earlier and a bit longer inland (zone 8) than on the immediate, cooler coast (zone 9). The one thing to watch is wet winter soil, not cold: give it excellent drainage and it will thrive for years.",
+  "region_notes_seasoned": "Lavender is one of the maritime Pacific Northwest's genuine horticultural strengths, the inverse of its struggle in the humid Southeast or subtropical Texas. Both pnw zones sit comfortably inside English lavender's zone-5-plus hardy range, and the region's characteristically dry, sunny summer, epitomized by the rain-shadow pockets around Sequim on the Olympic Peninsula (widely known lavender country), gives this Mediterranean herb the low humidity and full sun it wants. Zone 8's warmer, earlier spring blooms a little sooner than zone 9's cooler, later-warming coastal spring; resolve each zone's window independently rather than assuming the milder-numbered coastal zone is always earlier. WSU Puyallup's ornamental plant pathology program notes lavender is otherwise easy-care here, with Phytophthora root and crown rot, tied to wet soil, as the one real risk. Plant on a raised, sharply drained mound in full sun, and prune hard once frost risk has passed in spring and again after the main summer bloom fades."
+ },
+ "oregano": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "ncsu_ext",
+   "psu_ext",
+   "uf_ifas",
+   "uc_ipm"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Mar 21 - Apr 11",
+     "Mar 29 - Apr 19"
+    ],
+    "bloom": [
+     "Jul 1 - Aug 21",
+     "Jul 7 - Aug 22"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-oregano",
+      "verified": "2026-07-14"
+     },
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+      "verified": "2026-07-14"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/oregano/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "Region-constant arms spanning both pnw zones. Common oregano (Origanum vulgare) is hardy to about zone 4 (NCSU; PSU zones 5 to 8; UF zones 5 to 9), so it sits comfortably inside its hardy range across both zone 8 and zone 9; plant_out runs 3 weeks off each zone's last spring frost. Bloom is phenology-anchored to oregano's mid-to-late-summer flowering window (PSU: July to September; UF: mid-to-late summer; NCSU: O. vulgare hirtum flowers late season), resolved per zone from real NOAA frost dates rather than an oregano-specific PNW chart (region T1 pass Section F flags perennial herbs as thin for named planting-window sourcing).",
+    "synthesis_note_beginner": "These cover both pnw zones. Plant oregano in spring, a few weeks after your last frost, and it flowers in mid-to-late summer."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": true,
+   "note": "plant_out + bloom arms are frost/phenology-resolved per zone off the region's real NOAA frost normals (z8 last frost Mar 21 / first frost Nov 12, Sea-Tac; z9 last frost Mar 29 / first frost Nov 9, Astoria), then spanned across the region. PNW-specific per-herb planting-window sourcing is thin (no WSU/OSU chart names this crop by calendar month; region T1 sourcing pass Section F), so bloom is MODELED from the crop's own established phenology anchor (already used in this crop's other frost-anchored regions) resolved against these real frost dates, never analogized from a warmer region's literal month read."
+  },
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar 21 - Apr 11",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and comfortable here. Oregano is hardy well beyond this zone's range, and unlike the humid Southeast or subtropical Texas, the maritime PNW's mild, dry summer never pushes it toward the root and stem rot or rust that humidity causes elsewhere. If anything, the cooler summer means slightly less intense flavor concentration than a hot, dry climate would give; this is a minor trade for an otherwise easy, long-lived sub-shrub. Give it full sun and sharp drainage.",
+    "grown_as_note_beginner": "Oregano comes back year after year in this zone and grows easily. The region's mild, dry summer is much friendlier to it than a hot, humid climate would be. Give it full sun and fast-draining soil.",
+    "bloom": "Jul 1 - Aug 21",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost is a minor concern for established oregano here; wet winter soil is the real risk. Set new plants out after the last spring frost, do the main cutback after bloom rather than in late fall, and keep the plant on the drier side.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "sources": [
+     "ncsu_ext",
+     "psu_ext",
+     "uf_ifas",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-oregano",
+      "verified": "2026-07-14"
+     },
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+      "verified": "2026-07-14"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/oregano/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: common oregano is hardy to about zone 4 (NCSU; PSU z5-8; UF z5-9), so zone 8 sits comfortably inside its range. bloom is phenology-anchored to oregano's mid-to-late-summer flowering (PSU July to September; UF mid-to-late summer; NCSU hirtum late season), resolved from this zone's real frost dates by shifting the crop's own closest cold-anchored analog (northern_tier zone 7, last frost Mar 15, bloom Jun 25 to Aug 15) by the 6-day difference between that zone's last frost and this one's (Mar 21), giving Jul 1 to Aug 21. PNW-specific numeric oregano sourcing is thin (no WSU/OSU chart names oregano by calendar month; region T1 pass Section F), so this window is MODELED, not lifted from a PNW-specific chart. Unlike se_gulf (where oregano is 'at the edge of comfort' from humid heat), the pnw's cool, dry summer removes that stress entirely. prune lands the month after bloom end (Sep). blocks_launch:false open finding: exact calendar-month precision is modeled; flagged for community correction.",
+    "synthesis_note_beginner": "In zone 8, oregano lives through winter in the ground and comes back each year, easily. Plant it in spring, a few weeks after your last frost. It flowers in mid-to-late summer, and you tidy it up after it blooms."
+   },
+   "9": {
+    "plant_out": "Mar 29 - Apr 19",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and comfortable here too. Oregano is hardy well beyond this zone's range, and the region's mild, dry summer, even on the cooler immediate coast, never brings on the rot and rust that humid climates cause. Give it full sun and sharp drainage; the coast's cooler, later-warming spring pushes bloom back a little compared to the warmer inland zone.",
+    "grown_as_note_beginner": "Oregano does well here too, easily surviving winter. It flowers a little later than in the warmer inland zone because the coastal spring runs cooler. Give it full sun and fast-draining soil.",
+    "bloom": "Jul 7 - Aug 22",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost is a minor concern for established oregano here; wet winter soil is the real risk. Set new plants out after the last spring frost, do the main cutback after bloom rather than in late fall, and keep the plant on the drier side.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "sources": [
+     "ncsu_ext",
+     "psu_ext",
+     "uf_ifas",
+     "uc_ipm"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-oregano",
+      "verified": "2026-07-14"
+     },
+     "uf_ifas": {
+      "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+      "verified": "2026-07-14"
+     },
+     "uc_ipm": {
+      "url": "https://ipm.ucanr.edu/home-and-landscape/oregano/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: zone 9 also sits comfortably inside oregano's zone-4-plus hardy range. bloom shifts the crop's northern_tier zone 6 analog (last frost Apr 1, bloom Jul 10 to Aug 25) by the 3-day difference to this zone's last frost (Mar 29), giving Jul 7 to Aug 22, intentionally later than zone 8's window rather than more generous, matching the region T1 pass's finding that pnw z9's spring runs cooler and its freeze-free window shorter despite the milder USDA zone number. PNW-specific numeric sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. prune lands the month after bloom end (Sep). blocks_launch:false open finding: flagged for community correction.",
+    "synthesis_note_beginner": "In zone 9, oregano also lives through winter in the ground easily. Plant it in spring, a few weeks after your last frost. It flowers in mid-to-late summer, a bit later than the warmer inland zone, and you tidy it up after it blooms."
+   }
+  },
+  "region_notes_beginner": "Oregano is easy in the maritime Pacific Northwest. It is hardy well beyond both zones here, and unlike hot, humid parts of the country, the region's mild, dry summer does not cause it to rot or get sick. Plant in spring a few weeks after your last frost, give it full sun and fast-draining soil, and it flowers in mid-to-late summer, a little later on the cooler coast than inland.",
+  "region_notes_seasoned": "Oregano grows easily across both maritime Pacific Northwest zones: common oregano (Origanum vulgare) is hardy well beyond zone 8 or 9, and the region's mild, dry summer is a genuine advantage over the humid Southeast or subtropical Texas, where this crop fights root and stem rot and rust. Set plants out a few weeks after the last spring frost, in full sun with sharp drainage, and expect a long-lived, trouble-free sub-shrub. Bloom runs from roughly Jul 1 in the warmer inland zone (8) to about a week later on the cooler, later-warming immediate coast (9); resolve each zone's window from its own frost dates rather than assuming the milder-numbered coastal zone runs earlier. Do the main cutback shear after bloom fades, not in late fall."
+ },
+ "rosemary": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "ncsu_ext",
+   "psu_ext",
+   "msu_ext",
+   "uwi_hort"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Mar 21 - Apr 11",
+     "Mar 29 - Apr 19"
+    ],
+    "bloom": [
+     "Apr - Jun",
+     "May - Jul"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+      "verified": "2026-07-14"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/news/rosemary_the_herb_with_winter_problems",
+      "verified": "2026-07-14"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "Region-constant arms spanning both pnw zones. Rosemary is reliably hardy only to about zone 7 to 8 (PSU, NCSU), so it sits at the genuine cold edge of its range in zone 8 and comfortably inside it in the milder zone 9; plant_out runs 3 weeks off each zone's last spring frost. Bloom is phenology-anchored to rosemary's late-winter-into-spring flowering in mild climates (PSU), resolved per zone from real NOAA frost dates rather than a rosemary-specific PNW chart (region T1 pass Section F flags perennial herbs as thin for named planting-window sourcing).",
+    "synthesis_note_beginner": "These cover both pnw zones. Plant rosemary in spring, a few weeks after your last frost, and it flowers in spring."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": true,
+   "note": "plant_out + bloom arms are frost/phenology-resolved per zone off the region's real NOAA frost normals (z8 last frost Mar 21 / first frost Nov 12, Sea-Tac; z9 last frost Mar 29 / first frost Nov 9, Astoria), then spanned across the region. PNW-specific per-herb planting-window sourcing is thin (no WSU/OSU chart names this crop by calendar month; region T1 sourcing pass Section F), so bloom is MODELED from the crop's own established phenology anchor (already used in this crop's other frost-anchored regions) resolved against these real frost dates, never analogized from a warmer region's literal month read."
+  },
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar 21 - Apr 11",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, but genuinely at the cold edge here. Rosemary's own hardy floor is about zone 7 (NCSU, PSU), so this zone's real winter minimum, which can dip into an unusually hard freeze during an occasional Arctic outbreak even though the average winter here is mild, sits only about a zone above where rosemary starts to suffer dieback or death. MSU's rosemary winter-injury guidance recommends a hardy cultivar (Arp, Hill Hardy, Salem), a sheltered, south-facing, sharply drained site, and a burlap wrap or heavy mulch over the crown in an unusually severe cold snap. Day-to-day, wet winter soil is a bigger risk than cold; give it excellent drainage.",
+    "grown_as_note_beginner": "Rosemary can live outdoors year-round in this zone, but it is near its cold limit. Choose a hardy type like Arp or Hill Hardy, plant it in a sheltered, sunny, fast-draining spot, and be ready to cover it or wrap the base if an unusually hard freeze is forecast. Most winters it will be fine without extra help, but a severe cold snap can still hurt or kill it.",
+    "bloom": "Apr - Jun",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "This is the genuine cold edge of rosemary's range in the pnw. Typical winters here pose little risk, but an occasional hard freeze during a cold-air outbreak can still damage or kill an unprotected plant, so choose a hardy cultivar, site it against a warm south-facing wall, and mulch or cover the crown if an unusually severe freeze is forecast (MSU). Wet winter soil is the more common everyday risk.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "sources": [
+     "ncsu_ext",
+     "psu_ext",
+     "msu_ext",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+      "verified": "2026-07-14"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/news/rosemary_the_herb_with_winter_problems",
+      "verified": "2026-07-14"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial (cold edge): rosemary's own hardy floor is about zone 7 (NCSU, PSU), so zone 8 is one zone above that floor, the same 'genuinely at the cold edge' framing this crop already carries in its own northern_tier zone 7 cell ('Marginal for in-ground winter survival'). bloom is phenology-anchored to rosemary's late-winter-into-spring flowering (PSU), reusing this crop's own established offset pattern from last_frost (about 14 to 17 days to bloom start, roughly a 90-day span), giving 'Apr - Jun' off this zone's last frost (Mar 21), matching the crop's own northern_tier zone 7 bloom window almost exactly (that zone's last frost, Mar 15, is only 6 days earlier). PNW-specific numeric rosemary sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. The z8 cold-protection caution is sourced to MSU's rosemary winter-injury guidance (general culture advice reused across this crop's other cold-anchored regions regardless of climate), applied honestly here because rosemary's hardiness_zone_min (7) sits only one zone below this cell's zone number. prune lands the month after bloom end (Jul). blocks_launch:false open finding: exact calendar-month precision is modeled; flagged for community correction.",
+    "synthesis_note_beginner": "In zone 8, rosemary usually lives outdoors year-round, but it is near its cold limit, so pick a hardy type, give it a sheltered, sunny, fast-draining spot, and be ready to protect it in an unusually hard freeze. It flowers in spring."
+   },
+   "9": {
+    "plant_out": "Mar 29 - Apr 19",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and comfortably so. Zone 9's milder winter minimum (marine moderation keeps its coldest nights from getting as cold as zone 8's, even though its spring runs cooler and later) puts real distance between the regional winter and rosemary's zone-7 hardy floor, so cold protection is not the concern here that it is one zone colder. Give it full sun and sharp drainage; wet winter soil is the main everyday risk.",
+    "grown_as_note_beginner": "Rosemary lives outdoors year-round here without the cold worries of the colder inland zone. Give it full sun and fast-draining soil, and it should be trouble-free. It flowers in spring, a bit later than the warmer inland zone.",
+    "bloom": "May - Jul",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost and hard-freeze risk are much less of a concern here than in the colder inland zone; wet winter soil is the real everyday risk, so prioritize sharp drainage and full sun.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "sources": [
+     "ncsu_ext",
+     "psu_ext",
+     "msu_ext",
+     "uwi_hort"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+      "verified": "2026-07-14"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/news/rosemary_the_herb_with_winter_problems",
+      "verified": "2026-07-14"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: zone 9's milder winter minimum temperature (the USDA-zone basis) puts it comfortably clear of rosemary's zone-7 hardy floor, unlike zone 8's one-zone margin, even though the region T1 pass documents zone 9's spring as cooler and later-warming than zone 8's. bloom shifts later accordingly, 'May - Jul' off this zone's later last frost (Mar 29), reusing the same roughly 14-to-17-day-to-bloom-start, ~90-day-span offset pattern this crop already uses across its other cold-anchored regions. PNW-specific numeric sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. prune lands the month after bloom end (Aug). blocks_launch:false open finding: flagged for community correction.",
+    "synthesis_note_beginner": "In zone 9, rosemary lives outdoors year-round with little cold worry. Give it full sun and fast-draining soil. It flowers in spring, a bit later than the warmer inland zone."
+   }
+  },
+  "region_notes_beginner": "Rosemary grows well in the maritime Pacific Northwest, but the colder inland zone (8) is genuinely near its cold limit: most winters it is fine, but an unusually hard freeze can still hurt or kill it, so pick a tough type like Arp, plant it in a sheltered, sunny, fast-draining spot, and be ready to cover it in a severe cold snap. On the milder coast (zone 9), cold is much less of a worry. Either way, give it full sun and excellent drainage, since wet winter soil is the everyday risk. It flowers in spring.",
+  "region_notes_seasoned": "Rosemary's own hardy floor is about zone 7 (NCSU, PSU), which puts the colder, interior zone 8 genuinely at the cold edge of reliable in-ground culture here: an ordinary pnw winter poses little risk, but an occasional hard freeze during a cold-air outbreak can still damage or kill an unprotected plant, so MSU's winter-injury guidance is worth following there, a hardy cultivar (Arp, Hill Hardy), a sheltered south-facing site, and mulch or cover in a severe cold snap. The milder zone 9, whose marine-moderated winter minimum runs warmer even though its spring arrives later and cooler, carries none of that cold-edge concern. Both zones share the same everyday risk: wet winter soil, not cold, is what most often kills rosemary here, so sharp drainage and full sun matter everywhere. Bloom runs spring, later on the cooler-spring coast (9) than the interior lowlands (8)."
+ },
+ "sage": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "ncsu_ext",
+   "uwi_hort",
+   "clemson_hgic"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Mar 21 - Apr 11",
+     "Mar 29 - Apr 19"
+    ],
+    "bloom": [
+     "May - Jul",
+     "Jun - Jul"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+      "verified": "2026-07-14"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+      "verified": "2026-07-14"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sage-the-wisest-herb/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "Region-constant arms spanning both pnw zones. Common green sage (Salvia officinalis) is hardy in roughly zones 4 to 8 (NCSU); plant_out runs 3 weeks off each zone's last spring frost. Bloom is phenology-anchored to sage's early-summer, blue-purple flowering (Wisconsin Horticulture), resolved per zone from real NOAA frost dates rather than a sage-specific PNW chart (region T1 pass Section F flags perennial herbs as thin for named planting-window sourcing).",
+    "synthesis_note_beginner": "These cover both pnw zones. Plant sage in spring, a few weeks after your last frost, and it flowers in early summer."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": true,
+   "note": "plant_out + bloom arms are frost/phenology-resolved per zone off the region's real NOAA frost normals (z8 last frost Mar 21 / first frost Nov 12, Sea-Tac; z9 last frost Mar 29 / first frost Nov 9, Astoria), then spanned across the region. PNW-specific per-herb planting-window sourcing is thin (no WSU/OSU chart names this crop by calendar month; region T1 sourcing pass Section F), so bloom is MODELED from the crop's own established phenology anchor (already used in this crop's other frost-anchored regions) resolved against these real frost dates, never analogized from a warmer region's literal month read."
+  },
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar 21 - Apr 11",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and a comfortable, long-lived one. Zone 8 falls inside sage's own stated zone 4 to 8 hardy ceiling, and unlike the humid Southeast, where heat and dampness push sage toward root rot and mildew and shorten it to a couple of years, the maritime PNW's cool, dry summer removes that stress entirely. Give it full sun and sharp drainage, and expect it to persist for years before eventually turning woody and needing renewal.",
+    "grown_as_note_beginner": "Sage comes back year after year in this zone and lives a long time here. The region's cool, dry summer is much friendlier to it than a hot, humid climate. Give it full sun and fast-draining soil.",
+    "bloom": "May - Jul",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Hardy enough to overwinter in the ground with sharp drainage; wet winter soil, not cold, is the real risk. Set new plants out after the last spring frost, and do the hard renewal prune in spring, not fall.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "sources": [
+     "ncsu_ext",
+     "uwi_hort",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+      "verified": "2026-07-14"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+      "verified": "2026-07-14"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sage-the-wisest-herb/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: common sage is hardy in roughly zones 4 to 8 (NCSU), so zone 8 sits right at the warm edge of its stated ceiling, but that ceiling is heat-and-humidity driven (se_gulf's own sage cells describe zone 8 there as 'humid-marginal' and often short-lived from rot and mildew, not from being numerically above a hardiness cutoff), and the maritime pnw's cool, dry summer does not stress sage that way. bloom is phenology-anchored to sage's early-summer flowering (Wisconsin Horticulture), reusing the crop's own northern_tier zone 7 analog (last frost Mar 15, bloom 'May - Jul') almost unchanged given this zone's very close last frost (Mar 21). PNW-specific numeric sage sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. prune lands the month after bloom end (Aug). blocks_launch:false open finding: flagged for community correction.",
+    "synthesis_note_beginner": "In zone 8, sage lives through winter in the ground and comes back each year, for a long time. Plant it in spring, a few weeks after your last frost. It flowers in early summer, and you trim it back in spring."
+   },
+   "9": {
+    "plant_out": "Mar 29 - Apr 19",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and comfortable here too, even though zone 9 sits a step above sage's own stated zone 4 to 8 ceiling on paper. That ceiling reflects heat and humidity stress seen elsewhere in the country (se_gulf's zone 9 sage cell is explicitly 'humid-marginal' and short-lived); the maritime pnw's mild, dry, even cooler coastal summer carries none of that stress, so sage should be at least as long-lived here as in the warmer inland zone. Give it full sun and sharp drainage.",
+    "grown_as_note_beginner": "Sage does well here too, despite this zone's number being one above the top of sage's usual hardiness range on paper. That range is about heat and humidity problems elsewhere, which this region's cool, dry summer does not have. Give it full sun and fast-draining soil.",
+    "bloom": "Jun - Jul",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Hardy enough to overwinter in the ground with sharp drainage; wet winter soil, not cold, is the real risk. Set new plants out after the last spring frost, and do the hard renewal prune in spring, not fall.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "sources": [
+     "ncsu_ext",
+     "uwi_hort",
+     "clemson_hgic"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+      "verified": "2026-07-14"
+     },
+     "uwi_hort": {
+      "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+      "verified": "2026-07-14"
+     },
+     "clemson_hgic": {
+      "url": "https://hgic.clemson.edu/sage-the-wisest-herb/",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: zone 9 sits one step above sage's own stated zone 4 to 8 ceiling (NCSU), but that ceiling is a heat-and-humidity limit (se_gulf's own zone 9/10 sage cells are explicitly humid-marginal and short-lived from rot and mildew), not a cold-hardiness cutoff, and the maritime pnw's cool, dry, even milder-summered coastal climate carries none of that stress, so this cell is authored as a full, comfortable perennial rather than downgraded on the scalar number alone. bloom shifts later to the crop's own northern_tier zone 6 analog ('Jun - Jul', last frost Apr 1), the closer match to this zone's later last frost (Mar 29), intentionally later than zone 8's window rather than more generous, matching the region T1 pass's finding that pnw z9's spring runs cooler despite the milder USDA zone number. PNW-specific numeric sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. prune lands the month after bloom end (Aug). blocks_launch:false open finding: flagged for community correction.",
+    "synthesis_note_beginner": "In zone 9, sage also lives through winter in the ground and comes back each year. Plant it in spring, a few weeks after your last frost. It flowers in early summer, a bit later than the warmer inland zone."
+   }
+  },
+  "region_notes_beginner": "Sage grows well across the maritime Pacific Northwest. Its usual hardiness range tops out around zone 8 on paper, but that limit is really about heat and humidity problems in other parts of the country, not cold, so it does fine here in zone 9 too, since this region's summer stays cool and dry. Plant in spring a few weeks after your last frost, give it full sun and fast-draining soil, and it flowers in early summer, a little later on the cooler coast than inland. Trim it back each spring to keep it from getting too woody.",
+  "region_notes_seasoned": "Common green sage (Salvia officinalis) grows as a comfortable, long-lived perennial across both maritime Pacific Northwest zones. Its stated zone 4 to 8 hardy range (NCSU) puts zone 9 a notch above the ceiling on paper, but that ceiling is a heat-and-humidity limit, not a cold one; this crop's own se_gulf cells describe sage as humid-marginal and often short-lived there from rot and mildew, a stress the pnw's cool, dry summer simply does not impose. Expect sage to persist for years in full sun with sharp drainage before eventually turning woody and needing renewal. Bloom runs early summer, later on the cooler, later-warming immediate coast (zone 9) than the warmer interior lowlands (zone 8); resolve each zone's window independently rather than assuming the milder-numbered coastal zone runs earlier. Do the hard renewal prune in spring, not fall."
+ },
+ "thyme": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "ncsu_ext",
+   "psu_ext",
+   "usu_ext",
+   "wvu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "Mar 21 - Apr 11",
+     "Mar 29 - Apr 19"
+    ],
+    "bloom": [
+     "May 30 - Jul 11",
+     "Jun 7 - Jul 19"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-thyme",
+      "verified": "2026-07-14"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/drought/research/drought-tolerant-options-for-southwest-agriculture-ornamentals-herbs-cosmetics",
+      "verified": "2026-07-14"
+     },
+     "wvu_ext": {
+      "url": "https://extension.wvu.edu/lawn-gardening-pests/gardening/gardening-101/herb-gardening-for-beginners",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "Region-constant arms spanning both pnw zones. Common thyme is reliably hardy to about zone 5 (NCSU 5a to 9b; PSU/UF zones 5 to 9), so it sits comfortably inside its hardy range across both zone 8 and zone 9; plant_out runs 3 weeks off each zone's last spring frost. Bloom is phenology-anchored to thyme's early-to-mid-summer flowering (NCSU: spring into summer, May to July; PSU: June and July), resolved per zone from real NOAA frost dates rather than a thyme-specific PNW chart (region T1 pass Section F flags perennial herbs as thin for named planting-window sourcing).",
+    "synthesis_note_beginner": "These cover both pnw zones. Plant thyme in spring, a few weeks after your last frost, and it flowers in summer."
+   }
+  ],
+  "plantings_provenance": {
+   "method": "perennial_woody_ornamental_region_arms",
+   "frost_resolved": true,
+   "note": "plant_out + bloom arms are frost/phenology-resolved per zone off the region's real NOAA frost normals (z8 last frost Mar 21 / first frost Nov 12, Sea-Tac; z9 last frost Mar 29 / first frost Nov 9, Astoria), then spanned across the region. PNW-specific per-herb planting-window sourcing is thin (no WSU/OSU chart names this crop by calendar month; region T1 sourcing pass Section F), so bloom is MODELED from the crop's own established phenology anchor (already used in this crop's other frost-anchored regions) resolved against these real frost dates, never analogized from a warmer region's literal month read."
+  },
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar 21 - Apr 11",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and comfortable here. Thyme is hardy well beyond this zone's range, and the maritime pnw's mild, dry summer suits this low, spreading Mediterranean sub-shrub well; English and creeping thymes are both reliable. Give it full sun, lean soil, and sharp drainage.",
+    "grown_as_note_beginner": "Thyme comes back year after year in this zone and grows easily. Give it full sun and fast-draining soil, and it should thrive with little fuss.",
+    "bloom": "May 30 - Jul 11",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Hardy enough to overwinter in the ground with sharp drainage; wet winter soil, not cold, is the real risk. Set new plants out after the last spring frost, and do the main shaping shear after bloom, not in late fall.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "sources": [
+     "ncsu_ext",
+     "psu_ext",
+     "usu_ext",
+     "wvu_ext"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-thyme",
+      "verified": "2026-07-14"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/drought/research/drought-tolerant-options-for-southwest-agriculture-ornamentals-herbs-cosmetics",
+      "verified": "2026-07-14"
+     },
+     "wvu_ext": {
+      "url": "https://extension.wvu.edu/lawn-gardening-pests/gardening/gardening-101/herb-gardening-for-beginners",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: common thyme is reliably hardy to about zone 5 (NCSU 5a to 9b; PSU/UF z5-9), so zone 8 sits comfortably inside its range. bloom is phenology-anchored to thyme's early-to-mid-summer flowering (NCSU: May to July; PSU: June and July), reusing the crop's own northern_tier zone 7 analog (last frost Mar 15, bloom 'May 24 - Jul 5') shifted by the 6-day difference to this zone's last frost (Mar 21), giving May 30 to Jul 11. PNW-specific numeric thyme sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. prune lands the month after bloom end (Aug). blocks_launch:false open finding: flagged for community correction.",
+    "synthesis_note_beginner": "In zone 8, thyme lives through winter in the ground and comes back each year. Plant it in spring, a few weeks after your last frost. It flowers in summer, and you tidy it up after it blooms."
+   },
+   "9": {
+    "plant_out": "Mar 29 - Apr 19",
+    "resolution_method": "perennial_woody_ornamental_precompute",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "Perennial, and comfortable here too. Thyme is hardy well beyond this zone's range, and the region's mild, dry summer, even on the cooler immediate coast, suits it well. Give it full sun, lean soil, and sharp drainage; bloom runs a little later here than in the warmer inland zone.",
+    "grown_as_note_beginner": "Thyme does well here too, easily surviving winter. It flowers a bit later than the warmer inland zone because the coastal spring runs cooler. Give it full sun and fast-draining soil.",
+    "bloom": "Jun 7 - Jul 19",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "growing",
+     "bloom",
+     "bloom",
+     "prune",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Hardy enough to overwinter in the ground with sharp drainage; wet winter soil, not cold, is the real risk. Set new plants out after the last spring frost, and do the main shaping shear after bloom, not in late fall.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "sources": [
+     "ncsu_ext",
+     "psu_ext",
+     "usu_ext",
+     "wvu_ext"
+    ],
+    "anchoring_urls": {
+     "ncsu_ext": {
+      "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+      "verified": "2026-07-14"
+     },
+     "psu_ext": {
+      "url": "https://extension.psu.edu/herb-garden-plants-thyme",
+      "verified": "2026-07-14"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/drought/research/drought-tolerant-options-for-southwest-agriculture-ornamentals-herbs-cosmetics",
+      "verified": "2026-07-14"
+     },
+     "wvu_ext": {
+      "url": "https://extension.wvu.edu/lawn-gardening-pests/gardening/gardening-101/herb-gardening-for-beginners",
+      "verified": "2026-07-14"
+     }
+    },
+    "synthesis_note_seasoned": "grown_as=perennial: zone 9 also sits comfortably inside thyme's zone-5-plus hardy range. bloom reuses the crop's own northern_tier zone 6 analog (last frost Apr 1, bloom 'Jun 10 - Jul 22') shifted by the 3-day difference to this zone's last frost (Mar 29), giving Jun 7 to Jul 19, intentionally later than zone 8's window rather than more generous, matching the region T1 pass's finding that pnw z9's spring runs cooler despite the milder USDA zone number. PNW-specific numeric sourcing is thin (region T1 pass Section F); MODELED, not lifted from a PNW-specific chart. prune lands the month after bloom end (Aug). blocks_launch:false open finding: flagged for community correction.",
+    "synthesis_note_beginner": "In zone 9, thyme also lives through winter in the ground easily. Plant it in spring, a few weeks after your last frost. It flowers in summer, a bit later than the warmer inland zone, and you tidy it up after it blooms."
+   }
+  },
+  "region_notes_beginner": "Thyme is easy across the maritime Pacific Northwest. It is hardy well beyond both zones here, and the region's mild, dry summer suits this low, spreading herb well. Plant in spring a few weeks after your last frost, give it full sun and fast-draining soil, and it flowers in summer, a little later on the cooler coast than inland.",
+  "region_notes_seasoned": "Thyme is a hardy, trouble-free, low spreading perennial across both maritime Pacific Northwest zones: common thyme is reliably hardy to about zone 5 (NCSU 5a to 9b; PSU/UF z5-9), well beyond either zone 8 or 9 here, and the region's mild, dry summer suits this Mediterranean sub-shrub without the humidity stress it faces further south and east. Set plants out a few weeks after the last spring frost, in full sun with lean, sharply drained soil. Bloom runs from late May in the warmer inland zone (8) to about a week later on the cooler, later-warming immediate coast (9); resolve each zone's window from its own frost dates rather than assuming the milder-numbered coastal zone runs earlier. Do the shaping shear after bloom fades, not in late fall."
+ },
+ "blueberry": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "January",
+     "March"
+    ],
+    "bloom": [
+     "April",
+     "April"
+    ],
+    "harvest_start": [
+     "late June"
+    ],
+    "harvest_end": [
+     "August"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2073/2025/07/Growing-Blueberries-Start-Right.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "PNW Task 7b region fill (Claude Code lane, 2026-07-14). Northern highbush is the recommended_type in both zones, matching WSU's own framing of northern highbush as the common Washington type and the ample WSU Skagit-station-sourced winter chill (968 to 1,950 hours z8, 700 to 1,500 hours z9, region_chill_delivered.pnw) against this crop's 1,000 hour requirement. Plant/bloom/harvest windows sourced to WSU Skagit County Extension, 'Growing Blueberries: Start With the Right Soil' (Ranten 2025, citing WSU NWREC small-fruit horticulturist Lisa Wasko DeVetter): plant January-March (dormant), net against birds mid-June through harvest completion in August, prune in winter or early spring. Bloom month (April) is a reasoned placement (the source states pre-bloom dormant pruning and dormant planting windows but no explicit bloom date; April is the standard maritime-PNW Vaccinium bloom window and clears both zones' last frost with margin). Both zones share one window; the source is a general western-WA guide, not zone-differentiated. resolution_method is frost_anchored_resolved per the pnw cell contract's frost-anchored invariant (not berries_woody_precompute, which other regions use); resolved_from carries the real NOAA-normal frost dates per zone.",
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "January to March",
+    "harvest": "late June to August",
+    "harvest_start": "late June",
+    "harvest_end": "August",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2073/2025/07/Growing-Blueberries-Start-Right.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "northern_highbush",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Northern highbush is the blueberry to plant here. West of the Cascades, winters bank about 968 to 1,950 hours (average around 1,468) of winter chill, WSU Skagit County Extension station data, comfortably clearing this crop's roughly 1,000 hour chill requirement. The other real requirement is soil: native soils west of the Cascades are rarely acidic enough on their own, so start right by testing and amending to pH 4.5 to 5.5, or grow in containers or raised beds with an acidic mix (WSU).",
+    "type_note_beginner": "Plant northern highbush blueberries here. Our winters are plenty cold for this type. The bigger job is the soil: it needs to be quite acidic, more than most of our native soil, so test it and add sulfur or peat, or just grow your bushes in a large pot or raised bed with an acidic potting mix.",
+    "bloom": "April",
+    "frost_risk_note_seasoned": "Bloom in April is comfortably behind the typical last frost here",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "grown_as_note_seasoned": "Blueberry is a permanent deciduous shrub here, planted once and productive for decades. It rests bare and dormant through the mild, wet winter, then breaks bud and blooms in April, sets fruit through a long cool spring, and ripens from late June into August. Net the bushes against birds from mid-June through the end of harvest, and prune in the dormant season, winter into early spring, just before growth resumes. Plant at least two cultivars near each other for the best fruit set.",
+    "grown_as_note_beginner": "Your blueberry bush comes back every year and can produce for decades. It drops its leaves and rests over our mild winter, flowers in April, and ripens fruit from late June through August. Net the bushes starting in mid-June, before the birds beat you to the berries, and prune in winter or very early spring. Plant two different varieties together for a bigger crop."
+   },
+   "9": {
+    "plant_out": "January to March",
+    "harvest": "late June to August",
+    "harvest_start": "late June",
+    "harvest_end": "August",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2073/2025/07/Growing-Blueberries-Start-Right.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "northern_highbush",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Northern highbush is the blueberry to plant here. West of the Cascades, winters bank about 700 to 1,500 hours of winter chill, WSU Skagit County Extension station data, comfortably clearing this crop's roughly 1,000 hour chill requirement on average, though an unusually mild winter in the mildest immediate-coast pockets can run short; choose a lower-chill cultivar (800 to 900 hours) as insurance here. The other real requirement is soil: native soils west of the Cascades are rarely acidic enough on their own, so start right by testing and amending to pH 4.5 to 5.5, or grow in containers or raised beds with an acidic mix (WSU).",
+    "type_note_beginner": "Plant northern highbush blueberries here. Our winters are plenty cold for this type, though the mildest coastal spots occasionally run a little short, so pick a lower-chill variety there. The bigger job is the soil: it needs to be quite acidic, more than most of our native soil, so test it and add sulfur or peat, or just grow your bushes in a large pot or raised bed with an acidic potting mix.",
+    "bloom": "April",
+    "frost_risk_note_seasoned": "Bloom in April follows close on the heels of this zone's typical late-March last frost, so an unusually late cold snap is a slightly higher risk here than in the colder inland valleys; site plants where cold air drains away and cover a bloom-time frost forecast if you can",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "grown_as_note_seasoned": "Blueberry is a permanent deciduous shrub here, planted once and productive for decades. It rests bare and dormant through the mild, wet winter, then breaks bud and blooms in April, sets fruit through a long cool spring, and ripens from late June into August. Net the bushes against birds from mid-June through the end of harvest, and prune in the dormant season, winter into early spring, just before growth resumes. Plant at least two cultivars near each other for the best fruit set.",
+    "grown_as_note_beginner": "Your blueberry bush comes back every year and can produce for decades. It drops its leaves and rests over our mild winter, flowers in April, and ripens fruit from late June through August. Net the bushes starting in mid-June, before the birds beat you to the berries, and prune in winter or very early spring. Plant two different varieties together for a bigger crop."
+   }
+  },
+  "region_notes_beginner": "The maritime Northwest, from Puget Sound into the Willamette Valley, is premier blueberry country: our winters deliver plenty of the cold rest this bush needs, and northern highbush is the variety type to grow. Plant dormant bushes January through March, expect flowers in April, and pick fruit from late June into August. The one thing our soil does not give this plant for free is acidity, so amend your soil or grow in a large pot or raised bed with an acidic mix, and plant two varieties for a bigger harvest.",
+  "region_notes_seasoned": "West of the Cascades is a premier blueberry region: WSU Skagit County station data shows winters banking roughly 968 to 1,950 chill hours (zone 8) and 700 to 1,500 (zone 9), comfortably clearing northern highbush's requirement in the great majority of winters. Set dormant plants January through March, expect bloom in April, and net against birds from mid-June through the close of harvest in August. Acidic soil, not chill, is the limiting factor here: test and amend to pH 4.5 to 5.5, or grow in containers or raised beds with an acidic mix, since native soils west of the Cascades rarely arrive acidic enough on their own. Plant at least two cultivars for the best fruit set."
+ },
+ "raspberry": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "November",
+     "March"
+    ],
+    "bloom": [
+     "May",
+     "May"
+    ],
+    "harvest_start": [
+     "June"
+    ],
+    "harvest_end": [
+     "August"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://extension.wsu.edu/whatcom/seasonal-harvest-guide/",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "PNW Task 7b region fill (Claude Code lane, 2026-07-14). recommended_type summer_bearing in both zones: Washington's commercial red raspberry industry (the nation's largest, per USDA NASS) is built on summer-bearing (Meeker-type) cultivars in this exact maritime climate, a confident, sourced strength claim, not a hedge. Harvest window (June-August, with a second fall flush on everbearing types into September) is T1-sourced to WSU Extension's Whatcom County 'Seasonal Harvest Guide'. WSU's dedicated caneberry cultural bulletin (EM103E) has no freely available .edu-hosted copy located this pass (flash-drive only per WSU's own catalog), so plant_out/bloom timing is treated conservatively: dormant bare-root planting in the standard late-fall-through-winter window, bloom in May (about one month ahead of the June harvest start, the standard cane-fruit bloom-to-harvest interval already used for this crop's other certified regions), not claimed as independently WSU-PNW-sourced. Both zones share one window (the source is not zone-differentiated); resolved_from carries the real per-zone NOAA frost normals.",
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "November to March",
+    "harvest": "June to August",
+    "harvest_start": "June",
+    "harvest_end": "August",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://extension.wsu.edu/whatcom/seasonal-harvest-guide/",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "summer_bearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Summer-bearing (floricane-fruiting) red raspberry is the type to plant here, and it is not a modest claim: Washington is the number one red raspberry producing state in the country, almost all of it summer-bearing cultivars (Meeker and its kin) grown in this same maritime climate. Chill is never the limiter (this crop needs about 800 hours and the region banks 968 to 1,950), so the choice comes down to cultivar and trellising, not survival.",
+    "type_note_beginner": "Plant a summer-bearing red raspberry, the classic type. This is genuinely raspberry country: Washington grows more red raspberries than any other state, and our winters give this plant all the cold rest it needs.",
+    "bloom": "May",
+    "frost_risk_note_seasoned": "Raspberries bloom in May, well after this zone's typical late-March last frost, so spring frost on open bloom is a low risk here",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "grown_as_note_seasoned": "Raspberry is a deciduous cane fruit here as everywhere: the canes drop their leaves and rest through the mild, wet winter, banking the modest chill the plant needs. The perennial crown lives for a decade or more while each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes from late fall through winter, train them on a trellis, and prune out the spent fruited canes and thin the new ones in the dormant season.",
+    "grown_as_note_beginner": "Your raspberry patch comes back every year, even though each individual cane only lives two seasons: it grows one year, then fruits and dies the next, while fresh canes keep coming up from the roots. Plant dormant canes in late fall or winter, give them a trellis, and cut out the canes that already fruited each winter."
+   },
+   "9": {
+    "plant_out": "November to March",
+    "harvest": "June to August",
+    "harvest_start": "June",
+    "harvest_end": "August",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://extension.wsu.edu/whatcom/seasonal-harvest-guide/",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "summer_bearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Summer-bearing (floricane-fruiting) red raspberry is the type to plant here, and it is not a modest claim: Washington is the number one red raspberry producing state in the country, almost all of it summer-bearing cultivars (Meeker and its kin) grown in this same maritime climate. Chill is never the limiter (this crop needs about 800 hours and the region banks 700 to 1,500), so the choice comes down to cultivar and trellising, not survival.",
+    "type_note_beginner": "Plant a summer-bearing red raspberry, the classic type. This is genuinely raspberry country: Washington grows more red raspberries than any other state, and our winters give this plant all the cold rest it needs.",
+    "bloom": "May",
+    "frost_risk_note_seasoned": "Raspberries bloom in May, comfortably behind this zone's typical late-March/early-April last frost, so spring frost on open bloom is a low risk here too",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "grown_as_note_seasoned": "Raspberry is a deciduous cane fruit here as everywhere: the canes drop their leaves and rest through the mild, wet winter, banking the modest chill the plant needs. The perennial crown lives for a decade or more while each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes from late fall through winter, train them on a trellis, and prune out the spent fruited canes and thin the new ones in the dormant season.",
+    "grown_as_note_beginner": "Your raspberry patch comes back every year, even though each individual cane only lives two seasons: it grows one year, then fruits and dies the next, while fresh canes keep coming up from the roots. Plant dormant canes in late fall or winter, give them a trellis, and cut out the canes that already fruited each winter."
+   }
+  },
+  "region_notes_beginner": "This is raspberry country, really: Washington grows more red raspberries than any other state, right in this same mild, marine climate. Plant dormant canes from late fall through winter, give them a trellis and full sun, and expect a heavy early to midsummer harvest, June into August, from summer-bearing types.",
+  "region_notes_seasoned": "West of the Cascades is the heart of the US red raspberry industry, and Washington is the number one red raspberry state in the country, grown almost entirely as summer-bearing (floricane) cultivars in this exact climate. Set dormant bare-root canes from late fall through winter, trellis them, and expect bloom in May and a heavy harvest from June into August; everbearing types add a second flush into September. Chill (about 800 hours needed, far more banked here) is never the limiting factor; cultivar choice and trellising are what separate a good patch from a great one."
+ },
+ "blackberry": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "November",
+     "March"
+    ],
+    "bloom": [
+     "May",
+     "May"
+    ],
+    "harvest_start": [
+     "July"
+    ],
+    "harvest_end": [
+     "August"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://extension.wsu.edu/whatcom/seasonal-harvest-guide/",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "PNW Task 7b region fill (Claude Code lane, 2026-07-14). recommended_type summer_bearing in both zones (trailing marionberry/boysenberry/loganberry plus upright thornless types are all floricane/summer-bearing). Harvest window (July-August, matching Blackberry and Boysenberry/Marionberry/Loganberry/Tayberry alike) is T1-sourced to WSU Extension's Whatcom County 'Seasonal Harvest Guide'. As with raspberry, WSU's dedicated caneberry cultural bulletin (EM103E) has no free .edu-hosted copy located this pass, so plant_out/bloom timing is treated conservatively (standard dormant bare-root window; bloom about one month ahead of the July harvest start, the same cane-fruit interval convention used elsewhere for this crop). No WSU source located this pass frames an invasive-Himalayan-blackberry caveat for the home-garden planting guidance used here, so none is asserted. Both zones share one window; resolved_from carries the real per-zone NOAA frost normals.",
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "November to March",
+    "harvest": "July to August",
+    "harvest_start": "July",
+    "harvest_end": "August",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://extension.wsu.edu/whatcom/seasonal-harvest-guide/",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "summer_bearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Summer-bearing (floricane-fruiting) blackberry is the type to plant here, and this is the crop's home ground: marionberry, the trailing blackberry cultivar behind most commercial Pacific Northwest blackberry production, was bred in Oregon and remains an Oregon-bred signature of this exact climate. Trailing types (marionberry, boysenberry, loganberry) need a trellis for their long canes; upright thornless types are a lower-maintenance alternative. Chill (about 400 hours needed) is never a limiter here.",
+    "type_note_beginner": "Plant a summer-bearing blackberry. If you want the famous local flavor, look for marionberry, a trailing type bred right here in Oregon; it needs a trellis for its long canes. Upright thornless types are easier to manage if you would rather skip the trellis work.",
+    "bloom": "May",
+    "frost_risk_note_seasoned": "Blackberries bloom in May, well after this zone's typical late-March last frost, so spring frost on open bloom is a low risk here",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "grown_as_note_seasoned": "Blackberry is a deciduous cane fruit here: the canes drop their leaves and rest through the mild, wet winter, while the perennial crown and roots live for 15 to 20 years and each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes from late fall through winter, trellis the trailing types (their long canes root wherever they touch ground if left untrellised), and prune out the spent fruited canes each dormant season.",
+    "grown_as_note_beginner": "Your blackberry patch is permanent, even though each cane only lives two years: it grows one season, fruits the next, then dies while new canes take over. Plant dormant canes in late fall or winter, put trailing types like marionberry on a trellis, and cut out the old fruited canes each winter."
+   },
+   "9": {
+    "plant_out": "November to March",
+    "harvest": "July to August",
+    "harvest_start": "July",
+    "harvest_end": "August",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://extension.wsu.edu/whatcom/seasonal-harvest-guide/",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "summer_bearing",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "Summer-bearing (floricane-fruiting) blackberry is the type to plant here, and this is the crop's home ground: marionberry, the trailing blackberry cultivar behind most commercial Pacific Northwest blackberry production, was bred in Oregon and remains an Oregon-bred signature of this exact climate. Trailing types (marionberry, boysenberry, loganberry) need a trellis for their long canes; upright thornless types are a lower-maintenance alternative. Chill (about 400 hours needed) is never a limiter here.",
+    "type_note_beginner": "Plant a summer-bearing blackberry. If you want the famous local flavor, look for marionberry, a trailing type bred right here in Oregon; it needs a trellis for its long canes. Upright thornless types are easier to manage if you would rather skip the trellis work.",
+    "bloom": "May",
+    "frost_risk_note_seasoned": "Blackberries bloom in May, comfortably behind this zone's typical late-March/early-April last frost, so spring frost on open bloom is a low risk here too",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "grown_as_note_seasoned": "Blackberry is a deciduous cane fruit here: the canes drop their leaves and rest through the mild, wet winter, while the perennial crown and roots live for 15 to 20 years and each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes from late fall through winter, trellis the trailing types (their long canes root wherever they touch ground if left untrellised), and prune out the spent fruited canes each dormant season.",
+    "grown_as_note_beginner": "Your blackberry patch is permanent, even though each cane only lives two years: it grows one season, fruits the next, then dies while new canes take over. Plant dormant canes in late fall or winter, put trailing types like marionberry on a trellis, and cut out the old fruited canes each winter."
+   }
+  },
+  "region_notes_beginner": "This is where marionberry comes from: a trailing blackberry bred in Oregon that is still the signature flavor of this region. Plant dormant canes from late fall through winter, trellis the trailing types, and expect a good harvest, July into August. Upright thornless types are easier if you would rather not trellis.",
+  "region_notes_seasoned": "The maritime Northwest is blackberry country, and marionberry, an Oregon-bred trailing cultivar, remains the region's signature: it and its trailing relatives (boysenberry, loganberry) deliver intense flavor here and need a two-wire trellis for their long canes. Upright and semi-erect thornless types grow well too, with less training work. Set dormant bare-root canes from late fall through winter, expect bloom in May and harvest from July into August, and prune out spent fruited canes each dormant season. Chill (about 400 hours needed) is never a limiting factor here."
+ },
+ "elderberry": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "mu_ext",
+   "msu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     "November",
+     "March"
+    ],
+    "bloom": [
+     "June",
+     "June"
+    ],
+    "harvest_start": [
+     "August"
+    ],
+    "harvest_end": [
+     "September"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/publications/af1017",
+      "verified": "2026-07-14"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/news/elderberries_an_edible_landscape_plant",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "PNW Task 7b region fill (Claude Code lane, 2026-07-14). No WSU/OSU PNW-specific elderberry cultural-timing source was located this pass (WSU's tree-fruit handbook, EB0937, explicitly does not cover elderberry, and no dedicated WSU/OSU elderberry bulletin was found -- a fully thin gap for this region specifically, flagged in the T1 sourcing table). This cell instead applies the same general, cross-region American elderberry biology already carried by this crop's other certified regions (mu_ext, Missouri Extension AF1017; msu_ext, Michigan State Extension), reconciled to the pnw frost dates: one recommended_type everywhere, chosen by cultivar not climate, roughly 400 chill hours needed (trivial against this region's banked chill), June bloom, August-September ripening, matching the window this crop already carries in its existing ca_north_coast cell (a comparably mild, wet-winter maritime climate). Framed honestly as adaptable-elsewhere guidance applied here, not a PNW-specific finding; the region's genuine strength for this crop is its ample rainfall and moisture, which elderberry, unlike most other fruiting shrubs in this dataset, actually prefers. Both zones share one window; resolved_from carries the real per-zone NOAA frost normals.",
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "November to March",
+    "harvest": "August to September",
+    "harvest_start": "August",
+    "harvest_end": "September",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "mu_ext",
+     "msu_ext"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/publications/af1017",
+      "verified": "2026-07-14"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/news/elderberries_an_edible_landscape_plant",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "american_elderberry",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "American elderberry is the one type to grow, chosen by cultivar rather than by climate, and the maritime Northwest suits it well: this is a moisture-loving shrub, and our long wet season and mild winters are close to ideal. It is exceptionally cold-hardy and needs only about 400 chill hours, far less than this region banks, so chill is never a concern. Plant two different cultivars for cross-pollination.",
+    "type_note_beginner": "Grow American elderberry, the one common type. It loves moisture, so our wet climate is genuinely a plus for this plant, and our winters are more than cold enough for it. Plant two different varieties near each other for a good crop.",
+    "bloom": "June",
+    "frost_risk_note_seasoned": "Elderberry blooms in June, well after the last frost in either zone, so frost on bloom is not a concern here.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    },
+    "grown_as_note_seasoned": "Elderberry is a permanent, very cold-hardy deciduous shrub here, planted once and renewed in place for many years. It rests dormant through the mild, wet winter, leafs out and grows fast in spring, blooms in June, and ripens clusters of dark berries from August into September. Renew the oldest canes in late winter and plant two different cultivars for good fruit set; this native, adaptable shrub asks for little beyond the moisture this region already supplies.",
+    "grown_as_note_beginner": "Your elderberry is a long-lived, very cold-hardy bush you plant once and keep for years. It rests over our mild winter, grows fast in spring, flowers in June, and ripens dark berries from August into September. Prune the oldest stems in late winter, and plant two different varieties for a bigger crop; our wet climate actually suits this plant well."
+   },
+   "9": {
+    "plant_out": "November to March",
+    "harvest": "August to September",
+    "harvest_start": "August",
+    "harvest_end": "September",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant"
+    ],
+    "sources": [
+     "mu_ext",
+     "msu_ext"
+    ],
+    "anchoring_urls": {
+     "mu_ext": {
+      "url": "https://extension.missouri.edu/publications/af1017",
+      "verified": "2026-07-14"
+     },
+     "msu_ext": {
+      "url": "https://www.canr.msu.edu/news/elderberries_an_edible_landscape_plant",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "recommended_type": "american_elderberry",
+    "leaf_habit": "deciduous",
+    "type_note_seasoned": "American elderberry is the one type to grow, chosen by cultivar rather than by climate, and the maritime Northwest suits it well: this is a moisture-loving shrub, and our long wet season and mild winters are close to ideal. It is exceptionally cold-hardy and needs only about 400 chill hours, far less than this region banks, so chill is never a concern. Plant two different cultivars for cross-pollination.",
+    "type_note_beginner": "Grow American elderberry, the one common type. It loves moisture, so our wet climate is genuinely a plus for this plant, and our winters are more than cold enough for it. Plant two different varieties near each other for a good crop.",
+    "bloom": "June",
+    "frost_risk_note_seasoned": "Elderberry blooms in June, well after the last frost in either zone, so frost on bloom is not a concern here.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    },
+    "grown_as_note_seasoned": "Elderberry is a permanent, very cold-hardy deciduous shrub here, planted once and renewed in place for many years. It rests dormant through the mild, wet winter, leafs out and grows fast in spring, blooms in June, and ripens clusters of dark berries from August into September. Renew the oldest canes in late winter and plant two different cultivars for good fruit set; this native, adaptable shrub asks for little beyond the moisture this region already supplies.",
+    "grown_as_note_beginner": "Your elderberry is a long-lived, very cold-hardy bush you plant once and keep for years. It rests over our mild winter, grows fast in spring, flowers in June, and ripens dark berries from August into September. Prune the oldest stems in late winter, and plant two different varieties for a bigger crop; our wet climate actually suits this plant well."
+   }
+  },
+  "region_notes_beginner": "Elderberry is a native, adaptable shrub, and our wet, mild climate genuinely suits it: unlike most fruiting shrubs, this one likes the moisture we have plenty of. Plant dormant bushes from late fall through winter, expect flowers in June, and pick dark berry clusters from August into September. Plant two different varieties for a good crop.",
+  "region_notes_seasoned": "Elderberry is exceptionally adaptable and, unusually for a fruiting shrub in this dataset, actually prefers the moisture the maritime Northwest supplies in abundance. Chill (about 400 hours) is never a limiting factor against this region's ample winter cold. Set dormant plants from late fall through winter, expect bloom in June and harvest from August into September, renew the oldest canes in late winter, and plant two different cultivars for good fruit set."
+ },
+ "strawberry": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "establishment",
+      "from": "last_frost",
+      "offset_days": -14,
+      "window_days": 21,
+      "synthesis_note": "Set dormant bare-root crowns about two weeks before the last spring frost, as soon as the soil can be worked; the crowns are dormant stock, so there is no need to wait out frost danger (WSU Clallam County Extension).",
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "May",
+      "synthesis_note": "June-bearing plants on an established bed flower in May here, roughly a month ahead of the June harvest start; open blossoms are damaged at 30°F (WSU Clallam County Extension).",
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "June",
+      "synthesis_note": "June-bearing strawberries crop June-July here, the type-defining window (WSU Clallam County Extension).",
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "establishment",
+      "from": null,
+      "window": "July",
+      "synthesis_note": "The June-bearing flush runs into July. Renovate the matted row within about a week of the last picking: mow the leaves, narrow the row, and fertilize (WSU Clallam County Extension).",
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": "PNW Task 7b region fill (Claude Code lane, 2026-07-14). grown_as=perennial (June-bearing matted-row), matching WSU Clallam County Extension's 'Growing Strawberries' (Stehr-Green 2021): June-bearers crop June-July, the recommended maritime cultivars are Benton, Hood, Rainier, Puget Reliance, Puget Summer, Sweet Sunrise, Shuksan, and Tillamook, winter hardiness to the crown runs 10 to 20°F but open blossoms are damaged at 30°F, and beds are renovated about a week after the last picking. bloom/harvest are taken directly from the source's stated absolute calendar (June-July is the type's own name), not mechanically derived by transplanting this crop's northern_tier last-frost-offset formula onto pnw's much earlier last-frost date (that formula, tuned for zones with a May last frost, would place bloom/harvest in April/May here, contradicting the source's own June-bearing framing) -- plant_out alone keeps the frost-offset rule (dormant bare-root timing genuinely is frost/soil-workability driven and transfers region to region), giving Mar 7-28 (z8) and Mar 15-Apr 5 (z9). Zone 8 sits at the crown-hardiness edge (USDA zone 8 winter low 10-20°F versus the source's 10-20°F crown-hardiness floor); zone 9 (winter low 20-30°F) sits comfortably above it -- an honest, zone-specific distinction carried into grown_as_note_seasoned/beginner. Both zones otherwise share one window (the source is a general western-WA guide); resolved_from carries the real per-zone NOAA frost normals.",
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar 7 - Mar 28",
+    "harvest": "June to July",
+    "harvest_start": "June",
+    "harvest_end": "July",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "bloom",
+     "harvest",
+     "harvest",
+     "renovation",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "West of the Cascades, strawberries are grown as a perennial matted-row bed, the same dominant US backyard system used farther north, and June-bearing types are the real signature here: WSU Clallam County Extension names Benton, Hood, Rainier, Puget Reliance, Puget Summer, Sweet Sunrise, Shuksan, and Tillamook as the recommended maritime cultivars. Set dormant bare-root crowns as soon as the soil can be worked in early spring, about two weeks before the last frost. Renovate the bed within about a week of the last picking: mow the foliage, narrow the row, and fertilize. Zone 8 sits right at this crop's cold edge for the crown (hardy to 10 to 20°F, and this zone's own USDA winter-low band runs the same 10 to 20°F), so mulch with straw after the ground first freezes and pull it back as growth resumes in spring.",
+    "grown_as_note_beginner": "Here strawberries come back every year in the same bed. June-bearing types are the classic choice, and WSU recommends maritime-suited varieties like Benton, Hood, Rainier, and Shuksan. Plant the small dormant crowns in early spring, as soon as you can work the soil, and cut back and thin the plants about a week after you finish picking. In zone 8, cover the bed with straw once the ground has frozen, since this zone is right at the cold edge for the crowns, and pull the straw back in spring.",
+    "bloom": "May",
+    "frost_risk_note_seasoned": "Bloom in May follows well behind this zone's typical late-March last frost, but an open blossom is damaged at 30°F, so cover the bed on any forecast frosty night during bloom",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12"
+    }
+   },
+   "9": {
+    "plant_out": "Mar 15 - Apr 5",
+    "harvest": "June to July",
+    "harvest_start": "June",
+    "harvest_end": "July",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "growing",
+     "growing",
+     "bloom",
+     "harvest",
+     "harvest",
+     "renovation",
+     "growing",
+     "growing",
+     "growing",
+     "dormant"
+    ],
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://s3.wp.wsu.edu/uploads/sites/2069/2021/06/Growing-Strawberries-in-the-Home-Garden-J-Stehr-Green-2021.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "resolution_method": "frost_anchored_resolved",
+    "grown_as": "perennial",
+    "grown_as_note_seasoned": "West of the Cascades, strawberries are grown as a perennial matted-row bed, the same dominant US backyard system used farther north, and June-bearing types are the real signature here: WSU Clallam County Extension names Benton, Hood, Rainier, Puget Reliance, Puget Summer, Sweet Sunrise, Shuksan, and Tillamook as the recommended maritime cultivars. Set dormant bare-root crowns as soon as the soil can be worked in early spring, about two weeks before the last frost. Renovate the bed within about a week of the last picking: mow the foliage, narrow the row, and fertilize.",
+    "grown_as_note_beginner": "Here strawberries come back every year in the same bed. June-bearing types are the classic choice, and WSU recommends maritime-suited varieties like Benton, Hood, Rainier, and Shuksan. Plant the small dormant crowns in early spring, as soon as you can work the soil, and cut back and thin the plants about a week after you finish picking.",
+    "bloom": "May",
+    "frost_risk_note_seasoned": "Bloom in May follows behind this zone's typical late-March/early-April last frost, but an open blossom is damaged at 30°F, so cover the bed on any forecast frosty night during bloom here too",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9"
+    }
+   }
+  },
+  "region_notes_beginner": "West of the Cascades, strawberries are a perennial: you plant a bed once and it comes back and fruits for several years. June-bearing types are the real strength here, and WSU recommends maritime-suited varieties like Benton, Hood, Rainier, and Shuksan. Plant the small dormant crowns in early spring, as soon as you can work the soil, even if frost is still possible; you will pick berries in June and July. Cut back and thin the bed about a week after you finish picking, and cover the flowers if a frosty night is forecast during bloom.",
+  "region_notes_seasoned": "Across the maritime Northwest, strawberries are grown as a perennial matted-row bed, and June-bearing types are a genuine regional strength: WSU Clallam County Extension names Benton, Hood, Rainier, Puget Reliance, Puget Summer, Sweet Sunrise, Shuksan, and Tillamook as the recommended maritime cultivars, cropping June into July. Set dormant bare-root crowns about two weeks before the last frost, as soon as the soil can be worked, and renovate the bed within about a week of the last picking (mow the leaves, narrow the row, fertilize). Open blossoms are damaged at 30°F, so cover the bed on a forecast frosty night during May bloom. Zone 8 sits right at this crop's cold edge for the crown; mulch with straw once the ground freezes and pull it back in spring. Zone 9's milder winter floor sits comfortably above that edge."
+ }
+}

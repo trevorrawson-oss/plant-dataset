@@ -1,0 +1,2626 @@
+{
+ "apple": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 75,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 18,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 150,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 200,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Ample winter chill and a long, mild growing season let the full early-to-late variety range fruit dependably here. WSU's western Washington fruit handbook lists ripening from early August (Sunrise, Pristine) through late October to early November (Mutsu), with most commercial-quality varieties clustering early September to late October; that whole span finishes comfortably within this zone's frost-free season.",
+    "suitability_note_beginner": "Apples fruit well here. Early varieties like Sunrise ripen in August and late keepers like Mutsu can still finish by early November most years.",
+    "bloom": "Apr 8 - Apr 29",
+    "harvest_start": "Sep 5",
+    "harvest_end": "Oct 25",
+    "harvest": "Sep 5 - Oct 25",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom in early to late April occurs safely after the typical last frost in most years; an unusually late cold snap during bloom is an occasional, not typical, risk here.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The milder, immediate-coast sites carry the same ample chill and a growing season that starts a little earlier than the interior lowlands. Chill is not the limiter here; the coast's cooler summer can pinch the very latest-ripening keeper varieties in an unusually cool year, so lean toward the early-to-mid season roster for the most dependable results.",
+    "suitability_note_beginner": "This fruits well on the coast too, and the season gets going a bit earlier than farther inland. Stick to early or midseason varieties for the most reliable crop.",
+    "bloom": "Apr 16 - May 7",
+    "harvest_start": "Sep 13",
+    "harvest_end": "Nov 2",
+    "harvest": "Sep 13 - Nov 2",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care"
+    ],
+    "frost_risk_note_seasoned": "Bloom runs a little later here than the colder interior lowlands and clears the milder last-frost date safely in most years.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "This is prime apple country. Ample winter chill and a long, mild growing season let most varieties fruit reliably from Puget Sound to the Willamette Valley. Plant a bare-root or container tree while it is still dormant, from late fall through late winter.",
+  "region_notes_seasoned": "The maritime Pacific Northwest banks abundant winter chill and offers a long, cool growing season that suits apple well. WSU's western Washington fruit handbook shows ripening from early August through late October or early November depending on variety, with most commercial-quality types clustering early September to late October; that entire span finishes inside the region's mild fall. Plant bare-root or container trees during the dormant season, from late fall through late winter, while the ground is workable.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, comfortably clearing the requirement of every apple variety in this guide. Chill is never the limiting factor here; growing-season warmth for the very latest-ripening keepers is the real variable.",
+  "chill_basis_beginner": "Winters here are plenty cold for apple. Nearly any variety gets all the winter chill it needs."
+ },
+ "pear-european": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 75,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 11,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 136,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 187,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Ample winter chill and a long, mild growing season suit European pear well. WSU's western Washington fruit handbook groups \"fall pears\" (Red Clapp's Favorite, Bartlett) picked August to September and stored 4 to 6 weeks, and \"winter pears\" (Seckel, Comice, Bosc) picked September to October and stored 3 to 4 months; both groups finish comfortably within this zone's mild fall.",
+    "suitability_note_beginner": "Pears fruit well here. Early types like Bartlett ripen in late summer, and winter keepers like Bosc or Comice finish by early October most years.",
+    "bloom": "Apr 1 - Apr 22",
+    "harvest_start": "Aug 15",
+    "harvest_end": "Oct 5",
+    "harvest": "Aug 15 - Oct 5",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom in early to late April occurs safely after the typical last frost in most years; an unusually late cold snap during open bloom is an occasional, not typical, risk here.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The milder coastal and protected-lowland sites still bank ample chill for the full recommended-variety roster. Chill is not the limiter here; a cooler, shorter effective summer near the immediate coast can still pinch the latest winter-keeper types in an unusually cool year.",
+    "suitability_note_beginner": "This fruits well on the coast too. Lean toward the earlier-ripening fall pears if you want the most dependable results.",
+    "bloom": "Apr 9 - Apr 30",
+    "harvest_start": "Aug 23",
+    "harvest_end": "Oct 13",
+    "harvest": "Aug 23 - Oct 13",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom runs a little later here than the colder interior lowlands and clears the milder last-frost date safely in most years.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "This is good pear country. Ample winter chill and a long, mild growing season let most varieties fruit reliably from Puget Sound to the Willamette Valley. Plant a bare-root or container tree while it is still dormant, from late fall through late winter.",
+  "region_notes_seasoned": "The maritime Pacific Northwest banks abundant winter chill and a long, cool growing season that suits European pear well. WSU's western Washington fruit handbook splits the ripening roster into fall pears (August to September, short-storage) and winter pears (September to October, long-storage); both groups finish inside the region's mild fall. Plant bare-root or container trees during the dormant season, from late fall through late winter, while the ground is workable.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, comfortably clearing the requirement of every European pear variety in this guide. Chill is never the limiting factor here; growing-season warmth for the latest winter keepers is the real variable.",
+  "chill_basis_beginner": "Winters here are plenty cold for pear. Nearly any variety gets all the winter chill it needs."
+ },
+ "pear-asian": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 75,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 11,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 126,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 197,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Ample winter chill and a long, mild growing season suit Asian pear well. WSU's western Washington fruit handbook shows ripening from early August (Hamese) to mid-October (Atago) across the variety list, a span that finishes comfortably within this zone's mild fall.",
+    "suitability_note_beginner": "Asian pears fruit well here. Early varieties like Hamese ripen in August, and later types like Atago can still finish by mid-October most years.",
+    "bloom": "Apr 1 - Apr 22",
+    "harvest_start": "Aug 5",
+    "harvest_end": "Oct 15",
+    "harvest": "Aug 5 - Oct 15",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom in early to late April occurs safely after the typical last frost in most years; an unusually late cold snap during open bloom is an occasional, not typical, risk here.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The milder coastal and protected-lowland sites still bank ample chill for the full recommended-variety roster. Chill is not the limiter here; a cooler, shorter effective summer near the immediate coast can still pinch the latest-ripening types in an unusually cool year.",
+    "suitability_note_beginner": "This fruits well on the coast too. Lean toward the earlier-ripening varieties if you want the most dependable results.",
+    "bloom": "Apr 9 - Apr 30",
+    "harvest_start": "Aug 13",
+    "harvest_end": "Oct 23",
+    "harvest": "Aug 13 - Oct 23",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom runs a little later here than the colder interior lowlands and clears the milder last-frost date safely in most years.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "This is good Asian pear country. Ample winter chill and a long, mild growing season let most varieties fruit reliably from Puget Sound to the Willamette Valley. Plant a bare-root or container tree while it is still dormant, from late fall through late winter, and remember to thin the heavy fruit set.",
+  "region_notes_seasoned": "The maritime Pacific Northwest banks abundant winter chill and a long, cool growing season that suits Asian pear well. WSU's western Washington fruit handbook shows ripening from early August to mid-October depending on variety, a span that finishes inside the region's mild fall. Plant bare-root or container trees during the dormant season, from late fall through late winter, while the ground is workable, and thin the heavy set hard.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, comfortably clearing the requirement of every Asian pear variety in this guide. Chill is never the limiting factor here; growing-season warmth for the latest-ripening types is the real variable.",
+  "chill_basis_beginner": "Winters here are plenty cold for Asian pear. Nearly any variety gets all the winter chill it needs."
+ },
+ "cherry-sweet": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 75,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 7,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 89,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 109,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Ample winter chill and a long, mild growing season make this the maritime Pacific Northwest's signature stone fruit. WSU's western Washington fruit handbook shows ripening from mid-June (Early Burlat) to early August (Hudson, Sweetheart), with most varieties clustering early to mid-July. Harvest-time rain can crack the fruit in a wet summer, and birds find the crop fast, so netting is standard practice.",
+    "suitability_note_beginner": "Sweet cherries fruit well here, with most varieties ripening in late June to mid-July. Net the tree against birds, and know that a rainy stretch right at harvest can crack the fruit.",
+    "bloom": "Mar 28 - Apr 18",
+    "harvest_start": "Jun 25",
+    "harvest_end": "Jul 15",
+    "harvest": "Jun 25 - Jul 15",
+    "calendar": [
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom in late March to mid-April occurs safely after the typical last frost in most years; an unusually late cold snap during open bloom is an occasional, not typical, risk here.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The milder coastal and protected-lowland sites still bank ample chill for the full recommended-variety roster, with a growing season that starts a little later than the interior lowlands. Chill is not the limiter here; the same harvest-time rain-cracking and bird pressure apply, so plan on netting and picking promptly once fruit colors up.",
+    "suitability_note_beginner": "This fruits well on the coast too, just a little later than farther inland. Net against birds and pick promptly once the fruit ripens to avoid rain cracking.",
+    "bloom": "Apr 5 - Apr 26",
+    "harvest_start": "Jul 3",
+    "harvest_end": "Jul 23",
+    "harvest": "Jul 3 - Jul 23",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom runs a little later here than the colder interior lowlands and clears the milder last-frost date safely in most years.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "This is prime sweet cherry country, one of the region's signature fruits. Ample winter chill and a long, mild growing season let most varieties fruit reliably from Puget Sound to the Willamette Valley. Plant a bare-root or container tree while it is still dormant, from late fall through late winter, and net it against birds.",
+  "region_notes_seasoned": "The maritime Pacific Northwest banks abundant winter chill and a long, cool growing season that makes sweet cherry one of the region's signature tree fruits. WSU's western Washington fruit handbook shows ripening from mid-June to early August depending on variety, with most clustering early to mid-July. Plant bare-root or container trees during the dormant season, from late fall through late winter, while the ground is workable; net against birds and pick promptly, since harvest-time rain can crack the fruit.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, comfortably clearing the requirement of every sweet cherry variety in this guide. Chill is never the limiting factor here; harvest-time rain and birds are the real management variables.",
+  "chill_basis_beginner": "Winters here are plenty cold for sweet cherry. Nearly any variety gets all the winter chill it needs."
+ },
+ "cherry-sour": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 75,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 7,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 95,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 112,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Ample winter chill and a long, mild growing season suit sour (tart/pie) cherry well. WSU's western Washington fruit handbook places tart cherry (Surefire, Montmorency) in the early-to-mid-July ripening window, a span that finishes comfortably within this zone's mild summer. As with sweet cherry, harvest-time rain can crack the fruit and birds find it fast, so netting and prompt picking pay off.",
+    "suitability_note_beginner": "Sour cherries fruit well here, usually ripening in early to mid-July. Net the tree against birds, and pick promptly once ripe to avoid rain cracking.",
+    "bloom": "Mar 28 - Apr 18",
+    "harvest_start": "Jul 1",
+    "harvest_end": "Jul 18",
+    "harvest": "Jul 1 - Jul 18",
+    "calendar": [
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom in late March to mid-April occurs safely after the typical last frost in most years; an unusually late cold snap during open bloom is an occasional, not typical, risk here.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The milder coastal and protected-lowland sites still bank ample chill for tart cherry, with a growing season that starts a little later than the interior lowlands. Chill is not the limiter here; the same harvest-time rain-cracking and bird pressure apply.",
+    "suitability_note_beginner": "This fruits well on the coast too, just a little later than farther inland. Net against birds and pick promptly once ripe.",
+    "bloom": "Apr 5 - Apr 26",
+    "harvest_start": "Jul 9",
+    "harvest_end": "Jul 26",
+    "harvest": "Jul 9 - Jul 26",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom runs a little later here than the colder interior lowlands and clears the milder last-frost date safely in most years.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "This is good sour (pie) cherry country. Ample winter chill and a long, mild growing season let it fruit reliably from Puget Sound to the Willamette Valley. Plant a bare-root or container tree while it is still dormant, from late fall through late winter, and net it against birds.",
+  "region_notes_seasoned": "The maritime Pacific Northwest banks abundant winter chill and a long, cool growing season that suits sour (tart/pie) cherry well. WSU's western Washington fruit handbook places the tart-cherry ripening window in early to mid-July, comfortably inside the region's mild summer. Plant bare-root or container trees during the dormant season, from late fall through late winter, while the ground is workable; net against birds and pick promptly, since harvest-time rain can crack the fruit.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, comfortably clearing the requirement of sour cherry. Chill is never the limiting factor here; harvest-time rain and birds are the real management variables.",
+  "chill_basis_beginner": "Winters here are plenty cold for sour cherry. It gets all the winter chill it needs."
+ },
+ "plum": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -75,
+      "window_days": 60,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 4,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 112,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 184,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Chill is amply met for the entire variety range (250 to 900 hours needed, far less than this region banks), and WSU's western Washington fruit handbook lists solid ripening windows for both European types (Stanley, Italian Prune, Damson, Green Gage) and Japanese types (Methley, Santa Rosa, Burbank) in this climate. European plums are the steadier choice here: they bloom a little later and tolerate the region's damp spring well. Japanese types bloom earliest of the two and carry a modest late-frost risk in an unusually cold spring, but both types fruit dependably across the maritime lowlands.",
+    "suitability_note_beginner": "This fruits well here. European plums like Stanley and Italian Prune are the steadiest choice, and Japanese plums like Santa Rosa do well too, though they bloom a little earlier and carry slightly more frost risk in a cold spring.",
+    "bloom": "Mar 25 - Apr 15",
+    "harvest_start": "Jul 15",
+    "harvest_end": "Sep 25",
+    "harvest": "Jul 15 - Sep 25",
+    "calendar": [
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom begins only days after the typical last frost, so an unusually late cold snap can occasionally nip the earliest Japanese bloomers; later-blooming European varieties clear most spring frost risk.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The immediate coast blooms about a week later than the interior lowlands and still banks ample chill for the full variety range (250 to 900 hours needed). European plums remain the steadier pick in this cooler, often foggier spring; Japanese types still carry a touch more frost exposure at their earlier bloom.",
+    "suitability_note_beginner": "This still fruits well on the coast, just a little later than inland. European plums are the safest bet in the cooler, damper spring here.",
+    "bloom": "Apr 1 - Apr 22",
+    "harvest_start": "Jul 22",
+    "harvest_end": "Oct 2",
+    "harvest": "Jul 22 - Oct 2",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom runs about a week later than the interior lowlands, but frost risk follows the same pattern: the earliest Japanese types are the most exposed, later European varieties the safest.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Plum is a strong, dependable tree fruit for the maritime PNW. Winters bank plenty of chill for any variety, and the long, mild growing season ripens both European types like Stanley and Japanese types like Santa Rosa. European plums are the steadier pick for our damp spring; Japanese types bloom a little earlier and are slightly more exposed to a late frost.",
+  "region_notes_seasoned": "The maritime Pacific Northwest is genuine plum country. Ample winter chill and a long, mild season let both European and Japanese types fruit reliably from Puget Sound to the Willamette Valley; WSU's western Washington fruit handbook lists strong ripening windows for both. European varieties (Stanley, Italian Prune, Damson) are the region's steadier default, later-blooming and well suited to the damp spring; Japanese varieties (Santa Rosa, Methley) ripen earlier and carry modestly more late-frost exposure at their earlier bloom, but still fruit dependably across both zones.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, far above the 250 to 900 hour range this variety list needs. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for any plum variety. The challenge, when there is one, is a late spring frost on the earliest Japanese bloomers, not a lack of cold."
+ },
+ "fig": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 90,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 15,
+      "window_days": 20,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 118,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 142,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The breba crop, the fruit that overwinters on last year's wood, ripens reliably here in August. The main, fall crop on new growth usually fails to ripen in this cool-summer climate and should be pulled off unripe rather than left to rot (WSU Extension). Plant a hardy, early variety in the warmest available spot for the most dependable breba harvest.",
+    "suitability_note_beginner": "This fig fruits reliably here, but only the early summer crop on old wood. The second crop later in the fall almost never ripens in our cool summers, so pick off any late green figs instead of waiting on them.",
+    "bloom": "Apr 5 - Apr 25",
+    "harvest_start": "Aug 1",
+    "harvest_end": "Aug 25",
+    "harvest": "Aug 1 - Aug 25",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom typically opens well after the Mar 21 average last frost, so bloom-time freeze loss is uncommon here; a cool, wet spring can affect pollination more than frost does in most years (WSU Extension).",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "The breba crop, the fruit that overwinters on last year's wood, ripens reliably here in August. The main, fall crop on new growth usually fails to ripen in this cool-summer climate and should be pulled off unripe rather than left to rot (WSU Extension). Plant a hardy, early variety in the warmest available spot for the most dependable breba harvest.",
+    "suitability_note_beginner": "This fig fruits reliably here, but only the early summer crop on old wood. The second crop later in the fall almost never ripens in our cool summers, so pick off any late green figs instead of waiting on them.",
+    "bloom": "Apr 12 - May 2",
+    "harvest_start": "Aug 8",
+    "harvest_end": "Sep 1",
+    "harvest": "Aug 8 - Sep 1",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom typically opens well after the Mar 29 average last frost, so bloom-time freeze loss is uncommon here; a cool, wet spring can affect pollination more than frost does in most years (WSU Extension).",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Figs grow well here and give you a reliable early crop. Do not count on a second crop later in the fall; our summers usually are not warm enough long enough to ripen it.",
+  "region_notes_seasoned": "This is prime fig country for the breba crop: ample chill, mild winters, and a warm-site summer ripen the early, overwintered crop reliably. The fall crop on new wood is the honest exception, it rarely finishes here, so plant for the breba harvest and treat any fall figs as a bonus, not a plan.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank 700 to 1,950 hours of chill depending on zone and site (WSU Skagit County Extension), far above this crop's roughly 100 hour variety requirement. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for this tree. It needs only about 100 hours of winter chill and easily gets far more than that."
+ },
+ "mulberry": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 90,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 15,
+      "window_days": 20,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 57,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 106,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Mulberry is a grower-friendly, self-fertile tree that bears early in the season and has performed well in WSU's own western Washington fruit trials at Mount Vernon (WSU Extension). Precise cultivar-by-cultivar PNW ripening dates are thinly documented compared with the region's major tree fruits, but the tree's general viability and early-bearing habit here are well established.",
+    "suitability_note_beginner": "Mulberry grows easily here and starts fruiting earlier in the season than most other tree fruit. WSU's own western Washington trials have grown it successfully, though exact ripening dates for specific varieties are less documented than for apples or pears.",
+    "bloom": "Apr 5 - Apr 25",
+    "harvest_start": "Jun 1",
+    "harvest_end": "Jul 20",
+    "harvest": "Jun 1 - Jul 20",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom typically opens well after the Mar 21 average last frost, so bloom-time freeze loss is uncommon here; a cool, wet spring can affect pollination more than frost does in most years (WSU Extension).",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Mulberry is a grower-friendly, self-fertile tree that bears early in the season and has performed well in WSU's own western Washington fruit trials at Mount Vernon (WSU Extension). Precise cultivar-by-cultivar PNW ripening dates are thinly documented compared with the region's major tree fruits, but the tree's general viability and early-bearing habit here are well established.",
+    "suitability_note_beginner": "Mulberry grows easily here and starts fruiting earlier in the season than most other tree fruit. WSU's own western Washington trials have grown it successfully, though exact ripening dates for specific varieties are less documented than for apples or pears.",
+    "bloom": "Apr 12 - May 2",
+    "harvest_start": "Jun 8",
+    "harvest_end": "Jul 25",
+    "harvest": "Jun 8 - Jul 25",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom typically opens well after the Mar 29 average last frost, so bloom-time freeze loss is uncommon here; a cool, wet spring can affect pollination more than frost does in most years (WSU Extension).",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2022/01/Unusual2022.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Mulberry is an easy, reliable tree here that fruits earlier in the summer than most other tree fruit. It needs very little care once established.",
+  "region_notes_seasoned": "Mulberry is an easy, productive, self-fertile tree that bears earlier in the season than most other tree fruit here, confirmed by WSU's own western Washington uncommon-fruit trials. It is a low-maintenance addition to a maritime PNW home orchard.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank 700 to 1,950 hours of chill depending on zone and site (WSU Skagit County Extension), far above this crop's roughly 100 hour variety requirement. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for this tree. It needs only about 100 hours of winter chill and easily gets far more than that."
+ },
+ "persimmon": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -90,
+      "window_days": 90,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 41,
+      "window_days": 19,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 172,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 203,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    },
+    "sources": [
+     "wsu_ext"
+    ]
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Getting the fruit to ripen fully before fall's end is the main challenge for persimmon in the Puget Sound and Willamette Valley (WSU Extension); chill is never the issue. Choose an early-ripening cultivar (Izu, an early Fuyu strain, or a hardy American type) and give the tree full sun and a warm, sheltered site to reach a dependable harvest.",
+    "suitability_note_beginner": "This tree fruits well here if you pick an early-ripening variety and give it full sun in a warm, sheltered spot. Our cool fall makes ripening the fruit the real challenge, not winter cold.",
+    "bloom": "May 1 - May 20",
+    "harvest_start": "Oct 20",
+    "harvest_end": "Nov 20",
+    "harvest": "Oct 20 - Nov 20",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care"
+    ],
+    "frost_risk_note_seasoned": "Bloom typically opens well after the Mar 21 average last frost, so bloom-time freeze loss is uncommon here; a cool, wet spring can affect pollination more than frost does in most years (WSU Extension).",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "fruits_reliably",
+    "suitability_note_seasoned": "Getting the fruit to ripen fully before fall's end is the main challenge for persimmon in the Puget Sound and Willamette Valley (WSU Extension); chill is never the issue. Choose an early-ripening cultivar (Izu, an early Fuyu strain, or a hardy American type) and give the tree full sun and a warm, sheltered site to reach a dependable harvest.",
+    "suitability_note_beginner": "This tree fruits well here if you pick an early-ripening variety and give it full sun in a warm, sheltered spot. Our cool fall makes ripening the fruit the real challenge, not winter cold.",
+    "bloom": "May 8 - May 27",
+    "harvest_start": "Oct 27",
+    "harvest_end": "Nov 20",
+    "harvest": "Oct 27 - Nov 20",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care"
+    ],
+    "frost_risk_note_seasoned": "Bloom typically opens well after the Mar 29 average last frost, so bloom-time freeze loss is uncommon here; a cool, wet spring can affect pollination more than frost does in most years (WSU Extension).",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Persimmon can do well here if you pick an early variety and give it a warm, sunny spot. Skip a late-ripening type; our fall is not long enough for it.",
+  "region_notes_seasoned": "Persimmon is workable across the maritime Pacific Northwest with the right cultivar choice: winter chill is never a problem, but a full-sun, sheltered site and an early-ripening variety are what turn a marginal fall race into a dependable harvest.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank 700 to 1,950 hours of chill depending on zone and site (WSU Skagit County Extension), far above this crop's roughly 100 hour variety requirement. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for this tree. It needs only about 100 hours of winter chill and easily gets far more than that."
+ },
+ "apricot": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -75,
+      "window_days": 60,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": -6,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 132,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 158,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Dec - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "Chill is amply met in every zone here (this variety range needs 350 to 700 hours; the region banks far more), so the limiting factor is not cold, it is the cool, wet maritime spring. Apricot blooms earliest of any tree fruit grown here, and WSU's western Washington fruit handbook flags it as very sensitive to frost at bloom time; even where frost does not strike, cool, damp bloom-time weather keeps pollinators from working the flowers well and favors brown rot and coryneum blight on stone fruit generally. Reliable fruiting is genuinely site-dependent: the warmest, driest, most sheltered spot available, a late-blooming variety, and attentive dormant-season disease control are what turn a marginal crop into a real one.",
+    "suitability_note_beginner": "This can fruit here, but not every year. The cold is never the problem, our winters are plenty cold for any apricot variety. The real challenge is the cool, wet spring when the tree blooms. Give it your warmest, most sheltered spot and expect some years to be much better than others.",
+    "bloom": "Mar 15 - Apr 5",
+    "harvest_start": "Jul 25",
+    "harvest_end": "Aug 20",
+    "harvest": "Jul 25 - Aug 20",
+    "calendar": [
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "An unusually late frost on the open bloom is a real, occasional risk given how early this tree flowers, but the more persistent problem most springs is simply cool, damp bloom-time weather that limits pollination and favors brown rot, not frost itself.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Nov - Feb (dormant, bare-root or container)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "The immediate coast runs an even cooler, often foggier spring than the interior lowlands, so apricot's bloom-time weather problem is, if anything, a bit worse here even though the winter itself is milder on average. Chill is still amply met. Expect a full crop to be the exception rather than the rule; treat this as a warmest-microsite specialty planting rather than a dependable orchard tree.",
+    "suitability_note_beginner": "Even more of a gamble on the coast, where spring stays cool and damp longer than farther inland. Only plant this if you have an especially warm, sheltered spot and are prepared for some years with little or no fruit.",
+    "bloom": "Mar 22 - Apr 12",
+    "harvest_start": "Aug 1",
+    "harvest_end": "Aug 25",
+    "harvest": "Aug 1 - Aug 25",
+    "calendar": [
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost timing at bloom is broadly similar to the interior lowlands; the coast's cooler, often foggier spring is the more consistent problem for pollination and fruit set here.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Apricot is a gamble here, not a sure thing. Winters are plenty cold for any variety, so chill is never the issue. The problem is our cool, wet spring, which often keeps bees from working the very early bloom well and lets brown rot get started on the fruit that does set. Plant in the warmest, most sheltered spot you have, choose a late-blooming variety if you can, and expect a real harvest some years and a light one in others.",
+  "region_notes_seasoned": "West of the Cascades, apricot's limiting factor is never winter chill; ample chill is banked in every zone. The problem is the cool, wet maritime spring: apricot blooms earliest of any tree fruit grown here, and WSU flags it as very sensitive to frost at bloom time, and even where frost does not strike, cool, damp bloom-time weather keeps pollinators inactive and favors brown rot and coryneum blight on the fruit that does set. Reliable fruiting is genuinely site-dependent: the warmest, driest, most sheltered microclimate available, a late-blooming variety, and attentive dormant-season disease control.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, far above the 350 to 700 hour range this variety list needs. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for any apricot variety. The challenge is not enough cold, it is the wet spring."
+ },
+ "peach": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -60,
+      "window_days": 60,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 15,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 101,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 132,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar - Apr (dormant, bare-root)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "Chill is amply met in every zone here (this variety range needs 400 to 1,050 hours; the region banks far more), so peach can and does fruit in the milder Puget Sound and Willamette Valley lowlands. The real limiter is the region's cool, wet spring: WSU's western Washington fruit calendar calls for brown rot and coryneum blight control from bud break through petal fall on stone fruit, and peach leaf curl is a well-documented problem on the crop in this damp climate. A dormant, pre-bud-break fungicide spray, a full-sun site with good air movement, and some tolerance for an off year are what make this work.",
+    "suitability_note_beginner": "This can fruit here, but it takes real upkeep. Spray for peach leaf curl before the buds open in late winter, plant it somewhere sunny with good airflow, and do not expect every year to be a full crop; our cool, wet spring is the challenge, not the cold.",
+    "bloom": "Apr 5 - Apr 25",
+    "harvest_start": "Jul 15",
+    "harvest_end": "Aug 15",
+    "harvest": "Jul 15 - Aug 15",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom occurs safely after the worst frost risk in most years here; the bigger threat to the crop is the region's characteristically cool, wet spring weather itself, which limits pollination and favors brown rot and leaf curl.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Feb - Apr (dormant, bare-root)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "The immediate coast runs a cooler, often foggier spring and summer than the interior valley, which makes peach an even tougher bet here. Chill is still amply met. Treat this as a warmest-site specialty planting with real disease-control upkeep, not a dependable orchard crop.",
+    "suitability_note_beginner": "Even harder to get a full crop on the coast, where spring and summer both run cooler. Only plant this if you have a warm, sunny, sheltered spot and are ready to spray for leaf curl every year.",
+    "bloom": "Apr 12 - May 2",
+    "harvest_start": "Jul 25",
+    "harvest_end": "Aug 20",
+    "harvest": "Jul 25 - Aug 20",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost timing is broadly similar to the interior valley; the coast's cooler, damper spring is the more persistent problem for pollination and disease here.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Peach is not a sure thing here. Winters are plenty cold for any variety, so that part is easy, but our cool, wet spring often means poor pollination, and peach leaf curl and brown rot both like this damp climate. Plant in full sun with good air movement, spray for leaf curl while the tree is still dormant, and expect a real but not guaranteed crop most years.",
+  "region_notes_seasoned": "Peach's story west of the Cascades has the same shape as apricot's: winter chill is never the limiting factor, ample chill is banked in every zone, but the region's cool, wet spring brings real disease pressure. WSU's western Washington fruit calendar names brown rot and coryneum blight control as a stone fruit essential from bud break through petal fall, and peach leaf curl is a well-documented problem on the crop in this climate. Reliable fruiting is real but site-dependent: full sun, good air drainage, a dormant-season copper spray, and patience with an off year now and then.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, far above the 400 to 1,050 hour range this variety list needs. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for any peach variety. The challenge is not enough cold, it is the wet spring and the diseases that come with it."
+ },
+ "nectarine": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "bare_root_dormant",
+      "from": "last_frost",
+      "offset_days": -60,
+      "window_days": 60,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 15,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 101,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 132,
+      "sources": [
+       "wsu_ext"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar - Apr (dormant, bare-root)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "Nectarine is genetically peach with smooth skin, and shares peach's story here: chill is amply met (this variety range needs 300 to 850 hours, far under what the region banks), but the cool, wet spring costs pollination in most years and favors the same brown rot and coryneum blight pressure WSU's western Washington fruit calendar flags for stone fruit generally. Nectarine's smooth skin also cracks and rots more readily than peach's fuzzy skin in wet summer weather. A full-sun, good-air-movement site and consistent dormant disease control are what make a real crop possible here.",
+    "suitability_note_beginner": "This can fruit here, but it takes real care. Our cool, wet spring can hurt pollination, and wet summer weather can crack and rot the fruit's smooth skin more easily than it does peach. Give it a sunny, sheltered spot with good airflow.",
+    "bloom": "Apr 5 - Apr 25",
+    "harvest_start": "Jul 15",
+    "harvest_end": "Aug 15",
+    "harvest": "Jul 15 - Aug 15",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Bloom occurs safely after the worst frost risk in most years here; the bigger threat is the region's cool, wet spring weather itself, which limits pollination and favors brown rot, plus fruit cracking and rot in a wet ripening season.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Feb - Apr (dormant, bare-root)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "The immediate coast's cooler, often foggier spring and summer make nectarine, already the more fragile of the two, an even tougher bet than the interior valley. Chill is still amply met. Treat this as a warmest-site specialty planting with attentive disease control, not a dependable orchard crop.",
+    "suitability_note_beginner": "An even bigger stretch on the coast, where cooler, damper weather runs through spring and summer alike. Only plant this with a warm, sheltered site and regular disease spraying in mind.",
+    "bloom": "Apr 12 - May 2",
+    "harvest_start": "Jul 25",
+    "harvest_end": "Aug 20",
+    "harvest": "Jul 25 - Aug 20",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care",
+     "dormant",
+     "dormant",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost timing is broadly similar to the interior valley; the coast's cooler, damper spring and summer are the more persistent problem for pollination, disease, and fruit cracking here.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Nectarine is peach's smooth-skinned twin, and it has the same story here: winters are plenty cold, but our cool, wet spring often means poor pollination, and wet weather can crack and rot the fruit's skin more easily than it does peach's fuzzy skin. Plant in full sun with good air movement and expect a real but not guaranteed crop.",
+  "region_notes_seasoned": "Nectarine shares peach's story west of the Cascades: ample winter chill in every zone, but the region's cool, wet spring hurts pollination and favors the same brown rot and coryneum blight pressure WSU's western Washington fruit calendar flags for stone fruit generally, plus nectarine's own well-known extra susceptibility to skin cracking and fruit rot in wet weather. Reliable fruiting is real in a warm, well-sited spot with good disease management, not guaranteed everywhere.",
+  "chill_basis_seasoned": "Maritime Pacific Northwest winters bank roughly 700 to 1,950 hours of chill depending on zone and site, far above the 300 to 850 hour range this variety list needs. Chill is never the limiting factor here.",
+  "chill_basis_beginner": "Winters here are plenty cold for any nectarine variety. The challenge is not enough cold, it is the wet spring and summer."
+ },
+ "pomegranate": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "osu_ext"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "container_warmest_site",
+      "from": "last_frost",
+      "offset_days": 21,
+      "window_days": 45,
+      "sources": [
+       "osu_ext"
+      ],
+      "anchoring_urls": {
+       "osu_ext": {
+        "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 72,
+      "window_days": 30,
+      "sources": [
+       "osu_ext"
+      ],
+      "anchoring_urls": {
+       "osu_ext": {
+        "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 136,
+      "sources": [
+       "osu_ext"
+      ],
+      "anchoring_urls": {
+       "osu_ext": {
+        "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 157,
+      "sources": [
+       "osu_ext"
+      ],
+      "anchoring_urls": {
+       "osu_ext": {
+        "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "osu_ext": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Apr - Jun (container, warmest available site)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "This is a heat-limited call, not a cold one: pomegranate is winter-hardy here (every variety's modest 100 to 150 hour chill requirement is met many times over) and blooms in a normal year, but OSU Extension describes the crop as easy to grow in Oregon and hard to get to produce, because the region's marine-tempered summer rarely delivers the sustained heat pomegranate needs to size and ripen fruit. An early-ripening variety (Angel Red, Crimson Sky) sited in the hottest, most reflected-heat spot available, a south-facing wall is ideal, is the only realistic path to fruit, and even then expect a bonus crop in a hot year rather than a dependable annual harvest.",
+    "suitability_note_beginner": "This tree can live and bloom here, but our summers usually are not hot enough to ripen a full crop. Choose an early variety like Angel Red, give it your hottest, sunniest spot, and think of any fruit as a bonus, not a sure thing.",
+    "bloom": "Jun 1 - Jul 1",
+    "harvest_start": "Oct 15",
+    "harvest_end": "Nov 5",
+    "harvest": "Oct 15 - Nov 5",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care"
+    ],
+    "frost_risk_note_seasoned": "Frost is not the limiting factor for this crop here; insufficient sustained summer heat is what keeps fruit from sizing and ripening sweet.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "osu_ext"
+    ],
+    "anchoring_urls": {
+     "osu_ext": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Apr - Jun (container, warmest available site)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "The immediate coast runs even cooler summers than the interior valley, so pomegranate is a longer shot here still. Winter is still not the obstacle. Only the warmest, most reflected-heat microsite gives it any real chance, and most years should be expected to pass without a usable crop.",
+    "suitability_note_beginner": "An even bigger stretch on the coast, where summers run cooler than farther inland. Only try this with the single hottest, most sheltered spot you have.",
+    "bloom": "Jun 8 - Jul 8",
+    "harvest_start": "Oct 20",
+    "harvest_end": "Nov 8",
+    "harvest": "Oct 20 - Nov 8",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "harvest",
+     "care"
+    ],
+    "frost_risk_note_seasoned": "Frost is not the problem here either; the coast simply has even less summer heat than the interior valley to size and ripen fruit.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "osu_ext"
+    ],
+    "anchoring_urls": {
+     "osu_ext": {
+      "url": "https://extension.oregonstate.edu/ask-extension/featured/what-exotic-fruits-do-well-oregon",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Pomegranate lives here but rarely makes a real crop. Our summers usually are not hot enough for most varieties to ripen fruit, even though the tree survives winter fine. If you want to try, plant an early-ripening variety like Angel Red or Crimson Sky in your hottest, sunniest spot, ideally against a wall that holds heat, and treat any fruit as a bonus.",
+  "region_notes_seasoned": "Pomegranate's limiting factor here is summer heat, not winter cold. OSU Extension describes it as easy to grow in Oregon but hard to get to produce, because the region does not deliver the sustained heat most varieties need to set and ripen fruit. Early-ripening selections (Angel Red, Crimson Sky) are the practical answer; site the tree in full sun with reflected heat from a wall or paved area and good drainage, and expect fruit only in a genuinely hot year or with real microclimate help.",
+  "chill_basis_seasoned": "Winter chill is a non-issue for pomegranate here; every variety's modest 100 to 150 hour requirement is met many times over by the region's ample winter chill. Summer heat, not winter chill, decides whether this crop fruits.",
+  "chill_basis_beginner": "Cold is never the problem for this tree here. The challenge is that our summers usually are not hot enough to ripen the fruit."
+ },
+ "pawpaw": {
+  "region_id": "pnw",
+  "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+  "zone_span": [
+   "8",
+   "9"
+  ],
+  "sources": [
+   "wsu_ext",
+   "ksu_pawpaw"
+  ],
+  "plantings": [
+   {
+    "succession_id": 1,
+    "label": "establishment",
+    "track": "perennial",
+    "plant_out": [
+     {
+      "label": "container_or_bb",
+      "from": "last_frost",
+      "offset_days": 14,
+      "window_days": 45,
+      "sources": [
+       "wsu_ext",
+       "ksu_pawpaw"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       },
+       "ksu_pawpaw": {
+        "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "bloom": [
+     {
+      "label": "primary",
+      "from": "last_frost",
+      "offset_days": 25,
+      "window_days": 21,
+      "sources": [
+       "wsu_ext",
+       "ksu_pawpaw"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       },
+       "ksu_pawpaw": {
+        "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_start": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 169,
+      "sources": [
+       "wsu_ext",
+       "ksu_pawpaw"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       },
+       "ksu_pawpaw": {
+        "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "harvest_end": [
+     {
+      "label": "primary",
+      "from": "bloom_start",
+      "offset_days": 193,
+      "sources": [
+       "wsu_ext",
+       "ksu_pawpaw"
+      ],
+      "anchoring_urls": {
+       "wsu_ext": {
+        "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+        "verified": "2026-07-14"
+       },
+       "ksu_pawpaw": {
+        "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     },
+     "ksu_pawpaw": {
+      "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  ],
+  "plantings_provenance": null,
+  "resolved_by_zone": {
+   "8": {
+    "plant_out": "Mar - May (container or balled-and-burlapped; pawpaw transplants poorly bare-root)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "Pawpaw hits its roughly 400 hour chill requirement here many times over, and WSU's western Washington fruit calendar includes it as an October-ripening crop, so this is a real, if late and marginal, Pacific Northwest fruit. The limiting factor is summer heat accumulation, not chill or cold hardiness: Kentucky State University's pawpaw program, the national authority on the crop, recommends early-ripening selections (Mango, Sunflower, Shenandoah, Potomac) specifically for low-heat-unit, cool-summer regions like this one, since a later-ripening selection is unlikely to finish before the season's first frost here. Plant two genetically distinct trees for pollination and shade young trees for their first couple of years.",
+    "suitability_note_beginner": "This grows here, and an early variety like Mango or Sunflower can ripen before frost most years. Skip the late-ripening kinds, they usually will not finish in time. Plant two different trees together and shade them while young.",
+    "bloom": "Apr 15 - May 5",
+    "harvest_start": "Oct 1",
+    "harvest_end": "Oct 25",
+    "harvest": "Oct 1 - Oct 25",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost is not a bloom-time risk for this late-blooming tree; the real risk sits at the other end of the season, an early fall frost arriving before a later-ripening selection finishes.",
+    "resolved_from": {
+     "last_frost": "Mar 21",
+     "first_frost": "Nov 12",
+     "chill_hours": [
+      968,
+      1950
+     ]
+    },
+    "sources": [
+     "wsu_ext",
+     "ksu_pawpaw"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     },
+     "ksu_pawpaw": {
+      "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+      "verified": "2026-07-14"
+     }
+    }
+   },
+   "9": {
+    "plant_out": "Mar - May (container or balled-and-burlapped; pawpaw transplants poorly bare-root)",
+    "resolution_method": "perennial_precompute",
+    "suitability": "marginal",
+    "suitability_note_seasoned": "The immediate coast's cooler summer pushes pawpaw's already-late ripening window even closer to the season's first frost than the interior valley. Chill is still amply met. Stick to the earliest-ripening selections only (Mango, Sunflower per Kentucky State University's pawpaw program), and expect that in some years the fruit does not fully finish before frost.",
+    "suitability_note_beginner": "Even more marginal on the coast, where summers run cooler than farther inland. Stick to the earliest varieties, and do not expect a crop every single year.",
+    "bloom": "Apr 22 - May 12",
+    "harvest_start": "Oct 8",
+    "harvest_end": "Oct 30",
+    "harvest": "Oct 8 - Oct 30",
+    "calendar": [
+     "dormant",
+     "dormant",
+     "prune",
+     "bloom",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "growing",
+     "harvest",
+     "care",
+     "dormant"
+    ],
+    "frost_risk_note_seasoned": "Frost risk follows the same late-season pattern as the interior valley, but the margin is tighter here: the coast's cooler summer and its own earlier first-frost date leave less room for a later-ripening selection to finish.",
+    "resolved_from": {
+     "last_frost": "Mar 29",
+     "first_frost": "Nov 9",
+     "chill_hours": [
+      700,
+      1500
+     ]
+    },
+    "sources": [
+     "wsu_ext",
+     "ksu_pawpaw"
+    ],
+    "anchoring_urls": {
+     "wsu_ext": {
+      "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "verified": "2026-07-14"
+     },
+     "ksu_pawpaw": {
+      "url": "https://www.kysu.edu/academics/college-ahnr/school-of-anr/pawpaw/",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  "region_notes_beginner": "Pawpaw does grow here, and an early-ripening variety can give a real fall crop, but our cooler summers mean it ripens late, and only the earliest varieties reliably finish before frost. Plant two different varieties for pollination, shade young trees for their first couple of years, and choose an early type like Mango, Sunflower, or Shenandoah.",
+  "region_notes_seasoned": "West of the Cascades, pawpaw is a genuine but marginal crop. WSU's western Washington fruit-culture calendar places it among the region's latest-ripening tree fruit, alongside hardy kiwi, in October, and the crop is well known nationally, per Kentucky State University's pawpaw program, to need substantial summer heat accumulation to ripen, with early selections (Mango, Sunflower, Shenandoah, Potomac) recommended specifically for low-heat-unit, cool-summer regions like this one. Plant two genetically distinct trees for pollination, shade young trees, and pick an early-ripening variety; a late-ripening selection is unlikely to finish before the season's first frost here.",
+  "chill_basis_seasoned": "Every recommended pawpaw variety needs about 400 hours of winter chill; the maritime Pacific Northwest banks 700 to 1,950 hours depending on zone and site, several times over the requirement. Season length and summer heat, not chill, are what limit this crop here.",
+  "chill_basis_beginner": "Cold is never the problem for this tree here; it easily gets the winter chill it needs. The challenge is that our summers are not always long or hot enough to fully ripen the fruit before frost."
+ }
+}

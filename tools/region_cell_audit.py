@@ -32,7 +32,7 @@ MON_R = {i: m for m, i in MON.items()}
 
 CONSUMER_KEYS_RE = re.compile(r"(region_notes|_note|basis|_beginner|_seasoned)")
 CAL_VOCAB = {"plant", "indoors", "growing", "harvest", "season_over", "heat_pause",
-             "cold_pause", "bloom", "prune", "care", "dormant", "wait"}
+             "cold_pause", "bloom", "prune", "care", "dormant", "wait", "renovation"}
 
 # region config: the shape each region's cells must obey
 REGION_CONFIG = {
@@ -148,15 +148,46 @@ def audit_cell(slug, cell, region_id):
                                              and rf.get("first_frost") is None):
                 V.append(f"z{z}: resolved_from not null-frost ({rf!r})")
         elif frost_model == "anchored":
-            # frost-anchored regions (e.g. pnw): a real annual/frost-bound winter, so a cell
-            # must be resolved off real frost dates. The anti-pattern is a frost-FREE method
-            # or missing/null frost dates -- that would silently drop the region's winter.
-            if rm != "frost_anchored_resolved":
-                V.append(f"z{z}: resolution_method != 'frost_anchored_resolved' in the "
-                         f"frost-anchored {region_id} ({rm!r})")
-            if not (isinstance(rf, dict) and rf.get("last_frost") and rf.get("first_frost")):
-                V.append(f"z{z}: resolved_from missing non-null last_frost/first_frost "
-                         f"in the frost-anchored {region_id} ({rf!r})")
+            # frost-anchored regions (e.g. pnw): a real annual/frost-bound winter, so an
+            # ANNUAL cell must be resolved off real frost dates. The anti-pattern is a
+            # frost-FREE method or missing/null frost dates -- that would silently drop the
+            # region's winter. Tree/citrus perennial archetypes (resolution_method
+            # perennial_precompute / perennial_evergreen_precompute) are a DIFFERENT climate
+            # axis (chill/cold via min_winter_temp_f, not frost-window placement) -- this is
+            # the exact exemption the "free" branch already grants perennial cells (rgv_trees/
+            # rgv_citrus use these same two methods); mirror it here instead of wrongly
+            # demanding frost_anchored_resolved + real frost dates on a tree/citrus cell (a
+            # gap that would make EVERY pnw tree/citrus cell unauditable-clean, since the pnw
+            # cell contract §5.2 explicitly allows resolved_from={} for citrus and real frost
+            # dates OR {} for chill-gated trees -- see docs/pnw_cell_contract.md §1, §5.2).
+            if rm in ("perennial_precompute", "perennial_evergreen_precompute"):
+                if rf not in (None, {}) and not (isinstance(rf, dict) and rf.get("last_frost")
+                                                 and rf.get("first_frost")):
+                    V.append(f"z{z}: resolved_from partially populated in a perennial cell "
+                             f"(must be {{}} or real last_frost+first_frost) in {rm!r} ({rf!r})")
+            elif rm in ("perennial_woody_ornamental_precompute", "woody_ornamental_annual_precompute"):
+                # woody-ornamental herb archetype (lavender/oregano/rosemary/sage/thyme): its
+                # OWN resolution_method convention, used identically across every existing
+                # region cell for these crops (confirmed against the real gate code --
+                # woody_ornamental_gate.py / woody_ornamental_calendar.py key off grown_as,
+                # not a resolution_method string -- and against the RGV Task 7 precedent,
+                # which authored these same crops with this same method name). Still
+                # genuinely frost-anchored here (derive_perennial_woody_calendar's dormant
+                # bracket needs real last_frost/first_frost for a pnw cell; only a frost-free
+                # region's perennial cell legitimately carries no frost dates), so require
+                # real non-null frost dates same as the strict branch, just recognizing this
+                # archetype's own method name instead of wrongly demanding the frost_anchored
+                # annual archetype's generic string on a different archetype's cell.
+                if not (isinstance(rf, dict) and rf.get("last_frost") and rf.get("first_frost")):
+                    V.append(f"z{z}: resolved_from missing non-null last_frost/first_frost "
+                             f"in the frost-anchored {region_id} ({rm!r})")
+            else:
+                if rm != "frost_anchored_resolved":
+                    V.append(f"z{z}: resolution_method != 'frost_anchored_resolved' in the "
+                             f"frost-anchored {region_id} ({rm!r})")
+                if not (isinstance(rf, dict) and rf.get("last_frost") and rf.get("first_frost")):
+                    V.append(f"z{z}: resolved_from missing non-null last_frost/first_frost "
+                             f"in the frost-anchored {region_id} ({rf!r})")
         else:
             V.append(f"z{z}: unknown frost_model {frost_model!r} for region {region_id!r}")
         cal = cz.get("calendar")

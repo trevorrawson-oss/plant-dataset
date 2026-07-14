@@ -1,0 +1,560 @@
+{
+  "lemon": {
+    "region_id": "pnw",
+    "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+    "zone_span": [
+      "8",
+      "9"
+    ],
+    "sources": [
+      "clemson_hgic",
+      "tamu_agrilife",
+      "wsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 8 west of the Cascades is too cold for an in-ground lemon. Lemon fruit and leaves are damaged once temperatures fall into the high 20s°F, and this zone's coldest nights drop well below that, into the teens or lower, so an unprotected tree does not make it through a typical winter, let alone one of the region's periodic harder freezes. Grow it as a container tree brought under cover for the coldest nights instead.",
+        "suitability_note_beginner": "Too cold here for a lemon tree planted outside. Grow it in a pot you can bring under cover on the coldest nights.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "WSU's own western-Washington fruit guidance notes that even a typically mild maritime winter brings a periodic harder frost some years; that is well within reach of zone 8's colder nights, and lemon is hurt at a far milder temperature than the hardy tree fruit this region is known for.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu",
+            "verified": "2026-07-14"
+          },
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      },
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Zone 9's milder coastal and protected pockets sit closer to lemon's cold edge, and a container-grown tree (Improved Meyer is the hardier choice) can survive there long-term if it is moved under cover, or into a garage or bright room, whenever a hard freeze threatens. Even so, an occasional deeper freeze can still damage or kill an unprotected tree, so there is no dependable in-ground crop, only a protected container planting.",
+        "suitability_note_beginner": "A bit milder here, so a potted lemon (an Improved Meyer is the toughest option) can survive for years if you bring it under cover on the coldest nights. It still is not safe to leave outside unprotected all winter.",
+        "min_winter_temp_f": [
+          20,
+          30
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Zone 9's typical winter low sits nearer lemon's damage point than zone 8's, but the region's occasional harder freeze can still reach cold enough to hurt or kill an unprotected tree, so container culture with winter protection is still the honest recommendation.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu",
+            "verified": "2026-07-14"
+          },
+          "tamu_agrilife": {
+            "url": "https://agrilifeextension.tamu.edu",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Lemon does not work as an in-ground tree here. Winters in the maritime Pacific Northwest are usually mild, but an occasional hard freeze gets cold enough to hurt or kill one. Grow it in a container (an Improved Meyer is the toughest choice) that you can bring under cover on the coldest nights; in the milder zone 9 pockets that can keep a tree alive for years, though it still will not give you a dependable outdoor crop.",
+    "region_notes_seasoned": "Lemon is not a landscape tree in the maritime Pacific Northwest. The region's winters run mild in most years, close to what a hardened lemon can tolerate at its edge, but the occasional harder freeze, a known feature of the climate even in an otherwise mild winter, reaches well below lemon's high-20s°F damage point. Zone 8's colder interior lowlands make in-ground culture a non-starter; the milder zone 9 coastal and protected pockets can support a long-lived container specimen (Improved Meyer for its extra cold tolerance) moved under cover for the worst nights, but not a dependable in-ground crop.",
+    "min_winter_temp_f": [
+      10,
+      30
+    ],
+    "cold_basis_seasoned": "Zone 8's colder nights (roughly 10 to 20°F) are far past the high-20s°F point where lemon fruit and leaves are damaged; zone 9's milder band (roughly 20 to 30°F) sits closer to that edge, but the region's documented periodic harder freeze, on top of an otherwise mild winter, still reaches cold enough to threaten an unprotected tree in either zone (WSU).",
+    "cold_basis_beginner": "Even our milder zone 9 winters get cold enough some years to hurt an unprotected lemon tree, and zone 8 is colder still. A pot you can move under cover is the safe way to grow one here."
+  },
+  "lime": {
+    "region_id": "pnw",
+    "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+    "zone_span": [
+      "8",
+      "9"
+    ],
+    "sources": [
+      "clemson_hgic",
+      "tamu_agrilife",
+      "wsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 8 is far too cold for an in-ground lime. Lime is the most cold-tender common citrus: even the hardier Persian (Tahiti) type suffers wood damage below about 26°F, and this zone's coldest nights drop well below that. There is no in-ground establishment window here; grow it as a container tree brought fully indoors for winter.",
+        "suitability_note_beginner": "Too cold here for a lime tree outside. Lime is hurt by cold more easily than almost any other citrus. Grow it in a pot you bring fully indoors for winter.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "This region's periodic harder freeze, on top of an already-cold zone 8 winter, is easily enough to kill lime wood outright; lime has the least cold tolerance of the common citrus.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-14"
+          },
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      },
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 9's milder coastal and protected pockets still see winter lows that reach the mid-20s°F or colder in an ordinary year, cold enough to kill Persian (Tahiti) lime wood outright and well past the point that damages the even more tender Key (Mexican) lime. Lime remains unsuitable for in-ground planting even in the region's mildest zone; a container tree brought fully indoors for winter is the only workable approach.",
+        "suitability_note_beginner": "Even in the milder pockets, winters here get cold enough most years to kill a lime tree outright. Grow it in a pot indoors for winter instead.",
+        "min_winter_temp_f": [
+          20,
+          30
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Lime's wood-damage threshold (mid-20s°F for Persian/Tahiti, even milder cold for Key/Mexican) sits inside zone 9's ordinary winter-low range here, not just its rare deep-freeze years, so outdoor culture is not a defensible call even at the region's mild edge.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-14"
+          },
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Skip lime outdoors in the maritime Pacific Northwest. It is the most cold-sensitive common citrus, and even our milder zone 9 pockets get cold enough most winters to kill it. Grow it in a container you bring fully indoors for the winter.",
+    "region_notes_seasoned": "Lime is a clear no for in-ground planting anywhere in the maritime Pacific Northwest. It is the least cold-hardy of the common citrus, with wood damage starting in the mid-20s°F for Persian (Tahiti) lime and even milder cold hurting Key (Mexican) lime, and both of this region's zones see winter lows in that range in an ordinary year, not only in a rare severe one. A container tree moved fully indoors for winter is the only viable way to grow one here.",
+    "min_winter_temp_f": [
+      10,
+      30
+    ],
+    "cold_basis_seasoned": "Zone 8 (roughly 10 to 20°F) and zone 9 (roughly 20 to 30°F) both see ordinary winter lows at or below lime's wood-damage threshold, mid-20s°F for the hardier Persian (Tahiti) type and milder still for Key (Mexican) lime, so this is not an occasional-freeze risk but a routine one for this crop specifically (Clemson HGIC, Texas A&M AgriLife).",
+    "cold_basis_beginner": "Lime is hurt by cold more easily than almost any other citrus, and our winters here, even in the milder spots, routinely get cold enough to kill it."
+  },
+  "mandarin-clementine": {
+    "region_id": "pnw",
+    "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+    "zone_span": [
+      "8",
+      "9"
+    ],
+    "sources": [
+      "uf_ifas_edis",
+      "clemson_hgic",
+      "wsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 8's colder nights fall below even satsuma mandarin's cold limit, the hardiest of the commonly grown sweet citrus. A mature, hardened satsuma withstands brief lows near 15 to 20°F, but this zone's coldest nights drop into the teens or below that, and the region's periodic harder freeze can push colder still. There is no dependable in-ground planting here; grow it as a container tree brought under cover for winter.",
+        "suitability_note_beginner": "Even the toughest common citrus, satsuma mandarin, cannot reliably take zone 8's coldest nights here. Grow it in a pot you bring under cover for winter.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Satsuma's roughly 15-to-20°F mature-wood limit sits right at or below zone 8's coldest nights, and this region's occasional harder freeze can go colder still, so cold, not heat, rules this zone out.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_edis",
+          "clemson_hgic",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_edis": {
+            "url": "https://ask.ifas.ufl.edu/publication/CH116",
+            "verified": "2026-07-14"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      },
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Zone 9's milder winter lows sit close to or above satsuma mandarin's roughly 15-to-20°F cold limit, the hardiest of the commonly grown sweet citrus, so a well-sited or container-grown tree can survive here for years if it is protected on the coldest nights. Survival is not the limiting factor in this zone, though: the maritime Pacific Northwest's cool, marine-tempered summer does not bank the heat mandarins need to sweeten and color well, so even a tree that comes through winter fine does not give a dependable, worthwhile crop. Best grown as a protected container specimen, not counted on for fruit.",
+        "suitability_note_beginner": "This is about as good as citrus gets here: satsuma mandarin, the toughest common citrus for cold, can survive in the milder zone 9 spots if you protect it on hard-freeze nights. But our summers are not warm enough for the fruit to get sweet, so do not count on a real crop.",
+        "min_winter_temp_f": [
+          20,
+          30
+        ],
+        "heat_summer_basis": "insufficient",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Cold is not the whole story in zone 9: satsuma's own cold limit is close to this zone's typical low, so the tree itself can often make it through winter. The region's cool summer, not cold, is what keeps this from being a dependable fruiting crop.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_edis",
+          "clemson_hgic",
+          "wsu_ext",
+          "osu_ext"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_edis": {
+            "url": "https://ask.ifas.ufl.edu/publication/CH116",
+            "verified": "2026-07-14"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          },
+          "osu_ext": {
+            "url": "https://ir.library.oregonstate.edu/downloads/v979v342w",
+            "verified": "2026-07-14"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Mandarin is the toughest common citrus for cold, but the maritime Pacific Northwest still is not mandarin country. In zone 8 winters get too cold even for satsuma, the hardiest type. In the milder zone 9 pockets a protected container tree can survive for years, but our cool summers are not hot enough to sweeten the fruit, so do not count on a real harvest either way.",
+    "region_notes_seasoned": "Mandarin, specifically satsuma-type mandarin, is the cold-hardiness standout among common sweet citrus, and that shows here: zone 9's milder winter lows sit close to satsuma's own roughly 15-to-20°F cold limit, so a protected tree can genuinely survive long-term in the region's milder pockets, a step up from every other citrus in this batch. Zone 8's colder nights still put it out of reach. Survival is not the binding constraint in zone 9, though: the maritime Pacific Northwest's cool, marine-tempered summer does not deliver the heat mandarins need to sweeten and color, so even a tree that comes through winter cleanly does not produce a dependable, worthwhile crop. Grow it as a protected container specimen, not a fruiting orchard tree.",
+    "min_winter_temp_f": [
+      10,
+      30
+    ],
+    "cold_basis_seasoned": "Zone 8's winter lows (roughly 10 to 20°F) fall below even satsuma mandarin's roughly 15-to-20°F mature cold limit, the hardiest of the commonly grown sweet citrus; zone 9's milder band (roughly 20 to 30°F) sits close to or above that limit, so a protected tree can survive there for years (UF/IFAS, Clemson HGIC).",
+    "cold_basis_beginner": "Mandarin (satsuma) takes cold better than any other common citrus, and it can survive our milder zone 9 winters if protected. Zone 8 is still too cold for it.",
+    "heat_summer_basis": "insufficient",
+    "heat_basis_seasoned": "The maritime Pacific Northwest's cool, cloud- and marine-influenced summer does not bank the heat mandarins need to sweeten and color well, even though mandarins need less summer heat than a navel orange to ripen. Where the tree does survive winter, the fruit stays underripe and poorly colored, so this is not a dependable crop even in the milder zone.",
+    "heat_basis_beginner": "Our summers here are not warm enough for mandarin fruit to sweeten up properly, even where the tree itself can survive the winter."
+  },
+  "orange-navel": {
+    "region_id": "pnw",
+    "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+    "zone_span": [
+      "8",
+      "9"
+    ],
+    "sources": [
+      "uf_ifas_hs132",
+      "wsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 8 is too cold for an in-ground navel. A navel orange tolerates brief cold to about 24°F before sustaining real branch damage, and this zone's coldest nights drop well below that, into the teens or lower. There is no dependable in-ground establishment window here; grow it as a container tree brought under cover for winter.",
+        "suitability_note_beginner": "Too cold here for an orange tree outside. Navels start taking real damage around 24°F, and winters here get colder than that. Grow it in a pot you bring under cover for winter.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "This region's periodic harder freeze, layered on an already-cold zone 8 winter, reaches well past a navel's roughly 24°F branch-damage point.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_hs132",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_hs132": {
+            "url": "https://edis.ifas.ufl.edu/publication/HS132",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      },
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Zone 9's milder winter lows still dip into the low 20s°F in an ordinary year, close to or below a navel's roughly 24°F branch-damage point, so real cold protection (a container moved under cover for hard freezes) is needed even at this region's mild edge. Even where the tree survives and blooms, the maritime Pacific Northwest's cool, marine-tempered summer does not bank the heat a navel needs to ripen sweet, well-colored fruit, so there is no dependable edible crop either way. Best kept as a protected container specimen, not grown for fruit.",
+        "suitability_note_beginner": "Even the milder zone 9 spots get cold enough some winters to hurt an orange tree, so protect it on hard-freeze nights. And even if the tree survives, our summers are not hot enough to sweeten the fruit, so do not count on oranges from it.",
+        "min_winter_temp_f": [
+          20,
+          30
+        ],
+        "heat_summer_basis": "insufficient",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Both limiting factors bind here: zone 9's cold occasionally reaches a navel's damage point, and separately, the region's cool summer cannot deliver the heat this crop needs to ripen sweet regardless of how the tree comes through winter.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_hs132",
+          "wsu_ext",
+          "osu_ext"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_hs132": {
+            "url": "https://edis.ifas.ufl.edu/publication/HS132",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          },
+          "osu_ext": {
+            "url": "https://ir.library.oregonstate.edu/downloads/v979v342w",
+            "verified": "2026-07-14"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "This is the maritime Pacific Northwest's honest orange story, the flip side of a warm citrus region: zone 8 gets too cold outright, and even the milder zone 9 pockets are not truly orange country. A protected container tree can survive there for years, but our cool summers do not get hot enough to make the fruit sweet, so do not count on a real harvest either way.",
+    "region_notes_seasoned": "The maritime Pacific Northwest is a mirror of navel orange's usual flagship regions: cold-limited AND heat-poor at once, rather than the single limiting factor most regions face. Zone 8's winter lows sit well past the tree's roughly 24°F branch-damage point, ruling out in-ground culture outright. Zone 9's milder lows still occasionally reach that damage point, so a container tree needs real winter protection even there, and separately, the region's cool, marine-tempered summer does not bank enough heat to ripen sweet, well-colored fruit regardless of winter survival. Grow it as a protected container specimen if at all; this is not a fruiting region for navel orange.",
+    "min_winter_temp_f": [
+      10,
+      30
+    ],
+    "cold_basis_seasoned": "Zone 8's winter lows (roughly 10 to 20°F) are well past a navel's roughly 24°F branch-damage threshold; zone 9's milder band (roughly 20 to 30°F) still dips to or below that threshold in an ordinary year, so winter protection matters even at the region's mild edge (UF/IFAS).",
+    "cold_basis_beginner": "Orange trees start taking damage around 24°F. Zone 8 here regularly gets colder than that, and even zone 9 dips that low some winters.",
+    "heat_summer_basis": "insufficient",
+    "heat_basis_seasoned": "The maritime Pacific Northwest's cool, cloud- and marine-influenced summer does not bank the sustained heat a navel orange needs to ripen sweet, well-colored fruit. Even a tree that survives winter cleanly in the milder zone stays a no-usable-crop proposition on heat alone.",
+    "heat_basis_beginner": "Our summers here just are not hot enough for orange fruit to ripen sweet, even where the tree itself makes it through winter."
+  },
+  "grapefruit": {
+    "region_id": "pnw",
+    "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+    "zone_span": [
+      "8",
+      "9"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "wsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 8 is too cold for an in-ground grapefruit. Grapefruit wood is injured in the mid-20s°F, similar to sweet orange, and this zone's coldest nights drop well below that, into the teens or lower. There is no dependable in-ground establishment window here; grow it as a container tree brought under cover for winter.",
+        "suitability_note_beginner": "Too cold here for a grapefruit tree outside. The wood is hurt in the mid-20s°F, and winters here get colder than that. Grow it in a pot you bring under cover for winter.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "This region's periodic harder freeze, on top of an already-cold zone 8 winter, easily reaches grapefruit's mid-20s°F wood-damage point.",
+        "resolved_from": {},
+        "sources": [
+          "lsu_agcenter",
+          "wsu_ext"
+        ],
+        "anchoring_urls": {
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/profiles/clirette/articles/page1611248225640",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          }
+        }
+      },
+      "9": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "Zone 9's milder winter lows still reach the mid-20s°F or colder in an ordinary year, at or below grapefruit's own wood-damage threshold, so a container tree needs real protection on hard-freeze nights even at this region's mild edge. Grapefruit also needs the highest accumulated summer heat of the common citrus to ripen good fruit, and the maritime Pacific Northwest's cool, marine-tempered summer falls well short of that, the sharpest expression of this batch's heat problem. There is no dependable edible crop here under any circumstance; keep it strictly as a protected container specimen.",
+        "suitability_note_beginner": "Even the milder zone 9 spots get cold enough some winters to hurt a grapefruit tree, so protect it on hard-freeze nights. Grapefruit also needs more summer heat than any other common citrus to taste good, and our summers do not come close, so do not expect real fruit.",
+        "min_winter_temp_f": [
+          20,
+          30
+        ],
+        "heat_summer_basis": "insufficient",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Grapefruit is the sharpest case in this batch: its cold tolerance is unremarkable among citrus and its heat requirement is the highest, so both of the region's limits bind hardest on this crop.",
+        "resolved_from": {},
+        "sources": [
+          "lsu_agcenter",
+          "wsu_ext",
+          "osu_ext"
+        ],
+        "anchoring_urls": {
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/profiles/clirette/articles/page1611248225640",
+            "verified": "2026-07-14"
+          },
+          "wsu_ext": {
+            "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+            "verified": "2026-07-14"
+          },
+          "osu_ext": {
+            "url": "https://ir.library.oregonstate.edu/downloads/v979v342w",
+            "verified": "2026-07-14"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Grapefruit is the hardest sell of all in the maritime Pacific Northwest. Zone 8 gets too cold outright, and even the milder zone 9 pockets are not enough: winters there still get cold enough to hurt the tree some years, and grapefruit needs more summer heat than any other common citrus to taste good, heat this region simply does not have. Grow it in a container and bring it under cover for winter if you want to try, but do not expect fruit.",
+    "region_notes_seasoned": "Grapefruit is the sharpest expression of the maritime Pacific Northwest's citrus problem: cold-limited and heat-poor at once, and grapefruit sits at the tough end of both axes among common citrus, no more cold-hardy than sweet orange and needing the highest accumulated summer heat of the group to ripen good fruit. Zone 8's winter lows are well past its mid-20s°F wood-damage point, ruling out in-ground culture outright. Zone 9's milder lows still occasionally reach that point, so even a container tree needs real winter protection there, and the region's cool summer falls well short of grapefruit's high heat requirement regardless. This is not a fruiting region for grapefruit under any realistic siting.",
+    "min_winter_temp_f": [
+      10,
+      30
+    ],
+    "cold_basis_seasoned": "Zone 8's winter lows (roughly 10 to 20°F) are well past grapefruit's mid-20s°F wood-damage point; zone 9's milder band (roughly 20 to 30°F) still reaches that point in an ordinary year, so winter protection is needed even at the region's mild edge (LSU AgCenter).",
+    "cold_basis_beginner": "Grapefruit wood is hurt in the mid-20s°F. Zone 8 here regularly gets colder than that, and zone 9 dips that low some winters too.",
+    "heat_summer_basis": "insufficient",
+    "heat_basis_seasoned": "Grapefruit needs the highest accumulated summer heat of the common citrus to ripen good, sweet fruit, and the maritime Pacific Northwest's cool, marine-tempered summer falls well short of that, more short than for any other citrus in this batch. Even a tree that survives winter cleanly in the milder zone stays a no-usable-crop proposition.",
+    "heat_basis_beginner": "Grapefruit needs more summer heat than any other common citrus to taste good, and our summers here do not come close, even where the tree survives winter."
+  }
+}
