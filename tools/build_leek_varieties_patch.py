@@ -40,22 +40,27 @@ URL = {
     "umn_ext": "https://extension.umn.edu/vegetables/growing-leeks",
     "uf_ifas": "https://ask.ifas.ufl.edu/publication/HS1388",
 }
+# Cornell 2020 leek variety trial (Table 3, "DTM from Transplant"): the T1 DTM anchor for the 4 trial
+# varieties (King Richard 85, Lancelot 100, Tadorna 110, Bandit 120). cornell_ext, extension-published.
+# The 2 heirlooms (Large American Flag, Giant Musselburgh) are NOT in the trial, so they keep the
+# cornell_ext VVFG-list URL (variety identity only) and stay T2 on DTM.
+CORNELL_TRIAL = "https://rvpadmin.cce.cornell.edu/uploads/doc_944.pdf"
 UF_IFAS_VERIFIED = "2026-06-29"
 
 # Each variety: _src = [(source_id, url), ...] (T1 only). sources + anchoring_urls derive from it.
 VARDEFS = [
     dict(id="king-richard", name="King Richard", maturity_class="early",
-         cold_hardiness_class="tender", days_to_maturity=90, use="early fresh use",
-         is_reference=False, confidence_tier="T2",
-         note_beginner="The fast early leek: it sizes up in about 90 days from transplant, giving tall, tender stems for late summer and fall. King Richard is less cold hardy than the winter types, so plan to use it before hard freezes rather than leaving it standing through winter.",
-         note_seasoned="An early, quick-sizing summer-to-fall leek, roughly 90 days from transplant. It is the tender member of the set, best used before hard freezes rather than overwintered. Useful for a first harvest while the maincrop and overwintering types size up behind it.",
-         _src=[("usu_ext", URL["usu_ext"]), ("cornell_ext", URL["cornell_ext"])]),
+         cold_hardiness_class="tender", days_to_maturity=85, use="early fresh use",
+         is_reference=False, confidence_tier="T1",
+         note_beginner="The fast early leek: it sizes up in about 85 days from transplant, giving tall, tender stems for late summer and fall. King Richard is less cold hardy than the winter types, so plan to use it before hard freezes rather than leaving it standing through winter.",
+         note_seasoned="An early, quick-sizing summer-to-fall leek, about 85 days from transplant (Cornell trial). It is the tender member of the set, best used before hard freezes rather than overwintered. Useful for a first harvest while the maincrop and overwintering types size up behind it.",
+         _src=[("usu_ext", URL["usu_ext"]), ("cornell_ext", CORNELL_TRIAL)]),
     dict(id="lancelot", name="Lancelot", maturity_class="mid",
          cold_hardiness_class="hardy", days_to_maturity=100, use="all-purpose",
          is_reference=True, confidence_tier="T1",
          note_beginner="A reliable, vigorous maincrop leek for fall harvest, about 100 days from transplant. Lancelot is widely adapted and hardy enough to stand into cold weather, which makes it a good first choice if you are not sure what to grow.",
          note_seasoned="The default maincrop pick: vigorous, uniform, and widely adapted, about 100 days from transplant (Cornell). Hardy through fall and light freezes, though not bred to overwinter like Bandit or Giant Musselburgh. If you grow one leek, grow this one.",
-         _src=[("cornell_ext", URL["cornell_ext"]), ("umn_ext", URL["umn_ext"])]),
+         _src=[("cornell_ext", CORNELL_TRIAL), ("umn_ext", URL["umn_ext"])]),
     dict(id="large-american-flag", name="Large American Flag", maturity_class="mid",
          cold_hardiness_class="hardy", days_to_maturity=120, use="all-purpose heirloom",
          is_reference=False, confidence_tier="T2",
@@ -63,17 +68,17 @@ VARDEFS = [
          note_seasoned="The old open-pollinated standard (sold as Broad London), thick-shanked and dependable for fall, roughly 120 days from transplant. Hardy into cold weather; a maincrop workhorse rather than a dedicated overwinterer. USU-listed.",
          _src=[("usu_ext", URL["usu_ext"]), ("cornell_ext", URL["cornell_ext"])]),
     dict(id="tadorna", name="Tadorna", maturity_class="mid",
-         cold_hardiness_class="hardy", days_to_maturity=100, use="fall to early winter",
-         is_reference=False, confidence_tier="T2",
-         note_beginner="A hardy, uniform leek that holds well as the weather turns cold, about 100 days from transplant. Tadorna bridges the gap between the fall maincrop types and the true overwinterers, so you can keep harvesting into early winter.",
-         note_seasoned="A hardy, uniform Dutch maincrop, about 100 days from transplant, that stands well into cold and bridges the fall-to-overwintering window. Tougher than the plain fall types but stops short of Bandit or Giant Musselburgh for deep-winter standing.",
-         _src=[("cornell_ext", URL["cornell_ext"]), ("rhs", URL["rhs"])]),
+         cold_hardiness_class="hardy", days_to_maturity=110, use="fall to early winter",
+         is_reference=False, confidence_tier="T1",
+         note_beginner="A hardy, uniform leek that holds well as the weather turns cold, about 110 days from transplant. Tadorna bridges the gap between the fall maincrop types and the true overwinterers, so you can keep harvesting into early winter.",
+         note_seasoned="A hardy, uniform Dutch maincrop, about 110 days from transplant (Cornell trial), that stands well into cold and bridges the fall-to-overwintering window. Tougher than the plain fall types but stops short of Bandit or Giant Musselburgh for deep-winter standing.",
+         _src=[("cornell_ext", CORNELL_TRIAL), ("rhs", URL["rhs"])]),
     dict(id="bandit", name="Bandit", maturity_class="late",
          cold_hardiness_class="very_hardy", days_to_maturity=120, use="overwintering",
-         is_reference=False, confidence_tier="T2",
+         is_reference=False, confidence_tier="T1",
          note_beginner="The toughest overwintering leek here: a very cold hardy, blue-green type (the Blauwgroene Winter strain) that stands in the garden through winter into spring in milder zones. It is slow and late, about 120 days from transplant, but it is the one to grow to dig leeks fresh in the cold months.",
-         note_seasoned="A very hardy, blue-green overwintering leek (Blauwgroene Winter, RHS AGM as Bandit), late and slow at roughly 120 days from transplant but the most weather-tough of the set. It stands hard winters into spring where the class is viable; the headline overwinterer.",
-         _src=[("rhs", URL["rhs"]), ("cornell_ext", URL["cornell_ext"])]),
+         note_seasoned="A very hardy, blue-green overwintering leek (Blauwgroene Winter, RHS AGM as Bandit), late and slow at about 120 days from transplant (Cornell trial) but the most weather-tough of the set. It stands hard winters into spring where the class is viable; the headline overwinterer.",
+         _src=[("rhs", URL["rhs"]), ("cornell_ext", CORNELL_TRIAL)]),
     dict(id="giant-musselburgh", name="Giant Musselburgh", maturity_class="late",
          cold_hardiness_class="very_hardy", days_to_maturity=110, use="overwintering heirloom",
          is_reference=False, confidence_tier="T2",
