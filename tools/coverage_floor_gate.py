@@ -8,7 +8,7 @@ calendar[] deleted on every cell -- both certify, because every per-region / per
 `continue`s on the missing structure (A5/A24/A28 skip an absent calendar; A2 checks plantings,
 never the calendar). These two floors close that:
 
-  A31 region_roster_violations -- a non-indoor crop must carry the full 10-region roster.
+  A31 region_roster_violations -- a non-indoor crop must carry the full region roster.
   A32 calendar_presence_violations -- a frost_anchored cell must carry a non-empty calendar.
 
 Both are archetype-aware: an indoor / zone_independent crop legitimately collapses regions to {}
@@ -21,7 +21,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from zone_span_gate import EXPECTED_SPANS
 
-# The canonical 10-region roster -- identical across all non-indoor certified anchors and the
+# The canonical region roster -- identical across all non-indoor certified anchors and the
 # top-level `region_chill_delivered` table. THE coverage floor for a region-resolved crop.
 # DERIVED from zone_span_gate.EXPECTED_SPANS (the single source of truth for the region universe)
 # so adding a region there -- e.g. a future RGV / maritime-PNW region -- extends the roster in
@@ -52,7 +52,7 @@ def _is_indoor(crop):
 
 
 def region_roster_violations(crop):
-    """Return a list ([] = clean). A non-indoor crop must carry EXACTLY the canonical 10-region
+    """Return a list ([] = clean). A non-indoor crop must carry EXACTLY the canonical region
     roster -- no missing region (regions:{} or a partial roster renders the crop for almost
     nowhere) and no unknown region key (a typo renders a region the model does not resolve). An
     indoor / zone_independent crop must collapse regions to {} (a non-empty regions there is
@@ -69,10 +69,12 @@ def region_roster_violations(crop):
     V = []
     if missing:
         V.append(f"non-indoor crop is missing canonical region(s) {missing} "
-                 f"(has {len(have)}/{len(CANONICAL_REGIONS)}); the 10-region roster is the coverage "
-                 f"floor -- a partial/empty roster certifies a crop that renders for almost nowhere")
+                 f"(has {len(have)}/{len(CANONICAL_REGIONS)}); the {len(CANONICAL_REGIONS)}-region "
+                 f"roster is the coverage floor -- a partial/empty roster certifies a crop that "
+                 f"renders for almost nowhere")
     if unknown:
-        V.append(f"unknown region key(s) {unknown} not in the canonical 10-region roster "
+        V.append(f"unknown region key(s) {unknown} not in the canonical "
+                 f"{len(CANONICAL_REGIONS)}-region roster "
                  f"(a typo'd region renders for a region the model never resolves)")
     # D2 + D7: validate the zone layer BELOW each region key -- A31 stopped at the region key, so a
     # hollow resolved_by_zone (D2) or a fictitious zone key (D7) certified.

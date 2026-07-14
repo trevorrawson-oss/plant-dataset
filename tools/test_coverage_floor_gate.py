@@ -19,6 +19,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from coverage_floor_gate import (region_roster_violations, calendar_presence_violations,
                                   CANONICAL_REGIONS)
+from zone_span_gate import EXPECTED_SPANS
 
 _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_data_final.json")
 _data = json.load(open(_path, encoding="utf-8")) if os.path.exists(_path) else {"crops": []}
@@ -32,11 +33,10 @@ def _full_regions():
 
 
 # ============================== C3 -- region roster floor (A31) ==============================
-# 0. the canonical roster is the 10-region model
-assert CANONICAL_REGIONS == {
-    "ca_desert", "ca_interior", "ca_north_coast", "ca_south_coast", "fl_peninsula",
-    "hawaii_tropical", "low_desert_az", "northern_tier", "se_gulf", "warm_arid",
-}, sorted(CANONICAL_REGIONS)
+# 0. the canonical roster is DERIVED from zone_span_gate.EXPECTED_SPANS (the single source of
+#    truth for the region universe) -- never a hardcoded literal set, so this assertion can never
+#    drift out of sync again when a future region (rgv, maritime-PNW, ...) is added there.
+assert CANONICAL_REGIONS == set(EXPECTED_SPANS), sorted(CANONICAL_REGIONS)
 
 # 1. a non-indoor crop with the full roster -> clean
 ok = {"slug": "x", "calendar_basis": "frost_anchored", "regions": _full_regions()}

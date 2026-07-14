@@ -11,8 +11,21 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import build_rgv_promote as B
 
+# The RGV region has been PROMOTED to the live canonical (2026-07-13, d0832254) since this test
+# was written against the "canonical has no rgv yet" pre-promote premise. B.build() hard-asserts
+# that premise (`assert not have_rgv`) and will now always fail -- not because the emitter is
+# broken, but because the one-shot promote it built has already been applied. Skip gracefully
+# rather than red-flag a healthy suite; rgv_harness + rgv_cell_audit remain reusable for the next
+# region arc, and this test keeps its documentation value for that reuse.
+_canon_path = os.path.join(os.path.dirname(HERE), "crops_data_final.json")
+_canon_data = json.load(open(_canon_path, encoding="utf-8"))
+_RGV_ALREADY_PROMOTED = any("rgv" in (c.get("regions") or {}) for c in _canon_data["crops"])
+
 
 def test_batch_shape():
+    if _RGV_ALREADY_PROMOTED:
+        print("skipped: rgv already promoted to the live canonical (one-shot batch already applied)")
+        return
     batch = B.build()
     assert set(batch) == {"base_sha", "patches"}, batch.keys()
     # base_sha matches the live canonical

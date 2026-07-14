@@ -45,9 +45,12 @@ def build_scratch_tools(dest):
             shutil.copy(os.path.join(HERE, fn), os.path.join(dest, fn))
     zsg = os.path.join(dest, "zone_span_gate.py")
     src = open(zsg, encoding="utf-8").read()
-    # insert rgv into the EXPECTED_SPANS dict literal (first line after the opening brace)
+    # insert rgv into the EXPECTED_SPANS dict literal (first line after the opening brace).
+    # Built from RGV_SPAN (not a re-typed literal) so the patch and the module constant can
+    # never diverge.
+    rgv_span_literal = json.dumps(RGV_SPAN)
     patched, n = re.subn(r"(EXPECTED_SPANS = \{\n)",
-                         r'\1    "rgv":            ["9", "10"],\n', src, count=1)
+                         r'\1    "rgv":            ' + rgv_span_literal + ',\n', src, count=1)
     assert n == 1, "could not patch EXPECTED_SPANS"
     open(zsg, "w", encoding="utf-8").write(patched)
     return dest
@@ -86,8 +89,12 @@ def gate_crop(slug, staged_cells):
     with tempfile.TemporaryDirectory() as tmp:
         tools = build_scratch_tools(os.path.join(tmp, "tools"))
         canon = scratch_canonical(staged_cells, os.path.join(tmp, "canon.json"))
-        r = subprocess.run([sys.executable, os.path.join(tools, "whole_crop_gate.py"), slug, canon],
-                           capture_output=True, text=True)
+        try:
+            r = subprocess.run([sys.executable, os.path.join(tools, "whole_crop_gate.py"), slug, canon],
+                               capture_output=True, text=True, timeout=120)
+        except subprocess.TimeoutExpired as e:
+            return False, (f"whole_crop_gate.py timed out after 120s for {slug!r} -- "
+                            f"partial output: {(e.stdout or b'')!r}{(e.stderr or b'')!r}")
         return r.returncode == 0, r.stdout + r.stderr
 
 

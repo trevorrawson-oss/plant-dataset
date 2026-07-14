@@ -81,10 +81,10 @@ for m in _cbv:
 # ---------------- A31/A32. coverage floors (region roster + calendar presence) ----------------
 # A2 validates whatever regions/cells EXIST but never asserts enough exist, so regions:{} or a
 # calendar-stripped annual certify (incognito-redteam C3/C4). A31: a non-indoor crop carries the
-# full 10-region roster (indoor collapses to {}). A32: a frost_anchored cell carries a non-empty
+# full region roster (indoor collapses to {}). A32: a frost_anchored cell carries a non-empty
 # calendar (tree empty cells are A3's job).
 from coverage_floor_gate import region_roster_violations, calendar_presence_violations
-print("A31. region roster floor (non-indoor crop carries the full 10-region roster)")
+print("A31. region roster floor (non-indoor crop carries the full region roster)")
 _rrv = region_roster_violations(crop)
 print(f"  region roster violations: {len(_rrv)}")
 for m in _rrv:

@@ -23,6 +23,14 @@ import rgv_harness
 BASE = json.load(open(os.path.join(ROOT, "crops_data_final.json"), encoding="utf-8"))
 BROC = next(c for c in BASE["crops"] if c["slug"] == "broccoli")
 
+# The RGV region has been PROMOTED to the live canonical (2026-07-13, d0832254). Once real, every
+# certified crop (broccoli included) already carries a real regions.rgv cell, so
+# test_missing_rgv_fails_a31's "canonical has no rgv yet" premise no longer holds: merging an EMPTY
+# staged_cells dict onto broccoli's already-rgv-carrying regions no longer reproduces a missing-rgv
+# A31 failure. Detected below so that test can skip gracefully instead of red-flagging a healthy
+# harness; rgv_harness itself (and this fixture machinery) stays reusable for the next region arc.
+_RGV_ALREADY_PROMOTED = "rgv" in (BROC.get("regions") or {})
+
 
 def _valid_rgv_cell():
     """A minimal-but-gate-valid frost-free annual cell cloned from broccoli's hawaii
@@ -57,6 +65,11 @@ def test_span_key_mismatch_fails():
 
 
 def test_missing_rgv_fails_a31():
+    if _RGV_ALREADY_PROMOTED:
+        print("  skipped: rgv already promoted to the live canonical (broccoli already carries a "
+              "real regions.rgv cell, so an empty staged_cells no longer reproduces a missing-rgv "
+              "A31 failure)")
+        return
     ok, out = rgv_harness.gate_crop("broccoli", {})   # no rgv cell added
     assert not ok and "rgv" in out, out
     print("  ok: missing rgv cell bounces (A31 region roster floor)")
