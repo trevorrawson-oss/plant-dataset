@@ -1,0 +1,41 @@
+{
+ "base_sha": "77f03cc80edabf04574424d2d5784501f3986f541ced7ccd3a848ed0977ee03c",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='apple')].description_beginner",
+   "from": "Apple is a fruit tree that lives for decades. Here is the one thing to know before you buy: most apple trees cannot make fruit from their own flowers. You need a second, different apple variety planted nearby (within about 50 ft) that blooms at the same time, so bees can carry pollen from one to the other. A single apple tree by itself usually sets little or no fruit. The kind of apple you pick also decides whether it will fruit where you live, and the rootstock (the roots the variety is grafted onto) decides how tall the tree gets.",
+   "value": "Apple is a fruit tree that lives for decades. Here is the one thing to know before you buy: most apple trees cannot make fruit from their own flowers. You need a second, different apple variety planted nearby (within about 50 ft) that blooms at the same time, so bees can carry pollen from one to the other. A single apple tree by itself usually sets little or no fruit. The kind of apple you pick also decides whether it will fruit where you live, and the rootstock (the roots the variety is grafted onto) decides how tall the tree gets. The varieties run from familiar cold-climate apples like Honeycrisp, Gala, and Empire to low-chill types like Anna, Dorsett Golden, and Ein Shemer that fruit in mild-winter areas where standard apples never get enough cold."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='apple')].description_seasoned",
+   "from": "A long-lived deciduous fruit tree (Malus domestica) grown for fresh-eating, cooking, and storage fruit. Apple is the classic cross-pollination crop: nearly all cultivars are self-unfruitful, so you plant two different varieties whose bloom periods overlap, within about 50 ft, and rely on bees to move pollen between them. Chill-hour requirement is variety-set and spans a wide range, so cultivar choice, not the species, decides whether a tree fruits in your zone. Rootstock choice sets mature size and how soon the tree bears.",
+   "value": "A long-lived deciduous fruit tree (Malus domestica) grown for fresh-eating, cooking, and storage fruit. Apple is the classic cross-pollination crop: nearly all cultivars are self-unfruitful, so you plant two different varieties whose bloom periods overlap, within about 50 ft, and rely on bees to move pollen between them. Chill-hour requirement is variety-set and spans a wide range, so cultivar choice, not the species, decides whether a tree fruits in your zone. Rootstock choice sets mature size and how soon the tree bears. The recommended set spans that range, from low-chill Anna, Dorsett Golden, and Ein Shemer for mild-winter zones to high-chill Honeycrisp, McIntosh, and Empire for the North, plus triploids like Jonagold and Mutsu that need two pollen partners instead of one."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].description_beginner",
+   "from": "An onion is the swollen base of the plant's leaves, packed into the layered bulb you cook with. Here is the part that surprises most first-time growers: an onion decides to start forming its bulb based on how long the days are, not on a date. Because of that, onions are sold by \"day length\" instead of by the usual hardiness zone. Long-day kinds need very long summer days and suit the North, short-day kinds need only short days and suit the South, and intermediate kinds sit in the middle and grow well across much of the country. Pick the type that matches where you live, give the plants rich loose soil, water them steadily, and they are not hard to grow.",
+   "value": "An onion is the swollen base of the plant's leaves, packed into the layered bulb you cook with. Here is the part that surprises most first-time growers: an onion decides to start forming its bulb based on how long the days are, not on a date. Because of that, onions are sold by \"day length\" instead of by the usual hardiness zone. Long-day kinds like Walla Walla need very long summer days and suit the North, short-day kinds like Texas 1015Y need only short days and suit the South, and intermediate kinds like Super Star sit in the middle and grow well across much of the country. Pick the type that matches where you live, give the plants rich loose soil, water them steadily, and they are not hard to grow."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].description_seasoned",
+   "from": "Onion (Allium cepa) is a cool-season biennial grown as an annual for its bulb, which is a stack of swollen leaf bases rather than a root. Each green leaf builds one bulb scale, so leaf count at the moment bulbing starts sets the ceiling on bulb size. What triggers bulbing is day length, not the calendar: a cultivar switches from making leaves to filling a bulb only once daylight crosses its threshold. That threshold is what splits onions into long-day (14 to 16 hours), intermediate-day (12 to 14 hours), and short-day (10 to 12 hours) types, and it is why the right variety depends on your latitude. Grow a heavy-feeding, shallow-rooted plant in loose fertile soil, keep moisture steady so growth never stalls, then ease off water as the tops fall to begin curing.",
+   "value": "Onion (Allium cepa) is a cool-season biennial grown as an annual for its bulb, which is a stack of swollen leaf bases rather than a root. Each green leaf builds one bulb scale, so leaf count at the moment bulbing starts sets the ceiling on bulb size. What triggers bulbing is day length, not the calendar: a cultivar switches from making leaves to filling a bulb only once daylight crosses its threshold. That threshold is what splits onions into long-day (14 to 16 hours, such as Walla Walla), intermediate-day (12 to 14 hours, such as Super Star), and short-day (10 to 12 hours, such as Texas 1015Y) types, and it is why the right variety depends on your latitude. Grow a heavy-feeding, shallow-rooted plant in loose fertile soil, keep moisture steady so growth never stalls, then ease off water as the tops fall to begin curing."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].description_beginner",
+   "from": "Dry beans are grown just like green beans, but instead of picking the pods young you leave them on the plant to dry out completely. The beans inside get hard, and you harvest, shell, and store them to cook later. Common kinds include black beans, pinto, navy, and kidney. They are easy to grow and keep for a long time once dried.",
+   "value": "Dry beans are grown just like green beans, but instead of picking the pods young you leave them on the plant to dry out completely. The beans inside get hard, and you harvest, shell, and store them to cook later. Common kinds include black beans like Black Turtle, plus pinto, navy, kidney, and heirlooms like Jacob's Cattle. They are easy to grow and keep for a long time once dried."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].description_seasoned",
+   "from": "Dry beans (Phaseolus vulgaris) are the same warm-season legume as snap beans, but grown on to full maturity for their dry, storable seed rather than picked young for tender pods. You sow once in late spring, let the whole planting flower, set pods, and dry down on the plant, then harvest once when the pods are brown and the beans rattle. Cured and shelled, the beans keep for months to years. Black turtle, pinto, navy, and kidney are all dry types of this one species.",
+   "value": "Dry beans (Phaseolus vulgaris) are the same warm-season legume as snap beans, but grown on to full maturity for their dry, storable seed rather than picked young for tender pods. You sow once in late spring, let the whole planting flower, set pods, and dry down on the plant, then harvest once when the pods are brown and the beans rattle. Cured and shelled, the beans keep for months to years. Black Turtle, Pinto, Navy, Kidney, and heirlooms like Jacob's Cattle are all dry types of this one species, differing in seed size, color, and how long they take to dry down (roughly 85 to 110 days)."
+  }
+ ]
+}
