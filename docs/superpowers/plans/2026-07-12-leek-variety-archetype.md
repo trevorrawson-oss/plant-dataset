@@ -31,7 +31,8 @@ single-crop footprint assumption and the Task-5 Step-2 changed-keys assertion st
 - **Separation of concerns:** `variety_detail_gate` validates the variety SHAPE (enum, `min_temp_f` band, DTM); `overwinter_hardiness_gate` validates the HONESTY (coverage, window-fit). Neither duplicates the other. Neither is wired into `whole_crop_gate`/A39 this spec (INV-1 hard-flip = Spec 2).
 - **Release verification before promote** (protocol #6): `whole_crop_gate leek` + `variety_detail_gate` + `overwinter_hardiness_gate` + `gate_all` + `release_verify --slug leek` + source-truth sample.
 - **State trio at release:** CURRENT_STATE.md (surgical prepend -- no `---` separator, `current-state-md-drift`), STATE_HISTORY.md (prepend), LATEST.txt (SHA + session).
-- **Canonical count stays 125.** Leek enriches its existing 6 varieties, adds no crops. Footprint = leek's `varieties` + `variety_archetype` + a new crop-level `winter_hardiness` object + a `gating_factors` `winter_hardiness` token + `verification_status.source_set`; all other crops byte-identical.
+- **Canonical count stays 125.** Leek enriches its existing 6 varieties, adds no crops. Footprint = leek's `varieties` + `variety_archetype` + a new crop-level `winter_hardiness` object + a `gating_factors` `winter_hardiness` token + `verification_status.source_set` + the two crop-level `description_beginner`/`description_seasoned` rewrites (see the "Crop-description variety fold-in" constraint below); all other crops byte-identical.
+- **Crop-description variety fold-in (Trevor, 2026-07-14):** the crop-level `description_beginner` + `description_seasoned` must be updated to INCORPORATE the varieties, not just the archetype concept. Today leek's descriptions name no variety; they must name the representative hardiness spectrum (a fast summer type like King Richard through very-hardy overwinterers like Bandit / Giant Musselburgh) so the reader connects the summer-vs-overwintering story to concrete cultivar choices. This establishes the template Trevor backfills onto apple/dry-bean/onion. Keep the dual-register voice, the no-em-dash rule, American English, and `°F`; do not bloat the description (name representative anchors, not an exhaustive list). The rewrite must preserve the existing accurate biology and still pass `whole_crop_gate`'s description gates.
 - **No plant-astro submodule bump from this session.** Trevor confirms the push.
 
 ---
@@ -427,6 +428,8 @@ patch = {"base_sha": sha, "patches": [
     {"op": "add", "json_path": "$.crops[?(@.slug=='leek')].winter_hardiness", "value": winter_hardiness_model},
     {"op": "replace", "json_path": "$.crops[?(@.slug=='leek')].gating_factors", "from": current_gf, "value": new_gf},
     {"op": "replace", "json_path": "$.crops[?(@.slug=='leek')].varieties", "from": current_varieties, "value": new_varieties},
+    {"op": "replace", "json_path": "$.crops[?(@.slug=='leek')].description_beginner", "from": current_desc_beg, "value": new_desc_beg},
+    {"op": "replace", "json_path": "$.crops[?(@.slug=='leek')].description_seasoned", "from": current_desc_seas, "value": new_desc_seas},
     {"op": "replace", "json_path": "$.crops[?(@.slug=='leek')].verification_status.source_set", "from": current_ss, "value": new_ss},
 ]}
 ```
@@ -466,7 +469,7 @@ Expected: footprint = leek's `varieties` + `variety_archetype` + `winter_hardine
 ```bash
 python3 -c "import json; a=json.load(open('crops_data_final.json')); b=json.load(open('crops_data_final.scratch.json')); ca={c['slug']:c for c in a['crops']}; cb={c['slug']:c for c in b['crops']}; print('count', len(b['crops'])); print('moved', [s for s in ca if ca[s]!=cb.get(s)]); print('leek keys changed', sorted(k for k in set(ca['leek'])|set(cb['leek']) if ca['leek'].get(k)!=cb['leek'].get(k)))"
 ```
-Expected: `count 125`; `moved ['leek']`; leek keys changed = `['gating_factors','varieties','variety_archetype','verification_status','winter_hardiness']`.
+Expected: `count 125`; `moved ['leek']`; leek keys changed = `['description_beginner','description_seasoned','gating_factors','varieties','variety_archetype','verification_status','winter_hardiness']`.
 
 - [ ] **Step 3: Run the full release battery on the scratch candidate**
 
