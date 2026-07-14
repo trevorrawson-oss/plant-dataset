@@ -1,0 +1,331 @@
+{
+ "base_sha": "d0832254e3a1e9a520bcc3629fd91f347dea28206a6e2e063072e946b0465fa8",
+ "patches": [
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].variety_archetype",
+   "value": "hardiness_annual"
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].winter_hardiness",
+   "value": {
+    "explainer_beginner": "Leeks fall into two camps by how much cold they take. Summer and early types, like King Richard, grow fast and are meant to be eaten in late summer and fall; a hard freeze will damage them, so harvest before deep winter. Overwintering types, like Bandit and Giant Musselburgh, are bred to stand right in the garden through winter and be dug fresh in the cold months. How far north you can overwinter one depends on your zone: the hardiest leeks shrug off temperatures around 20°F and lower, and a thick mulch of straw or leaves buys roughly another zone of protection. In the coldest areas, treat even a hardy leek as a fall crop, or harvest and store it before the ground freezes solid.",
+    "explainer_seasoned": "Leek cold tolerance sorts into three classes the app uses to judge overwintering viability by zone. Tender types (King Richard) are grown in season and harvested by fall; they are not overwintered. Hardy maincrop types (Lancelot, Large American Flag, Tadorna) stand through fall and light freezes and overwinter in milder zones, roughly zone 7 and warmer, a zone lower under mulch. Very hardy types (Bandit, Giant Musselburgh) stand hard winters, roughly zone 5 to 6 and warmer, again hedged with mulch and snow cover. UMN reports some varieties take temperatures near 20°F without harm, and RHS confirms hardy winter leeks stand the coldest weather unprotected, sweetening with frost. These are hedged ranges, not hard cutoffs: microclimate, mulch, and a hard-freeze year all shift the line, so the model states viability as a range and leaves the per-zone call to the app.",
+    "sources": [
+     "umn_ext",
+     "rhs",
+     "cornell_ext",
+     "usu_ext"
+    ],
+    "anchoring_urls": {
+     "umn_ext": {
+      "url": "https://extension.umn.edu/vegetables/growing-leeks",
+      "verified": "2026-07-14"
+     },
+     "rhs": {
+      "url": "https://www.rhs.org.uk/vegetables/leeks/grow-your-own",
+      "verified": "2026-07-14"
+     },
+     "cornell_ext": {
+      "url": "http://vegvariety.cce.cornell.edu/main/showVarieties.php?searchCriteria=leek",
+      "verified": "2026-07-14"
+     },
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+      "verified": "2026-07-14"
+     }
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='leek')].gating_factors",
+   "from": [],
+   "value": [
+    "winter_hardiness"
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties",
+   "from": {
+    "recommended": [
+     {
+      "name": "King Richard",
+      "use": "early fresh use",
+      "season": "summer to early fall",
+      "recommended_note": "A fast, tall early leek that sizes up in roughly 75 to 100 days, good for a late-summer and fall harvest. Less cold-hardy than the winter types, so use it before hard freezes."
+     },
+     {
+      "name": "Lancelot",
+      "use": "all-purpose",
+      "season": "fall",
+      "recommended_note": "A reliable, vigorous mid-season leek for fall harvest, widely adapted and a good first choice if you are unsure."
+     },
+     {
+      "name": "Large American Flag",
+      "use": "all-purpose heirloom",
+      "season": "fall",
+      "recommended_note": "Also sold as Broad London, a dependable open-pollinated standard for fall harvest with thick shanks. The USU-listed classic for home gardens."
+     },
+     {
+      "name": "Tadorna",
+      "use": "fall to early winter",
+      "season": "fall to early winter",
+      "recommended_note": "A hardy, uniform leek that stands well into cold weather, bridging the fall and overwintering windows."
+     },
+     {
+      "name": "Bandit",
+      "use": "overwintering",
+      "season": "winter to spring",
+      "recommended_note": "A very cold-hardy, blue-green overwintering leek (the Blauwgroene Winter type) that stands through winter into spring in milder zones. Slow and late, but the most weather-tough choice."
+     },
+     {
+      "name": "Giant Musselburgh",
+      "use": "overwintering heirloom",
+      "season": "late fall to winter",
+      "recommended_note": "A hardy old Scottish heirloom with broad, mild shanks that stands cold well, a traditional pick for a winter standing crop."
+     }
+    ],
+    "note_seasoned": "Choose by season first. Early or summer types (King Richard) are fast and tall but less hardy, for late-summer and fall use. Maincrop types (Lancelot, Large American Flag, Tadorna) carry the main fall harvest. Overwintering types (Bandit, Giant Musselburgh) are slower, shorter, and blue-green but the most cold-hardy, bred to stand in the ground through winter into spring. Matching variety to how late you want to harvest matters far more for leeks than for onions, since leeks have no day-length requirement.",
+    "note_beginner": "Pick a leek by when you want to harvest. Early types like King Richard grow fast for late summer and fall but are less hardy. Maincrop types like Lancelot or American Flag give the main fall crop. Overwintering types like Bandit or Giant Musselburgh are tougher and slower, made to stand in the garden through winter so you can dig them up fresh in the cold months. Unlike onions, leeks do not care about day length, so just match the type to your season.",
+    "sources": [
+     "usu_ext",
+     "rhs",
+     "uf_ifas"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+      "verified": "2026-06-29"
+     },
+     "rhs": {
+      "url": "https://www.rhs.org.uk/vegetables/leeks/grow-your-own",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas": {
+      "url": "https://ask.ifas.ufl.edu/publication/HS1388",
+      "verified": "2026-06-29"
+     }
+    }
+   },
+   "value": {
+    "recommended": [
+     {
+      "id": "king-richard",
+      "name": "King Richard",
+      "maturity_class": "early",
+      "is_reference": false,
+      "days_to_maturity": 85,
+      "cold_hardiness_class": "tender",
+      "use": "early fresh use",
+      "confidence_tier": "T1",
+      "note_beginner": "The fast early leek: it sizes up in about 85 days from transplant, giving tall, tender stems for late summer and fall. King Richard is less cold hardy than the winter types, so plan to use it before hard freezes rather than leaving it standing through winter.",
+      "note_seasoned": "An early, quick-sizing summer-to-fall leek, about 85 days from transplant (Cornell trial). It is the tender member of the set, best used before hard freezes rather than overwintered. Useful for a first harvest while the maincrop and overwintering types size up behind it.",
+      "sources": [
+       "usu_ext",
+       "cornell_ext"
+      ],
+      "anchoring_urls": {
+       "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+        "verified": "2026-07-14"
+       },
+       "cornell_ext": {
+        "url": "https://rvpadmin.cce.cornell.edu/uploads/doc_944.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     },
+     {
+      "id": "lancelot",
+      "name": "Lancelot",
+      "maturity_class": "mid",
+      "is_reference": true,
+      "days_to_maturity": 100,
+      "cold_hardiness_class": "hardy",
+      "use": "all-purpose",
+      "confidence_tier": "T1",
+      "note_beginner": "A reliable, vigorous maincrop leek for fall harvest, about 100 days from transplant. Lancelot is widely adapted and hardy enough to stand into cold weather, which makes it a good first choice if you are not sure what to grow.",
+      "note_seasoned": "The default maincrop pick: vigorous, uniform, and widely adapted, about 100 days from transplant (Cornell). Hardy through fall and light freezes, though not bred to overwinter like Bandit or Giant Musselburgh. If you grow one leek, grow this one.",
+      "sources": [
+       "cornell_ext",
+       "umn_ext"
+      ],
+      "anchoring_urls": {
+       "cornell_ext": {
+        "url": "https://rvpadmin.cce.cornell.edu/uploads/doc_944.pdf",
+        "verified": "2026-07-14"
+       },
+       "umn_ext": {
+        "url": "https://extension.umn.edu/vegetables/growing-leeks",
+        "verified": "2026-07-14"
+       }
+      }
+     },
+     {
+      "id": "large-american-flag",
+      "name": "Large American Flag",
+      "maturity_class": "mid",
+      "is_reference": false,
+      "days_to_maturity": 120,
+      "cold_hardiness_class": "hardy",
+      "use": "all-purpose heirloom",
+      "confidence_tier": "T2",
+      "note_beginner": "A dependable open-pollinated standard, also sold as Broad London, with thick shanks for fall harvest in about 120 days from transplant. It is the classic home-garden leek that Utah State and other extension guides still recommend.",
+      "note_seasoned": "The old open-pollinated standard (sold as Broad London), thick-shanked and dependable for fall, roughly 120 days from transplant. Hardy into cold weather; a maincrop workhorse rather than a dedicated overwinterer. USU-listed.",
+      "sources": [
+       "usu_ext",
+       "cornell_ext"
+      ],
+      "anchoring_urls": {
+       "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+        "verified": "2026-07-14"
+       },
+       "cornell_ext": {
+        "url": "http://vegvariety.cce.cornell.edu/main/showVarieties.php?searchCriteria=leek",
+        "verified": "2026-07-14"
+       }
+      }
+     },
+     {
+      "id": "tadorna",
+      "name": "Tadorna",
+      "maturity_class": "mid",
+      "is_reference": false,
+      "days_to_maturity": 110,
+      "cold_hardiness_class": "hardy",
+      "use": "fall to early winter",
+      "confidence_tier": "T1",
+      "note_beginner": "A hardy, uniform leek that holds well as the weather turns cold, about 110 days from transplant. Tadorna bridges the gap between the fall maincrop types and the true overwinterers, so you can keep harvesting into early winter.",
+      "note_seasoned": "A hardy, uniform Dutch maincrop, about 110 days from transplant (Cornell trial), that stands well into cold and bridges the fall-to-overwintering window. Tougher than the plain fall types but stops short of Bandit or Giant Musselburgh for deep-winter standing.",
+      "sources": [
+       "cornell_ext",
+       "rhs"
+      ],
+      "anchoring_urls": {
+       "cornell_ext": {
+        "url": "https://rvpadmin.cce.cornell.edu/uploads/doc_944.pdf",
+        "verified": "2026-07-14"
+       },
+       "rhs": {
+        "url": "https://www.rhs.org.uk/vegetables/leeks/grow-your-own",
+        "verified": "2026-07-14"
+       }
+      }
+     },
+     {
+      "id": "bandit",
+      "name": "Bandit",
+      "maturity_class": "late",
+      "is_reference": false,
+      "days_to_maturity": 120,
+      "cold_hardiness_class": "very_hardy",
+      "use": "overwintering",
+      "confidence_tier": "T1",
+      "note_beginner": "The toughest overwintering leek here: a very cold hardy, blue-green type (the Blauwgroene Winter strain) that stands in the garden through winter into spring in milder zones. It is slow and late, about 120 days from transplant, but it is the one to grow to dig leeks fresh in the cold months.",
+      "note_seasoned": "A very hardy, blue-green overwintering leek (Blauwgroene Winter, RHS AGM as Bandit), late and slow at about 120 days from transplant (Cornell trial) but the most weather-tough of the set. It stands hard winters into spring where the class is viable; the headline overwinterer.",
+      "sources": [
+       "rhs",
+       "cornell_ext"
+      ],
+      "anchoring_urls": {
+       "rhs": {
+        "url": "https://www.rhs.org.uk/vegetables/leeks/grow-your-own",
+        "verified": "2026-07-14"
+       },
+       "cornell_ext": {
+        "url": "https://rvpadmin.cce.cornell.edu/uploads/doc_944.pdf",
+        "verified": "2026-07-14"
+       }
+      }
+     },
+     {
+      "id": "giant-musselburgh",
+      "name": "Giant Musselburgh",
+      "maturity_class": "late",
+      "is_reference": false,
+      "days_to_maturity": 110,
+      "cold_hardiness_class": "very_hardy",
+      "use": "overwintering heirloom",
+      "confidence_tier": "T2",
+      "note_beginner": "A hardy old Scottish heirloom with broad, mild shanks that takes cold well, about 110 days from transplant. It is a traditional pick for a winter standing crop, an open-pollinated alternative to Bandit if you want to save seed or grow a heritage variety.",
+      "note_seasoned": "A broad-shanked Scottish heirloom, open-pollinated, very hardy and traditional for a winter standing crop, roughly 110 days from transplant. The heritage overwinterer alongside Bandit: milder flavored, a touch faster, and seed-saveable.",
+      "sources": [
+       "cornell_ext",
+       "rhs"
+      ],
+      "anchoring_urls": {
+       "cornell_ext": {
+        "url": "http://vegvariety.cce.cornell.edu/main/showVarieties.php?searchCriteria=leek",
+        "verified": "2026-07-14"
+       },
+       "rhs": {
+        "url": "https://www.rhs.org.uk/vegetables/leeks/grow-your-own",
+        "verified": "2026-07-14"
+       }
+      }
+     }
+    ],
+    "note_seasoned": "Choose by season first. Early or summer types (King Richard) are fast and tall but less hardy, for late-summer and fall use. Maincrop types (Lancelot, Large American Flag, Tadorna) carry the main fall harvest. Overwintering types (Bandit, Giant Musselburgh) are slower, shorter, and blue-green but the most cold-hardy, bred to stand in the ground through winter into spring. Matching variety to how late you want to harvest matters far more for leeks than for onions, since leeks have no day-length requirement.",
+    "note_beginner": "Pick a leek by when you want to harvest. Early types like King Richard grow fast for late summer and fall but are less hardy. Maincrop types like Lancelot or American Flag give the main fall crop. Overwintering types like Bandit or Giant Musselburgh are tougher and slower, made to stand in the garden through winter so you can dig them up fresh in the cold months. Unlike onions, leeks do not care about day length, so just match the type to your season.",
+    "sources": [
+     "usu_ext",
+     "rhs",
+     "uf_ifas"
+    ],
+    "anchoring_urls": {
+     "usu_ext": {
+      "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+      "verified": "2026-06-29"
+     },
+     "rhs": {
+      "url": "https://www.rhs.org.uk/vegetables/leeks/grow-your-own",
+      "verified": "2026-06-29"
+     },
+     "uf_ifas": {
+      "url": "https://ask.ifas.ufl.edu/publication/HS1388",
+      "verified": "2026-06-29"
+     }
+    }
+   }
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='leek')].description_beginner",
+   "from": "A leek is a mild, sweet relative of the onion, but instead of a bulb you grow and eat the long white stem. Leeks take a long time, so most gardeners start them indoors in late winter and plant them deep, then pull soil up around the stems to keep the bottom part white and tender. The best thing about leeks is that they handle cold: they stand right in the garden through frost and even taste sweeter for it, so you can dig them up fresh from fall into winter instead of all at one time.",
+   "value": "A leek is a mild, sweet relative of the onion, but instead of a bulb you grow and eat the long white stem. Leeks take a long time, so most gardeners start them indoors in late winter and plant them deep, then pull soil up around the stems to keep the bottom part white and tender. The best thing about leeks is that they handle cold: they stand right in the garden through frost and even taste sweeter for it, so you can dig them up fresh from fall into winter instead of all at one time. Which leek you plant sets how late you can harvest: fast early types like King Richard are for late summer and fall, while very hardy overwintering types like Bandit and Giant Musselburgh are bred to stand out in the cold and be dug through winter."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='leek')].description_seasoned",
+   "from": "Leek (Allium ampeloprasum) is the mild, sweet allium grown not for a bulb but for its long, thick, blanched white stem, or shank. It is a patient, long-season crop, usually started indoors in late winter and transplanted deep so soil can be earthed up around the stem to blanch it. Its great virtue is cold-hardiness: leeks stand in the garden through hard frost, sweetening with the cold, and are dug fresh from fall into winter rather than harvested all at once. There is no bulbing and no day-length requirement, so unlike onions you simply match the variety, early or overwintering, to how late you want to harvest.",
+   "value": "Leek (Allium ampeloprasum) is the mild, sweet allium grown not for a bulb but for its long, thick, blanched white stem, or shank. It is a patient, long-season crop, usually started indoors in late winter and transplanted deep so soil can be earthed up around the stem to blanch it. Its great virtue is cold-hardiness: leeks stand in the garden through hard frost, sweetening with the cold, and are dug fresh from fall into winter rather than harvested all at once. There is no bulbing and no day-length requirement, so unlike onions you simply match the variety to how late you want to harvest: an early tender type like King Richard for summer and fall, hardy maincrop types like Lancelot through the fall, and very hardy overwinterers like Bandit or Giant Musselburgh to stand through winter into spring."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='leek')].verification_status.source_set",
+   "from": [
+    "rhs",
+    "uc_ipm",
+    "uc_mg",
+    "uf_ifas",
+    "umd_ext",
+    "umn_ext",
+    "usu_ext"
+   ],
+   "value": [
+    "cornell_ext",
+    "rhs",
+    "uc_ipm",
+    "uc_mg",
+    "uf_ifas",
+    "umd_ext",
+    "umn_ext",
+    "usu_ext"
+   ]
+  }
+ ]
+}
