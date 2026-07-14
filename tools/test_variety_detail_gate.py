@@ -151,6 +151,54 @@ assert any("days_to_maturity" in x for x in variety_violations(pcrop([pvar(days_
 fast_late = pvar(id="q", name="Q", days_to_maturity=80, maturity_class="late", is_reference=False)
 assert any("late" in w for w in variety_warnings(pcrop([pvar(), fast_late]))), variety_warnings(pcrop([pvar(), fast_late]))
 
+def hvar(**over):
+    v = {"id": "lancelot", "name": "Lancelot", "maturity_class": "mid", "is_reference": True,
+         "confidence_tier": "T1", "note_beginner": "b", "note_seasoned": "s", "sources": ["cornell_ext"],
+         "days_to_maturity": 110, "cold_hardiness_class": "hardy", "use": "all-purpose"}
+    v.update(over)
+    return v
+
+def hcrop(varieties, slug="leek"):
+    return {"slug": slug, "variety_archetype": "hardiness_annual", "days_to_maturity": [90, 150],
+            "varieties": {"recommended": varieties}}
+
+_kingrichard = hvar(id="king-richard", name="King Richard", cold_hardiness_class="tender",
+                    days_to_maturity=80, maturity_class="early", use="early fresh use", is_reference=False)
+
+# dispatch
+assert archetype(hcrop([hvar()])) == "hardiness_annual"
+
+# clean hardiness crop -> no violations
+H_CLEAN = hcrop([hvar(), _kingrichard])
+assert variety_violations(H_CLEAN) == [], variety_violations(H_CLEAN)
+
+# hardiness does NOT require bean traits, tree fields, or day_length_type
+assert not any(("seed_type" in v or "bloom_group" in v or "day_length_type" in v)
+               for v in variety_violations(H_CLEAN)), variety_violations(H_CLEAN)
+
+# bad cold_hardiness_class enum -> violation
+assert any("cold_hardiness_class" in v
+           for v in variety_violations(hcrop([hvar(cold_hardiness_class="arctic"), _kingrichard])))
+
+# missing required hardiness field (cold_hardiness_class / use) -> violation
+for f in ("cold_hardiness_class", "use"):
+    v = hvar(); del v[f]
+    assert any(f in x for x in variety_violations(hcrop([v, _kingrichard]))), (f,)
+
+# hardiness IS a DTM archetype: missing DTM -> violation; absurd DTM -> violation
+v = hvar(); del v["days_to_maturity"]
+assert any("days_to_maturity" in x for x in variety_violations(hcrop([v, _kingrichard])))
+assert any("days_to_maturity" in x for x in variety_violations(hcrop([hvar(days_to_maturity=900), _kingrichard])))
+
+# min_temp_f: NEGATIVE is valid (very hardy), absurd out-of-band bounces
+assert variety_violations(hcrop([hvar(cold_hardiness_class="very_hardy", min_temp_f=-10), _kingrichard])) == [], \
+    variety_violations(hcrop([hvar(cold_hardiness_class="very_hardy", min_temp_f=-10), _kingrichard]))
+assert any("min_temp_f" in v for v in variety_violations(hcrop([hvar(min_temp_f=200), _kingrichard])))
+
+# class/DTM coherence warning applies (fastest labeled 'late')
+fast_late = hvar(id="q", name="Q", days_to_maturity=80, maturity_class="late", is_reference=False)
+assert any("late" in w for w in variety_warnings(hcrop([hvar(), fast_late]))), variety_warnings(hcrop([hvar(), fast_late]))
+
 # 0. off-scope crop (no maturity_class anywhere) -> silent, even with junk
 off = {"slug": "bell-pepper", "days_to_maturity": [60, 90],
        "varieties": {"recommended": [{"name": "X", "days_to_maturity": 999}]}}

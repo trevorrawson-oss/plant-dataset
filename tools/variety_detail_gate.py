@@ -51,17 +51,24 @@ TREE_ENUMS = (("bloom_group", BLOOM_GROUP),)
 DAY_LENGTH = {"long_day", "intermediate_day", "short_day"}
 PHOTOPERIOD_TRAITS = ("day_length_type", "use")
 PHOTOPERIOD_ENUMS = (("day_length_type", DAY_LENGTH),)
+# hardiness_annual (leek) archetype
+COLD_HARDINESS = {"tender", "hardy", "very_hardy"}
+HARDINESS_TRAITS = ("cold_hardiness_class", "use")
+HARDINESS_ENUMS = (("cold_hardiness_class", COLD_HARDINESS),)
+MIN_TEMP_FLOOR, MIN_TEMP_CEIL = -40, 60   # plausible low-temp band; ALLOWS negatives (very hardy)
 
 # archetype dispatch: required trait block + enum block per archetype; DTM_ARCHETYPES carry days_to_maturity
-ARCHETYPE_TRAITS = {"annual_dtm": ANNUAL_TRAITS, "photoperiod_annual": PHOTOPERIOD_TRAITS, "tree_fruit": TREE_TRAITS}
-ARCHETYPE_ENUMS = {"annual_dtm": ANNUAL_ENUMS, "photoperiod_annual": PHOTOPERIOD_ENUMS, "tree_fruit": TREE_ENUMS}
-DTM_ARCHETYPES = ("annual_dtm", "photoperiod_annual")
+ARCHETYPE_TRAITS = {"annual_dtm": ANNUAL_TRAITS, "photoperiod_annual": PHOTOPERIOD_TRAITS,
+                    "hardiness_annual": HARDINESS_TRAITS, "tree_fruit": TREE_TRAITS}
+ARCHETYPE_ENUMS = {"annual_dtm": ANNUAL_ENUMS, "photoperiod_annual": PHOTOPERIOD_ENUMS,
+                   "hardiness_annual": HARDINESS_ENUMS, "tree_fruit": TREE_ENUMS}
+DTM_ARCHETYPES = ("annual_dtm", "photoperiod_annual", "hardiness_annual")
 
 
 def archetype(crop):
     """Crop declares its variety archetype; absence defaults to annual_dtm (dry-bean stays untouched)."""
     a = crop.get("variety_archetype")
-    return a if a in ("annual_dtm", "photoperiod_annual", "tree_fruit") else "annual_dtm"
+    return a if a in ("annual_dtm", "photoperiod_annual", "hardiness_annual", "tree_fruit") else "annual_dtm"
 
 
 def _variety_objs(crop):
@@ -114,8 +121,10 @@ def variety_violations(crop):
             ref_count += 1
         if arch in DTM_ARCHETYPES:
             V += _dtm_checks(slug, nm, x, season_only)
-        elif arch == "tree_fruit":
+        if arch == "tree_fruit":
             V += _tree_checks(slug, nm, x)
+        elif arch == "hardiness_annual":
+            V += _hardiness_checks(slug, nm, x)
     if ref_count != 1:
         V.append(f"{slug}: exactly one variety must have is_reference true (found {ref_count})")
     dupes = sorted({i for i in ids if ids.count(i) > 1})
@@ -158,6 +167,16 @@ def _tree_checks(slug, nm, x):
     sf = x.get("self_fruitful")
     if sf is not None and sf not in SELF_FRUITFUL:
         V.append(f"{slug}/{nm}: self_fruitful {sf!r} not in {sorted(SELF_FRUITFUL)}")
+    return V
+
+
+def _hardiness_checks(slug, nm, x):
+    """min_temp_f (optional): an int in [MIN_TEMP_FLOOR, MIN_TEMP_CEIL]. ALLOWS negatives for very hardy
+    types -- do NOT reuse the tree positive-int chill validator."""
+    V = []
+    mt = x.get("min_temp_f")
+    if mt is not None and (not _int(mt) or not (MIN_TEMP_FLOOR <= mt <= MIN_TEMP_CEIL)):
+        V.append(f"{slug}/{nm}: min_temp_f {mt!r} must be an int in [{MIN_TEMP_FLOOR},{MIN_TEMP_CEIL}]")
     return V
 
 
