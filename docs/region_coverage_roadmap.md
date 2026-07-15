@@ -177,10 +177,18 @@ authoring for these crops); not blocking the widen.
 The taxonomy deliberately special-cases marquee warm states; everywhere else gets generic
 frost-anchored zone dates. Where that is honest, GENERIC-OK is the ruling, recorded here --
 not silence. First reads (each to be confirmed in its own pass): maritime PNW = NOT ok
-(cool summers invert the assumptions; item 4). Mid-Atlantic z8 = probably ok (humid
-continental-lite; generic frost anchoring is close). Mid-South z8 = probably ok. NV/UT
-z8-9 = probably ok (warm_arid adjacency worth a look). AK z8 (13 ZIPs, maritime) =
-probably ok at this scale.
+(cool summers invert the assumptions; item 4). **Mid-Atlantic z8 (Raleigh NC marquee) --
+CONDITIONAL-GO (ruled 2026-07-15).** Real Raleigh frost normals (NC State Extension: last
+frost Apr 8, first frost Oct 30) plus a 3-crop T1 basket show tree fruit (apple, chill clears
+the whole canonical variety range) and berry (blueberry, genuine NC-documented highbush/
+rabbiteye range) are honestly served by generic frost-anchored dates; the one real gap is
+warm-season annuals (cherry-tomato) -- NC State's own planting calendar and VCE 426-331 both
+document a second (fall) planting window that the naive single-cycle deriver omits, the same
+`heat_pause`-shaped gap already modeled for other hot z8/z9 belts. Not a suitability flip, so
+NEW-REGION is not warranted; caveat recorded for any future authoring pass. Full sourcing and
+naive-vs-real detail: `docs/reviews/notes/2026-07-15/tier2_mid_atlantic_ruling.md`. Mid-South
+z8 = probably ok. NV/UT z8-9 = probably ok (warm_arid adjacency worth a look). AK z8 (13 ZIPs,
+maritime) = probably ok at this scale.
 
 ## Empty-state ZIPs (item 2 detail)
 
