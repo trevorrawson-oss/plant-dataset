@@ -84,6 +84,8 @@ EXCLUDED_KEYS = {
     "drought_tolerance","watering_method","start","day_length_type","recommended_day_length_type",
     "variety_archetype",  # variety pilots (apple 2026-07-11, onion 2026-07-12, leek 2026-07-14): crop-level schema-dispatch enum (annual_dtm|photoperiod_annual|hardiness_annual|tree_fruit) read by variety_detail_gate; structural token, never user-facing prose
     "cold_hardiness_class",  # hardiness_annual archetype (leek variety pilot 2026-07-14): per-variety overwintering-viability enum (tender|hardy|very_hardy) read by variety_detail_gate + overwinter_hardiness_gate; structural token, sibling of day_length_type
+    "bearing_habit",  # berry archetype (berry variety pilot 2026-07-15): per-variety bearing-habit/group enum (june_bearing|day_neutral|...) read by variety_detail_gate; structural token, sibling of day_length_type/cold_hardiness_class
+    "berry_group",    # berry archetype (2026-07-15): crop-level berry sub-discriminator enum (strawberry|cane|bush), sibling of variety_archetype
     # ENUM / NOTIFICATION + AUDIT MACHINERY:
     "audience","offset_from","trigger","stage","measures","cause","author",
     "last_reviewed_operation","overrides_tip_id","verified_date","recommended_rootstock",
@@ -185,6 +187,12 @@ def ruled_categorical(pat, k):
         # since it's an enum token that's categorical at ANY path, not just varieties.recommended.
         # bloom_window_relative (list) / bloom_duration_days,chill_hours_required (int) / triploid
         # (bool) are non-string, out of A25 scope; note_beginner/note_seasoned auto-rule by suffix.
+    if k == "hero_description" and "varieties.recommended" in pat:
+        return True  # berry variety pilot (Trevor 2026-07-15): the single-register per-variety MARQUEE hero
+        # line, one form read identically by both registers (the variety analog of the ruled pet_safe.note
+        # / saucer_practice single-register consumer lines), additive above the dual-register note_beginner/
+        # note_seasoned detail. Path-scoped to varieties.recommended; not a categorical token, an intentional
+        # single-register hero. Standing common-core going forward (backfilled onto the 4 prior pilots).
     return False
 
 # --- DEFERRED by design: companions array-split provenance (inventory §5 -- its own

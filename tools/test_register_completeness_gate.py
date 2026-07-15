@@ -182,4 +182,13 @@ assert not _is_ruled(P_rec, "totally_new_prose_key"), "unrelated key must stay u
 assert ruled_categorical(P_rec, "self_fruitful"), "self_fruitful must be ruled_categorical-scoped"
 assert not ruled_categorical(P_other, "self_fruitful"), "self_fruitful ruled_categorical path guard holds"
 
+# ---- berry variety pilot (2026-07-15): bearing_habit, berry_group ruled globally; hero_description path-scoped ----
+# berry enum tokens ruled globally (siblings of cold_hardiness_class / day_length_type / variety_archetype)
+assert _is_ruled("$.crops[?(@.slug=='strawberry')].varieties.recommended[0].bearing_habit", "bearing_habit")
+assert _is_ruled("$.crops[?(@.slug=='strawberry')].berry_group", "berry_group")
+# hero_description ruled path-scoped to varieties.recommended (single-register marquee, analog of pet_safe.note)
+assert _is_ruled("$.crops[?(@.slug=='strawberry')].varieties.recommended[0].hero_description", "hero_description")
+# NOT ruled elsewhere (guard the path scope)
+assert not _is_ruled("$.crops[?(@.slug=='strawberry')].hero_description", "hero_description")
+
 print("PASS register_completeness_gate (per-crop function)")
