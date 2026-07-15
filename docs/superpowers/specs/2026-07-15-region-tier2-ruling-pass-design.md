@@ -32,12 +32,19 @@ populated, its z8 sourcing is entirely Deep South (`uga_b577`, `uga_calendar`, `
 looked alarming but is a dead end: `STATE_HISTORY.md` (the June cert sweep) records `zones{}` as
 explicitly Trevor-ruled **"backend/UNRENDERED, LEAVE"** -- the app never shows it.
 
-The real no-region experience is the **standard `annual_calendar` deriver** (`tools/annual_calendar.py`)
-computing purely off a zone's frost dates, with no region-specific climate adjustment -- the exact
-mechanism PNW and RGV existed to replace for their zones. This confirms the RGV/PNW spot-check
-method (run the deriver for a marquee city's real frost dates, compare against a real regional T1
-extension calendar) is the right comparison for this pass too, now grounded in the actual mechanism
-rather than the legacy field.
+`tools/annual_calendar.py` itself only renders an already-resolved set of `plant_out`/`start_indoors`/
+`harvest` windows into the 12-month `calendar[]` token array -- it does not take frost dates directly.
+PNW's own arc hand-authored those windows from real WSU/OSU sources per crop/class; the deriver just
+computed the display tokens from them. There is no verifiable, dataset-side record of exactly what
+plant-app renders for a ZIP with no matching region (`zones{}` being dead rules that field out as an
+answer for every zone, not just 8+). Rather than reverse-engineer unverifiable app internals, **this
+arc's comparison baseline is a deliberately naive, region-blind construction**: build `plant_out`/
+`start_indoors` windows for a crop directly from ITS OWN generic biology fields (`weeks_indoors`,
+`days_to_maturity`, `frost_tolerance_f`) anchored to the belt's real frost dates, exactly the kind of
+zone-only assumption a region-less experience embodies, run it through `tools/annual_calendar.py`,
+and compare the result against the belt's real T1 regional guidance. This mirrors the framing PNW's
+own writeup used ("generic zone dates that assume a hot summer the maritime PNW does not have") without
+claiming to reproduce plant-app's private client logic byte-for-byte.
 
 ## 3. Scope: the 5 belts
 
@@ -62,12 +69,24 @@ For each belt, in order:
 1. **Pick the marquee anchor.** The highest-ZIP-count state/city in the belt (e.g. Raleigh/Norfolk
    NC for mid-Atlantic). Get its real last/first frost dates (NOAA or the state extension's own
    figures, same standard PNW used for Sea-Tac/Astoria).
-2. **Run the standard deriver** (`tools/annual_calendar.py`) fed those frost dates, for a small
-   representative crop basket spanning the classes that actually matter -- not one bellwether:
-   - always one `frost_anchored` annual (a widely-grown, well-documented crop),
-   - always one chill-gated tree fruit (every one of these 5 belts genuinely grows tree fruit,
-     and PNW's biggest surprise -- the A3 chill/fruit-set flip -- was exactly this class),
-   - plus a berry or cool-season crop where regionally relevant.
+2. **Build the naive-baseline comparison** for a small representative crop basket spanning the
+   classes that actually matter -- not one bellwether:
+   - **one `frost_anchored` annual** (a widely-grown, well-documented crop): construct naive
+     `plant_out`/`start_indoors` windows from the crop's own generic `weeks_indoors` /
+     `days_to_maturity` / `frost_tolerance_f` fields anchored to the marquee city's real frost
+     dates, run through `tools/annual_calendar.py`, and compare the resulting `calendar[]` and
+     windows against the belt's real T1 planting calendar for that crop.
+   - **one chill-gated tree fruit** (every one of these 5 belts genuinely grows tree fruit, and
+     PNW's biggest surprise -- the A3 chill/fruit-set flip -- was exactly this class): there is no
+     chill data at all today for a no-region ZIP (`region_chill_delivered` is a per-region table;
+     a belt with no region has zero entries), so the comparison is finding a real published
+     chill-hour estimate for the marquee city (a university extension chill map/tool) and checking
+     whether it would classify the crop `fruits_reliably` / `marginal` / `survives_no_fruit`
+     against its `chill_hours_required` floor -- i.e. whether the missing chill data is
+     consequential (the verdict would clearly differ from a naive same-zone assumption) or moot
+     (the belt's chill so clearly clears or fails the floor that a bespoke region would not change
+     the story).
+   - plus a berry or cool-season crop where regionally relevant, using the annual method above.
 3. **Find the belt's real T1 extension calendar** for the same crops. Reuse already-catalogued
    sources where they exist (`vce_426_331`/`ncsu_ext` for mid-Atlantic, `usu_ext` for Utah,
    `unr_ext` for Nevada). **Where no T1 source is yet catalogued -- mid-South (AR/OK/TN/MO) and
