@@ -1,0 +1,480 @@
+{
+ "base_sha": "8dd4ac4c3b543bfbb3779fcf4fcafe0d4f34f3942476c6b21272e5c687d21503",
+ "patches": [
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='strawberry')].variety_archetype",
+   "value": "berry"
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='strawberry')].berry_group",
+   "value": "strawberry"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='strawberry')].varieties.recommended",
+   "from": [
+    {
+     "name": "Honeoye",
+     "type": "june_bearing",
+     "days_or_season": "early-season June-bearer",
+     "use": "fresh, freezing, jam",
+     "recommended_note": "A hardy, productive early June-bearer that does well in cold-winter matted rows. Bright, firm, slightly tart fruit."
+    },
+    {
+     "name": "Earliglow",
+     "type": "june_bearing",
+     "days_or_season": "early-season June-bearer",
+     "use": "fresh, jam",
+     "recommended_note": "The flavor standard among early June-bearers. Small to medium deep-red berries; modest yield but excellent taste."
+    },
+    {
+     "name": "Jewel",
+     "type": "june_bearing",
+     "days_or_season": "mid- to late-season June-bearer",
+     "use": "fresh, freezing",
+     "recommended_note": "Large, glossy, firm berries on a vigorous plant. Productive, though prone to red stele and verticillium on poorly drained sites."
+    },
+    {
+     "name": "Allstar",
+     "type": "june_bearing",
+     "days_or_season": "mid- to late-season June-bearer",
+     "use": "fresh",
+     "recommended_note": "Very large, light-colored, sweet berries with a long mid- to late-season harvest. A reliable, disease-tolerant garden choice."
+    },
+    {
+     "name": "Albion",
+     "type": "day_neutral",
+     "days_or_season": "summer through fall",
+     "use": "fresh",
+     "recommended_note": "A day-neutral that fruits the first season and bears steadily into fall. Large, conical, firm, sweet-tart berries; excellent in raised beds and containers."
+    },
+    {
+     "name": "Seascape",
+     "type": "day_neutral",
+     "days_or_season": "summer through fall",
+     "use": "fresh, freezing",
+     "recommended_note": "A widely adapted day-neutral with large, good-quality fruit across the season. Forgiving and well suited to containers."
+    },
+    {
+     "name": "Tristar",
+     "type": "day_neutral",
+     "days_or_season": "summer through fall",
+     "use": "fresh",
+     "recommended_note": "A disease-resistant day-neutral, sweet and dependable. A long-standing home-garden standard for season-long picking."
+    },
+    {
+     "name": "Ozark Beauty",
+     "type": "everbearing",
+     "days_or_season": "early summer and late summer",
+     "use": "fresh, jam",
+     "recommended_note": "A classic everbearer giving two lighter crops, one in early summer and one in late summer. Good flavor; less total yield than a day-neutral."
+    },
+    {
+     "name": "Quinault",
+     "type": "everbearing",
+     "days_or_season": "early summer and late summer",
+     "use": "fresh",
+     "recommended_note": "A soft, sweet everbearer that produces some fruit its first year. Tender berries best eaten fresh; can be grown without winter cover in milder areas."
+    }
+   ],
+   "value": [
+    {
+     "id": "honeoye",
+     "name": "Honeoye",
+     "bearing_habit": "june_bearing",
+     "maturity_class": "early",
+     "use": "fresh, freezing, jam",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "The dependable cold-climate workhorse, first to ripen and quick to fill a bowl.",
+     "note_beginner": "One of the earliest berries of the season and very easy to grow, even where winters are cold. The fruit is bright red, firm, and a little tart, which makes it as good in a cobbler or freezer bag as it is fresh.",
+     "note_seasoned": "A hardy, heavy-yielding early June-bearer that thrives in cold-winter matted rows. Bright, firm, slightly tart fruit; it carries little disease resistance, so keep it off poorly drained sites where red stele and verticillium take hold.",
+     "sources": [
+      "umn_ext",
+      "cornell_ext"
+     ],
+     "anchoring_urls": {
+      "umn_ext": {
+       "url": "https://extension.umn.edu/strawberry-farming/strawberry-varieties-and-purchasing-plants",
+       "verified": "2026-07-15"
+      },
+      "cornell_ext": {
+       "url": "https://cceoneida.com/resources/guide-to-growing-strawberries",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "earliglow",
+     "name": "Earliglow",
+     "bearing_habit": "june_bearing",
+     "maturity_class": "early",
+     "use": "fresh, jam",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "The deep-red benchmark every other early berry has been measured against for decades.",
+     "note_beginner": "If you want the best-tasting early berry, this is the classic pick. The deep-red fruit is small to medium and the harvest is on the modest side, but the flavor is hard to beat, fresh or in jam.",
+     "note_seasoned": "The flavor standard among early June-bearers, with good resistance to red stele and verticillium. Yields are modest and the early bloom can be caught by a late frost, so site it where cold air drains away from the planting.",
+     "sources": [
+      "umd_ext",
+      "umn_ext"
+     ],
+     "anchoring_urls": {
+      "umd_ext": {
+       "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+       "verified": "2026-07-15"
+      },
+      "umn_ext": {
+       "url": "https://extension.umn.edu/strawberry-farming/strawberry-varieties-and-purchasing-plants",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "jewel",
+     "name": "Jewel",
+     "bearing_habit": "june_bearing",
+     "maturity_class": "mid",
+     "use": "fresh, freezing",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "The mid-season crowd-pleaser: big, beautiful berries and a heavy, reliable crop.",
+     "note_beginner": "A popular mid-season variety that gives you large, glossy, firm berries on a strong plant. Give it well-drained soil and it will reward you with a heavy crop for fresh eating and freezing.",
+     "note_seasoned": "Large, firm, high-quality fruit on a vigorous mid-season plant, and a longtime home and market standard. It has little disease resistance, so avoid poorly drained sites where red stele and verticillium can set in.",
+     "sources": [
+      "umn_ext",
+      "umd_ext"
+     ],
+     "anchoring_urls": {
+      "umn_ext": {
+       "url": "https://extension.umn.edu/strawberry-farming/strawberry-varieties-and-purchasing-plants",
+       "verified": "2026-07-15"
+      },
+      "umd_ext": {
+       "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "allstar",
+     "name": "Allstar",
+     "bearing_habit": "june_bearing",
+     "maturity_class": "mid",
+     "use": "fresh",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "The set-and-forget June-bearer: disease-tough, generous, and sweet from June into July.",
+     "note_beginner": "A dependable choice that produces very large, sweet, light-colored berries over a long stretch of the mid to late season. It shrugs off common strawberry diseases, so it is forgiving for a first-time grower.",
+     "note_seasoned": "A USDA release with very large, light-colored, flavorful fruit and a long mid- to late-season harvest. Resistant to both red stele and verticillium wilt, which makes it a reliable, low-worry matted-row choice, though it is a light runner producer.",
+     "sources": [
+      "umd_ext",
+      "cornell_ext"
+     ],
+     "anchoring_urls": {
+      "umd_ext": {
+       "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+       "verified": "2026-07-15"
+      },
+      "cornell_ext": {
+       "url": "https://cceoneida.com/resources/guide-to-growing-strawberries",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "albion",
+     "name": "Albion",
+     "bearing_habit": "day_neutral",
+     "maturity_class": "early",
+     "use": "fresh",
+     "is_reference": true,
+     "confidence_tier": "T1",
+     "hero_description": "The day-neutral benchmark: firm, sweet-tart berries from first summer into fall.",
+     "note_beginner": "A great first strawberry to try. It fruits the very first season and keeps giving you a few berries at a time into fall, and it thrives in raised beds and containers. The berries are large, firm, and sweet-tart.",
+     "note_seasoned": "The leading day-neutral, widely adapted and productive from the planting year into fall as long as temperatures stay below 85°F. Large, conical, firm, sweet-tart fruit; it excels in raised beds and containers, though plant durability is only fair, so refresh the bed every few years.",
+     "sources": [
+      "osu_ext",
+      "umn_ext"
+     ],
+     "anchoring_urls": {
+      "osu_ext": {
+       "url": "https://extension.oregonstate.edu/catalog/ec-1618-strawberry-cultivars-western-oregon-washington",
+       "verified": "2026-07-15"
+      },
+      "umn_ext": {
+       "url": "https://extension.umn.edu/strawberry-farming/strawberry-varieties-and-purchasing-plants",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "seascape",
+     "name": "Seascape",
+     "bearing_habit": "day_neutral",
+     "maturity_class": "early",
+     "use": "fresh, freezing",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "California's easygoing day-neutral, the most productive of the bunch and happy in a pot.",
+     "note_beginner": "An easygoing day-neutral that produces large, good-quality berries throughout the season. It is forgiving and does well in containers, which makes it a friendly choice for a first raised-bed or patio planting.",
+     "note_seasoned": "A widely adapted California day-neutral with large, firm, good-flavored fruit and good plant durability across the season. Often the most productive of the common day-neutrals in trials; well suited to containers and season-long fresh picking.",
+     "sources": [
+      "umd_ext",
+      "osu_ext"
+     ],
+     "anchoring_urls": {
+      "umd_ext": {
+       "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+       "verified": "2026-07-15"
+      },
+      "osu_ext": {
+       "url": "https://extension.oregonstate.edu/catalog/ec-1618-strawberry-cultivars-western-oregon-washington",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "tristar",
+     "name": "Tristar",
+     "bearing_habit": "day_neutral",
+     "maturity_class": "early",
+     "use": "fresh",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "The little day-neutral that punches way above its size on flavor.",
+     "note_beginner": "A sweet, dependable day-neutral that keeps giving you a few berries at a time all season. It resists disease well and is a long-standing favorite for home gardens and containers.",
+     "note_seasoned": "A University of Maryland day-neutral release and a long-running home-garden standard, vigorous and disease-resistant with excellent flavor. Fruit runs small to medium, so it rewards steady feeding and moisture for season-long yield.",
+     "sources": [
+      "umd_ext",
+      "cornell_ext"
+     ],
+     "anchoring_urls": {
+      "umd_ext": {
+       "url": "https://extension.umd.edu/resource/growing-strawberries-home-garden",
+       "verified": "2026-07-15"
+      },
+      "cornell_ext": {
+       "url": "https://cceoneida.com/resources/guide-to-growing-strawberries",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "ozark-beauty",
+     "name": "Ozark Beauty",
+     "bearing_habit": "everbearing",
+     "maturity_class": "early",
+     "use": "fresh, jam",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "The old-school everbearer, prized for flavor in cooler northern gardens.",
+     "note_beginner": "A traditional everbearing strawberry that gives you two smaller crops, one in early summer and one later in the season. The flavor is good, though you will pick fewer berries overall than from a day-neutral.",
+     "note_seasoned": "A classic everbearer that sets a spring and a late-summer crop with a lull between, at lower total yield than a modern day-neutral. Reliable and good-flavored, but soft-fruited and best in cooler northern gardens, since heat cuts the crop short.",
+     "sources": [
+      "osu_ext",
+      "cornell_ext"
+     ],
+     "anchoring_urls": {
+      "osu_ext": {
+       "url": "https://extension.oregonstate.edu/catalog/ec-1618-strawberry-cultivars-western-oregon-washington",
+       "verified": "2026-07-15"
+      },
+      "cornell_ext": {
+       "url": "https://cceoneida.com/resources/guide-to-growing-strawberries",
+       "verified": "2026-07-15"
+      }
+     }
+    },
+    {
+     "id": "quinault",
+     "name": "Quinault",
+     "bearing_habit": "everbearing",
+     "maturity_class": "early",
+     "use": "fresh",
+     "is_reference": false,
+     "confidence_tier": "T1",
+     "hero_description": "A tender, garden-only everbearer you eat warm from the plant, never from a store.",
+     "note_beginner": "An everbearing strawberry that gives you some fruit its very first year. The berries are large, soft, and sweet, best eaten fresh since they do not keep or ship well.",
+     "note_seasoned": "A Washington State University everbearer that bears two moderate crops and can even set fruit on unrooted runners. Berries are large but very soft with only fair durability, best for fresh eating; it can overwinter without cover in milder regions.",
+     "sources": [
+      "osu_ext"
+     ],
+     "anchoring_urls": {
+      "osu_ext": {
+       "url": "https://extension.oregonstate.edu/catalog/ec-1618-strawberry-cultivars-western-oregon-washington",
+       "verified": "2026-07-15"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].varieties.recommended[?(@.id=='black-turtle')].hero_description",
+   "value": "The classic black bean, an Americas heirloom that holds its shape in the pot."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].varieties.recommended[?(@.id=='pinto')].hero_description",
+   "value": "So common it barely needs an introduction, yet endlessly at home in the garden."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].varieties.recommended[?(@.id=='navy')].hero_description",
+   "value": "Built for short seasons, this fast finisher beats the frost with room to spare."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].varieties.recommended[?(@.id=='kidney')].hero_description",
+   "value": "Named for its shape, this red giant needs the whole season to fill out."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='dry-bean')].varieties.recommended[?(@.id=='jacobs-cattle')].hero_description",
+   "value": "New England's speckled heirloom, prettier than most beans have any right to be."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='dorsett-golden')].hero_description",
+   "value": "The apple most desert orchards plant just to keep Anna company."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='anna')].hero_description",
+   "value": "The apple that proved warm winters don't have to mean no apples at all."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='ein-shemer')].hero_description",
+   "value": "Nearly self-sufficient in the orchard, though a neighbor always helps it along."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='zestar')].hero_description",
+   "value": "One of the first apples ready each year, picked in late August up north."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='mcintosh')].hero_description",
+   "value": "This heirloom won't fruit well without a proper cold winter behind it."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='liberty')].hero_description",
+   "value": "A favorite of low-spray and organic growers, bred at Cornell for easy backyard fruit."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='empire')].hero_description",
+   "value": "A McIntosh and Red Delicious cross, sweet and crisp for snacking and good keeping."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='honeycrisp')].hero_description",
+   "value": "The apple whose fame at the grocery store rewired what people expect from an apple."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='gala')].hero_description",
+   "value": "The apple most people meet first, mild enough to make anyone a fan."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='golden-delicious')].hero_description",
+   "value": "Every orchard's diplomat, pollinating almost anything else while making a fine dessert apple too."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='jonagold')].hero_description",
+   "value": "A honeyed giant that offers nothing back to its pollinator partners."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='mutsu')].hero_description",
+   "value": "Also called Crispin at the store, it too needs two pollinizer partners nearby."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='fuji')].hero_description",
+   "value": "Blooms and ripens later than almost anything else, then keeps for months in storage."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='granny-smith')].hero_description",
+   "value": "The bracingly tart green apple that blooms with mid-season trees but ripens long after them."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='pink-lady')].hero_description",
+   "value": "The marathon apple of the orchard, worth the wait if you don't mind an October harvest."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='apple')].varieties.recommended[?(@.id=='dolgo')].hero_description",
+   "value": "Nobody grows this crabapple for its fruit, they grow it to pollinate the whole row."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='onion')].varieties.recommended[?(@.id=='walla-walla')].hero_description",
+   "value": "So sweet and mild it barely lasts past the week you harvest it."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='onion')].varieties.recommended[?(@.id=='yellow-sweet-spanish')].hero_description",
+   "value": "Trades sweetness for pungency, earning a real spot in the winter root cellar."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='onion')].varieties.recommended[?(@.id=='super-star')].hero_description",
+   "value": "Also sold as Sierra Blanca, this onion is forgiving about exactly where you garden."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='onion')].varieties.recommended[?(@.id=='cimarron')].hero_description",
+   "value": "Bred for the central band, where long-day and short-day onions both fall short."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='onion')].varieties.recommended[?(@.id=='texas-1015y-supersweet')].hero_description",
+   "value": "Named for its exact fall seeding date, this Texas A&M sweet onion rewards precise timing."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='onion')].varieties.recommended[?(@.id=='yellow-granex')].hero_description",
+   "value": "The seed behind Georgia's famous Vidalia onions, grown far beyond Vidalia itself."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties.recommended[?(@.id=='king-richard')].hero_description",
+   "value": "The sprinter of the leek patch, ready for the table well before winter."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties.recommended[?(@.id=='lancelot')].hero_description",
+   "value": "If you only grow one leek, make it this dependable maincrop standard."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties.recommended[?(@.id=='large-american-flag')].hero_description",
+   "value": "Also sold as Broad London, this old standby has anchored home gardens for generations."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties.recommended[?(@.id=='tadorna')].hero_description",
+   "value": "A tough Dutch leek that carries the harvest from fall into the first real cold."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties.recommended[?(@.id=='bandit')].hero_description",
+   "value": "When every other leek has given up for the winter, this blue-green type is still standing."
+  },
+  {
+   "op": "add",
+   "json_path": "$.crops[?(@.slug=='leek')].varieties.recommended[?(@.id=='giant-musselburgh')].hero_description",
+   "value": "A seed-saveable Scottish heirloom that still holds its own against modern overwinterers."
+  }
+ ]
+}
