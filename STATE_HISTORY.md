@@ -6,6 +6,12 @@
 
 ---
 
+## 2026-07-15 -- HYGIENE: total_crops 123 -> 125 + berry pilot pushed/bumped/live
+
+Corrected the stale top-level `total_crops` count field 123 -> 125 (`db35a673` -> `c73d7fa`, 1 SHA-guarded 1-op splice via `tools/apply_patch.py`). The field predated dry-bean + sweet-corn taking the roster to 125; it now matches `len(crops)`. Footprint EXACT: only `total_crops` changed, 0 crops touched, `source_catalog` +none, count 125, compact. `gate_all` 116/116. Flagged during the berry arc's final whole-branch review. plant-astro's `src/lib/dataset.ts` already exposed a computed `actual_crops_count` (125) alongside the stored `total_crops`, so this is a legacy-field correction with no render impact and NO plant-astro re-bump was needed. COMMITTED, UNPUSHED.
+
+BERRY PILOT SHIPPED + PUSHED + LIVE: after the berry (strawberry) pilot committed (`c4dca3c`, canonical `db35a673`), it was PUSHED to `origin/main` (`18d1423..c4dca3c`, carrying the interleaved region Tier-2 design/plan docs, which are path-disjoint) and plant-astro was BUMPED `18d1423 -> c4dca3c` + PUSHED (`8f68e7e -> 53a2a8f`, build green 1324 pages) -- strawberry varieties render via the generic RecommendedVarietiesCard; `hero_description` rides as data for a future plant-astro rendering pass.
+
 ## 2026-07-15 -- BERRY VARIETY PILOT (strawberry) -- the 5th variety archetype + the hero_description common-core standard
 
 The `berry` bearing-habit archetype, the 5TH after dry-bean (`annual_dtm`), apple (`tree_fruit`), onion (`photoperiod_annual`), leek (`hardiness_annual`). Canonical `8dd4ac4c` -> `db35a673` (1 SHA-guarded 36-op atomic splice; count 125 unchanged; strawberry stays certified; 116 certified unchanged -- a schema/content pilot, no cert-count change). Executed subagent-driven (superpowers:subagent-driven-development): fresh implementer per task + a two-stage (spec + quality) review after each. Spec `docs/superpowers/specs/2026-07-15-berry-variety-pilot-design.md` (f0abab8); plan `docs/superpowers/plans/2026-07-15-berry-variety-pilot.md` (7998250).
