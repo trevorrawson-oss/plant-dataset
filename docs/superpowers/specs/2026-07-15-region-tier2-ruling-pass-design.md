@@ -73,8 +73,12 @@ For each belt, in order:
    `unr_ext` for Nevada). **Where no T1 source is yet catalogued -- mid-South (AR/OK/TN/MO) and
    Alaska -- actively research and find the real land-grant extension source** (University of
    Arkansas, Oklahoma State, University of Tennessee, University of Missouri, UAF Cooperative
-   Extension Service) and add it to `source_catalog`. A missing catalog entry is a research task,
-   not a blocker and not license to cite a weaker T2 source instead.
+   Extension Service). A missing catalog entry is a research task, not a blocker and not license
+   to cite a weaker T2 source instead. **`source_catalog` itself lives inside
+   `crops_data_final.json`, so it is NOT written in this arc** (that would be a canonical touch);
+   newly found sources are cited by institution + URL directly in the belt's research note.
+   Formal `source_catalog` registration happens only if/when a belt is later built as a real
+   region (the same point RGV/PNW formally added their sources).
 4. **Compare directionally**, using the same GO / CONDITIONAL-GO / mismatch framing as the
    zone-span reconciliation's "clone honesty record" and RGV/PNW's own provenance audits: do the
    deriver's frost-anchored dates and the real T1 calendar's timing and class behavior (does the
@@ -108,11 +112,11 @@ mid-Atlantic's result calls for it, before the same approach is repeated four mo
 - An update to `docs/region_coverage_roadmap.md`'s "Tier-2 rulings pending (item 5 detail)" section
   -- that belt's row moves from an unsourced "first read" to a cited ruling, mirroring how item 1's
   "Clone honesty record" subsection reads.
-- Any new `source_catalog` entries added along the way (mid-South, Alaska).
 
-No `crops_data_final.json` change, no `LATEST.txt`/`CURRENT_STATE.md`/`STATE_HISTORY.md` state-trio
-update -- this arc produces no content release, so the state trio (which is for canonical content
-releases) does not apply.
+No `crops_data_final.json` change of any kind -- including `source_catalog`, which lives inside the
+canonical file (see §4 step 3) -- and no `LATEST.txt`/`CURRENT_STATE.md`/`STATE_HISTORY.md`
+state-trio update, since this arc produces no content release and the state trio is for canonical
+content releases only.
 
 ## 8. Scope boundaries (explicitly OUT)
 
