@@ -12,7 +12,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from variety_detail_gate import (archetype, in_scope, variety_violations, variety_warnings, coverage_report)
 
-REQUIRED = ("id", "name", "maturity_class", "seed_type", "seed_color", "seed_size",
+REQUIRED = ("id", "name", "maturity_class", "hero_description", "seed_type", "seed_color", "seed_size",
             "plant_habit", "primary_use", "confidence_tier", "note_beginner", "note_seasoned", "sources")
 
 
@@ -20,7 +20,7 @@ def variety(**over):
     v = {"id": "black-turtle", "name": "Black Turtle", "days_to_maturity": 100,
          "maturity_class": "late", "seed_type": "open_pollinated", "seed_color": "black",
          "seed_size": "small", "plant_habit": "bush", "primary_use": "soup",
-         "is_reference": True, "confidence_tier": "T1",
+         "is_reference": True, "confidence_tier": "T1", "hero_description": "h",
          "note_beginner": "b", "note_seasoned": "s", "sources": ["ucanr_ext"]}
     v.update(over)
     return v
@@ -40,7 +40,8 @@ assert variety_warnings(CLEAN) == [], variety_warnings(CLEAN)
 
 def tvar(**over):
     v = {"id": "golden-delicious", "name": "Golden Delicious", "maturity_class": "mid",
-         "is_reference": True, "confidence_tier": "T1", "note_beginner": "b", "note_seasoned": "s",
+         "is_reference": True, "confidence_tier": "T1", "hero_description": "h",
+         "note_beginner": "b", "note_seasoned": "s",
          "sources": ["umn_ext"], "bloom_group": "mid", "bloom_window_relative": [0.42, 0.6],
          "bloom_duration_days": 10, "chill_hours_required": 700, "use": "fresh eating", "triploid": False}
     v.update(over)
@@ -112,7 +113,8 @@ assert variety_warnings(TREE_CLEAN) == [], variety_warnings(TREE_CLEAN)
 
 def pvar(**over):
     v = {"id": "super-star", "name": "Super Star", "maturity_class": "mid", "is_reference": True,
-         "confidence_tier": "T1", "note_beginner": "b", "note_seasoned": "s", "sources": ["tamu_agrilife"],
+         "confidence_tier": "T1", "hero_description": "h", "note_beginner": "b", "note_seasoned": "s",
+         "sources": ["tamu_agrilife"],
          "days_to_maturity": 105, "day_length_type": "intermediate_day", "use": "sweet all-purpose"}
     v.update(over)
     return v
@@ -153,7 +155,8 @@ assert any("late" in w for w in variety_warnings(pcrop([pvar(), fast_late]))), v
 
 def hvar(**over):
     v = {"id": "lancelot", "name": "Lancelot", "maturity_class": "mid", "is_reference": True,
-         "confidence_tier": "T1", "note_beginner": "b", "note_seasoned": "s", "sources": ["cornell_ext"],
+         "confidence_tier": "T1", "hero_description": "h", "note_beginner": "b", "note_seasoned": "s",
+         "sources": ["cornell_ext"],
          "days_to_maturity": 110, "cold_hardiness_class": "hardy", "use": "all-purpose"}
     v.update(over)
     return v
@@ -198,6 +201,45 @@ assert any("min_temp_f" in v for v in variety_violations(hcrop([hvar(min_temp_f=
 # class/DTM coherence warning applies (fastest labeled 'late')
 fast_late = hvar(id="q", name="Q", days_to_maturity=80, maturity_class="late", is_reference=False)
 assert any("late" in w for w in variety_warnings(hcrop([hvar(), fast_late]))), variety_warnings(hcrop([hvar(), fast_late]))
+
+def bvar(**over):
+    v = {"id": "albion", "name": "Albion", "maturity_class": "early",
+         "confidence_tier": "T1", "hero_description": "The day-neutral standard, sweet berries all season.",
+         "note_beginner": "b", "note_seasoned": "s", "sources": ["ucanr_ext_8256"],
+         "bearing_habit": "day_neutral", "use": "fresh", "is_reference": True}
+    v.update(over)
+    return v
+
+def bcrop(varieties, group="strawberry", slug="strawberry"):
+    return {"slug": slug, "days_to_maturity": [], "variety_archetype": "berry",
+            "berry_group": group, "varieties": {"recommended": varieties}}
+
+_honeoye = bvar(id="honeoye", name="Honeoye", bearing_habit="june_bearing", is_reference=False)
+
+# clean strawberry crop -> no violations
+BCLEAN = bcrop([bvar(), _honeoye])
+assert variety_violations(BCLEAN) == [], variety_violations(BCLEAN)
+assert variety_warnings(BCLEAN) == [], variety_warnings(BCLEAN)
+
+# bad bearing_habit for the strawberry group (a cane value) bounces
+assert any("bearing_habit" in v for v in variety_violations(
+    bcrop([bvar(), _honeoye, bvar(id="x", name="X", bearing_habit="summer_bearing", is_reference=False)])))
+
+# missing hero_description bounces (new common-core)
+_no_hero = bvar(id="nh", name="NH", is_reference=False); _no_hero.pop("hero_description")
+assert any("hero_description" in v for v in variety_violations(bcrop([bvar(), _no_hero])))
+
+# chill_hours_required is NOT allowed under berry_group strawberry
+assert any("chill_hours_required" in v for v in variety_violations(
+    bcrop([bvar(chill_hours_required=800), _honeoye])))
+
+# reserved cane group accepts a cane habit + chill (designed, RED-proven)
+CANEOK = bcrop([bvar(id="boyne", name="Boyne", bearing_habit="summer_bearing",
+                     chill_hours_required=800, is_reference=True)], group="cane", slug="raspberry")
+assert variety_violations(CANEOK) == [], variety_violations(CANEOK)
+
+# invalid berry_group bounces
+assert any("berry_group" in v for v in variety_violations(bcrop([bvar()], group="vine")))
 
 # 0. off-scope crop (no maturity_class anywhere) -> silent, even with junk
 off = {"slug": "bell-pepper", "days_to_maturity": [60, 90],

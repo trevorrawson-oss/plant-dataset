@@ -39,7 +39,7 @@ DTM_MARGIN = 10                # advisory band widening; low-stakes (sourced val
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 COMMON_CORE = ("id", "name", "maturity_class", "confidence_tier",
-               "note_beginner", "note_seasoned", "sources")
+               "hero_description", "note_beginner", "note_seasoned", "sources")
 ANNUAL_TRAITS = ("seed_type", "seed_color", "seed_size", "plant_habit", "primary_use")
 TREE_TRAITS = ("bloom_group", "bloom_window_relative", "bloom_duration_days",
                "chill_hours_required", "use")
@@ -57,18 +57,32 @@ HARDINESS_TRAITS = ("cold_hardiness_class", "use")
 HARDINESS_ENUMS = (("cold_hardiness_class", COLD_HARDINESS),)
 MIN_TEMP_FLOOR, MIN_TEMP_CEIL = -40, 60   # plausible low-temp band; ALLOWS negatives (very hardy)
 
+# berry archetype (strawberry/cane/bush, sub-dispatched by crop-level berry_group)
+STRAWBERRY_HABIT = {"june_bearing", "everbearing", "day_neutral"}
+CANE_HABIT = {"summer_bearing", "fall_bearing"}                                    # RESERVED (0 live)
+BUSH_HABIT = {"northern_highbush", "southern_highbush", "rabbiteye", "half_high"}  # RESERVED (0 live)
+BERRY_GROUP_HABIT = {"strawberry": STRAWBERRY_HABIT, "cane": CANE_HABIT, "bush": BUSH_HABIT}
+BERRY_GROUPS_WITH_CHILL = {"cane", "bush"}
+BERRY_TRAITS = ("bearing_habit", "use")
+
 # archetype dispatch: required trait block + enum block per archetype; DTM_ARCHETYPES carry days_to_maturity
 ARCHETYPE_TRAITS = {"annual_dtm": ANNUAL_TRAITS, "photoperiod_annual": PHOTOPERIOD_TRAITS,
-                    "hardiness_annual": HARDINESS_TRAITS, "tree_fruit": TREE_TRAITS}
+                    "hardiness_annual": HARDINESS_TRAITS, "tree_fruit": TREE_TRAITS,
+                    "berry": BERRY_TRAITS}
 ARCHETYPE_ENUMS = {"annual_dtm": ANNUAL_ENUMS, "photoperiod_annual": PHOTOPERIOD_ENUMS,
-                   "hardiness_annual": HARDINESS_ENUMS, "tree_fruit": TREE_ENUMS}
+                   "hardiness_annual": HARDINESS_ENUMS, "tree_fruit": TREE_ENUMS,
+                   "berry": ()}
 DTM_ARCHETYPES = ("annual_dtm", "photoperiod_annual", "hardiness_annual")
 
 
 def archetype(crop):
     """Crop declares its variety archetype; absence defaults to annual_dtm (dry-bean stays untouched)."""
     a = crop.get("variety_archetype")
-    return a if a in ("annual_dtm", "photoperiod_annual", "hardiness_annual", "tree_fruit") else "annual_dtm"
+    return a if a in ("annual_dtm", "photoperiod_annual", "hardiness_annual", "tree_fruit", "berry") else "annual_dtm"
+
+
+def berry_group(crop):
+    return crop.get("berry_group")
 
 
 def _variety_objs(crop):
@@ -125,11 +139,15 @@ def variety_violations(crop):
             V += _tree_checks(slug, nm, x)
         elif arch == "hardiness_annual":
             V += _hardiness_checks(slug, nm, x)
+        elif arch == "berry":
+            V += _berry_checks(slug, nm, x, berry_group(crop))
     if ref_count != 1:
         V.append(f"{slug}: exactly one variety must have is_reference true (found {ref_count})")
     dupes = sorted({i for i in ids if ids.count(i) > 1})
     if dupes:
         V.append(f"{slug}: duplicate variety id(s) {dupes}")
+    if arch == "berry" and berry_group(crop) not in ("strawberry", "cane", "bush"):
+        V.append(f"{slug}: berry_group {berry_group(crop)!r} not in ['bush', 'cane', 'strawberry']")
     return V
 
 
@@ -177,6 +195,23 @@ def _hardiness_checks(slug, nm, x):
     mt = x.get("min_temp_f")
     if mt is not None and (not _int(mt) or not (MIN_TEMP_FLOOR <= mt <= MIN_TEMP_CEIL)):
         V.append(f"{slug}/{nm}: min_temp_f {mt!r} must be an int in [{MIN_TEMP_FLOOR},{MIN_TEMP_CEIL}]")
+    return V
+
+
+def _berry_checks(slug, nm, x, group):
+    """Berry block: bearing_habit must match the crop's berry_group vocabulary; chill_hours_required is
+    a cane/bush field (positive int) and is REJECTED under berry_group strawberry (strawberry has no chill)."""
+    V = []
+    valid = BERRY_GROUP_HABIT.get(group, set())
+    habit = x.get("bearing_habit")
+    if habit not in valid:
+        V.append(f"{slug}/{nm}: bearing_habit {habit!r} not in {sorted(valid)} for berry_group {group!r}")
+    chill = x.get("chill_hours_required")
+    if group in BERRY_GROUPS_WITH_CHILL:
+        if chill is not None and (not _int(chill) or chill <= 0):
+            V.append(f"{slug}/{nm}: chill_hours_required {chill!r} must be a positive int")
+    elif chill is not None:
+        V.append(f"{slug}/{nm}: chill_hours_required not allowed for berry_group {group!r} (no chill)")
     return V
 
 
