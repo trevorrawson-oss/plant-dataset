@@ -186,9 +186,20 @@ warm-season annuals (cherry-tomato) -- NC State's own planting calendar and VCE 
 document a second (fall) planting window that the naive single-cycle deriver omits, the same
 `heat_pause`-shaped gap already modeled for other hot z8/z9 belts. Not a suitability flip, so
 NEW-REGION is not warranted; caveat recorded for any future authoring pass. Full sourcing and
-naive-vs-real detail: `docs/reviews/notes/2026-07-15/tier2_mid_atlantic_ruling.md`. Mid-South
-z8 = probably ok. NV/UT z8-9 = probably ok (warm_arid adjacency worth a look). AK z8 (13 ZIPs,
-maritime) = probably ok at this scale.
+naive-vs-real detail: `docs/reviews/notes/2026-07-15/tier2_mid_atlantic_ruling.md`. **Mid-South
+z8 (AR/OK/TN/MO, Little Rock AR marquee) -- CONDITIONAL-GO (ruled 2026-07-15).** Real Little Rock
+frost normals (NWS: last frost Apr 3, first frost Oct 31) plus a newly-sourced 3-crop T1 basket
+(no source for this belt was previously catalogued) show tree fruit (apple, real AR chill
+accumulation 901-1,081 hrs clears the whole canonical variety range, tightest at the belt's
+southwestern warm edge) and berry (blackberry, UA's own breeding-program cultivars and chill
+figures line up directly with the canonical values) are honestly served by generic
+frost-anchored dates; the one real gap is the same class found in mid-Atlantic -- two independent
+UAEX pages document an explicit fall (Jul 1-15) tomato planting cycle that the naive single-cycle
+deriver omits. Not a suitability flip, so NEW-REGION is not warranted; caveat recorded for any
+future authoring pass, plus a note that any future chill treatment should reflect the belt's real
+intra-state gradient rather than one flat figure. Full sourcing and naive-vs-real detail:
+`docs/reviews/notes/2026-07-15/tier2_mid_south_ruling.md`. NV/UT z8-9 = probably ok (warm_arid
+adjacency worth a look). AK z8 (13 ZIPs, maritime) = probably ok at this scale.
 
 ## Empty-state ZIPs (item 2 detail)
 
