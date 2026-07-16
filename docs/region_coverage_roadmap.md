@@ -198,7 +198,28 @@ UAEX pages document an explicit fall (Jul 1-15) tomato planting cycle that the n
 deriver omits. Not a suitability flip, so NEW-REGION is not warranted; caveat recorded for any
 future authoring pass, plus a note that any future chill treatment should reflect the belt's real
 intra-state gradient rather than one flat figure. Full sourcing and naive-vs-real detail:
-`docs/reviews/notes/2026-07-15/tier2_mid_south_ruling.md`. NV/UT z8-9 = probably ok (warm_arid
+`docs/reviews/notes/2026-07-15/tier2_mid_south_ruling.md`. **Nevada z8/z9/z10 (Las Vegas / North
+Las Vegas marquee, z9 dominant at 94 ZIPs vs. z8 15 / z10 1) -- CONDITIONAL-GO, broader than
+mid-Atlantic/mid-South (ruled 2026-07-15).** A genuinely different climate archetype (high
+desert, not humid) does not reproduce the other two belts' narrow single-gap shape. Real Las
+Vegas frost normals (NWS Technical Memorandum WR-235: last frost Feb 28, first frost Nov 25) plus
+a 3-crop T1 basket (cherry-tomato / apple / garlic, per the brief) surface three separate real
+findings: cherry-tomato's real spring start matches UNR's own recommended dates, but the naive
+single-cycle deriver's `growing`-for-6-months back half actively contradicts UNR's stated
+>90°F/<55°F summer fruit-set cutoff and the real Nov 25 frost return (a sharper, more actively
+misleading gap than the humid belts' merely-incomplete flat `cold_pause`); apple is confirmed
+`fruits_reliably` by a direct peer-reviewed UNR field trial at the marquee city itself (SP-20-07),
+running counter to any chill-starved assumption, but a real third of the canonical
+recommended-variety list (the 700-900 hr tier) sits above the trial's confirmed chill ceiling
+with no Nevada-specific evidence either way -- the sharpest variety-level caveat found in this
+arc so far; garlic is confirmed genuinely arid-friendly (a real Sept-to-mid-Oct fall
+clove-planting window at the marquee city, narrower than but consistent with the existing
+`warm_arid`/`low_desert_az` cross-reference regions). None of the three basket crops shows a
+suitability-CLASS mismatch, so NEW-REGION is not warranted, but the caveats are real and broader
+than a one-line footnote; recorded for any future authoring pass (heat-pause + widened spring
+succession for warm annuals, chill-tier variety differentiation for apple, a belt-specific
+garlic window rather than inheriting a neighbor's). Full sourcing and naive-vs-real detail:
+`docs/reviews/notes/2026-07-15/tier2_nevada_ruling.md`. UT z8-9 = probably ok (warm_arid
 adjacency worth a look). AK z8 (13 ZIPs, maritime) = probably ok at this scale.
 
 ## Empty-state ZIPs (item 2 detail)
