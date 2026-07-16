@@ -13,7 +13,7 @@ it leads to stale-checkout confusion.)
 - **STATE_HISTORY.md** — the append-only recovery log (read to reconstruct true position).
 
 ## What this is
-125 crops: 116 certified gold-standard anchors + 9 honest shells (the ~105-certified bot-pipeline
+128 crops: 119 certified gold-standard anchors + 9 honest shells (the ~105-certified bot-pipeline
 goal is met and passed; the 9 remaining shells are the 5 mushrooms + avocado/olive/artichoke/asparagus). The armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered
 gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURRENT_STATE.md.
 
