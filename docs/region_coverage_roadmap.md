@@ -24,7 +24,7 @@ HANDED OFF (different owner, a first-class item here, not a footnote).
 | 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`) | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence is what actually resolves RGV ZIPs to `rgv` in-app |
 | 3 | Rio Grande Valley / subtropical TX region (new authored region; TAMU AgriLife RGV calendars are strong T1) | dataset | **SHIPPED 2026-07-13** (canonical `d0832254`) | 95 TX z10 ZIPs off the se_gulf interim; app-side 785xx ZIP3 fence is the paired follow-up (item 2 / kickoff #26) |
 | 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | **SHIPPED 2026-07-14** (canonical `8dd4ac4c`) | ~750 ZIPs off generic frost-anchored dates; app-side west-side ZIP3 fence is the paired follow-up (kickoff #28) |
-| 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | OPEN | GENERIC-OK is a legitimate ruling where honest |
+| 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | **RULED 2026-07-15** (4x CONDITIONAL-GO: mid-Atlantic, mid-South, Nevada, Utah; 1x NEW-REGION: Alaska) | 4 belts confirmed honestly served by generic dates with recorded caveats; Alaska queued as a candidate future region (not built in this arc) |
 | 6 | Puerto Rico (2 z11 / 47 z12 / 126 z13) | product call (Trevor) | OPEN | market-scope question first; also needs z12/13 support end to end |
 
 Items 3+ are their own arcs (spec -> plan -> build). Nothing below item 2 blocks item 2.
@@ -243,8 +243,44 @@ and the apple finding is the sharpest of the arc; recorded for any future author
 heat-pause + accurate frost-return date for warm-season annuals, fall-bearing/low-chill cultivar
 steering for raspberry, and apple treated as leaning `marginal` pending a real St.-George-specific
 chill-hour figure). Full sourcing and naive-vs-real detail:
-`docs/reviews/notes/2026-07-15/tier2_utah_ruling.md`. AK z8 (13 ZIPs, maritime) = probably ok at
-this scale.
+`docs/reviews/notes/2026-07-15/tier2_utah_ruling.md`. **Alaska z8 (Ketchikan marquee, 13 ZIPs,
+southeast panhandle, maritime) -- NEW-REGION (ruled 2026-07-15).** The belt the design spec
+flagged as the strongest a priori NEW-REGION candidate (the closest Tier-2 analog to maritime
+PNW's own confirmed inversion), and the evidence bears that out. Real Ketchikan frost normals
+(NWS AJK "Last Spring Freeze" statistical table: mean last frost Apr 22, 38 yrs of data; NOAA NCEI
+Local Climatological Data: 191-day growing season, mid-April to end of October, cross-checked
+arithmetically against the NWS figure) plus a newly-sourced 3-crop T1 basket (cherry-tomato /
+apple / kale; no source for this belt was previously catalogued, requiring active UAF Cooperative
+Extension Service research, same as mid-South) show TWO of three basket crops with real,
+sourced, suitability-CLASS divergences, not variety-tier caveats: cherry-tomato -- three
+independent UAF sources (a statewide guide, the belt's own dedicated variety list HGA-00231, and
+a controlled Palmer research trial) converge that unprotected outdoor tomato culture gives
+poor-to-near-zero yield here ("adjacent plots outside gave almost no yields"), requiring a high
+tunnel/row cover the naive frost-anchored deriver has no way to represent; apple -- the belt's
+real UAF-recommended variety list (Yellow Transparent, Pristine, William's Pride, Gravenstein,
+Lodi, Tydeman's Early, Sansa, Silken, Akane) shares zero overlap with the canonical 16-variety
+list, because the belt's real binding constraint is a short/cool/cloudy summer limiting ripening
+time (UAF's own stated priority: "will it survive the winter, then will it fruit during the short
+growing season"), a mechanism this dataset's chill-hour-based suitability logic does not model
+for apple at all -- applied naively that logic would read AK's abundant chill (independently
+confirmed by this dataset's own `northern_tier` z3 "chill is abundant... bloom is simply too
+exposed" precedent) and wrongly default to `fruits_reliably` off the canonical list. Only kale is
+directionally fine (thrives, no protection needed, matching the established
+under-representation-only shape). Direct cross-reference against this dataset's own `pnw` region
+(the named closest analog) sharpens the finding rather than softening it: PNW's real z8
+cherry-tomato and apple treatment (full outdoor season, `fruits_reliably` off the canonical list)
+is the opposite of what real UAF sources document for AK's z8 core, so AK cannot safely inherit
+PNW's own numbers despite the climate-family kinship. **Ruling: NEW-REGION** -- not built here per
+the design spec's scope boundaries; queued as a candidate future roadmap item (a
+Ketchikan-anchored SE-Alaska-panhandle region, UAF Cooperative Extension sourced: HGA-00231, "16
+Easy Steps," "Hoop Houses in Alaska," "Growing Tree Fruits in Alaska"). Full sourcing and
+naive-vs-real detail: `docs/reviews/notes/2026-07-15/tier2_alaska_ruling.md`.
+
+**With all 5 belts now ruled (4 CONDITIONAL-GO, 1 NEW-REGION), roadmap item 5's judged-belt
+ruling pass is complete.** The Alaska NEW-REGION finding is recorded above as a candidate future
+roadmap item, not built in this arc (per the design spec's explicit scope boundary); queuing it as
+a formally numbered roadmap item is a decision for Trevor at the arc's final checkpoint, not made
+unilaterally here.
 
 ## Empty-state ZIPs (item 2 detail)
 
