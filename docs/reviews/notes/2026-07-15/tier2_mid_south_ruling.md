@@ -11,7 +11,9 @@ not touched (it lives inside `crops_data_final.json`).
 
 AR carries the most belt ZIPs (460 z8) of the mid-South belt (AR/OK/TN/MO), so AR is the
 marquee state; Little Rock is the marquee city (state capital, the NWS forecast-office anchor
-station for the state).
+station for the state). The belt's TN z9 sliver (1 ZIP) is negligible at this scale; it rides
+this belt's general verdict, not its own pass (the same closure Task 3 gave Nevada's z10
+sliver, per the design spec's own open item).
 
 **Real frost-date normals (NWS Little Rock forecast office, 1991-2020 climate normals, 36°F
 threshold, 50% probability):**

@@ -26,8 +26,10 @@ HANDED OFF (different owner, a first-class item here, not a footnote).
 | 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | **SHIPPED 2026-07-14** (canonical `8dd4ac4c`) | ~750 ZIPs off generic frost-anchored dates; app-side west-side ZIP3 fence is the paired follow-up (kickoff #28) |
 | 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | **RULED 2026-07-15** (4x CONDITIONAL-GO: mid-Atlantic, mid-South, Nevada, Utah; 1x NEW-REGION: Alaska) | 4 belts confirmed honestly served by generic dates with recorded caveats; Alaska queued as a candidate future region (not built in this arc) |
 | 6 | Puerto Rico (2 z11 / 47 z12 / 126 z13) | product call (Trevor) | OPEN | market-scope question first; also needs z12/13 support end to end |
+| 7 | Southeast Alaska panhandle region (new authored region; UAF Cooperative Extension Service T1 -- Ketchikan-anchored, maritime z8, 13 ZIPs) | dataset | QUEUED | surfaced by item 5's Alaska ruling (**NEW-REGION**, `docs/reviews/notes/2026-07-15/tier2_alaska_ruling.md`): unprotected outdoor tomato yields collapse per a UAF field trial (needs protected-culture guidance, not a window fix); the real SE-AK apple variety list shares zero overlap with the canonical chill-tier list (season-length-bound, a mechanism the chill model doesn't represent) |
 
-Items 3+ are their own arcs (spec -> plan -> build). Nothing below item 2 blocks item 2.
+Items 3+ are their own arcs (spec -> plan -> build). Nothing below item 2 blocks item 2. Item 7
+is the same kind of item 3/4 was before it shipped -- queued by a ruling pass, not yet spec'd.
 
 ## Item 1 record: the widen (SHIPPED 2026-07-12, canonical 7e29f4f4)
 
@@ -176,8 +178,9 @@ authoring for these crops); not blocking the widen.
 
 The taxonomy deliberately special-cases marquee warm states; everywhere else gets generic
 frost-anchored zone dates. Where that is honest, GENERIC-OK is the ruling, recorded here --
-not silence. First reads (each to be confirmed in its own pass): maritime PNW = NOT ok
-(cool summers invert the assumptions; item 4). **Mid-Atlantic z8 (Raleigh NC marquee) --
+not silence. All 5 Tier-2 belts below are now RULED (2026-07-15), each against a real T1
+basket, not a first-read guess -- maritime PNW itself was the original NOT-ok precedent (cool
+summers invert the assumptions; item 4). **Mid-Atlantic z8 (Raleigh NC marquee) --
 CONDITIONAL-GO (ruled 2026-07-15).** Real Raleigh frost normals (NC State Extension: last
 frost Apr 8, first frost Oct 30) plus a 3-crop T1 basket show tree fruit (apple, chill clears
 the whole canonical variety range) and berry (blueberry, genuine NC-documented highbush/
