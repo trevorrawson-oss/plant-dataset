@@ -219,8 +219,32 @@ suitability-CLASS mismatch, so NEW-REGION is not warranted, but the caveats are 
 than a one-line footnote; recorded for any future authoring pass (heat-pause + widened spring
 succession for warm annuals, chill-tier variety differentiation for apple, a belt-specific
 garlic window rather than inheriting a neighbor's). Full sourcing and naive-vs-real detail:
-`docs/reviews/notes/2026-07-15/tier2_nevada_ruling.md`. UT z8-9 = probably ok (warm_arid
-adjacency worth a look). AK z8 (13 ZIPs, maritime) = probably ok at this scale.
+`docs/reviews/notes/2026-07-15/tier2_nevada_ruling.md`. **Utah z8 (St. George / Washington
+County "Dixie" marquee, 15 ZIPs) -- CONDITIONAL-GO (ruled 2026-07-15).** Real St. George frost
+normals (USU Extension Washington County: last frost Mar 30, first frost Nov 1, sourced to Utah
+Climate Center actual records) plus a 3-crop T1 basket (cherry-tomato / apple / raspberry, per
+the brief) show cherry-tomato directionally fine (naive spring start close to USU's own Apr 1
+transplant date; the one real gap, a flat naive winter `cold_pause` that hides the real summer
+heat-abort period and mischaracterizes September/October as dormant, mirrors Nevada's shape, not
+mid-Atlantic/mid-South's -- USU does not recommend a fall tomato cycle here either) and raspberry
+genuinely belt-identified (USU names "Utah's Dixie" directly as fall-bearing-raspberry territory)
+but marginal, needing heat-tolerant low-chill cultivars per both USU's own raspberry guide and
+this dataset's own pre-existing `warm_arid` raspberry region text. Apple is the sharpest,
+class-level (not just variety-tier) caveat found in this arc so far: Washington County's own
+Extension office recommends apple only for the county's higher-elevation towns, which sit outside
+this z8 belt entirely, not for the low-elevation St. George core the belt's ZIPs actually cover;
+this dataset's own existing z8/z9 desert apple regions (`warm_arid` NM `fruits_reliably` at
+400-700 chill hr/~3,900 ft, `low_desert_az` AZ `marginal` at 250-400 chill hr/~1,100 ft) bracket
+St. George's real elevation (2,624 ft) closer to the `marginal` end, though no hard local
+chill-hour figure was found despite a genuine search effort (an open gap, not glossed over) so
+this stops short of a confirmed suitability-class flip. None of the three basket crops shows a
+confirmed suitability-CLASS mismatch, so NEW-REGION is not warranted, but the caveats are real
+and the apple finding is the sharpest of the arc; recorded for any future authoring pass (a real
+heat-pause + accurate frost-return date for warm-season annuals, fall-bearing/low-chill cultivar
+steering for raspberry, and apple treated as leaning `marginal` pending a real St.-George-specific
+chill-hour figure). Full sourcing and naive-vs-real detail:
+`docs/reviews/notes/2026-07-15/tier2_utah_ruling.md`. AK z8 (13 ZIPs, maritime) = probably ok at
+this scale.
 
 ## Empty-state ZIPs (item 2 detail)
 
