@@ -37,7 +37,7 @@ sources, 0 uncatalogued.**
 | Black layer = physiological maturity ~30-35% kernel moisture; storage target ~13-15%; in-field drydown ~0.5-1.0%/day Sep, ~0.25-0.5%/day Oct | iastate_ext (corn grain dry-down) |
 | Grain-corn variety choice by relative maturity (modern hybrids stand + dry more evenly) | umn_ext (selecting corn hybrids for grain) |
 | Cross-pollination MECHANISM: dent pollen crosses sweet corn to starchy kernels + keeps popcorn from popping | iastate_ext, ncsu_ext |
-| Cross-pollination ISOLATION FIGURE: "at least 250 feet apart" (impractical for most home gardens) OR "a minimum of 14 days should separate the tasseling time" (~2 weeks) | **iastate_ext** (growing-sweet-corn-home-garden -- states BOTH verbatim) |
+| Cross-pollination ISOLATION FIGURE: "at least 300 feet" apart OR stagger tasseling by ~2 weeks | **iastate_ext** (growing-and-harvesting-popcorn-home-garden: "at least 300 feet"), **umn_ext** (growing-popcorn: "plant popcorn 300 feet from the nearest cornfield" + wait 3 weeks) |
 | Heat over 95F at tasseling/silking kills pollen + desiccates silks (critical moisture window) | unl_ext, umn_ext |
 | Cold/wet soil below 60F rots seed / imbibitional chilling | iastate_ext |
 
@@ -88,10 +88,14 @@ fertilizer, watering critical window, spacing/sow-depth: carried over from sweet
   cool window before the summer heat pause. Kept plantable (Option C) with an honest advisory.
 - Variety DTMs (115/115/100) are synthesized within Clemson's 90-120 band, not individually quoted.
 
-- **Cross-poll distance re-anchored (2026-07-15 review fix):** the ~250 ft home-garden figure + the 2-week
-  tasseling stagger are now cited to **iastate_ext**, which states both verbatim ("at least 250 feet apart";
-  "a minimum of 14 days should separate the tasseling time"). The clone's original ncsu_ext attribution was
-  wrong for the distance -- NCSU's primary figure is the stricter "at least 300 yards" (commercial). ncsu_ext
-  still backs the mechanism (starchy/no-pop) and the 2-week stagger.
+- **Cross-poll isolation distance = "at least 300 feet" (2026-07-15 review fixes):** first re-anchored off the
+  clone's wrong ncsu_ext attribution (NCSU's primary figure is the stricter "at least 300 yards"); then
+  **harmonized 250 ft -> 300 ft** for corn-family consistency -- popcorn (the cross-poll victim) is set to
+  "at least 300 feet" per its popcorn-specific sources, and the three corn types cross-pollinate each other,
+  so field-corn recommending a shorter separation than popcorn would contradict across the family. The
+  conservative 300 ft is now cited to **iastate_ext** (Growing and Harvesting Popcorn in the Home Garden:
+  "at least 300 feet") + **umn_ext** (Growing popcorn: "plant popcorn 300 feet from the nearest cornfield").
+  The ~2-week tassel-stagger alternative is kept (both popcorn pages offer a time-based alternative; umn says
+  "wait three weeks"). ncsu_ext still backs the mechanism (starchy / no-pop).
 
 **Non-T1 load-bearing sources: 0.**
