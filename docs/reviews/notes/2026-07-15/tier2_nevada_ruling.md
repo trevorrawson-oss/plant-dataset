@@ -93,16 +93,20 @@ bug, produces this.
    https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf
    -- a checkbox planting chart (fetched as PDF, rendered to image and read visually since the
    embedded font would not extract as text). Tomato transplant window: **Mar (mid/late) through
-   Jun (early/mid/late)** -- i.e. mid-March through the end of June, a long single-season
-   succession window, with NO shaded cells in Jul/Aug (no transplanting recommended once summer
-   heat sets in, and no fall reflush shown).
+   May (early/mid/late)** -- i.e. mid-March through the end of May, a real ~2.5-month
+   single-season succession window, with NO shaded cells in Jun/Jul/Aug (no transplanting
+   recommended once summer heat sets in, and no fall reflush shown). Confirmed by direct contrast
+   with the Watermelon row immediately below Tomato* on the same chart: Watermelon's shading DOES
+   extend through all three June sub-periods (E/M/L), while Tomato*'s June cells are unshaded
+   (white) -- the two rows are visually distinct at the June columns on close inspection of the
+   rendered chart image.
 
 **Naive vs. real:** the naive spring start (indoors Jan 24-31, plant_out Mar 7-21) lines up
 closely with UNR's own recommended dates (seed-start "6-8 weeks before Mar 15" = mid/late Jan;
 transplant Mar 15) -- directionally correct, same as Tasks 1-2. But two real gaps, different in
 shape from the humid belts':
 - The naive's single 2-week `plant_out` window and May-Jun harvest close-out under-represents the
-  real ~3.5-month spring succession window (mid-March through late June) all three UNR sources
+  real ~2.5-month spring succession window (mid-March through late May) all three UNR sources
   describe -- but unlike mid-Atlantic/mid-South, **there is no missing fall cycle to add**: UNR
   explicitly does not recommend one for tomato in Southern Nevada. The gap here is "spread the
   single spring window wider," not "add a second season."
@@ -155,9 +159,11 @@ trial at the marquee city, not an inference from a same-climate-family cross-ref
 runs in the OPPOSITE direction a naive "hot low desert" assumption might suggest (i.e. it is not
 a chill-starved climate the way Phoenix/`low_desert_az` is -- see below). The real ceiling of
 CONFIRMED good performance is Granny Smith at 700 hours; Liberty (800) is explicitly unresolved,
-and 6 of the canonical's 16 recommended varieties (Zestar! 800, McIntosh 900, Empire 700, Golden
-Delicious 700, Jonagold 700, plus Gala at 600 unevaluated on its own) sit at or above that
-confirmed ceiling with no real Nevada-specific evidence either way. This is a real, sourced gap
+and 6 of the canonical's 16 recommended varieties (Zestar! 800, McIntosh 900, Empire 700,
+Honeycrisp 800, Golden Delicious 700, Jonagold 700) sit at or above that confirmed ceiling with no
+real Nevada-specific evidence either way (Gala, at 600 hours, sits below the confirmed ceiling and
+is excluded from this tier -- it is unevaluated in the trial too, but that does not matter since it
+sits comfortably under the confirmed-good 700-hour range). This is a real, sourced gap
 -- the sharpest variety-level caveat found in this arc so far (wider than mid-Atlantic's zero-gap
 and mid-South's single-station margin note): roughly a third of the canonical "recommended" apple
 list for this crop is unconfirmed against the belt's real chill ceiling. It does not, however,
@@ -224,7 +230,7 @@ Nevada does not reproduce mid-Atlantic/mid-South's narrow "add a fall tomato win
 surfaces three separate, real, sourced findings, one per basket crop:
 
 1. **cherry-tomato:** the real spring start lines up well with UNR's own recommended dates, but
-   the naive single-cycle deriver both under-represents the real ~3.5-month spring succession
+   the naive single-cycle deriver both under-represents the real ~2.5-month spring succession
    window AND -- more importantly -- produces a `growing`-for-6-months back half that actively
    contradicts UNR's own stated summer heat/fruit-set cutoff (>90°F day / <55°F night) and the
    real Nov 25 frost return, rather than merely omitting a fall cycle that doesn't exist here
@@ -263,7 +269,7 @@ narrower than either arid cross-reference region and should not simply inherit o
 | NOAA NCEI 1991-2020 U.S. Climate Normals (Las Vegas, via public frost-date aggregation) | https://www.almanac.com/gardening/frostdates/NV/Las%20Vegas | Cross-check: 50/50 last freeze ~Feb 20, 50% first fall 32°F ~Dec 8 (more recent normals, same directional story) |
 | UNR Extension, "Growing Tomatoes in Southern Nevada" (A. Roberts, 1999, SP-99-11) | https://extension.unr.edu/publication.aspx?PubID=3267 | Southern NV's own recommended last-frost date (Mar 15); >90°F/<55°F fruit-set cutoff; no fall/second planting recommended; early+main variety mix strategy |
 | UNR/UNCE Fact Sheet-02-61, "Home Vegetable Production in Southern Nevada" (Dr. Angela M. O'Callaghan) | https://naes.agnt.unr.edu/PMS/Pubs/2002-3280.pdf | Warm-season (tomato) planting window March-May; 90°F growth ceiling; cool-season Feb-Apr / mid-Aug-Oct |
-| UNLV-hosted "Vegetable Planting Guide for Southern Nevada" (Clarita Huffman, Master Gardener; UNR Cooperative Extension) | https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf | Tomato transplant window (mid-Mar - late Jun, no fall shading); garlic fall clove-planting window (Sept - mid-Oct) |
+| UNLV-hosted "Vegetable Planting Guide for Southern Nevada" (Clarita Huffman, Master Gardener; UNR Cooperative Extension) | https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf | Tomato transplant window (mid-Mar - late May, no fall shading); garlic fall clove-planting window (Sept - mid-Oct) |
 | UNR Extension, "Research Orchard Fruit Evaluations & Recommendations for Southern Nevada - 2020" (SP-20-07; Robinson, O'Callaghan, Ruskamp; peer-reviewed) | https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf | Direct field-trial apple variety performance + chill-hours at the marquee city (North Las Vegas Research Orchard) |
 
 All primary sources above are `.edu`/`.gov` university extension or National Weather Service, T1
