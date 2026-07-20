@@ -438,7 +438,7 @@ not specific to this exact month list):
 length, `heat_pause.months` <-> calendar alignment, folding in the real "action-over-passive" flip on
 z8's Aug row, where the fall `start_indoors` action legitimately overrides the passive pause), `
 annual_calendar_violations` (A24 placement -- no pause on a top-level active window),
-`heat_pause_backing_violations` (A25 -- `heat_pause` carries months + basis + sourced URL), and
+`heat_pause_backing_violations` (A28 -- `heat_pause` carries months + basis + sourced URL), and
 `second_planting_gate.check_crop` (A43, both rules A and B) -- **zero violations across all four
 checks, both zone rows.**
 
@@ -663,7 +663,7 @@ Climate Office both publish zone-7 tables; Task 3 replaces this with the real da
 ```
 
 **Verified clean** (scratch script, both zone rows): `annual_coherence_violations`,
-`annual_calendar_violations` (A24), `heat_pause_backing_violations` (A25), and
+`annual_calendar_violations` (A24), `heat_pause_backing_violations` (A28), and
 `second_planting_gate.check_crop` (A43, rules A+B) all return **zero violations**. Note the z8 July
 row: `heat_pause.months` includes 7, but the calendar shows `plant` for July, not `heat_pause` --
 this is the legitimate "action-over-passive" flip (section 2.6), and it is not a placeholder
@@ -717,7 +717,7 @@ practice this means:
 ### 2.7 Gates that bind this shape
 
 A2 (region-fill completeness), A5/A5b/A5c (annual calendar coherence + indoors-run backing), A8
-(`successions_realized`, if in scope), A24 (calendar-placement drift), A25 (`heat_pause` thermal
+(`successions_realized`, if in scope), A24 (calendar-placement drift), A28 (`heat_pause` thermal
 backing -- **the gate that matters most in THIS arc**, since an unsourced pause silently reshapes the
 whole calendar, per design spec risk item 3), A31/A32 (region-roster + real-calendar floor -- A32
 applies to `{frost_anchored, perennial_herbaceous, berries_woody, perennial_woody_ornamental}`, this
@@ -1018,7 +1018,7 @@ specific NC/VA winter-extreme record):
     }
   },
   "region_notes_beginner": "Skip this outdoors in the Mid-Atlantic, in both the Coastal Plain and the Piedmont. Winters get too cold in a hard freeze most years. Grow it in a container and bring it fully indoors for winter if you want to try.",
-  "region_notes_seasoned": "The Mid-Atlantic has a real, frost-anchored winter this crop cannot tolerate outdoors, in either zone of this belt. Summer heat is ample; winter cold decides the case on its own. Container culture with full winter cover indoors is the only realistic path; some z8 Tidewater growers do attempt exactly this (section 4.4) -- but this is not outdoor citrus country.",
+  "region_notes_seasoned": "The Mid-Atlantic has a real, frost-anchored winter this crop cannot tolerate outdoors, in either zone of this belt. Summer heat is ample; winter cold decides the case on its own. Container culture with full winter cover indoors is the only realistic path; some z8 Tidewater growers do attempt exactly this (section 4.4). But this is not outdoor citrus country.",
   "min_winter_temp_f": [8, 22],
   "cold_basis_seasoned": "Mid-Atlantic winters bring real hard freezes well below this crop's wood-damage threshold in both zones of the belt, the Piedmont colder and more consistently so than the Coastal Plain. This is a genuine frost-anchored winter, not an occasional-outbreak risk the way a warmer citrus-adjacent belt might see it.",
   "cold_basis_beginner": "Winters here get properly cold most years, cold enough to kill this tree if left outdoors.",
@@ -1069,10 +1069,16 @@ though `unsuitable`). A32 does not apply (trees/citrus exempt, per section 3.5).
 
 ## 5. Archetype 4 -- BERRY cell (blueberry, `berries_woody`)
 
-**Who gets this shape:** blueberry, the sole `berries_woody` crop today (blackberry/raspberry are a
-separate `cane_type`-routed sub-form of the same archetype but are not templated in this doc; see
-section 7). **Berries are strong and well documented in this belt** -- NC is genuine native highbush
-AND rabbiteye range, and this is the ONE archetype where the region-specific
+**Who gets this shape:** blueberry -- one of **4** `berries_woody` crops in the roster (blueberry,
+raspberry, blackberry, elderberry; `docs/superpowers/plans/2026-07-20-mid-atlantic-region.md` line 36).
+This section templates only blueberry's **BUSH** sub-form (`cane_type: "not_applicable"`,
+`self_fertile` MUST be `false`, `BUSH_TYPE_ENUM`). Raspberry and blackberry (the **CANE** sub-form,
+a real `cane_type` value, `self_fertile` a bool with `True` correct, `CANE_TYPE_ENUM`) and elderberry
+(the **SHRUB** sub-form, `cane_type: "multistem_perennial"`, also self-fertile-bool, not chill-class-
+typed, `SHRUB_TYPE_ENUM`) carry different gate requirements per `tools/berries_woody_gate.py` and are
+NOT templated in this doc; see section 7, deferred to Task 7. **Berries are strong and well documented
+in this belt** -- NC is genuine native highbush AND rabbiteye range, and this is the ONE archetype
+where the region-specific
 `recommended_type` decision is genuinely two-way, unlike PNW (northern_highbush only) or `se_gulf`
 (rabbiteye only).
 
@@ -1285,6 +1291,13 @@ citrus, berry) only. It does NOT cover:
   real `>1,000 hr` NC-wide floor is already sourced (the ruling); the exact per-zone band split used
   in this doc's own apple worked example (section 3.3) is an illustrative placeholder pending that
   task.
+- The `berries_woody` archetype's CANE and SHRUB sub-forms -- raspberry and blackberry (CANE:
+  `cane_type` a real value, `self_fertile` a bool, `True` correct, `CANE_TYPE_ENUM`) and elderberry
+  (SHRUB: `cane_type: "multistem_perennial"`, also self-fertile-bool, not chill-class-typed,
+  `SHRUB_TYPE_ENUM`) -- per `tools/berries_woody_gate.py`. Section 5 templates only the BUSH sub-form
+  (blueberry). These 3 crops are Task 7's job (the plan's remaining-perennials batch,
+  `docs/superpowers/plans/2026-07-20-mid-atlantic-region.md`, alongside the woody herbs and
+  strawberry below).
 - The 5 `perennial_woody_ornamental` crops (rosemary/oregano/sage/thyme/lavender) and the 1
   `perennial_herbaceous` crop (strawberry). Design spec section 5 flags that humidity, not cold, is
   their real Mid-Atlantic constraint (`se_gulf`'s own humidity-struggle framing is the closer analog
@@ -1393,7 +1406,7 @@ blueberry.regions.se_gulf
 ```
 
 Gate logic cross-referenced: `tools/whole_crop_gate.py` (A2, A3, A4, A5/A5b/A5c, A8, A15, A16, A18,
-A24, A25, A31/A32, A43, A45), `tools/annual_calendar.py` (`derive_annual_calendar`,
+A24, A28, A31/A32, A43, A45), `tools/annual_calendar.py` (`derive_annual_calendar`,
 `annual_calendar_violations`, `annual_coherence_violations`, `heat_pause_backing_violations`),
 `tools/second_planting_gate.py` (`check_crop`, the A43 de-mux + envelope invariant), `tools/
 tree_calendar.py` (`derive_tree_calendar`, `tree_calendar_violations`), `tools/berries_woody_gate.py`
