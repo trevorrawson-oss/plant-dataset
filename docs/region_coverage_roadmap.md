@@ -21,7 +21,7 @@ HANDED OFF (different owner, a first-class item here, not a footnote).
 | # | Item | Owner | Status | Impact |
 |---|------|-------|--------|--------|
 | 1 | Zone-span widen (2023-map reconciliation, A45 gate) | dataset | SHIPPED 2026-07-12 | ~320 ZIPs regain region resolution |
-| 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`); **+ the `isWarm` decoupling (found 2026-07-20, see below)** | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence is what actually resolves RGV ZIPs to `rgv` in-app; the `isWarm` bug strands ALL of `northern_tier`'s authored z3-7 data |
+| 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`); **+ temperate-region resolution / `isWarm` decoupling (kickoff #32, the priority app-side item)** | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence resolves RGV ZIPs to `rgv` in-app; the `isWarm` gate stops NEW temperate regions' z7 halves from being assigned (not a `northern_tier` bug -- that already resolves) |
 | 3 | Rio Grande Valley / subtropical TX region (new authored region; TAMU AgriLife RGV calendars are strong T1) | dataset | **SHIPPED 2026-07-13** (canonical `d0832254`) | 95 TX z10 ZIPs off the se_gulf interim; app-side 785xx ZIP3 fence is the paired follow-up (item 2 / kickoff #26) |
 | 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | **SHIPPED 2026-07-14** (canonical `8dd4ac4c`) | ~750 ZIPs off generic frost-anchored dates; app-side west-side ZIP3 fence is the paired follow-up (kickoff #28) |
 | 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | **RULED 2026-07-15** (4x CONDITIONAL-GO: mid-Atlantic, mid-South, Nevada, Utah; 1x NEW-REGION: Alaska) | all 5 belts ruled with real T1 evidence, not a first-read guess; every belt surfaced an actual region-building candidate (a real, sourced planting-window or suitability gap the generic fallback doesn't capture) -- 1 clears the NEW-REGION bar outright (Alaska, item 7), 4 stop short of that bar but their caveats are the same KIND of finding that justified RGV/PNW, so they're queued as candidates too (items 8-11), the same "same zone, different real climate" precedent the `ca_interior`/`ca_north_coast`/`ca_south_coast`/`ca_desert` split already establishes |
@@ -304,43 +304,54 @@ a precondition for that. So all 5 belts are now **full region builds**, not cand
 (item 7, NEW-REGION), mid-Atlantic (item 8), mid-South (item 9), Nevada (item 10), Utah (item 11) --
 each its own spec/plan/build arc, unsequenced relative to each other. Item 7 was spec'd 2026-07-20.
 
-## The `isWarm` blocker -- a PROGRAM-LEVEL prerequisite (found 2026-07-20, scope corrected same day)
+## The temperate-region resolution gap -- a PROGRAM-LEVEL prerequisite (found + corrected 2026-07-20)
 
-**Scope correction.** This was first written up as an Alaska-only concern, reasoning from the belts'
-*ruled* z8 spans. Reading the belts' real ZIP distributions out of `zip-zones.json` shows it gates
-most of the addressable population in the two largest queued belts:
+**Handoff written:** `docs/kickoffs/32-plant-app-temperate-region-resolution.md` (plant-app).
 
-| Belt | Resolves today (z8+) | Blocked by `isWarm` (z7 and colder) |
+**Two scope corrections, both made the day this was found** -- the second reverses a wrong claim, so
+read carefully:
+
+1. It is not Alaska-only. Reading the belts' real ZIP distributions out of `zip-zones.json`, it affects
+   the z7 halves of the two largest queued belts far more than Alaska.
+2. **It does NOT strand `northern_tier`, and cold-zone growers are NOT on generic dates.** The first
+   write-up said the gate leaves `northern_tier` unresolved for every cold-zone user. That was wrong.
+   The app has TWO resolution layers, and only one is gated on `isWarm` (see the mechanism below);
+   `northern_tier` is delivered today through the other one.
+
+The z7 ZIPs that would **upgrade** (from `northern_tier`'s generic cold-continental calendar to their
+authored region-specific calendar) once the region ships AND the app fix lands:
+
+| Belt | z8 ZIPs (standard wiring) | z7 ZIPs (need the fix) |
 |---|---|---|
-| Mid-Atlantic (item 8) | 1,464 | **4,608** |
-| Mid-South (item 9) | 698 | **2,676** |
-| Nevada (item 10) | 129 | 119 |
-| Utah (item 11) | **15** | 321 |
-| SE Alaska (item 7) | 13 (6 panhandle) | 36 (22 panhandle) |
+| Mid-Atlantic (item 8) | 1,444 | **3,131** |
+| Mid-South (item 9) | 697 | ~1,900 |
+| Nevada (item 10) | z8-dominant | small z7 tail |
+| Utah (item 11) | **15** | small z7 tail |
+| SE Alaska (item 7) | 6 (panhandle) | 22 (panhandle) |
 
 Hand this to plant-app **in parallel with the item-8 build**, not sequenced behind anything. Note
 separately that **Utah's ruled z8 core is only 15 ZIPs**, smaller than Alaska's panhandle -- worth
 knowing before item 11 is scoped, since its z6-7 neighbors are the Wasatch Front, a genuinely
 different climate from St. George's Dixie.
 
-### The mechanism
+### The mechanism (two layers, only one gated)
 
-`plant-app/src/lib/zones.ts` resolves a region **only for zones >= 8** (`isWarmZone`) and **only for
-regions flagged `isWarm: true`** in `regions.json`. Two consequences, one new and one long-standing:
+- **Calendar resolution (`guide-calendar.ts:resolveZoneCell`) already handles cold zones.** With no
+  region passed and `zone <= 7`, it resolves `northern_tier` first. So a Minnesota z5 grower gets
+  `northern_tier`'s real calendar today. This layer is correct; it does NOT change.
+- **Region assignment at onboarding (`zones.ts:resolveFromZip`) is gated on `isWarmZone` (zone >= 8)
+  AND `region.isWarm`.** For any zone < 8 it stores no region. That is fine for a true cold-zone
+  grower (the calendar layer gives them `northern_tier`) but wrong for a NEW temperate region spanning
+  z7: a z7 Virginia grower never gets `mid_atlantic` assigned, so `resolveZoneCell` falls back to
+  `northern_tier`'s z7 cell instead of the authored `mid_atlantic` one. The z7 data exists but is
+  shadowed. The z8 half is unaffected (normal warm-path wiring).
 
-- **New:** any region spanning z7 delivers only its z8 half. That is `mid_atlantic` (3,131 z7 ZIPs
-  vs 1,444 z8), `mid_south`, and `se_alaska` (Juneau and Sitka, most of the panhandle's population).
-  Flagging a subarctic maritime region `isWarm: true` to route around this would also be a lie in a
-  user-facing taxonomy.
-- **Long-standing:** the same gate already strands **`northern_tier`** (`isWarm: false`, span z3-7),
-  which carries real authored cells for the whole certified roster and therefore **never ZIP-resolves
-  at all**. Every cold-zone user in the dataset's coverage is on generic dates today despite the data
-  existing.
-
-The fix is to decouple "has an authored region" from "is a warm-climate region": `isWarm` should drive
-labeling and chip presentation, not whether region resolution runs. plant-app change, sized
-independently, and it unlocks `northern_tier` as a bonus. It is a precondition for the z7 half of
-items 8, 9, and 7 delivering; it does not block any of their dataset builds.
+The fix is to decouple region **assignment** from `isWarm`: assign by state + zone-span for all zones,
+keep `northern_tier` out of the assignable set (it stays the silent cold default), and let `isWarm`
+drive presentation only. **Once assignment sets `location.region`, the calendar layer already returns
+the right cell -- no `guide-calendar.ts` change needed.** Full trace + recommended design in kickoff
+#32. It is a precondition for the z7 half of items 8, 9, and 7 delivering; it blocks none of their
+dataset builds.
 
 ## Empty-state ZIPs (item 2 detail)
 

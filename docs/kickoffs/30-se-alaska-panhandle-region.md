@@ -38,10 +38,11 @@ opposite of what UAF documents here.
 2. **The zone span is `["7","8"]`, and the ZIP3 fence is load-bearing.** z8 alone is 6 real panhandle
    ZIPs and leaves out Juneau and Sitka. Naive state+zone matching pulls 21 Southcentral/Kodiak ZIPs
    into a panhandle calendar. Fence to ZIP3 **998 + 999**. Spec 4.2.
-3. **An app-side blocker was found while writing the spec.** `plant-app/src/lib/zones.ts` only
-   resolves regions for zone >= 8 and only for `isWarm: true` regions -- so the z7 half would not
-   deliver, and **the same bug already strands `northern_tier`'s entire authored z3-7 dataset**.
-   Needs its own plant-app kickoff. Spec 9.2.
+3. **An app-side prerequisite for the z7 half** (handoff already written, kickoff #32). Corrected
+   mechanism: plant-app's `zones.ts:resolveFromZip` won't assign `se_alaska` to a z7 grower (gated on
+   `isWarmZone` >= 8), so Juneau/Sitka fall back to `northern_tier`'s z7 cell. This is NOT a
+   `northern_tier`-stranding bug -- `guide-calendar.ts:resolveZoneCell` already delivers `northern_tier`
+   for cold zones. Spec 9.2.
 
 ## Read first
 

@@ -64,11 +64,11 @@ mid-Atlantic state. The belt is genuinely unclaimed today: none of NC, VA, MD, D
 appears in plant-app's `REGION_STATES` at all, so every user in these seven states currently gets
 bare zone dates with no region.
 
-### 4.2 Zone span -- the one real decision in this spec
+### 4.2 Zone span -- `["7", "8"]` (DECIDED, Trevor 2026-07-20)
 
-**Recommendation: `["7", "8"]`.** The alternative, `["8"]`, is defensible and cheaper to deliver; the
-argument for spanning both is below, and this is the one call worth your explicit sign-off before
-build starts.
+**Decision: `["7", "8"]`.** Trevor signed off on 2026-07-20. The rejected alternative was `["8"]`
+only (cheaper to deliver, but leaves the z7 majority of the belt on generic dates). The reasoning is
+kept below.
 
 Real ZIP distribution across the seven belt states, from plant-app's `zip-zones.json`:
 
@@ -92,29 +92,45 @@ Crucially, **widening a span later is its own roster-wide arc.** Roadmap item 1 
 gate. Authoring z7 now costs one extra row per crop inside an arc that is already open. Authoring it
 later costs a second full pass.
 
-**The case against (`["8"]` only):** the ruling's evidence is Raleigh-anchored and therefore z8. z7
-would need its own sourced frost normals and windows. And the z7 half will not deliver in-app until
-the `isWarm` fix lands (4.3 below).
+**The case against (`["8"]` only, rejected):** the ruling's evidence is Raleigh-anchored and therefore
+z8. z7 needs its own sourced frost normals and windows. And the z7 half will not deliver in-app until
+the temperate-region resolution fix lands (4.3 below).
 
-**My call: span z7-8, author both rows, accept that the z7 half sits dormant until the app fix.** The
+**Decision: span z7-8, author both rows, accept that the z7 half sits dormant until the app fix.** The
 dataset is the source of truth and should be correct ahead of the consumer; that has been the pattern
 for every region so far (RGV and PNW both shipped before their fences landed).
 
-### 4.3 The `isWarm` blocker applies here too -- correcting my earlier read
+### 4.3 The temperate-region resolution fix -- a prerequisite for the z7 half (handoff kickoff #32)
 
-**I told you on 2026-07-20 that Alaska was the only queued belt affected by plant-app's
-`isWarmZone(zone) >= 8` gate. That was wrong, and it was wrong because I reasoned from the belts'
-*ruled* z8 spans rather than from their real ZIP distributions.** Corrected picture across all four:
+The z7 half of this region will not deliver in-app until plant-app's region-assignment layer stops
+gating on `isWarmZone(zone) >= 8`. **The precise mechanism, corrected 2026-07-20** (an earlier draft
+of this spec mis-stated it as a `northern_tier`-stranding bug -- it is not):
 
-| Belt | Resolves today (z8+) | Blocked by `isWarm` (z7 and colder) |
+- plant-app has TWO resolution layers. `guide-calendar.ts:resolveZoneCell` already resolves
+  `northern_tier` for `zone <= 7` when no region is passed, so cold-zone growers DO get their calendar
+  today; `northern_tier` is not stranded.
+- The gap is in `zones.ts:resolveFromZip` (onboarding assignment), gated on `isWarmZone` +
+  `region.isWarm`. A z7 Virginia grower is never assigned `mid_atlantic`, so `resolveZoneCell` falls
+  back to `northern_tier`'s generic z7 cell instead of the authored `mid_atlantic` one. The z7 data
+  exists in the dataset but is shadowed. The z8 half works with standard new-region wiring.
+
+Fix = decouple assignment from `isWarm` (assign by state + zone-span, keep `northern_tier` out of the
+assignable set, `isWarm` drives presentation only). **No `guide-calendar.ts` change needed** -- once
+assignment sets `location.region`, the calendar layer returns the right cell. Full trace + recommended
+design: `docs/kickoffs/32-plant-app-temperate-region-resolution.md`.
+
+The z7 ZIPs that upgrade (from `northern_tier`'s generic cold calendar to the region-specific one)
+once this region ships AND the fix lands:
+
+| Belt | z8 ZIPs (standard wiring) | z7 ZIPs (need the fix) |
 |---|---|---|
-| Mid-Atlantic (item 8) | 1,464 | **4,608** |
-| Mid-South (item 9) | 698 | **2,676** |
-| Nevada (item 10) | 129 | 119 |
-| Utah (item 11) | **15** | 321 |
+| Mid-Atlantic (item 8) | 1,444 | **3,131** |
+| Mid-South (item 9) | 697 | ~1,900 |
+| Nevada (item 10) | z8-dominant | small z7 tail |
+| Utah (item 11) | **15** | small z7 tail |
 
-Two things follow. First, the `isWarm` decoupling is not an Alaska footnote; it gates most of the
-addressable population in the two largest belts. It should be treated as a **program-level
+Two things follow. First, the resolution fix is not an Alaska footnote; it gates the z7 majority of
+the two largest belts. It should be treated as a **program-level
 prerequisite** and handed to plant-app now, in parallel with this build, rather than sequenced behind
 anything. Second, **Utah's ruled z8 core is only 15 ZIPs** -- smaller than Alaska's panhandle -- which
 is worth knowing before item 11 is scoped. Its z6-7 neighbors are the Wasatch Front, a genuinely
@@ -237,7 +253,8 @@ confirm A43 bounces it before trusting the batch.
 - `regions.json` row + `SHORT_REGION_LABEL.mid_atlantic`.
 - **No ZIP3 fence is expected.** Unlike RGV, PNW, and Alaska, this belt has no adjacent-but-different
   climate pocket sharing its state+zone signature. Confirm during build rather than assuming.
-- **The `isWarm` decoupling (4.3)** -- now a program-level prerequisite, not an Alaska item.
+- **The temperate-region resolution fix (4.3, kickoff #32)** -- the program-level prerequisite for the
+  z7 half; hand it to plant-app in parallel with this build.
 
 No plant-astro bump from this session.
 
@@ -250,8 +267,8 @@ No plant-astro bump from this session.
 
 ## 11. Risks / open items
 
-1. **The z7/z8 span decision (4.2)** -- the one call worth explicit sign-off. Cheap to flip before
-   build starts, expensive after.
+1. **Zone span is DECIDED z7-8 (4.2).** No longer open. The z7 half depends on the plant-app
+   resolution fix (4.3 / kickoff #32) to deliver, but that does not block the dataset build.
 2. **Fall-cycle coverage breadth.** VCE 426-331 is strong but will not carry a fall window for all 82
    annuals. Expect a real tail of spring-only crops; that is the honest answer, not a gap.
 3. **`heat_pause` calibration.** Declaration-driven, so an unsourced pause silently reshapes the
@@ -263,13 +280,14 @@ No plant-astro bump from this session.
 
 ## 12. Acceptance criteria
 
-- `mid_atlantic` authored + certified across the 111 roster; span as decided in 4.2.
+- `mid_atlantic` authored + certified across the 111 roster; `zone_span = ["7", "8"]` (4.2, decided).
 - A43/A45/A31/A32/A3 + `gate_all` 119/119 + `chill_gate` 0 + `release_verify` clean + pre-commit
   backstop no-regression.
 - Footprint EXACT (111 `regions.mid_atlantic` + chill band + provenance; 0 other keys; count 128;
   COMPACT).
 - State trio updated; roadmap item 8 -> SHIPPED; field register row added.
-- plant-app kickoff written (`REGION_STATES`, and the `isWarm` prerequisite restated).
+- plant-app kickoff written (`REGION_STATES`); the temperate-region resolution fix (kickoff #32) is
+  already written and handed off.
 - Dataset committed + PUSHED on Trevor's confirm; NO plant-astro bump.
 
 Then item 8 closes and the sequence continues to item 9 (mid-South), which the ruling shows has the

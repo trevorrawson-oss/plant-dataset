@@ -29,30 +29,28 @@ source institutions (`ncsu_ext`, `vce_426_331`) are **already in `source_catalog
 The risk here is **volume, not design**: 111 crops with a real per-crop fall-window decision on the 82
 annuals. Batch discipline matters more than cleverness.
 
-## Decide this before authoring: the zone span
+## Zone span: DECIDED z7-8 (Trevor, 2026-07-20)
 
-Spec 4.2 recommends **`["7","8"]`**; `["8"]` is the cheaper-to-deliver alternative. Real ZIP counts
-across the seven states: **z7 = 3,131, z8 = 1,444** -- z7 holds 2.2x more ZIPs and is the same
-continuous Piedmont/coastal-plain climate a shade cooler. Widening a span later is its own roster-wide
-arc (roadmap item 1 is the precedent), so authoring z7 now costs one extra row per crop inside an
-already-open arc. **Get Trevor's sign-off on this before build starts** -- cheap to flip now, expensive
-after.
+`zone_span = ["7", "8"]`. Real ZIP counts across the seven states: **z7 = 3,131, z8 = 1,444** -- z7
+holds 2.2x more ZIPs and is the same continuous Piedmont/coastal-plain climate a shade cooler. Widening
+a span later is its own roster-wide arc (roadmap item 1 is the precedent), so authoring z7 now costs
+one extra row per crop inside an already-open arc. The z7 half depends on the plant-app resolution fix
+(below) to deliver in-app, but that does not block the dataset build.
 
-## Correction carried into this arc (read spec 4.3)
+## The z7 delivery dependency (read spec 4.3 + kickoff #32)
 
-An earlier read that Alaska was the only queued belt hit by plant-app's `isWarmZone(zone) >= 8` gate
-was **wrong** -- it reasoned from ruled z8 spans, not real ZIP distributions. Actual:
+The z7 half will not deliver in-app until plant-app's onboarding assignment stops gating on
+`isWarmZone(zone) >= 8`. **Corrected mechanism** (an earlier note mis-called this a `northern_tier`
+bug -- it is not): plant-app has two resolution layers. `guide-calendar.ts:resolveZoneCell` already
+delivers `northern_tier` for cold zones, so that data is NOT stranded. The gap is that
+`zones.ts:resolveFromZip` never assigns `mid_atlantic` to a z7 grower, so `resolveZoneCell` falls back
+to `northern_tier`'s z7 cell instead of the authored `mid_atlantic` one. The handoff is already
+written: `docs/kickoffs/32-plant-app-temperate-region-resolution.md` -- hand it to plant-app in
+parallel with this build.
 
-| Belt | Resolves today (z8+) | Blocked by `isWarm` |
-|---|---|---|
-| Mid-Atlantic | 1,464 | **4,608** |
-| Mid-South | 698 | **2,676** |
-| Nevada | 129 | 119 |
-| Utah | **15** | 321 |
-
-The `isWarm` decoupling is a **program-level prerequisite**, not an Alaska footnote, and should go to
-plant-app in parallel with this build. Also note **Utah's ruled z8 core is only 15 ZIPs** -- worth
-knowing before item 11 is scoped.
+z7 ZIPs that upgrade once this region + the fix land: **Mid-Atlantic 3,131, Mid-South ~1,900**, small
+tails for Nevada/Utah/Alaska. Also note **Utah's ruled z8 core is only 15 ZIPs** -- worth knowing
+before item 11 is scoped.
 
 ## Read first
 

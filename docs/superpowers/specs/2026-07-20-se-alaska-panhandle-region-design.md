@@ -355,24 +355,29 @@ Green gate is not a clean release. Before promote:
   load-bearing here: without it, 21 Southcentral and Kodiak ZIPs get a panhandle calendar.
 - `regions.json` row + `SHORT_REGION_LABEL.se_alaska`.
 
-### 9.2 The blocker the app side must fix first (NEW finding, 2026-07-20)
+### 9.2 The temperate-region resolution fix -- prerequisite for the z7 half (handoff kickoff #32 written)
 
-**`plant-app/src/lib/zones.ts` only resolves regions for zones >= 8** (`isWarmZone`), and only for
-regions flagged `isWarm: true` in `regions.json`. Consequences:
+**Precise mechanism (corrected 2026-07-20; an earlier draft mis-stated this as a `northern_tier`
+bug).** plant-app has two resolution layers:
 
-- A `se_alaska` region spanning z7-8 would deliver **only its z8 half** in-app until this is
-  generalized -- Juneau and Sitka would still get generic dates.
-- Flagging `se_alaska` as `isWarm: true` to work around it would be a lie in a user-facing taxonomy
-  ("warm climate region") about a place that is not warm.
-- **The same bug already strands `northern_tier`**, which carries real authored z3-7 data for the whole
-  roster and `isWarm: false`, and therefore never ZIP-resolves at all. Every cold-zone user in the
-  dataset's coverage is on generic dates today despite the data existing.
+- `guide-calendar.ts:resolveZoneCell` already resolves `northern_tier` for `zone <= 7` when no region
+  is passed, so cold-zone growers DO get their calendar today. `northern_tier` is NOT stranded.
+- `zones.ts:resolveFromZip` (onboarding assignment) is gated on `isWarmZone` (zone >= 8) +
+  `region.isWarm`. So a z7 grower is never assigned `se_alaska`, and `resolveZoneCell` falls back to
+  `northern_tier`'s z7 cell instead of the authored `se_alaska` one. The z7 data exists but is
+  shadowed. The z8 half works with standard new-region wiring.
 
-The fix is to **decouple "has an authored region" from "is a warm-climate region"** -- `isWarm` should
-drive labeling and chip presentation, not whether region resolution runs. That is a plant-app change,
-sized independently of this arc, and it unlocks `northern_tier` as a bonus. **Write it up as its own
-plant-app kickoff and add it to roadmap item 2**; it is a precondition for this region delivering its
-z7 half, not a blocker on the dataset build.
+For SE Alaska this matters especially: Juneau and Sitka (the panhandle's largest communities) are z7,
+so without the fix the region delivers only its 6 z8 (Ketchikan-area) ZIPs, not the 22 z7 ones.
+Flagging `se_alaska` as `isWarm: true` to route around it would also be a lie in a user-facing
+taxonomy ("warm climate region") about a subarctic place.
+
+The fix is to decouple region **assignment** from `isWarm` (assign by state + zone-span for all zones,
+keep `northern_tier` out of the assignable set, `isWarm` drives presentation only). **No
+`guide-calendar.ts` change is needed** -- once assignment sets `location.region`, the calendar layer
+returns the right cell. **The handoff is already written:
+`docs/kickoffs/32-plant-app-temperate-region-resolution.md`** (folded into roadmap item 2). It is a
+precondition for this region's z7 half delivering, not a blocker on the dataset build.
 
 ### 9.3 The variety-card caveat
 
@@ -423,8 +428,9 @@ No plant-astro bump from this session (memory `plant-astro-bump-owned-by-astro-s
 - State trio updated (CURRENT_STATE.md regenerate + prose slots, STATE_HISTORY.md prepend, LATEST.txt
   bump); roadmap item 7 -> SHIPPED; field register rows added (the region column, `protected_culture`,
   `recommended_varieties`, and the queued `heat_accumulation` follow-on).
-- plant-app kickoff written: `REGION_STATES.se_alaska`, the 998/999 fence, the variety-card caveat,
-  and **the `isWarm` decoupling** (9.2) as its own item.
+- plant-app kickoff written: `REGION_STATES.se_alaska`, the 998/999 fence, the variety-card caveat.
+  (The temperate-region resolution fix, 9.2, is already handed off as kickoff #32 -- shared with items
+  8/9, not re-written per-region.)
 - Dataset committed + PUSHED (Trevor confirms push); NO plant-astro bump from this session.
 
 Then item 7 closes and the region program is down to items 8-11 (mid-Atlantic, mid-South, Nevada,
