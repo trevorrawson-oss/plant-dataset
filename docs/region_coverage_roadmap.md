@@ -21,20 +21,26 @@ HANDED OFF (different owner, a first-class item here, not a footnote).
 | # | Item | Owner | Status | Impact |
 |---|------|-------|--------|--------|
 | 1 | Zone-span widen (2023-map reconciliation, A45 gate) | dataset | SHIPPED 2026-07-12 | ~320 ZIPs regain region resolution |
-| 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`) | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence is what actually resolves RGV ZIPs to `rgv` in-app |
+| 2 | App-side cleanup: ~285 empty-state ZIP rows in zip-zones.json; verify the regions.json sync path end to end; fence ZIP3 785xx to the new `rgv` region (item 3 shipped below; paired app-side kickoff `docs/kickoffs/26-rgv-plant-app-zip3-fence.md`); **+ the `isWarm` decoupling (found 2026-07-20, see below)** | plant-app | QUEUED (next) | ~285 ZIPs broken regardless of spans until fixed; 785xx fence is what actually resolves RGV ZIPs to `rgv` in-app; the `isWarm` bug strands ALL of `northern_tier`'s authored z3-7 data |
 | 3 | Rio Grande Valley / subtropical TX region (new authored region; TAMU AgriLife RGV calendars are strong T1) | dataset | **SHIPPED 2026-07-13** (canonical `d0832254`) | 95 TX z10 ZIPs off the se_gulf interim; app-side 785xx ZIP3 fence is the paired follow-up (item 2 / kickoff #26) |
 | 4 | Maritime PNW region (WA/OR z8-9; WSU/OSU extension T1) | dataset | **SHIPPED 2026-07-14** (canonical `8dd4ac4c`) | ~750 ZIPs off generic frost-anchored dates; app-side west-side ZIP3 fence is the paired follow-up (kickoff #28) |
 | 5 | Judged later, each needs an explicit ruling: mid-Atlantic z8 belt (NC 793 / VA 258 / MD 117 / DC 215 / DE-NJ-PA small), mid-South (AR 460 / OK 106 / TN 123 / MO 6), NV (110) / UT (15) / AK (13) | dataset | **RULED 2026-07-15** (4x CONDITIONAL-GO: mid-Atlantic, mid-South, Nevada, Utah; 1x NEW-REGION: Alaska) | all 5 belts ruled with real T1 evidence, not a first-read guess; every belt surfaced an actual region-building candidate (a real, sourced planting-window or suitability gap the generic fallback doesn't capture) -- 1 clears the NEW-REGION bar outright (Alaska, item 7), 4 stop short of that bar but their caveats are the same KIND of finding that justified RGV/PNW, so they're queued as candidates too (items 8-11), the same "same zone, different real climate" precedent the `ca_interior`/`ca_north_coast`/`ca_south_coast`/`ca_desert` split already establishes |
 | 6 | Puerto Rico (2 z11 / 47 z12 / 126 z13) | product call (Trevor) | OPEN | market-scope question first; also needs z12/13 support end to end |
-| 7 | Southeast Alaska panhandle region (new authored region; UAF Cooperative Extension Service T1 -- Ketchikan-anchored, maritime z8, 13 ZIPs) | dataset | QUEUED | surfaced by item 5's Alaska ruling (**NEW-REGION**, `docs/reviews/notes/2026-07-15/tier2_alaska_ruling.md`): unprotected outdoor tomato yields collapse per a UAF field trial (needs protected-culture guidance, not a window fix); the real SE-AK apple variety list shares zero overlap with the canonical chill-tier list (season-length-bound, a mechanism the chill model doesn't represent) |
+| 7 | Southeast Alaska panhandle region `se_alaska` (new authored region; UAF Cooperative Extension Service T1 -- Ketchikan through Juneau, maritime **z7-8**, 28 panhandle ZIPs) | dataset | **SPEC'D 2026-07-20** (`docs/superpowers/specs/2026-07-20-se-alaska-panhandle-region-design.md`, kickoff #30) -- ready for a fresh build session | surfaced by item 5's Alaska ruling (**NEW-REGION**, `docs/reviews/notes/2026-07-15/tier2_alaska_ruling.md`): unprotected outdoor tomato yields collapse per a UAF field trial (needs protected-culture guidance, not a window fix); the real SE-AK apple variety list shares zero overlap with the canonical chill-tier list (season-length-bound, a mechanism the chill model doesn't represent) |
 | 8 | Mid-Atlantic region (NC/VA/MD/DC/DE-NJ-PA z8; VCE/NC State Extension T1) | dataset | QUEUED | surfaced by item 5's mid-Atlantic ruling (**CONDITIONAL-GO**, `docs/reviews/notes/2026-07-15/tier2_mid_atlantic_ruling.md`): the naive fallback calendar misses a real, T1-documented FALL tomato planting window (VCE 426-331's zone-8 spring-AND-fall two-cycle table) that the generic single-cycle assumption doesn't have |
 | 9 | Mid-South region (AR/OK/TN/MO z8, +TN z9 sliver; UAEX/University of Arkansas T1) | dataset | QUEUED | surfaced by item 5's mid-South ruling (**CONDITIONAL-GO**, `docs/reviews/notes/2026-07-15/tier2_mid_south_ruling.md`): same missing-fall-tomato-window gap as mid-Atlantic, independently evidenced (2 UAEX sources); blackberry's real UA breeding-program per-cultivar chill data (Ouachita/Navaho/Apache/Kiowa/Arapaho) is ready to author directly |
 | 10 | Nevada high-desert region (z8/z9/z10, Las Vegas/Clark County anchor; UNR Extension T1) | dataset | QUEUED | surfaced by item 5's Nevada ruling (**CONDITIONAL-GO**, `docs/reviews/notes/2026-07-15/tier2_nevada_ruling.md`): the naive calendar's flat back half is actively misleading (not just incomplete) -- misses the real Jun-Sep heat-abort period AND the real Nov frost return; apple needs real variety-chill tiering (6 of 16 canonical varieties sit above the confirmed 700hr trial ceiling with no local evidence either way); garlic's real fall window differs from the neighboring `warm_arid`/`low_desert_az` cross-reference regions |
 | 11 | Utah "Dixie" high-desert region (St. George/Washington County z8 core; USU Extension T1) | dataset | QUEUED | surfaced by item 5's Utah ruling (**CONDITIONAL-GO**, `docs/reviews/notes/2026-07-15/tier2_utah_ruling.md`): same tomato heat/frost-return gap as Nevada; apple leans marginal at St. George's elevation per county extension (currently would default to the canonical's `fruits_reliably` assumption, unchecked); raspberry needs fall-bearing/low-chill cultivar steering, confirmed via this dataset's own pre-existing `warm_arid` raspberry text (same USU source) |
 
-Items 3+ are their own arcs (spec -> plan -> build). Nothing below item 2 blocks item 2. Items
-7-11 are all the same kind item 3/4 were before they shipped -- queued by a ruling pass, not yet
-spec'd; none are sequenced ahead of the others, pick per priority when ready to start the next one.
+Items 3+ are their own arcs (spec -> plan -> build). Nothing below item 2 blocks item 2.
+
+**Trevor's ruling (2026-07-16, restated 2026-07-20): items 7-11 are all FULL NEW REGIONS**, not
+candidates awaiting a second go/no-go. The 4 CONDITIONAL-GO belts are built the same way the
+NEW-REGION one is; a real, sourced planting-window or suitability gap is reason enough on its own,
+the same "same zone, different real climate" precedent the `ca_interior`/`ca_north_coast`/
+`ca_south_coast`/`ca_desert` split already establishes. Each is its own spec -> plan -> build arc.
+**Item 7 (Alaska) is SPEC'D as of 2026-07-20** and ready for a build session; 8-11 are unsequenced
+relative to each other, pick per priority.
 
 ## Item 1 record: the widen (SHIPPED 2026-07-12, canonical 7e29f4f4)
 
@@ -291,9 +297,27 @@ CONDITIONAL-GO findings (2026-07-16) is that a real, sourced planting-window or 
 reason enough to queue a region candidate on its own, the same "same zone, different real climate"
 precedent the `ca_interior`/`ca_north_coast`/`ca_south_coast`/`ca_desert` split already
 establishes -- clearing the stricter NEW-REGION bar (a confirmed suitability-class mismatch) isn't
-a precondition for that. So all 5 belts are now queued candidate future roadmap items: Alaska
+a precondition for that. So all 5 belts are now **full region builds**, not candidates: Alaska
 (item 7, NEW-REGION), mid-Atlantic (item 8), mid-South (item 9), Nevada (item 10), Utah (item 11) --
-each its own future spec/plan/build arc, unsequenced relative to each other.
+each its own spec/plan/build arc, unsequenced relative to each other. Item 7 was spec'd 2026-07-20.
+
+## The `isWarm` blocker (found 2026-07-20 while spec'ing item 7) -- folded into item 2
+
+`plant-app/src/lib/zones.ts` resolves a region **only for zones >= 8** (`isWarmZone`) and **only for
+regions flagged `isWarm: true`** in `regions.json`. Two consequences, one new and one long-standing:
+
+- **New:** a z7-8 `se_alaska` region would deliver only its z8 half. Juneau and Sitka (z7, and most of
+  the panhandle's population) would stay on generic dates. Flagging a subarctic maritime region
+  `isWarm: true` to route around this would be a lie in a user-facing taxonomy.
+- **Long-standing:** the same gate already strands **`northern_tier`** (`isWarm: false`, span z3-7),
+  which carries real authored cells for the whole certified roster and therefore **never ZIP-resolves
+  at all**. Every cold-zone user in the dataset's coverage is on generic dates today despite the data
+  existing.
+
+The fix is to decouple "has an authored region" from "is a warm-climate region": `isWarm` should drive
+labeling and chip presentation, not whether region resolution runs. plant-app change, sized
+independently, and it unlocks `northern_tier` as a bonus. It is a precondition for item 7's z7 half
+delivering, not a blocker on item 7's dataset build.
 
 ## Empty-state ZIPs (item 2 detail)
 
