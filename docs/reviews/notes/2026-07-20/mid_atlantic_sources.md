@@ -158,19 +158,30 @@ shoulders. No `heat_pause`.
 pear (European) Aug-Oct, plum Jun-Aug, fig Jun-Aug, persimmon Sep-Nov. (Pawpaw is NATIVE to this
 belt -- a genuine strength; source its Aug-Oct ripening in Task 5.)
 
-### Chill band adopted (`region_chill_delivered.mid_atlantic`) -- FLAGGED for Trevor at check-in
+### Chill band adopted (`region_chill_delivered.mid_atlantic`) -- multi-state T1 basket (2026-07-20)
 
-| Zone | band | reasoning |
+| Zone | band | T1 basis |
 |---|---|---|
-| 7 | **[1100, 1500]** | cooler Piedmont/mid-Atlantic winters bank proportionally more |
-| 8 | **[1000, 1350]** | NC State ">1,000" statewide; Coastal Plain is the warm edge |
+| 7 | **[1100, 1500]** | Piedmont/MD/NJ/PA; Penn State: "over 1,400 chill hours by the end of March" |
+| 8 | **[1000, 1350]** | Coastal Plain/Tidewater warm edge; NC State: ">1,000 chilling hours annually" |
 
-Both clear the 900 apple max, so all trees fruit. **This is the one interpolated number in the arc:**
-NC State gives a single statewide ">1,000" figure, not a per-zone measurement. The band reads higher
-than some existing z8 neighbors (`se_gulf` z8 [650,1000], `ca_interior` z8 [500,1100]) because NC's
-z8 winters genuinely deliver more chill than the Gulf coast or CA Central Valley -- but it is a
-judgment call on a user-displayed number, so surface it at the check-in and let Trevor decide whether
-to keep the ">1,000"-anchored band or moderate it toward the neighbors for display comparability.
+Both clear the 900 apple max, so all trees fruit. **Originally interpolated from NC State's single
+statewide ">1,000" figure and flagged for a sanity-check; a follow-up multi-state hunt (2026-07-20)
+CONFIRMED the band with a 4-source T1 basket in the same 35-45 degF chill-hour model:**
+- **NC State Extension** (Gardener Handbook ch. 15): NC gardens receive "in excess of 1,000 chilling
+  hours annually" -> anchors the z8 (warm-edge) floor.
+- **Penn State** ("Make Like a Tree and Chill"): PA accumulates "over 1,400 chill hours by the end of
+  March" (35-45 degF model), and continues accruing into April -> anchors the z7 (cooler-north) upper
+  range; [1100,1500] is if anything conservative.
+- **Virginia Cooperative Extension** (422-025): apples grown in Virginia require "about 1,000" chill
+  hours and are grown belt-wide -> the belt comfortably banks >=1,000 (VA is the belt's core).
+- **University of Maryland Extension**: chill deficit "is more of a concern for gardeners in very warm
+  and very cold regions"; for MD it is not a limiting factor -> corroborates abundance.
+
+The band reads higher than some existing z8 neighbors (`se_gulf` z8 [650,1000], `ca_interior` z8
+[500,1100]) because the humid-temperate Mid-Atlantic genuinely banks more chill than the Gulf coast or
+CA Central Valley -- now confirmed by four independent university-extension sources, not a lone figure.
+No longer a flagged interpolation.
 
 ## 6. Berries -- NC State blueberry variety steer (`recommended_type`)
 
