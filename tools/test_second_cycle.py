@@ -114,7 +114,56 @@ def test_two_cycle_cell_omits_second_planting_start_indoors_when_absent():
     print("  ok: fall cycle with no start_indoors (direct-sow) still renders cleanly")
 
 
+def test_result_shares_no_mutable_objects_with_inputs():
+    # Finding 1 (LOW review): the helper must deep-copy base/spring/fall values into
+    # the result, so mutating a nested list/dict on the RESULT can never corrupt the
+    # caller's original input dicts. Task 4 reuses ONE `base` template across ~30
+    # crops/zones -- shared aliasing here would silently corrupt every other user of
+    # that template the moment any downstream code mutates a result in place.
+    base, spring, fall = _cherry_tomato_fixture()
+    import copy as _copy
+    base_before = _copy.deepcopy(base)
+    fall_before = _copy.deepcopy(fall)
+
+    result = second_cycle.build_two_cycle_cell(base, spring, fall)
+
+    # mutate nested objects on the RESULT, not the inputs
+    result["zone_span"].append("9")
+    result["resolved_from"]["last_frost"] = "X"
+    result["second_planting"]["plant_out"] = "MUTATED"
+
+    # the caller's original dicts must be untouched
+    assert base == base_before, "mutating result['zone_span']/['resolved_from'] leaked into base"
+    assert fall == fall_before, "mutating result['second_planting'] leaked into the caller's fall dict"
+    print("  ok: mutating the result's nested objects does not corrupt the caller's inputs")
+
+
+def test_inconsistent_spring_window_fails_a43_rule_a():
+    # Finding 2 (LOW review): the docstring's CALLER CONTRACT says the helper does NOT
+    # re-validate the caller's own window consistency -- it only combines/splits
+    # deterministically -- and that second_planting_gate's A43 Rule A envelope check is
+    # the safety net that catches a caller who violates that contract. Prove it: give
+    # a deliberately inconsistent spring window (harvest="Jun - Jul" but
+    # harvest_end="Aug 1", i.e. harvest_end falls OUTSIDE the displayed harvest span)
+    # and confirm the helper faithfully propagates it through to a cell the gate flags.
+    base, spring, fall = _cherry_tomato_fixture()
+    spring["harvest"] = "Jun - Jul"  # harvest_end="Aug 1" is now outside this span
+    result = second_cycle.build_two_cycle_cell(base, spring, fall)
+
+    crop = {
+        "slug": "cherry-tomato",
+        "succession_policy": {"suitable": True},
+        "regions": {"mid_atlantic": {"resolved_by_zone": {"8": result}}},
+    }
+    v = second_planting_gate.check_crop(crop, rules=frozenset("AB"))
+    assert v != [], "expected A43 Rule A to flag the inconsistent harvest/harvest_end envelope"
+    assert any("envelope" in msg and "harvest_end" in msg for msg in v), v
+    print(f"  ok: inconsistent caller window caught by the gate, not silently swallowed: {v}")
+
+
 if __name__ == "__main__":
     test_two_cycle_cell_shape_and_calendar_and_gate()
     test_two_cycle_cell_omits_second_planting_start_indoors_when_absent()
+    test_result_shares_no_mutable_objects_with_inputs()
+    test_inconsistent_spring_window_fails_a43_rule_a()
     print("\nALL second_cycle TESTS PASSED")

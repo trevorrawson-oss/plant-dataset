@@ -52,6 +52,7 @@ Usage: from a Python authoring script (not a CLI) --
     from second_cycle import build_two_cycle_cell
     cell = build_two_cycle_cell(base, spring, fall)
 """
+import copy
 import os
 import sys
 
@@ -78,14 +79,20 @@ def build_two_cycle_cell(base, spring, fall):
     fall: the SECOND cycle (plant_out, harvest_start, harvest_end, optional start_indoors) --
         becomes the result's `second_planting` object, verbatim.
 
-    Returns a new dict; does not mutate any of its arguments.
+    Returns a new dict; does not mutate any of its arguments, and shares no mutable
+    (list/dict) objects with them -- every base/spring/fall value is deep-copied
+    before landing in the result (and in the nested `second_planting`), so mutating
+    a nested object on the result (e.g. appending to `result["zone_span"]`) can
+    never corrupt the caller's original `base`/`spring`/`fall` dicts. This matters
+    because callers may reuse ONE `base` template across many crops/zones.
     """
     cell = {}
     for k in _BASE_FIELDS:
         if k in base:
-            cell[k] = base[k]
-    cell.update(spring)
-    cell["second_planting"] = dict(fall)
+            cell[k] = copy.deepcopy(base[k])
+    for k, v in spring.items():
+        cell[k] = copy.deepcopy(v)
+    cell["second_planting"] = copy.deepcopy(dict(fall))
 
     combined = {
         "plant_out": f"{spring['plant_out']}, {fall['plant_out']}",
