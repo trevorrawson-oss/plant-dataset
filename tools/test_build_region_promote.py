@@ -38,8 +38,27 @@ def test_base_sha_defaults_to_live_canonical():
     assert batch["base_sha"] == live
 
 
+# ---- mid_atlantic registration (Task 2 of the 2026-07-20 Mid-Atlantic region arc) ----
+# Task 2 only registers the STAGING/EXPECTED_CELLS entries; the 5 staging files themselves
+# are authored later (Tasks 4-7). So this test only pins the registration shape (file names +
+# the 111 expected-cell count constant), NOT a full brp.build("mid_atlantic") batch run --
+# that needs real staging files on disk and is exercised once Tasks 4-7 land.
+
+def test_mid_atlantic_registered():
+    import build_region_promote as brp
+    assert "mid_atlantic" in brp.STAGING
+    assert brp.EXPECTED_CELLS["mid_atlantic"] == 111
+    files, band = brp.STAGING["mid_atlantic"]
+    assert band == "mid_atlantic_chill_band.json"
+    assert set(files) == {
+        "mid_atlantic_annuals_cool.json", "mid_atlantic_annuals_warm.json",
+        "mid_atlantic_trees.json", "mid_atlantic_citrus.json", "mid_atlantic_perennials.json"}
+    print("  ok: mid_atlantic STAGING + EXPECTED_CELLS registered (111 cells, 5 staging files)")
+
+
 if __name__ == "__main__":
     test_pnw_batch_shape()
     test_no_duplicate_slugs()
     test_base_sha_defaults_to_live_canonical()
+    test_mid_atlantic_registered()
     print("ok")

@@ -40,6 +40,8 @@ REGION_CONFIG = {
             "span": ["9", "10"], "frost_model": "free"},
     "pnw": {"label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
             "span": ["8", "9"], "frost_model": "anchored"},
+    "mid_atlantic": {"label": "Mid-Atlantic: Piedmont and Coastal Plain",
+                     "span": ["7", "8"], "frost_model": "anchored"},
 }
 
 

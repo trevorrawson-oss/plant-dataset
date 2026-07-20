@@ -231,6 +231,40 @@ def test_pnw_woody_ornamental_wrong_method_string_still_flagged():
     print("  ok: ADVERSARIAL -- wrong method string on a woody-ornamental cell still flagged")
 
 
+# ---- mid_atlantic registration (Task 2 of the 2026-07-20 Mid-Atlantic region arc) ----
+# mid_atlantic is frost_model="anchored" like pnw (a real frost-bound winter), so it must
+# obey the SAME anchored-branch rules already exercised above: frost_anchored_resolved +
+# non-null last_frost/first_frost, cold_pause ALLOWED. These two tests only pin the new
+# REGION_CONFIG entry itself; the anchored-branch behavior is already covered generically.
+
+def test_mid_atlantic_config_present_anchored():
+    import region_cell_audit as rca
+    cfg = rca.REGION_CONFIG["mid_atlantic"]
+    assert cfg["span"] == ["7", "8"]
+    assert cfg["frost_model"] == "anchored"
+    assert cfg["label"] == "Mid-Atlantic: Piedmont and Coastal Plain"
+    print("  ok: mid_atlantic REGION_CONFIG entry present (span z7-8, anchored)")
+
+
+def test_mid_atlantic_cold_pause_allowed():
+    import region_cell_audit as rca
+    cell = {
+        "region_id": "mid_atlantic",
+        "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+        "zone_span": ["7", "8"],
+        "resolved_by_zone": {
+            z: {"plant_out": "Apr 8 - Jun 1", "harvest": "Jun 20 - Sep 1",
+                "harvest_start": "Jun 20", "harvest_end": "Sep 1",
+                "first_plant_date": "Apr 8", "last_plant_date": "Jun 1",
+                "resolution_method": "frost_anchored_resolved",
+                "resolved_from": {"last_frost": "Apr 8", "first_frost": "Oct 30"},
+                "calendar": ["cold_pause", "cold_pause", "cold_pause", "plant", "plant", "growing",
+                             "harvest", "harvest", "harvest", "growing", "cold_pause", "cold_pause"]}
+            for z in ("7", "8")}}
+    assert not any("cold_pause" in v for v in rca.audit_cell("broccoli", cell, "mid_atlantic"))
+    print("  ok: cold_pause allowed for frost-anchored (mid_atlantic)")
+
+
 if __name__ == "__main__":
     test_valid_frost_anchored_cell_clean()
     test_cold_pause_allowed_for_frost_anchored()
@@ -246,4 +280,6 @@ if __name__ == "__main__":
     test_pnw_woody_ornamental_annual_method_real_frost_dates_clean()
     test_pnw_woody_ornamental_missing_frost_dates_still_flagged()
     test_pnw_woody_ornamental_wrong_method_string_still_flagged()
+    test_mid_atlantic_config_present_anchored()
+    test_mid_atlantic_cold_pause_allowed()
     print("\nALL region_cell_audit TESTS PASSED")

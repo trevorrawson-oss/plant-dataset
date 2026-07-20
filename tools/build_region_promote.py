@@ -27,8 +27,11 @@ CANON = os.path.join(ROOT, "crops_data_final.json")
 STAGING = {
     "pnw": (["pnw_annuals.json", "pnw_trees.json", "pnw_citrus.json", "pnw_perennials.json"],
             "pnw_chill_band.json"),
+    "mid_atlantic": (["mid_atlantic_annuals_cool.json", "mid_atlantic_annuals_warm.json",
+                      "mid_atlantic_trees.json", "mid_atlantic_citrus.json",
+                      "mid_atlantic_perennials.json"], "mid_atlantic_chill_band.json"),
 }
-EXPECTED_CELLS = {"pnw": 108}
+EXPECTED_CELLS = {"pnw": 108, "mid_atlantic": 111}
 
 
 def build(region_id, base_sha=None):
