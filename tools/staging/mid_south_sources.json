@@ -1,0 +1,74 @@
+{
+  "nws_lzk": {
+    "id": "nws_lzk",
+    "name": "NWS Little Rock, Frost/Freeze Information for Arkansas",
+    "publisher": "NOAA National Weather Service, Little Rock (LZK) Forecast Office",
+    "url": "https://www.weather.gov/lzk/frostfreeze.htm",
+    "source_class": "government_observation_network",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "NWS Little Rock forecast-office frost/freeze normals for Arkansas (1991-2020, 36 degF frost / 32 degF freeze, 50% probability). Little Rock (Adams Field, Pulaski Co.): last spring frost Apr 3, first fall frost Oct 31. The mid_south zone 8 frost anchor. Not citable for biological-mechanism claims.",
+    "_admission_provenance": "mid_south region (roadmap item 9, 2026-07-20). New NWS forecast-office source, mirroring uscrn's government_observation_network class. Surfaced: the belt's marquee central-AR (zone 8) frost dates. The 2026-07-15 tier2 ruling found and read this page; formally catalogued now that the belt is built as a real region."
+  },
+  "uada_ext_fsa6001": {
+    "id": "uada_ext_fsa6001",
+    "name": "UAEX FSA6001, Home Gardening Series: Arkansas planting dates + frost zones",
+    "publisher": "University of Arkansas Division of Agriculture, Cooperative Extension Service",
+    "url": "https://www.uaex.uada.edu/publications/pdf/FSA-6001.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UAEX specific publication FSA6001 (Home Gardening Series). Arkansas frost-zone table (Zone A Mar 20/Nov 15 through Zone E Apr 20/Oct 20) and the climate-zone planting-date adjustment. Backs the mid_south zone 7 frost anchor (Frost Zone D, Apr 10/Oct 24). Parent portal entry: uada_ext.",
+    "_admission_provenance": "mid_south region (roadmap item 9, 2026-07-20). Sub-ID under uada_ext (T1, 1862 Land Grant); inherits parent tier. Surfaced: the Arkansas internal frost-zone table (the zone 7 upland anchor + the zone adjustment the spring/fall tables key to). PDF read with pypdf in the controller env. Mirrors the uariz_ext_az1005-under-uariz_ext sub-ID pattern."
+  },
+  "uada_ext_spring_veg": {
+    "id": "uada_ext_spring_veg",
+    "name": "UAEX, Arkansas spring and summer vegetable planting dates",
+    "publisher": "University of Arkansas Division of Agriculture, Cooperative Extension Service",
+    "url": "https://www.uaex.uada.edu/yard-garden/vegetables/spring-summer-planting-dates.aspx",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UAEX Arkansas spring/summer vegetable planting-date table (Zone C = central Arkansas = USDA zone 8; adjust north/upland zones per FSA6001). Backs the mid_south spring planting windows across the annual roster. Parent portal entry: uada_ext.",
+    "_admission_provenance": "mid_south region (roadmap item 9, 2026-07-20). Sub-ID under uada_ext. Surfaced: the belt's spring/summer planting windows. Mirrors the uariz_ext_az1005 sub-ID pattern."
+  },
+  "uada_ext_fall_veg": {
+    "id": "uada_ext_fall_veg",
+    "name": "UAEX, Planting Dates for Fall Vegetable Production",
+    "publisher": "University of Arkansas Division of Agriculture, Cooperative Extension Service",
+    "url": "https://www.uaex.uada.edu/yard-garden/vegetables/fall-planting-dates.aspx",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UAEX Arkansas fall vegetable planting-date table (crop, days-to-maturity, fall planting window; header note to sow transplant crops four weeks earlier). The documented second (fall) planting cycle for warm-season and cool-season annuals: the reason the mid_south region exists. Parent portal entry: uada_ext.",
+    "_admission_provenance": "mid_south region (roadmap item 9, 2026-07-20). Sub-ID under uada_ext. Surfaced: the fall-cycle windows the naive single-cycle deriver omits (the same gap class the mid_atlantic vce_426_331 fall table filled). Mirrors the uariz_ext_az1005 sub-ID pattern."
+  },
+  "uada_ext_chill": {
+    "id": "uada_ext_chill",
+    "name": "UAEX, Chilling Hour Reports (Arkansas Fruit, Vegetable and Nut Update blog)",
+    "publisher": "University of Arkansas Division of Agriculture, Cooperative Extension Service",
+    "url": "https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/horticulture/ar-fruit-veg-nut-update-blog/posts/chillhours.aspx",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UAEX average accumulated chilling hours by station (Utah model, 35-45 degF, by March 1, 1990-2000 baseline): Fayetteville 1,024, Clarksville 1,081, Hope 901, Wynne 1,069. Backs the region_chill_delivered.mid_south band and its honest intra-state gradient (the warm SW edge, Hope 901, is tighter). Parent portal entry: uada_ext.",
+    "_admission_provenance": "mid_south region (roadmap item 9, 2026-07-20). Sub-ID under uada_ext. Surfaced: the belt's real chill accumulation by station (the gradient the ruling flagged). Mirrors the uariz_ext_az1005 sub-ID pattern."
+  },
+  "uada_ext_fsa6105": {
+    "id": "uada_ext_fsa6105",
+    "name": "UAEX FSA6105, Blackberry Production in the Home Garden (M. Elena Garcia)",
+    "publisher": "University of Arkansas Division of Agriculture, Cooperative Extension Service",
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UAEX specific publication FSA6105 (M. Elena Garcia, Extension Fruit and Nut Specialist). Blackberry: University of Arkansas-released cultivar chill-hour figures (Kiowa 200-300, Prime-Jim/Jan 300-400, Ouachita 400-500, Chickasaw 500, Apache/Navaho 800-900), statewide-adaptation claim, spring planting / year-after-establishment harvest timing. The mid_south signature-crop source. Parent portal entry: uada_ext.",
+    "_admission_provenance": "mid_south region (roadmap item 9, 2026-07-20). Sub-ID under uada_ext. Surfaced: the belt's signature crop; UA bred these named cultivars for Arkansas and the canonical roster carries them. PDF read with pypdf in the controller env. Mirrors the uariz_ext_az1005 sub-ID pattern."
+  }
+}

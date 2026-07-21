@@ -68,6 +68,22 @@ def build(region_id, base_sha=None):
     new_prov = cur_prov if pnw_note in cur_prov else cur_prov.rstrip() + " " + pnw_note
     patches.append({"op": "replace", "json_path": "$.region_chill_delivered_provenance",
                     "from": cur_prov, "value": new_prov})
+    # NEW source_catalog entries (regions whose T1 sources were not pre-catalogued, e.g.
+    # mid_south's UAEX/NWS publications). Optional file staging/<region>_sources.json =
+    # {source_id: entry}. Each becomes an `add $.source_catalog.<id>` patch, landing in the
+    # SAME atomic promote as the cells that cite them (so the canonical is never in a state
+    # where a cell cites an uncatalogued source). Absent -> no source patches (rgv/pnw/
+    # mid_atlantic, whose sources were already catalogued).
+    src_path = os.path.join(HERE, "staging", f"{region_id}_sources.json")
+    n_sources = 0
+    if os.path.exists(src_path):
+        new_sources = json.load(open(src_path, encoding="utf-8"))
+        for sid, entry in new_sources.items():
+            assert sid not in canon.get("source_catalog", {}), \
+                f"source id {sid} already in source_catalog (would collide on add)"
+            patches.append({"op": "add", "json_path": f"$.source_catalog.{sid}",
+                            "value": entry})
+            n_sources += 1
     exp = EXPECTED_CELLS.get(region_id)
     if exp is not None:
         assert len(seen) == exp, f"expected {exp} {region_id} cells, got {len(seen)}"
@@ -85,9 +101,10 @@ def main():
     with open(out, "w", encoding="utf-8") as f:
         json.dump(batch, f, ensure_ascii=False, indent=1)  # batch file may be pretty; canonical stays compact
     n_cells = sum(1 for p in batch["patches"] if p["json_path"].endswith(f".regions.{a.region_id}"))
-    n_top = len(batch["patches"]) - n_cells
-    print(f"emitted {len(batch['patches'])} patches ({n_cells} {a.region_id} cells + {n_top} top-level); "
-          f"base_sha {batch['base_sha'][:12]}")
+    n_src = sum(1 for p in batch["patches"] if p["json_path"].startswith("$.source_catalog."))
+    n_top = len(batch["patches"]) - n_cells - n_src
+    print(f"emitted {len(batch['patches'])} patches ({n_cells} {a.region_id} cells + {n_top} top-level "
+          f"+ {n_src} source_catalog); base_sha {batch['base_sha'][:12]}")
 
 
 if __name__ == "__main__":

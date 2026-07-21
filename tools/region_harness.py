@@ -58,11 +58,22 @@ def build_scratch_tools(dest, region_id, span):
 
 def scratch_canonical(region_id, staged_cells, path):
     """Write the real CANON + each staged region cell merged into its crop's regions, to
-    `path`, COMPACT (matching the format whole_crop_gate and its sub-gates expect)."""
+    `path`, COMPACT (matching the format whole_crop_gate and its sub-gates expect).
+
+    If a region introduces NEW source_catalog entries (e.g. mid_south's UAEX/NWS
+    publications, which are not yet in the live canonical), a per-crop cell citing them
+    would fail whole_crop_gate's source-tier check (E: "not in catalog"). So the same
+    `staging/<region_id>_sources.json` file the atomic promote adds to the real catalog is
+    merged into the scratch catalog here, so per-crop gating sees them BEFORE the promote.
+    Absent for regions whose sources were pre-catalogued (rgv/pnw/mid_atlantic) -- a no-op."""
     data = json.load(open(CANON, encoding="utf-8"))
     by = {c["slug"]: c for c in data["crops"]}
     for slug, cell in staged_cells.items():
         by[slug].setdefault("regions", {})[region_id] = cell
+    src_file = os.path.join(HERE, "staging", f"{region_id}_sources.json")
+    if os.path.exists(src_file):
+        new_sources = json.load(open(src_file, encoding="utf-8"))
+        data.setdefault("source_catalog", {}).update(new_sources)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, separators=(",", ":"), ensure_ascii=False)
     return path
