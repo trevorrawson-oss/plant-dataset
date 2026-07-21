@@ -6,6 +6,73 @@
 
 ---
 
+## 2026-07-20 -- MID-ATLANTIC REGION SHIPPED: roadmap item 8, the 3rd authored region (`e1e01c47` -> `af5dcee9`)
+
+**What shipped.** A real Mid-Atlantic region `mid_atlantic` (`zone_span ["7","8"]`, NC/VA/MD/DC/DE/NJ/PA
+Piedmont + Coastal Plain) across all 111 certified region-carrying crops. One SHA-guarded atomic
+promote (`tools/batches/mid_atlantic_region_promote.json`, 113 patches = 111 `regions.mid_atlantic`
+cells + `region_chill_delivered.mid_atlantic {"7":[1100,1500],"8":[1000,1350]}` + a provenance
+replace-append). Count 128 unchanged, 119 certified unchanged (a roster-wide column, not a new crop).
+Frost-anchored like PNW. NO new gate, NO new field: reuses A45/A31/A32/A3/A43. Both sources
+(`ncsu_ext`, `vce_426_331`) were already catalogued.
+
+**The headline: the FALL CYCLE.** The Tier-2 ruling that queued this belt found the naive single-cycle
+frost-anchored deriver omits a real, VCE-426-331-documented fall planting window for warm-season
+annuals. ~30 crops (tomatoes, cucumbers, summer squash, snap/pole beans, and the brassicas/greens/
+roots) now carry a `second_planting` fall cycle.
+
+**Tooling discovery (Task 3, a plan correction).** `annual_calendar.derive_annual_calendar` does NOT
+render `second_planting` -- verified roster-wide: all 272 existing `second_planting` cells' stored
+calendars fail to re-derive from their split storage form. The two-cycle calendars are built from
+COMBINED windows then split (the 2026-07-09 demux idiom, A43 forbids the comma shape at storage). Added
+`tools/second_cycle.py:build_two_cycle_cell(base, spring, fall)` (combine-derive-then-split,
+deepcopy-hardened) so the ~30 fall-cycle cells were deterministic, not hand-rolled.
+
+**Mid-arc rules correction (heat_pause).** The initial authoring-rules doc said "no heat_pause for
+cool crops" -- a PNW cool-summer artifact. The Mid-Atlantic is humid-subtropical like `se_gulf`, where
+a cool crop's summer gap between the spring and fall cycles is a real HEAT exclusion. Corrected to a
+BACKED `heat_pause` (A28: months + basis + source) matching se_gulf's broccoli/lettuce/radish, NOT
+`season_over` (implies permanent end) and NOT `growing` (A37 forbids after harvest). Caught on 2 cells,
+fixed before the greens/roots shard (where radish's 3-month summer pause then validated it).
+
+**Chill band.** Originally interpolated from NC State's single ">1,000" figure and flagged; a follow-up
+hunt (Trevor's prompt) confirmed it with a 4-state T1 basket in the same 35-45degF model: NC State
+(>1,000/yr), Penn State (>1,400 by end of March), VCE 422-025 (VA apples need ~1,000, met), UMD (not a
+concern). Band unchanged, now corroborated not interpolated.
+
+**Class split.** 82 frost_anchored annuals; 14 chill-gated trees (12 `fruits_reliably` incl native
+pawpaw; **apricot + cherry-sweet `marginal`** per Trevor's final-review call -- chill clears but
+humid-East early-bloom frost + brown rot / fruit cracking; pomegranate `marginal`; sour cherry stays
+`fruits_reliably`); 5 citrus cold-limited (grapefruit/lime `unsuitable`, lemon/mandarin
+`survives_no_fruit` z8 container-only); 10 perennials (blueberry `rabbiteye` per NC State, strawberry
+`perennial`-z7 matted-row / `annual`-z8 plasticulture split).
+
+**Execution.** Subagent-driven (SDD): the tooling foundation (contract + region-config + the
+second_cycle helper, each independently reviewed), then 11 family authoring shards writing DISJOINT
+staging files (controller-merged, no per-subagent commits -> parallel-safe by design), then an
+independent **opus final content review** over all 111 cells: verdict SHIP-WITH-FIXES, no Critical, the
+honesty scan clean (no fabricated sources across 111 cells), window accuracy vs VCE "excellent". Fixed:
+parsnip's unsupported VCE citation (-> its real northern_tier sources + honesty flag), a fig z8 zone
+typo, a jalapeno/cayenne prose contradiction, dry-bean/edamame over-attribution, + the apricot/cherry
+downgrade.
+
+**Verification.** Scratch dry-run + post-promote both green: `gate_all` 119/119, A45/`chill_gate`/A43/
+`calendar_coherence` 0, `whole_crop_gate` spot PASS, footprint EXACT (111 `regions.mid_atlantic` + chill
+band + provenance; 0 other regions changed; count 128; COMPACT), A45+A43 RED-checks bounce.
+`coverage_floor` standalone 89 = PRE-EXISTING (identical on the base canonical; `gate_all` authoritative
+-- the documented RGV/PNW pattern). `release_verify` is single-crop-pilot-shaped (N/A roster-wide); the
+pre-commit backstop `precommit_release_verify.py` is the binding multi-crop gate.
+
+**Provenance.** Spec+plan `docs/superpowers/{specs,plans}/2026-07-20-mid-atlantic-region*`; kickoff #31;
+sourcing `docs/reviews/notes/2026-07-20/mid_atlantic_sources.md`; dry-run
+`docs/reviews/notes/2026-07-20/mid_atlantic_promote_dryrun.md`; field-addition register row 19; roadmap
+item 8 -> SHIPPED. **Sequencing note:** items 8-11 were built z8-belts-before-Alaska per Trevor
+(2026-07-20); mid-Atlantic is the first. The z7 half's IN-APP delivery depends on the plant-app
+temperate-region resolution fix (kickoff #32, the `isWarm` decoupling) -- the dataset side leads.
+
+**Owed:** plant-app kickoff #33 (`REGION_STATES.mid_atlantic`, no ZIP3 fence expected; the #32 z7
+dependency). COMMITTED, UNPUSHED (Trevor confirms push); NO plant-astro bump from this session.
+
 ## 2026-07-15 -- CORN FAMILY SHIPPED: field-corn / popcorn / flint-corn (3 dry corns; the sweet-corn follow-on)
 
 Certifies the three DRY corns as new §E crops, the fast follow-on the sweet-corn arc (2026-07-10) expressly set up. Canonical `c73d7fa` -> `e1e01c47` (1 SHA-guarded 4-op atomic add-splice: 3 `add` crop ops + a `total_crops` 125 -> 128 replace; count 125 -> 128; 116 -> 119 certified). All *Zea mays*, frost-anchored, direct-sown, wind-pollinated block-planted annuals. Built subagent-driven (superpowers:subagent-driven-development) in an ISOLATED git WORKTREE (`.claude/worktrees/corn-family`, branch `worktree-corn-family`) specifically to run without colliding with the concurrent region Tier-2 arc on `main` (which had already caused git-index collisions in the berry arc when two sessions shared one checkout). Spec `docs/superpowers/specs/2026-07-15-corn-family-design.md`; plan `docs/superpowers/plans/2026-07-15-corn-family.md`; kickoff #21.

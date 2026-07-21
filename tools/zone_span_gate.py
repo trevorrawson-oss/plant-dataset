@@ -28,6 +28,7 @@ EXPECTED_SPANS = {
     "warm_arid":       ["8"],
     "ca_interior":     ["8", "9"],
     "pnw":             ["8", "9"],
+    "mid_atlantic":    ["7", "8"],
     "se_gulf":         ["8", "9", "10"],
     "rgv":             ["9", "10"],
     "ca_north_coast":  ["9", "10"],
