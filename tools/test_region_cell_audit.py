@@ -265,6 +265,34 @@ def test_mid_atlantic_cold_pause_allowed():
     print("  ok: cold_pause allowed for frost-anchored (mid_atlantic)")
 
 
+def test_mid_south_config_present_anchored():
+    import region_cell_audit as rca
+    cfg = rca.REGION_CONFIG["mid_south"]
+    assert cfg["span"] == ["7", "8"]
+    assert cfg["frost_model"] == "anchored"
+    assert cfg["label"] == "Mid-South: Ozark Uplands and Delta Lowlands"
+    print("  ok: mid_south REGION_CONFIG entry present (span z7-8, anchored)")
+
+
+def test_mid_south_cold_pause_allowed():
+    import region_cell_audit as rca
+    cell = {
+        "region_id": "mid_south",
+        "region_label": "Mid-South: Ozark Uplands and Delta Lowlands",
+        "zone_span": ["7", "8"],
+        "resolved_by_zone": {
+            z: {"plant_out": "Apr 3 - Jun 1", "harvest": "Jun 20 - Sep 1",
+                "harvest_start": "Jun 20", "harvest_end": "Sep 1",
+                "first_plant_date": "Apr 3", "last_plant_date": "Jun 1",
+                "resolution_method": "frost_anchored_resolved",
+                "resolved_from": {"last_frost": "Apr 3", "first_frost": "Oct 31"},
+                "calendar": ["cold_pause", "cold_pause", "cold_pause", "plant", "plant", "growing",
+                             "harvest", "harvest", "harvest", "growing", "cold_pause", "cold_pause"]}
+            for z in ("7", "8")}}
+    assert not any("cold_pause" in v for v in rca.audit_cell("broccoli", cell, "mid_south"))
+    print("  ok: cold_pause allowed for frost-anchored (mid_south)")
+
+
 if __name__ == "__main__":
     test_valid_frost_anchored_cell_clean()
     test_cold_pause_allowed_for_frost_anchored()
@@ -282,4 +310,6 @@ if __name__ == "__main__":
     test_pnw_woody_ornamental_wrong_method_string_still_flagged()
     test_mid_atlantic_config_present_anchored()
     test_mid_atlantic_cold_pause_allowed()
+    test_mid_south_config_present_anchored()
+    test_mid_south_cold_pause_allowed()
     print("\nALL region_cell_audit TESTS PASSED")

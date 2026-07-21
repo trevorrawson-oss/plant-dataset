@@ -56,9 +56,22 @@ def test_mid_atlantic_registered():
     print("  ok: mid_atlantic STAGING + EXPECTED_CELLS registered (111 cells, 5 staging files)")
 
 
+def test_mid_south_registered():
+    import build_region_promote as brp
+    assert "mid_south" in brp.STAGING
+    assert brp.EXPECTED_CELLS["mid_south"] == 111
+    files, band = brp.STAGING["mid_south"]
+    assert band == "mid_south_chill_band.json"
+    assert set(files) == {
+        "mid_south_annuals_cool.json", "mid_south_annuals_warm.json",
+        "mid_south_trees.json", "mid_south_citrus.json", "mid_south_perennials.json"}
+    print("  ok: mid_south STAGING + EXPECTED_CELLS registered (111 cells, 5 staging files)")
+
+
 if __name__ == "__main__":
     test_pnw_batch_shape()
     test_no_duplicate_slugs()
     test_base_sha_defaults_to_live_canonical()
     test_mid_atlantic_registered()
+    test_mid_south_registered()
     print("ok")
