@@ -1,0 +1,556 @@
+{
+  "grapefruit": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "lsu_agcenter",
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 7's Piedmont winters bring hard freezes well below grapefruit's mid-20s°F wood-damage threshold most years, so there is no dependable in-ground establishment window this far inland. Grapefruit also carries the highest summer heat requirement of the common citrus, but that is moot here: winter cold decides the case long before ripening heat would matter.",
+        "suitability_note_beginner": "Too cold here for a grapefruit tree outside. Winters regularly drop well past the point that damages grapefruit wood, so there is no time of year it would make it through in the ground.",
+        "min_winter_temp_f": [
+          0,
+          10
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "A hard freeze most winters, not just an occasional outbreak, pushes well past grapefruit's mid-20s°F wood-damage point in the Piedmont.",
+        "resolved_from": {},
+        "sources": [
+          "lsu_agcenter",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/profiles/clirette/articles/page1611248225640",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      },
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Coastal Plain and Tidewater winters are milder than the Piedmont's, but even this zone's hard freezes reach into grapefruit's mid-20s°F wood-damage range in most years, so there is still no dependable in-ground crop. Grapefruit's high summer-heat need is not the constraint; winter cold rules it out first.",
+        "suitability_note_beginner": "Milder than the colder inland part of this region, but still cold enough most winters to hurt a grapefruit tree badly. Grow it in a container you bring under cover for winter if you want to try.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Coastal Plain winters are milder on average, but a hard freeze into the teens or low 20s°F still arrives most years, close enough to grapefruit's wood-damage threshold that in-ground planting is not a defensible call.",
+        "resolved_from": {},
+        "sources": [
+          "lsu_agcenter",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "lsu_agcenter": {
+            "url": "https://www.lsuagcenter.com/profiles/clirette/articles/page1611248225640",
+            "verified": "2026-07-20"
+          },
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Skip grapefruit outdoors anywhere in the Mid-Atlantic. Winters in both the Piedmont and the Coastal Plain get cold enough most years to badly hurt or kill the tree, and grapefruit also needs more summer heat than other citrus to taste good, heat this region does have but never gets the chance to matter here. Grow it in a container you bring fully under cover for winter if you want to try.",
+    "region_notes_seasoned": "Grapefruit is not viable in-ground anywhere in this belt. Both zones see hard freezes, more often in the cooler Piedmont interior but a real risk even in the milder Coastal Plain and Tidewater, that reach grapefruit's mid-20s°F wood-damage threshold in an ordinary winter, not just a rare severe one. Grapefruit also needs the highest summer heat accumulation of the common citrus to ripen good fruit, heat the region's long, hot, humid summers would supply, but cold decides the case first, so that requirement never comes into play. A container tree moved fully under cover for winter is the only realistic way to grow one here.",
+    "min_winter_temp_f": [
+      0,
+      20
+    ],
+    "cold_basis_seasoned": "Winter lows across the belt run from roughly 10 to 20°F in the milder Coastal Plain and Tidewater zone to 0 to 10°F in the cooler Piedmont interior, both well past grapefruit's mid-20s°F wood-damage threshold in an ordinary year (Clemson HGIC; LSU AgCenter). This is a real, frost-anchored winter, not an occasional-outbreak risk, so in-ground grapefruit is not viable in either zone.",
+    "cold_basis_beginner": "Winters here get cold enough most years, in both parts of this region, to badly hurt a grapefruit tree left outside. The Piedmont is colder than the Coastal Plain, but neither is warm enough.",
+    "heat_summer_basis": null,
+    "heat_basis_seasoned": "Heat is moot here: winter cold rules grapefruit out before its high summer heat requirement, the highest of the common citrus, ever gets the chance to matter. The Mid-Atlantic's long, hot, humid summers would in fact supply ample heat if the tree could survive winter.",
+    "heat_basis_beginner": "Summer heat is not the problem, winter cold is. This region's summers are plenty hot, but the tree cannot get through winter here in the first place."
+  },
+  "lime": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "clemson_hgic",
+      "tamu_agrilife",
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Lime is the most cold-tender common citrus: even the hardier Persian (Tahiti) type suffers wood damage below about 26 to 28°F, and the Piedmont's hard freezes drop well past that most winters. There is no in-ground establishment window this far inland; grow it as a container tree brought fully indoors for winter.",
+        "suitability_note_beginner": "Too cold here for a lime tree outside. Lime is hurt by cold more easily than almost any other citrus, and winters here regularly get colder than that. Grow it in a pot you bring fully indoors for winter.",
+        "min_winter_temp_f": [
+          0,
+          10
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "A hard freeze every winter, not an occasional event, rules out in-ground lime in the Piedmont.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-20"
+          },
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      },
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "The milder Coastal Plain and Tidewater zone still sees hard freezes into the teens and low 20s°F most winters, well past the mid-20s°F point where even the hardier Persian (Tahiti) lime suffers wood damage, and lime lacks any real cold-hardy selection the way lemon (Meyer) or mandarin (satsuma) do. In-ground planting is not viable here either; a container tree brought fully indoors for winter is the only workable approach.",
+        "suitability_note_beginner": "Milder than the colder inland part of this region, but still cold enough most winters to kill a lime tree outright. Lime does not have a cold-hardy option the way lemon and mandarin do. Grow it in a pot indoors for winter.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Even the Coastal Plain's milder hard freezes, into the teens and low 20s°F most winters, comfortably exceed lime's wood-damage threshold; lime has no cold-hardy cultivar to fall back on.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-20"
+          },
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-20"
+          },
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Skip lime outdoors anywhere in the Mid-Atlantic. It is the most cold-sensitive common citrus, more so than lemon or mandarin, and both parts of this region get cold enough most winters to kill it outright. Grow it in a container you bring fully indoors for winter.",
+    "region_notes_seasoned": "Lime is a clear no for in-ground planting anywhere in this belt. It is the least cold-hardy of the common citrus, with wood damage in even the hardier Persian (Tahiti) type starting around 26 to 28°F, and unlike lemon (which has the hardier Meyer hybrid) or mandarin (which has cold-hardy satsuma), lime has no widely grown cold-tolerant selection to soften the picture. Both of this region's zones see hard freezes well past that threshold in an ordinary winter, the cooler Piedmont every year and the milder Coastal Plain and Tidewater most years. A container tree moved fully indoors for winter is the only viable way to grow one here.",
+    "min_winter_temp_f": [
+      0,
+      20
+    ],
+    "cold_basis_seasoned": "Winter lows run from roughly 10 to 20°F in the milder Coastal Plain and Tidewater zone to 0 to 10°F in the cooler Piedmont interior, both well past the 26 to 28°F point where even the hardiest common lime cultivar (Persian/Tahiti) takes wood damage (Clemson HGIC; Texas A&M AgriLife). Lime is the least cold-tolerant of the common citrus and has no cold-hardy selection comparable to Meyer lemon or satsuma mandarin.",
+    "cold_basis_beginner": "Lime is hurt by cold more easily than almost any other citrus, and this region's winters, in both zones, routinely get cold enough to kill it."
+  },
+  "orange-navel": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "uf_ifas_hs132",
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 7's Piedmont winters bring hard freezes below 10°F most years, far past the mid-20s°F point where navel wood is damaged and the 26 to 28°F point where the fruit itself freezes. There is no dependable in-ground establishment window this far inland.",
+        "suitability_note_beginner": "Too cold here for an orange tree outside. Winters regularly drop far past the point that damages the tree and freezes the fruit.",
+        "min_winter_temp_f": [
+          0,
+          10
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "A hard freeze most winters, not just an occasional outbreak, is well past navel's cold tolerance in the Piedmont.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_hs132",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_hs132": {
+            "url": "https://edis.ifas.ufl.edu/publication/HS132",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      },
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "The milder Coastal Plain and Tidewater zone still sees hard freezes into the teens most winters, past the mid-20s°F wood-damage point and the 26 to 28°F fruit-freeze point for navel orange. Ample summer heat is not the limiter here; winter cold decides the case on its own. A container tree brought fully indoors for the coldest nights is the only realistic way to grow one here.",
+        "suitability_note_beginner": "Milder than the colder inland part of this region, but winters still get cold enough most years to damage the tree and freeze the fruit. If you want this in the Mid-Atlantic, grow it in a container you bring fully indoors for winter.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Even the Coastal Plain's milder hard freezes reach past navel's mid-20s°F wood-damage point and its 26 to 28°F fruit-freeze point in most winters.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_hs132",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_hs132": {
+            "url": "https://edis.ifas.ufl.edu/publication/HS132",
+            "verified": "2026-07-20"
+          },
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Skip navel orange outdoors anywhere in the Mid-Atlantic. Winters in both the Piedmont and the Coastal Plain get cold enough most years to damage the tree and freeze the fruit. Grow it in a container you bring fully indoors for winter if you want to try.",
+    "region_notes_seasoned": "Navel orange is not viable in-ground anywhere in this belt. Both zones see hard freezes, more severe in the cooler Piedmont interior but a real risk even in the milder Coastal Plain and Tidewater, past navel's mid-20s°F wood-damage threshold and its 26 to 28°F fruit-freeze point in an ordinary winter. Summer heat is ample across the belt and is never the constraint; winter cold rules the crop out on its own. Container culture with full winter cover indoors is the only realistic path.",
+    "min_winter_temp_f": [
+      0,
+      20
+    ],
+    "cold_basis_seasoned": "Winter lows run from roughly 10 to 20°F in the milder Coastal Plain and Tidewater zone to 0 to 10°F in the cooler Piedmont, both well past the mid-20s°F point where navel wood is damaged and the 26 to 28°F point where the fruit itself freezes (UF/IFAS HS132). This is a real, frost-anchored winter in both zones, not an occasional-outbreak risk.",
+    "cold_basis_beginner": "Winters here get properly cold most years in both parts of this region, cold enough to damage the tree and freeze the fruit if left outdoors.",
+    "heat_summer_basis": null,
+    "heat_basis_seasoned": "Heat is moot here: the tree cannot survive winter in either zone, so its summer heat need, which the belt's long, hot, humid summers would meet easily, never gets the chance to matter.",
+    "heat_basis_beginner": "Summer warmth does not matter here, because the tree cannot get through winter in the first place. Summers are plenty hot if it could."
+  },
+  "lemon": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "clemson_hgic",
+      "tamu_agrilife",
+      "ncsu_ext",
+      "vce_426_331",
+      "uf_ifas_hs1153"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 7's Piedmont winters bring hard freezes well below the high-20s°F point where true lemon (Eureka, Lisbon) is damaged, and even below the low-to-mid 20s°F threshold of the hardier Improved Meyer hybrid. There is no in-ground establishment window this far inland; grow it as a container tree brought fully indoors for winter.",
+        "suitability_note_beginner": "Too cold here for a lemon tree outside, even the hardier Meyer type. Grow one in a pot you bring fully indoors for winter.",
+        "min_winter_temp_f": [
+          0,
+          10
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "A hard freeze every winter in the Piedmont is well past even Improved Meyer's cold tolerance, let alone true lemon's.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-20"
+          },
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      },
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "The milder Coastal Plain and Tidewater zone sits close to the edge for the hardiest lemon option: Improved Meyer, a lemon x mandarin hybrid, tolerates cold into the low-to-mid 20s°F and is documented surviving the milder half of zone 8 with protection. A container Meyer brought under cover, or fully indoors, on hard-freeze nights can persist here for years, but this zone's colder pockets and periodic harder freezes still reach past that threshold, so there is no dependable in-ground or even reliably fruiting container crop, only a protected specimen that may bloom in milder winters. True lemon (Eureka, Lisbon) is more tender still and does not belong outdoors here at all.",
+        "suitability_note_beginner": "This is about as good as lemon gets here: Improved Meyer, the cold-hardy lemon type, can survive in the milder Tidewater pockets of this zone for years if you bring it under cover, or fully indoors, on the coldest nights. It still is not a plant you leave outside all winter, and do not expect a reliable crop of fruit. Regular lemon types are too tender to try here at all.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Improved Meyer's own documented cold limit, the low-to-mid 20s°F, sits right at this zone's milder Tidewater edge; the zone's colder pockets and any harder freeze still exceed it, so container culture with real winter protection is the honest baseline, not a dependable outdoor planting.",
+        "resolved_from": {},
+        "sources": [
+          "clemson_hgic",
+          "tamu_agrilife",
+          "ncsu_ext",
+          "uf_ifas_hs1153"
+        ],
+        "anchoring_urls": {
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-20"
+          },
+          "tamu_agrilife": {
+            "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+            "verified": "2026-07-20"
+          },
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          },
+          "uf_ifas_hs1153": {
+            "url": "https://edis.ifas.ufl.edu/publication/HS402",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Lemon does not work as an in-ground tree anywhere in the Mid-Atlantic. In the colder Piedmont even the hardiest lemon type cannot survive winter outdoors. In the milder Coastal Plain and Tidewater zone, a potted Improved Meyer lemon, brought under cover or fully indoors on the coldest nights, can live for years, but do not count on a real harvest of fruit.",
+    "region_notes_seasoned": "Lemon is not a landscape tree anywhere in this belt. The Piedmont's winters are too cold for even the hardiest lemon selection. In the milder Coastal Plain and Tidewater zone, Improved Meyer, a naturally more cold-tolerant lemon x mandarin hybrid, is documented surviving with protection at the mild edge of zone 8, so a container tree brought under cover, or fully indoors, for the coldest nights can be a long-lived planting there. Even so, this zone's colder pockets and its own periodic harder freeze still reach past Meyer's cold limit, so there is no dependable outdoor crop, only a protected specimen. True lemon types (Eureka, Lisbon) are more cold-tender still and are not a realistic choice outdoors in either zone.",
+    "min_winter_temp_f": [
+      0,
+      20
+    ],
+    "cold_basis_seasoned": "Winter lows run from roughly 10 to 20°F in the milder Coastal Plain and Tidewater zone to 0 to 10°F in the cooler Piedmont. True lemon (Eureka, Lisbon) is damaged in the high 20s°F and does not belong outdoors in either zone; Improved Meyer, a hardier lemon x mandarin hybrid, tolerates cold into the low-to-mid 20s°F and is documented surviving the milder half of zone 8 with protection, the one real cold-edge option this belt supports (Clemson HGIC; Texas A&M AgriLife).",
+    "cold_basis_beginner": "Regular lemon is too tender for either part of this region. The hardier Meyer type can survive winter in the milder Coastal Plain and Tidewater zone if you protect it on cold nights, but even that needs help, and the Piedmont is too cold for it too."
+  },
+  "mandarin-clementine": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "uf_ifas_edis",
+      "clemson_hgic",
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [],
+        "bloom": [],
+        "harvest_start": [],
+        "harvest_end": [],
+        "anchoring_urls": {}
+      }
+    ],
+    "plantings_provenance": null,
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "unsuitable",
+        "suitability_note_seasoned": "Zone 7's Piedmont winter lows fall below even Owari satsuma's roughly 15 to 20°F mature-wood cold limit, the hardiest of the commonly grown sweet citrus. There is no in-ground establishment window this far inland; grow it as a container tree brought under cover for winter.",
+        "suitability_note_beginner": "Even the toughest common citrus, satsuma mandarin, cannot reliably take this zone's coldest nights. Grow it in a pot you bring under cover for winter.",
+        "min_winter_temp_f": [
+          0,
+          10
+        ],
+        "heat_summer_basis": null,
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Piedmont winter lows regularly reach below satsuma's own roughly 15 to 20°F cold limit, the hardiest common citrus option, so cold rules this zone out on its own.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_edis",
+          "clemson_hgic",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_edis": {
+            "url": "https://ask.ifas.ufl.edu/publication/CH116",
+            "verified": "2026-07-20"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      },
+      "8": {
+        "plant_out": null,
+        "resolution_method": "perennial_evergreen_precompute",
+        "suitability": "survives_no_fruit",
+        "suitability_note_seasoned": "The milder Coastal Plain and Tidewater zone sits close to Owari satsuma's own roughly 15 to 20°F mature cold limit, the hardiest of the commonly grown sweet citrus, so a container tree protected on hard-freeze nights can survive here for years, the best cold-hardiness case among this region's citrus. Even so, this zone's colder pockets and any harder freeze can still reach below that limit, so there is no dependable in-ground or reliably fruiting crop, only a protected specimen that may bloom in a mild year. The region's long, hot, humid summers bank plenty of heat to sweeten mandarin fruit if the tree does bloom and set; heat is not the constraint here, winter cold is.",
+        "suitability_note_beginner": "This is the best cold-hardiness story among the citrus in this region: satsuma mandarin, the toughest common citrus for cold, can survive in the milder Tidewater pockets of this zone for years if you protect it on the coldest nights. It still is not safe to leave outside unprotected all winter, and do not count on a reliable harvest. Our summers are plenty hot for the fruit to taste good on the rare year it does set.",
+        "min_winter_temp_f": [
+          10,
+          20
+        ],
+        "heat_summer_basis": "adequate",
+        "bloom": null,
+        "harvest_start": null,
+        "harvest_end": null,
+        "harvest": null,
+        "calendar": [],
+        "frost_risk_note_seasoned": "Satsuma's roughly 15 to 20°F mature-wood limit sits right at this zone's milder Tidewater edge; the zone's colder pockets and any harder freeze can still go below it, so real winter protection is the honest baseline here, not a dependable outdoor planting.",
+        "resolved_from": {},
+        "sources": [
+          "uf_ifas_edis",
+          "clemson_hgic",
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "uf_ifas_edis": {
+            "url": "https://ask.ifas.ufl.edu/publication/CH116",
+            "verified": "2026-07-20"
+          },
+          "clemson_hgic": {
+            "url": "https://hgic.clemson.edu/cold-tolerance-in-citrus/",
+            "verified": "2026-07-20"
+          },
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    },
+    "region_notes_beginner": "Mandarin, specifically satsuma, is the toughest common citrus for cold, and that shows here: in the colder Piedmont even satsuma cannot make it through winter outdoors. In the milder Coastal Plain and Tidewater zone, a protected container satsuma can survive for years if you bring it under cover on the coldest nights, but do not count on a real harvest either way. Our summers are hot enough for the fruit if it does set.",
+    "region_notes_seasoned": "Mandarin, specifically satsuma-type mandarin, is the cold-hardiness standout among the common sweet citrus, and that shows here: the milder Coastal Plain and Tidewater zone sits close to satsuma's own roughly 15 to 20°F mature cold limit, the mildest cold threshold of any citrus in this batch, so a container tree protected on hard-freeze nights can genuinely survive there for years. The cooler Piedmont interior still falls below that limit and rules the crop out entirely. Survival is not guaranteed even in the milder zone, since its colder pockets and periodic harder freezes can still reach below satsuma's limit, so this stays a protected container specimen, not a dependable in-ground or fruiting planting. Unlike some cooler, heat-poor regions, the Mid-Atlantic's long, hot, humid summer is never the constraint on fruit quality; winter cold is the whole story.",
+    "min_winter_temp_f": [
+      0,
+      20
+    ],
+    "cold_basis_seasoned": "Winter lows run from roughly 10 to 20°F in the milder Coastal Plain and Tidewater zone to 0 to 10°F in the cooler Piedmont. Owari satsuma, the hardiest commonly grown sweet citrus, tolerates mature wood cold into the roughly 15 to 20°F range, close to the milder zone's edge and well above the colder zone's typical lows (UF/IFAS EDIS CH116; Clemson HGIC).",
+    "cold_basis_beginner": "Satsuma mandarin takes cold better than any other common citrus, and it can survive in the milder Coastal Plain and Tidewater zone with protection. The colder Piedmont is still too cold for it.",
+    "heat_summer_basis": "adequate",
+    "heat_basis_seasoned": "The Mid-Atlantic's long, hot, humid summer banks ample heat to sweeten mandarin fruit; heat is never the limiting factor here, unlike some cooler citrus-marginal regions. Winter cold, not summer heat, is what keeps this crop to a protected container planting rather than a dependable in-ground or fruiting one.",
+    "heat_basis_beginner": "Our summers here are plenty hot for mandarin fruit to taste good. The reason this is not a reliable outdoor crop is winter cold, not a lack of summer warmth."
+  }
+}

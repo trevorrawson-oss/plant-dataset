@@ -1,0 +1,1509 @@
+{
+  "lavender": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext_lavandula_angustifolia",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "Apr 8",
+          "May 6"
+        ],
+        "bloom": [
+          "Jun 17",
+          "Aug 5"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext_lavandula_angustifolia": {
+            "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+            "verified": "2026-07-20"
+          },
+          "osu_ext_prune_lavender": {
+            "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "synthesis_note_seasoned": "Region-constant arms spanning both Mid-Atlantic zones. English lavender is comfortably hardy in zone 7 and zone 8 alike (to about zone 5), so cold is not the constraint it is farther north. Plant-out follows the standard perennial establishment window, about three weeks starting at each zone's last spring frost. Bloom is phenology-anchored to the crop's established early-summer flowering window, resolved per zone from real frost dates. The real Mid-Atlantic story is humidity, not cold: NC State's plant profile for the species flags root rot and leaf spot in wet soil, the closer analog to this crop's se_gulf humidity struggle than to a dry-climate reference.",
+        "synthesis_note_beginner": "These cover both Mid-Atlantic zones. Lavender lives through winter in the ground in both, so plant it in spring after your last frost and expect flowers in early to midsummer. The bigger challenge here is the humid summer, not the cold, so give it a raised, fast draining spot."
+      }
+    ],
+    "plantings_provenance": {
+      "method": "perennial_woody_ornamental_region_arms",
+      "frost_resolved": true,
+      "note": "plant_out + bloom arms are frost-resolved off real VCE/NC State frost dates per zone, then spanned across the region. Bloom phenology anchor: early-summer flowering (the same offset this crop's other frost-anchored regions use). Humidity, not cold, is the real Mid-Atlantic constraint (design spec section 5); the se_gulf humidity-struggle framing is the closer analog than a dry-climate one, folded into grown_as_note per zone."
+    },
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "Apr 15 - May 6",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext_lavandula_angustifolia",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext_lavandula_angustifolia": {
+            "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+            "verified": "2026-07-20"
+          },
+          "osu_ext_prune_lavender": {
+            "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, and comfortably so. Zone 7 sits well inside English lavender's hardy range (to about zone 5), so it lives in the ground as a woody subshrub through the Piedmont's real winter. The everyday risk here is not cold, it is the region's humid summer: NC State's own profile of the species flags root rot from wet soil and leaf spot as the real threats. Plant on a raised, sharply drained mound in full sun with room between plants for airflow, the same drainage discipline growers lean on farther south in the humid Southeast.",
+        "grown_as_note_beginner": "Lavender lives outdoors year round in zone 7 here. Winter cold is not the problem, the humid summer is: wet soil brings root rot and leaf spot, so plant it on a raised, fast draining mound in full sun with space around each plant for air to move.",
+        "bloom": "Jun 24 - Aug 5",
+        "frost_risk_note_seasoned": "Winter cold is comfortably within this hardy species' range here; the real risk is wet soil during the humid growing season. Plant high and lean, water sparingly once established, and space plants for airflow to limit root rot and leaf spot.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: English lavender is hardy to about zone 5 (NC State Plant Toolbox: zones 5a to 9b), so zone 7 is comfortably inside its range. plant_out is frost-resolved from the last spring frost (Apr 15), the standard 3-week perennial establishment window. bloom is phenology-anchored to the crop's established early-summer flowering window (the same offset this crop's other frost-anchored regions use), giving Jun 24 to Aug 5. The humid Piedmont summer, not cold, is the real constraint: NC State's plant profile names root rot from overwatering and leaf spot as this species' main threats, the closer analog to this crop's se_gulf humidity struggle than to a dry-climate reference. Prune the month after bloom fades, as OSU's pruning guidance directs.",
+        "synthesis_note_beginner": "In zone 7, lavender lives through winter in the ground and comes back each year. Plant it in spring after your last frost, around Apr 15. It flowers in early summer, and the bigger challenge here is the humid summer, not the cold, so give it a raised, fast draining spot."
+      },
+      "8": {
+        "plant_out": "Apr 8 - Apr 29",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext_lavandula_angustifolia",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext_lavandula_angustifolia": {
+            "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+            "verified": "2026-07-20"
+          },
+          "osu_ext_prune_lavender": {
+            "url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, and comfortably so. Zone 8 also sits well inside English lavender's hardy range, so cold is a non issue on the milder Coastal Plain too. The region's humid summer is the real test here: give it a raised, sharply drained mound, full sun, and airflow between plants, and expect a bit more disease pressure than a dry climate lavender bed would see, especially in a wet summer.",
+        "grown_as_note_beginner": "Lavender lives outdoors year round on the Coastal Plain too. Summer humidity, not winter cold, is what causes trouble, so plant it on a raised, fast draining mound in full sun with room for air to move, and keep a closer eye on it in a wet summer.",
+        "bloom": "Jun 17 - Jul 29",
+        "frost_risk_note_seasoned": "Cold is not a concern on the Coastal Plain; humidity driven root rot and leaf spot are the real risks. Plant on a raised, sharply drained site in full sun, water sparingly, and give plants room to breathe.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: zone 8 sits comfortably inside English lavender's zone 5 to 9b hardy range (NC State Plant Toolbox). plant_out is frost-resolved from the last spring frost (Apr 8). bloom follows the same early-summer phenology offset used across this crop's frost-anchored regions, giving Jun 17 to Jul 29. As in zone 7, humidity rather than cold is the limiting factor on the Coastal Plain: plant high and lean, water sparingly, and space for airflow to hold off root rot and leaf spot in a wet year.",
+        "synthesis_note_beginner": "In zone 8, lavender also lives through winter in the ground. Plant it in spring after your last frost, around Apr 8. It flowers in early summer, and the humid summer, not the winter cold, is the thing to manage here."
+      }
+    },
+    "region_notes_beginner": "In the Piedmont and Coastal Plain, English lavender lives outdoors year round in both zones. Winter cold is not the challenge here, the humid summer is: wet soil brings root rot and leaf spot, so plant on a raised, fast draining mound in full sun with room around each plant for air to move. Set plants out in spring after your last frost, and expect flowers in early to midsummer.",
+    "region_notes_seasoned": "Across the Mid-Atlantic Piedmont and Coastal Plain, English lavender is comfortably hardy in both zone 7 and zone 8, so cold is not the constraint it is farther north. The real test here is the region's humid summer: NC State's own profile of the species names root rot from overwatering and leaf spot as the main threats. Plant on a raised, sharply drained mound in full sun, water sparingly once established, and space plants generously for airflow, the same discipline growers rely on across the humid Southeast. Set plants out in spring after the last frost and do the hard cut back the month after bloom fades, never in fall."
+  },
+  "oregano": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "Apr 8",
+          "May 6"
+        ],
+        "bloom": [
+          "Jul 15",
+          "Sep 1"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "synthesis_note_seasoned": "Region-constant arms spanning both Mid-Atlantic zones. Common oregano is hardy well below zone 7 (to about zone 4), so cold is not a constraint in either zone. Plant-out follows the standard perennial establishment window off each zone's last spring frost. Bloom is phenology-anchored to oregano's mid-to-late-summer flowering window. Oregano tolerates this region's humidity better than lavender or rosemary, though wet heavy soil is still worth guarding against.",
+        "synthesis_note_beginner": "These cover both Mid-Atlantic zones. Oregano lives through winter in the ground in both, so plant it in spring after your last frost. It flowers in mid to late summer and copes with the humid summer better than some other herbs."
+      }
+    ],
+    "plantings_provenance": {
+      "method": "perennial_woody_ornamental_region_arms",
+      "frost_resolved": true,
+      "note": "plant_out + bloom arms are frost-resolved off real VCE/NC State frost dates per zone. Oregano is more humidity-tolerant than lavender/rosemary, a milder version of the se_gulf humidity-struggle framing (design spec section 5), folded into grown_as_note per zone."
+    },
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "Apr 15 - May 6",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, and comfortable here. Oregano is hardy well below zone 7 (to about zone 4), so cold is a non issue in the Piedmont. Unlike lavender and rosemary, common oregano tolerates the region's humid summer reasonably well, though heavy, wet soil can still push it toward root and stem rot. Give it full sun and well drained soil, and it persists for years as a low woody subshrub before eventually needing division.",
+        "grown_as_note_beginner": "Oregano comes back year after year in zone 7 and handles the humidity better than some other Mediterranean herbs. Give it full sun and soil that drains well, and it should live for years.",
+        "bloom": "Jul 20 - Sep 1",
+        "frost_risk_note_seasoned": "Frost is a minor concern here; wet, heavy soil is the bigger everyday risk. Set plants out after the last spring frost, and do the main tidy up cutback after bloom rather than in late fall.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: common oregano (Origanum vulgare) is hardy to about zone 4 (NC State Plant Toolbox), so zone 7 is comfortably inside its range. plant_out is frost-resolved from the last spring frost (Apr 15). bloom is phenology-anchored to oregano's mid-to-late-summer flowering window, giving Jul 20 to Sep 1. Oregano is more humidity-tolerant than lavender or rosemary, though wet heavy soil is still a real risk in the humid Piedmont; well drained soil and full sun keep it healthy.",
+        "synthesis_note_beginner": "In zone 7, oregano lives through winter in the ground and comes back each year. Plant it in spring after your last frost, around Apr 15. It flowers in mid to late summer, and it copes with the humid summer better than some other herbs here."
+      },
+      "8": {
+        "plant_out": "Apr 8 - Apr 29",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/origanum-vulgare/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, and comfortable on the Coastal Plain too. Oregano's cold hardiness clears zone 8 easily. The region's humid summer is a milder test for oregano than for lavender or rosemary, but heavy or poorly drained soil still invites root and stem rot, so plant it in full sun with good drainage and space for airflow.",
+        "grown_as_note_beginner": "Oregano grows well on the Coastal Plain year round. It handles humidity better than some herbs, but still wants full sun and soil that drains well so the roots do not sit wet.",
+        "bloom": "Jul 15 - Aug 29",
+        "frost_risk_note_seasoned": "Frost is rarely a concern on the Coastal Plain; wet soil is the bigger everyday risk. Set plants out after the last spring frost, and do the main cutback after bloom rather than in late fall.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: zone 8 is comfortably inside oregano's zone 4-plus hardy range. plant_out is frost-resolved from the last spring frost (Apr 8). bloom follows the same mid-to-late-summer phenology used region-wide, giving Jul 15 to Aug 29 (interpolated slightly earlier than zone 7's window to reflect the Coastal Plain's marginally warmer, earlier season). Oregano tolerates this region's humidity better than lavender or rosemary, though wet soil is still worth guarding against.",
+        "synthesis_note_beginner": "In zone 8, oregano also lives through winter in the ground. Plant it in spring after your last frost, around Apr 8. It flowers in mid to late summer and is one of the easier herbs here in a humid year."
+      }
+    },
+    "region_notes_beginner": "In the Piedmont and Coastal Plain, oregano lives outdoors year round in both zones and is one of the easier herbs to grow here. It handles the humid summer better than lavender or rosemary, but still wants full sun and soil that drains well. Plant in spring after your last frost, and expect flowers in mid to late summer.",
+    "region_notes_seasoned": "Across the Mid-Atlantic Piedmont and Coastal Plain, common oregano is comfortably hardy in both zone 7 and zone 8 (hardy to about zone 4), so cold is not a constraint here. It also tolerates this region's humid summer better than lavender or rosemary, though heavy or poorly drained soil still invites root and stem rot, so plant it in full sun with good drainage and airflow. Set plants out in spring after the last frost, and do the tidy up cutback after bloom fades rather than in late fall."
+  },
+  "rosemary": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "Apr 8",
+          "May 6"
+        ],
+        "bloom": [
+          "Mar",
+          "Jun"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "synthesis_note_seasoned": "Region-constant arms spanning both Mid-Atlantic zones. Rosemary's own hardy floor is about zone 7, so zone 7 is a genuine cold edge here (a hardy cultivar and winter protection matter) while zone 8 clears it with more margin. Bloom follows this crop's coarse late-winter-into-spring phenology framing. Humidity, not just cold, is a real Mid-Atlantic constraint for this crop, closer to the se_gulf humidity-struggle framing than a dry-climate one (design spec section 5).",
+        "synthesis_note_beginner": "These cover both Mid-Atlantic zones. Rosemary is right at its cold limit in zone 7 but more comfortable in zone 8. Plant it in spring after your last frost; it flowers from late winter into spring, and humid summers are a real risk to watch in both zones."
+      }
+    ],
+    "plantings_provenance": {
+      "method": "perennial_woody_ornamental_region_arms",
+      "frost_resolved": true,
+      "note": "plant_out + bloom arms are frost-resolved off real VCE/NC State frost dates. Rosemary is genuinely marginal at zone 7 (its own hardy floor) and humidity-stressed region-wide; both risks folded into grown_as_note per zone rather than a single generic note."
+    },
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "Apr 15 - May 6",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "growing",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, but genuinely at the cold edge here. Rosemary's own hardy floor is about zone 7 (NC State), so this zone's real winter minimum sits right at the line where rosemary starts to suffer dieback or death in a hard year. Choose a hardy cultivar (Arp, Hill Hardy, Salem), give it a sheltered, south-facing, sharply drained site, and be ready to wrap or mulch the crown in an unusually severe cold snap. Day to day, wet winter soil in this humid region is as much a risk as the cold; give it excellent drainage.",
+        "grown_as_note_beginner": "Rosemary can live outdoors year round in zone 7, but it is right at its cold limit here. Choose a hardy type like Arp or Hill Hardy, plant it in a sheltered, sunny, fast draining spot, and be ready to cover it if an unusually hard freeze is forecast. Most winters it will be fine, but a severe cold snap can still hurt it.",
+        "bloom": "Apr - Jun",
+        "frost_risk_note_seasoned": "This is the genuine cold edge of rosemary's range here. Typical winters pose little risk, but an occasional hard freeze can still damage or kill an unprotected plant, so choose a hardy cultivar, site it against a warm wall, and mulch or cover the crown if a severe freeze is forecast. Wet winter soil in this humid region is the more common everyday risk.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial (marginal cold edge): rosemary is reliably hardy only to about zone 7 to 8 (NC State), so zone 7 sits right at its floor. plant_out is frost-resolved from the last spring frost (Apr 15). bloom uses this crop's coarse phenology framing (small blue flowers, late winter into spring in mild climates, later in cooler zones), giving Apr to Jun here. The humid Piedmont adds a second real risk beyond cold: wet winter soil, so sharp drainage matters as much as cultivar choice and site selection.",
+        "synthesis_note_beginner": "In zone 7, rosemary is right at the edge of what it can survive outdoors. Plant a hardy type like Arp after your last frost, around Apr 15, in a sheltered, sunny, fast draining spot. It flowers in spring, and you may need to protect it in a hard winter."
+      },
+      "8": {
+        "plant_out": "Apr 8 - Apr 29",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "bloom",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "growing",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, and comfortably so on the Coastal Plain. Zone 8 clears rosemary's roughly zone 7 to 8 hardy floor, so cold is much less of a concern here than in zone 7. The Mid-Atlantic's humid summer is the real everyday test: give it excellent drainage, a raised bed or mound, full sun, and restraint with water to hold off root and crown rot and powdery mildew.",
+        "grown_as_note_beginner": "Rosemary lives outdoors year round on the Coastal Plain and is not at its cold limit here the way it is farther inland. The humidity is what to watch for, so plant it on a raised bed with fast draining soil in full sun and do not overwater.",
+        "bloom": "Mar - Jun",
+        "frost_risk_note_seasoned": "Little frost risk here; the real risks are humidity driven root rot and powdery mildew. Prioritize excellent drainage, a raised bed, full sun, and airflow between plants.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: zone 8 clears rosemary's roughly zone 7 to 8 hardy floor with more margin than zone 7, so cold is a lesser concern here. plant_out is frost-resolved from the last spring frost (Apr 8). bloom uses the same coarse phenology framing, given a slightly wider Mar to Jun window reflecting the Coastal Plain's earlier, longer spring. Humidity, not cold, is the dominant risk on the Coastal Plain: excellent drainage, raised beds, and airflow are the operative defenses (matching this crop's own se_gulf framing).",
+        "synthesis_note_beginner": "In zone 8, rosemary is not at its cold limit the way it is in zone 7. Plant it in spring after your last frost, around Apr 8, on a raised bed with fast draining soil. It flowers from late winter into spring, and the humidity is what to watch, not the cold."
+      }
+    },
+    "region_notes_beginner": "In the Piedmont, rosemary is right at its cold limit in zone 7, so choose a hardy type like Arp, plant in a sheltered sunny spot with great drainage, and be ready to protect it in a hard winter. On the Coastal Plain (zone 8), cold is much less of a worry, but the humid summer is, so give it a raised bed with fast draining soil and do not overwater. It flowers from late winter into spring in both zones.",
+    "region_notes_seasoned": "Rosemary's real story in the Mid-Atlantic is a genuine zone split: zone 7 sits right at this crop's roughly zone 7 hardy floor, so a hardy cultivar (Arp, Hill Hardy, Salem), a sheltered south-facing site, and sharp drainage matter for winter survival, with occasional crown protection in a severe freeze. Zone 8's Coastal Plain clears that floor comfortably, so the dominant risk there shifts to the region's humid summer: root and crown rot and powdery mildew, held off with excellent drainage, a raised bed, full sun, and airflow. Bloom runs from late winter into spring across the region, earlier and longer on the milder Coastal Plain."
+  },
+  "sage": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "Apr 8",
+          "May 6"
+        ],
+        "bloom": [
+          "May",
+          "Aug"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "synthesis_note_seasoned": "Region-constant arms spanning both Mid-Atlantic zones. Common sage is hardy in roughly zones 4 to 8, so zone 7 is comfortably within range for cold while zone 8 sits right at its warm ceiling, where heat and humidity become the limiting factor instead. Bloom follows this crop's early-to-midsummer phenology. This is the closer se_gulf humidity-struggle framing rather than a dry-climate one for zone 8 specifically (design spec section 5).",
+        "synthesis_note_beginner": "These cover both Mid-Atlantic zones. Sage is comfortable in zone 7 but at its warm edge in zone 8, where heat and humidity, not cold, cause the most trouble. Plant in spring after your last frost; it flowers in summer."
+      }
+    ],
+    "plantings_provenance": {
+      "method": "perennial_woody_ornamental_region_arms",
+      "frost_resolved": true,
+      "note": "plant_out + bloom arms are frost-resolved off real VCE/NC State frost dates. Zone 8 sits at sage's own warm/humidity ceiling (its stated zone 4-8 range), the mirror image of rosemary's zone-7 cold edge; both are per-zone genuine calls, not a copy-paste of one zone's framing onto the other."
+    },
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "Apr 15 - May 6",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial. Common green sage is hardy to about zone 4 to 8, so zone 7 sits comfortably inside its range for cold. The Piedmont's humid summer is the more meaningful stress here: give it sharp drainage and full sun, and it persists several years as a woody subshrub before it tends to sprawl and need replacing; tender variegated types are the first to struggle in a wet, humid year.",
+        "grown_as_note_beginner": "Sage comes back year after year in zone 7. Give it good drainage and full sun, and it lasts several years before getting woody and needing replacement. The plain green kinds handle our humid summers better than the fancy variegated ones.",
+        "bloom": "Jun - Aug",
+        "frost_risk_note_seasoned": "Cold is comfortably within range here. Humidity and wet soil are the real everyday risks; give sage sharp drainage, do the hard renewal prune in spring rather than fall, and favor plain green cultivars over variegated ones.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: common sage (Salvia officinalis) is hardy in roughly zones 4 to 8 (NC State), so zone 7 sits well inside its range for cold, at the same warm edge se_gulf's own sage cells flag as humidity-marginal. plant_out is frost-resolved from the last spring frost (Apr 15). bloom uses this crop's early-summer phenology, given a slightly later Jun to Aug window than the cooler northern_tier zones to reflect this belt's real, later spring. The Piedmont's humid summer, not cold, is the real day to day test; green broadleaf types cope better than variegated ones.",
+        "synthesis_note_beginner": "In zone 7, sage lives through winter in the ground and comes back each year. Plant it in spring after your last frost, around Apr 15. It flowers in summer, and the humid summer, not the cold, is the thing to manage."
+      },
+      "8": {
+        "plant_out": "Apr 8 - Apr 29",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "bloom",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial, but at the warm edge of comfort. Zone 8 sits right at sage's stated zone 4 to 8 ceiling, so this is the zone where the Coastal Plain's heat and humidity start to matter more than cold ever will. Root and stem rot and powdery mildew are the real threats in a wet summer; grow it in a raised bed or container with excellent drainage and airflow, favor plain green cultivars, and treat it as a shorter-lived perennial than farther north.",
+        "grown_as_note_beginner": "Sage can grow as a perennial on the Coastal Plain, but this is the warm edge of what it likes, so the heat and humidity cause more trouble than winter cold does. Grow it in a raised bed or pot with great drainage, stick with the plain green kinds, and expect it to need replacing sooner than in a cooler spot.",
+        "bloom": "May - Aug",
+        "frost_risk_note_seasoned": "Frost is a minor factor here; heat and humidity are the real risks, bringing rot and mildew in a wet summer. Grow in a raised bed or container with excellent drainage and airflow.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial (warm-edge, humidity-marginal): zone 8 sits right at sage's stated zone 4 to 8 ceiling (NC State), so unlike zone 7, the limiting factor here is the Coastal Plain's heat and humidity rather than cold, matching this crop's own se_gulf zone 8 framing. plant_out is frost-resolved from the last spring frost (Apr 8). bloom is given a wider May to Aug window reflecting an earlier, longer warm season. Root and stem rot and powdery mildew are the operative risks; raised beds, excellent drainage, and green broadleaf cultivars are the mitigations.",
+        "synthesis_note_beginner": "In zone 8, sage is at the warm edge of what it tolerates. Plant it in spring after your last frost, around Apr 8, in a raised bed with great drainage. It flowers from late spring into summer, and heat and humidity, not cold, are what shorten its life here."
+      }
+    },
+    "region_notes_beginner": "In the Piedmont (zone 7), sage lives through winter in the ground easily and the main thing to manage is drainage in our humid summers. On the Coastal Plain (zone 8), sage is at the warm edge of what it likes, so heat and humidity cause more trouble than cold: grow it in a raised bed or pot with great drainage, stick with plain green types, and expect to replace it sooner than up in zone 7. It flowers in summer in both zones.",
+    "region_notes_seasoned": "Sage's Mid-Atlantic story flips the usual cold-limit script. Zone 7 sits comfortably inside sage's roughly zone 4 to 8 hardy range, so cold is a non issue there and the Piedmont's humidity is the main day to day test. Zone 8 sits right at that same range's warm ceiling, so on the Coastal Plain, heat and humidity, not cold, become the dominant risk: root and stem rot and powdery mildew in a wet summer, best managed with a raised bed, excellent drainage, airflow, and plain green cultivars over variegated ones. Bloom runs from early to late summer, earlier and longer on the Coastal Plain."
+  },
+  "thyme": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "Apr 8",
+          "May 6"
+        ],
+        "bloom": [
+          "Jun 17",
+          "Aug 5"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "synthesis_note_seasoned": "Region-constant arms spanning both Mid-Atlantic zones. Thyme is hardy to about zone 4 to 5, so cold is not a constraint in either zone here. Bloom is phenology-anchored to the crop's established early-to-mid-summer flowering window, the same offset this crop uses in its other frost-anchored regions. Humidity, not cold, is the real Mid-Atlantic constraint, the closer analog to this crop's se_gulf humidity-limited framing than a dry-climate one (design spec section 5).",
+        "synthesis_note_beginner": "These cover both Mid-Atlantic zones. Thyme lives through winter in the ground in both, so plant it in spring after your last frost. It flowers in summer, and humid summers are the real thing to watch for here."
+      }
+    ],
+    "plantings_provenance": {
+      "method": "perennial_woody_ornamental_region_arms",
+      "frost_resolved": true,
+      "note": "plant_out + bloom arms are frost-resolved off real VCE/NC State frost dates. Same +70/+112-day bloom offset this crop uses region-wide (verified against its other frost-anchored cells); humidity-limited framing folded into grown_as_note per zone."
+    },
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "Apr 15 - May 6",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial. Thyme is hardy to about zone 4 to 5, so zone 7 is comfortably inside its range for cold. The Piedmont's humid summer is the real test: thyme can rot in heavy or poorly drained soil, so plant it high on a mound or raised bed in gritty soil, space plants for airflow, and favor upright leafy culinary types (English, German Winter) over low woolly ornamental ones, which struggle more in humidity.",
+        "grown_as_note_beginner": "Thyme comes back year after year in zone 7. Give it a raised, fast draining spot in full sun and it should live for years. Choose an upright leafy type rather than a low fuzzy one, since the fuzzy kinds handle humidity worse.",
+        "bloom": "Jun 24 - Aug 5",
+        "frost_risk_note_seasoned": "Cold is well within range here; humidity and wet soil are the real everyday risks. Plant high on a mound or raised bed with sharp drainage, keep airflow open, and water at the base rather than overhead.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: thyme is reliably hardy to about zone 5 (NC State: zones 5a to 9b), so zone 7 is comfortably inside its range for cold. plant_out is frost-resolved from the last spring frost (Apr 15). bloom uses this crop's established early-to-mid-summer phenology offset, giving Jun 24 to Aug 5, identical to the offset lavender uses in this same belt. Humidity, not cold, is the real Mid-Atlantic test for thyme: raised beds, gritty soil, airflow, and upright culinary cultivars are the operative defenses, the closer analog to this crop's se_gulf humidity framing.",
+        "synthesis_note_beginner": "In zone 7, thyme lives through winter in the ground and comes back each year. Plant it in spring after your last frost, around Apr 15. It flowers in summer, and the humid summer, not the cold, is what to watch for."
+      },
+      "8": {
+        "plant_out": "Apr 8 - Apr 29",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "growing",
+          "growing",
+          "bloom",
+          "bloom",
+          "prune",
+          "growing",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://plants.ces.ncsu.edu/plants/thymus-vulgaris/",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "perennial_woody_ornamental_precompute",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "Perennial. Zone 8 clears thyme's hardy range with ease, so cold is a non issue on the Coastal Plain. Humidity is the operative risk here, a bit more pronounced than in zone 7: plant thyme high on a mound or raised bed in gritty, sharply drained soil, space for air movement, and favor upright leafy culinary types over low woolly ones, which are more prone to rot in this belt's humid summer.",
+        "grown_as_note_beginner": "Thyme grows well year round on the Coastal Plain. The humidity here is a bit more of a challenge than farther inland, so plant it high in fast draining soil with room for airflow, and choose an upright leafy type.",
+        "bloom": "Jun 17 - Jul 29",
+        "frost_risk_note_seasoned": "Cold is not the issue on the Coastal Plain; humidity and wet soil are. Plant high on a mound or raised bed with sharp drainage, keep airflow open, and water only at the base.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "synthesis_note_seasoned": "grown_as=perennial: zone 8 is comfortably inside thyme's zone 5-plus hardy range. plant_out is frost-resolved from the last spring frost (Apr 8). bloom uses the same early-to-mid-summer phenology offset as zone 7 (Jun 17 to Jul 29). The Coastal Plain's humidity is somewhat more pronounced than the Piedmont's, so raised-bed culture and upright culinary cultivars matter even more here, mirroring this crop's own se_gulf humidity-limited framing.",
+        "synthesis_note_beginner": "In zone 8, thyme also lives through winter in the ground. Plant it in spring after your last frost, around Apr 8. It flowers in summer, and the humidity here is a bit more of a factor than in zone 7."
+      }
+    },
+    "region_notes_beginner": "In the Piedmont and Coastal Plain, thyme lives outdoors year round in both zones; cold is not the challenge. The humid summer is, especially on the Coastal Plain, so plant it high on a mound or raised bed in fast draining, gritty soil with room for airflow, and choose an upright leafy type over a low fuzzy one. It flowers in summer.",
+    "region_notes_seasoned": "Across the Mid-Atlantic Piedmont and Coastal Plain, thyme is comfortably hardy in both zone 7 and zone 8 (hardy to about zone 4 to 5), so cold is not the limiting factor here. Humidity is, a bit more so on the Coastal Plain than the Piedmont: thyme can rot in heavy or poorly drained soil, so plant it high on a mound or raised bed in gritty, sharply drained soil, space for airflow, and favor upright leafy culinary types (English, German Winter) over low woolly ornamental ones, which handle humidity worse. Bloom runs June into early August across the region."
+  },
+  "blueberry": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "March",
+          "April"
+        ],
+        "bloom": [
+          "March",
+          "April"
+        ],
+        "harvest_start": [
+          "June"
+        ],
+        "harvest_end": [
+          "mid-July"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/growing-blueberries-in-the-home-garden",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": "Region fill (Task 7, Claude Code lane, 2026-07-20). recommended_type is rabbiteye in BOTH zones per the sourcing note's NC State steer (docs/reviews/notes/2026-07-20/mid_atlantic_sources.md section 6): rabbiteye is the best choice for most upland soils below 2,500 ft in NC (Premier/Powderblue/Climax), with highbush (Duke/Jersey) named specifically as the Coastal Plain alternative on higher-organic soils. Both types are already canonical varieties. leaf_habit is deciduous in both zones (not evergreen): unlike se_gulf's near-frost-free z8-10, the Mid-Atlantic has a real winter in both z7 and z8, so rabbiteye drops its leaves and rests dormant here, a genuinely new deciduous+rabbiteye combination per the cell contract section 5.3. Windows frost-reconciled against the real VCE/NC State frost dates; calendar[] DERIVED by derive_deciduous_berry_woody_calendar (A16).",
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "March to April",
+        "harvest": "June to July",
+        "harvest_start": "June",
+        "harvest_end": "July",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/growing-blueberries-in-the-home-garden",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "rabbiteye",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "Rabbiteye is NC State's own top pick for most soils below 2,500 feet elevation, and that covers the Piedmont: it names Premier among its recommended rabbiteye cultivars for this belt. Highbush (Duke, Jersey) is a real alternative on the higher-organic soils some Piedmont gardens have; both are already on this crop's canonical variety list. Rabbiteye's real winter here, unlike the mild Deep South, means it drops its leaves and rests fully dormant rather than holding foliage nearly year round.",
+        "type_note_beginner": "Rabbiteye is the type NC State recommends for most soils in this area, including Premier. Highbush (Duke, Jersey) also works if your soil is especially rich. Here in the Piedmont's real winter, rabbiteye loses its leaves and rests like a typical fruit bush, unlike in the much milder Deep South.",
+        "bloom": "April",
+        "frost_risk_note_seasoned": "Rabbiteye blooms later than highbush and usually escapes spring freezes here; a warm late-winter spell can occasionally push bloom early in a mild year.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "grown_as_note_seasoned": "Rabbiteye is a permanent deciduous shrub in the Piedmont's real winter, planted once and productive for decades. It rests dormant and leafless through winter, then blooms in spring, sets fruit, and ripens across early summer. After leaf drop, prune late in the dormant season, just before bud break. It needs a second, different rabbiteye variety nearby to cross pollinate and set a crop; NC's own abundant winter chill (typically over 1,000 hours) is never the limiting factor here.",
+        "grown_as_note_beginner": "Your rabbiteye blueberry is a long-lived bush you plant once and keep for many years. Here it loses its leaves and rests over winter like a typical fruit bush. It flowers in spring and ripens berries by early summer. Plant a second, different rabbiteye variety nearby so the two can pollinate each other and make fruit."
+      },
+      "8": {
+        "plant_out": "March to April",
+        "harvest": "June to mid-July",
+        "harvest_start": "June",
+        "harvest_end": "mid-July",
+        "calendar": [
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "growing",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/growing-blueberries-in-the-home-garden",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "rabbiteye",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "Rabbiteye is NC State's own top pick for most soils below 2,500 feet elevation in NC, which covers most of the Coastal Plain too; Premier is among its named cultivars. On the Coastal Plain's higher-organic soils specifically, NC State also names highbush (Duke, Jersey) and southern highbush (O'Neal, Legacy) as strong picks, ripening as early as mid-May. Both highbush types are already on this crop's canonical variety list; rabbiteye remains the broader, more soil-forgiving default across the belt.",
+        "type_note_beginner": "Rabbiteye, including Premier, is NC State's top recommendation for most soils here. If your soil is especially rich and organic, as is common on the Coastal Plain, highbush types like Duke and Jersey are also a strong choice and ripen a bit earlier. Either way, this belt's real winter means the bush loses its leaves and rests each year.",
+        "bloom": "March",
+        "frost_risk_note_seasoned": "Rabbiteye blooms early here and can occasionally meet a late-winter freeze in a mild year; later-blooming cultivars are the safer bet.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "grown_as_note_seasoned": "Rabbiteye is a permanent deciduous shrub on the Coastal Plain too; the region's real winter, milder than the Piedmont's but still a genuine cold season, means it drops its leaves and rests dormant each year rather than holding foliage. It blooms early, in March, and ripens from June into mid-July. Prune late in the dormant season, just before bud break, and plant a second, different rabbiteye variety nearby for cross pollination. Abundant regional chill (NC State: typically over 1,000 hours annually) is never the limiting factor.",
+        "grown_as_note_beginner": "Your rabbiteye blueberry on the Coastal Plain is a long-lived bush you plant once and keep for years. It loses its leaves and rests over winter, flowers early in spring, and ripens berries from June into mid-July. Plant a second, different rabbiteye variety nearby so the two can pollinate each other."
+      }
+    },
+    "region_notes_beginner": "The Mid-Atlantic is real blueberry country. Rabbiteye, including the variety Premier, is NC State's top pick for most soils here, though highbush types like Duke and Jersey are also great on richer Coastal Plain soils. Unlike the Deep South, our real winter means the bush loses its leaves and rests each year. Plant in early spring, expect flowers in late winter to spring, and pick berries from June into midsummer. Always plant two different rabbiteye varieties together so they can pollinate each other.",
+    "region_notes_seasoned": "The Piedmont and Coastal Plain are genuine rabbiteye and highbush blueberry country: NC State names rabbiteye, including Premier, as the best choice for most soils below 2,500 feet, with highbush (Duke, Jersey) and southern highbush called out specifically for the Coastal Plain's higher-organic soils. Unlike se_gulf's mild winter, this belt's real winter in both zones means rabbiteye is grown here as a fully deciduous shrub, dropping its leaves and resting dormant rather than holding foliage year round. Chill is never the limiting factor (NC State: this belt typically banks over 1,000 hours annually against rabbiteye's roughly 350 to 600 hour requirement). Plant at least two different rabbiteye cultivars for cross pollination, and prune in the dormant season just before bud break."
+  },
+  "blackberry": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "December",
+          "March"
+        ],
+        "bloom": [
+          "April",
+          "May"
+        ],
+        "harvest_start": [
+          "late June"
+        ],
+        "harvest_end": [
+          "August"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": "Region fill (Task 7, Claude Code lane, 2026-07-20). recommended_type summer_bearing in both zones: NC State's Southeast Regional Caneberry Production Guide directly covers this belt, naming thornless erect cultivars (Natchez, Ouachita, Osage, all already canonical, chill 200 to 400 hours) as the easiest to manage. Blackberry has no evergreen form (leaf_habit deciduous everywhere; it requires winter chill it always gets here). Windows frost-reconciled against real VCE/NC State frost dates; calendar[] DERIVED by derive_deciduous_berry_woody_calendar (A16).",
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "December to March",
+        "harvest": "July to August",
+        "harvest_start": "July",
+        "harvest_end": "August",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "summer_bearing",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "Summer-bearing (floricane-fruiting) blackberry is the type to grow across the Piedmont, and NC State's own Southeast Regional Caneberry Production Guide covers this belt directly. Thornless erect and semi-erect cultivars (Natchez, Ouachita, Osage) are the easiest to pick and manage; chill (about 200 to 800 hours depending on cultivar) is never a limiter here.",
+        "type_note_beginner": "Grow a summer-bearing blackberry, ideally a thornless upright type like Natchez or Ouachita, easy to pick and manage. Winters here are plenty cold for it.",
+        "bloom": "May",
+        "frost_risk_note_seasoned": "Blackberries bloom in May here, well after the last frost, so spring frost on open bloom is a low risk. Winter cold is not a limiting factor for these cultivars.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "grown_as_note_seasoned": "Blackberry is a deciduous cane fruit here: the canes drop their leaves and rest through the Piedmont winter, banking far more chill than these cultivars need, while the perennial crown and roots live for 15 to 20 years and each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes from winter into early spring, trellis for support, and prune out the spent fruited canes each dormant season. Watch for rosette (double blossom) and favor resistant cultivars.",
+        "grown_as_note_beginner": "Your blackberry patch is permanent, even though each cane only lives two years: it grows one season, fruits the next, then dies while new canes take over. Plant dormant canes in winter or early spring, give upright types a simple trellis, and cut out the old fruited canes each winter."
+      },
+      "8": {
+        "plant_out": "December to March",
+        "harvest": "late June to August",
+        "harvest_start": "late June",
+        "harvest_end": "August",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "harvest",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "summer_bearing",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "Summer-bearing thornless erect blackberries thrive on the Coastal Plain, squarely inside NC State's Southeast Regional Caneberry guidance. Natchez, Ouachita, and Osage all fruit heavily here from late spring into summer. The main disease to watch is rosette (double blossom); scout at bloom and favor resistant cultivars.",
+        "type_note_beginner": "The Coastal Plain grows thornless upright blackberries like Natchez and Ouachita very well, with a heavy crop from late spring into summer. Watch for rosette disease and pick resistant kinds.",
+        "bloom": "April to May",
+        "frost_risk_note_seasoned": "Blackberries bloom in mid-spring here, comfortably behind the last frost, so spring frost on open bloom is a low risk.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "grown_as_note_seasoned": "Blackberry is a deciduous cane fruit on the Coastal Plain too: the canes rest through the region's real (if milder than the Piedmont's) winter, while the perennial crown lives 15 to 20 years and each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes over winter, trellis for support, and prune out spent fruited canes each dormant season. This is excellent blackberry country: warm, humid summers ripen a heavy crop, and chill is never a limiter.",
+        "grown_as_note_beginner": "Your blackberry patch on the Coastal Plain is permanent, even though each cane lives only two years. Plant dormant canes over winter, give upright types a trellis, and cut out old fruited canes each winter. This is genuinely great blackberry country."
+      }
+    },
+    "region_notes_beginner": "The Mid-Atlantic is prime blackberry country. Thornless upright types like Natchez and Ouachita thrive in both the Piedmont and the Coastal Plain, fruiting heavily from late spring into summer. Plant dormant canes over winter, give them a simple trellis, watch for rosette disease, and cut out old fruited canes each year.",
+    "region_notes_seasoned": "Both Mid-Atlantic zones are excellent blackberry country: NC State's own Southeast Regional Caneberry Production Guide covers this belt directly, and thornless erect summer-bearing cultivars (Natchez, Ouachita, Osage) fruit heavily on second-year canes with chill never a limiting factor (200 to 800 hours needed against a region that banks well over 1,000). The Coastal Plain ripens a few weeks ahead of the Piedmont. Plant dormant bare-root canes from winter into early spring, trellis for support, scout for rosette (double blossom) at bloom and favor resistant cultivars, and prune out spent fruited canes each dormant season."
+  },
+  "raspberry": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "December",
+          "March"
+        ],
+        "bloom": [
+          "April",
+          "May"
+        ],
+        "harvest_start": [
+          "June"
+        ],
+        "harvest_end": [
+          "July"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/plant-growth",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": "Region fill (Task 7, Claude Code lane, 2026-07-20). recommended_type summer_bearing in both zones (standard reds, already canonical: Boyne/Nova/Latham/Killarney/Jewel/Bristol/Royalty, chill 700-800 hours, never a limiter here). Zone 7 (cooler Piedmont) is the more comfortable end of the belt for raspberries per NC State's own caneberry guidance; zone 8 (warmer Coastal Plain) is honestly framed as more marginal, with Phytophthora root rot and heat/humidity decline the real risks (matching general NC State/VCE caneberry caution, rather than downgrading to an everbearing/trailing type as se_gulf does further south). Windows frost-reconciled against real VCE/NC State frost dates; calendar[] DERIVED by derive_deciduous_berry_woody_calendar (A16).",
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "December to March",
+        "harvest": "late June to July",
+        "harvest_start": "late June",
+        "harvest_end": "July",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/plant-growth",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "summer_bearing",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "Summer-bearing (floricane-fruiting) red raspberry is the type to grow in the Piedmont, giving one concentrated early-summer crop on year-old canes. This zone's cooler upland climate is genuinely raspberry-friendly by regional standards; well-drained soil matters, since raspberries are prone to Phytophthora root rot in heavy or wet ground.",
+        "type_note_beginner": "Grow a summer-bearing red raspberry here for one big early-summer crop on year-old canes. Give it soil that drains well, since raspberries are prone to root rot in heavy, wet ground.",
+        "bloom": "May",
+        "frost_risk_note_seasoned": "Raspberries bloom in May, well after the last frost, so spring frost on open bloom is a low risk. Winter cold is not a limiting factor.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "grown_as_note_seasoned": "Raspberry is a deciduous cane fruit here: the canes drop their leaves and rest through the Piedmont winter, banking far more chill than needed, while the perennial crown lives a decade or more and each cane lives only two, growing one year and fruiting the next before dying. Set dormant bare-root canes over winter into early spring, plant on a raised bed or well-drained site to guard against Phytophthora root rot, trellis, and prune out spent fruited canes and thin new ones each dormant season.",
+        "grown_as_note_beginner": "Your raspberry patch comes back every year, even though each cane only lives two seasons. Plant dormant canes in winter or early spring on a raised, well-drained bed, since wet soil invites root rot. Give the canes a trellis and cut out the old fruited ones each winter."
+      },
+      "8": {
+        "plant_out": "December to March",
+        "harvest": "June to July",
+        "harvest_start": "June",
+        "harvest_end": "July",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/plant-growth",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "summer_bearing",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "Summer-bearing red raspberry can be grown on the Coastal Plain, but this is the more marginal end of the belt for this crop: the Coastal Plain's greater summer heat and humidity raise the risk of Phytophthora root rot and general decline more than in the cooler Piedmont. Plant on a raised bed with excellent drainage, choose a site with some afternoon shade if summers run hot, and treat plantings as shorter-lived here than farther inland.",
+        "type_note_beginner": "Raspberries can grow on the Coastal Plain, but the heat and humidity make this the harder part of the region for them. Plant on a raised, well-drained bed, give afternoon shade if you can, and expect the planting to need renewing sooner than in cooler spots.",
+        "bloom": "April to May",
+        "frost_risk_note_seasoned": "Raspberries bloom in mid-spring here, comfortably behind the last frost, so spring frost on open bloom is a low risk. Summer heat and humidity are the bigger everyday concern.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "grown_as_note_seasoned": "Raspberry is a deciduous cane fruit on the Coastal Plain too, resting through the region's milder winter before growing and fruiting each summer. The real challenge here is heat and humidity rather than cold: well-drained, raised planting sites are essential to hold off Phytophthora root rot, and afternoon shade helps in the hottest microclimates. Set dormant canes over winter, trellis, and prune out spent fruited canes each dormant season; expect this to be a more marginal, shorter-lived planting than in the cooler Piedmont.",
+        "grown_as_note_beginner": "Your raspberry patch on the Coastal Plain rests through our milder winter and grows each summer, but heat and humidity are real challenges here, more so than in the cooler Piedmont. Plant on a raised, well-drained bed, consider afternoon shade, and expect it to need replacing sooner than farther inland."
+      }
+    },
+    "region_notes_beginner": "Raspberries do well in the cooler Piedmont (zone 7), giving one big early-summer crop on year-old canes. On the warmer Coastal Plain (zone 8), they can still be grown, but heat and humidity make it more of a challenge, so plant on a raised, well-drained bed and consider some afternoon shade. Give canes a trellis, plant on well-drained ground everywhere to avoid root rot, and cut out old fruited canes each winter.",
+    "region_notes_seasoned": "Raspberries genuinely favor the cooler Piedmont (zone 7) over the warmer, more humid Coastal Plain (zone 8) in this belt: standard summer-bearing red cultivars (Boyne, Nova, Latham, Killarney) crop reliably in zone 7's cooler upland climate, while zone 8 is more marginal, with summer heat and humidity raising the risk of Phytophthora root rot and general plant decline. Well-drained, raised planting sites matter everywhere, more so on the Coastal Plain, where afternoon shade and shorter planting life expectancy are honest expectations rather than corrections. Chill (roughly 700 to 800 hours) is never a limiting factor in either zone."
+  },
+  "elderberry": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "ncsu_ext",
+      "vce_426_331"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "establishment",
+        "track": "perennial",
+        "plant_out": [
+          "March",
+          "April"
+        ],
+        "bloom": [
+          "May",
+          "June"
+        ],
+        "harvest_start": [
+          "July"
+        ],
+        "harvest_end": [
+          "September"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": "Region fill (Task 7, Claude Code lane, 2026-07-20). recommended_type american_elderberry in both zones (the only type in this crop's canonical roster; chosen by cultivar not climate, chill 400 hours never a limiter). Elderberry's native range covers the whole Mid-Atlantic; this belt's real moisture supply is a genuine strength, mirrored from this crop's own northern_tier/se_gulf framing. Windows frost-reconciled against real VCE/NC State frost dates; calendar[] DERIVED by derive_deciduous_berry_woody_calendar (A16).",
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "March to April",
+        "harvest": "August to September",
+        "harvest_start": "August",
+        "harvest_end": "September",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "american_elderberry",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "American elderberry is the type to grow here, chosen by cultivar rather than climate. It is exceptionally cold-hardy and thrives in the moist soils common across the Piedmont; the only real rule is to plant two different cultivars for cross pollination.",
+        "type_note_beginner": "Grow American elderberry, the common type. It loves moist soil and our winters are more than cold enough for it. Just plant two different varieties near each other for a good crop.",
+        "bloom": "June",
+        "frost_risk_note_seasoned": "Elderberry blooms in early summer, well after spring frost, so frost on bloom is rarely a concern here.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        },
+        "grown_as_note_seasoned": "Elderberry is a permanent, very cold-hardy deciduous shrub here, planted once and renewed in place for many years. It rests bare and dormant through winter, leafs out and grows fast in spring, blooms in early summer, and ripens dark berry clusters in late summer. Renew the oldest canes in late winter, and plant two different cultivars for good fruit set. This native, adaptable shrub asks for little beyond the moisture the Piedmont already supplies.",
+        "grown_as_note_beginner": "Your elderberry is a long-lived, very cold-hardy bush you plant once and keep for years. It loses its leaves and rests in winter, grows fast in spring, flowers in early summer, and ripens dark berries in late summer. Prune the oldest stems in late winter, and plant two different varieties for a good crop."
+      },
+      "8": {
+        "plant_out": "March to April",
+        "harvest": "July to August",
+        "harvest_start": "July",
+        "harvest_end": "August",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "prune",
+          "bloom",
+          "growing",
+          "harvest",
+          "harvest",
+          "care",
+          "dormant",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "ncsu_ext",
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu",
+            "verified": "2026-07-20"
+          },
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "recommended_type": "american_elderberry",
+        "leaf_habit": "deciduous",
+        "type_note_seasoned": "American elderberry grows and fruits readily on the Coastal Plain too; there is no separate warm-climate type as there is for blueberry. It wants steady moisture, which the Coastal Plain's water table and rainfall usually supply. Plant two different cultivars for cross pollination.",
+        "type_note_beginner": "Grow American elderberry here too, the same common type. It likes plenty of moisture, which the Coastal Plain generally has. Plant two different varieties near each other for a good crop.",
+        "bloom": "May to June",
+        "frost_risk_note_seasoned": "Elderberry blooms in late spring here, well after the last frost, so frost on bloom is rarely a concern.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        },
+        "grown_as_note_seasoned": "Elderberry is a permanent deciduous shrub on the Coastal Plain as well, planted once and kept for years, though the region's milder winter means it rests only briefly compared to the Piedmont. It blooms in late spring, ripens earlier than upland plantings, from July into August, and is renewed by pruning out the oldest canes in late winter. Plant two different cultivars for good fruit set, and keep it well watered through the summer heat.",
+        "grown_as_note_beginner": "Your elderberry on the Coastal Plain is a long-lived bush you plant once and keep for years. It rests only briefly over our milder winter, flowers in late spring, and ripens earlier than upland plantings, from July into August. Prune old stems in late winter and plant two different varieties for a good crop."
+      }
+    },
+    "region_notes_beginner": "Elderberry is an easy, native-range shrub across the Mid-Atlantic. It loves moisture, which this region generally provides, and our winters are more than cold enough for it. Plant in spring, expect flowers from late spring into early summer, and pick dark berries in mid to late summer. Always plant two different varieties together so they can pollinate each other.",
+    "region_notes_seasoned": "Elderberry is native to the Mid-Atlantic and genuinely easy here in both zones: American elderberry is exceptionally cold-hardy (chill, about 400 hours, is never a limiter against a belt that banks well over 1,000), thrives in the moist soils common to both the Piedmont and Coastal Plain, and needs only cultivar diversity, not climate correction, to fruit well. The Coastal Plain's milder winter and earlier spring bring bloom and harvest a few weeks ahead of the Piedmont. Plant two different cultivars for cross pollination, keep it well watered through summer heat, and renew the oldest canes each late winter."
+  },
+  "strawberry": {
+    "region_id": "mid_atlantic",
+    "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+    "zone_span": [
+      "7",
+      "8"
+    ],
+    "sources": [
+      "vce_426_331",
+      "ncsu_ext"
+    ],
+    "plantings": [
+      {
+        "succession_id": 1,
+        "label": "z7 matted-row establishment",
+        "track": "perennial",
+        "plant_out": [
+          {
+            "label": "establishment",
+            "from": "last_frost",
+            "offset_days": -14,
+            "window_days": 21,
+            "synthesis_note": "Set dormant bare-root crowns about two weeks before the last spring frost, as soon as the soil can be worked; the crowns are dormant stock, so there is no need to wait out frost danger (VCE 426-331 home garden matted-row guidance).",
+            "sources": [
+              "vce_426_331"
+            ],
+            "anchoring_urls": {
+              "vce_426_331": {
+                "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "establishment",
+            "from": "last_frost",
+            "offset_days": 14,
+            "window_days": 21,
+            "synthesis_note": "On an established matted-row bed, June-bearing plants begin flowering in the weeks after the last frost; open blossoms are frost-sensitive (VCE 426-331).",
+            "sources": [
+              "vce_426_331"
+            ],
+            "anchoring_urls": {
+              "vce_426_331": {
+                "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "establishment",
+            "from": "last_frost",
+            "offset_days": 42,
+            "synthesis_note": "June-bearing strawberries ripen roughly six weeks after the last frost in the Piedmont's matted-row system (VCE 426-331).",
+            "sources": [
+              "vce_426_331"
+            ],
+            "anchoring_urls": {
+              "vce_426_331": {
+                "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "establishment",
+            "from": "last_frost",
+            "offset_days": 70,
+            "synthesis_note": "The June-bearing flush runs about four weeks. Renovate the matted row within two weeks of the last picking: mow the leaves above the crowns, narrow the row, and fertilize (VCE 426-331).",
+            "sources": [
+              "vce_426_331"
+            ],
+            "anchoring_urls": {
+              "vce_426_331": {
+                "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        }
+      },
+      {
+        "succession_id": 2,
+        "label": "z8 plasticulture establishment",
+        "track": "annual",
+        "plant_out": [
+          {
+            "label": "establishment",
+            "from": null,
+            "window": "mid-Sep - early Oct",
+            "synthesis_note": "NC State's plasticulture system, developed for and widely used across the NC Coastal Plain and Piedmont, sets plug transplants in mid-September through early October on raised, plastic-mulched beds with drip irrigation. This is an absolute, month-resolved window driven by the fall establishment season, not anchored to the last spring frost.",
+            "sources": [
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "bloom": [
+          {
+            "label": "establishment",
+            "from": null,
+            "window": "Mar - Apr",
+            "synthesis_note": "Plants establish through fall, overwinter under row covers as small crowns, then bloom in spring as day length and temperature increase (NC State plasticulture guidance).",
+            "sources": [
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "harvest_start": [
+          {
+            "label": "establishment",
+            "from": null,
+            "window": "late Apr",
+            "synthesis_note": "Harvest begins in late April in the plasticulture system, several weeks ahead of a matted-row planting, one of the system's main advantages (NC State).",
+            "sources": [
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "harvest_end": [
+          {
+            "label": "establishment",
+            "from": null,
+            "window": "early Jun",
+            "synthesis_note": "Harvest runs into early June, after which the planting is turned under before summer heat and disease pressure build; fresh plugs are set again the following fall (NC State plasticulture guidance, the annual-hill system).",
+            "sources": [
+              "ncsu_ext"
+            ],
+            "anchoring_urls": {
+              "ncsu_ext": {
+                "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+                "verified": "2026-07-20"
+              }
+            }
+          }
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+            "verified": "2026-07-20"
+          }
+        }
+      }
+    ],
+    "plantings_provenance": "Region fill (Task 7, Claude Code lane, 2026-07-20). The Mid-Atlantic genuinely runs BOTH strawberry systems, differentiated honestly by zone rather than picking one for the whole region: zone 7 (Piedmont/VA, cooler, VCE-documented) uses the traditional June-bearing perennial matted row, the same shape this crop's own northern_tier cells use, with plant_out/bloom/harvest_start/harvest_end frost-offset from the real last spring frost. Zone 8 (Coastal Plain/NC, warmer, NC State-documented) uses the annual plasticulture (fall plug, raised bed, plastic mulch) system NC State pioneered and recommends for this belt's Coastal Plain conditions, an absolute month-resolved fall-plant/spring-harvest/summer-removal cycle, structurally like this crop's own se_gulf annual cells but with NC State's own earlier fall planting and spring harvest dates (not LSU's Gulf Coast timing). grown_as differs by zone (perennial z7 / annual z8) using the existing grown_as field exactly as intended for this archetype.",
+    "resolved_by_zone": {
+      "7": {
+        "plant_out": "Apr 1 - Apr 22",
+        "harvest": "May 27 - Jun 24",
+        "harvest_start": "May 27",
+        "harvest_end": "Jun 24",
+        "calendar": [
+          "dormant",
+          "dormant",
+          "dormant",
+          "bloom",
+          "harvest",
+          "harvest",
+          "renovation",
+          "growing",
+          "growing",
+          "growing",
+          "dormant",
+          "dormant"
+        ],
+        "sources": [
+          "vce_426_331"
+        ],
+        "anchoring_urls": {
+          "vce_426_331": {
+            "url": "https://www.pubs.ext.vt.edu/426/426-331/426-331.html",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "grown_as": "perennial",
+        "grown_as_note_seasoned": "The Piedmont grows strawberries as a perennial matted-row bed, the traditional home-garden system: plant once and the same bed comes back and fruits for several years. Set dormant bare-root crowns about two weeks before the last spring frost, as soon as the soil can be worked. June-bearing types give one concentrated flush in late spring, then send runners to fill the row. Renovate the bed within two weeks of the last harvest: mow the leaves above the crowns, narrow the row, and fertilize.",
+        "grown_as_note_beginner": "In the Piedmont, you plant a strawberry bed once and it comes back and fruits for years. Plant the small dormant crowns in early spring, even if frost is still possible. You get one big batch of berries in late spring, then trim and thin the bed after picking to keep it healthy.",
+        "bloom": "Apr 29 - May 20",
+        "frost_risk_note_seasoned": "Blossoms opening in late April to May can still be caught by a late frost; cover the bed with row cover on a forecast frosty night during bloom to protect the crop.",
+        "resolved_from": {
+          "last_frost": "Apr 15",
+          "first_frost": "Oct 25"
+        }
+      },
+      "8": {
+        "plant_out": "Sep 15 - Oct 5",
+        "harvest": "late Apr - early Jun",
+        "harvest_start": "late Apr",
+        "harvest_end": "early Jun",
+        "calendar": [
+          "growing",
+          "growing",
+          "bloom",
+          "harvest",
+          "harvest",
+          "harvest",
+          "season_over",
+          "season_over",
+          "plant",
+          "growing",
+          "growing",
+          "growing"
+        ],
+        "sources": [
+          "ncsu_ext"
+        ],
+        "anchoring_urls": {
+          "ncsu_ext": {
+            "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+            "verified": "2026-07-20"
+          }
+        },
+        "resolution_method": "frost_anchored_resolved",
+        "grown_as": "annual",
+        "grown_as_note_seasoned": "The Coastal Plain grows strawberries on NC State's plasticulture (annual-hill) system, not a perennial bed: set plug transplants in mid-September through early October on raised, plastic-mulched rows with drip irrigation, let plants establish through fall and overwinter as small crowns, then harvest from late April through early June, several weeks ahead of a matted-row planting. After harvest the planting is turned under, since summer heat and disease pressure make it impractical to carry over, and fresh plugs are set again the following fall.",
+        "grown_as_note_beginner": "On the Coastal Plain, strawberries are grown as a fall-planted crop you replace each year, not a bed that lives for years. Set transplants in September or early October on a raised, plastic-covered row. Pick berries from late April into early June, then pull the plants and start fresh again next fall.",
+        "bloom": "Mar - Apr",
+        "frost_risk_note_seasoned": "Plants overwinter as small crowns under row covers; open spring blossoms are damaged by a hard freeze, so keep row covers or frost protection on hand for a late cold snap during March and April bloom.",
+        "resolved_from": {
+          "last_frost": "Apr 8",
+          "first_frost": "Oct 30"
+        }
+      }
+    },
+    "region_notes_beginner": "The Mid-Atlantic grows strawberries two different ways depending on where you are. In the cooler Piedmont (zone 7), plant a matted-row bed once and it comes back for years, with one big batch of berries in late spring. On the warmer Coastal Plain (zone 8), growers use a plastic-covered raised-row system: plant in fall, pick from late April into early June, then replace the planting each year. Both are real, well-documented ways to grow strawberries here.",
+    "region_notes_seasoned": "The Mid-Atlantic genuinely runs both major US strawberry systems, split honestly by zone. The cooler Piedmont (zone 7) uses the traditional June-bearing perennial matted row documented by Virginia Cooperative Extension: set dormant crowns about two weeks before the last frost, expect one concentrated harvest flush in late spring, and renovate the bed after picking to keep it productive for several years. The warmer Coastal Plain (zone 8) uses NC State's plasticulture (annual-hill) system, pioneered for exactly this climate: fall-set plug transplants on raised, plastic-mulched, drip-irrigated rows establish through fall, overwinter as small crowns, and crop from late April through early June, several weeks earlier than a matted-row bed, before the planting is turned under ahead of summer heat and disease pressure and replaced the next fall."
+  }
+}
