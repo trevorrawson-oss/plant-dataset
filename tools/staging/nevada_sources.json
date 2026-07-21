@@ -1,0 +1,62 @@
+{
+  "nws_vef": {
+    "id": "nws_vef",
+    "name": "NWS Las Vegas, Technical Memorandum WR-235 (Climate of Las Vegas, Nevada)",
+    "publisher": "NOAA National Weather Service, Las Vegas (VEF) Forecast Office",
+    "url": "https://www.weather.gov/media/wrh/online_publications/TMs/TM-235.pdf",
+    "source_class": "government_observation_network",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "NWS Las Vegas forecast-office frost/freeze normals for the Las Vegas Valley (1961-90 period of record, 32 degF). Verbatim: average last spring frost Feb 28, average first fall frost Nov 25. The nevada zone 9 frost anchor (zone 8 and zone 10 gradient-derived from it). Not citable for biological-mechanism claims.",
+    "_admission_provenance": "nevada region (roadmap item 10, 2026-07-21). New NWS forecast-office source, mirroring nws_lzk's government_observation_network class. Surfaced: the belt's marquee Las Vegas Valley (zone 9) frost dates. The 2026-07-15 tier2 Nevada ruling fetched and read this PDF with pypdf (verbatim quote confirmed, independently re-verified in the ruling arc review); catalogued now the belt is built as a real region. PDF re-downloaded + confirmed in the build controller env 2026-07-21."
+  },
+  "unr_sp2007": {
+    "id": "unr_sp2007",
+    "name": "UNR Extension SP-20-07, Research Orchard Fruit Evaluations & Recommendations for Southern Nevada (2020)",
+    "publisher": "University of Nevada, Reno Extension",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UNR Extension specific publication SP-20-07 (M.L. Robinson, A. O'Callaghan, L. Ruskamp; peer-reviewed). Direct multi-year (2005-2018) apple variety field trial at the North Las Vegas Research Orchard (4600 Horse Drive, inside the zone 9 belt), with per-variety performance ratings and chill-hour figures. Backs the nevada apple suitability (fruits_reliably) and the reliable-vs-unproven variety steering (confirmed performers Dorsett Golden / Pink Lady / Mutsu / Anna / Fuji / Granny Smith; confirmed ceiling ~700 hr at Granny Smith). Sub-ID under unr_ext (the parent portal).",
+    "_admission_provenance": "nevada region (roadmap item 10, 2026-07-21). Sub-ID under unr_ext (T1, 1862 Land Grant); inherits parent tier. Surfaced: the belt's direct apple field-trial evidence (the delta-2 variety steering). The 2026-07-15 tier2 Nevada ruling read this PDF (text layer not machine-extractable; pages rendered to image and read), independently re-verified in the ruling arc review; catalogued now the belt is built. Mirrors the uada_ext_fsa6001-under-uada_ext sub-ID pattern. PDF re-downloaded in the build controller env 2026-07-21."
+  },
+  "unr_fs0261": {
+    "id": "unr_fs0261",
+    "name": "UNR/UNCE Fact Sheet FS-02-61, Home Vegetable Production in Southern Nevada",
+    "publisher": "University of Nevada, Reno Cooperative Extension",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2002-3280.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UNR Cooperative Extension Fact Sheet FS-02-61 (A.M. O'Callaghan). The Southern Nevada warm-vs-cool season planting framework: warm-season vegetables planted March through May; cool-season mid-February through April and from mid-August until the end of October; plants do not grow well above 90 degF. Backs the nevada annual season windows and the summer heat_pause. Sub-ID under unr_ext.",
+    "_admission_provenance": "nevada region (roadmap item 10, 2026-07-21). Sub-ID under unr_ext (T1, 1862 Land Grant); inherits parent tier. Surfaced: the belt's cool/warm season windows + the 90 degF ceiling (the heat_pause basis). Verbatim extract confirmed via pypdf/fitz in the build controller env 2026-07-21: 'mid February through April and from mid August until the end of October', 'March until May', 'grow well at temperatures above 90 F'."
+  },
+  "unr_sp9911": {
+    "id": "unr_sp9911",
+    "name": "UNR Extension SP-99-11, Growing Tomatoes in Southern Nevada",
+    "publisher": "University of Nevada, Reno Extension",
+    "url": "https://extension.unr.edu/publication.aspx?PubID=3267",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UNR Extension specific publication SP-99-11 (A. Roberts). Southern Nevada's practical last-frost date (March 15); the >90 degF-day / <55 degF-night tomato fruit-set cutoff; and the recommendation AGAINST a fall or second tomato planting for Southern Nevada (spread the single spring window by mixing early 50-60 day and main-season 80+ day varieties). Backs the nevada warm-fruiting-crop single-spring shape (no fall replant) and the heat_pause. Sub-ID under unr_ext.",
+    "_admission_provenance": "nevada region (roadmap item 10, 2026-07-21). Sub-ID under unr_ext (T1, 1862 Land Grant); inherits parent tier. Surfaced: the belt's no-fall-tomato recommendation (the delta-1 divergence from Phoenix's fall reflush) + the practical last-frost date. The 2026-07-15 tier2 Nevada ruling read this publication; catalogued now the belt is built."
+  },
+  "unlv_mg_svn": {
+    "id": "unlv_mg_svn",
+    "name": "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)",
+    "publisher": "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV",
+    "url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+    "source_class": "extension_master_gardener_program",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UNR Cooperative Extension Master Gardener (Clark County) per-crop planting chart for Southern Nevada. Cool-season crops carry a spring window (Feb-Apr) and a fall window (mid-Aug through Oct/Nov); warm-season crops a spring window (Mar-May), with quick crops (bush beans, sweet corn, cucumber, summer squash) also a late-summer (Jul-Aug) window; garlic Sept through mid-Oct; dry onions Feb plus Sept-Oct. Backs the nevada per-crop annual windows. A Master Gardener product of a T1 university extension (mirrors nmsu_donaana_mg's admission).",
+    "_admission_provenance": "nevada region (roadmap item 10, 2026-07-21). extension_master_gardener_program class, mirroring nmsu_donaana_mg (a T1 Master Gardener planting chart). Surfaced: the belt's per-crop planting windows (the load-bearing annual-window source, the Nevada analog of VCE 426-331 / UNLV chart). The 2026-07-15 tier2 Nevada ruling read tomato + garlic from it; the full chart was rendered to image (fitz, 2.2x) and its text layer read in the build controller env 2026-07-21 for the whole crop roster's windows."
+  }
+}
