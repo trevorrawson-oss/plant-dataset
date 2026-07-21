@@ -44,6 +44,8 @@ REGION_CONFIG = {
                      "span": ["7", "8"], "frost_model": "anchored"},
     "mid_south": {"label": "Mid-South: Ozark Uplands and Delta Lowlands",
                   "span": ["7", "8"], "frost_model": "anchored"},
+    "nevada": {"label": "Nevada: Mojave High Desert (Las Vegas Valley)",
+               "span": ["8", "9", "10"], "frost_model": "anchored"},
 }
 
 

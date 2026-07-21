@@ -293,6 +293,36 @@ def test_mid_south_cold_pause_allowed():
     print("  ok: cold_pause allowed for frost-anchored (mid_south)")
 
 
+def test_nevada_config_present_anchored():
+    import region_cell_audit as rca
+    cfg = rca.REGION_CONFIG["nevada"]
+    assert cfg["span"] == ["8", "9", "10"]
+    assert cfg["frost_model"] == "anchored"
+    assert cfg["label"] == "Nevada: Mojave High Desert (Las Vegas Valley)"
+    print("  ok: nevada REGION_CONFIG entry present (span z8-9-10, anchored)")
+
+
+def test_nevada_heat_pause_plus_cold_pause_allowed():
+    import region_cell_audit as rca
+    cell = {
+        "region_id": "nevada",
+        "region_label": "Nevada: Mojave High Desert (Las Vegas Valley)",
+        "zone_span": ["8", "9", "10"],
+        "resolved_by_zone": {
+            z: {"plant_out": "Mar 15 - May 1", "harvest": "May 20 - Jun 20",
+                "harvest_start": "May 20", "harvest_end": "Jun 20",
+                "first_plant_date": "Mar 15", "last_plant_date": "May 1",
+                "resolution_method": "frost_anchored_resolved",
+                "resolved_from": {"last_frost": "Feb 28", "first_frost": "Nov 25"},
+                "calendar": ["cold_pause", "indoors", "plant", "growing", "harvest", "harvest",
+                             "heat_pause", "heat_pause", "heat_pause", "season_over",
+                             "cold_pause", "cold_pause"]}
+            for z in ("8", "9", "10")}}
+    assert not any("cold_pause" in v or "heat_pause" in v
+                   for v in rca.audit_cell("cherry-tomato", cell, "nevada"))
+    print("  ok: heat_pause + cold_pause allowed for frost-anchored (nevada)")
+
+
 if __name__ == "__main__":
     test_valid_frost_anchored_cell_clean()
     test_cold_pause_allowed_for_frost_anchored()
@@ -312,4 +342,6 @@ if __name__ == "__main__":
     test_mid_atlantic_cold_pause_allowed()
     test_mid_south_config_present_anchored()
     test_mid_south_cold_pause_allowed()
+    test_nevada_config_present_anchored()
+    test_nevada_heat_pause_plus_cold_pause_allowed()
     print("\nALL region_cell_audit TESTS PASSED")
