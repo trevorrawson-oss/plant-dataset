@@ -6,6 +6,61 @@
 
 ---
 
+## 2026-07-21 -- ONION + SHALLOT DAY-LENGTH CORRECTION (mid_south z7+z8, mid_atlantic z8)
+
+Canonical `931c1653` -> `a071f0c1` via one SHA-guarded 56-patch splice (`tools/apply_patch.py`,
+`tools/batches/onion_daylength_intermediate.json`, builder `tools/build_onion_daylength_patch.py`).
+count 128 / 119 certified unchanged. NO new field, NO new gate (reuses A9 photoperiod).
+
+**Why:** the mid-Atlantic + mid-South region builds shipped `recommended_day_length_type = long_day`
+for onion + shallot across their whole z7-z8 span, but the zone-8 cores sit at ~34-36N (Little Rock
+34.7N, Wilmington NC 34.2N) where long-day onions do not bulb (they need 14-16h; ~34N solstice only
+reaches ~14.2h). The operative T1 line is 36N (Univ. Maryland, Texas A&M: short-day below, long-day
+above). Two extensions reject long-day outright (NC Onslow "not recommended for our area"; Clemson
+"cannot be successfully grown in the South").
+
+**Decision (Trevor-approved Path A):** flip to `intermediate_day` -- the belt-wide convergence
+("Candy" is recommended by AR/OK/TN/MO + MD, and matches `ca_interior`/`warm_arid` z8 already
+intermediate) -- AND trim the spring window's April tail, because the A9 photoperiod WINDOW-FIT rule
+forbids an April `plant_out` for `intermediate_day` (intermediate onions are set early to build leaf
+area before their shorter, earlier trigger). Sources split on the tail: OSU (Feb 15-Mar 10), TN
+(through March), NC coastal (Feb 10-Mar 10) end by mid-March, while AR-FSA6014 ("Feb-April") + VCE
+("Feb 20-Apr 20") run into April but are generic all-type windows. Path A keeps the validated gate
+armor untouched and is the more accurate window for intermediate types; harvest is day-length-
+anchored (May-June) and unchanged.
+
+**Scope:** onion mid_south z7 + z8; onion mid_atlantic z8; shallot mid_south z7 + z8; shallot
+mid_atlantic z8. **mid_atlantic z7 (Piedmont, to ~40N) STAYS `long_day`** -- genuine long-day
+country. Shallot rides onion by species identity (both *Allium cepa* Aggregatum); no separate T1
+shallot latitude map exists, so the cells honestly say "follows onion." Trimmed windows: mid_south
+z8 "Feb 15 - Mar 25", z7 "Feb 24 - Mar 31"; mid_atlantic z8 "Feb 20 - Mar 31"; calendar April
+`plant` -> `growing`. Per flipped cell: recommended_day_length_type + both day_length notes +
+plant_out + last_plant_date + calendar[3] + zone_notes; per belt: region_notes + `sources` gain the
+day-length authority. **2 new T1 source_catalog entries:** `uada_ext_fsa6014` (UAEX FSA6014 Onions),
+`ncsu_ext_bulb_onions` (NC State Bulb Onions).
+
+**Footprint EXACT:** only onion + shallot changed; only their mid_south / mid_atlantic cells; 27
+changed leaves per crop, all intended (0 unexpected); 0 other crops; COMPACT (0 escaped-unicode).
+
+**Gates:** `gate_all` 119/119 PASS; A9 photoperiod onion/shallot 0/0; `calendar_coherence` 0;
+`prose_window_sweep` 0; `release_verify` B-H clean (the 1 concern = the documented single-crop-pilot
+collateral false positive: it expected only onion to change, but this is a deliberate 2-crop change;
+the apply_patch footprint + gate_all are authoritative). Independent content review = SHIP-WITH-FIXES
+(factual / honesty / direction / date-consistency all CLEAN; fixed a degree-symbol spacing slip
+" N" -> "N" + one prose nit).
+
+**Docs:** decision note `docs/reviews/notes/2026-07-21/onion_daylength_intermediate_decision.md` (the
+full per-state source table + the split + the gate-coupling rationale); app handoff
+`docs/kickoffs/36-onion-daylength-app-note.md` (render the per-zone `day_length_note` + a "which
+onion" explainer paragraph; no new field / app logic). Kickoff #35 (mid-south plant-app) was found
+already written + complete (not owed).
+
+**Open follow-on (not this change):** two pre-existing shallot per-variety `day_length_type`
+tensions remain uncorroborated (Southern multiplier short_day; the set varieties intermediate_day) --
+see memory `shallot-variety-dtm-held`; out of scope (region recommendation, not per-variety typing).
+
+COMMITTED, UNPUSHED (Trevor confirms push); NO plant-astro bump from this session.
+
 ## 2026-07-20 -- MID-SOUTH REGION SHIPPED (roadmap item 9, the 4th authored region)
 
 Canonical `af5dcee9` -> `931c1653` via one SHA-guarded atomic promote (`tools/apply_patch.py`, 119

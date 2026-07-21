@@ -1,0 +1,381 @@
+{
+ "base_sha": "931c165348826512c5f08a5df3ed062f831294f4044d4ea9a1b3e10aa1978ae9",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.recommended_day_length_type",
+   "from": "long_day",
+   "value": "intermediate_day"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.day_length_note_beginner",
+   "from": "Grow long-day onions here. They wait for very long summer days (14 to 16 hours) before forming a bulb, which is exactly what this latitude provides. Intermediate-day onions are a reasonable alternative too, especially toward the belt's warmer southern edge. Skip short-day (Southern) onions, which need fall planting and a much milder winter.",
+   "value": "Grow intermediate-day onions here. They form a bulb at a middle day length, about 12 to 14 hours, which fits this latitude, and they size up best when set out early, so plant from February into late March. Long-day onions also work at the belt's cooler northern edge. Skip short-day (Southern) onions, which are bred for fall planting in much milder winters."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.day_length_note_seasoned",
+   "from": "This latitude (roughly 37 to 40°N in the Ozark and upland north of the belt) calls for long-day onions, which bulb at 14 to 16 hours of daylight, well matched to the belt's long summer days. Intermediate-day types also perform here and are a reasonable hedge toward the belt's warmer southern edge, where the largest long-day varieties can run short of season. Avoid true short-day (Southern) types, which need a fall planting and a mild winter this belt does not reliably provide.",
+   "value": "This latitude (roughly 36 to 37°N in the Ozark uplands and the belt's north) is intermediate-day onion country: intermediate types bulb at 12 to 14 hours of daylight, the belt's early-summer day length, and they build the most size when set out early, so aim for February into late March rather than April. Long-day types remain a reasonable choice at the belt's cooler northern edge in southern Missouri. Avoid true short-day (Southern) types, which are bred for a fall planting and a mild winter this belt does not reliably provide. University of Arkansas guidance lists intermediate-day onions as suited to the northern half of the state, and Tennessee and Oklahoma Extension both recommend intermediate-day for dry bulbs."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.plant_out",
+   "from": "Feb 24 - Apr 26",
+   "value": "Feb 24 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.last_plant_date",
+   "from": "Apr 26",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.calendar[3]",
+   "from": "plant",
+   "value": "growing"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.7.zone_notes",
+   "from": "Ozark uplands: set onion sets or seedlings Feb 24 to Apr 26 as soon as the ground can be worked. Bulbs size up and pull late June into late July. This latitude (roughly 37 to 40°N) is squarely long-day onion territory, though intermediate-day types also perform well near the belt's southern edge.",
+   "value": "Ozark uplands: set onion sets or seedlings Feb 24 to Mar 31 as soon as the ground can be worked, setting them early so intermediate-day bulbs build size before the day-length trigger. Bulbs size up and pull late June into late July. This latitude (roughly 36 to 37°N) is intermediate-day onion territory, with long-day types a reasonable choice at the belt's cooler northern edge."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.recommended_day_length_type",
+   "from": "long_day",
+   "value": "intermediate_day"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.day_length_note_beginner",
+   "from": "Long-day onions are the safe choice here, though this zone sits close to the line where intermediate-day onions work just as well. Long-day onions wait for the long days of summer before making a bulb; pick a quick-maturing variety since summer here is a bit shorter than the true North. Intermediate-day onions are a good alternative too. Skip short-day (Southern) onions, which are meant for fall planting in places with much milder winters.",
+   "value": "Grow intermediate-day onions here. They form a bulb at a middle day length, about 12 to 14 hours, a good match for this latitude, and they size up best when set early, so plant from February into late March. Short-day (Southern) onions such as Texas 1015Y also do well in the warm lowland south. Skip long-day (Northern) onions, which need days longer than this belt's summer reaches and stay small here."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.day_length_note_seasoned",
+   "from": "This belt sits at the warm edge of long-day onion country (roughly 35 to 36°N in the lowland South). Long-day onions bulb here at 14 to 16 hours of daylight, which the belt's summer provides, but choose a fast-maturing long-day variety since the growing season is on the shorter side for the type. Intermediate-day onions (12 to 14 hours) also bulb well at this latitude and are a strong, well-suited alternative; avoid true short-day (Southern) types, which are bred for fall planting and mild winters this belt does not reliably offer.",
+   "value": "This belt (roughly 34 to 35°N in the Delta lowlands) sits in intermediate-day onion country, below the 36°N line where growers switch off long-day types. Intermediate-day onions bulb at 12 to 14 hours of daylight and build the most size when set out early, so aim for February into late March. Short-day (Southern) types such as Texas 1015Y and Granex also succeed in the warm south of the belt. Avoid long-day (Northern) types: at this latitude the longest summer day only reaches about 14 hours, so a long-day onion triggers too late and too briefly to size up. University of Arkansas guidance lists short-day onions as adapted statewide, with the intermediate-day Candy the widely adaptable standard."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.plant_out",
+   "from": "Feb 15 - Apr 15",
+   "value": "Feb 15 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.last_plant_date",
+   "from": "Apr 15",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.calendar[3]",
+   "from": "plant",
+   "value": "growing"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.resolved_by_zone.8.zone_notes",
+   "from": "Delta Lowlands and Ozark Uplands warm edge: set onion sets or seedlings Feb 15 to Apr 15 as soon as the soil is workable, well ahead of the last frost since onion tolerates cold. Bulbs size up through early summer and pull late June into late July, near the southern edge of long-day territory, so intermediate-day types are a strong alternative here.",
+   "value": "Delta Lowlands and Ozark Uplands warm edge: set onion sets or seedlings Feb 15 to Mar 25 as soon as the soil is workable, well ahead of the last frost since onion tolerates cold, and set them early so intermediate-day bulbs build size before the day-length trigger. Bulbs size up through early summer and pull late June into late July. This is intermediate-day territory below the 36°N line, and short-day (Southern) types also do well in the warm lowland south."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.region_notes_beginner",
+   "from": "In the Ozark Uplands and Delta Lowlands, onions are a one-time spring crop. Grow long-day onions (intermediate-day types work well too, especially in the warmer south of the belt). Set sets or seedlings out as soon as the ground can be worked in late winter to spring; onions shrug off a light frost. They are ready mid-to-late summer when about half the tops flop over and dry. Pull them, then let them cure in a warm, airy spot for two to four weeks before storing.",
+   "value": "In the Ozark Uplands and Delta Lowlands, onions are a one-time spring crop. Grow intermediate-day onions, which bulb at this belt's day length; set them out early, from February into late March, so they build size before the day-length trigger. Short-day (Southern) types also do well in the warm lowland south, and long-day types work at the cooler northern edge. Set sets or seedlings out as soon as the ground can be worked; onions shrug off a light frost. They are ready mid-to-late summer when about half the tops flop over and dry. Pull them, then let them cure in a warm, airy spot for two to four weeks before storing."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.region_notes_seasoned",
+   "from": "Onion in the Mid-South is a single spring-planted crop with no fall crop. Set sets or seedlings out as soon as the soil is workable, well ahead of the last frost since onion is cold-hardy, roughly mid February into mid April in zone 8 and about a week and a half later in the cooler zone 7 uplands. This belt spans long-day onion territory: the cooler Ozark uplands sit squarely in long-day country, while the lowland South sits at the warm edge of it, where intermediate-day types are an equally strong choice and the largest long-day varieties can run short of season. Avoid true short-day (Southern) types, which need fall planting and a milder winter than this belt reliably offers. Bulbing is triggered by day length rather than by planting date, so bulbs mature on roughly the same midsummer calendar regardless of exactly when they went in; lift and cure two to four weeks before storage.",
+   "value": "Onion in the Mid-South is a single spring-planted crop with no fall crop. This belt is intermediate-day onion country: it sits around and below the 36°N line where growers move off long-day types, so intermediate-day varieties (the widely adaptable Candy is the regional standard) are the reliable pick, with short-day (Southern) types also succeeding in the lowland south and long-day types workable only at the cooler northern edge. Set sets or seedlings out as soon as the soil is workable, roughly mid February into late March in zone 8 and about a week and a half later in the cooler zone 7 uplands; intermediate-day onions size up best when set early, so the window closes by the end of March rather than running into April. Onion is cold-hardy and goes in well before the last frost. Bulbing is triggered by day length rather than by planting date, so bulbs mature on roughly the same midsummer calendar regardless of exactly when they went in; lift and cure two to four weeks before storage. University of Arkansas, Oklahoma State, and University of Tennessee Extension all steer this belt to short-day or intermediate-day onions."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_south.sources",
+   "from": [
+    "uada_ext_spring_veg"
+   ],
+   "value": [
+    "uada_ext_spring_veg",
+    "uada_ext_fsa6014"
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.recommended_day_length_type",
+   "from": "long_day",
+   "value": "intermediate_day"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.day_length_note_beginner",
+   "from": "Long-day onions are the safe choice here, though this zone sits close to the line where intermediate-day onions work just as well. Long-day onions wait for the long days of summer before making a bulb; pick a quick-maturing variety since summer here is a bit shorter than the true North. Intermediate-day onions are a good alternative too. Skip short-day (Southern) onions, which are meant for fall planting in places with much milder winters.",
+   "value": "Grow intermediate-day onions here. They form a bulb at a middle day length, about 12 to 14 hours, a good match for the Coastal Plain, and they size up best when set early, so plant from late February into late March. Short-day (Southern) onions such as Granex also do well in the warmer, southern coastal counties. Skip long-day (Northern) onions, which need longer days than this belt's summer provides and stay small here."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.day_length_note_seasoned",
+   "from": "This belt sits at the warm edge of long-day onion country (roughly 35 to 36°N in the Coastal Plain). Long-day onions bulb here at 14 to 16 hours of daylight, which the belt's summer provides, but choose a fast-maturing long-day variety since the growing season is on the shorter side for the type. Intermediate-day onions (12 to 14 hours) also bulb well at this latitude and are a strong, well-suited alternative; avoid true short-day (Southern) types, which are bred for fall planting and mild winters this belt does not reliably offer.",
+   "value": "The Coastal Plain (roughly 34 to 36°N) sits at or below the 36°N line where growers move off long-day onions. Intermediate-day types bulb at 12 to 14 hours of daylight and size up best when set out early, so aim for late February into late March. In the southern Coastal Plain of eastern North Carolina, true short-day types such as Granex and Texas Grano are the traditional choice: NC State recommends short-day onions for eastern North Carolina and calls long-day onions not recommended there. Avoid long-day (Northern) types in the Coastal Plain, where they trigger too late and too briefly to make a good bulb."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.plant_out",
+   "from": "Feb 20 - Apr 20",
+   "value": "Feb 20 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.last_plant_date",
+   "from": "Apr 20",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.calendar[3]",
+   "from": "plant",
+   "value": "growing"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.resolved_by_zone.8.zone_notes",
+   "from": "Coastal Plain and Piedmont warm edge: set onion sets or seedlings Feb 20 to Apr 20 as soon as the soil is workable, well ahead of the last frost since onion tolerates cold. Bulbs size up through early summer and pull late June into late July, near the southern edge of long-day territory, so intermediate-day types are a strong alternative here.",
+   "value": "Coastal Plain and Piedmont warm edge: set onion sets or seedlings Feb 20 to Mar 31 as soon as the soil is workable, well ahead of the last frost since onion tolerates cold, and set them early so intermediate-day bulbs build size before the day-length trigger. Bulbs size up through early summer and pull late June into late July. This is intermediate-day territory at or below the 36°N line, and true short-day types are the traditional choice in the southern Coastal Plain."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.region_notes_beginner",
+   "from": "In the Piedmont and Coastal Plain, onions are a one-time spring crop. Grow long-day onions (intermediate-day types work well too, especially in the warmer south of the belt). Set sets or seedlings out as soon as the ground can be worked in late winter to spring; onions shrug off a light frost. They are ready mid-to-late summer when about half the tops flop over and dry. Pull them, then let them cure in a warm, airy spot for two to four weeks before storing.",
+   "value": "In the Piedmont and Coastal Plain, onions are a one-time spring crop. In the warmer Coastal Plain (zone 8) grow intermediate-day onions, set out early from late February into late March so they build size before the day-length trigger; true short-day (Southern) types are the traditional choice in the southern Coastal Plain. The cooler Piedmont (zone 7) is long-day onion country. Set sets or seedlings out as soon as the ground can be worked; onions shrug off a light frost. They are ready mid-to-late summer when about half the tops flop over and dry. Pull them, then cure in a warm, airy spot for two to four weeks before storing."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.region_notes_seasoned",
+   "from": "Onion in the Mid-Atlantic is a single spring-planted crop: Virginia Cooperative Extension's 426-331 tables carry only a spring window (Feb 20 to Apr 20 in zone 8, Mar 1 to May 1 in zone 7), no fall column. This latitude spans long-day onion territory in the cooler Piedmont north (zone 7) to the warm edge of long-day, where intermediate-day types are an equally strong choice, in the Coastal Plain south (zone 8); avoid true short-day (Southern) types, which need fall planting and a milder winter than this belt reliably offers. Set sets or seedlings out as soon as the soil is workable, well ahead of the last frost since onion is cold-hardy. Bulbing is triggered by day length rather than by planting date, so bulbs mature on roughly the same midsummer calendar regardless of exactly when they went in; lift and cure two to four weeks before storage.",
+   "value": "Onion in the Mid-Atlantic is a single spring-planted crop with no fall crop. Day-length suitability splits by zone: the cooler Piedmont north (zone 7) is long-day onion country, while the Coastal Plain south (zone 8, at or below the 36°N line) is intermediate-day country, where NC State recommends short-day types for eastern North Carolina and calls long-day onions not recommended there. Virginia Cooperative Extension's 426-331 tables carry only a spring window and no fall column; for the intermediate-day Coastal Plain we close the planting window by the end of March, about Feb 20 to Mar 31 in zone 8, rather than running to the table's April date, since intermediate-day onions size up best when set early, while the long-day Piedmont keeps the fuller spring window, about Mar 1 to May 1 in zone 7. Set sets or seedlings out as soon as the soil is workable, well ahead of the last frost since onion is cold-hardy. Bulbing is triggered by day length rather than by planting date, so bulbs mature on roughly the same midsummer calendar regardless of exactly when they went in; lift and cure two to four weeks before storage."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='onion')].regions.mid_atlantic.sources",
+   "from": [
+    "vce_426_331"
+   ],
+   "value": [
+    "vce_426_331",
+    "ncsu_ext_bulb_onions"
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.recommended_day_length_type",
+   "from": "long_day",
+   "value": "intermediate_day"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.day_length_note_beginner",
+   "from": "Go with long-day shallots, or any reliable set type. They wait for long summer days before dividing into a clump, which suits this latitude well. Intermediate-day seed hybrids are also fine, especially further south in the belt.",
+   "value": "Go with intermediate-day shallots, or any reliable set type. Shallots are the same species as onion and respond to day length the same way, so at this latitude intermediate types divide and size up well when set early, from February into late March. Long-day set types also work at the belt's cooler northern edge."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.day_length_note_seasoned",
+   "from": "This latitude (roughly 37 to 40°N) calls for long-day shallots or any reliable traditional set type, dividing at 14 to 16 hours of daylight. Intermediate-day seed hybrids are also a reasonable hedge toward the belt's warmer southern edge.",
+   "value": "Shallots share onion's photoperiod response, both being Allium cepa, so this latitude (roughly 36 to 37°N) calls for intermediate-day shallots or any reliable traditional set type, dividing at 12 to 14 hours of daylight and sizing best when set out early, February into late March. Long-day set types remain reasonable at the cooler northern edge. Extension services publish onion day-length maps but not a separate shallot one, so this follows onion, the closest documented allium."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.plant_out",
+   "from": "Feb 24 - Apr 26",
+   "value": "Feb 24 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.last_plant_date",
+   "from": "Apr 26",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.calendar[3]",
+   "from": "plant",
+   "value": "growing"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.7.zone_notes",
+   "from": "Ozark uplands: push sets into workable soil Feb 24 to Apr 26, pointy end up, as soon as the ground can be worked. Clumps divide and size up through early summer, dug late June into late July.",
+   "value": "Ozark uplands: push sets into workable soil Feb 24 to Mar 31, pointy end up, as soon as the ground can be worked, setting them early so intermediate-day clumps build size before the day-length trigger. Clumps divide and size up through early summer, dug late June into late July."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.recommended_day_length_type",
+   "from": "long_day",
+   "value": "intermediate_day"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.day_length_note_beginner",
+   "from": "Long-day shallots, or any reliable set type, work well here. They wait for long summer days before dividing into a clump. Intermediate-day seed hybrids are also a fine choice this far south in the belt.",
+   "value": "Intermediate-day shallots, or any reliable set type, work well here. Shallots respond to day length like onions, dividing into a clump at a middle day length, and they size up best when set early, from February into late March. Short-day set types also do well in the warm lowland south."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.day_length_note_seasoned",
+   "from": "This belt sits at the warm edge of long-day territory (roughly 35 to 36°N). Long-day shallots and traditional set types both divide well here at 14 to 16 hours of daylight; intermediate-day seed hybrids are also a reasonable choice this far south in the belt.",
+   "value": "Shallots share onion's photoperiod response, both being Allium cepa, so the Delta lowlands (roughly 34 to 35°N) sit in intermediate-day territory, below the 36°N long-day line. Intermediate-day shallots and traditional set types divide well at 12 to 14 hours of daylight and size best when set out early, February into late March; short-day set types also succeed in the warm south. This follows the onion day-length map, since extension services do not publish a separate one for shallot."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.plant_out",
+   "from": "Feb 15 - Apr 15",
+   "value": "Feb 15 - Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.last_plant_date",
+   "from": "Apr 15",
+   "value": "Mar 25"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.calendar[3]",
+   "from": "plant",
+   "value": "growing"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.resolved_by_zone.8.zone_notes",
+   "from": "Delta Lowlands and Ozark Uplands warm edge: push sets into workable soil Feb 15 to Apr 15, pointy end up. Each set divides into a clump of several shallots, dug late June into late July once most tops fall over.",
+   "value": "Delta Lowlands and Ozark Uplands warm edge: push sets into workable soil Feb 15 to Mar 25, pointy end up, setting them early so intermediate-day clumps build size before the day-length trigger. Each set divides into a clump of several shallots, dug late June into late July once most tops fall over."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.region_notes_beginner",
+   "from": "In the Ozark Uplands and Delta Lowlands, shallots are a one-time spring crop grown from sets. There is no local planting guide specific to shallot, so this follows the same timing as onion, a very close relative: push sets into workable soil in late winter to spring, pointy end up, 6 to 8 inches apart. Each set splits into a clump you dig in early-to-mid summer once the tops flop over.",
+   "value": "In the Ozark Uplands and Delta Lowlands, shallots are a one-time spring crop grown from sets. There is no local planting guide specific to shallot, so this follows onion, a very close relative: push sets into workable soil early, from February into late March, pointy end up, 6 to 8 inches apart. Grow intermediate-day types for this latitude. Each set splits into a clump you dig in early-to-mid summer once the tops flop over."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.region_notes_seasoned",
+   "from": "No University of Arkansas Cooperative Extension row exists for shallot in this belt, so this cell follows the guide's Onion (bulbing) row, the closest related allium it documents, with an identical set-planted, spring-only culture and days-to-maturity range. Push sets into workable soil as soon as the ground allows, 6 to 8 inches apart, tip at the surface. The belt spans long-day shallot territory from the cooler Ozark uplands to the warm edge of long-day in the lowland South, where intermediate-day seed hybrids are an equally reasonable choice. The clump divides and sizes up as days lengthen, then is dug once most tops fall, roughly mid-to-late summer regardless of the exact planting date.",
+   "value": "No University of Arkansas Cooperative Extension row exists for shallot in this belt, so this cell follows the guide's Onion (bulbing) row, the closest related allium it documents, with an identical set-planted, spring-only culture and days-to-maturity range. Shallots share onion's photoperiod response, both being Allium cepa, so this is intermediate-day territory: grow intermediate-day shallots or reliable traditional set types, with short-day types also suited to the lowland south and long-day types workable at the cooler northern edge. Push sets into workable soil early, from February into late March, a week and a half later in the cooler zone 7 uplands, 6 to 8 inches apart, tip at the surface; setting early lets the clump size up before the day-length trigger. The clump divides and sizes up as days lengthen, then is dug once most tops fall, roughly mid-to-late summer regardless of the exact planting date."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_south.sources",
+   "from": [
+    "uada_ext_spring_veg"
+   ],
+   "value": [
+    "uada_ext_spring_veg",
+    "uada_ext_fsa6014"
+   ]
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.recommended_day_length_type",
+   "from": "long_day",
+   "value": "intermediate_day"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.day_length_note_beginner",
+   "from": "Long-day shallots, or any reliable set type, work well here. They wait for long summer days before dividing into a clump. Intermediate-day seed hybrids are also a fine choice this far south in the belt.",
+   "value": "Intermediate-day shallots, or any reliable set type, work well here. Shallots respond to day length like onions, dividing into a clump at a middle day length, and they size up best when set early, from late February into late March. Short-day set types also do well in the warmer, southern coastal counties."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.day_length_note_seasoned",
+   "from": "This belt sits at the warm edge of long-day territory (roughly 35 to 36°N). Long-day shallots and traditional set types both divide well here at 14 to 16 hours of daylight; intermediate-day seed hybrids are also a reasonable choice this far south in the belt.",
+   "value": "Shallots share onion's photoperiod response, both being Allium cepa, so the Coastal Plain (roughly 34 to 36°N) sits at or below the 36°N long-day line. Intermediate-day shallots and set types divide well at 12 to 14 hours of daylight and size best when set out early, late February into late March; in the southern Coastal Plain short-day set types are the traditional choice. This follows onion's day-length map, since extension services do not publish a separate one for shallot."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.plant_out",
+   "from": "Feb 20 - Apr 20",
+   "value": "Feb 20 - Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.last_plant_date",
+   "from": "Apr 20",
+   "value": "Mar 31"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.calendar[3]",
+   "from": "plant",
+   "value": "growing"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.resolved_by_zone.8.zone_notes",
+   "from": "Coastal Plain and Piedmont warm edge: push sets into workable soil Feb 20 to Apr 20, pointy end up. Each set divides into a clump of several shallots, dug late June into late July once most tops fall over.",
+   "value": "Coastal Plain and Piedmont warm edge: push sets into workable soil Feb 20 to Mar 31, pointy end up, setting them early so intermediate-day clumps build size before the day-length trigger. Each set divides into a clump of several shallots, dug late June into late July once most tops fall over."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.region_notes_beginner",
+   "from": "In the Piedmont and Coastal Plain, shallots are a one-time spring crop grown from sets. There is no local planting guide specific to shallot, so this follows the same timing as onion, a very close relative: push sets into workable soil in late winter to spring, pointy end up, 6 to 8 inches apart. Each set splits into a clump you dig in early-to-mid summer once the tops flop over.",
+   "value": "In the Piedmont and Coastal Plain, shallots are a one-time spring crop grown from sets. There is no local planting guide specific to shallot, so this follows onion, a very close relative: push sets into workable soil early, from late February into late March in the Coastal Plain, pointy end up, 6 to 8 inches apart. Grow intermediate-day types in the warmer Coastal Plain; the cooler Piedmont is long-day country. Each set splits into a clump you dig in early-to-mid summer once the tops flop over."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.region_notes_seasoned",
+   "from": "No VCE 426-331 row exists for shallot in this belt, so this cell follows the guide's Onion (bulbing) row, the closest related allium it documents, with an identical set-planted, spring-only culture and days-to-maturity range. Push sets into workable soil as soon as the ground allows, 6 to 8 inches apart, tip at the surface. The belt spans long-day shallot territory in the cooler Piedmont north to the warm edge of long-day, where intermediate-day seed hybrids are an equally reasonable choice, in the Coastal Plain south. The clump divides and sizes up as days lengthen, then is dug once most tops fall, roughly mid-to-late summer regardless of the exact planting date.",
+   "value": "No VCE 426-331 row exists for shallot in this belt, so this cell follows the guide's Onion (bulbing) row, the closest related allium it documents, with an identical set-planted, spring-only culture and days-to-maturity range. Shallots share onion's photoperiod response, both being Allium cepa, so day-length suitability splits by zone like onion: the cooler Piedmont north (zone 7) is long-day country, while the Coastal Plain south (zone 8) is intermediate-day country, where short-day set types are the traditional choice in eastern North Carolina. Push sets into workable soil as the ground allows, and in the intermediate-day Coastal Plain set them early, from late February into late March, so the clump sizes up before the day-length trigger, 6 to 8 inches apart, tip at the surface. The clump divides and sizes up as days lengthen, then is dug once most tops fall, roughly mid-to-late summer regardless of the exact planting date."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.crops[?(@.slug=='shallot')].regions.mid_atlantic.sources",
+   "from": [
+    "vce_426_331"
+   ],
+   "value": [
+    "vce_426_331",
+    "ncsu_ext_bulb_onions"
+   ]
+  },
+  {
+   "op": "add",
+   "json_path": "$.source_catalog.uada_ext_fsa6014",
+   "value": {
+    "id": "uada_ext_fsa6014",
+    "name": "UAEX FSA6014, Home Gardening Series: Onions",
+    "publisher": "University of Arkansas Division of Agriculture, Cooperative Extension Service",
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6014.pdf",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "UAEX specific publication FSA6014 (Home Gardening Series, Onions). Arkansas onion day-length recommendation: short-day cultivars adapted statewide, intermediate-day cultivars adapted to the northern half; long-day not listed as adapted. Cultivar table (Candy classed short/intermediate, adaptable to a wide range of latitudes) and the spring transplant window (February through April). Backs the mid_south onion + shallot intermediate_day recommendation. Parent portal entry: uada_ext.",
+    "_admission_provenance": "onion/shallot day-length correction (2026-07-21). Sub-ID under uada_ext (T1, 1862 Land Grant); inherits parent tier. Surfaced the Arkansas onion day-length + cultivar guidance that the mid_south region build did not separately cite. Mirrors the uada_ext_fsa6001 sub-ID pattern."
+   }
+  },
+  {
+   "op": "add",
+   "json_path": "$.source_catalog.ncsu_ext_bulb_onions",
+   "value": {
+    "id": "ncsu_ext_bulb_onions",
+    "name": "NC State Extension: Bulb Onions",
+    "publisher": "NC State",
+    "url": "https://content.ces.ncsu.edu/bulb-onions",
+    "source_class": "university_extension",
+    "trust_tier": "high",
+    "accessed": "2026-07",
+    "tier": "T1",
+    "citable_for": "NC State Extension 'Bulb Onions'. Day-length definitions (short-day 10-12 h, intermediate 12-14 h, long-day 14-16 h) and the recommendation that short-day onions are best suited for eastern North Carolina, with a fall/late-winter planting culture. Backs the mid_atlantic Coastal Plain (zone 8) onion + shallot intermediate_day recommendation and the short-day southern-coastal note. Parent portal entry: ncsu_ext.",
+    "_admission_provenance": "onion/shallot day-length correction (2026-07-21). Sub-ID under ncsu_ext (T1, 1862 Land Grant); inherits parent tier. Surfaced the eastern-NC onion day-length recommendation the mid_atlantic region build did not separately cite."
+   }
+  }
+ ]
+}
