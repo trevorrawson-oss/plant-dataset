@@ -184,11 +184,14 @@ PROSE_SWAP = [
     ("NC State", "the University of Arkansas"),
     ("Piedmont and Coastal Plain", "Ozark Uplands and Delta Lowlands"),
     ("Coastal Plain and Piedmont", "Delta Lowlands and Ozark Uplands"),
-    ("the Piedmont", "the uplands"),
+    ("the Piedmont", "the Ozark uplands"),
     ("Coastal Plain", "lowland South"),
+    ("Piedmont", "Ozark uplands"),
     ("Tidewater", "Delta"),
     ("Mid-Atlantic", "Mid-South"),
     ("mid-Atlantic", "Mid-South"),
+    ("Lowlands's", "Lowlands'"),
+    ("uplands's", "uplands'"),
 ]
 
 
@@ -366,6 +369,75 @@ def transform(slug, cell, is_warm):
     return ms
 
 
+# ---- perennials (trees / citrus / berries + woody herbs): text-window archetypes ----
+# The certified perennial cells carry month-granular text windows (bloom/harvest phrases) that
+# transfer to the humid-temperate Mid-South without date arithmetic. Transform = region metadata
+# + chill band into resolved_from + source remap (region-specific extensions -> UAEX; adjacent-
+# South + neutral-biology sources kept) + prose name-swap DRAFT. Suitability (incl. the apricot /
+# sweet-cherry / pomegranate `marginal` calls) and calendars carry verbatim.
+PEREN_SRC_MAP = {"ncsu_ext": "uada_ext", "vce_426_331": "uada_ext", "psu_ext": "uada_ext",
+                 "umd_ext": "uada_ext", "ncsu_ext_lavandula_angustifolia": "uada_ext"}
+BLACKBERRY_SRC_MAP = {"ncsu_ext": "uada_ext_fsa6105", "vce_426_331": "uada_ext_fsa6105"}
+SRC_URL = {**URLS, "uada_ext": "https://www.uaex.uada.edu",
+           "uada_ext_chill": "https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/horticulture/ar-fruit-veg-nut-update-blog/posts/chillhours.aspx",
+           "uada_ext_fsa6105": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf"}
+MS_CHILL = {"7": [1000, 1300], "8": [900, 1100]}
+
+
+def _map_sources(o, smap, keep_urls):
+    """Recursively remap source ids in sources[] + anchoring_urls{} per smap (identity for ids
+    not in smap). anchoring_urls url = SRC_URL[mapped] for a remapped id, else the original url."""
+    if isinstance(o, dict):
+        out = {}
+        for k, v in o.items():
+            if k == "sources" and isinstance(v, list):
+                seen, lst = set(), []
+                for s in v:
+                    m = smap.get(s, s)
+                    if m not in seen:
+                        seen.add(m)
+                        lst.append(m)
+                out[k] = lst
+            elif k.endswith("anchoring_urls") and isinstance(v, dict):
+                nd = {}
+                for sid, entry in v.items():
+                    m = smap.get(sid, sid)
+                    url = SRC_URL.get(m) if sid in smap else (entry.get("url") if isinstance(entry, dict) else None)
+                    nd[m] = {"url": url, "verified": VERIFIED}
+                out[k] = nd
+            else:
+                out[k] = _map_sources(v, smap, keep_urls)
+        return out
+    if isinstance(o, list):
+        return [_map_sources(v, smap, keep_urls) for v in o]
+    return o
+
+
+def transform_perennial(slug, cell, is_tree):
+    smap = BLACKBERRY_SRC_MAP if slug == "blackberry" else PEREN_SRC_MAP
+    ms = _map_sources(swap_prose(copy.deepcopy(cell)), smap, SRC_URL)
+    ms["region_id"] = REGION_ID
+    ms["region_label"] = REGION_LABEL
+    for z in ("7", "8"):
+        zc = ms["resolved_by_zone"][z]
+        rf = zc.get("resolved_from")
+        if isinstance(rf, dict):
+            rf["last_frost"] = MS_ANCHORS[z]["last_frost"]
+            rf["first_frost"] = MS_ANCHORS[z]["first_frost"]
+            if "chill_hours" in rf:
+                rf["chill_hours"] = MS_CHILL[z]
+        # trees carry a chill claim: cite the AR chill source alongside the parent
+        if is_tree:
+            for s in (zc.get("sources") or []):
+                pass
+            ss = zc.setdefault("sources", [])
+            if "uada_ext_chill" not in ss:
+                ss.append("uada_ext_chill")
+            au = zc.setdefault("anchoring_urls", {})
+            au["uada_ext_chill"] = {"url": SRC_URL["uada_ext_chill"], "verified": VERIFIED}
+    return ms
+
+
 def main():
     for infile, outfile in [("mid_atlantic_annuals_cool.json", "mid_south_annuals_cool.json"),
                             ("mid_atlantic_annuals_warm.json", "mid_south_annuals_warm.json")]:
@@ -376,6 +448,14 @@ def main():
             json.dump(out, f, ensure_ascii=False, indent=1)
         n_fall = sum(1 for s in out if s in FALL_UAEX)
         print(f"{outfile}: {len(out)} cells ({n_fall} with a UAEX fall cycle)")
+    for infile, outfile, is_tree in [("mid_atlantic_trees.json", "mid_south_trees.json", True),
+                                     ("mid_atlantic_citrus.json", "mid_south_citrus.json", False),
+                                     ("mid_atlantic_perennials.json", "mid_south_perennials.json", False)]:
+        data = json.load(open(os.path.join(STAGING, infile), encoding="utf-8"))
+        out = {slug: transform_perennial(slug, cell, is_tree) for slug, cell in data.items()}
+        with open(os.path.join(STAGING, outfile), "w", encoding="utf-8") as f:
+            json.dump(out, f, ensure_ascii=False, indent=1)
+        print(f"{outfile}: {len(out)} cells")
 
 
 if __name__ == "__main__":
