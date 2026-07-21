@@ -6,6 +6,69 @@
 
 ---
 
+## 2026-07-20 -- MID-SOUTH REGION SHIPPED (roadmap item 9, the 4th authored region)
+
+Canonical `af5dcee9` -> `931c1653` via one SHA-guarded atomic promote (`tools/apply_patch.py`, 119
+patches = 111 `regions.mid_south` cells + `region_chill_delivered.mid_south` + a provenance
+replace-append + 6 `source_catalog` adds). count 128 unchanged, 119 certified unchanged. `mid_south`
+= AR/OK/TN/MO, `zone_span ["7","8"]`, "Mid-South: Ozark Uplands and Delta Lowlands", frost-anchored,
+across all 111 certified region-carrying crops. A roster-wide region column (same GS-arc method as
+RGV/PNW/mid_atlantic), NOT a new crop; no cert-count change. Reuses A45/A31/A32/A3/A43 -- NO new
+gate, NO new field.
+
+**Zone span decided from data** (not the ruling's z8-only sample): plant-app `zip-zones.json` shows
+z7 1,883 (dominant: AR 236 / MO 360 / OK 640 / TN 647) vs z8 697 (AR 462 marquee); z5/z6 excluded
+(northern_tier), lone z9 TN ZIP rides the belt verdict.
+
+**The 3 deltas from mid-Atlantic:** (1) sources NOT pre-catalogued -- registered 6 new T1 entries
+(`nws_lzk` + `uada_ext_{fsa6001,spring_veg,fall_veg,chill,fsa6105}`) inside the atomic batch;
+`region_harness.scratch_canonical` now injects `staging/<region>_sources.json` so per-crop gating
+sees new ids, `build_region_promote` emits the source add-patches. (2) real intra-state chill
+gradient -- band z7[1000,1300]/z8[900,1100], Hope (SW warm edge, z8) 901 clears McIntosh 900 by ~1hr
+(authored honest, flagged). (3) blackberry the SIGNATURE crop (UAEX FSA6105, UA breeding program).
+Frost anchors z8 Apr 3/Oct 31 (NWS Little Rock LZK), z7 Apr 10/Oct 24 (UAEX FSA6001 Frost Zone D).
+Fall cycle from UAEX's tighter table (tomato Jul 1-15 vs VCE's Jul 1-Aug 10; +3 UAEX-documented adds
+mid-Atlantic lacked: sweet-corn/green-beans-bush/potato). Trees fruits_reliably except apricot/
+cherry-sweet/pomegranate MARGINAL (Trevor's humid-East call); sour cherry fruits_reliably; pawpaw
+native. Citrus cold-limited; woody herbs humidity-limited.
+
+**Build method (reusable):** deterministic controller transform `tools/build_mid_south_cells.py` of
+the certified mid_atlantic cells -- SHIFT spring resolved dates by the anchor delta (preserves
+hand-authored succession/frost-limited/reflush windows; a naive re-resolve from `plantings[]`
+offsets is WRONG -- round-trip-proven -- because some certified cells carry hand-authored windows
+that do not derive from a single offset), author FALL cycles fresh from UAEX via
+`tools/second_cycle.py`, re-derive calendars, PORT heat_pause token placement from the certified
+ground truth (the deriver never emits heat_pause), reachability-fix unreachable `growing` ->
+heat_pause/season_over/cold_pause. Then a 7-shard subagent prose-honesty fan-out (full cells to
+`shards/ms_prose_*.json`, controller-merged behind a structural-identity guard) + controller
+reconcile (delete stale VCE `source_quote`, sweep `mid_atlantic`/`Penn State`/`Table 4`/
+garbled-double-name artifacts).
+
+**Verification:** gate_all 119/119, A45/chill/A43/calendar_coherence/timing_spine 0,
+region_cell_audit 0, whole_crop_gate spot PASS, footprint EXACT (byte-level: 0 crops changed beyond
+the added mid_south cell; 111 gained it; no top-level keys added/removed; count 128; COMPACT).
+coverage_floor standalone 89 = PRE-EXISTING (real base shows the same 89). release_verify raised 2
+"concerns" = the DOCUMENTED roster-wide single-crop-pilot false positive (it expects only `--slug`
+to change but a column adds a cell to all 111; footprint audit + gate_all are authoritative).
+Independent content review = SHIP-WITH-FIXES: caught onion/leek/garlic prose fabricating a "UAEX
+<crop> table (dates)" that does not exist + contradicted the resolved windows (fixed to the real
+windows + a no-explicit-row flag). Then NEW `tools/prose_window_sweep.py` (a reusable
+prose-vs-resolved date-window honesty check) caught a further residue the sampling review missed:
+garden peas ("UAEX Peas, garden row" fabrication + VCE dates), okra/sweet-potato (VCE windows
+attributed to UAEX -> UAEX's real April-May/April-June), squash/watermelon/corn ("UAEX zone N window
+runs through <VCE date>" + carried mid_atlantic frost anchors Oct 30->Oct 31, Oct 25->Oct 24,
+woody-herb Apr 15/8->Apr 10/3), spring-onion -- all fixed; sweep now clean at 2-day tolerance.
+
+**Docs:** spec `docs/superpowers/specs/2026-07-20-mid-south-region-design.md`, kickoff #34, dry-run +
+sources note + prose brief under `docs/reviews/notes/2026-07-20/mid_south_*`, plant-app kickoff #35
+(`REGION_STATES.mid_south=AR,OK,TN,MO`, no ZIP3 fence, z7 depends on #32), field-addition register
+row 20. Open flag: onion/shallot kept `long_day` (belt reaches long-day z7 north; AR z8 core
+arguably intermediate-day -- a fall-planted-intermediate follow-on, not silently half-changed).
+COMMITTED, UNPUSHED (Trevor confirms push); NO plant-astro bump from this session. Next: item 10
+(Nevada) or 11 (Utah).
+
+---
+
 ## 2026-07-20 -- MID-ATLANTIC REGION SHIPPED: roadmap item 8, the 3rd authored region (`e1e01c47` -> `af5dcee9`)
 
 **What shipped.** A real Mid-Atlantic region `mid_atlantic` (`zone_span ["7","8"]`, NC/VA/MD/DC/DE/NJ/PA
