@@ -31,6 +31,7 @@ EXPECTED_SPANS = {
     "mid_atlantic":    ["7", "8"],
     "mid_south":       ["7", "8"],
     "nevada":          ["8", "9", "10"],
+    "utah_dixie":      ["8"],
     "se_gulf":         ["8", "9", "10"],
     "rgv":             ["9", "10"],
     "ca_north_coast":  ["9", "10"],
