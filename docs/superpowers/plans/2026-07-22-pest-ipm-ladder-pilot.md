@@ -296,15 +296,18 @@ git show --stat HEAD
 ```python
 from control_ladder_gate import identity_violations, all_violations, coverage_report
 
-# missing id
-assert any("missing 'id'" in v for v in identity_violations({"slug": "x", "pests": [{"name": "Aphids"}]}))
+_L = [{"method": "m"}]  # a ladder just needs to be present (non-None) to bring a problem in-scope
+# missing id (in-scope: has a ladder)
+assert any("missing 'id'" in v for v in identity_violations({"slug": "x", "pests": [{"name": "Aphids", "control_ladder": _L}]}))
 # duplicate id within crop
-dup = {"slug": "x", "pests": [{"id": "aphids", "name": "A"}], "diseases": [{"id": "aphids", "name": "B"}]}
+dup = {"slug": "x", "pests": [{"id": "aphids", "control_ladder": _L}], "diseases": [{"id": "aphids", "control_ladder": _L}]}
 assert any("duplicate id" in v for v in identity_violations(dup))
 # non-kebab id
-assert any("kebab" in v for v in identity_violations({"slug": "x", "pests": [{"id": "Cabbage_Worm"}]}))
+assert any("kebab" in v for v in identity_violations({"slug": "x", "pests": [{"id": "Cabbage_Worm", "control_ladder": _L}]}))
+# a problem WITHOUT a ladder is out of scope -> not flagged for a missing id (soft-pilot staging)
+assert identity_violations({"slug": "x", "pests": [{"name": "Not yet migrated"}]}) == []
 # clean -> none
-assert identity_violations({"slug": "x", "pests": [{"id": "aphids"}], "diseases": [{"id": "clubroot"}]}) == []
+assert identity_violations({"slug": "x", "pests": [{"id": "aphids", "control_ladder": _L}], "diseases": [{"id": "clubroot", "control_ladder": _L}]}) == []
 
 # coverage_report counts certified problems + ladders
 cov = coverage_report({
@@ -331,9 +334,11 @@ def identity_violations(crop):
     slug = crop.get("slug", "?")
     seen = {}
     for p in _problems(crop):
+        if p.get("control_ladder") is None:
+            continue  # in-scope only once a ladder is authored (soft-pilot staging; rollout adds a coverage floor)
         pid = p.get("id")
         if not pid:
-            V.append(f"{slug}/{p.get('name','?')}: pest/disease missing 'id'")
+            V.append(f"{slug}/{p.get('name') or p.get('name_beginner') or '?'}: pest/disease missing 'id'")
             continue
         if not ID_RE.match(pid):
             V.append(f"{slug}/{pid}: id is not kebab-case")
@@ -385,7 +390,7 @@ Run: `python3 tools/test_control_ladder_gate.py`
 Expected: PASS — all three test lines print `OK`.
 
 Run: `python3 tools/control_ladder_gate.py crops_data_final.json --coverage`
-Expected: `catalog_methods: 0` (no catalog yet); many `missing 'id'` VIOLATIONS (no problem has an id yet). This confirms the gate reads the real file and the coverage baseline is zero. Non-zero exit is expected pre-content.
+Expected: the coverage dict prints (`catalog_methods: 0`, `problems_with_ladder: 0` — no content authored yet); then `control_ladder_gate: 0 violation(s)`, exit 0. Shape checks scope to ladder-bearing problems, so with no ladders authored the gate is cleanly silent — this confirms it reads the real file and the soft-pilot baseline is clean.
 
 - [ ] **Step 5: Commit** (Trevor-gated checkpoint)
 

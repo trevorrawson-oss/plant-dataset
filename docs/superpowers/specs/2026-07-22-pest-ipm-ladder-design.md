@@ -127,6 +127,7 @@ Standalone, TDD (RED before GREEN), `--coverage` flag. Soft/standalone through t
 
 **Identity**
 - Every pest/disease has a unique kebab `id` within its crop. *Defect: missing or duplicate id -> bounce.*
+- **Soft-phase scoping:** the identity and ladder-shape checks apply only to *ladder-bearing* problems (a problem is in-scope once its `control_ladder` is authored). During the pilot the soft gate is therefore cleanly silent on the ~118 un-migrated crops; a clean run means "the migrated content is valid." The universal requirement -- every certified problem carries `id` + `type` + `control_ladder` -- is enforced by the Coverage floor at the rollout hard-flip, not by the shape checks.
 
 **Short-ladder legitimacy (the "N/A" analog)**
 - A `control_ladder` of length >= 1 is valid; the gate NEVER requires a ladder to reach conventional. Cultural-only ladders (clubroot, blackheart, microgreens) MUST pass. *Defect: gate flags a cultural-only ladder as incomplete -> that is a gate bug, RED-tested to confirm it does not.*
