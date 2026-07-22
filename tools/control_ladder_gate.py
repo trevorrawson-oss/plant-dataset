@@ -67,3 +67,30 @@ def catalog_violations(data):
         if set(m.get("anchoring_urls") or {}) != set(m.get("sources") or []):
             V.append(f"control_methods/{mid}: anchoring_urls keys do not match sources")
     return V
+
+
+def ladder_violations(data, crop):
+    V = []
+    cat = catalog(data)
+    slug = crop.get("slug", "?")
+    for p in _problems(crop):
+        pid = p.get("id") or p.get("name") or "?"
+        ladder = p.get("control_ladder")
+        if ladder is None:
+            continue
+        ranks, ptype = [], p.get("type")
+        for rung in ladder:
+            mid = rung.get("method")
+            m = cat.get(mid)
+            if m is None:
+                V.append(f"{slug}/{pid}: control_ladder references unknown method '{mid}'")
+                continue
+            ranks.append(TIER_RANK[m["tier"]])
+            targets = set(m.get("applies_to") or [])
+            if UNIVERSAL_TARGET not in targets and ptype in TYPE_TARGETS:
+                if not (targets & TYPE_TARGETS[ptype]):
+                    V.append(f"{slug}/{pid}: method '{mid}' (applies_to {sorted(targets)}) "
+                             f"does not fit problem type '{ptype}'")
+        if any(ranks[i] > ranks[i + 1] for i in range(len(ranks) - 1)):
+            V.append(f"{slug}/{pid}: control_ladder is not softest-first (tier ranks {ranks})")
+    return V

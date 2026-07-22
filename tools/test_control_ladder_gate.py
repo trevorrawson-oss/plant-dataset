@@ -33,3 +33,38 @@ assert any("not T1" in v for v in catalog_violations(data({"m": method(sources=[
 # anchoring_urls mismatch
 assert any("anchoring_urls" in v for v in catalog_violations(data({"m": method(anchoring_urls={})})))
 print("catalog_violations tests: OK")
+
+from control_ladder_gate import ladder_violations
+
+CAT = {
+    "rotate_crops":     {"name": "Rotation", "tier": "cultural", "applies_to": ["any"]},
+    "insecticidal_soap":{"name": "Soap", "tier": "soft_chemical", "applies_to": ["insect_soft_bodied"]},
+    "copper":           {"name": "Copper", "tier": "soft_chemical", "applies_to": ["fungal_foliar"]},
+    "pyrethrin":        {"name": "Pyrethrin", "tier": "conventional", "applies_to": ["insect_general"]},
+}
+def crop(problems, key="pests"):
+    return {"slug": "broccoli", key: problems}
+def prob(**over):
+    p = {"id": "aphids", "name": "Aphids", "type": "insect",
+         "control_ladder": [{"method": "rotate_crops"}, {"method": "insecticidal_soap"}]}
+    p.update(over); return p
+def D(crop_obj):  # gate expects (data, crop)
+    return ({"control_methods": CAT}, crop_obj)
+
+# clean softest-first ladder -> no violations
+assert ladder_violations(*D(crop([prob()]))) == []
+# absent ladder -> not a ladder violation (coverage handles it)
+assert ladder_violations(*D(crop([prob(control_ladder=None)]))) == []
+# dangling method reference
+assert any("unknown method" in v for v in ladder_violations(*D(crop([prob(control_ladder=[{"method": "ghost"}])]))))
+# NON-monotonic: conventional before cultural
+bad = [{"method": "pyrethrin"}, {"method": "rotate_crops"}]
+assert any("softest-first" in v for v in ladder_violations(*D(crop([prob(control_ladder=bad)]))))
+# applies_to mismatch: insecticidal soap under a FUNGAL disease
+fung = prob(id="downy-mildew", name="Downy mildew", type="fungal",
+            control_ladder=[{"method": "rotate_crops"}, {"method": "insecticidal_soap"}])
+assert any("does not fit problem type" in v for v in ladder_violations(*D(crop([fung], key="diseases"))))
+# cultural-only SHORT ladder (clubroot) -> MUST PASS
+club = prob(id="clubroot", name="Clubroot", type="fungal", control_ladder=[{"method": "rotate_crops"}])
+assert ladder_violations(*D(crop([club], key="diseases"))) == []
+print("ladder_violations tests: OK")
