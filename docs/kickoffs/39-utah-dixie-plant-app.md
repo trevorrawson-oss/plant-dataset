@@ -2,7 +2,7 @@
 
 **For:** a plant-app session (the app owns ZIP -> region resolution; this repo owns the dataset).
 **From:** the plant-dataset Utah "Dixie" region build (roadmap item 11), 2026-07-22.
-**Dataset side:** SHIPPED. Canonical `b1045e04` -> **`f7e3afe3`** (commit `d215415`, COMMITTED UNPUSHED --
+**Dataset side:** SHIPPED. Canonical `b1045e04` -> **`2c98dd2b`** (promote `d215415` + two post-promote prose/provenance cleanups, COMMITTED UNPUSHED --
 Trevor confirms the dataset push; plant-astro submodule bump is a separate later step). `regions.utah_dixie`
 now exists on all 111 certified region-carrying crops, `zone_span ["8"]`.
 

@@ -15,7 +15,11 @@ consumer-prose fix (a final controller leak-sweep caught it: 8 warm cells droppe
 Vegas Valley just across the state line" comparison, and 5 citrus cells reworded "colder than Phoenix"
 to an absolute z8b framing keyed to the ordinary 15-20degF winter lows -- consumer prose must describe
 the region on its own terms; footprint = exactly those 13 `regions.utah_dixie` cells, gate_all still
-PASS 119/119). Count 128 / 119 certified unchanged. NO new field, NO new gate. COMMITTED UNPUSHED
+PASS 119/119), then -> `2c98dd2b` via the final whole-arc review's provenance sweep: the review caught
+the same sibling-region + build tokens surviving in `plantings_provenance`/note fields the per-class
+reviews had left out of scope ("warm_arid"/"low_desert_az"/"nevada"/"UNLV"/"Shape C" + raw heat_pause /
+cold_pause tokens), stripped from 16 woody-herb + corn/bean + perennial-herb cells (footprint = exactly
+those 16 cells; gate_all still PASS 119/119). Count 128 / 119 certified unchanged. NO new field, NO new gate. COMMITTED UNPUSHED
 (Trevor confirms push); NO plant-astro bump (astro session owns it, after push).
 
 **What shipped.** A real Utah "Dixie" region `utah_dixie` ("Utah: St. George Dixie (Mojave-edge high
