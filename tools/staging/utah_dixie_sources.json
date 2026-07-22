@@ -1,1 +1,98 @@
-{}
+{
+ "usu_ext_veg_dates": {
+  "id": "usu_ext_veg_dates",
+  "name": "USU Extension, Suggested Vegetable Planting Dates for Utah",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "USU Extension vegetable planting-date groups A-D (cold tolerance) and the St. George explicit dates (Group A Feb 15, B Mar 1, C Mar 15, D Apr 1), plus the Group E fall-harvest windows. Backs the utah_dixie spring planting windows and the cool-crop fall (second_planting) dates. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext (T1, 1862 Land Grant); inherits parent tier. The load-bearing St. George per-crop window source (the USU analog of Nevada's UNLV chart). Cells cite multiple distinct USU pages, so per-pub sub-IDs are required (region_cell_audit forbids one source id mapping to two URLs in a cell)."
+ },
+ "usu_ext_tomato": {
+  "id": "usu_ext_tomato",
+  "name": "USU Extension, How to Grow Tomatoes in Your Garden",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "The tomato blossom-drop / fruit-set heat threshold: night temperatures below 50 degF or day temperatures above 95 degF cause flowers to abort. Backs the utah_dixie summer heat_pause for heat-abort warm crops. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext."
+ },
+ "usu_ext_wash_fruits": {
+  "id": "usu_ext_wash_fruits",
+  "name": "USU Extension Washington County, Fruits",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/washington/gardening/fruits/",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "Washington County fruit recommendation by elevation: low-elevation St. George fruits that thrive (apricots, cherries, figs, grapes, peaches, persimmons, plums, strawberries) versus higher-elevation-only apples, pears, raspberries, blackberries. Backs the utah_dixie tree suitability calls, including the apple + pear marginal verdict. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext. The direct T1 authority for the marquee apple/pear marginal delta."
+ },
+ "usu_ext_raspberry": {
+  "id": "usu_ext_raspberry",
+  "name": "USU Extension, Raspberry Management for Utah",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/yardandgarden/research/raspberry-management-for-utah",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "Names Utah's Dixie directly as fall-bearing-raspberry territory (fruit ripens after peak summer heat, avoiding sunburn); fall-bearing/primocane cultivars for hot low sites (Caroline, Josephine, Polana, Joan J, Polka); alkaline-soil iron chlorosis. Backs the utah_dixie raspberry marginal fall-bearing steer. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext. The same USU page already cited (via usu_ext) by the warm_arid raspberry cell whose steer utah_dixie mirrors."
+ },
+ "usu_ext_garlic": {
+  "id": "usu_ext_garlic",
+  "name": "USU Extension, Garlic in the Garden",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/yardandgarden/research/garlic-in-the-garden",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "Garlic planted from late September to November in Utah (fall planting preferred); harvest when tops begin to yellow. Backs the utah_dixie garlic fall clove window. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext."
+ },
+ "usu_ext_fall_veg": {
+  "id": "usu_ext_fall_veg",
+  "name": "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "St. George fall cool-season gardening: cole crops (broccoli, cabbage, cauliflower) as transplants; direct-seeded lettuce, carrots, spinach; storage onions fall-planted and harvested the next summer (variety selection critical); green onions spring or fall; turnips, carrots, beets held in ground into winter. ~196-day season. Backs the utah_dixie cool-crop fall (second_planting) windows and the fall-planted onion delta. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext."
+ },
+ "usu_ext_wash_frost": {
+  "id": "usu_ext_wash_frost",
+  "name": "USU Extension Washington County, Elevations for Washington County (frost dates)",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/washington/files/2020_Frost_dates_and_elevation.pdf",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "St. George frost normals (last frost March 30 / first frost November 1), marked as Utah Climate Center actual-record data; note that St. George reaches over 100 degF in June, July, and August. Backs the utah_dixie frost anchor and the summer heat_pause basis. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext."
+ },
+ "usu_ext_peaches": {
+  "id": "usu_ext_peaches",
+  "name": "USU Extension, How to Grow Peaches in Your Garden",
+  "publisher": "Utah State University Extension",
+  "url": "https://extension.usu.edu/yardandgarden/research/peaches-in-the-garden",
+  "source_class": "university_extension",
+  "trust_tier": "high",
+  "accessed": "2026-07",
+  "tier": "T1",
+  "citable_for": "Per-variety peach chill-hour requirements (roughly 500 to 1050 hours) and the note that chill hours are hours between 32 and 45 degF; used for low-chill stone-fruit variety selection in the St. George core. No regional chill-accumulation total is given. Sub-ID under usu_ext.",
+  "_admission_provenance": "utah_dixie region (roadmap item 11, 2026-07-22). Sub-ID under usu_ext."
+ }
+}

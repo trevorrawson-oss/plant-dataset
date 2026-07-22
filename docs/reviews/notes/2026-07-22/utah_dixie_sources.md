@@ -8,12 +8,28 @@ authored window/verdict traces to a page below. Non-USU aggregators are NOT used
 - **Frost anchor z8: last frost Mar 30 / first frost Nov 1** -- USU Washington County, "Elevations for Washington County" (2020), St. George row marked Utah Climate Center actual-record. Cross-confirmed by "Suggested Vegetable Planting Dates for Utah" ("last spring frost in St. George occurring on March 30"). Secondary (older, more conservative): Heflebower "Fall Gardening in the St. George Area" (2008) gives avg fall frost Oct 23 / ~196-day season. **Use Mar 30 / Nov 1 as the stored `resolved_from`.**
 - `resolution_method = "frost_anchored_resolved"`, non-empty `plantings[]` (the anchored-model requirement).
 
-## SOURCE REGISTRATION -- ride `usu_ext`, ZERO new source_catalog ids
-`usu_ext` is a **portal/family-level** catalog entry ("Utah State University Extension publications...
-Intermountain West regional coverage"). Existing cells already cite `usu_ext` at the `sources` level
-with the specific page URL in `anchoring_urls['usu_ext']` (e.g. raspberry `warm_arid`). So EVERY
-`utah_dixie` cell uses `"sources": ["usu_ext"]` (add a co-source only if a cell genuinely cites a
-second institution) and puts the exact page URL in `anchoring_urls`. **`tools/staging/utah_dixie_sources.json = {}`** -- 0 new source_catalog adds (lighter than Nevada). Provenance precision lives in per-cell `anchoring_urls`.
+## SOURCE REGISTRATION -- USU per-pub sub-ids (CORRECTED after gating the reference cell)
+`region_cell_audit` FORBIDS one source id mapping to two URLs within a single cell. Utah cells cite
+MULTIPLE distinct USU pages (a warm cell needs the veg-dates window page AND the tomato heat-abort
+page), so a single generic `usu_ext` id does NOT work. Follow the Nevada precedent (per-pub sub-ids
+under the family): `tools/staging/utah_dixie_sources.json` registers **8 USU sub-ids** (all T1,
+`_admission_provenance` set). **Each cell cites ONLY the specific sub-ids it uses, each with its own
+page URL in `anchoring_urls`.** The id -> page -> use map:
+
+| source_id | page | cite it for |
+|---|---|---|
+| `usu_ext_veg_dates` | Suggested Vegetable Planting Dates | spring windows (Group A-D dates) + fall Group E dates |
+| `usu_ext_tomato` | How to Grow Tomatoes | the >95 degF/<50 degF heat-abort -> `heat_pause` basis |
+| `usu_ext_wash_fruits` | Washington County Fruits | tree suitability (the elevation split; apple/pear marginal) |
+| `usu_ext_raspberry` | Raspberry Management for Utah | raspberry Utah's-Dixie fall-bearing steer |
+| `usu_ext_garlic` | Garlic in the Garden | garlic fall clove window |
+| `usu_ext_fall_veg` | Fall Gardening in the St. George Area | cool-crop fall windows + fall-planted storage onion |
+| `usu_ext_wash_frost` | Elevations for Washington County | frost anchor Mar 30/Nov 1 + "100 degF Jun-Aug" heat basis |
+| `usu_ext_peaches` | How to Grow Peaches | low-chill stone-fruit variety selection (chill 500-1050 per-variety) |
+
+A cell's `sources` list = the sub-ids it cites; `anchoring_urls` maps each to its page. (The parent
+`usu_ext` entry stays in the catalog; these are additional sub-ids, like Nevada's `unr_sp9911` under
+`unr_ext`.) Prune any sub-id that ends up uncited before the promote (Task 9 footprint audit).
 
 ## USU planting-date GROUP structure ("Suggested Vegetable Planting Dates for Utah," Table 1)
 Vegetables grouped A-D by cold tolerance; St. George gets **explicit warm-adjusted dates** (NOT the
