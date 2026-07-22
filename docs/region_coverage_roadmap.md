@@ -45,6 +45,18 @@ Alaska. Items 8 (mid-Atlantic) and 7 (Alaska) are both SPEC'D as of 2026-07-20; 
 to build next**. Items 9-11 are unsequenced relative to each other within that block, though 9
 (mid-South) has the identical gap shape to 8 and should reuse its conventions directly.
 
+**Post-region variety sequencing (Trevor, 2026-07-22):** the moment Alaska (item 7) closes the region
+program, the **raspberry `berry`-archetype (cane-branch) migration runs first** -- it is the one
+variety GS arc that is region-entangled (raspberry's fall-bearing/low-chill steer is authored as
+region prose in `warm_arid`/`utah_dixie`/etc.), so it waits until all region prose is settled. Other,
+non-region-entangled variety GS arcs CAN run **concurrently** with the remaining region builds: variety
+arcs write `varieties.*`/`variety_archetype`; region arcs write `regions.<slug>.*` -- key-disjoint even
+on a shared crop (proven strawberry-pilot || region-Tier2 and leek || PNW, both path-disjoint with the
+SHA-guard failing closed on drift). Run each arc in its own git worktree (the corn-family pattern) to
+avoid shared-checkout git-index collisions; the atomic SHA-guarded promote is the only serialization
+point (second-to-land rebases + re-runs the full gate ceremony). The real limiter is content-review
+bandwidth, not the tooling.
+
 ## Item 1 record: the widen (SHIPPED 2026-07-12, canonical 7e29f4f4)
 
 | Region | Span change | Donor | ZIPs |
