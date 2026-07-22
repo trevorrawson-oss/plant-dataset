@@ -61,8 +61,8 @@ assert catalog_violations(data({"insecticidal_soap": method()})) == []
 assert any("missing/empty" in v for v in catalog_violations(data({"insecticidal_soap": method(pros=[])})))
 # invalid tier
 assert any("invalid tier" in v for v in catalog_violations(data({"insecticidal_soap": method(tier="nuke")})))
-# non-kebab id
-assert any("kebab" in v for v in catalog_violations(data({"Insecticidal_Soap": method()})))
+# NB: catalog method KEYS are snake_case (mirroring source_catalog keys) -- NOT format-checked here.
+# The kebab ID_RE check applies only to per-crop pest/disease `id` (Task 3 identity).
 # source not in catalog
 assert any("not in source_catalog" in v for v in catalog_violations(data({"m": method(sources=["ghost"], anchoring_urls={"ghost": {}})})))
 # source not T1
@@ -137,8 +137,6 @@ def catalog_violations(data):
     cat = catalog(data)
     srcs = data.get("source_catalog") or {}
     for mid, m in cat.items():
-        if not ID_RE.match(mid):
-            V.append(f"control_methods/{mid}: id is not kebab-case")
         for k in _REQ_METHOD:
             if k not in m or m[k] in (None, "", [], {}):
                 V.append(f"control_methods/{mid}: missing/empty required key '{k}'")
