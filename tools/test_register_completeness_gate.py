@@ -191,4 +191,16 @@ assert _is_ruled("$.crops[?(@.slug=='strawberry')].varieties.recommended[0].hero
 # NOT ruled elsewhere (guard the path scope)
 assert not _is_ruled("$.crops[?(@.slug=='strawberry')].hero_description", "hero_description")
 
+# ---- pest/IPM control-ladder arc (spec 2026-07-22): rule the new keys ----
+from register_completeness_gate import EXCLUDED_KEYS, excluded_by_path
+
+# per-problem categorical/slug keys are ruled (id/method/tier were already ruled from
+# earlier arcs; that's a harmless no-op, the goal is all eight present)
+for k in ("id", "method", "tier", "applies_to", "best_use", "pros", "cons", "cautions"):
+    assert k in EXCLUDED_KEYS, f"{k} must be ruled into EXCLUDED_KEYS"
+# the two new top-level objects are ruled wholesale by path
+assert excluded_by_path("control_methods.insecticidal_soap.best_use")
+assert excluded_by_path("pesticide_safety_education.label_note_seasoned")
+print("pest-ipm register rulings: OK")
+
 print("PASS register_completeness_gate (per-crop function)")

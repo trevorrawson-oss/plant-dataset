@@ -132,6 +132,9 @@ EXCLUDED_KEYS = {
     # is enforced by planting_layout_gate (whole_crop_gate A44); pollination_block_min_rows is an int,
     # out of this string check. Added when sweet-corn became the first crop to carry the field.
     "planting_layout",
+    # --- pest/IPM control-ladder arc (spec 2026-07-22). Categorical/slug/list keys, NOT dual-register
+    #     prose. The dual-register prose in this block is how_it_works_* + note_* (already suffixed). ---
+    "id", "method", "tier", "applies_to", "best_use", "pros", "cons", "cautions",
 }
 
 # Excluded by PATH (whole subtrees that are audit/machinery -- §4 AUDIT_LEAF /
@@ -141,7 +144,8 @@ EXCLUDED_KEYS = {
 # is EXCLUDED. Ruled by Trevor at the basil herb anchor, 2026-06-12.
 EXCLUDED_PATH_SUBSTR = ("plantings_provenance", "verification_status", "anchoring_urls",
                         "sources_summary",
-                        "uscrn_validation")  # C11 Part 1: the uscrn_* date/coverage machinery block
+                        "uscrn_validation",  # C11 Part 1: the uscrn_* date/coverage machinery block
+                        "control_methods", "pesticide_safety_education")  # pest/IPM arc 2026-07-22
 
 def excluded_by_path(pat):
     return any(s in pat for s in EXCLUDED_PATH_SUBSTR)
