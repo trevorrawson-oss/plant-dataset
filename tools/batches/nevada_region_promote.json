@@ -12259,7 +12259,7 @@
         "from": "plant_out",
         "offset_days": -56,
         "window_days": 31,
-        "synthesis_note_seasoned": "Start onion seed indoors in late summer, about eight weeks before the fall set-out, so seedlings are ready to transplant (UNLV Master Gardener Southern Nevada chart).",
+        "synthesis_note_seasoned": "Plant shallot sets in fall (the usual method), or start shallot from seed indoors in late summer about eight weeks ahead; sets or seedlings go out in mid-fall (UNLV Master Gardener Southern Nevada chart).",
         "sources": [
          "unlv_mg_svn"
         ],
@@ -12277,7 +12277,7 @@
         "from": "first_frost",
         "offset_days": -40,
         "window_days": 45,
-        "synthesis_note_seasoned": "Set intermediate-day onion seedlings or sets out in mid-fall so they establish before winter and bulb as spring days lengthen; not spring-set here, which would mismatch the daylength (UNLV Master Gardener Southern Nevada chart).",
+        "synthesis_note_seasoned": "Set intermediate-day shallot sets or seedlings out in mid-fall so they establish before winter and divide into a cluster of bulbs as spring days lengthen; not spring-set here, which would mismatch the daylength (UNLV Master Gardener Southern Nevada chart).",
         "sources": [
          "unlv_mg_svn"
         ],
@@ -12371,8 +12371,8 @@
        "first_frost": "Nov 8"
       },
       "recommended_day_length_type": "intermediate_day",
-      "day_length_note_seasoned": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are set out in fall or late winter and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
-      "day_length_note_beginner": "Where you live, plant intermediate-day onions like Candy or Super Star. Day length is how many hours of sunlight there are, and these onions form a bulb when days reach about 12 to 14 hours in spring. A northern long-day onion planted here would struggle to bulb, and a far-southern short-day one bulbs too early."
+      "day_length_note_seasoned": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day shallot sets, which bulb at around 12 to 14 hours of daylight, the same trigger their close onion relatives use. Sets go into the ground in fall and bulb as days lengthen through spring. A long-day (northern) type here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day type may bulb too early and small.",
+      "day_length_note_beginner": "Where you live, plant intermediate-day shallot sets. Day length is how many hours of sunlight there are, and shallots form a bulb when days reach about 12 to 14 hours in spring, the same as their onion relatives. A northern long-day type planted here would struggle to bulb, and a far-southern short-day one bulbs too early."
      },
      "9": {
       "plant_out": "Oct 15 - Nov 30",
@@ -12414,8 +12414,8 @@
        "first_frost": "Nov 25"
       },
       "recommended_day_length_type": "intermediate_day",
-      "day_length_note_seasoned": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are set out in fall or late winter and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
-      "day_length_note_beginner": "Where you live, plant intermediate-day onions like Candy or Super Star. Day length is how many hours of sunlight there are, and these onions form a bulb when days reach about 12 to 14 hours in spring. A northern long-day onion planted here would struggle to bulb, and a far-southern short-day one bulbs too early."
+      "day_length_note_seasoned": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day shallot sets, which bulb at around 12 to 14 hours of daylight, the same trigger their close onion relatives use. Sets go into the ground in fall and bulb as days lengthen through spring. A long-day (northern) type here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day type may bulb too early and small.",
+      "day_length_note_beginner": "Where you live, plant intermediate-day shallot sets. Day length is how many hours of sunlight there are, and shallots form a bulb when days reach about 12 to 14 hours in spring, the same as their onion relatives. A northern long-day type planted here would struggle to bulb, and a far-southern short-day one bulbs too early."
      },
      "10": {
       "plant_out": "Oct 1 - Nov 15",
@@ -12457,8 +12457,8 @@
        "first_frost": "Dec 5"
       },
       "recommended_day_length_type": "intermediate_day",
-      "day_length_note_seasoned": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are set out in fall or late winter and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
-      "day_length_note_beginner": "Where you live, plant intermediate-day onions like Candy or Super Star. Day length is how many hours of sunlight there are, and these onions form a bulb when days reach about 12 to 14 hours in spring. A northern long-day onion planted here would struggle to bulb, and a far-southern short-day one bulbs too early."
+      "day_length_note_seasoned": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day shallot sets, which bulb at around 12 to 14 hours of daylight, the same trigger their close onion relatives use. Sets go into the ground in fall and bulb as days lengthen through spring. A long-day (northern) type here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day type may bulb too early and small.",
+      "day_length_note_beginner": "Where you live, plant intermediate-day shallot sets. Day length is how many hours of sunlight there are, and shallots form a bulb when days reach about 12 to 14 hours in spring, the same as their onion relatives. A northern long-day type planted here would struggle to bulb, and a far-southern short-day one bulbs too early."
      }
     },
     "region_notes_beginner": "Shallots follow the same plan as onions here: plant in fall, harvest in late spring, and choose intermediate-day types for this latitude. Set out clumps of shallot sets in the fall and they divide into a cluster of bulbs by late spring.",
@@ -19223,11 +19223,32 @@
         "verified": "2026-07-21"
        }
       },
-      "second_planting": {
-       "plant_out": "Aug 15 - Sep 15",
-       "start_indoors": "Jun 6 - Jul 7",
-       "harvest_start": "Nov 23",
-       "harvest_end": "Nov 18",
+      "calendar": [
+       "cold_pause",
+       "cold_pause",
+       "plant",
+       "growing",
+       "growing",
+       "harvest",
+       "heat_pause",
+       "heat_pause",
+       "heat_pause",
+       "cold_pause",
+       "cold_pause",
+       "indoors"
+      ],
+      "notes": "Start seed in a protected hotbed or indoors and set out transplants; celery never goes direct-sown here.",
+      "zone_notes": null,
+      "planting_note": "single_season",
+      "successions_realized": 1,
+      "heat_pause": {
+       "months": [
+        7,
+        8,
+        9
+       ],
+       "classification": "heat_pause",
+       "basis_seasoned": "Las Vegas Valley summers routinely run past 100°F from June into September, well past the roughly 90°F growth ceiling the University of Nevada, Reno Extension's home-vegetable guidance (Fact Sheet FS-02-61) sets for the region, and celery stalks toughen and turn bitter in that heat. In zone 8's cooler pockets the spring stand is cut by mid-June and there is no fall replant: an August transplant here cannot mature before the zone's earlier first frost, so the bed rests through the hottest months and stays dormant into the cooler fall rather than starting a second crop.",
        "sources": [
         "unlv_mg_svn",
         "unr_fs0261"
@@ -19242,25 +19263,7 @@
          "verified": "2026-07-21"
         }
        }
-      },
-      "calendar": [
-       "cold_pause",
-       "cold_pause",
-       "plant",
-       "growing",
-       "growing",
-       "harvest",
-       "indoors",
-       "plant",
-       "plant",
-       "growing",
-       "harvest",
-       "indoors"
-      ],
-      "notes": "Start seed in a protected hotbed or indoors and set out transplants; celery never goes direct-sown here.",
-      "zone_notes": null,
-      "planting_note": "multi_season",
-      "successions_realized": 1
+      }
      },
      "9": {
       "resolution_method": "frost_anchored_resolved",
@@ -19395,8 +19398,8 @@
       "successions_realized": 1
      }
     },
-    "region_notes_beginner": "In the Las Vegas Valley, start celery seed indoors or in a protected hotbed about 10 weeks before setting plants out. The hotbed gives transplants a head start, so they go into the ground in the two weeks before the last frost, roughly mid-February. Stalks are ready by early summer; cut the spring stand promptly, since it toughens and turns bitter once the heat builds past 90°F. Start a second batch of transplants for a fall planting once the worst heat has broken, for a crop that finishes as the weather cools and tolerates a light frost.",
-    "region_notes_seasoned": "The Las Vegas Valley (Mojave high desert) grows celery as a hotbed-started transplant crop on two cycles, per the UNLV/UNR Cooperative Extension Master Gardener planting chart and the University of Nevada, Reno Extension's cool-season framework (Fact Sheet FS-02-61). Seed starts indoors about 10 weeks ahead; the hotbed's protection lets the spring transplant go out in the two weeks before the last frost rather than waiting for it, and stalks are ready roughly 100 days later, in early summer. Once daytime highs run past 90°F, plants generally stop growing well and stalks toughen and turn bitter, so the spring stand is cut promptly as the heat builds, and the timing here is tighter than for the quicker roots and greens. A second hotbed-started batch transplants out from about mid-August to mid-September, once the worst heat has broken, for a fall stand that finishes as the weather cools and carries up to the valley's first fall frost, since celery tolerates a light frost but is damaged by a hard freeze. Zone 8's cooler pockets reach frost sooner, tightening the fall finish; zone 10 at Laughlin has the most room to spare."
+    "region_notes_beginner": "In the Las Vegas Valley, start celery seed indoors or in a protected hotbed about 10 weeks before setting plants out. The hotbed gives transplants a head start, so they go into the ground in the two weeks before the last frost, roughly mid-February. Stalks are ready by early summer; cut the spring stand promptly, since it toughens and turns bitter once the heat builds past 90°F. In the warmer valley and at Laughlin, start a second batch of transplants for a fall planting once the worst heat has broken, for a crop that finishes as the weather cools and tolerates a light frost; the cooler zone 8 pockets skip this fall round, since the August transplant cannot mature before frost there, and grow a single spring crop instead.",
+    "region_notes_seasoned": "The Las Vegas Valley (Mojave high desert) grows celery as a hotbed-started transplant crop, on two cycles in its warmer zones, per the UNLV/UNR Cooperative Extension Master Gardener planting chart and the University of Nevada, Reno Extension's cool-season framework (Fact Sheet FS-02-61). Seed starts indoors about 10 weeks ahead; the hotbed's protection lets the spring transplant go out in the two weeks before the last frost rather than waiting for it, and stalks are ready roughly 100 days later, in early summer. Once daytime highs run past 90°F, plants generally stop growing well and stalks toughen and turn bitter, so the spring stand is cut promptly as the heat builds, and the timing here is tighter than for the quicker roots and greens. In zone 9 and at zone 10's Laughlin, a second hotbed-started batch transplants out from about mid-August to mid-September, once the worst heat has broken, for a fall stand that finishes as the weather cools and carries up to the valley's first fall frost, since celery tolerates a light frost but is damaged by a hard freeze; zone 10's later frost gives that fall stand the most room to spare. Zone 8's cooler pockets reach frost too soon for an August-transplanted fall crop to mature, so gardeners there grow a single spring crop and skip the replant."
    }
   },
   {
@@ -22306,7 +22309,7 @@
       },
       "calendar": [
        "harvest",
-       "heat_pause",
+       "cold_pause",
        "plant",
        "growing",
        "harvest",
@@ -22320,7 +22323,6 @@
       ],
       "heat_pause": {
        "months": [
-        2,
         7
        ],
        "classification": "heat_pause",
@@ -24609,7 +24611,7 @@
      }
     },
     "region_notes_beginner": "In the Las Vegas Valley, set out violas from mid-September into December for flowers that carry through the mild winter and into spring; this frost-tolerant flower does not need real winter downtime here. Only the intense summer heat, roughly May through August, stops it, so it comes back once the weather cools.",
-    "region_notes_seasoned": "The Mojave high desert grows viola as a single fall-through-spring cycle, not a spring-plus-fall two-window crop: set out plants from mid-September through mid-December, and they bloom from mid-October into spring with no real cold_pause, since the region's light winter frost does not stop this hardy flower. Only the summer heat wall, roughly May through August (extending into September in zone 10's hotter Colorado River pocket), excludes it, per the University of Nevada, Reno Cooperative Extension's Southern Nevada seasonal framework (Fact Sheet FS-02-61)."
+    "region_notes_seasoned": "The Mojave high desert grows viola as a single fall-through-spring cycle, not a spring-plus-fall two-window crop: set out plants from mid-September through mid-December, and they bloom from mid-October into spring with no real winter dormancy, since the region's light winter frost does not stop this hardy flower. Only the summer heat wall, roughly May through August (extending into September in zone 10's hotter Colorado River pocket), excludes it, per the University of Nevada, Reno Cooperative Extension's Southern Nevada seasonal framework (Fact Sheet FS-02-61)."
    }
   },
   {
@@ -24897,7 +24899,7 @@
      }
     },
     "region_notes_beginner": "In the Las Vegas Valley, set out sweet alyssum from mid-September into December for flowers that carry through the mild winter and into spring; this hardy, self-sowing flower blooms straight through the cool season without a real winter pause. Only the intense summer heat, roughly May through August, stops it.",
-    "region_notes_seasoned": "The Mojave high desert grows sweet alyssum as a single fall-through-spring cycle, not a spring-plus-fall two-window crop: set out plants from mid-September through mid-December, and they bloom from early October into spring with no real cold_pause, since the region's light winter frost does not stop this hardy flower. Only the summer heat wall, roughly May through August (extending into September in zone 10's hotter Colorado River pocket), excludes it, per the University of Nevada, Reno Cooperative Extension's Southern Nevada seasonal framework (Fact Sheet FS-02-61). Shear tired plants to reflush; it self-sows readily."
+    "region_notes_seasoned": "The Mojave high desert grows sweet alyssum as a single fall-through-spring cycle, not a spring-plus-fall two-window crop: set out plants from mid-September through mid-December, and they bloom from early October into spring with no real winter dormancy, since the region's light winter frost does not stop this hardy flower. Only the summer heat wall, roughly May through August (extending into September in zone 10's hotter Colorado River pocket), excludes it, per the University of Nevada, Reno Cooperative Extension's Southern Nevada seasonal framework (Fact Sheet FS-02-61). Shear tired plants to reflush; it self-sows readily."
    }
   },
   {
@@ -25187,7 +25189,7 @@
      }
     },
     "region_notes_beginner": "In the Las Vegas Valley, sweet pea is strictly a cool-season, fall-through-spring flower: sow from October into mid-November for cutting from December into spring, on a 5 to 6 ft trellis. The long, intense desert summer excludes it entirely, so there is no spring sowing here, only fall.",
-    "region_notes_seasoned": "The Mojave high desert grows sweet pea on one fall-sown cycle, not a two-window crop: sow from October into mid-November into deep, rich, well-drained soil, and cut fragrant stems from December through spring with no real winter cold_pause, since the region's light frost does not stop this hardy vine. The summer heat wall, roughly May through September, excludes it entirely, per the University of Nevada, Reno Cooperative Extension's Southern Nevada seasonal framework (Fact Sheet FS-02-61); there is no fall replant. Keep soil evenly moist, mulch to cool the roots, and keep it away from edible peas; the seeds and pods are poisonous."
+    "region_notes_seasoned": "The Mojave high desert grows sweet pea on one fall-sown cycle, not a two-window crop: sow from October into mid-November into deep, rich, well-drained soil, and cut fragrant stems from December through spring with no real winter dormancy, since the region's light frost does not stop this hardy vine. The summer heat wall, roughly May through September, excludes it entirely, per the University of Nevada, Reno Cooperative Extension's Southern Nevada seasonal framework (Fact Sheet FS-02-61); there is no fall replant. Keep soil evenly moist, mulch to cool the roots, and keep it away from edible peas; the seeds and pods are poisonous."
    }
   },
   {
@@ -25799,7 +25801,7 @@
      }
     },
     "region_notes_beginner": "Echinacea (purple coneflower) does well in the Las Vegas Valley: plant one division or transplant in spring in full sun and fast-draining soil, and it comes back every year, blooming from early summer into fall. Unlike bee balm and mint, it is drought-tolerant and does not need a summer break here; water deeply but infrequently and leave the seed heads standing for the birds.",
-    "region_notes_seasoned": "In the Mojave high desert, echinacea is established once, in spring, from a division, transplant, or stratified seedling, and returns from its crown for years. It is genuinely drought-tolerant and, once sited in full sun with sharp drainage, carries a long bloom from early summer into fall without the heat_pause the desert's moisture-hungry perennials need (University of Nevada, Reno Cooperative Extension Fact Sheet FS-02-61's general seasonal framework). Water deeply but infrequently, avoid soggy soil, and divide an established clump every 3 to 4 years."
+    "region_notes_seasoned": "In the Mojave high desert, echinacea is established once, in spring, from a division, transplant, or stratified seedling, and returns from its crown for years. It is genuinely drought-tolerant and, once sited in full sun with sharp drainage, carries a long bloom from early summer into fall without the summer heat pause the desert's moisture-hungry perennials need (University of Nevada, Reno Cooperative Extension Fact Sheet FS-02-61's general seasonal framework). Water deeply but infrequently, avoid soggy soil, and divide an established clump every 3 to 4 years."
    }
   },
   {
