@@ -46,6 +46,8 @@ REGION_CONFIG = {
                   "span": ["7", "8"], "frost_model": "anchored"},
     "nevada": {"label": "Nevada: Mojave High Desert (Las Vegas Valley)",
                "span": ["8", "9", "10"], "frost_model": "anchored"},
+    "utah_dixie": {"label": "Utah: St. George Dixie (Mojave-edge high desert)",
+                   "span": ["8"], "frost_model": "anchored"},
 }
 
 

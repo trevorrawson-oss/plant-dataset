@@ -36,8 +36,11 @@ STAGING = {
     "nevada": (["nevada_annuals_warm.json", "nevada_annuals_cool.json",
                 "nevada_trees.json", "nevada_citrus.json",
                 "nevada_perennials.json"], "nevada_chill_band.json"),
+    "utah_dixie": (["utah_dixie_annuals_warm.json", "utah_dixie_annuals_cool.json",
+                    "utah_dixie_trees.json", "utah_dixie_citrus.json",
+                    "utah_dixie_perennials.json"], "utah_dixie_chill_band.json"),
 }
-EXPECTED_CELLS = {"pnw": 108, "mid_atlantic": 111, "mid_south": 111, "nevada": 111}
+EXPECTED_CELLS = {"pnw": 108, "mid_atlantic": 111, "mid_south": 111, "nevada": 111, "utah_dixie": 111}
 
 
 def build(region_id, base_sha=None):

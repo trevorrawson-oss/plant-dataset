@@ -323,6 +323,35 @@ def test_nevada_heat_pause_plus_cold_pause_allowed():
     print("  ok: heat_pause + cold_pause allowed for frost-anchored (nevada)")
 
 
+def test_utah_dixie_config_present_anchored():
+    import region_cell_audit as rca
+    cfg = rca.REGION_CONFIG["utah_dixie"]
+    assert cfg["span"] == ["8"]
+    assert cfg["frost_model"] == "anchored"
+    assert cfg["label"] == "Utah: St. George Dixie (Mojave-edge high desert)"
+    print("  ok: utah_dixie REGION_CONFIG entry present (span z8 single-zone, anchored)")
+
+
+def test_utah_dixie_single_zone_heat_pause_plus_cold_pause_allowed():
+    import region_cell_audit as rca
+    cell = {
+        "region_id": "utah_dixie",
+        "region_label": "Utah: St. George Dixie (Mojave-edge high desert)",
+        "zone_span": ["8"],
+        "resolved_by_zone": {
+            "8": {"plant_out": "Apr 1 - May 1", "harvest": "Jun 5 - Jul 5",
+                  "harvest_start": "Jun 5", "harvest_end": "Jul 5",
+                  "first_plant_date": "Apr 1", "last_plant_date": "May 1",
+                  "resolution_method": "frost_anchored_resolved",
+                  "resolved_from": {"last_frost": "Mar 30", "first_frost": "Nov 1"},
+                  "calendar": ["cold_pause", "cold_pause", "indoors", "plant", "growing", "harvest",
+                               "heat_pause", "heat_pause", "heat_pause", "season_over",
+                               "cold_pause", "cold_pause"]}}}
+    assert not any("cold_pause" in v or "heat_pause" in v
+                   for v in rca.audit_cell("cherry-tomato", cell, "utah_dixie"))
+    print("  ok: heat_pause + cold_pause allowed for frost-anchored single-zone (utah_dixie)")
+
+
 if __name__ == "__main__":
     test_valid_frost_anchored_cell_clean()
     test_cold_pause_allowed_for_frost_anchored()
@@ -344,4 +373,6 @@ if __name__ == "__main__":
     test_mid_south_cold_pause_allowed()
     test_nevada_config_present_anchored()
     test_nevada_heat_pause_plus_cold_pause_allowed()
+    test_utah_dixie_config_present_anchored()
+    test_utah_dixie_single_zone_heat_pause_plus_cold_pause_allowed()
     print("\nALL region_cell_audit TESTS PASSED")

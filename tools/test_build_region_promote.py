@@ -80,6 +80,18 @@ def test_nevada_registered():
     print("  ok: nevada STAGING + EXPECTED_CELLS registered (111 cells, 5 staging files)")
 
 
+def test_utah_dixie_registered():
+    import build_region_promote as brp
+    assert "utah_dixie" in brp.STAGING
+    assert brp.EXPECTED_CELLS["utah_dixie"] == 111
+    files, band = brp.STAGING["utah_dixie"]
+    assert band == "utah_dixie_chill_band.json"
+    assert set(files) == {
+        "utah_dixie_annuals_warm.json", "utah_dixie_annuals_cool.json",
+        "utah_dixie_trees.json", "utah_dixie_citrus.json", "utah_dixie_perennials.json"}
+    print("  ok: utah_dixie STAGING + EXPECTED_CELLS registered (111 cells, 5 staging files)")
+
+
 if __name__ == "__main__":
     test_pnw_batch_shape()
     test_no_duplicate_slugs()
@@ -87,4 +99,5 @@ if __name__ == "__main__":
     test_mid_atlantic_registered()
     test_mid_south_registered()
     test_nevada_registered()
+    test_utah_dixie_registered()
     print("ok")
