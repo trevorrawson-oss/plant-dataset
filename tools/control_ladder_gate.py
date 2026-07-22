@@ -78,14 +78,22 @@ def ladder_violations(data, crop):
         ladder = p.get("control_ladder")
         if ladder is None:
             continue
-        ranks, ptype = [], p.get("type")
+        ptype = p.get("type")
+        if ptype not in TYPE_TARGETS:
+            # fail-closed: an unrecognized/missing type means applies_to coherence cannot be
+            # verified, so we flag it rather than silently passing (also enforces the type enum).
+            V.append(f"{slug}/{pid}: problem type {ptype!r} is not a recognized type "
+                     f"(applies_to coherence cannot be checked)")
+        ranks = []
         for rung in ladder:
             mid = rung.get("method")
             m = cat.get(mid)
             if m is None:
                 V.append(f"{slug}/{pid}: control_ladder references unknown method '{mid}'")
                 continue
-            ranks.append(TIER_RANK[m["tier"]])
+            rank = TIER_RANK.get(m.get("tier"))  # defensive: a bad tier is catalog_violations' job to report
+            if rank is not None:
+                ranks.append(rank)
             targets = set(m.get("applies_to") or [])
             if UNIVERSAL_TARGET not in targets and ptype in TYPE_TARGETS:
                 if not (targets & TYPE_TARGETS[ptype]):

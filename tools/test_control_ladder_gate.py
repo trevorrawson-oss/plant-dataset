@@ -67,4 +67,10 @@ assert any("does not fit problem type" in v for v in ladder_violations(*D(crop([
 # cultural-only SHORT ladder (clubroot) -> MUST PASS
 club = prob(id="clubroot", name="Clubroot", type="fungal", control_ladder=[{"method": "rotate_crops"}])
 assert ladder_violations(*D(crop([club], key="diseases"))) == []
+# bad-tier catalog method in a ladder must NOT crash (catalog_violations reports the bad tier separately)
+_badcat = {"broken": {"name": "Broken", "applies_to": ["any"]}}  # no tier key
+assert ladder_violations({"control_methods": _badcat}, crop([prob(control_ladder=[{"method": "broken"}])])) == []
+# unrecognized problem type -> flagged (applies_to coherence cannot be checked)
+_unk = prob(id="mystery", type="fungusy", control_ladder=[{"method": "insecticidal_soap"}])
+assert any("not a recognized type" in v for v in ladder_violations(*D(crop([_unk]))))
 print("ladder_violations tests: OK")
