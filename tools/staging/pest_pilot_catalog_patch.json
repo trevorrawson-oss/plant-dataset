@@ -1,0 +1,851 @@
+{
+  "base_sha": "2c98dd2b3a56a79e82d7777e770b00439c7cbc984ff2d66c34a227d9c7afd89f",
+  "patches": [
+    {
+      "op": "add",
+      "json_path": "control_methods",
+      "value": {
+        "crop_rotation": {
+          "name": "Crop rotation",
+          "tier": "cultural",
+          "applies_to": [
+            "any"
+          ],
+          "how_it_works_beginner": "Move each plant family to a new spot every year so soil pests and disease germs that built up under last year's crop have nothing to feed on when the new crop arrives.",
+          "how_it_works_seasoned": "Rotating a bed out of a plant family for several seasons starves soilborne pathogens and root pests that lack an alternate host, letting soil inoculum decline before a susceptible crop returns.",
+          "best_use": "A season-to-season foundation for soilborne diseases and root pests, especially clubroot, black rot, and cabbage maggot in the same bed.",
+          "pros": [
+            "Free and preventive; no inputs and no spraying",
+            "Works on soilborne problems that no spray can cure, such as clubroot and black rot"
+          ],
+          "cons": [
+            "Slow: soil inoculum takes years to decline, so it prevents rather than rescues",
+            "Needs enough garden space to move families apart, which is hard in a small plot"
+          ],
+          "cautions": [
+            "Clubroot resting spores persist in soil for years, so a rotation of 5 to 7 years away from the cabbage family is needed to help"
+          ],
+          "sources": [
+            "ucanr_ext",
+            "umn_ext",
+            "clemson_hgic"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/clubroot.html",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/plant-diseases/clubroot",
+              "verified": "2026-07-22"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-diseases/",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "garden_sanitation": {
+          "name": "Garden sanitation",
+          "tier": "cultural",
+          "applies_to": [
+            "any"
+          ],
+          "how_it_works_beginner": "Clear away old, diseased, or pest-ridden plants and debris so germs and insects have nowhere to shelter and overwinter near next season's crop.",
+          "how_it_works_seasoned": "Removing and destroying infected residue, culls, and volunteer hosts strips the pathogen and pest reservoir between crops, lowering both starting inoculum and the overwintering population.",
+          "best_use": "End-of-season cleanup and in-season removal of the first infected leaves; the backbone step for black rot and other diseases with no chemical cure.",
+          "pros": [
+            "Free and preventive; cuts the carryover of both pests and disease",
+            "The main line of defense where no spray works, as with black rot"
+          ],
+          "cons": [
+            "Prevents rather than rescues; it lowers pressure but will not clear an active infection",
+            "Only as good as your thoroughness; missed debris or nearby weeds keep the reservoir alive"
+          ],
+          "cautions": [
+            "Destroy diseased debris rather than leaving or burying it; infected tissue can still carry the pathogen to the next crop"
+          ],
+          "sources": [
+            "clemson_hgic",
+            "umn_ext",
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-diseases/",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/plant-diseases/clubroot",
+              "verified": "2026-07-22"
+            },
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/clubroot.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "resistant_varieties": {
+          "name": "Resistant varieties",
+          "tier": "cultural",
+          "applies_to": [
+            "any"
+          ],
+          "how_it_works_beginner": "Choose a variety bred to shrug off a disease your garden struggles with, so the plant defends itself and you may never need to spray.",
+          "how_it_works_seasoned": "Cultivars carrying genetic resistance or tolerance resist infection or limit disease development, making variety choice the cheapest and most durable control and the first line of defense.",
+          "best_use": "Chosen at seed-buying time for diseases that recur in your beds, such as clubroot, downy mildew, and black rot; the natural handoff to variety-level resistance data.",
+          "pros": [
+            "Built-in protection with no spraying, cost, or labor once chosen",
+            "The first line of defense, and often the only practical control for stubborn soilborne diseases"
+          ],
+          "cons": [
+            "Only helps for the specific disease bred against; no variety resists everything",
+            "Resistance can be partial or be overcome by local pathogen strains, so it is not a guarantee"
+          ],
+          "cautions": [
+            "Clubroot-resistant varieties tolerate rather than fully resist the disease"
+          ],
+          "sources": [
+            "umn_ext",
+            "clemson_hgic",
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "umn_ext": {
+              "url": "https://extension.umn.edu/plant-diseases/clubroot",
+              "verified": "2026-07-22"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-diseases/",
+              "verified": "2026-07-22"
+            },
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "balance_nitrogen": {
+          "name": "Balanced nitrogen feeding",
+          "tier": "cultural",
+          "applies_to": [
+            "insect_soft_bodied"
+          ],
+          "how_it_works_beginner": "Avoid overfeeding with high-nitrogen fertilizer. The soft, sappy new growth that too much nitrogen pushes out is exactly what aphids multiply on.",
+          "how_it_works_seasoned": "Excess nitrogen drives flushes of tender growth rich in the soluble nitrogen aphids feed on, boosting their reproduction; feeding modestly with a less soluble form in small portions keeps growth steady and populations lower.",
+          "best_use": "A preventive feeding habit for aphids and other soft-bodied sap-suckers on leafy and cole crops.",
+          "pros": [
+            "Costs nothing; it is simply not overfeeding",
+            "Improves plant health and reduces aphid pressure at the same time"
+          ],
+          "cons": [
+            "Preventive only; it lowers aphid buildup but will not clear an existing colony",
+            "Underfeeding hurts yield, so it is a balance, not a cut"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "raise_soil_ph": {
+          "name": "Raise soil pH (liming)",
+          "tier": "cultural",
+          "applies_to": [
+            "fungal_soilborne"
+          ],
+          "how_it_works_beginner": "Add lime to sweeten acidic soil up toward pH 7.2. Clubroot germinates and infects best in sour soil, so raising the pH slows it down.",
+          "how_it_works_seasoned": "Liming to pH 7.2 or above suppresses clubroot spore germination and root infection; the effect is partial and needs annual reapplication where the pathogen is established, since clubroot favors acidic soil below pH 7.0.",
+          "best_use": "For clubroot in the cabbage family, paired with long rotation and resistant varieties; there is no chemical cure, so this is a core cultural tool.",
+          "pros": [
+            "Directly suppresses clubroot, a disease with no chemical cure",
+            "Also corrects overly acidic soil, helping most vegetables grow better"
+          ],
+          "cons": [
+            "Partial control; liming slows clubroot but will not eradicate an established infestation",
+            "Slow to act and must be reapplied annually to hold the pH up"
+          ],
+          "cautions": [
+            "Lime this high only to fight clubroot or to correct a tested deficiency; most vegetables prefer a pH near 6.0 to 6.8, so do not over-lime the whole garden"
+          ],
+          "sources": [
+            "ucanr_ext",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/clubroot.html",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/plant-diseases/clubroot",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "airflow_spacing": {
+          "name": "Airflow and spacing",
+          "tier": "cultural",
+          "applies_to": [
+            "fungal_foliar",
+            "bacterial",
+            "disease_general"
+          ],
+          "how_it_works_beginner": "Give plants room and a sunny, breezy spot so leaves dry quickly after rain or dew. Most leaf diseases need long wet periods to take hold.",
+          "how_it_works_seasoned": "Wider spacing, pruning excess foliage, and good sun and air movement shorten leaf-wetness duration, denying foliar fungal and bacterial pathogens the sustained moisture they need to infect and sporulate.",
+          "best_use": "Preventive layout for foliar diseases such as downy mildew and the celery leaf-spot blights, set at planting by spacing and site choice.",
+          "pros": [
+            "Free and preventive; reduces a wide range of foliar diseases at once",
+            "No inputs and no residue, and it improves light and yield too"
+          ],
+          "cons": [
+            "Prevents rather than cures; it slows disease onset but will not stop an active outbreak",
+            "Wider spacing means fewer plants per bed"
+          ],
+          "sources": [
+            "ucanr_ext",
+            "clemson_hgic"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html",
+              "verified": "2026-07-22"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-diseases/",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "bottom_watering": {
+          "name": "Bottom watering",
+          "tier": "cultural",
+          "applies_to": [
+            "fungal_soilborne",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Water from below so the surface of the mix stays drier. A dry surface discourages the damping-off fungi and fungus gnat larvae that need constant moisture.",
+          "how_it_works_seasoned": "Watering from the tray and letting the media surface dry between waterings denies the saturated top layer that damping-off fungi and fungus gnat larvae exploit, while still keeping the root zone moist; good drainage and avoiding overwatering are the point.",
+          "best_use": "Indoor trays and seedlings, especially microgreens, where a wet surface drives damping-off and fungus gnats and there is no rescue spray for a raw crop.",
+          "pros": [
+            "Cuts damping-off and fungus gnats at once by keeping the surface dry",
+            "Simple, free, and leaves no residue on an about-to-eat crop"
+          ],
+          "cons": [
+            "Preventive only; it will not save seedlings already collapsing from damping-off",
+            "Needs attention; overwatering the tray undoes the benefit"
+          ],
+          "sources": [
+            "ucanr_ext",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/home-and-landscape/fungus-gnats/",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/solve-problem/how-prevent-seedling-damping",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "sensible_seeding_rate": {
+          "name": "Sensible seeding rate",
+          "tier": "cultural",
+          "applies_to": [
+            "fungal_soilborne",
+            "disease_general"
+          ],
+          "how_it_works_beginner": "Do not sow seeds too thickly. Crowded seedlings stay damp and stuffy, which is exactly what the damping-off fungi that topple seedlings need.",
+          "how_it_works_seasoned": "Sowing at a sensible density keeps air moving and humidity down among seedlings, denying damping-off pathogens such as Pythium and Rhizoctonia the stagnant, saturated microclimate they exploit; overcrowded seedbeds are where damping-off typically starts.",
+          "best_use": "Prevention for damping-off in trays, seedbeds, and dense crops such as microgreens, set at sowing by not overseeding.",
+          "pros": [
+            "Free and preventive; cuts damping-off and improves seedling vigor",
+            "No inputs and nothing to eat on the crop"
+          ],
+          "cons": [
+            "Preventive only; it will not save seedlings already collapsing from damping-off",
+            "Fewer seedlings per tray than a heavy sow"
+          ],
+          "sources": [
+            "psu_ext",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "psu_ext": {
+              "url": "https://extension.psu.edu/safeguard-your-seedlings-from-damping-off",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/solve-problem/how-prevent-seedling-damping",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "even_watering": {
+          "name": "Even watering",
+          "tier": "cultural",
+          "applies_to": [
+            "physiological"
+          ],
+          "how_it_works_beginner": "Keep the soil evenly moist so the plant can move calcium steadily to its fast-growing center. Wild swings between wet and dry are what trigger disorders such as celery blackheart.",
+          "how_it_works_seasoned": "Uniform soil moisture sustains the transpiration-driven calcium flow to rapidly growing tissue; blackheart and blossom-end rot are localized calcium-deficiency disorders that appear when moisture swings or rapid growth outpace calcium delivery, not usually from low soil calcium.",
+          "best_use": "Preventing calcium-movement disorders such as celery blackheart, by watering on a steady schedule of about 1 to 2 inches per week and never letting shallow-rooted crops dry out.",
+          "pros": [
+            "Prevents a disorder that no spray can fix, at no cost",
+            "Also steadies growth and yield across the crop"
+          ],
+          "cons": [
+            "Preventive only; damaged hearts or fruit will not recover",
+            "Hard to hold steady in hot, dry, fast-growth spells when demand spikes"
+          ],
+          "cautions": [
+            "Blackheart can strike even with adequate soil calcium if watering is uneven, so consistent moisture matters more than adding calcium"
+          ],
+          "sources": [
+            "msu_ext",
+            "umd_ext"
+          ],
+          "anchoring_urls": {
+            "msu_ext": {
+              "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+              "verified": "2026-07-22"
+            },
+            "umd_ext": {
+              "url": "https://extension.umd.edu/resource/blossom-end-rot-vegetables",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "floating_row_cover": {
+          "name": "Floating row cover",
+          "tier": "physical",
+          "applies_to": [
+            "any"
+          ],
+          "how_it_works_beginner": "A light fabric laid over the plants is a physical fence: the moths, flies, and beetles cannot reach the plants to lay eggs or feed. Put it on right after planting.",
+          "how_it_works_seasoned": "Floating row cover physically excludes egg-laying adults such as cabbage butterflies and moths, cabbage maggot flies, and flea beetles when installed before the pest's flight; timing to the pest's emergence and sealing the edges are what make it work.",
+          "best_use": "Preventive exclusion from transplanting until the pest's egg-laying period passes, for cabbageworms, flea beetles, and cabbage maggot; remove for pollination if the crop needs it.",
+          "pros": [
+            "Excludes several pests at once with no spraying and no residue",
+            "Very effective when installed before the pest starts to fly"
+          ],
+          "cons": [
+            "Must be on before the pest arrives and sealed at the edges, or it fails",
+            "Traps heat and blocks pollinators, so it comes off once the crop needs bees or in hot spells"
+          ],
+          "cautions": [
+            "Do not lay row cover over a bed where the same-family crop grew last year, or emerging soil pests can be trapped under it with the crop"
+          ],
+          "sources": [
+            "ucanr_ext",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/PESTS/importcabwrm.html",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/yard-and-garden-insects/root-maggots",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "handpick": {
+          "name": "Handpicking",
+          "tier": "physical",
+          "applies_to": [
+            "insect_chewing",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Pick the caterpillars, beetles, and their eggs off by hand and drop them into soapy water. In a small garden this alone can keep chewing pests in check.",
+          "how_it_works_seasoned": "Physically removing larvae, adults, and egg masses, checking leaf undersides, directly lowers the feeding population; most practical at low densities and in small plantings, and best done on a regular scouting schedule.",
+          "best_use": "Low to moderate numbers of visible chewing pests such as cabbageworms and cutworms in a small garden, on a regular scouting routine.",
+          "pros": [
+            "Free, immediate, and completely selective; no harm to beneficials or the crop",
+            "No residue and safe right up to harvest"
+          ],
+          "cons": [
+            "Labor-intensive and impractical at high densities or larger scale",
+            "Misses hidden eggs and tiny larvae, so it must be repeated"
+          ],
+          "sources": [
+            "ucanr_ext",
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/PESTS/importcabwrm.html",
+              "verified": "2026-07-22"
+            },
+            "umn_ext": {
+              "url": "https://extension.umn.edu/yard-and-garden-insects/cutworms",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "stem_collars": {
+          "name": "Stem collars",
+          "tier": "physical",
+          "applies_to": [
+            "insect_chewing",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "A collar of cardboard or foil around a young transplant's stem, pushed into the soil, blocks cutworms from reaching and cutting the stem at the soil line.",
+          "how_it_works_seasoned": "A rigid collar of cardboard, stiff paper, or foil set a few inches into the soil and standing several inches above it forms a barrier cutworm larvae cannot cross to girdle the stem; most valuable during the vulnerable transplant-establishment window.",
+          "best_use": "Protecting individual transplants from cutworms during establishment, most practical in small gardens.",
+          "pros": [
+            "Cheap, non-toxic, and completely selective",
+            "Protects each transplant through its most vulnerable stage"
+          ],
+          "cons": [
+            "Labor-intensive per plant, so it suits small plantings",
+            "Only guards against soil-line stem attackers, and only while the collar is in place"
+          ],
+          "sources": [
+            "umn_ext"
+          ],
+          "anchoring_urls": {
+            "umn_ext": {
+              "url": "https://extension.umn.edu/yard-and-garden-insects/cutworms",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "water_spray": {
+          "name": "Water spray",
+          "tier": "physical",
+          "applies_to": [
+            "insect_soft_bodied"
+          ],
+          "how_it_works_beginner": "A strong stream of water from the hose knocks aphids off the plant. Most cannot climb back on, and it costs nothing.",
+          "how_it_works_seasoned": "A forceful water spray dislodges aphid colonies from sturdy plants, and dislodged aphids largely fail to reestablish; spraying early in the day lets foliage dry quickly and limits disease.",
+          "best_use": "Early aphid clusters on sturdy plants, as a first physical knock-back before considering any spray.",
+          "pros": [
+            "Free, immediate, and leaves no residue",
+            "Preserves natural enemies entirely"
+          ],
+          "cons": [
+            "Temporary; colonies can rebuild, so it may need repeating",
+            "Not suitable for tender seedlings that a strong stream would damage"
+          ],
+          "cautions": [
+            "Spray early in the day so foliage dries quickly, since prolonged leaf wetness can promote disease"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "yellow_sticky_traps": {
+          "name": "Yellow sticky traps",
+          "tier": "physical",
+          "applies_to": [
+            "insect_general",
+            "insect_soft_bodied"
+          ],
+          "how_it_works_beginner": "Bright yellow cards coated in glue attract and catch flying insects such as fungus gnat adults. They help you monitor and knock down the flying stage.",
+          "how_it_works_seasoned": "Yellow sticky traps exploit the insects' attraction to yellow to capture and monitor adult flies such as fungus gnats and winged aphids; in containers, small squares on skewers trap emerging adults and gauge population trends.",
+          "best_use": "Monitoring and reducing adult fungus gnats around trays and houseplants, and catching winged aphids and other small flying pests.",
+          "pros": [
+            "Cheap, non-toxic monitoring plus modest control of the flying stage",
+            "Gives an early warning of a building population"
+          ],
+          "cons": [
+            "Catches only flying adults, not the damaging larvae in the media",
+            "Can also catch some small beneficials"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/home-and-landscape/fungus-gnats/",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "beneficial_predators": {
+          "name": "Beneficial predators",
+          "tier": "biological",
+          "applies_to": [
+            "insect_soft_bodied",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Good bugs such as lady beetles, lacewings, and tiny parasitic wasps eat or parasitize pests such as aphids. Protect them and they do the work for free.",
+          "how_it_works_seasoned": "Conserving resident natural enemies (lady beetles, brown and green lacewings, syrphid larvae, and parasitic wasps such as Aphidius and Diaeretiella) keeps aphids and other soft-bodied pests in check; avoiding broad-spectrum sprays and managing the ants that tend aphids is the key to keeping them working.",
+          "best_use": "The default living control for aphids and other soft-bodied pests; lean on it before reaching for any spray.",
+          "find_it_beginner": "You can buy live beneficials such as lady beetles or lacewing eggs from garden centers and online, but conserving the ones already in your garden is usually cheaper and more effective, since released insects often just fly away.",
+          "pros": [
+            "Free, self-sustaining control once populations establish",
+            "No residue and no harm to the crop"
+          ],
+          "cons": [
+            "Predators lag behind a fast-building pest outbreak, so they may not act quickly enough",
+            "Broad-spectrum sprays and ant activity undercut them"
+          ],
+          "cautions": [
+            "Avoid broad-spectrum insecticides, which kill the beneficials as well as the pests"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "bt": {
+          "name": "Bacillus thuringiensis (Bt)",
+          "tier": "biological",
+          "applies_to": [
+            "insect_chewing"
+          ],
+          "how_it_works_beginner": "Bt is a natural soil bacterium. When a caterpillar eats leaves sprayed with it, the Bt proteins wreck its gut and it stops feeding and dies. It is harmless to people, pets, and bees.",
+          "how_it_works_seasoned": "Bt kurstaki produces crystal proteins that, once eaten, are activated in the caterpillar's alkaline gut and destroy the gut lining; it is selective to caterpillars and practically nontoxic to people, pets, bees, and wildlife, but it must be ingested and breaks down in a few days.",
+          "best_use": "The go-to biological control for cabbageworms and loopers, sprayed on young caterpillars and reapplied after rain or new growth.",
+          "find_it_beginner": "Sold as a caterpillar spray or dust, often labeled Bt or Btk; common brands are Dipel and Thuricide. Confirm that 'Bacillus thuringiensis' (subspecies kurstaki) is listed as the active ingredient on the label.",
+          "pros": [
+            "Practically nontoxic to people, pets, bees, and wildlife",
+            "Targets caterpillars only, sparing most beneficial insects"
+          ],
+          "cons": [
+            "Must be eaten to work, so thorough coverage and good timing on small larvae matter",
+            "Breaks down quickly in sunlight, with a foliage half-life of roughly 1 to 4 days, so it needs reapplication"
+          ],
+          "cautions": [
+            "Bt kurstaki kills the caterpillars of moths and butterflies as a group, including desirable species such as swallowtails and monarchs; spray only plants with a pest problem, never butterfly host plants"
+          ],
+          "sources": [
+            "npic_orst",
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "npic_orst": {
+              "url": "https://npic.orst.edu/factsheets/btgen.html",
+              "verified": "2026-07-22"
+            },
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/PESTS/importcabwrm.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "beneficial_nematodes": {
+          "name": "Beneficial nematodes",
+          "tier": "biological",
+          "applies_to": [
+            "insect_general"
+          ],
+          "how_it_works_beginner": "These are microscopic good worms you water into the soil. They hunt and kill soil-dwelling insect larvae, such as fungus gnat larvae, and are safe for people and pets.",
+          "how_it_works_seasoned": "Entomopathogenic nematodes (Steinernema feltiae) applied as a soil drench seek out and infect soil-dwelling fly larvae; they are effective in moist media at soil temperatures of roughly 60°F to 90°F.",
+          "best_use": "For soil-stage larvae such as fungus gnats in trays, drenched into moist media when the soil is warm.",
+          "find_it_beginner": "You buy these as a living product, usually a refrigerated sponge or powder you mix with water, from garden centers or online (sold as beneficial nematodes, for example Steinernema feltiae). Check that it is fresh and unexpired, and apply it soon after buying.",
+          "pros": [
+            "Targets soil larvae that sprays cannot reach, with no residue",
+            "Safe for people, pets, and the crop"
+          ],
+          "cons": [
+            "Needs moist media and soil temperatures around 60°F to 90°F to work",
+            "A living product with a short shelf life; the effect is temporary and may need repeating"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/home-and-landscape/fungus-gnats/",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "insecticidal_soap": {
+          "name": "Insecticidal soap",
+          "tier": "soft_chemical",
+          "applies_to": [
+            "insect_soft_bodied"
+          ],
+          "how_it_works_beginner": "Special soap sprays kill soft-bodied pests such as aphids by smothering them. You have to hit the insect directly, and it stops working once it dries.",
+          "how_it_works_seasoned": "Potassium salts of fatty acids kill soft-bodied insects on contact by disrupting the cuticle and smothering them; there is no residual, so only insects wetted at spray time are affected and thorough coverage plus repeat applications are needed.",
+          "best_use": "Early, light aphid or other soft-bodied infestations you can coat directly, when you want minimal impact on beneficials.",
+          "find_it_beginner": "Sold ready-to-use as 'insecticidal soap' (a common brand is Safer); on the label the active ingredient reads as potassium salts of fatty acids. Ordinary dish soap is not the same thing, so look for a product actually labeled insecticidal soap.",
+          "pros": [
+            "Low toxicity to people, pets, and pollinators, and accepted for organic use",
+            "Leaves no toxic residue, so beneficials that arrive after the spray are not harmed"
+          ],
+          "cons": [
+            "Contact-only with no residual, so it must directly wet the pest and often needs repeating",
+            "Works only on soft-bodied pests, not beetles or caterpillars"
+          ],
+          "cautions": [
+            "Can burn foliage on water-stressed plants or when the temperature is above 90°F",
+            "Kills soft-bodied beneficials it directly wets, so spray only where pests are"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "neem_oil": {
+          "name": "Neem oil",
+          "tier": "soft_chemical",
+          "applies_to": [
+            "insect_soft_bodied",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Neem oil is a plant-based spray that coats and smothers soft-bodied pests and disrupts their feeding and growth. Like soap, it mostly works on what it directly wets.",
+          "how_it_works_seasoned": "Neem, azadirachtin plus the oil, works by contact smothering and as an antifeedant and growth regulator on soft-bodied insects; it is a contact material with little persistent residue, so coverage and timing matter and repeat applications are common.",
+          "best_use": "Light, early soft-bodied infestations, especially where you want a low-residue option that spares beneficials once it dries.",
+          "find_it_beginner": "Sold as 'neem oil' garden sprays and concentrates; on the label, look for neem oil, or its extract azadirachtin, listed as the active ingredient.",
+          "pros": [
+            "Low toxicity to people, pets, and pollinators, and accepted for organic use",
+            "Little persistent residue, so it has relatively small impact on beneficials that arrive later"
+          ],
+          "cons": [
+            "A contact material with little residual, so it must wet the pest and usually needs repeating",
+            "Can burn foliage in heat or on stressed plants"
+          ],
+          "cautions": [
+            "UC IPM rates neem low in toxicity to bees and other pollinators; still, because it is a contact spray, apply at dusk to avoid directly wetting bees that are foraging",
+            "Do not apply in high heat above 90°F or to drought-stressed plants"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "copper_fungicide": {
+          "name": "Copper fungicide",
+          "tier": "soft_chemical",
+          "applies_to": [
+            "fungal_foliar",
+            "bacterial",
+            "disease_general"
+          ],
+          "how_it_works_beginner": "Copper sprays coat the leaf surface and stop fungal and bacterial spores from taking hold. They protect healthy tissue but cannot cure a leaf that is already infected.",
+          "how_it_works_seasoned": "Fixed copper acts as a protectant contact fungicide and bactericide, releasing copper ions that disrupt spore germination on the leaf surface; it must be on the tissue before infection and reapplied as new growth expands and after rain.",
+          "best_use": "A preventive, softer-chemical option for foliar diseases such as downy mildew and bacterial leaf spots when cultural steps are not holding; apply before or at the first sign of disease.",
+          "find_it_beginner": "Sold as 'copper fungicide' or 'liquid copper' in the disease-control section; on the label, look for a copper compound such as copper octanoate (often called copper soap) as the active ingredient.",
+          "pros": [
+            "Broad-spectrum on both fungi and bacteria, and accepted for organic use",
+            "Protects new plantings when disease pressure is high and rotation or spacing alone fall short"
+          ],
+          "cons": [
+            "Protectant only; it shields healthy tissue but will not cure an established infection",
+            "Gives only fair control of some diseases such as downy mildew, and needs frequent reapplication",
+            "Builds up in the soil with repeated use because copper binds tightly at the surface and persists"
+          ],
+          "cautions": [
+            "Copper is highly to very highly toxic to fish and aquatic life; do not let spray or runoff reach ponds, streams, or storm drains",
+            "Copper accumulates at the soil surface and persists, so limit repeat use over the years",
+            "Follow the label rate; too much copper can injure foliage"
+          ],
+          "sources": [
+            "clemson_hgic",
+            "npic_orst"
+          ],
+          "anchoring_urls": {
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-diseases/",
+              "verified": "2026-07-22"
+            },
+            "npic_orst": {
+              "url": "https://npic.orst.edu/factsheets/cuso4gen.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "spinosad": {
+          "name": "Spinosad",
+          "tier": "soft_chemical",
+          "applies_to": [
+            "insect_chewing",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Spinosad is made by a soil microbe and kills caterpillars, leafminers, and thrips when they eat or touch the treated leaf. It is a strong organic option but is hard on bees while the spray is wet.",
+          "how_it_works_seasoned": "Spinosad, from the bacterium Saccharopolyspora spinosa, is effective on caterpillars, thrips, and leafminers by ingestion and contact and penetrates leaf tissue; it is accepted for organic use but is toxic to bees and some natural enemies while wet.",
+          "best_use": "A stronger organic rescue for caterpillar, thrips, or leafminer pressure the softer rungs have not held; time it to spare bees.",
+          "find_it_beginner": "Sold as a garden insect spray with spinosad as the active ingredient; common brands are Captain Jack's Deadbug Brew and Monterey Garden Insect Spray. Look for 'spinosad' on the label, since brand names change but the active ingredient is what tells you what you have.",
+          "pros": [
+            "Strong control of caterpillars, thrips, and leafminers, and accepted for organic use",
+            "Penetrates leaf tissue to reach protected pests such as leafminers"
+          ],
+          "cons": [
+            "Broader than the soaps and oils, so it also hits some beneficials",
+            "Toxic to certain natural enemies such as predatory mites and syrphid larvae for several days after spraying"
+          ],
+          "cautions": [
+            "Toxic to bees when sprayed and for about a day afterward; do not apply to flowering plants, and spray at dusk when bees are not foraging"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7429.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "sulfur": {
+          "name": "Sulfur",
+          "tier": "soft_chemical",
+          "applies_to": [
+            "fungal_foliar",
+            "mite",
+            "disease_general"
+          ],
+          "how_it_works_beginner": "Sulfur dust or spray is an old, simple mineral fungicide that stops powdery mildew and some other leaf diseases from getting started. Put it on before disease shows up.",
+          "how_it_works_seasoned": "Elemental sulfur acts as a protectant fungicide, and a miticide, interfering with fungal processes on the leaf surface; it is preventive, so timing before infection and thorough coverage matter.",
+          "best_use": "Preventive control of powdery mildew and some mites on crops that tolerate it, applied when weather favors disease but temperatures are moderate.",
+          "find_it_beginner": "Sold as garden or dusting sulfur, a mineral fungicide; look for 'sulfur' as the active ingredient. This is not the same as the stronger, more caustic lime-sulfur, so check the label.",
+          "pros": [
+            "Inexpensive, long-used mineral fungicide accepted for organic use",
+            "Also suppresses some mites, and pest resistance to it is rare"
+          ],
+          "cons": [
+            "Protectant only; it does not cure existing infections",
+            "Can injure sensitive plants; some crops and varieties are damaged by it"
+          ],
+          "cautions": [
+            "Do not apply when the temperature is near or above 90°F or to drought-stressed plants; sulfur burns foliage in heat",
+            "Do not apply sulfur within 2 weeks of an oil spray",
+            "Can harm released predatory (beneficial) mites unless they are sulfur-resistant, disrupting natural mite control"
+          ],
+          "sources": [
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "pyrethroid": {
+          "name": "Pyrethroid (such as permethrin)",
+          "tier": "conventional",
+          "applies_to": [
+            "insect_soft_bodied",
+            "insect_chewing",
+            "insect_boring",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Pyrethroids are synthetic insecticides, modeled on a compound from the chrysanthemum flower, that kill a wide range of insects on contact. They work fast but hit the good bugs along with the pests.",
+          "how_it_works_seasoned": "Synthetic pyrethroids such as permethrin are broad-spectrum contact neurotoxins with residual activity; they knock down most insects quickly but are non-selective and persist on foliage, so they set back natural enemies and can trigger pest resurgence.",
+          "best_use": "A rescue-only, last-resort option for a heavy infestation that the softer rungs have not controlled; never a routine or first choice.",
+          "find_it_beginner": "Sold in the garden aisle as ready-to-use insect sprays, concentrates, and dusts. On the label, look for a pyrethroid active ingredient such as permethrin, bifenthrin, or zeta-cypermethrin. Brands get reformulated: the Sevin liquid sprays, for example, are now zeta-cypermethrin (a pyrethroid), so check the active ingredient on the label rather than trusting the brand name.",
+          "pros": [
+            "Fast, broad, and inexpensive knockdown of most insect pests",
+            "Widely available and effective when an outbreak is severe"
+          ],
+          "cons": [
+            "Non-selective: kills natural enemies along with pests, which can make the pest rebound worse",
+            "Residue can persist for weeks, so the harm to beneficials is long-lasting",
+            "Repeated use selects for resistant pest populations"
+          ],
+          "cautions": [
+            "Highly toxic to bees and other beneficial insects; do not apply to flowering plants, and spray at dusk when bees are not foraging",
+            "Highly toxic to fish and aquatic life; keep it out of ponds, streams, and storm drains",
+            "More toxic to cats than to dogs or people; keep pets off until the spray is dry",
+            "Observe the pre-harvest interval on the label before eating the crop, and always read and follow the label"
+          ],
+          "sources": [
+            "npic_orst",
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "npic_orst": {
+              "url": "https://npic.orst.edu/factsheets/PermGen.html",
+              "verified": "2026-07-22"
+            },
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/agriculture/cole-crops/relative-toxicities-of-insecticides-and-miticides-used-in-cole-crops-to-natural-enemies-and-honey-bees/",
+              "verified": "2026-07-22"
+            }
+          }
+        },
+        "carbaryl": {
+          "name": "Carbaryl",
+          "tier": "conventional",
+          "applies_to": [
+            "insect_chewing",
+            "insect_boring",
+            "insect_general"
+          ],
+          "how_it_works_beginner": "Carbaryl is a synthetic insecticide often used against beetles and caterpillars. It kills a broad range of insects but is very hard on bees and earthworms.",
+          "how_it_works_seasoned": "Carbaryl is a broad-spectrum carbamate that disrupts the insect nervous system; it is effective on beetles and chewing larvae but is highly toxic to honey bees and earthworms and leaves a long residual that harms natural enemies.",
+          "best_use": "A rescue-only, last-resort option for beetle or caterpillar outbreaks the softer rungs have not held; not a first or routine choice.",
+          "find_it_beginner": "Sold as a garden insect spray or dust; on the label, look for 'carbaryl' as the active ingredient. Watch out here: the Sevin brand was carbaryl for decades, but many current Sevin sprays were switched to a pyrethroid (zeta-cypermethrin), while Sevin dust is still carbaryl. Read the active ingredient on the label to confirm what you are actually buying.",
+          "pros": [
+            "Effective, broad-spectrum control of beetles and many chewing pests",
+            "Inexpensive and widely available for a severe outbreak"
+          ],
+          "cons": [
+            "Non-selective: kills beneficial insects along with the pests",
+            "Long residual, so the harm to natural enemies and pollinators persists",
+            "Repeated use can select for resistant pest populations"
+          ],
+          "cautions": [
+            "Highly toxic to honey bees; do not apply to flowering plants, and spray at dusk when bees are not foraging",
+            "Toxic to earthworms, which are important to healthy soil",
+            "Observe the pre-harvest interval on the label before eating the crop, and always read and follow the label"
+          ],
+          "sources": [
+            "npic_orst",
+            "ucanr_ext"
+          ],
+          "anchoring_urls": {
+            "npic_orst": {
+              "url": "https://npic.orst.edu/factsheets/carbarylgen.html",
+              "verified": "2026-07-22"
+            },
+            "ucanr_ext": {
+              "url": "https://ipm.ucanr.edu/agriculture/cole-crops/relative-toxicities-of-insecticides-and-miticides-used-in-cole-crops-to-natural-enemies-and-honey-bees/",
+              "verified": "2026-07-22"
+            }
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "json_path": "source_catalog.npic_orst",
+      "value": {
+        "id": "npic_orst",
+        "name": "National Pesticide Information Center (NPIC)",
+        "publisher": "Oregon State University / U.S. Environmental Protection Agency",
+        "url": "https://npic.orst.edu",
+        "source_class": "university_government_cooperative",
+        "trust_tier": "high",
+        "accessed": "2026-07",
+        "tier": "T1",
+        "citable_for": "National Pesticide Information Center pesticide fact sheets, produced under a cooperative agreement between Oregon State University and the U.S. Environmental Protection Agency. Citable for active-ingredient identity and class, mode of action, non-target toxicity (bees, aquatic life, earthworms, pets, wildlife), and universal read-and-follow-the-label safety guidance. Not citable for crop-culture or planting-window claims.",
+        "_admission_provenance": "Pest/IPM control-ladder pilot (spec 2026-07-22). New T1 for method-level pesticide honesty (active-ingredient class + non-target toxicity + label-law framing) where UC IPM and land-grant extension pages do not carry the ingredient-specific toxicology. NPIC is an OSU + EPA cooperative agreement (university + federal government), squarely T1; class 'university_government_cooperative' mirrors the bespoke-class precedent set by aspca (veterinary_toxicology_authority). Pages live-verified via Claude Code WebFetch 2026-07-22: Permethrin General Fact Sheet (Jul 2009), Carbaryl General Fact Sheet (Feb 2016), Copper Sulfate General Fact Sheet (Nov 2012), Bacillus thuringiensis (Bt) Fact Sheet (last reviewed May 2022)."
+      }
+    }
+  ]
+}
