@@ -8,8 +8,8 @@ this session.
 ## Sync/rebuild off this canonical
 
 ```
-crops_data_final.json  sha256 = 9b4c478ab90348b4f47c9527f9340217c8d3a3d50f947463bb59175f3c961dad
-dataset commit = fe61424   (bump/sync assets off this, once pushed)
+crops_data_final.json  sha256 = b1045e0433c7dbec30937f7e5624ce99bde1fb233e97585c282f021669f867ed
+dataset commit = 6724c92   (bump/sync assets off this, once pushed)
 ```
 
 ## The headline: a real `nevada` region now exists, dataset side is done
