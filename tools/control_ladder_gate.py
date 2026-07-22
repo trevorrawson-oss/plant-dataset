@@ -102,3 +102,58 @@ def ladder_violations(data, crop):
         if any(ranks[i] > ranks[i + 1] for i in range(len(ranks) - 1)):
             V.append(f"{slug}/{pid}: control_ladder is not softest-first (tier ranks {ranks})")
     return V
+
+
+def identity_violations(crop):
+    V = []
+    slug = crop.get("slug", "?")
+    seen = {}
+    for p in _problems(crop):
+        if p.get("control_ladder") is None:
+            continue  # in-scope only once a ladder is authored (soft-pilot staging; rollout adds a coverage floor)
+        pid = p.get("id")
+        if not pid:
+            V.append(f"{slug}/{p.get('name') or p.get('name_beginner') or '?'}: pest/disease missing 'id'")
+            continue
+        if not ID_RE.match(pid):
+            V.append(f"{slug}/{pid}: id is not kebab-case")
+        seen[pid] = seen.get(pid, 0) + 1
+    for pid, n in seen.items():
+        if n > 1:
+            V.append(f"{slug}/{pid}: duplicate id ({n}x) within crop")
+    return V
+
+
+def all_violations(data):
+    V = list(catalog_violations(data))
+    for crop in data.get("crops", []):
+        V += ladder_violations(data, crop)
+        V += identity_violations(crop)
+    return V
+
+
+def coverage_report(data):
+    crops = data.get("crops", [])
+    certified = [c for c in crops if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
+    problems = sum(len(_problems(c)) for c in certified)
+    with_ladder = sum(1 for c in certified for p in _problems(c) if p.get("control_ladder") is not None)
+    return {"catalog_methods": len(catalog(data)), "certified_crops": len(certified),
+            "problems_on_certified": problems, "problems_with_ladder": with_ladder}
+
+
+def main():
+    argv = sys.argv[1:]
+    pos = [a for a in argv if not a.startswith("--")]
+    path = pos[0] if pos else "crops_data_final.json"
+    data = load(path)
+    if "--coverage" in argv:
+        import pprint; pprint.pprint(coverage_report(data))
+    V = all_violations(data)
+    for v in V:
+        print("VIOLATION:", v)
+    print(f"control_ladder_gate: {len(V)} violation(s)")
+    sys.exit(1 if V else 0)
+
+
+if __name__ == "__main__":
+    main()

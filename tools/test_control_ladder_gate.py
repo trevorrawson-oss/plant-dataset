@@ -74,3 +74,29 @@ assert ladder_violations({"control_methods": _badcat}, crop([prob(control_ladder
 _unk = prob(id="mystery", type="fungusy", control_ladder=[{"method": "insecticidal_soap"}])
 assert any("not a recognized type" in v for v in ladder_violations(*D(crop([_unk]))))
 print("ladder_violations tests: OK")
+
+from control_ladder_gate import identity_violations, all_violations, coverage_report
+
+_L = [{"method": "m"}]  # a ladder just needs to be present (non-None) to bring a problem in-scope
+# missing id (in-scope: has a ladder)
+assert any("missing 'id'" in v for v in identity_violations({"slug": "x", "pests": [{"name": "Aphids", "control_ladder": _L}]}))
+# duplicate id within crop
+dup = {"slug": "x", "pests": [{"id": "aphids", "control_ladder": _L}], "diseases": [{"id": "aphids", "control_ladder": _L}]}
+assert any("duplicate id" in v for v in identity_violations(dup))
+# non-kebab id
+assert any("kebab" in v for v in identity_violations({"slug": "x", "pests": [{"id": "Cabbage_Worm", "control_ladder": _L}]}))
+# a problem WITHOUT a ladder is out of scope -> not flagged for a missing id (soft-pilot staging)
+assert identity_violations({"slug": "x", "pests": [{"name": "Not yet migrated"}]}) == []
+# clean -> none
+assert identity_violations({"slug": "x", "pests": [{"id": "aphids", "control_ladder": _L}], "diseases": [{"id": "clubroot", "control_ladder": _L}]}) == []
+
+# coverage_report counts certified problems + ladders
+cov = coverage_report({
+    "control_methods": {"a": {}, "b": {}},
+    "crops": [
+        {"verification_status": {"status": "verified_gs_arc"}, "pests": [{"id": "p", "control_ladder": [{"method": "a"}]}], "diseases": []},
+        {"verification_status": {"status": "shell"}, "pests": [{"id": "q"}]},
+    ],
+})
+assert cov == {"catalog_methods": 2, "certified_crops": 1, "problems_on_certified": 1, "problems_with_ladder": 1}, cov
+print("identity + coverage tests: OK")
