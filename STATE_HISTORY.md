@@ -6,6 +6,83 @@
 
 ---
 
+## 2026-07-22 -- PEST/IPM CONTROL-LADDER PILOT SHIPPED (field-addition register row 23)
+
+Canonical `2c98dd2b` -> `4f7789aa` via 3 SHA-guarded splices layered directly on the Utah Dixie state:
+`b4bb71b` (top-level `control_methods` catalog + `npic_orst` source add) -> `a1755b0` (top-level
+`pesticide_safety_education`) -> `857a856` (16 `control_ladder`s across broccoli/celery/microgreens, old
+treatment blobs retired). Register row 23 committed `669a681` (row 22 was taken by the concurrent
+`utah_dixie` region). Count 128 / 119 certified unchanged. **NEW soft standalone gate**
+`tools/control_ladder_gate.py`; **NEW fields** `control_methods` (top-level catalog), per-problem
+`control_ladder` + `id` + `type`, `pesticide_safety_education` (top-level). COMMITTED UNPUSHED (Trevor
+confirms push, coordinated with Utah).
+
+**What shipped.** The first honest, softest-first IPM control ladder. Every pest/disease is no longer a
+single treatment blob; it is (a) a stable kebab `id` (the vocabulary the next variety-resistance arc points
+at), (b) a `type` (insect/fungal/bacterial/physiological/...), and (c) an ORDERED `control_ladder` whose
+rungs reference a shared, authored-once `control_methods` catalog. The catalog = 24 methods across the 5 IPM
+tiers (cultural 9 / physical 5 / biological 3 / soft_chemical 5 / conventional 2), each with dual-register
+how-it-works, best_use, honest pros/cons/cautions, a beginner `find_it_beginner` shelf/brand line on the 10
+purchasable methods, and T1 sources (`ucanr_ext`=UC IPM, `npic_orst`=NPIC OSU/EPA [new], `umn_ext`,
+`umd_ext`, `clemson_hgic`, `psu_ext`, `msu_ext`). The `pesticide_safety_education` object carries the
+universal responsible-use spine once. Pilot on broccoli (7 problems) + celery (7) + microgreens (2) = 16
+ladders. Retires `organic_treatment_*` (broccoli/celery) + `management_*` (microgreens) into the ladder
+rung notes.
+
+**The honesty (the reason for the arc).** Conventional pesticides are named by active-ingredient class + a
+common example ("a pyrethroid such as permethrin"; carbaryl) with the full caution set (kills bees +
+beneficials, long residual, resistance, observe the pre-harvest interval, read the label) -- fair, not
+demonized, and NOT brands (the `find_it_beginner` shelf lines handle recognition, including the Sevin
+landmine: Sevin-5 dust is still carbaryl but many Sevin liquids are now zeta-cypermethrin, so read the
+active ingredient). "Organic" is stated to NOT mean harmless: copper accumulates in soil + is highly toxic
+to fish, sulfur burns foliage over 90degF + harms predatory mites, neem/spinosad harm bees while wet, Bt
+kills all moth + butterfly larvae including swallowtails/monarchs. Ladders honestly STOP where no further
+control applies: clubroot (no chemical cure -- rotation/lime/resistant varieties), celery blackheart
+(physiological), pink-rot, both microgreens problems (raw crop, cultural-only), cabbage-root-maggot +
+carrot-rust-fly (protected in roots -- exclusion only), celery leaf-miner (conservation-only; broad sprays
+flare it). Exactly ONE conventional rescue rung: flea-beetle -> carbaryl (beetles are not predator-regulated
+and can kill seedlings, so a labeled last-resort is honest here; rescue-only, spot-treat).
+
+**Build (SDD).** control_ladder_gate built TDD across 4 tasks; the per-task review loop caught 3 genuine
+plan bugs (kebab check wrongly on snake_case catalog keys; a KeyError-on-bad-tier that would have masked the
+catalog violation; the identity check needed scoping to ladder-bearing problems so the SOFT gate is silent
+on the 118 un-migrated crops). Catalog authored by an opus subagent from live-fetched T1 pages, then an
+independent opus **T1-fidelity review CAUGHT an unsupported neem bee-toxicity caution** (its cited UC IPM
+page rates neem LOW-tox to pollinators, contradicting the claim) + 3 lighter attribution gaps, all fixed.
+Ladders authored by an opus subagent, then an independent horticulture review drove 3 fixes (the flea-beetle
+rescue rung, a root-maggot collar rung grounded in broccoli's OWN sourced prevention prose after the general
+UMN root-maggot page proved to carry only row cover, and fungus-gnat sticky traps) and confirmed the 7 other
+no-conventional-rung omissions are each correctly honest. A sourcing trap was avoided: a WebSearch summary
+claimed UMN recommends maggot collars, but fetching the actual page showed only row covers -- so the catalog
+`stem_collars` method was NOT broadened on an unsupported general claim; the crop-specific ladder note
+carries it instead, grounded in broccoli's certified prose.
+
+**Gates / verification (protocol #6).** `gate_all` 119/119 (the whole suite on every certified crop),
+`control_ladder_gate` 0 violations (24 catalog methods / 16 ladders live), `register_completeness` PASS (the
+new keys were ruled into EXCLUDED_KEYS/PATH by the gate-phase task, so blob removal + new keys produced 0
+unruled prose), **adversarial RED battery** injects 6 defect classes (dangling method ref, non-monotonic
+tier, applies_to mismatch, duplicate id, bad-tier-no-crash, unknown-type-flag) into the REAL pilot shapes
+and confirms every one bounces + clubroot's cultural-only ladder passes clean, `release_verify` clean except
+the documented roster/multi-crop single-crop-pilot false positive (the pre-commit backstop is binding and
+was green at every commit), consumer-copy sweep em-dash/double-hyphen/spelled-degrees 0 across catalog +
+safety + the 3 crops, canonical COMPACT (0 escaped-unicode, no trailing newline), and every crop OTHER than
+the 3 pilots is BYTE-IDENTICAL. Footprint EXACT: +`control_methods` (24) + `pesticide_safety_education` +
+`source_catalog`+`npic_orst`, and only broccoli/celery/microgreens-mix `pests`/`diseases` changed; count 128
+/ 119 certified unchanged (a new gate + new fields, NOT a new crop).
+
+**Next / follow-ons.** NEXT ARC = variety resilience/disease-resistance (per-variety `resists:` /
+`susceptible_to:` referencing these pest/disease `id`s -- the whole reason this arc was sequenced first).
+The `control_ladder_gate` HARD-FLIP into A39 register-coverage + `gate_all` (with a coverage floor requiring
+every certified problem to carry `id`+`type`+`control_ladder`) fires when the roster-wide rollout (~897
+problems, family batches, catalog grows) reaches full coverage. Approach C (crop-level pest hub: management
+philosophy + scouting calendar) = a future register row when a consumer pulls on it. plant-app honest IPM
+pest guidance + any plant-astro rendering = a separate lane (after push). Deferred Minors: unused `os` import
+in control_ladder_gate (cosmetic); all_violations composition is now exercised by the RED battery. Spec/plan
+`docs/superpowers/{specs,plans}/2026-07-22-pest-ipm-ladder-*`; ledger `.superpowers/sdd/progress.md`; catalog
+provenance `tools/staging/pest_pilot_catalog_sources.md`; horticulture/fidelity reviews inline (this notes
+dir). >> **PEST/IPM PILOT SHIPPED -- 119 certified / 128 total** (new gate + new fields, no cert-count
+change). << COMMITTED, UNPUSHED (Trevor confirms push).
+
 ## 2026-07-22 -- UTAH DIXIE HIGH-DESERT REGION SHIPPED (roadmap item 11)
 
 Canonical `b1045e04` -> `f7e3afe3` via one SHA-guarded atomic promote of 121 patches
