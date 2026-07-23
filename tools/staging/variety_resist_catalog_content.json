@@ -1,0 +1,386 @@
+{
+  "fruit_bagging": {
+    "name": "Bagging fruit",
+    "tier": "physical",
+    "applies_to": [
+      "insect_boring",
+      "insect_general"
+    ],
+    "how_it_works_beginner": "Slip a small paper bag over each young apple and staple it shut. The bag is a physical wall: codling moths and apple maggot flies cannot reach the fruit to lay their eggs, so the apple grows clean inside.",
+    "how_it_works_seasoned": "Enclosing individual fruit in standard paper lunch bags about four to six weeks after bloom, when the fruit is 1/2 to 1 inch across, excludes egg-laying codling moth and apple maggot. UC IPM calls it the only nonchemical method effective enough to use alone, even under high pressure; thin to one fruit per cluster, slit the bag bottom, slip the fruit through, and staple it around the stem.",
+    "best_use": "A spray-free way to protect a manageable number of apples on a backyard tree from codling moth and apple maggot, worth the labor when you do not have too many fruit.",
+    "find_it_beginner": "Use ordinary paper lunch bags (about 7 by 4 inches) from the grocery store and a stapler; special fruit-protection bags and nylon footie sleeves are also sold online.",
+    "pros": [
+      "Excellent, spray-free control of codling moth and apple maggot, effective enough to use on its own",
+      "No residue, and the fruit inside grows clean"
+    ],
+    "cons": [
+      "Very time consuming, since every fruit is bagged by hand, so it suits only a small number of apples",
+      "Red varieties may not color up fully inside the bag, and short-stemmed varieties are hard to bag"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7412.html",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "kaolin_clay": {
+    "name": "Kaolin clay film",
+    "tier": "physical",
+    "applies_to": [
+      "insect_general",
+      "insect_boring",
+      "insect_chewing"
+    ],
+    "how_it_works_beginner": "Kaolin clay is a fine white mineral powder you mix with water and spray on the tree. When it dries it leaves a chalky film that irritates insects and hides the fruit, so pests find the tree an unpleasant place to feed or lay eggs and move on.",
+    "how_it_works_seasoned": "Kaolin, sold as a wettable particle film, dries to a layer of interlocking microscopic particles on leaves and fruit; the particles agitate and repel insects and mask the host visually, deterring feeding and egg-laying. It gives strong control of apple maggot and fair to moderate control of plum curculio and fruit-boring caterpillars such as codling moth, and needs reapplying to keep new growth and washed-off surfaces covered.",
+    "best_use": "An organic-acceptable repellent barrier for apple maggot, and partial help against plum curculio and codling moth, on backyard trees where you will reapply through the season.",
+    "find_it_beginner": "Sold as a kaolin clay particle film, most commonly under the Surround WP name, in the tree-fruit or organic pest section; look for kaolin clay as the active ingredient.",
+    "pros": [
+      "Repels several fruit pests at once and is accepted for organic use, giving strong control of apple maggot",
+      "Works as a physical film barrier and repellent rather than a nerve poison"
+    ],
+    "cons": [
+      "Only fair to moderate on plum curculio and codling moth, so it reduces rather than eliminates damage",
+      "Leaves a chalky white residue that must be washed off the fruit, and needs frequent reapplication to stay effective"
+    ],
+    "cautions": [
+      "University trials show heavy use can harm beneficial species and lead to a flare-up of European red mites or San Jose scale"
+    ],
+    "sources": [
+      "ext_org_apples"
+    ],
+    "anchoring_urls": {
+      "ext_org_apples": {
+        "url": "https://apples.extension.org/can-kaolin-clay-sprays-reduce-insect-damage-to-apple-fruit/",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "codling_moth_pheromone_trap": {
+    "name": "Codling moth pheromone traps",
+    "tier": "physical",
+    "applies_to": [
+      "insect_boring",
+      "insect_general"
+    ],
+    "how_it_works_beginner": "A pheromone trap uses the scent of a female codling moth to lure males onto a sticky card. Its main job is to tell you when the moths are flying, so you know the right time to act, rather than to control the moths by itself.",
+    "how_it_works_seasoned": "Wing traps baited with codling moth sex pheromone catch males and mark the start and peaks of moth flight, which is what times sanitation, bagging, and any sprays to egg hatch. Hung high in the canopy from mid- to late March and checked every few days, they are a monitoring tool; UC IPM notes that trapping on isolated trees might help slightly but is not a reliable way to reduce damage on its own.",
+    "best_use": "Monitoring moth flight on a backyard apple tree so you can time the other steps well, not as a stand-alone control.",
+    "find_it_beginner": "Sold as codling moth pheromone traps or lures in the orchard-pest section and online; the trap is a sticky delta or wing trap and the lure is a small pheromone cap you replace during the season.",
+    "pros": [
+      "Cheap, non-toxic way to know exactly when moths are active so you can time other steps well",
+      "Gives early warning of a building codling moth population"
+    ],
+    "cons": [
+      "Mainly a monitoring tool: hanging traps is not a reliable way to reduce damage by itself",
+      "Must be hung and checked on schedule to be useful"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7412.html",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "red_sphere_trap": {
+    "name": "Red sphere apple maggot traps",
+    "tier": "physical",
+    "applies_to": [
+      "insect_general"
+    ],
+    "how_it_works_beginner": "A dark red ball coated in sticky glue looks like a ripe apple to an apple maggot fly. The fly lands to lay eggs and gets stuck. Hung early and in enough numbers, the traps catch the females before they can sting the real fruit.",
+    "how_it_works_seasoned": "Red spheres baited with an apple volatile mimic host fruit and capture egg-laying apple maggot females on a sticky coating. Beyond monitoring, hanging baited spheres at roughly one per 100 to 150 fruit from mid-June traps out females and can serve as a control measure in small plantings; increase the number of spheres with tree size.",
+    "best_use": "Trapping out apple maggot flies on a backyard tree, using enough baited spheres per tree and hanging them by mid-June before egg-laying begins.",
+    "find_it_beginner": "Sold as red sphere or red ball apple maggot traps, usually with a sticky coating (such as Tanglefoot) and an apple or fruit-scent lure; hang the number the label suggests for your tree size.",
+    "pros": [
+      "Can trap out egg-laying females and serve as a control measure in a small planting, not just monitoring",
+      "Non-toxic and pesticide-free"
+    ],
+    "cons": [
+      "Needs enough traps per tree and must be up by mid-June, or flies slip through",
+      "Traps must be kept sticky and serviced through the season"
+    ],
+    "sources": [
+      "psu_ext"
+    ],
+    "anchoring_urls": {
+      "psu_ext": {
+        "url": "https://extension.psu.edu/apple-maggot-in-the-home-fruit-planting",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "horticultural_oil": {
+    "name": "Horticultural oil",
+    "tier": "soft_chemical",
+    "applies_to": [
+      "insect_soft_bodied",
+      "insect_general",
+      "mite"
+    ],
+    "how_it_works_beginner": "Horticultural oil is a light, refined oil you mix with water and spray. It coats and smothers soft-bodied pests such as aphids and spider mites. It only kills what the spray actually wets, so thorough coverage matters.",
+    "how_it_works_seasoned": "Narrow-range horticultural oils, petroleum- or plant-based, kill soft-bodied insects and mites by smothering on contact; they leave little residue, so coverage, especially leaf undersides, and repeat timing are what make them work. On apple they give partial control of aphids such as woolly apple aphid and knock back spider mites.",
+    "best_use": "A low-residue contact spray for spider mites and soft-bodied insects such as aphids once the softer steps are not holding, applied for thorough coverage in mild weather.",
+    "find_it_beginner": "Sold as horticultural oil, narrow-range oil, or superior oil in the pest-control section; look for a highly refined petroleum or plant-based oil as the active ingredient.",
+    "pros": [
+      "Low-residue contact material accepted for organic use, controlling both soft-bodied insects and spider mites",
+      "Works by smothering on contact, a physical mode of action that pests do not build resistance to"
+    ],
+    "cons": [
+      "Contact only: it must wet the pest thoroughly and usually needs repeating, giving only partial control of well-protected pests",
+      "Can burn foliage on stressed plants or in heat"
+    ],
+    "cautions": [
+      "Do not use oils on water-stressed plants or when temperatures exceed 90°F",
+      "Do not apply sulfur within 30 days of an oil spray, since the combination can injure foliage"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "prune_out_infection": {
+    "name": "Pruning out infections",
+    "tier": "physical",
+    "applies_to": [
+      "bacterial",
+      "disease_general"
+    ],
+    "how_it_works_beginner": "For fire blight there is no spray that cures the tree. You cut off the infected branches well below the damage and destroy them, physically removing the bacteria before they spread further into the tree.",
+    "how_it_works_seasoned": "Fire blight strikes are removed by cutting 6 to 8 inches beyond the visible margin of the infection into healthy wood, ideally in summer or winter when the bacteria are not actively moving; on highly susceptible trees, rapidly advancing spring infections should be cut out as soon as they appear. The location of the cut matters more than sterilizing tools, though dipping shears in 10% bleach between cuts is reasonable.",
+    "best_use": "The core fire blight control on a backyard apple or pear: cut well below each strike and destroy the prunings, since no spray will cure an infection already in the wood.",
+    "pros": [
+      "Physically removes the fire blight bacteria that no spray can cure once they are in the wood",
+      "Cutting well below the strike, in the dormant or dry season, limits further spread"
+    ],
+    "cons": [
+      "You must cut 6 to 8 inches below visible damage, so healthy wood is lost with the infected wood",
+      "Missed or late cuts let the infection keep advancing through the tree"
+    ],
+    "cautions": [
+      "Dipping shears in 10% bleach between cuts is wise, but placing the cut far enough below the infection matters more"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7414.html",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "slug_traps_barriers": {
+    "name": "Slug traps and barriers",
+    "tier": "physical",
+    "applies_to": [
+      "mollusk"
+    ],
+    "how_it_works_beginner": "Slugs hide in cool, damp spots by day and feed at night. You can hunt them after dark with a flashlight, set board or beer traps for them to gather in, and ring beds with copper strips they will not cross. Together these steadily lower their numbers.",
+    "how_it_works_seasoned": "Nighttime handpicking, board traps raised on runners, and beer-baited pitfall traps concentrate and remove slugs and snails, while copper foil or tape at least 2 inches wide repels them until it tarnishes. Handpicking done thoroughly and regularly, daily at first then weekly once numbers drop, can be very effective; traps need scraping out and refreshing every few days.",
+    "best_use": "Knocking down slug numbers around a strawberry bed with regular night handpicking, board or beer traps, and copper barriers, alongside removing their daytime hiding places.",
+    "pros": [
+      "Non-toxic and low-cost, and handpicking done thoroughly on a regular basis can be very effective",
+      "Copper barriers repel slugs and snails from a bed without any bait"
+    ],
+    "cons": [
+      "Labor-intensive: traps must be emptied and refreshed every few days and handpicking repeated",
+      "Copper strips stop working once they tarnish, and beer traps only catch slugs that reach them"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7427.html",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "iron_phosphate_slug_bait": {
+    "name": "Iron phosphate slug bait",
+    "tier": "soft_chemical",
+    "applies_to": [
+      "mollusk"
+    ],
+    "how_it_works_beginner": "Iron phosphate baits are pellets you scatter on the soil. Slugs and snails eat them, stop feeding, and die over the next several days. They are much safer around pets, children, and wildlife than the older metaldehyde baits.",
+    "how_it_works_seasoned": "Iron phosphate bait causes snails and slugs to stop feeding after ingesting even small amounts, though death takes several days to a week. UC IPM calls it a good fit for an IPM program and safer for use around children, pets, birds, fish, and other wildlife than metaldehyde, which is particularly poisonous to dogs and cats. Baits work best combined with habitat reduction, not alone.",
+    "best_use": "A lower-risk bait to back up traps and sanitation against slugs in a strawberry bed, scattered on the soil rather than on the plants.",
+    "find_it_beginner": "Sold as iron phosphate or ferric phosphate slug and snail bait pellets; look for iron phosphate as the active ingredient, and note this is not the same as the more hazardous metaldehyde baits.",
+    "pros": [
+      "Safer for use around children, pets, birds, fish, and other wildlife than metaldehyde baits",
+      "A good choice within an integrated program, causing slugs to stop feeding after eating even a small amount"
+    ],
+    "cons": [
+      "Slow: it can take several days to a week for the slugs to die",
+      "Baits alone do not give lasting control without also removing moisture and hiding places"
+    ],
+    "cautions": [
+      "Even a lower-risk bait is still a pesticide; scatter it on the soil, not on the plants, and follow the label"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7427.html",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "swd_exclusion_netting": {
+    "name": "SWD exclusion netting",
+    "tier": "physical",
+    "applies_to": [
+      "insect_general"
+    ],
+    "how_it_works_beginner": "Spotted wing drosophila is a tiny fly that lays eggs in ripening berries. A very fine mesh net, put over the plants before the fruit starts to color, keeps the flies out so they cannot reach the fruit.",
+    "how_it_works_seasoned": "Fine mesh, around 0.98 mm, the size used to screen out no-see-ums, excludes adult spotted wing drosophila when installed before fruit begins to ripen; drape it so it does not touch the fruit, since flies can lay through mesh pressed against a berry, and seal the edges so flies cannot get under.",
+    "best_use": "Excluding spotted wing drosophila from a strawberry planting, with fine no-see-um-grade mesh put on before the first fruit colors and held off the berries.",
+    "pros": [
+      "Physically keeps the flies off the fruit with no spraying",
+      "Very effective when the fine mesh is in place before fruit ripens and sealed at the edges"
+    ],
+    "cons": [
+      "Must be on before fruit starts to color, or flies are trapped inside with the fruit",
+      "Mesh pressed against a berry lets flies lay through it, so the net must be held off the fruit"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/home-and-landscape/spotted-wing-drosophila/",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "swd_monitoring_traps": {
+    "name": "SWD monitoring traps",
+    "tier": "physical",
+    "applies_to": [
+      "insect_general"
+    ],
+    "how_it_works_beginner": "A cup of apple cider vinegar with a drop of dish soap, hung in the shade near your berries, catches spotted wing drosophila flies. Checking it tells you when the flies have arrived so you can act in time.",
+    "how_it_works_seasoned": "Traps baited with 1 to 2 inches of pure apple cider vinegar, with a drop of unscented dish soap to break the surface tension, and hung in shade near the crop from early May before fruit ripens, catch adult SWD; check weekly for the small flies with dark wing spots to time harvest and controls. Monitoring, not control, is the purpose.",
+    "best_use": "Detecting when spotted wing drosophila arrives at a strawberry planting so the other steps are timed right; hang before fruit ripens and check weekly.",
+    "find_it_beginner": "You can build one from a cup or jar with a few small entry holes, baited with pure (not flavored) apple cider vinegar; ready-made SWD traps and lures are also sold.",
+    "pros": [
+      "Cheap, non-toxic early warning of when the flies arrive so you can time harvest and other steps",
+      "Simple to build from apple cider vinegar and a cup"
+    ],
+    "cons": [
+      "A monitoring tool, not a control: trapping alone will not protect the crop",
+      "Must be hung before fruit ripens and checked regularly to be useful"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/home-and-landscape/spotted-wing-drosophila/",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "bird_netting": {
+    "name": "Bird netting",
+    "tier": "physical",
+    "applies_to": [
+      "vertebrate"
+    ],
+    "how_it_works_beginner": "Bird netting is a plastic mesh you drape over the plants, ideally on a frame of hoops so it does not lie right on the berries. It is a physical fence that keeps birds from reaching the fruit. Extend it to the ground and tie the ends so birds cannot slip underneath.",
+    "how_it_works_seasoned": "Netting on a PVC or hoop frame excludes birds from ripening fruit; UC IPM notes that netting laid directly on the plant still lets birds reach fruit through it, so support it off the canopy, extend it to the ground, and tie off all ends to stop birds entering underneath.",
+    "best_use": "The reliable way to protect ripening strawberries from birds, on a hoop frame that holds the net off the fruit with the edges sealed to the ground.",
+    "pros": [
+      "Physically excludes birds from the fruit when installed on a frame and sealed",
+      "Reusable season to season and needs no chemicals"
+    ],
+    "cons": [
+      "Netting laid straight on the plants lets birds still reach fruit through it, so it needs a frame",
+      "Must be extended to the ground and tied off, or birds get underneath"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/pdf/pestnotes/pnbirdstreefruitsvines.pdf",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "bird_scare_deterrents": {
+    "name": "Bird scare devices",
+    "tier": "physical",
+    "applies_to": [
+      "vertebrate"
+    ],
+    "how_it_works_beginner": "Shiny, moving, or noisy objects like foil strips, reflective tape, and scare-eye balloons can frighten birds away from the berries for a while. Birds get used to them, so you have to move them around and swap types often.",
+    "how_it_works_seasoned": "Visual and noise deterrents, such as mylar streamers, scare-eye balloons, and noisemakers, can frighten some bird species off a planting, but effectiveness varies by species and birds habituate; UC IPM advises rotating device types and not leaving one combination up for more than a week. They reduce pressure rather than exclude birds.",
+    "best_use": "A cheap first line against birds on a strawberry patch, rotating shiny and noise devices weekly, best paired with netting since birds soon get used to scares.",
+    "pros": [
+      "Inexpensive and easy to put up as a first response",
+      "Can frighten off some bird species, at least for a while"
+    ],
+    "cons": [
+      "Effectiveness varies by species and birds habituate, so it does not reliably protect the crop",
+      "Devices must be rotated and moved at least weekly or birds ignore them"
+    ],
+    "sources": [
+      "ucanr_ext"
+    ],
+    "anchoring_urls": {
+      "ucanr_ext": {
+        "url": "https://ipm.ucanr.edu/pdf/pestnotes/pnbirdstreefruitsvines.pdf",
+        "verified": "2026-07-23"
+      }
+    }
+  },
+  "straw_mulch": {
+    "name": "Straw mulch",
+    "tier": "cultural",
+    "applies_to": [
+      "fungal_foliar",
+      "disease_general"
+    ],
+    "how_it_works_beginner": "A layer of straw around and between strawberry plants keeps the ripening berries up off the wet soil. Fruit that is not sitting on damp ground is far less likely to rot with gray mold, and the straw also cuts down on mud splashing onto the fruit.",
+    "how_it_works_seasoned": "A good layer of straw mulch acts as a barrier that reduces fruit contact with the soil, which helps control fruit rots such as gray mold; keeping berries off wet ground and reducing rain and irrigation splash lowers Botrytis pressure. Pair it with wide spacing and restrained nitrogen so the canopy dries quickly.",
+    "best_use": "A foundational cultural step for gray mold and fruit rots on strawberries, laid to keep the berries off the soil and reduce splash, alongside good spacing and airflow.",
+    "pros": [
+      "Keeps fruit off wet soil, which aids greatly in controlling fruit rots such as gray mold",
+      "Reduces rain and irrigation splash and keeps berries cleaner, with no spraying"
+    ],
+    "cons": [
+      "Reduces rather than eliminates fruit rot, so it is one part of the program, not a cure",
+      "Works only alongside wide spacing, good airflow, and restrained nitrogen, since a dense damp canopy still rots"
+    ],
+    "sources": [
+      "ohio_state_ext",
+      "ncsu_ext"
+    ],
+    "anchoring_urls": {
+      "ohio_state_ext": {
+        "url": "https://ohioline.osu.edu/factsheet/plpath-fru-36",
+        "verified": "2026-07-23"
+      },
+      "ncsu_ext": {
+        "url": "https://content.ces.ncsu.edu/gray-mold-or-botrytis-rot-of-strawberry",
+        "verified": "2026-07-23"
+      }
+    }
+  }
+}

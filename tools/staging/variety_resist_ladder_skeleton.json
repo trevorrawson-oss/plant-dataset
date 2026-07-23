@@ -1,0 +1,221 @@
+[
+  {
+    "crop": "apple",
+    "problem_id": "codling-moth",
+    "type": "insect",
+    "methods": [
+      "garden_sanitation",
+      "codling_moth_pheromone_trap",
+      "fruit_bagging",
+      "kaolin_clay",
+      "spinosad",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "apple-maggot",
+    "type": "insect",
+    "methods": [
+      "garden_sanitation",
+      "red_sphere_trap",
+      "fruit_bagging",
+      "kaolin_clay",
+      "spinosad",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "plum-curculio",
+    "type": "insect",
+    "methods": [
+      "garden_sanitation",
+      "kaolin_clay",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "woolly-apple-aphid",
+    "type": "insect",
+    "methods": [
+      "resistant_varieties",
+      "water_spray",
+      "beneficial_predators",
+      "insecticidal_soap",
+      "horticultural_oil"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "apple-scab",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "garden_sanitation",
+      "airflow_spacing",
+      "sulfur"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "fire-blight",
+    "type": "bacterial",
+    "methods": [
+      "resistant_varieties",
+      "garden_sanitation",
+      "prune_out_infection",
+      "copper_fungicide"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "cedar-apple-rust",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "garden_sanitation",
+      "sulfur"
+    ]
+  },
+  {
+    "crop": "apple",
+    "problem_id": "powdery-mildew",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "airflow_spacing",
+      "garden_sanitation",
+      "sulfur"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "slugs",
+    "type": "mollusk",
+    "methods": [
+      "garden_sanitation",
+      "slug_traps_barriers",
+      "iron_phosphate_slug_bait"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "spotted-wing-drosophila",
+    "type": "insect",
+    "methods": [
+      "garden_sanitation",
+      "swd_monitoring_traps",
+      "swd_exclusion_netting",
+      "spinosad",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "tarnished-plant-bug",
+    "type": "insect",
+    "methods": [
+      "garden_sanitation",
+      "beneficial_predators",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "aphids",
+    "type": "insect",
+    "methods": [
+      "balance_nitrogen",
+      "water_spray",
+      "beneficial_predators",
+      "insecticidal_soap",
+      "neem_oil",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "two-spotted-spider-mite",
+    "type": "mite",
+    "methods": [
+      "garden_sanitation",
+      "beneficial_predators",
+      "horticultural_oil",
+      "neem_oil",
+      "sulfur"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "root-crown-weevils",
+    "type": "insect",
+    "methods": [
+      "crop_rotation",
+      "garden_sanitation",
+      "handpick",
+      "beneficial_nematodes",
+      "pyrethroid"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "birds",
+    "type": "vertebrate",
+    "methods": [
+      "bird_scare_deterrents",
+      "bird_netting"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "gray-mold",
+    "type": "fungal",
+    "methods": [
+      "straw_mulch",
+      "airflow_spacing",
+      "garden_sanitation"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "anthracnose",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "straw_mulch",
+      "garden_sanitation",
+      "copper_fungicide"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "powdery-mildew",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "airflow_spacing",
+      "sulfur"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "red-stele",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "crop_rotation"
+    ]
+  },
+  {
+    "crop": "strawberry",
+    "problem_id": "verticillium-wilt",
+    "type": "fungal",
+    "methods": [
+      "resistant_varieties",
+      "crop_rotation",
+      "garden_sanitation"
+    ]
+  }
+]
