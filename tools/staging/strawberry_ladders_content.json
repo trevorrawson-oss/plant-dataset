@@ -1,0 +1,406 @@
+{
+  "pests": [
+    {
+      "id": "slugs",
+      "name": "Slugs",
+      "severity": "medium",
+      "type": "mollusk",
+      "symptoms_seasoned": "Ragged holes chewed in ripe fruit and leaves, with slime trails, worst in damp, heavily mulched beds and wet weather.",
+      "symptoms_beginner": "Ragged holes eaten in the berries and leaves, with shiny slime trails. Worst in damp, mulchy beds and wet weather.",
+      "cause_seasoned": "Slugs, which shelter in deep or wet mulch and feed at night on soft ripe fruit.",
+      "cause_beginner": "Slugs, which hide in damp mulch and eat the soft ripe berries at night.",
+      "prevention_seasoned": "Avoid deep straw mulch during the growing season, keep the bed tidy, and harvest ripe fruit promptly.",
+      "prevention_beginner": "Do not pile on thick straw in summer, keep the bed clean, and pick ripe berries quickly.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Start here: clear away damp hiding places, do not pile on thick straw mulch in summer, and keep the bed tidy so slugs have nowhere cool and wet to shelter by day. Pick ripe berries promptly so there is less soft fruit to draw them.",
+          "note_seasoned": "Removing daytime shelter, avoiding deep summer mulch, and prompt harvest cut the slug population at its source; keep ripening fruit up off wet ground."
+        },
+        {
+          "method": "slug_traps_barriers",
+          "note_beginner": "Hunt slugs after dark with a flashlight and pick them off, set board or beer traps for them to gather in, and ring the bed with copper strips they will not cross. Done regularly, handpicking alone can be very effective.",
+          "note_seasoned": "Nighttime handpicking, board and beer-baited traps, and 2-inch copper barriers steadily lower numbers; empty and refresh traps every few days, and renew copper once it tarnishes."
+        },
+        {
+          "method": "iron_phosphate_slug_bait",
+          "note_beginner": "If traps and cleanup are not enough, scatter iron phosphate slug bait on the soil, not on the plants. It is much safer around pets, kids, and wildlife than the old metaldehyde baits, though slugs take several days to die.",
+          "note_seasoned": "Iron phosphate bait makes slugs stop feeding and is safer around pets and wildlife than metaldehyde; it works best alongside habitat removal, not alone, and takes several days to a week to kill."
+        }
+      ]
+    },
+    {
+      "id": "spotted-wing-drosophila",
+      "name": "Spotted wing drosophila",
+      "severity": "high",
+      "type": "insect",
+      "symptoms_seasoned": "Soft, collapsing spots on ripening and ripe fruit; tiny larvae feed inside berries. Populations build through the season, so later fruit is hit hardest.",
+      "symptoms_beginner": "Soft, sunken spots on ripening berries, with tiny maggots inside. It gets worse later in the season.",
+      "cause_seasoned": "A vinegar fly that lays eggs in coloring fruit; the larvae feed inside as the berry ripens.",
+      "cause_beginner": "A small fruit fly that lays eggs in the berries as they start to color, and the maggots eat the fruit from inside.",
+      "prevention_seasoned": "Harvest on a tight schedule, never leave overripe fruit on the plant, and exclude adults with fine netting where pressure is high.",
+      "prevention_beginner": "Keep up with picking, never leave overripe berries on the plant, and use fine netting if the flies are bad.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Start here: pick all the ripe berries often and completely, and remove and destroy any overripe or damaged fruit. Overripe berries left on the plant are where this fly breeds, so tight, clean picking is your strongest everyday tool.",
+          "note_seasoned": "Frequent, complete harvest and destroying culls removes the ripening fruit SWD breeds in; sanitation is the backbone, since populations build through the season and hit later fruit hardest."
+        },
+        {
+          "method": "swd_monitoring_traps",
+          "note_beginner": "Hang a cup of apple cider vinegar with a drop of dish soap near the berries to catch the flies. It tells you when they have arrived so you can time the other steps; it is a warning tool, not control.",
+          "note_seasoned": "Vinegar traps checked weekly from before ripening detect adult arrival to time harvest and exclusion; monitoring, not control."
+        },
+        {
+          "method": "swd_exclusion_netting",
+          "note_beginner": "Cover the planting with very fine mesh, fine enough to stop no-see-ums, before the first berries start to color, and seal it to the ground. It physically keeps the flies off the fruit.",
+          "note_seasoned": "Fine mesh, about 1 mm, installed before fruit colors and sealed at every edge down to the ground, excludes adult SWD; put it on too late and you trap flies inside with the fruit."
+        },
+        {
+          "method": "spinosad",
+          "note_beginner": "If pressure is high on a later crop, spinosad is the organic spray with the best track record on this fly, but it is hard on bees while wet, so spray at dusk and mind the days-to-harvest on the label.",
+          "note_seasoned": "Spinosad is the most effective organic material against SWD; rotate it to slow resistance, spray at dusk to spare bees, and observe the pre-harvest interval on a crop you pick continuously."
+        },
+        {
+          "method": "pyrethroid",
+          "note_beginner": "A last resort for heavy pressure only. It kills fast but hits bees and beneficials, and on a crop you pick every few days the days-to-harvest limit really matters, so read the label.",
+          "note_seasoned": "Rescue-only; broad-spectrum and disruptive, with a pre-harvest interval that is limiting on continuously harvested strawberries. Time it to dusk, off bloom."
+        }
+      ]
+    },
+    {
+      "id": "tarnished-plant-bug",
+      "name": "Tarnished plant bug (lygus)",
+      "severity": "medium",
+      "type": "insect",
+      "symptoms_seasoned": "Catfaced fruit, dimpled and pinched at the tip with seedy, woody patches; most noticeable on day-neutrals in summer.",
+      "symptoms_beginner": "Lumpy, dented berries with a pinched, seedy tip. Most common on day-neutral plants in summer.",
+      "cause_seasoned": "Lygus bugs feeding on developing flowers and fruit, which disrupts seed and berry development at the tip.",
+      "cause_beginner": "A small bug that feeds on the flowers and young fruit, which makes the berry tip grow lumpy.",
+      "prevention_seasoned": "Control broadleaf weeds that host lygus near the planting and keep the bed clean through the season.",
+      "prevention_beginner": "Pull broadleaf weeds near the bed, since the bugs breed on them, and keep the area tidy.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Start here, and this is the main control: keep broadleaf weeds down in and around the bed, since that is where these bugs breed and shelter. Watch the flowers while fruiting so you catch a buildup early.",
+          "note_seasoned": "Removing the broadleaf weeds that host lygus in and around the planting is the primary lever; scout flowers through fruiting, since the damage that catfaces fruit is done at bloom."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Minute pirate bugs, big-eyed bugs, and parasitic wasps feed on the young bugs, so avoid broad sprays that would kill them. Because lygus fly in from weeds and field edges, though, natural enemies only help so much on their own.",
+          "note_seasoned": "Conserving natural enemies gives partial suppression, but lygus are mobile and reinvade from surrounding vegetation, so biological control is a supporting step, not a standalone fix; weed sanitation matters more."
+        },
+        {
+          "method": "pyrethroid",
+          "note_beginner": "Only if the bugs are ruining a lot of fruit and weeding has not been enough. A fast synthetic that also kills bees and beneficials, so keep it off flowers and treat it as a last resort.",
+          "note_seasoned": "Rescue-only; broad-spectrum and disruptive to the natural enemies above, with a label pre-harvest interval. Lygus are only moderately susceptible, so it does not substitute for weed control."
+        }
+      ]
+    },
+    {
+      "id": "aphids",
+      "name": "Aphids",
+      "severity": "low",
+      "type": "insect",
+      "symptoms_seasoned": "Clusters of small soft-bodied insects on new growth and leaf undersides, with sticky honeydew and sometimes sooty mold; aphids can also transmit strawberry viruses.",
+      "symptoms_beginner": "Groups of tiny soft bugs on new leaves and leaf undersides, leaving a sticky film. They can also spread plant viruses.",
+      "cause_seasoned": "Aphids feeding on plant sap, building up quickly on tender new growth.",
+      "cause_beginner": "Aphids, tiny bugs that suck plant juices and multiply fast on new leaves.",
+      "prevention_seasoned": "Start with clean, certified plants to limit virus introduction, and avoid excess nitrogen that flushes soft, aphid-prone growth.",
+      "prevention_beginner": "Start with clean plants, and do not over-feed, since lots of soft new growth attracts aphids.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Start here: do not overfeed. Too much nitrogen pushes out soft new growth that aphids multiply on, so feed modestly. Starting with clean, certified plants also limits the viruses aphids can spread.",
+          "note_seasoned": "Modest nitrogen keeps growth steady and less aphid-prone; clean certified stock limits virus introduction, since aphids also vector strawberry viruses."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "A strong jet of water knocks aphids off the leaves, and most cannot climb back on. Do it early in the day so the leaves dry quickly.",
+          "note_seasoned": "A forceful spray dislodges colonies from sturdy plants; spray early so foliage dries and disease is not encouraged."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Ladybugs, lacewings, and tiny parasitic wasps eat aphids and usually keep them in check for free. Protect them by not reaching for broad sprays.",
+          "note_seasoned": "Resident ladybugs, lacewings, syrphid larvae, and parasitic wasps hold aphids down; avoiding broad-spectrum sprays and managing the ants that tend them is what keeps them working."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "For a heavy infestation, insecticidal soap kills the aphids you spray directly. It only works while wet, so coat them well, and it spares beneficials once dry.",
+          "note_seasoned": "Contact soap smothers aphids with no residual, so coverage and repeat sprays matter; it spares dry-surface beneficials."
+        },
+        {
+          "method": "neem_oil",
+          "note_beginner": "Neem oil is another low-residue option that coats and disrupts aphids. Do not spray it in heat above 90°F or on a drought-stressed plant, and spray at dusk to avoid wetting bees.",
+          "note_seasoned": "Neem works by contact smothering and as an antifeedant and growth regulator; low toxicity to bees but, as a contact spray, apply at dusk. Avoid above 90°F or on stressed plants."
+        },
+        {
+          "method": "pyrethroid",
+          "note_beginner": "Rarely needed for aphids, and a last resort only. It kills fast but hits the ladybugs and other good bugs too, which can make aphids worse later, so keep it off flowers.",
+          "note_seasoned": "Rescue-only and usually counterproductive on aphids, since it removes the natural enemies that regulate them and can trigger resurgence. Observe the label pre-harvest interval."
+        }
+      ]
+    },
+    {
+      "id": "two-spotted-spider-mite",
+      "name": "Two-spotted spider mite",
+      "severity": "medium",
+      "type": "mite",
+      "symptoms_seasoned": "Fine stippling and bronzing of leaves with faint webbing on undersides, worst in hot, dry, dusty conditions; heavy infestations weaken plants and reduce yield.",
+      "symptoms_beginner": "Leaves look speckled and bronzed, with fine webbing underneath. Worst in hot, dry, dusty weather, and bad cases weaken the plants.",
+      "cause_seasoned": "Tiny mites that feed on the underside of leaves and multiply rapidly in hot, dry weather.",
+      "cause_beginner": "Tiny mites under the leaves that multiply fast when it is hot and dry.",
+      "prevention_seasoned": "Avoid drought stress and dusty conditions, and keep plants well watered in heat.",
+      "prevention_beginner": "Keep plants watered in hot weather and avoid letting them get dusty and dry.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Start here: keep plants well watered, since spider mites flare on hot, dry, drought-stressed plants, and knock the mites back with a hard spray of water to the leaf undersides, which also raises the humidity they dislike. Keeping the bed from getting dusty helps too.",
+          "note_seasoned": "Mites explode on drought-stressed, dusty plants, so steady watering is preventive; a forceful water spray to leaf undersides dislodges them and raises humidity. This foundation often keeps mites below the threshold that needs any spray."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Predatory mites and other tiny good bugs feed on spider mites and often control them on their own. Avoid broad sprays, including too much sulfur, that would kill these helpers.",
+          "note_seasoned": "Predatory mites are the key natural enemy; conserve them by avoiding broad-spectrum sprays and sulfur, which set them back."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "For a bad case, horticultural oil smothers the mites on contact. Cover the leaf undersides well, and do not spray in heat above 90°F or on a drought-stressed plant.",
+          "note_seasoned": "Narrow-range oil knocks mites back by smothering; coverage of leaf undersides is everything. Avoid above 90°F, on stressed plants, or within 30 days of sulfur."
+        },
+        {
+          "method": "neem_oil",
+          "note_beginner": "Neem oil is another contact option that coats and disrupts the mites. Same rules: thorough coverage, not in high heat, and spray at dusk to avoid bees.",
+          "note_seasoned": "Neem gives partial mite control by contact and as a growth disruptor; repeat coverage is needed, and avoid high heat and stressed plants."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "Sulfur is a last resort here. It does knock back spider mites, but it also harms the predatory mites that were helping you, so use it only if the softer steps have failed, and never in heat above 90°F.",
+          "note_seasoned": "Sulfur is a protectant miticide but harms predatory mites, so it can trade a short knockdown for lost biological control; reserve it, keep a 2-week gap from any oil spray, and avoid above 90°F."
+        }
+      ]
+    },
+    {
+      "id": "root-crown-weevils",
+      "name": "Root and crown weevils (black vine weevil)",
+      "severity": "medium",
+      "type": "insect",
+      "symptoms_seasoned": "Notched leaf margins from night-feeding adults, and stunted, wilting, or collapsing plants whose roots and crowns have been eaten by larvae.",
+      "symptoms_beginner": "Leaf edges notched as if cut with pinking shears, and plants that wilt or collapse because grubs have eaten the roots and crown.",
+      "cause_seasoned": "Weevils whose adults notch leaves at night and whose larvae feed underground on roots and crowns.",
+      "cause_beginner": "Beetles whose adults chew the leaf edges at night and whose grubs eat the roots underground.",
+      "prevention_seasoned": "Rotate to a fresh site when starting a new bed, since larvae build up in older plantings, and start with clean stock.",
+      "prevention_beginner": "Start new beds in a fresh spot, since the grubs build up in old beds, and use clean plants.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Start a new bed in a fresh spot away from old strawberry plantings, since the grubs build up in beds over the years. Begin with clean, healthy plants so you are not importing them.",
+          "note_seasoned": "Siting a new planting away from older, infested beds starves the soil larvae, which build up over successive years; start with clean stock."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull and destroy badly infested plants in the fall, when the grubs are feeding on the roots and crown, so they do not carry over.",
+          "note_seasoned": "Removing and destroying heavily infested plants in fall reduces the overwintering larval population."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "On warm evenings the adult weevils come out to feed and notch the leaf edges. Go out with a flashlight and pick them off, since they cannot fly and are easy to catch by hand.",
+          "note_seasoned": "The flightless adults feed at night; handpicking or shaking them onto a cloth after dark removes egg-laying females before the next generation of root-feeding larvae."
+        },
+        {
+          "method": "beneficial_nematodes",
+          "note_beginner": "Beneficial nematodes are microscopic good worms you water into moist, warm soil. They hunt the grubs underground and are safe for people and pets.",
+          "note_seasoned": "Entomopathogenic nematodes drenched into moist soil at roughly 60°F to 90°F infect the root-feeding larvae; time it to when larvae are present and keep the soil moist."
+        },
+        {
+          "method": "pyrethroid",
+          "note_beginner": "A last resort, and only against the adult beetles at night, since sprays cannot reach the grubs down in the soil. It hits bees and beneficials, so keep it off flowers and use it sparingly.",
+          "note_seasoned": "Rescue-only and limited to adults, since foliar sprays do not reach soil larvae; broad-spectrum and disruptive, with a label pre-harvest interval. Nematodes are the better tool for the root-feeding stage."
+        }
+      ]
+    },
+    {
+      "id": "birds",
+      "name": "Birds",
+      "severity": "medium",
+      "type": "vertebrate",
+      "symptoms_seasoned": "Pecked and partly eaten ripe berries, often the first fully colored fruit taken just before you would pick it.",
+      "symptoms_beginner": "Ripe berries pecked or half-eaten, often the best red ones taken right before you pick them.",
+      "cause_seasoned": "Birds attracted to ripening red fruit.",
+      "cause_beginner": "Birds that go for the ripe red berries.",
+      "prevention_seasoned": "Net the planting before the first fruit ripens rather than after birds find it.",
+      "prevention_beginner": "Put netting on before the first berries ripen, not after the birds have already found them.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "bird_scare_deterrents",
+          "note_beginner": "Shiny, moving, or noisy things like reflective tape and scare-eye balloons can frighten birds off for a while, but birds get used to them fast, so move them around and swap types at least weekly. On their own they do not reliably protect the fruit.",
+          "note_seasoned": "Visual and noise deterrents reduce pressure but birds habituate; rotate device types and do not leave one combination up more than a week. Best paired with netting, not relied on alone."
+        },
+        {
+          "method": "bird_netting",
+          "note_beginner": "The reliable fix is bird netting draped over hoops so it sits off the berries, with the edges tucked to the ground so birds cannot get underneath. Put it on before the first berries ripen, not after the birds have found the patch.",
+          "note_seasoned": "Netting on a hoop or PVC frame excludes birds; laid straight on the plants they still peck through it, so support it off the canopy, extend it to the ground, and tie the edges. Install before the first fruit colors."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "gray-mold",
+      "name": "Gray mold (Botrytis fruit rot)",
+      "severity": "high",
+      "type": "fungal",
+      "symptoms_seasoned": "A soft, tan rot of green and ripe fruit that quickly becomes a fuzzy gray mold, often starting where berries touch soil, mulch, or another berry. It spreads fast through a picked basket.",
+      "symptoms_beginner": "Berries turn soft and rot, then grow a gray fuzz. It often starts where a berry touches the ground or another berry, and spreads quickly.",
+      "cause_seasoned": "The fungus Botrytis cinerea, which overwinters on dead leaves and thrives when it rains during bloom and fruit development.",
+      "cause_beginner": "A mold that lives on old dead leaves and takes hold when it is wet while the plants are flowering and fruiting.",
+      "prevention_seasoned": "Avoid spring nitrogen on June-bearers, which thickens the canopy and traps moisture. Water at the base rather than overhead, space plants for airflow, and pick fruit promptly and often.",
+      "prevention_beginner": "Do not feed June-bearing plants in spring, since extra leaves trap dampness. Water at the soil, give plants room to breathe, and pick ripe berries often.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "straw_mulch",
+          "note_beginner": "Start here: lay straw around and between the plants so the ripening berries sit up off the wet soil. Fruit that is not touching damp ground is far less likely to rot with gray mold.",
+          "note_seasoned": "A good straw layer keeps fruit off wet soil and cuts rain splash, lowering Botrytis pressure; a foundational cultural step, though it reduces rather than eliminates rot."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give plants room and water at the soil rather than overhead so the canopy dries quickly. Gray mold takes hold in damp, crowded, still foliage.",
+          "note_seasoned": "Wide spacing and base watering shorten leaf and fruit wetness, denying Botrytis the sustained moisture it needs; an open canopy dries fast after rain."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off and destroy moldy berries the moment you see them, since the mold spreads fast from one berry to the next, and clear away old dead leaves where it overwinters. Go easy on spring nitrogen, especially on June-bearers, since the extra soft leaves thicken the canopy and trap the dampness the mold loves.",
+          "note_seasoned": "Remove infected fruit immediately and clean out old leaves at renovation and early spring; avoid spring nitrogen on June-bearers, which thickens the canopy and traps moisture. There is no home spray that cures it, so these cultural steps are the whole program."
+        }
+      ]
+    },
+    {
+      "id": "anthracnose",
+      "name": "Anthracnose fruit rot",
+      "severity": "medium",
+      "type": "fungal",
+      "symptoms_seasoned": "Dark, sunken, circular lesions on fruit; the fungus can also infect crowns and runners, causing wilting and plant death in warm, wet spells.",
+      "symptoms_beginner": "Dark, sunken round spots on the berries. The disease can also rot the crown and runners, making plants wilt and die in warm, wet weather.",
+      "cause_seasoned": "Colletotrichum fungi, favored by warm, humid, rainy conditions during fruit development and spread by splashing water.",
+      "cause_beginner": "A fungus that thrives in warm, wet, humid weather and splashes around in the rain.",
+      "prevention_seasoned": "Start with certified disease-free plants, avoid overhead watering, and do not plant into ground with a recent history of the disease.",
+      "prevention_beginner": "Buy clean, certified plants, water at the base, and avoid spots where this disease has been a problem before.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Start with clean, certified disease-free plants and, where anthracnose has been a problem, choose a resistant variety. Do not plant into ground with a recent history of the disease.",
+          "note_seasoned": "Certified clean stock and resistant cultivars are the foundation, since the fungus arrives on infected transplants and persists in old sites; avoid replanting into a recent-history bed."
+        },
+        {
+          "method": "straw_mulch",
+          "note_beginner": "Lay straw mulch to keep berries off the soil and cut down on rain splashing spores up onto the fruit, which is how this disease spreads.",
+          "note_seasoned": "Mulch reduces the rain and irrigation splash that disperses Colletotrichum spores; water at the base rather than overhead."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull off and destroy diseased berries and plants promptly, and give plants room so the canopy dries. Watering at the soil instead of overhead keeps spores from splashing around.",
+          "note_seasoned": "Prompt removal of diseased fruit and plants lowers inoculum; base watering and airflow limit the warm, wet, splashing conditions the fungus needs."
+        },
+        {
+          "method": "copper_fungicide",
+          "note_beginner": "If the cultural steps are not holding in a warm, wet season, a copper spray can protect healthy fruit, but it must go on before infection and cannot cure berries already rotting. Copper is toxic to fish and builds up in the soil, so use it sparingly.",
+          "note_seasoned": "Fixed copper is a protectant only, applied before infection during warm wet spells; it will not cure established rot. Copper accumulates in soil and harms aquatic life, so limit repeat use."
+        }
+      ]
+    },
+    {
+      "id": "powdery-mildew",
+      "name": "Powdery mildew",
+      "severity": "low",
+      "type": "fungal",
+      "symptoms_seasoned": "Upward cupping and purpling of leaf edges with a white powdery film; in some cultivars infected fruit tastes bitter.",
+      "symptoms_beginner": "Leaf edges curl upward and turn purple, with a white dusty coating. In some varieties the berries taste bitter.",
+      "cause_seasoned": "A fungus that, unlike most strawberry diseases, spreads in dry conditions with high humidity and moderate temperatures.",
+      "cause_beginner": "A fungus that spreads when the air is humid but the leaves are dry.",
+      "prevention_seasoned": "Space plants well, avoid dense canopies, and select tolerant cultivars.",
+      "prevention_beginner": "Give plants room, keep them from getting crowded, and choose mildew-resistant varieties.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "The easiest fix is to grow a mildew-resistant variety, especially if it keeps coming back or if it makes your berries taste bitter.",
+          "note_seasoned": "Cultivar resistance varies widely and is the lowest-effort durable control; worth choosing where mildew recurs, since some cultivars also develop off-flavored fruit."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give plants room and keep the canopy from getting crowded. Unlike most strawberry diseases, mildew spreads when the air is humid even if the leaves stay dry, so airflow still helps. Pick off the worst-affected leaves.",
+          "note_seasoned": "Wide spacing and an open canopy lower the humidity mildew favors, since it spreads in dry-leaf, high-humidity conditions; remove badly affected leaves."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "If mildew is heavy, sulfur is the organic spray, applied before it takes hold. Some strawberry varieties are sensitive to it, so test a few plants first, and never spray in heat above 90°F.",
+          "note_seasoned": "Sulfur is a protectant for powdery mildew, but some strawberry cultivars are sulfur-sensitive, so spot-test first; avoid above 90°F and within 2 weeks of oil, and note it harms predatory mites."
+        }
+      ]
+    },
+    {
+      "id": "red-stele",
+      "name": "Red stele (Phytophthora root rot)",
+      "severity": "medium",
+      "type": "fungal",
+      "symptoms_seasoned": "Stunted, wilting plants that collapse in spring; roots are rotted and, when sliced lengthwise, show a reddish-brown core. Worst in heavy, wet, poorly drained soil.",
+      "symptoms_beginner": "Plants are stunted and wilt, then collapse in spring. If you cut a root open, the center is reddish-brown. It is worst in heavy, wet soil that drains poorly.",
+      "cause_seasoned": "Soilborne Phytophthora fungi that thrive in cold, saturated soils and persist for years.",
+      "cause_beginner": "A soil fungus that builds up in cold, soggy ground and stays in the soil for years.",
+      "prevention_seasoned": "Plant only in well-drained soil or raised beds, start with certified plants, and choose red-stele-resistant cultivars on wet sites.",
+      "prevention_beginner": "Plant in well-drained soil or raised beds, buy certified plants, and pick resistant varieties if your ground stays wet.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "This is a soilborne rot with no home cure, so prevention is everything. On wet ground, the single most important choice is a red-stele-resistant variety, and always start with certified disease-free plants.",
+          "note_seasoned": "Red-stele-resistant cultivars are the primary control for a soilborne Phytophthora that persists for years and cannot be cured; pair with certified clean stock."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Plant only in well-drained soil or raised beds, since this rot thrives in cold, soggy ground, and do not replant strawberries into a bed where it has struck, because the fungus lingers in the soil for years. Pull and destroy any collapsing plants.",
+          "note_seasoned": "Improve drainage with raised beds and rotate off infested ground for years, since the pathogen is soilborne and persistent; there is no chemical rescue, so remove and destroy affected plants. Drainage, a fresh well-drained site, and resistant varieties are the whole game."
+        }
+      ]
+    },
+    {
+      "id": "verticillium-wilt",
+      "name": "Verticillium wilt",
+      "severity": "medium",
+      "type": "fungal",
+      "symptoms_seasoned": "Outer leaves wilt, dry at the margins, and collapse while inner leaves may stay upright; plants are stunted and may die. Symptoms often appear as fruit load increases.",
+      "symptoms_beginner": "The outer leaves wilt, dry at the edges, and flop down while the middle leaves stay up. Plants are stunted and may die, often as the berries are forming.",
+      "cause_seasoned": "The soilborne fungus Verticillium, which also infects tomatoes, peppers, eggplant, potatoes, and brambles and persists in soil for years.",
+      "cause_beginner": "A soil fungus that also attacks tomatoes, peppers, potatoes, and other berries, and stays in the soil for years.",
+      "prevention_seasoned": "Do not plant strawberries after or near tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries, and start with certified disease-free stock on a clean site.",
+      "prevention_beginner": "Do not plant strawberries where you recently grew tomatoes, peppers, potatoes, or other berries, and start with certified clean plants.",
+      "audience": "core",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "There is no cure once a plant wilts, so it comes down to variety and site. Choose a verticillium-resistant strawberry variety and start with certified disease-free plants.",
+          "note_seasoned": "Resistant cultivars and certified clean stock are the primary controls for a soilborne fungus with no rescue treatment; variety choice does much of the work."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Do not plant strawberries where you recently grew tomatoes, peppers, eggplant, potatoes, raspberries, or blackberries, since verticillium builds up on all of them and lingers in the soil for years. Pick a clean site with no recent history.",
+          "note_seasoned": "The fungus infects many hosts, including tomato, pepper, eggplant, potato, and brambles, and persists for years, so rotate onto ground clear of those crops; site choice is the main lever."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull and destroy plants as they wilt, so they do not add to what is in the soil, and keep the bed clean.",
+          "note_seasoned": "Removing affected plants limits soil buildup; there is no spray, so sanitation supports the rotation and variety program rather than curing anything."
+        }
+      ]
+    }
+  ]
+}
