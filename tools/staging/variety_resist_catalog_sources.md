@@ -5,23 +5,32 @@ All claims trace to a real, fetched Tier-1 extension page (verified `2026-07-23`
 methods referenced by the ladder skeleton keep their own pre-existing sources and are not restated here.
 
 ## Source-catalog status
-- **All cited source ids are already catalogued and T1** except one addition needed for the
+- **All cited source ids are already catalogued and T1** except two additions needed for the
   Task 9 build:
   - **`ohio_state_ext`** -- Ohio State University Extension (Ohioline), T1. Needed to anchor
     `straw_mulch` to the OSU Ohioline Botrytis factsheet (the only fetched page that names *straw*
     mulch specifically; `osu_ext` in the catalog is *Oregon* State, a different institution, so it
     cannot be reused). URL: https://ohioline.osu.edu/factsheet/plpath-fru-36
+  - **`ucanr_ext_woolly_apple_aphid`** -- UC IPM home Woolly Apple Aphid, a page sub-id under the
+    already-catalogued T1 parent `ucanr_ext` (tier inherited, per the `umn_ext_broccoli` precedent).
+    Added by the fidelity-review IMPORTANT fix to give `horticultural_oil`'s aphid claims an in-object
+    anchor distinct from the pn7405 spider-mite page. URL:
+    https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/PESTS/woolyapaph.html
 - Reused catalogued ids: `ucanr_ext` (UC ANR / UC IPM), `ext_org_apples` (apples.extension.org),
-  `psu_ext` (Penn State Extension), `ncsu_ext` (NC State Extension).
+  `psu_ext` (Penn State Extension), `ncsu_ext` (NC State Extension), `umn_ext` (UMN Extension --
+  fidelity-review CRITICAL fix, anchors `fruit_bagging`'s apple-maggot claim), `msu_ext` (MSU
+  Extension -- fidelity-review CRITICAL fix, anchors `swd_exclusion_netting`'s mesh-size + sealing
+  claims).
 
 ---
 
 ## fruit_bagging (physical)
-- **Source:** `ucanr_ext` -- UC IPM Pest Notes 7412, Codling Moth. https://ipm.ucanr.edu/PMG/PESTNOTES/pn7412.html
+- **Source (codling moth):** `ucanr_ext` -- UC IPM Pest Notes 7412, Codling Moth. https://ipm.ucanr.edu/PMG/PESTNOTES/pn7412.html
+- **Source (apple maggot):** `umn_ext` -- UMN Extension, Apple maggot. https://extension.umn.edu/yard-and-garden-insects/apple-maggot
 - pro "excellent, spray-free control ... effective enough to use on its own" <- "Excellent control can be achieved by enclosing young fruit in bags"; "the only nonchemical control method that is effective enough to be used alone and in higher population situations."
-- how/best_use timing (4-6 weeks after bloom, 1/2 to 1 inch, one fruit per cluster, slit + staple) <- page's bagging instructions.
+- how/best_use timing (4-6 weeks after bloom, 1/2 to 1 inch, one fruit per cluster, slit + staple) <- pn7412 bagging instructions.
 - con "very time consuming" <- "quite time consuming"; con "red varieties may not color up ... short-stemmed varieties are hard to bag" <- "Red varieties won't develop full color" and Gravenstein's "very short stems" make bagging difficult.
-- Excludes apple maggot as well as codling moth: the same paper-bag exclusion is the standard apple-maggot home tactic (corroborated in the apple-maggot search set); the primary numeric claims are all pn7412.
+- Excludes apple maggot as well as codling moth: NOW ANCHORED to the fetched UMN Extension apple maggot page (verified 2026-07-23), which describes enclosing each apple in a bag and states "the apples are protected from apple maggots for the rest of the season." (Fidelity-review CRITICAL fix: pn7412 does not mention apple maggot; umn_ext supplies the in-object apple-maggot anchor, so the claim is kept.)
 
 ## kaolin_clay (physical)
 - **Source:** `ext_org_apples` -- Apples/Cooperative Extension, "Can kaolin clay sprays reduce insect damage to apple fruit?" https://apples.extension.org/can-kaolin-clay-sprays-reduce-insect-damage-to-apple-fruit/
@@ -42,13 +51,14 @@ methods referenced by the ladder skeleton keep their own pre-existing sources an
 - how_it_works "red sphere baited with an apple volatile mimics fruit, catches egg-laying females on glue" <- page's trap description.
 - pro/best_use "trap-out at ~1 per 100 to 150 fruit from mid-June can serve as a control measure in small plantings" <- "Baited red spheres hung at a rate of 1 per 100 to 150 fruit are used to trap out females ..."; "can serve as a control measure for apple maggots in small plantings"; deploy "in mid-June."
 - con "must be serviced through the season" <- monitoring guidance ("monitored twice a week").
+- Fidelity-review MINOR fix: how_it_works_seasoned and find_it_beginner reworded from "increase spheres with tree size" / "the number the label suggests for your tree size" to the source's actual fruit-count rate ("one per 100 to 150 fruit"), since the page gives a fruit-count basis, not tree-size guidance.
 
 ## horticultural_oil (soft_chemical)
 - **Source:** `ucanr_ext` -- UC IPM Pest Notes 7405, Spider Mites (anchor). https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html
 - how/pro "smothers soft-bodied insects and mites on contact; coverage essential" <- "insecticidal soap or insecticidal oil" incl. "petroleum-based horticultural oils"; "Oils and soaps must contact mites to kill them, so excellent coverage, especially on the undersides of leaves, is essential."
 - caution ">90°F / stressed plants" <- "Don't use soaps or oils on water-stressed plants or when temperatures exceed 90°F."
 - caution "no sulfur within 30 days of an oil spray" <- "don't apply sulfur within 30 days of an oil spray."
-- **Corroborating (used only for the woolly-apple-aphid ladder, not the method anchor):** UC IPM home Woolly Apple Aphid, https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/PESTS/woolyapaph.html -- "During the growing season horticultural oil or insecticidal soap can be sprayed to thoroughly cover infested plant parts. These sprays can provide partial control" (supports the con "only partial control of well-protected pests").
+- **Source (aphids), NOW an in-object anchor:** `ucanr_ext_woolly_apple_aphid` (sub-id under `ucanr_ext`, T1 inherited) -- UC IPM home Woolly Apple Aphid, https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/PESTS/woolyapaph.html -- fetched + verified 2026-07-23: "During the growing season horticultural oil or insecticidal soap can be sprayed to thoroughly cover infested plant parts. These sprays can provide partial control." Anchors the soft-bodied-insect / aphid / "partial control" claims (applies_to insect_soft_bodied, best_use "aphids", how_it_works_seasoned "partial control of aphids such as woolly apple aphid", pro "soft-bodied insects and spider mites"). (Fidelity-review IMPORTANT fix: the aphid rationale previously rested only on pn7405, the spider-mite page, which never mentions aphids; woolyapaph.html is now listed on the method so every claim carries an in-object anchor.)
 - NOTE: I deliberately did NOT claim dormant-season / overwintering-egg control, because none of the pages I fetched stated it in verifiable wording. (This is why the separate `dormant_oil` candidate was dropped -- see report.)
 
 ## prune_out_infection (physical)
@@ -72,9 +82,11 @@ methods referenced by the ladder skeleton keep their own pre-existing sources an
 
 ## swd_exclusion_netting (physical)
 - **Source:** `ucanr_ext` -- UC IPM Home & Landscape, Spotted-Wing Drosophila. https://ipm.ucanr.edu/home-and-landscape/spotted-wing-drosophila/
-- how/pro "fine ~0.98 mm mesh (no-see-um grade) excludes adult SWD" <- "0.98 mm mesh used for screening out no-see-um flies."
+- **Source (mesh size + sealing):** `msu_ext` -- MSU Extension, "Spotted wing Drosophila: A serious pest for the home gardener." https://www.canr.msu.edu/news/spotted_wing_drosophila_a_serious_pest_for_the_home_gardener -- fetched + verified 2026-07-23: "netting with 1-millimeter (0.03125 inch) mesh can be employed to help protect fruits from SWD. To be effective, the netting must completely cover the plants and be sealed to the surface of the ground."
+- how/pro "fine ~0.98 to 1 mm mesh (no-see-um grade) excludes adult SWD" <- ucanr "0.98 mm mesh used for screening out no-see-um flies" + msu "1-millimeter ... mesh."
 - con "must be on before fruit ripens" <- "netting must be applied before fruit begins to ripen so that flies will not be caught inside."
-- con "mesh touching the berry lets flies lay through it" <- guidance to drape so netting does not contact fruit (from the same SWD coverage).
+- how/con "must completely cover the planting and be sealed at every edge, down to the ground" <- ucanr "Netting must be secured so flies cannot enter" + msu "must completely cover the plants and be sealed to the surface of the ground."
+- Fidelity-review CRITICAL fix: the original "drape it so it does not touch the fruit, since flies can lay through mesh pressed against a berry" / con "the net must be held off the fruit" clause was NOT on the cited UC IPM page. It was also absent from the fetched UMN (extension.umn.edu/yard-and-garden-insects/spotted-wing-drosophila) and MSU home-gardener pages. No fetched T1 page states the keep-net-off-fruit / lay-through-contact detail in verifiable wording, so the specific clause was DROPPED; the retained mesh-size, before-ripening, and complete-cover/edge-seal claims are all anchored to ucanr + msu.
 
 ## swd_monitoring_traps (physical)
 - **Source:** `ucanr_ext` -- UC IPM Home & Landscape, Spotted-Wing Drosophila. https://ipm.ucanr.edu/home-and-landscape/spotted-wing-drosophila/
