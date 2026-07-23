@@ -81,7 +81,7 @@ in control_ladder_gate (cosmetic); all_violations composition is now exercised b
 `docs/superpowers/{specs,plans}/2026-07-22-pest-ipm-ladder-*`; ledger `.superpowers/sdd/progress.md`; catalog
 provenance `tools/staging/pest_pilot_catalog_sources.md`; horticulture/fidelity reviews inline (this notes
 dir). >> **PEST/IPM PILOT SHIPPED -- 119 certified / 128 total** (new gate + new fields, no cert-count
-change). << COMMITTED, UNPUSHED (Trevor confirms push).
+change). << PUSHED origin/main `f4246c6` 2026-07-22 (joint coordinated push with the Utah Dixie region).
 
 ## 2026-07-22 -- UTAH DIXIE HIGH-DESERT REGION SHIPPED (roadmap item 11)
 
