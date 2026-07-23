@@ -28,6 +28,7 @@ TYPE_TARGETS = {
     "viral":         {"viral", "disease_general"},
     "physiological": {"physiological"},
     "nematode":      {"nematode"},
+    "vertebrate":    {"vertebrate"},
 }
 UNIVERSAL_TARGET = "any"   # cultural/physical practices that apply broadly
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")

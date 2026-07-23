@@ -100,3 +100,18 @@ cov = coverage_report({
 })
 assert cov == {"catalog_methods": 2, "certified_crops": 1, "problems_on_certified": 1, "problems_with_ladder": 1}, cov
 print("identity + coverage tests: OK")
+
+# --- vertebrate type (strawberry Birds): bird exclusion is coherent, insecticide is not ---
+_vcat = {
+    "bird_netting": method(name="Bird netting", tier="physical", applies_to=["vertebrate"]),
+    "pyrethrin":    method(name="Pyrethrin", tier="conventional", applies_to=["insect_general"]),
+}
+_birds_ok = prob(id="birds", name="Birds", type="vertebrate",
+                 control_ladder=[{"method": "bird_netting"}])
+_birds_bad = prob(id="birds", name="Birds", type="vertebrate",
+                  control_ladder=[{"method": "pyrethrin"}])
+# coherent: netting applies to vertebrates
+assert ladder_violations(data(_vcat, [crop([_birds_ok])]), crop([_birds_ok])) == []
+# incoherent: an insecticide does not apply to a vertebrate
+assert any("applies_to" in v for v in
+           ladder_violations(data(_vcat, [crop([_birds_bad])]), crop([_birds_bad])))
