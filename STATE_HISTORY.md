@@ -6,6 +6,10 @@
 
 ---
 
+## 2026-07-23 -- ARTICHOKE CATEGORY CORRECTION (Fruit -> Fruiting Veg)
+
+Trevor flagged artichoke mis-categorized as `Fruit`. Artichoke is the immature flower bud of a thistle -- a vegetable -- and the `Fruit` bucket held only strawberry + artichoke. Corrected `category:"Fruit"` -> `"Fruiting Veg"`, joining asparagus (the closest perennial specialty-vegetable analog; bucket also holds eggplant/tomatillo/okra); the odd 2-crop Fruit bucket is now strawberry-only. Artichoke is one of the 9 uncertified SHELLS -- NOT a cert change, NO new field, NO new gate. Surgical compact-JSON edit (parse -> mutate the single crop -> re-dump `separators=(",",":")` `ensure_ascii=False`, no reformat): canonical `e7fdb15e` -> `7b1aa59d`, delta EXACTLY +7 bytes, every other byte identical (verified: first divergence at the artichoke `category` value, tails byte-match after a +7 offset). GATES: `gate_all` 119/119 PASS (certified roster unaffected -- artichoke uncertified), `release_verify` clean (only the 4 documented non-blocking Step-5 pause-legibility notes). Count 128 / 119 certified unchanged. State bookkeeping: LATEST.txt bumped; CURRENT_STATE headline left as-is (lean surface -- roster + counts unmoved by a shell-category swap). COMMITTED, UNPUSHED (Trevor confirms push); NO plant-astro bump from this session (astro submodule bump is the website lane, Trevor's call). Prior steps below.
+
 ## 2026-07-22 -- PEST/IPM CONTROL-LADDER PILOT SHIPPED (field-addition register row 23)
 
 Canonical `2c98dd2b` -> `4f7789aa` via 3 SHA-guarded splices layered directly on the Utah Dixie state:
