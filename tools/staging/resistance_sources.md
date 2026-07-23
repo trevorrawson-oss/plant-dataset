@@ -75,23 +75,29 @@ Legend shorthand below: DB = Cornell Apple Variety Database; Khan = Cornell Khan
 Purdue = BP-132-W; UMN = UMN apple-scab page.
 
 ## dorsett-golden
-- **apple-scab: susceptible** <- DB row "Dorsett Golden | Susceptible [fire blight] | Susceptible
-  [apple scab] | (blank) | (blank)"; Khan lists Dorsett Golden under "Susceptible."
-- **fire-blight: susceptible** <- DB row, fire-blight cell "Susceptible" (single-source, DB only).
-- Undocumented (omitted): cedar-apple-rust, powdery-mildew (DB cells blank; Purdue does not list this
-  low-chill cultivar).
+- **apple-scab: susceptible** <- DB row "Dorsett Golden | (blank fire blight) | Susceptible
+  [apple scab] | (blank) | (blank) | Susceptible [leaf spots]"; Khan lists Dorsett Golden under
+  "Susceptible."
+- Undocumented (omitted): fire-blight, cedar-apple-rust, powdery-mildew (DB fire-blight,
+  cedar-apple-rust, and powdery-mildew cells are all blank; Khan fire-blight page does not list Dorsett
+  Golden; Purdue does not list this low-chill cultivar). The earlier "Susceptible" fire-blight grade
+  misread the adjacent apple-scab/leaf-spots "Susceptible" into the blank fire-blight cell.
 
 ## anna
-- **apple-scab: susceptible** <- DB row "Anna | Susceptible | Susceptible | (blank) | (blank)"; Khan
-  lists Anna under "Susceptible."
-- **fire-blight: susceptible** <- DB fire-blight cell "Susceptible" (DB only).
-- Undocumented (omitted): cedar-apple-rust, powdery-mildew (DB blank; not in Purdue).
+- **apple-scab: susceptible** <- DB row "Anna | (blank fire blight) | Susceptible [apple scab] |
+  (blank) | (blank) | Susceptible [leaf spots]"; Khan lists Anna under "Susceptible."
+- Undocumented (omitted): fire-blight, cedar-apple-rust, powdery-mildew (DB fire-blight,
+  cedar-apple-rust, and powdery-mildew cells are all blank; Khan fire-blight page does not list Anna;
+  not in Purdue). The earlier "Susceptible" fire-blight grade misread the neighboring "Susceptible" into
+  the blank fire-blight cell.
 
 ## ein-shemer
-- **apple-scab: susceptible** <- DB row "Ein Shemer | Susceptible | Susceptible | (blank) | (blank)";
-  Khan lists Ein Shemer under "Susceptible."
-- **fire-blight: susceptible** <- DB fire-blight cell "Susceptible" (DB only).
-- Undocumented (omitted): cedar-apple-rust, powdery-mildew (DB blank; not in Purdue).
+- **apple-scab: susceptible** <- DB row "Ein Shemer | (blank fire blight) | Susceptible [apple scab] |
+  (blank) | (blank) | Susceptible [leaf spots]"; Khan lists Ein Shemer under "Susceptible."
+- Undocumented (omitted): fire-blight, cedar-apple-rust, powdery-mildew (DB fire-blight,
+  cedar-apple-rust, and powdery-mildew cells are all blank; Khan fire-blight page does not list Ein
+  Shemer; not in Purdue). The earlier "Susceptible" fire-blight grade misread the neighboring
+  "Susceptible" into the blank fire-blight cell.
 
 ## zestar
 - **apple-scab: susceptible** <- Khan "Moderately Susceptible"; Purdue "MS"; UMN lists Zestar!(TM)
@@ -142,10 +148,13 @@ Purdue = BP-132-W; UMN = UMN apple-scab page.
 - **apple-scab: susceptible** <- DB "Highly Susceptible"; Khan "Very Susceptible"; Purdue "VS." The
   classic scab-susceptible standard.
 - **fire-blight: susceptible** <- DB "Highly Susceptible"; Purdue "VS."
-- **cedar-apple-rust: susceptible** <- DB "Susceptible" (the precise cedar-apple-rust column; Purdue's
-  broader "Juniper rusts" cell is "R--S," which includes susceptibility -- consistent).
-- Undocumented (omitted): **powdery-mildew** -- DB cell is internally split ("Resistant, Susceptible")
-  and Purdue is "MS"; the split fails the omit rule, so no grade (honest silence within a graded variety).
+- Undocumented (omitted): **cedar-apple-rust** -- DB cedar-apple-rust cell is internally split
+  ("Resistant, Susceptible") and Purdue juniper-rusts is a range ("R--S"); neither states a single
+  clean level, so the split fails the omit rule, no grade. (The earlier "Susceptible" grade misread
+  this split cell as a clean Susceptible.)
+- Undocumented (omitted): **powdery-mildew** -- DB powdery-mildew cell is internally split ("Moderately
+  Susceptible1; Resistant2, 3") and Purdue is "MS"; the split fails the omit rule, so no grade (honest
+  silence within a graded variety).
 
 ## golden-delicious
 - **apple-scab: susceptible** <- DB "Susceptible"; Khan "Susceptible"; Purdue "S."
@@ -167,18 +176,31 @@ Purdue = BP-132-W; UMN = UMN apple-scab page.
 
 ## fuji
 - **apple-scab: susceptible** <- DB "Susceptible"; Khan "Susceptible"; Purdue "S."
-- **fire-blight: susceptible** <- DB "Moderately Susceptible, Highly Susceptible"; Purdue "VS."
-- **cedar-apple-rust: susceptible** <- DB "Susceptible" (precise cedar-apple-rust column; Purdue
-  juniper-rusts "R--VS" includes susceptibility -- consistent).
-- Undocumented (omitted): **powdery-mildew** -- DB cell internally split ("Resistant, Highly
-  Susceptible"); even though Purdue is "R," the DB split fails the omit rule, so no grade.
+- **fire-blight: susceptible** <- DB "Moderately Susceptible1; Highly Susceptible2,4,7,9; Susceptible8";
+  Purdue "VS."
+- **powdery-mildew: resistant** <- DB powdery-mildew cell "Resistant1,2,3" (clean, unanimous) and Purdue
+  powdery mildew "R" agree. Provenance: `cornell_ext_apple_disease`,
+  https://blogs.cornell.edu/applevarietydatabase/disease-susceptibility-of-common-apples/ (fetched
+  2026-07-23), Fuji powdery-mildew cell "Resistant1,2,3"; `purdue_ext`,
+  https://www.extension.purdue.edu/extmedia/BP/BP-132-W.pdf (fetched 2026-07-23), Fuji row
+  "S VS R--VS R", Powdery Mildew column "R" (R = Resistant). This grade was earlier dropped on a
+  column misread that put the cedar-apple-rust split text on powdery mildew.
+- Undocumented (omitted): **cedar-apple-rust** -- DB cedar-apple-rust cell is internally split
+  ("Resistant, Highly Susceptible") and Purdue juniper-rusts is a range ("R--VS"); neither states a
+  single clean level, so no grade. (The earlier "Susceptible" grade misread this split cell.)
 
 ## granny-smith
 - **apple-scab: susceptible** <- DB "Highly Susceptible"; Khan "Susceptible"; Purdue "S."
 - **fire-blight: susceptible** <- DB "Highly Susceptible"; Purdue "VS."
 - **powdery-mildew: susceptible** <- DB "Highly Susceptible"; Purdue "VS."
-- Undocumented (omitted): **cedar-apple-rust** -- FLAGGED T1 CONFLICT. DB "Highly Susceptible" vs
-  Purdue juniper-rusts "R" (Resistant) disagree across the resistant/susceptible line, so no grade.
+- **cedar-apple-rust: resistant** <- DB cedar-apple-rust cell "Resistant" (clean) and Purdue
+  juniper-rusts "R" agree. Provenance: `cornell_ext_apple_disease`,
+  https://blogs.cornell.edu/applevarietydatabase/disease-susceptibility-of-common-apples/ (fetched
+  2026-07-23), Granny Smith cedar-apple-rust cell "Resistant"; `purdue_ext`,
+  https://www.extension.purdue.edu/extmedia/BP/BP-132-W.pdf (fetched 2026-07-23), Granny Smith row
+  "S VS R VS", Juniper rusts column "R" (R = Resistant). The earlier "FLAGGED T1 CONFLICT" was
+  spurious: the "Highly Susceptible" attributed to cedar-apple-rust was a misread of the adjacent Leaf
+  Spots column; both T1 tables agree on Resistant.
 
 ## pink-lady
 - **apple-scab: susceptible** <- DB "Highly Susceptible"; Khan "Very Susceptible"; Purdue "VS."
@@ -262,30 +284,28 @@ Purdue = BP-132-W; UMN = UMN apple-scab page.
 - **Strawberry: quinault** -- no fetched T1 grade on any of the five ids. Honest silence.
 - **Apple: NONE.** All 16 apple varieties carry at least an apple-scab grade, because the Cornell
   Apple Variety Database grades every one of them (the low-chill trio Anna / Dorsett Golden /
-  Ein Shemer are genuine rows -- verified against neighboring rows -- with fire blight = Susceptible
-  and apple scab = Susceptible, other columns blank). Manufacturing an "absent" apple by suppressing
-  real Cornell grades would violate the honesty model, so apple does not exercise the fully-absent
-  branch. The pilot-level requirement is met by strawberry (seascape / ozark-beauty / quinault).
+  Ein Shemer are genuine rows -- verified against the raw HTML table -- with apple scab = Susceptible
+  and leaf spots = Susceptible; their fire blight, powdery mildew, and cedar-apple-rust cells are all
+  blank, so only apple scab is graded). Manufacturing an "absent" apple by suppressing real Cornell
+  grades would violate the honesty model, so apple does not exercise the fully-absent branch. The
+  pilot-level requirement is met by strawberry (seascape / ozark-beauty / quinault).
 
 ## Undocumented (variety, disease) pairs within GRADED varieties (key omitted, never defaulted)
-- Apple low-chill trio (anna, dorsett-golden, ein-shemer): cedar-apple-rust + powdery-mildew omitted
-  (DB cells blank; not in Purdue).
-- gala: powdery-mildew omitted (DB cell split "Resistant, Susceptible").
-- fuji: powdery-mildew omitted (DB cell split "Resistant, Highly Susceptible").
-- granny-smith: cedar-apple-rust omitted (FLAGGED T1 conflict: DB "Highly Susceptible" vs Purdue "R").
+- Apple low-chill trio (anna, dorsett-golden, ein-shemer): fire-blight + cedar-apple-rust +
+  powdery-mildew omitted (DB cells all blank; Khan fire-blight page does not list them; not in Purdue).
+- gala: cedar-apple-rust omitted (DB cell split "Resistant, Susceptible"; Purdue range "R--S") +
+  powdery-mildew omitted (DB cell split "Moderately Susceptible; Resistant"; Purdue "MS").
+- fuji: cedar-apple-rust omitted (DB cell split "Resistant, Highly Susceptible"; Purdue range "R--VS").
 - dolgo: fire-blight omitted (FLAGGED T1 conflict: DB "Moderately Susceptible" vs Purdue "R").
 - All strawberry graded varieties: gray-mold / anthracnose / powdery-mildew omitted where no per-variety
   T1 grade exists (the red-stele + verticillium axis is the documented one; the fruit-rot/foliar axes
   are genuinely sparse per-variety, as expected -- not a gap to fill).
 
 ## Note-vs-table observations flagged (not silent picks)
-1. **granny-smith cedar-apple-rust** -- Cornell DB "Highly Susceptible" vs Purdue "R" (Resistant):
-   direct T1-vs-T1 conflict across the resistant/susceptible line. Left UNGRADED rather than picking a
-   side. (Neither contradicts variety prose, which makes no rust claim.)
-2. **dolgo fire-blight** -- Cornell DB "Moderately Susceptible" vs Purdue "R": T1-vs-T1 conflict across
+1. **dolgo fire-blight** -- Cornell DB "Moderately Susceptible" vs Purdue "R": T1-vs-T1 conflict across
    the line. Left UNGRADED.
-3. **honeycrisp apple-scab** -- UMN "Resistant to apple scab" vs Cornell DB/Khan/Purdue "Moderately
+2. **honeycrisp apple-scab** -- UMN "Resistant to apple scab" vs Cornell DB/Khan/Purdue "Moderately
    Resistant." A degree difference (both resistant-side, not a resistant/susceptible flip). Graded the
    conservative `tolerant`; recorded here for transparency.
-4. No graded value CONTRADICTS a variety's `disease_notes` / `note_seasoned` prose. Liberty
+3. No graded value CONTRADICTS a variety's `disease_notes` / `note_seasoned` prose. Liberty
    (immune scab) and the strawberry red-stele/verticillium grades match their prose exactly.
