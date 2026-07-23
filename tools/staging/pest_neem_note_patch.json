@@ -1,0 +1,54 @@
+{
+  "base_sha": "4f7789aaed0c6a3ef44ec3fecd728a76ddd017b53dfd23ad03cfb45b8dbf1696",
+  "patches": [
+    {
+      "op": "replace",
+      "json_path": "crops[?(@.name=='Broccoli')].pests[?(@.id=='aphids')].control_ladder",
+      "from": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on nitrogen fertilizer; the soft, lush growth it pushes is what aphids swarm to."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Blast colonies off with a strong jet of water, hitting under the leaves and inside the head where they hide.",
+          "note_seasoned": "Aim under the leaves and into the head; the waxy gray-green cabbage aphid is the hardest to dislodge and to wash out of a cut head."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Lady beetles and lacewings usually clean up aphids on their own if you do not spray them off."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "For heavier clusters, coat the aphids directly under the leaves; repeat every few days."
+        },
+        {
+          "method": "neem_oil"
+        }
+      ],
+      "value": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on nitrogen fertilizer; the soft, lush growth it pushes is what aphids swarm to."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Blast colonies off with a strong jet of water, hitting under the leaves and inside the head where they hide.",
+          "note_seasoned": "Aim under the leaves and into the head; the waxy gray-green cabbage aphid is the hardest to dislodge and to wash out of a cut head."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Lady beetles and lacewings usually clean up aphids on their own if you do not spray them off."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "For heavier clusters, coat the aphids directly under the leaves; repeat every few days."
+        },
+        {
+          "method": "neem_oil",
+          "note_beginner": "A contact alternative to insecticidal soap for the same aphids; coat the leaf undersides where they cluster and repeat, and spray at dusk so you do not wet foraging bees."
+        }
+      ]
+    }
+  ]
+}
