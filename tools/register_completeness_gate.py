@@ -197,6 +197,14 @@ def ruled_categorical(pat, k):
         # / saucer_practice single-register consumer lines), additive above the dual-register note_beginner/
         # note_seasoned detail. Path-scoped to varieties.recommended; not a categorical token, an intentional
         # single-register hero. Standing common-core going forward (backfilled onto the 4 prior pilots).
+    if (pat.endswith(".resistance") or pat == "resistance") and "varieties.recommended" in pat:
+        return True  # variety disease-resistance pilot (Trevor 2026-07-23): the per-variety `resistance`
+        # GRADE MAP -- keys are pest/disease ids, values are a closed grade enum (immune|resistant|
+        # tolerant|susceptible), both checked referentially/structurally by the new standalone
+        # variety_resistance_gate, not this register. Path-scoped to varieties.recommended like
+        # hero_description, but one level deeper: resistance is a dict-of-grades rather than a bare
+        # string, so `k` here is the pest/disease id (arbitrary kebab token), not a fixed key name --
+        # the pattern match is on the PATH (ends in .resistance) rather than on k.
     return False
 
 # --- DEFERRED by design: companions array-split provenance (inventory §5 -- its own
