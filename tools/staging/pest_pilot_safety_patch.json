@@ -1,0 +1,35 @@
+{
+  "base_sha": "fd4d67492dddfe5f3c92133b3f54ac5951084582123a6e94ec4da599548941a1",
+  "patches": [
+    {
+      "op": "add",
+      "json_path": "pesticide_safety_education",
+      "value": {
+        "label_note_beginner": "Always read and follow the pesticide label before you buy, mix, or spray: the label is the law. It tells you which crops and pests the product is registered for, how much to use, how often you can apply it, and how long to wait before you harvest and eat what you sprayed. Using a product off the label, on the wrong crop, at the wrong rate, or against label directions, is not just risky, it is illegal.",
+        "label_note_seasoned": "Treat the label as a binding legal document, not a suggestion: applying a pesticide in any way other than what the label specifies is against the law. Read the full label before every application, not only the first, since registered uses, rates, and precautions can change between purchases; the label sets the registered crops and pests, the application rate and timing, required protective equipment, the restricted-entry interval, and the pre-harvest interval.",
+        "preharvest_interval_beginner": "The pre-harvest interval, or PHI, is the number of days you must wait after spraying before you can harvest and eat the crop. It is printed on the label and it varies by product and by crop: the same product can carry a different wait time on tomatoes than on lettuce. Harvesting before the PHI has passed goes against the label and can leave more pesticide residue on your food than is considered safe.",
+        "preharvest_interval_seasoned": "The PHI is the minimum time between the last application and legal harvest, set so residues decline to within EPA tolerance levels by harvest. Sun, rain, and warm temperatures all affect how quickly a residue on the plant breaks down, so the labeled interval is product and crop specific: never assume it carries over from a similar product or a different crop. Some ready-to-harvest formulations list a PHI of zero; others run a week or more. Check the label for the exact product and crop every time.",
+        "pollinator_note_beginner": "Bees and other pollinators can be killed by spray that lands on open flowers. Never spray a plant that is in bloom, and keep spray drift off nearby blooming plants and flowering weeds too. If a spray is truly needed while a plant is blooming, apply it in the evening after bees have returned to the hive for the night, so residue has time to dry before bees are foraging again the next morning.",
+        "pollinator_note_seasoned": "Bees face the highest exposure when insecticides or miticides are applied directly to flowers they are actively foraging on, so avoid treating any blooming plant, including flowering weeds nearby, and avoid drift onto them. When an application during bloom cannot be avoided, spray between sunset and midnight after foraging bees have returned to the hive; many products lose much of their bee toxicity as residue dries overnight. Do not tank mix an insecticide or miticide with a fungicide during bloom: combining products can raise the toxicity to pollinators. Check the label's environmental hazards section, too: products flagged highly toxic to bees or with extended residual toxicity call for extra caution.",
+        "handling_note_beginner": "Wear the protective gear the label calls for: typically closed-toe shoes, long sleeves, long pants, and eye protection, plus chemical-resistant gloves or a respirator if the label says so. Keep children and pets off treated areas until the spray has dried, or for the re-entry time listed on the label. Spray on a calm day so drift does not land on neighboring plants, pets, or people, and store the product in its original, labeled container out of the reach of children and pets. Dispose of empty containers and leftover product the way the label describes.",
+        "handling_note_seasoned": "Match your protective equipment to the label: standard coverage is closed-toe shoes, long sleeves, long pants, and eye protection, with chemical-resistant gloves or a respirator added when the label specifies them; inspect reusable PPE for tears or leaks before each use. Keep people and pets off treated foliage and soil until residue has dried, or through the label's stated restricted-entry interval, whichever is longer. Apply only in calm conditions and direct sprays close to the target to limit drift onto non-target plants, waterways, or people. Store pesticides in their original, labeled containers in a locked cabinet or area out of reach of children and pets, never reuse an empty container, and dispose of containers and unused product only as the label's storage and disposal section directs.",
+        "resistance_note_beginner": "Spraying the same product again and again trains the pest population to survive it: a few naturally tougher individuals live through each spray and pass that trait on, until the product stops working at all. Reach for the softer rungs first, cultural and physical controls, then biological, then a soft chemical, and save a stronger spray for when it is really needed. If more than one spray is needed, rotate to a different product with a different active ingredient rather than repeating the same one back to back.",
+        "resistance_note_seasoned": "Repeated applications of a pesticide from the same mode of action select for the resistant fraction of a pest population until that class of chemistry stops working. Rotate between products from different chemical classes rather than repeating or tank-mixing the same mode of action, and hold to no more than two consecutive applications of a single mode of action for insects and mites. Leaning on integrated pest management, cultural and physical controls first, then biological controls, then the softer chemical rungs, lowers overall spray pressure and slows resistance development even when a spray eventually becomes necessary.",
+        "sources": [
+          "npic_orst",
+          "ucanr_ext"
+        ],
+        "anchoring_urls": {
+          "npic_orst": {
+            "url": "https://npic.orst.edu/health/readlabel.html",
+            "verified": "2026-07-22"
+          },
+          "ucanr_ext": {
+            "url": "https://ipm.ucanr.edu/GENERAL/precautions.html",
+            "verified": "2026-07-22"
+          }
+        }
+      }
+    }
+  ]
+}
