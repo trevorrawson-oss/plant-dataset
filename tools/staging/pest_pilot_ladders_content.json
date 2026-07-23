@@ -1,0 +1,713 @@
+{
+  "Broccoli": {
+    "pests": [
+      {
+        "id": "cabbageworms",
+        "type": "insect",
+        "name": "Cabbageworms and cabbage loopers",
+        "symptoms_beginner": "You'll see ragged holes eaten in the leaves and head, green caterpillars on the plant, and little dark droppings. Some caterpillars loop up in the middle as they crawl.",
+        "cause_beginner": "These are caterpillars that hatch from eggs laid by white butterflies and small moths. They love cabbage-family plants like broccoli and chew on the leaves and heads.",
+        "prevention_beginner": "Cover your plants with a light fabric row cover right after planting to keep the butterflies and moths from laying eggs. Clear away old cabbage-family plants, and start watching for the first white butterflies as your signal to act.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Ragged holes chewed in leaves and into developing heads, with green caterpillars and dark droppings on the foliage. Imported cabbageworms are velvety green; cabbage loopers move in a looping arch.",
+        "cause_seasoned": "The larvae of the imported cabbageworm, cabbage looper, and diamondback moth feed on brassica foliage and heads; the adults are white or brownish moths and butterflies that lay eggs on the leaves.",
+        "prevention_seasoned": "Cover plants with floating row cover from transplanting to exclude the egg-laying adults; clean up brassica debris that shelters pupae, and watch for the first white butterflies as a spray cue.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Clear away old cabbage-family plants after harvest, since the pupae shelter in the debris."
+          },
+          {
+            "method": "floating_row_cover",
+            "note_beginner": "Broccoli does not need bees, so you can leave the cover on the whole time. Tuck the edges down so the butterflies and moths cannot get under it to lay eggs.",
+            "note_seasoned": "Broccoli needs no pollination, so the cover can stay on through harvest; seal the edges to exclude the egg-laying adults."
+          },
+          {
+            "method": "handpick",
+            "note_beginner": "Check the undersides of the leaves and pick off the green caterpillars and eggs."
+          },
+          {
+            "method": "bt",
+            "note_beginner": "Bt kills only caterpillars and is safe for you and for bees, but it washes off, so spray again after rain.",
+            "note_seasoned": "Bt is selective for caterpillars; reapply after rain or a flush of new growth, since it does not persist."
+          },
+          {
+            "method": "spinosad",
+            "note_beginner": "Use spinosad only if Bt and handpicking have not held. Spray in the evening when bees are not flying.",
+            "note_seasoned": "A stronger organic option once the softer rungs have not held; time it to dusk to spare bees."
+          }
+        ]
+      },
+      {
+        "id": "aphids",
+        "type": "insect",
+        "name": "Aphids",
+        "symptoms_beginner": "You'll see clusters of tiny soft insects on the new growth, under leaves, and inside the head. Leaves curl up, and there may be a sticky coating. The waxy gray-green kind is hard to wash out of the head.",
+        "cause_beginner": "Aphids are tiny insects that suck juice from the plant. They breed fast in warm weather, and their feeding twists the leaves and gets into the heads.",
+        "prevention_beginner": "Welcome helpful bugs like ladybugs that eat aphids, don't overdo the nitrogen fertilizer (lush growth attracts them), and check the new growth often so they don't reach the head.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Clusters of small soft-bodied insects on growing tips, leaf undersides, and tucked into the head; leaves curl and pucker, and a sticky residue and sooty mold may appear. Gray-green waxy cabbage aphids are especially hard to wash out of heads.",
+        "cause_seasoned": "Several aphid species, notably the waxy cabbage aphid, suck sap from broccoli; they multiply quickly in warm weather and their feeding distorts growth and contaminates heads.",
+        "prevention_seasoned": "Encourage natural enemies like lady beetles and lacewings, avoid overfeeding nitrogen (which spurs the soft growth aphids favor), and inspect growing tips early so colonies do not reach the head.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "balance_nitrogen",
+            "note_beginner": "Go easy on nitrogen fertilizer; the soft, lush growth it pushes is what aphids swarm to."
+          },
+          {
+            "method": "water_spray",
+            "note_beginner": "Blast colonies off with a strong jet of water, hitting under the leaves and inside the head where they hide.",
+            "note_seasoned": "Aim under the leaves and into the head; the waxy gray-green cabbage aphid is the hardest to dislodge and to wash out of a cut head."
+          },
+          {
+            "method": "beneficial_predators",
+            "note_beginner": "Lady beetles and lacewings usually clean up aphids on their own if you do not spray them off."
+          },
+          {
+            "method": "insecticidal_soap",
+            "note_beginner": "For heavier clusters, coat the aphids directly under the leaves; repeat every few days."
+          },
+          {
+            "method": "neem_oil"
+          }
+        ]
+      },
+      {
+        "id": "flea-beetles",
+        "type": "insect",
+        "name": "Flea beetles",
+        "symptoms_beginner": "Lots of tiny round holes in the leaves of young plants, made by small dark beetles that jump away like fleas when you get close. Bad damage can stunt or kill seedlings.",
+        "cause_beginner": "Flea beetles are small jumping beetles that chew on young cabbage-family leaves. They hurt seedlings most, because a tiny plant can't grow fast enough to recover.",
+        "prevention_beginner": "Cover seedlings with row cover from the start, keep them strong with steady water and food so they grow past the damage, and pull nearby weeds in the cabbage family.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Tiny round shot-hole pits chewed in the leaves of young plants; the small dark beetles jump like fleas when disturbed. Heavy damage stunts or kills seedlings.",
+        "cause_seasoned": "Flea beetles chew the foliage of young brassicas; they are most damaging at the seedling stage when a small plant cannot outgrow the feeding.",
+        "prevention_seasoned": "Use row cover from transplanting, keep seedlings vigorous with even water and feeding so they grow through the damage, and clean up weedy brassica relatives nearby.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Pull weedy cabbage-family relatives nearby that feed the beetles."
+          },
+          {
+            "method": "floating_row_cover",
+            "note_beginner": "Cover seedlings from day one. The real goal is getting them big and tough enough to outgrow the shot-hole damage.",
+            "note_seasoned": "Exclude beetles from transplanting; the aim is carrying seedlings past the vulnerable stage."
+          },
+          {
+            "method": "spinosad",
+            "note_beginner": "Only if the beetles are thick enough to stunt the seedlings."
+          },
+          {
+            "method": "carbaryl",
+            "note_beginner": "A last resort, mainly at the seedling stage, when flea beetles can kill young plants before they get going. Spot-treat only the affected plants rather than blanket-spraying, since a broad spray can flare cabbage aphids on broccoli. Read the label and mind the days-to-harvest wait.",
+            "note_seasoned": "Reserve for a seedling-stage outbreak that the softer rungs have not held, since young broccoli can be killed outright. Spot-treat affected plants; blanket coverage risks flaring cabbage aphids by knocking out their predators. Observe the label pre-harvest interval."
+          }
+        ]
+      },
+      {
+        "id": "cabbage-root-maggot",
+        "type": "insect",
+        "name": "Cabbage root maggot",
+        "symptoms_beginner": "New transplants wilt and grow badly or fall over. If you pull one up, you'll find small white maggots eating the roots. It's worst in cool, wet spring soil.",
+        "cause_beginner": "A small fly lays eggs at the base of the plant, and the maggots that hatch burrow down and eat the roots. The fly is most active in cool spring weather.",
+        "prevention_beginner": "Put a small collar or disk around the base of each transplant to stop the fly from laying eggs there, or use a row cover. Don't plant into cold, soggy soil, and avoid spots where you grew cabbage-family plants last year.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Transplants wilt, grow poorly, and may collapse; pulling a plant reveals small white maggots tunneling in the roots and lower stem. Damage is worst in cool, wet spring soil.",
+        "cause_seasoned": "The larvae of the cabbage root fly tunnel into brassica roots; the adult fly lays eggs at the base of the stem, and the maggots hatch and feed on the roots below.",
+        "prevention_seasoned": "Place a collar or disk around the stem base at transplanting to block egg-laying, or use row cover; avoid planting into cold, wet soil and rotate away from where brassicas grew.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "The fly builds up where cabbage-family plants grew last year, so move the bed."
+          },
+          {
+            "method": "floating_row_cover",
+            "note_beginner": "Seal the cover at the edges right at transplanting so the low-flying fly cannot reach the stem base to lay eggs. Broccoli needs no bees, so it can stay covered.",
+            "note_seasoned": "Seal row cover at the edges from transplanting to block egg-laying at the stem base; no pollination is needed, so it stays on."
+          },
+          {
+            "method": "stem_collars",
+            "note_beginner": "A tar-paper or cardboard disk laid flat on the soil around each transplant blocks the cabbage fly from laying eggs at the stem base."
+          }
+        ]
+      }
+    ],
+    "diseases": [
+      {
+        "id": "clubroot",
+        "type": "fungal",
+        "name": "Clubroot",
+        "symptoms_beginner": "Plants wilt in the afternoon heat, stay small and yellowish, and don't bounce back. If you dig one up, the roots are swollen into lumpy, club-shaped knobs instead of normal roots.",
+        "cause_beginner": "A germ that lives in the soil infects the roots of cabbage-family plants and makes them swell up, which stops the plant from taking up water and food. It stays in the soil for years.",
+        "prevention_beginner": "Don't grow broccoli or its cabbage-family relatives in the same spot more than once every 3 years, or longer if you've had clubroot. Keep the soil from being too acidic, improve drainage, and clean soil off your tools so you don't spread it.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Plants wilt in the heat of the day, grow stunted and yellowed, and recover poorly; roots are swollen into distorted clubs and galls instead of normal fine roots.",
+        "cause_seasoned": "A soilborne organism (Plasmodiophora brassicae) infects brassica roots and causes the galls, which block water and nutrient uptake. It persists in the soil for many years and spreads in contaminated soil and water.",
+        "prevention_seasoned": "Rotate brassicas on a long cycle of at least 3 years, and longer where clubroot is known, since this ties directly to the rotation plan; keep soil pH up, improve drainage, and avoid moving infested soil on tools and boots.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "The soil germ lasts for years, so keep broccoli and its cabbage-family relatives out of an infested bed for at least 3 years, longer where clubroot has been bad.",
+            "note_seasoned": "Long rotations of at least 3 years, and longer where clubroot is established, let soil inoculum decline; there is no cure once plants are infected."
+          },
+          {
+            "method": "raise_soil_ph",
+            "note_beginner": "Liming the soil toward neutral (pH 7.0 or above) holds clubroot back, but does not cure it."
+          },
+          {
+            "method": "resistant_varieties",
+            "note_beginner": "Clubroot-resistant cabbage-family varieties exist and are worth choosing where the disease keeps returning."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Pull and destroy infected plants, and knock soil off tools and boots so you do not carry spores to clean beds."
+          }
+        ]
+      },
+      {
+        "id": "black-rot",
+        "type": "bacterial",
+        "name": "Black rot",
+        "symptoms_beginner": "Yellow patches shaped like the letter V appear at the edges of the leaves, pointing inward, with black veins inside them. It can spread into the stem and rot the head.",
+        "cause_beginner": "A bacteria that often comes in on infected seeds or transplants. It gets into the leaves and travels through the plant's veins, spreading fastest in warm, wet weather.",
+        "prevention_beginner": "Begin with clean, certified seed and healthy transplants, don't plant where cabbage-family crops grew recently, space plants for good airflow, and avoid watering from overhead or touching wet plants.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Yellow, V-shaped lesions spread inward from the leaf edges, with the veins inside the V turning black; the disease can move into the stem and rot the head.",
+        "cause_seasoned": "A seedborne bacterium (Xanthomonas campestris) that enters through leaf pores and wounds and moves through the plant's veins; it spreads in warm, wet conditions and on infected seed or transplants.",
+        "prevention_seasoned": "Start with clean, certified seed and healthy transplants, rotate away from brassicas, give plants room for airflow, and avoid overhead watering and handling wet foliage.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "Rotate away from where cabbage-family crops grew recently."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Remove and destroy infected plants, and stay out of the bed when the foliage is wet, since that spreads the bacteria.",
+            "note_seasoned": "Rogue out infected plants and avoid working among wet foliage, which moves the bacteria."
+          },
+          {
+            "method": "resistant_varieties",
+            "note_beginner": "Start with clean, certified seed and resistant varieties; black rot often rides in on the seed."
+          },
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Space plants so the leaves dry fast; the bacteria spread fastest in warm, wet conditions."
+          },
+          {
+            "method": "copper_fungicide",
+            "note_beginner": "Copper is a protectant that can slow spread, not a cure. It will not overcome infected seed, so the cultural steps come first.",
+            "note_seasoned": "Copper acts only as a protectant against bacterial spread and cannot rescue systemic or seedborne infection; lead with sanitation and clean seed."
+          }
+        ]
+      },
+      {
+        "id": "downy-mildew",
+        "type": "fungal",
+        "name": "Downy mildew",
+        "symptoms_beginner": "Pale yellow blotches show on top of the leaves, with fuzzy grayish growth on the underside, mostly in cool, damp weather. A bad case can mark the head.",
+        "cause_beginner": "A mold-like disease that loves cool, wet, humid weather and spreads through the air and water. Wet leaves and crowded plants make it worse.",
+        "prevention_beginner": "Space plants so air moves between them, water at the soil instead of from above, keep the heads dry, and pick resistant varieties if downy mildew is common where you live.",
+        "sources": [
+          "umn_ext_broccoli",
+          "umd_ext_broccoli"
+        ],
+        "anchoring_urls": {
+          "umn_ext_broccoli": {
+            "url": "https://extension.umn.edu/vegetables/growing-broccoli",
+            "verified": "2026-06-23"
+          },
+          "umd_ext_broccoli": {
+            "url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+            "verified": "2026-06-23"
+          }
+        },
+        "symptoms_seasoned": "Pale yellow patches form on the upper leaf surface with a fuzzy gray-white growth underneath, mainly in cool, damp weather; severe infection can discolor the head.",
+        "cause_seasoned": "A fungus-like organism that thrives in cool, wet, humid conditions and spreads by spores in water and air; long leaf wetness and crowded plantings favor it.",
+        "prevention_seasoned": "Space plants for good air movement, water at the soil line rather than overhead, keep heads dry, and choose resistant varieties where downy mildew is common.",
+        "audience": "core",
+        "control_ladder": [
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Space plants for good air movement and keep the heads dry; downy mildew needs long leaf wetness to take hold.",
+            "note_seasoned": "Set spacing and site at planting for airflow, and water at the soil line so foliage dries quickly."
+          },
+          {
+            "method": "resistant_varieties",
+            "note_beginner": "Choose resistant varieties where downy mildew shows up most years."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Strip off the worst-affected leaves as soon as you see the fuzzy gray growth underneath."
+          },
+          {
+            "method": "copper_fungicide",
+            "note_beginner": "A copper spray can slow spread in a wet spell, but it is hard to stop once the humidity stays high."
+          }
+        ]
+      }
+    ]
+  },
+  "Celery": {
+    "pests": [
+      {
+        "id": "celery-leafminer",
+        "type": "insect",
+        "name": "Celery leafminer",
+        "severity": "medium",
+        "audience": "core",
+        "symptoms_seasoned": "Pale, winding, snakelike tunnels (mines) trace through the leaf tissue, and heavier infestations leave leaves blotched, blistered, and partly dried. The damage is the larvae feeding between the upper and lower leaf surfaces; pinprick stippling on the foliage marks where adult females punctured leaves to feed and lay eggs. Light mining is cosmetic, but a heavy attack reduces the plant's vigor and the eating quality of the leafy tops.",
+        "symptoms_beginner": "You will see pale, squiggly trails winding through the leaves, like someone drew on them with a white pen. Those are tunnels made by tiny maggots feeding inside the leaf. Badly hit leaves look blotchy and dried out. A little is just cosmetic, but a lot weakens the plant.",
+        "cause_seasoned": "Larvae of leafminer flies in the genus Liriomyza (notably Liriomyza trifolii and L. huidobrensis), small flies whose maggots mine within the leaf. Populations build in warm weather and can run through several overlapping generations; the pest also attacks many other vegetables and ornamentals, and natural enemies usually hold it in check unless broad-spectrum insecticides flare it up.",
+        "cause_beginner": "The young (larvae) of small leafminer flies (Liriomyza). The adult fly lays eggs in the leaf, and the maggots that hatch tunnel around inside it. They like warm weather and attack lots of different plants. Tiny wasps usually keep them down on their own, unless heavy spraying kills off those helpers.",
+        "prevention_seasoned": "Cover young plants with floating row cover to exclude egg-laying adults, keep plants vigorous, and rely on conservation of natural enemies rather than spraying. Remove crop debris that can harbor pupae, and scout the leaves for the first stippling and mines so light infestations can be hand-removed before they build.",
+        "prevention_beginner": "Lay a light row cover over young celery to keep the flies from laying eggs, keep the plants growing strongly, and let the natural helper insects do their job by not spraying. Check the leaves often, and pull off the first tunneled ones before they multiply.",
+        "sources": [
+          "uc_ipm"
+        ],
+        "anchoring_urls": {
+          "uc_ipm": {
+            "url": "https://ipm.ucanr.edu/agriculture/celery/leafminers/",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Clear crop debris that shelters the pupae, and pull the first mined leaves before the maggots multiply."
+          },
+          {
+            "method": "floating_row_cover",
+            "note_beginner": "Lay a light cover over young celery to keep the egg-laying flies off."
+          },
+          {
+            "method": "handpick",
+            "note_beginner": "Pick off and destroy heavily tunneled leaves; the maggots are inside them."
+          },
+          {
+            "method": "beneficial_predators",
+            "note_beginner": "Tiny parasitic wasps usually keep leafminers in check. Avoid broad-spectrum sprays, which kill those helpers and often make outbreaks worse.",
+            "note_seasoned": "Conserve the parasitic wasps that control leafminers; broad-spectrum insecticides flare this pest, so no chemical rung belongs here."
+          }
+        ]
+      },
+      {
+        "id": "aphids",
+        "type": "insect",
+        "name": "Aphids",
+        "severity": "medium",
+        "audience": "core",
+        "symptoms_seasoned": "Clusters of small soft-bodied insects, often green or gray, gather on the youngest growth and in the leaf and stalk crevices, leaving the plant sticky with honeydew that may turn black with sooty mold. Beyond direct feeding, aphids are the main concern as a vector: they transmit celery mosaic virus, which yellows, mottles, twists, and stunts the foliage with no cure.",
+        "symptoms_beginner": "Little soft insects, usually green or gray, clustered on the newest leaves and in the crevices of the stalks, often leaving a sticky film. The bigger worry is that aphids spread a virus (celery mosaic) that yellows, mottles, and twists the leaves, which cannot be cured.",
+        "cause_seasoned": "Several aphid species colonize celery, including the bean aphid and foxglove aphid. They reproduce rapidly in mild weather and are spread further when winged forms move between plants; their role in moving celery mosaic virus from infected weeds and old celery makes even modest populations worth watching.",
+        "cause_beginner": "Several kinds of aphids (small sap-sucking insects) feed on celery and multiply fast in mild weather. The main reason to care is that they carry a virus from plant to plant, so even a few can do harm beyond their feeding.",
+        "prevention_seasoned": "Control nearby weeds and remove old celery and carrot-family volunteers that host both aphids and the virus, use reflective mulch to deter colonizers where mosaic is a problem, and keep natural enemies active by minimizing insecticide use. Row cover protects young plants.",
+        "prevention_beginner": "Keep weeds down and clear out old celery and carrot-family plants nearby, since they shelter aphids and the virus. Encourage natural helpers by not spraying harshly, and use a row cover on young plants. Reflective (silver) mulch helps keep aphids away where the virus is common.",
+        "sources": [
+          "uc_ipm"
+        ],
+        "anchoring_urls": {
+          "uc_ipm": {
+            "url": "https://ipm.ucanr.edu/agriculture/celery/celery-mosaic-virus/",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Aphids spread celery mosaic virus, so pull any plant with yellow, mottled, twisted leaves right away, and clear old celery and carrot-family weeds that host both.",
+            "note_seasoned": "Remove mosaic-symptom plants promptly as virus reservoirs, and eliminate volunteer celery and carrot-family weeds that host aphids and the virus."
+          },
+          {
+            "method": "floating_row_cover",
+            "note_beginner": "A cover keeps colonizing aphids off young plants."
+          },
+          {
+            "method": "water_spray",
+            "note_beginner": "Knock colonies off with a hard jet of water, hitting the newest growth and the stalk crevices."
+          },
+          {
+            "method": "beneficial_predators",
+            "note_beginner": "Lady beetles, lacewings, and parasitic wasps hold aphids down if you do not spray them off."
+          },
+          {
+            "method": "insecticidal_soap",
+            "note_beginner": "For heavy infestations, coat the aphids directly."
+          }
+        ]
+      },
+      {
+        "id": "carrot-rust-fly",
+        "type": "insect",
+        "name": "Carrot rust fly",
+        "severity": "low",
+        "audience": "core",
+        "symptoms_seasoned": "Rusty-brown tunnels and scarring in the lower stalk bases and roots, sometimes with a rusty residue, and aboveground stunting or off-color foliage in heavier attacks. As a shared carrot-family pest, the same fly that mines carrots will work celery's crown and root zone where its populations are active.",
+        "symptoms_beginner": "Rusty-brown tunnels and scars low on the stalks and roots, and weak or off-color plants when it is bad. It is the same pest that tunnels carrots, and it goes after celery too where it is common.",
+        "cause_seasoned": "Larvae of the carrot rust fly (Psila rosae), whose females are drawn to the scent of carrot-family foliage and lay eggs near the crown; the maggots burrow into the lower stalks and roots. It is most damaging in cool, humid, maritime regions and far less of a problem in hot-summer areas.",
+        "cause_beginner": "The maggots of the carrot rust fly, a small fly that attacks the whole carrot family, including celery. The female lays eggs near the base of the plant and the maggots tunnel into the lower stalks and roots. It is mainly a problem in cool, damp, coastal areas.",
+        "prevention_seasoned": "Floating row cover sealed at the edges at planting is the most reliable home defense, since the low-flying females cannot reach the crowns. Rotate celery away from where carrot-family crops grew last year, and avoid planting it next to carrots or parsnips.",
+        "prevention_beginner": "A row cover laid over the bed and tucked in at the edges is the best defense, because the low-flying fly cannot reach the plants to lay eggs. Also keep celery away from where you grew carrots or parsnips last year, and do not plant it right next to them.",
+        "sources": [
+          "uc_ipm"
+        ],
+        "anchoring_urls": {
+          "uc_ipm": {
+            "url": "https://ipm.ucanr.edu/agriculture/celery/leafminers/",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "Keep celery away from where carrots, parsnips, or celery grew last year."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Remove and do not compost infested plants, and clear wild carrot-family weeds that keep the fly going."
+          },
+          {
+            "method": "floating_row_cover",
+            "note_beginner": "Seal the cover at the edges at planting. The fly flies low and cannot reach the crowns to lay eggs, which makes this the most reliable home defense.",
+            "note_seasoned": "Edge-sealed row cover at planting is the most reliable home control, since the low-flying females cannot reach the crown."
+          }
+        ]
+      }
+    ],
+    "diseases": [
+      {
+        "id": "early-blight",
+        "type": "fungal",
+        "name": "Early blight (Cercospora leaf spot)",
+        "severity": "medium",
+        "audience": "core",
+        "symptoms_seasoned": "Small yellow spots appear on both surfaces of the leaves and enlarge into gray, roughly circular lesions about 1/4 to 3/4 inch across; as they multiply the tissue between them turns papery and often splits and cracks, and severe spotting blights the foliage. In contrast to late blight, the petioles often stay relatively clean even when the leaves are heavily spotted. Badly blighted plants size up poorly.",
+        "symptoms_beginner": "Small yellow spots show up on both sides of the leaves, then grow into gray, round patches about a quarter inch to three quarters of an inch wide. As they spread the leaf turns papery and cracks. Unlike late blight, the stalks often stay fairly clean even when leaves are spotty. A badly blighted plant grows poorly.",
+        "cause_seasoned": "The fungus Cercospora apii, which is seedborne and also survives on celery debris in the field. It is favored by warm conditions, roughly 60 to 86°F, with leaf wetness from rain, dew, fog, or overhead irrigation; spores spread on wind and splashing water.",
+        "cause_beginner": "A fungus (Cercospora apii) that can ride in on the seed and survive on old celery debris. It likes warm weather, about 60 to 86°F, together with wet leaves from rain, dew, fog, or overhead watering. The spores spread in wind and splashing water.",
+        "prevention_seasoned": "Start with disease-indexed (Cercospora-tested) seed and disease-free transplants, rotate celery and other carrot-family crops out of the bed for at least a year, clear crop debris, water at the base in the morning, and space plants for airflow. Avoid working among plants while the foliage is wet.",
+        "prevention_beginner": "Use clean, tested seed and healthy transplants, do not grow celery (or its relatives) in the same spot two years running, clear away old debris, water at the soil in the morning, and give plants room so leaves dry fast. Stay out of the bed when the plants are wet.",
+        "sources": [
+          "uc_ipm"
+        ],
+        "anchoring_urls": {
+          "uc_ipm": {
+            "url": "https://ipm.ucanr.edu/agriculture/celery/early-blight/",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "Do not grow celery or its carrot-family relatives in the same spot two years running."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Clear old celery debris, which carries the fungus over, and start with clean, tested seed."
+          },
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Space plants and water at the soil in the morning so the leaves dry fast."
+          },
+          {
+            "method": "copper_fungicide",
+            "note_beginner": "In a wet year a copper fungicide started early can slow spread. It does not cure leaves that are already spotted.",
+            "note_seasoned": "A protectant copper, begun at first symptoms in wet weather, suppresses spread but does not cure infected tissue."
+          }
+        ]
+      },
+      {
+        "id": "late-blight",
+        "type": "fungal",
+        "name": "Late blight (Septoria leaf spot)",
+        "severity": "medium",
+        "audience": "core",
+        "symptoms_seasoned": "Small, discrete yellow spots appear on leaves and petioles and enlarge, often coalescing, then turn tan and dry to a papery texture; tiny dark fruiting bodies (pycnidia) speckle the lesions, the diagnostic sign that separates it from early blight. Unlike early blight, late blight readily lesions the stalks themselves, downgrading the harvest. It is usually the more damaging of the two celery blights.",
+        "symptoms_beginner": "Small yellow spots on the leaves and stalks that enlarge, run together, and turn tan and papery, speckled with tiny dark dots (the telltale sign). Unlike early blight, this one spots the stalks too, which ruins the part you eat. It is usually the worse of the two blights.",
+        "cause_seasoned": "The fungus Septoria apiicola (unrelated to the potato and tomato late blight). It is seedborne, the primary inoculum source, and survives on infected debris. Development stops below about 55°F and is favored above 70°F with leaf wetness from rain, heavy dew, fog, or sprinkler irrigation; splashing water disperses the spores.",
+        "cause_beginner": "A fungus (Septoria apiicola, not the same as potato or tomato late blight). It usually arrives on the seed and survives on old debris. It needs wet leaves and stops growing below about 55°F, getting worse above 70°F with rain, dew, fog, or overhead watering, which splash the spores around.",
+        "prevention_seasoned": "The single most important step is Septoria-indexed (tested) seed, since seed is the main source; plant only disease-free transplants, avoid overhead sprinkling, rotate out of celery for at least a year, plow under or remove infected residue, and stay out of the bed when foliage is wet.",
+        "prevention_beginner": "The most important thing is to start with tested, clean seed, because the disease usually comes in on the seed. Use healthy transplants, water at the soil instead of overhead, do not grow celery in the same place two years in a row, clear away infected leftovers, and keep out of the bed when the plants are wet.",
+        "sources": [
+          "uc_ipm"
+        ],
+        "anchoring_urls": {
+          "uc_ipm": {
+            "url": "https://ipm.ucanr.edu/agriculture/celery/late-blight/",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "Rotate out of celery for at least a year."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Seed is the main source, so start with tested, disease-free seed and clear away infected residue.",
+            "note_seasoned": "Septoria-indexed seed is the single most important step; also remove or plow under infected debris."
+          },
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Avoid overhead watering and keep the foliage as dry as you can."
+          },
+          {
+            "method": "copper_fungicide",
+            "note_beginner": "A copper spray at the first spots can slow it in wet weather, but cannot cure infected tissue."
+          }
+        ]
+      },
+      {
+        "id": "pink-rot",
+        "type": "fungal",
+        "name": "Pink rot",
+        "severity": "medium",
+        "audience": "core",
+        "symptoms_seasoned": "Brown, water-soaked lesions develop on the petioles at or near the soil line and expand into soft, watery, decayed areas; in humid conditions a white cottony mold grows over them, later bearing hard black resting bodies (sclerotia) the size of small seeds. Plants weakened by calcium deficiency are especially susceptible. It is a rot of the dense, moist plant base rather than a leaf disease.",
+        "symptoms_beginner": "Brown, water-soaked spots low on the stalks near the soil that turn into soft, mushy, rotted areas, sometimes covered in fluffy white mold with hard black specks in it. It rots the base of the plant, and plants short on calcium are hit hardest.",
+        "cause_seasoned": "The soilborne fungus Sclerotinia sclerotiorum, which survives in soil as long-lived sclerotia and attacks many crops. It is favored by cool, wet conditions, prolonged leaf wetness, fog, dense canopies that stay damp, and overhead irrigation, which is why crowded, constantly wet celery is at greatest risk.",
+        "cause_beginner": "A soil fungus (Sclerotinia) that lives for years in the ground and attacks many plants. It thrives in cool, wet, crowded conditions where the base of the plant stays damp, so over-tight planting and overhead watering make it worse.",
+        "prevention_seasoned": "Rotate away from celery and other susceptible crops to lower soil inoculum, space plants and rows for good airflow so the canopy and plant bases dry, use drip rather than sprinkler irrigation, avoid late-season overhead watering, and ensure adequate calcium and even moisture to keep plants from being predisposed.",
+        "prevention_beginner": "Move celery to a fresh spot each year, give plants enough room so air moves through and the bases dry out, water at the soil with drip instead of overhead, and keep calcium and watering steady so the plants are not weakened and easy to infect.",
+        "sources": [
+          "uc_ipm"
+        ],
+        "anchoring_urls": {
+          "uc_ipm": {
+            "url": "https://ipm.ucanr.edu/agriculture/celery/pink-rot/",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "crop_rotation",
+            "note_beginner": "Rotate away from celery and other susceptible crops to lower the long-lived soil fungus."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Remove and destroy affected plants; do not compost them, since the hard black resting bodies survive for years."
+          },
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Space plants and rows and water at the soil with drip so the dense plant base can dry. There is no home spray for pink rot.",
+            "note_seasoned": "Open the canopy and switch from overhead to drip so the plant base dries; management is cultural, with no effective home fungicide."
+          }
+        ]
+      },
+      {
+        "id": "blackheart",
+        "type": "physiological",
+        "name": "Blackheart (calcium deficiency)",
+        "severity": "medium",
+        "audience": "core",
+        "symptoms_seasoned": "The young leaves and growing point in the center of the plant turn brown to black and die, while the outer stalks may still look healthy, so the damage is hidden until the plant is cut open. Secondary soft-rot bacteria often invade the dead tissue, producing a slimy, foul interior. It is a physiological disorder, not an infection, though it opens the door to one.",
+        "symptoms_beginner": "The inside center of the plant, the youngest leaves and the growing tip, turns brown or black and dies, while the outer stalks can still look fine, so you often do not see it until you cut the plant open. Rot bacteria then move into the dead part and make it slimy and smelly.",
+        "cause_seasoned": "A localized calcium deficiency in the fastest-growing tissue. It is usually not caused by truly calcium-poor soil but by anything that interrupts calcium delivery to the growing point: uneven or insufficient watering, rapid growth surges, high salts, or strongly acidic soil that limits calcium uptake. Celery's heavy water demand and shallow roots make it particularly prone.",
+        "cause_beginner": "The growing center runs short of calcium. Usually the soil has enough, but the plant cannot move calcium to its fast-growing tip when watering is uneven, growth is too rushed, or the soil is too acidic. Celery is especially prone because it is shallow-rooted and needs so much water.",
+        "prevention_seasoned": "The core prevention is even, uninterrupted moisture, since erratic watering is the usual trigger; keep soil pH in the recommended slightly acidic to neutral range so calcium stays available, avoid forcing soft, rapid growth with excessive nitrogen, and maintain adequate soil calcium where tests show it is low. Some growers find a calcium foliar spray to the developing heart helps under risky conditions.",
+        "prevention_beginner": "The main fix is steady, even watering, never letting the soil swing from dry to soaked, because uneven water is what usually triggers it. Keep the soil pH in the right range so calcium stays available, do not push soft growth with too much nitrogen, and add calcium (like lime) only if a soil test shows you need it.",
+        "sources": [
+          "usu_ext",
+          "msu_ext"
+        ],
+        "anchoring_urls": {
+          "usu_ext": {
+            "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+            "verified": "2026-06-30"
+          },
+          "msu_ext": {
+            "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+            "verified": "2026-06-30"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "even_watering",
+            "note_beginner": "Steady, even moisture is the core fix. Erratic watering is what starves the growing tip of calcium. Keep the soil pH in range so calcium stays available, and do not force soft growth with too much nitrogen.",
+            "note_seasoned": "Uninterrupted moisture is the key lever, since erratic watering triggers the disorder; hold pH in the recommended range and avoid excess nitrogen that forces soft, rapid growth."
+          },
+          {
+            "method": "resistant_varieties",
+            "note_beginner": "Some celery varieties tolerate blackheart better; choose one where the disorder keeps recurring. No spray cures it."
+          }
+        ]
+      }
+    ]
+  },
+  "Microgreens Mix": {
+    "pests": [
+      {
+        "id": "fungus-gnats",
+        "type": "insect",
+        "name_seasoned": "Fungus gnats",
+        "name_beginner": "Fungus gnats",
+        "description_seasoned": "Small dark flies whose larvae live in persistently wet medium and feed on organic matter and tender roots. They are the main indoor microgreen pest and a symptom of an over-wet tray rather than a primary threat.",
+        "description_beginner": "Tiny dark flies that show up around constantly damp soil. Their larvae live in the wet mix. They are the main bug you might see indoors, and they usually mean the tray is staying too wet.",
+        "sources": [
+          "psu_microgreens",
+          "unr_ext"
+        ],
+        "anchoring_urls": {
+          "psu_microgreens": {
+            "url": "https://extension.psu.edu/growing-microgreens",
+            "verified": "2026-06-15"
+          },
+          "unr_ext": {
+            "url": "https://extension.unr.edu/publication.aspx?PubID=3468",
+            "verified": "2026-06-15"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "bottom_watering",
+            "note_beginner": "Keep the surface from staying soaking wet and water from the bottom; the gnat larvae live in the constantly wet mix. Keep a little air moving too.",
+            "note_seasoned": "Let the surface dry between waterings where the crop allows and bottom-water, since a persistently wet surface is what drives gnats; good airflow helps, and the short cycle means most trays are harvested before gnats build to a real problem."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Clean your trays and use fresh mix between batches to keep gnats away.",
+            "note_seasoned": "Sanitized trays and fresh medium between cycles break the breeding cycle."
+          },
+          {
+            "method": "yellow_sticky_traps",
+            "note_beginner": "Yellow sticky traps set right at the tray surface catch the adult gnats and help knock back a stubborn population, and they stay non-toxic on a crop you eat raw. Most trays are still harvested before gnats build up.",
+            "note_seasoned": "Sticky traps at the surface catch adults and dent a persistent population while staying safe on a raw crop; the short cycle usually harvests the tray before numbers matter."
+          }
+        ]
+      }
+    ],
+    "diseases": [
+      {
+        "id": "damping-off",
+        "type": "fungal",
+        "name_seasoned": "Damping-off (and surface mold)",
+        "name_beginner": "Damping-off and mold",
+        "description_seasoned": "Soil-borne fungi (Pythium, Rhizoctonia, and others) rot seedlings at the soil line under wet, crowded, still conditions, often alongside fuzzy white or gray surface mold. It is the number-one microgreen failure.",
+        "description_beginner": "The most common microgreen problem. In wet, crowded, stuffy conditions, tiny fungi rot the baby plants right at the base, and you often see fuzzy white or gray mold on the surface too.",
+        "sources": [
+          "psu_microgreens",
+          "usu_ext",
+          "unr_ext"
+        ],
+        "anchoring_urls": {
+          "psu_microgreens": {
+            "url": "https://extension.psu.edu/growing-microgreens",
+            "verified": "2026-06-15"
+          },
+          "usu_ext": {
+            "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+            "verified": "2026-06-15"
+          },
+          "unr_ext": {
+            "url": "https://extension.unr.edu/publication.aspx?PubID=3468",
+            "verified": "2026-06-15"
+          }
+        },
+        "control_ladder": [
+          {
+            "method": "sensible_seeding_rate",
+            "note_beginner": "Do not sow too thickly. Crowded, stuffy stands are where damping-off takes hold.",
+            "note_seasoned": "A sensible seeding rate keeps the stand from staying wet and stagnant, the conditions damping-off needs."
+          },
+          {
+            "method": "bottom_watering",
+            "note_beginner": "Keep the mix just damp, not soggy, and water from the bottom once the leaves are up. A wet surface is the main trigger.",
+            "note_seasoned": "Wrung-sponge moisture and bottom-watering once greened keep the surface from staying wet."
+          },
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Keep a small fan running for constant gentle airflow so the surface and stems stay dry."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "There is no spray you can use on a crop you eat raw, so prevention is the whole game. If a tray molds badly, toss it and start over with clean, sanitized trays.",
+            "note_seasoned": "There is no rescue spray for a raw cut crop; sanitized trays between cycles are essential, and a badly affected tray is composted and restarted clean."
+          }
+        ]
+      }
+    ]
+  }
+}
