@@ -683,6 +683,20 @@ print(f"  zone_span violations: {len(_zsp)}")
 for m in _zsp:
     fail(f"zone-span: {m}")
 
+# ---------------- A46. herbaceous_perennial structural cert (asparagus GS arc, 2026-07-23) ----------------
+# The no-replant perennial VEGETABLE archetype (asparagus, later artichoke): a new label on the
+# frost_anchored basis (so A3 tree-cert correctly no-ops), with its own structural armor for the
+# invariants the calendar layer does not cover -- establishment lag, succession suppression, and
+# per-region SUITABILITY honesty (a chill-dependent crop marked unsuitable in the tropics, not given
+# a fake calendar). Scoped to archetype == 'herbaceous_perennial' -> no-op on all 119 certified
+# (incl. the herbaceous herbs chives/mint, which stay culinary_herb per the 2026-07-05 ruling).
+from herbaceous_perennial_gate import herbaceous_perennial_violations
+print("A46. herbaceous_perennial structural cert (establishment + succession + suitability; no-op off scope)")
+_hpv = herbaceous_perennial_violations(crop)
+print(f"  archetype={crop.get('archetype')!r} | herbaceous_perennial violations: {len(_hpv)}")
+for m in _hpv:
+    fail(f"herbaceous-perennial: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
