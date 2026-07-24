@@ -100,3 +100,15 @@ if os.path.exists(_path):
     assert fp2 == [], f"D1/D8 FP on certified anchors: {fp2}"
 
 print("calendar_basis_gate: all tests passed")
+
+# herbaceous_perennial archetype (asparagus GS arc, 2026-07-23)
+from calendar_basis_gate import calendar_basis_violations, ARCHETYPE_BASIS
+assert ARCHETYPE_BASIS.get("herbaceous_perennial") == "frost_anchored", ARCHETYPE_BASIS.get("herbaceous_perennial")
+# clean: herbaceous_perennial on frost_anchored
+_hp_ok = {"slug": "asparagus", "archetype": "herbaceous_perennial",
+          "calendar_basis": "frost_anchored", "zone_independent": False}
+assert calendar_basis_violations(_hp_ok) == [], calendar_basis_violations(_hp_ok)
+# dispatch lie: herbaceous_perennial on a tree basis -> violation
+_hp_bad = dict(_hp_ok, calendar_basis="perennial_chill_gated")
+assert any("herbaceous_perennial" in v for v in calendar_basis_violations(_hp_bad)), calendar_basis_violations(_hp_bad)
+print("calendar_basis_gate: herbaceous_perennial pairing OK")

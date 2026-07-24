@@ -59,6 +59,12 @@ ARCHETYPE_BASIS = {
     "berries_woody": "berries_woody",
     "woody_ornamental": "perennial_woody_ornamental",
     "microgreen": "non_seasonal_indoor",
+    "herbaceous_perennial": "frost_anchored",  # asparagus (+ later artichoke), 2026-07-23: an
+    # herbaceous perennial VEGETABLE -- a new archetype label riding the SAME frost_anchored basis +
+    # annual calendar machinery (the warm_season_grass pattern), with NO new calendar-layer dispatch.
+    # The no-replant / establishment / suitability invariants are carried by the A46
+    # herbaceous_perennial_gate, not by the calendar layer. calendar_basis stays frost_anchored so
+    # A3 (perennial tree cert) correctly no-ops (proven by chives/mint/bee-balm certifying this way).
 }
 
 
