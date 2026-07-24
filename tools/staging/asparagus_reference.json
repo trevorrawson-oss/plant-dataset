@@ -439,7 +439,8 @@
             }
           },
           "resistance": {
-            "asparagus-rust": "susceptible"
+            "asparagus-rust": "susceptible",
+            "purple-spot": "susceptible"
           }
         },
         {
@@ -449,7 +450,7 @@
           "confidence_tier": "T1",
           "hero_description": "An all-male hybrid from Rutgers' Jersey series, a class the program bred for the vigor-based field tolerance to rust and the Fusarium rots that the all-male hybrids share.",
           "note_beginner": "A dependable all-male hybrid. The Jersey hybrids as a group carry good field tolerance to rust and the Fusarium rots, and they can still suffer in a snowless deep freeze, so mulch the crowns in the coldest zones.",
-          "note_seasoned": "Rutgers' fresh-market benchmark: a high-yielding, all-male member of the Jersey hybrid class. That class, rather than each cultivar by name, is documented for vigor-based field tolerance (not immunity) to rust and to Fusarium crown and root rot: MSU rates the Jersey hybrids more rust-tolerant than Millennium, and UC IPM credits hybrid vigor for a degree of Fusarium tolerance. Now largely discontinued at retail, but still a benchmark for the class.",
+          "note_seasoned": "Rutgers' fresh-market benchmark: a high-yielding, all-male member of the Jersey hybrid class. That class, rather than each cultivar by name, is documented for vigor-based field tolerance (not immunity) to rust and to Fusarium crown and root rot: MSU rates the Jersey hybrids more tolerant of rust and purple spot than Millennium, and UC IPM credits hybrid vigor for a degree of Fusarium tolerance. Now largely discontinued at retail, but still a benchmark for the class.",
           "sources": [
             "msu_ext",
             "rutgers_njaes",
@@ -471,7 +472,8 @@
           },
           "resistance": {
             "asparagus-rust": "tolerant",
-            "fusarium-crown-rot": "tolerant"
+            "fusarium-crown-rot": "tolerant",
+            "purple-spot": "tolerant"
           }
         },
         {
@@ -527,7 +529,16 @@
         "umn_ext",
         "msu_ext"
       ],
-      "anchoring_urls": {}
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+          "verified": "2026-07-24"
+        },
+        "msu_ext": {
+          "url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan",
+          "verified": "2026-07-24"
+        }
+      }
     },
     "pests": [
       {
@@ -562,6 +573,33 @@
             "method": "pyrethroid",
             "note_beginner": "As a last resort, a conventional pyrethroid such as permethrin knocks beetles down fast, but it is harmful to bees and fish and kills the natural enemies too. Read and follow the label.",
             "note_seasoned": "A broad pyrethroid is a rescue only; it is hard on pollinators and on the beetle's parasitic wasp, so reserve it for a young stand under heavy pressure."
+          }
+        ]
+      },
+      {
+        "id": "cutworm",
+        "type": "insect",
+        "name": "Cutworms",
+        "control_ladder": [
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Keep the bed and its edges clear of weeds and old plant debris, since that is where the moths lay eggs and the caterpillars shelter. Cutting down and removing the spent ferns in fall takes away their winter cover.",
+            "note_seasoned": "Cutworms overwinter in weeds, field trash, and crop residue, so weed control in and around the bed and thorough removal of fern debris are the foundation; UC IPM lists good weed management and cultivation as the first line, and both are allowed in an organically certified crop."
+          },
+          {
+            "method": "handpick",
+            "note_beginner": "When spears come up chewed or cut off at the base, dig an inch or so into the soil right around them: the gray, curled caterpillars hide just below the surface by day. Pick them out and drop them in soapy water. In a small bed this often keeps up.",
+            "note_seasoned": "Scout at the first chewed or crooked spears and confirm by digging an inch into the soil beside the damage, where the larvae rest. Hand-remove and crush or drown them; a nighttime flashlight check catches them feeding on the spears."
+          },
+          {
+            "method": "spinosad",
+            "note_beginner": "If cutworms keep cutting spears, a spinosad bait is a softer, organic option, but use it on the ferns after harvest rather than on the spears you plan to eat, and follow the label.",
+            "note_seasoned": "Spinosad baits are a soft-chemical option for cutworm on the fern stage; per the University of Minnesota they are not labeled for use on the edible spears, so reserve spinosad for after the cutting window and apply at dusk to spare bees."
+          },
+          {
+            "method": "pyrethroid",
+            "note_beginner": "As a last resort under heavy pressure, a labeled pyrethroid such as permethrin knocks cutworms down, and it works best in cool spring weather. It is hard on bees and beneficial insects, so read and follow the label.",
+            "note_seasoned": "A pyrethroid rescue such as permethrin gives good cutworm control under cool spring conditions and can be banded over the rows as spears emerge; it is broad and hard on natural enemies, so hold it for a threshold infestation, around one or more cutworms per ten crowns."
           }
         ]
       }
@@ -604,6 +642,32 @@
             "method": "garden_sanitation",
             "note_beginner": "Do not replant asparagus into an old asparagus bed. The Fusarium fungus survives in the soil for years, so choose a fresh, well-drained site the crop has not grown in.",
             "note_seasoned": "Fusarium persists in soil indefinitely, so avoid replant sites and rotate long out of asparagus; favor well-drained ground, since waterlogged, low-pH soil worsens the rots."
+          }
+        ]
+      },
+      {
+        "id": "purple-spot",
+        "type": "fungal",
+        "name": "Purple spot (Stemphylium)",
+        "control_ladder": [
+          {
+            "method": "resistant_varieties",
+            "note_beginner": "Plant a more tolerant hybrid where you can. Michigan trials rate the Jersey hybrids as less bothered by purple spot than Millennium, though no variety shrugs it off completely."
+          },
+          {
+            "method": "airflow_spacing",
+            "note_beginner": "Give the bed full sun and wide spacing, and water at the base rather than overhead, so the spears and ferns dry fast. The fungus needs the leaves to stay wet for several hours to infect, so quick drying is the point.",
+            "note_seasoned": "Purple spot infects through wet tissue when leaves stay wet for roughly four hours or more, so full sun, wide airflow-oriented spacing, and limited overhead irrigation to shorten leaf-wetness periods are the core cultural controls."
+          },
+          {
+            "method": "garden_sanitation",
+            "note_beginner": "Cut down and clear away the old ferns at the end of the season, since the fungus overwinters on that dead fern litter and reinfects next spring's spears.",
+            "note_seasoned": "The fungus survives winter on old fern residue, which seeds the next year's spear infections, so remove or chop and bury the spent fern at season's end; this residue sanitation is the single most important purple spot control in a home bed."
+          },
+          {
+            "method": "copper_fungicide",
+            "note_beginner": "You rarely need to spray in a home bed, since purple spot is mostly a cosmetic blemish. If it turns severe, a labeled protectant fungicide can go on the ferns after harvest; copper is a common organic choice.",
+            "note_seasoned": "Purple spot rarely warrants spraying in a home planting, where it is largely cosmetic. In a chronic or commercial case, protectant fungicides on the fern stage hold it (the materials proven in trials are chlorothalonil and azoxystrobin); a labeled copper is the common organic protectant, applied after harvest since fungicides are not used during the cutting window."
           }
         ]
       }
@@ -2350,11 +2414,11 @@
       {
         "label": "Ferns yellowing or browning early",
         "cause_beginner": "In summer, rust or another disease; in fall after frost, just normal dieback.",
-        "what_happened_beginner": "Your ferns turned yellow or brown. The timing tells you which. In fall, after frost, uniform yellowing and browning is normal: the ferns are dying back for winter and you cut them down. In summer, patchy yellowing and browning with rusty, orange to brick-red spots on the stems is asparagus rust, a disease that weakens next year's crop. For rust, cut and destroy the infected ferns, site and space the bed for good airflow, and plant resistant varieties.",
-        "next_season_tip_beginner": "Give the bed sun and airflow, plant rust-resistant varieties, and clear out old ferns; in fall, browning is just normal dieback.",
-        "what_happened_seasoned": "Ferns discolored. Distinguish natural senescence from disease by season: uniform fall yellowing after frost is normal dieback ahead of dormancy. Premature summer yellowing, browning, and defoliation, especially with rust-colored (orange to brick-red) pustules on stalks and branches, is asparagus rust, which cuts vigor and yield the following year. Rust-colored fern collapse across the stand, versus one or a few stunted, bright-yellow ferns on an otherwise declining plant, also separates rust from Fusarium crown and root rot. Manage rust with resistant varieties, wide airflow-oriented spacing in full sun, and sanitation of infected fern.",
+        "what_happened_beginner": "Your ferns turned yellow or brown. The timing tells you which. In fall, after frost, uniform yellowing and browning is normal: the ferns are dying back for winter and you cut them down. In summer, patchy yellowing and browning with rusty, orange to brick-red spots on the stems is asparagus rust, a disease that weakens next year's crop. For rust, cut and destroy the infected ferns, site and space the bed for good airflow, and plant rust-tolerant varieties.",
+        "next_season_tip_beginner": "Give the bed sun and airflow, plant rust-tolerant varieties, and clear out old ferns; in fall, browning is just normal dieback.",
+        "what_happened_seasoned": "Ferns discolored. Distinguish natural senescence from disease by season: uniform fall yellowing after frost is normal dieback ahead of dormancy. Premature summer yellowing, browning, and defoliation, especially with rust-colored (orange to brick-red) pustules on stalks and branches, is asparagus rust, which cuts vigor and yield the following year. Rust-colored fern collapse across the stand, versus one or a few stunted, bright-yellow ferns on an otherwise declining plant, also separates rust from Fusarium crown and root rot. Manage rust with rust-tolerant varieties, wide airflow-oriented spacing in full sun, and sanitation of infected fern.",
         "cause_seasoned": "Natural post-frost senescence in fall; premature summer discoloration with rusty pustules is asparagus rust, distinct from Fusarium's stunted, bright-yellow single ferns.",
-        "next_season_tip_seasoned": "For rust, use resistant hybrids, orient wide rows to the prevailing wind in full sun, and remove infected fern; expect uniform yellowing only after fall frost.",
+        "next_season_tip_seasoned": "For rust, use more rust-tolerant hybrids, orient wide rows to the prevailing wind in full sun, and remove infected fern; expect uniform yellowing only after fall frost.",
         "audience": "core"
       },
       {
