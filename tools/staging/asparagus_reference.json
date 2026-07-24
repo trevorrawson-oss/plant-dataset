@@ -394,23 +394,118 @@
     "propagule": "crown",
     "days_to_maturity": [],
     "verification_status": {
-      "status": null,
-      "launch_ready_core": false,
-      "launch_ready_seasoned": false,
-      "last_audited": null,
-      "open_findings": [],
+      "status": "verified_gs_arc",
+      "phase": "asparagus_herbaceous_perennial_cert_gs_arc",
+      "date": "2026-07-24",
+      "launch_ready_core": true,
+      "launch_ready_seasoned": true,
+      "last_audited": "2026-07-24",
+      "source_set": [
+        "clemson_hgic",
+        "msu_ext",
+        "mu_ext",
+        "nmsu_chart",
+        "nmsu_ext",
+        "osu_ext",
+        "rutgers_njaes",
+        "tamu_agrilife",
+        "uada_ext",
+        "uc_ipm",
+        "ucanr_ext",
+        "uf_ifas",
+        "uga_b577",
+        "uga_ext",
+        "uiuc_ext",
+        "umd_ext",
+        "umn_ext",
+        "unr_fs0261",
+        "usu_ext",
+        "usu_ext_veg_dates",
+        "wsu_ext"
+      ],
+      "verification_log_ref": "Asparagus GS-arc cert (2026-07-24), herbaceous_perennial archetype. Asparagus officinalis (Asparagaceae) is modeled as a herbaceous_perennial on the frost_anchored calendar basis, the same lane certified for chives and mint, where the annual placement gates (A3) no-op because a permanent bed is planted once from crowns and never succession-sown. The regional calendars carry the established-bed steady state: winter cold_pause dormancy, spring harvest as the soil warms, summer growing (the fern canopy recharging the crown), then fall dieback back into cold_pause. This spring-harvest-then-summer-fern rhythm is legalized by the A34/A37 herbaceous_perennial carve-out authored at Task 1, which exempts the archetype from the annual harvest-needs-a-preceding-plant and no-growing-after-harvest rules; without it the productive cells would read as incoherent. Suitability is an honest 16-region, 39-cell map: 18 cells perennialize, 8 are marginal, and 13 are unsuitable. Every marginal and unsuitable call rests on the asparagus dormancy requirement verified verbatim from UC IPM (asparagus requires two distinct periods, a growing period and a resting period) plus its stated 65°F to 85°F fern optimum: frost-poor maritime and low-chill zones blunt the dormant rest (marginal), and frost-free subtropical or extreme-heat desert zones deny it entirely (unsuitable). Variety resistance is graded T1 from Michigan State trials: Millennium (the reference, a cold-hardy all-male University of Guelph hybrid) is susceptible to rust and purple spot, while the Rutgers Jersey class, represented by Jersey Knight, carries the vigor-based field tolerance to rust, purple spot, and Fusarium crown and root rot. The plan skeleton's fabricated per-variety grades were caught by the T1-or-drop rule during authoring and rebuilt only from the MSU-sourced calls, a design-arc integrity catch. Asparagus opens a new Perennial Vegetables category (UC Master Gardener frames it as a perennial cool-season stem vegetable, not a fruiting vegetable), moved out of Fruiting Vegetables. Review fix: the ca_interior Delta prose was re-anchored to sourced framing (the deep peat Delta soils have grown asparagus for generations, crowns producing up to twenty years) after an unsupported largest-producer superlative was dropped and re-verified against the UC ANR Kings County report and UC IPM cultural-tips. Remaining honest caveats, heavily-modeled regional month placement and thin regional sourcing on a few desert cells, are logged as low-severity open findings; none block launch.",
+      "open_findings": [
+        {
+          "id": "asparagus_herbaceous_perennial_in_frost_anchored_lane",
+          "summary": "MODELING CHOICE flagged for certify: asparagus is a HERBACEOUS PERENNIAL modeled in the frost_anchored lane (the chives/mint lane), not a woody or a dedicated perennial-vegetable basis. The annual placement gates (A3) no-op because the bed is planted once from crowns and never succession-sown, and the established-bed steady-state calendar (winter cold_pause, spring harvest, summer fern growing, fall dieback) is legalized by the A34/A37 herbaceous_perennial carve-out that exempts the archetype from harvest-needs-a-preceding-plant and no-growing-after-harvest. The perennial nature is represented honestly: perennial=true, lifecycle=perennial, succession_policy.suitable=false (permanent 15-to-20-year bed), propagule=crown, days_to_maturity [] with the establishment lag carried in years_to_first_harvest/years_to_full_production/productive_lifespan_years, and a dedicated dormancy growth stage. Confirm this lane choice is acceptable versus a dedicated perennial-vegetable basis shared with the queued artichoke.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_regional_calendars_month_placement_modeled",
+          "summary": "All 39 per-zone calendars have their harvest/growing MONTH placement MODELED from each region's frost and spring warm-up pattern plus the regional extension sources, not lifted from a single asparagus-per-zone chart (few exist), following the certified-chives regional-calendar precedent. resolution_method on every cell is frost_anchored_resolved. The suitability TIERS are T1-defensible on the dormancy requirement; where regional sourcing was thin the month placement was modeled and flagged rather than the tier overstated.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_nevada_z9_z10_month_placement_and_marginal",
+          "summary": "nevada z9 and z10 are the lowest-confidence cells: the z10 marginal call (warm-winter blunted dormancy) and the Feb-Mar spear-emergence placement for both z9 and z10 are heavily modeled from dormancy-deficit reasoning, with no asparagus-per-zone z10 chart and only a generic southern-Nevada vegetable-production regional anchor (unr_fs0261) alongside the UC IPM dormancy biology. The tier is conservative and the placement is modeled; flagged for the source-truth sample.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_utah_dixie_z8_month_placement_modeled",
+          "summary": "utah_dixie z8 (St. George): the Mar-Apr harvest placement is modeled from the warm Mojave-edge spring; the USU asparagus source is statewide and northern-Utah-timed to May-Jun. The perennializes tier is sound (the Dixie winter still delivers a real dormant rest); only the month placement is modeled.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_pnw_z9_month_placement_modeled",
+          "summary": "pnw z9: the Mar-Apr start is modeled. Cool maritime springs make the hardiness zone a weak predictor of first-cut, so the prose tells the reader to let soil temperature call the start; OSU anchors the mid-June harvest END directly while the START months are modeled.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_ca_interior_z8_month_placement_modeled",
+          "summary": "ca_interior z8 (valley margins and foothills): the Mar-Apr placement is extrapolated from Delta-centric commercial sources (UC ANR and UC IPM), which document the z9 Delta floor far better than the cooler foothill margins. The perennializes tier is well-supported; the z8 month placement is modeled.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_mid_south_z8_month_placement_modeled",
+          "summary": "mid_south z8 (Delta lowlands): the March start is extrapolated below the statewide-Arkansas April figure for the warm Delta lowlands. The perennializes tier is T1 (AR and MO give a month-direct April-into-June window for the uplands); the warmer-lowland March placement is modeled.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_low_desert_az_unsuitable_thin_sourcing",
+          "summary": "low_desert_az z9 and z10 (Phoenix and Yuma) are the weakest-sourced cells: no UArizona low-desert asparagus page exists (the only UArizona asparagus page is high-desert Yavapai, about z7, and recommends the crop there), so the unsuitable call is modeled from the UC IPM dormancy-plus-heat basis and the Texas A&M poor-in-mild-winter-and-long-hot-summer analog (tamu_agrilife). A marginal, short-lived call is arguably also defensible; unsuitable was chosen on the conservative-tier rule.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        },
+        {
+          "id": "asparagus_suitability_boundary_calls_modeled",
+          "summary": "Two suitability boundary calls are modeled climate distinctions rather than source-stated lines: se_gulf z10 kept marginal (it sits at the hottest-South edge and could arguably be unsuitable) and ca_desert z9 kept marginal against z10/z11 unsuitable (the marginal-versus-unsuitable split within the desert). Both follow the design default and the dormancy-and-heat basis; flagged for the source-truth sample.",
+          "severity": "low",
+          "blocks_launch": false,
+          "status": "open"
+        }
+      ],
       "field_additions": [
         {
           "field": "timing_spine",
-          "added_in": "asparagus_gs_arc",
+          "date": "2026-07-24",
           "sources": [
-            "umn_ext",
+            "clemson_hgic",
             "msu_ext",
-            "osu_ext",
             "mu_ext",
-            "uga_ext"
+            "osu_ext",
+            "umn_ext"
           ],
-          "note": "Perennial timing spine authored T1: propagule 'crown'; days_to_maturity [] (perennial N/A, so no dtm_anchor and no day_range_from_sow ladder); in-row spacing 12 to 18 inches (Missouri, Clemson); warm seed germination optimum 60 to 85 F, optimum 75 F (Oregon State germination table, read from raw HTML). Full field_additions provenance completed at Task 8 cert."
+          "note": "propagule=crown; dtm_anchor absent (days_to_maturity [] perennial N/A, so no day_range_from_sow ladder); establishment lag carried in years_to_first_harvest/years_to_full_production/productive_lifespan_years; in-row spacing 12 to 18 inches (Missouri, Clemson); warm seed germination optimum 60°F to 85°F (Oregon State germination table, read from raw HTML)."
+        },
+        {
+          "field": "category",
+          "date": "2026-07-24",
+          "note": "new Perennial Vegetables category (UC Master Gardener: asparagus is a perennial cool-season STEM vegetable, not fruiting); moved from Fruiting Vegetables."
         }
       ]
     },
