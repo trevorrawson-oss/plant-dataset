@@ -627,6 +627,39 @@
           }
         ],
         "resolved_by_zone": {
+          "3": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "Zone 3 is the cold edge, but asparagus is one of the hardiest garden perennials and rides out winter dormant underground; plant a cold-tough all-male hybrid like Millennium, expect spears in mid to late May once the soil warms, cut for about six weeks into June, then let the ferns run all summer to reload the crown before dormancy.",
+            "sources": [
+              "umn_ext",
+              "msu_ext"
+            ],
+            "anchoring_urls": {
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              },
+              "msu_ext": {
+                "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+                "verified": "2026-07-24"
+              }
+            }
+          },
           "4": {
             "suitability": "perennializes",
             "calendar": [
@@ -659,10 +692,672 @@
                 "verified": "2026-07-24"
               }
             }
+          },
+          "5": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In zone 5 spears break ground in early to mid May; harvest for six to eight weeks into June, then stop and let the ferns grow through summer to recharge the crown before it dies back and rests over winter.",
+            "sources": [
+              "umn_ext",
+              "msu_ext"
+            ],
+            "anchoring_urls": {
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              },
+              "msu_ext": {
+                "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "6": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "Zone 6 warms a touch earlier, so spears start in April; cut for six to eight weeks into May, then leave the ferns to grow all summer and feed the crown before fall dieback and winter dormancy.",
+            "sources": [
+              "msu_ext",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "msu_ext": {
+                "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+                "verified": "2026-07-24"
+              },
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "7": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "On the mild zone 7 edge spears can push in early April; harvest six to eight weeks into May, then let the ferns develop through the summer to rebuild the crown ahead of the dormant season.",
+            "sources": [
+              "msu_ext",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "msu_ext": {
+                "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+                "verified": "2026-07-24"
+              },
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              }
+            }
           }
         },
         "region_notes_beginner": "Asparagus is a great fit for cold gardens. Plant one-year-old crowns of a hardy hybrid like Millennium in spring, wait two years for your first real harvest, and the bed will feed you for 15 years or more.",
         "region_notes_seasoned": "A frost-anchored perennial here: harvest May into late June, then leave the ferns until they yellow after a hard frost and cut them down for beetle and rust sanitation. In the coldest, snow-poor winters mulch the crowns, since the Jersey types can injure below -30°F."
+      },
+      "warm_arid": {
+        "region_id": "warm_arid",
+        "region_label": "Warm Arid (Inland Southwest)",
+        "zone_span": [
+          "8"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the inland Southwest asparagus is winter hardy and tolerates the heat well; spears emerge in March as the soil warms, so harvest through March and April for six to eight weeks, then let the ferns grow through the long hot summer, kept watered, to recharge the crown before it goes dormant in winter.",
+            "sources": [
+              "nmsu_ext",
+              "nmsu_chart"
+            ],
+            "anchoring_urls": {
+              "nmsu_ext": {
+                "url": "https://pubs.nmsu.edu/_h/H227/index.html",
+                "verified": "2026-07-24"
+              },
+              "nmsu_chart": {
+                "url": "https://donaanamastergardeners.nmsu.edu/documents/foodgardenplantingchart-1.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus is a durable desert perennial: plant crowns of a heat-tough variety, give the bed deep water and a winter rest, and it will send up early spring spears for 15 years or more.",
+        "region_notes_seasoned": "A frost-anchored perennial for the inland Southwest; harvest March into April, then keep the summer ferns watered so the crown reloads before dormancy. The winters here still deliver a real dormant rest, so a well-sited bed perennializes."
+      },
+      "utah_dixie": {
+        "region_id": "utah_dixie",
+        "region_label": "Utah: St. George Dixie (Mojave-edge high desert)",
+        "zone_span": [
+          "8"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "St. George sits in Utah's warmest, Mojave-edge corner, yet its winters still bring frost and a real dormant rest, so asparagus perennializes; spears push up early as the soil warms in March, harvest through March and April for six to eight weeks, then let the summer ferns recharge the crown before winter.",
+            "sources": [
+              "usu_ext",
+              "usu_ext_veg_dates"
+            ],
+            "anchoring_urls": {
+              "usu_ext": {
+                "url": "https://extension.usu.edu/yardandgarden/research/asparagus-in-the-garden",
+                "verified": "2026-07-24"
+              },
+              "usu_ext_veg_dates": {
+                "url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Even in hot St. George, asparagus works: the winters cool off enough for the crowns to rest, and you get early spring spears from a bed that lasts for years.",
+        "region_notes_seasoned": "A frost-anchored perennial on the Mojave edge; the Dixie winter still delivers the dormant rest asparagus needs, so harvest March into April, then carry the ferns through summer with irrigation to reload the crown."
+      },
+      "mid_atlantic": {
+        "region_id": "mid_atlantic",
+        "region_label": "Mid-Atlantic: Piedmont and Coastal Plain",
+        "zone_span": [
+          "7",
+          "8"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "7": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "Across the Piedmont spears emerge in April as the soil warms; harvest for about six weeks into May, then let the ferns grow through summer and stand until they brown in late fall, when the crown rests through winter.",
+            "sources": [
+              "rutgers_njaes",
+              "umd_ext"
+            ],
+            "anchoring_urls": {
+              "rutgers_njaes": {
+                "url": "https://njaes.rutgers.edu/fs1301/",
+                "verified": "2026-07-24"
+              },
+              "umd_ext": {
+                "url": "https://extension.umd.edu/resource/growing-asparagus-home-garden",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "On the warmer Coastal Plain spears break ground by mid March; harvest March into April for six to eight weeks, then let the ferns develop through the long summer to recharge the crown before it dies back and rests over winter.",
+            "sources": [
+              "umd_ext",
+              "rutgers_njaes"
+            ],
+            "anchoring_urls": {
+              "umd_ext": {
+                "url": "https://extension.umd.edu/resource/growing-asparagus-home-garden",
+                "verified": "2026-07-24"
+              },
+              "rutgers_njaes": {
+                "url": "https://njaes.rutgers.edu/fs1301/",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus is a Mid-Atlantic classic: set crowns in early spring, wait two years for a real cut, and a well-drained Piedmont or Coastal Plain bed will feed you for 15 years or more.",
+        "region_notes_seasoned": "A frost-anchored perennial; on the Piedmont harvest April into May, and on the warmer Coastal Plain from mid March. Let the ferns stand until they brown in late fall, then cut them for beetle and rust sanitation while the crown rests."
+      },
+      "mid_south": {
+        "region_id": "mid_south",
+        "region_label": "Mid-South: Ozark Uplands and Delta Lowlands",
+        "zone_span": [
+          "7",
+          "8"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "7": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the cooler Ozark uplands spears emerge in April; harvest for four to six weeks into May, then let the ferns grow through summer and stand until a killing frost, when the crown dies back and rests over winter.",
+            "sources": [
+              "uada_ext",
+              "mu_ext"
+            ],
+            "anchoring_urls": {
+              "uada_ext": {
+                "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
+                "verified": "2026-07-24"
+              },
+              "mu_ext": {
+                "url": "https://extension.missouri.edu/publications/g6405",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the warm Delta lowlands spears push up by March; harvest March into April for four to six weeks, then let the ferns develop through the hot summer to recharge the crown before winter dormancy.",
+            "sources": [
+              "uada_ext",
+              "mu_ext"
+            ],
+            "anchoring_urls": {
+              "uada_ext": {
+                "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
+                "verified": "2026-07-24"
+              },
+              "mu_ext": {
+                "url": "https://extension.missouri.edu/publications/g6405",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus thrives across the Mid-South: plant crowns in a well-drained spot, snap the early spring spears, and the bed will keep producing for many years.",
+        "region_notes_seasoned": "A frost-anchored perennial; harvest April into June in the Ozarks and from March in the Delta lowlands, snapping spears to limit fusarium. Let the ferns stand until a killing frost, then cut them down; do not remove them before late September."
+      },
+      "pnw": {
+        "region_id": "pnw",
+        "region_label": "Maritime Pacific Northwest: Puget Sound and Willamette Valley",
+        "zone_span": [
+          "8",
+          "9"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the maritime Puget Sound and Willamette Valley spring warms slowly, so spears emerge in April; harvest for six to eight weeks into mid June, then let the ferns grow through the mild summer, standing until they turn golden and the crown rests over the cool wet winter.",
+            "sources": [
+              "osu_ext",
+              "wsu_ext"
+            ],
+            "anchoring_urls": {
+              "osu_ext": {
+                "url": "https://extension.oregonstate.edu/news/growing-asparagus-takes-patience-rewards-gardeners-years",
+                "verified": "2026-07-24"
+              },
+              "wsu_ext": {
+                "url": "https://hortsense.cahnrs.wsu.edu/vegetables/vegetables-asparagus/",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "9": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the mildest maritime pockets spears can start in late March; harvest into May and early June, then let the ferns develop through summer to recharge the crown before winter dormancy. Cool maritime springs keep the season later than the zone alone suggests.",
+            "sources": [
+              "osu_ext",
+              "wsu_ext"
+            ],
+            "anchoring_urls": {
+              "osu_ext": {
+                "url": "https://extension.oregonstate.edu/news/growing-asparagus-takes-patience-rewards-gardeners-years",
+                "verified": "2026-07-24"
+              },
+              "wsu_ext": {
+                "url": "https://hortsense.cahnrs.wsu.edu/vegetables/vegetables-asparagus/",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Western Washington and Oregon are prime asparagus country: plant crowns in spring, and a well-drained maritime bed will send up spears for 15 years or more.",
+        "region_notes_seasoned": "A frost-anchored perennial in a region that grows it commercially; harvest April into mid June, then leave the ferns until they yellow in fall. Cool maritime springs delay the start, so let soil temperature, not the calendar, call the first cut."
+      },
+      "ca_interior": {
+        "region_id": "ca_interior",
+        "region_label": "California: Interior Valleys",
+        "zone_span": [
+          "8",
+          "9"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the cooler valley margins and foothills spears emerge in March; harvest March into April for eight to ten weeks, then let the ferns grow through the hot summer with irrigation, and stop watering in fall so the crown goes dormant and rests over winter.",
+            "sources": [
+              "uc_ipm",
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/sites/default/files/2011-11/131938.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "9": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "The peat soils of the Sacramento and San Joaquin Delta are the largest asparagus-producing region in the country, with the heaviest cutting from February into spring; spears push up by February here, harvest for eight to ten weeks, then let the ferns recharge the crown through summer before the fall dormant rest.",
+            "sources": [
+              "uc_ipm",
+              "ucanr_ext"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "ucanr_ext": {
+                "url": "https://ucanr.edu/sites/default/files/2011-11/131938.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "California's interior valleys are the heart of American asparagus; plant crowns in a deep, well-drained bed, let the crown rest each winter, and enjoy very early spring spears for years.",
+        "region_notes_seasoned": "A frost-anchored perennial; the Delta and valley floor cut from February, the cooler margins from March, for eight to ten weeks. Let the summer ferns reload the crown, then cut irrigation in September or October so the plants go dormant, the rest period the crop requires."
+      },
+      "nevada": {
+        "region_id": "nevada",
+        "region_label": "Nevada: Mojave High Desert (Las Vegas Valley)",
+        "zone_span": [
+          "8",
+          "9",
+          "10"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the higher, cooler reaches of the Las Vegas Valley spears emerge in March; harvest March into April for eight to ten weeks, then keep the summer ferns irrigated to recharge the crown before it goes dormant and rests through the cool desert winter.",
+            "sources": [
+              "uc_ipm",
+              "unr_fs0261"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "unr_fs0261": {
+                "url": "https://naes.agnt.unr.edu/PMS/Pubs/2002-3280.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "9": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "On the warm valley floor spears push up by February; harvest for eight to ten weeks into spring, then let the ferns grow through the hot summer with steady water, and go dormant over winter. The Mojave winter still cools enough for the crown to rest.",
+            "sources": [
+              "uc_ipm",
+              "unr_fs0261"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "unr_fs0261": {
+                "url": "https://naes.agnt.unr.edu/PMS/Pubs/2002-3280.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "Zone 10 in the Las Vegas Valley is the warm edge of asparagus range: winters here are often too mild to force a full dormant rest, and asparagus requires a distinct resting period to recharge, so a bed perennializes only marginally, with weaker spears and a shorter productive life than in zones 8 and 9.",
+            "suitability_note_beginner": "Asparagus can grow here, but only just: the winters are usually too warm to give the crowns the deep rest they need, so expect thinner spears and a shorter-lived bed than in cooler areas.",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the warmest, low, frost-scarce pockets spears can start in February, but the mild winters blunt the dormant rest asparagus depends on; the bed still cycles and yields, yet vigor and stand life fall off compared with the cooler valley.",
+            "sources": [
+              "uc_ipm",
+              "unr_fs0261"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "unr_fs0261": {
+                "url": "https://naes.agnt.unr.edu/PMS/Pubs/2002-3280.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus grows well across most of the Las Vegas Valley; plant crowns of a heat-tolerant variety like UC 157, give the bed deep water, and pick very early spring spears for years. In the warmest low pockets the winters can be too mild for a lasting bed.",
+        "region_notes_seasoned": "A frost-anchored perennial for the Mojave high desert; harvest from February on the valley floor and March higher up, then irrigate the summer ferns to reload the crown. In zone 10's mildest pockets the dormant rest is incomplete, so the bed only marginally perennializes."
       },
       "hawaii_tropical": {
         "region_id": "hawaii_tropical",
