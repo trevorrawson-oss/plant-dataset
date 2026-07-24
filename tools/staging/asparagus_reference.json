@@ -142,7 +142,45 @@
           "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
           "verified": "2026-07-24"
         }
-      }
+      },
+      "schedule_by_stage": [
+        {
+          "stage_id": "establishment",
+          "system": "soaker_or_drip",
+          "rate": "keep evenly moist; water deeply in dry spells",
+          "frequency": "even_while_establishing",
+          "level": "critical",
+          "note_seasoned": "Steady moisture matters most through the first two seasons while the crowns build their deep root system; water deeply whenever rainfall is short so the soil never dries around the new roots, and mulch to hold it even.",
+          "note_beginner": "Keep a new bed evenly moist while the roots get established. Water deeply during dry spells and mulch to hold the moisture; this is the most important watering in the plant's life."
+        },
+        {
+          "stage_id": "spear_emergence",
+          "system": "soaker_or_drip",
+          "rate": "deep and even through the cutting window",
+          "frequency": "steady_through_harvest",
+          "level": "critical",
+          "note_seasoned": "The crown is spending reserves to push spears, so keep even, deep moisture through the six-to-eight-week harvest; water at the soil line with drip or a soaker so the emerging spears and soon-to-grow ferns stay dry against rust.",
+          "note_beginner": "While the spears are coming up in spring, keep the soil evenly moist with deep watering. Water at the base, not over the plants, to help prevent rust."
+        },
+        {
+          "stage_id": "fern_growth",
+          "system": "soaker_or_drip",
+          "rate": "deep and even; let the top inch dry between waterings",
+          "frequency": "even_through_summer",
+          "level": "standard",
+          "note_seasoned": "Keep the ferns growing vigorously with steady moisture through summer, since next spring's yield tracks this year's fern; an established, deep-rooted bed rides out short dry spells, but growth and reserves suffer in prolonged drought. Water at the base to keep the ferns dry against rust.",
+          "note_beginner": "Water the ferns through summer so they grow tall and feed the roots for next year. An older bed handles a short dry spell, but do not let it stay dry for long. Water at the base to keep the ferns dry."
+        },
+        {
+          "stage_id": "dormancy",
+          "system": "natural_or_minimal",
+          "rate": "little to none while dormant",
+          "frequency": "minimal_in_dormancy",
+          "level": "low",
+          "note_seasoned": "Cut back watering as the ferns die back and the crown goes dormant; the risk now is crown and root rot in cold, saturated ground, so never let a dormant bed sit in waterlogged soil over winter.",
+          "note_beginner": "Water little or none once the ferns brown and the plant goes dormant for winter. The danger now is rot in soggy soil, so do not let the resting bed stay waterlogged."
+        }
+      ]
     },
     "spacing_inches": [
       12,
@@ -652,6 +690,182 @@
         "region_notes_beginner": "Skip asparagus in a tropical, frost-free garden and choose a heat-loving perennial instead; without a real winter dormancy the crowns will not build the reserves a lasting bed needs.",
         "region_notes_seasoned": "A dormancy-dependent temperate perennial marked unsuitable for frost-free zone 12: without a sustained dormant rest the crown cannot recharge, so stands thin and fade rather than perennializing."
       }
-    }
+    },
+    "tips_by_stage": {
+      "establishment": [
+        {
+          "tip_id": "tip_asp_estab1",
+          "sources": [
+            "umn_ext",
+            "msu_ext",
+            "clemson_hgic"
+          ],
+          "evidence_tier": "extension_backed",
+          "author": {
+            "type": "plant_team"
+          },
+          "added_in": "asparagus_cert_gs_arc",
+          "last_reviewed": "2026-07-24",
+          "audience": "core",
+          "anchoring_urls": {
+            "umn_ext": {
+              "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+              "verified": "2026-07-24"
+            },
+            "msu_ext": {
+              "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+              "verified": "2026-07-24"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/asparagus/",
+              "verified": "2026-07-24"
+            }
+          },
+          "text_seasoned": "Hold off on harvest while the bed roots in. Cut nothing the planting year and let every spear grow to fern, which is how the crown banks the reserves it will draw on for decades. The second spring, take only a light two-week pick, and just if the bed came through the first season strong; some guides wait for year three. Cutting a young bed too hard too soon leaves it weak and spindly and can set the crown back for good.",
+          "text_beginner": "Do not pick any spears the first year you plant. Let them all grow into tall ferns so the roots get strong. The next spring you can take a small two-week harvest if the plants look healthy, then stop. Harvesting a young bed too hard, too soon, can weaken it permanently, so be patient for the big harvests."
+        }
+      ],
+      "spear_emergence": [
+        {
+          "tip_id": "tip_asp_spear1",
+          "sources": [
+            "umn_ext",
+            "mu_ext",
+            "clemson_hgic"
+          ],
+          "evidence_tier": "extension_backed",
+          "author": {
+            "type": "plant_team"
+          },
+          "added_in": "asparagus_cert_gs_arc",
+          "last_reviewed": "2026-07-24",
+          "audience": "core",
+          "anchoring_urls": {
+            "umn_ext": {
+              "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+              "verified": "2026-07-24"
+            },
+            "mu_ext": {
+              "url": "https://extension.missouri.edu/publications/g6405",
+              "verified": "2026-07-24"
+            },
+            "clemson_hgic": {
+              "url": "https://hgic.clemson.edu/factsheet/asparagus/",
+              "verified": "2026-07-24"
+            }
+          },
+          "text_seasoned": "On an established bed, cut spears at about 6 to 8 inches with tight tips, every one to three days, through a roughly six-to-eight-week spring window. The signal to stop is the spears themselves: when the majority thin down to about pencil width (under 3/8 inch) and come up spindly, quit cutting. Harvesting past that point drains the crown, so let the rest grow to fern once the diameter drops off.",
+          "text_beginner": "Once a bed is established, cut spears when they are about 6 to 8 inches tall with closed, tight tips, every day or two. Keep going for about six to eight weeks, then stop when the new spears turn thin, about pencil-width or skinnier. That thinning is the plant telling you it is low on energy, so let the rest grow into ferns."
+        }
+      ],
+      "fern_growth": [
+        {
+          "tip_id": "tip_asp_fern1",
+          "sources": [
+            "umn_ext",
+            "msu_ext",
+            "mu_ext"
+          ],
+          "evidence_tier": "extension_backed",
+          "author": {
+            "type": "plant_team"
+          },
+          "added_in": "asparagus_cert_gs_arc",
+          "last_reviewed": "2026-07-24",
+          "audience": "core",
+          "anchoring_urls": {
+            "umn_ext": {
+              "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+              "verified": "2026-07-24"
+            },
+            "msu_ext": {
+              "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+              "verified": "2026-07-24"
+            },
+            "mu_ext": {
+              "url": "https://extension.missouri.edu/publications/g6405",
+              "verified": "2026-07-24"
+            }
+          },
+          "text_seasoned": "After the final cut, let every spear grow into a tall fern and leave it standing all summer and into fall. This canopy is the crown recharging: next spring's spear yield tracks directly with this year's fern growth, so never shear it early. Feed the bed right after harvest, keep it weeded and watered to fuel the ferns, and scout the foliage for asparagus beetles and for rust.",
+          "text_beginner": "When you stop harvesting, let the plants grow into tall, feathery ferns and leave them up all summer. This is how the roots refill their energy for next year, and next spring's harvest depends on it, so never cut the ferns down early. Feed the bed after the last harvest, keep it watered and weeded, and check the ferns for beetles and orange rust spots."
+        }
+      ],
+      "dormancy": [
+        {
+          "tip_id": "tip_asp_dorm1",
+          "sources": [
+            "msu_ext",
+            "mu_ext",
+            "uga_ext"
+          ],
+          "evidence_tier": "extension_backed",
+          "author": {
+            "type": "plant_team"
+          },
+          "added_in": "asparagus_cert_gs_arc",
+          "last_reviewed": "2026-07-24",
+          "audience": "core",
+          "anchoring_urls": {
+            "msu_ext": {
+              "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+              "verified": "2026-07-24"
+            },
+            "mu_ext": {
+              "url": "https://extension.missouri.edu/publications/g6405",
+              "verified": "2026-07-24"
+            },
+            "uga_ext": {
+              "url": "https://fieldreport.caes.uga.edu/publications/C1026/",
+              "verified": "2026-07-24"
+            }
+          },
+          "text_seasoned": "Once frost has fully browned the ferns, cut them to the ground and clear the debris off the bed. Both asparagus beetles and rust overwinter in that dead fern litter, so removing and destroying it before spring knocks back next year's pressure. You can cut anytime from late fall through late winter, as long as it is down before the new spears push. Do not till or dig the bed; the crown is resting, not gone.",
+          "text_beginner": "After frost turns the ferns brown, cut them down to the ground and rake away the old growth. Beetles and rust spend winter hiding in that dead fern, so clearing it out means fewer problems next year. Any time from late fall to late winter works, as long as you finish before the new spears come up. Do not dig or till the bed, since the roots are just resting underground."
+        }
+      ]
+    },
+    "failure_diagnostics": [
+      {
+        "label": "Thin, spindly spears",
+        "cause_beginner": "The bed is still young, or it was harvested too hard, too soon.",
+        "what_happened_beginner": "Your spears are coming up thin and wispy instead of fat. On a young bed this is normal, since the crown is still building underground for the first two or three years. On an older bed, thin spears usually mean it was cut too long or too hard and the roots ran low on energy. Give a young bed time and do not harvest yet; on an older bed, stop cutting as soon as the spears thin down and let them all grow into ferns to rebuild the crown.",
+        "next_season_tip_beginner": "Do not harvest a young bed, and on any bed stop cutting once spears thin to pencil-width so the crown can recover.",
+        "what_happened_seasoned": "Spears emerged thin and spindly. On an establishing bed (years one to three) this is expected while the crown accumulates reserves. On a bearing bed it signals crown exhaustion, usually from harvesting too long or too heavily: plants cut too hard too soon become weak and spindly and the crown may never fully recover, and spring vigor tracks directly with the prior year's fern growth. End harvest when the majority of spears drop to pencil diameter (under 3/8 inch), let the rest fern out, and feed and water to rebuild the crown.",
+        "cause_seasoned": "An immature crown still building reserves, or crown exhaustion from over-long or over-heavy harvest.",
+        "next_season_tip_seasoned": "Delay harvest on young beds, cut no longer than six to eight weeks on bearing beds, and stop at pencil-diameter thinning to protect the crown.",
+        "audience": "core"
+      },
+      {
+        "label": "Few or no spears in spring",
+        "cause_beginner": "The bed is too young, the soil is still cold, or an older bed is shaded, waterlogged, weedy, or rotting.",
+        "what_happened_beginner": "Hardly any spears came up. In the first year or two this is normal, since a new bed sends up only a few thin spears while the roots grow. Otherwise the spears may just be waiting for the soil to warm, since they push up as the ground warms in spring. Very few spears on an older bed can mean it is too shaded, too wet, weedy, or that the crowns are rotting.",
+        "next_season_tip_beginner": "Give a young bed time, keep it sunny, well-drained, and weed-free, and wait for the soil to warm in spring.",
+        "what_happened_seasoned": "Spear emergence was sparse or absent. On a new planting this is normal establishment: the crown sends up only a few spears in years one and two while it builds root reserves. On an established bed, sparse emergence usually means the soil has not warmed yet (spears push up as the ground warms), or the bed is in decline from shade, waterlogged ground, heavy weed competition, or crown rot. Confirm the bed is warm, sunny, well-drained, and weed-free, and rule out crown and root rot before assuming winter loss.",
+        "cause_seasoned": "Normal establishment on a young bed, or, on an older bed, soil not yet warm or a bed declining under shade, wet soil, weeds, or crown rot.",
+        "next_season_tip_seasoned": "Expect few spears through establishment; on bearing beds keep full sun, good drainage, and weed control, and check for crown rot.",
+        "audience": "core"
+      },
+      {
+        "label": "Ferns yellowing or browning early",
+        "cause_beginner": "In summer, rust or another disease; in fall after frost, just normal dieback.",
+        "what_happened_beginner": "Your ferns turned yellow or brown. The timing tells you which. In fall, after frost, uniform yellowing and browning is normal: the ferns are dying back for winter and you cut them down. In summer, patchy yellowing and browning with rusty, orange to brick-red spots on the stems is asparagus rust, a disease that weakens next year's crop. For rust, cut and destroy the infected ferns, site and space the bed for good airflow, and plant resistant varieties.",
+        "next_season_tip_beginner": "Give the bed sun and airflow, plant rust-resistant varieties, and clear out old ferns; in fall, browning is just normal dieback.",
+        "what_happened_seasoned": "Ferns discolored. Distinguish natural senescence from disease by season: uniform fall yellowing after frost is normal dieback ahead of dormancy. Premature summer yellowing, browning, and defoliation, especially with rust-colored (orange to brick-red) pustules on stalks and branches, is asparagus rust, which cuts vigor and yield the following year. Rust-colored fern collapse across the stand, versus one or a few stunted, bright-yellow ferns on an otherwise declining plant, also separates rust from Fusarium crown and root rot. Manage rust with resistant varieties, wide airflow-oriented spacing in full sun, and sanitation of infected fern.",
+        "cause_seasoned": "Natural post-frost senescence in fall; premature summer discoloration with rusty pustules is asparagus rust, distinct from Fusarium's stunted, bright-yellow single ferns.",
+        "next_season_tip_seasoned": "For rust, use resistant hybrids, orient wide rows to the prevailing wind in full sun, and remove infected fern; expect uniform yellowing only after fall frost.",
+        "audience": "core"
+      },
+      {
+        "label": "Rotting crown and roots",
+        "cause_beginner": "Fusarium rot, made worse by poorly drained, soggy soil or by replanting into old asparagus ground.",
+        "what_happened_beginner": "Your plants are declining, with yellow, stunted ferns and crowns or roots that are soft and reddish-brown when you cut into them. This is usually Fusarium crown and root rot, a soil fungus that builds up over years and hits harder in wet, poorly drained ground. There is no cure once a bed is infected. Start a new bed in a sunny, well-drained spot that has never grown asparagus, and plant a vigorous all-male hybrid.",
+        "next_season_tip_beginner": "Plant in well-drained soil that has never grown asparagus, choose a vigorous hybrid, and never let the bed sit waterlogged.",
+        "what_happened_seasoned": "Plants declined with stunted, bright-yellow ferns; cut crowns and storage roots showed reddish flecks or sunken reddish-brown lesions. This is Fusarium crown and root rot. The fungus survives in soil indefinitely, so it is worst on replant sites and where poor drainage and heavy, wet, inadequately prepared soil stress the crown. It cannot be cured in place. Establish a new bed on well-drained ground never previously in asparagus, favor a vigorous all-male hybrid (hybrid vigor confers tolerance, not immunity), and avoid waterlogging.",
+        "cause_seasoned": "Fusarium crown and root rot, persistent in soil and worsened by replant sites, poor drainage, and heavy wet soil stressing the crown.",
+        "next_season_tip_seasoned": "Site new beds on well-drained soil never in asparagus, use tolerant all-male hybrids, and keep the crown out of saturated ground.",
+        "audience": "core"
+      }
+    ]
   }
 }
