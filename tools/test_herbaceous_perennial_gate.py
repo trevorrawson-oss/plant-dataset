@@ -97,5 +97,29 @@ assert any("northern_tier" in v and "calendar" in v for v in herbaceous_perennia
 c = well_formed(); c["rotation"] = None
 assert any("rotation" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
 
+# 12. years_to_first_harvest = [True] -> violation (bool is an int subclass; guard must reject it)
+c = well_formed(); c["years_to_first_harvest"] = [True]
+assert any("years_to_first_harvest" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+
+# 13. productive_lifespan_years = True -> violation (bool is an int subclass; guard must reject it)
+c = well_formed(); c["productive_lifespan_years"] = True
+assert any("productive_lifespan_years" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+
+# 14. empty years_to_full_production -> violation
+c = well_formed(); c["years_to_full_production"] = []
+assert any("years_to_full_production" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+
+# 15. a second_planting planting track -> violation (sibling of succession, same enum)
+c = well_formed(); c["regions"]["northern_tier"]["plantings"].append({"track": "second_planting", "label": "fill"})
+assert any("second_planting" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+
+# 16. lifecycle permanent -> VALID (proves the accepted-value branch, not just the reject branch)
+c = well_formed(); c["lifecycle"] = "permanent"
+assert herbaceous_perennial_violations(c) == [], herbaceous_perennial_violations(c)
+
+# 17. non-list years_to_first_harvest (None) -> violation
+c = well_formed(); c["years_to_first_harvest"] = None
+assert any("years_to_first_harvest" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+
 assert SUITABILITY_ENUM == {"perennializes", "marginal", "unsuitable"}, SUITABILITY_ENUM
 print("herbaceous_perennial_gate: all tests passed")
