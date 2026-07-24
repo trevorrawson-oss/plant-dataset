@@ -1359,6 +1359,676 @@
         "region_notes_beginner": "Asparagus grows well across most of the Las Vegas Valley; plant crowns of a heat-tolerant variety like UC 157, give the bed deep water, and pick very early spring spears for years. In the warmest low pockets the winters can be too mild for a lasting bed.",
         "region_notes_seasoned": "A frost-anchored perennial for the Mojave high desert; harvest from February on the valley floor and March higher up, then irrigate the summer ferns to reload the crown. In zone 10's mildest pockets the dormant rest is incomplete, so the bed only marginally perennializes."
       },
+      "se_gulf": {
+        "region_id": "se_gulf",
+        "region_label": "Southeast / Gulf",
+        "zone_span": [
+          "8",
+          "9",
+          "10"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "8": {
+            "suitability": "perennializes",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the cooler upper Southeast, roughly the Piedmont and mountains of north Georgia and the Carolinas, spears emerge in March; harvest March into April for six to eight weeks, then let the summer ferns grow through the warm, humid season to recharge the crown before it dies back and rests through the cool winter.",
+            "sources": [
+              "uc_ipm",
+              "uga_b577"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "uga_b577": {
+                "url": "https://fieldreport.caes.uga.edu/publications/B577/",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "9": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "The Gulf and lower coastal-plain winter is often too mild to force a full dormant rest, and asparagus requires a distinct resting period to recharge the crown; on the humid Gulf a bed perennializes only marginally, with weaker spears, heavier Fusarium and rust pressure, and a shorter stand life than in the upper South.",
+            "suitability_note_beginner": "Asparagus will grow here, but not at its best: the coastal winters are usually too warm to give the crowns the deep rest they need, so expect thinner spears and a shorter-lived bed than gardeners get farther north.",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "Along the warm coastal plain and Gulf, spears push up by February; harvest February into March, then carry the ferns through a long, hot, humid summer. The mild winter shortens the crown's dormant rest, so the bed cycles and yields but with less vigor and a shorter productive life than in the cooler upper South.",
+            "sources": [
+              "uc_ipm",
+              "uga_b577"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "uga_b577": {
+                "url": "https://fieldreport.caes.uga.edu/publications/B577/",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "Zone 10 is the warm, frost-scarce edge of Southeast asparagus range: winters here rarely deliver a sustained dormant rest, and without that rest the crown cannot fully recharge, so a bed perennializes only weakly, with spindly spears and a short productive life.",
+            "suitability_note_beginner": "This is about as far south as asparagus will go in the Southeast, and only barely: the winters are too mild for a real rest, so a bed tends to be weak and short-lived. A cooler spot farther north is a much better bet.",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the warmest, nearly frost-free pockets of the lower Southeast spears can start in February, but the winters barely cool the crown, so the dormant rest asparagus depends on is largely missing; the bed still cycles and produces, yet vigor and stand life fall off sharply compared with the upper South.",
+            "sources": [
+              "uc_ipm",
+              "uga_b577"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "uga_b577": {
+                "url": "https://fieldreport.caes.uga.edu/publications/B577/",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus does well in the cooler upper Southeast: plant crowns of a rust-tolerant variety in the Piedmont or mountains and pick early-spring spears for years. Down on the warm coastal plain and Gulf the winters run too mild for a lasting bed, so expect thinner spears and a shorter life the farther south you are.",
+        "region_notes_seasoned": "A frost-anchored perennial across the upper Southeast, where zone 8 gets a real winter rest and perennializes well; harvest from March in the Piedmont. Toward the Gulf and coastal plain (zones 9 to 10) the mild winter blunts the crown's dormant rest, so a bed only marginally perennializes, with heavier disease pressure and a shorter stand life."
+      },
+      "ca_north_coast": {
+        "region_id": "ca_north_coast",
+        "region_label": "California: North & North Coast",
+        "zone_span": [
+          "9",
+          "10"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "9": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "The cool maritime North Coast is frost-poor, so winters rarely deliver the sustained cold rest asparagus needs to recharge, and the mild summers keep fern growth going rather than letting the crown settle into deep dormancy; a bed perennializes marginally, with modest vigor and a shorter productive life than the interior valleys.",
+            "suitability_note_beginner": "Asparagus grows here but never really thrives: the coast stays so mild that the crowns never get the cold winter rest they need, so expect a modest, shorter-lived bed. Gardeners just inland in the warmer valleys do better.",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "On the cool northern and north-coast strip, spears emerge in March as the maritime chill eases; harvest March into April, then grow the ferns through a mild, cool summer. Frost is scarce here, so the crown's winter rest is shallow and the bed perennializes only marginally.",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "Zone 10 on the cool coast is nearly frost-free, so the crown gets almost no sustained dormant rest; asparagus requires that rest to recharge, so a bed perennializes only weakly here, with thin spears and a short stand life.",
+            "suitability_note_beginner": "The mild coast barely cools in winter, so asparagus crowns miss the rest they need and a bed stays weak and short-lived. It will grow, but it is not a strong choice here.",
+            "calendar": [
+              "cold_pause",
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the mildest coastal pockets spears can start by February into March, but the frost-poor maritime winter gives the crown little true rest; the bed cycles and yields yet stays low in vigor with a short productive life.",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus will grow along California's cool North Coast, but the mild, nearly frostless winters never give the crowns a proper rest, so beds tend to be modest and short-lived. If you garden a little inland where winters are cooler, you will get a stronger bed.",
+        "region_notes_seasoned": "The cool, frost-poor maritime North Coast blunts asparagus dormancy: without a sustained cold rest the crown recharges poorly, so both zones 9 and 10 perennialize only marginally, with modest vigor and a shorter stand life than the interior valleys deliver. Harvest from March where a bed is kept."
+      },
+      "ca_south_coast": {
+        "region_id": "ca_south_coast",
+        "region_label": "California: South Coast",
+        "zone_span": [
+          "9",
+          "10",
+          "11"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "9": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "The South Coast is a low-chill, nearly frost-free climate; winters here seldom force the sustained dormant rest asparagus needs to recharge, so a bed perennializes only marginally, with weaker spears and a shorter productive life than in the cooler interior.",
+            "suitability_note_beginner": "Asparagus can grow along the South Coast, but the mild winters do not give the crowns the deep rest they need, so beds tend to be thin and short-lived. Do not expect the heavy spring cuttings that cooler areas get.",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "On the mild South Coast, spears push up by February; harvest February into March, then carry the ferns through a long warm season. The low-chill winter gives the crown only a shallow rest, so the bed perennializes marginally.",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "Zone 10 on the South Coast is essentially frost-free, so the crown gets little to no sustained dormant rest; without that rest asparagus recharges poorly and a bed perennializes only weakly, short-lived and low in vigor.",
+            "suitability_note_beginner": "This close to the coast the winters stay so warm that asparagus never really rests, so a bed will be weak and will not last. It is a poor choice here.",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "In the warmest South Coast pockets spears can start in February, but the frost-scarce winter barely rests the crown; the bed still cycles and produces, yet vigor and stand life drop off.",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "11": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Zone 11 on the South Coast is frost-free; asparagus is a temperate perennial that requires a sustained cold dormant rest to recharge the crown, and a frost-free climate provides no real winter, so a bed declines and runs out rather than perennializing into a productive stand.",
+            "suitability_note_beginner": "Not recommended here. This frost-free coast never gives asparagus the winter rest it needs, so a bed will slowly decline instead of settling in. Choose a heat-loving perennial instead.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus is a weak choice on the mild South Coast: the low-chill winters do not give the crowns the rest they need, so beds are thin and short-lived in zones 9 and 10 and not worth planting in frost-free zone 11. A cooler inland spot does much better.",
+        "region_notes_seasoned": "The low-chill South Coast blunts asparagus dormancy: zones 9 and 10 perennialize only marginally, with weak spears and a short stand life, and frost-free zone 11 is unsuitable because the crown never gets the sustained rest it must have to recharge. Where a marginal bed is kept, harvest from February."
+      },
+      "ca_desert": {
+        "region_id": "ca_desert",
+        "region_label": "California: Desert Valleys",
+        "zone_span": [
+          "9",
+          "10",
+          "11"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "9": {
+            "suitability": "marginal",
+            "suitability_note_seasoned": "The higher desert margin gets some winter chill, but summer fern growth runs far above asparagus's 65°F to 85°F optimum, so the crown recharges poorly even where winter rest is adequate; a bed perennializes marginally, with a shorter productive life than the interior valleys.",
+            "suitability_note_beginner": "Asparagus can just about grow on the cooler desert edge with plenty of water, but the brutal summer heat wears the crowns down, so beds are weak and short-lived. It is a marginal choice at best.",
+            "calendar": [
+              "cold_pause",
+              "harvest",
+              "harvest",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "cold_pause",
+              "cold_pause"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "notes": "On the higher, cooler desert edge spears emerge in February; harvest February into March, then push the ferns through a very hot summer with heavy irrigation. Some winter chill reaches the crown here, but the extreme summer heat limits how well it recharges, so the bed perennializes only marginally.",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "The low, hot desert is low-chill with summers far above asparagus's 65°F to 85°F optimum; the crown gets neither a sustained cold rest nor a cool enough fern season to recharge, so a bed declines and runs out rather than perennializing.",
+            "suitability_note_beginner": "Not recommended. The low desert is too hot in summer and too mild in winter for asparagus to get the rest and recovery it needs, so a bed will decline instead of lasting.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "11": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Frost-free, extreme-heat low desert: asparagus requires a sustained cold dormant rest and a fern season within its 65°F to 85°F optimum, and zone 11 delivers neither, so the crown cannot recharge and a bed fades rather than perennializing.",
+            "suitability_note_beginner": "Not recommended. This frost-free desert is far too hot in summer and too warm in winter for asparagus, which needs a real cold rest, so a bed will not last. Grow a heat-adapted perennial instead.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Asparagus is a poor fit for the California desert: the searing summers and low winter chill wear the crowns down. It is marginal at best on the cooler, higher desert edge (zone 9) and not worth planting in the hotter, frost-free valleys (zones 10 and 11).",
+        "region_notes_seasoned": "Desert heat, not just winter warmth, limits asparagus here: summer fern growth runs well above the 65°F to 85°F optimum, so the crown recharges poorly. Zone 9 on the cooler edge perennializes only marginally; the hot, low-chill zones 10 and 11 are unsuitable, with beds that decline rather than persist."
+      },
+      "low_desert_az": {
+        "region_id": "low_desert_az",
+        "region_label": "Arizona: Low Desert",
+        "zone_span": [
+          "9",
+          "10"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "9": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "The Arizona low desert pairs low winter chill with summers far above asparagus's 65°F to 85°F optimum; the crown gets neither a sustained cold rest nor a cool enough fern season to rebuild reserves, so a bed declines and runs out rather than perennializing into a productive stand.",
+            "suitability_note_beginner": "Not recommended. Around Phoenix and Yuma the summers are too hot and the winters too mild for asparagus, which needs a real cold rest, so a bed will struggle and fade instead of lasting.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Zone 10 low desert is low-chill with extreme summer heat well beyond asparagus's 65°F to 85°F optimum, so the crown can neither rest in winter nor recharge through summer; a bed declines rather than perennializing.",
+            "suitability_note_beginner": "Not recommended. The low desert is far too hot in summer and too warm in winter to give asparagus the rest it needs, so a bed will decline rather than settle in. Choose a heat-loving perennial instead.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Skip asparagus in the Arizona low desert around Phoenix and Yuma: the extreme summer heat and mild winters never give the crowns the cold rest they need, so a bed will struggle and fade. A heat-adapted perennial is a far better choice.",
+        "region_notes_seasoned": "The low desert is unsuitable for asparagus: low winter chill plus summers far above the crop's 65°F to 85°F optimum leave the crown with no sustained rest and no cool fern season to recharge, so a bed declines rather than perennializing. Marked unsuitable on the dormancy-and-heat requirement."
+      },
+      "rgv": {
+        "region_id": "rgv",
+        "region_label": "Rio Grande Valley: Subtropical South Texas",
+        "zone_span": [
+          "9",
+          "10"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "9": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "The subtropical Rio Grande Valley has mild, nearly frost-free winters and long, hot summers; Texas A&M notes asparagus produces poorly in areas with mild winters and extremely long, hot summers, and without a sustained dormant rest the crown cannot recharge, so a bed declines rather than perennializing.",
+            "suitability_note_beginner": "Not recommended. The Valley's winters are too mild and its summers too long and hot for asparagus, which needs a real cold rest, so a bed will decline instead of lasting.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2021/03/EHT-066.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "10": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Zone 10 in the Valley is essentially frost-free; asparagus requires a sustained cold dormant rest to recharge the crown, and the subtropical climate gives none, so a bed fades and runs out rather than perennializing.",
+            "suitability_note_beginner": "Not recommended. This frost-free part of the Valley never gives asparagus the winter rest it needs, so a bed will slowly decline. Grow a subtropical perennial instead.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "tamu_agrilife"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2021/03/EHT-066.pdf",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Skip asparagus in the Rio Grande Valley: the mild, nearly frostless winters and long, hot summers never give the crowns the cold rest they need, so a bed will struggle and fade. Choose a subtropical perennial that suits the Valley instead.",
+        "region_notes_seasoned": "The subtropical Valley is unsuitable for asparagus: Texas A&M notes the crop produces poorly where winters are mild and summers long and hot, and without a sustained dormant rest the crown cannot recharge, so a bed declines rather than perennializing. Marked unsuitable across zones 9 and 10."
+      },
+      "fl_peninsula": {
+        "region_id": "fl_peninsula",
+        "region_label": "Florida Peninsula",
+        "zone_span": [
+          "10",
+          "11"
+        ],
+        "plantings": [
+          {
+            "succession_id": 1,
+            "label": "crowns",
+            "track": "perennial"
+          }
+        ],
+        "resolved_by_zone": {
+          "10": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "UF/IFAS notes asparagus grows best in colder climates and that without a certain dormant period it has trouble putting up stalks, tending to be smaller and more spindly; the frost-free peninsula gives no sustained dormant rest, so a bed declines rather than perennializing into a productive stand.",
+            "suitability_note_beginner": "Not recommended. Florida's peninsula is too warm for asparagus, which needs a cold winter rest; UF/IFAS notes it grows best in colder climates, so a bed here stays spindly and short-lived.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/asparagus/",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "11": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Zone 11 on the peninsula is frost-free and effectively tropical; asparagus requires a sustained cold dormant rest to recharge the crown, and none is available, so a bed fades and runs out rather than perennializing.",
+            "suitability_note_beginner": "Not recommended. This frost-free part of Florida never gives asparagus the winter rest it needs, so a bed will decline instead of settling in. Grow a tropical perennial instead.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "uf_ifas"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "uf_ifas": {
+                "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/asparagus/",
+                "verified": "2026-07-24"
+              }
+            }
+          }
+        },
+        "region_notes_beginner": "Skip asparagus on the Florida peninsula: UF/IFAS notes it grows best in colder climates, and without a cold winter rest the crowns stay spindly and short-lived. A warm-climate perennial is a much better choice here.",
+        "region_notes_seasoned": "The frost-free peninsula is unsuitable for asparagus: UF/IFAS notes it grows best in colder climates and struggles to push stalks without a dormant period, so a bed stays spindly and declines rather than perennializing. Marked unsuitable across zones 10 and 11."
+      },
       "hawaii_tropical": {
         "region_id": "hawaii_tropical",
         "region_label": "Hawaii / Tropical",
@@ -1376,6 +2046,74 @@
           }
         ],
         "resolved_by_zone": {
+          "10": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Asparagus is a temperate perennial that dies back and rests over winter; a frost-free tropical zone gives it no sustained cool dormant period, so a bed declines and runs out rather than perennializing into a productive stand.",
+            "suitability_note_beginner": "Not recommended here. Asparagus needs a cold winter rest that a frost-free tropical climate does not provide, so a backyard bed will struggle instead of settling in for the long haul.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              }
+            }
+          },
+          "11": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Asparagus is a temperate perennial that dies back and rests over winter; a frost-free tropical zone gives it no sustained cool dormant period, so a bed declines and runs out rather than perennializing into a productive stand.",
+            "suitability_note_beginner": "Not recommended here. Asparagus needs a cold winter rest that a frost-free tropical climate does not provide, so a backyard bed will struggle instead of settling in for the long haul.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              }
+            }
+          },
           "12": {
             "suitability": "unsuitable",
             "suitability_note_seasoned": "Asparagus is a temperate perennial that dies back and rests over winter; a frost-free tropical zone gives it no sustained cool dormant period, so a bed declines and runs out rather than perennializing into a productive stand.",
@@ -1404,10 +2142,44 @@
                 "verified": "2026-07-24"
               }
             }
+          },
+          "13": {
+            "suitability": "unsuitable",
+            "suitability_note_seasoned": "Asparagus is a temperate perennial that dies back and rests over winter; a frost-free tropical zone gives it no sustained cool dormant period, so a bed declines and runs out rather than perennializing into a productive stand.",
+            "suitability_note_beginner": "Not recommended here. Asparagus needs a cold winter rest that a frost-free tropical climate does not provide, so a backyard bed will struggle instead of settling in for the long haul.",
+            "calendar": [
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing",
+              "growing"
+            ],
+            "resolution_method": "frost_anchored_resolved",
+            "sources": [
+              "uc_ipm",
+              "umn_ext"
+            ],
+            "anchoring_urls": {
+              "uc_ipm": {
+                "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "umn_ext": {
+                "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+                "verified": "2026-07-24"
+              }
+            }
           }
         },
         "region_notes_beginner": "Skip asparagus in a tropical, frost-free garden and choose a heat-loving perennial instead; without a real winter dormancy the crowns will not build the reserves a lasting bed needs.",
-        "region_notes_seasoned": "A dormancy-dependent temperate perennial marked unsuitable for frost-free zone 12: without a sustained dormant rest the crown cannot recharge, so stands thin and fade rather than perennializing."
+        "region_notes_seasoned": "A dormancy-dependent temperate perennial marked unsuitable across the frost-free tropical span (zones 10 to 13): without a sustained dormant rest the crown cannot recharge, so stands thin and fade rather than perennializing."
       }
     },
     "tips_by_stage": {
