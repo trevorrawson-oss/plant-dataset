@@ -123,4 +123,17 @@ assert cross_consistency_violations(tree) == [], "tree harvest-without-annual-pl
 fp2 = [(c["slug"], cross_consistency_violations(c)) for c in _cert if cross_consistency_violations(c)]
 assert fp2 == [], f"cross-consistency FP after rule 2: {fp2}"
 
+# 14. herbaceous_perennial (asparagus) carve-out: an established permanent bed's steady-state
+# calendar renders spring `harvest` + summer `growing` with NO annual plant token -- legit, must NOT
+# fire Rule 2 (a permanent bed is planted once at establishment, like trees/berries off frost_anchored).
+_hp = {"slug": "asparagus", "calendar_basis": "frost_anchored", "archetype": "herbaceous_perennial",
+       "regions": {"northern_tier": {"resolved_by_zone": {"4": {"calendar":
+           ["cold_pause","cold_pause","cold_pause","cold_pause","harvest","harvest",
+            "growing","growing","growing","growing","cold_pause","cold_pause"]}}}}}
+assert cross_consistency_violations(_hp) == [], cross_consistency_violations(_hp)
+# 14b. REGRESSION: the SAME harvest-without-plant calendar on a NON-herbaceous_perennial frost_anchored
+# crop STILL bounces (the carve-out must not weaken enforcement for annuals).
+_ann = dict(_hp, archetype="cool_season_annual")
+assert any("plant-class token" in v for v in cross_consistency_violations(_ann)), cross_consistency_violations(_ann)
+
 print("cross_consistency_gate: all tests passed")

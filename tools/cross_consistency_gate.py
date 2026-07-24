@@ -16,7 +16,8 @@ single-value mentions ("around pH 6.5").
 RULE 2 (increment 2) -- harvest-requires-plant: a frost_anchored cell that renders a `harvest`
 token must also carry a plant-class token (`plant`/`indoors`); you cannot harvest what was never
 planted. Catches the copy-paste that drops the planting tokens. No-op off frost_anchored (trees /
-berries plant once at establishment, not in the annual month-strip).
+berries plant once at establishment, not in the annual month-strip) and for the herbaceous_perennial
+archetype (asparagus's permanent bed).
 
 INCREMENT 2, STILL OPEN (each bottoms out at biology/prose, NOT a clean deterministic gate --
 surfaced to Trevor for the LLM-biology-judge layer, not forced here): a `growing` token in a month
@@ -68,8 +69,12 @@ def cross_consistency_violations(crop):
                          f"{pref} (disagree by > {_PH_TOLERANCE}); the prose and the rendered Hero "
                          f"pH stat contradict each other")
 
-    # RULE 2 -- harvest-requires-plant (frost_anchored only).
-    if crop.get("calendar_basis") == "frost_anchored":
+    # RULE 2 -- harvest-requires-plant (frost_anchored ANNUALS only). A herbaceous_perennial
+    # (asparagus) is an established permanent bed planted once at establishment, not in the annual
+    # month-strip -- the same reason trees/berries are exempt off frost_anchored -- so its steady-
+    # state calendar legitimately renders `harvest` (spring spears) with no annual plant token.
+    if (crop.get("calendar_basis") == "frost_anchored"
+            and crop.get("archetype") != "herbaceous_perennial"):
         for rk, r in (crop.get("regions") or {}).items():
             if not isinstance(r, dict):
                 continue

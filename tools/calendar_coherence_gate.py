@@ -119,9 +119,13 @@ def impossible_growing_months(cell):
 
 def growing_reachability_violations(crop):
     """Bug 1 (frost_anchored only). One violation per impossible growing-month. No-op off
-    frost_anchored (an evergreen perennial legitimately grows after harvest)."""
+    frost_anchored (an evergreen perennial legitimately grows after harvest), and no-op for the
+    herbaceous_perennial archetype (asparagus's permanent bed legitimately grows after spring harvest)."""
     if crop.get("calendar_basis") != "frost_anchored":
         return []
+    if crop.get("archetype") == "herbaceous_perennial":
+        return []  # asparagus: the summer fern grows AFTER the spring spear harvest -- the
+        # frost_anchored analog of the evergreen "legitimately grows after harvest" exemption above.
     out = []
     for loc, cell in _cells(crop):
         for i, blk in impossible_growing_months(cell):

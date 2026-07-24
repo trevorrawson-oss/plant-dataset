@@ -215,6 +215,18 @@ assert any("growing" in m for m in v) and any("hole" in m.lower() for m in v), \
 clean = _crop(calendar=["plant", "growing", "harvest"] + [COLD] * 9, harvest="Mar")
 assert calendar_coherence_violations(clean) == [], f"a clean crop must pass: {v}"
 
+# herbaceous_perennial (asparagus) carve-out: the summer fern `growing` legitimately follows the
+# spring spear `harvest` -- the frost_anchored analog of the evergreen "grows after harvest" exemption.
+_hp = {"slug": "asparagus", "calendar_basis": "frost_anchored", "archetype": "herbaceous_perennial",
+       "regions": {"northern_tier": {"resolved_by_zone": {"4": {"calendar":
+           ["cold_pause","cold_pause","cold_pause","cold_pause","harvest","harvest",
+            "growing","growing","growing","growing","cold_pause","cold_pause"]}}}}}
+assert growing_reachability_violations(_hp) == [], growing_reachability_violations(_hp)
+# REGRESSION: the same impossible growing-after-harvest on a NON-herbaceous_perennial frost_anchored
+# crop STILL bounces.
+_ann = dict(_hp, archetype="cool_season_annual")
+assert growing_reachability_violations(_ann), growing_reachability_violations(_ann)
+
 
 # ============================================ REAL DATA -- 0 FP on a known-legit pattern
 # garlic's real cells overwinter (cold_pause -> growing); the gate must not false-flag them.
