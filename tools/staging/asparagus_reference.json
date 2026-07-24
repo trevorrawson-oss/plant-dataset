@@ -24,7 +24,7 @@
   "planting_layout": {
     "pattern": "rows",
     "row_spacing_inches": [48, 60],
-    "in_row_spacing_inches": [12, 18]
+    "in_row_spacing_inches": [8, 12]
   },
   "varieties": {
     "recommended": [
@@ -48,9 +48,9 @@
         "name": "Jersey Knight",
         "is_reference": false,
         "confidence_tier": "T1",
-        "hero_description": "An all-male Jersey-series hybrid from the Rutgers breeding program, long grown for its field tolerance to rust and the Fusarium rots.",
-        "note_beginner": "A dependable all-male hybrid with good tolerance to rust and the Fusarium rots. The Jersey types can suffer in a snowless deep freeze, so mulch the crowns in the coldest zones.",
-        "note_seasoned": "Rutgers' fresh-market benchmark: all-male, high-yielding, with field tolerance rather than immunity to rust and to Fusarium crown and root rot. Now largely discontinued at retail, but still the reference point for disease tolerance.",
+        "hero_description": "An all-male hybrid from Rutgers' Jersey series, a class the program bred for the vigor-based field tolerance to rust and the Fusarium rots that the all-male hybrids share.",
+        "note_beginner": "A dependable all-male hybrid. The Jersey hybrids as a group carry good field tolerance to rust and the Fusarium rots, and they can still suffer in a snowless deep freeze, so mulch the crowns in the coldest zones.",
+        "note_seasoned": "Rutgers' fresh-market benchmark: a high-yielding, all-male member of the Jersey hybrid class. That class, rather than each cultivar by name, is documented for vigor-based field tolerance (not immunity) to rust and to Fusarium crown and root rot: MSU rates the Jersey hybrids more rust-tolerant than Millennium, and UC IPM credits hybrid vigor for a degree of Fusarium tolerance. Now largely discontinued at retail, but still a benchmark for the class.",
         "sources": ["msu_ext", "rutgers_njaes", "uc_ipm"],
         "anchoring_urls": {
           "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan"},
