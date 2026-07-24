@@ -1,7 +1,7 @@
 {"crop": {
   "slug": "asparagus",
   "name": "Asparagus",
-  "category": "Fruiting Veg",
+  "category": "Perennial Vegetables",
   "type": "crop",
   "archetype": "herbaceous_perennial",
   "calendar_basis": "frost_anchored",
@@ -21,11 +21,7 @@
   "years_to_full_production": [3, 4],
   "productive_lifespan_years": 18,
   "rotation": "Grow in a permanent bed and do not rotate. Pick a sunny, well-drained long-term site, because the crowns will hold that ground for 15 to 20 years.",
-  "planting_layout": {
-    "pattern": "rows",
-    "row_spacing_inches": [48, 60],
-    "in_row_spacing_inches": [8, 12]
-  },
+  "planting_layout": "row",
   "varieties": {
     "recommended": [
       {
@@ -38,8 +34,8 @@
         "note_seasoned": "An all-male Guelph hybrid prized for cold hardiness and yield; it senesces early in fall, pulling reserves down to the crown. Michigan trials rate it more susceptible to rust and purple spot than the Jersey hybrids, so keep the ferns open and dry and scout after harvest.",
         "sources": ["umn_ext", "msu_ext"],
         "anchoring_urls": {
-          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
-          "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan"}
+          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus", "verified": "2026-07-24"},
+          "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan", "verified": "2026-07-24"}
         },
         "resistance": {"asparagus-rust": "susceptible"}
       },
@@ -53,9 +49,9 @@
         "note_seasoned": "Rutgers' fresh-market benchmark: a high-yielding, all-male member of the Jersey hybrid class. That class, rather than each cultivar by name, is documented for vigor-based field tolerance (not immunity) to rust and to Fusarium crown and root rot: MSU rates the Jersey hybrids more rust-tolerant than Millennium, and UC IPM credits hybrid vigor for a degree of Fusarium tolerance. Now largely discontinued at retail, but still a benchmark for the class.",
         "sources": ["msu_ext", "rutgers_njaes", "uc_ipm"],
         "anchoring_urls": {
-          "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan"},
-          "rutgers_njaes": {"url": "https://sebsnjaesnews.rutgers.edu/2012/11/seven-decades-of-asparagus-breeding-at-rutgers/"},
-          "uc_ipm": {"url": "https://ipm.ucanr.edu/agriculture/asparagus/fusarium-crown-and-root-rot/"}
+          "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan", "verified": "2026-07-24"},
+          "rutgers_njaes": {"url": "https://sebsnjaesnews.rutgers.edu/2012/11/seven-decades-of-asparagus-breeding-at-rutgers/", "verified": "2026-07-24"},
+          "uc_ipm": {"url": "https://ipm.ucanr.edu/agriculture/asparagus/fusarium-crown-and-root-rot/", "verified": "2026-07-24"}
         },
         "resistance": {"asparagus-rust": "tolerant", "fusarium-crown-rot": "tolerant"}
       },
@@ -69,8 +65,8 @@
         "note_seasoned": "A non-hybrid Washington selection with mixed male and female plants, so expect volunteer seedlings and lighter yields than an all-male hybrid, offset by proven cold hardiness.",
         "sources": ["umn_ext", "msu_ext"],
         "anchoring_urls": {
-          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
-          "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"}
+          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus", "verified": "2026-07-24"},
+          "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden", "verified": "2026-07-24"}
         }
       },
       {
@@ -83,8 +79,8 @@
         "note_seasoned": "A purple open-pollinated strain, sweeter and larger-speared but lower-yielding and more disease-prone than the all-male green hybrids; a less vigorous type like this may need an extra year to establish.",
         "sources": ["umn_ext", "msu_ext"],
         "anchoring_urls": {
-          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
-          "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"}
+          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus", "verified": "2026-07-24"},
+          "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden", "verified": "2026-07-24"}
         }
       }
     ],
@@ -186,8 +182,8 @@
           "notes": "In zone 4 the spears push up as the soil warms in May; cut for about six to eight weeks, then stop by late June and let the ferns grow all summer to recharge the crown before winter dormancy.",
           "sources": ["umn_ext", "msu_ext"],
           "anchoring_urls": {
-            "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
-            "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"}
+            "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus", "verified": "2026-07-24"},
+            "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden", "verified": "2026-07-24"}
           }
         }
       },
@@ -208,7 +204,7 @@
           "resolution_method": "frost_anchored_resolved",
           "sources": ["umn_ext"],
           "anchoring_urls": {
-            "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"}
+            "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus", "verified": "2026-07-24"}
           }
         }
       },
