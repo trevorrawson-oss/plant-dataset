@@ -9,6 +9,8 @@
     "perennial": true,
     "lifecycle": "perennial",
     "difficulty": "medium",
+    "description_beginner": "Asparagus is a long-lived perennial vegetable: you plant it once and a good bed keeps feeding you for 15 to 20 years. You grow it from one-year-old crowns set in a deep trench, then wait two to three years for the first real harvest while the roots get strong. Each spring the bed sends up the tender green spears you eat; after about six to eight weeks of cutting you stop and let the rest grow into tall, ferny foliage that feeds the roots for next year. For a new bed, plant an all-male hybrid like Millennium, a very cold-hardy, high-yielding variety that most northern nurseries now carry. Jersey Knight is another good all-male pick, with better tolerance to rust and root rot. Mary Washington is the classic seed-grown heirloom, lower-yielding but easy to find, and Purple Passion has sweet purple spears that are nice raw in a salad. Asparagus likes full sun and deep, well-drained soil, and it needs a real winter rest, so it is a temperate crop rather than a tropical one.",
+    "description_seasoned": "Asparagus (Asparagus officinalis) is a long-lived herbaceous perennial grown for the tender spring spears it pushes from a deep, cold-hardy crown. Established once from one-year-old crowns in a deep trench, a well-sited bed yields for 15 to 20 years and sometimes far longer. The rhythm is fixed: spears emerge as the soil warms and are cut for a roughly six-to-eight-week spring window, after which every remaining spear grows into a tall fern canopy that recharges the crown for the next season. It is a temperate crop by physiology, not a tropical one; UC IPM notes asparagus requires two distinct periods, a growing period and a resting period, so it needs a real winter dormancy to persist. Variety choice sets the ceiling. All-male hybrids outyield the open-pollinated types and skip the weedy volunteer seedlings: Millennium, a cold-hardy University of Guelph hybrid, is the modern high-yield northern standard but runs more susceptible to rust, while the Rutgers Jersey hybrids, represented here by Jersey Knight, carry the class's vigor-based field tolerance to rust and to Fusarium crown and root rot. Among the open-pollinated types, Mary Washington is the century-old heirloom standard, hardy but lighter-yielding with mixed male and female plants, and Purple Passion is a sweeter, purple-speared strain that yields less and catches foliage disease more easily. Give asparagus full sun and deep, well-drained ground, and choose the site with care, since the crowns will hold it for two decades.",
     "start_method": {
       "start": "transplant",
       "notes_seasoned": "Establish from one-year-old crowns; you can grow from seed, but that adds a full year before the first harvest.",
@@ -27,7 +29,29 @@
       4
     ],
     "productive_lifespan_years": 18,
-    "rotation": "Grow in a permanent bed and do not rotate. Pick a sunny, well-drained long-term site, because the crowns will hold that ground for 15 to 20 years.",
+    "rotation": {
+      "family": "Asparagus family (Asparagaceae)",
+      "rotation_years": null,
+      "avoid_after_seasoned": "Do not establish a new asparagus bed where asparagus grew recently. Fusarium crown and root rot, the disease that eventually runs old beds down, survives in the soil indefinitely (UC IPM), so a replant site carries a heavy inoculum load from the start; UC IPM advises long rotations out of asparagus. Because a bed is permanent, this is not annual rotation but a one-time siting decision: keep a new planting off old asparagus ground, and off low, waterlogged spots, since wet soil worsens the crown and root rots.",
+      "avoid_after_beginner": "Do not plant a new asparagus bed where asparagus grew before. The Fusarium rot that wears old beds out lives in the soil for years, so an old asparagus spot is already loaded with it. Pick fresh ground instead. Since the bed stays put for 15 years or more, this choice is made once, when you site the bed.",
+      "good_after": "A fresh, sunny, well-drained site not recently in asparagus.",
+      "sources": [
+        "uc_ipm",
+        "msu_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/agriculture/asparagus/fusarium-crown-and-root-rot/",
+          "verified": "2026-07-24"
+        },
+        "msu_ext": {
+          "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+          "verified": "2026-07-24"
+        }
+      },
+      "note_seasoned": "Asparagus is not rotated. It is a permanent 15-to-20-year bed, chosen once and left in place, so the usual annual crop-rotation logic does not apply. Rotation matters only at siting: establish the bed on fresh, well-drained ground that has not recently grown asparagus, to keep clear of the soil-persistent Fusarium crown and root rot, and never replant a failing bed into the same spot.",
+      "note_beginner": "You do not rotate asparagus. It is a permanent bed that stays in one place for 15 to 20 years, so instead of moving it each season you just choose the spot well at the start: fresh, sunny, well-drained ground that has not grown asparagus before. If an old bed fails, start the new one somewhere else, not in the same soil."
+    },
     "planting_layout": "row",
     "soil": {
       "preferred_texture_core": [
@@ -364,8 +388,8 @@
     "frost_tolerance_f": 32,
     "frost_effect": "killed",
     "chilling_sensitivity_f": null,
-    "hardiness_notes_seasoned": "The distinction that matters is crown versus top growth: the crown is deeply cold-hardy and overwinters dormant in the ground, riding out hard freezes, while the ferns and emerged spears are frost-tender. Missouri notes that spring freezes will not harm the crowns or subsequent harvests but can damage emerging spears, and a fall frost is what triggers the ferns to die back. In the coldest, snow-poor winters, mulch the crowns, since the least cold-hardy types can injure in a deep freeze without snow cover.",
-    "hardiness_notes_beginner": "The roots and crown underground are very cold-hardy and survive winter just fine; it is the spears and ferns above ground that frost damages. A late spring frost can ruin spears that are already up, and a fall frost kills back the ferns for the year. In very cold areas with little snow, spread mulch over the bed for extra winter protection.",
+    "hardiness_notes_seasoned": "The distinction that matters is crown versus top growth: the crown is deeply cold-hardy and overwinters dormant in the ground, riding out hard freezes, while the ferns and emerged spears are frost-tender. Missouri notes that spring freezes will not harm the crowns or subsequent harvests but can damage emerging spears, and a fall frost is what triggers the ferns to die back. That winter dormancy is not merely tolerated but needed: UC IPM describes asparagus as running on two distinct periods, a growing period and a resting period, so without a real cold-season rest the crown cannot recharge and a bed slowly declines, which is why it is a temperate crop rather than a tropical one. In the coldest, snow-poor winters, mulch the crowns, since the least cold-hardy types can injure in a deep freeze without snow cover.",
+    "hardiness_notes_beginner": "The roots and crown underground are very cold-hardy and survive winter just fine; it is the spears and ferns above ground that frost damages. A late spring frost can ruin spears that are already up, and a fall frost kills back the ferns for the year. Asparagus actually needs that cold winter rest: it grows in spring and summer, then rests over winter, so it does best where winters are real and struggles in frost-free, tropical places. In very cold areas with little snow, spread mulch over the bed for extra winter protection.",
     "tray_sowing": "na",
     "propagule": "crown",
     "days_to_maturity": [],
@@ -865,6 +889,221 @@
         "cause_seasoned": "Fusarium crown and root rot, persistent in soil and worsened by replant sites, poor drainage, and heavy wet soil stressing the crown.",
         "next_season_tip_seasoned": "Site new beds on well-drained soil never in asparagus, use tolerant all-male hybrids, and keep the crown out of saturated ground.",
         "audience": "core"
+      }
+    ],
+    "harvest_ready_beginner": "On an established bed, start cutting in spring when the spears are about 6 to 8 inches tall and their tips are still tight and closed. Snap each spear off at the ground, or cut it at the soil line, and pick again every day or two, because spears come up fast and open into ferns if you leave them. Keep harvesting for about six to eight weeks, then stop when the new spears thin down to about pencil width. That thinning is the plant telling you it is low on energy, so let the rest grow into ferns to feed the roots for next year. Do not harvest at all the first year after planting, and take only a little the second year.",
+    "harvest_ready_seasoned": "On a bearing bed, cut spears at about 6 to 8 inches with the tips still tight, before they begin to open, snapping them off at the soil line or cutting just below it. Harvest every one to three days through a roughly six-to-eight-week spring window; in warm weather spears elongate and fern out fast, so a bed can need daily picking. The signal to stop is the spears themselves: end the season when the majority thin to about pencil diameter, under 3/8 inch, which marks the crown running low on reserves. Cutting past that point drains the crown and weakens next spring's yield, so let the remaining spears grow to fern. Hold off entirely in the planting year and take only a light pick in year two while the crown builds strength.",
+    "harvest_ready_sources": [
+      "umn_ext",
+      "msu_ext",
+      "mu_ext",
+      "clemson_hgic"
+    ],
+    "harvest_ready_anchoring_urls": {
+      "umn_ext": {
+        "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+        "verified": "2026-07-24"
+      },
+      "msu_ext": {
+        "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+        "verified": "2026-07-24"
+      },
+      "mu_ext": {
+        "url": "https://extension.missouri.edu/publications/g6405",
+        "verified": "2026-07-24"
+      },
+      "clemson_hgic": {
+        "url": "https://hgic.clemson.edu/factsheet/asparagus/",
+        "verified": "2026-07-24"
+      }
+    },
+    "harvest_urgency": "high",
+    "storage": {
+      "room_temp_seasoned": "Fresh-cut spears lose sugars and turn limp and woody at room temperature, so cool and refrigerate them promptly after cutting rather than leaving them on the counter.",
+      "room_temp_beginner": "Do not leave cut asparagus out on the counter, where it wilts and toughens fast. Cool it and get it into the fridge soon after cutting.",
+      "fridge_seasoned": "Refrigerate spears standing upright in a glass or jar with an inch or two of water, loosely covered with a plastic bag, the way the University of Illinois recommends, which holds them a few days; kept dry in a plastic bag in the crisper they last up to about a week. Either way, refrigerate promptly and use them while the tips are still tight.",
+      "fridge_beginner": "Stand the spears upright in a glass with an inch or two of water and drape a plastic bag over the top, and they keep a few days; or store them dry in a plastic bag in the crisper drawer, where they last up to about a week. Refrigerate them right after cutting.",
+      "freezer_seasoned": "For longer keeping, freeze asparagus, but blanch it first: Michigan State gives 2 minutes in boiling water for small spears, 3 for medium, and 4 for large, then an equal spell in ice water before packing and freezing. Blanching first preserves the color, texture, and flavor that raw-frozen spears lose.",
+      "freezer_beginner": "To keep asparagus longer, freeze it, but boil it briefly first (blanch it) for about 2 to 4 minutes depending on spear size, then cool it right away in ice water and pack it for the freezer. Freezing without this step leaves it mushy and off-color.",
+      "sources": [
+        "umn_ext",
+        "uiuc_ext",
+        "msu_ext"
+      ],
+      "anchoring_urls": {
+        "umn_ext": {
+          "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+          "verified": "2026-07-24"
+        },
+        "uiuc_ext": {
+          "url": "https://extension.illinois.edu/gardening/asparagus",
+          "verified": "2026-07-24"
+        },
+        "msu_ext": {
+          "url": "https://www.canr.msu.edu/resources/michigan-fresh-using-storing-and-preserving-asparagus-hni28-",
+          "verified": "2026-07-24"
+        }
+      },
+      "notes_seasoned": "Asparagus is best eaten fresh, within a day or two of cutting, when it is sweetest. Refrigerate it promptly, either upright in water or dry in the crisper, and blanch and freeze whatever you cannot use soon.",
+      "notes_beginner": "Asparagus tastes best fresh, so use it within a day or two. Keep it in the fridge, standing in water or dry in the crisper, and blanch and freeze any extra."
+    },
+    "notifications": [
+      {
+        "title_seasoned": "Don't cut first-year asparagus",
+        "title_beginner": "Let new asparagus grow this year",
+        "body_seasoned": "Your bed is establishing. Cut nothing this planting year and let every spear grow to fern so the crown banks the reserves it will draw on for decades; take only a light pick next spring.",
+        "body_beginner": "Your asparagus is young. Do not pick any spears this first year. Let them all grow into tall ferns so the roots get strong for the big harvests later.",
+        "stage_id": "establishment",
+        "trigger_offset_days": 0,
+        "audience": "core"
+      },
+      {
+        "title_seasoned": "Time to stop cutting asparagus",
+        "title_beginner": "Stop harvesting your asparagus",
+        "body_seasoned": "You are near the end of the roughly six-to-eight-week window. Once the spears thin to about pencil width, stop cutting and let the rest grow to fern, or you will drain the crown and cost next spring's yield.",
+        "body_beginner": "Your spring harvest is nearly done. When the new spears turn thin, about pencil width, stop cutting and let the plants grow into ferns so the roots can refuel for next year.",
+        "stage_id": "spear_emergence",
+        "trigger_offset_days": 0,
+        "audience": "core"
+      },
+      {
+        "title_seasoned": "Cut down the asparagus ferns",
+        "title_beginner": "Clear the old asparagus ferns",
+        "body_seasoned": "The ferns have browned after frost. Cut them to the ground and remove the debris before spring: asparagus beetles and rust overwinter in the dead fern litter, so fall sanitation knocks back next year's pressure. Do not till the resting bed.",
+        "body_beginner": "Once frost has turned the ferns brown, cut them down and rake away the old growth. Beetles and rust hide in that dead fern over winter, so clearing it out means fewer problems next year. Do not dig or till the bed.",
+        "stage_id": "dormancy",
+        "trigger_offset_days": 0,
+        "audience": "core"
+      }
+    ],
+    "weather_triggers": [
+      {
+        "condition": "hard_freeze",
+        "active_stages": [
+          "spear_emergence",
+          "dormancy"
+        ],
+        "action": "FROST_PROTECT",
+        "severity": "low",
+        "audience": "core",
+        "title_seasoned": "Frost and your asparagus",
+        "title_beginner": "Frost and your asparagus",
+        "body_seasoned": "In fall, a hard freeze simply browns the ferns and sends the crown into its normal winter dormancy; that dieback is expected and needs no action beyond cutting the ferns down afterward, and the deeply cold-hardy crown rides out winter in place. In spring it is different: a late frost can damage spears that are already up, so if a cold night threatens, harvest the standing spears first or cover the bed.",
+        "body_beginner": "In fall, a hard freeze just turns the ferns brown and sends the plant into its normal winter rest, which is what you want; the roots are very cold-hardy and come through fine. In spring it is different: a late frost can ruin spears that are already up, so if a cold night is coming, cut the standing spears first or cover the bed."
+      },
+      {
+        "condition": "heat_wave",
+        "active_stages": [
+          "establishment",
+          "fern_growth"
+        ],
+        "action": "PROTECT_QUALITY",
+        "severity": "medium",
+        "audience": "core",
+        "title_seasoned": "Heat stress on a young asparagus bed",
+        "title_beginner": "Hot, dry weather and new asparagus",
+        "body_seasoned": "Established asparagus is heat-tolerant and its summer ferns shrug off hot spells, but a first-or-second-year bed whose roots have not yet gone deep is vulnerable to drought stress in sustained heat. Water deeply and evenly and mulch to hold moisture; even, steady moisture through establishment builds the crown, while prolonged drought on a young stand banks fewer reserves and thins next spring's spears.",
+        "body_beginner": "Grown asparagus handles summer heat well, but a new bed with shallow young roots can suffer in a hot, dry spell. Water it deeply and mulch to keep the soil evenly moist. Steady water while the bed is young is what builds the strong roots you want for future harvests."
+      }
+    ],
+    "companions": {
+      "note_beginner": "Asparagus lives in a permanent bed, so it does not get moved around with companions the way annual vegetables do. The traditional good neighbors are tomatoes and basil, tucked along the edges of the bed: they share the warm season and are said to help keep pests down. This is old garden tradition rather than a proven effect, so treat it as a bonus, not a reason to crowd the bed.",
+      "note_seasoned": "Because asparagus is a permanent perennial bed, companion planting matters far less than it does for rotated annuals. The enduring tradition pairs asparagus with tomatoes and basil, on a reciprocal-repellent and aromatic-deterrent rationale that is folklore with a plausible mechanism, not measured extension trials. There is a real practical fit, though: the spring spear harvest ends just as warm-season tomatoes and basil hit their stride, so they can share the ground at different times. Keep any interplanting to the bed's edges so it never competes with the crowns or complicates fern-and-sanitation management.",
+      "sources": [],
+      "anchoring_urls": {},
+      "good_beginner_seasoned": [
+        {
+          "name": "Tomatoes",
+          "why_beginner": "Tomatoes are the classic asparagus companion: gardeners have long interplanted the two, and the tomato foliage is said to help deter asparagus beetles while the asparagus is said to return the favor against some soil pests. This is tradition, not a proven effect, but the two share a bed well since asparagus finishes its harvest just as tomatoes get going.",
+          "provenance": {
+            "label": "traditional",
+            "confidence": "low",
+            "reason": "Long-standing companion tradition for asparagus (tomato and basil interplanted with asparagus); a plausible aromatic-deterrent rationale, but no measured trial found in the cited extension sources.",
+            "verified_against_sources": false
+          },
+          "why_seasoned": "A near-universal asparagus companion tradition: tomatoes and asparagus are interplanted on the reciprocal-repellent lore (tomato foliage said to deter asparagus beetle, asparagus said to discourage some nematodes). Treat it as hedged tradition with a plausible aromatic rationale, not a measured pairwise effect; the practical merit is that the spring asparagus harvest and the summer tomato crop occupy the same ground at different times."
+        },
+        {
+          "name": "Basil",
+          "why_beginner": "Basil is a traditional partner tucked in with asparagus and tomatoes; its strong scent is said to help keep pests down, and it fits the same warm-season bed. It is folklore rather than a tested effect, so plant it because it is handy in the kitchen and does no harm.",
+          "provenance": {
+            "label": "traditional",
+            "confidence": "low",
+            "reason": "Long-standing companion tradition for asparagus (tomato and basil interplanted with asparagus); a plausible aromatic-deterrent rationale, but no measured trial found in the cited extension sources.",
+            "verified_against_sources": false
+          },
+          "why_seasoned": "Basil rounds out the traditional asparagus-tomato-basil interplant, credited by garden lore with an aromatic pest-deterrent effect. Plausible mechanism, no measured trial; a low-stakes, space-friendly pairing rather than a documented benefit."
+        }
+      ],
+      "good_seasoned": [
+        {
+          "name": "Tomatoes",
+          "category": "vegetable",
+          "timing": "interplant along the bed edges",
+          "why_seasoned": "A near-universal asparagus companion tradition: tomatoes and asparagus are interplanted on the reciprocal-repellent lore (tomato foliage said to deter asparagus beetle, asparagus said to discourage some nematodes). Treat it as hedged tradition with a plausible aromatic rationale, not a measured pairwise effect; the practical merit is that the spring asparagus harvest and the summer tomato crop occupy the same ground at different times.",
+          "notify_weeks_before": 0,
+          "provenance": {
+            "label": "traditional",
+            "confidence": "low",
+            "reason": "Long-standing companion tradition for asparagus (tomato and basil interplanted with asparagus); a plausible aromatic-deterrent rationale, but no measured trial found in the cited extension sources.",
+            "verified_against_sources": false
+          },
+          "evidence_label": "traditional",
+          "confidence": "low",
+          "verified_against_sources": false,
+          "sources": [],
+          "anchoring_urls": {}
+        },
+        {
+          "name": "Basil",
+          "category": "herb",
+          "timing": "interplant along the bed edges",
+          "why_seasoned": "Basil rounds out the traditional asparagus-tomato-basil interplant, credited by garden lore with an aromatic pest-deterrent effect. Plausible mechanism, no measured trial; a low-stakes, space-friendly pairing rather than a documented benefit.",
+          "notify_weeks_before": 0,
+          "provenance": {
+            "label": "traditional",
+            "confidence": "low",
+            "reason": "Long-standing companion tradition for asparagus (tomato and basil interplanted with asparagus); a plausible aromatic-deterrent rationale, but no measured trial found in the cited extension sources.",
+            "verified_against_sources": false
+          },
+          "evidence_label": "traditional",
+          "confidence": "low",
+          "verified_against_sources": false,
+          "sources": [],
+          "anchoring_urls": {}
+        }
+      ],
+      "good_beginner": [],
+      "bad_beginner": [],
+      "bad_beginner_seasoned": [],
+      "bad_seasoned": []
+    },
+    "moon_phase_preference": {
+      "phase": "none",
+      "evidence_tier": "none",
+      "source_note_seasoned": "No reliable extension or peer-reviewed evidence supports timing asparagus planting or harvest by moon phase. Set crowns by soil temperature and frost dates, cut spears as they reach size through the spring window, and let the ferns grow on their own schedule."
+    },
+    "tasks": [],
+    "recipes": [
+      {
+        "slug": "roasted-asparagus",
+        "title": "Simple Roasted Asparagus",
+        "category": "Sides & Snacks",
+        "difficulty": "easy",
+        "serves": 4,
+        "prep_mins": 5,
+        "cook_mins": 12,
+        "image": "roasted-asparagus.jpg"
+      },
+      {
+        "slug": "asparagus-spring-soup",
+        "title": "Spring Asparagus Soup",
+        "category": "Mains",
+        "difficulty": "easy",
+        "serves": 4,
+        "prep_mins": 10,
+        "cook_mins": 25,
+        "image": "asparagus-spring-soup.jpg"
       }
     ]
   }
