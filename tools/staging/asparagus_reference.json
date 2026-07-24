@@ -1218,7 +1218,7 @@
               "cold_pause"
             ],
             "resolution_method": "frost_anchored_resolved",
-            "notes": "The peat soils of the Sacramento and San Joaquin Delta are the largest asparagus-producing region in the country, with the heaviest cutting from February into spring; spears push up by February here, harvest for eight to ten weeks, then let the ferns recharge the crown through summer before the fall dormant rest.",
+            "notes": "The deep peat soils of the Sacramento and San Joaquin Delta have grown asparagus for generations, and once established a crown can keep producing there for up to twenty years; spears push up early, by February in this warm delta, so cut for eight to ten weeks, then let the ferns recharge the crown through summer before the fall dormant rest.",
             "sources": [
               "uc_ipm",
               "ucanr_ext"
@@ -1235,7 +1235,7 @@
             }
           }
         },
-        "region_notes_beginner": "California's interior valleys are the heart of American asparagus; plant crowns in a deep, well-drained bed, let the crown rest each winter, and enjoy very early spring spears for years.",
+        "region_notes_beginner": "California's interior valleys, from the deep peat soils of the Delta to the cooler foothill margins, have long grown asparagus; plant crowns in a deep, well-drained bed, let the crown rest each winter, and enjoy very early spring spears for years.",
         "region_notes_seasoned": "A frost-anchored perennial; the Delta and valley floor cut from February, the cooler margins from March, for eight to ten weeks. Let the summer ferns reload the crown, then cut irrigation in September or October so the plants go dormant, the rest period the crop requires."
       },
       "nevada": {
@@ -1795,7 +1795,7 @@
         "resolved_by_zone": {
           "9": {
             "suitability": "unsuitable",
-            "suitability_note_seasoned": "The Arizona low desert pairs low winter chill with summers far above asparagus's 65°F to 85°F optimum; the crown gets neither a sustained cold rest nor a cool enough fern season to rebuild reserves, so a bed declines and runs out rather than perennializing into a productive stand.",
+            "suitability_note_seasoned": "The Arizona low desert pairs low winter chill with summers far above asparagus's 65°F to 85°F optimum; Texas A&M notes asparagus produces poorly in areas with mild winters and extremely long, hot summers, and here the crown gets neither a sustained cold rest nor a cool enough fern season to rebuild reserves, so a bed declines and runs out rather than perennializing into a productive stand.",
             "suitability_note_beginner": "Not recommended. Around Phoenix and Yuma the summers are too hot and the winters too mild for asparagus, which needs a real cold rest, so a bed will struggle and fade instead of lasting.",
             "calendar": [
               "growing",
@@ -1813,18 +1813,23 @@
             ],
             "resolution_method": "frost_anchored_resolved",
             "sources": [
-              "uc_ipm"
+              "uc_ipm",
+              "tamu_agrilife"
             ],
             "anchoring_urls": {
               "uc_ipm": {
                 "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2021/03/EHT-066.pdf",
                 "verified": "2026-07-24"
               }
             }
           },
           "10": {
             "suitability": "unsuitable",
-            "suitability_note_seasoned": "Zone 10 low desert is low-chill with extreme summer heat well beyond asparagus's 65°F to 85°F optimum, so the crown can neither rest in winter nor recharge through summer; a bed declines rather than perennializing.",
+            "suitability_note_seasoned": "Zone 10 low desert is low-chill with extreme summer heat well beyond asparagus's 65°F to 85°F optimum; Texas A&M notes asparagus produces poorly in areas with mild winters and extremely long, hot summers, so the crown can neither rest in winter nor recharge through summer and a bed declines rather than perennializing.",
             "suitability_note_beginner": "Not recommended. The low desert is far too hot in summer and too warm in winter to give asparagus the rest it needs, so a bed will decline rather than settle in. Choose a heat-loving perennial instead.",
             "calendar": [
               "growing",
@@ -1842,11 +1847,16 @@
             ],
             "resolution_method": "frost_anchored_resolved",
             "sources": [
-              "uc_ipm"
+              "uc_ipm",
+              "tamu_agrilife"
             ],
             "anchoring_urls": {
               "uc_ipm": {
                 "url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+                "verified": "2026-07-24"
+              },
+              "tamu_agrilife": {
+                "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2021/03/EHT-066.pdf",
                 "verified": "2026-07-24"
               }
             }
