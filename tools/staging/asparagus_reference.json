@@ -1,0 +1,219 @@
+{"crop": {
+  "slug": "asparagus",
+  "name": "Asparagus",
+  "category": "Fruiting Veg",
+  "type": "crop",
+  "archetype": "herbaceous_perennial",
+  "calendar_basis": "frost_anchored",
+  "perennial": true,
+  "lifecycle": "perennial",
+  "difficulty": "medium",
+  "start_method": {
+    "start": "transplant",
+    "notes_seasoned": "Establish from one-year-old crowns; you can grow from seed, but that adds a full year before the first harvest.",
+    "notes_beginner": "Plant one-year-old crowns instead of seeds to get a head start."
+  },
+  "succession_policy": {
+    "suitable": false,
+    "reason_seasoned": "A permanent bed is established once and never succession-planted; you set a long-term site, plant crowns, and let the crowns thicken and yield for 15 to 20 years."
+  },
+  "years_to_first_harvest": [2, 3],
+  "years_to_full_production": [3, 4],
+  "productive_lifespan_years": 18,
+  "rotation": "Grow in a permanent bed and do not rotate. Pick a sunny, well-drained long-term site, because the crowns will hold that ground for 15 to 20 years.",
+  "planting_layout": {
+    "pattern": "rows",
+    "row_spacing_inches": [48, 60],
+    "in_row_spacing_inches": [12, 18]
+  },
+  "varieties": {
+    "recommended": [
+      {
+        "id": "millennium",
+        "name": "Millennium",
+        "is_reference": true,
+        "confidence_tier": "T1",
+        "hero_description": "A cold-hardy, all-male hybrid from the University of Guelph and the modern high-yield standard for northern gardens.",
+        "note_beginner": "Millennium is the variety most northern nurseries now stock. It is vigorous and productive and shrugs off hard winters. Watch the summer ferns for rust, though, because it catches rust more easily than the older Jersey hybrids.",
+        "note_seasoned": "An all-male Guelph hybrid prized for cold hardiness and yield; it senesces early in fall, pulling reserves down to the crown. Michigan trials rate it more susceptible to rust and purple spot than the Jersey hybrids, so keep the ferns open and dry and scout after harvest.",
+        "sources": ["umn_ext", "msu_ext"],
+        "anchoring_urls": {
+          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
+          "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan"}
+        },
+        "resistance": {"asparagus-rust": "susceptible"}
+      },
+      {
+        "id": "jersey-knight",
+        "name": "Jersey Knight",
+        "is_reference": false,
+        "confidence_tier": "T1",
+        "hero_description": "An all-male Jersey-series hybrid from the Rutgers breeding program, long grown for its field tolerance to rust and the Fusarium rots.",
+        "note_beginner": "A dependable all-male hybrid with good tolerance to rust and the Fusarium rots. The Jersey types can suffer in a snowless deep freeze, so mulch the crowns in the coldest zones.",
+        "note_seasoned": "Rutgers' fresh-market benchmark: all-male, high-yielding, with field tolerance rather than immunity to rust and to Fusarium crown and root rot. Now largely discontinued at retail, but still the reference point for disease tolerance.",
+        "sources": ["msu_ext", "rutgers_njaes", "uc_ipm"],
+        "anchoring_urls": {
+          "msu_ext": {"url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan"},
+          "rutgers_njaes": {"url": "https://sebsnjaesnews.rutgers.edu/2012/11/seven-decades-of-asparagus-breeding-at-rutgers/"},
+          "uc_ipm": {"url": "https://ipm.ucanr.edu/agriculture/asparagus/fusarium-crown-and-root-rot/"}
+        },
+        "resistance": {"asparagus-rust": "tolerant", "fusarium-crown-rot": "tolerant"}
+      },
+      {
+        "id": "mary-washington",
+        "name": "Mary Washington",
+        "is_reference": false,
+        "confidence_tier": "T1",
+        "hero_description": "The open-pollinated heirloom standard, an unimproved Washington-type grown in American gardens for a century.",
+        "note_beginner": "The classic seed-grown heirloom. Yields are lower than the modern hybrids and it grows both male and female plants, but it is very cold-hardy and easy to find.",
+        "note_seasoned": "A non-hybrid Washington selection with mixed male and female plants, so expect volunteer seedlings and lighter yields than an all-male hybrid, offset by proven cold hardiness.",
+        "sources": ["umn_ext", "msu_ext"],
+        "anchoring_urls": {
+          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
+          "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"}
+        }
+      },
+      {
+        "id": "purple-passion",
+        "name": "Purple Passion",
+        "is_reference": false,
+        "confidence_tier": "T1",
+        "hero_description": "A sweet-flavored, purple-speared open-pollinated variety that turns green when cooked.",
+        "note_beginner": "Grown for its large, sweet purple spears that are good raw in a salad. It yields less than the green hybrids and catches foliage disease more easily, so give it a sunny, open spot.",
+        "note_seasoned": "A purple open-pollinated strain, sweeter and larger-speared but lower-yielding and more disease-prone than the all-male green hybrids; a less vigorous type like this may need an extra year to establish.",
+        "sources": ["umn_ext", "msu_ext"],
+        "anchoring_urls": {
+          "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
+          "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"}
+        }
+      }
+    ],
+    "note_beginner": "For a new bed, plant one-year-old crowns of an all-male hybrid like Millennium: you get more spears and no weedy seedlings. Save the purple and heirloom types for a fun second row once the main bed is going.",
+    "note_seasoned": "All-male hybrids (Millennium and the Jersey series) outyield the open-pollinated types and skip the seedling weeds. Millennium leads on cold hardiness and yield but trades away rust resistance; the Jersey hybrids lead on rust and Fusarium tolerance.",
+    "sources": ["umn_ext", "msu_ext"],
+    "anchoring_urls": {}
+  },
+  "pests": [
+    {
+      "id": "asparagus-beetle",
+      "type": "insect",
+      "name": "Asparagus beetles (common and spotted)",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Cut down and clear the old ferns in late fall. The beetles spend winter tucked in that dead debris, so removing it shrinks next year's population.",
+          "note_seasoned": "Destroy crop residue once the ferns die back; overwintering adults shelter in fern litter and along field edges, so fall sanitation is the foundation of beetle control."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Pick the beetles off by hand and rub the small dark eggs from the spears, dropping the adults into soapy water. In a small home bed this alone often keeps up."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "If beetles are heavy, cover the bed with floating row cover early in spring to keep them off the spears, then take it off once harvest is finished.",
+          "note_seasoned": "Row cover excludes adults during the cutting season but has to come off for harvest and fern growth, so treat it as a supplement to sanitation, not a standalone fix."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "A tiny native wasp parasitizes the beetle eggs, and ladybug larvae feed on the eggs and grubs, so go easy on sprays to let these helpers build up."
+        },
+        {
+          "method": "spinosad",
+          "note_beginner": "If the softer steps have not held, spinosad is an organic option for the larvae. Spray late in the day to spare bees.",
+          "note_seasoned": "Spinosad, sold for gardens as Entrust, targets the larvae and is the softest chemical rung; it is toxic to bees while wet, so apply at dusk and after bloom."
+        },
+        {
+          "method": "pyrethroid",
+          "note_beginner": "As a last resort, a conventional pyrethroid such as permethrin knocks beetles down fast, but it is harmful to bees and fish and kills the natural enemies too. Read and follow the label.",
+          "note_seasoned": "A broad pyrethroid is a rescue only; it is hard on pollinators and on the beetle's parasitic wasp, so reserve it for a young stand under heavy pressure."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "asparagus-rust",
+      "type": "fungal",
+      "name": "Asparagus rust (Puccinia asparagi)",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Start with a newer rust-resistant hybrid. It will not stop rust completely, but it gets infected far less than the old heirlooms."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give the bed full sun and space the rows wide, running them with the prevailing wind so the ferns dry quickly after dew and rain."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Cut and destroy infected ferns before spring, and clear out any old, unused, or wild asparagus within a few hundred feet, since that is where the rust overwinters."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "If rust keeps coming back, a labeled protectant fungicide can go on the ferns after harvest; sulfur is a common organic choice, but do not apply it in hot weather above 90°F.",
+          "note_seasoned": "Protectant fungicides on the fern stage, on a 7-to-10-day schedule after harvest, hold rust in a chronic field; sulfur works but can burn foliage in heat, so avoid it above 90°F."
+        }
+      ]
+    },
+    {
+      "id": "fusarium-crown-rot",
+      "type": "fungal",
+      "name": "Fusarium crown and root rot",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Plant an all-male hybrid; these carry better field tolerance to the Fusarium rots, though no variety is fully immune."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Do not replant asparagus into an old asparagus bed. The Fusarium fungus survives in the soil for years, so choose a fresh, well-drained site the crop has not grown in.",
+          "note_seasoned": "Fusarium persists in soil indefinitely, so avoid replant sites and rotate long out of asparagus; favor well-drained ground, since waterlogged, low-pH soil worsens the rots."
+        }
+      ]
+    }
+  ],
+  "regions": {
+    "northern_tier": {
+      "region_id": "northern_tier",
+      "region_label": "Northern Tier (Cold Zones)",
+      "zone_span": ["3", "4", "5", "6", "7"],
+      "plantings": [{"succession_id": 1, "label": "crowns", "track": "perennial"}],
+      "resolved_by_zone": {
+        "4": {
+          "suitability": "perennializes",
+          "calendar": ["cold_pause", "cold_pause", "cold_pause", "cold_pause", "harvest", "harvest", "growing", "growing", "growing", "growing", "cold_pause", "cold_pause"],
+          "resolution_method": "frost_anchored_resolved",
+          "notes": "In zone 4 the spears push up as the soil warms in May; cut for about six to eight weeks, then stop by late June and let the ferns grow all summer to recharge the crown before winter dormancy.",
+          "sources": ["umn_ext", "msu_ext"],
+          "anchoring_urls": {
+            "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"},
+            "msu_ext": {"url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"}
+          }
+        }
+      },
+      "region_notes_beginner": "Asparagus is a great fit for cold gardens. Plant one-year-old crowns of a hardy hybrid like Millennium in spring, wait two years for your first real harvest, and the bed will feed you for 15 years or more.",
+      "region_notes_seasoned": "A frost-anchored perennial here: harvest May into late June, then leave the ferns until they yellow after a hard frost and cut them down for beetle and rust sanitation. In the coldest, snow-poor winters mulch the crowns, since the Jersey types can injure below -30°F."
+    },
+    "hawaii_tropical": {
+      "region_id": "hawaii_tropical",
+      "region_label": "Hawaii / Tropical",
+      "zone_span": ["10", "11", "12", "13"],
+      "plantings": [{"succession_id": 1, "label": "crowns", "track": "perennial"}],
+      "resolved_by_zone": {
+        "12": {
+          "suitability": "unsuitable",
+          "suitability_note_seasoned": "Asparagus is a temperate perennial that dies back and rests over winter; a frost-free tropical zone gives it no sustained cool dormant period, so a bed declines and runs out rather than perennializing into a productive stand.",
+          "suitability_note_beginner": "Not recommended here. Asparagus needs a cold winter rest that a frost-free tropical climate does not provide, so a backyard bed will struggle instead of settling in for the long haul.",
+          "calendar": ["growing", "growing", "growing", "growing", "growing", "growing", "growing", "growing", "growing", "growing", "growing", "growing"],
+          "resolution_method": "frost_anchored_resolved",
+          "sources": ["umn_ext"],
+          "anchoring_urls": {
+            "umn_ext": {"url": "https://extension.umn.edu/vegetables/growing-asparagus"}
+          }
+        }
+      },
+      "region_notes_beginner": "Skip asparagus in a tropical, frost-free garden and choose a heat-loving perennial instead; without a real winter dormancy the crowns will not build the reserves a lasting bed needs.",
+      "region_notes_seasoned": "A dormancy-dependent temperate perennial marked unsuitable for frost-free zone 12: without a sustained dormant rest the crown cannot recharge, so stands thin and fade rather than perennializing."
+    }
+  }
+}}
