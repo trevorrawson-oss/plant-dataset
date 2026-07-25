@@ -13,6 +13,43 @@ fields at all**, and it is the ONLY one of the 25 establishment crops in that st
 Trevor, looking at the promoted guide: *"I see there's no planting data, so we don't
 actually let anyone know when to plant or transplant?"* Correct. We do not.
 
+## 1b. HIGHEST PRIORITY, found 2026-07-25 during the app build: `calendar_basis` is wrong
+
+**Asparagus is authored `calendar_basis: "frost_anchored"`, which is the ANNUAL basis.**
+It is the only perennial in the dataset with an annual basis:
+
+| archetype | calendar_basis | count |
+|---|---|---|
+| berries_herbaceous | `perennial_herbaceous` | 1 |
+| berries_woody | `berries_woody` | 4 |
+| deciduous_fruit_tree | `perennial_chill_gated` | 14 |
+| evergreen_fruit_tree | `perennial_evergreen` | 5 |
+| woody_ornamental | `perennial_woody_ornamental` | 5 |
+| **herbaceous_perennial (asparagus)** | **`frost_anchored`** | **1** |
+
+**Why this is severe.** plant-app derives its entire perennial/annual split from this one
+field: `src/lib/crops.ts:28` is
+`isPerennial = basis !== 'frost_anchored' && basis !== 'non_seasonal_indoor'`.
+So today `STARTER_CROPS['Asparagus'].perennial === false`, and asparagus is treated as an
+ANNUAL across the whole app:
+
+- `perennialStatusForCrop` early-returns `{ supported: false }`, so My Garden never shows
+  a perennial phase for an asparagus planting
+- `garden-record.ts` resolves its record `kind` as annual
+- the guide screen's annual-calendar branch wins over the perennial ribbon, which made
+  the new establishment-year pills unreachable on the live screen
+
+The app has landed a narrow guard for the guide-screen symptom, but the record-kind and
+My-Garden consequences can only be fixed here. Until `calendar_basis` is corrected, the
+establishment-year feature is inert for the one crop it was built for.
+
+**Requested:** set asparagus's `calendar_basis` to the perennial value appropriate for a
+herbaceous perennial. `perennial_herbaceous` is the closest existing analogue (used by
+`berries_herbaceous`), but the choice is yours — the app only needs it to be a value that
+is not `frost_anchored` or `non_seasonal_indoor`. If a new basis is coined for the
+`herbaceous_perennial` archetype, say so, because plant-app has a `calendar_basis` switch
+that may need a matching arm.
+
 ## 2. What is missing, verified 2026-07-25
 
 Across all 8 regions and every resolved zone cell:
@@ -87,6 +124,7 @@ years", derived from `low`.
 
 ## 6. Requested work
 
+0. **Fix `calendar_basis`** (section 1b) — highest priority, blocks the app feature entirely.
 1. **Author `plant_out` on asparagus zone cells**, all 8 regions, frost-anchored like the
    other perennials. Crowns, dormant, early spring as soil becomes workable. Extension
    sources already cited on this crop (`umn_ext`, `msu_ext`, `clemson_hgic`,
