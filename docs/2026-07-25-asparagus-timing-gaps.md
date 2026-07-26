@@ -146,6 +146,33 @@ region, that is a **per-region field** and a larger arc. The app's three-state m
 would consume it without redesign. A ruling either way (range is global / range is
 per-region) unblocks the question permanently.
 
+**Ruling (2026-07-25): global, not per-region. Closed.**
+
+`years_to_first_harvest` stays a single crop-level `[low, high]` range. Checked primary
+sourcing on the two widest ranges in the roster — asparagus `[2,3]` and pawpaw `[4,7]`,
+the crops where regional variation would matter most if it existed:
+
+- Extension guidance for both is written as a blanket establishment rule ("don't harvest
+  year 1, light harvest year 2, full harvest year 3+"; "4-8 years to first fruit"), not a
+  zone-keyed schedule. Cold climates are told to be *more conservative within the same
+  range*, not handed a different range.
+- Where climate genuinely gates the crop (pawpaw needs ~150 frost-free days / 2200 GDD to
+  ripen fruit at all), that's a suitability question the dataset already answers via the
+  region's `suitability` field (`perennializes` / `marginal` / `unsuitable`), not a
+  first-harvest-year question.
+- The existing range width already is the uncertainty band the sources support: narrow
+  for fast, low-variance crops (blackberry/raspberry `[1,2]`), wide where establishment
+  vigor swings on soil/care/climate (pear-european `[4,6]`, pawpaw `[4,7]`). A per-region
+  split would mean inventing zone-specific years the sources don't give, or copying the
+  same `[low,high]` into every region cell — false precision or pure duplication, not new
+  information.
+
+A per-region field would be a real arc (25 crops x up to 16 regions, sourced) for no
+accuracy gain given what's actually citable. Keep the three-state model consuming the
+global range as it does today. If a future crop turns up a source that explicitly ties
+first harvest to zone (not just "wait longer if slow to establish"), handle it as a
+single-crop exception then, not a roster-wide field.
+
 ## 8. Reproduce the audit
 
 ```bash

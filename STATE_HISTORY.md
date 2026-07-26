@@ -6,6 +6,127 @@
 
 ---
 
+## 2026-07-26 -- ASPARAGUS TIMING, ARC 1 of 2 (the planting data the cert shipped without)
+
+Canonical `419c9bd1` -> `4749fe39` via two promote passes (`tools/promote_asparagus_timing.py` then
+`..._findings.py`). Count 128 unchanged, 120 certified unchanged; apply footprint = the asparagus
+crop dict + `source_catalog` (166 -> 171). COMPACT preserved. **UNCOMMITTED** (Trevor approves each
+commit); NO plant-astro bump (astro lane).
+
+**The defect.** Crop #120 certified 120/120 while carrying NO `plant_out` and NO `harvest` window
+string on any of its 39 zone cells. The app could not tell a grower when to set crowns -- on the one
+crop whose entire failure mode is "plants it, expects spears". Raised by the plant-app
+establishment-years arc; brief at `docs/2026-07-25-asparagus-timing-gaps.md`.
+
+**Root cause, established from the repo rather than assumed.** The cert plan omitted the fields
+DELIBERATELY (`plans/2026-07-24-asparagus-cert-authoring.md:424`: "OMIT `plant_out`/`harvest`... the
+crown-planting window lives in `start_method`/`year_one_notes`"). The modeling instinct was sound --
+an established bed is not replanted annually. But the designated home was never built: `start_method`
+says "Establish from one-year-old crowns" with **zero timing**, and `year_one_notes` **was never
+authored on the crop** (it exists on 25 others, including artichoke). The timing was moved out of the
+calendar and landed nowhere. The lopsidedness showed it: 49 month-bearing strings on the crop, every
+one about HARVEST. And the premise was already wrong -- apple lives 30 years, is planted once, and
+carries `plant_out: "Apr - May (dormant, bare-root)"`; the parenthetical does the one-time framing.
+The convention existed across 24 crops; asparagus broke it to solve the problem a second way, then
+did not. **Nothing caught it because `plant_out` is OPTIONAL** -- A24/A43 go vacuous when the field is
+absent, so removing a field removes its own enforcement. A gate that validates a field's SHAPE cannot
+notice its ABSENCE. The plan's own "omitting them keeps A24/A43 vacuous" reads as gate avoidance.
+
+**Shipped.** `plant_out` on 25 cells (18/18 `perennializes` + 7/8 `marginal`) with the establishment
+parenthetical `"(dormant crowns, one-time planting)"`. `harvest` strings on 26 cells, derived
+deterministically from the already-authored calendar tokens. **`establishment_years` 5** -- the plant
+DEVELOPMENT figure, sourced independently (Penn State: "until the plants reach full maturity (five
+years)"; ramp plateau at year 5 across Rutgers/UMass/Illinois/USU/MSU) and deliberately NOT a copy of
+`years_to_first_harvest` `[2,3]`, the FOOD figure the app reads for a different purpose. The
+researching agent was explicitly instructed not to reason backward from `[2,3]`, and confirmed it did
+not. `year_one_notes` dual-register -- the field the cert designated and never built, i.e. the root
+cause closed. `days_to_maturity` `[]` CONFIRMED intentional (all 25 `ytfh` crops carry it; a
+days-from-sow figure is meaningless for a crop whose first harvest is years from a dormant crown).
+
+**A24 DORMANT-PLANTING CARVE-OUT (third in the A34/A37 family).** The frost-pause-on-`plant_out`
+branch encodes an ANNUAL assumption. A dormant crown is the opposite case: deliberately planted while
+the ground is cold, weeks BEFORE frost-free. **17 of 25 T1-sourced windows would have falsely
+bounced.** Apple/blueberry/strawberry never hit this because A24 no-ops off `frost_anchored` entirely;
+asparagus is the ONLY dormant-crown perennial ON that basis (deliberately -- it needs the annual
+month-strip machinery). Carve-out is archetype-scoped and surgical: exempts ONLY that branch, ONLY for
+`herbaceous_perennial`. TDD: GREEN asparagus 26 cells -> 0; RED broccoli 15, **chives 32, mint 42**,
+echinacea 73 still bounce (chives/mint are herbaceous perennials on `culinary_herb` -- proof this is
+not a perennial-wide escape hatch); harvest-into-frost and heat_pause branches still fire on asparagus;
+0/128 regression. Chose a carve-out over a basis flip precisely BECAUSE it is surgical.
+
+**NEW A47 perennial planting-data floor**, `tools/perennial_plant_out_gate.py`, wired SOFT. A
+calendared perennial cell must carry `plant_out`. Keys on `crop.perennial`, NOT `calendar_basis`.
+Exempts empty-calendar shell cells and `unsuitable` cells. RED: 26 violations / 1 crop pre-fix, and
+**zero flood** -- all 37 other perennials were already at 100% of calendared cells, so this enforces a
+convention the roster universally observed and never checked. Adversarial battery 7/7: full strip on
+apple/blueberry/strawberry/mint, single-cell regression, empty-string evasion, case-slip
+`'Unsuitable'` loophole attempt, plus 3 exemption checks. **One cell open** (se_gulf z10, no honest
+window exists) -> HARD-FLIP to `fail()` once arc 2 re-rates it.
+
+**RULING -- `calendar_basis` stays `frost_anchored`.** The app brief's top-priority ask was to flip it
+as "misauthored". It is not: `calendar_basis_gate` maps `herbaceous_perennial -> frost_anchored`
+deliberately. Flipping would have **silently no-opped six gates** on asparagus's calendar (A5
+coherence, A24 placement, A25 thermal backing, nursery-run, start_indoors, coherence Bug 1) -- trading
+a rendering bug for loss of armor. `calendar_basis` selects VALIDATION MACHINERY, not perennial-ness.
+The dataset already publishes `perennial` (128/128 present, 0 mismatches, hard-enforced by
+`herbaceous_perennial_gate` rule 1). App fix: `isPerennial = crop.perennial === true`, which corrects
+**9 crops, not 1** -- chives, mint, lemongrass, echinacea, bee-balm, artichoke, asparagus, and
+avocado + olive, the last two `lifecycle: permanent` evergreen fruit TREES currently rendering as
+annuals. Garlic correctly stays annual under it.
+
+**RULING -- `years_to_first_harvest` stays GLOBAL, not per-region** (closes plant-astro spec S9).
+Checked the two widest ranges (asparagus `[2,3]`, pawpaw `[4,7]`): extension guidance is a blanket
+establishment rule, and cold climates are told to be more conservative WITHIN the same range, not
+given a different one. Where climate genuinely gates the crop it is a `suitability` question, already
+answered. A per-region field would invent zone-specific years the sources do not give.
+
+**CITATION INTEGRITY -- 4 defects in previously-certified data**, each verified here by direct
+extraction, not relayed from a subagent. `unr_fs0261` is "Home Vegetable Production in Southern
+Nevada" and its ONLY mention of the crop is `"Stems - asparagus"` in a list of edible plant parts --
+REMOVED from 3 nevada cells. `ucanr_ext` is the **Kings County 2005 Annual Agricultural Crop Report**
+(farmer's-market listings, 1956-57 rainfall tables); its one timing sentence is about harvest, so it
+was KEPT for exactly that. `msu_ext` is a real asparagus guide with no planting date -- KEPT for other
+claims. `wsu_ext` is a hortsense pest/disease page -- KEPT for pests. Correct crown sources ADDED
+alongside in all four. All four survived the cert's 11/11 T1 source-truth sample, which did not draw
+them; future samples should weight toward cells whose claims rest on a single source.
+
+**Sourcing traps caught** (6 parallel read-only research agents, all instructed to report gaps rather
+than infer): the UC IPM California planting table is a **SEED** table, not crowns -- using it would
+have put ca_interior at Mar-Apr, ~2 months late and outside dormancy; Rutgers' "early April" is
+**furrow shaping**, not crown placement; statewide USU says "April" for utah_dixie, ~6 weeks late
+versus the county source (whose last-frost Mar 30 matches our stored value exactly); the NMSU window
+exists only as a drawn bar with no text layer.
+
+**Gauntlet all green.** `gate_all` 120/120, `whole_crop_gate` asparagus PASS, `release_verify` CLEAN
+(only asparagus changed among crops, reference crop byte-identical, no new violations), and the
+brief's own section-8 acceptance audit now shows asparagus matching the other 24.
+
+**18 `open_findings` (9 new, 0 blocking).** The honest limits: no T1 source states an asparagus crown
+window BY ZONE anywhere, so every per-zone value carries an editorial step, recorded per cell in
+`resolution_method` (`extension_direct` and `county_source_direct` are sourced; `state_source_zone_mapped`,
+`extension_shift_rule_applied`, `soil_workable_anchor_derived`, `extension_chart_plus_anchor`,
+`extension_chart_geometry` each carry an inference). The two anchor camps conflict 4-6 weeks
+(soil-workability ruled primary). warm_arid Feb 1-28 has no quotable text and cannot have one.
+mid_south z8 has no Delta-specific window.
+
+**SUITABILITY MAP UNTOUCHED (18/8/13) -- ARC 2 QUEUED, Trevor-scoped.** Research surfaced that the
+certified notes justify every marginal/unsuitable call on a **CHILL requirement no T1 source states**.
+`uc_ipm` says dormancy comes from cold OR DROUGHT and instructs HOME gardeners to induce it by
+withholding irrigation ("Irrigation is usually stopped in September or October so that the plants will
+go dormant"); Marin MG and statewide UC MG repeat it; UF/IFAS states it independently. The mechanism
+T1 supports is a reliable dormancy window (cold or dry-down) plus an 85F fern ceiling -- which is why
+Mediterranean California works and the summer-WET Gulf does not (UF names it "warm and wet"). Seven
+ratings contradicted: ca_north_coast z9 (HIGH confidence -- Marin and Sonoma MG both publish 15-year
+bed lifespans with county variety lists and no warning), ca_north_coast z10, ca_south_coast z9/z10,
+ca_desert z9 -> `perennializes`; se_gulf z10 -> `unsuitable` (asparagus occurs ZERO times in the
+UF/IFAS Florida vegetable guide, both statewide and South Florida editions). Also flagged though not
+asked: **ca_desert z10 sits at `unsuitable` while being exactly the Imperial/Coachella ground UC
+publishes a home-garden crown window for** -- the least defensible rating in the set; audit z11 too.
+Arc 2 must repair the REASONING, not just the ratings, and rating flips cascade into calendars
+(`unsuitable` takes the all-`growing` honesty floor and is A47-exempt) and `plant_out` eligibility.
+
+---
+
 ## 2026-07-24 -- ASPARAGUS CERTIFIED (GS crop #120, the `herbaceous_perennial` archetype cert)
 
 Canonical `ccf5e890` -> `419c9bd1` via one pure-crop-replacement splice (`tools/promote_asparagus.py`; real apply footprint = only the asparagus crop dict, no catalog additions -- all 21 cited source ids + all `control_ladder` methods were already catalogued). Count 128 unchanged; **119 -> 120 certified**. Asparagus goes from honest shell to certified anchor as a `herbaceous_perennial` on `frost_anchored` (A3 tree-cert no-ops, the chives/mint/bee-balm precedent). **UNPUSHED** (Trevor confirms every push); NO plant-astro bump (astro lane).
