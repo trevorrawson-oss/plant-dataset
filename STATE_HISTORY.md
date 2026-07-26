@@ -6,6 +6,78 @@
 
 ---
 
+## 2026-07-26 -- ASPARAGUS low_desert_az AUTHORED + RE-RATED (last cells on the retired chill mechanism)
+
+Canonical `719caf82` -> `f5546edc` via one promote pass
+(`tools/promote_asparagus_low_desert_az.py`) plus one targeted note correction. Count 128 and 120
+certified unchanged; only the asparagus crop dict + `source_catalog` (173 -> 174) changed.
+
+**Re-rated.** `low_desert_az` z9 and z10, `unsuitable` -> `perennializes`. Split 23/3/13 ->
+**25/3/11**.
+
+**Decisive evidence**, verified here by direct extraction rather than relayed from a subagent.
+UCCE Imperial (Bell) names the production locations outright: *"Asparagus is grown in four
+locations in the Lower Colorado Desert; the Cochella Valley, the Imperial Valley, Yuma, AZ., and
+Mexicali, Mexico."* A UC extension source therefore places Arizona low-desert ground in the same
+production district as cells this dataset already rates `perennializes`. Corroborated by two UA
+home-garden calendars:
+- **az1615 (Yuma, z10a):** `"Asparagus | October-February | March-April | 8 | 4 to 6 | 20 to 24"`
+  under headers Planting Window / Harvest Window / Planting Depth (in) / .... The 8-inch depth is
+  a CROWN depth -- asparagus seed goes in at about half an inch -- and the calendar header states
+  "This calendar has been made for seeds unless otherwise noted, but transplants can also be
+  planted during these times as well."
+- **az1005 (Maricopa, the cooler z9 side):** `"Asparagus 2-3 years T T T T T T T"` -- seven
+  transplant marks, zero seed marks, against a legend of S = Seeds / T = Transplants.
+
+**Authored:** `plant_out` "Nov 1 - Feb 1 (dormant crowns, one-time planting)", `harvest`
+"Mar - Apr", calendar `CP,CP,HV,HV,GR,GR,GR,GR,GR,GR,CP,CP` -- mirroring the verified
+`ca_desert` z10 cell, the same Lower Colorado Desert. No source splits z9 from z10, so both carry
+the same window (the pnw z8/z9 precedent). az1005's mark POSITIONS did not extract reliably from
+its rotated table, so it is cited for the transplant-only recommendation and the establishment lag
+only, NOT for the window.
+
+**My own error, found and corrected.** Arc 2's roster-wide note repair applied a "both routes to
+dormancy fail" blanket to these cells, asserting "there is no dry season long enough to
+substitute". That is correct for the summer-WET climates it was written for -- Hawaii, peninsular
+Florida, RGV -- and WRONG for the arid Arizona desert, where a reliable dry-down is precisely what
+the climate does supply. The blanket was applied too widely.
+
+**And the same audit caught a second instance.** Applying the discipline the finding itself
+records -- when a mechanism repair sweeps many cells, re-check each against the mechanism rather
+than assuming the class is uniform -- every remaining `unsuitable` cell was re-read. That surfaced
+`ca_south_coast` z11, coastal southern California, a MEDITERRANEAN climate whose defining feature
+is a dry summer, still asserting no dry-down was available. Its note is corrected. Its rating is
+**held** at `unsuitable` with a finding rather than flipped: with the mechanism corrected the
+`unsuitable` justification is weak (the adjacent z10 on the same strip is `marginal` on
+gardener-supplied dry-down, and UC IPM's South Coast crown window covers "San Luis Obispo County,
+south" with no zone exclusion), but promotion needs a real calendar and window, and deriving those
+wholly from z10 to clear a rating is exactly the move this arc has repeatedly refused. Recommend
+sourcing z11 specifically, then most likely aligning it with z10 at `marginal`. The other nine
+remaining `unsuitable` cells were confirmed correct: RGV, peninsular Florida and Hawaii are all
+genuinely summer-wet, `ca_desert` z11 is vacant ground, and `se_gulf` z10 rests on UF/IFAS.
+
+**Counterweight kept rather than suppressed.** `tamu_agrilife` is cited on these cells for "It
+produces poorly in areas with mild winters and extremely long, hot summers", and Phoenix/Yuma is
+squarely that climate. It was retained as a source and its substance carried in the prose (lighter
+cuttings, shorter season, fern growth slowed above 85F) instead of being dropped to make the new
+rating look cleaner. The rating still moves because a suitability call answers whether a LOCAL
+home bed establishes and persists, and the extension services for exactly this ground -- UA Yuma
+and Maricopa -- list the crop for their own home gardeners while UC names Yuma a production
+location.
+
+**Citation hygiene held.** Every new source URL was verified to resolve with the correct content
+before being cited, following the prior pass's catch of a self-constructed URL that 404'd.
+
+**Gauntlet all green:** `gate_all` 120/120, `whole_crop_gate` asparagus PASS, `release_verify`
+CLEAN, A47 hard 0/128, 0 em-dash, 0 spelled degrees, and a scan confirming 0 arid cells still
+claim no dry season. 26 `open_findings`, 0 blocking.
+
+**Asparagus suitability work is complete except `ca_south_coast` z11.** Nothing else is owed in
+this repo for the crop; the plant-astro bump (astro lane) and the plant-app `isPerennial` fix are
+what actually surface any of it to users.
+
+---
+
 ## 2026-07-26 -- ASPARAGUS ca_desert z10 AUTHORED + RE-RATED (closing the cell arcs 1-2 left open)
 
 Canonical `cf4d3198` -> `719caf82` via one promote pass
