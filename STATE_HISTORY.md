@@ -6,6 +6,65 @@
 
 ---
 
+## 2026-07-26 -- ASPARAGUS ca_south_coast z11 ALIGNED (last flagged cell; the crop is COMPLETE)
+
+Canonical `f5546edc` -> `34025ee3` via one promote pass
+(`tools/promote_asparagus_ca_south_coast_z11.py`). Count 128 and 120 certified unchanged; only the
+asparagus crop dict changed, 0 catalog additions. COMPACT preserved.
+
+**Re-rated.** `ca_south_coast` z11, `unsuitable` -> `marginal`. Split 25/3/11 -> **25/4/10**.
+
+**Why.** z11's `unsuitable` rating was justified ONLY by the chill mechanism retired in arc 2, and
+`unsuitable` is the strongest claim the field makes -- "do not plant this". With the mechanism
+corrected there was nothing behind it. Coastal southern California is MEDITERRANEAN, so the
+dry-down route to dormancy (UC IPM's standard home-garden instruction) works identically at z11
+and at the adjacent z10, which sits on the same coastal strip rated `marginal`. The two differ by
+roughly 5F of winter minimum and are both essentially frost-free; z11 is 365 frost-free days. UC
+IPM's South Coast crown window covers "San Luis Obispo County, south" with NO zone exclusion, so
+its stated scope already includes this ground. A cliff from `marginal` to `unsuitable` between
+adjacent zones, on no evidence, is itself a claim.
+
+**This cell is live, not vacant.** 112 crops carry a `ca_south_coast` z11 cell and 102 of those
+have real calendars, so users land on it. That is the material difference from `ca_desert` z11,
+which was left `unsuitable` precisely because it is vacant ground -- no California desert reaches
+z11 (Death Valley is 9a).
+
+**Authored** by mirroring z10: calendar `CP,HV,HV,GR,GR,GR,GR,GR,GR,GR,CP,CP`; `plant_out`
+"Jan 1 - Feb 28 (dormant crowns, one-time planting)"; `harvest` "Feb - Mar"; dual-register
+suitability notes stating the real limit.
+
+**Honestly derived, not dressed as sourced.** No T1 source addresses z11 specifically, so
+`resolution_method` records a NEW value, `adjacent_zone_derived`, and the notes carry the
+inherited limitation: no source publishes a bed lifespan for a frost-free coastal planting. That
+limitation is exactly why the cell lands at `marginal` rather than `perennializes`.
+
+**Why this derivation is allowed where ca_desert z10's was not.** Declining to promote ca_desert
+z10 by derivation was right, because low-desert phenology is genuinely DISTINCT -- a December
+harvest opening, a late-November fern chop -- and none of it could be inherited from a neighbour;
+that cell was authored only once its phenology was sourced. Here the cell is extended from an
+adjacent zone WITHIN THE SAME REGION, under a UC window whose own stated scope covers the
+geography. That is the established pattern in this dataset (pnw z9 from z8; se_gulf z9 via UGA's
+stated shift rule; mid_atlantic z8 via UMD's). The promote script GUARDS the derivation: it aborts
+if z10 has drifted from the values z11 is derived from, so the inheritance cannot go stale
+silently.
+
+**Final map, fully coherent.** All 29 `perennializes` + `marginal` cells carry a `plant_out`
+window. The 10 remaining `unsuitable` cells are all legitimately summer-WET (rgv z9/z10,
+fl_peninsula z10/z11, hawaii_tropical z10-z13), Florida-specific on UF/IFAS (se_gulf z10), or
+vacant ground (ca_desert z11). Every `unsuitable` rating is now defensible on the corrected
+mechanism -- a reliable annual dormancy window from cold OR dry-down, plus the 85F fern ceiling.
+
+**Gauntlet all green:** `gate_all` 120/120, `whole_crop_gate` asparagus PASS, `release_verify`
+CLEAN, A47 hard 0/128, 0 em-dash, 0 spelled degrees. 27 `open_findings`, 0 blocking.
+
+**ASPARAGUS IS COMPLETE IN THIS REPO.** Nothing further is owed for the crop. What remains is
+outside it: the plant-astro submodule bump (astro lane, and the `Perennial Vegetables` category
+still needs frontend grouping before a bump is safe), and the plant-app fix
+`isPerennial = crop.perennial === true` -- the thing that actually surfaces any of this work to a
+user, and which corrects 9 misclassified crops rather than just asparagus.
+
+---
+
 ## 2026-07-26 -- ASPARAGUS low_desert_az AUTHORED + RE-RATED (last cells on the retired chill mechanism)
 
 Canonical `719caf82` -> `f5546edc` via one promote pass
