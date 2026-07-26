@@ -78,11 +78,61 @@ Report the audit as a table: crop · region · field · claim · actual ratings 
   cries wolf; that is the `a25-tightening-floods` / `growth-stages-shape-not-gated` failure
   pattern, and a noisy gate gets ignored, which is worse than none.
 
+### A sample audit was already run — read this before starting
+
+A heuristic pass over all 37 claims on 2026-07-26 flagged 13. **On reading, almost all were false
+positives from the heuristic, and the fruit-tree prose is genuinely careful.** Example — pawpaw
+`ca_south_coast`: *"the tree may survive in the milder zone 9 with irrigation but sets little, and
+zone 10 is unsuitable"* maps precisely onto its cells. So **do not expect a drift crisis in the
+fruit trees.** Two recurring heuristic failure modes to avoid repeating: (a) grabbing the FIRST
+zone in a sentence and attributing a later clause's verb to it (pear-asian northern_tier reads
+"fruits reliably from zone 5 south… in zone 4 the tree…" — the "marginal" belongs to z4), and
+(b) not knowing the full vocabulary (below).
+
+The audit's real yield was structural: it exposed that **`suitability` has FIVE values across two
+archetype families**, which the original version of this document did not account for.
+
+| value | cells | used by |
+|---|---|---|
+| `fruits_reliably` | 292 | fruit trees only |
+| `marginal` | 180 | **both families** |
+| `unsuitable` | 165 | **both families** |
+| `survives_no_fruit` | 118 | fruit trees only |
+| `perennializes` | 25 | asparagus (herbaceous_perennial) only |
+
+`marginal` and `unsuitable` are shared; the "positive" value is archetype-specific
+(`fruits_reliably` for trees, `perennializes` for the herbaceous perennial). There is no
+documented enum covering all five — **worth adding one as part of this item**, since a gate that
+hardcodes three values will silently pass the 410 fruit-tree cells using the other two.
+
+### DISPLAY RULE — ruled by Trevor 2026-07-26
+
+Four states, four behaviors. The line between show and hide is **whether the limiting factor
+varies between years**:
+
+| value | frontend behavior |
+|---|---|
+| `fruits_reliably` / `perennializes` | show normally |
+| `marginal` | **show with caveats** — chill or dormancy varies year to year, and an unusual season may deliver. The take-your-chances case. |
+| `survives_no_fruit` | **show, flagged ORNAMENTAL-ONLY** — the plant lives and gives you no food. Someone may still want the tree. |
+| `unsuitable` | **hide for that zone** — structurally impossible; there is no year that will differ. |
+
+No new field is needed: all four values are already authored. Note `survives_no_fruit` (118 cells)
+is precisely the "someone might want an apple tree anyway" case — it is a distinct authored state,
+not a flavor of `marginal`.
+
+Honest nuance for the copy: `unsuitable` does not mean the plant dies. UF/IFAS says outright *"If
+you're determined to give it a try, plant one- or two-year-old asparagus crowns…"* and then that
+growth is "more or less continuous, resulting in weak, spindly spears." The failure is indefinite
+disappointment, not death.
+
 ### Gate design notes
 
 - **Scope on the crop having cell-level `suitability`**, not on archetype and not on
   `calendar_basis`. Keys on the thing that makes the check meaningful. (Compare A47, which keys on
   `crop.perennial` for exactly this reason.)
+- **Handle all five values.** A gate written against asparagus's three will no-op on the 410
+  fruit-tree cells that use `fruits_reliably` / `survives_no_fruit` — the majority of the surface.
 - Parse zone references (`"zone 9"`, `"zones 9 and 10"`, `"zones 9 to 11"`) and suitability verbs
   from the prose, then compare against `resolved_by_zone[z]["suitability"]`.
 - **Only flag a genuine contradiction**, never absence. Prose that does not mention a zone is
@@ -235,26 +285,12 @@ trading a misleading calendar for a **blank card**. So sequence it:
    emptied safely.
 2. **Then** carve A32 (+ the archetype floor) for `unsuitable` and empty the 10.
 
-### The display rule, ruled 2026-07-26
+### The display rule
 
-An `unsuitable` cell should **not show** for that zone. A `marginal` cell **should** show, with its
-caveats. The line is **whether the limiting factor varies between years**:
-
-- **`marginal` = take your chances.** Apple in a low-chill zone: chill accumulation genuinely
-  varies, and an unusually cold winter may deliver a crop. Worth offering.
-- **`unsuitable` = structurally impossible.** Asparagus in Hawaii: there is no dormancy window,
-  ever. It is not waiting for a good year; there are no good years.
-
-Both crops are already authored consistently with this, so **no new field is needed** — the
-frontend simply has to read `suitability`. Verified: apple's 5 `unsuitable` cells are all
-genuinely hopeless (fl_peninsula z11, hawaii z10-13, "cannot complete dormancy or set fruit"),
-while its take-a-chance zones are its 10 `marginal` cells.
-
-**Honest nuance to carry into the copy:** `unsuitable` does not mean the plant dies. UF/IFAS says
-outright *"If you're determined to give it a try, plant one- or two-year-old asparagus crowns…"* —
-and then that growth is "more or less continuous, resulting in weak, spindly spears." The failure
-is indefinite disappointment, not death. If the frontend ever offers an "show me anyway" escape
-hatch, that is the honest thing to say in it.
+Ruled by Trevor 2026-07-26. **See Item 1's DISPLAY RULE section for the full four-state table** —
+it belongs there because it depends on the five-value vocabulary documented in that item. In short:
+`unsuitable` hides; `survives_no_fruit` shows flagged **ornamental-only**; `marginal` shows with
+caveats; the positive values show normally. No new field required.
 
 ### The scope limit on the hide rule
 
