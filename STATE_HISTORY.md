@@ -6,6 +6,88 @@
 
 ---
 
+## 2026-07-26 -- ASPARAGUS ca_desert z10 AUTHORED + RE-RATED (closing the cell arcs 1-2 left open)
+
+Canonical `cf4d3198` -> `719caf82` via one promote pass
+(`tools/promote_asparagus_ca_desert_z10.py`). Count 128 and 120 certified unchanged; only the
+asparagus crop dict + `source_catalog` (171 -> 173) changed. COMPACT preserved.
+
+**The cell.** `ca_desert` z10 -- the Imperial and Coachella valley floor -- sat at `unsuitable`
+with an all-`growing` placeholder calendar, no window, and a note demanding "sustained cold
+rest", while being one of the three areas UC ANR Pub 7234 names as California's PRIMARY asparagus
+production districts. Arc 2 corrected the note but deliberately did NOT flip the rating: promotion
+required a real 12-token calendar, and inventing one to clear a rating is exactly the fabrication
+the T1-or-it-doesn't-ship bar exists to prevent. This pass authored it from sourced phenology.
+
+**Authored.** `unsuitable` -> `perennializes`. Split 22/3/14 -> **23/3/13**.
+- `plant_out` "Nov 1 - Feb 1 (dormant crowns, one-time planting)" -- matches UA az1005's
+  transplant-only tick range exactly (Nov 1 through Feb 1), and sits inside both UA az1615's
+  Oct-Feb and Pub 7234's statewide "October through March is usually best for establishing
+  asparagus stands with transplants or crowns".
+- `harvest` "Mar - Apr" -- UA az1615 (Yuma), the only low-desert HOME-GARDEN harvest statement
+  found. Deliberately later than the commercial December-to-April season, because a backyard bed
+  is not force-started by a late-November fern chop plus a December forcing irrigation. The
+  commercial October cut is market-contingent and was excluded.
+- calendar `CP,CP,HV,HV,GR,GR,GR,GR,GR,GR,CP,CP`. The Nov-Feb `cold_pause` is the MANAGED rest --
+  irrigation cut in Sep/Oct, fern dries down, cut to the ground "in January if still green" per UC
+  IPM -- and doubles as the crown-planting window (legal under the A24 dormant-planting carve-out
+  from arc 1).
+- Summer coded ACTIVE `growing`, NOT `heat_pause`. No T1 source says the desert fern stalls;
+  commercial fields irrigate through summer at 10-to-15-day intervals and reach full 5-foot fern.
+  A pause token would assert a stop nothing supports.
+
+**Why `perennializes`.** Dormancy window SATISFIED, by drought rather than cold -- UC IPM's
+home-garden page: "If drought or cold weather do not stop vegetative fern growth, shoots will
+become spindly and less vigorous each year", "Irrigation is usually stopped in September or
+October so that the plants will go dormant", and it anticipates the frost-free case outright:
+"After the frost turns the ferns brown or during January if ferns are still green, prune them
+down to the ground." Heat ceiling SURVIVABLE, not persistence-limiting: development is reduced
+above 85F (Pub 7234), but UC 157 -- the dominant desert cultivar -- was BRED AT UC's Desert
+Research and Extension Center in Holtville, in the Imperial Valley, where UC's own page notes
+summers reach 120F, and NMSU lists it heat-tolerant. Existence proof: Pub 7234's primary-district
+naming, plus UCCE Imperial's Bell putting low-desert stand life at "10 to 20 years". Home-garden
+proof: two independent low-desert extension HOME calendars carry asparagus (az1615, az1005).
+
+**Provenance of the retired chill claim, finally identified.** The "asparagus requires winter
+chill" reasoning that justified nearly every marginal/unsuitable rating on this crop traces to
+**PlantVillage**: "Asparagus grows best in regions with hot days and cool nights and requires
+90-150 days of cold temperature to break dormancy." That host is `.edu` but is an AGGREGATED
+CROP-PROFILE DATABASE, not an extension bulletin; the claim is unattributed there, and its three
+cited references are Minnesota, Tennessee, and a UC Davis home-garden guide. Directly contradicted
+by UC ANR naming Imperial/Riverside a primary district with a December harvest, and by NMSU
+("asparagus is relatively winter hardy, with higher heat, drought, and salt tolerances").
+**LESSON: a `.edu` HOST is not a T1 SOURCE -- tier on what the document IS.** Two other
+`ucanr.edu`-hosted pages failed the same way on this crop: an ANR Small Farms asparagus page that
+is a reprinted eastern/midwestern text ("In the east, in the cool spring..."), and a Southern
+California planting schedule credited to "Digital Gardener" using Sunset zones.
+
+**Citation hygiene catch.** The UCCE Imperial low-desert source URL was CONSTRUCTED rather than
+verified and **404'd on check**. The real document was located
+(`ucanr.edu/repository/a/?a=161158`, Bell, "Asparagus in the Low Desert") and all four
+load-bearing quotes confirmed present in the extracted PDF before it was cited. Separately, UC
+IPM's "Desert Valleys / February-April" row was re-confirmed to be a SEED window -- it traces
+verbatim to Pub 7234's "In the low desert, asparagus seed is often spring planted from February
+to April" -- and was NOT used as a crown window.
+
+**Gauntlet all green:** `gate_all` 120/120, `whole_crop_gate` asparagus PASS, `release_verify`
+CLEAN, A47 hard 0/128. 23 `open_findings`, 0 blocking.
+
+**Honest gaps carried** (new findings): no T1 source gives a low-desert-specific CROWN window, so
+Nov 1 - Feb 1 is assembled from a statewide UC window plus two Arizona low-desert home calendars;
+no UC source addresses home-garden asparagus in Coachella or Imperial specifically -- UCCE
+Imperial cites a Waisen (2022) Coachella Valley planting guide in *Imperial Agricultural Briefs*
+25(6):100-102 that is not posted at a resolvable URL and is the single most valuable missing
+document for this cell; no source states whether a frost-free home bed's fern senesces unaided or
+must be forced annually; and the 85F ceiling is stated but its consequence in a 107F July is not
+quantified. Also logged: z10's Mar-Apr harvest now reads LATER than cooler z9's Feb-Mar, which is
+a sourced-vs-modeled asymmetry rather than a biology claim (z9 was modeled from regional patterns
+at cert) -- the sourced value was preferred over smoothing the ladder.
+
+**Next:** `low_desert_az` z9/z10 sit at `unsuitable` on the same retired mechanism, and UA az1615
+lists asparagus for Yuma HOME gardeners -- the same low desert, very likely the same defect.
+
+---
+
 ## 2026-07-26 -- ASPARAGUS TIMING, ARC 2 of 2 (the suitability mechanism, and the ratings it distorted)
 
 Canonical `4749fe39` -> `cf4d3198` via two promote passes
