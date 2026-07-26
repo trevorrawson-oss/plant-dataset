@@ -198,6 +198,79 @@ for stale `log_ref` claims has been run.
 
 ---
 
+## Item 4 — `unsuitable` cells: the fabricated calendar, and the display rule
+
+Added 2026-07-26 after a failed attempt to fix it. **Read the attempt before retrying.**
+
+### The defect
+
+Asparagus's 10 `unsuitable` cells each carry a fabricated 12-token **all-`growing`** calendar. That
+renders as *active year-round growth for a crop that cannot grow there* — worse than showing
+nothing. It is the gate-avoidance pattern **inverted**: not a field deleted to dodge a gate, but a
+field invented to satisfy one.
+
+### What I tried, and why it failed
+
+Relaxed `herbaceous_perennial_gate`'s calendar floor to exempt `unsuitable`, then emptied the 10
+calendars. TDD passed on that gate (floor still bit for `perennializes`/`marginal`). **The gauntlet
+then failed with 10 violations from A32** — "frost_anchored resolved cell has an empty/absent
+calendar." Reverted both changes; canonical is unchanged at `34025ee3`.
+
+**The correction to my reasoning, which matters for the retry:** I had justified the fix as
+"align asparagus with the 19 fruit trees, which leave unsuitable calendars empty." That framing is
+wrong. Of 165 unsuitable cells across the 20 crops carrying `suitability`, 155 are empty — but
+those crops are **exempt**, not conventional: they ride perennial bases (`perennial_chill_gated`,
+`perennial_evergreen`) where A32 no-ops entirely. Asparagus is on `frost_anchored` deliberately, so
+it inherits yet another annual-crop requirement. This is the same structural tension as the A24
+carve-out, and it would be the **fourth** carve-out in that family.
+
+### Do the frontend first — this is the actual point
+
+A32's wording is a **rendering contract**: "this archetype's cells must render a non-empty
+month-strip calendar." Emptying the calendar before the frontend stops rendering these cells risks
+trading a misleading calendar for a **blank card**. So sequence it:
+
+1. **Frontend honors `suitability` and hides `unsuitable` cells for that zone** (Trevor's call,
+   2026-07-26). Once an unsuitable cell is not rendered, its calendar content is moot and can be
+   emptied safely.
+2. **Then** carve A32 (+ the archetype floor) for `unsuitable` and empty the 10.
+
+### The display rule, ruled 2026-07-26
+
+An `unsuitable` cell should **not show** for that zone. A `marginal` cell **should** show, with its
+caveats. The line is **whether the limiting factor varies between years**:
+
+- **`marginal` = take your chances.** Apple in a low-chill zone: chill accumulation genuinely
+  varies, and an unusually cold winter may deliver a crop. Worth offering.
+- **`unsuitable` = structurally impossible.** Asparagus in Hawaii: there is no dormancy window,
+  ever. It is not waiting for a good year; there are no good years.
+
+Both crops are already authored consistently with this, so **no new field is needed** — the
+frontend simply has to read `suitability`. Verified: apple's 5 `unsuitable` cells are all
+genuinely hopeless (fl_peninsula z11, hawaii z10-13, "cannot complete dormancy or set fruit"),
+while its take-a-chance zones are its 10 `marginal` cells.
+
+**Honest nuance to carry into the copy:** `unsuitable` does not mean the plant dies. UF/IFAS says
+outright *"If you're determined to give it a try, plant one- or two-year-old asparagus crowns…"* —
+and then that growth is "more or less continuous, resulting in weak, spindly spears." The failure
+is indefinite disappointment, not death. If the frontend ever offers an "show me anyway" escape
+hatch, that is the honest thing to say in it.
+
+### The scope limit on the hide rule
+
+**`suitability` exists on only 20 of 128 crops** (19 fruit trees + asparagus; artichoke will make
+21). A hide-unsuitable rule therefore only ever affects those 21. For the other 107, "should this
+crop even appear for this zone?" is **unanswered** — there is no field carrying it. That is a
+much larger arc (roster-wide suitability rollout) and belongs in
+`docs/field_addition_register.md` under the column GS-arc method, not in this pass. Worth deciding
+whether it is wanted before the fruit-tree audit in Item 1 makes the 20-crop set feel complete.
+
+**Done when:** the frontend hides `unsuitable`; then A32 + the archetype floor are carved for
+`unsuitable` (TDD, RED first) and asparagus's 10 fabricated calendars are emptied; and a decision
+is recorded on whether roster-wide `suitability` is wanted.
+
+---
+
 ## Sequencing and effort
 
 Item 1 first — it is the only one that may surface live defects, and its audit step is what makes
