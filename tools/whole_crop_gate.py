@@ -704,18 +704,17 @@ for m in _hpv:
 # All 37 other perennials already carry plant_out on 100% of their calendared cells, so this
 # enforces a convention the roster already observes universally.
 #
-# SOFT ON PURPOSE, with a documented hard-flip condition. Exactly ONE cell is currently open:
-# asparagus se_gulf.z10, where UF/IFAS omits asparagus from the Florida vegetable guide entirely
-# and states it cannot be grown in z10a -- there is no honest window to author. The correct fix
-# is a suitability re-rate to `unsuitable` (which this gate exempts), and that ruling is arc 2 of
-# the asparagus timing work. HARD-FLIP (fail() instead of print) once arc 2 lands and this
-# reports 0. Same soft-then-flip pattern as control_ladder_gate / variety_resistance_gate.
+# HARD as of 2026-07-26 (arc 2). It shipped SOFT for exactly one cell -- asparagus se_gulf.z10,
+# which had no honest window because UF/IFAS omits asparagus from the Florida vegetable guide
+# entirely. Arc 2 re-rated that cell to `unsuitable` on UF/IFAS's own evidence, which this gate
+# exempts by design, and the gate then reported 0 across all 128 crops. Flipped per the
+# soft-then-hard-flip pattern used by control_ladder_gate / variety_resistance_gate.
 from perennial_plant_out_gate import perennial_plant_out_violations
-print("A47. perennial planting-data floor (SOFT: perennial calendared cell carries plant_out)")
+print("A47. perennial planting-data floor (a perennial's calendared cell carries plant_out)")
 _ppo = perennial_plant_out_violations(crop)
-print(f"  perennial plant_out gaps: {len(_ppo)} (SOFT -- does not block; hard-flip after arc 2)")
+print(f"  perennial plant_out gaps: {len(_ppo)}")
 for m in _ppo:
-    print(f"  SOFT: perennial-plant-out: {m}")
+    fail(f"perennial-plant-out: {m}")
 
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months

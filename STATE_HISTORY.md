@@ -6,6 +6,108 @@
 
 ---
 
+## 2026-07-26 -- ASPARAGUS TIMING, ARC 2 of 2 (the suitability mechanism, and the ratings it distorted)
+
+Canonical `4749fe39` -> `cf4d3198` via two promote passes
+(`tools/promote_asparagus_suitability.py`, then `..._region_notes.py`). Count 128 and 120
+certified unchanged; only the asparagus crop dict changed. COMPACT preserved. Follows arc 1
+(commits `f475d8e` / `37131bb` / `e4f4335`).
+
+**The finding.** Every `marginal`/`unsuitable` asparagus cell justified its rating on a **chill
+requirement** -- "low-chill", "sustained cold dormant rest", "shallow winter rest" -- cited to
+`uc_ipm`. That source says something different, on a page that is explicitly home-garden:
+
+> "If drought or cold weather do not stop vegetative fern growth, shoots will become spindly and
+> less vigorous each year."
+> "Irrigation is usually stopped in September or October so that the plants will go dormant."
+
+UF/IFAS independently: "Dormancy is usually brought about by cold weather or drought." Marin MG
+and statewide UC MG repeat the irrigation instruction. **No T1 source states a chill-hour
+requirement for asparagus anywhere**, checked across roughly 15. So withholding irrigation is UC's
+standard instruction TO HOME GARDENERS, not a commercial trick -- which was the assumption behind
+the original ratings, and it was wrong.
+
+**The corrected mechanism**, now written into every affected note: asparagus needs a reliable
+annual dormancy window, delivered by winter cold OR by a dependable dry-down, plus fern
+development is reduced above 85F (Pub 7234). This is why Mediterranean California works and the
+summer-WET Gulf does not -- UF/IFAS names the mechanism "warm AND wet". The old chill framing
+reached the right conclusion for the tropics by luck and the wrong one for California by
+mechanism.
+
+**Rating changes (5). Split 18/8/13 -> 22/3/14.**
+- `ca_north_coast` z9 and z10, marginal -> **perennializes**. Strongest evidence in the set: Marin
+  and Sonoma MG (both `ucanr.edu`) publish 15-year bed lifespans, county-specific variety lists,
+  and no warm-winter warning of any kind.
+- `ca_south_coast` z9, marginal -> perennializes. UC IPM publishes a home-garden South Coast crown
+  window; Pub 7234 records production in Orange and Ventura counties.
+- `ca_desert` z9, marginal -> perennializes, on a corrected chain (see below).
+- `se_gulf` z10, marginal -> **unsuitable**. Asparagus occurs ZERO times in the UF/IFAS Florida
+  vegetable gardening guide, in both the statewide and South Florida editions. Cell takes the
+  all-`growing` honesty floor and loses its window (A47-exempt by design).
+
+**A second-pass zone correction reversed three earlier recommendations.** Per USDA 2023 by ZIP:
+Antelope Valley and Victorville are **z8** -- BELOW `ca_desert`'s `[9,10,11]` span, so the
+California high desert is not in that region at all; Imperial and Coachella are **z10**; and no
+California desert ground reaches z11 (Death Valley is 9a). Consequences:
+- `ca_south_coast` z10 **stays marginal**. Its upgrade case collapsed under scrutiny: the
+  "10-15 years" stand-life claim traces to a **.org volunteer-association blog Q&A** (2021,
+  answering "my asparagus is taking over my garden") reworded from statewide UC MG boilerplate
+  with no zone scoping, and San Diego County's actual UCCE planting-date table omits asparagus
+  entirely from both its Coastal and Coastal Inland columns. The earlier flag -- no T1 states a
+  stand life for a frost-free coastal bed -- was confirmed, not resolved.
+- `ca_desert` z9's promotion survived but on a REBUILT argument. The original was a-fortiori from
+  a false premise (that z9 meant Antelope Valley); corrected, z9 is Barstow/Blythe, cooler-wintered
+  than the z10 valleys UC documents as a primary district with 8-10 year stands, so it runs the
+  other way and lands stronger.
+- `ca_desert` z11 stays `unsuitable` -- effectively vacant ground -- but its note was wrong twice:
+  it called z11 "the low desert" (that is z10, where UC grows the crop) and demanded "sustained
+  cold rest".
+- `se_gulf` z9 stays marginal, well supported by Mississippi State ("Performance in south
+  Mississippi gardens... is likely to be disappointing... may not become completely dormant in
+  winter") and UF HS546. Its unsupported "heavier Fusarium and rust pressure" clause was DROPPED:
+  no T1 backs disease as a Gulf exclusion, and UGA calls its own varieties rust- and
+  Fusarium-resistant.
+
+**Not flipped, escalated instead: `ca_desert` z10.** Its `unsuitable` rating is flatly
+contradicted -- this is the Imperial/Coachella valley floor, which Pub 7234 names one of
+California's three PRIMARY asparagus production districts and for which UC IPM publishes a
+home-garden crown window, with stands holding 8 to 10 years. It was NOT flipped because promotion
+requires a real 12-token calendar and a sourced crown window built for low-desert phenology (fern
+chop late November, harvest opening near December). **Inventing that calendar to clear a rating
+would be exactly the fabrication the T1-or-it-doesn't-ship bar exists to prevent.** Its note now
+states the real limits (85F fern ceiling, managed dry-down dormancy) rather than the false one,
+and a HIGH-priority `open_finding` queues a proper authoring pass.
+
+**A47 hard-flipped.** The single cell keeping it soft is now `unsuitable` and exempt by design, so
+A47 reports 0 across all 128 crops and now calls `fail()`. Re-proven to still bite after the flip:
+stripping asparagus's 25 windows -> 25 violations CAUGHT, and the full adversarial battery still
+7/7.
+
+**A gate gap found by hand, not by a gate.** `region_notes_seasoned`/`_beginner` are a SEPARATE
+consumer-facing prose layer that summarizes the per-zone ratings, and nothing cross-checks the
+two. After the re-rates, `ca_north_coast` still read "both zones 9 and 10 perennialize only
+marginally" when both had just been promoted -- a direct contradiction between two strings the
+same guide renders to the same reader. A36 checks that both registers EXIST; A29 checks they are
+AUTHORED; neither reads what they SAY. Repaired by hand across 5 regions (ca_north_coast,
+ca_south_coast, ca_desert, se_gulf, nevada). A candidate gate is logged as an `open_finding`, but
+it needs a flood check first: region prose is free text and phrasing varies widely across 128
+crops.
+
+**Repair footprint:** 17 cell notes plus 5 region note PAIRS rewritten. A scan confirms **0
+consumer-facing strings still assert the chill mechanism**; 0 em-dash, 0 spelled degrees. The old
+mechanism survives only in `verification_status.verification_log_ref`, deliberately left as the
+historical record of the 2026-07-24 cert.
+
+**Gauntlet all green:** `gate_all` 120/120, `whole_crop_gate` asparagus PASS, `release_verify`
+CLEAN, A47 hard 0/128. 20 `open_findings`, 0 blocking.
+
+**Next:** author `ca_desert` z10 properly (calendar + crown window) and then re-rate; consider the
+region-prose-vs-rating gate; and note that `low_desert_az` z9/z10 sit at `unsuitable` on the same
+bad mechanism, with UA Extension az1615 listing asparagus for Yuma HOME gardeners -- not
+investigated this pass, flagged only.
+
+---
+
 ## 2026-07-26 -- ASPARAGUS TIMING, ARC 1 of 2 (the planting data the cert shipped without)
 
 Canonical `419c9bd1` -> `4749fe39` via two promote passes (`tools/promote_asparagus_timing.py` then
