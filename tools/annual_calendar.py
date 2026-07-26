@@ -313,9 +313,34 @@ def annual_calendar_violations(crop):
     legitimate frost tail -- month-rounding); a `wait` token on a harvest month (a separate
     pause-legibility item, e.g. beefsteak ca_north_coast.z10, pending its own fix); thermal
     BACKING of a heat_pause (B3, now its own gate A28). Heat_pause/declared-months ALIGNMENT
-    stays in `annual_coherence_violations` (A5)."""
+    stays in `annual_coherence_violations` (A5).
+
+    DORMANT-PLANTING CARVE-OUT (2026-07-26, asparagus plant_out authoring arc). The
+    pause-on-plant rule encodes an ANNUAL assumption: you cannot set a frost-tender
+    transplant out during a frost lockout. A DORMANT CROWN is the opposite case -- it is
+    deliberately planted while the ground is still cold and the plant still asleep ("as
+    soon as the soil can be worked", weeks BEFORE the frost-free date). Every other
+    dormant-planted perennial escapes this rule for free by riding a perennial basis:
+    apple `"Apr - May (dormant, bare-root)"` never reaches A24 because the whole gate
+    no-ops off frost_anchored. asparagus is the ONLY dormant-crown perennial ON the
+    frost_anchored basis (deliberately -- it needs the annual month-strip machinery per
+    calendar_basis_gate's archetype map), so it is the only crop where correct agronomy
+    collides with this rule. Measured 2026-07-26: 17 of 25 T1-sourced crown windows would
+    have been reported as violations.
+
+    SCOPE -- narrow on purpose, matching the A34/A37 archetype carve-out approved during
+    the asparagus cert: exempts ONLY the frost-pause-on-plant_out branch, ONLY for
+    archetype == 'herbaceous_perennial'. The cold_pause-on-core-harvest branch and BOTH
+    heat_pause branches still apply in full, so a herbaceous perennial that overstates its
+    harvest into a frost month still bounces. A cool_season_annual planting into a
+    cold_pause month still bounces (TDD RED-proven). This is a carve-out rather than a
+    basis flip precisely BECAUSE it is surgical: flipping asparagus to a perennial basis
+    would silently disable A5/A24/A25/A28 and the coherence gates wholesale."""
     if crop.get("calendar_basis") != "frost_anchored":
         return []
+    # A dormant crown/rhizome goes in while the ground is cold -- see DORMANT-PLANTING
+    # CARVE-OUT above. Scoped to the archetype, not to the crop or the basis.
+    dormant_planter = crop.get("archetype") == "herbaceous_perennial"
     out = []
     for rk, r in (crop.get("regions") or {}).items():
         for z, cell in (r.get("resolved_by_zone") or {}).items():
@@ -331,7 +356,7 @@ def annual_calendar_violations(crop):
                 tok = cal[i]
                 m = i + 1
                 mon = _MON_ABBR[i]
-                if tok in _FROST_PAUSE_TOKENS and m in plant:
+                if tok in _FROST_PAUSE_TOKENS and m in plant and not dormant_planter:
                     out.append(f"{loc}: {tok} on plant_out month {mon} "
                                f"(a frost/dormancy pause cannot fall on an outdoor planting window)")
                 elif tok == "cold_pause" and m in harvest_core:

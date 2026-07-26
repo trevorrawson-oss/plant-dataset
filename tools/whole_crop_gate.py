@@ -697,6 +697,26 @@ print(f"  archetype={crop.get('archetype')!r} | herbaceous_perennial violations:
 for m in _hpv:
     fail(f"herbaceous-perennial: {m}")
 
+# ---------------- A47. perennial planting-data floor (SOFT, 2026-07-26) ----------------
+# Catches the asparagus defect class: a perennial certified with NO plant_out on any zone cell,
+# so the app cannot tell a grower when to plant. Nothing caught it because plant_out is OPTIONAL
+# -- A24/A43 go VACUOUS when the field is absent, so removing it removes its own enforcement.
+# All 37 other perennials already carry plant_out on 100% of their calendared cells, so this
+# enforces a convention the roster already observes universally.
+#
+# SOFT ON PURPOSE, with a documented hard-flip condition. Exactly ONE cell is currently open:
+# asparagus se_gulf.z10, where UF/IFAS omits asparagus from the Florida vegetable guide entirely
+# and states it cannot be grown in z10a -- there is no honest window to author. The correct fix
+# is a suitability re-rate to `unsuitable` (which this gate exempts), and that ruling is arc 2 of
+# the asparagus timing work. HARD-FLIP (fail() instead of print) once arc 2 lands and this
+# reports 0. Same soft-then-flip pattern as control_ladder_gate / variety_resistance_gate.
+from perennial_plant_out_gate import perennial_plant_out_violations
+print("A47. perennial planting-data floor (SOFT: perennial calendared cell carries plant_out)")
+_ppo = perennial_plant_out_violations(crop)
+print(f"  perennial plant_out gaps: {len(_ppo)} (SOFT -- does not block; hard-flip after arc 2)")
+for m in _ppo:
+    print(f"  SOFT: perennial-plant-out: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
