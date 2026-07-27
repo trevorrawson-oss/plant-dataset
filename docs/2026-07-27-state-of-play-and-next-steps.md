@@ -24,9 +24,14 @@ Shipped across five passes today and yesterday:
 | `harvest_ramp_weeks` | — | **new field**, bed-age ramp (pilot) |
 | gates | — | **A47 hard**, A24 dormant-planting carve-out |
 
-**It is LIVE** (small tester group) — and the site currently serves the *pre-fix* harvest windows,
-because the plant-astro submodule still points at `10eecc0`. A Central Valley user is being shown
-`Feb - Mar` right now.
+> **CORRECTION 2026-07-27 — the claim that stood here was wrong.** It read: *"It is LIVE (small
+> tester group) and the site currently serves the pre-fix harvest windows, because the plant-astro
+> submodule still points at `10eecc0`. A Central Valley user is being shown `Feb - Mar` right now."*
+> That conflated the **dataset** commit where asparagus certified (`10eecc0`) with the **astro**
+> submodule pin. Verified directly in `plant-astro`: HEAD, `origin/main` and the working tree all
+> pin **`7923579`** (the ladybug sweep), which is an *ancestor* of the asparagus cert.
+> **Asparagus is not on the live site at all, and no user is being served wrong asparagus data.**
+> There is no clock on the bump. See `docs/2026-07-27-astro-handoff-bump-target-and-answers.md`.
 
 ---
 
@@ -42,6 +47,22 @@ their own geography: `northern_tier` z3-z6, `mid_atlantic` z7, `mid_south` z7, `
 **No T1 source was found for:** all three `nevada` cells, `utah_dixie` z8, `pnw` z9,
 `mid_atlantic` z8, `se_gulf` z8/z9 starts.
 
+> **CLOSED 2026-07-27 — the gap is real and is formally accepted.**
+> `docs/2026-07-27-asparagus-harvest-start-sourcing-sweep.md`. The premise below was right and the
+> conclusion did not follow: county MG sources **are** T1, they **were** being wrongly discounted,
+> and they are full of asparagus harvest guidance — but **none of it is a start date**. Eighteen
+> documents were fetched raw across eight states and five source classes. **Not one home-garden
+> source publishes a regional asparagus harvest START month.** They publish *duration in weeks,
+> ramped by bed age* (which we already have) and *a stop rule* — usually "stop when spears thin
+> below pencil diameter." The only start dates in existence are in **commercial** production
+> publications and are explicitly market-forced ("if the market is favorable", "for an early
+> market"), which this arc had already ruled out for the early end. The 20 modeled-start cells are
+> not under-researched; the field is asking the literature for a value it does not produce.
+> **Do not re-open on sourcing effort.** Two follow-ons are proposed in that document: carry the
+> *stop rule* (§3.2, the single most-sourced datum in the whole literature and absent from the
+> dataset), and consider inverting the model to sourced-stop + sourced-duration where a date stop
+> exists (§3.3).
+
 **This is now re-openable**, for a reason that did not exist when the gap was created: county
 Master Gardener calendars were being treated as too weak to cite, and they are not (see §3).
 Several of those cells probably have a sourceable start sitting in a county MG document.
@@ -51,7 +72,20 @@ mid-Atlantic, mid-South or PNW**, so the pre-fix values there were unsupported a
 read off crown-**planting** tables (Clemson's "Planting Dates for Crowns", UGA B577, UMD HG16 all
 publish Feb-Apr *planting* windows that resemble the old *harvest* strings).
 
+> **Evidenced 2026-07-27.** VCE 426-331's *planting* rows — z7a `March 20-April 20`, z7b
+> `March 10-April 10`, z8 `Feb 15-April 1` — are near-identical to the pre-fix *harvest* strings
+> that sat on the mid-Atlantic cells. The crown-planting-table hypothesis is now backed.
+
 ### 2b. Register `harvest_ramp_weeks` — a loose end, ~15 minutes
+
+> **DONE 2026-07-27 — register row 26.** With one correction: the rollout is **not** "the 25
+> establishment crops." Measured on `0da1d234` it is **30** crops carrying
+> `years_to_first_harvest`/`establishment_years`, and the field's semantics do not generalize to
+> most of them — on fruit trees and woody berries establishment shows up as *yield*, not weeks of
+> cutting, and the five cut-as-needed woody herbs have no discrete harvest window to ramp at all.
+> Honest candidate set is the `herbaceous_perennial` archetype: asparagus (live), artichoke, plus
+> rhubarb/cardoon if they ever join. Row 26 records that, both hazards, and the proposed
+> coherence-gate hard-flip.
 
 The field shipped as an asparagus pilot and the intent was always a roster-wide rollout across the
 25 establishment crops. **It was never added to `docs/field_addition_register.md`.** Add it with the
@@ -62,10 +96,19 @@ seasons in the ground from a one-year-old crown.
 
 ### 2c. The plant-astro bump
 
-Owned by the astro lane, not this repo. It matters more than it did: the live site is serving
-harvest windows we now know are wrong. Their working tree has in-flight asparagus artwork and a
-`PlantingCalendarCard` change, so they should stage the submodule pointer explicitly
-(`git add plant-dataset`) rather than `git add -A`, and run `npm run build` after.
+Owned by the astro lane, not this repo — **re-confirmed by Trevor 2026-07-27**. Their working tree
+has in-flight asparagus artwork and a `PlantingCalendarCard` change, so they should stage the
+submodule pointer explicitly (`git add plant-dataset`) rather than `git add -A`, and run
+`npm run build` after.
+
+> **CORRECTED 2026-07-27.** The sentence that stood here — *"it matters more than it did: the live
+> site is serving harvest windows we now know are wrong"* — was false; see the §1 correction. The
+> live site serves no asparagus at all. **Target is `0c6c229` / canonical `0da1d234`, not the
+> `93451d0` in their spec** (that SHA is real but sits *behind* the harvest re-source and the ramp
+> fix, so bumping there would ship the very windows we corrected). Because there is no clock, the
+> bump should land **with** their `PlantingCalendarCard` fix, not ahead of it — correct data
+> rendered by the annual-calendar branch is still a broken card. Full package:
+> `docs/2026-07-27-astro-handoff-bump-target-and-answers.md`.
 
 ### 2d. The app-side fix
 
@@ -198,6 +241,22 @@ what landed; do not assume `whole_crop_gate.py` is what this document describes.
 3. **Artichoke finishes** (in flight) — the roster must be stable before column passes
 4. **Hardening pass (§4)** — item 1 first, audit before gate
 5. **Cleanup arc (§5)** — the largest, and the one that protects the trust claim
+
+> **REVISED 2026-07-27, after items 1 and 2 were worked.** Item 1's rationale was false (no live
+> asparagus, no clock) and item 1 is not this lane's to run; it is queued behind the astro session's
+> `PlantingCalendarCard` fix. Item 2 is **done**: the ramp is registered (row 26) and the honest gap
+> is **closed as formally accepted** on an 18-document sweep, not re-sourced. Remaining order:
+>
+> 1. **Artichoke finishes** (paused mid-arc, uncommitted) — the roster must be stable before any column pass
+> 2. **plant-astro bump + `PlantingCalendarCard` fix**, astro lane, together
+> 3. **Hardening pass (§4)** — item 1 first, audit before gate. Item 2 is now partly discharged: the
+>    three thin asparagus values have an accept-decision and evidence behind them
+> 4. **Cleanup arc (§5)** — the largest, and the one that protects the trust claim. The sweep added
+>    three fresh instances of its tier-C shape (`auburn_aces`, UNR 3017, and the near-miss of
+>    stretching UC's "Central Coast" onto our north/south coast regions), so the ~19% estimate is
+>    not looking pessimistic
+> 5. **New, from the sweep:** carry the **harvest stop rule** (§3.2 of the sweep doc) — the most
+>    sourced datum in the asparagus literature and entirely absent from the dataset
 
 ---
 
