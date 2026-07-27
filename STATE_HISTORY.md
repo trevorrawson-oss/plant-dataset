@@ -6,6 +6,35 @@
 
 ---
 
+## 2026-07-27 -- ASPARAGUS harvest ramp year-2 correction (caught by the plant-app session)
+
+Canonical `79862bc3` -> `0da1d234`. One field value. gate_all 120/120, whole_crop_gate PASS.
+
+The `harvest_ramp_weeks` pilot encoded bed year 2 as `[0, 0]` -- no harvest. That contradicted two
+fields the cert had authored carefully: `years_to_first_harvest` `[2,3]`, and the establishment tip
+("The second spring, take only a light two-week pick, and just if the bed came through the first
+season strong; some guides wait for year three").
+
+**Neither of those was stale.** They are an honest encoding of a GENUINE SOURCE DISAGREEMENT -- UMN
+and Missouri permit a light second-spring cut, MSU and UNH say wait for year three -- and `[2,3]` is
+that disagreement expressed as a range. My error was FALSE PRECISION: collapsing a sourced range to
+its conservative end and presenting it as certainty, in a NEW field, without flagging that I had.
+
+Fixed: year 2 `[0,2]` (conditional light cut), year 3 `[2,4]` (SDSU "limit harvest in the third year
+to 2-4 weeks"; USU "up to 4 weeks in Year 3"). All three fields now agree.
+
+**Lesson for the roster-wide rollout:** where the establishment literature disagrees, the ramp must
+CARRY the range rather than pick a side. A `[0,2]` says "optional if the bed is strong", which is
+what the sources actually support.
+
+**Caught by the plant-app session, not by a gate or by me.** Their read: the app's three-state model
+reads `years_to_first_harvest`, so a ramp disagreeing with it would render a light-harvest ribbon
+beside a zero-week duration -- telling a grower to cut a bed the data says not to touch. They
+refused to build on it and asked. That was the right call, and it is the third contradiction-between-
+layers defect of this arc, after the region-prose drift and the resolution_method overwrite.
+
+---
+
 ## 2026-07-27 -- ASPARAGUS HARVEST WINDOWS RE-SOURCED (+ bed-age ramp pilot)
 
 Canonical `34025ee3` -> `79862bc3` via two promote passes plus one gate ruling. Only asparagus
