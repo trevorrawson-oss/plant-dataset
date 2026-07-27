@@ -6,6 +6,62 @@
 
 ---
 
+## 2026-07-27 -- ASPARAGUS HARVEST WINDOWS RE-SOURCED (+ bed-age ramp pilot)
+
+Canonical `34025ee3` -> `79862bc3` via two promote passes plus one gate ruling. Only asparagus
+changed. COMPACT preserved. Reported by Trevor for the Central Valley.
+
+**The defect.** All 29 harvest strings were exactly two calendar months. Root cause is mine: timing
+arc 1 derived them mechanically from the cert's MODELED calendar tokens and recorded "no re-sourcing
+needed". `ca_interior` z9 read `Feb - Mar` while UC ANR Pub 7234 -- cited on that very cell -- says
+"In the Delta, asparagus is harvested from late February through May". Arc 1 kept that source
+explicitly "for its harvest sentence" and never compared it to the value being written.
+
+**The model**, from four parallel research passes: sourced START (regional) + DURATION (portable,
+bed-age dependent). "START moves with climate but DURATION does not." 22 of 29 windows changed; 5
+legitimately stayed two months.
+
+**Duration is regional after all, reversing the pass's hypothesis.** Warm long-season regions grant
+the LONGEST harvests: NMSU "a maximum of 10 weeks/year" from year four; California 8-10 weeks (four
+independent UC corroborations); northern tier 6-8, with z3/z4 nearer 6 because a stop DATE binds
+first. Heat speeds spears and degrades tips within the window; every T1 source ends the season on
+SPEAR DIAMETER, not a date.
+
+**New field `harvest_ramp_weeks`** (pilot, asparagus only): pure numbers, no prose keys. Bed years
+1-2 none, 3 two-to-three weeks, 4 six-to-eight, 5+ eight-to-ten. Structured so the app can key off
+the user's own plantedAt -- the multi-year perennial guidance Trevor identifies as the product
+differentiator. Roster-wide rollout is a register entry gated on a stable roster.
+
+**Sourcing trap resolved.** The pass told researchers not to conflate home and commercial windows.
+In California that distinction does not exist: Contra Costa MG's HOME guidance is a verbatim lift
+from the COMMERCIAL Pub 7234, which the home page tells gardeners to consult. So "home is shorter"
+cannot justify narrowing the Delta. The late-February start IS commercial-only (market-forced).
+
+**Three self-inflicted defects**, caught by a post-promote coherence scan rather than any gate:
+1. The first pass OVERWROTE `resolution_method` with harvest values, destroying plant_out provenance
+   on 27 cells -- the identical "two orthogonal axes in one string" error I had advised the artichoke
+   session against less than an hour earlier. Fixed by restoring from git and adding
+   `harvest_resolution_method` (ruled into register_completeness EXCLUDED_KEYS).
+2. se_gulf z8 and z9 were missed entirely (27 rows for 29 cells).
+3. Prose drift: 11 cell notes and 6 region-note pairs still described the OLD windows, reproducing
+   within an hour the exact defect class written up as item 1 of the hardening kickoff.
+
+**New tooling hazard.** A research agent FABRICATED a document title and supporting quotes for a
+handbook containing no asparagus content, from a WebFetch SUMMARY OF A PDF. Worse than the known
+table-column-shift hazard because it invents rather than garbles. Operating rule: WebFetch summaries
+of PDFs are NOT sourcing -- pypdf text or raw HTML only.
+
+**Honest gap.** Duration is well sourced; starts are not. Only northern_tier z3-z6, mid_atlantic z7,
+mid_south z7, warm_arid z8, ca_interior z9 and low_desert_az z10 have a start sourced for their own
+geography. No T1 source exists for any nevada cell, utah_dixie z8, pnw z9, mid_atlantic z8, or the
+se_gulf starts. No source starts asparagus harvest in MARCH anywhere in the mid-Atlantic, mid-South
+or PNW -- the old values there may have been read off crown-PLANTING tables.
+
+**Gauntlet all green:** gate_all 120/120, whole_crop_gate PASS, release_verify CLEAN, A47 hard
+0/128, prose/window drift 0. 34 open_findings, 0 blocking.
+
+---
+
 ## 2026-07-26 -- ASPARAGUS ca_south_coast z11 ALIGNED (last flagged cell; the crop is COMPLETE)
 
 Canonical `f5546edc` -> `34025ee3` via one promote pass

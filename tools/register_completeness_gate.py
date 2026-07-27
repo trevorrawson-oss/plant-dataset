@@ -36,7 +36,13 @@ EXCLUDED_KEYS = {
     # MACHINERY / IDENTIFIER
     "id","slug","stage_id","tip_id","region_id","evidence_tier","added_in",
     "last_reviewed","last_operation","last_session","schema_version","last_updated",
-    "date","stored_date","resolution_tier","resolution_method","anchor_threshold",
+    # `harvest_resolution_method` ruled alongside `resolution_method` 2026-07-27: both are
+    # provenance MACHINERY (an enum-ish token naming how a value was reached), never rendered.
+    # They are deliberately SEPARATE keys because they answer orthogonal questions -- how the
+    # PLANTING window was reached vs how the HARVEST window was -- and a single field cannot
+    # carry both without losing the cross-product.
+    "date","stored_date","resolution_tier","resolution_method","harvest_resolution_method",
+    "anchor_threshold",
     "fallback_beyond_horizon","calendar_state","window_type","timing_relative",
     "to_spacing","phase","status","image","example_product","plantings_provenance",
     "provenance","lifted_from_zone","name","botanical_name","family","variety",
