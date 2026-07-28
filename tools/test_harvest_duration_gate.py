@@ -214,6 +214,55 @@ class RampProseCheck(unittest.TestCase):
         self.assertEqual(len(v), 1, v)
         self.assertIn("RAMP-PROSE", v[0])
 
+    # --- the check reads EVERY crop-level consumer string, not just harvest_ready_* ---
+    # Narrowing it to harvest_ready_* is what let nine other asparagus strings keep
+    # asserting a superseded figure while the gate reported clean.
+
+    def test_disagreeing_count_in_description_flags(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "description_beginner": "After about six to eight weeks of cutting you stop."}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("description_beginner", v[0])
+
+    def test_disagreeing_count_in_a_nested_list_of_objects_flags(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "growth_stages": [{"id": "x"},
+                                  {"user_action_seasoned": "Cut through the roughly six-to-eight-week window."}]}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("growth_stages[1].user_action_seasoned", v[0])
+
+    def test_count_in_a_sentence_with_no_harvest_verb_still_flags(self):
+        # the notifications[].body_seasoned shape. The per-CELL checks filter to harvest
+        # clauses to dodge fern/irrigation housekeeping, but at CROP level a week count is
+        # about this crop's harvest even with no harvest verb in the sentence.
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "notifications": [{"body_seasoned": "You are near the end of the roughly "
+                                                    "six-to-eight-week window."}]}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("notifications[0].body_seasoned", v[0])
+
+    def test_region_cells_are_not_scanned_by_the_crop_level_check(self):
+        # per-cell prose is duration_violations' job, with its own clause filtering
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "regions": {"r": {"resolved_by_zone": {"7": {
+                    "harvest": "Apr - May",
+                    "notes": "Spears emerge in April; harvest for four to six weeks into May."}}}}}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
+    def test_audit_record_and_citation_machinery_are_not_scanned(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "verification_status": {"open_findings": [
+                    {"finding": "was six to eight weeks before the widening"}]},
+                "sources_summary": {"primary": [{"note": "cited six to eight weeks"}]}}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
+    def test_crop_without_a_ramp_is_skipped_even_with_week_counts(self):
+        crop = {"slug": "c", "description_beginner": "Harvest for six to eight weeks."}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
 
 class LiveCanonicalClean(unittest.TestCase):
     """Done is a check that returns zero. RED until the promote lands."""

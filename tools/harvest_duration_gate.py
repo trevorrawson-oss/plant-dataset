@@ -283,23 +283,70 @@ def _mature_ramp(crop):
     return top["bed_year"], top["weeks"]
 
 
+# Crop-level subtrees RAMP-PROSE does not read. `regions`/`zones` are per-cell prose,
+# which duration_violations owns and which needs the harvest-clause filter. The rest is
+# the audit record and citation machinery, never rendered.
+_CROP_PROSE_SKIP_TOP = {"regions", "zones", "verification_status", "sources_summary",
+                        "varieties"}
+
+
+def _crop_prose_strings(crop):
+    """Yield (path, text) for every crop-level consumer string."""
+    def walk(node, path):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k == "sources" or "anchoring_urls" in k:
+                    continue
+                yield from walk(v, f"{path}.{k}")
+        elif isinstance(node, list):
+            for i, v in enumerate(node):
+                yield from walk(v, f"{path}[{i}]")
+        elif isinstance(node, str):
+            yield path, node
+
+    for k, v in crop.items():
+        if k in _CROP_PROSE_SKIP_TOP:
+            continue
+        yield from walk(v, k)
+
+
+def _bare_week_range(text):
+    """(min, max) from an 'N to M weeks' anywhere in the text, else None.
+
+    Deliberately NOT filtered to harvest clauses, unlike the per-cell checks. Cell notes
+    need that filter to dodge fern/irrigation housekeeping ("cut irrigation"), but a
+    CROP-level week count is about this crop's harvest even when its sentence carries no
+    harvest verb -- `notifications[].body_seasoned` opens "You are near the end of the
+    roughly six-to-eight-week window", which the clause filter drops on the floor.
+    """
+    m = re.search(rf"({_NUM_RE}){_RANGE_SEP}({_NUM_RE})[-\s]+weeks?", text, re.I)
+    return (_num(m.group(1)), _num(m.group(2))) if m else None
+
+
 def ramp_prose_violations(crop):
-    """RAMP-PROSE: a bare week count in the crop's harvest_ready_* prose must equal
-    the ramp's mature entry. Equality, not overlap: [6,8] and [8,10] share an
-    endpoint and are still two different claims about the same bed."""
+    """RAMP-PROSE: a bare week count in ANY crop-level consumer string must equal the
+    ramp's mature entry.
+
+    Equality, not overlap: [6,8] and [8,10] share an endpoint and are still two different
+    claims about the same bed.
+
+    SCOPE IS EVERY CROP-LEVEL STRING, and the width is the point. This check first shipped
+    reading only `harvest_ready_*`, and that narrowness is exactly why nine other asparagus
+    strings went on asserting a superseded six-to-eight-week figure -- in the guide body,
+    the stage cards, the watering note, a tip callout and a notification -- while the gate
+    reported clean. Measured: the widening is a no-op on every crop without a ramp, which
+    today is all of them but one, so there is no flood to narrow away from.
+    """
     mature = _mature_ramp(crop)
     if mature is None:
         return []
     bed_year, weeks = mature
     out = []
-    for reg in ("harvest_ready_beginner", "harvest_ready_seasoned"):
-        text = crop.get(reg)
-        if not isinstance(text, str):
-            continue
-        dur = stated_duration(text)
+    for path, text in _crop_prose_strings(crop):
+        dur = _bare_week_range(text)
         if dur and list(dur) != list(weeks):
             out.append(
-                f"RAMP-PROSE: {reg} states {dur[0]} to {dur[1]} weeks but "
+                f"RAMP-PROSE: {path} states {dur[0]} to {dur[1]} weeks but "
                 f"harvest_ramp_weeks bed year {bed_year} says {weeks[0]} to {weeks[1]}. "
                 f"Two layers of the same crop make different duration claims; decide "
                 f"which is sourced before editing either."
