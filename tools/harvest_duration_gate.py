@@ -60,6 +60,7 @@ _WORDNUM = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
 _MONTH_RE = "|".join(MONTHS) + "|" + "|".join(_ABBR)
 _NUM_RE = r"(?:\d+|" + "|".join(_WORDNUM) + ")"
 _MOD_RE = r"(?:early\s+|mid\s+|mid-|late\s+|early to mid\s+)?"
+_RANGE_SEP = r"(?:\s+to\s+|\s*-\s*to\s*-\s*|\s*[-–]\s*)"
 
 
 def _month(tok):
@@ -108,7 +109,11 @@ def harvest_clauses(note):
 def stated_duration(note):
     """(wmin, wmax) weeks stated in a harvest clause, else None."""
     for seg in harvest_clauses(note):
-        m = re.search(rf"({_NUM_RE})\s*(?:to|-|–)\s*({_NUM_RE})\s+weeks?", seg, re.I)
+        # "six to eight weeks", "6-8 weeks", and the compound-adjective form
+        # "a roughly six-to-eight-week window" (harvest_ready_seasoned's shape).
+        # The separator must treat "-to-" as one unit: a bare `-` alternative would
+        # consume only the first hyphen and then fail to match "to" as a number.
+        m = re.search(rf"({_NUM_RE}){_RANGE_SEP}({_NUM_RE})[-\s]+weeks?", seg, re.I)
         if m:
             return _num(m.group(1)), _num(m.group(2))
         m = re.search(rf"(?:about|up to(?: about)?|for(?: about)?)\s+({_NUM_RE})\s+weeks?", seg, re.I)
@@ -217,6 +222,44 @@ def ramp_violations(crop):
                 f"CARRY THE RANGE (an optional [0, N] year), not collapse to the "
                 f"conservative end. This is the year-2 [0,0] defect."]
     return []
+
+
+def _mature_ramp(crop):
+    """The highest authored bed_year's weeks, or None."""
+    ramp = crop.get("harvest_ramp_weeks")
+    if not isinstance(ramp, list) or not ramp:
+        return None
+    entries = [e for e in ramp if isinstance(e, dict)
+               and isinstance(e.get("bed_year"), int)
+               and isinstance(e.get("weeks"), list) and len(e["weeks"]) == 2]
+    if not entries:
+        return None
+    top = max(entries, key=lambda e: e["bed_year"])
+    return top["bed_year"], top["weeks"]
+
+
+def ramp_prose_violations(crop):
+    """RAMP-PROSE: a bare week count in the crop's harvest_ready_* prose must equal
+    the ramp's mature entry. Equality, not overlap: [6,8] and [8,10] share an
+    endpoint and are still two different claims about the same bed."""
+    mature = _mature_ramp(crop)
+    if mature is None:
+        return []
+    bed_year, weeks = mature
+    out = []
+    for reg in ("harvest_ready_beginner", "harvest_ready_seasoned"):
+        text = crop.get(reg)
+        if not isinstance(text, str):
+            continue
+        dur = stated_duration(text)
+        if dur and list(dur) != list(weeks):
+            out.append(
+                f"RAMP-PROSE: {reg} states {dur[0]} to {dur[1]} weeks but "
+                f"harvest_ramp_weeks bed year {bed_year} says {weeks[0]} to {weeks[1]}. "
+                f"Two layers of the same crop make different duration claims; decide "
+                f"which is sourced before editing either."
+            )
+    return out
 
 
 def main(path):

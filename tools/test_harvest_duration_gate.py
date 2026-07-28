@@ -16,7 +16,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "tools"))
 
-from harvest_duration_gate import duration_violations, ramp_violations  # noqa: E402
+from harvest_duration_gate import duration_violations, ramp_violations, ramp_prose_violations  # noqa: E402
 
 PRE_FIX_COMMIT = "7870051"  # canonical 02fbb5e8, before the duration-pass repairs
 
@@ -184,6 +184,33 @@ class HistoricalReproduction(unittest.TestCase):
                 n += 1
         self.assertEqual(hit, self.EXPECTED_CELLS)
         self.assertEqual(n, 8)  # mid_south z7 + mid_atlantic z7 each carry REACH and END
+
+
+class RampProseCheck(unittest.TestCase):
+    def test_prose_week_count_disagreeing_with_mature_ramp_flags(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "harvest_ready_beginner": "Keep harvesting for about six to eight weeks, then stop."}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("RAMP-PROSE", v[0])
+
+    def test_prose_matching_mature_ramp_passes(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "harvest_ready_beginner": "Keep harvesting for eight to ten weeks, then stop."}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
+    def test_prose_stating_no_week_count_is_silent(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "harvest_ready_beginner": "Harvest until the spears thin to pencil width."}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
+    def test_hyphenated_compound_week_count_is_parsed(self):
+        # the harvest_ready_seasoned shape: "a roughly six-to-eight-week spring window"
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "harvest_ready_seasoned": "Harvest through a roughly six-to-eight-week spring window."}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("RAMP-PROSE", v[0])
 
 
 class LiveCanonicalClean(unittest.TestCase):
