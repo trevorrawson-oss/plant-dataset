@@ -39,6 +39,10 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
 - No em dashes in consumer copy (use commas/colons/semicolons/periods; `--` is fine in docs,
   commit messages, code comments, this file). American English. Temps render as `°F`. "plant" is
   lowercase except at sentence start or in "Plant Pro".
+- **`harvest` strings are month-granular TOUCH-SETS** ("Mar - May" = harvest occurs somewhere
+  within those months), never day-precise spans -- but a month may be named only if the cell's
+  sourced duration can actually reach it (explicit source dates govern over arithmetic). Ruled
+  2026-07-27; rationale + renderer evidence in `docs/2026-07-27-harvest-window-semantics-ruling.md`.
 
 ## Adding a cross-crop field
 Before adding any field across crops, follow `docs/gs_cross_crop_field_addition_v0.md` (the column

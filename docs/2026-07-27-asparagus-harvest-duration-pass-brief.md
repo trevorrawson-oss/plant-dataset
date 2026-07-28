@@ -4,7 +4,14 @@
 **Written by:** the session that opened the question, deliberately handing it off rather than
 resolving it (see §7 for why).
 **Canonical at handoff:** `02fbb5e8` (`origin/main` `561d914`, pushed).
-**Status:** NOT STARTED. Nothing in this brief has been applied.
+**Status: DONE 2026-07-27** (canonical `02fbb5e8` -> `a995333f`). Outcome in
+`docs/2026-07-27-harvest-window-semantics-ruling.md`. **§1 was ruled READING A** (month-granular
+touch-sets, verified by reading the plant-astro renderer) **but with a reachability constraint**,
+so the nine were NOT waved through: a re-measure with three sub-checks (REACH/END/START) found 8
+findings on 6 cells, and source reads convicted **four fields and two notes**. All four exit
+criteria met; `tools/harvest_duration_gate.py` returns 0 and is RED-proven git-pinned against this
+canonical. The brief's §2b control group and §2c eleven were examined and hold; `mid_south` z8
+upgraded to sourced-consistent. Read the ruling doc, not this brief, for current state.
 
 Read `docs/2026-07-27-asparagus-harvest-start-sourcing-sweep.md` first: it establishes that harvest
 **duration** is well sourced roster-wide while **starts** are not, and that is the load-bearing
