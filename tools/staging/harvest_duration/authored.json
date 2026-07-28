@@ -3,7 +3,9 @@
     "task": "2026-07-27-harvest-duration-reconciliation task 5",
     "authored": "2026-07-28",
     "canonical_read_only": true,
-    "method": "every source fetched raw with urllib (+ pypdf for PDFs) and tag-stripped; each document grepped for 'asparagus' before any citation; every claim below carries a verbatim sentence copied from the fetched bytes. WebFetch was used only once, as a URL lead for the UC Master Gardener pages, and never as evidence."
+    "method": "every source fetched raw with urllib (+ pypdf for PDFs) and tag-stripped; each document grepped for 'asparagus' before any citation; every claim below carries a verbatim sentence copied from the fetched bytes. WebFetch was used only once, as a URL lead for the UC Master Gardener pages, and never as evidence.",
+    "cell_notes_key": "`cell_notes` is a region -> zone -> replacement `notes` string map. The promote task MUST apply it, because a cell's note and its harvest_duration_weeks override are two representations of one claim and the gate's OVERRIDE-PROSE check requires them to agree. Applying cell_overrides.mid_south.7 = [4, 8] WITHOUT applying cell_notes.mid_south.7 leaves the old 'four to six weeks' prose in place and fires OVERRIDE-PROSE.",
+    "fix_round_1": "2026-07-28 review: mid_south z7 changed from [4, 6] to [4, 8] and its note rewritten to match. The original [4, 6] rested on framing UADA's figure as regional and MU G6405's as bed-age keyed; re-reading both in full context, that framing does not hold. See evidence['cell.mid_south.7']."
   },
   "harvest_stop_rule": {
     "signal": "spear_diameter",
@@ -58,7 +60,7 @@
     "mid_south": {
       "7": [
         4,
-        6
+        8
       ]
     },
     "utah_dixie": {
@@ -66,6 +68,11 @@
         6,
         8
       ]
+    }
+  },
+  "cell_notes": {
+    "mid_south": {
+      "7": "In the cooler Ozark uplands spears emerge in April; harvest for four to eight weeks into May (Arkansas puts a spring season at four to six weeks, Missouri at five to eight on a mature bed, so let spear thickness make the call), then let the ferns grow through summer and stand until a killing frost, when the crown dies back and rests over winter."
     }
   },
   "deferred_candidates": {
@@ -211,9 +218,18 @@
       "source": "uada_ext",
       "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
       "quote": "Generally, harvest should extend four to six weeks from the first harvest in early spring.",
-      "supports": "harvest_duration_weeks [4, 6] for mid_south z7. UADA FSA-6002 is the Arkansas publication and the cell is explicitly scoped to 'the cooler Ozark uplands'; the note already states four to six weeks, so the structured override and the prose agree (OVERRIDE-PROSE clean).",
-      "tension": "co-cited mu_ext (Missouri G6405) states 'Three years after planting the crowns, asparagus can be harvested for five to eight weeks.' The two cited sources therefore span 4 to 8 weeks. [4, 6] follows the geographically tighter Arkansas source and the cell's existing note. Widening to [4, 8] to carry the full range would ALSO require rewriting the note to say four to eight weeks, or OVERRIDE-PROSE fires. Owner's call; flagged, not silently resolved.",
-      "secondary_quote": "mu_ext: 'Normal spring harvest extends from April 10 to May 25 in the Missouri bootheel, April 14 to May 30 in southern Missouri, and April 20 to June 5 in northern Missouri, but harvest time can vary by about a week depending on temperature.'"
+      "supports": "the LOWER bound (4) of harvest_duration_weeks [4, 8] for mid_south z7. This sentence is a FAQ answer ('Q. How long can I harvest asparagus in the spring?') carrying no bed-age qualifier, so it is not a mature-bed-specific figure.",
+      "paired_with": "cell.mid_south.7.upper",
+      "resolution": "[4, 8], carrying the range. Both cited sources are in-region (Arkansas and Missouri are both inside mid_south AR/OK/TN/MO) and the cell anchors mu_ext at the real G6405 publication, so this is a live two-source disagreement, not a geography stretch. The governing precedent is mid_atlantic z7, which carried Rutgers ('6 weeks during the fifth and subsequent seasons') against UMD ('in their fourth season, harvest for 8 to 10 weeks per year') as [6, 10]; BOTH of those are bed-age keyed, so being phrased by bed age is how mature-bed durations are normally written and is not a tiebreaker.",
+      "counter_evidence_in_same_document": "UADA FSA-6002 body text separately states 'Starting the fourth year, spears may be harvested from April into June', which is roughly eight to nine weeks. UADA is therefore if anything LOOSER than its own FAQ number, not tighter, which is why the FAQ's six cannot serve as the cell's ceiling.",
+      "corrected": "2026-07-28. This cell was first authored [4, 6] on the reading that UADA's figure was regional and MU's was a transitional ramp-year figure. Re-read in full context, MU's is the terminal step of MU's own two-step ramp and UADA's carries no bed-age qualifier at all, so the reading was wrong and the carry-the-range rule applies."
+    },
+    "cell.mid_south.7.upper": {
+      "source": "mu_ext",
+      "url": "https://extension.missouri.edu/publications/g6405",
+      "quote": "Three years after planting the crowns, asparagus can be harvested for five to eight weeks.",
+      "supports": "the UPPER bound (8) of harvest_duration_weeks [4, 8] for mid_south z7. This is the TERMINAL step of MU G6405's own two-step ramp, whose preceding sentence is 'Asparagus can be harvested for a limited time (two weeks) the second year after planting crowns (three years from seed transplants).' It is therefore a Missouri MATURE-BED duration, not a transitional ramp-year figure.",
+      "corroborating_band": "same document: 'Normal spring harvest extends from April 10 to May 25 in the Missouri bootheel, April 14 to May 30 in southern Missouri, and April 20 to June 5 in northern Missouri, but harvest time can vary by about a week depending on temperature.' The southern-Missouri band, the same Ozark uplands the cell describes, is April 14 to May 30 = 46 days = about 6.6 weeks, which a [4, 6] ceiling (42 days) cannot represent. This band is also what sets the cell's Apr-May field, which the note rewrite deliberately does not widen."
     },
     "cell.utah_dixie.8": {
       "source": "usu_ext",
