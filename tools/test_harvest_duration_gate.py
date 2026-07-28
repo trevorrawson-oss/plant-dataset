@@ -224,5 +224,21 @@ class LiveCanonicalClean(unittest.TestCase):
         self.assertEqual(findings, [])
 
 
+class LiveCanonicalRampProseClean(unittest.TestCase):
+    """RAMP-PROSE findings on live canonical. RED until the promote lands.
+
+    NOTE: This @unittest.expectedFailure decorator must be REMOVED when the data
+    repair task completes and ramp-prose violations are fixed in crops_data_final.json.
+    """
+
+    @unittest.expectedFailure
+    def test_live_canonical_has_zero_ramp_prose_findings(self):
+        data = json.loads((REPO / "crops_data_final.json").read_text(encoding="utf-8"))
+        findings = []
+        for cr in data["crops"]:
+            findings += [f"{cr['slug']} {v}" for v in ramp_prose_violations(cr)]
+        self.assertEqual(findings, [])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
