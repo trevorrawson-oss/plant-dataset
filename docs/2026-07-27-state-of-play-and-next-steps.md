@@ -257,6 +257,17 @@ what landed; do not assume `whole_crop_gate.py` is what this document describes.
 >    not looking pessimistic
 > 5. **New, from the sweep:** carry the **harvest stop rule** (§3.2 of the sweep doc) — the most
 >    sourced datum in the asparagus literature and entirely absent from the dataset
+>
+> **ADDED 2026-07-27 — the DURATION PASS, briefed and ready to run fresh:**
+> `docs/2026-07-27-asparagus-harvest-duration-pass-brief.md`. 24 of 29 renderable asparagus cells
+> are now **exactly three calendar months** — the same uniformity signature as the original defect,
+> where all 29 were exactly two. Nine carry a note whose own sourced duration (4-8 weeks) cannot
+> fill three months, and `mid_south` z7 is contradicted outright by MU G6405 (*"April 14 to May 30
+> in southern Missouri"*) against an `Apr - Jun` field. The re-source may have traded a uniform
+> 2-month artifact for a uniform 3-month one. **The brief's §1 is the pivot:** whether a `harvest`
+> string is month-granular or a precise window decides whether nine cells are broken or zero are,
+> and it was never written down. Run it in a **fresh session** — the one that found it is anchored
+> on having just concluded these windows are sound (brief §7).
 
 ---
 
