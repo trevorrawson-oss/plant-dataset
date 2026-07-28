@@ -716,6 +716,21 @@ print(f"  perennial plant_out gaps: {len(_ppo)}")
 for m in _ppo:
     fail(f"perennial-plant-out: {m}")
 
+# ---------------- A48. herbaceous-perennial HARVEST floor (artichoke GS arc, 2026-07-26) ----------------
+# A47's other half. Asparagus shipped with neither plant_out NOR harvest on any of its 39 cells;
+# A47 closed the first and, by its `perennial is True` scope, could not close the second -- the
+# broader scope floods 195 cells across five cut-as-needed herbs (thyme/rosemary/oregano/sage/
+# lavender), whose harvest-string convention is a separate open ruling. Scoped to the archetype
+# instead, it reports 0 for asparagus, so it ships enforcing a convention already met. Verified
+# adversarially: stripping the 29 real asparagus harvest strings reproduces the shipped defect
+# and the gate reports all 29.
+from perennial_harvest_gate import perennial_harvest_violations
+print("A48. herbaceous-perennial harvest floor (a calendared cell says when food arrives)")
+_phv = perennial_harvest_violations(crop)
+print(f"  perennial harvest gaps: {len(_phv)}")
+for m in _phv:
+    fail(f"perennial-harvest: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
