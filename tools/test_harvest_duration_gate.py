@@ -16,7 +16,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "tools"))
 
-from harvest_duration_gate import duration_violations  # noqa: E402
+from harvest_duration_gate import duration_violations, ramp_violations  # noqa: E402
 
 PRE_FIX_COMMIT = "7870051"  # canonical 02fbb5e8, before the duration-pass repairs
 
@@ -27,6 +27,43 @@ def crop(cells):
     for (rk, z), cell in cells.items():
         regions.setdefault(rk, {"resolved_by_zone": {}})["resolved_by_zone"][z] = cell
     return {"slug": "synthetic", "regions": regions}
+
+
+RAMP_OK = [
+    {"bed_year": 1, "weeks": [0, 0]}, {"bed_year": 2, "weeks": [0, 2]},
+    {"bed_year": 3, "weeks": [2, 4]}, {"bed_year": 4, "weeks": [6, 8]},
+    {"bed_year": 5, "weeks": [8, 10]},
+]
+RAMP_HISTORICAL_DEFECT = [
+    {"bed_year": 1, "weeks": [0, 0]}, {"bed_year": 2, "weeks": [0, 0]},
+    {"bed_year": 3, "weeks": [2, 3]}, {"bed_year": 4, "weeks": [6, 8]},
+    {"bed_year": 5, "weeks": [8, 10]},
+]
+
+
+class RampFirstCheck(unittest.TestCase):
+    def test_ramp_opening_later_than_the_earliest_possible_year_flags(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_HISTORICAL_DEFECT,
+                "years_to_first_harvest": [2, 3]}
+        v = ramp_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("RAMP-FIRST", v[0])
+
+    def test_ramp_opening_in_the_earliest_possible_year_passes(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "years_to_first_harvest": [2, 3]}
+        self.assertEqual(ramp_violations(crop), [])
+
+    def test_crop_without_a_ramp_is_skipped(self):
+        self.assertEqual(ramp_violations({"slug": "c"}), [])
+
+    def test_ramp_with_no_nonzero_year_flags(self):
+        crop = {"slug": "c",
+                "harvest_ramp_weeks": [{"bed_year": 1, "weeks": [0, 0]}],
+                "years_to_first_harvest": [2, 3]}
+        v = ramp_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("RAMP-FIRST", v[0])
 
 
 class ReachCheck(unittest.TestCase):

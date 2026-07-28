@@ -192,6 +192,33 @@ def duration_violations(crop):
     return out
 
 
+def ramp_violations(crop):
+    """RAMP-FIRST: the ramp's first harvestable bed year must equal the earliest
+    year `years_to_first_harvest` allows. See the module header for why equality,
+    not range-containment, is the correct rule."""
+    ramp = crop.get("harvest_ramp_weeks")
+    ytfh = crop.get("years_to_first_harvest")
+    if not isinstance(ramp, list) or not ramp:
+        return []
+    if not (isinstance(ytfh, list) and len(ytfh) == 2 and all(isinstance(x, int) for x in ytfh)):
+        return []
+    nonzero = [e["bed_year"] for e in ramp
+               if isinstance(e, dict) and isinstance(e.get("weeks"), list)
+               and len(e["weeks"]) == 2 and e["weeks"][1] > 0
+               and isinstance(e.get("bed_year"), int)]
+    if not nonzero:
+        return [f"RAMP-FIRST: harvest_ramp_weeks has no bed year with a non-zero max, but "
+                f"years_to_first_harvest is {ytfh}, which promises a harvest."]
+    first, earliest = min(nonzero), min(ytfh)
+    if first != earliest:
+        return [f"RAMP-FIRST: harvest_ramp_weeks first opens in bed year {first}, but "
+                f"years_to_first_harvest {ytfh} allows a harvest as early as year "
+                f"{earliest}. Where the establishment literature disagrees the ramp must "
+                f"CARRY THE RANGE (an optional [0, N] year), not collapse to the "
+                f"conservative end. This is the year-2 [0,0] defect."]
+    return []
+
+
 def main(path):
     data = json.load(open(path, encoding="utf-8"))
     total = 0
