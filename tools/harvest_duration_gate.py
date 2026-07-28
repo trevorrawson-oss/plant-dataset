@@ -16,14 +16,44 @@ each named month. The renderer paints every touched month as a full "harvest" ce
 succession.ts discards day numbers), so a named month is a promise, and a month may be named only
 if the cell's sourced duration can actually reach it.
 
-THREE SUB-CHECKS, each only where the note gives it something to check:
-  REACH  a stated duration ("six to eight weeks") must reach the field's last month from the
-         15th of its first month (mid-month convention: starts are month-granular or modeled,
-         so mid-month is the unbiased anchor; explicit source dates govern over this arithmetic
-         and are settled at authoring time, not here).
-  END    a stated harvest end month ("into May", "through March and April") must equal the
-         field's last month.
-  START  a stated spear-emergence month must equal the field's first month.
+SIX SUB-CHECKS now live here, three per-cell (inside `duration_violations`) and three crop-level
+(one call each per crop, wired together in `main`):
+
+  Per-cell, each only where the note gives it something to check:
+  REACH          a stated duration ("six to eight weeks") must reach the field's last month from
+                 the 15th of its first month (mid-month convention: starts are month-granular or
+                 modeled, so mid-month is the unbiased anchor; explicit source dates govern over
+                 this arithmetic and are settled at authoring time, not here). Where a cell
+                 carries a structured `harvest_duration_weeks` override, the override is
+                 authoritative over the note parse for REACH (a source-carried number is more
+                 trustworthy than a regex read of prose).
+  END            a stated harvest end month ("into May", "through March and April") must equal
+                 the field's last month.
+  START          a stated spear-emergence month must equal the field's first month.
+  OVERRIDE-PROSE where a cell carries BOTH a structured `harvest_duration_weeks` override AND a
+                 note that itself states a week count, the two must agree. A structured field and
+                 free-text prose making different claims about the same cell is the same class of
+                 self-contradiction REACH/END/START catch between field and note; this catches it
+                 between two different representations of duration.
+
+  Crop-level, each scanning the whole crop once (not per-cell):
+  RAMP-FIRST  (`ramp_violations`) the ramp's first harvestable bed year must EQUAL the earliest
+              year `years_to_first_harvest` allows, not merely fall within it. Rationale for
+              equality over range-containment: `years_to_first_harvest: [2,3]` on asparagus
+              encodes a genuine source disagreement (UMN/Missouri permit a light second-spring
+              cut; MSU/UNH say wait for year three). Requiring the ramp's first non-zero bed year
+              to equal the minimum forces the ramp to keep year 2 open, which `[0,2]` honestly
+              encodes. A range-containment check would PASS on the very defect the rule exists
+              for: a ramp whose first non-zero year is 3 would satisfy "the ramp's first
+              harvestable year is somewhere in years_to_first_harvest," because 3 is inside
+              [2,3], even though it silently drops the year-2 possibility the sources disagree on.
+  RAMP-PROSE  (`ramp_prose_violations`) a bare week count stated in the crop's `harvest_ready_*`
+              prose must equal the ramp's mature (highest bed_year) entry, again by equality: a
+              stated [6,8] and a ramp of [8,10] share an endpoint but are still two different
+              claims about the same mature bed.
+  STOP-SHAPE  (`stop_rule_violations`) `harvest_stop_rule`, where present, is well-formed
+              (known signal, non-descending threshold range, dual-register prose, sourced).
+              Absence is the legitimate N/A branch and is silent.
 
 SCOPE -- roster-wide, and the width is MEASURED rather than hopeful. On canonical 02fbb5e8:
 1,120 renderable month-granular single-window harvest cells across 120 crops; the note-parse
@@ -61,6 +91,10 @@ _MONTH_RE = "|".join(MONTHS) + "|" + "|".join(_ABBR)
 _NUM_RE = r"(?:\d+|" + "|".join(_WORDNUM) + ")"
 _MOD_RE = r"(?:early\s+|mid\s+|mid-|late\s+|early to mid\s+)?"
 _RANGE_SEP = r"(?:\s+to\s+|\s*-\s*to\s*-\s*|\s*[-–]\s*)"
+
+# Observable stop signals. Extend as archetypes join; an unknown value is a defect,
+# because the app dispatches display on it.
+STOP_SIGNALS = {"spear_diameter"}
 
 
 def _month(tok):
@@ -168,7 +202,18 @@ def duration_violations(crop):
                 continue
             m1, mk = fm
             note = cell.get("notes", "")
-            dur = stated_duration(note)
+            note_dur = stated_duration(note)
+            ov = cell.get("harvest_duration_weeks")
+            has_ov = (isinstance(ov, list) and len(ov) == 2
+                      and all(isinstance(x, int) for x in ov))
+            if has_ov and note_dur and list(note_dur) != list(ov):
+                out.append(
+                    f"{rk} z{z}: OVERRIDE-PROSE: harvest_duration_weeks is "
+                    f"{ov[0]}-{ov[1]} weeks but the note states {note_dur[0]}-{note_dur[1]}. "
+                    f"The structured override and the prose must agree."
+                )
+            # a structured override is authoritative over the note parse for REACH
+            dur = tuple(ov) if has_ov else note_dur
             if dur and m1 != mk:
                 wmax = dur[1]
                 need = _days_mid_to_first(m1, mk)
@@ -262,12 +307,43 @@ def ramp_prose_violations(crop):
     return out
 
 
+def stop_rule_violations(crop):
+    """STOP-SHAPE: harvest_stop_rule, where present, is well-formed. Absence is the
+    legitimate N/A branch (a crop with no repeated-cutting season has no stop rule)
+    and is silent."""
+    rule = crop.get("harvest_stop_rule")
+    if rule is None:
+        return []
+    if not isinstance(rule, dict):
+        return ["STOP-SHAPE: harvest_stop_rule must be an object."]
+    out = []
+    if rule.get("signal") not in STOP_SIGNALS:
+        out.append(f"STOP-SHAPE: harvest_stop_rule.signal {rule.get('signal')!r} is not one "
+                   f"of {sorted(STOP_SIGNALS)}.")
+    t = rule.get("threshold_inches")
+    if not (isinstance(t, list) and len(t) == 2
+            and all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in t)
+            and t[0] <= t[1]):
+        out.append(f"STOP-SHAPE: harvest_stop_rule.threshold_inches must be [min, max] "
+                   f"non-descending numbers, got {t!r}. Where sources disagree on the number "
+                   f"this CARRIES THE RANGE; equal values are allowed when they agree.")
+    for k in ("note_beginner", "note_seasoned"):
+        if not isinstance(rule.get(k), str) or not rule[k].strip():
+            out.append(f"STOP-SHAPE: harvest_stop_rule.{k} must be non-empty dual-register prose.")
+    if not rule.get("sources"):
+        out.append("STOP-SHAPE: harvest_stop_rule.sources must name at least one source, and only "
+                   "documents verified to carry the rule.")
+    return out
+
+
 def main(path):
     data = json.load(open(path, encoding="utf-8"))
     total = 0
     hit = set()
     for crop in data["crops"]:
-        for v in duration_violations(crop):
+        crop_level = (ramp_violations(crop) + ramp_prose_violations(crop)
+                      + stop_rule_violations(crop))
+        for v in crop_level + duration_violations(crop):
             print(f"  {crop.get('slug')}: {v}")
             total += 1
             hit.add(crop.get("slug"))

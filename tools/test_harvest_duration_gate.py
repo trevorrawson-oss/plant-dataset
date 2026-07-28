@@ -16,7 +16,9 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "tools"))
 
-from harvest_duration_gate import duration_violations, ramp_violations, ramp_prose_violations  # noqa: E402
+from harvest_duration_gate import (  # noqa: E402
+    duration_violations, ramp_violations, ramp_prose_violations, stop_rule_violations,
+)
 
 PRE_FIX_COMMIT = "7870051"  # canonical 02fbb5e8, before the duration-pass repairs
 
@@ -237,6 +239,92 @@ class LiveCanonicalRampProseClean(unittest.TestCase):
         findings = []
         for cr in data["crops"]:
             findings += [f"{cr['slug']} {v}" for v in ramp_prose_violations(cr)]
+        self.assertEqual(findings, [])
+
+
+STOP_OK = {
+    "signal": "spear_diameter",
+    "threshold_inches": [0.25, 0.5],
+    "note_beginner": "Stop cutting when new spears come up about as thick as a pencil.",
+    "note_seasoned": "End the season when most spears thin to about pencil diameter.",
+    "sources": ["uada_ext"],
+}
+
+
+class StopShapeCheck(unittest.TestCase):
+    def test_absent_stop_rule_is_silent(self):
+        self.assertEqual(stop_rule_violations({"slug": "c"}), [])
+
+    def test_wellformed_stop_rule_passes(self):
+        self.assertEqual(stop_rule_violations({"slug": "c", "harvest_stop_rule": STOP_OK}), [])
+
+    def test_unknown_signal_flags(self):
+        r = dict(STOP_OK, signal="vibes")
+        v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+        self.assertTrue(any("STOP-SHAPE" in x and "signal" in x for x in v), v)
+
+    def test_descending_threshold_flags(self):
+        r = dict(STOP_OK, threshold_inches=[0.5, 0.25])
+        v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+        self.assertTrue(any("threshold_inches" in x for x in v), v)
+
+    def test_missing_register_flags(self):
+        r = dict(STOP_OK); del r["note_seasoned"]
+        v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+        self.assertTrue(any("note_seasoned" in x for x in v), v)
+
+    def test_missing_sources_flags(self):
+        r = dict(STOP_OK, sources=[])
+        v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+        self.assertTrue(any("sources" in x for x in v), v)
+
+
+class OverrideCheck(unittest.TestCase):
+    def test_override_unreachable_within_band_flags(self):
+        c = crop({("r", "7"): {
+            "harvest": "Apr - Jun",
+            "harvest_duration_weeks": [4, 6],
+            "notes": "Spears emerge in April.",
+        }})
+        v = duration_violations(c)
+        self.assertTrue(any("REACH" in x for x in v), v)
+
+    def test_override_disagreeing_with_note_flags(self):
+        c = crop({("r", "7"): {
+            "harvest": "Apr - May",
+            "harvest_duration_weeks": [4, 6],
+            "notes": "Spears emerge in April; harvest for six to eight weeks into May.",
+        }})
+        v = duration_violations(c)
+        self.assertTrue(any("OVERRIDE-PROSE" in x for x in v), v)
+
+    def test_override_agreeing_with_note_and_band_passes(self):
+        c = crop({("r", "7"): {
+            "harvest": "Apr - May",
+            "harvest_duration_weeks": [4, 6],
+            "notes": "Spears emerge in April; harvest for four to six weeks into May.",
+        }})
+        self.assertEqual(duration_violations(c), [])
+
+
+class LiveCanonicalAllClean(unittest.TestCase):
+    """Done is a check that returns zero -- the aggregate this file's own main() reports:
+    the union of ramp_violations, ramp_prose_violations, stop_rule_violations (crop-level)
+    and duration_violations (per-cell) across every crop in the real canonical.
+
+    NOTE: This @unittest.expectedFailure decorator must be REMOVED when the data-repair
+    task lands and the 2 known asparagus RAMP-PROSE violations are fixed in
+    crops_data_final.json.
+    """
+
+    @unittest.expectedFailure
+    def test_live_canonical_has_zero_aggregate_findings(self):
+        data = json.loads((REPO / "crops_data_final.json").read_text(encoding="utf-8"))
+        findings = []
+        for cr in data["crops"]:
+            crop_level = (ramp_violations(cr) + ramp_prose_violations(cr)
+                          + stop_rule_violations(cr))
+            findings += [f"{cr['slug']} {v}" for v in crop_level + duration_violations(cr)]
         self.assertEqual(findings, [])
 
 
