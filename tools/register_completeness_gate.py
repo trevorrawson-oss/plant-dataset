@@ -138,6 +138,12 @@ EXCLUDED_KEYS = {
     # is enforced by planting_layout_gate (whole_crop_gate A44); pollination_block_min_rows is an int,
     # out of this string check. Added when sweet-corn became the first crop to carry the field.
     "planting_layout",
+    # `harvest_stop_rule.signal` ruled 2026-07-27: an ENUM naming the observable a
+    # grower watches (spear_diameter), machinery the app dispatches display on --
+    # not consumer prose. The rule's consumer copy lives in the sibling dual-register
+    # note_beginner/note_seasoned, which stay checked. Ruled as a BARE key (0 other
+    # `signal` keys exist); a path-scoped rule would wrongly exclude those notes too.
+    "signal",
     # --- pest/IPM control-ladder arc (spec 2026-07-22). Categorical/slug/list keys, NOT dual-register
     #     prose. The dual-register prose in this block is how_it_works_* + note_* (already suffixed). ---
     "id", "method", "tier", "applies_to", "best_use", "pros", "cons", "cautions",
