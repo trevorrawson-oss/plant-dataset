@@ -1,0 +1,363 @@
+{
+  "_provenance": {
+    "task": "2026-07-27-harvest-duration-reconciliation task 5",
+    "authored": "2026-07-28",
+    "canonical_read_only": true,
+    "method": "every source fetched raw with urllib (+ pypdf for PDFs) and tag-stripped; each document grepped for 'asparagus' before any citation; every claim below carries a verbatim sentence copied from the fetched bytes. WebFetch was used only once, as a URL lead for the UC Master Gardener pages, and never as evidence."
+  },
+  "harvest_stop_rule": {
+    "signal": "spear_diameter",
+    "threshold_inches": [
+      0.25,
+      0.5
+    ],
+    "note_beginner": "Stop picking when the new spears start coming up thin, about as thick as a pencil or thinner, somewhere around a quarter to a half inch across. Thin spears mean the roots are running low on stored food, so let everything that comes up after that grow into tall ferns. Those ferns feed the crown all summer and set up next spring's crop.",
+    "note_seasoned": "End the cutting season on spear caliper rather than on elapsed days: when the majority of emerging spears fall to about pencil diameter, which extension standards place somewhere between a quarter inch and a half inch, the crown's carbohydrate reserves are drawn down and continued harvest is borrowed straight from next season's yield. Release the bed at that threshold, let the remaining spears fern out, and keep the ferns watered and free of beetles through summer so the crown reloads before dormancy.",
+    "sources": [
+      "uada_ext",
+      "mu_ext",
+      "nmsu_ext",
+      "usu_ext",
+      "ucanr_marin_mg",
+      "ucanr_santa_clara_mg"
+    ],
+    "anchoring_urls": {
+      "uada_ext": {
+        "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
+        "verified": "2026-07-28"
+      },
+      "mu_ext": {
+        "url": "https://extension.missouri.edu/publications/g6405",
+        "verified": "2026-07-28"
+      },
+      "nmsu_ext": {
+        "url": "https://pubs.nmsu.edu/_h/H227/index.html",
+        "verified": "2026-07-28"
+      },
+      "usu_ext": {
+        "url": "https://extension.usu.edu/yardandgarden/research/asparagus-in-the-garden",
+        "verified": "2026-07-28"
+      },
+      "ucanr_marin_mg": {
+        "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/asparagus",
+        "verified": "2026-07-28"
+      },
+      "ucanr_santa_clara_mg": {
+        "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/asparagus",
+        "verified": "2026-07-28"
+      }
+    }
+  },
+  "ramp_mature": [
+    6,
+    10
+  ],
+  "harvest_ready_beginner": "Asparagus pays you back on a schedule, so let the age of the bed set how long the picking season runs. Take nothing the first year after planting, take only a light pick the second year, and let the season stretch a little further each spring as the crown gets stronger, until a bed in its fifth year and beyond carries the longest season it will ever have. Once the season is open, start cutting when the spears are about 6 to 8 inches tall and their tips are still tight and closed. Snap each spear off at the ground, or cut it at the soil line, and check the bed every day or two, because spears come up fast and open into ferns if you leave them. Let the spears end the season rather than the calendar: when the new ones pushing up turn thin, about pencil width, the crown is telling you it is low on stored energy, so stop cutting and let the rest grow into ferns that feed the roots for next year.",
+  "harvest_ready_seasoned": "Harvest length on asparagus is a function of crown reserves, so scale it to bed age rather than to a fixed block of the calendar: no cut in the planting year, a token pick in year two, a short season in year three, a longer one in year four, and the mature ceiling only once the bed reaches year five and beyond. Inside an open season, cut spears at about 6 to 8 inches while the tips are still tight and the bracts closed, snapping at the soil line or slicing just below it, and work the bed every one to three days; in warm weather spears elongate and fern out fast, so a bearing bed can need a daily pass. Close the season on the crop's own signal instead of on elapsed time: when the majority of emerging spears thin to about pencil diameter, roughly a quarter to a half inch depending on which extension standard you follow, the crown's carbohydrate reserves are drawn down and further cutting is borrowed from next spring's yield. Release the bed at that point and let the remaining spears fern out to recharge the crown before dormancy.",
+  "cell_overrides": {
+    "mid_south": {
+      "7": [
+        4,
+        6
+      ]
+    },
+    "utah_dixie": {
+      "8": [
+        6,
+        8
+      ]
+    }
+  },
+  "deferred_candidates": {
+    "se_gulf.8": {
+      "proposed": [
+        6,
+        8
+      ],
+      "status": "NOT PROMOTED. Backed by a verbatim quote, but from a source the cell does not cite and that is not in source_catalog.",
+      "blocking": [
+        "uga_c1026 is absent from source_catalog (needs an admission row).",
+        "se_gulf z8 does not cite uga_c1026; its sources are uc_ipm and uga_b577."
+      ],
+      "evidence": {
+        "source": "uga_c1026",
+        "url": "https://secure.caes.uga.edu/extension/publications/files/pdf/C%201026_3.PDF",
+        "quote": "After that, harvesting can continue for six to eight weeks during the growing season.",
+        "supports": "UGA Circular 1026 'Home Garden Asparagus' (Georgia) states a 6-to-8-week mature-bed season, which is exactly what se_gulf z8's note claims. Promote the override only together with the catalog admission and the cell source addition."
+      }
+    }
+  },
+  "evidence": {
+    "stop-rule.signal.uada_ext": {
+      "source": "uada_ext",
+      "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
+      "quote": "When the diameter of the spears is less than the size of a pencil, cease harvesting.",
+      "supports": "signal = spear_diameter. FSA-6002 states the rule three times; the other two instances are 'Stop harvesting when the diameter of the spears is less than that of a pencil.' and 'Remember to stop harvesting asparagus when the diameter of the spears is less than that of a pencil.' 37 asparagus mentions in the raw PDF.",
+      "note": "PDF text; soft hyphen in 'harvest-ing' joined, no wording changed."
+    },
+    "stop-rule.signal.usu_ext": {
+      "source": "usu_ext",
+      "url": "https://extension.usu.edu/yardandgarden/research/asparagus-in-the-garden",
+      "quote": "Stop harvesting when the majority of spears are smaller than a pencil in diameter.",
+      "supports": "signal = spear_diameter, and the 'majority of spears' phrasing the seasoned note uses. 29 asparagus mentions."
+    },
+    "stop-rule.signal.ucanr_santa_clara_mg": {
+      "source": "ucanr_santa_clara_mg",
+      "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/asparagus",
+      "quote": "Stop harvesting when spears are thinner than a pencil.",
+      "supports": "signal = spear_diameter, independent T1 confirmation. 9 asparagus mentions."
+    },
+    "stop-rule.threshold.0.25.nmsu_ext": {
+      "source": "nmsu_ext",
+      "url": "https://pubs.nmsu.edu/_h/H227/index.html",
+      "quote": "Stop harvesting when the diameter of emerging spears is less than that of a pencil (approximately 1/4 inch).",
+      "supports": "threshold_inches lower bound 0.25. NMSU H227 also states 'When average spear groundline diameter declines to 1/4 in., harvest should be stopped and plants allowed to produce ferns to replenish carbohydrates for the next season.' 50 asparagus mentions."
+    },
+    "stop-rule.threshold.0.375.mu_ext": {
+      "source": "mu_ext",
+      "url": "https://extension.missouri.edu/publications/g6405",
+      "quote": "Field harvesting should stop when the majority of spears are the diameter of a pencil (less than 3/8 inch).",
+      "supports": "the 3/8 inch figure the dataset's previous seasoned prose carried, now verified raw against MU G6405. It sits inside the [0.25, 0.5] range rather than defining an endpoint. 53 asparagus mentions."
+    },
+    "stop-rule.threshold.0.5.ucanr_marin_mg": {
+      "source": "ucanr_marin_mg",
+      "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/asparagus",
+      "quote": "When new spears begin to thin to less that one-half inch in diameter, stop harvesting.",
+      "supports": "threshold_inches upper bound 0.5. 14 asparagus mentions. The typo 'less that' is in the published page and is reproduced verbatim here; do not repeat it in consumer copy."
+    },
+    "stop-rule.threshold.0.5.ucanr_sonoma_mg": {
+      "source": "ucanr_sonoma_mg (NOT in source_catalog)",
+      "url": "https://ucanr.edu/site/mg-sonoma/asparagus",
+      "quote": "Discontinue harvesting when new spears are less than 1/2 in. in diameter.",
+      "supports": "second independent UC Master Gardener statement of the half-inch cutoff, corroborating ucanr_marin_mg. Recorded for completeness only; NOT listed in harvest_stop_rule.sources because the id is absent from source_catalog. 5 asparagus mentions.",
+      "note": "the page renders the fraction as a single glyph; transcribed as 1/2 to keep the JSON plain-ASCII in this field."
+    },
+    "ramp-mature.upper.uc_mg": {
+      "source": "uc_mg",
+      "url": "https://ucanr.edu/statewide-program/uc-master-gardener-program/asparagus",
+      "quote": "When the asparagus plants are in their fourth season, they may be harvested for 6 to 10 weeks per year.",
+      "supports": "ramp_mature [6, 10] directly. This is the single source that publishes the whole span as one range, and it is why [8, 10] was a collapse to the upper end. 28 asparagus mentions."
+    },
+    "ramp-mature.lower.umn_ext": {
+      "source": "umn_ext",
+      "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+      "quote": "The asparagus harvest season lasts about 6 to 8 weeks, from early May to late June in Minnesota.",
+      "supports": "the 6-week floor of ramp_mature. 74 asparagus mentions. NOTE: this page does NOT state the pencil-diameter stop rule, confirming the brief's warning."
+    },
+    "ramp-mature.lower.rutgers_njaes": {
+      "source": "rutgers_njaes",
+      "url": "https://njaes.rutgers.edu/fs1301/",
+      "quote": "Harvest all spears for 2-3 weeks from first spear emergence during the third growing season, 4-6 weeks during the fourth growing season, and 6 weeks during the fifth and subsequent seasons.",
+      "supports": "an independent 6-week mature-bed figure (New Jersey), reinforcing the floor. 63 asparagus mentions.",
+      "note": "en dashes in the source's number ranges transcribed as hyphens."
+    },
+    "ramp-mature.upper.umd_ext": {
+      "source": "umd_ext",
+      "url": "https://extension.umd.edu/resource/growing-asparagus-home-garden",
+      "quote": "When the asparagus plants are in their fourth season, harvest for 8 to 10 weeks per year.",
+      "supports": "the 10-week ceiling of ramp_mature (Maryland). 23 asparagus mentions."
+    },
+    "ramp-mature.upper.illinois_ext": {
+      "source": "illinois_ext",
+      "url": "https://extension.illinois.edu/gardening/asparagus",
+      "quote": "During the fourth year and thereafter, the spears may be harvested from their first appearance in the spring through May or June (as long as 8 to 10 weeks).",
+      "supports": "independent 8-to-10-week mature-bed figure (Illinois). 40 asparagus mentions."
+    },
+    "ramp-mature.upper.ucanr_pub7234": {
+      "source": "ucanr_pub7234",
+      "url": "https://my.ucanr.edu/repository/fileaccess.cfm?article=54042&p=+ZBSTYA",
+      "quote": "Asparagus is a perennial crop that is normally harvested once a year over an 8- to 10-week period.",
+      "supports": "independent 8-to-10-week figure (UC ANR 7234, commercial California). 60 asparagus mentions.",
+      "note": "PDF-to-text hyphenation 'harvest- ed' rejoined."
+    },
+    "ramp-mature.upper.nmsu_ext": {
+      "source": "nmsu_ext",
+      "url": "https://pubs.nmsu.edu/_h/H227/index.html",
+      "quote": "From year four on, harvest a maximum of 10 weeks/year.",
+      "supports": "the 10-week ceiling stated as a MAXIMUM, which is why it is the upper bound of the range and not a flat value."
+    },
+    "ramp-mature.mid.usu_ext": {
+      "source": "usu_ext",
+      "url": "https://extension.usu.edu/yardandgarden/research/asparagus-in-the-garden",
+      "quote": "Harvest can be 6-8 weeks in following years.",
+      "supports": "a mature-bed figure interior to [6, 10] (Utah)."
+    },
+    "ramp-mature.mid.mu_ext": {
+      "source": "mu_ext",
+      "url": "https://extension.missouri.edu/publications/g6405",
+      "quote": "Three years after planting the crowns, asparagus can be harvested for five to eight weeks.",
+      "supports": "a mature-bed figure interior to [6, 10] (Missouri)."
+    },
+    "ramp-mature.summary": {
+      "outcome": "ramp_mature = [6, 10] per the owner's 2026-07-28 ruling",
+      "sources_at_or_below_6": [
+        "umn_ext (6-8)",
+        "rutgers_njaes (6)",
+        "usu_ext (6-8)",
+        "mu_ext (5-8)"
+      ],
+      "sources_at_10": [
+        "umd_ext (8-10)",
+        "illinois_ext (8-10)",
+        "ucanr_pub7234 (8-10)",
+        "nmsu_ext (max 10)"
+      ],
+      "sources_spanning_the_whole_range": [
+        "uc_mg (6 to 10)"
+      ],
+      "supports": "eight independently fetched T1 documents place the mature-bed season between 6 and 10 weeks and one publishes that exact span; [8, 10] collapsed it to its upper end."
+    },
+    "cell.mid_south.7": {
+      "source": "uada_ext",
+      "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
+      "quote": "Generally, harvest should extend four to six weeks from the first harvest in early spring.",
+      "supports": "harvest_duration_weeks [4, 6] for mid_south z7. UADA FSA-6002 is the Arkansas publication and the cell is explicitly scoped to 'the cooler Ozark uplands'; the note already states four to six weeks, so the structured override and the prose agree (OVERRIDE-PROSE clean).",
+      "tension": "co-cited mu_ext (Missouri G6405) states 'Three years after planting the crowns, asparagus can be harvested for five to eight weeks.' The two cited sources therefore span 4 to 8 weeks. [4, 6] follows the geographically tighter Arkansas source and the cell's existing note. Widening to [4, 8] to carry the full range would ALSO require rewriting the note to say four to eight weeks, or OVERRIDE-PROSE fires. Owner's call; flagged, not silently resolved.",
+      "secondary_quote": "mu_ext: 'Normal spring harvest extends from April 10 to May 25 in the Missouri bootheel, April 14 to May 30 in southern Missouri, and April 20 to June 5 in northern Missouri, but harvest time can vary by about a week depending on temperature.'"
+    },
+    "cell.utah_dixie.8": {
+      "source": "usu_ext",
+      "url": "https://extension.usu.edu/yardandgarden/research/asparagus-in-the-garden",
+      "quote": "Harvest can be 6-8 weeks in following years.",
+      "supports": "harvest_duration_weeks [6, 8] for utah_dixie z8. USU Extension is Utah's own land-grant extension and utah_dixie is a Utah region, so this is not a geography stretch. Preceding sentence in the same paragraph: 'Harvest all emerging asparagus spears for 4 weeks beginning 2 years after planting.' The cell note already states six to eight weeks, so OVERRIDE-PROSE is clean.",
+      "corroborating": "same page: 'begin light harvest in year 3, cut spears about 9 inches tall for 4 weeks, then gradually extend to 8 weeks in mature beds' and 'Harvest for 6 weeks in Year 4 and up to 8 weeks after 5 years of growth.'",
+      "co_cited_carry_nothing": "usu_ext_veg_dates (1 asparagus mention, a Group A cold-tolerance planting list) and usu_washco_dates (18 asparagus mentions, all planting dates) state no harvest duration."
+    },
+    "cell.mid_atlantic.7": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "rutgers_njaes",
+        "umd_ext"
+      ],
+      "detail": "Both cited sources were fetched and both state a mature-bed duration, but the two together span exactly the crop default. Rutgers: 'Harvest all spears for 2-3 weeks from first spear emergence during the third growing season, 4-6 weeks during the fourth growing season, and 6 weeks during the fifth and subsequent seasons.' UMD: 'When the asparagus plants are in their fourth season, harvest for 8 to 10 weeks per year.' Union = 6 to 10 = ramp_mature. An override would be a redundant restatement of the default, so none is written. The note's stated six to ten weeks is correct and sourced as written."
+    },
+    "cell.mid_atlantic.8": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "umd_ext",
+        "rutgers_njaes"
+      ],
+      "detail": "Neither cited source states a six-to-eight-week season anywhere. Rutgers says 6 weeks for a mature New Jersey bed; UMD says 8 to 10 weeks for a fourth-season Maryland bed. Neither publishes a Coastal-Plain-versus-Piedmont split at all, so the zone 7 / zone 8 differentiation in the notes is unsourced. Inherits [6, 10].",
+      "flag": "the cell note's 'six to eight weeks' is not a figure either cited document publishes. Not fixable inside cell_overrides; surfaced for a note pass."
+    },
+    "cell.northern_tier.3": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "umn_ext",
+        "msu_ext",
+        "ndsu_ext",
+        "sdsu_ext"
+      ],
+      "detail": "No cited source states a six-week zone-3 season. umn_ext states 'The asparagus harvest season lasts about 6 to 8 weeks, from early May to late June in Minnesota', which is a range, not six weeks. msu_ext returns an 85-character JavaScript shell with zero asparagus content and cannot be verified. ndsu_ext and sdsu_ext resolve to extension portal home pages with ZERO asparagus mentions each. Inherits [6, 10].",
+      "flag": "the note's 'about six weeks' is unsourced; two of the four cited ids point at portal roots that contain no asparagus content at all."
+    },
+    "cell.northern_tier.4": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "umn_ext",
+        "msu_ext",
+        "umaine_ext"
+      ],
+      "detail": "umn_ext does state 'The asparagus harvest season lasts about 6 to 8 weeks, from early May to late June in Minnesota', and that calendar matches the cell's 'May - Jun' field. It is withheld as an override because it is a MINNESOTA figure and northern_tier z4 is a multi-state cold band spanning MN, WI, MI, upstate NY, VT, NH and ME; and because illinois_ext, cited on the neighboring z5/z6 cells of the same region, publishes 8 to 10 weeks. Writing [6, 8] on z4 alone would invent a zone-4-versus-zone-5 ceiling difference no source states. msu_ext is unverifiable (JS shell, 0 asparagus). umaine_ext resolves to the extension portal home page with 0 asparagus mentions. Inherits [6, 10]."
+    },
+    "cell.northern_tier.5": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "umn_ext",
+        "msu_ext",
+        "iastate_ext",
+        "illinois_ext"
+      ],
+      "detail": "The verifiable cited sources disagree and their union is the crop default: umn_ext 'about 6 to 8 weeks' versus illinois_ext 'During the fourth year and thereafter, the spears may be harvested from their first appearance in the spring through May or June (as long as 8 to 10 weeks).' Union = 6 to 10 = ramp_mature. msu_ext unverifiable (JS shell, 0 asparagus); iastate_ext resolves to a portal home page with 0 asparagus mentions. Inherits [6, 10]."
+    },
+    "cell.northern_tier.6": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "msu_ext",
+        "umn_ext",
+        "uconn_ext",
+        "illinois_ext"
+      ],
+      "detail": "Same split as z5: umn_ext 6 to 8, illinois_ext 8 to 10, union = the crop default. msu_ext unverifiable (JS shell, 0 asparagus); uconn_ext resolves to the UConn IPM portal home page with 0 asparagus mentions. Inherits [6, 10]."
+    },
+    "cell.northern_tier.7": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "msu_ext",
+        "umn_ext",
+        "mu_ext"
+      ],
+      "detail": "No usable regional duration. msu_ext unverifiable (JS shell, 0 asparagus). umn_ext's 6-to-8-week figure is published for Minnesota, which is zones 3 to 5; transferring it to a zone-7 cell is the geography stretch this arc forbids. The cell's mu_ext anchoring URL is the Missouri Extension ROOT portal (https://extension.missouri.edu), not G6405, and that page has 0 asparagus mentions. Inherits [6, 10].",
+      "flag": "mu_ext is anchored at the portal root here while mid_south z7 anchors the same id at the G6405 publication. Worth reconciling in a later pass."
+    },
+    "cell.pnw.8": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "osu_ext",
+        "wsu_ext",
+        "wsu_em051e"
+      ],
+      "detail": "All three fetched successfully and none states a harvest duration in weeks. osu_ext gives a DATE stop instead: 'Year 3 and beyond: Harvest until mid-June.' (15 asparagus mentions; its only week figure is 'Year 2: Harvest sparingly for one to two weeks.'). wsu_ext is the Hortsense asparagus PEST index page: 10 asparagus mentions, all navigation and pest-link text, no cultural guidance at all. wsu_em051e is a 63,000-character planting manual with 10 asparagus mentions, all in planting-calendar rows, and no harvest duration. Inherits [6, 10].",
+      "flag": "the note's 'six to eight weeks' is unsourced by any of the three cited documents. osu_ext's mid-June stop is the real PNW-specific datum and would be worth carrying instead, as a date rather than a duration."
+    },
+    "cell.se_gulf.8": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "uc_ipm",
+        "uga_b577"
+      ],
+      "detail": "Neither cited source supports the note. uc_ipm does state 'During the third year and the years thereafter, cut spears daily or every other day for a period of 8 to 10 weeks', but UC IPM is a CALIFORNIA publication and se_gulf is the Southeast/Gulf region: citing it for a southeastern duration is precisely the geography stretch this arc forbids, and its number (8 to 10) is not the note's number (6 to 8) either. uga_b577 was fetched at both the cell URL (6 asparagus mentions) and the catalog URL (1 mention); its entire asparagus section is soil prep and crown placement plus one second-season statement, 'If good growth is made the first season, spears can be cut during the second season for up to 14 days without harming the vigor of the roots.' It carries no mature-bed duration. Inherits [6, 10].",
+      "flag": "see deferred_candidates['se_gulf.8']: UGA C1026 'Home Garden Asparagus' DOES state six to eight weeks for Georgia, but the id is not in source_catalog and the cell does not cite it."
+    },
+    "cell.warm_arid.8": {
+      "outcome": "no regional duration stated -- inherits crop default",
+      "checked": [
+        "nmsu_ext",
+        "nmsu_chart"
+      ],
+      "detail": "nmsu_ext states 'From year four on, harvest a maximum of 10 weeks/year' (and 'For the next two years, harvest up to eight weeks'). That is a CEILING, and the crop default [6, 10] already carries 10 as its upper bound. The cell's note parses as a flat ten weeks, so an override written to satisfy OVERRIDE-PROSE would have to be [10, 10], which converts NMSU's maximum into a minimum and asserts that every warm-arid bed harvests for a full ten weeks. That is a claim NMSU does not make, so no override is written. nmsu_chart is a 1,164-character planting chart with 1 asparagus mention and no duration. Inherits [6, 10].",
+      "flag": "the note's 'up to about ten weeks once the bed is four years old' is faithful to NMSU as prose; it is only the structured [min, max] representation that cannot honestly carry it."
+    },
+    "unverifiable.msu_ext": {
+      "source": "msu_ext",
+      "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+      "outcome": "FETCH RETURNS NO CONTENT",
+      "detail": "Confirmed against three URL spellings (/resources/, /news/, and a /uploads/ PDF path). Each returns 853 to 959 raw bytes that reduce to an 85-character JavaScript shell with ZERO asparagus mentions. The document cannot be verified by raw fetch, so msu_ext is cited for nothing in this file, including the stop rule.",
+      "checked": [
+        "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+        "https://www.canr.msu.edu/news/asparagus_in_the_home_garden",
+        "https://www.canr.msu.edu/uploads/236/86185/Asparagus_in_the_Home_Garden.pdf"
+      ]
+    },
+    "portal-root-citations": {
+      "outcome": "FETCHED, ZERO ASPARAGUS CONTENT",
+      "detail": "Five cell source ids are anchored at extension portal home pages rather than at an asparagus publication. Each was fetched raw and each contains zero occurrences of the word 'asparagus', so none of them can support any claim on the cells that cite them.",
+      "documents": {
+        "ndsu_ext": {
+          "url": "https://www.ndsu.edu/agriculture/extension",
+          "asparagus_mentions": 0
+        },
+        "sdsu_ext": {
+          "url": "https://extension.sdstate.edu",
+          "asparagus_mentions": 0
+        },
+        "umaine_ext": {
+          "url": "https://extension.umaine.edu/",
+          "asparagus_mentions": 0
+        },
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu",
+          "asparagus_mentions": 0
+        },
+        "uconn_ext": {
+          "url": "https://ipm.cahnr.uconn.edu",
+          "asparagus_mentions": 0
+        },
+        "mu_ext (northern_tier z7 anchoring URL only)": {
+          "url": "https://extension.missouri.edu",
+          "asparagus_mentions": 0
+        }
+      }
+    }
+  }
+}
