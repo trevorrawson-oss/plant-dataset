@@ -18,6 +18,7 @@ sys.path.insert(0, str(REPO / "tools"))
 
 from harvest_duration_gate import (  # noqa: E402
     duration_violations, ramp_violations, ramp_prose_violations, stop_rule_violations,
+    stated_duration, stated_end,
 )
 
 PRE_FIX_COMMIT = "7870051"  # canonical 02fbb5e8, before the duration-pass repairs
@@ -124,6 +125,90 @@ class EndCheck(unittest.TestCase):
                       "and set crowns any time from November into early February."),
         }})
         self.assertEqual(duration_violations(c), [])
+
+
+class ArtichokeProseIdiom(unittest.TestCase):
+    """Verbatim staged artichoke prose. Artichoke is the SECOND crop this gate meets, and
+    it broke the parser in two ways asparagus's shorter sentences never exposed:
+
+      1. `harvest_clauses` split only on . and ; -- artichoke chains a planting window and a
+         harvest window into one comma-separated sentence, so a PLANTING month or a seedling
+         VERNALIZATION week count was attributed to harvest.
+      2. `stated_end` took the FIRST `into|through <month>` match, so a start-of-harvest
+         phrase beat the real end.
+
+    All four of these were reported as violations against the staged cells and ALL FOUR were
+    false positives. They are pinned here so the next crop's idiom cannot silently undo the fix.
+    """
+
+    def test_vernalization_week_count_is_not_a_harvest_duration(self):
+        c = crop({("northern_tier", "5"): {
+            "harvest": "Aug - Oct",
+            "notes": ("This is the best-documented cold-region cycle: seed sown in the last "
+                      "third of March, seedlings chilled about three weeks near 40°F at the "
+                      "four to six leaf stage, transplanted late May to mid June, first buds "
+                      "from mid August, and harvest continuing into early October until a "
+                      "hard freeze."),
+        }})
+        self.assertEqual(duration_violations(c), [])
+
+    def test_end_month_is_the_last_harvest_anchored_month_not_the_first(self):
+        c = crop({("northern_tier", "6"): {
+            "harvest": "Jul - Oct",
+            "notes": ("Start seed indoors in February, chill the seedlings, and set them out "
+                      "from late April. The longer season pulls first harvest forward into "
+                      "July and lets picking run into October on secondary buds."),
+        }})
+        self.assertEqual(duration_violations(c), [])
+
+    def test_transplanting_window_is_not_a_harvest_end(self):
+        c = crop({("low_desert_az", "9"): {
+            "harvest": "May - Jun",
+            "notes": ("University of Arizona's Maricopa County calendar marks artichoke for "
+                      "transplanting from mid January through March, with seed sown from early "
+                      "November to mid December, and gives four to six months to harvest."),
+        }})
+        self.assertEqual(duration_violations(c), [])
+
+    def test_planting_window_sharing_a_clause_with_harvest_is_not_a_harvest_end(self):
+        c = crop({("low_desert_az", "10"): {
+            "harvest": "May - Jun",
+            "notes": ("University of Arizona's Yuma calendar puts artichoke in from September "
+                      "through October and harvests it in May and June, running the plant "
+                      "through the whole mild winter."),
+        }})
+        self.assertEqual(duration_violations(c), [])
+
+    def test_a_duration_in_a_comma_continuation_still_belongs_to_its_harvest_clause(self):
+        # asparagus warm_arid z8, verbatim. Splitting on commas severed "up to about ten
+        # weeks" from the harvest clause it modifies, silently dropping REACH coverage on a
+        # live cell. A segment inherits harvest-clause status from the preceding segment
+        # within the same sentence; the inheritance resets at . and ;
+        note = ("In the inland Southwest asparagus is winter hardy and tolerates the heat "
+                "well; spears emerge in March as the soil warms, so harvest from March into "
+                "mid May, up to about ten weeks once the bed is four years old, and stop "
+                "when the spears thin toward a quarter inch. Then let the ferns grow through "
+                "the long hot summer, kept watered, to recharge the crown before it goes "
+                "dormant in winter.")
+        self.assertEqual(stated_duration(note), (10, 10))
+        self.assertEqual(stated_end(note), 5)  # "into mid May"
+
+    def test_inheritance_does_not_leak_across_a_sentence_boundary(self):
+        # the artichoke z5 shape: a vernalization week count in a sentence whose harvest
+        # word appears only LATER must not be adopted
+        note = ("Seedlings chilled about three weeks near 40°F, transplanted late May. "
+                "Harvest runs into October.")
+        self.assertIsNone(stated_duration(note))
+
+    def test_a_real_end_disagreement_still_flags_in_artichoke_shaped_prose(self):
+        # the fix must not buy its precision by going blind
+        c = crop({("r", "7"): {
+            "harvest": "Jul - Oct",
+            "notes": ("Set them out from late April. The season pulls first harvest forward "
+                      "into July and picking runs into August on secondary buds."),
+        }})
+        v = duration_violations(c)
+        self.assertTrue(any("END" in x for x in v), v)
 
 
 class StartCheck(unittest.TestCase):

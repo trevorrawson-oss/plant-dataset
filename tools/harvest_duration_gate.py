@@ -58,10 +58,18 @@ SEVEN SUB-CHECKS now live here, FOUR per-cell (inside `duration_violations`) and
 SCOPE -- roster-wide, and the width is MEASURED rather than hopeful. On canonical 02fbb5e8:
 1,120 renderable month-granular single-window harvest cells across 120 crops; the note-parse
 matches anything at all on exactly one crop (asparagus: 15 durations, 27 ends, 28 starts) and
-flags 8 findings on 6 cells, all six confirmed real against their cited sources. Zero false
-flood anywhere, so there is nothing to narrow: today this is materially an asparagus-idiom check,
-kept roster-wide so artichoke (same archetype, same prose conventions, mid-cert) and any later
-duration-stating crop buy the check with no scope change.
+flags 8 findings on 6 cells, all six confirmed real against their cited sources.
+
+THAT MEASUREMENT'S "ZERO FALSE FLOOD" CLAIM WAS TRUE AND MISLEADING, and the correction is worth
+keeping. It was taken when asparagus was the only crop in the canonical with parseable harvest
+prose, so it measured this parser against ONE crop's idiom. Run against artichoke's staged cells
+(#121, the archetype's other member) it produced FOUR FALSE POSITIVES on 39 cells -- a seedling
+vernalization week count and three planting windows, all read as harvest. Artichoke writes long
+comma-chained sentences that carry a planting window and a harvest window together; asparagus
+writes short ones. Both defects are fixed below (comma-level clause splitting with forward
+inheritance; harvest-anchored, last-match end months) and artichoke's real prose is pinned in
+the test suite. THE LESSON: "no false positives" measured on a single crop's writing style is a
+statement about that style, not about the parser. Re-measure when a new idiom arrives.
 
 Clause hygiene: bare "cut" counts as a harvest verb only when it is not fern/irrigation
 housekeeping ("cut irrigation", "cut them to the ground", "cut the ferns off/down/back") --
@@ -123,20 +131,42 @@ def field_months(harvest):
     return a, b
 
 
+_HARVEST_WORD = re.compile(r"\b(harvest\w*|spears?)\b", re.I)
+# bare "cut" counts only when it is not fern/irrigation housekeeping
+_CUT_WORD = re.compile(
+    r"\bcut(?:ting)?s?\b(?!\s+(?:irrigation|them\b|it\b|the\s+ferns?|off\b|down\b|back\b))", re.I)
+
+
 def harvest_clauses(note):
-    """Note segments (split on . and ;) that talk about harvesting or cutting SPEARS.
+    """Note segments that talk about harvesting or cutting.
+
+    SPLIT ON COMMAS AS WELL AS . AND ;, and the comma is load-bearing. Asparagus writes short
+    sentences, so sentence-level segmentation was enough for it. Artichoke -- the second crop
+    this gate met -- chains a PLANTING window and a HARVEST window into one comma-separated
+    sentence ("marks artichoke for transplanting from mid January through March, ... and gives
+    four to six months to harvest"), and at sentence granularity the planting month and a
+    seedling VERNALIZATION week count ("seedlings chilled about three weeks near 40°F") were
+    both attributed to harvest. Four false positives on 39 staged cells, all from this.
 
     Bare "cut" is a harvest verb only when not fern/irrigation housekeeping: "cut irrigation",
     "cut them to the ground", "cut it/the ferns off/down/back" are about ending the season,
     not about harvest, and reading them as harvest produced the ca_desert z10 false positive.
     """
     out = []
-    for seg in re.split(r"[.;]", note or ""):
-        if re.search(r"\b(harvest\w*|spears?)\b", seg, re.I):
-            out.append(seg)
-        elif re.search(r"\bcut(?:ting)?s?\b(?!\s+(?:irrigation|them\b|it\b|the\s+ferns?|off\b|down\b|back\b))",
-                       seg, re.I):
-            out.append(seg)
+    for sentence in re.split(r"[.;]", note or ""):
+        carry = False
+        for seg in sentence.split(","):
+            if _HARVEST_WORD.search(seg) or _CUT_WORD.search(seg):
+                carry = True
+                out.append(seg)
+            elif carry:
+                # a comma CONTINUATION of a harvest clause is still about harvest:
+                # "so harvest from March into mid May, up to about ten weeks once the bed is
+                # four years old". Splitting naively severed that duration from its clause and
+                # silently dropped REACH coverage on a live cell. Inheritance runs FORWARD only
+                # and resets at . and ; -- artichoke's "seedlings chilled about three weeks ...,
+                # and harvest continuing into early October" must NOT reach backward for it.
+                out.append(seg)
     return out
 
 
@@ -158,13 +188,30 @@ def stated_duration(note):
 
 
 def stated_end(note):
-    """Harvest end month explicitly stated in a harvest clause, else None."""
+    """Harvest end month stated in a harvest clause, else None.
+
+    TWO RULES, both bought with false positives on real prose:
+
+    HARVEST-ANCHORED. The month phrase counts only if a harvest word appears BEFORE it inside
+    the same segment. Without this, "puts artichoke in from September through October and
+    harvests it in May and June" reads its PLANTING window as the harvest end -- the segment
+    qualifies (it says "harvests"), but the "through October" belongs to the planting half.
+
+    LAST MATCH, NOT FIRST. A note may name the harvest start and the harvest end with the same
+    preposition: "pulls first harvest forward INTO JULY and lets picking run INTO OCTOBER". The
+    end is the later one; taking the first read a start as an end.
+    """
+    found = None
     for seg in harvest_clauses(note):
-        m = re.search(rf"(?:into|until|through)\s+{_MOD_RE}({_MONTH_RE})\b"
-                      rf"(?:\s+and\s+{_MOD_RE}({_MONTH_RE})\b)?", seg, re.I)
-        if m:
-            return _month(m.group(2) or m.group(1))
-    return None
+        for m in re.finditer(rf"(?:into|until|through)\s+{_MOD_RE}({_MONTH_RE})\b"
+                             rf"(?:\s+and\s+{_MOD_RE}({_MONTH_RE})\b)?", seg, re.I):
+            before = seg[:m.start()]
+            # the anchor predicate must be the SAME one that qualifies a segment, or a
+            # legitimate "cut for six to eight weeks into May" loses its end month
+            if not (_HARVEST_WORD.search(before) or _CUT_WORD.search(before)):
+                continue
+            found = _month(m.group(2) or m.group(1))
+    return found
 
 
 def stated_start(note):
