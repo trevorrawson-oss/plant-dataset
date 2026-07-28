@@ -16,7 +16,7 @@ each named month. The renderer paints every touched month as a full "harvest" ce
 succession.ts discards day numbers), so a named month is a promise, and a month may be named only
 if the cell's sourced duration can actually reach it.
 
-SIX SUB-CHECKS now live here, three per-cell (inside `duration_violations`) and three crop-level
+SEVEN SUB-CHECKS now live here, FOUR per-cell (inside `duration_violations`) and three crop-level
 (one call each per crop, wired together in `main`):
 
   Per-cell, each only where the note gives it something to check:

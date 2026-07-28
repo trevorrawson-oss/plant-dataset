@@ -107,7 +107,7 @@ already in hand from the brief and were not re-fetched.
 
 Under the ruling, each was checked for END/START agreement plus duration reachability from its
 sourced duration (UC's 8-10 wk mature figure carries the nine California cells — four independent
-UC corroborations per the brief; crop `harvest_ramp_weeks` year-5 is [8,10]):
+UC corroborations per the brief; crop `harvest_ramp_weeks` year-5 was [8,10] when this was ruled, widened to [6,10] on 2026-07-28 by the duration-reconciliation arc -- that only lowers the floor, so every reachability conclusion below stands unchanged):
 
 - `ca_desert` z9 `Mar - May` ("run into May", 8-10 wk): consistent.
 - `ca_desert` z10 `Mar - Apr` ("Spears follow in March and April"): consistent.

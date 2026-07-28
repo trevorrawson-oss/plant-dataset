@@ -151,7 +151,7 @@ New cross-layer checks, each firing only where the data gives it something to co
 |---|---|
 | **RAMP-FIRST** | the first `bed_year` whose `weeks` max is non-zero must **equal the MINIMUM** of `years_to_first_harvest`. |
 | **RAMP-PROSE** | where `harvest_ready_*` states a bare established-bed week count, it must equal the ramp's mature entry. |
-| **OVERRIDE-REACH** | a cell's `harvest_duration_weeks` must be reachable within that cell's `harvest` band -- reuses the existing REACH machinery and the mid-month convention from the touch-set ruling. A structured override takes **precedence over the note parse** as REACH's input. |
+| **OVERRIDE-REACH** (a design-time name; folded into `REACH` as shipped) | a cell's `harvest_duration_weeks` must be reachable within that cell's `harvest` band -- reuses the existing REACH machinery and the mid-month convention from the touch-set ruling. A structured override takes **precedence over the note parse** as REACH's input. **AS SHIPPED THE CODE EMITS NO DISTINCT `OVERRIDE-REACH` STRING:** `tools/harvest_duration_gate.py::duration_violations` selects `dur = tuple(ov) if has_ov else note_dur` and emits one `REACH` message either way, so override-driven reachability failures surface as `REACH`. The label names the input-precedence RULE, not an emitted verdict; the tests pin the emitted strings. |
 | **OVERRIDE-PROSE** | where a cell carries both an override and a note-stated duration, they must agree. |
 | **STOP-SHAPE** | `harvest_stop_rule`, where present, has a non-empty `signal`, a 2-element ascending `threshold_inches`, both registers, and at least one source. |
 
