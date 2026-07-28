@@ -227,13 +227,10 @@ class LiveCanonicalClean(unittest.TestCase):
 
 
 class LiveCanonicalRampProseClean(unittest.TestCase):
-    """RAMP-PROSE findings on live canonical. RED until the promote lands.
+    """RAMP-PROSE findings on live canonical. GREEN since the 2026-07-28 reconciliation
+    promote (canonical f37b228b) moved harvest_ramp_weeks bed year 5 to [6, 10] and
+    rewrote both harvest_ready registers off their bare six-to-eight-week counts."""
 
-    NOTE: This @unittest.expectedFailure decorator must be REMOVED when the data
-    repair task completes and ramp-prose violations are fixed in crops_data_final.json.
-    """
-
-    @unittest.expectedFailure
     def test_live_canonical_has_zero_ramp_prose_findings(self):
         data = json.loads((REPO / "crops_data_final.json").read_text(encoding="utf-8"))
         findings = []
@@ -312,12 +309,11 @@ class LiveCanonicalAllClean(unittest.TestCase):
     the union of ramp_violations, ramp_prose_violations, stop_rule_violations (crop-level)
     and duration_violations (per-cell) across every crop in the real canonical.
 
-    NOTE: This @unittest.expectedFailure decorator must be REMOVED when the data-repair
-    task lands and the 2 known asparagus RAMP-PROSE violations are fixed in
-    crops_data_final.json.
+    GREEN since the 2026-07-28 reconciliation promote (canonical f37b228b) closed the
+    2 asparagus RAMP-PROSE findings; STOP-SHAPE also became live rather than vacuous on
+    that promote, which added the crop's first harvest_stop_rule.
     """
 
-    @unittest.expectedFailure
     def test_live_canonical_has_zero_aggregate_findings(self):
         data = json.loads((REPO / "crops_data_final.json").read_text(encoding="utf-8"))
         findings = []
