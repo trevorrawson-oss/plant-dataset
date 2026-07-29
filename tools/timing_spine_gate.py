@@ -123,6 +123,22 @@ def timing_spine_violations(crop, catalog=None):
                              f"({mins[i + 1][0]} < {mins[i][0]}) up to the harvest anchor")
                     break
 
+    # --- weeks_indoors is a SCALAR across the roster, and a consumer type-checks it ---
+    # Added 2026-07-28 after artichoke shipped `[6, 8]` and broke plant-astro's build:
+    # `weeks_indoors: Expected type "number", received "object"`. Measured at the time: 78 crops
+    # carry an int, 49 carry null, artichoke was the only list. No gate here looked at the field's
+    # SHAPE, so the site build was the first thing to notice -- one repo downstream, after a
+    # submodule bump. A range is not more honest here, it is just unrenderable; where sources give
+    # a band (WSU/NC State both say 6-8) the band belongs in prose and the scalar carries the
+    # instruction. Deliberately NARROW: four other fields carry a mixed scalar/list shape
+    # roster-wide (establishment_years, productive_lifespan_years, and a prose field on each of
+    # bee-balm and honeydew-melon) and are NOT adjudicated here -- flagging them unread is the
+    # mistake this suite just spent a session correcting.
+    wi = crop.get("weeks_indoors")
+    if wi is not None and not (isinstance(wi, int) and not isinstance(wi, bool)):
+        V.append(f"{slug}: weeks_indoors must be an int or null, got {wi!r} "
+                 f"({type(wi).__name__}) -- plant-astro's content schema types it as a number")
+
     # --- sow_depth required for seed-like propagules (microgreens surface-sown -> exempt)
     if prop in SEED_LIKE and not _is_microgreen and crop.get("sow_depth_inches") is None:
         V.append(f"{slug}: propagule {prop!r} requires sow_depth_inches (planting depth)")

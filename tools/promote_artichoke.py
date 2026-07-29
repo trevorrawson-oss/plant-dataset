@@ -54,7 +54,7 @@ SCRATCH = os.path.join(HERE, "..", "crops_data_final.scratch.json")
 # plus the asparagus ca_south_coast region-prose repair. Re-pointed to apply the
 # `annual_only` re-rating of 22 cells; the promote is idempotent for everything else, so
 # the footprint check below is what proves only the ratings moved.
-EXPECTED_SHA = "b9d0c26ef2ff8161fc7f63d645ec7d379800f6518f2aa772a47c4f3991848f3e"
+EXPECTED_SHA = "6da153b9c29df50a5f7d5a726f665edd846f1c81b226eb1f49714332a0ac50f4"
 
 REGION_LABELS = {
     "northern_tier": "Northern Tier (Cold Zones)",
@@ -115,7 +115,14 @@ SCALARS = {
     "chilling_sensitivity_f": None,
     # --- germination / seedling: artichoke HAS a real home-from-seed path, unlike asparagus ---
     "germination_temp_f": [65, 82],
-    "weeks_indoors": [6, 8],
+    # SCALAR, not a range -- and this was a real break, caught by plant-astro's build rather
+    # than by any gate here. The field is a scalar int on all 78 crops that carry one, and
+    # astro's content schema types it `z.number().nullish()`, so shipping `[6, 8]` failed the
+    # site build outright. 8 is the top of the sourced band (WSU "Weeks to Grow to Transplant
+    # Size 6-8"; NC State "seed 6-8 weeks before the T date") and the safer single instruction,
+    # since artichoke's three-week chilling sits inside that lead time. The 6-to-8 range is not
+    # lost: it is stated in start_method.notes and year_one_notes, where a range belongs.
+    "weeks_indoors": 8,
     "germination_light": "neutral",
     "seedling_light": "bright_default",
     "tray_sowing": "cell_tray",
