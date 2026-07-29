@@ -185,6 +185,37 @@ TDD-proven gate is wired or there is a written reason it is not viable yet.
 
 ## Item 2 — Re-source or explicitly accept three weak asparagus values
 
+> ## ✅ DONE 2026-07-29. All three discharged. See `docs/2026-07-29-hardening-session-outcomes.md`.
+>
+> - **2a RE-SOURCED.** The window stays `Feb 1 - Feb 28`; its provenance moved from drawn-bar
+>   geometry to extension TEXT. TAMU **EHT-066**: *"Asparagus is grown from 1- or 2-year-old crowns
+>   planted in January or February, or as soon as the ground can be worked."* Verified by
+>   urllib + pypdf in-session. The cell now cites `tamu_agrilife`, method
+>   `nmsu_tamu_arid_month_resolution` (reusing `lettuce-leaf`'s warm_arid z8 precedent). The NMSU
+>   search is CLOSED: H-227, CR-457 and CR-457-B (rev. Jan 2026) all read, none publishes a crown
+>   date. Finding 11 -> `resolved`.
+> - **2b ACCEPTED, ruling upheld, one rationale RETRACTED.** The multi-state source this item wanted
+>   exists and argues FOR accepting: the Midwest Vegetable Production Guide (8 states, z3b-z7a)
+>   states ONE window, *"Transplant April 15 to May 15"*, with zero zone references. Frost
+>   re-derivation was tested and rejected (the ladder steps 10-11 d/zone, frost steps 14-15).
+>   Soil-workability upheld 5 institutions to 1, with two real tie-breakers.
+>   **The "Fusarium-in-cold-wet-soil rationale" attributed to UMaine is NOT in Bulletin #2071 and is
+>   retracted as fabricated** (verified: `"cold wet"`/`"wet soil"`/`"cold soil"` all occur zero
+>   times). Findings 9 and 10 stay `open` as accepted-limits with dated dispositions.
+> - **2c WAS ALREADY FIXED, and the finding was the defect.** z9 is `Mar - May`, not `Feb - Mar`
+>   (commit `7738de1`, 2026-07-27); z10 is `Mar - Apr`, so both start in March and there is no
+>   inversion. Finding 21 sat `open` still asserting the old value, **which is what caused this
+>   whole re-sourcing pass to be commissioned against a value that no longer existed.** The
+>   re-source ran anyway and returned nothing for a GEOGRAPHIC reason (UC's four-district scheme
+>   puts Barstow and the Palo Verde Valley in no UC district), which closes the door permanently.
+>   Finding 21 -> `resolved`.
+>
+> **Citation defects surfaced and filed, NOT fixed** (they belong to the §5 cleanup arc): `msu_ext`
+> cited on all five northern_tier cells with no crown timing; five source ids resolving to portal
+> roots that all return HTTP 200; `sdsu_ext` cited on z3 where its own sentence contradicts the cell;
+> `umaine_ext` on z4 cited for a rule that forbids that window; the `uc_ipm` URL pointing at UC IPM's
+> self-labelled ARCHIVED page.
+
 All three shipped with their limitations recorded. None is wrong; each is *thinner than the rest
 of the crop*. The task is to either strengthen or formally accept them, not to leave them
 ambiguous.
@@ -250,6 +281,33 @@ inversion documented.
 
 ## Item 3 — Rule on the `verification_log_ref` convention
 
+> ## ✅ DONE 2026-07-29. Ruled APPEND-ONLY. See `docs/verification_log_ref_convention.md`.
+>
+> The recommendation below was adopted, but **for a different and stronger reason than it gives.**
+> "Rewriting erases the audit trail" is the weak argument: `open_findings` + `STATE_HISTORY.md`
+> already carry that trail (the retired chill mechanism appears in three separate findings). The
+> decisive argument is that **a living summary is unenforceable at 116 crops and drifts silently** --
+> measured, 13 of 115 prose log_refs already assert a stale count, and 7 drifted only because the
+> roster grew 10 regions -> 16. That is the backfill treadmill CLAUDE.md forbids.
+>
+> **TWO DRIFT CLASSES**, and the test that separates them (*would a reader taking this as current
+> truth be materially misled about this crop?*): **Class 1 context growth** (the "10/10 regions"
+> statements) needs NO action, the date stamp is the correction. **Class 2 retired reasoning or
+> revalued vocabulary** requires an appended `[CORRECTION <date>: ...]` line.
+>
+> **NO GATE, deliberately.** A count scanner was built and measured and is kept UNWIRED at
+> `tools/logref_count_scan.py`: 14 rows, of which 7 are correct historical prose, 4 regex noise on
+> good writing, 1 a shape outlier, and **exactly 2 real**. No regex can separate "stale because the
+> roster grew" from "stale because the value was retired."
+>
+> **Applied:** asparagus (claimed 18/8/13, actual 25/4/10, plus the retired *chill* mechanism and a
+> now-false desert clause) and artichoke (claimed 25 marginal; 22 are `annual_only`). The roster-wide
+> check this item asked for was run -- that is the 14-row measurement.
+>
+> Also ruled, both deliberately ungated: `lettuce-leaf`'s list shape STAYS (the field name's original
+> meaning; unlike `weeks_indoors` no consumer reads this field), and presence is NOT a cert
+> requirement (five certified crops lack it; backfilling would be *writing* history).
+
 `asparagus.verification_status.verification_log_ref` still contains the **retired chill
 mechanism**, because it is the narrative record of what was believed at cert on 2026-07-24. It was
 left deliberately: it is a backend field inside `verification_status`, not consumer-facing, and
@@ -281,6 +339,34 @@ for stale `log_ref` claims has been run.
 ---
 
 ## Item 4 — `unsuitable` cells: the fabricated calendar, and the display rule
+
+> ## ✅ DONE 2026-07-29. Unblocked and fixed. See `docs/2026-07-29-hardening-session-outcomes.md`.
+>
+> **Step 1 was already satisfied**, verified rather than assumed. BOTH consumers refuse to render an
+> `unsuitable` cell: plant-astro's `regions.ts` `growableZonesByRegion` and `built-crops.ts`
+> `zonesForCrop` both `continue` on the value (no page built, not listed); plant-app's
+> `lib/suitability.ts` maps it to `'blocked'` and `guide-perennial-calendar.ts` returns
+> `{supported: false}`. plant-app's own header names these calendars *"the motivating defect"* and
+> says it *"keeps working if those calendars are ever cleaned up upstream"*.
+>
+> **Step 2 shipped.** Two carve-outs, TDD RED before GREEN, both keyed on the **VALUE** not the
+> archetype: A32 (`coverage_floor_gate`) and the A46 `herbaceous_perennial_gate` floor now exempt
+> `unsuitable`. RED reproduced this doc's prediction exactly (A32 = 10, A46 floor = 10). The
+> asymmetry is pinned by tests: the calendar requirement drops, **the `suitability_note_seasoned`
+> requirement stays** -- no fake cycle, but never a bare downgrade. Every other suitability value, a
+> missing key, and five near-miss spellings all still bounce.
+>
+> **11 calendars emptied, not 10.** This doc predates artichoke's cert; `artichoke.ca_desert.11`
+> carries the identical fabrication on a cell whose own note says the ground is *"effectively
+> vacant"*. That eleventh cell is the one thing here beyond this doc's literal scope.
+>
+> **DECISION on roster-wide `suitability`: NOT WANTED, and not a gap.** For the other 107 crops the
+> question is already answered by **cell absence** -- plant-astro: *"Annual cells carry no
+> suitability key, so for them growable == cell exists."* The field encodes states only a PERENNIAL
+> can occupy (present-but-unproductive, present-but-not-persisting). A rollout would add a redundant
+> field to 107 crops, create a second source of truth, and become a hard cert requirement taxing
+> every future crop. Revisit only if a consumer must distinguish "no cell authored yet" from
+> "authored, won't grow" -- that conflation is this decision's one real cost.
 
 Added 2026-07-26 after a failed attempt to fix it. **Read the attempt before retrying.**
 

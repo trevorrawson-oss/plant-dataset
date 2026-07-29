@@ -43,6 +43,25 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
   within those months), never day-precise spans -- but a month may be named only if the cell's
   sourced duration can actually reach it (explicit source dates govern over arithmetic). Ruled
   2026-07-27; rationale + renderer evidence in `docs/2026-07-27-harvest-window-semantics-ruling.md`.
+- **RE-VERIFY THE DATA BEFORE ACTING ON ANY RECORD THAT DESCRIBES IT** -- an `open_finding`, a
+  kickoff item, a `log_ref`, a state-history entry, a failing test you assume is stale. Confirm the
+  defect still exists, and **run the gate that already covers the claim** before researching it.
+  Ruled 2026-07-29 after this cost real work three times in one session: finding 21 sat `open`
+  quoting a harvest window two revisions stale and commissioned a 16-document sourcing pass against
+  a value that no longer existed, while `zone_order_gate` -- the exact check for its claim -- was
+  returning 0 the whole time. A text gate for this was built, MEASURED (45 candidate hits, almost
+  all findings legitimately quoting a SOURCE's dates) and **NOT built**: the check is procedural, not
+  mechanizable. Corollary: **a failing test is evidence until you have read it.**
+  `test_gen_current_state` was dismissed as stale rot while correctly reporting that
+  `CURRENT_STATE.md` had lost its binding SESSION PROTOCOL header.
+- **`verification_status.verification_log_ref` is an APPEND-ONLY, CERT-DATED HISTORICAL RECORD**,
+  never a living summary. It records what was believed at the arc it names. **Do not "fix" a stale
+  one into current tense** -- and never reason from one as current truth. When a pass retires a
+  mechanism it asserts or revalues a distribution it counts, APPEND
+  `[CORRECTION <date>: <what is no longer true> -- see <finding id>.]` and leave the original prose
+  byte-for-byte. Roster growth alone needs no correction. Ruled 2026-07-29; the two-class rule, the
+  measurement, and why this is deliberately NOT gated are in
+  `docs/verification_log_ref_convention.md`.
 
 ## Adding a cross-crop field
 Before adding any field across crops, follow `docs/gs_cross_crop_field_addition_v0.md` (the column
