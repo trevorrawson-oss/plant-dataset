@@ -36,10 +36,13 @@ suite exists to refuse. On the archetype scope the gate reports 0 for the only c
 it ships enforcing a convention already met -- the same soft-launch discipline as A47 and A48 --
 while reproducing the shipped defect exactly on the pre-fix canonical.
 
-SOFT, and soft is a stage not a resting state. It is NOT yet wired into whole_crop_gate, because
-that file currently carries the artichoke session's uncommitted A48. HARD-FLIP TRIGGER: fold in as
-A49 alongside A48 once artichoke certifies and the archetype has two members. Precedent:
-control_ladder_gate and variety_resistance_gate both shipped standalone before folding into A39.
+HARD as of 2026-07-28, wired into whole_crop_gate as **A49**. It shipped SOFT on 2026-07-27 with
+two stated conditions -- artichoke certifies, and the archetype has two members -- and both were met
+when artichoke certified as GS #121 (canonical `05090b3c`). The other stated blocker, that
+whole_crop_gate carried the artichoke session's uncommitted A48, ended when A48 landed as commit
+`1a69e7d`. Measured 0 on both archetype members at the flip, and gate_all stayed 121/121.
+Soft was a stage, not a resting state. Precedent: control_ladder_gate and variety_resistance_gate
+both shipped standalone before folding into A39.
 
 Usage: python3 tools/zone_order_gate.py [crops_data_final.json]
 Exit 1 on any violation.

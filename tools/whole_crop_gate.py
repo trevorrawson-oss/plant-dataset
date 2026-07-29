@@ -731,6 +731,70 @@ print(f"  perennial harvest gaps: {len(_phv)}")
 for m in _phv:
     fail(f"perennial-harvest: {m}")
 
+# ---------------- A49. zone-order coherence (HARD-FLIPPED 2026-07-28) ----------------
+# Within one region, as the USDA zone number RISES the ground gets warmer, so the harvest START
+# should move EARLIER or stay equal. A cooler zone that starts first is a data defect or a claim
+# needing its own justification. Reproduces the asparagus ca_desert defect exactly: z9 (the cooler
+# desert) carried "Feb - Apr" against z10's "Mar - Apr" on the warmer valley floor.
+#
+# SHIPPED SOFT 2026-07-27 with an explicit trigger -- "fold in as A49 once artichoke certifies and
+# the archetype has two members" -- and BOTH conditions are now met, so it folds in here. Scoped to
+# archetype == herbaceous_perennial; the broader scopes are dominated by shapes that are CORRECT
+# (USDA zone is a WINTER-MINIMUM metric, not a spring-warmth one, so a maritime z9 legitimately
+# harvests later than z8). Measured 0 on both archetype members at the flip.
+from zone_order_gate import zone_order_violations
+print("A49. zone-order coherence (a cooler zone must not lead a warmer one into harvest)")
+_zov = zone_order_violations(crop)
+print(f"  zone-order violations: {len(_zov)}")
+for m in _zov:
+    fail(f"zone-order: {m}")
+
+# ---------------- A50. harvest-duration coherence (HARD-FLIPPED 2026-07-28) ----------------
+# Four check families over the three layers a duration claim can live in:
+#   STOP-SHAPE   harvest_stop_rule is well-formed, its `signal` is a known observable, and
+#                threshold_inches is present exactly when the signal is a MEASUREMENT (asparagus's
+#                spear caliber) and absent when it is a STATE CHANGE (artichoke's bract opening).
+#                Both directions matter: a missing number on a dimensional signal drops the rule,
+#                and inches on a non-dimensional one assert precision no source published.
+#   RAMP-FIRST   the ramp's first harvestable bed year EQUALS min(years_to_first_harvest). Equality,
+#                not range-containment -- the containment formulation PASSES on the [0,0] defect it
+#                was written to catch.
+#   RAMP-PROSE   a bare week count in ANY crop-level consumer string equals the ramp's mature entry.
+#   REACH / END  per-cell: a note's stated duration must be able to REACH the last month the
+#                `harvest` field names, and its stated end month must agree with the field.
+#
+# Register row 27 phrased this flip as "fold STOP-SHAPE into the A39 register-coverage floor". It
+# lands as its own A-number instead: the module carries four families, and splitting one gate
+# across two A-numbers would have hard-flipped one and left three soft. STOP-SHAPE is enforced
+# either way, which is what the row was actually asking for.
+from harvest_duration_gate import (duration_violations, ramp_violations,
+                                   ramp_prose_violations, stop_rule_violations)
+print("A50. harvest-duration coherence (stop rule shape + bed-age ramp + prose + per-cell reach)")
+_hdv = (stop_rule_violations(crop) + ramp_violations(crop)
+        + ramp_prose_violations(crop) + duration_violations(crop))
+print(f"  harvest-duration violations: {len(_hdv)}")
+for m in _hdv:
+    fail(f"harvest-duration: {m}")
+
+# ---------------- A51. region-prose vs cell-rating coherence (post-asparagus hardening item 1) ----------------
+# THE R7 DEFECT. Region prose and per-cell suitability ratings are two layers the same guide renders
+# to the SAME READER, and nothing compared them: A36 checks both registers EXIST, A29 checks they are
+# AUTHORED, neither reads what they SAY. It found a live contradiction on certified asparagus on its
+# first run -- ca_south_coast prose said "Frost-free zone 11 is unsuitable" while the z11 cell was
+# rated `marginal`, on a crop that had passed a 120/120 roster gate.
+#
+# ROSTER-WIDE, not archetype-scoped, and it is the first check here to ship that way. The defect is
+# not archetype-specific: any crop carrying region prose can contradict its own cells. The first
+# version DID flood (38 findings, 37 of them false positives on comparative prose like "where a navel
+# is only marginal"), and the fix was to narrow the CHECK to zone-bound assertions rather than to
+# narrow its SCOPE -- see the module header for the full measurement.
+from region_prose_gate import region_prose_violations
+print("A51. region-prose coherence (prose about a zone matches that zone's rating)")
+_rpv = region_prose_violations(crop, scoped=False)
+print(f"  region-prose contradictions: {len(_rpv)}")
+for m in _rpv:
+    fail(f"region-prose: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
