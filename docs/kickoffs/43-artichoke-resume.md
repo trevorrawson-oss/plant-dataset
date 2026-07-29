@@ -7,6 +7,11 @@
 
 ---
 
+> **UPDATE 2026-07-28, commit `d26e69a`: §4's four false positives are FIXED.** The asparagus lane
+> repaired both parser defects. Your staged 39 cells now report `duration` **0** and `zone_order`
+> **0**. Nothing for you to work around; §4 is kept below because the two failure shapes are worth
+> knowing while you author prose, and your real sentences are now pinned as test fixtures.
+
 ## 0. Read this first, in this order
 
 1. §1 -- your promote script will abort on sight, and your uncommitted work is at risk.
