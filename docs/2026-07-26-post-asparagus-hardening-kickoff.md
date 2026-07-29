@@ -13,6 +13,38 @@ are here because they are the things most likely to bite silently later.
 
 ## Item 1 — Build the region-prose vs cell-rating coherence gate
 
+> ## ✅ DONE 2026-07-28. DO NOT REBUILD.
+>
+> Shipped as **`tools/region_prose_gate.py`**, wired into `whole_crop_gate` as **A51**, and it runs
+> **ROSTER-WIDE** rather than archetype-scoped — the first check in the suite to do so, because a
+> crop contradicting its own cells is not an archetype-specific failure. Built during the artichoke
+> arc so its first job was checking copy as it was written. Commits `766a5c5` (gate + hard-flip) and
+> `ced0499` (the repair).
+>
+> **It found a live defect on certified asparagus on its first run**, which is what this item
+> predicted: `ca_south_coast` prose said *"Frost-free zone 11 is unsuitable"* while the z11 cell was
+> rated `marginal` with a full `plant_out` and harvest window. The prose was the stale half. Reading
+> it also turned up a second contradiction in the same block that the gate does NOT check
+> (*"Harvest from February"* against three cells reading `"Mar - May"`) — no gate compares a
+> region-prose MONTH to its cells' harvest windows. Both repaired.
+>
+> **Read the gate's module header before touching it.** The first version shipped three checks and
+> produced **38 findings roster-wide, of which exactly ONE was a defect.** The other 37 were
+> comparative prose ("where a navel is only marginal" — a different crop), place-based
+> differentiation instead of zone numbers, and a boundary zone named to mark the limit beyond a
+> region. The fix was to narrow the CHECK to zone-bound assertions, not to narrow its scope: 38 → 3
+> → 0. The ten verbatim false positives are pinned as regression tests in
+> `test_region_prose_gate.py` so it cannot drift back to keyword matching.
+>
+> **Known limit, recorded:** the rule is any-match, so the FLAT contradiction is caught and the
+> HEDGED form is not — including, ironically, the "perennialize only marginally" sentence quoted
+> below that motivated this whole item. Tightening to an exact-set match fires on correct writing
+> like "marginal to unsuitable depending on the season". A future pass wanting the hedge needs a
+> different mechanism, not a wider net.
+>
+> The expensive half this item flagged as separable — auditing 12 long-certified fruit trees — turned
+> out NOT to be expensive: once the check was correct, all of them passed on their own merits.
+
 **Priority: highest of the three.** This is the only item that could be hiding live defects in
 already-certified crops.
 
