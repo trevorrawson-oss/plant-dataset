@@ -18,7 +18,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from coverage_floor_gate import (region_roster_violations, calendar_presence_violations,
-                                  CANONICAL_REGIONS)
+                                  CANONICAL_REGIONS, CALENDAR_PRESENCE_BASES)
 from zone_span_gate import EXPECTED_SPANS
 
 _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_data_final.json")
@@ -152,3 +152,52 @@ if _cert:
     print(f"  real data: 0 FP across {len(_cert)} certified (region+zone+calendar floors): PASS")
 
 print("coverage_floor_gate: all tests passed")
+
+# ===== hardening item 4 (2026-07-29): `unsuitable` is EXEMPT from the calendar-presence floor =====
+# The floor's message is a RENDERING CONTRACT, and no consumer renders an `unsuitable` cell
+# (plant-astro builds no page for it; plant-app maps it to 'blocked'). Requiring content there
+# could only be satisfied by inventing it -- which is what had happened on 11 real cells.
+
+def _cell(basis, suit, cal):
+    c = {"slug": "probe", "calendar_basis": basis, "regions": {
+        "se_gulf": {"resolved_by_zone": {"9": {"calendar": cal}}}}}
+    if suit is not None:
+        c["regions"]["se_gulf"]["resolved_by_zone"]["9"]["suitability"] = suit
+    return c
+
+
+# 19. GREEN: an `unsuitable` cell with an EMPTY calendar is clean on every presence base.
+#     Guard against a vacuous loop: assert each name really IS a presence base, or the
+#     exemption assertion below would pass simply because the gate no-ops off the basis.
+for basis in ("frost_anchored", "perennial_herbaceous", "berries_woody",
+              "perennial_woody_ornamental"):
+    assert basis in CALENDAR_PRESENCE_BASES, f"{basis!r} is not a presence base -- test is vacuous"
+    c = _cell(basis, "unsuitable", [])
+    assert calendar_presence_violations(c) == [], \
+        f"unsuitable must be exempt on {basis}: {calendar_presence_violations(c)}"
+
+# 20. ADVERSARIAL: the carve is NARROW. Every OTHER suitability value with an empty calendar
+#     still bounces -- the exemption keys on the value, not on carrying a suitability key.
+for suit in ("perennializes", "marginal", "annual_only", "survives_no_fruit", "fruits_reliably"):
+    c = _cell("frost_anchored", suit, [])
+    assert any("se_gulf" in v and "9" in v for v in calendar_presence_violations(c)), \
+        f"{suit} with an empty calendar MUST still flag: {calendar_presence_violations(c)}"
+
+# 21. ADVERSARIAL: a cell with NO suitability key at all (an ordinary annual) still bounces --
+#     absence must not read as exemption.
+c = _cell("frost_anchored", None, [])
+assert any("se_gulf" in v for v in calendar_presence_violations(c)), \
+    f"a suitability-less empty cell must still flag: {calendar_presence_violations(c)}"
+
+# 22. ADVERSARIAL: near-miss spellings do NOT earn the exemption.
+for bogus in ("Unsuitable", "UNSUITABLE", "unsuitable ", "un-suitable", "unsuited"):
+    c = _cell("frost_anchored", bogus, [])
+    assert any("se_gulf" in v for v in calendar_presence_violations(c)), \
+        f"{bogus!r} must not be exempt: {calendar_presence_violations(c)}"
+
+# 23. an `unsuitable` cell that DOES carry a calendar is still clean (the carve permits, never
+#     requires, an empty calendar -- so this change cannot break existing filled data).
+c = _cell("frost_anchored", "unsuitable", ["growing"] * 12)
+assert calendar_presence_violations(c) == [], calendar_presence_violations(c)
+
+print("coverage_floor_gate: unsuitable carve-out tests passed")

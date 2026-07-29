@@ -109,6 +109,24 @@ def calendar_presence_violations(crop):
         for z, cell in (r.get("resolved_by_zone") or {}).items():
             if not isinstance(cell, dict):
                 continue
+            # CARVE-OUT 2026-07-29 (hardening item 4): a cell rated `unsuitable` is EXEMPT.
+            # This check's own message is a RENDERING CONTRACT ("must render a non-empty
+            # month-strip calendar"), and for an `unsuitable` cell there is nothing to render:
+            # plant-astro does not build or list the zone (regions.ts / built-crops.ts both
+            # `continue` on the value) and plant-app blocks the calendar outright
+            # (lib/suitability.ts -> 'blocked'). So the floor could only ever be satisfied by
+            # INVENTING calendar content for a reader who does not exist -- which is exactly what
+            # happened: 11 cells across asparagus and artichoke carried a fabricated 12-token
+            # all-`growing` strip, claiming year-round growth in zones the same cell's own note
+            # calls structurally impossible or "effectively vacant".
+            #
+            # Keyed on the VALUE, not the basis or archetype -- the fourth carve-out in this family
+            # (A24 dormant-planting, A34/A37 herbaceous_perennial) and the narrowest: it exempts a
+            # cell only when the cell itself declares the crop cannot grow there. Trees were
+            # already outside this floor (A3 governs their legitimately-empty cells), so this
+            # aligns the non-tree bases with the treatment trees always had.
+            if (cell.get("suitability") or "") == "unsuitable":
+                continue
             if not (cell.get("calendar") or []):
                 V.append(f"{rk}.{z}: {basis} resolved cell has an empty/absent calendar "
                          f"-- this archetype's cells must render a non-empty month-strip calendar")

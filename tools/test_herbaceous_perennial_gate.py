@@ -215,3 +215,51 @@ for _c in _data["crops"]:
 assert _seen >= 1, "expected at least asparagus on the archetype"
 
 print("herbaceous_perennial_gate: all tests passed")
+
+# ===== hardening item 4 (2026-07-29): `unsuitable` EXEMPT from the calendar floor, note KEPT =====
+# The floor read "mark unsuitable, still show the honest cycle" -- but a structurally impossible
+# zone has no cycle, so the floor forced a fabrication (a 12-token all-`growing` strip claiming
+# year-round growth). The asymmetry below is the whole design: no fake cycle, but never a bare
+# downgrade -- the cell must still EXPLAIN itself.
+
+# 27. GREEN: an `unsuitable` cell with an EMPTY calendar is clean, provided it still explains itself.
+c = well_formed()
+_cell = c["regions"]["northern_tier"]["resolved_by_zone"]["4"]
+_cell["suitability"] = "unsuitable"
+_cell["calendar"] = []
+_cell["suitability_note_seasoned"] = "No sustained dormancy is available here, so the crown never rests."
+v = herbaceous_perennial_violations(c)
+assert not any("non-empty calendar" in x for x in v), f"unsuitable must be calendar-exempt: {v}"
+
+# 28. THE ASYMMETRY: the SAME emptied `unsuitable` cell WITHOUT its note still bounces. Dropping
+#     the calendar must not become a way to ship a bare downgrade with no reason.
+c = well_formed()
+_cell = c["regions"]["northern_tier"]["resolved_by_zone"]["4"]
+_cell["suitability"] = "unsuitable"
+_cell["calendar"] = []
+_cell.pop("suitability_note_seasoned", None)
+v = herbaceous_perennial_violations(c)
+assert any("suitability_note_seasoned" in x for x in v), \
+    f"an unsuitable cell must STILL explain itself even with no calendar: {v}"
+
+# 29. ADVERSARIAL: the carve is NARROW -- every other value with an empty calendar still bounces.
+for suit in ("perennializes", "marginal", "annual_only", "survives_no_fruit"):
+    c = well_formed()
+    _cell = c["regions"]["northern_tier"]["resolved_by_zone"]["4"]
+    _cell["suitability"] = suit
+    _cell["calendar"] = []
+    _cell["suitability_note_seasoned"] = "A reason, so only the calendar floor can fire."
+    v = herbaceous_perennial_violations(c)
+    assert any("non-empty calendar" in x for x in v), \
+        f"{suit} with an empty calendar MUST still flag: {v}"
+
+# 30. near-miss spellings do not earn the calendar exemption (they bounce on the enum first).
+for bogus in ("Unsuitable", "UNSUITABLE", "unsuited"):
+    c = well_formed()
+    _cell = c["regions"]["northern_tier"]["resolved_by_zone"]["4"]
+    _cell["suitability"] = bogus
+    _cell["calendar"] = []
+    v = herbaceous_perennial_violations(c)
+    assert any("not in" in x for x in v), f"{bogus!r} must bounce: {v}"
+
+print("herbaceous_perennial_gate: unsuitable carve-out tests passed")

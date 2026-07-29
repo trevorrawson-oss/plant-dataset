@@ -101,9 +101,32 @@ def herbaceous_perennial_violations(crop):
                 V.append(f"{rk}.{z}: a {suit} cell must carry suitability_note_seasoned -- the "
                          f"reason the grower is owed (what actually limits the crop here), not a "
                          f"bare downgrade and not a fake calendar")
-            if not cal:
+            # CARVE-OUT 2026-07-29 (hardening item 4): `unsuitable` is EXEMPT from the calendar
+            # floor. The floor's original wording -- "mark unsuitable, still show the honest cycle"
+            # -- assumed a cycle exists to show. For a structurally impossible zone there is none,
+            # and the floor was therefore FORCING A FABRICATION: all 10 asparagus `unsuitable` cells
+            # carried a 12-token all-`growing` calendar, i.e. active year-round growth for a crop
+            # that cannot grow there. That is the gate-avoidance pattern inverted -- a field invented
+            # to satisfy a gate rather than deleted to dodge one -- and the fill-the-shape-is-the-
+            # defect hazard: a required sub-field pulls a fabricated value out of the author.
+            #
+            # Safe because BOTH consumers now refuse to render these cells, verified not assumed:
+            #   plant-astro  regions.ts growableZonesByRegion + built-crops.ts zonesForCrop both
+            #                `continue` on suitability === 'unsuitable' (no page built, not listed)
+            #   plant-app    lib/suitability.ts maps unsuitable -> 'blocked' and
+            #                guide-perennial-calendar.ts returns {supported:false} for it. Its own
+            #                header names these fabricated calendars as "the motivating defect" and
+            #                states the gate "keeps working if those calendars are ever cleaned up
+            #                upstream" -- which is this change.
+            #
+            # DELIBERATELY NARROW: keyed on the VALUE, not the archetype, so it exempts exactly the
+            # cells with no cycle to describe. Every other suitability value still requires a
+            # calendar, and NOTE_REQUIRED above still requires `unsuitable` to EXPLAIN itself -- the
+            # asymmetry is the point: no fake cycle, but never a bare downgrade.
+            if not cal and suit != "unsuitable":
                 V.append(f"{rk}.{z}: a suitability-marked cell must carry a non-empty calendar "
-                         f"(the A32 honesty floor -- mark unsuitable, still show the honest cycle)")
+                         f"(the A32 honesty floor; `unsuitable` is exempt -- it has no cycle to "
+                         f"show and no consumer renders it)")
 
     # 7. permanent-bed rotation guidance present.
     if crop.get("rotation") in (None, "", []):
