@@ -16,16 +16,42 @@ every calendar here shows a real `plant` token in its real planting month, and `
 where seed is genuinely started under protection. Verify with tools/carveout_dependency_audit.py.
 
 SUITABILITY, per B.6 -- the enum answers "does the PLANTING PERSIST", not "is it worth growing":
-  perennializes -> the stand persists and crops for years (winter minima above the 14-15F
-                   crown-kill line, summers that do not chronically devernalize)
-  marginal      -> crops, but the planting does not persist: annual culture, or a short-lived
-                   or protected stand
-  unsuitable    -> do not plant; ONLY where even annual culture fails
+  perennializes     -> the stand persists and crops for years (winter minima above the 14-15F
+                       crown-kill line, summers that do not chronically devernalize)
+  marginal          -> crops, but the planting does not persist: annual culture, or a short-lived
+                       or protected stand
+  survives_no_fruit -> the plant grows and never buds. Ornamental only.
+  unsuitable        -> do not plant; ONLY where there is no crop AND no plant worth having
 
 LOAD-BEARING: because vernalization is QUANTITATIVE (57-74% bud set with NO cold at all,
-Rutgers FS044), an "insufficient chill" argument CANNOT carry `unsuitable`. The only
-`unsuitable` basis in this crop is UF/IFAS's statement that in Florida "bud formation must be
-artificially induced" -- a thing a home grower cannot do to a garden bed.
+Rutgers FS044), an "insufficient chill" argument CANNOT carry `unsuitable`.
+
+REVISED 2026-07-28 -- AND IT WAS NOT STRONG ENOUGH TO CARRY `unsuitable` EITHER. The tropical
+cells were originally rated `unsuitable` on UF/IFAS's statement that in Florida "bud formation
+must be artificially induced". That sentence is real and it does rule out a CROP. It says nothing
+against the PLANT, and the same publication reports the other half of its own experiment:
+
+    "untreated plants remained vegetative until the end of the growing season"     -- HS1289
+
+The untreated plants did not fail. They grew, in Florida, all season, and simply never bolted --
+which is `survives_no_fruit` exactly, a value with a ruled display behavior (flagged
+ornamental-only: the plant lives and gives you no food, someone may still want it) and 118 cells
+of roster precedent. HS1289 also describes what you actually get, in the same paragraph: a rosette
+of "arching, deeply toothed, silvery, woolly green leaves that are normally 20 to 32 inches long".
+That is a plant people grow on purpose.
+
+Rating it `unsuitable` hid a cell about a plant that grows perfectly well, and told a grower
+nothing where it could have told them something true. Seven cells move: hawaii_tropical z10-z13,
+fl_peninsula z10/z11, se_gulf z10.
+
+`ca_desert` z11 STAYS `unsuitable`, and the difference is the whole point of keeping both values.
+It is not an agronomic verdict at all -- no California desert ground reaches zone 11, so the cell
+is VACANT. There is no plant to describe because there is nobody standing there.
+
+CONSEQUENCE AT THE GATE LAYER, since these cells now carry a calendar and are no longer exempt:
+A47 REQUIRES plant_out on them (someone may want the foliage, so tell them when to plant it) and
+A48 EXEMPTS them from harvest (there is no food; inventing a window would be a false promise).
+That asymmetry is deliberate and is pinned by tests in both gates' suites.
 """
 
 # ---------------------------------------------------------------- calendars
@@ -90,11 +116,28 @@ UTAHDIXIE_Z8 = cal(IN, PL, PL, GR, GR, GR, GR, GR, GR, HV, HV, CP)
 PNW_Z8 = cal(CP, IN, IN, PL, PL, GR, GR, GR, HV, HV, CP, CP)
 PNW_Z9 = cal(GR, GR, GR, PL, PL, GR, GR, GR, HV, HV, HV, GR)
 
-# California interior valleys: UC's July set-out, cropping through the cool months, then pulled --
-# the plant is NOT carried through a Central Valley summer (UCCE Contra Costa: "Grow as annual";
-# the Tulare/Kings chart's row label is literally "Artichoke (annual)").
-CAINT_Z8 = cal(HV, HV, HV, SO, IN, IN, PL, GR, GR, GR, HV, HV)
-CAINT_Z9 = cal(HV, HV, HV, SO, IN, IN, PL, GR, GR, GR, HV, HV)
+# California interior valleys: UC's July set-out, cropping through the cool months, and then --
+# REVISED 2026-07-28 -- CARRIED, not pulled.
+#
+# The April token used to be `season_over`, which asserted that the planting ENDS every spring.
+# That is the annual reading, and two UC sources do frame it that way (UCCE Contra Costa "Grow as
+# annual"; the Tulare/Kings chart's row label is literally "Artichoke (annual)"). But the same
+# Contra Costa sheet says in its next breath that the "plant may winter over if temperature stays
+# above 25 F", and the binding constraint in the valley is not the winter at all.
+#
+# THE LIMITING FACTOR IS SUMMER WATER DEMAND, with heat as the thing the water buys relief from --
+# not heat acting directly. Texas A&M states both halves: artichokes "are deep-rooted and require
+# adequate moisture when growing and producing fruit", and "in the summer, irrigation will help
+# keep temperatures down in the crop canopy to prevent bud opening". A big-canopy, deep-rooted
+# plant carried through a valley summer is a large and unforgiving water bill; met, the stand
+# persists for several years, and unmet it dies. That is a SHORT-LIVED PERENNIAL, and it is why
+# the same ground produces one gardener's multi-year clump and the neighbour's dead crown.
+#
+# The rating stays `marginal` -- persistence that depends on generous irrigation is the textbook
+# marginal case -- so only the April token and the reason change. Everything the annual sources
+# support (the July set-out, the cool-season harvest, the seed route) is unchanged and still cited.
+CAINT_Z8 = cal(HV, HV, HV, GR, IN, IN, PL, GR, GR, GR, HV, HV)
+CAINT_Z9 = cal(HV, HV, HV, GR, IN, IN, PL, GR, GR, GR, HV, HV)
 
 # California coast -- the crop's home ground. Perennial, cut back after the spring peak, second
 # crop in fall. UC ANR 7221: peak March-April; VRIC: two crops per year on the cool coast.
@@ -117,10 +160,28 @@ SEGULF_Z9 = cal(GR, HV, HV, HV, HV, SO, IN, IN, PL, PL, PL, GR)
 RGV_Z9 = cal(HV, HV, HV, SO, SO, SO, SO, IN, PL, PL, GR, GR)
 RGV_Z10 = cal(HV, HV, HV, SO, SO, SO, SO, IN, PL, PL, GR, GR)
 
-# The A32 honesty floor for `unsuitable` cells: an honest all-growing strip, no window, and a
-# note that dominates. A47/A48 exempt these by design -- telling someone when to plant, or when
-# to expect food, from a crop that will not crop there is worse than silence.
+# The A32 honesty floor for the one genuinely `unsuitable` cell (ca_desert z11, VACANT GROUND):
+# an honest all-growing strip, no window, and a note that dominates. A47/A48 exempt it by design.
 ALL_GROWING = [GR] * 12
+
+# ORNAMENTAL-ONLY calendars (survives_no_fruit). These carry a real `plant` token because the
+# planting is real -- what is absent is the harvest, and no `harvest` token appears anywhere in
+# either strip. That is the honest depiction: a grower puts a plant in the ground, it grows, and
+# nothing is ever picked.
+#
+# FLORIDA / the peninsular Gulf. UF/IFAS HS1289: "In Florida, annual culture between October and
+# May is recommended to avoid the hot and wet summer" + "Seedlings should be transplanted in the
+# field no later than mid-November." The summer is `season_over` rather than `growing` because
+# that is what the source says happens -- the planting is finished by the heat and the wet, not
+# carried through it. A one-season foliage plant, and the note says so.
+TROPICS_FL = cal(GR, GR, GR, GR, GR, SO, SO, SO, SO, PL, PL, GR)
+
+# HAWAII. No season_over, because nothing here ends the plant: there is no cold season and no
+# hot-and-wet break in the way Florida has one, so the rosette simply persists. The planting
+# window is the cool half of the year and it is a CONVENIENCE, not a requirement -- the plant is
+# not waiting for anything, it establishes more easily out of the hottest months. Stated in the
+# note rather than implied by the strip.
+TROPICS_HI = cal(PL, PL, GR, GR, GR, GR, GR, GR, GR, GR, PL, PL)
 
 # ---------------------------------------------------------------- shared prose
 _MECH_HEAT = ("bud quality falls off above 86°F, when the bracts open early and the heart "
@@ -129,20 +190,28 @@ _MECH_CROWN = ("the crown suffers severe loss below about 15°F even under mulch
                "planting does not carry over")
 _MECH_DEVERN = ("summer heat can reverse accumulated chilling, so fewer plants set buds")
 
-_UNSUIT_TROPICS_S = (
-    "Artichoke sets its edible buds only after a run of cool weather, and this climate never "
-    "delivers one: winter lows sit far above the 50°F band that drives bud initiation, so "
-    "plants stay vegetative and simply grow larger leaves. UF/IFAS reaches the same conclusion "
-    "for peninsular Florida and states the consequence plainly, that bud formation has to be "
-    "induced artificially to get a crop at all. That is a greenhouse and growth-regulator "
-    "operation, not something a garden bed can supply, so there is no honest planting window "
-    "to publish here.")
-_UNSUIT_TROPICS_B = (
-    "Skip artichoke here. The plant will grow, and it may even look healthy, but it will not "
-    "form the buds you actually eat: winters never get cool enough to trigger them. Commercial "
-    "growers in climates like this force budding with chemicals in a greenhouse, which is not "
-    "something you can reproduce in a garden. Grow it in a pot you can move somewhere cool, or "
-    "choose a different crop.")
+# The ornamental-only core, shared by all seven survives_no_fruit cells. Per-cell additions carry
+# the part that is NOT shared, because a blanket note is a claim about every cell it lands on
+# (kickoff R6, learned when a "both routes to dormancy fail" note went out across the asparagus
+# unsuitable cells and was false for the arid ones).
+_ORN_S = (
+    "Artichoke will grow on this ground and it will not crop on it, and the reason is narrow "
+    "rather than general. The part you eat is an immature flower bud, and bud initiation needs a "
+    "run of hours below 50°F that this climate never banks. UF/IFAS ran that experiment in "
+    "Florida and reported both halves of it: plants sprayed with gibberellic acid formed buds, "
+    "while the untreated ones stayed leafy right through to the end of the season and never "
+    "bolted at all. Those plants did not struggle or die, they simply never flowered. Spraying a growth regulator on a "
+    "schedule is a commercial operation rather than a garden one, so plan on the plant and not "
+    "on the crop. What the plant gives you is genuinely worth having: UF/IFAS describes the "
+    "rosette as arching, deeply toothed, silvery, woolly leaves 20 to 32 inches long.")
+_ORN_B = (
+    "You can grow artichoke here, but you will not get artichokes. The part you eat is a flower "
+    "bud, and the plant only makes buds after a stretch of genuinely cool weather that this "
+    "climate does not get, so it stays a large leafy rosette instead. That rosette is silver, "
+    "deeply cut, and up to about two and a half feet across, which is why people grow this plant "
+    "for looks alone in warm climates. Plant it for the foliage and grow something else for "
+    "dinner. If you have your heart set on eating one, grow it in a pot you can move somewhere "
+    "cool for a few weeks.")
 
 
 def _annual_note_s(where, extra=""):
@@ -415,7 +484,7 @@ C("utah_dixie", "8", "marginal", UTAHDIXIE_Z8,
           "apply to Washington County, and the county material it points to never mentions "
           "artichoke, even though it does list rhubarb, asparagus and chives. So no source states "
           "an artichoke date for this ground. Utah State's own summer caution applies directly, "
-          "that the plant often fails to flower when it is hot during flower-stalk formation, "
+          "that hot weather while the flower stalk is forming often leaves the plant with none, "
           "and this is the hottest corner of the state."),
   note_b=("Start seed indoors in early January and set the plants out in late February. That "
           "early date is the whole trick, because artichoke needs cool weather to form buds and "
@@ -458,37 +527,57 @@ C("pnw", "9", "perennializes", PNW_Z9,
           "each September through November for several years before dividing the clump."))
 
 # ======================= ca_interior (z8-9) =======================
-_CAI_S = ["uc_mg_t132", "uc_anr_7221"]
+_CAI_S = ["uc_mg_t132", "uc_anr_7221", "tamu_eht065"]
+_CAI_WATER = (
+    "The thing that decides it here is summer water, not summer heat acting on its own. Artichoke "
+    "is deep-rooted and wants steady moisture whenever it is growing or carrying buds, and Texas "
+    "A&M spells out how the two are connected: in summer, irrigation keeps temperatures down "
+    "inside the crop canopy and that is what stops buds opening early. A full-sized plant asked "
+    "to hold a large canopy through a valley summer is a serious and unforgiving water bill. Meet "
+    "it and the same crowns carry on for several years; miss it and the plant is gone. That is "
+    "why one garden on this ground has a standing clump and the garden next door lost theirs.")
 C("ca_interior", "8", "marginal", CAINT_Z8,
   "Jul 1 - Jul 31 (transplants, shoots, or root divisions)", "Nov - Mar",
   "extension_regional_guide", _CAI_S,
   start_indoors="May 1 - Jun 15",
   notes=("University of California's statewide planting table gives the interior valleys a July "
          "window, and its footnote is explicit that artichoke goes in as transplants, shoots or "
-         "roots rather than seed. Plants size up through fall and crop through the cool months."),
-  note_s=("Grown as an annual on this ground and not as a permanent bed. University of California "
-          "sources split four ways on this region, from a July set-out to a December sowing with "
-          "a March transplant, and one UC home-garden leaflet says outright that planting is not "
-          "recommended in the interior valleys, though that leaflet is specifically about "
-          "perennial root-division culture. The consistent reading across them is that the annual "
-          "system works and the perennial one does not, because " + _MECH_HEAT + " through a "
-          "Central Valley summer."),
+         "roots rather than seed. Plants size up through fall and crop through the cool months, "
+         "then hold through the following summer on irrigation rather than being pulled."),
+  note_s=("A short-lived perennial on this ground rather than either a one-season annual or a "
+          "permanent bed. " + _CAI_WATER + " University of California sources split four ways on "
+          "this region, from a July set-out to a December sowing with a March transplant, and one "
+          "UC home-garden leaflet says outright that planting is not recommended in the interior "
+          "valleys. Two of them do call it an annual, but the same sheet that says so also notes "
+          "the plant may winter over wherever temperatures stay above 25°F, and the leaflet that "
+          "declines to recommend it is specifically about perennial root-division culture rather "
+          "than about the crop. No source publishes how long a stand actually lasts in the "
+          "Central Valley. The only sourced figure, five to ten years, describes commercial "
+          "coastal California and is longer than this ground gives, so expect fewer years than "
+          "that and divide or replace when yield falls off."),
   note_b=("Plant in July, which feels wrong but is right: the plants grow through fall and give "
-          "you buds through the cool months. Do not try to keep them going through the next "
-          "summer, since valley heat ruins the buds. Replant each year."))
+          "you buds through the cool months. You do not have to pull them afterwards. The catch "
+          "is water, because carrying a big plant through a valley summer takes a lot of it, and "
+          "that summer watering is also what keeps the buds from opening too fast. On steady deep "
+          "irrigation, ideally drip, the same plants will crop for several years. Let them dry "
+          "out one hot week and you will be starting over."))
 
 C("ca_interior", "9", "marginal", CAINT_Z9,
   "Jul 1 - Jul 31 (transplants, shoots, or root divisions)", "Nov - Mar",
   "extension_regional_guide", _CAI_S,
   start_indoors="May 1 - Jun 15",
   notes=("The valley floor proper. Same July planting, with harvest opening a little earlier and "
-         "running through winter into early spring."),
-  note_s=("The same annual system and the same reason it stays annual: summer heat rather than "
-          "winter cold is the limit here, and " + _MECH_HEAT + ". Winters are mild enough that a "
-          "plant may survive, but a surviving plant faces the next Central Valley summer, which "
-          "is what makes the perennial route unreliable rather than the frost."),
-  note_b=("Set plants out in July for a winter and early-spring harvest. Pull them before the "
-          "next summer and start again."))
+         "running through winter into early spring, and the same summer carry on irrigation."),
+  note_s=("The same short-lived perennial pattern, and the water demand is sharper on the valley "
+          "floor because the summers are hotter and longer. " + _CAI_WATER + " Winter is not the "
+          "constraint here: it is mild enough that a plant left in the ground comes through it "
+          "easily. What a surviving plant then faces is the next valley summer, and that, not the "
+          "frost, is what sets how long a stand lasts. No Central Valley figure for stand life is "
+          "published anywhere, so none is given."),
+  note_b=("Set plants out in July for a winter and early-spring harvest, and keep them. They will "
+          "crop again for several years if you water them properly through summer, which on this "
+          "ground means deep, regular irrigation rather than an occasional soak. Summer drought "
+          "is what kills them here, not winter."))
 
 # ======================= ca_north_coast (z9-10) -- the home ground =======================
 _CNC_S = ["uc_mg_t132", "uc_anr_7221", "uc_ipm"]
@@ -539,8 +628,8 @@ C("ca_desert", "9", "marginal", CADESERT_Z9,
   notes=("The Imperial and Coachella valley system, and it is strictly annual. Fields go in from "
          "late August through October and crop from December through April. University of "
          "California Cooperative Extension in Imperial County notes that desert artichokes are "
-         "direct-seeded or grown from transplants, and that few if any come from the mother-plant "
-         "cuttings used on the coast."),
+         "started from direct-sown seed or from transplants, with almost none raised from the "
+         "mother-plant cuttings the coast relies on."),
   note_s=("Rated marginal rather than perennializing because the planting genuinely does not "
           "carry over: this is a one-season crop pulled before summer, and University of "
           "California Cooperative Extension states that desert artichokes are seldom marketable "
@@ -640,18 +729,24 @@ C("se_gulf", "9", "marginal", SEGULF_Z9,
   note_b=("A fall-planted, spring-harvested crop. Replant every autumn. Do not expect a permanent "
           "bed to survive the summer."))
 
-C("se_gulf", "10", "unsuitable", ALL_GROWING,
-  None, None, "extension_regional_guide", ["uf_ifas_vh021", "uf_ifas_hs1289"],
-  note_s=("This is the peninsular-Florida end of the Gulf, and UF/IFAS is direct about it: "
-          "artichoke is absent entirely from the Florida vegetable gardening guide, whose "
-          "alphabetical planting table begins at arugula, and a UF/IFAS county guide states in a "
-          "footnote that globe artichokes, asparagus and rhubarb are not well adapted to Florida. "
-          "The mechanism is stated too, that hot weather opens the buds quickly and destroys the "
-          "tenderness of the edible parts, and that bud formation has to be induced artificially "
-          "because the winter supplies too few cool hours."),
-  note_b=("Skip artichoke on this ground. Florida's extension service leaves it out of the state "
-          "vegetable guide, and says plainly that it is not well adapted here. Even when the "
-          "plant grows, the heat opens the buds before they are worth eating."))
+C("se_gulf", "10", "survives_no_fruit", TROPICS_FL,
+  "Oct 1 - Nov 15 (transplants, foliage only)", None,
+  "extension_regional_guide", ["uf_ifas_vh021", "uf_ifas_hs1289"],
+  notes=("Set transplants from October to mid November, which is UF/IFAS's own Florida window and "
+         "the last date it gives for getting seedlings into the field. The rosette fills out "
+         "through the cool months and is finished by the hot, wet summer."),
+  note_s=(_ORN_S + " Two things are specific to this end of the Gulf rather than general. The "
+          "planting is a single cool season and not a standing one, because UF/IFAS recommends "
+          "the October to May cycle precisely to dodge a summer whose heat and wet drive disease "
+          "and pests, so expect to replant rather than to keep a permanent clump. And the "
+          "documented absence is real: artichoke is missing entirely from the Florida vegetable "
+          "gardening guide, whose alphabetical planting table runs straight past where it would "
+          "sit, and a UF/IFAS county guide footnotes that globe artichokes, asparagus and rhubarb "
+          "are not well adapted to Florida. Read that as the food verdict it is, not as a verdict "
+          "on whether the plant will grow."),
+  note_b=(_ORN_B + " Plant in October or early November and enjoy the leaves through winter and "
+          "spring. The summer heat and rain will finish the plant off, so start again next fall "
+          "if you liked it."))
 
 # ======================= rgv (z9-10) =======================
 _RGV_S = ["tamu_agrilife", "tamu_eht065"]
@@ -665,8 +760,8 @@ C("rgv", "9", "marginal", RGV_Z9,
   note_s=("Texas A&M covers artichoke statewide but every Valley-specific document omits it, "
           "including both editions of the Lower Rio Grande Valley vegetable crops guide and the "
           "Valley homeowner vegetable guide. The one Texas sentence touching this coast says "
-          "some home gardeners along the Texas coast grow it from crown divisions, with a first "
-          "harvest about a year after planting, and gives no month. Rated marginal rather than "
+          "a few home gardeners on the Texas coast do grow it, from crown divisions, seeing a first "
+          "harvest roughly a year later, and it gives no month. Rated marginal rather than "
           "unsuitable on the strength of that positive statement, but the cool hours here are "
           "few and " + _MECH_DEVERN + ", so expect an uneven set."),
   note_b=("Texas extension does not publish a Valley planting date for artichoke, so this is a "
@@ -687,28 +782,52 @@ C("rgv", "10", "marginal", RGV_Z10,
 
 # ======================= fl_peninsula (z10-11) =======================
 _FL_S = ["uf_ifas_vh021", "uf_ifas_hs1289"]
-C("fl_peninsula", "10", "unsuitable", ALL_GROWING, None, None,
-  "extension_regional_guide", _FL_S,
-  note_s=_UNSUIT_TROPICS_S + (" UF/IFAS omits artichoke from the Florida vegetable gardening "
-                              "guide entirely and states that it is not well adapted to Florida's "
-                              "climate."),
-  note_b=_UNSUIT_TROPICS_B)
-C("fl_peninsula", "11", "unsuitable", ALL_GROWING, None, None,
-  "extension_regional_guide", _FL_S,
-  note_s=_UNSUIT_TROPICS_S + (" UF/IFAS omits artichoke from the Florida vegetable gardening "
-                              "guide entirely and states that it is not well adapted to Florida's "
-                              "climate."),
-  note_b=_UNSUIT_TROPICS_B)
+_FL_NOTES = ("Set transplants from October to mid November, the window UF/IFAS publishes for "
+             "Florida and the last date it gives for getting seedlings into the field. The "
+             "rosette fills out through the cool months and the hot, wet summer ends it.")
+_FL_S_EXTRA = (
+    " This is UF/IFAS's own ground, so the evidence here is direct rather than borrowed. The "
+    "planting is a single cool season rather than a standing one, because the recommended "
+    "October to May cycle exists specifically to dodge a summer whose heat and wet drive disease "
+    "and pests. Artichoke is also absent entirely from the Florida vegetable gardening guide, "
+    "whose alphabetical planting table runs straight past where it would sit, and a UF/IFAS "
+    "county guide footnotes that globe artichokes, asparagus and rhubarb are not well adapted to "
+    "Florida. That is a verdict on the crop, and it is correct; it is not a verdict on whether "
+    "the plant will grow, and the same service's trial answers that question the other way.")
+_FL_B_EXTRA = (" Plant in October or early November and enjoy the leaves through winter and "
+               "spring. Summer heat and rain will finish the plant off, so start again next fall "
+               "if you liked it.")
+for _z in ("10", "11"):
+    C("fl_peninsula", _z, "survives_no_fruit", TROPICS_FL,
+      "Oct 1 - Nov 15 (transplants, foliage only)", None,
+      "extension_regional_guide", _FL_S,
+      notes=_FL_NOTES,
+      note_s=_ORN_S + _FL_S_EXTRA,
+      note_b=_ORN_B + _FL_B_EXTRA)
 
 # ======================= hawaii_tropical (z10-13) =======================
+# NOT the Florida calendar. Florida's summer `season_over` is a sourced event -- UF/IFAS ends the
+# planting there deliberately. Hawaii has no equivalent break, so the strip runs `growing` all
+# year and the plant simply persists. Copying Florida's shape here would have imported a summer
+# die-off that no source claims for Hawaii, which is the R6 blanket-note error in calendar form.
 _HI_S = ["uf_ifas_hs1289"]
 for _z in ("10", "11", "12", "13"):
-    C("hawaii_tropical", _z, "unsuitable", ALL_GROWING, None, None,
+    C("hawaii_tropical", _z, "survives_no_fruit", TROPICS_HI,
+      "Nov 1 - Feb 28 (transplants, foliage only)", None,
       "mechanism_derived_no_regional_source", _HI_S,
-      note_s=_UNSUIT_TROPICS_S + (" No Hawaii extension source addresses artichoke, so this "
-                                  "rating rests on the physiology plus the nearest documented "
-                                  "parallel, which is peninsular Florida."),
-      note_b=_UNSUIT_TROPICS_B)
+      notes=("Plant out in the cooler half of the year, which makes establishment easier rather "
+             "than making budding possible. Once rooted the rosette simply persists, since "
+             "nothing in this climate ends it."),
+      note_s=(_ORN_S + " Two caveats specific to here. No Hawaii extension source addresses "
+              "artichoke at all, so both the rating and the window rest on the physiology plus "
+              "the nearest documented parallel, which is peninsular Florida. And the planting "
+              "window is a convenience rather than a requirement: the plant is not waiting for a "
+              "season, it simply establishes more easily out of the hottest months, so a "
+              "November to February setting is a preference and not a deadline. Unlike Florida "
+              "there is no hot wet break that ends the planting, so expect the rosette to persist "
+              "and to keep making leaves indefinitely."),
+      note_b=(_ORN_B + " Plant in the cooler months if you can, though it is not critical here. "
+              "Once it takes hold it will just keep growing."))
 
 
 def total_cells():
@@ -716,11 +835,28 @@ def total_cells():
 
 
 if __name__ == "__main__":
+    # Mirrors A47/A48 exactly, including where they DIVERGE: `unsuitable` is exempt from both,
+    # `survives_no_fruit` is exempt from harvest only (no food to promise) and still owes a
+    # plant_out (someone may want the foliage). Keep this in step with the two gates -- a stale
+    # self-check that says "clean" while the gate says otherwise is worse than no self-check.
+    NO_PLANT_OUT = {"unsuitable"}
+    NO_HARVEST = {"unsuitable", "survives_no_fruit"}
     print(f"regions {len(CELLS)}  cells {total_cells()}")
+    bad = 0
     for r, zs in CELLS.items():
         for z, c in zs.items():
-            flag = "" if c["suitability"] == "unsuitable" else (
-                "  !! MISSING plant_out" if not c["plant_out"] else
-                "  !! MISSING harvest" if not c["harvest"] else "")
-            print(f"  {r}.{z:<3} {c['suitability']:<14} {str(c['plant_out'])[:46]:<46}"
+            s = c["suitability"]
+            flag = ""
+            if s not in NO_PLANT_OUT and not c["plant_out"]:
+                flag = "  !! MISSING plant_out (A47)"
+            elif s not in NO_HARVEST and not c["harvest"]:
+                flag = "  !! MISSING harvest (A48)"
+            elif s in NO_HARVEST and c["harvest"]:
+                flag = "  !! harvest on a no-food cell (A48 would not catch this)"
+            bad += bool(flag)
+            print(f"  {r}.{z:<3} {s:<18} {str(c['plant_out'])[:46]:<46}"
                   f" {str(c['harvest'])[:16]:<16}{flag}")
+    import collections
+    print("  suitability:", dict(collections.Counter(
+        c["suitability"] for zs in CELLS.values() for c in zs.values())))
+    print(f"  field-floor problems: {bad}")

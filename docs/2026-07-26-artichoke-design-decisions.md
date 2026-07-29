@@ -543,6 +543,12 @@ Every anchoring URL is fetched and the claim sentence confirmed present before i
 
 ## Part C — arc status and handoff (2026-07-27)
 
+> **DISCHARGED 2026-07-28. Artichoke certified as GS #121** (canonical `ea3636e7` -> `05090b3c`).
+> Part C below is preserved as the historical handoff record and is no longer a to-do list: C.2's
+> two findings are applied, C.3's 140 violations are zero, and C.1's SHA guard was deliberately
+> re-baselined. **What actually happened, including where this document's own predictions were
+> wrong, is Part D.**
+
 ### C.1 Where the work lives, and what it has NOT touched
 
 | artifact | state |
@@ -621,3 +627,73 @@ Recorded because each was asserted with specificity before being checked:
    each other and with the measured crown-kill temperature, which is why the field stays null.
 4. The `se_gulf` window was derived from a self-constructed URL that 404'd; the real LSU document
    exists and tightened the window by two weeks.
+
+---
+
+## Part D — what certification actually did (2026-07-28)
+
+Canonical `ea3636e7` -> **`05090b3c`**; 120 -> 121 certified, shells 8 -> 7. `gate_all` **121/121**,
+`release_verify` CLEAN, verbatim scan 26/26 sources compared with **0 hard hits**.
+
+### D.1 Both C.2 findings applied, one of them enlarged
+
+**`survives_no_fruit` on 7 cells — and the justification got stronger than C.2 had.** C.2 rested the
+case on UF/IFAS's mechanism plus UNR's "showy garden flowers … purple, up to 7 inches". **That UNR
+sentence must NOT be used here**, and catching it matters: it describes a plant that *did* bud, and
+the whole mechanism in the tropics is that the plant never initiates a bud at all, so it never
+flowers either. Citing purple flowers for Hawaii would have been a fabricated consequence of a real
+mechanism. The actual evidence is better and comes from the same publication as the mechanism —
+UF/IFAS HS1289's own trial reports treated plants forming buds and *"untreated plants remained
+vegetative until the end of the growing season"*, plus a description of what you do get: a rosette of
+*"arching, deeply toothed, silvery, woolly green leaves that are normally 20 to 32 inches long"*.
+The plants did not fail; they grew all season and never bolted.
+
+**`ca_interior` reframed** to a short-lived perennial limited by summer water demand, per C.2.
+`productive_lifespan_years` stays 7, flagged coastal-derived, and no Central Valley figure is given.
+
+### D.2 Where this document was wrong
+
+- **B.7 said `varieties[].resistance` ships honest-N/A — correct — but the row assumed artichoke
+  would sit inside the flat variety-detail schema.** It cannot: `variety_detail_gate` goes in scope
+  on `maturity_class` and then requires a per-variety `days_to_maturity`, and no anchorable
+  per-cultivar DTM exists (the circulating UMaine 2021 column states no basis, matches seed-catalog
+  copy, and is contradicted by UMaine's own measurements the next year — this arc laundered it once
+  already). Artichoke's cultivars are therefore **deliberately outside that gate's scope**, the cost
+  is stated (it is a no-op for artichoke), and the fix is named: a herbaceous-perennial variety
+  archetype keyed on **chill requirement**, which is what the sources actually differentiate these
+  cultivars on.
+- **B.6a item 2 said artichoke's all-`growing` tropical strip is "a literally accurate depiction".**
+  It is not, once those cells carry a planting window: the shipped strips carry a real `plant` token
+  in the real planting month, and Florida's summer is `season_over` because UF/IFAS ends the planting
+  there deliberately. Hawaii keeps an unbroken `growing` year because nothing there ends it —
+  copying Florida's shape would have imported a summer die-off no source claims for Hawaii.
+- **A.6 predicted A48 would be the arc's harvest floor for every non-`unsuitable` cell.** The
+  `survives_no_fruit` re-rating split it: A48 now **exempts** that value while A47 still **requires**
+  `plant_out` on it.
+
+### D.3 Fields authored natively at cert (register rows 26/27)
+
+`harvest_stop_rule` with a **new `STOP_SIGNALS` member, `bract_opening`**, and `threshold_inches`
+made conditional on the signal. `harvest_ramp_weeks` is **NULL** — a first draft invented a
+three-year ramp to fill the field's shape and it was retracted; no source publishes one, and it would
+describe 6 of 39 cells. Three cells carry a sourced `harvest_duration_weeks`.
+
+### D.4 Gate work, and one live defect found elsewhere
+
+`SUITABILITY_ENUM` widened 3 -> the roster's 5. **A49** (`zone_order_gate`) and **A50**
+(`harvest_duration_gate`) hard-flipped into `whole_crop_gate` — artichoke's cert was their stated
+trigger. New `tools/region_prose_gate.py` (hardening item 1) **found a live contradiction on
+certified asparagus on its first run**: `ca_south_coast` z11 is `marginal` in data while its region
+prose says *"Frost-free zone 11 is unsuitable."* Not repaired here — it is an asparagus content call
+— and pinned as a known-open expectation in that gate's test. Its roster-wide audit reports 38
+findings across 17 crops, all long-certified fruit trees.
+
+### D.5 Source discipline
+
+The arc's own false rejection of `unlv_mg_svn` was **reversed**: it is T1, cited by 67 crops, and the
+catalog had already ruled. Re-verified at source by reading the chart's **bar geometry** (its marks
+have no text layer) and validating against the garlic and broccoli rows before re-anchoring, which
+closed 3 anchoring gaps. `uaex_cardoon` was dropped from the catalog entirely rather than admitted
+uncited at T2. All 26 cited URLs fetched; a claim-support sweep flagged 4 low-mention documents and
+all 4 adjudicated — two are cited **for a documented absence**, two are drawn-bar charts read
+geometrically (AZ1615's artichoke row verified verbatim as *"September-October | May-June"*).

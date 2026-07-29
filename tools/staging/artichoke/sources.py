@@ -42,6 +42,17 @@ WRONGLY REJECTED, THEN RESTORED (2026-07-27, corrected in this file 2026-07-28):
     early-Feb through late-Mar with NO fall window, which is exactly what the nevada cells claim
     and is the unusual part worth citing -- every other cool-season crop on the chart gets two.
 
+NOT ADMITTED TO THE CATALOG AT ALL (2026-07-28): uaex_cardoon.
+  It was drafted as a CATALOG_ADDITIONS entry at tier T2, gate E bounced the citation, and the
+  arc dropped the citation but left the catalog row. Removing the row too, because a T2 entry that
+  no crop cites is not evidence, it is clutter with a maintenance cost: the pending tier
+  renumbering (docs/2026-07-27-source-tier-model-kickoff.md section 3.1) has to migrate every T2
+  row, and this one would be migrated for nothing. The record of the consideration stays below
+  under a non-admitting key, since the reasoning is worth keeping: it is an ORNAMENTAL newspaper
+  column about CARDOON rather than var. scolymus, and the page carries the publisher's own
+  standing disclaimer that it "does not promote, support or recommend" the plants it features.
+  That disclaimer is disqualifying independently of tier.
+
 DROPPED AT URL VERIFICATION (2026-07-26) -- the R4 check earning its keep a second time:
   - lsu_agcenter_3634 -- DROPPED, THEN RESTORED 2026-07-26. The first draft carried a CONSTRUCTED
     address (/profiles/lbenedict/...) which 404'd -- precisely the self-constructed-404 failure the
@@ -421,7 +432,7 @@ CATALOG_ADDITIONS = {
             "this landing page resolves and confirms the metadata, and the PDF itself was "
             "recovered from a 2010 Wayback snapshot."),
     },
-    "uaex_cardoon": {
+    "_uaex_cardoon_NOT_ADMITTED": {
         "id": "uaex_cardoon",
         "name": "University of Arkansas Extension, Plant of the Week: Cynara cardunculus 'Cardoon' "
                 "(Klingaman, 2012)",
@@ -465,7 +476,6 @@ SOURCE_URLS = {
     "lsu_agcenter_3634": CATALOG_ADDITIONS["lsu_agcenter_3634"]["url"],
     "unr_ext_fs1305": CATALOG_ADDITIONS["unr_ext_fs1305"]["url"],
     "rutgers_fs044": CATALOG_ADDITIONS["rutgers_fs044"]["url"],
-    "uaex_cardoon": CATALOG_ADDITIONS["uaex_cardoon"]["url"],
     # already in the catalog -- pinned to the artichoke-specific document, not the umbrella host
     "uc_ipm": "https://ipm.ucanr.edu/agriculture/artichoke/",
     # the chart IS the document; there is no artichoke-specific page to pin to. Same URL the
