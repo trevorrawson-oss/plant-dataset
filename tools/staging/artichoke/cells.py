@@ -305,7 +305,7 @@ C("northern_tier", "6", "marginal", NORTH_Z6,
   note_s=("Annual culture is the reliable route. Cornell reports that transplanting before "
           "mid-May supplies enough natural chilling in upstate New York without a cooler, though "
           "controlled vernalization still buys earlier and more uniform budding. Overwintering is "
-          "the marginal part rather than the cropping: " + _MECH_CROWN + ", and mulch alone has "
+          "the doubtful part rather than the cropping: " + _MECH_CROWN + ", and mulch alone has "
           "repeatedly failed in trials."),
   note_b=("Grow it as an annual and you will do well. Set out chilled transplants in late April "
           "or early May and start picking in July. Some gardeners try to carry plants through "
@@ -449,7 +449,7 @@ C("nevada", "9", "marginal", NEVADA_Z9,
           "on comparable ground. Nevada Extension separately recommends Green Globe, Imperial Star "
           "and Violetta for the state's low desert, noting Imperial Star will produce in its first "
           "year from seed, typically one or two primary buds of three or four inches plus five to "
-          "seven smaller side buds. Rated marginal because no source says the planting persists "
+          "seven smaller side buds. Rated as an annual because no source says the planting persists "
           "here, and " + _MECH_HEAT + " once summer arrives."),
   note_b=("Plant in February or March, not fall, and start seed indoors around New Year. You should "
           "cut buds in May and June, then the summer heat ends it and you start again next winter. "
@@ -630,7 +630,7 @@ C("ca_desert", "9", "marginal", CADESERT_Z9,
          "California Cooperative Extension in Imperial County notes that desert artichokes are "
          "started from direct-sown seed or from transplants, with almost none raised from the "
          "mother-plant cuttings the coast relies on."),
-  note_s=("Rated marginal rather than perennializing because the planting genuinely does not "
+  note_s=("Rated as an annual rather than perennializing because the planting genuinely does not "
           "carry over: this is a one-season crop pulled before summer, and University of "
           "California Cooperative Extension states that desert artichokes are seldom marketable "
           "after early April because warm weather toughens the buds. " + _MECH_HEAT.capitalize()
@@ -761,7 +761,7 @@ C("rgv", "9", "marginal", RGV_Z9,
           "including both editions of the Lower Rio Grande Valley vegetable crops guide and the "
           "Valley homeowner vegetable guide. The one Texas sentence touching this coast says "
           "a few home gardeners on the Texas coast do grow it, from crown divisions, seeing a first "
-          "harvest roughly a year later, and it gives no month. Rated marginal rather than "
+          "harvest roughly a year later, and it gives no month. Rated a workable annual rather than "
           "unsuitable on the strength of that positive statement, but the cool hours here are "
           "few and " + _MECH_DEVERN + ", so expect an uneven set."),
   note_b=("Texas extension does not publish a Valley planting date for artichoke, so this is a "
@@ -860,3 +860,61 @@ if __name__ == "__main__":
     print("  suitability:", dict(collections.Counter(
         c["suitability"] for zs in CELLS.values() for c in zs.values())))
     print(f"  field-floor problems: {bad}")
+
+
+# =============================================================================================
+# ANNUAL_ONLY -- applied 2026-07-28, after plant-app landed the display state
+# =============================================================================================
+#
+# 22 of the 25 `marginal` cells are not really "marginal" at all: artichoke crops WELL on them
+# and simply does not persist, so the grower replants each season. `marginal` answers "does the
+# planting persist" with a shrug, which undersells a dependable annual crop. `annual_only` says
+# the true thing, and it is the value the arc wanted at cert and declined ONLY because no
+# renderer knew it (design-decisions B.6, open_findings `artichoke-annual-only-suitability-
+# declined`). plant-app now renders it with its own display state and a "Replant each year" flag
+# (commit bc2c809), so the block is gone.
+#
+# THE THREE THAT STAY `marginal` ARE THE POINT OF DOING THIS BY HAND. Not every non-persistent
+# cell is an annual one:
+#   pnw z8          -- a SHORT-LIVED PERENNIAL. Oregon State's breeder describes western Oregon
+#                      artichokes as short-lived perennials needing cut-back and mulch, good for
+#                      three to four productive years. The plant IS carried over; it just does
+#                      not last. That is genuinely marginal, not annual.
+#   ca_interior z8  -- SHORT-LIVED PERENNIAL limited by summer WATER DEMAND (see the calendar
+#   ca_interior z9     note above). Met, the same crowns crop for several years; missed, the
+#                      plant dies. Persistence that depends on the gardener is the textbook
+#                      marginal case, and calling it annual would erase the reframe this arc
+#                      made deliberately two passes ago.
+# Flattening all 25 would have been one line and would have re-broken ca_interior.
+ANNUAL_ONLY_CELLS = {
+    ("northern_tier", "3"), ("northern_tier", "4"), ("northern_tier", "5"),
+    ("northern_tier", "6"), ("northern_tier", "7"),
+    ("mid_atlantic", "7"), ("mid_atlantic", "8"),
+    ("mid_south", "7"), ("mid_south", "8"),
+    ("warm_arid", "8"),
+    ("nevada", "8"), ("nevada", "9"), ("nevada", "10"),
+    ("utah_dixie", "8"),
+    ("ca_desert", "9"), ("ca_desert", "10"),
+    ("low_desert_az", "9"), ("low_desert_az", "10"),
+    ("se_gulf", "8"), ("se_gulf", "9"),
+    ("rgv", "9"), ("rgv", "10"),
+}
+
+# CROSS-CHECK, not a derivation. The explicit set above is the source of truth (a substring rule
+# would drift silently the first time someone rewords a plant_out), but every cell in it must
+# ALSO carry the arc's own "replant each ..." marker in its plant_out, and no cell outside it may.
+# If those two ever disagree, the data and the intent have come apart and this file refuses to load.
+def _apply_annual_only():
+    derived = {(rk, z) for rk, zs in CELLS.items() for z, c in zs.items()
+               if c["suitability"] == "marginal" and "replant each" in (c["plant_out"] or "")}
+    assert derived == ANNUAL_ONLY_CELLS, (
+        f"annual_only set disagrees with the plant_out marker.\n"
+        f"  in set but not marked: {sorted(ANNUAL_ONLY_CELLS - derived)}\n"
+        f"  marked but not in set: {sorted(derived - ANNUAL_ONLY_CELLS)}")
+    for rk, z in ANNUAL_ONLY_CELLS:
+        assert CELLS[rk][z]["suitability"] == "marginal", f"{rk}.{z} is not marginal"
+        assert CELLS[rk][z]["suitability_note_seasoned"], f"{rk}.{z} has no seasoned note"
+        CELLS[rk][z]["suitability"] = "annual_only"
+
+
+_apply_annual_only()

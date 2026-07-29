@@ -21,17 +21,27 @@ culinary_herb / companion_and_ornamental_flower, ruled 2026-07-05) stay untouche
 # that plants stay vegetative and never initiate buds, so the plant thrives and gives no
 # artichokes. Rating that `unsuitable` would hide a cell about a plant that grows perfectly well.
 #
-# `annual_only` is deliberately NOT here. It would fit artichoke's cold-region cells better than
-# `marginal` does, but it is a frontend-visible vocabulary change with no renderer support, and
-# design-decisions B.6 recorded it as an open finding rather than smuggling it in mid-arc.
-SUITABILITY_ENUM = {"perennializes", "fruits_reliably", "marginal", "unsuitable",
-                    "survives_no_fruit"}
+# `annual_only` ADDED 2026-07-28 (Trevor's call), and the route matters. It was declined at
+# artichoke's cert for one reason only -- no renderer knew the value, and `plant-app` fails OPEN,
+# so shipping it would have resolved to 'normal' and SILENTLY DELETED the suitability note from
+# every affected cell, because that note renders only for the non-normal states. The one
+# instruction those growers cannot infer ("replant each spring") would have vanished the day the
+# data got more accurate. plant-app landed the state first (commit bc2c809: its own display state,
+# its own "Replant each year" flag, and the zone now outranking the archetype for the grown-as
+# pill), so the blocker is gone. Frontend first, then the data -- the inverse order would have
+# made the app worse.
+#
+# It means: a PERENNIAL crop that is a dependable ANNUAL in this zone. It crops well, it simply
+# does not persist. `marginal` had been carrying these cells and undersells them, answering "does
+# the planting persist" with a shrug where the honest answer is "no, and it crops well anyway".
+SUITABILITY_ENUM = {"perennializes", "fruits_reliably", "marginal", "annual_only",
+                    "unsuitable", "survives_no_fruit"}
 
 # Values that must explain themselves. A cell that says the planting will not persist, will not
 # grow, or will grow and never feed you is making a claim the grower is owed a reason for.
 # `survives_no_fruit` belongs here for the same reason `unsuitable` does -- it is a stronger
 # statement than `marginal`, not a weaker one, and without the note it reads as a bare downgrade.
-NOTE_REQUIRED = {"marginal", "unsuitable", "survives_no_fruit"}
+NOTE_REQUIRED = {"marginal", "unsuitable", "survives_no_fruit", "annual_only"}
 
 
 def herbaceous_perennial_violations(crop):

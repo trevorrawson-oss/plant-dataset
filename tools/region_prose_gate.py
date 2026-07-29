@@ -94,6 +94,13 @@ ARCHETYPE = "herbaceous_perennial"
 RATING_WORDS = {
     "perennializes": [r"\bperennializ\w*"],
     "marginal": [r"\bmarginal\w*"],
+    # `annual_only` (2026-07-28). Matched on the phrases prose ACTUALLY uses -- "grown as an
+    # annual", "replant each spring" -- not the enum name, which no one writes at a reader. The
+    # bare word "annual" is deliberately NOT a pattern: it is the single commonest word in this
+    # corpus ("annual culture", "an annual crop", "the annual cycle") and matching it would
+    # reproduce the keyword flood this gate was rebuilt to escape.
+    "annual_only": [r"\bannual[\s-]only\b", r"\bgrown as an annual\b",
+                    r"\breplant(?:ed|ing)? each (?:year|spring|season|autumn|fall)\b"],
     "unsuitable": [r"\bunsuitable\b"],
     "survives_no_fruit": [r"\bsurvives_no_fruit\b", r"\bornamental[\s-]only\b",
                           r"\bornamental\s+only\b"],

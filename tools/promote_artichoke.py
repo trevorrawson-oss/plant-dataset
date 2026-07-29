@@ -50,7 +50,11 @@ SCRATCH = os.path.join(HERE, "..", "crops_data_final.scratch.json")
 # trio is coherent, and none of its commits touched artichoke, source_catalog, or any shared
 # catalog. Re-pointed only after re-verifying the new base:
 #   shasum -a 256 crops_data_final.json == LATEST.txt, git tree clean, gate_all 120/120.
-EXPECTED_SHA = "ea3636e72e70a397d55512e800f115173a13ab833b9a523db1d275cc0b80024b"
+# RE-BASELINED 2026-07-28 (2nd time) to `b9d0c26e`, which is this same script's own output
+# plus the asparagus ca_south_coast region-prose repair. Re-pointed to apply the
+# `annual_only` re-rating of 22 cells; the promote is idempotent for everything else, so
+# the footprint check below is what proves only the ratings moved.
+EXPECTED_SHA = "b9d0c26ef2ff8161fc7f63d645ec7d379800f6518f2aa772a47c4f3991848f3e"
 
 REGION_LABELS = {
     "northern_tier": "Northern Tier (Cold Zones)",

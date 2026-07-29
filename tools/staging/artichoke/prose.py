@@ -996,8 +996,8 @@ VARIETIES_RESISTANCE_NOTE = (
 REGION_NOTES = {
     "northern_tier": (
         # z3,4,5,6,7 -- all marginal, annual culture
-        "Every zone here is annual culture, and the rating is marginal all the way down for one "
-        "reason: the planting does not survive winter. That is measured rather than assumed. "
+        "Every zone here is grown as an annual, and every zone is rated that way for one reason: "
+        "the planting does not survive winter. That is measured rather than assumed. "
         "Upstate New York found no surviving plants at all under six inches of straw, Connecticut "
         "describes field mulches as generally unsuccessful with survival in about one winter in "
         "twenty, and the best result anywhere in this band is 30 to 40 percent at Blacksburg under "
@@ -1023,7 +1023,8 @@ REGION_NOTES = {
         "before you plant, because the chilling happens AFTER planting rather than before. "
         "Transplants go out at or a week or two before the last frost so the seedlings pick up "
         "190 to 240 hours at or below 50°F in the ground, which is why the planting date is "
-        "pinned to frost rather than chosen for convenience. Both zones are marginal because the "
+        "pinned to frost rather than chosen for convenience. Both zones are grown as an annual because "
+        "the "
         "planting does not persist, and the measured overwintering is poor. The two zones differ "
         "in what limits them: zone 7 is a straightforward spring-planted annual, while zone 8 is "
         "warm enough that summer heat rather than winter is the binding constraint, which is why "
@@ -1038,8 +1039,8 @@ REGION_NOTES = {
         "plants some afternoon shade, because summer heat is your main enemy here."),
     "mid_south": (
         # z7,8 -- both marginal, documented absence
-        "Both zones are marginal and neither is sourced, which is itself the headline for this "
-        "region. Not one of the four state extension services covering Arkansas, Oklahoma, "
+        "Both zones are grown as an annual and neither is sourced, which is itself the headline for "
+        "this region. Not one of the four state extension services covering Arkansas, Oklahoma, "
         "Tennessee and Missouri publishes an artichoke planting date, variety list or crop "
         "profile, and that was established by enumerating their full crop lists rather than by a "
         "failed search. Missouri's perennial-vegetable category contains only asparagus and "
@@ -1071,7 +1072,7 @@ REGION_NOTES = {
         "they are worth eating."),
     "nevada": (
         # z8,9,10 -- all marginal
-        "All three zones are marginal and all three are spring-planted annuals, which is the "
+        "All three zones are grown as an annual on a spring planting, which is the "
         "surprise in this region and it is sourced. The southern Nevada Master Gardener planting "
         "chart gives artichoke a February through late March window and, unlike almost every "
         "other cool-season crop on that chart, no autumn window at all, so there is a single "
@@ -1181,8 +1182,8 @@ REGION_NOTES = {
         "the outside of the buds, which does not affect how they taste."),
     "ca_desert": (
         # z9,10 marginal; z11 unsuitable (VACANT GROUND) -- A SPLIT REGION
-        "Zones 9 and 10 are a genuine, commercially important winter crop and are rated marginal "
-        "only because the planting does not persist: fields go in from late August through October, "
+        "Zones 9 and 10 are a genuine, commercially important winter crop and are grown as an annual "
+        "purely because the planting does not persist: fields go in from late August through October, "
         "crop from December through April, and are finished by the heat, with University of "
         "California Cooperative Extension noting desert artichokes are seldom marketable after "
         "early April. This is a limit on persistence, not on productivity. Note the organ, which "
@@ -1216,7 +1217,7 @@ REGION_NOTES = {
     "se_gulf": (
         # z8,9 marginal; z10 survives_no_fruit -- A SPLIT REGION
         "This region splits, and the boundary is the supply of cool hours. Zones 8 and 9 are a "
-        "fall-planted, spring-harvested crop rated marginal, on LSU AgCenter's guidance: plant "
+        "fall-planted, spring-harvested crop grown as an annual, on LSU AgCenter's guidance: plant "
         "from October into early November, harvest in spring, and expect to replant, because LSU "
         "is candid that although artichoke is technically a perennial the plants are often lost "
         "over the summer to disease. Winter is not the constraint in that band, since these "
@@ -1234,15 +1235,15 @@ REGION_NOTES = {
         "plan a crop."),
     "rgv": (
         # z9,10 -- both marginal
-        "Both zones are marginal and both are derived rather than sourced, which is the important "
-        "thing to know here. No Texas publication gives a Rio Grande Valley artichoke date. Texas "
+        "Both zones are grown as an annual and both are derived rather than sourced, which is the "
+        "important thing to know here. No Texas publication gives a Rio Grande Valley artichoke date. Texas "
         "A&M covers the crop statewide, but every Valley-specific document omits it, including "
         "both editions of the Lower Rio Grande Valley vegetable crops guide and the Valley "
         "homeowner vegetable guide. The single Texas sentence that touches this coast says some "
         "a few home gardeners on the Texas coast do grow it, from crown divisions, seeing a first "
         "harvest roughly a year later, and it names no month. These windows follow the Texas A&M "
-        "statewide fall system shifted earlier for a subtropical winter. Rated marginal rather "
-        "than lower on the strength of that positive statement, but the cool hours here are few "
+        "statewide fall system shifted earlier for a subtropical winter. Rated a workable annual "
+        "rather than lower on the strength of that positive statement, but the cool hours here are few "
         "and summer heat can reverse what does accumulate, so expect an uneven set and expect "
         "some plants to make leaves and never make buds. Zone 10 is warmer and thinner still.",
         "Texas extension does not publish a Valley planting date for artichoke, so treat this as a "

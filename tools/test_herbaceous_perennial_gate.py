@@ -81,12 +81,14 @@ assert any("productive_lifespan_years" in v for v in herbaceous_perennial_violat
 c = well_formed(); c["regions"]["northern_tier"]["plantings"].append({"track": "succession", "label": "fill"})
 assert any("succession" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
 
-# 8. bad suitability enum on a filled cell -> violation. The probe value is deliberately one that
-#    LOOKS plausible: `annual_only` is the value the artichoke arc considered adding and declined
-#    (design-decisions B.6 -- a frontend-visible vocabulary change, recorded as an open finding
-#    rather than smuggled in). If it ever becomes legal it must be by a ruling, not by drift.
-c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "annual_only"
-assert any("suitability" in v and "annual_only" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+# 8. bad suitability enum on a filled cell -> violation. This probe USED to be `annual_only`,
+#    which the artichoke arc considered and declined (design-decisions B.6: a frontend-visible
+#    vocabulary change with no renderer support). It became legal on 2026-07-28 by a ruling and a
+#    renderer change, which is exactly the route the old comment demanded -- "if it ever becomes
+#    legal it must be by a ruling, not by drift." Probe swapped to a value that is still illegal,
+#    so the reject branch stays covered.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "grows_ok"
+assert any("suitability" in v and "grows_ok" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
 
 # 9. unsuitable cell missing the reason note -> violation
 c = well_formed(); c["regions"]["hawaii_tropical"]["resolved_by_zone"]["12"].pop("suitability_note_seasoned")
@@ -169,7 +171,34 @@ for bogus in ("survives_no_fruits", "SURVIVES_NO_FRUIT", "fruits_reliable", "no_
 c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "fruits_reliably"
 assert not any("suitability_note_seasoned" in x for x in herbaceous_perennial_violations(c))
 
-assert SUITABILITY_ENUM == {"perennializes", "marginal", "unsuitable",
+# 24-26. `annual_only` -- the SIXTH value (2026-07-28, Trevor's call).
+#
+# A perennial that is a dependable ANNUAL in this zone. `marginal` was carrying these
+# cells and it undersells them: it answers "does the planting persist" with a shrug, when
+# the honest answer is "no, and it crops well anyway, so replant". 22 of artichoke's cells
+# are that, and the value was declined at cert ONLY because the renderers did not know it.
+# plant-app now does (commit bc2c809: its own display state, its own "Replant each year"
+# flag, and the zone now outranks the archetype for the grown-as pill), so the blocker is
+# gone and the data can say what is true.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"].update(
+    {"suitability": "annual_only",
+     "suitability_note_seasoned": "Grown as an annual here; the crown does not survive winter."})
+assert herbaceous_perennial_violations(c) == [], herbaceous_perennial_violations(c)
+
+# 25. it REQUIRES the seasoned note, and that is the entire point of the value. These cells
+#     carry the one instruction a grower cannot infer -- replant each spring -- and a bare
+#     downgrade with no reason would be worse than the `marginal` it replaces.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "annual_only"
+v = herbaceous_perennial_violations(c)
+assert any("northern_tier" in x and "suitability_note_seasoned" in x for x in v), v
+
+# 26. near-miss spellings still bounce -- widening the enum must not soften it.
+for bogus in ("annual", "annual-only", "ANNUAL_ONLY", "annuals_only", "annual_culture"):
+    c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = bogus
+    v = herbaceous_perennial_violations(c)
+    assert any("suitability" in x and "not in" in x for x in v), (bogus, v)
+
+assert SUITABILITY_ENUM == {"perennializes", "marginal", "unsuitable", "annual_only",
                             "survives_no_fruit", "fruits_reliably"}, SUITABILITY_ENUM
 
 # 23. REAL-DATA REGRESSION: asparagus, the only crop on the archetype today, stays clean. Widening
