@@ -17,7 +17,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "tools"))
 
 from harvest_duration_gate import (  # noqa: E402
-    duration_violations, ramp_violations, ramp_prose_violations, stop_rule_violations,
+    duration_violations, ramp_violations, ramp_prose_violations, stop_rule_violations, STOP_SIGNALS,
     stated_duration, stated_end,
 )
 
@@ -408,6 +408,71 @@ class StopShapeCheck(unittest.TestCase):
         r = dict(STOP_OK, sources=[])
         v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
         self.assertTrue(any("sources" in x for x in v), v)
+
+
+# --------------------------------------------------------------------------------------------
+# A SECOND STOP SIGNAL (artichoke GS arc, 2026-07-28).
+#
+# STOP_SIGNALS shipped as a vocabulary of one because asparagus was the only crop with a stop
+# rule. Artichoke's signal is not a different threshold on the same observable, it is a DIFFERENT
+# OBSERVABLE: you watch the bud's bracts for the moment they loosen and begin to spread, and you
+# cut before that happens. Three T1 sources state it independently and none of them states a size:
+#
+#   UC IPM  "harvested when the buds have grown to maximum size but before the bracts or leaves
+#            on the bud begin to spread open" + "Buds left on the plant past their prime tend to
+#            become woody and bitter."
+#   USU     "Harvest buds when they reach full size but before the bracts (bud leaves) begin to open."
+#   UF/IFAS "High temperatures above 86F reduce the tenderness and compactness of the 'heart' and
+#            cause buds to open quickly."
+#
+# So `threshold_inches` becomes CONDITIONAL ON THE SIGNAL rather than universally required. The
+# gate demanded it unconditionally, which for a non-dimensional signal would force the author to
+# invent a diameter -- false precision manufactured to satisfy a shape, which is the defect class
+# this whole gate was written for. Keyed to the signal it stays fully strict for asparagus.
+STOP_BRACT = {
+    "signal": "bract_opening",
+    "note_beginner": "Cut each bud while it is still tight and the scales are closed flat.",
+    "note_seasoned": "Cut on bract tightness rather than size; once the bracts loosen the bud is "
+                     "woody and bitter and is past use.",
+    "sources": ["uc_ipm"],
+}
+
+
+class SecondStopSignalCheck(unittest.TestCase):
+    def test_bract_opening_is_a_known_signal(self):
+        self.assertIn("bract_opening", STOP_SIGNALS)
+
+    def test_bract_opening_without_threshold_passes(self):
+        """The whole point: a non-dimensional signal must not be forced to carry a diameter."""
+        self.assertEqual(stop_rule_violations({"slug": "c", "harvest_stop_rule": STOP_BRACT}), [])
+
+    def test_bract_opening_WITH_threshold_flags(self):
+        """And the exemption is not a free pass. Attaching inches to a signal that is not a
+        measurement asserts a precision no source published, so it is a defect in its own right."""
+        r = dict(STOP_BRACT, threshold_inches=[3.0, 4.0])
+        v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+        self.assertTrue(any("threshold_inches" in x for x in v), v)
+
+    def test_spear_diameter_still_requires_threshold(self):
+        """ASPARAGUS REGRESSION. Making the requirement conditional must not make it optional."""
+        r = dict(STOP_OK); del r["threshold_inches"]
+        v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+        self.assertTrue(any("threshold_inches" in x for x in v), v)
+
+    def test_bract_opening_still_needs_both_registers_and_sources(self):
+        for kill in ("note_beginner", "note_seasoned"):
+            r = dict(STOP_BRACT); del r[kill]
+            v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+            self.assertTrue(any(kill in x for x in v), (kill, v))
+        r = dict(STOP_BRACT, sources=[])
+        self.assertTrue(any("sources" in x for x in
+                            stop_rule_violations({"slug": "c", "harvest_stop_rule": r})))
+
+    def test_near_miss_signal_still_bounces(self):
+        for bogus in ("bract_open", "bracts_opening", "BRACT_OPENING", "bud_size"):
+            r = dict(STOP_BRACT, signal=bogus)
+            v = stop_rule_violations({"slug": "c", "harvest_stop_rule": r})
+            self.assertTrue(any("signal" in x for x in v), (bogus, v))
 
 
 class OverrideCheck(unittest.TestCase):

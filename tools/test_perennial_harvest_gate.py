@@ -86,6 +86,25 @@ v = perennial_harvest_violations(crop({
     "6": {"suitability": "perennializes", "calendar": CAL, "harvest": "May - Jun"}}))
 assert len(v) == 2, v
 
+# 7b. survives_no_fruit IS SKIPPED (artichoke GS arc, 2026-07-28). The value means, per its ruled
+#     display behavior, "the plant lives and gives you no food." Demanding a harvest window from a
+#     cell that says there is no harvest is not a stricter gate, it is a contradiction -- and the
+#     only way to satisfy it would be to invent a food promise, which is the exact failure mode
+#     this gate exists to prevent, pointed the other way.
+#
+#     Deliberately NOT mirrored into A47: `plant_out` stays REQUIRED on these cells. That is the
+#     asymmetry the value carries. Someone may still want the plant for its foliage, and telling
+#     them when to put it in is useful and true; telling them when to eat it is not.
+assert perennial_harvest_violations(crop({
+    "12": {"suitability": "survives_no_fruit", "calendar": ALL_GROWING,
+           "plant_out": "Oct 1 - Nov 30 (transplants, ornamental foliage only)"}})) == []
+
+# 7c. ...and the exemption is keyed to the VALUE, not to "any cell without a harvest". A cell whose
+#     suitability is merely absent is still on the hook.
+v = perennial_harvest_violations(crop({
+    "12": {"calendar": ALL_GROWING, "plant_out": "Oct"}}))
+assert len(v) == 1, v
+
 # 8. no regions / malformed shapes must not crash
 assert perennial_harvest_violations({"slug": "x", "archetype": "herbaceous_perennial"}) == []
 assert perennial_harvest_violations({"slug": "x", "archetype": "herbaceous_perennial",

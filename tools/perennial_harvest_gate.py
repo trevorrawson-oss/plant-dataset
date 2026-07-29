@@ -25,16 +25,28 @@ the gate" trade this suite exists to refuse.
 On the archetype scope the gate reports 0 for asparagus, the only current member, so it ships
 enforcing a convention the archetype already meets -- the same soft-launch discipline as A47.
 
-TWO EXEMPTIONS, both copied from A47 deliberately so the two halves of the floor cannot drift apart:
+THREE EXEMPTIONS. The first two are copied from A47 deliberately so the two halves of the floor
+cannot drift apart; the third is where they deliberately DIVERGE.
   - EMPTY CALENDAR -> skip. An unfilled shell cell is an admission state, not a defect.
   - suitability == "unsuitable" -> skip. Those cells carry an honest all-`growing` calendar under
     the A32 honesty floor. Telling a grower when to expect food from a crop that will not grow
     there is worse than silence -- the same reasoning A47 applies to plant_out.
+  - suitability == "survives_no_fruit" -> skip (added 2026-07-28, artichoke GS arc). The value
+    means, per its ruled display behavior, "the plant lives and gives you no food." Demanding a
+    harvest window from a cell whose whole content is THERE IS NO HARVEST is not a stricter gate,
+    it is a contradiction, and the only way to satisfy it would be to invent a food promise --
+    this gate's own failure mode, pointed the other way.
+
+    NOT MIRRORED INTO A47, and that asymmetry is the point. `plant_out` stays REQUIRED on these
+    cells. Someone may still want the plant for its foliage, so telling them when to put it in the
+    ground is useful and true; telling them when to eat it is not. Artichoke in the tropics is the
+    case: UF/IFAS's mechanism is that plants stay vegetative and never initiate buds, so a grower
+    gets a large silver-leaved rosette and no artichokes, ever.
 
 Usage: python3 tools/perennial_harvest_gate.py [crops_data_final.json]
 Exit 1 on any violation.
 """
-SKIP_SUITABILITY = {"unsuitable"}
+SKIP_SUITABILITY = {"unsuitable", "survives_no_fruit"}
 ARCHETYPE = "herbaceous_perennial"
 
 

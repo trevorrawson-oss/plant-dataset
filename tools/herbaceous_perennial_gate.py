@@ -10,7 +10,28 @@ See docs/superpowers/specs/2026-07-23-asparagus-herbaceous-perennial-archetype-d
 Scoped to archetype (not calendar_basis) so the herbaceous HERBS (chives/mint/bee-balm on
 culinary_herb / companion_and_ornamental_flower, ruled 2026-07-05) stay untouched.
 """
-SUITABILITY_ENUM = {"perennializes", "marginal", "unsuitable"}
+# The roster's suitability vocabulary, all five values. Measured on canonical ea3636e7:
+# fruits_reliably 292, marginal 180, unsuitable 165, survives_no_fruit 118, perennializes 25.
+#
+# WIDENED 2026-07-28 (artichoke GS arc) from the three asparagus happened to need. The gate was
+# not ruling the other two out -- it had never seen them, and a crop joining this archetype could
+# not reach for a value 17 other crops already publish. `survives_no_fruit` in particular carries
+# a RULED display behavior (flagged ornamental-only: the plant lives and gives you no food,
+# someone may still want it), which is exactly artichoke in the tropics -- UF/IFAS's mechanism is
+# that plants stay vegetative and never initiate buds, so the plant thrives and gives no
+# artichokes. Rating that `unsuitable` would hide a cell about a plant that grows perfectly well.
+#
+# `annual_only` is deliberately NOT here. It would fit artichoke's cold-region cells better than
+# `marginal` does, but it is a frontend-visible vocabulary change with no renderer support, and
+# design-decisions B.6 recorded it as an open finding rather than smuggling it in mid-arc.
+SUITABILITY_ENUM = {"perennializes", "fruits_reliably", "marginal", "unsuitable",
+                    "survives_no_fruit"}
+
+# Values that must explain themselves. A cell that says the planting will not persist, will not
+# grow, or will grow and never feed you is making a claim the grower is owed a reason for.
+# `survives_no_fruit` belongs here for the same reason `unsuitable` does -- it is a stronger
+# statement than `marginal`, not a weaker one, and without the note it reads as a bare downgrade.
+NOTE_REQUIRED = {"marginal", "unsuitable", "survives_no_fruit"}
 
 
 def herbaceous_perennial_violations(crop):
@@ -66,9 +87,10 @@ def herbaceous_perennial_violations(crop):
             if suit not in SUITABILITY_ENUM:
                 V.append(f"{rk}.{z}: suitability {suit!r} not in {sorted(SUITABILITY_ENUM)}")
                 continue
-            if suit in ("marginal", "unsuitable") and not cell.get("suitability_note_seasoned"):
-                V.append(f"{rk}.{z}: a {suit} cell must carry suitability_note_seasoned "
-                         f"(the dormancy/chill reason, not a fake calendar)")
+            if suit in NOTE_REQUIRED and not cell.get("suitability_note_seasoned"):
+                V.append(f"{rk}.{z}: a {suit} cell must carry suitability_note_seasoned -- the "
+                         f"reason the grower is owed (what actually limits the crop here), not a "
+                         f"bare downgrade and not a fake calendar")
             if not cal:
                 V.append(f"{rk}.{z}: a suitability-marked cell must carry a non-empty calendar "
                          f"(the A32 honesty floor -- mark unsuitable, still show the honest cycle)")

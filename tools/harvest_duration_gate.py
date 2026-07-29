@@ -76,10 +76,18 @@ housekeeping ("cut irrigation", "cut them to the ground", "cut the ferns off/dow
 the ca_desert z10 note is the false-positive shape this guards against, and the test suite
 pins it.
 
-SOFT, and soft is a stage not a resting state (the zone_order_gate pattern). NOT yet wired into
-whole_crop_gate because that file carries the artichoke session's uncommitted A48. HARD-FLIP
-TRIGGER: fold in alongside A48/A49 once artichoke certifies. Precedent: control_ladder_gate,
-variety_resistance_gate, zone_order_gate.
+HARD as of 2026-07-28, wired into whole_crop_gate as **A50** (all four check families: STOP-SHAPE,
+RAMP-FIRST, RAMP-PROSE, and the per-cell REACH/END pass). It shipped SOFT on 2026-07-27 with the
+trigger "fold in alongside A48/A49 once artichoke certifies", which happened at GS #121 (canonical
+`05090b3c`); the other stated blocker, whole_crop_gate carrying an uncommitted A48, ended at commit
+`1a69e7d`. gate_all stayed 121/121 across the flip.
+
+NOTE ON THE A-NUMBER, since register row 27 phrased this flip as "fold STOP-SHAPE into the A39
+register-coverage floor". It lands as its own A-number instead. This module carries FOUR check
+families, and folding only STOP-SHAPE into A39 would have hard-flipped one of them and quietly left
+the other three soft -- including RAMP-PROSE, which is the check that caught nine stale asparagus
+strings. STOP-SHAPE is enforced on every certified crop either way, which is what the row was
+asking for. Precedent: control_ladder_gate, variety_resistance_gate, zone_order_gate.
 
 Usage: python3 tools/harvest_duration_gate.py [crops_data_final.json]
 Exit 1 on any violation.
@@ -102,7 +110,33 @@ _RANGE_SEP = r"(?:\s+to\s+|\s*-\s*to\s*-\s*|\s*[-–]\s*)"
 
 # Observable stop signals. Extend as archetypes join; an unknown value is a defect,
 # because the app dispatches display on it.
-STOP_SIGNALS = {"spear_diameter"}
+#
+# The value maps to whether `threshold_inches` is MEANINGFUL for that signal, and that is a
+# property of the observable rather than of the crop. `spear_diameter` is a measurement, so the
+# number is the rule and is required. `bract_opening` is a STATE CHANGE -- you watch the bud's
+# scales for the moment they loosen and spread, and you cut before it -- so there is no number to
+# carry, and none of the three T1 sources that state the rule gives one:
+#
+#   UC IPM  "harvested when the buds have grown to maximum size but before the bracts or leaves
+#            on the bud begin to spread open"
+#   USU     "Harvest buds when they reach full size but before the bracts (bud leaves) begin to open."
+#   TAMU    "A hot, dry climate causes artichoke buds to open quickly and destroys the tenderness
+#            of the edible parts."
+#
+# Requiring a diameter here would have forced the author to manufacture one, which is the exact
+# false-precision defect the rest of this gate exists to catch. Requiring its ABSENCE is the other
+# half: inches attached to a non-dimensional signal assert a threshold nobody published.
+#
+# NOTE THE SEMANTIC DIFFERENCE, because it is not just a different number. Asparagus's rule ends
+# the SEASON to protect the crown's reserves. Artichoke's ends the useful life of an INDIVIDUAL
+# BUD. No source states a season-ending, reserve-protecting stop for artichoke, and that absence
+# is real rather than unresearched -- you are picking a flower bud, not a shoot funded by a
+# storage root. The dual-register notes carry that distinction.
+STOP_SIGNALS = {"spear_diameter", "bract_opening"}
+
+# Signals whose rule IS a measurement, so threshold_inches is required. Any other known signal
+# must NOT carry one.
+DIMENSIONAL_SIGNALS = {"spear_diameter"}
 
 
 def _month(tok):
@@ -414,13 +448,21 @@ def stop_rule_violations(crop):
     if rule.get("signal") not in STOP_SIGNALS:
         out.append(f"STOP-SHAPE: harvest_stop_rule.signal {rule.get('signal')!r} is not one "
                    f"of {sorted(STOP_SIGNALS)}.")
+    sig = rule.get("signal")
     t = rule.get("threshold_inches")
-    if not (isinstance(t, list) and len(t) == 2
-            and all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in t)
-            and t[0] <= t[1]):
-        out.append(f"STOP-SHAPE: harvest_stop_rule.threshold_inches must be [min, max] "
-                   f"non-descending numbers, got {t!r}. Where sources disagree on the number "
-                   f"this CARRIES THE RANGE; equal values are allowed when they agree.")
+    if sig in DIMENSIONAL_SIGNALS:
+        if not (isinstance(t, list) and len(t) == 2
+                and all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in t)
+                and t[0] <= t[1]):
+            out.append(f"STOP-SHAPE: harvest_stop_rule.threshold_inches must be [min, max] "
+                       f"non-descending numbers for a dimensional signal ({sig!r}), got {t!r}. "
+                       f"Where sources disagree on the number this CARRIES THE RANGE; equal "
+                       f"values are allowed when they agree.")
+    elif sig in STOP_SIGNALS and t is not None:
+        out.append(f"STOP-SHAPE: harvest_stop_rule.threshold_inches is set to {t!r} but the "
+                   f"signal {sig!r} is not a measurement -- it is a state the grower watches "
+                   f"for. Attaching inches to it asserts a threshold no source published. Drop "
+                   f"the key and let the notes carry the observable.")
     for k in ("note_beginner", "note_seasoned"):
         if not isinstance(rule.get(k), str) or not rule[k].strip():
             out.append(f"STOP-SHAPE: harvest_stop_rule.{k} must be non-empty dual-register prose.")

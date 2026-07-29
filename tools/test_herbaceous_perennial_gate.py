@@ -81,9 +81,12 @@ assert any("productive_lifespan_years" in v for v in herbaceous_perennial_violat
 c = well_formed(); c["regions"]["northern_tier"]["plantings"].append({"track": "succession", "label": "fill"})
 assert any("succession" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
 
-# 8. bad suitability enum on a filled cell -> violation
-c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "fruits_reliably"
-assert any("suitability" in v and "fruits_reliably" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
+# 8. bad suitability enum on a filled cell -> violation. The probe value is deliberately one that
+#    LOOKS plausible: `annual_only` is the value the artichoke arc considered adding and declined
+#    (design-decisions B.6 -- a frontend-visible vocabulary change, recorded as an open finding
+#    rather than smuggled in). If it ever becomes legal it must be by a ruling, not by drift.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "annual_only"
+assert any("suitability" in v and "annual_only" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
 
 # 9. unsuitable cell missing the reason note -> violation
 c = well_formed(); c["regions"]["hawaii_tropical"]["resolved_by_zone"]["12"].pop("suitability_note_seasoned")
@@ -121,5 +124,65 @@ assert herbaceous_perennial_violations(c) == [], herbaceous_perennial_violations
 c = well_formed(); c["years_to_first_harvest"] = None
 assert any("years_to_first_harvest" in v for v in herbaceous_perennial_violations(c)), herbaceous_perennial_violations(c)
 
-assert SUITABILITY_ENUM == {"perennializes", "marginal", "unsuitable"}, SUITABILITY_ENUM
+# ---------------------------------------------------------------------------------------------
+# 18-22. THE ENUM IS THE ROSTER'S FIVE VALUES, not three (artichoke GS arc, 2026-07-28).
+#
+# WHY. This gate shipped with a three-value vocabulary because asparagus only ever needed three.
+# The roster actually publishes FIVE, measured on canonical ea3636e7: fruits_reliably 292,
+# marginal 180, unsuitable 165, survives_no_fruit 118, perennializes 25. The two the gate did not
+# know about are not new -- `survives_no_fruit` is authored on 118 cells across 17 crops and has a
+# RULED display behavior (flagged ornamental-only: "the plant lives and gives you no food, someone
+# may still want it"). A crop joining this archetype could not reach for either one.
+#
+# Artichoke is the case that needed it. In the tropics UF/IFAS's mechanism is that plants STAY
+# VEGETATIVE and never initiate buds -- the plant thrives and simply gives no artichokes, which is
+# `survives_no_fruit` exactly. Rating it `unsuitable` would hide a cell about a plant that grows
+# perfectly well there.
+#
+# This widens an enum, so the tests that matter are the ones proving it still REJECTS. #8 above
+# (annual_only) and #21 below are those.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"].update(
+    {"suitability": "survives_no_fruit",
+     "suitability_note_seasoned": "The plant grows well and never sets a bud, so it is foliage only."})
+assert herbaceous_perennial_violations(c) == [], herbaceous_perennial_violations(c)
+
+# 19. fruits_reliably accepted too -- admitted for symmetry so the archetype can express the whole
+#     roster vocabulary rather than a subset that happens to fit one crop.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "fruits_reliably"
+assert herbaceous_perennial_violations(c) == [], herbaceous_perennial_violations(c)
+
+# 20. survives_no_fruit REQUIRES the seasoned note. "This plant will live and give you nothing to
+#     eat" is a stronger claim than `marginal`, not a weaker one, so it joins the note-bearing set
+#     rather than riding in as a free pass alongside the positive verdicts.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "survives_no_fruit"
+v = herbaceous_perennial_violations(c)
+assert any("northern_tier" in x and "suitability_note_seasoned" in x for x in v), v
+
+# 21. ADVERSARIAL: the widened enum must still bite. A near-miss spelling of a LEGAL value is the
+#     realistic defect (a typo in an authoring script, not an invented word), and it must bounce.
+for bogus in ("survives_no_fruits", "SURVIVES_NO_FRUIT", "fruits_reliable", "no_fruit", ""):
+    c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = bogus
+    v = herbaceous_perennial_violations(c)
+    assert any("suitability" in x and "not in" in x for x in v), (bogus, v)
+
+# 22. fruits_reliably needs NO note -- it is a positive verdict, the parallel of perennializes.
+c = well_formed(); c["regions"]["northern_tier"]["resolved_by_zone"]["4"]["suitability"] = "fruits_reliably"
+assert not any("suitability_note_seasoned" in x for x in herbaceous_perennial_violations(c))
+
+assert SUITABILITY_ENUM == {"perennializes", "marginal", "unsuitable",
+                            "survives_no_fruit", "fruits_reliably"}, SUITABILITY_ENUM
+
+# 23. REAL-DATA REGRESSION: asparagus, the only crop on the archetype today, stays clean. Widening
+#     an enum cannot break existing data, but the note requirement added in #20 could have, so this
+#     is the check that earns the change rather than assuming it.
+import json  # noqa: E402
+_here = os.path.dirname(os.path.abspath(__file__))
+_data = json.load(open(os.path.join(_here, "..", "crops_data_final.json"), encoding="utf-8"))
+_seen = 0
+for _c in _data["crops"]:
+    if _c.get("archetype") == "herbaceous_perennial":
+        _seen += 1
+        assert herbaceous_perennial_violations(_c) == [], (_c.get("slug"), herbaceous_perennial_violations(_c))
+assert _seen >= 1, "expected at least asparagus on the archetype"
+
 print("herbaceous_perennial_gate: all tests passed")
