@@ -44,10 +44,36 @@ assert region_prose_violations(crop(
     seasoned="Zone 8 and zone 9 are unsuitable.", archetype="tree_fruit")) == []
 
 # 1. well-formed region -> clean
+#    HISTORY, 2026-07-29: this fixture's beginner register used to read "Replant each year in zones
+#    8 and 9" over two `marginal` cells, and asserted clean. When `annual_only` shipped as a sixth
+#    suitability value (2026-07-28) it made "replant each year" a RATING ASSERTION, so the fixture
+#    started encoding a genuine contradiction while still asserting it was clean -- and this
+#    module-level assert has been failing at import ever since, which meant the annual_only
+#    extension shipped with its own regression coverage broken. The GATE was right; the fixture was
+#    stale. Rewritten to prose that describes `marginal` without claiming annual behavior.
 assert region_prose_violations(crop(
     {"8": "marginal", "9": "marginal"},
-    seasoned="Zone 8 and zone 9 are both marginal: the planting does not persist.",
+    seasoned="Zone 8 and zone 9 are both marginal: the planting persists, but never with vigor.",
+    beginner="In zones 8 and 9 the bed hangs on, though it stays weak.")) == []
+
+# 1b. annual_only, the coherent direction -> clean. "Replant each year" over cells actually rated
+#     annual_only is correct writing and must not flag.
+assert region_prose_violations(crop(
+    {"8": "annual_only", "9": "annual_only"},
     beginner="Replant each year in zones 8 and 9.")) == []
+
+# 1c. annual_only, the CONTRADICTION direction -> caught. This is what fixture 1 had been silently
+#     asserting was clean. A cell rated `marginal` is a plant that persists poorly (artichoke keeps
+#     three cells marginal precisely because they are SHORT-LIVED PERENNIALS, three to four
+#     productive years); prose telling the reader to replant it every year describes `annual_only`.
+#     One finding PER BOUND ZONE: the clause names two, so both cells are convicted.
+v_annual = region_prose_violations(crop(
+    {"8": "marginal", "9": "marginal"},
+    beginner="Replant each year in zones 8 and 9."))
+assert len(v_annual) == 2, v_annual
+assert all("annual_only" in m and "marginal" in m for m in v_annual), v_annual
+assert {"zone 8", "zone 9"} == {z for z in ("zone 8", "zone 9")
+                                if any(z in m for m in v_annual)}, v_annual
 
 # ---------------------------------------------------------------------------- SUIT-BOUND
 # 2. THE ONE REAL DEFECT THIS GATE FOUND ON LIVE DATA, reproduced verbatim.

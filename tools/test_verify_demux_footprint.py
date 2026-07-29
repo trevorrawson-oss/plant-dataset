@@ -70,7 +70,12 @@ def test_disallowed_nested_cell_key():
     cell = bp["regions"][rk]["resolved_by_zone"][zk]
     assert "resolution_method" in cell
     cell["resolution_method"] = "CORRUPTED"
-    assert len(crops_of(data)) == 124
+    # DERIVED, not hardcoded (2026-07-29): this said `== 124` and rotted as the roster grew to 128.
+    # It is only a did-the-canonical-load sanity check, so cross-check the file's own declared
+    # total rather than freezing a number that changes every time a crop is added.
+    assert len(crops_of(data)) == data["total_crops"], (
+        "roster length disagrees with the canonical's own total_crops",
+        len(crops_of(data)), data["total_crops"])
     path = write_compact(data)
     try:
         result = run_auditor(path, "bell-pepper", "populate")
@@ -97,7 +102,8 @@ def test_allowed_populate_key():
         "sources": [],
         "anchoring_urls": {},
     }
-    assert len(crops_of(data)) == 124
+    # DERIVED, not hardcoded (2026-07-29): see the note in test_disallowed_nested_cell_key.
+    assert len(crops_of(data)) == data["total_crops"]
     path = write_compact(data)
     try:
         result = run_auditor(path, "bell-pepper", "populate")
@@ -115,7 +121,8 @@ def test_clean_stage_allowlist():
     cell = bp["regions"][rk]["resolved_by_zone"][zk]
     assert "harvest_end" in cell
     cell["harvest_end"] = "CHANGED-DATE"
-    assert len(crops_of(data)) == 124
+    # DERIVED, not hardcoded (2026-07-29): see the note in test_disallowed_nested_cell_key.
+    assert len(crops_of(data)) == data["total_crops"]
     path = write_compact(data)
     try:
         populate_result = run_auditor(path, "bell-pepper", "populate")
@@ -141,7 +148,8 @@ def test_regions_absent_regression():
     bp = find_crop(data, "bell-pepper")
     assert "regions" in bp
     del bp["regions"]
-    assert len(crops_of(data)) == 124
+    # DERIVED, not hardcoded (2026-07-29): see the note in test_disallowed_nested_cell_key.
+    assert len(crops_of(data)) == data["total_crops"]
     path = write_compact(data)
     try:
         result = run_auditor(path, "bell-pepper", "populate")

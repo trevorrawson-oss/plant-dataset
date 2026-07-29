@@ -125,6 +125,23 @@ def test_batch_shape():
           f"{last['from']}->{last['value']}; byte-identical to committed batch)")
 
 
+# DISCHARGED ONE-SHOT (guard added 2026-07-29). build_corn_family_patch reads its three staged
+# crops from session-scoped /private/tmp/*.json files that no longer exist -- the corn-family arc
+# shipped 2026-07-16 and those temp inputs went with the session. The builder can no longer run, so
+# this test hard-failed with a FileNotFoundError and sat in the "pre-existing failures" bucket,
+# where it added noise and hid nothing. Reconstructing the inputs would mean FABRICATING the staged
+# crops, which is worse than not testing. So: skip loudly, and name what is not covered.
+_STAGED = ["/private/tmp/field_corn.json", "/private/tmp/popcorn.json",
+           "/private/tmp/flint_corn.json"]
+
 if __name__ == "__main__":
+    _missing = [p for p in _STAGED if not os.path.exists(p)]
+    if _missing:
+        print("SKIP build_corn_family_patch: staged inputs are gone "
+              f"({len(_missing)}/{len(_STAGED)} missing, e.g. {_missing[0]}).")
+        print("  The corn-family arc shipped 2026-07-16; its /private/tmp staging was "
+              "session-scoped. NOT COVERED: the builder's byte-for-byte reproduction of "
+              "tools/batches/corn_family_add.json. Restore the staged crops to re-enable.")
+        sys.exit(0)
     test_batch_shape()
     print("ALL build_corn_family_patch TESTS PASSED")

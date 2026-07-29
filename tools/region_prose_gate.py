@@ -78,9 +78,13 @@ and the reason is that the defect it looks for is not archetype-specific. Any cr
 prose and per-cell ratings can contradict itself.
 
 Usage:
-  python3 tools/region_prose_gate.py [PATH]          # archetype-scoped (the gate)
-  python3 tools/region_prose_gate.py [PATH] --all    # roster-wide (the audit)
+  python3 tools/region_prose_gate.py [PATH]          # archetype-scoped (standalone default)
+  python3 tools/region_prose_gate.py [PATH] --all    # roster-wide (matches the wired gate)
 Exit 1 on any violation in the scoped run.
+
+NOTE on the two scopes: whole_crop_gate calls region_prose_violations(crop, scoped=False),
+so **A51 as wired is roster-wide** -- the standalone default above is the narrower
+archetype run kept for fast iteration. Use --all to reproduce what the suite enforces.
 """
 import json
 import re

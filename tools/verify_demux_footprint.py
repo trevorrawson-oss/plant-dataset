@@ -32,8 +32,14 @@ def main():
     base = json.load(open(a.base, encoding="utf-8"))
     cc = cand["crops"] if isinstance(cand, dict) and "crops" in cand else cand
     bc = base["crops"] if isinstance(base, dict) and "crops" in base else base
-    if len(cc) != 124 or len(bc) != 124:
-        problems.append(f"crop count: base={len(bc)} candidate={len(cc)} (want 124)")
+    # RELATIVE, not absolute (2026-07-29): this asserted `!= 124` on BOTH sides, freezing the
+    # roster size as of the de-mux arc. At 128 crops it reported a false problem on every run
+    # ("base=128 candidate=128 (want 124)") -- a footprint auditor failing on a footprint that is
+    # in fact clean. The invariant it actually wants is that the candidate neither ADDS nor DROPS a
+    # crop relative to its own base, which is roster-size independent.
+    if len(cc) != len(bc):
+        problems.append(f"crop count changed: base={len(bc)} candidate={len(cc)} "
+                        f"(a promote must not add or remove crops)")
     by_slug_c = {c.get("slug"): c for c in cc}
     for b in bc:
         slug = b.get("slug")

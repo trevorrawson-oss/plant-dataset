@@ -47,11 +47,37 @@ def read_latest():
 def static_header():
     """Everything from the top of the existing file through the first `---` rule
     (the title + SESSION PROTOCOL block). Carried through verbatim so it stays in
-    sync with whatever discipline is on disk."""
+    sync with whatever discipline is on disk.
+
+    HARDENED 2026-07-29 -- this function had a FAIL-OPEN that armed a file-destroying bug.
+    It used to `return head + "---" if sep else text`, i.e. when the `---` separator was
+    ABSENT it returned THE ENTIRE FILE as the "header", and the caller then appended every
+    generated section to it. One regen would have duplicated the whole 351KB file, and the
+    next would double it again.
+
+    That was not hypothetical: commit 93d5a59's regen dropped the title + SESSION PROTOCOL
+    block (and with it the leading `---`), so the fail-open sat armed for 40+ commits while
+    CLAUDE.md told every session the binding protocol lived in that header.
+    test_gen_current_state.py was failing on exactly that assertion the whole time and was
+    misread as stale test rot.
+
+    A missing separator now ABORTS. The header is not reconstructable from the file once
+    lost -- it can only come from git history -- so guessing is worse than stopping."""
     if not os.path.exists(STATE):
         return "# plant -- CURRENT STATE (live surface)\n\n---\n"
     text = open(STATE).read()
     head, sep, _ = text.partition("\n---\n")
+    if not sep:
+        raise SystemExit(
+            "ABORT: CURRENT_STATE.md has no '---' separator, so the static header cannot be "
+            "located. Returning the whole file here would duplicate it into the regenerated "
+            "output. Restore the title + SESSION PROTOCOL block (recover it from git history, "
+            "e.g. `git show 93d5a59^:CURRENT_STATE.md | head -20`) and re-run.")
+    if "SESSION PROTOCOL" not in head:
+        raise SystemExit(
+            "ABORT: the block above CURRENT_STATE.md's first '---' carries no SESSION PROTOCOL "
+            "header. CLAUDE.md binds every session to that header, and a regen cannot "
+            "reconstruct it. Restore it from git history and re-run.")
     return head + "\n---\n" if sep else text
 
 

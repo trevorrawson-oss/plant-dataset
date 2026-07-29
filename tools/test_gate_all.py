@@ -31,7 +31,16 @@ def _run_cli(path):
 
 # ---- clean canonical: every certified crop passes; shells excluded from the run ----
 cert, failed = run(_CANON)
-assert len(cert) == 114, ("expected 114 certified crops in the run", len(cert))
+# DERIVED, not hardcoded (2026-07-29): this said `== 114` and rotted at every cert, reading as a
+# suite failure when nothing was wrong (114 -> 121 by the artichoke arc). The intent is that the
+# run covers EXACTLY the certified set, so compute that set from the canonical instead.
+with open(_CANON, encoding="utf-8") as _fh:
+    _expected = {c["slug"] for c in json.load(_fh)["crops"]
+                 if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"}
+assert set(cert) == _expected, (
+    "gate_all's run must cover exactly the verified_gs_arc set",
+    sorted(_expected - set(cert)), sorted(set(cert) - _expected))
+assert len(cert) >= 114, ("the certified roster must never shrink below its 2026 floor", len(cert))
 assert failed == [], ("clean canonical: no certified crop should fail whole_crop_gate", failed)
 assert "olive" not in cert and "button-mushroom" not in cert, ("uncertified §E shells must be excluded", cert)
 

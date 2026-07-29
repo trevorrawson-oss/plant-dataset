@@ -22,7 +22,20 @@ def test_pnw_batch_shape():
     prov = top["$.region_chill_delivered_provenance"]
     assert prov["op"] == "replace" and "from" in prov
     assert prov["value"].startswith(prov["from"])  # appends, never truncates the prior note
-    assert "pnw" in prov["value"][len(prov["from"]):].lower()  # the pnw note was appended
+    # DISCHARGED PREMISE (2026-07-29). This asserted the pnw note was APPENDED, which can only
+    # hold against a PRE-PNW canonical. PNW promoted for real on 2026-07-15, so the live
+    # `region_chill_delivered_provenance` already names pnw and the builder correctly appends
+    # NOTHING (verified: value == from, appended tail ''). That idempotence is right behavior, so
+    # the assertion is checked only while the region is still un-promoted; once promoted, we assert
+    # the idempotence instead. The test had been failing since that promote and read as a defect.
+    _already = "pnw" in prov["from"].lower()
+    if _already:
+        assert prov["value"] == prov["from"], (
+            "pnw is already in the live provenance, so the builder must be a no-op here",
+            prov["value"][len(prov["from"]):])
+        print("  note: pnw already promoted -- asserted builder idempotence instead of append")
+    else:
+        assert "pnw" in prov["value"][len(prov["from"]):].lower()  # the pnw note was appended
 
 
 def test_no_duplicate_slugs():

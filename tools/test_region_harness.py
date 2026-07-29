@@ -58,7 +58,11 @@ def test_span_key_mismatch_fails():
 
 
 def test_missing_pnw_fails_a31():
-    ok, out = region_harness.gate_crop("pnw", PNW_SPAN, "broccoli", {})   # no pnw cell
+    # `None` EXPLICITLY REMOVES the region. Passing `{}` used to mean "no pnw cell", but the
+    # harness builds its scratch canonical from the REAL one, so once pnw actually promoted
+    # (2026-07-15) broccoli carried a genuine pnw cell and this assertion inverted -- the gate
+    # passed because the data was correct. Removal has to be stated, not implied.
+    ok, out = region_harness.gate_crop("pnw", PNW_SPAN, "broccoli", {"broccoli": None})
     assert not ok and "pnw" in out, out
     print("  ok: missing pnw cell bounces (A31 region roster floor)")
 

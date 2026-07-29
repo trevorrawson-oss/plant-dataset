@@ -37,6 +37,20 @@ def check_raises(name, fn):
 # ---------------------------------------------------------------------------
 # 1. Real-batch test: against the live canonical + the actual staged inputs.
 # ---------------------------------------------------------------------------
+# DISCHARGED ONE-SHOT (guard added 2026-07-29). The staged inputs below are session-scoped
+# /private/tmp files from the berry variety pilot, which shipped 2026-07-16; they no longer exist,
+# so this module raised FileNotFoundError AT IMPORT and sat in the "pre-existing failures" bucket.
+# Reconstructing them would mean FABRICATING the staged varieties, which is worse than not testing.
+# Skip loudly and name what is uncovered. (Note an import-time failure is the worst kind of quiet:
+# it yields no test names at all, so nobody can see what stopped running.)
+_missing = [p for p in (STRAWBERRY_VARIETIES, HERO_BACKFILL) if not os.path.exists(p)]
+if _missing:
+    print(f"SKIP build_berry_pilot_patch: staged inputs are gone ({', '.join(_missing)}).")
+    print("  The berry variety pilot shipped 2026-07-16; its /private/tmp staging was "
+          "session-scoped. NOT COVERED: the real-batch op-count/shape assertions below. "
+          "Restore the staged inputs to re-enable.")
+    sys.exit(0)
+
 raw = open(CANON, "rb").read()
 sha = hashlib.sha256(raw).hexdigest()
 data = json.loads(raw)

@@ -69,6 +69,16 @@ def scratch_canonical(region_id, staged_cells, path):
     data = json.load(open(CANON, encoding="utf-8"))
     by = {c["slug"]: c for c in data["crops"]}
     for slug, cell in staged_cells.items():
+        # `None` = REMOVE this region from that crop. Added 2026-07-29 because the old way of
+        # simulating "this crop has no cell for the region" -- simply omitting it from
+        # staged_cells -- stopped working once a region actually SHIPPED into the canonical. This
+        # function starts from the real CANON, so for a live region (pnw, mid_atlantic, ...) an
+        # omitted crop still carries its real cell and A31's roster floor correctly passes. The
+        # test that relied on omission had been failing ever since PNW promoted (2026-07-15),
+        # which read as a broken gate when it was a stale premise.
+        if cell is None:
+            (by[slug].get("regions") or {}).pop(region_id, None)
+            continue
         by[slug].setdefault("regions", {})[region_id] = cell
     src_file = os.path.join(HERE, "staging", f"{region_id}_sources.json")
     if os.path.exists(src_file):

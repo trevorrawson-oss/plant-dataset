@@ -25,8 +25,16 @@ assert "SESSION PROTOCOL" in gen, "generated file dropped the protocol header"
 for anchor in ("lettuce", "cherry", "beefsteak"):
     assert re.search(anchor + r".{0,30}PASS", gen, re.I), f"generated gate-record missing {anchor} PASS"
 
-# 4. region fill state is generated (all anchors 10/10 today)
-assert "10/10" in gen or "10 / 10" in gen, "generated region-fill state missing the 10/10 fill"
+# 4. region fill state is generated, at whatever the CURRENT roster width is.
+#    DERIVED, not hardcoded (2026-07-29): this assertion said "10/10" and rotted the moment the
+#    Tier-2 region belt took the roster 10 -> 16, then masked the REAL failure above it (the
+#    dropped SESSION PROTOCOL header) because the run died here first. A hardcoded roster width
+#    in a test guarantees a false failure at every region addition.
+_regions = re.search(r"(\d+)\s*/\s*(\d+) region cells filled", gen)
+assert _regions, "generated region-fill state missing an 'N/N region cells filled' line"
+_filled, _total = int(_regions.group(1)), int(_regions.group(2))
+assert _filled == _total, f"first reported anchor is not fully filled: {_filled}/{_total}"
+assert _total >= 10, f"roster width {_total} is below the 10 regions that existed at cert"
 
 # 5. flip gates reflect launch_ready true / verified_gs_arc
 assert "verified_gs_arc" in gen, "generated flip-gates missing the status"
