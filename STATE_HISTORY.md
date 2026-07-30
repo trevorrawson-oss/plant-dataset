@@ -6,6 +6,201 @@
 
 ---
 
+## 2026-07-29 (fourth promote, same session) -- PUMPKIN's desert SPRING re-derivation: closing a defect I introduced
+
+**Canonical `6eddf48f` -> `13d42f95` (fourth guarded promote; 5 cells x 7 keys + 1 finding). Day total: `dd24b180` -> `13d42f95`, 25 value cells across 10 crops + 21 documentation findings, count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
+
+### The defect, and that it was mine
+
+Promote 1/4 moved the four winter cucurbits off their `Jan 15` opening by **copying z9's already-correct `Feb 1 - Mar 1`**. That was right for acorn / butternut / spaghetti squash, whose UC row is `Feb-March; Aug` -- February is explicitly permitted. It was **wrong for pumpkin**, which sits on a *different* UC row:
+
+| document | winter squash | pumpkin |
+|---|---|---|
+| UC Table 13.2, Desert Valleys | `Feb-March; Aug` -- February permitted | `March-June` -- **no February** |
+| U of A AZ1005, Maricopa | Mar 1 / Mar 15 (+ Jul 1 / Jul 15 / Aug 1) | Mar 1 / Mar 15 (+ Jul 1 / Jul 15 / Aug 1) |
+
+So batch 1 improved pumpkin from `Jan 15` to `Feb 1` and left it a month early.
+
+**THE GENERALIZABLE LESSON: copying a correct sibling is safe only when the sibling's own source row covers the target crop.** It did for the three winter squashes. It did not for pumpkin.
+
+### Both desert regions were contradicted, and low_desert_az is the cleaner case
+
+- `ca_desert` z9/z10/z11: `Feb 1 - Mar 1` vs UC's `March-June`.
+- `low_desert_az` z9/z10: `Feb 15 - Mar 15` vs AZ1005's `Mar 1` / `Mar 15`. **Those cells cite AZ1005 by its correct PATHED url** (`extension.arizona.edu/.../az1005-2018.pdf`), so the cell was contradicted by its own directly-cited governing document -- **no geography question at all**, unlike the California cells where AZ1005 is only a climatic analogue.
+
+Both therefore converge on one window, which is correct for two adjacent Sonoran low-desert regions.
+
+### The re-derivation (not a one-line shift)
+
+- `plant_out` -> **`Mar 1 - Mar 15`**: starts where both documents start, spans exactly AZ1005's two pumpkin marks, sits inside UC's `March-June`.
+- `harvest` -> **`Jun 15 - Jun 30`**, derived from **pumpkin's own cross-region offset convention** rather than an invented number: its hot-desert cells run start+103..106 (`ca_desert`) and start+106..107 (`low_desert_az`), which applied to Mar 1 / Mar 15 give Jun 15 / Jun 30 after month-boundary snapping. DTM `[85, 120]` (mid 100), so the window sits inside the crop's own range.
+- `calendar` -> February stops being a planting month (`plant` -> `cold_pause`), which is semantically right because the binding constraint is **soil temperature**, not frost.
+
+**UC's `March-June` was deliberately NOT adopted whole.** It appears to merge the desert's two cycles into one envelope (a March spring crop and a June-onward Halloween crop), while our model and AZ1005 both keep a March spring crop separate from a Jul/Aug fall crop. Widening spring to June would collapse a two-cycle structure both the data and AZ1005 maintain.
+
+The `Jul 1 - Jul 31` second planting is untouched, asserted unmoved mid-apply, and its own provenance gap stays recorded as `ca_desert_fall_cycle_provenance_gap`.
+
+Guards adversarially tested **11/11**, including: fall-cycle-altered aborts, no-fall-cycle-to-preserve aborts, only-pumpkin-changed, all 5 cells landing identical with `Feb = cold_pause`, and fall cycle provably preserved.
+
+### HELD BACK on purpose
+
+`ca_desert` pumpkin still cites the bare `ucanr.edu` / `mg.ucanr.edu` roots. Now that its spring window matches the pathed UC table, that would be a **clean** repoint -- but mixing a value change with a citation change in one promote is exactly what the arc warns against. Flagged as a citation-arc candidate, not done here.
+
+### Gauntlet
+
+`gate_all` **121/121 PASS**; `whole_crop_gate pumpkin` PASS; `calendar_coherence` / `harvest_duration` / `numeric_sanity` / `cross_consistency` / `soil_temp_floor_scan` all exit 0; `release_verify` **"no new violations introduced"**; COMPACT preserved. Suite **203 passed / 0 failed**.
+
+### THE HONEST ACCOUNTING -- what four promotes did and did NOT do
+
+**The citation arc is untouched: still 681 SOLE pairs / 170 decisions / 32 document hunts.** Today was *correctness* work, and **not one bare host was repointed**. What closed was the question the sample pass existed to answer, plus the defects it surfaced: 25 value cells, 21 findings, one gate hard-flipped, one region ruled a sourced exception, two sibling checks measured and rejected. The remaining arc is unchanged in size, cheapest hunt first: `mid_south`/`uada_ext` (22 crops), then `mid_atlantic`/`ncsu_ext` (14).
+
+## 2026-07-29 (third promote, same session) -- ca_desert FALL-CYCLE adjudication: a FINDING, not an edit
+
+**Canonical `04fcbc74` -> `6eddf48f` (third guarded promote; 10 findings, ZERO value changes). Day total: `dd24b180` -> `6eddf48f`, 10 crops / 20 value cells + 10 documentation findings, count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
+
+### The adjudication
+
+Trevor approved working the ca_desert fall windows. The divergence from the UC table these cells cite is real:
+
+| crop group | ours | UC (Desert Valleys) | AZ1005 (Maricopa, AZ) |
+|---|---|---|---|
+| winter squash (acorn/butternut/spaghetti) | `Jul 1 - Jul 31` | `Aug` | Jul 1 / Jul 15 / Aug 1 |
+| pumpkin | `Jul 1 - Jul 31` | **none** (`March-June`) | Jul 1 / Jul 15 / Aug 1 |
+| cucumbers (x4) | `Sep 1 - Sep 30`(z9) / `Sep 1 - Oct 1` | `Aug` | Aug 15 / Sep 1 / Sep 15 |
+| summer squash (x2) | same | `Aug-Sep` | Aug 15 / Sep 1 |
+
+**NO DATES WERE CHANGED, and that is the finding.** Three reasons, in order of weight:
+
+1. **Nothing shows the windows are wrong.** A July sowing of winter squash / pumpkin for an Oct-Nov desert harvest is standard low-desert practice, and AZ1005 marks exactly it. Our Sep 1 cucumber start sits at the late edge of what both documents allow, which is *conservative* for a home gardener -- it avoids sowing into a 110°F September.
+2. **Trimming on Arizona's authority would be the geography stretch the arc warns about.** AZ1005 is titled "Vegetable Planting Calendar for **Maricopa County**". It is a legitimate CLIMATIC ANALOGUE for Imperial/Coachella -- same Sonoran low desert -- but it is not a California document, and narrowing a Californian window to its last mark would assert coverage it does not claim.
+3. **UC publishes no California-desert fall window at all.** Searched and read this session: the statewide Table 13.2 (one coarse row for all "Desert Valleys", self-limited to "approximate"); **UC ANR's own Imperial County Planting Calendar** (`ucanr.edu/sites/default/files/2020-10/337028.pdf`, Rev 8/2017) -- a genuine UC document, but its warm-weather table runs **Jan-Apr** and its cool-weather table **Sep-Dec**, so it has **no May-Aug columns** and cannot address a summer-sown fall cycle; UC IPM cucurbits (no planting dates); UC VRIC cucumber PDF (404); and UC MG Riverside's linked "planting calendar", already documented as a **Grangetto's retail chart served from a ucanr.edu URL**.
+
+So **the quantity does not exist in the California literature for this region and cycle** -- the same shape as the `harvest-start-is-not-a-published-datum` lesson. That makes this a CONTENT finding, and the kickoff is explicit that the content kind must be **surfaced**, not quietly repointed at a plausible-looking page. Recording it *is* the deliverable.
+
+`tools/promote_ca_desert_fall_window_provenance.py` appends one finding (`ca_desert_fall_cycle_provenance_gap`, two group-specific variants) to each of the 10 crops. It **verifies the described fall cycle actually exists on each crop before annotating it**, and then proves by independent full-tree diff that **nothing outside `open_findings` moved**. Guards adversarially tested **8/8**, including a case where the described cycle is absent (aborts rather than attaching a finding to a cell it does not describe) and an independent no-value-drift diff.
+
+### NEW RESIDUAL, and it is mine
+
+**`pumpkin`'s ca_desert SPRING window is `Feb 1 - Mar 1`, while UC gives pumpkins `March-June` and AZ1005's earliest pumpkin mark is `Mar 1`. Neither source has February.** Winter squash legitimately *is* February (UC `Feb-March`), and **promote 1/3 copied the winter-squash sibling shape into pumpkin rather than checking pumpkin's own row** -- so that batch improved pumpkin from `Jan 15` to `Feb 1` but did not fully land it. Owed a proper re-derivation rather than a one-line shift, because UC's `March-June` also implies the window should extend into June, which ours does not.
+
+The general lesson: **copying a correct sibling is safe only when the sibling's own source row covers the target crop.** It did for the three winter squashes; it did not for pumpkin, which sits on a different UC row.
+
+### Gauntlet
+
+`gate_all` **121/121 PASS**; `whole_crop_gate` PASS x10; `calendar_coherence` / `harvest_duration` / `numeric_sanity` / `cross_consistency` / `soil_temp_floor_scan` all exit 0; `release_verify` **"no new violations introduced"** with only its known single-crop-pilot-shaped footprint CONCERN naming exactly the 10 intended crops; COMPACT preserved (128 crops, `total_crops` 128, no trailing newline). Suite **203 passed / 0 failed**.
+
+### Owed
+
+`pumpkin`'s spring re-derivation; the 3 citation-only contradicted shapes; then `mid_south`/`uada_ext` (22 crops, the cheapest of the 32 document hunts).
+
+## 2026-07-29 (later, same session) -- ca_desert SOIL-TEMPERATURE FLOOR, BATCH 2/2 + the scan HARD-FLIPPED
+
+**Canonical `2702917e` -> `04fcbc74` (second guarded promote; 6 crops / 12 cells). Cumulative for the day: `dd24b180` -> `04fcbc74`, 10 crops / 20 cells, count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
+
+### The 18 reported cells were 12 defects + 6 SOURCED EXCEPTIONS
+
+Trevor approved working the 18 the scan still reported after batch 1. Reading them rather than fixing them split the set:
+
+**RULED NOT A DEFECT -- the 6 `utah_dixie` z8 cells.** Their region note already documented the reason, before this scan existed: *"Direct-sow around March 15, the Group C (Tender) date for St. George, about two weeks ahead of the March 30 average last frost; **the table's explicit local date runs earlier than a generic frost-relative rule would**"* -- citing USU Extension's *Suggested Vegetable Planting Dates for Utah*. CLAUDE.md is explicit that **explicit source dates govern over arithmetic**. So these are correct and were left untouched. This is the "read every finding, do not count them" rule landing again: a third of my own reported set was legitimate, and the justification was already in the data.
+
+That ruling is now ENCODED in the scan's `RULED` table rather than left in prose, so it cannot be re-litigated -- and a `RULED` entry **requires a sourced reason string**, which records that a human read the cell rather than muted it.
+
+### PROMOTE 2/2 -- and why it is worse than batch 1
+
+The 12 `ca_desert` z10/z11 cells (cucumber, slicing-cucumber, english-cucumber, pickling-cucumber, zucchini-courgette, yellow-summer-squash) opened their SPRING window on `Jan 15` against a `Jan 15` last frost.
+
+**These cells do NOT cite a bare host.** They already cite the PATHED `ucanr.edu/program/uc-master-gardener-program/time-planting`, and that page's own table gives, for "Desert Valleys" (Imperial and Coachella): **cucumbers `Feb-May; Aug`** and **squash, summer `Feb-Mar; Aug-Sep`**. The cell cited the exact document that contradicts it. AZ1005 agrees independently: earliest seeding marks are `Feb 15` for both Cucumbers and Squash, Summer. As with batch 1, the crops' own `start_method` copy already stated the real constraint (soil "at least 70 degrees F at 2 inches; seed will not germinate below about 50 degrees F").
+
+**The fix is deliberately NARROWER than batch 1.** These are TWO-CYCLE cells -- a spring and a fall window comma-joined, with a Jul/Aug `heat_pause` between. Only the SPRING half is wrong. The FALL half is bound by FIRST frost, which genuinely differs by zone (z10/z11 `Dec 31` vs z9 `Dec 15`), so z10/z11 correctly run later than z9 there (`last_plant_date` `Oct 1` vs `Sep 30`, `harvest_end` `Dec 20` vs `Dec 10`, `succession_fall` `Sep 1, Sep 22` vs `Sep 1, Sep 30`). **Copying z9 wholesale, which batch 1 could safely do, would have DESTROYED that correct differentiation.** So the script splices ONLY z9's spring segment and preserves each target's own fall segment byte-for-byte, then asserts mid-apply that the preserved fields did not move.
+
+Fields changed per cell: `plant_out`, `harvest`, `harvest_start`, `first_plant_date`, `succession_spring`, `calendar[0]` (`plant` -> `cold_pause`) and `calendar[2]` (`harvest` -> `plant`). `succession_spring` is the field a naive edit would have missed -- it carried `Jan 15, Feb 5, Feb 26` and had to become z9's `Feb 1, Feb 22, Mar 15`.
+
+`tools/promote_ca_desert_cucurbit_spring_floor.py`, SHA-pinned to `2702917e`, **guards adversarially tested 9/9** on scratch copies: SHA drift, half-fixed cell, corrupted z9 template, a z9 template that is not two-cycle (split guard), exact footprint with no stray diffs, **fall-cycle fields provably untouched**, compactness, and a double-run abort.
+
+### `soil_temp_floor_scan.py` HARD-FLIPPED
+
+Unruled count is now **0**, so the check went from soft to exit-coded (returns 1 on any unruled hit). It is **roster-wide, so it is NOT a whole_crop_gate A-number and `gate_all` does not reach it** -- `gate_all` only loops `whole_crop_gate` per crop -- so it belongs in the release gauntlet list alongside `calendar_coherence_gate` / `numeric_sanity_gate`.
+
+New `tools/test_soil_temp_floor_scan.py`, **8 tests passing on BOTH runners**: catches sown-ON-frost, sown-BEFORE-frost, and the two-cycle spring-half variant; ignores transplanted crops **and proves `propagule` is what excludes them** (flip rosemary to `seed` and it must appear); ignores cool-soil crops; confirms the ruled exception is suppressed yet still visible and carries its reason; and asserts exit 1 on an injected defect vs exit 0 on the clean canonical. Guard placement follows the lesson from earlier the same day -- in the test body, never under `__main__`.
+
+### Two SIBLING checks measured, NEITHER shipped
+
+Answering "should we scan for this problem elsewhere" with evidence rather than a list:
+- **frost-tail check** (frost-tender crop whose `harvest_end` runs past first frost): 56 hits, and **they are MY OWN measurement artifact** -- a +/-182-day wrap-around read `harvest_end Jun 15` against `first_frost Dec 15` as "182 days after" when Jun 15 is really six months before. The check needs redesigning before it means anything. Recorded so nobody re-derives the same bug.
+- **DTM-vs-window check** (spring `harvest_start` earlier than `plant_out` + minimum days-to-maturity): 29 cells but only **3 crops**, collapsing to 3 CROP-LEVEL questions -- `pole-beans` shows harvest starting 50 days after sowing against a stated min DTM of 60, *identically across every region*, so it is one modeling choice replicated, not 20 cell errors. Genuinely worth a later pass.
+
+Base rate worth remembering: of the three checks built in this family today, **one shipped, one flooded, one was an artifact of my own logic.** Build them one at a time and read the output before believing it.
+
+### Gauntlet
+
+`gate_all` **121/121 PASS**; `whole_crop_gate` PASS x10; `verbatim_scan` 0 HARD; `register_completeness_gate` PASS; `calendar_coherence` / `harvest_duration` / `numeric_sanity` / `cross_consistency` / `soil_temp_floor_scan` all exit 0; `calendar_basis` 12 **CONFIRMED PRE-EXISTING** (mushroom archetype, verified on the pre-change base); `release_verify` **"no new violations introduced"**, its one CONCERN being the known single-crop-pilot-shaped footprint check naming exactly the 10 intended crops; COMPACT preserved (128 crops, `total_crops` 128, no trailing newline). Test suite **203 passed / 0 failed**.
+
+### Owed
+
+Trevor's call on the 3 citation-only contradicted shapes, and on the ca_desert **FALL** windows (ours `Sep 1 - Oct 1` vs UC's `Aug` / `Aug-Sep` and AZ1005's Aug 15 / Sep 1 / Sep 15) -- same family as the winter-squash Jul-vs-Aug second planting. Then `mid_south`/`uada_ext`, 22 crops.
+
+## 2026-07-29 -- CITATION-ARC SAMPLE PASS (kickoff 46 §5) + the ca_desert SOIL-TEMPERATURE FLOOR correction
+
+**Canonical `dd24b180` -> `2702917e` (one guarded promote; 4 crops / 8 cells; count 128 / 121 certified unchanged). NOT PUSHED, NOT COMMITTED -- awaiting Trevor.**
+
+### The sample pass (§5), and its committed decision rule
+
+Ran the 20-row / 18-node sample. **Re-verified every row against canonical FIRST: all 20 claims match the data exactly.** Two kickoff corrections: the 20 rows are **18** distinct nodes, not 17; and the table's node path (`ca_desert.z10`) is not the schema path, which is `regions.<region>.resolved_by_zone.<N>` with no `z` prefix.
+
+**OUTCOME = ESCALATE (correctness branch).** Located the document the California cells should rest on: `ucanr.edu/program/uc-master-gardener-program/time-planting` (California Master Gardener Handbook Table 13.2), whose regions map onto ours verbatim ("Desert Valleys = Imperial and Coachella Valleys") and which is **already the most-cited pathed url for both `uc_mg` (126 uses) and `ucanr_ext`**. Adjudicated all 92 California bare-host `plant_out` windows against it: **39 SUPPORTED / 35 DIVERGENT / 18 CONTRADICTED (20%)** vs a >=10% escalation threshold.
+
+**Then discarded my own DIVERGENT class as non-defective**, because the document self-limits: *"planting dates are only approximate, as the climate may vary even in small sections of the state."* A window running past a month boundary is inside that tolerance. 35 of my 53 non-supported rows evaporated on reading -- the "read the findings, don't count them" rule applied to my own output.
+
+The 18 CONTRADICTED read down to **4 authoring decisions**, replicated across zones/crops by a shared deriver. **3 of the 4 are CITATION defects with DEFENSIBLE DATA** -- the `unr_fs0261` shape, a real land-grant document cited for a window it places elsewhere:
+- winter-squash desert 2nd planting `Jul 1-31` vs UC's `Aug` (9 cells) -- but AZ1005 shows winter squash seeded Jul 1 / Jul 15 / Aug 1 in the low desert.
+- okra desert `Mar 1 - Apr 30` vs UC's `May` (3 cells) -- but UC gives "May" for all four California regions, and AZ1005 gives okra `Mar 15 - May 15`.
+- okra `ca_north_coast` z9 `Jun` vs UC's `May` (1 cell), not independently checked.
+The 4th shape is the promote below.
+
+### The arc re-priced 4-20x DOWN -- three kickoff premises corrected
+
+Written into kickoff §5 as a banner. New tool `tools/citation_provenance_scan.py`:
+1. **Wrong unit.** The 681 SOLE pairs are REDUNDANT per crop x region (the same bare host repeats on `plantings[0]`, `.plant_out[0]`, `.bloom[0]`, `.harvest_start[0]`, `.harvest_end[0]` AND `resolved_by_zone.N`). They collapse to **170 (crop, region, source) DECISIONS** over **32 (region, source) DOCUMENT HUNTS**.
+2. **"The document was never recorded anywhere" is FALSE for all 26 bare-host ids.** Every one also cites real pathed documents elsewhere in the dataset (`ncsu_ext` 1,742 pathed vs 99 bare; `clemson_hgic` 2,483 vs 12; `tamu_agrilife` 997 vs 201). **ZERO bare-only ids.** The kickoff had checked the CATALOG row only, never sibling cells. Caveat kept explicit: a pathed url for another crop does not support THIS claim, so the hunt is cheap, not the answer free.
+3. **The 681 conflates two OPPOSITE classes.** 53% of SOLE nodes (257/481) sit on crops whose ACCEPTED `open_findings` already declare the derivation -- `okra_pilot_region_anchor_base_urls` states verbatim that the anchors "use the institution/publication BASE URL rather than a live okra-specific page" and schedules this very sweep. A declared bare host is an honest admission of derivation; `unr_fs0261` was a document cited for a claim it does not contain. **The UNDECLARED 224 are the real worklist**, almost entirely fruit trees and berries in the two most recently built regions.
+
+Cheapest hunt = **`mid_south`/`uada_ext`, 22 crops**: that region already BUILT a per-document citation vocabulary (`uada_ext_spring_veg` on 499 pairs/82 crops, plus `uada_ext_fall_veg`, `uada_ext_fsa6001`, `uada_ext_chill`, `uada_ext_fsa6105`) with an explicit one-id-one-url rule, and left only the FRUIT crops on the institution root -- where plain `uada_ext` still carries 143 pairs across 29 crops and TWO urls (the bare root and a pathed `FSA-6002.pdf`). `mid_atlantic_sources.md` by contrast names ZERO urls, which is why its 14 hunts are the harder half.
+
+**A lesson worth keeping: locating the RIGHT document is not the same as supporting the claim.** NMSU **CR457B** is exactly what `nmsu_ext` should cite for `warm_arid`, and reading it in full it publishes last-frost BY ZONE (`8a Feb 28 - Mar 30`, `8b Before Feb 28`) and days-to-maturity PER CROP (Table 2) and **no per-crop planting-date window at all**. It backs a derivation's inputs, never the derived window. Also: UCR CVC accession pages carry **"Season of ripeness at Riverside"**, and Riverside IS `ca_interior`, which is a clean repoint method for `ucr_citrus`'s 33 SOLE pairs (its one pathed url, `crc3178`, is Owari Satsuma, not grapefruit).
+
+### THE PROMOTE: ca_desert z10/z11 soil-temperature floor
+
+`acorn-squash`, `butternut-squash`, `spaghetti-squash`, `pumpkin` x `ca_desert` z10 + z11 opened spring `plant_out` on **`Jan 15`** while those cells' `resolved_from.last_frost` **IS `Jan 15`** -- a frost-tender, direct-sown cucurbit scheduled onto the mean last-frost date, and 10 days earlier than the region arm's own declared `plant_out = last_frost + 10`.
+
+**Frost is the wrong anchor, and the data already contradicted its own copy.** These crops' `start_method.notes_seasoned` says direct sowing works "once the soil is reliably warm (at least 65 degrees F, ideally 70 degrees F, at 2 inches)" and `germination_temp_f` is `[70, 95]`. Soil temperature lags frost by weeks. Corroborated by **two methods sharing no inputs**: UC's table (January is outside `Feb-March`) and pure internal arithmetic (`+0` vs declared `+10`). Externally: AZ1005's earliest winter-squash seeding mark is `Mar 1` and it directs growers to soil of 65-85F; pumpkin's own `verification_log_ref` already cites UMN for "soil 65F at 2in". Both documents fetched and read directly (urllib + pypdf/fitz), never via a WebFetch summary.
+
+**FIX: z10/z11 adopt z9, so no new values were invented.** z9 (last frost Jan 31) already resolved correctly to `Feb 1 - Mar 1` / `May 15 - Jun 15` with January `cold_pause`. Feb 1 sits inside UC's `Feb-March`. Also retires the odd z10/z11 `season_over` June token (z9 has `harvest`). The sources give ONE desert window with no zone split, so z9/z10/z11 matching is correct rather than suspicious -- the same call `rgv` documents for its Valley-wide calendar. Hardiness zones describe winter lows, not soil warmth, so a warmer zone licenses no earlier sowing.
+
+`tools/promote_ca_desert_soil_temp_floor.py`, SHA-pinned to `dd24b180`, footprint **exactly 8 cells x 7 keys + 1 open_finding per crop**. **Guards adversarially TDD-tested 6/6 on scratch copies:** SHA drift aborts, a half-fixed cell aborts, a CORRUPTED z9 TEMPLATE aborts (it refuses to copy a bad template), a second run aborts rather than silently re-applying, the scratch apply proves an exact footprint with zero stray diffs, and compactness holds.
+
+### NEW SOFT SCAN -- `tools/soil_temp_floor_scan.py` (measured, NOT wired)
+
+The narrowing is the point, and it is the "narrow the CHECK, not its scope" lesson again:
+- naive "resolved start != declared frost offset": **751 cells / 66 crops -- FLOODS**, almost all legitimate (mild-region fall/winter cycles compared against a spring arm, plus benign snapping of resolved windows to clean calendar dates like `Feb 1` for `Jan 31 + 14`). **NOT SHIPPED and should not be.**
+- + frost-tender, same spring cycle: 114 -- still mostly snapping.
+- + `germination_temp_f` low >= 70: 53 -- but **27 are thyme / rosemary / lavender**, whose germination temp governs INDOOR seed starting while their `plant_out` is a nursery-transplant date. False positives.
+- + **`propagule == 'seed'`**: **26 cells / 10 crops -- TIGHT**, every hit one real class. That filter is load-bearing.
+
+Scan **26 -> 18** proves the promote's footprint exactly. **LEFT SOFT; hard-flip owed** once the remaining 18 are adjudicated: 12 more `ca_desert` z10/z11 cucurbits at delta 0 (cucumber, slicing/english/pickling-cucumber, zucchini-courgette, yellow-summer-squash) and 6 `utah_dixie` z8 cells that open **15 days BEFORE** last frost -- possibly a deliberate short-season call needing a region ruling, NOT assumed to be the same defect.
+
+### Also fixed: a real test-guard gap, not stale rot
+
+`test_build_corn_family_patch.py`'s discharged-one-shot skip guard (added earlier the same day) sat inside `if __name__ == "__main__":`, **which pytest never runs** -- so the script path skipped politely while the pytest path hard-failed on the missing `/private/tmp` staged inputs. That is why the prior session's green was per-file script runs. Guard moved into the test body; both runners now skip identically and the suite reads **195 passed / 0 failed**.
+
+### Gauntlet
+
+`gate_all` **121/121 PASS**; `whole_crop_gate` PASS x4; `verbatim_scan` 0 HARD hits x4; `register_completeness_gate` PASS; `calendar_coherence` / `harvest_duration` / `numeric_sanity` / `cross_consistency` all 0; `calendar_basis` 12 **CONFIRMED PRE-EXISTING** (mushroom archetype -- verified byte-identical count on the pre-change base, not caused by this change); `release_verify` reports **"no new violations introduced"** with only its known single-crop-pilot-shaped expected-footprint CONCERN naming exactly the 4 intended crops; COMPACT preserved (no trailing newline, no pretty-print markers, 128 crops, `total_crops` 128).
+
+### Owed
+
+Trevor's call on (a) the remaining 18 soil-temp cells, (b) the 3 citation-only contradicted shapes, then (c) `mid_south`/`uada_ext`. Full write-up: `docs/2026-07-29-citation-cleanup-sample-pass-outcome.md`.
+
+
 **`dd24b180` (2026-07-29) -- POST-ASPARAGUS HARDENING: ALL FOUR ITEMS CLOSED, plus the CURRENT_STATE PROTOCOL HEADER RECOVERED FROM GIT (`b0d01f13` -> `dc545be6` -> `b961d502` -> `7bc4b954` -> `dd24b180`, four guarded promotes; 2 crops touched, count 128 and 121 certified unchanged).** Item 1 was already shipped as A51. **ITEM 3 RULED: `verification_log_ref` is an APPEND-ONLY, CERT-DATED HISTORICAL RECORD**, never a living summary, with a required `[CORRECTION <date>: ...]` append when a pass retires something it asserts (`docs/verification_log_ref_convention.md`, rule now in CLAUDE.md). The kickoff's own reason (preserve the audit trail) is the WEAK argument and is recorded as such -- `open_findings` and this file already carry that trail, and the retired asparagus chill mechanism appears in three separate findings. The decisive argument is that a living summary is UNENFORCEABLE at 116 crops: measured, 13 of 115 prose log_refs already assert a stale count and 7 drifted for no reason but the roster growing 10 regions -> 16, which is the backfill treadmill CLAUDE.md forbids. **TWO-CLASS RULE:** Class 1 context growth needs no action (the date stamp IS the correction); Class 2 retired reasoning or revalued vocabulary requires the correction line. **NO GATE, deliberately:** a count scanner was built, measured and left UNWIRED at `tools/logref_count_scan.py` -- 14 rows, of which 7 are correct historical prose, 4 regex noise on good writing (pear's *"better with two varieties"* is pollination advice), 1 a shape outlier, and **exactly 2 real**. Tightening cannot rescue it because no regex separates "stale because the roster grew" from "stale because the value was retired". Applied to asparagus (claimed 18/8/13, actual 25/4/10, plus the retired CHILL mechanism and a now-false "extreme-heat desert zones deny it entirely" clause) and artichoke (claimed 25 marginal; 22 are `annual_only`). Also ruled ungated: `lettuce-leaf`'s list shape STAYS (the field name's original meaning; unlike `weeks_indoors` NO consumer reads this field, so a mixed shape has no failure mode), and presence is NOT a cert requirement (5 certified crops lack it; backfilling would be WRITING history). **ITEM 4 SHIPPED, blocker verified rather than assumed:** both consumers already refuse to render an `unsuitable` cell -- plant-astro's `regions.ts` `growableZonesByRegion` and `built-crops.ts` `zonesForCrop` both `continue` on the value, and plant-app's `lib/suitability.ts` maps it to `'blocked'` with `guide-perennial-calendar.ts` returning `{supported:false}`; plant-app's own header names these fabricated calendars *"the motivating defect"* and says it *"keeps working if those calendars are ever cleaned up upstream"*. So A32 (`coverage_floor_gate`) and the A46 `herbaceous_perennial_gate` floor now EXEMPT `unsuitable`, TDD RED reproducing this doc's prediction exactly (A32=10, A46 floor=10). The floor's old wording *"mark unsuitable, still show the honest cycle"* assumed a cycle exists; for a structurally impossible zone there is none, so the floor was FORCING A FABRICATION -- the fill-the-shape hazard, and gate-avoidance inverted (a field invented to satisfy a gate, not deleted to dodge one). **THE ASYMMETRY IS PINNED BY TESTS: the calendar requirement drops, the `suitability_note_seasoned` requirement STAYS** -- no fake cycle, but never a bare downgrade; every other suitability value, a missing key, and five near-miss spellings all still bounce. **11 calendars emptied, not 10:** this doc predates artichoke's cert and `artichoke.ca_desert.11` carries the identical fabrication on a cell whose own note says the ground is *"effectively vacant"*. **ROSTER-WIDE `suitability` RULED NOT WANTED, and not a gap:** for the other 107 crops the question is already answered by CELL ABSENCE (plant-astro: *"absence of a cell is how annuals express won't-grow"*); the field encodes states only a PERENNIAL can occupy, so a rollout would add a redundant field to 107 crops, create a second source of truth, and become a hard cert requirement taxing every future crop. **ITEM 2, all three discharged. 2a RE-SOURCED:** the `warm_arid` z8 window is UNCHANGED at `Feb 1 - Feb 28` and its provenance moved from drawn-bar GEOMETRY to extension TEXT -- TAMU **EHT-066**: *"Asparagus is grown from 1- or 2-year-old crowns planted in January or February, or as soon as the ground can be worked."* Verified here by urllib + pypdf (HTTP 200, 1,301,793 bytes, 42 asparagus mentions), NOT a WebFetch summary. Geography is authorized by our OWN `region_source_map`, which labels the region *"Warm Arid (S. NM / W. TX)"* and names `tamu_agrilife` its z8 anchor for the far-west TX / El Paso corridor. Method moves to `nmsu_tamu_arid_month_resolution`, an EXISTING value already used on `lettuce-leaf`'s warm_arid z8 with the same two sources, rather than an invented 81st method string. The NMSU search is CLOSED: H-227, CR-457 and CR-457-B (rev. Jan 2026) all read, none publishes a crown date, and CR-457-B's planting table has no date columns at all. **2b ACCEPTED and the ruling UPHELD on better ground, with one rationale RETRACTED AS FABRICATED:** the multi-state source this item wanted exists and argues FOR accepting -- the Midwest Vegetable Production Guide (8-state land-grant, z3b-z7a) states ONE undifferentiated window, *"Transplant April 15 to May 15"*, with ZERO zone references anywhere in its asparagus section (verified: 8 pages, 44 mentions, pypdf). Soil-workability holds 5 institutions to 1, with two REAL tie-breakers the finding said were missing (MU G6405: *"Spring freezes will not harm the crowns ... but can damage emerging spears"*, and the fact that the literature's frost lever is planting DEPTH, stated in UMaine's own document). Frost re-derivation was TESTED AND REJECTED: the ladder steps 10-11 d/zone while zone frost steps 14-15, so a constant offset reproduces z3-z5 and breaks z6 and z7 against three sources -- the non-constant offset is DELIBERATE. **THE RETRACTION: the "Fusarium-in-cold-wet-soil rationale" finding 10 attributes to UMaine IS NOT IN BULLETIN #2071** -- verified by direct fetch (50 asparagus mentions; `"cold wet"`, `"cold, wet"`, `"wet soil"` and `"cold soil"` each occur ZERO times). An earlier pass invented it. **2c WAS ALREADY FIXED AND THE FINDING WAS THE DEFECT:** z9 is `Mar - May` not `Feb - Mar` (commit `7738de1`, 2026-07-27) and z10 is `Mar - Apr`, so BOTH START IN MARCH and no inversion remains; finding 21 sat `open` still asserting the old value, **and that stale text is what caused a full 16-document re-sourcing pass to be commissioned against a value that no longer existed** -- the same hazard ruled on for `verification_log_ref` the same day, in a different field. The re-source ran anyway and returned nothing for a GEOGRAPHIC reason (UC's four-district scheme puts neither Barstow nor the Palo Verde Valley in ANY UC district), closing the door permanently. **THE BIGGEST FIND WAS NOT ON THE LIST. `CURRENT_STATE.md` HAD LOST ITS TITLE AND BINDING SESSION PROTOCOL HEADER**, silently dropped by `93d5a59`'s own state-trio regen and missing for 40+ commits, while CLAUDE.md told every session the binding protocol lived there (commit `ac18c8e` is titled "protocol-header restore", so this had happened once before). Recovered verbatim from `93d5a59^`, with protocol #4 updated to CLAUDE.md's current gauntlet. **LOSING IT ARMED A FILE-DESTROYING SECOND DEFECT:** `gen_current_state.static_header()` partitions on the first `---`, and with the separator gone it FAILED OPEN and returned THE ENTIRE FILE as the header -- one regen would have duplicated all 351KB and the next would have doubled it again (generator output measured 377KB against a 351KB file). That fail-open is now a HARD ABORT on both a missing separator and a missing SESSION PROTOCOL, because the header is not reconstructable from the file once lost -- only from git. **`test_gen_current_state.py` HAD BEEN FAILING ON EXACTLY THIS ASSERTION THE WHOLE TIME AND WAS DISMISSED AS STALE TEST ROT.** **THE TEST SUITE IS NOW 78/78 GREEN, from 7 failing**, and every fix was a real diagnosis rather than a silenced assertion: three were HARDCODED COUNTS that rot at every cert, now DERIVED (`test_gate_all` 114 -> compare against the actual `verified_gs_arc` set; `test_verify_demux_footprint` 124 -> the canonical's own `total_crops`; `test_gen_current_state` "10/10" -> the roster's real width, which had also MASKED the header failure above it by dying first). **A REAL TOOL BUG behind one of them:** `verify_demux_footprint.py` hardcoded `!= 124` on both sides and so reported a FALSE problem on every run at 128 crops (*"base=128 candidate=128 (want 124)"*) -- a footprint auditor failing a clean footprint; the invariant it actually wants is base == candidate, roster-size independent. Two were STALE PREMISES FROM REAL PROGRESS: `test_region_harness` simulated "crop has no pnw cell" by OMISSION, which stopped working the day PNW actually promoted (2026-07-15) since the harness builds its scratch canonical from the real one -- the harness now takes `None` as an explicit REMOVE sentinel, restoring genuine A31 coverage; and `test_build_region_promote` asserted the pnw provenance note was APPENDED, which can only hold pre-PNW, so it now asserts the builder's (correct) IDEMPOTENCE instead. Two are DISCHARGED ONE-SHOTS whose session-scoped `/private/tmp` staging is gone (berry pilot, corn family) and now SKIP LOUDLY naming what is uncovered, because reconstructing those inputs would mean FABRICATING staged crops. **A51's own test was also repaired: it had been failing AT IMPORT since `annual_only` shipped** -- its "well-formed region" fixture said *"Replant each year"* over two `marginal` cells, and that value turned the phrase into a rating assertion, so the fixture asserted a genuine contradiction was clean. The GATE was right, the FIXTURE was stale, **and the annual_only extension therefore shipped with its own regression coverage broken while its commit log recorded all gate suites passing.** **GAUNTLET GREEN:** gate_all **121/121**, release_verify clean but for the expected two-crop footprint concern, region_prose 0 roster-wide, harvest_duration 0, zone_order 0, herbaceous_perennial 0, calendar_coherence 0, timing_spine 0, npk 0, control_ladder 0, variety_resistance 0, register_completeness PASS, COMPACT preserved (byte-identical re-serialization), footprint EXACT and proven per promote. **OWED:** the citation-integrity cleanup arc, whose evidence base grew by nine verified instances (`docs/2026-07-29-hardening-session-outcomes.md`) -- note **tier A alone is insufficient, every portal-root defect returns HTTP 200**; and a DECISION on `CURRENT_STATE.md` itself, which has re-accumulated 79 history entries (353KB against a 28KB proper regen), 70 of them carrying prose found in NEITHER history file, so protocol #2's "fully regenerate" would delete them. This trio was therefore done SURGICALLY, by prepend, and that departure is flagged rather than hidden.
 
 **`b0d01f13` (2026-07-28) -- `weeks_indoors` BACK TO A SCALAR: the shape break plant-astro's BUILD caught and no gate here did (`6da153b9` -> `b0d01f13`, one field, one crop).** Artichoke shipped `weeks_indoors: [6, 8]`, a range, because two sources publish a band (WSU "Weeks to Grow to Transplant Size 6-8", NC State "seed 6-8 weeks before the T date"). **The field is a scalar int on all 78 crops that carry one** (49 more carry null; artichoke was the ONLY list roster-wide), and plant-astro's content schema types it `z.number().nullish()`, so the submodule bump failed the site build outright: *weeks_indoors: Expected type "number", received "object"*. This is exactly the [[dataset-shape-change-breaks-frontends]] class, and it is why the standing rule is to run `npm run build` after any bump -- the whole dataset gauntlet was green and the defect was one repo downstream. FIXED IN THE DATA, NOT THE SCHEMA: 78 crops and a consuming schema outvote one crop's preference, and a range here is not more honest, just unrenderable. `weeks_indoors: 8`, the top of the sourced band and the safer single instruction since artichoke's three-week chilling sits inside that lead time; the 6-to-8 range keeps living in `start_method.notes` and `year_one_notes`, where a band belongs. **NEW GUARD, DELIBERATELY NARROW:** `timing_spine_gate` now requires `weeks_indoors` to be int-or-null, RED-proven by re-injecting `[6, 8]`. A generic mixed-shape check was measured first and NOT built: four other top-level fields carry a mixed scalar/list shape roster-wide (`establishment_years` on 4 berries, `productive_lifespan_years` on 9 crops, and a prose field on each of bee-balm and honeydew-melon), several plausibly legitimate ranges, and shipping a gate that flags 15 crops nobody has adjudicated is the mistake this suite spent the previous session correcting. Recorded as an observation, not a finding. **GAUNTLET GREEN:** gate_all 121/121, release_verify CLEAN, timing_spine 0, and plant-astro's `npm run build` now completes.
