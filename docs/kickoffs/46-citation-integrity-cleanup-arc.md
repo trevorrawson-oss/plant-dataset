@@ -94,6 +94,48 @@ be classified separately — do not let a link-rot sweep delete a good citation.
 
 ## 5. START HERE — the 20-cell SAMPLE PASS, before committing to anything
 
+> ## ✅ RUN 2026-07-29. OUTCOME: **ESCALATE** — full write-up in
+> ## `docs/2026-07-29-citation-cleanup-sample-pass-outcome.md`.
+>
+> **The decision rule fired on the correctness branch.** 92 California windows adjudicated against
+> the UC planting-date table they should rest on: **39 SUPPORTED / 35 DIVERGENT / 18 CONTRADICTED
+> (20%)**, against a ≥10% escalation threshold. The 18 collapse to **4 authoring decisions**, and
+> **8 cells are corroborated defective by a second, independent, no-network test** (frost-tender
+> desert cucurbits scheduled to go in the ground exactly ON the mean last-frost date, 10 days
+> earlier than the crop's own declared `last_frost + 10` rule). Trevor needs to see those 8 before
+> more crops certify.
+>
+> **But the grind is 4-20x smaller than this document budgets**, and three of its stated premises
+> are wrong. Corrections, all measured (`tools/citation_provenance_scan.py`):
+>
+> | this doc says | measured |
+> |---|---|
+> | "the 20 rows are **17** distinct nodes" | **18** |
+> | node path `ca_desert.z10` | real path is `regions.<region>.resolved_by_zone.<N>`, no `z` prefix |
+> | "681 sole-source claims each needing a document located, **several sessions**" | 681 pairs are redundant per crop x region: **170 decisions** over **32 document hunts** |
+> | "for 680 of the 681 SOLE rows the specific document **was never recorded anywhere**" | **false for all 26 bare-host ids** — every one also cites real pathed documents on other cells (`ncsu_ext` 1,742 pathed vs 99 bare; `clemson_hgic` 2,483 vs 12). **Zero bare-only ids.** |
+> | "almost no free mechanical wins... only 10 pairs repointable from the catalog" | true of the *catalog*, misleading overall — `mid_south` already built a full per-document citation vocabulary (`uada_ext_spring_veg` 499 pairs/82 crops, `uada_ext_fall_veg`, `uada_ext_fsa6001`, `uada_ext_chill`) and left the **fruit** crops on the institution root. 22 crops, one hunt. |
+>
+> **And the 681 is not one defect class.** 53% of the SOLE nodes (257 of 481) sit on crops whose
+> accepted `open_findings` ALREADY DECLARE the derivation — e.g. `okra_pilot_region_anchor_base_urls`
+> states verbatim that the region anchors "use the institution/publication BASE URL rather than a
+> live okra-specific page" and schedules exactly this sweep. A declared bare host is an *honest
+> admission of derivation*; `unr_fs0261` was *a real document cited for a claim it does not contain*.
+> Those need opposite treatment. **The UNDECLARED 224 are the real worklist**, and they are almost
+> entirely fruit trees and berries in the two most recently built regions (`mid_south`/`uada_ext`,
+> `mid_atlantic`/`ncsu_ext`).
+>
+> Two further findings worth carrying forward:
+> - **A document can be the right one and still not contain the claim.** NMSU **CR457B** — exactly
+>   what `nmsu_ext` should cite for `warm_arid` — publishes last-frost *by zone* and days-to-maturity
+>   *per crop*, and **no per-crop planting-date window**. It backs the derivation's inputs, never the
+>   window. Same shape as the `harvest-start-is-not-a-published-datum` lesson.
+> - **`ucr_citrus`'s 33 SOLE pairs have a clean repoint method**: UCR CVC accession pages carry
+>   "**Season of ripeness at Riverside**", and Riverside *is* `ca_interior`.
+>
+> Do NOT mass-repoint: pointing the California cells at the UC table would *create* a visible
+> contradiction on 53 of 92 windows. Revised order of work is in §5 of the outcome doc.
+
 **Do this first. It is roughly an afternoon and it can change the arc's priority in either
 direction.**
 
