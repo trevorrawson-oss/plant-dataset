@@ -54,6 +54,17 @@ def _base_raw_for_test():
 
 
 def test_batch_shape():
+    # DISCHARGED ONE-SHOT guard -- must live HERE, not only under __main__: pytest calls this
+    # function directly and never runs __main__, so a guard placed there skips the script run
+    # and lets the pytest run hard-fail on the missing staged inputs. See the note at the
+    # bottom of this file for why the inputs are gone and what is therefore not covered.
+    _missing = [p for p in _STAGED if not os.path.exists(p)]
+    if _missing:
+        print(f"SKIP build_corn_family_patch: staged inputs are gone ({len(_missing)}/"
+              f"{len(_STAGED)} missing, e.g. {_missing[0]}). NOT COVERED: the builder's "
+              "byte-for-byte reproduction of tools/batches/corn_family_add.json.")
+        return
+
     base_raw = _base_raw_for_test()
     if base_raw is None:
         print("skipped: corn family promoted and the pre-promote base is not reconstructable "
