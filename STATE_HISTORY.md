@@ -6,6 +6,58 @@
 
 ---
 
+## 2026-07-30 (hunt 2) -- a VEGETABLE guide was the sole source for 14 fruit crops
+
+**Canonical `eb5926ed` -> `45409cee` (54 citations repointed, 12 findings, 1 catalog entry; ZERO value changes). Count 128 / 121 certified unchanged.**
+
+### The defect
+
+`vce_426_331` is catalogued only as *"Virginia Cooperative Extension Publication 426-331. Mid-Atlantic regional coverage."* Fetched and read, it is **"Virginia's Home Garden VEGETABLE Planting Guide"**: bean 12, lettuce 8, tomato 4, and cherry / apple / peach / pear / plum / apricot / persimmon / blueberry / raspberry / strawberry **all zero**. It was the SOLE source on **19 fruit nodes** carrying `plant_out`, `harvest`, `bloom` and `suitability`.
+
+It was invisible to everything we own -- `bare_host_scan` (the url is PATHED), `url_health_gate` (returns 200), `whole_crop_gate` (a source IS cited). `tools/doc_mentions_crop_scan.py` had to be built before this could be seen at all.
+
+### The document it should rest on
+
+NC State Extension Gardener Handbook, ch. 15 *Tree Fruit and Nuts*, located and read in full.
+
+- **Planting:** *"The best time to plant a fruit or nut tree in North Carolina is late fall or early winter. When trees are planted in the fall, the roots grow through the winter..."*
+- **Harvest:** Table 5, *"Approximate harvest dates"*, parsed from real `<td>` cells (never flattened text -- HTML tables column-shift). apple Aug-Nov, fig Jun-Aug, peach Jun-Aug, pears Aug-Oct, persimmon Sep-Nov, plum Jun-Aug, pawpaw *"August to September or to first frost"*. **Eight of ten of our windows sit cleanly inside.**
+
+### THE MIRROR IMAGE OF HUNT 1, and why scoping mattered
+
+> NC State: plant fruit trees **late fall or early winter**.
+> UAEX: plant them **late winter**, and **not figs until early spring**.
+
+**The same `Dec - Feb` template is CORRECT in mid_atlantic and WRONG in mid_south.** Had the mid_south fig/raspberry fix been swept across the roster instead of scoped to one region, it would have broken correct cells here. The scoping discipline paid off within the same day.
+
+### Two nuances declared rather than "fixed"
+
+Both were one careless edit away from making the data worse:
+
+- **nectarine** runs to Aug 20 against Table 5's `May to July`. But the column is headed **APPROXIMATE**, and the same table gives **peach** `June to August` -- and nectarine botanically *is* a peach (*Prunus persica* var. *nucipersica*). Divergence on an approximate source, not a defect.
+- **mulberry**'s apparently-applicable row is **"Mulberry, RED"** -- *Morus rubra*, the native species. **None of our canonical varieties is red mulberry**: Illinois Everbearing, Dwarf Everbearing, Silk Hope and Oscar are everbearing *M. alba x rubra* hybrids, Black Beauty is *M. nigra*, Pakistan is a long-fruited type. Trimming our Jun-Jul window to the row's `May to June` **would have made the cell wrong for every variety we recommend.**
+
+### Bloom, at a second institution
+
+The handbook carries **31 mentions of bloom and not one bloom date** (the only month near "bloom" refers to pruning in February). That independently reproduces hunt 1's largest finding at a **second** institution. Two land-grants, same absence. It is now much more than a mid_south quirk, and it strengthens the case for **one roster-wide bloom declaration** instead of rediscovering it in thirty more hunts.
+
+`apricot`, `cherry-sour`, `cherry-sweet` and `pomegranate` were deliberately NOT repointed -- the handbook names them only in passing risk language or not at all, and repointing would repeat the generic-basis weakness recorded that morning on mid_south.
+
+### Template risk measured and bounded
+
+Checked rather than feared: only **one** region pair was built by cell-template reuse -- `mid_south` from `mid_atlantic`, already fully audited (52 attributed claims read, 2 bad, both fixed). `utah_dixie` mirrors `warm_arid` for raspberry only; `rgv` reuses source ids, not cells. The fabricated-attribution risk is not widespread.
+
+### Gauntlet + measurement
+
+Guards **19/19** on both runners, including the two that matter: refuse to cite the handbook if a cell's `plant_out` drifts off the window it backs, and refuse to repoint a bloom arm. `gate_all` **121/121**; all five standalone gates exit 0; COMPACT preserved.
+
+| unit | session start | now |
+|---|---|---|
+| SOLE bare-host pairs | 681 | **614** |
+| distinct SOLE nodes | 481 | **414** |
+| decisions / hunts | 170 / 32 | **167 / 32** |
+| `vce_426_331` fruit exposure | 19 crops | **5** |
+
 ## 2026-07-30 (fifth promote) -- a new check, and it audited the same day's work
 
 **Canonical `7ca9e487` -> `eb5926ed` (documentation only; 3 findings, zero value changes). NOT PUSHED beyond commit.**
