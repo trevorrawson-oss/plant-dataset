@@ -129,6 +129,39 @@ Top of the list as of `dd24b180`:
 | `ncsu_ext` | 99 | 26 | `https://content.ces.ncsu.edu` |
 | `uariz_ext` | 91 | 13 | `https://extension.arizona.edu` |
 
+### The triage is now quantified — run `tools/bare_host_scan.py`
+
+Shipped 2026-07-29 so this is repeatable rather than a heredoc:
+
+```bash
+python3 tools/bare_host_scan.py            # summary by source id
+python3 tools/bare_host_scan.py --sole     # only the critical rows
+python3 tools/bare_host_scan.py --id uc_mg # every node citing one id
+```
+
+**SEVERITY SPLIT — the useful cut, and it needs no network.** For each bare-host citation the
+tool asks whether the *same node* cites anything else:
+
+| | pairs | meaning |
+|---|---|---|
+| **SOLE** | **681** | the node's only source is a domain root — **the claim rests on nothing citable** |
+| CORROBORATED | 895 | a real source sits alongside; the bare host is redundant decoration, low-risk to repoint or drop |
+
+**Work SOLE first.** Six ids carry 601 of the 681: `ucanr_ext` 188, `uc_mg` 131, `uada_ext` 100,
+`ncsu_ext` 79, `tamu_agrilife` 53, `uariz_ext` 50. This is the arc plan's own "weight tier C toward
+cells whose claims rest on a single source", now measured instead of assumed.
+
+> **COST REALITY — read before scoping. This is a research grind, not a mechanical sweep.**
+> Of the 1,576 pairs, only **10** can be repointed straight from the catalog (where the catalog row
+> already holds a pathed URL and only the cells point at the root: `ucanr_san_diego_mg` 7,
+> `nmsu_chart` 2, `cornell_ext` 1). For the other **1,566 — including 680 of the 681 SOLE rows —
+> the catalog entry is ITSELF a bare host**, so the specific document was never recorded anywhere
+> and has to be located per claim.
+>
+> Budget accordingly: this is per-cell sourcing work at the scale of a region arc, not an
+> afternoon. Consider doing it **per source id** (all 188 `ucanr_ext` cells at once, since they
+> likely share a handful of underlying documents) rather than per crop.
+
 **This is a TRIAGE list, not 1,576 defects — adjudicate, do not mass-edit.** Two honest
 possibilities per row, and they need different treatment:
 
@@ -249,8 +282,10 @@ it is T1 and cited by 67 crops.
 
 ## 10. Suggested sequence
 
-1. **Bare-host triage (§5).** No network. Produces the worklist and probably several mechanical
-   repoint wins. Start with the six biggest ids (1,152 of the 1,576 pairs).
+1. **Bare-host triage (§5) — DONE 2026-07-29, `tools/bare_host_scan.py`.** The worklist exists and
+   is quantified: 681 SOLE / 895 corroborated, six ids holding 601 of the SOLE rows, and only 10
+   pairs repointable from the catalog. **Start the arc at step 2, not here.** The one correction to
+   the original expectation: there are almost no free mechanical wins.
 2. **The nine seed instances (§6).** Already verified; decide repoint / drop / dissent-note per row,
    and handle the 25 uncited catalog rows.
 3. **Tier B roster-wide:** for each of the 1,175 distinct URLs, fetch once (cache it) and grep for
@@ -262,8 +297,10 @@ it is T1 and cited by 67 crops.
 5. **Only then** consider a gate, and only if the measurement supports one. A `url_health_gate.py`
    already exists — read it before writing anything new.
 
-**Effort:** step 1 is an afternoon. Steps 3-4 are the real arc and will span sessions; treat each
-batch as its own release with its own gauntlet and state trio.
+**Effort:** step 1 is done. Steps 2-4 are the real arc and **will span several sessions** — 681
+sole-source claims each needing a document located, plus 1,175 URLs to sweep for tier B. Treat each
+batch as its own release with its own gauntlet and state trio, and prefer batching **by source id**
+over by crop, since cells sharing an id likely share a handful of underlying documents.
 
 ## 11. Done when
 
