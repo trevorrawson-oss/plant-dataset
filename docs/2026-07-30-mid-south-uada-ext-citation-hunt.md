@@ -279,3 +279,32 @@ that column-shifts under naive extraction. Only its column headings were used.)
 **Arc position after this hunt:** 1 of 32 document hunts closed, 22 of 170 decisions adjudicated.
 The next-cheapest is `mid_atlantic`/`ncsu_ext` (14 crops), and the sample-pass doc already warns it
 is the harder half — its sourcing note names zero URLs.
+
+
+---
+
+## 10. POSTSCRIPT -- the scan built after this hunt audited this hunt
+
+`tools/doc_mentions_crop_scan.py` was built immediately after this pass, to find the defect class
+the `mid_atlantic` hunt exposed: a real, live, correctly titled document cited for a claim it does
+not contain (`vce_426_331`, catalogued as "Mid-Atlantic regional coverage", is actually
+*Virginia's Home Garden **VEGETABLE** Planting Guide*). Run blind over the roster it independently
+rediscovered both `unr_fs0261` and `vce_426_331` -- and it also flagged **this document's own
+repoint**.
+
+**Measured on `fruit-trees.aspx`, word-boundary matched:**
+
+| named | not named |
+|---|---|
+| apple 16, pear 13, peach 14, nectarine 10, plum 4, persimmon 8, pawpaw 8, fig 7, cherry 1 | **apricot 0, mulberry 0, pomegranate 0** |
+
+So nine of the twelve crops repointed in §5 are named outright. **Apricot, mulberry and
+pomegranate are covered only by the page's generic sentence** -- *"Fruit trees other than figs,
+could be planted in the fall…"* -- which is a statement about fruit trees as a class. All three
+are deciduous fruit trees, so the citation is defensible and is **NOT reverted**; but it is an
+inference from a general statement rather than a crop-specific mention, and that is weaker than
+the other nine.
+
+Recorded as `mid_south_fruit_trees_citation_generic_basis` on those three crops rather than left
+implicit. **The generalizable point: the check earned its keep on its first run by auditing
+careful hand work from the same day and finding the soft spot in it.**

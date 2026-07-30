@@ -6,6 +6,52 @@
 
 ---
 
+## 2026-07-30 (fifth promote) -- a new check, and it audited the same day's work
+
+**Canonical `7ca9e487` -> `eb5926ed` (documentation only; 3 findings, zero value changes). NOT PUSHED beyond commit.**
+
+### The defect class nothing could see
+
+Hunt 2 (`mid_atlantic`/`ncsu_ext`) found `vce_426_331` -- catalogued only as "Virginia Cooperative Extension Publication 426-331. Mid-Atlantic regional coverage" -- is actually **"Virginia's Home Garden VEGETABLE Planting Guide"**. Measured: bean 12, lettuce 8, tomato 4, and cherry/apple/peach/pear/plum/apricot/persimmon/blueberry/raspberry/strawberry **all zero**. It is the SOLE source on **19 fruit nodes** carrying `plant_out`, `harvest`, `bloom` and `suitability`.
+
+It was invisible to every check we own: `bare_host_scan` (the url is PATHED), `url_health_gate` (returns 200), `whole_crop_gate` (a source IS cited). So the arc had been hunting bare hosts while a worse, better-disguised class sat underneath.
+
+### `tools/doc_mentions_crop_scan.py`
+
+Asks one question: does the document cited for this crop's claim actually mention this crop? 621 pathed urls fetched and cached (21 unfetchable = UNDETERMINED, never absence).
+
+**Validation: run blind over the roster it independently rediscovered BOTH known cases** -- `unr_fs0261`, the defect this arc is named after, and `vce_426_331`.
+
+**THE NARROWING IS THE WORK.** Raw output is 519 nodes, which reads as a flood. The noise is one class: frost and weather tables legitimately name no crops. Splitting on a property measurable from the document itself -- how many roster crops it names at all -- separates two findings needing OPPOSITE treatment:
+
+| class | nodes / decisions | disposition |
+|---|---|---|
+| CROP-LIST omits this crop | 364 / 222 | the `unr_fs0261` shape -- actionable |
+| REFERENCE doc names ~no crops | 155 / 45 | backs the INPUTS not the claim (CR457B shape) -- declare |
+
+And the actionable class splits AGAIN along a line **no gate could draw**: herbs and flowers cited to a vegetable table are a DECLARED convention (`mid_south_sources.md` instructs exactly that and says to flag it), while FRUIT cited to a vegetable table is a real defect. Identical mechanical signature, opposite disposition. Hence a SCAN a human reads, never a gate.
+
+### It audited this session's own work
+
+`uada_ext_fruit_trees`, the catalog entry created and repointed 12 crops at in commit `07b7dbf` hours earlier, **never names apricot, mulberry or pomegranate**:
+
+> apple 16, pear 13, peach 14, nectarine 10, plum 4, persimmon 8, pawpaw 8, fig 7, cherry 1 -- **apricot 0, mulberry 0, pomegranate 0**
+
+Those three rest on the page's GENERIC sentence, "Fruit trees other than figs, could be planted in the fall...". All three ARE deciduous fruit trees so the citation is defensible and is **NOT reverted**, but it is an inference from a general statement rather than a crop-specific mention. Recorded as `mid_south_fruit_trees_citation_generic_basis` rather than left implicit. **The check earned its keep on its first run by auditing careful hand work from the same day.**
+
+### Three development bugs, two of them silent false-CLEARS
+
+Caught by testing BEFORE the output was trusted, and all three now regression-pinned (22/22):
+1. substring `"fig"` matched **"Figure 1"** -- every document with figure captions would have cleared fig, hiding the very defect being hunted;
+2. term `"green"` derived from slug `green-beans-bush` cleared essentially every document;
+3. a display bug attributed co-cited frost tables to the actionable class, making them look like offending crop lists.
+
+A false CLEAR is the dangerous direction: it hides a defect instead of costing a read.
+
+### Gauntlet
+
+Guards 11/11 both runners; `gate_all` 121/121; all five standalone gates exit 0; suite **209 passed**. COMPACT preserved.
+
 ## 2026-07-30 (promotes 3 and 4, same session) -- TREVOR RULED: all three contradictions FIXED, plus a FABRICATED ATTRIBUTION found while answering him
 
 **Canonical `5f58654b` -> `d1b441c2` -> `7ca9e487`. Day total `13d42f95` -> `7ca9e487`, four guarded promotes. Count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
