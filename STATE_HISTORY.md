@@ -6,6 +6,143 @@
 
 ---
 
+## 2026-07-30 (promotes 3 and 4, same session) -- TREVOR RULED: all three contradictions FIXED, plus a FABRICATED ATTRIBUTION found while answering him
+
+**Canonical `5f58654b` -> `d1b441c2` -> `7ca9e487`. Day total `13d42f95` -> `7ca9e487`, four guarded promotes. Count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
+
+### The ruling
+
+Trevor asked three questions: which side of the blueberry call has more sourcing, whether there was a factual basis for moving fig and raspberry to early spring, and he read the cherry-sour writeup as saying it does fruit. **The third was a misreading and I corrected it before acting** -- UAEX says cherries will *not* reliably set fruit; `fruits_reliably` was the thing being contradicted. He then approved all three fixes.
+
+### What answering him turned up: a FABRICATED ATTRIBUTION
+
+Chasing the cherry question, `cherry-sweet` z8 turned out to read, in BOTH registers:
+
+> "University of Arkansas Cooperative Extension steers zone 8 growers toward sour cherry instead"
+
+That is the `mid_atlantic` sentence with **"NC State Extension" find-and-replaced**. NC State really does make that steer, and it is the sound basis of Trevor's 2026-07-20 ruling **for mid_atlantic**. **UAEX does not make it** -- FSA6129 groups cherries with apricots as trees that "will not reliably set fruit" and gives no cherry cultivar table at all. We were crediting a land-grant with a recommendation it never published. Removed in both registers.
+
+### Root cause, and it is one sentence
+
+**`mid_south` was built from the `mid_atlantic` cell as a structural template** -- `mid_south_sources.md` section 7 directs exactly that reuse -- **and NC State's Piedmont-specific claims came across relabeled as Arkansas claims.** The giveaway was still sitting in our blueberry provenance: the phrase **"below 2,500 feet"** is NC State's threshold for the North Carolina Piedmont. This is `copy-a-sibling-only-if-its-source-row-covers-you` one level up: there the sibling's ROW had to cover the crop; here the sibling CELL's source had to cover the geography.
+
+**Scope was measured, not assumed.** All **52** UAEX-attributed recommendation claims in `mid_south` prose were read. **Exactly two were unsupported** -- the blueberry type steer and the cherry steer, i.e. precisely the two fruit cells copied from mid_atlantic. The rest verify against documents read this session (blackberry/FSA6105; the peach and nectarine spray-program claim; strawberry plasticulture; onion day-length via FSA6014). A bounded template-inheritance problem, not a systemic one.
+
+### Promote 3/4 (`d1b441c2`) -- the value fix, 28 edits across 5 crops
+
+| crop | before | after |
+|---|---|---|
+| blueberry z7 | `rabbiteye` + "northern highbush is not recommended" | **`northern_highbush`** + 4 rewritten prose fields |
+| blueberry z8 | `rabbiteye` + "northern highbush too heat-stressed to recommend" | `rabbiteye` kept, **false exclusion removed** |
+| fig z7+z8 | `Dec - Feb (dormant plant)`, arm `-60d` | **`Mar - Apr (dormant plant)`**, arm **`-21d`** |
+| raspberry z7+z8 | `December to March` | **`March to April`** + 3 prose strings moved off winter |
+| cherry-sour z7+z8 | `fruits_reliably` | **`marginal`** |
+| cherry-sweet z8 | fabricated UAEX steer | removed, both registers |
+
+**Why blueberry mattered most, in Trevor's own terms.** Rabbiteye is the southern species: less cold hardy AND low-chill (350-600 h), so an upland warm spell pushes it into bloom ahead of a killing freeze. The shipped value pointed a z7 gardener at the bush most likely to grow well and then **fruit nothing** -- exactly the outcome he was worried about. Northern highbush needs 800-1,000 h and z7 banks 1,000-1,300. **Corroborated internally before touching anything:** our own `northern_tier` z7 already used `northern_highbush`, and `mid_south` z7 banks MORE chill than `northern_tier` z7 does.
+
+The pollination advice is a real correction, not a reword: rabbiteye is self-**IN**fertile (the old note demanded a second rabbiteye "to cross pollinate and set a crop"), while FSA6130 states highbush cultivars "are generally self-fertile but benefit from planting two or more cultivars which can improve fruit size and number."
+
+**Dates were DERIVED, not copied.** `last_frost - 21d` against Arkansas's own anchors (z7 Apr 10, z8 Apr 3) lands Mar 20 / Mar 13, both inside "Mar - Apr". `northern_tier`'s dates were deliberately NOT copied because its sources (UMaine/UNH/UMass/Rutgers; umd_ext/clemson_hgic for fig) do not cover Arkansas -- the same discipline the pumpkin lesson taught.
+
+**`mid_atlantic` deliberately untouched, and gate-proven so.** Its label is "Piedmont and Coastal Plain", it excludes the mountains, and NC State genuinely puts rabbiteye there. A guard asserts every non-`mid_south` region of all five crops is byte-identical.
+
+**Calendars asserted frozen** -- these are woody-perennial calendars with no `plant` token, so a planting-window change does not move them. Verified rather than assumed.
+
+### Promote 4/4 (`7ca9e487`) -- the repoint the corrections unlocked
+
+The three crops had been held back from promote 2/4 **precisely because their documents contradicted them**. Corrected, each document now supports its cell: fig -> `uada_ext_fruit_trees`, raspberry -> `uada_ext_fsa6107` (new), blueberry -> `uada_ext_fsa6104` (new). 10 nodes, 2 catalog entries, zero values. The load-bearing guard refuses to attach a document to an uncorrected cell, and is tested by **reverting each fix in turn** and confirming the refusal.
+
+Fig keeps **exactly three** arms bare on purpose, pinned by assertion: `bloom[0]` (no UAEX document publishes a bloom date for any fruit crop) and `harvest_start[0]`/`harvest_end[0]` (the page gives ripening spans for pawpaw and persimmon, not fig).
+
+### The measurement finally moved
+
+| unit | session start | after 4 promotes |
+|---|---|---|
+| SOLE bare-host pairs | 681 | **657** |
+| distinct SOLE nodes | 481 | **457** |
+| `uada_ext` SOLE | 100 | **76** |
+| **decisions / hunts** | 170 / 32 | **168 / 32** |
+
+**Decisions moved for the first time in the arc** (170 -> 168): raspberry and blueberry cleared their `(crop, region, source)` triples completely.
+
+### Gauntlet
+
+Guards adversarially TDD-tested **28/28** and **21/21** on both runners (four suites this session: 21/21, 21/21, 28/28, 21/21). `gate_all` **121/121 PASS**; all five standalone gates exit 0; `release_verify` **"no new violations introduced"** and **"no `--`/em-dash/spelled-degrees in any user-facing string"** on the rewritten copy, with its one known single-crop-pilot CONCERN naming the same 16 crops and `catalog +['uada_ext_fruit_trees','uada_ext_fsa6104','uada_ext_fsa6107']`; COMPACT preserved. Suite **207 passed / 0 failed**.
+
+The four open_findings filed at `14c8eab2` are now `resolved` with their rulings recorded on the crop.
+
+### Owed
+
+`mid_atlantic` fig/raspberry very likely share the dormant-planting shape but UAEX does not cover NC/VA -- that needs NC State/VCE evidence and is the next hunt anyway. Still owed from 2026-07-29: the 3 citation-only contradicted shapes, the held-back `ca_desert` pumpkin repoint, `ucr_citrus`, pole-beans 50d-vs-60-DTM.
+
+## 2026-07-30 -- CITATION ARC, HUNT 1 OF 32: `mid_south`/`uada_ext`, and why the "mechanical" hunt was not mechanical
+
+**Canonical `13d42f95` -> `14c8eab2` -> `5f58654b` (two guarded promotes; 17 findings, then 40 citations repointed + 1 catalog entry). ZERO value changes in either. Count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
+
+### The premise was right and the conclusion drawn from it would have been a disaster
+
+The sample-pass doc priced this as the cheapest of the 32 hunts because `mid_south` "already built a per-document citation vocabulary and then didn't apply it to its fruit crops." The first half is true. The second half hides the reason:
+
+> **The vocabulary the region built is a VEGETABLE vocabulary.** `uada_ext_spring_veg` (499 pairs / 82 crops) and `uada_ext_fall_veg` are vegetable planting-date tables, and **not one of the 22 fruit crops has a row in either.** The fruit crops were not "left behind" through carelessness; they were left behind because the documents that cover them are a different publication set that nobody had located.
+
+Treating this hunt as clerical -- repointing 22 crops at the ids already sitting in the catalog -- would have cited a vegetable table for apple, peach and blueberry. That is the `unr_fs0261` defect (a real document cited for a claim it does not contain), manufactured 22 times in one commit, by a pass whose stated purpose is to eliminate it.
+
+### Nine documents located and read
+
+None was recorded anywhere in the dataset. All fetched with `urllib`, PDFs via `pypdf`, and **every load-bearing sentence re-extracted from the raw bytes** before being relied on (7 of 7 survived). No WebFetch summary was used as evidence.
+
+`fruit-trees.aspx` (Home Garden Fruit Trees), FSA6129 (Tree Fruit Cultivars), FSA6130 (Small Fruit Cultivars), FSA6104 (Blueberry), FSA6103 (Strawberry), FSA6107 (Raspberry), `berries.aspx`, Reference Desk pomegranate, Reference Desk mulberry. Plus two read as negative evidence: Plant of the Week elderberry, and the herbs page.
+
+**Correction to the sample-pass note:** it records plain `uada_ext` as carrying "the bare root AND a pathed FSA-6002.pdf". Measured: the pathed FSA-6002 url is on **exactly 2 nodes, both asparagus**, against **141** bare uses, and FSA-6002 is an asparagus publication. The one-id-two-url violation is real but tiny and has nothing to do with fruit.
+
+### One sentence carried twelve crops and condemned a thirteenth
+
+> *"Fruit trees other than figs, could be planted in the fall, but often the best variety availability will be in late winter."*
+
+It **supports** `plant_out = "Dec - Feb (dormant, bare-root)"` across twelve tree fruits, and **excludes fig by name** -- the exception stated in the very sentence that licenses the rule. The page then says it again: *"Fig trees should not be planted until early spring."*
+
+### THREE DATA DEFECTS, surfaced not edited
+
+1. **`blueberry` -- the recommended type is inverted.** z7 IS the Ozark uplands (the region's own note defines z7 as "NW AR Ozarks (Fayetteville, the U of A chill station)") yet sets `recommended_type: rabbiteye` and states *"Northern highbush is heat-stressed here and is not recommended."* **Three** UAEX documents place the types the other way: FSA6104 (*"The northern highbush type is better adapted to the northern part of the state"*; northern highbush at **higher** elevations, rabbiteye at **lower**), FSA6130 (section headers **"Northern Highbush (Northern and Central Ark.)"** vs **"Rabbiteye (Central and Southern Ark.)"**), and `berries.aspx` (*"northern highbush blueberries are grown in the northern counties, and rabbiteyes are grown in more central and southern areas"*). The chill band corroborates UAEX rather than the cell: z7 banks [1000,1300] and FSA6130 puts the northern-highbush cultivars at 700-1200. z8's categorical *"northern highbush is too heat-stressed to recommend here"* is also wrong -- FSA6130 lists it for "Northern and **CENTRAL** Ark." A variety-selection steer is what a beginner acts on once and lives with for fifteen years.
+2. **`fig`** -- `Dec - Feb (dormant plant)` against the explicit carve-out. Fig is the most cold-tender woody fruit on the roster and a December planting in z7 is the failure mode the document is warning about.
+3. **`raspberry`** -- `December to March` against FSA6107: *"Planting should occur in the spring as soon as the soil can be properly prepared."*
+
+**2 and 3 are ONE authoring shape:** the build applied a single dormant-season woody-planting template to all woody fruit. UAEX endorses that template for tree fruit and documents **exactly two exceptions on this roster** -- fig and raspberry -- and both were missed.
+
+### One ruling question, deliberately not adjudicated
+
+FSA6129: *"Given the climate in Arkansas, both apricots and cherries trees can be grown but will not reliably set fruit... In the case of cherries, heavy rainfall... will result in fruit splitting prior to harvest."* That **supports** apricot and cherry-sweet at `marginal`. It reads against `cherry-sour = fruits_reliably` -- UAEX says "cherries" unqualified, gives **no cherry cultivar table at all**, and both stated mechanisms apply to sour cherry. But `mid_south_sources.md` §6 records **Trevor's 2026-07-20 call** that sour cherry stays `fruits_reliably`, carried from mid-Atlantic where NC State steers z8 growers specifically **toward** sour cherry. Two land-grants, opposite directions, an existing ruling: surfaced, not changed.
+
+### The largest honest gap: nobody publishes bloom dates
+
+Every tree fruit carries `bloom[0] = {from: last_frost, offset_days, window_days: 21}` cited SOLE to the bare host. **No UAEX document read this session publishes a bloom date for any fruit crop** -- FSA6129 uses bloom only as relative risk language ("tend to bloom early", "Late blooming"). This is the `harvest-start-is-not-a-published-datum` shape one field over: the literature yields relative bloom language and absolute frost dates, and our model turns them into an offset. Declared as modeled on 13 crops (apple excluded -- its bloom arm already cites a pathed `ext_org_apples` url). **Repointing can never fix an absent quantity.**
+
+### What was repointed, and what was left bare ON PURPOSE
+
+40 nodes -> new catalog id `uada_ext_fruit_trees`: 12 tree fruits' `plant_out` arm + both resolved cells, plus pawpaw's and persimmon's harvest arms (the page gives explicit ripening spans: pawpaw *"between mid-August and into October"*, oriental persimmon *"from late August until early December"*; both cells sit inside).
+
+Excluded deliberately: **fig / raspberry / blueberry** (repointing would publish the contradiction), **all bloom arms** (undocumented), **pawpaw's plant_out** (a *container* claim the page's bare-root sentence does not make, while its harvest was repointed), and **harvest for apricot / cherry / mulberry / peach / pear / plum / pomegranate** (UAEX publishes no dates -- FSA6129 has **no plum section at all** and gives peach/nectarine only a relative "days before Elberta" ladder with no anchor date).
+
+### The measurement, including the part that did not move
+
+| unit | before | after |
+|---|---|---|
+| SOLE bare-host pairs | 681 | **665** |
+| distinct SOLE nodes | 481 | **465** |
+| `uada_ext` SOLE | 100 | **84** |
+| decisions / document hunts | 170 / 32 | **170 / 32 -- UNCHANGED** |
+
+The -16 is exactly the SOLE arm-nodes; the other 24 repointed cells were already corroborated by `uada_ext_chill`. **Decisions and hunts did not move at all**, because each crop's container and bloom arms stay bare by design. That is the honest result of hunt 1: **UAEX publishes suitability, cultivar and ripening guidance but not the offset model our schema stores**, so most of these citations cannot be repointed at any effort. The next hunt should expect the same and be priced accordingly.
+
+### Gauntlet
+
+Guards adversarially TDD-tested **21/21** and **21/21**, on BOTH runners, including the two that matter most -- refusing to cite the page if a repointed crop's `plant_out` drifts off the documented window, or if pawpaw/persimmon harvest leaves the stated ripening span. `gate_all` **121/121 PASS**; `calendar_coherence` / `harvest_duration` / `numeric_sanity` / `cross_consistency` / `soil_temp_floor_scan` all exit 0; `release_verify` **"no new violations introduced"**, its one CONCERN the known single-crop-pilot footprint shape naming **exactly** the 16 intended crops with `source_catalog +['uada_ext_fruit_trees']` and nothing else; COMPACT preserved. Suite **205 passed / 0 failed** (203 + two new guard suites).
+
+### Owed
+
+The three contradictions are **data** decisions for Trevor and are untouched. Still owed from 2026-07-29: the 3 citation-only contradicted shapes, the held-back `ca_desert` pumpkin repoint, `ucr_citrus` (33 pairs / 4 crops, one method), and pole-beans' 50d-vs-60-DTM modeling question. Arc position: **1 of 32 hunts closed**; next is `mid_atlantic`/`ncsu_ext` (14 crops), whose sourcing note names zero URLs.
+
 ## 2026-07-29 (fourth promote, same session) -- PUMPKIN's desert SPRING re-derivation: closing a defect I introduced
 
 **Canonical `6eddf48f` -> `13d42f95` (fourth guarded promote; 5 cells x 7 keys + 1 finding). Day total: `dd24b180` -> `13d42f95`, 25 value cells across 10 crops + 21 documentation findings, count 128 / 121 certified unchanged. NOT PUSHED, NOT COMMITTED.**
