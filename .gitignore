@@ -21,3 +21,6 @@ CROP_REVIEW_*.doc
 
 # Session handoff staging (gitignored -- durable for a fresh chat, not committed)
 _handoff/
+
+# Fetched-document cache for tools/doc_mentions_crop_scan.py (regenerable, 14MB)
+tools/.doc_cache/
