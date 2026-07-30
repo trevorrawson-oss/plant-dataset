@@ -1,9 +1,11 @@
 # Citation-integrity cleanup arc — kickoff
 
 **Written:** 2026-07-29, at the close of the post-asparagus hardening pass.
-**Canonical at writing:** `dd24b180` (`origin/main` + 4 unpushed commits; 128 crops / 121 certified).
+**Canonical at writing:** `dd24b180` (pushed, `origin/main` `3d89bed`; 128 crops / 121 certified).
 **Run this in a FRESH session.** Everything needed is here, in `CURRENT_STATE.md`, and in
 `docs/2026-07-29-hardening-session-outcomes.md`.
+**Start at §5** — a 20-cell sample pass that answers "is the data wrong, or just the citations?"
+before anyone commits to the grind. §5b's triage is already done.
 
 ---
 
@@ -90,44 +92,135 @@ be classified separately — do not let a link-rot sweep delete a good citation.
 
 ---
 
-## 5. START HERE — the bare-host pass. Zero fetching, one second, 1,576 pairs.
+## 5. START HERE — the 20-cell SAMPLE PASS, before committing to anything
 
-The single highest-value first move, and it needs no network at all. A URL with **no path** is a
-domain root; it cannot support a crop-specific claim about planting dates or pest thresholds.
+**Do this first. It is roughly an afternoon and it can change the arc's priority in either
+direction.**
 
-```bash
-cd ~/plant-dataset && python3 - <<'PYEOF'
-import json, re, collections
-d=json.load(open('crops_data_final.json',encoding='utf-8'))
-sc=d['source_catalog']; BARE=re.compile(r'https?://[^/]+/?$')
-hits=collections.Counter(); crops=collections.defaultdict(set)
-def walk(x, slug):
-    if isinstance(x,dict):
-        for k,v in x.items():
-            if k=='anchoring_urls' and isinstance(v,dict):
-                for sid,meta in v.items():
-                    u=(meta or {}).get('url') if isinstance(meta,dict) else None
-                    if u and BARE.fullmatch(u): hits[sid]+=1; crops[sid].add(slug)
-            else: walk(v,slug)
-    elif isinstance(x,list):
-        for v in x: walk(v,slug)
-for c in d['crops']: walk(c,c['slug'])
-for sid,n in hits.most_common():
-    print(f'{sid:26} {n:6d} cells {len(crops[sid]):4d} crops  {sc.get(sid,{}).get("url","")}')
-print('TOTAL bare-host pairs:', sum(hits.values()))
-PYEOF
-```
+### Why it comes first
 
-Top of the list as of `dd24b180`:
+The question this arc has never answered is: **is the DATA wrong, or are the citations just
+pointed badly?** Those need completely different responses, and the counts cannot distinguish
+them. A bare host is a *cannot-verify*, not a *known-wrong*: a cell can be well-researched and
+badly recorded.
 
-| source id | cells | crops | url |
-|---|---|---|---|
-| `ucanr_ext` | 337 | 22 | `https://ucanr.edu` |
-| `uc_mg` | 283 | 25 | `https://mg.ucanr.edu` |
-| `tamu_agrilife` | 201 | 33 | `https://agrilifeextension.tamu.edu` |
-| `uada_ext` | 141 | 28 | `https://www.uaex.uada.edu` |
-| `ncsu_ext` | 99 | 26 | `https://content.ces.ncsu.edu` |
-| `uariz_ext` | 91 | 13 | `https://extension.arizona.edu` |
+The one crop audited to the bottom (asparagus) found **both** — and the split matters. `msu_ext`
+was cited on five cells with no crown timing in the document, yet **all five window values were
+correct** (independently backed by in-state quotes). But `ca_interior` z9 said `Feb - Mar` while UC
+ANR Pub 7234 — cited on that very cell — says harvest runs "late February through May", and that
+one was **genuinely wrong**.
+
+**Crucially, none of the data errors were found by the bare-host shape.** Every one came from
+reading a source and comparing it to the cell. So the 1,576 bare hosts and the wrong values are
+largely orthogonal problems, and only a tier-C read tells you the ratio.
+
+### The method — three verdicts, and only three
+
+For each sampled cell: work out what document the claim *should* rest on, locate it, read it, and
+record one of:
+
+| verdict | meaning | what it implies for the arc |
+|---|---|---|
+| **SUPPORTED** | a real document backs the stated window | citation-only defect — fix by repointing. High volume, low urgency. |
+| **CONTRADICTED** | a locatable document disagrees with the cell | **the data is wrong.** High urgency; a grower is being misled. |
+| **UNVERIFIABLE** | no document states this for this geography | the claim is unsourced derivation — a content finding, and repointing can never fix it. |
+
+Record the verbatim quote and URL for every verdict, including UNVERIFIABLE (list what you fetched
+and what it did *not* contain — that is the same evidence standard the asparagus sweep met).
+
+### The decision rule — commit to it BEFORE you look
+
+Write the outcome into this doc, then act on it:
+
+- **0-1 CONTRADICTED of 20** → the 681 is a *provenance* problem, not a correctness one. Treat the
+  arc as a repoint grind, schedule it behind feature work, and stop describing it as a data-quality
+  risk.
+- **≥2 of 20 CONTRADICTED (≥10%)** → it is a **correctness** problem. Escalate: the arc changes
+  shape from citation hygiene into a data-correction arc, gets its own gauntlet and state trio per
+  batch, and Trevor should hear about it before more crops certify.
+- **High UNVERIFIABLE** → tells you what fraction of the 681 can never be fixed by repointing and
+  needs honest downgrading instead. Budget that separately; it is authoring work, not sourcing work.
+
+> **STATISTICAL HONESTY — do not over-read a clean result.** At n=20, seeing **zero** contradictions
+> bounds the true rate at roughly **15%** (rule of three: 3/n), not at zero. A clean 20 means "the
+> rate is probably under 15%", which is reassuring but is NOT "the data is fine". If you need a
+> tighter bound, n=60 gets you to ~5%. Say which you did.
+
+### The sample — deterministic, stratified, already drawn
+
+No randomness, so it is auditable and nobody can be accused of cherry-picking: stratified across the
+source ids carrying the most SOLE citations, stride-sampled within each so picks spread across crops
+and regions. **Declared restriction:** it draws only from nodes stating a *concrete* window (a string
+`plant_out`/`harvest`), because the question is whether the windows a grower reads are wrong;
+frost-offset structures and `bloom` sub-blocks are a different claim type and are out of scope for
+this measurement.
+
+20 rows across 16 crops, 9 regions, 8 source ids — every one a SOLE-source bare-host node on a
+certified crop:
+
+| # | source id | crop | node | the claim to check |
+|---|---|---|---|---|
+| 1 | `ucanr_ext` | acorn-squash | `ca_desert.z10` | `plant_out` Jan 15 - Feb 15; `harvest` Apr 15 - May 31 |
+| 2 | `ucanr_ext` | honeydew-melon | `ca_desert.z11` | `plant_out` Feb 1 - Mar 20; `harvest` Jun 1 - Aug 10 |
+| 3 | `ucanr_ext` | okra | `ca_south_coast.z9` | `plant_out` May 1 - Jun 15; `harvest` Jul 10 - Oct 31 |
+| 4 | `uc_mg` | acorn-squash | `ca_desert.z10` | `plant_out` Jan 15 - Feb 15; `harvest` Apr 15 - May 31 |
+| 5 | `uc_mg` | cantaloupe | `ca_north_coast.z10` | `plant_out` Apr 15 - Jun 1; `harvest` Jul 25 - Oct 10 |
+| 6 | `uc_mg` | pumpkin | `ca_desert.z9.second_planting` | `plant_out` Jul 1 - Jul 31 |
+| 7 | `uariz_ext` | cantaloupe | `low_desert_az.z10` | `plant_out` Feb 1 - Mar 15; `harvest` May 1 - Jun 30 |
+| 8 | `uariz_ext` | lemon | `ca_desert.z10` | `plant_out` Feb - Apr; `harvest` Nov - … |
+| 9 | `uariz_ext` | lime | `low_desert_az.z10` | `plant_out` Feb - Apr; `harvest` Jun - Nov |
+| 10 | `tamu_agrilife` | acorn-squash | `warm_arid.z8` | `plant_out` May 1 - Jun 15; `harvest` Sep 1 - Oct 20 |
+| 11 | `tamu_agrilife` | butternut-squash | `warm_arid.z8` | `plant_out` May 1 - Jun 15; `harvest` Sep 1 - Oct 20 |
+| 12 | `tamu_agrilife` | shallot | `rgv.z10` | `plant_out` Oct 1 - Nov 15; `harvest` Jan 29 - Apr 14 |
+| 13 | `uada_ext` | blueberry | `mid_south.z7` | `plant_out` March to April; `harvest` June to July |
+| 14 | `uada_ext` | oregano | `mid_south.z8` | `plant_out` Apr 8 - Apr 29 |
+| 15 | `uada_ext` | sage | `mid_south.z8` | `plant_out` Apr 8 - Apr 29 |
+| 16 | `ncsu_ext` | apple | `mid_atlantic.z8` | `plant_out` Dec - Feb (dormant); `harvest` Aug 13 - Sep 27 |
+| 17 | `ncsu_ext` | cherry-sweet | `mid_atlantic.z8` | `plant_out` Dec - Feb (dormant); `harvest` Jun 4 - Jun 29 |
+| 18 | `ncsu_ext` | pear-asian | `mid_atlantic.z8` | `plant_out` Dec - Feb (dormant); `harvest` Aug 3 - Sep 12 |
+| 19 | `ucr_citrus` | grapefruit | `ca_interior.z8` | `plant_out` Spring; `harvest` Jan - May |
+| 20 | `nmsu_ext` | acorn-squash | `warm_arid.z8` | `plant_out` May 1 - Jun 15; `harvest` Sep 1 - Oct 20 |
+
+**Read the table carefully — some rows are the SAME NODE twice.** Rows 1 and 4 are both
+acorn-squash `ca_desert` z10, and rows 10 and 20 are both acorn-squash `warm_arid` z8. They repeat
+because **that node cites two sources and BOTH are bare hosts**, so it is still SOLE. The 20 rows
+are therefore **17 distinct nodes** — check each node once, and record the verdict against the node.
+
+That pattern is worth a finding in its own right, and it is the worse half of the problem:
+
+> **200 of the 481 distinct SOLE nodes cite TWO bare hosts and nothing else.** They *look*
+> well-cited — two independent extension sources! — while resting on nothing citable at all. A
+> reviewer scanning for "does this cell have sources?" would pass every one. (The 681 rows are 481
+> nodes: 281 citing one bare host, 200 citing two.)
+
+**One genuine cross-crop duplicate to check:** rows 10/11 are different crops — acorn-squash and
+butternut-squash — carrying a **byte-identical** `warm_arid` z8 window (`May 1 - Jun 15` /
+`Sep 1 - Oct 20`) from the same two bare sources. That is either correct (two winter squashes really
+do share a regional window) or the uniformity signature that exposed asparagus's 29 identical
+harvest strings. Rows 16/17/18 are three different tree fruits sharing one `mid_atlantic` z8
+planting window — same question, and dormant bare-root planting genuinely is shared across tree
+fruit, so this one is probably fine. **Check the squash pair; it is the more suspicious of the two.**
+
+**Row 13's `March to April` / `June to July` prose form** differs from every other row's
+`Mmm D - Mmm D`. A format outlier often marks a differently-authored cell.
+
+**Traps specific to this pass** (the full list is §7): distinguish a **seed** window from a
+**crown/transplant** window from a **harvest** window — that exact confusion put wrong values on an
+asparagus cell; do not stretch a source's stated geography onto ground it does not cover; county
+Master Gardener material is **T1**, so do not discard it and call the cell unverifiable; and
+**WebFetch summaries of PDFs are not sourcing** — `pypdf` or raw HTML only.
+
+To redraw or widen the sample, the generator is `docs/` adjacent — regenerate with
+`tools/bare_host_scan.py --sole` plus the stride rule described above, or just widen k per source id.
+
+---
+
+## 5b. The bare-host triage — DONE 2026-07-29, and it re-priced the arc
+
+Groundwork, already done — it produced the SOLE ranking the sample pass above draws from.
+A URL with **no path** is a domain root; it cannot support a crop-specific claim about
+planting dates or pest thresholds, and it is the blind spot a liveness check cannot see
+(every one returns HTTP 200).
 
 ### The triage is now quantified — run `tools/bare_host_scan.py`
 
@@ -282,10 +375,14 @@ it is T1 and cited by 67 crops.
 
 ## 10. Suggested sequence
 
-1. **Bare-host triage (§5) — DONE 2026-07-29, `tools/bare_host_scan.py`.** The worklist exists and
-   is quantified: 681 SOLE / 895 corroborated, six ids holding 601 of the SOLE rows, and only 10
-   pairs repointable from the catalog. **Start the arc at step 2, not here.** The one correction to
-   the original expectation: there are almost no free mechanical wins.
+0. **Bare-host triage (§5b) — DONE 2026-07-29, `tools/bare_host_scan.py`.** The worklist exists and
+   is quantified: 681 SOLE rows over 481 distinct nodes, 895 corroborated, six ids holding 601 of
+   the SOLE rows, and only 10 pairs repointable from the catalog. The correction to the original
+   expectation: **there are almost no free mechanical wins.**
+1. **THE 20-CELL SAMPLE PASS (§5). START HERE.** ~an afternoon, and it decides everything after it:
+   whether the 681 is a *provenance* problem or a *correctness* one. The sample is already drawn
+   (17 distinct nodes) and the decision rule is written down — **commit to that rule before you
+   look at a single source.** Do not skip ahead to step 2; the sample's outcome may reorder it.
 2. **The nine seed instances (§6).** Already verified; decide repoint / drop / dissent-note per row,
    and handle the 25 uncited catalog rows.
 3. **Tier B roster-wide:** for each of the 1,175 distinct URLs, fetch once (cache it) and grep for
@@ -297,7 +394,8 @@ it is T1 and cited by 67 crops.
 5. **Only then** consider a gate, and only if the measurement supports one. A `url_health_gate.py`
    already exists — read it before writing anything new.
 
-**Effort:** step 1 is done. Steps 2-4 are the real arc and **will span several sessions** — 681
+**Effort:** step 0 is done and step 1 is an afternoon. Steps 2-4 are the real arc and **will span
+several sessions** — 681
 sole-source claims each needing a document located, plus 1,175 URLs to sweep for tier B. Treat each
 batch as its own release with its own gauntlet and state trio, and prefer batching **by source id**
 over by crop, since cells sharing an id likely share a handful of underlying documents.
