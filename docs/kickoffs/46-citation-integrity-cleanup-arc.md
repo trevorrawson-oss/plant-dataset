@@ -1,5 +1,15 @@
 # Citation-integrity cleanup arc — kickoff
 
+> ## ⚠️ SUPERSEDED IN PART. READ `docs/kickoffs/47-citation-arc-continuation-handoff.md` FIRST.
+> Two hunts ran on 2026-07-30 and **the plan in this document is no longer the right one.** Its §5
+> banner already corrects three of its own premises; 47 corrects the *order of work*. The short
+> version: **most of these citations cannot be repointed at any effort** — no extension service
+> publishes bloom dates (confirmed independently at UAEX and NC State) — so the next move is ONE
+> roster-wide declaration pass, not 30 more document hunts. That is the difference between ~14
+> sessions and 5–6. Everything here about *method* still holds; everything about *sequence* does
+> not.
+
+
 **Written:** 2026-07-29, at the close of the post-asparagus hardening pass.
 **Canonical at writing:** `dd24b180` (pushed, `origin/main` `3d89bed`; 128 crops / 121 certified).
 **Run this in a FRESH session.** Everything needed is here, in `CURRENT_STATE.md`, and in
