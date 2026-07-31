@@ -20,6 +20,9 @@ import subprocess
 import sys
 import tempfile
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import promote_fixture as _fixture  # noqa: E402
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CANON = os.path.join(REPO, 'crops_data_final.json')
 SCRIPT = os.path.join(REPO, 'tools', 'promote_mid_atlantic_handbook_repoint.py')
@@ -28,25 +31,18 @@ NEW_ID = 'ncsu_ext_handbook_tree_fruit'
 VEG = 'https://www.pubs.ext.vt.edu/426/426-331/426-331.html'
 
 
-def _is_base():
-    if not os.path.exists(CANON):
-        return False
-    with open(CANON, 'rb') as fh:
-        return hashlib.sha256(fh.read()).hexdigest() == BASE_SHA
 
 
 def _scratch(mutate=None):
-    tmp = tempfile.mkdtemp(prefix='marepo_')
-    path = os.path.join(tmp, 'crops.json')
-    shutil.copy2(CANON, path)
-    raw = open(path, 'rb').read()
-    if mutate is None:
-        return path, hashlib.sha256(raw).hexdigest()
-    data = json.loads(raw)
-    mutate({c['slug']: c for c in data['crops']}, data)
-    out = json.dumps(data, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
-    open(path, 'wb').write(out)
-    return path, hashlib.sha256(out).hexdigest()
+    """The pinned PRE-promote state, rebuilt -- never a copy of live canonical.
+
+    Copying canonical only worked while it still sat on BASE_SHA. Once it moved past, the old
+    `if not _canonical_is_base(): return` skip made this whole suite pass while running ZERO
+    checks. promote_fixture rebuilds the pinned state (from a commit, or by replaying the
+    promote chain for hunt 1's never-committed intermediates) and hash-verifies it, so these
+    guards keep testing forever and FAIL LOUDLY if the state cannot be rebuilt.
+    """
+    return _fixture.scratch(BASE_SHA, mutate)
 
 
 def _run(path, sha, apply_=False):
@@ -56,9 +52,6 @@ def _run(path, sha, apply_=False):
 
 
 def test_guards():
-    if not _is_base():
-        print('SKIP: canonical is not the pinned base SHA')
-        return
     results = []
 
     def check(name, ok, detail=''):

@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Reconstruct the exact pre-state a promote guard suite was pinned to.
+
+WHY THIS EXISTS. Every promote guard suite in this repo opened with
+
+    if not _is_base():
+        print('SKIP: canonical is not the pinned base SHA')
+        return
+
+which is correct only while canonical still sits on that promote's base SHA. Canonical moves on
+after every promote, so each suite went silently vacuous -- reporting green while running ZERO
+checks. Measured 2026-07-30: six suites in that state, and the seventh (cherry-sour) had just
+joined them. A promote guard that stops testing without saying so is worse than one that was never
+written, because the green is load-bearing in the release gauntlet.
+
+The fix is to stop using live canonical as the fixture and rebuild the pinned pre-state instead.
+Two recoveries, in order:
+
+  1. **From a commit.** Most base SHAs are a committed `crops_data_final.json`.
+  2. **By replay.** Hunt 1 ran four guarded promotes back to back and committed only the final
+     state, so three intermediate base SHAs were never a commit. Each is exactly its predecessor
+     plus one promote script, so it is rebuilt by replaying that script. Verified byte-exact.
+
+Every path is HASH-VERIFIED against the requested SHA, so a wrong reconstruction cannot silently
+become a fixture. An unresolvable SHA raises -- loudly, never a skip.
+"""
+import hashlib
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TOOLS = os.path.join(REPO, 'tools')
+
+# canonical SHA -> the commit whose crops_data_final.json IS that SHA.
+# Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
+COMMIT_FOR = {
+    '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
+    '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
+    'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
+    '13d42f95413034636325ff14abb5346d6e044f61ddf313948ff49cdfb82fcda7': '0a4e54f',
+    'd5f8307395d681d908857953c13ef51be0e680c6532794a2fb3c6e3aae0925d9': '0015981',
+    'd77b9c5166896fa15a815ec25140d9531f966a592abc881fe528875647bb4590': '610dad4',
+}
+
+# canonical SHA -> (predecessor SHA, promote script that produces it).
+# Hunt 1's intermediate states, which were never committed on their own.
+CHAIN = {
+    '14c8eab246859c63a3fc9bf68c8f8fcef9ee39f360661589d26245f5924504c3': (
+        '13d42f95413034636325ff14abb5346d6e044f61ddf313948ff49cdfb82fcda7',
+        'promote_mid_south_uada_citation_findings.py'),
+    '5f58654b1fceb057a37cfaec7c77ef5c5d6e3a8de69847781cf237da89121b20': (
+        '14c8eab246859c63a3fc9bf68c8f8fcef9ee39f360661589d26245f5924504c3',
+        'promote_mid_south_fruit_tree_repoint.py'),
+    'd1b441c27f9d1cfe243977e794fc9207ed58361e87ea402af0a37e0845f0f65a': (
+        '5f58654b1fceb057a37cfaec7c77ef5c5d6e3a8de69847781cf237da89121b20',
+        'promote_mid_south_fruit_corrections.py'),
+    # the apple/pawpaw pair shipped in one commit, so the state between them is not a commit
+    '8116484c0254efcb4a7de0fc3c398a1404e2b7836db84031e04c0a9d9de4805f': (
+        'd5f8307395d681d908857953c13ef51be0e680c6532794a2fb3c6e3aae0925d9',
+        'promote_apple_mid_atlantic_bloom_reason.py'),
+}
+
+_cache = {}
+
+
+def _from_commit(sha):
+    ref = COMMIT_FOR.get(sha)
+    if ref is None:
+        return None
+    p = subprocess.run(['git', 'show', '%s:crops_data_final.json' % ref],
+                       cwd=REPO, capture_output=True)
+    return p.stdout if p.returncode == 0 else None
+
+
+def _from_chain(sha):
+    step = CHAIN.get(sha)
+    if step is None:
+        return None
+    parent_sha, script = step
+    parent = pre_state(parent_sha)          # recursive; each level hash-verified
+    tmp = tempfile.mkdtemp(prefix='fixture_')
+    try:
+        path = os.path.join(tmp, 'crops.json')
+        with open(path, 'wb') as fh:
+            fh.write(parent)
+        r = subprocess.run([sys.executable, os.path.join(TOOLS, script),
+                            '--canonical', path, '--expect-sha', parent_sha, '--apply'],
+                           cwd=REPO, capture_output=True, text=True)
+        if r.returncode != 0:
+            raise AssertionError('replay of %s failed: %s' % (script, (r.stdout + r.stderr)[-400:]))
+        with open(path, 'rb') as fh:
+            return fh.read()
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def pre_state(sha):
+    """The exact canonical bytes hashing to `sha`. Raises if it cannot be rebuilt."""
+    if sha in _cache:
+        return _cache[sha]
+    raw = _from_commit(sha) or _from_chain(sha)
+    if raw is None:
+        raise AssertionError(
+            'cannot rebuild the pre-state for %s. Add it to COMMIT_FOR (if it was committed) or '
+            'to CHAIN (predecessor SHA + the promote that produces it) in tools/promote_fixture.py. '
+            'These guards must FAIL here, never skip.' % sha[:16])
+    got = hashlib.sha256(raw).hexdigest()
+    if got != sha:
+        raise AssertionError('rebuilt fixture hashes to %s, expected %s -- history rewritten, or a '
+                             'stale COMMIT_FOR/CHAIN entry.' % (got[:16], sha[:16]))
+    _cache[sha] = raw
+    return raw
+
+
+def scratch(sha, mutate=None):
+    """Write the pre-state to a temp file. `mutate(crops_by_slug, data)` may inject a defect.
+
+    Returns (path, sha_of_written_file).
+    """
+    import json
+    tmp = tempfile.mkdtemp(prefix='promote_fixture_')
+    path = os.path.join(tmp, 'crops.json')
+    raw = pre_state(sha)
+    if mutate is not None:
+        data = json.loads(raw)
+        mutate({c['slug']: c for c in data['crops']}, data)
+        raw = json.dumps(data, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    with open(path, 'wb') as fh:
+        fh.write(raw)
+    return path, hashlib.sha256(raw).hexdigest()

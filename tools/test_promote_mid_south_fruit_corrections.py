@@ -18,17 +18,15 @@ import subprocess
 import sys
 import tempfile
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import promote_fixture as _fixture  # noqa: E402
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CANON = os.path.join(REPO, 'crops_data_final.json')
 SCRIPT = os.path.join(REPO, 'tools', 'promote_mid_south_fruit_corrections.py')
 BASE_SHA = '5f58654b1fceb057a37cfaec7c77ef5c5d6e3a8de69847781cf237da89121b20'
 
 
-def _canonical_is_base():
-    if not os.path.exists(CANON):
-        return False
-    with open(CANON, 'rb') as fh:
-        return hashlib.sha256(fh.read()).hexdigest() == BASE_SHA
 
 
 def _write(path, data):
@@ -46,16 +44,15 @@ def _run(path, sha, apply_=False):
 
 
 def _scratch(mutate=None):
-    tmp = tempfile.mkdtemp(prefix='msfix_')
-    path = os.path.join(tmp, 'crops.json')
-    shutil.copy2(CANON, path)
-    with open(path, 'rb') as fh:
-        raw = fh.read()
-    if mutate is None:
-        return path, hashlib.sha256(raw).hexdigest()
-    data = json.loads(raw)
-    mutate({c['slug']: c for c in data['crops']}, data)
-    return path, _write(path, data)
+    """The pinned PRE-promote state, rebuilt -- never a copy of live canonical.
+
+    Copying canonical only worked while it still sat on BASE_SHA. Once it moved past, the old
+    `if not _canonical_is_base(): return` skip made this whole suite pass while running ZERO
+    checks. promote_fixture rebuilds the pinned state (from a commit, or by replaying the
+    promote chain for hunt 1's never-committed intermediates) and hash-verifies it, so these
+    guards keep testing forever and FAIL LOUDLY if the state cannot be rebuilt.
+    """
+    return _fixture.scratch(BASE_SHA, mutate)
 
 
 def _cell(crops, slug, z):
@@ -63,9 +60,6 @@ def _cell(crops, slug, z):
 
 
 def test_guards():
-    if not _canonical_is_base():
-        print('SKIP: canonical is not the pinned base SHA')
-        return
     results = []
 
     def check(name, ok, detail=''):

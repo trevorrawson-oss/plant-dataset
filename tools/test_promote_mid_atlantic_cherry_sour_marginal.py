@@ -6,7 +6,18 @@ NOTHING ELSE moved -- and the consistency guard, since the ruling's stated argum
 apricot and cherry-sweet are already marginal in this region. If that stops being true, the
 argument for this change no longer holds and the promote must refuse.
 
-Skip guard is in the TEST BODY so pytest sees it.
+THE FIXTURE IS RECONSTRUCTED, NEVER COPIED FROM LIVE CANONICAL (changed 2026-07-30).
+
+This suite used to open with `if not _is_base(): return`, copying live canonical as its fixture.
+That was correct only while canonical still sat on the pinned base SHA. Canonical has since moved
+(sour cherry itself, then two bloom-reason rewordings), so the guard body stopped running entirely
+and the suite passed **vacuously** -- reporting green while testing nothing, which is the same
+failure shape as `optional-field-gates-go-vacuous`.
+
+The fix rebuilds the true pre-state from git and asserts it hashes to BASE_SHA, so the fixture is
+self-validating: if the reconstruction were wrong the SHA would not match. If it cannot be
+reconstructed the suite FAILS LOUDLY rather than skipping, because a promote guard that silently
+stops testing is worse than one that is missing.
 
     $ python3 -m pytest tools/test_promote_mid_atlantic_cherry_sour_marginal.py -q
     $ python3 tools/test_promote_mid_atlantic_cherry_sour_marginal.py
@@ -14,7 +25,6 @@ Skip guard is in the TEST BODY so pytest sees it.
 import hashlib
 import json
 import os
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -24,20 +34,32 @@ CANON = os.path.join(REPO, 'crops_data_final.json')
 SCRIPT = os.path.join(REPO, 'tools', 'promote_mid_atlantic_cherry_sour_marginal.py')
 BASE_SHA = '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b'
 
+# the commit whose crops_data_final.json IS BASE_SHA (verified by hash below, not by trust)
+BASE_COMMIT = '7abf386'
 
-def _is_base():
-    if not os.path.exists(CANON):
-        return False
-    with open(CANON, 'rb') as fh:
-        return hashlib.sha256(fh.read()).hexdigest() == BASE_SHA
+
+def _base_bytes():
+    """The exact pre-promote canonical, recovered from git and hash-verified."""
+    p = subprocess.run(['git', 'show', '%s:crops_data_final.json' % BASE_COMMIT],
+                       cwd=REPO, capture_output=True)
+    assert p.returncode == 0, (
+        'cannot reconstruct the pre-promote fixture from %s -- these guards must FAIL here, '
+        'never skip: %s' % (BASE_COMMIT, p.stderr.decode('utf-8', 'replace')[:300]))
+    raw = p.stdout
+    got = hashlib.sha256(raw).hexdigest()
+    assert got == BASE_SHA, (
+        'reconstructed fixture hashes to %s, expected BASE_SHA %s -- history rewritten?'
+        % (got[:16], BASE_SHA[:16]))
+    return raw
 
 
 def _scratch(mutate=None):
     tmp = tempfile.mkdtemp(prefix='chsour_')
     path = os.path.join(tmp, 'crops.json')
-    shutil.copy2(CANON, path)
-    raw = open(path, 'rb').read()
+    raw = _base_bytes()
     if mutate is None:
+        with open(path, 'wb') as fh:
+            fh.write(raw)
         return path, hashlib.sha256(raw).hexdigest()
     data = json.loads(raw)
     mutate({c['slug']: c for c in data['crops']}, data)
@@ -57,9 +79,6 @@ def _cell(crops, slug, z):
 
 
 def test_guards():
-    if not _is_base():
-        print('SKIP: canonical is not the pinned base SHA')
-        return
     results = []
 
     def check(name, ok, detail=''):
@@ -67,6 +86,16 @@ def test_guards():
         print(('  PASS  ' if ok else '  FAIL  ') + name + (('  -- ' + detail) if detail else ''))
 
     path, sha = _scratch()
+
+    # The fixture must genuinely be the PRE-promote state, or every guard below is testing
+    # the wrong thing while still reporting green. This is the check whose absence let the
+    # suite go vacuous.
+    fx = {c['slug']: c for c in json.loads(open(path).read())['crops']}
+    check('fixture hashes to the pinned BASE_SHA', sha == BASE_SHA, sha[:16])
+    check('fixture is the PRE-ruling state (both zones still fruits_reliably)',
+          all(_cell(fx, 'cherry-sour', z)['suitability'] == 'fruits_reliably'
+              for z in ('7', '8')),
+          str({z: _cell(fx, 'cherry-sour', z)['suitability'] for z in ('7', '8')}))
     rc, out = _run(path, sha)
     check('clean dry-run succeeds', rc == 0)
     check('asserts siblings already marginal', 'already marginal here' in out)
