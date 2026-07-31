@@ -1,8 +1,15 @@
 # Citation-integrity arc — CONTINUATION HANDOFF
 
 **Written:** 2026-07-30, at the close of the two-hunt session.
-**Canonical at writing:** `45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b`
-(**PUSHED**, `origin/main` = `d142eea`; 128 crops / 121 certified).
+**Canonical at writing:** `45409cee` — **SUPERSEDED, see below.**
+**CANONICAL NOW: `d5f8307395d681d908857953c13ef51be0e680c6532794a2fb3c6e3aae0925d9`**
+(**PUSHED**, `origin/main` = `0015981`; 128 crops / 121 certified).
+
+> ### ⚠️ CANONICAL MOVED AFTER THIS DOCUMENT WAS WRITTEN — RE-PIN BEFORE YOU PROMOTE.
+> `45409cee` → `d5f83073` (Trevor ruled `mid_atlantic` sour cherry `fruits_reliably` →
+> `marginal`; 6 edits + 1 finding on one crop). **Any promote script pinning
+> `BASE_SHA = '45409cee…'` will now abort — correctly.** Re-pin it to `d5f83073…` after
+> confirming the drift is only that ruling and nothing else.
 **Supersedes the operational half of `docs/kickoffs/46-citation-integrity-cleanup-arc.md`.** That
 document's §5 banner already corrects three of its own premises; this one corrects the plan.
 
@@ -15,9 +22,9 @@ document's §5 banner already corrects three of its own premises; this one corre
 ```bash
 cd ~/plant-dataset
 shasum -a 256 crops_data_final.json     # must equal LATEST.txt
-git log --oneline -1                    # expect d142eea
+git log --oneline -1                    # expect 0015981
 git status -sb                          # expect clean, synced with origin/main
-python3 -m pytest tools/ -q --ignore=tools/test_build_berry_pilot_patch.py   # expect 210 passed
+python3 -m pytest tools/ -q --ignore=tools/test_build_berry_pilot_patch.py   # expect 233 passed
 ```
 
 `tools/test_build_berry_pilot_patch.py` breaks pytest **collection** (module-level `sys.exit(0)`).
