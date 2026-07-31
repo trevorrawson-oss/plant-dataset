@@ -1,8 +1,12 @@
 # Citation-integrity arc — RESUME HERE
 
 **Written:** 2026-07-31, at the close of the audit-response session.
-**Canonical:** `8d2b1a91eea725e66cd6317a4a5a395f0db3b3302fb93e4994262c3e6d42b289`
-**HEAD:** `362942d` on `main`, **PUSHED and in sync with origin.** 128 crops / 121 certified.
+**Canonical:** ~~`8d2b1a91…`~~ **`172e4e7af950f0b98bf7883f5386c2b701a9d88f4d4347fc30d520cce7e91298`**
+(updated 2026-07-31 by the zone-lift prose de-zone, `8f7321c`).
+**HEAD:** ~~`362942d`~~ **`7092ca1` on `main`, COMMITTED but NOT PUSHED (origin is 2 behind).**
+128 crops / 121 certified.
+**Re-verify before trusting this header** -- it was 3 commits stale within a day of being written,
+which is the same failure mode this document warns about in §7.
 **Supersedes the operational half of `docs/kickoffs/47-citation-arc-continuation-handoff.md`.**
 47's §2 correction banner and §4 lessons still stand; its numbers and worklist are stale.
 
