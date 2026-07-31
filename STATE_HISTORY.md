@@ -46,6 +46,81 @@ Suite **237 -> 244 passed**. **NOT COMMITTED, NOT PUSHED.**
 
 ---
 
+## 2026-07-31 (ninth promote) -- the five tomatoes were told to feed twice as often as their own sources say
+
+**Canonical `d77b9c51` -> `a3469153` (40 edits / 5 crops, fertilizer only). Count 128 / 121 certified unchanged.**
+
+**The first fix driven by Trevor's independent blind audit** (`JSON_Cleanup_Audit_Comparison.docx`).
+
+**THE DEFECT, AND IT WAS SHIPPED BEHAVIOUR.** Every tomato carried `frequency: "every 2 weeks"` with
+`notify_days_after: 14`, while its own `amount_*` prose said *"repeated every 3 to 4 weeks"*. That is
+not merely a prose contradiction: `notify_days_after` **drives the app's reminder**, so we were
+telling gardeners to feed roughly twice as often as any cited source supports.
+
+**WHAT THE CITED SOURCE SAYS.** Clemson HGIC, already on this node, read from raw bytes:
+
+> "Side dress 1 pound of calcium nitrate (15.5-0-0) per 100 square feet (30 feet of row) **three to
+> four weeks after planting**. On sandier soil, this may need to be split into two applications
+> **three to four weeks apart**."
+
+UMN, the other cited source, carries no interval at all.
+
+**THREE START TRIGGERS IN ONE NODE.** `timing` said first flowers, `stage_id` said flowering, and the
+prose said first fruit at quarter size. **Trevor ruled: use Clemson's timing, drop the UGA
+attribution.**
+
+**THE UGA ATTRIBUTION WAS DROPPED, NOT REPOINTED.** The prose credited *"per UGA Extension"* for a
+rate-and-interval claim, but UGA is not among this node's sources (`umn_ext`, `clemson_hgic`) and the
+catalog's `uga_ext` entry is a **bare host** with no document behind it. The composite claim (1 lb of
+10-10-10) is not Clemson's product either, so **no new institution was credited in its place** -- the
+node's structural citations stand on their own. Same shape as hunt 1's fabricated UAEX attribution.
+
+**STAGE MAPPING IS PRECEDENTED, NOT INVENTED.** `established` + `notify_days_after: 21` +
+"side-dress about 3 to 4 weeks later" is exactly the shape `cauliflower`, `cabbage` and `kohlrabi`
+already use, and `tomatillo` -- same family -- uses `established` + 28.
+
+**THE FORMULA SWITCH WAS PRESERVED.** Feeding cadence and the balanced-to-high-potassium switch at
+flowering are two different facts. Moving the reminder to establishment would have silently dropped
+the switch, so the notification message now carries both.
+
+**GUARDS 51/51 ON BOTH RUNNERS**, including the one that matters most for an app-coupled field: an
+injected defect that **deletes the target growth stage** from one crop, confirming the promote
+aborts rather than pointing the app at a stage that does not exist. `gate_all` 121/121; all 5
+standalone gates exit 0; `release_verify` concern set byte-identical to the pre-state; `sources`,
+`anchoring_urls` and `npk_ratio` all asserted frozen.
+
+**THE NPK WORDING DEFECT IS DELIBERATELY STILL OPEN** as its own promote. Never mix two rulings.
+
+---
+
+## 2026-07-31 -- the external audit, verified rather than trusted
+
+Trevor ran an independent blind audit against the cleaned file. Every claim was re-measured here
+before any of it was acted on.
+
+**Confirmed exactly:** 57 null anchor URLs; 11 boolean `verified` values; asparagus missing exactly
+those 7 top-level fields; `version` still `1.0` / `schema_version` `2.9`; 121 `launch_ready_core`;
+768 total findings; and the 5 tomato fertilizer cadence contradictions.
+
+**Two divergences, both COUNTING UNITS rather than facts** -- the same trap that repriced this arc
+twice. Source/anchor mismatches are **133 by element vs the audit's 67 by object**, across the
+identical six crops; crops with unfinished findings are 62 vs 63 on a slightly different status set.
+
+**A framing the audit's totals hide: `lettuce-leaf` is 124 of the 133 mismatches AND all 11 boolean
+`verified` values.** That is one broken crop, not six, and it makes the next mechanical pass far
+cheaper than "67 scattered mismatches" suggests.
+
+**THE STRONGEST RESULT IS THE CROSS-VALIDATION.** The external auditor and
+`tools/internal_contradiction_scan.py`, built here the same day by a completely different method,
+**independently found the same NPK defect on the same three tomatoes**. Each also caught what the
+other missed: the audit found the fertilizer cadence, null URLs, boolean `verified` and the schema
+gaps; the scan found the elderberry chill/suitability gap, the cross-region contradictions and the
+template prose inheritance. The two are complementary, and that is the argument for running both.
+
+**NOT COMMITTED, NOT PUSHED.**
+
+---
+
 ## 2026-07-30 (eighth promote) -- pawpaw, and the proof that one reason cannot cover ten crops
 
 **Canonical `8116484c` -> `d77b9c51` (documentation only: 1 crop / 1 finding / 2 keys). Count 128 / 121 certified unchanged.**
