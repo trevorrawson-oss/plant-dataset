@@ -1,696 +1,731 @@
 {
-  "rosemary": {
-    "verdict": "safe",
-    "source": "aspca:rosemary",
-    "note": "ASPCA non-toxic to cats/dogs/horses"
-  },
-  "chives": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "aspca:chives+ncsu",
-    "note": "allium, hemolysis"
-  },
-  "sweet-pea": {
-    "verdict": "caution",
-    "affects": [
-      "horses"
-    ],
-    "source": "ncsu:lathyrus-odoratus+aspca",
-    "note": "seeds/pods lathyrism; ASPCA horses-only"
-  },
-  "chamomile": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "ncsu:matricaria-chamomilla+aspca",
-    "note": "German low-severity; Roman is ASPCA-toxic"
-  },
-  "cherry-tomato": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "aspca:tomato-plant+ncsu",
-    "note": "foliage/unripe toxic, ripe fruit safe"
-  },
-  "borage": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "aspca:borage+ncsu",
-    "note": "PAs, liver/lung"
-  },
-  "garlic": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/garlic",
-    "note": "In the onion (allium) family and toxic to cats, dogs, and horses; it damages their red blood cells."
-  },
-  "leek": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/leek",
-    "note": "An allium (onion family), toxic to cats, dogs, and horses; it can damage their red blood cells."
-  },
-  "onion": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/onion",
-    "note": "Toxic to cats, dogs, and horses; onions and the whole allium family damage their red blood cells."
-  },
-  "shallot": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/onion",
-    "note": "A type of onion (allium), toxic to cats, dogs, and horses; it damages their red blood cells."
-  },
-  "spring-onion": {
-    "verdict": "toxic",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/onion",
-    "note": "An onion-family allium, toxic to cats, dogs, and horses; scallions damage their red blood cells."
-  },
-  "beefsteak-tomato": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
-    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses."
-  },
-  "grape-tomato": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
-    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses."
-  },
-  "heirloom-tomato": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
-    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses."
-  },
-  "roma-tomato": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
-    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses."
-  },
-  "eggplant": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/solanum-melongena/",
-    "note": "The fruit is fine, but the leaves, stems, flowers, and roots are toxic to cats, dogs, and horses (solanine)."
-  },
-  "potato": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
-    "note": "The tuber is fine when cooked, but the green parts, sprouts, leaves, and stems are toxic to cats, dogs, and horses (solanine)."
-  },
-  "tomatillo": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/physalis-philadelphica/",
-    "note": "Ripe tomatillos are fine, but the unripe fruit, leaves, and stems contain solanine and are toxic to cats, dogs, and horses."
-  },
-  "bell-pepper": {
-    "verdict": "safe",
-    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
-    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum)."
-  },
-  "banana-pepper": {
-    "verdict": "safe",
-    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
-    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum)."
-  },
-  "cayenne-pepper": {
-    "verdict": "safe",
-    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
-    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum)."
-  },
-  "habanero": {
-    "verdict": "safe",
-    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
-    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum)."
-  },
-  "jalapeno": {
-    "verdict": "safe",
-    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
-    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum)."
-  },
-  "apricot": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apricot",
-    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
-  },
-  "cherry-sour": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cherry",
-    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
-  },
-  "cherry-sweet": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cherry",
-    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
-  },
-  "plum": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/plum",
-    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
-  },
-  "peach": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
-    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
-  },
-  "nectarine": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
-    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
-  },
-  "lemon": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon",
-    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses."
-  },
-  "lime": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lime",
-    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses."
-  },
-  "orange-navel": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/orange",
-    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses."
-  },
-  "grapefruit": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/grapefruit",
-    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses."
-  },
-  "mandarin-clementine": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/orange",
-    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses. (mandarin=Citrus reticulata, anchored to the ASPCA orange citrus caution)"
-  },
-  "lavender": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lavender",
-    "note": "Its essential oils (linalool) can cause mild stomach upset in cats, dogs, and horses if eaten."
-  },
-  "zinnia": {
-    "verdict": "safe",
-    "source": "aspca:zinnia non-toxic to c/d/h"
-  },
-  "nasturtium": {
-    "verdict": "safe",
-    "source": "aspca:nasturtium non-toxic to c/d/h"
-  },
-  "sunflower": {
-    "verdict": "safe",
-    "source": "aspca:sunflower (Helianthus) non-toxic to c/d/h"
-  },
-  "calendula": {
-    "verdict": "safe",
-    "source": "aspca:garden-marigold (Calendula officinalis) non-toxic to c/d"
-  },
-  "sweet-alyssum": {
-    "verdict": "safe",
-    "source": "aspca:alyssum non-toxic to c/d"
-  },
-  "viola": {
-    "verdict": "safe",
-    "source": "aspca:pansy (Viola tricolor) non-toxic to pets"
-  },
-  "marigold": {
-    "verdict": "safe",
-    "source": "ncsu:tagetes-patula -- NO pet tag (human phototoxic sap only); safe like Capsicum peppers. NOTE our marigold=Tagetes, not ASPCA's Calendula 'garden marigold'"
-  },
-  "cosmos": {
-    "verdict": "safe",
-    "source": "ncsu:cosmos-bipinnatus -- no pet tag"
-  },
-  "echinacea": {
-    "verdict": "safe",
-    "source": "ncsu:echinacea-purpurea -- no pet tag (edible/livestock-support)"
-  },
-  "bee-balm": {
-    "verdict": "safe",
-    "source": "ncsu:monarda-didyma -- no pet tag (edible)"
-  },
-  "oregano": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/oregano",
-    "note": "The essential oils can cause mild vomiting or diarrhea in cats, dogs, and horses if eaten in quantity."
-  },
-  "parsley": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/parsley",
-    "note": "Large amounts contain furanocoumarins that can make skin sun-sensitive in cats, dogs, and horses."
-  },
-  "mint": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/mint",
-    "note": "The essential oils can cause mild vomiting or diarrhea in cats, dogs, and horses with large amounts."
-  },
-  "lemongrass": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon-grass",
-    "note": "The essential oils can upset a cat or dog's stomach; large amounts can be more serious for horses."
-  },
-  "parsnip": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/pastinaca-sativa/",
-    "note": "All parts contain furanocoumarins that can make skin sun-sensitive in cats, dogs, and horses."
-  },
-  "basil": {
-    "verdict": "safe",
-    "source": "ncsu:ocimum-basilicum non-toxic c/d"
-  },
-  "cilantro-coriander": {
-    "verdict": "safe",
-    "source": "ncsu:coriandrum-sativum non-toxic c/d/h"
-  },
-  "dill": {
-    "verdict": "safe",
-    "source": "aspca:dill non-toxic c/d/h"
-  },
-  "sage": {
-    "verdict": "safe",
-    "source": "aspca:sage non-toxic c/d/h"
-  },
-  "thyme": {
-    "verdict": "safe",
-    "source": "ncsu:thymus-vulgaris non-toxic c/d/h"
-  },
-  "arugula": {
-    "verdict": "safe",
-    "source": "ncsu:eruca no pet tag"
-  },
-  "bok-choy": {
-    "verdict": "safe",
-    "source": "Brassica rapa, no toxicity listing (non-toxic brassica like B. oleracea)"
-  },
-  "celery": {
-    "verdict": "safe",
-    "source": "ncsu:apium-graveolens no pet tag"
-  },
-  "collards": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
-  },
-  "kale": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
-  },
-  "lettuce-leaf": {
-    "verdict": "safe",
-    "source": "ncsu:lactuca-sativa no pet tag"
-  },
-  "spinach": {
-    "verdict": "safe",
-    "source": "ncsu:spinacia-oleracea no pet tag (human oxalate only)"
-  },
-  "swiss-chard": {
-    "verdict": "safe",
-    "source": "aspca:beets (Beta vulgaris) non-toxic"
-  },
-  "arugula-microgreens": {
-    "verdict": "safe",
-    "source": "parent arugula (Eruca) safe"
-  },
-  "broccoli-microgreens": {
-    "verdict": "safe",
-    "source": "parent broccoli (B. oleracea) safe"
-  },
-  "cilantro-microgreens": {
-    "verdict": "safe",
-    "source": "parent cilantro safe"
-  },
-  "microgreens-mix": {
-    "verdict": "safe",
-    "source": "brassica/herb mix, all parents safe"
-  },
-  "pea-shoots": {
-    "verdict": "safe",
-    "source": "garden pea (Pisum sativum) non-toxic (distinct from toxic Lathyrus sweet-pea)"
-  },
-  "radish-microgreens": {
-    "verdict": "safe",
-    "source": "parent radish (Raphanus) safe"
-  },
-  "sunflower-sprouts": {
-    "verdict": "safe",
-    "source": "parent sunflower (Helianthus) ASPCA non-toxic"
-  },
-  "wheatgrass": {
-    "verdict": "safe",
-    "source": "wheat/grass (Triticum) non-toxic; cats graze grass"
-  },
-  "beet": {
-    "verdict": "safe",
-    "source": "aspca:beets (Beta vulgaris) non-toxic c/d/h"
-  },
-  "carrot": {
-    "verdict": "safe",
-    "source": "ncsu:daucus-carota no pet tag"
-  },
-  "radish": {
-    "verdict": "safe",
-    "source": "ncsu:raphanus-sativus no pet tag"
-  },
-  "sweet-potato": {
-    "verdict": "safe",
-    "source": "aspca:sweet-potato-vine (Ipomoea batatas) non-toxic"
-  },
-  "turnip": {
-    "verdict": "safe",
-    "source": "Brassica rapa, no toxicity listing (non-toxic brassica)"
-  },
-  "broccoli": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
-  },
-  "brussels-sprouts": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
-  },
-  "cabbage": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
-  },
-  "cauliflower": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
-  },
-  "kohlrabi": {
-    "verdict": "safe",
-    "source": "ncsu:brassica-oleracea no pet tag"
+  "acorn-squash": {
+    "source": "ncsu:cucurbita-pepo non-toxic c/d/h",
+    "verdict": "safe"
   },
   "apple": {
-    "verdict": "caution",
     "affects": [
       "cats",
       "dogs",
       "horses"
     ],
+    "note": "The fruit is fine, but the seeds, stems, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
     "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
-    "note": "The fruit is fine, but the seeds, stems, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses."
+    "verdict": "caution"
   },
-  "pear-asian": {
-    "verdict": "caution",
+  "apricot": {
     "affects": [
       "cats",
       "dogs",
       "horses"
     ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
-    "note": "The flesh is fine, but the seeds contain the same cyanide compounds as apple seeds and are best kept from cats, dogs, and horses."
+    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apricot",
+    "verdict": "caution"
   },
-  "pear-european": {
-    "verdict": "caution",
+  "artichoke": {
+    "note": "no pet tag; Scolymus Group is globe artichoke (the cynara-cardunculus page is cardoon, a different entry)",
+    "source": "ncsu:cynara-cardunculus-scolymus-group",
+    "verdict": "safe"
+  },
+  "arugula": {
+    "source": "ncsu:eruca no pet tag",
+    "verdict": "safe"
+  },
+  "arugula-microgreens": {
+    "source": "parent arugula (Eruca) safe",
+    "verdict": "safe"
+  },
+  "asparagus": {
+    "note": "no pet tag; NCSU human poison LOW (fruits/stems, contact dermatitis). NOT Asparagus densiflorus, the ASPCA-toxic ornamental fern",
+    "source": "ncsu:asparagus-officinalis",
+    "verdict": "safe"
+  },
+  "banana-pepper": {
+    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum).",
+    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+    "verdict": "safe"
+  },
+  "basil": {
+    "source": "ncsu:ocimum-basilicum non-toxic c/d",
+    "verdict": "safe"
+  },
+  "bee-balm": {
+    "source": "ncsu:monarda-didyma -- no pet tag (edible)",
+    "verdict": "safe"
+  },
+  "beefsteak-tomato": {
     "affects": [
       "cats",
       "dogs",
       "horses"
     ],
-    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
-    "note": "The flesh is fine, but the seeds contain the same cyanide compounds as apple seeds and are best kept from cats, dogs, and horses."
+    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+    "verdict": "caution"
   },
-  "elderberry": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/sambucus-canadensis/",
-    "note": "Cooked ripe elderberries are used in foods, but the raw or unripe berries, leaves, and stems contain cyanide compounds and are toxic to cats, dogs, and horses."
+  "beet": {
+    "source": "aspca:beets (Beta vulgaris) non-toxic c/d/h",
+    "verdict": "safe"
   },
-  "fig": {
-    "verdict": "caution",
-    "affects": [
-      "cats",
-      "dogs",
-      "horses"
-    ],
-    "source": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
-    "note": "The fruit is fine, but the milky sap and leaves can irritate the skin and stomach of cats, dogs, and horses."
-  },
-  "acorn-squash": {
-    "verdict": "safe",
-    "source": "ncsu:cucurbita-pepo non-toxic c/d/h"
-  },
-  "butternut-squash": {
-    "verdict": "safe",
-    "source": "ncsu:cucurbita non-toxic"
-  },
-  "pumpkin": {
-    "verdict": "safe",
-    "source": "ncsu:cucurbita-pepo non-toxic c/d/h"
-  },
-  "spaghetti-squash": {
-    "verdict": "safe",
-    "source": "ncsu:cucurbita non-toxic"
-  },
-  "yellow-summer-squash": {
-    "verdict": "safe",
-    "source": "ncsu:cucurbita-pepo non-toxic"
-  },
-  "zucchini-courgette": {
-    "verdict": "safe",
-    "source": "ncsu:cucurbita-pepo non-toxic c/d/h"
-  },
-  "broad-beans-fava": {
-    "verdict": "safe",
-    "source": "ncsu:vicia-faba no pet tag (favism human-only)"
-  },
-  "edamame": {
-    "verdict": "safe",
-    "source": "ncsu:glycine-max no pet tag"
-  },
-  "green-beans-bush": {
-    "verdict": "safe",
-    "source": "ncsu:phaseolus-vulgaris no pet tag (raw-bean lectin human-only)"
-  },
-  "pole-beans": {
-    "verdict": "safe",
-    "source": "ncsu:phaseolus-vulgaris no pet tag"
-  },
-  "snow-peas": {
-    "verdict": "safe",
-    "source": "garden pea (Pisum sativum) non-toxic"
-  },
-  "sugar-snap-peas": {
-    "verdict": "safe",
-    "source": "garden pea (Pisum sativum) non-toxic"
-  },
-  "cucumber": {
-    "verdict": "safe",
-    "source": "ncsu:cucumis-sativus non-toxic c/d/h"
-  },
-  "english-cucumber": {
-    "verdict": "safe",
-    "source": "ncsu:cucumis-sativus non-toxic"
-  },
-  "pickling-cucumber": {
-    "verdict": "safe",
-    "source": "ncsu:cucumis-sativus non-toxic"
-  },
-  "slicing-cucumber": {
-    "verdict": "safe",
-    "source": "ncsu:cucumis-sativus non-toxic"
-  },
-  "cantaloupe": {
-    "verdict": "safe",
-    "source": "Cucumis melo, non-toxic cucurbit (like cucumber)"
-  },
-  "honeydew-melon": {
-    "verdict": "safe",
-    "source": "Cucumis melo, non-toxic cucurbit"
-  },
-  "watermelon": {
-    "verdict": "safe",
-    "source": "Citrullus lanatus, non-toxic cucurbit (commonly pet-safe)"
+  "bell-pepper": {
+    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum).",
+    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+    "verdict": "safe"
   },
   "blackberry": {
-    "verdict": "safe",
-    "source": "Rubus, non-toxic (commonly pet-safe berry)"
+    "source": "Rubus, non-toxic (commonly pet-safe berry)",
+    "verdict": "safe"
   },
   "blueberry": {
-    "verdict": "safe",
-    "source": "ncsu:vaccinium-corymbosum no pet tag"
+    "source": "ncsu:vaccinium-corymbosum no pet tag",
+    "verdict": "safe"
   },
-  "raspberry": {
-    "verdict": "safe",
-    "source": "Rubus, non-toxic (commonly pet-safe berry)"
+  "bok-choy": {
+    "source": "Brassica rapa, no toxicity listing (non-toxic brassica like B. oleracea)",
+    "verdict": "safe"
   },
-  "persimmon": {
-    "verdict": "safe",
-    "source": "ncsu:diospyros-virginiana no pet tag"
+  "borage": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "PAs, liver/lung",
+    "source": "aspca:borage+ncsu",
+    "verdict": "toxic"
   },
-  "pomegranate": {
-    "verdict": "safe",
-    "source": "ncsu:punica-granatum no pet tag"
+  "broad-beans-fava": {
+    "source": "ncsu:vicia-faba no pet tag (favism human-only)",
+    "verdict": "safe"
+  },
+  "broccoli": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "broccoli-microgreens": {
+    "source": "parent broccoli (B. oleracea) safe",
+    "verdict": "safe"
+  },
+  "brussels-sprouts": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "butternut-squash": {
+    "source": "ncsu:cucurbita non-toxic",
+    "verdict": "safe"
+  },
+  "cabbage": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "calendula": {
+    "source": "aspca:garden-marigold (Calendula officinalis) non-toxic to c/d",
+    "verdict": "safe"
+  },
+  "cantaloupe": {
+    "source": "Cucumis melo, non-toxic cucurbit (like cucumber)",
+    "verdict": "safe"
+  },
+  "carrot": {
+    "source": "ncsu:daucus-carota no pet tag",
+    "verdict": "safe"
+  },
+  "cauliflower": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "cayenne-pepper": {
+    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum).",
+    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+    "verdict": "safe"
+  },
+  "celery": {
+    "source": "ncsu:apium-graveolens no pet tag",
+    "verdict": "safe"
+  },
+  "chamomile": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "German low-severity; Roman is ASPCA-toxic",
+    "source": "ncsu:matricaria-chamomilla+aspca",
+    "verdict": "caution"
+  },
+  "cherry-sour": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cherry",
+    "verdict": "caution"
+  },
+  "cherry-sweet": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/cherry",
+    "verdict": "caution"
+  },
+  "cherry-tomato": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "foliage/unripe toxic, ripe fruit safe",
+    "source": "aspca:tomato-plant+ncsu",
+    "verdict": "caution"
+  },
+  "chives": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "allium, hemolysis",
+    "source": "aspca:chives+ncsu",
+    "verdict": "toxic"
+  },
+  "cilantro-coriander": {
+    "source": "ncsu:coriandrum-sativum non-toxic c/d/h",
+    "verdict": "safe"
+  },
+  "cilantro-microgreens": {
+    "source": "parent cilantro safe",
+    "verdict": "safe"
+  },
+  "collards": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "cosmos": {
+    "source": "ncsu:cosmos-bipinnatus -- no pet tag",
+    "verdict": "safe"
+  },
+  "cucumber": {
+    "source": "ncsu:cucumis-sativus non-toxic c/d/h",
+    "verdict": "safe"
+  },
+  "dill": {
+    "source": "aspca:dill non-toxic c/d/h",
+    "verdict": "safe"
+  },
+  "dry-bean": {
+    "note": "no pet tag; NCSU human poison MEDIUM (raw/undercooked seeds, phytohaemagglutinin). NOT Ricinus communis, ASPCA's castor bean",
+    "source": "ncsu:phaseolus-vulgaris",
+    "verdict": "safe"
+  },
+  "echinacea": {
+    "source": "ncsu:echinacea-purpurea -- no pet tag (edible/livestock-support)",
+    "verdict": "safe"
+  },
+  "edamame": {
+    "source": "ncsu:glycine-max no pet tag",
+    "verdict": "safe"
+  },
+  "eggplant": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the leaves, stems, flowers, and roots are toxic to cats, dogs, and horses (solanine).",
+    "source": "https://plants.ces.ncsu.edu/plants/solanum-melongena/",
+    "verdict": "caution"
+  },
+  "elderberry": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Cooked ripe elderberries are used in foods, but the raw or unripe berries, leaves, and stems contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/sambucus-canadensis/",
+    "verdict": "caution"
+  },
+  "english-cucumber": {
+    "source": "ncsu:cucumis-sativus non-toxic",
+    "verdict": "safe"
+  },
+  "field-corn": {
+    "note": "no pet tag; no poison section. NOT Dracaena fragrans, ASPCA's 'Corn Plant'",
+    "source": "ncsu:zea-mays",
+    "verdict": "safe"
+  },
+  "fig": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the milky sap and leaves can irritate the skin and stomach of cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+    "verdict": "caution"
+  },
+  "flint-corn": {
+    "note": "no pet tag; no poison section. NOT Dracaena fragrans, ASPCA's 'Corn Plant'",
+    "source": "ncsu:zea-mays",
+    "verdict": "safe"
+  },
+  "garlic": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "In the onion (allium) family and toxic to cats, dogs, and horses; it damages their red blood cells.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/garlic",
+    "verdict": "toxic"
+  },
+  "grape-tomato": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+    "verdict": "caution"
+  },
+  "grapefruit": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/grapefruit",
+    "verdict": "caution"
+  },
+  "green-beans-bush": {
+    "source": "ncsu:phaseolus-vulgaris no pet tag (raw-bean lectin human-only)",
+    "verdict": "safe"
+  },
+  "habanero": {
+    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum).",
+    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+    "verdict": "safe"
+  },
+  "heirloom-tomato": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+    "verdict": "caution"
+  },
+  "honeydew-melon": {
+    "source": "Cucumis melo, non-toxic cucurbit",
+    "verdict": "safe"
+  },
+  "jalapeno": {
+    "note": "NCSU gives Capsicum annuum no pet-toxicity tag (unlike its nightshade relatives); capsaicin is a mild irritant only. ASPCA's 'Ornamental Pepper' is a different plant (Solanum pseudocapsicum).",
+    "source": "https://plants.ces.ncsu.edu/plants/capsicum-annuum/",
+    "verdict": "safe"
+  },
+  "kale": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "kohlrabi": {
+    "source": "ncsu:brassica-oleracea no pet tag",
+    "verdict": "safe"
+  },
+  "lavender": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Its essential oils (linalool) can cause mild stomach upset in cats, dogs, and horses if eaten.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lavender",
+    "verdict": "caution"
+  },
+  "leek": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "An allium (onion family), toxic to cats, dogs, and horses; it can damage their red blood cells.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/leek",
+    "verdict": "toxic"
+  },
+  "lemon": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon",
+    "verdict": "caution"
+  },
+  "lemongrass": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The essential oils can upset a cat or dog's stomach; large amounts can be more serious for horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon-grass",
+    "verdict": "caution"
+  },
+  "lettuce-leaf": {
+    "source": "ncsu:lactuca-sativa no pet tag",
+    "verdict": "safe"
+  },
+  "lime": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lime",
+    "verdict": "caution"
+  },
+  "mandarin-clementine": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses. (mandarin=Citrus reticulata, anchored to the ASPCA orange citrus caution)",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/orange",
+    "verdict": "caution"
+  },
+  "marigold": {
+    "source": "ncsu:tagetes-patula -- NO pet tag (human phototoxic sap only); safe like Capsicum peppers. NOTE our marigold=Tagetes, not ASPCA's Calendula 'garden marigold'",
+    "verdict": "safe"
+  },
+  "microgreens-mix": {
+    "source": "brassica/herb mix, all parents safe",
+    "verdict": "safe"
+  },
+  "mint": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The essential oils can cause mild vomiting or diarrhea in cats, dogs, and horses with large amounts.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/mint",
+    "verdict": "caution"
   },
   "mulberry": {
-    "verdict": "safe",
-    "source": "ncsu:morus-rubra non-toxic c/d/h (human unripe/sap only)"
+    "source": "ncsu:morus-rubra non-toxic c/d/h (human unripe/sap only)",
+    "verdict": "safe"
   },
-  "pawpaw": {
-    "verdict": "safe",
-    "source": "ncsu:asimina-triloba no pet tag (human GI only)"
+  "nasturtium": {
+    "source": "aspca:nasturtium non-toxic to c/d/h",
+    "verdict": "safe"
+  },
+  "nectarine": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+    "verdict": "caution"
   },
   "okra": {
-    "verdict": "safe",
-    "source": "ncsu:abelmoschus-esculentus no pet tag"
+    "source": "ncsu:abelmoschus-esculentus no pet tag",
+    "verdict": "safe"
+  },
+  "onion": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Toxic to cats, dogs, and horses; onions and the whole allium family damage their red blood cells.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/onion",
+    "verdict": "toxic"
+  },
+  "orange-navel": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The fruit is fine, but the peel, leaves, and citrus oils can upset the stomach of cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/orange",
+    "verdict": "caution"
+  },
+  "oregano": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The essential oils can cause mild vomiting or diarrhea in cats, dogs, and horses if eaten in quantity.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/oregano",
+    "verdict": "caution"
+  },
+  "parsley": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Large amounts contain furanocoumarins that can make skin sun-sensitive in cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/parsley",
+    "verdict": "caution"
+  },
+  "parsnip": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "All parts contain furanocoumarins that can make skin sun-sensitive in cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/pastinaca-sativa/",
+    "verdict": "caution"
+  },
+  "pawpaw": {
+    "source": "ncsu:asimina-triloba no pet tag (human GI only)",
+    "verdict": "safe"
+  },
+  "pea-shoots": {
+    "source": "garden pea (Pisum sativum) non-toxic (distinct from toxic Lathyrus sweet-pea)",
+    "verdict": "safe"
+  },
+  "peach": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+    "verdict": "caution"
+  },
+  "pear-asian": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the seeds contain the same cyanide compounds as apple seeds and are best kept from cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
+    "verdict": "caution"
+  },
+  "pear-european": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the seeds contain the same cyanide compounds as apple seeds and are best kept from cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/apple",
+    "verdict": "caution"
+  },
+  "persimmon": {
+    "source": "ncsu:diospyros-virginiana no pet tag",
+    "verdict": "safe"
+  },
+  "pickling-cucumber": {
+    "source": "ncsu:cucumis-sativus non-toxic",
+    "verdict": "safe"
+  },
+  "plum": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The flesh is fine, but the pits, seeds, and leaves contain cyanide compounds and are toxic to cats, dogs, and horses.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/plum",
+    "verdict": "caution"
+  },
+  "pole-beans": {
+    "source": "ncsu:phaseolus-vulgaris no pet tag",
+    "verdict": "safe"
+  },
+  "pomegranate": {
+    "source": "ncsu:punica-granatum no pet tag",
+    "verdict": "safe"
+  },
+  "popcorn": {
+    "note": "no pet tag; no poison section. NOT Dracaena fragrans, ASPCA's 'Corn Plant'",
+    "source": "ncsu:zea-mays",
+    "verdict": "safe"
+  },
+  "potato": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "The tuber is fine when cooked, but the green parts, sprouts, leaves, and stems are toxic to cats, dogs, and horses (solanine).",
+    "source": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+    "verdict": "caution"
+  },
+  "pumpkin": {
+    "source": "ncsu:cucurbita-pepo non-toxic c/d/h",
+    "verdict": "safe"
+  },
+  "radish": {
+    "source": "ncsu:raphanus-sativus no pet tag",
+    "verdict": "safe"
+  },
+  "radish-microgreens": {
+    "source": "parent radish (Raphanus) safe",
+    "verdict": "safe"
+  },
+  "raspberry": {
+    "source": "Rubus, non-toxic (commonly pet-safe berry)",
+    "verdict": "safe"
+  },
+  "roma-tomato": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Ripe tomatoes are fine, but the leaves, stems, and unripe fruit are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/solanum-lycopersicum/",
+    "verdict": "caution"
+  },
+  "rosemary": {
+    "note": "ASPCA non-toxic to cats/dogs/horses",
+    "source": "aspca:rosemary",
+    "verdict": "safe"
+  },
+  "sage": {
+    "source": "aspca:sage non-toxic c/d/h",
+    "verdict": "safe"
+  },
+  "shallot": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "A type of onion (allium), toxic to cats, dogs, and horses; it damages their red blood cells.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/onion",
+    "verdict": "toxic"
+  },
+  "slicing-cucumber": {
+    "source": "ncsu:cucumis-sativus non-toxic",
+    "verdict": "safe"
+  },
+  "snow-peas": {
+    "source": "garden pea (Pisum sativum) non-toxic",
+    "verdict": "safe"
+  },
+  "spaghetti-squash": {
+    "source": "ncsu:cucurbita non-toxic",
+    "verdict": "safe"
+  },
+  "spinach": {
+    "source": "ncsu:spinacia-oleracea no pet tag (human oxalate only)",
+    "verdict": "safe"
+  },
+  "spring-onion": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "An onion-family allium, toxic to cats, dogs, and horses; scallions damage their red blood cells.",
+    "source": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/onion",
+    "verdict": "toxic"
   },
   "strawberry": {
-    "verdict": "safe",
-    "source": "Fragaria, non-toxic (commonly pet-safe berry)"
+    "source": "Fragaria, non-toxic (commonly pet-safe berry)",
+    "verdict": "safe"
+  },
+  "sugar-snap-peas": {
+    "source": "garden pea (Pisum sativum) non-toxic",
+    "verdict": "safe"
+  },
+  "sunflower": {
+    "source": "aspca:sunflower (Helianthus) non-toxic to c/d/h",
+    "verdict": "safe"
+  },
+  "sunflower-sprouts": {
+    "source": "parent sunflower (Helianthus) ASPCA non-toxic",
+    "verdict": "safe"
+  },
+  "sweet-alyssum": {
+    "source": "aspca:alyssum non-toxic to c/d",
+    "verdict": "safe"
+  },
+  "sweet-corn": {
+    "note": "no pet tag; no poison section. NOT Dracaena fragrans, ASPCA's 'Corn Plant'",
+    "source": "ncsu:zea-mays",
+    "verdict": "safe"
+  },
+  "sweet-pea": {
+    "affects": [
+      "horses"
+    ],
+    "note": "seeds/pods lathyrism; ASPCA horses-only",
+    "source": "ncsu:lathyrus-odoratus+aspca",
+    "verdict": "caution"
+  },
+  "sweet-potato": {
+    "source": "aspca:sweet-potato-vine (Ipomoea batatas) non-toxic",
+    "verdict": "safe"
+  },
+  "swiss-chard": {
+    "source": "aspca:beets (Beta vulgaris) non-toxic",
+    "verdict": "safe"
+  },
+  "thyme": {
+    "source": "ncsu:thymus-vulgaris non-toxic c/d/h",
+    "verdict": "safe"
+  },
+  "tomatillo": {
+    "affects": [
+      "cats",
+      "dogs",
+      "horses"
+    ],
+    "note": "Ripe tomatillos are fine, but the unripe fruit, leaves, and stems contain solanine and are toxic to cats, dogs, and horses.",
+    "source": "https://plants.ces.ncsu.edu/plants/physalis-philadelphica/",
+    "verdict": "caution"
+  },
+  "turnip": {
+    "source": "Brassica rapa, no toxicity listing (non-toxic brassica)",
+    "verdict": "safe"
+  },
+  "viola": {
+    "source": "aspca:pansy (Viola tricolor) non-toxic to pets",
+    "verdict": "safe"
+  },
+  "watermelon": {
+    "source": "Citrullus lanatus, non-toxic cucurbit (commonly pet-safe)",
+    "verdict": "safe"
+  },
+  "wheatgrass": {
+    "source": "wheat/grass (Triticum) non-toxic; cats graze grass",
+    "verdict": "safe"
+  },
+  "yellow-summer-squash": {
+    "source": "ncsu:cucurbita-pepo non-toxic",
+    "verdict": "safe"
+  },
+  "zinnia": {
+    "source": "aspca:zinnia non-toxic to c/d/h",
+    "verdict": "safe"
+  },
+  "zucchini-courgette": {
+    "source": "ncsu:cucurbita-pepo non-toxic c/d/h",
+    "verdict": "safe"
   }
 }
