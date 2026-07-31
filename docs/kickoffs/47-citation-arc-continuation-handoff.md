@@ -2,8 +2,8 @@
 
 **Written:** 2026-07-30, at the close of the two-hunt session.
 **Canonical at writing:** `45409cee` — **SUPERSEDED, see below.**
-**CANONICAL NOW: `d5f8307395d681d908857953c13ef51be0e680c6532794a2fb3c6e3aae0925d9`**
-(**PUSHED**, `origin/main` = `0015981`; 128 crops / 121 certified).
+**CANONICAL NOW: `d77b9c5166896fa15a815ec25140d9531f966a592abc881fe528875647bb4590`**
+(committed `610dad4`, HEAD `05f9213`, **4 commits ahead of `origin/main` -- NOT PUSHED**; 128 crops / 121 certified).
 
 > ### ⚠️ CANONICAL MOVED AFTER THIS DOCUMENT WAS WRITTEN — RE-PIN BEFORE YOU PROMOTE.
 > `45409cee` → `d5f83073` (Trevor ruled `mid_atlantic` sour cherry `fruits_reliably` →
@@ -22,9 +22,9 @@ document's §5 banner already corrects three of its own premises; this one corre
 ```bash
 cd ~/plant-dataset
 shasum -a 256 crops_data_final.json     # must equal LATEST.txt
-git log --oneline -1                    # expect 0015981
+git log --oneline -1                    # expect 05f9213
 git status -sb                          # expect clean, synced with origin/main
-python3 -m pytest tools/ -q --ignore=tools/test_build_berry_pilot_patch.py   # expect 233 passed
+python3 -m pytest tools/ -q --ignore=tools/test_build_berry_pilot_patch.py   # expect 244 passed
 ```
 
 `tools/test_build_berry_pilot_patch.py` breaks pytest **collection** (module-level `sys.exit(0)`).
@@ -54,8 +54,9 @@ Expect three untracked items that are **not yours**: `.claude/`, `tools/staging/
 > **Read `docs/2026-07-30-bloom-declaration-premise-falsified.md` before touching bloom.**
 > New tool: `tools/bloom_datum_scan.py` classifies every cited document
 > (`PUBLISHES_TIMING` / `MENTION_NO_DATE` / `NO_MENTION` / `UNDETERMINED`).
-> The real worklist it found: **78 undeclared arms whose every cited document never mentions bloom
-> at all** — the `unr_fs0261` shape, a **defect** class, not a declaration class.
+> The real worklist it found: ~~78~~ **55 undeclared arms whose every cited document never mentions
+> bloom at all** — the `unr_fs0261` shape, a **defect** class, not a declaration class. (78 before the
+> cache fix; **23 were phantom**, resting on pages nobody had actually read.)
 >
 > Also: there are **three** bloom encodings, not one (243 `offset`, 145 `month_literal`, 13
 > `synthesis_window`). A declaration worded *"a modeled offset from the zone last-frost date"* is
@@ -83,7 +84,7 @@ document for that.
    the remaining 167 decisions in one pass. Precedent to copy: `mid_south_bloom_offset_undocumented`
    (13 crops) and `mid_atlantic_bloom_offset_undocumented` (10 crops), already in the data.
    **Replaced by:** a *classified* pass — declare only the 138 `MENTION_NO_DATE` arms, in wording
-   that matches each arm's actual encoding; treat the 78 never-mentioned arms as defects; leave the
+   that matches each arm's actual encoding; treat the 55 never-mentioned arms as defects; leave the
    documented ones alone and consider repointing them to the real datum.
 2. **Then targeted hunts, driven by `doc_mentions_crop_scan`** (§3) — only where a document
    plausibly exists. The scan hands you the worklist; you no longer have to guess.
