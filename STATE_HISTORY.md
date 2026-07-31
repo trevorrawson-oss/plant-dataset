@@ -46,6 +46,55 @@ Suite **237 -> 244 passed**. **NOT COMMITTED, NOT PUSHED.**
 
 ---
 
+## 2026-07-31 (eleventh promote) -- the tomato NPK hints taught the label wrong
+
+**Canonical `72adc366` -> `1dd6ada3` (10 edits / 5 crops, wording only). Count 128 / 121 certified unchanged.**
+
+The external audit found three tomatoes saying *"you want the third number to be the highest"* and
+then giving `5-10-10` and `8-32-16` -- in neither of which the third number is highest.
+
+**IT IS FIVE CROPS, NOT THREE.** `beefsteak-tomato` and `heirloom-tomato` carry the same error in a
+form the audit's read did not catch: *"a higher third number on the bag (like 5-10-10)"*, where the
+third number is **tied** with the second, not higher.
+
+**AND THE UNDERLYING CLAIM IS UNSOURCED, which is the bigger finding.** Both cited sources were
+fetched and read in full:
+
+- **Clemson HGIC never mentions potassium at all.** It says *"A soil test is always the best method
+  of determining the fertilization needs of the crop."*
+- **UMN Extension:** *"Apply phosphorus (P) and potassium (K) according to soil test
+  recommendations... Unless your soil test report specifically recommends additional phosphorus, use
+  a **low- or no-phosphorus** fertilizer. Too much nitrogen fertilization will lead to plants that
+  are bushy, leafy, and slow to bear fruit."*
+
+So *"make potassium the highest number"* is supported by neither, and **`8-32-16` -- phosphorus 32,
+the largest number on that bag -- is the opposite of what our own cited source advises.** We were
+teaching people how to read a fertilizer label and then pointing them at the one formula UMN warns
+against, on the crop most likely to be a beginner's first.
+
+**THE FIX RETREATS TO WHAT IS SOURCED** rather than inventing a replacement rule: soil test first
+(both sources), go easy on nitrogen before fruit set (UMN verbatim), no added phosphorus unless a
+test calls for it (UMN verbatim). `8-32-16` is removed outright; `5-10-10` stays because it IS the
+crop's `npk_ratio`.
+
+**DELIBERATELY NOT CHANGED:** `npk_ratio` stays `5-10-10` on all five. Whether a phosphorus-containing
+formula is the right default when UMN advises low-or-no-P is a **real open question** -- but it is a
+different one, and a value change never rides along with a wording correction.
+
+Guards **53/53 both runners**, and they assert the **content** of the replacement -- soil test
+present, nitrogen warning kept, phosphorus guidance carried, `8-32-16` gone, `npk_ratio` and the
+ninth promote's cadence fields frozen -- because the failure mode for a wording fix is text that
+becomes self-consistent and stays wrong. `gate_all` 121/121; 5 standalone gates 0; `release_verify`
+identical to pre-state.
+
+**CONFIRMED BY OUR OWN TOOL:** `internal_contradiction_scan --family NPK` drops 11 -> 8, the three
+tomatoes gone. The remaining 8 are a different shape (high-nitrogen claims on basil, cosmos, parsnip,
+slicing-cucumber, sweet-alyssum, sweet-potato, tomatillo, viola) and stay open.
+
+**NOT COMMITTED, NOT PUSHED.**
+
+---
+
 ## 2026-07-31 (tenth promote) -- a verification date that records work actually done
 
 **Canonical `a3469153` -> `72adc366` (11 writes / 1 crop). Count 128 / 121 certified unchanged.**
