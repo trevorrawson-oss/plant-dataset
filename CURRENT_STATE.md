@@ -49,6 +49,10 @@
 
 > **CITATION ARC — next session starts at `docs/kickoffs/47-citation-arc-continuation-handoff.md`.** Kickoff 46 is superseded on sequence: the recommended next move is ONE roster-wide bloom declaration, not hunt 3. Two hunts done, 167 decisions / 32 hunts remain, and the arc's real yield has been user-facing DATA defects, not citations.
 
+## Citation arc: resume at `docs/kickoffs/48-citation-arc-resume.md`
+(2026-07-31. Supersedes the operational half of kickoff 47, which is stale by 13 commits.
+The arc continues; 48 carries the verify block, the corrected worklist and what is closed.)
+
 ## Canonical pointer
 - **Current SHA:** `8d2b1a91eea725e66cd6317a4a5a395f0db3b3302fb93e4994262c3e6d42b289` (the 57 legacy zone-layer null anchors now state a decision instead of implying a to-do)
 - **Prior SHA:** `1dd6ada3c03477f0d9262b660162c73e83f1ce1539db2c9143bba85f2e99c34c` (the tomato NPK hints taught the fertilizer label wrong and pointed at the one formula UMN warns against)

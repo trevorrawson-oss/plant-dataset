@@ -1,5 +1,11 @@
 # Citation-integrity arc — CONTINUATION HANDOFF
 
+> ### ➡️ SUPERSEDED 2026-07-31 — START AT `docs/kickoffs/48-citation-arc-resume.md`.
+> This document's §2 correction banner and §4 lessons still stand. Its **numbers, verify block
+> and worklist are stale** by 13 commits and six canonical promotes. The arc is NOT abandoned;
+> 48 is where it resumes.
+
+
 **Written:** 2026-07-30, at the close of the two-hunt session.
 **Canonical at writing:** `45409cee` — **SUPERSEDED, see below.**
 **CANONICAL NOW: `d77b9c5166896fa15a815ec25140d9531f966a592abc881fe528875647bb4590`**
