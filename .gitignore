@@ -24,3 +24,8 @@ _handoff/
 
 # Fetched-document cache for tools/doc_mentions_crop_scan.py (regenerable, 14MB)
 tools/.doc_cache/
+
+# Audit / comparison snapshots of the canonical (24MB each -- never commit these).
+# The canonical is crops_data_final.json; every prior state is recoverable from git
+# history, and tools/promote_fixture.py rebuilds any pinned SHA exactly.
+crops_data_final.*.json
