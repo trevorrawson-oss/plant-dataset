@@ -46,6 +46,55 @@ Suite **237 -> 244 passed**. **NOT COMMITTED, NOT PUSHED.**
 
 ---
 
+## 2026-07-31 (twelfth promote) -- a note that said "to-do" when it meant "decided"
+
+**Canonical `1dd6ada3` -> `8d2b1a91` (57 note rewrites / 4 crops, note text only).**
+
+The 57 legacy zone-layer null anchors carried *"URL not in retro log, needs manual lookup"*. That
+reads as outstanding work, so every audit re-files it: Trevor's external blind audit ranked it
+**priority two** although it had been deferred on 2026-07-06. The note now states the decision --
+`regions` is authoritative for these claims and carries its own sources, nothing renders anchor data
+from the zone layer, and this is a recorded decision rather than a pending task.
+
+Deleting and backfilling were both considered and rejected; the reasoning is in the previous entry.
+Guards **19/19 both runners**, including a **recursive** strip proving the live zone planting data
+that `plant-astro`'s `today.ts` reads is byte-identical -- the first version of that check stripped
+`anchoring_urls` only at the top of each zone and silently compared the nested notes it was meant to
+exclude.
+
+---
+
+## 2026-07-31 -- the 8 remaining NPK "defects" were my own scan's bug
+
+Trevor asked for the 8 remaining NPK contradictions to be fixed. **Reading them showed six are
+correct prose that the matcher inverted**, and fixing the crops would have damaged them.
+
+- `cosmos`, `parsnip`, `slicing-cucumber`, `sweet-potato`: *"pick one **low** in the first number
+  (nitrogen), like 5-10-10, **not** a high-nitrogen lawn feed"*
+- `basil`: *"**avoid** high-nitrogen formulations during peak harvest"*
+
+The matcher saw `high` … `nitrogen` and missed the negation entirely. Two more negate **after** the
+phrase, by naming the consequence, which looking backwards could never catch:
+
+- `sweet-alyssum`: *"a high-nitrogen feed **drives leafy growth and suppresses the bloom**"*
+- `viola`: *"suits violas **better than** a high-nitrogen feed, **which stretches them**"*
+
+Fixed with a negator window plus a bad-outcome window, 6 new tests. **NPK 8 -> 0.**
+
+**VERIFIED NOT BLINDED, which is the check that matters:** run against the pre-fix canonical, the
+scan still flags all three real tomato defects. The negation handling removed false positives
+without silencing true ones.
+
+I also had to correct **my own test**, which asserted `tomatillo` should fire. In `5-10-10`,
+potassium (10) *is* higher than nitrogen (5), so *"slightly-higher-potassium"* reads correctly.
+
+**Fourth time this session a count was mostly artifact, and the second time in my own tool.** The
+only genuine NPK defect in the roster was the tomato case, already fixed in the eleventh promote.
+
+**NOT COMMITTED, NOT PUSHED.**
+
+---
+
 ## 2026-07-31 (eleventh promote) -- the tomato NPK hints taught the label wrong
 
 **Canonical `72adc366` -> `1dd6ada3` (10 edits / 5 crops, wording only). Count 128 / 121 certified unchanged.**

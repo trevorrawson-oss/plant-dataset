@@ -116,6 +116,43 @@ _K_HIGH = re.compile(r'\b(?:high|higher|highest)\b[^.]{0,30}\b(?:potassium|potas
 _P_HIGH = re.compile(r'\b(?:high|higher|highest)\b[^.]{0,30}\bphosph'
                      r'|\bsecond number\b[^.]{0,30}\bhighest\b', re.I)
 
+# Extension prose names the formula to AVOID far more often than the one to buy: "not a
+# high-nitrogen lawn feed", "avoid high-nitrogen formulations", "rather than a high-nitrogen
+# feed". Read naively, every one of those is a "wants high nitrogen" claim -- which flagged
+# six correct crops (cosmos, parsnip, slicing-cucumber, sweet-alyssum, sweet-potato, viola)
+# in the 2026-07-31 run. A claim only counts if it is not sitting inside a negation.
+_NEGATOR = re.compile(r'\b(?:avoid|not|never|rather than|better than|preferable to|instead of|'
+                      r'skip|without|no|don\'?t|do not|except|less|lower|too much|'
+                      r'excess(?:ive)?|beware|steer clear)\b', re.I)
+
+# Extension prose also negates AFTER the phrase, by naming the bad outcome: "a high-nitrogen
+# feed drives leafy growth and suppresses the bloom", "which stretches them", "gives you
+# leaves instead of fruit". Looking only backwards read sweet-alyssum and viola as claims.
+_BAD_OUTCOME = re.compile(r'\b(?:drives?|suppress(?:es)?|stretch(?:es)?|delays?|reduces?|'
+                          r'at the expense of|instead of|few(?:er)? (?:fruit|flower)|'
+                          r'leafy|bushy|slow to (?:bear|set|fruit)|little fruit|all leaves)\b',
+                          re.I)
+_NEG_WINDOW = 46
+_OUT_WINDOW = 70
+
+
+def _negated(text, start, end):
+    """Is the claim inside a negation, or immediately followed by the bad outcome it causes?"""
+    if _NEGATOR.search(text[max(0, start - _NEG_WINDOW):start]):
+        return True
+    return bool(_BAD_OUTCOME.search(text[end:end + _OUT_WINDOW]))
+
+
+def _claims(hints):
+    """Which nutrients the prose genuinely calls for, negations discounted."""
+    out = set()
+    for letter, rx in (('N', _N_HIGH), ('K', _K_HIGH), ('P', _P_HIGH)):
+        for m in rx.finditer(hints):
+            if not _negated(hints, m.start(), m.end()):
+                out.add(letter)
+                break
+    return out
+
 
 def npk_contradictions(slug, fert):
     """Fertilizer prose that contradicts a ratio the SAME cell recommends.
@@ -139,13 +176,7 @@ def npk_contradictions(slug, fert):
     if not judged:
         return []
 
-    claims = set()
-    if _N_HIGH.search(hints):
-        claims.add('N')
-    if _K_HIGH.search(hints):
-        claims.add('K')
-    if _P_HIGH.search(hints):
-        claims.add('P')
+    claims = _claims(hints)
     if not claims:
         return []
 

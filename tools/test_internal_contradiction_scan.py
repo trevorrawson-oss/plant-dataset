@@ -146,3 +146,64 @@ def test_different_prose_is_not_a_swap():
     a = 'NC State Extension recommends planting in late winter for this belt and region.'
     b = 'University of Arkansas suggests a completely different management approach entirely.'
     assert S.institution_swap(a, b) is None
+
+
+# --------------------------------------------------------- negation (2026-07-31)
+# The scan flagged 8 crops for "prose calls for high nitrogen" when 6 of them said the
+# OPPOSITE: "not a high-nitrogen lawn feed", "avoid high-nitrogen formulations", "rather
+# than a high-nitrogen feed". The matcher saw high...nitrogen and missed the negation --
+# a false-POSITIVE flood that would have "fixed" six correct crops.
+
+def test_negated_high_nitrogen_is_not_a_claim():
+    f = {'npk_ratio': '5-10-10',
+         'npk_hint_beginner': 'pick one low in the first number (nitrogen), like 5-10-10, '
+                              'not a high-nitrogen lawn feed.'}
+    assert S.npk_contradictions('cosmos', f) == []
+
+
+def test_avoid_high_nitrogen_is_not_a_claim():
+    f = {'npk_ratio': '5-10-5',
+         'npk_hint_seasoned': '5-10-5 balanced to modest nitrogen; avoid high-nitrogen '
+                              'formulations during peak harvest'}
+    assert S.npk_contradictions('basil', f) == []
+
+
+def test_rather_than_high_nitrogen_is_not_a_claim():
+    f = {'npk_ratio': '5-10-10',
+         'npk_hint_beginner': 'choose a low first-number blend like 5-10-10 rather than a '
+                              'high-nitrogen lawn feed.'}
+    assert S.npk_contradictions('viola', f) == []
+
+
+def test_instead_of_and_never_are_also_negations():
+    for prose in ('use 5-10-10 instead of a high-nitrogen feed',
+                  'never use a high-nitrogen fertilizer here; 5-10-10 is right'):
+        assert S.npk_contradictions('x', {'npk_ratio': '5-10-10',
+                                          'npk_hint_seasoned': prose}) == []
+
+
+def test_an_UNNEGATED_high_claim_still_fires():
+    f = {'npk_ratio': '5-10-10', 'npk_hint_seasoned': 'this crop wants high nitrogen all season'}
+    assert S.npk_contradictions('x', f), 'negation handling must not silence real claims'
+
+
+def test_a_bad_outcome_stated_after_the_phrase_is_a_warning_not_a_claim():
+    """sweet-alyssum and viola negate by naming the consequence, after the phrase."""
+    for prose in ('a light ratio such as 5-10-5; a high-nitrogen feed drives leafy growth and '
+                  'suppresses the bloom',
+                  'a ratio such as 5-10-10 suits violas better than a high-nitrogen feed, '
+                  'which stretches them'):
+        assert S.npk_contradictions('x', {'npk_ratio': '5-10-10',
+                                          'npk_hint_seasoned': prose}) == []
+
+
+def test_tomatillo_reads_correctly_and_must_stay_silent():
+    """"slightly-higher-potassium ... 5-10-10": K(10) IS higher than N(5). Not a defect.
+
+    My first version of this test asserted the opposite and was wrong -- a reminder that the
+    scan's job is to raise a question, and the answer still comes from reading the sentence.
+    """
+    f = {'npk_ratio': '10-10-10',
+         'npk_hint_beginner': 'A balanced or slightly-higher-potassium blend such as 10-10-10 '
+                              'or 5-10-10 is ideal. Avoid high-nitrogen lawn-style fertilizers.'}
+    assert S.npk_contradictions('tomatillo', f) == []
