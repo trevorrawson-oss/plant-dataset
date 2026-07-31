@@ -6,6 +6,184 @@
 
 ---
 
+## 2026-07-30 (tooling) -- six promote guard suites were reporting green while testing nothing
+
+**Canonical untouched (`d77b9c51`).** Found while fixing the one Trevor asked about.
+
+Every promote guard suite in the repo opened with:
+
+    if not _canonical_is_base():
+        print('SKIP: canonical is not the pinned base SHA')
+        return
+
+That is correct only while canonical still sits on that promote's base SHA -- and canonical moves
+after **every** promote. So each suite went **silently vacuous**. Measured: **six suites running
+ZERO checks**, with `cherry-sour` about to become the seventh (canonical had moved three times since
+its base). **121 guard checks were not executing**, while the release gauntlet counted their green.
+
+This is the `optional-field-gates-go-vacuous` shape applied to the guards themselves, and it is
+worse than a missing test: the green is load-bearing, so nobody looks.
+
+**THE FIX -- `tools/promote_fixture.py`.** Stop using live canonical as the fixture; rebuild the
+pinned pre-state.
+
+1. **From a commit**, where the base SHA was committed.
+2. **By replay**, where it was not. Hunt 1 ran four guarded promotes back to back and committed only
+   the final state, so `14c8eab2`, `5f58654b` and `d1b441c2` were working-tree states that exist in
+   no commit. Each is exactly its predecessor plus one promote script, so it is rebuilt by replaying
+   that script from the committed `13d42f95`. Verified byte-exact.
+
+Every path is **hash-verified** against the requested SHA, so a wrong reconstruction cannot quietly
+become a fixture, and an unresolvable SHA **raises** -- loudly, never a skip.
+
+**THE PROOF THE FIXTURES ARE REAL.** All six suites now reproduce **exactly** the guard counts
+recorded in this log when each promote was originally run: 11/11, 19/19, 28/28, 21/21, 21/21, 21/21.
+A wrong pre-state could not do that. Separately, cherry-sour was adversarially checked by injecting
+the collateral it must never cause (a `mid_south` suitability flip) and confirming five checks fail,
+then restoring byte-identical.
+
+Suite **237 -> 244 passed**. **NOT COMMITTED, NOT PUSHED.**
+
+---
+
+## 2026-07-30 (eighth promote) -- pawpaw, and the proof that one reason cannot cover ten crops
+
+**Canonical `8116484c` -> `d77b9c51` (documentation only: 1 crop / 1 finding / 2 keys). Count 128 / 121 certified unchanged.**
+
+**Trevor-approved**, following the apple ruling the same day, and framed by his own note: *"we don't
+just blanket it over."*
+
+**THE SHARED DEFECT, stated once.** `mid_atlantic_bloom_offset_undocumented` was authored **once**
+and attached to **ten crops whose bloom arms do not share a citation**. It credits NC State's
+Extension Gardener Handbook ch.15 with publishing no bloom date. Eight of the ten cite `ncsu_ext`,
+and for them that is exactly right. Two do not: apple and pawpaw.
+
+**AND THE TWO NEEDED DIFFERENT CORRECTIONS -- this is the whole point.**
+
+| crop | what its arm cites | what that document does | why the declaration still stands |
+|---|---|---|---|
+| apple | `ext_org_apples` | **publishes** apple bloom timing | **geography** -- the figure is *western* NC; `mid_atlantic` is Piedmont and Coastal Plain |
+| pawpaw | `psu_ext` | publishes **nothing** on bloom | **real absence** at the cited source |
+
+Penn State's "The Native Pawpaw Tree" was fetched and read from raw bytes: **15,361 characters,
+pawpaw named 15 times, and ZERO occurrences of bloom, blossom or flowering.** So pawpaw's conclusion
+was already sound and only the credited document was wrong -- a strictly smaller defect than apple's,
+and one that a blanket re-wording would have papered over with apple's geography argument, which is
+false here.
+
+One text over ten crops looked economical and quietly asserted three different things, two of them
+untrue. **Never blanket a reason across crops whose citations differ.**
+
+**FOOTPRINT PROVEN:** exactly one crop; only `verification_status`; exactly `summary` + `basis`;
+`status` still `accepted_modeled`; pawpaw's `regions` byte-identical; the 8 handbook siblings **and
+the already-corrected apple** all byte-for-byte. Guards **25/25 on BOTH runners**, carrying the same
+load-bearing refusal as apple's: **name only a source the arm actually carries**, tested by
+repointing pawpaw at the handbook and confirming the abort. GAUNTLET: `gate_all` 121/121; all 5
+standalone gates exit 0; `release_verify` concern set **byte-identical to the pre-state**.
+
+---
+
+## 2026-07-30 (tooling) -- the cache was answering questions about pages nobody read
+
+Fixed the defect recorded as open in the seventh promote. **Canonical untouched by this work.**
+
+`load_doc` treated any cached body as the document. It is not: some hosts answer a bot with a WAF
+challenge and still return **HTTP 200**, so the `\x00` failure sentinel never fires and the block
+page is cached as ordinary content; some PDFs carry no extractable text layer. Searching a body
+nobody read, finding no crop name, and reporting a defect is the **false-clear direction** -- it
+manufactures work rather than hiding it.
+
+**THE FIX, in the shared layer so both scans inherit it:** `unreadable_reason()` classifies a cached
+body as not-the-document (challenge-page signatures; extraction under 600 characters), and `load_doc`
+returns the existing `(None, reason)` contract, which the report already routes to **UNDETERMINED,
+never absence**. Second half, and the part that makes it durable: `fetch_all` skipped any URL with a
+cache file, so a block page cached once was **stranded forever**. `urls_needing_fetch()` plus
+`--refetch-unreadable` re-queue exactly those.
+
+**MEASURED EFFECT, not assumed:**
+
+| scan | before | after |
+|---|---|---|
+| `doc_mentions_crop_scan` FLAGGED | 511 | **463** |
+| `doc_mentions_crop_scan` UNDETERMINED | 198 | **246** |
+| CROP-LIST omits the crop (actionable) | 356 / 214 | **356 / 214 -- unmoved, therefore CONFIRMED GENUINE** |
+| REFERENCE doc names ~no crops | 155 / 45 | **107 / 27** (kickoff 47 section 3 corrected) |
+| `bloom_datum_scan` never-mentions-bloom, undeclared | 78 | **55** |
+| `bloom_datum_scan` UNDETERMINED | 17 | **40** |
+
+All 48 phantom nodes came out of the REFERENCE class, which is why the arc's actionable worklist is
+unchanged -- a genuinely reassuring result. On the bloom side it mattered more: **23 of 78 bloom
+"defects" were phantom.**
+
+**RETRY ATTEMPTED ON ALL 15, AND NONE RECOVERED.** MSU's Incapsula blocks us regardless of headers.
+They now sit honestly as UNDETERMINED and any future run can retry them. Suite 237 passed.
+
+**NOT COMMITTED, NOT PUSHED.**
+
+---
+
+## 2026-07-30 (seventh promote) -- apple's bloom finding was right for the wrong reason
+
+**Canonical `d5f83073` -> `8116484c` (documentation only: 1 crop / 1 finding / 2 keys). Count 128 / 121 certified unchanged.**
+
+**TREVOR RULED BY PRECEDENT:** fix the stated reason, keep the conclusion, reword do not delete.
+
+**WHAT WAS WRONG.** `mid_atlantic_bloom_offset_undocumented` is carried **identically by ten crops**
+and says the NC State Extension Gardener Handbook ch.15 "publishes NO bloom date for any fruit crop",
+so the quantity is absent and the offset must be declared. For **eight** of the ten that is exactly
+right: their bloom arms cite `ncsu_ext`. **Apple's does not.** Apple's `mid_atlantic` bloom arm cites
+`ext_org_apples`, and that page publishes apple bloom timing outright:
+
+> "in western North Carolina apple trees will generally bloom in mid-April whereas apple trees in
+> Minnesota do not bloom until a month later, generally in mid-May"
+
+The finding therefore described a document this cell never cited, and asserted an absence its actual
+source contradicts.
+
+**WHY THE CONCLUSION SURVIVES -- geography, not absence.** The page's North Carolina figure is
+explicitly **WESTERN** North Carolina. `mid_atlantic` is explicitly "Piedmont and Coastal Plain",
+which excludes the mountains. A western-mountains source does not govern this belt. That is the
+identical test Trevor applied to `mid_atlantic` sour cherry hours earlier, where the one
+pro-sour-cherry recommendation came from **Macon County**. Apple bloom timing **is** published; it is
+not published for THIS region. The offset stays modeled, and repointing at the mid-April figure would
+import the wrong geography.
+
+**THE NEW GUARD, and it is the one that matters.** A generalization of hunt 1's best guard ("refuse to
+cite a document at a cell that contradicts it"): **refuse to write a reason that names a source the
+arm does not actually carry.** That is precisely the defect being removed, so the script must be
+unable to reintroduce it. Tested by reverting apple's citation to the handbook and confirming the
+abort. Guards **23/23 on BOTH runners**.
+
+**FOOTPRINT PROVEN, not asserted:** exactly one crop changed; only `verification_status`; exactly
+`summary` + `basis`; `status` still `accepted_modeled`; apple's `regions` byte-identical; **all nine
+sibling findings byte-for-byte unchanged**. GAUNTLET: `gate_all` 121/121 PASS; all 5 standalone gates
+exit 0; `release_verify` concern set **byte-identical to the pre-state** (17 concerns, the known
+single-crop-pilot lettuce-leaf exemplar shape naming apple's tree-only `chill_basis_*` keys, all
+pre-existing); COMPACT preserved, no trailing newline.
+
+**PAWPAW SURFACED, NOT CHANGED.** `pawpaw` also fails to cite the handbook -- its arm cites `psu_ext`,
+whose pawpaw page never mentions bloom at all. So pawpaw's *conclusion* is sound (genuinely
+undocumented) while its *reason* is imprecise for the same structural cause. Scoped out deliberately:
+Trevor ruled on apple, and the arc's rule is never to generalize beyond the authority that licensed
+it.
+
+**A REAL TOOLING DEFECT FOUND AND MEASURED, NOT YET FIXED.** The shared `tools/.doc_cache` -- consumed
+by BOTH `doc_mentions_crop_scan` and `bloom_datum_scan` -- holds **15 of 631 documents (2.4%) that
+were never actually read but are cached as content**: 14 Incapsula/WAF challenge pages that returned
+**HTTP 200** (so no failure sentinel fired; five are `canr.msu.edu` pages on peaches, elderberries,
+sweet cherries, rosemary and black knot), plus one PDF whose text layer does not extract
+(`naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf`, 155 characters of bullet glyphs, **cited on 14 bloom
+arms**). Both scans read these as **absence**, which is the dangerous direction: it manufactures
+"document omits the crop" and "document never mentions bloom" findings out of pages nobody read. **29
+bloom arms rest on at least one such document.** Consequence: `doc_mentions_crop_scan`'s published
+356 nodes / 214 decisions triage in kickoff 47 section 3 is **partly phantom** and should be
+re-measured after a fix. A block-page/empty-extraction detector belongs in the shared `load_doc` so
+both tools inherit it, returning UNDETERMINED rather than absence (lesson 7). Not built this session.
+
+**NOT COMMITTED, NOT PUSHED.**
+
+---
+
 ## 2026-07-30 (sixth promote) -- Trevor re-rules sour cherry, and my bloom recommendation is falsified
 
 **Canonical `45409cee` -> `d5f83073` (6 edits + 1 finding on ONE crop). Count 128 / 121 certified unchanged.**
