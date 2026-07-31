@@ -228,23 +228,16 @@ real worklist.
 were deliberately excluded from the handbook repoint — it names them only in passing risk language
 or not at all.
 
-**A question I owe Trevor a cleaner answer on.** `mid_atlantic` `cherry-sour` is `fruits_reliably`.
-The NC State **statewide handbook** says *"Apricot and cherry trees … will not consistently bear
-fruit"* and contains **no sour-cherry steer at all**. The one genuine *"we recommend apples, pears,
-and sour cherries"* comes from **Macon County — the western NC mountains**, and `mid_atlantic` is
-explicitly *"Piedmont and Coastal Plain"*. The sour-over-sweet **preference** is well supported;
-*"fruits reliably in the Piedmont"* I have not found NC State saying. Trevor's 2026-07-20 ruling
-predates this evidence. **Surface it, do not quietly change it.**
+**~~A question I owe Trevor a cleaner answer on.~~ RULED AND SHIPPED 2026-07-30** (`0015981`). `mid_atlantic` `cherry-sour` `fruits_reliably` -> `marginal`, both zones. Trevor revised his own 2026-07-20 call: the claim rested on a vegetable guide (z7) and NC State's homepage (z8), and the one pro-sour-cherry recommendation is Macon County, the western mountains, which this region excludes. Prose rewritten so `marginal` reads as odds, not discouragement.
 
-**Surfaced 2026-07-30, canonical deliberately untouched:**
-- `apple` / `mid_atlantic` carries `mid_atlantic_bloom_offset_undocumented`, which says the NC State
-  handbook "publishes NO bloom date … repointing cannot fix an absent quantity". That arm was
-  **never sourced to the handbook** — it cites `ext_org_apples`, which *does* publish apple bloom
-  timing. The conclusion may still stand (the page gives **western** NC; `mid_atlantic` is Piedmont
-  and Coastal Plain — the same Macon County problem as `cherry-sour`), but the stated reason does
-  not. **Surface, do not quietly change.**
-- `lavender` / `hawaii_tropical` anchors on `westhawaiitoday.com`, a **newspaper**, not an extension
-  service. A tier-bar question, not a citation-arc one.
+**Surfaced 2026-07-30 and now CLOSED:**
+- ~~`apple` / `mid_atlantic` bloom finding names a document the arm never cited~~ **FIXED** (`610dad4`). Trevor ruled by precedent: fix the stated reason, keep the conclusion. It rests on **geography**, not absence -- the page's figure is *western* NC and this region excludes the mountains.
+- ~~`pawpaw` shares the structural defect~~ **FIXED in the same commit**, and it needed a *different* reason: its `psu_ext` page publishes nothing on bloom at all (15,361 chars, pawpaw named 15 times, zero bloom mentions), so pawpaw rests on **real absence**. Two crops, one shared wrong reason, two different right ones. **Never blanket a reason across crops whose citations differ.**
+- ~~the shared `.doc_cache` reports unread pages as absence~~ **FIXED** (`1366a23`): `unreadable_reason()` + `--refetch-unreadable`. 23 of 78 bloom "defects" were phantom; the actionable 356/214 is unmoved and thereby confirmed.
+- ~~six promote guard suites running zero checks~~ **FIXED** (`a8e50a5`): `tools/promote_fixture.py` rebuilds each pinned pre-state instead of copying live canonical.
+
+**Still open from that day:**
+- `lavender` / `hawaii_tropical` anchors on `westhawaiitoday.com`, a **newspaper**, not an extension service. A tier-bar question, not a citation-arc one.
 
 **Carried from 2026-07-29, still open:**
 - the 3 citation-only contradicted shapes (winter-squash Jul-vs-Aug; okra `ca_desert` Mar-Apr vs
