@@ -29,3 +29,6 @@ tools/.doc_cache/
 # The canonical is crops_data_final.json; every prior state is recoverable from git
 # history, and tools/promote_fixture.py rebuilds any pinned SHA exactly.
 crops_data_final.*.json
+
+# Per-crop export for external blind audits (generated, never committed)
+audit_export/
