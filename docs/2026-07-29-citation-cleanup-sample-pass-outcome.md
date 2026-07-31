@@ -6,6 +6,22 @@ tree clean, HEAD `59c3afc`).
 sample) plus the no-network measurements that the sample's first three nodes made obvious.
 **Canonical was NOT modified.** No promote, no data edit. This pass is measurement + adjudication.
 
+> **[CORRECTION 2026-07-31: row 18 of §4's table is WRONG and this document is where the error
+> entered the arc.]** It states *"Riverside **is** `ca_interior`"* and concludes that "Season of
+> ripeness at Riverside" *"directly serves the harvest windows of all 4 citrus crops on
+> `ucr_citrus`'s 33 SOLE pairs"*. **Riverside is not `ca_interior` by our own data:**
+> `zone_frost_data["10a"].regions.mediterranean` lists Los Angeles LAX, San Diego, Long Beach and
+> **Riverside** -- the `ca_south_coast` set -- while `ca_interior` is anchored on the Central Valley
+> (Sacramento/Fresno/Bakersfield/Modesto 8a, Tulare 8b, Stockton/Merced/Livermore 9a). The
+> conclusion was also widened from a SINGLE observation on `crc3178`, an Owari Satsuma (a
+> **mandarin**), to all four citrus crops. Measured over 24 accession pages on 2026-07-31: 24/24
+> carry the ripeness field, 1/24 also carries Lindcove, and **0/24 publish a bloom date**. The datum
+> is single-site and has no regional resolving power, and `source_catalog.ucr_citrus.citable_for`
+> never claimed regional date windows -- so 31 of the 33 pairs are CASE 2 (unsourced claim), not
+> CASE 1 (repoint). From here this claim propagated verbatim into kickoffs 46, 47 and 48, where it
+> is now struck through. **The original text below is left byte-for-byte** as the record of what was
+> believed on 2026-07-29. Full working: `STATE_HISTORY.md` 2026-07-31.
+
 ---
 
 ## 0. Headline

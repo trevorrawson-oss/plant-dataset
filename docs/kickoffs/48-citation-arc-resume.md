@@ -99,8 +99,24 @@ warn anyone. Same shape as blueberry. This is a **cross-crop field addition**
 - 30 hunts / 167 decisions remain. Schedule them by §2.
 - Hunt 2 residue: 8 crops with no located document (`apricot`, `cherry-sour`, `cherry-sweet`,
   `pomegranate`, `elderberry`, `blueberry`, `raspberry`, `strawberry`).
-- `ucr_citrus`: 33 pairs / 4 crops, **one method** -- UCR accession pages carry "Season of ripeness
-  at Riverside", and Riverside **is** `ca_interior`. Cheapest real closure available.
+- ~~`ucr_citrus`: 33 pairs / 4 crops, **one method** -- UCR accession pages carry "Season of ripeness
+  at Riverside", and Riverside **is** `ca_interior`. Cheapest real closure available.~~
+  **WITHDRAWN 2026-07-31. THE PREMISE IS FALSE AND THIS IS NOT A CHEAP CLOSURE.** Riverside is not
+  `ca_interior` by our own data: `zone_frost_data["10a"].regions.mediterranean` lists
+  **Los Angeles LAX, San Diego, Long Beach, Riverside** -- the `ca_south_coast` set -- while
+  `ca_interior` is anchored on the Central Valley (Sacramento/Fresno/Bakersfield/Modesto 8a,
+  Tulare 8b, Stockton/Merced/Livermore 9a). The claim came from ONE observation on `crc3178`, an
+  Owari Satsuma (a **mandarin**), generalized to all 33 pairs. Measured over **24** accession pages:
+  24/24 carry the ripeness field, **1/24** also carries Lindcove (which genuinely is the interior
+  valley), and **0/24 publish a bloom date**. The datum is SINGLE-SITE and has no regional resolving
+  power -- our four CA grapefruit windows all sit inside one location's *cultivar* spread -- and for
+  lime UCR's Oct-Dec means *"full maturity ... they drop from the tree"*, not our green-lime Jul-Dec.
+  Decisive without geography: `source_catalog.ucr_citrus.citable_for` is "variety identity,
+  characteristics, parentage, and home-grower recommendations" and never claimed regional date
+  windows, so **31 of the 33 pairs are CASE 2 (unsourced claim), not CASE 1 (repoint)**. The 2
+  in-scope pairs are Flying Dragon `rootstock_options[2]`, and even those need UC ANR's rootstock
+  publication (a new catalog admission) for the resistance and soil claims. Full working in
+  `STATE_HISTORY.md` 2026-07-31. **Kickoffs 46 and 47 carry the same false sentence.**
 - The held-back `ca_desert` pumpkin repoint (now clean).
 - 3 citation-only contradicted shapes (winter-squash Jul-vs-Aug; okra `ca_desert`; okra
   `ca_north_coast` z9).

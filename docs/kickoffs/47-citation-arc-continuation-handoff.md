@@ -250,8 +250,15 @@ or not at all.
 - the 3 citation-only contradicted shapes (winter-squash Jul-vs-Aug; okra `ca_desert` Mar-Apr vs
   UC's coarse "May"; okra `ca_north_coast` z9 Jun vs "May");
 - the held-back `ca_desert` pumpkin repoint (now clean — its window matches the pathed UC table);
-- `ucr_citrus`, 33 pairs / 4 crops, one method (UCR CVC accession pages carry *"Season of ripeness
-  at Riverside"*, and Riverside **is** `ca_interior`);
+- ~~`ucr_citrus`, 33 pairs / 4 crops, one method (UCR CVC accession pages carry *"Season of ripeness
+  at Riverside"*, and Riverside **is** `ca_interior`);~~ **WITHDRAWN 2026-07-31 -- THE PREMISE IS
+  FALSE.** Riverside is not `ca_interior` by our own data: `zone_frost_data["10a"].regions.mediterranean`
+  lists Los Angeles LAX, San Diego, Long Beach and **Riverside** (the `ca_south_coast` set), while
+  `ca_interior` is anchored on the Central Valley. Generalized from ONE mandarin accession to all 33
+  pairs; measured over 24 accession pages, 0/24 publish a bloom date and the ripeness datum is
+  single-site with no regional resolving power. `source_catalog.ucr_citrus.citable_for` never claimed
+  regional date windows, so **31 of the 33 are CASE 2 (unsourced claim), not CASE 1 (repoint)**. Full
+  withdrawal in `docs/kickoffs/48-citation-arc-resume.md` §4;
 - pole-beans: harvest starts 50 days after sowing against a stated min DTM of 60, identically in
   every region — one modeling question, not 20 cell errors.
 

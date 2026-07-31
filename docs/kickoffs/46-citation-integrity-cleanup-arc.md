@@ -140,8 +140,16 @@ be classified separately — do not let a link-rot sweep delete a good citation.
 >   what `nmsu_ext` should cite for `warm_arid` — publishes last-frost *by zone* and days-to-maturity
 >   *per crop*, and **no per-crop planting-date window**. It backs the derivation's inputs, never the
 >   window. Same shape as the `harvest-start-is-not-a-published-datum` lesson.
-> - **`ucr_citrus`'s 33 SOLE pairs have a clean repoint method**: UCR CVC accession pages carry
->   "**Season of ripeness at Riverside**", and Riverside *is* `ca_interior`.
+> - ~~**`ucr_citrus`'s 33 SOLE pairs have a clean repoint method**: UCR CVC accession pages carry
+>   "**Season of ripeness at Riverside**", and Riverside *is* `ca_interior`.~~
+>   **WITHDRAWN 2026-07-31 -- THE PREMISE IS FALSE.** Riverside is not `ca_interior` by our own
+>   data: `zone_frost_data["10a"].regions.mediterranean` lists Los Angeles LAX, San Diego, Long
+>   Beach and **Riverside** (the `ca_south_coast` set), while `ca_interior` is anchored on the
+>   Central Valley. The claim was generalized from ONE mandarin accession to all 33 pairs. The
+>   datum is single-site and has no regional resolving power, and
+>   `source_catalog.ucr_citrus.citable_for` never claimed regional date windows, so **31 of the 33
+>   are CASE 2 (unsourced claim), not CASE 1 (repoint)**. Full withdrawal in
+>   `docs/kickoffs/48-citation-arc-resume.md` §4; working in `STATE_HISTORY.md` 2026-07-31.
 >
 > Do NOT mass-repoint: pointing the California cells at the UC table would *create* a visible
 > contradiction on 53 of 92 windows. Revised order of work is in §5 of the outcome doc.
