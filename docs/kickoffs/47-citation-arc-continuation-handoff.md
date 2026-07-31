@@ -30,6 +30,30 @@ Expect three untracked items that are **not yours**: `.claude/`, `tools/staging/
 
 ## 2. THE PLAN CHANGED. Do not just "run hunt 3."
 
+> ### ⛔ CORRECTION 2026-07-30 — ITEM 1 BELOW IS WITHDRAWN. DO NOT RUN IT.
+>
+> The premise licensing the roster-wide bloom declaration — *"no extension service publishes bloom
+> dates"* — was **measured and falsified**. **22 documents at 12 institutions** publish
+> month-granular bloom timing, and **66 of our own bloom arms already cite one of them** (apple ←
+> `apples.extension.org`: *"will generally bloom in mid-April"*; NC State's own **Plant Toolbox**
+> carries a structured `Bloom Time` field). Running the pass as written would have asserted *"the
+> quantity is absent from the literature"* onto 66 cells whose cited document publishes it.
+>
+> Two hunts' **document-scoped** conclusions were widened to an institution, then to the whole
+> literature. That is this document's own **lesson 2**, recurring at the level of the plan.
+> What survives, narrowed: **no source publishes the offset-from-last-frost MODEL our schema
+> stores** — a fact about our encoding, not about the literature.
+>
+> **Read `docs/2026-07-30-bloom-declaration-premise-falsified.md` before touching bloom.**
+> New tool: `tools/bloom_datum_scan.py` classifies every cited document
+> (`PUBLISHES_TIMING` / `MENTION_NO_DATE` / `NO_MENTION` / `UNDETERMINED`).
+> The real worklist it found: **78 undeclared arms whose every cited document never mentions bloom
+> at all** — the `unr_fs0261` shape, a **defect** class, not a declaration class.
+>
+> Also: there are **three** bloom encodings, not one (243 `offset`, 145 `month_literal`, 13
+> `synthesis_window`). A declaration worded *"a modeled offset from the zone last-frost date"* is
+> factually wrong on **158 of 401** arms.
+
 The arc was scoped as **32 document hunts / 170 decisions**. Two hunts are done, and both
 re-priced it. The headline:
 
@@ -40,19 +64,27 @@ Concretely: **no extension service publishes BLOOM DATES.** Confirmed independen
 institutions — UAEX (hunt 1) and NC State (hunt 2, 31 mentions of "bloom", zero dates). Every tree
 fruit stores `bloom[0] = {from: last_frost, offset_days, window_days}`. No hunt will ever find a
 document for that.
+<!-- ^ FALSIFIED 2026-07-30. Left byte-for-byte as the record of what was believed; see the
+     correction banner above. Do not reason from this paragraph as current truth. -->
 
 ### The recommended order
 
-1. **ROSTER-WIDE BLOOM DECLARATION — do this first.** One documentation-only promote declaring the
+1. ~~**ROSTER-WIDE BLOOM DECLARATION — do this first.**~~ **WITHDRAWN — see the banner above.**
+   One documentation-only promote declaring the
    bloom offset as modeled across every crop that carries one. Two institutions already establish
    the absence; a third, fourth and fifth hunt rediscovering it is waste. Closes a large slice of
    the remaining 167 decisions in one pass. Precedent to copy: `mid_south_bloom_offset_undocumented`
    (13 crops) and `mid_atlantic_bloom_offset_undocumented` (10 crops), already in the data.
+   **Replaced by:** a *classified* pass — declare only the 138 `MENTION_NO_DATE` arms, in wording
+   that matches each arm's actual encoding; treat the 78 never-mentioned arms as defects; leave the
+   documented ones alone and consider repointing them to the real datum.
 2. **Then targeted hunts, driven by `doc_mentions_crop_scan`** (§3) — only where a document
    plausibly exists. The scan hands you the worklist; you no longer have to guess.
 3. **Then the residue**, which is genuinely small.
 
 **Estimate.** Done as 30 more hunts: **~14 sessions.** Done in the order above: **5–6.**
+(The 2026-07-30 correction does not change these estimates much — the declaration slice shrinks,
+but the 78-arm defect slice it uncovered is real work that was previously invisible.)
 
 ### And the real reason to keep going
 
@@ -178,6 +210,16 @@ and sour cherries"* comes from **Macon County — the western NC mountains**, an
 explicitly *"Piedmont and Coastal Plain"*. The sour-over-sweet **preference** is well supported;
 *"fruits reliably in the Piedmont"* I have not found NC State saying. Trevor's 2026-07-20 ruling
 predates this evidence. **Surface it, do not quietly change it.**
+
+**Surfaced 2026-07-30, canonical deliberately untouched:**
+- `apple` / `mid_atlantic` carries `mid_atlantic_bloom_offset_undocumented`, which says the NC State
+  handbook "publishes NO bloom date … repointing cannot fix an absent quantity". That arm was
+  **never sourced to the handbook** — it cites `ext_org_apples`, which *does* publish apple bloom
+  timing. The conclusion may still stand (the page gives **western** NC; `mid_atlantic` is Piedmont
+  and Coastal Plain — the same Macon County problem as `cherry-sour`), but the stated reason does
+  not. **Surface, do not quietly change.**
+- `lavender` / `hawaii_tropical` anchors on `westhawaiitoday.com`, a **newspaper**, not an extension
+  service. A tier-bar question, not a citation-arc one.
 
 **Carried from 2026-07-29, still open:**
 - the 3 citation-only contradicted shapes (winter-squash Jul-vs-Aug; okra `ca_desert` Mar-Apr vs

@@ -6,6 +6,44 @@
 
 ---
 
+## 2026-07-30 (sixth promote) -- Trevor re-rules sour cherry, and my bloom recommendation is falsified
+
+**Canonical `45409cee` -> `d5f83073` (6 edits + 1 finding on ONE crop). Count 128 / 121 certified unchanged.**
+
+### The ruling
+
+Trevor revised his own 2026-07-20 call on evidence that did not exist then: `mid_atlantic` sour cherry `fruits_reliably` -> **`marginal`**, both zones.
+
+**The claim rested on nothing.** Zone 7 cited `vce_426_331`, which is *Virginia's Home Garden **VEGETABLE** Planting Guide* and mentions cherry **zero** times. Zone 8 cited `content.ces.ncsu.edu` -- NC State's **website homepage**. Our top suitability rating was backed by a vegetable table and a front door.
+
+**NC State's Extension Gardener Handbook ch.15:** *"Apricot and cherry trees grow in certain areas where the climate is favorable, but need careful management and will not consistently bear fruit."* No sour/sweet split, and **no cherry cultivar table at all** while apples, pears, peaches and nectarines each get one. The single NC State recommendation of sour cherry is **Macon County** -- far-western **mountains** -- and `mid_atlantic` is explicitly "Piedmont and Coastal Plain". Cherry's two failure modes (early bloom into a late freeze; rain splitting fruit at ripening) are **worse** in the humid Piedmont/Coastal Plain than in the mountains.
+
+**The argument that needs no geography:** apricot and cherry-sweet were already `marginal` here on that same sentence, and `mid_south` sour cherry moved to `marginal` earlier the same day on the equivalent UAEX sentence.
+
+**Trevor's framing, and why the prose was rewritten rather than the enum flipped:** *"say based on its characteristics a grower might find more luck with it fruiting."* Both encouraging facts are **sourced**: *"Sour cherries (Prunus cerasus) are self fertile while sweet cherries need two varieties to pollinate"* (NC State, Henderson County) and *"Cherries will grow here with sour types being hardier"* (NC State, Macon County). What was removed is the **promise** of a dependable annual crop, not the steer toward sour over sweet.
+
+Guards **19/19** both runners, including one asserting the sibling-consistency argument still holds and one proving no date, calendar or citation moved. `gate_all` 121/121; all five standalone gates exit 0.
+
+### AND A CORRECTION TO ME, which matters more than the ruling
+
+**The roster-wide bloom declaration I recommended as the next session's first task is WITHDRAWN. Its premise was measured and falsified.**
+
+I wrote, as the arc's headline finding: *"no extension service publishes BLOOM DATES -- confirmed independently at two institutions."* That is false. **22 documents at 12 institutions publish month-granular bloom timing, and 66 of our own bloom arms already cite one of them.** The clearest case is `apple`, whose bloom arm cites `apples.extension.org/timing-of-apple-tree-bloom/` -- a page that says *"in western North Carolina apple trees will generally bloom in mid-April."* Verified from raw bytes.
+
+**What I actually established** was that UAEX's fruit publication set and NC State's handbook ch.15 contain no bloom dates. **What I claimed** was a fact about the entire extension literature. I widened a document-scoped finding to a whole field -- which is precisely the error kickoff 47 lists as its own **lesson 2** ("never generalize beyond the authority that licensed it"), committed in the very document where I wrote that lesson down.
+
+Had the pass run as written it would have asserted *"the quantity is absent from the literature"* onto 66 cells whose cited document publishes it -- a fabricated claim at scale, the same class as the fabricated attribution caught in `mid_south` that morning.
+
+**What survives, properly narrowed:** no source publishes the *offset-from-last-frost model* our schema stores. That is a fact about our encoding, not about the literature. And there are **three** bloom encodings, not one (243 `offset`, 145 `month_literal`, 13 `synthesis_window`), so the declaration's wording would have been factually wrong on 158 of 401 arms regardless.
+
+See `docs/2026-07-30-bloom-declaration-premise-falsified.md` and `tools/bloom_datum_scan.py`.
+
+### One consequence still open, deliberately not changed
+
+`apple` / `mid_atlantic` carries `mid_atlantic_bloom_offset_undocumented`, filed by me earlier this session, whose stated **reason** is wrong: that arm was never sourced to the handbook -- it cites `ext_org_apples`, which publishes apple bloom timing. In hunt 1 I explicitly **excluded** apple from the equivalent `mid_south` finding for exactly this reason; the exclusion was not carried into hunt 2.
+
+Its **conclusion** may nonetheless survive: the page gives **western** NC, and `mid_atlantic` excludes the mountains -- the same geography trap as the Macon County cherry question. **Surfaced, not changed.**
+
 ## 2026-07-30 (hunt 2) -- a VEGETABLE guide was the sole source for 14 fruit crops
 
 **Canonical `eb5926ed` -> `45409cee` (54 citations repointed, 12 findings, 1 catalog entry; ZERO value changes). Count 128 / 121 certified unchanged.**
