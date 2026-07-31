@@ -46,6 +46,71 @@ Suite **237 -> 244 passed**. **NOT COMMITTED, NOT PUSHED.**
 
 ---
 
+## 2026-07-31 (tenth promote) -- a verification date that records work actually done
+
+**Canonical `a3469153` -> `72adc366` (11 writes / 1 crop). Count 128 / 121 certified unchanged.**
+
+`anchoring_urls[*].verified` holds the DATE a link was checked, which is the only thing that makes
+staleness computable. On `lettuce-leaf` it held the boolean `true` in 11 places: an assertion of
+verification with the *when* thrown away.
+
+**There was no honest shortcut.** Every affected node had `true` on **all** of its links, so no
+sibling carried a date to inherit, and the crop's `last_reviewed` would have been an inference
+dressed as a record. Writing it would have been the `fill-the-shape-is-the-defect` trap exactly.
+
+**So the check was performed.** All 11 urls were fetched 2026-07-31 and each confirmed on three
+counts: HTTP 200; a **real document** rather than a WAF challenge or empty extraction, using the
+shared `unreadable_reason()` detector built the previous day for that failure; and **on topic** --
+every page mentions the pest or disease it is cited for (aphids, slugs and snails, lettuce root
+aphid, downy mildew, tipburn). 11 of 11 passed, so the date records work rather than rubber-stamping
+it. Had any failed it would have been left boolean and surfaced.
+
+Guards **15/15 both runners**, including the one that keeps this honest: the promote **refuses to
+stamp a link whose url is not the one actually fetched**. `gate_all` 121/121; 5 standalone gates 0;
+`release_verify` identical to pre-state; urls, source ids and every other key asserted frozen.
+
+---
+
+## 2026-07-31 -- the 57 null URLs: investigated, and deliberately NOT removed
+
+Trevor asked for these to be removed and I had recommended it. **Investigation reversed that, and
+the recommendation was wrong on two independent counts.**
+
+**1. They are not information-free.** Each carries a note:
+
+> `{"url": null, "verified": null, "note": "URL not in retro log, needs manual lookup"}`
+
+That is a deliberate record of a known gap, not noise.
+
+**2. Removing the anchor orphans the source id.** In **all 54** nodes, the null id is *also* listed
+in that node's `sources`. Deleting the anchor entry leaves the source id unanchored -- which is
+precisely the `src_not_anchored` mismatch class, the same shape as lettuce-leaf's 58. It would trade
+57 nulls for 57 mismatches and net zero.
+
+**AND BACKFILLING WOULD BE WORSE.** Seven source ids cover all 57, and every one of them appears
+elsewhere in the file with a real url -- pointing at a **different document**:
+
+| id | nulls | what the same id points at elsewhere |
+|---|---|---|
+| `uga_b577` | 18 | the **known-dead** url that serves an 89KB institutional **logo PDF** |
+| `uf_ifas_south_cal` | 9 | EDIS EP452 |
+| `uc_mg` | 8 | a **bare host** (`mg.ucanr.edu`) -- gains nothing |
+| `uf_ifas_nwdistrict` | 7 | a 2020 blog post |
+| `mu_ext` | 6 | the **elderberry** publication |
+| `sdsu_ext` | 6 | a **tomatillo** page |
+| `cornell_ext` | 3 | a **cut-flowers high tunnel** page |
+
+Copying those into tomato zone nodes would manufacture exactly the wrong-document class this whole
+arc exists to remove -- the `unr_fs0261` / `vce_426_331` shape, self-inflicted.
+
+**Correct dispositions**, both of which the auditor itself offered as the alternative: formalize the
+state so complete and incomplete citations stop looking alike, or resolve them per-claim as genuine
+research. Deletion is not on the list.
+
+**NOT COMMITTED, NOT PUSHED.**
+
+---
+
 ## 2026-07-31 (ninth promote) -- the five tomatoes were told to feed twice as often as their own sources say
 
 **Canonical `d77b9c51` -> `a3469153` (40 edits / 5 crops, fertilizer only). Count 128 / 121 certified unchanged.**
