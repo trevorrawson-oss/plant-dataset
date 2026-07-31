@@ -46,6 +46,7 @@ COMMIT_FOR = {
     'a346915312a1089672c6f333c93e4bc96becaf8a691f8e81db08ee2612e2869e': '57df9e5',
     '72adc3667192a92d086e596cebd935c0ea0ec708cccc0e4611705ffa7f34b5bb': 'baed9d7',
     '1dd6ada3c03477f0d9262b660162c73e83f1ce1539db2c9143bba85f2e99c34c': '8bc30f1',
+    '8d2b1a91eea725e66cd6317a4a5a395f0db3b3302fb93e4994262c3e6d42b289': '073d358',
 }
 
 # canonical SHA -> (predecessor SHA, promote script that produces it).
