@@ -91,5 +91,116 @@ def test_matching():
     assert not failed, 'failed: %s' % [r[0] for r in failed]
 
 
+def test_unreadable_cache_bodies_are_undetermined_never_absence():
+    """A cached body that is NOT the document must never read as 'the crop is absent'.
+
+    Measured 2026-07-30: 15 of 631 cached documents were never actually read but sat in the
+    cache as ordinary content -- 14 WAF challenge pages that returned HTTP 200 (so the \\x00
+    failure sentinel never fired) and 1 PDF with no extractable text layer. Both scans read
+    those as absence, which MANUFACTURES 'document omits the crop' findings out of pages
+    nobody read. That is the false-clear direction, and it is the dangerous one.
+    """
+    results = []
+
+    def check(name, ok, detail=''):
+        results.append((name, ok))
+        print(('  PASS  ' if ok else '  FAIL  ') + name + (('  -- ' + detail) if detail else ''))
+
+    # the five real MSU bodies, verbatim from the cache
+    incap = 'Request unsuccessful. Incapsula incident ID: 102000290217487562-303730109970777971'
+    check('Incapsula block page is unreadable', M.unreadable_reason(incap) is not None,
+          str(M.unreadable_reason(incap)))
+    check('block page reports WHY', 'block' in (M.unreadable_reason(incap) or '').lower())
+
+    # the real UNR PDF body: a text layer that yielded only bullet glyphs
+    glyphs = '1 SP-20-07 ' + ('• ' * 60)
+    check('text-less PDF extraction is unreadable', M.unreadable_reason(glyphs) is not None)
+
+    for body in ('Attention Required! | Cloudflare',
+                 'Just a moment...',
+                 'Please enable JavaScript to continue',
+                 'Access Denied'):
+        check('challenge page %r is unreadable' % body[:24],
+              M.unreadable_reason(body) is not None)
+
+    # the sentinel and the missing-cache cases still work
+    check('NUL fetch sentinel stays unreadable',
+          M.unreadable_reason('\x00FETCHFAIL HTTPError: 403') is not None)
+    check('None (uncached) stays unreadable', M.unreadable_reason(None) is not None)
+
+    # a REAL document must survive -- a detector that eats good pages destroys the scan
+    real = ('Growing Blueberries in the Home Garden. Blueberries are well adapted to North '
+            'Carolina. Rabbiteye blueberries are the best choice for most soils below 2,500 '
+            'feet elevation. Plant in fall or early spring, spacing bushes six feet apart in '
+            'rows ten feet apart. Mulch heavily with pine bark or sawdust and keep soil pH '
+            'between 4.5 and 5.2. Fertilize at bloom and again six weeks later. ') * 3
+    check('a real document is NOT flagged unreadable', M.unreadable_reason(real) is None,
+          str(M.unreadable_reason(real)))
+
+    # and load_doc must route unreadable bodies to the (None, reason) contract that the
+    # report already treats as UNDETERMINED
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        os.makedirs(M.CACHE, exist_ok=True)
+        url = 'https://example.invalid/blocked-%s' % os.path.basename(tmp)
+        with open(M.cache_path(url), 'w') as fh:
+            fh.write(incap)
+        txt, st = M.load_doc(url)
+        check('load_doc returns None for a block page', txt is None, repr(st))
+        check('load_doc explains it was not read', bool(st) and st != 'ok', repr(st))
+        os.remove(M.cache_path(url))
+
+    failed = [r for r in results if not r[1]]
+    print('\n%d/%d checks passed' % (len(results) - len(failed), len(results)))
+    assert not failed, 'failed: %s' % [r[0] for r in failed]
+
+
+def test_unreadable_cache_entries_are_retried_not_stranded():
+    """Marking a body unreadable is only half the fix -- it must also be re-fetchable.
+
+    `fetch_all` skips any URL that already has a cache file, so without this a WAF challenge
+    page cached once is stranded as UNDETERMINED forever and no later run can ever recover the
+    real document.
+    """
+    import tempfile
+    results = []
+
+    def check(name, ok, detail=''):
+        results.append((name, ok))
+        print(('  PASS  ' if ok else '  FAIL  ') + name + (('  -- ' + detail) if detail else ''))
+
+    os.makedirs(M.CACHE, exist_ok=True)
+    tag = os.path.basename(tempfile.mkdtemp(prefix='refetch_'))
+    good = 'https://example.invalid/good-%s' % tag
+    blocked = 'https://example.invalid/blocked-%s' % tag
+    missing = 'https://example.invalid/missing-%s' % tag
+    try:
+        with open(M.cache_path(good), 'w') as fh:
+            fh.write('Growing pawpaw in the home garden. ' * 40)
+        with open(M.cache_path(blocked), 'w') as fh:
+            fh.write('Request unsuccessful. Incapsula incident ID: 1020002902174875')
+
+        urls = [good, blocked, missing]
+        default = M.urls_needing_fetch(urls)
+        check('uncached url is always fetched', missing in default)
+        check('healthy cached url is NOT refetched', good not in default)
+        check('by default an unreadable entry is left alone', blocked not in default)
+
+        retry = M.urls_needing_fetch(urls, refetch_unreadable=True)
+        check('--refetch-unreadable picks up the block page', blocked in retry)
+        check('--refetch-unreadable still skips healthy documents', good not in retry)
+        check('--refetch-unreadable still fetches the uncached one', missing in retry)
+    finally:
+        for u in (good, blocked):
+            if os.path.exists(M.cache_path(u)):
+                os.remove(M.cache_path(u))
+
+    failed = [r for r in results if not r[1]]
+    print('\n%d/%d checks passed' % (len(results) - len(failed), len(results)))
+    assert not failed, 'failed: %s' % [r[0] for r in failed]
+
+
 if __name__ == '__main__':
     test_matching()
+    test_unreadable_cache_bodies_are_undetermined_never_absence()
+    test_unreadable_cache_entries_are_retried_not_stranded()

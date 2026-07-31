@@ -83,12 +83,22 @@ explicitly "Piedmont and Coastal Plain" — the Macon County problem already fla
 | already declared | 23 | leave; but see §4 |
 | own document **publishes** a bloom date | 146 flagged, **66 confirmed** after reading all 47 | **do NOT declare.** Several are repointable to a real datum |
 | bloom discussed, **no date** | 138 | the declaration shape genuinely fits |
-| bloom **never mentioned** by any cited document | 100 (**78 undeclared**) | **likely a real citation defect** — the `unr_fs0261` shape |
-| undetermined (unfetchable/uncached) | 17 | **never absence** (lesson 7) |
+| bloom **never mentioned** by any cited document | ~~100 (78 undeclared)~~ → **55 undeclared** | **likely a real citation defect** — the `unr_fs0261` shape |
+| undetermined (unfetchable/uncached/**unread**) | ~~17~~ → **40** | **never absence** (lesson 7) |
 
-The 78 undeclared *never-mentioned* arms are the highest-value slice — concentrated in `elderberry`
-(11), `strawberry` (7), `lemon` (5), `lime`/`fig`/`mulberry` (4 each) — and they are a **defect**
-class, not a declaration class. That is where the arc's actual yield has always been.
+The undeclared *never-mentioned* arms are the highest-value slice — concentrated in `elderberry`,
+`strawberry`, `lemon`, `lime`, `fig` and `mulberry` — and they are a **defect** class, not a
+declaration class. That is where the arc's actual yield has always been.
+
+> **CORRECTED 2026-07-30, same day.** The first pass of this table said 78. **23 of those were
+> phantom**: the shared cache held 15 documents that were never actually read but sat there as
+> ordinary content — 14 WAF challenge pages returning **HTTP 200** (so no failure sentinel fired)
+> and one PDF with no text layer, cited on 14 bloom arms between them. Searching a body nobody read
+> and finding no "bloom" **manufactures** the defect. Fixed in the shared `unreadable_reason()`, so
+> `doc_mentions_crop_scan` inherits it too (its FLAGGED went 511 → 463, all 48 out of the REFERENCE
+> class; its actionable 356/214 is unmoved and therefore confirmed). This is the section-3 lesson
+> arriving inside my own tool: I checked that the *matcher* could not false-clear, and did not check
+> that the *corpus* was real.
 
 ## 6. Two things found in passing
 

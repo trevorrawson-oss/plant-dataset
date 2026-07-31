@@ -204,10 +204,32 @@ def extract(body):
     return html.unescape(t)
 
 
-def fetch_all(urls, delay=0.7):
+def urls_needing_fetch(urls, refetch_unreadable=False):
+    """Which URLs still need a network round trip.
+
+    A cached body that is not the document (WAF challenge, empty PDF extraction) would
+    otherwise be stranded forever: the cache file exists, so no later run retries it and the
+    document stays UNDETERMINED permanently. `refetch_unreadable` re-queues exactly those.
+    """
+    todo = []
+    for u in urls:
+        p = cache_path(u)
+        if not os.path.exists(p):
+            todo.append(u)
+            continue
+        if refetch_unreadable:
+            with open(p, encoding='utf-8', errors='replace') as fh:
+                if unreadable_reason(fh.read()) is not None:
+                    todo.append(u)
+    return todo
+
+
+def fetch_all(urls, delay=0.7, refetch_unreadable=False):
     os.makedirs(CACHE, exist_ok=True)
-    todo = [u for u in urls if not os.path.exists(cache_path(u))]
-    print('cache: %d present, %d to fetch' % (len(urls) - len(todo), len(todo)))
+    todo = urls_needing_fetch(urls, refetch_unreadable)
+    print('cache: %d present, %d to fetch%s'
+          % (len(urls) - len(todo), len(todo),
+             ' (including unreadable retries)' if refetch_unreadable else ''))
     for i, u in enumerate(todo, 1):
         try:
             with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40) as r:
@@ -224,13 +246,44 @@ def fetch_all(urls, delay=0.7):
     print('fetch complete')
 
 
+# A cached body is not always the document. Some hosts answer a bot with a WAF challenge and
+# still return HTTP 200, so the \x00 failure sentinel never fires and the block page is cached
+# as ordinary content; some PDFs carry no extractable text layer and come back as a handful of
+# glyphs. Either way the scan would search a body nobody ever read, find no crop name, and
+# report a defect. Absence of evidence has to stay distinguishable from absence of a document.
+# Measured 2026-07-30: 15 of 631 cached documents were in this state.
+BLOCK_PAGE = re.compile(
+    r'request unsuccessful|incapsula|attention required|just a moment|access denied|'
+    r'enable javascript|are you a human|captcha|your request has been blocked|'
+    r'bot detection|cf-browser-verification', re.I)
+
+# Below this, an extraction is a failed parse rather than a short page. Tuned against the real
+# cache: exactly one document (a PDF with no text layer) falls under it.
+MIN_USEFUL_CHARS = 600
+
+
+def unreadable_reason(text):
+    """Why this cached body is NOT the document, or None if it looks like a real one."""
+    if text is None:
+        return 'nocache'
+    if text.startswith('\x00'):
+        return text[1:60]
+    flat = ' '.join(text.split())
+    if BLOCK_PAGE.search(flat[:3000]):
+        return 'blocked: challenge page served as HTTP 200'
+    if len(flat) < MIN_USEFUL_CHARS:
+        return 'blocked: extraction too short (%d chars) -- no usable text layer' % len(flat)
+    return None
+
+
 def load_doc(url):
     p = cache_path(url)
     if not os.path.exists(p):
         return None, 'nocache'
     txt = open(p).read()
-    if txt.startswith('\x00'):
-        return None, txt[1:60]
+    reason = unreadable_reason(txt)
+    if reason is not None:
+        return None, reason
     return txt.lower(), 'ok'
 
 
@@ -270,6 +323,9 @@ def main():
     ap.add_argument('--fetch', action='store_true')
     ap.add_argument('--report', action='store_true')
     ap.add_argument('--delay', type=float, default=0.7)
+    ap.add_argument('--refetch-unreadable', action='store_true',
+                    help='also retry cached bodies that are not the document '
+                         '(WAF challenge pages, empty PDF extractions)')
     args = ap.parse_args()
     if not any((args.candidates, args.fetch, args.report)):
         ap.error('pass --candidates, --fetch or --report')
@@ -300,7 +356,8 @@ def main():
         return 0
 
     if args.fetch:
-        fetch_all(pathed_urls, delay=args.delay)
+        fetch_all(pathed_urls, delay=args.delay,
+                  refetch_unreadable=args.refetch_unreadable)
         return 0
 
     # ---- report ----

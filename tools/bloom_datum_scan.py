@@ -45,7 +45,8 @@ sys.path.insert(0, os.path.join(REPO, 'tools'))
 DATA = os.path.join(REPO, 'crops_data_final.json')
 
 # Reuse hunt 2's fetch/cache/extract layer rather than growing a second one.
-from doc_mentions_crop_scan import cache_path, extract, fetch_all  # noqa: E402
+from doc_mentions_crop_scan import (cache_path, extract, fetch_all,  # noqa: E402
+                                    unreadable_reason)
 
 PROXIMITY = 120
 
@@ -93,9 +94,15 @@ def classify(text):
 
 
 def classify_doc(cached_text):
-    """Classify cached text, honouring the NUL failure sentinel as UNDETERMINED."""
-    if cached_text is None or cached_text.startswith('\x00'):
-        return {'verdict': 'UNDETERMINED', 'evidence': (cached_text or '')[1:80]}
+    """Classify cached text. A body that is not the document is UNDETERMINED, never absence.
+
+    Delegates to the shared detector so this scan and doc_mentions_crop_scan agree on what
+    counts as "read": the NUL fetch sentinel, WAF challenge pages served as HTTP 200, and
+    PDFs with no extractable text layer.
+    """
+    reason = unreadable_reason(cached_text)
+    if reason is not None:
+        return {'verdict': 'UNDETERMINED', 'evidence': reason}
     return classify(cached_text)
 
 
@@ -172,6 +179,8 @@ def main():
     ap.add_argument('--candidates', action='store_true')
     ap.add_argument('--fetch', action='store_true')
     ap.add_argument('--report', action='store_true')
+    ap.add_argument('--refetch-unreadable', action='store_true',
+                    help='also retry cached bodies that are not the document')
     ap.add_argument('--crop')
     args = ap.parse_args()
 
@@ -197,7 +206,7 @@ def main():
         print('cache: %d/%d documents present' % (cached, len(urls)))
 
     if args.fetch:
-        fetch_all(urls)
+        fetch_all(urls, refetch_unreadable=args.refetch_unreadable)
 
     if args.report:
         verdicts = {u: classify_doc(load_cached(u)) for u in urls}

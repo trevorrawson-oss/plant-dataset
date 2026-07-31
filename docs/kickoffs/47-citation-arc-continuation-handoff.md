@@ -130,8 +130,26 @@ python3 tools/doc_mentions_crop_scan.py --report       # the findings
 **Current reading, and it is a TRIAGE list, not a defect list:**
 
 - `CROP-LIST omits this crop` — **356 nodes / 214 decisions.** Actionable. The `unr_fs0261` shape.
-- `REFERENCE doc names ~no crops` — **155 nodes / 45 decisions.** A frost or chill table. Backs the
-  derivation's *inputs*, never the claim. **Declare, do not repoint.**
+  **Re-measured 2026-07-30 after the block-page fix below: unchanged at 356 / 214, so this
+  worklist is confirmed genuine.**
+- `REFERENCE doc names ~no crops` — ~~155 nodes / 45 decisions~~ → **107 nodes / 27 decisions**
+  (corrected 2026-07-30). A frost or chill table. Backs the derivation's *inputs*, never the claim.
+  **Declare, do not repoint.**
+
+> **CACHE FIX, 2026-07-30 — re-run the scans, do not trust pre-fix counts.** `load_doc` treated any
+> cached body as the document. **15 of 631 cached documents were never actually read**: 14 WAF
+> challenge pages that returned **HTTP 200** (so the `\x00` sentinel never fired — five are
+> `canr.msu.edu`, cached as the 82-character *"Request unsuccessful. Incapsula incident ID…"*), and
+> one PDF with no text layer (`naes.agnt.unr.edu` 2020-3713.pdf, 155 characters of glyphs, cited on
+> **14 bloom arms**). Searching a body nobody read and finding no crop name **manufactures** a
+> defect — the false-clear direction.
+>
+> Now fixed in the shared `unreadable_reason()` / `load_doc`, so **both** scans inherit it and
+> report `UNDETERMINED`, never absence (lesson 7). Measured effect:
+> `doc_mentions_crop_scan` FLAGGED **511 → 463**, UNDETERMINED **198 → 246** — all 48 came out of
+> the REFERENCE class, which is why the actionable 356/214 is unmoved. `bloom_datum_scan`
+> never-mentions-bloom arms **78 → 55 undeclared**, UNDETERMINED **17 → 40**: **23 of 78 bloom
+> "defects" were phantom.**
 
 **The actionable class splits AGAIN along a line no gate could draw**, and you must read it:
 
