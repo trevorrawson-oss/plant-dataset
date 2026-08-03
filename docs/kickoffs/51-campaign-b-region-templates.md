@@ -7,11 +7,23 @@
 
 **Written:** 2026-08-03, at the close of campaign A.
 **Canonical when written:** `3f6d6ce4430c23ab8b346017be3b9a8963f635fc1178767293d24e2a689eb6f3`
-**HEAD:** `84c7eb2` on `main`, **with campaign A's two promotes UNCOMMITTED on top.**
+**HEAD when written:** `84c7eb2` on `main`, with campaign A's promotes uncommitted on top.
+
+> **[CORRECTED 2026-08-03 by the campaign A session, verified again at campaign B's open.]**
+> The header above is the state *when this was written* and was stale within hours. **Current:**
+> canonical **`3b7dc544`**, HEAD **`bc5250d`** on `main`, **fully pushed and in sync with
+> `origin/main`** — nothing is uncommitted and nothing is unpushed. Suite is **422 passed**, not the
+> 402 in §1. **Campaign A shipped as THREE promotes, not two**; the third (`1fd3ee4`, the
+> `ca_desert` July-sowing note) landed after this document was written.
+>
+> **Do NOT amend or rebase anything at or below `bc5250d`.** `promote_fixture.COMMIT_FOR` pins
+> `3b7dc544 -> 1fd3ee4`; amending those commits breaks pre-state rebuilds and silently re-opens
+> [[promote-guards-went-vacuous-on-sha-skip]].
 
 > **Re-verify this header before trusting it, and re-derive every number below.** Kickoff 48's
-> header was three commits stale within a day; kickoff 49's was one stale within two; and kickoff
-> 50's §3 was **two revisions stale in its headline claim**, which is the whole reason §1 exists.
+> header was three commits stale within a day; kickoff 49's was one stale within two; kickoff
+> 50's §3 was **two revisions stale in its headline claim**, which is the whole reason §1 exists —
+> and this one needed a correction block of its own before its first session could start.
 
 ---
 
@@ -21,7 +33,7 @@
 cd ~/plant-dataset
 shasum -a 256 crops_data_final.json     # must equal LATEST.txt
 git log --oneline -1 && git status -sb
-python3 -m pytest tools/ -q --ignore=tools/test_build_berry_pilot_patch.py   # expect 402 passed
+python3 -m pytest tools/ -q --ignore=tools/test_build_berry_pilot_patch.py   # expect 422 passed
 python3 tools/citation_provenance_scan.py --decisions
 ```
 

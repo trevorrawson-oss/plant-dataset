@@ -4,7 +4,8 @@
 are closed**. Created 2026-08-03 because that had never been written down: the counts lived only as
 prose snapshots inside kickoffs 46, 47, 48, 49 and 50, and every one of those went stale.
 
-**Last reconciled:** 2026-08-03, canonical `e65aa63a` (after campaign A's repoint promote), HEAD `84c7eb2` + uncommitted promote.
+**Last reconciled:** 2026-08-03, canonical `3b7dc544`, HEAD `bc5250d` on `main` (pushed; campaign A
+is live). Campaign B re-priced the same day -- see **Campaign B, re-priced** below.
 
 > **COUNT RECONCILED 2026-08-03 — the shipped scan is the authority, confirmed.** Kickoff 50 §2 made
 > this gating. An independent re-derivation that does *not* import the scan reproduces it exactly
@@ -34,17 +35,35 @@ measures citations, not rulings. When a hunt is closed by a *ruling* rather than
 adjudication concluded CASE 2, "the claim is unsourced," and filed findings instead of repointing —
 the cells still cite the bare host, so the scan still counts them forever.
 
-**Live scan (2026-08-03, campaign A CLOSED at `3f6d6ce4`): 115 decisions / 32 hunts.**
-**Closed by ruling, still counted: 24 decisions** -- 9 `ucr_citrus`, 7 campaign-A closeout rulings
-(arugula 2, edamame 1, okra 4), and the 8 cucurbit decisions held by the accepted
-`ca_desert_fall_cycle_provenance_gap`.
-**Genuinely open: 91 decisions.**
+**Live scan (2026-08-03, canonical `3b7dc544`): 115 decisions / 32 hunts.**
+**Closed by ruling or declared, still counted: 36 decisions** -- 9 `ucr_citrus`, 7 campaign-A
+closeout rulings (arugula 2, edamame 1, okra 4), the 8 cucurbit decisions held by the accepted
+`ca_desert_fall_cycle_provenance_gap`, and **12 newly surfaced by campaign B's re-price** (8
+`mid_atlantic` bloom-only decisions closed by ruling + 4 `mid_south` herbs declared by their own
+pilot findings).
+**Genuinely open: 91 -> 79 decisions.**
 
-> Campaign A ran as **two promotes**: the repoint took the live count **167 -> 115** (52 decisions /
-> 89 nodes / 178 anchor entries), then the closeout filed **5 findings over 9 decisions** and moved
-> the count not at all -- which is the ledger's whole point. **Four of the eight California hunts are
-> now fully resolved** (#9, #10, #11, #12, the `uc_mg` side). The four `ucanr_ext` hunts stay PARTIAL
-> on `lemon`/`lime`, deferred to campaign D, plus the two pears deferred to a UC fruit-tree read.
+> **91 was CORRECT at campaign A's close and no data moved.** The drop to 79 is the campaign B
+> re-price reclassifying 12 already-adjudicated decisions, not drift and not a new promote — the
+> canonical is byte-identical and the scan still reports 115/32. This is the ledger behaving as
+> designed: the scan counts citations, the ledger counts open questions, and re-pricing a block is
+> what moves the second number without touching the first.
+
+> **The re-price keeps finding the same thing, so treat it as the arc's default.** Campaign A's
+> turned "4 authoring decisions" into 2 and surfaced a 12-decision class nobody had seen; campaign
+> B's moved 12 decisions out of the open column and cut the real document work to **6 decisions /
+> 39 nodes** out of a nominal 33. Both times the over-count came from reading a citation total as a
+> count of open questions. Re-price C and D before hunting them.
+
+> Campaign A ran as **THREE promotes** (`afe1ebb` -> `32db451` -> `1fd3ee4`, canonical
+> `e65aa63a` -> `3f6d6ce4` -> `3b7dc544`): the repoint took the live count **167 -> 115** (52
+> decisions / 89 nodes / 178 anchor entries); the closeout filed **5 findings over 9 decisions** and
+> moved the count not at all -- which is the ledger's whole point; and the `ca_desert` July-sowing
+> note edited **8 region-note strings over 4 crops**, prose only. The third landed after kickoff 51
+> and its handoff were written, which is why both of their headers needed correcting.
+> **Four of the eight California hunts are now fully resolved** (#9, #10, #11, #12, the `uc_mg`
+> side). The four `ucanr_ext` hunts stay PARTIAL on `lemon`/`lime`, deferred to campaign D, plus the
+> two pears deferred to a UC fruit-tree read.
 
 Update the Status column when a hunt closes. Re-run the scan and reconcile at the top of any session
 that works this arc.
@@ -59,8 +78,8 @@ by design, so the scan keeps counting them).
 
 | # | region | source | dec. | status | note |
 |---|---|---|---|---|---|
-| 1 | `mid_south` | `uada_ext` | 20 | **PARTIAL** | Hunt 1 (2026-07-30) worked the **fruit** crops; the 2026-07-31 herb pass removed 10 false credits from **prose only** and deliberately did not repoint, so all 10 herb cells still cite the bare host. `lavender` has the one identified real target (its UAEX Plant of the Week URL) + a filed finding. |
-| 2 | `mid_atlantic` | `ncsu_ext` | 13 | OPEN | `rosemary_mid_atlantic_ncsu_zone_attribution` already filed here. |
+| 1 | `mid_south` | `uada_ext` | 20 | **PARTIAL** | **RE-PRICED 2026-08-03: 3 of the 20 need document work** (`strawberry` 12 nodes, `fig` harvest 2, and `apple`/`elderberry` region-anchor only). 12 are claim-adjudicated with only a container root left; 4 herbs are DECLARED by their own pilot findings. Hunt 1 (2026-07-30) worked the fruit crops; the 2026-07-31 herb pass fixed **prose only**, so all 12 herb nodes still cite the bare host. `lavender`'s target is real but its nodes are **CORROBORATED, not SOLE** -- it is not in these 20. |
+| 2 | `mid_atlantic` | `ncsu_ext` | 13 | **PARTIAL** | **RE-PRICED 2026-08-03: 8 of the 13 are CLOSED-BY-RULING** (one bloom node each, all carrying `mid_atlantic_bloom_offset_undocumented`). The other 5 hold **28 of the 36 nodes** and have no ruling at all: `apricot`, `cherry-sour`, `cherry-sweet`, `pomegranate` (6 nodes each) + `broad-beans-fava` (4, container only). `rosemary_mid_atlantic_ncsu_zone_attribution` is filed but is **NOT in this hunt**: rosemary's `mid_atlantic` `ncsu_ext` citation is already **pathed** at the Toolbox (`plants.ces.ncsu.edu/plants/salvia-rosmarinus/`), so it is an attribution dispute on a specific page, not a bare host. Rosemary's only bare nodes are `mid_south`. |
 | 3 | `ca_interior` | `ucanr_ext` | 3 | **PARTIAL** | Repointed 8. Residue: `lemon` -> campaign D; both pears cite the **UC Home Orchard root**, not the veg table, and are filed `open` as CASE 1 repoint candidates for a fruit-tree read. |
 | 4 | `ca_north_coast` | `ucanr_ext` | 3 | **PARTIAL** | Repointed 7; `okra` RULED. Residue: `lemon`, `lime` -> campaign D. |
 | 5 | `ca_south_coast` | `ucanr_ext` | 2 | **PARTIAL** | Repointed 8. Residue: `lemon`, `lime` -> campaign D. |
@@ -110,8 +129,8 @@ is the unit that actually amortizes a hunt, since one document read serves N cro
 
 | campaign | hunts | decisions | what it is | status |
 |---|---|---|---|---|
-| **A. California / UC** | 8 (#3-6, #9-12) | **76 -> 9** | one planting-date table, four regions, two source ids | **CLOSED 2026-08-03** (`e65aa63a` + `3f6d6ce4`). 52 repointed, 16 ruled. 4 of 8 hunts fully resolved. Residue: `lemon`/`lime` 7 -> campaign D, 2 pears -> fruit-tree read |
-| **B. Region templates** | 2 (#1, #2) | **33** | `mid_south`/`uada_ext` + `mid_atlantic`/`ncsu_ext` — the two find-and-replace parents | not written; both already carry filed findings naming the next move |
+| **A. California / UC** | 8 (#3-6, #9-12) | **76 -> 9** | one planting-date table, four regions, two source ids | **CLOSED 2026-08-03** in three promotes (`e65aa63a` -> `3f6d6ce4` -> `3b7dc544`). 52 repointed, 16 ruled, + the `ca_desert` July-sowing note. 4 of 8 hunts fully resolved. Residue: `lemon`/`lime` 7 -> campaign D, 2 pears -> fruit-tree read |
+| **B. Region templates** | 2 (#1, #2) | **33 -> 6** | `mid_south`/`uada_ext` + `mid_atlantic`/`ncsu_ext` — the two find-and-replace parents | **RE-PRICED 2026-08-03** (`tools/campaign_b_reprice.py`): 8 closed by ruling, 4 declared, 12 claim-adjudicated with only a container root left, 3 region-anchor only. **6 decisions / 39 nodes need documents**, and `strawberry` (12 of those nodes) already has its document located and quoted by hunt 1 |
 | **C. Arid + Texas** | 7 (#7, #8, #13, #14, #17, #21, #24) | **35** | NMSU + TAMU AgriLife + Arizona across `warm_arid`/`rgv`/`low_desert_az`/`ca_desert` | not written; AZ1005's rotated grid and NMSU CR457B's missing window are known traps |
 | **D. The tail** | 11 (#16, #18, #23, #25-32) | **14** | one or two crops each; **7 of the 11 are lemon** | not written; likely one sitting |
 | | **28** | **158 -> 106** | | |
@@ -174,6 +193,59 @@ closed (one by edit, one by ruling). See the kickoff's correction banner.
 find-and-replace defect class** — `mid_south` was built from the `mid_atlantic` template, and both
 the cherry-sweet fabrication (2026-07-30) and the ten herb credits (2026-07-31) were born that way.
 Closing them has knock-on value beyond their 33 decisions.
+
+#### RE-PRICED 2026-08-03 — reproduce with `python3 tools/campaign_b_reprice.py`
+
+**33 decisions / 112 nodes, of which 6 decisions (39 nodes) need document work.** The tool is
+node-level and class-aware because the decision unit over-prices: a decision counts as open if any
+node under it is unadjudicated, *including a `plantings[]` container root that asserts nothing*.
+
+| bucket | dec. | nodes | what it is |
+|---|---|---|---|
+| CLOSED-BY-RULING | 8 | 8 | all `mid_atlantic`; one bloom node each, all carrying the accepted finding |
+| DECLARED | 4 | 12 | the `mid_south` herbs; their own pilot findings declare the windows MODELED |
+| CONTAINER-ONLY RESIDUE | 12 | 45 | every CLAIM arm adjudicated; only a container root left |
+| OPEN — container only | 3 | 8 | `apple` 1, `elderberry` 3, `broad-beans-fava` 4 — a region-anchor question, not a claim hunt |
+| **OPEN — needs documents** | **6** | **39** | `strawberry` 12, `fig` 3 (`mid_south`); `apricot`, `cherry-sour`, `cherry-sweet`, `pomegranate` 6 each (`mid_atlantic`) |
+
+**Kickoff 51 §2 overstates what is already adjudicated, and it is the
+[[stale-records-commission-phantom-work]] shape inside a "do NOT redo this" heading:**
+
+- **"27 bloom arms covered" is 21 of 27.** The kickoff names one 13-crop roster and reads as
+  though it covers both regions. It does not: `mid_south_bloom_offset_undocumented` sits on 13
+  crops; `mid_atlantic_bloom_offset_undocumented` is a **separate record over a different 10-crop
+  set**, two of whose crops (`apple`, `pawpaw`) own no bare `mid_atlantic` bloom node at all.
+  Uncovered: `strawberry` ×2 (`mid_south`), and `apricot`/`cherry-sour`/`cherry-sweet`/
+  `pomegranate` (`mid_atlantic`), which carry **no `mid_atlantic` finding whatsoever**.
+- **"34 harvest arms left bare on purpose by hunt 1" is 20 of 34.** Hunt 1 was a `mid_south`/UAEX
+  hunt, so it never adjudicated NC State — `mid_atlantic`'s 8 harvest arms were outside its scope.
+  Within `mid_south` its stated exclusion names neither `fig`'s harvest (fig is excluded for
+  **planting**, as contradicted) nor `strawberry`'s.
+
+**`strawberry` is NOT unruled — its research was done and never applied.** Hunt 1 classified
+strawberry **z8** as CASE 1 repointable and quoted two supporting sentences from UAEX's Arkansas
+Berries page: *"planted in the fall on raised beds then picked one time the following spring"* and
+*"the bright red, flavorful fruit are picked from April thru June in our state"*. It proposed two
+new catalog ids, **`uada_ext_berries` and `uada_ext_fsa6103`. Neither is in `source_catalog`**, and
+all 12 strawberry nodes still cite the bare host. **z7 was deliberately left** — it plants in
+spring where z8 plants in fall, flagged as a modeling question, not a citation one. So strawberry
+is the cheapest of the six, not the most expensive.
+
+**`lavender` is not in this hunt.** Its 3 `mid_south` nodes are **CORROBORATED, not SOLE**, so the
+scan excludes them. The repoint is still real and its finding still governs (the citation and the
+z8 "zone 5 to 9b" sentence move together or not at all) — it just cannot reduce this count.
+
+**The URL map is safe here, unlike campaign A**: all 20 `mid_south` decisions cite exactly
+`https://www.uaex.uada.edu` and all 13 `mid_atlantic` decisions exactly
+`https://content.ces.ncsu.edu`. Zero decisions cite more than one bare URL. Pinned per decision
+anyway — that check is what aborted campaign A's promote.
+
+**Lead found while re-pricing, not yet filed:** 5 crops carry a find-and-replace wreck in
+`regions.mid_south.plantings_provenance.note` — *"frost-resolved off real the University of
+Arkansas Cooperative Extension/the University of Arkansas frost dates"* (`oregano`, `rosemary`,
+`sage`, `thyme`, `lavender`). An institution-name expansion ran over "UAEX/UA" and left the
+sentence ungrammatical. Provenance prose, not consumer copy, so low severity — but it is this
+campaign's signature defect class, in the region that parents it.
 
 **Already known, do not redo:**
 - `mid_south` **already built a per-document citation vocabulary** in

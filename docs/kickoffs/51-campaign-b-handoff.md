@@ -9,13 +9,22 @@ guards, the release gauntlet, the state trio, no plant-astro bump. It is campaig
 
 ## 1. Where you are starting (verify, do not trust)
 
+> **[CORRECTED 2026-08-03.]** This table was written mid-close and three of its rows went stale
+> before the campaign B session opened. The corrected values are below; the strikethroughs record
+> what it said, because "the header is the last place anyone re-checks" is this arc's most expensive
+> recurring lesson.
+
 | | |
 |---|---|
-| canonical | `3b7dc5440ff989e8a3c1d524d3574230f14e50ae0b9c8469edc4b3a93c8271a1` |
-| HEAD | `c92ebc4` on `main` |
-| **pushed?** | **NO — four commits sit unpushed. Trevor confirms every push separately.** |
-| suite | 422 passed |
-| arc | 115 decisions live, **91 genuinely open**, 32 hunts |
+| canonical | `3b7dc5440ff989e8a3c1d524d3574230f14e50ae0b9c8469edc4b3a93c8271a1` ✓ still current |
+| HEAD | ~~`c92ebc4`~~ → **`bc5250d`** on `main` (this handoff's own commit landed after it was written) |
+| **pushed?** | ~~NO — four commits sit unpushed~~ → **YES. Everything is pushed; `main` is in sync with `origin/main`.** Trevor still confirms every *new* push separately. |
+| suite | 422 passed ✓ (note kickoff 51 §1 says 402 — that number is stale) |
+| arc | 115 decisions live, 32 hunts ✓. **91 genuinely open was correct at campaign A's close; campaign B's re-price revises it to 79** — see the ledger |
+| campaign A | shipped as **THREE** promotes, not two: `afe1ebb` → `32db451` → `1fd3ee4` |
+
+> **Do NOT amend or rebase anything at or below `bc5250d`.** `promote_fixture.COMMIT_FOR` pins
+> `3b7dc544 -> 1fd3ee4`; amending those commits breaks pre-state rebuilds.
 
 ```bash
 cd ~/plant-dataset
