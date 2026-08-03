@@ -82,6 +82,26 @@ before it prices a campaign.
 
 ## 3. The evidence already gathered — do NOT redo this
 
+> **[CORRECTION 2026-08-03 — §3's table of "4 authoring decisions" is TWO-THIRDS STALE. Re-measured
+> against canonical `38a579d4`; working in
+> `docs/2026-08-03-campaign-a-count-reconciliation-and-readjudication.md`.]**
+>
+> - **Row 2 (pumpkin desert, "the one real DATA-defect candidate") NO LONGER EXISTS.** The quoted
+>   `Jan 15 - Feb 15` was corrected twice — to `Feb 1 - Mar 1`, then re-derived to **`Mar 1 - Mar 15`**
+>   — and `pumpkin_desert_spring_march_rederivation` is marked **`resolved`**. This kickoff quotes a
+>   value two revisions stale, which is the failure CLAUDE.md's re-verify rule exists to catch.
+> - **Row 1 (winter-squash desert 2nd planting) IS CLOSED BY RULING, and this row recommends the move
+>   the ruling REFUSED.** `ca_desert_fall_cycle_provenance_gap` is **`accepted`**, and its basis says:
+>   *"AZ1005 is cited here as a CLIMATIC ANALOGUE for the Sonoran low desert, explicitly NOT as a
+>   California source — trimming a Californian window to its marks would be the geography stretch the
+>   arc warns about."* Do **not** repoint these at AZ1005.
+> - **Rows 3 and 4 (okra) are LIVE and are the whole of the block's authoring risk** — `ca_desert`
+>   z10/z11 `Mar 1 - Apr 30`, z9 `Mar 15 - Apr 30`; `ca_north_coast` z9 `Jun 1 - Jun 30`.
+>
+> **So the risk in this block is 2 authoring decisions, not 4.** Also missed at pricing time: **12 of
+> the 76 decisions have no UC row at all** — the target page is a *vegetable* table and 6 of the 14
+> crops are citrus, tree fruit, arugula or edamame. The original text below is left byte-for-byte.
+
 **Read `docs/2026-07-29-citation-cleanup-sample-pass-outcome.md` first, INCLUDING its correction
 banner** (its §4 row 18 "Riverside is `ca_interior`" is false and `ucr_citrus` is withdrawn).
 

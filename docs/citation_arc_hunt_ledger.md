@@ -4,7 +4,17 @@
 are closed**. Created 2026-08-03 because that had never been written down: the counts lived only as
 prose snapshots inside kickoffs 46, 47, 48, 49 and 50, and every one of those went stale.
 
-**Last reconciled:** 2026-08-03, canonical `38a579d4`, HEAD `c2281f5`.
+**Last reconciled:** 2026-08-03, canonical `e65aa63a` (after campaign A's repoint promote), HEAD `84c7eb2` + uncommitted promote.
+
+> **COUNT RECONCILED 2026-08-03 — the shipped scan is the authority, confirmed.** Kickoff 50 §2 made
+> this gating. An independent re-derivation that does *not* import the scan reproduces it exactly
+> (614 pairs / 414 nodes / **167 decisions / 32 hunts**, California block **76 over 8**), and
+> `region_of()` was checked against a structurally-determined region on every node carrying
+> `anchoring_urls`: **0 disagreements.** The conflicting hand traversal (77/7) applied
+> `len(sources) == 1` to the **region root**, whose value child nodes inherit — a rule that calls a
+> cell *sourced* when it names two bare hosts. Working: `docs/2026-08-03-campaign-a-count-reconciliation-and-readjudication.md`.
+> **The reconciliation itself changed no number;** the numbers below moved afterwards, when campaign
+> A's repoint promote landed.
 
 ---
 
@@ -24,9 +34,17 @@ measures citations, not rulings. When a hunt is closed by a *ruling* rather than
 adjudication concluded CASE 2, "the claim is unsourced," and filed findings instead of repointing —
 the cells still cite the bare host, so the scan still counts them forever.
 
-**Live scan (2026-08-03): 167 decisions / 32 hunts.**
-**Closed by ruling, still counted: 9 decisions / 4 hunts** (all `ucr_citrus`).
-**Genuinely open: 158 decisions / 28 hunts.**
+**Live scan (2026-08-03, campaign A CLOSED at `3f6d6ce4`): 115 decisions / 32 hunts.**
+**Closed by ruling, still counted: 24 decisions** -- 9 `ucr_citrus`, 7 campaign-A closeout rulings
+(arugula 2, edamame 1, okra 4), and the 8 cucurbit decisions held by the accepted
+`ca_desert_fall_cycle_provenance_gap`.
+**Genuinely open: 91 decisions.**
+
+> Campaign A ran as **two promotes**: the repoint took the live count **167 -> 115** (52 decisions /
+> 89 nodes / 178 anchor entries), then the closeout filed **5 findings over 9 decisions** and moved
+> the count not at all -- which is the ledger's whole point. **Four of the eight California hunts are
+> now fully resolved** (#9, #10, #11, #12, the `uc_mg` side). The four `ucanr_ext` hunts stay PARTIAL
+> on `lemon`/`lime`, deferred to campaign D, plus the two pears deferred to a UC fruit-tree read.
 
 Update the Status column when a hunt closes. Re-run the scan and reconcile at the top of any session
 that works this arc.
@@ -43,16 +61,16 @@ by design, so the scan keeps counting them).
 |---|---|---|---|---|---|
 | 1 | `mid_south` | `uada_ext` | 20 | **PARTIAL** | Hunt 1 (2026-07-30) worked the **fruit** crops; the 2026-07-31 herb pass removed 10 false credits from **prose only** and deliberately did not repoint, so all 10 herb cells still cite the bare host. `lavender` has the one identified real target (its UAEX Plant of the Week URL) + a filed finding. |
 | 2 | `mid_atlantic` | `ncsu_ext` | 13 | OPEN | `rosemary_mid_atlantic_ncsu_zone_attribution` already filed here. |
-| 3 | `ca_interior` | `ucanr_ext` | 11 | OPEN | **Kickoff 50 block.** |
-| 4 | `ca_north_coast` | `ucanr_ext` | 10 | OPEN | **Kickoff 50 block.** |
-| 5 | `ca_south_coast` | `ucanr_ext` | 10 | OPEN | **Kickoff 50 block.** |
-| 6 | `ca_desert` | `ucanr_ext` | 10 | OPEN | **Kickoff 50 block.** |
+| 3 | `ca_interior` | `ucanr_ext` | 3 | **PARTIAL** | Repointed 8. Residue: `lemon` -> campaign D; both pears cite the **UC Home Orchard root**, not the veg table, and are filed `open` as CASE 1 repoint candidates for a fruit-tree read. |
+| 4 | `ca_north_coast` | `ucanr_ext` | 3 | **PARTIAL** | Repointed 7; `okra` RULED. Residue: `lemon`, `lime` -> campaign D. |
+| 5 | `ca_south_coast` | `ucanr_ext` | 2 | **PARTIAL** | Repointed 8. Residue: `lemon`, `lime` -> campaign D. |
+| 6 | `ca_desert` | `ucanr_ext` | 7 | **PARTIAL** | Repointed 3; `okra` RULED; 4 cucurbits HELD on the accepted fall-cycle gap (Trevor ruled 2026-08-03: leave them). Residue: `lemon`, `lime` -> campaign D. |
 | 7 | `warm_arid` | `nmsu_ext` | 9 | OPEN | See `right-document-wrong-claim`: NMSU CR457B has no planting-date window at all. |
 | 8 | `warm_arid` | `tamu_agrilife` | 9 | OPEN | |
-| 9 | `ca_interior` | `uc_mg` | 9 | OPEN | **Kickoff 50 block.** |
-| 10 | `ca_north_coast` | `uc_mg` | 9 | OPEN | **Kickoff 50 block.** |
-| 11 | `ca_south_coast` | `uc_mg` | 9 | OPEN | **Kickoff 50 block.** |
-| 12 | `ca_desert` | `uc_mg` | 8 | OPEN | **Kickoff 50 block.** |
+| 9 | `ca_interior` | `uc_mg` | 1 | **CLOSED-RULING** | Repointed 8; `arugula` ruled CASE 2 (no arugula row in Table 13.2). Hunt fully resolved. |
+| 10 | `ca_north_coast` | `uc_mg` | 2 | **CLOSED-RULING** | Repointed 7; `edamame` ruled (only bean row is Phaseolus, not Glycine max) and `okra` ruled. Hunt fully resolved. |
+| 11 | `ca_south_coast` | `uc_mg` | 1 | **CLOSED-RULING** | Repointed 8; `arugula` ruled. Hunt fully resolved. |
+| 12 | `ca_desert` | `uc_mg` | 5 | **CLOSED-RULING** | Repointed 3; `okra` ruled; 4 cucurbits held by the accepted fall-cycle gap. Hunt fully resolved. |
 | 13 | `rgv` | `tamu_agrilife` | 6 | OPEN | |
 | 14 | `low_desert_az` | `uariz_ext` | 6 | OPEN | AZ1005's grid is 90°-rotated; see `right-document-wrong-claim`. |
 | 15 | `ca_south_coast` | `ucr_citrus` | 3 | **CLOSED-RULING** | Withdrawn 2026-07-31 (kickoff 48 §4, commit `7092ca1`). Premise "Riverside is `ca_interior`" was false; 24/24 accession pages carry ripeness, **0/24** publish a bloom date. |
@@ -74,10 +92,13 @@ by design, so the scan keeps counting them).
 | 31 | `warm_arid` | `clemson_hgic` | 1 | OPEN | lemon |
 | 32 | `low_desert_az` | `ucanr_ext` | 1 | OPEN | lime |
 
-**Shape of what's left.** Eight hunts (#3-6, #9-12) are 76 decisions — **46% of the live count, and
-48% of the genuinely-open 158**. That is kickoff 50. Eight more (#25-32) are **one crop each and
-seven of them are lemon**, so they are likely a single sitting once someone reads lemon's citations
-end to end.
+**Shape of what's left.** The eight California hunts (#3-6, #9-12) were 76 decisions and are now
+**24** — campaign A's promote closed 52. What remains there is *not* more of the same work: 12 have
+**no UC row at all** (the page is a vegetable table) and 12 are held by a contradiction, 8 of those
+already ruled. The two largest live blocks are now #1 `mid_south`/`uada_ext` (20) and #2
+`mid_atlantic`/`ncsu_ext` (13) — campaign B. Eight hunts (#25-32) are **one crop each and seven of
+them are lemon**, so they are likely a single sitting once someone reads lemon's citations end to
+end; campaign A's leftover `lemon`+`lime` decisions belong with them.
 
 ---
 
@@ -89,11 +110,11 @@ is the unit that actually amortizes a hunt, since one document read serves N cro
 
 | campaign | hunts | decisions | what it is | status |
 |---|---|---|---|---|
-| **A. California / UC** | 8 (#3-6, #9-12) | **76** | one planting-date table, four regions, two source ids | **kickoff 50**, ready |
+| **A. California / UC** | 8 (#3-6, #9-12) | **76 -> 9** | one planting-date table, four regions, two source ids | **CLOSED 2026-08-03** (`e65aa63a` + `3f6d6ce4`). 52 repointed, 16 ruled. 4 of 8 hunts fully resolved. Residue: `lemon`/`lime` 7 -> campaign D, 2 pears -> fruit-tree read |
 | **B. Region templates** | 2 (#1, #2) | **33** | `mid_south`/`uada_ext` + `mid_atlantic`/`ncsu_ext` — the two find-and-replace parents | not written; both already carry filed findings naming the next move |
 | **C. Arid + Texas** | 7 (#7, #8, #13, #14, #17, #21, #24) | **35** | NMSU + TAMU AgriLife + Arizona across `warm_arid`/`rgv`/`low_desert_az`/`ca_desert` | not written; AZ1005's rotated grid and NMSU CR457B's missing window are known traps |
 | **D. The tail** | 11 (#16, #18, #23, #25-32) | **14** | one or two crops each; **7 of the 11 are lemon** | not written; likely one sitting |
-| | **28** | **158** | | |
+| | **28** | **158 -> 106** | | |
 
 **Suggested order: A, then B, then C, then D.** A is the biggest and the best-prepared (document
 located, correctness question already down to 4 authoring decisions). B is next-cheapest per
@@ -101,7 +122,9 @@ decision because both hunts already have findings pointing at their specific nex
 most research-heavy and has two documented traps. D is trivial per-hunt but has the most hunts, and
 collapsing the lemon cluster first will make it collapse faster still.
 
-Campaign A alone takes the arc from 158 open to 82. A + B takes it to 49.
+Campaign A's repoint promote took the arc from 158 open to **106**. Its 24-decision residue is not
+plain repoint work, so it is folded into D (`lemon`/`lime`) and into a small okra ruling rather than
+re-run as a campaign. B next takes it to about 73.
 
 ---
 
@@ -124,6 +147,24 @@ to be self-sufficient: it names the hunts, the source ids, what is already known
 ### Campaign A — California / UC · hunts #3-6, #9-12 · `ucanr_ext`, `uc_mg`
 
 **Has a full kickoff: `docs/kickoffs/50-uc-anr-california-citation-hunt.md`.** Start there, not here.
+
+**COMPOSITION MEASURED 2026-08-03** (`docs/2026-08-03-campaign-a-count-reconciliation-and-readjudication.md`).
+Size unchanged at 76; the internal split was not visible when it was priced as "one document, four
+regions, two source ids":
+
+| class | dec. | what it is |
+|---|---|---|
+| CASE 1 — clean repoint at the pathed UC table | **52** | every zone SUPPORTED or DIVERGENT; 8 crops × 4 regions × 2 ids, less the blocked |
+| blocked by a contradicted cell | **12** | 8 on the *ruled* `ca_desert_fall_cycle_provenance_gap`, 4 on the two live okra decisions |
+| **no UC row at all** | **12** | `lemon` 4, `lime` 3, `arugula` 2, `pear-asian`/`pear-european`/`edamame` 1 each |
+
+**The 12 with no row are the `vce_426_331` shape inside campaign A** — the UC page is *Table 13.2, a
+VEGETABLE table* (artichoke → watermelons), standing as sole source on citrus and tree fruit. Expect
+CASE 2. `lemon`+`lime` (7 of the 12) overlap campaign D's lemon cluster and should be worked with it,
+not twice.
+
+**Only 2 authoring decisions are live, both okra** — kickoff 50 §3's other two shapes are already
+closed (one by edit, one by ruling). See the kickoff's correction banner.
 
 ---
 
