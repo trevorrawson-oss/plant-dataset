@@ -49,6 +49,7 @@ COMMIT_FOR = {
     '8d2b1a91eea725e66cd6317a4a5a395f0db3b3302fb93e4994262c3e6d42b289': '073d358',
     '172e4e7af950f0b98bf7883f5386c2b701a9d88f4d4347fc30d520cce7e91298': '7092ca1',
     'c6f50a1417a82786356fef764e524641143d41f973dc8f7097eb18454cb3fe5a': '761a128',
+    '38a579d4c3e92e470892c9c992215de750f14f5bad02107d6cfc790ebdecc93a': 'c2281f5',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
@@ -74,6 +75,13 @@ CHAIN = {
     '8116484c0254efcb4a7de0fc3c398a1404e2b7836db84031e04c0a9d9de4805f': (
         'd5f8307395d681d908857953c13ef51be0e680c6532794a2fb3c6e3aae0925d9',
         'promote_apple_mid_atlantic_bloom_reason.py'),
+    # campaign A: the repoint landed before the closeout findings, both uncommitted pending review
+    'e65aa63ae6154371233edbf076d7f94003652dfbd64980eae3c20a2afb3c76cd': (
+        '38a579d4c3e92e470892c9c992215de750f14f5bad02107d6cfc790ebdecc93a',
+        'promote_ca_uc_planting_table_repoint.py'),
+    '3f6d6ce4430c23ab8b346017be3b9a8963f635fc1178767293d24e2a689eb6f3': (
+        'e65aa63ae6154371233edbf076d7f94003652dfbd64980eae3c20a2afb3c76cd',
+        'promote_ca_uc_case2_findings.py'),
 }
 
 _cache = {}
