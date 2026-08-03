@@ -80,6 +80,13 @@ CHAIN = {
     '8116484c0254efcb4a7de0fc3c398a1404e2b7836db84031e04c0a9d9de4805f': (
         'd5f8307395d681d908857953c13ef51be0e680c6532794a2fb3c6e3aae0925d9',
         'promote_apple_mid_atlantic_bloom_reason.py'),
+    # campaign B, the strawberry pass: three promotes run back-to-back before a commit.
+    '0ab9b42b58e5a047d302a4dd865b82b997688ad21129a3bd64f2cc1f5116820c': (
+        '3b7dc5440ff989e8a3c1d524d3574230f14e50ae0b9c8469edc4b3a93c8271a1',
+        'promote_strawberry_mid_south_harvest_repoint.py'),
+    '093581673b519fa00337e61a238e99da725eaee7645c2e79d11e2c4f56ba0d51': (
+        '0ab9b42b58e5a047d302a4dd865b82b997688ad21129a3bd64f2cc1f5116820c',
+        'promote_strawberry_mid_south_z7_anchor.py'),
 }
 
 _cache = {}
