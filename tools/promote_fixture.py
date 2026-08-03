@@ -55,6 +55,8 @@ COMMIT_FOR = {
     'e65aa63ae6154371233edbf076d7f94003652dfbd64980eae3c20a2afb3c76cd': 'afe1ebb',
     '3f6d6ce4430c23ab8b346017be3b9a8963f635fc1178767293d24e2a689eb6f3': '32db451',
     '3b7dc5440ff989e8a3c1d524d3574230f14e50ae0b9c8469edc4b3a93c8271a1': '1fd3ee4',
+    # campaign B, the strawberry pass -- its two intermediates are in CHAIN, this is the end state
+    '78e5d8e3b649151e4f049aa02cf6de23f05592448942c234e1016802f5652d19': '76db16a',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
