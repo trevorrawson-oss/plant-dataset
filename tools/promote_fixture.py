@@ -48,6 +48,7 @@ COMMIT_FOR = {
     '1dd6ada3c03477f0d9262b660162c73e83f1ce1539db2c9143bba85f2e99c34c': '8bc30f1',
     '8d2b1a91eea725e66cd6317a4a5a395f0db3b3302fb93e4994262c3e6d42b289': '073d358',
     '172e4e7af950f0b98bf7883f5386c2b701a9d88f4d4347fc30d520cce7e91298': '7092ca1',
+    'c6f50a1417a82786356fef764e524641143d41f973dc8f7097eb18454cb3fe5a': '761a128',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the

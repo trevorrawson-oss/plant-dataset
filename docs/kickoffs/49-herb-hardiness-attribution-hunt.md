@@ -1,5 +1,31 @@
 # Herb hardiness attributions — five UAEX lookups
 
+> ## ✅ CLOSED 2026-07-31 — worked end to end. Do NOT re-run this hunt.
+>
+> All 10 attributed sentences fixed at canonical `c6f50a14` -> **`38a579d4`**. The credits are gone
+> (measured: 0 University of Arkansas attributions remain in any `mid_south` cell of the five
+> crops); every horticultural fact was kept.
+>
+> **Answers, per crop.** UAEX publishes **no** hardiness zone for thyme, rosemary, oregano or sage.
+> **Lavender is the exception** and is the §4.5 "bigger find": UAEX *does* publish a range for
+> *Lavandula angustifolia* — **"hardy from zones 5 to 8"** — which is **not** the "5a to 9b" we
+> credited it with. Surfaced, not aligned.
+>
+> **The trap this hunt turned on:** the only UAEX page pairing a zone range with the word
+> "rosemary" is *Willow Rosemary* — ***Salix elaeagnos*, a willow.** Match the binomial, never the
+> common name.
+>
+> **Two findings filed for what was deliberately NOT fixed:**
+> `lavender_mid_south_uaex_zone_range_divergence` and `rosemary_mid_atlantic_ncsu_zone_attribution`.
+>
+> Full evidence: **`docs/2026-07-31-mid-south-herb-hardiness-attribution-hunt.md`**.
+> Narrative + gauntlet: the top entry of `STATE_HISTORY.md`.
+> Promote: `tools/promote_mid_south_herb_hardiness_attributions.py` (guards 26/26, **16/16
+> mutation-protected**).
+>
+> **The only thing outstanding is Trevor's commit + push approval.** §8 below is still live and is
+> the right place to pick up next.
+
 **Written:** 2026-07-31, at the close of the cleanup-batch session.
 **Canonical:** `c6f50a1417a82786356fef764e524641143d41f973dc8f7097eb18454cb3fe5a`
 **HEAD:** `a5ba1eb` on `main`, **pushed and in sync with origin.** 128 crops / 121 certified.
