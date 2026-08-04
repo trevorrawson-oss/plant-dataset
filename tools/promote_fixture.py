@@ -61,6 +61,8 @@ COMMIT_FOR = {
     '370806b54252628b49502d3b85476504be24e461bb479445f056d02514f529b7': '4a2f3ec',
     # campaign B closeout (fig, strawberry, apple, elderberry, fava) -- likewise one promote
     '47a502afd95a8248c790ee005e7970672a62434cf4f1cc76dd3e7edac9b62286': '18687d5',
+    # campaign B rulings -- Trevor's calls on the 7 open decisions, closing the campaign
+    '4065e23bf7cbfd2945c476c93e7326e9a6d2f0646ac88bac9a66f7b9d857023e': 'be3abea',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
