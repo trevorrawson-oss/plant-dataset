@@ -122,11 +122,17 @@ def declares_modeled(crop):
 def adjudicate(slug, crop, region, arm):
     """-> (verdict, evidence). Verdicts: RULED, DECLARED, OPEN."""
     if arm == 'bloom':
-        fid = BLOOM_FINDING[region]
-        st = finding_status(crop, fid)
-        if st is not None:
-            return 'RULED', '%s [%s]' % (fid, st)
-        return 'OPEN', 'no %s on this crop' % fid
+        # Two shapes are equally binding: the ROSTER-WIDE ruling, and a CROP-SCOPED one filed
+        # because that crop was outside the roster ruling's set. strawberry is the second shape
+        # (`strawberry_mid_south_bloom_offset_undocumented`, filed 2026-08-03) -- it owns bloom
+        # arms but was never in the 13-crop mid_south roster. Checking only the roster id told the
+        # next session strawberry still needed document work AFTER it had been adjudicated, which
+        # is the stale-record trap this whole tool exists to stop.
+        for fid in (BLOOM_FINDING[region], '%s_%s' % (slug, BLOOM_FINDING[region])):
+            st = finding_status(crop, fid)
+            if st is not None:
+                return 'RULED', '%s [%s]' % (fid, st)
+        return 'OPEN', 'no %s (roster or crop-scoped) on this crop' % BLOOM_FINDING[region]
     if arm in ('harvest_start', 'harvest_end'):
         if region == 'mid_south' and slug in HUNT1_HARVEST_EXCLUDED:
             return 'RULED', 'hunt 1 stated exclusion (UAEX publishes no harvest dates)'
