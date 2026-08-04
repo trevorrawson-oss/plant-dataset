@@ -57,6 +57,8 @@ COMMIT_FOR = {
     '3b7dc5440ff989e8a3c1d524d3574230f14e50ae0b9c8469edc4b3a93c8271a1': '1fd3ee4',
     # campaign B, the strawberry pass -- its two intermediates are in CHAIN, this is the end state
     '78e5d8e3b649151e4f049aa02cf6de23f05592448942c234e1016802f5652d19': '76db16a',
+    # campaign B, the mid_atlantic/ncsu_ext hunt -- one promote, so one commit, no CHAIN entry
+    '370806b54252628b49502d3b85476504be24e461bb479445f056d02514f529b7': '4a2f3ec',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
