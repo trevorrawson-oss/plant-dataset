@@ -13,8 +13,8 @@ it leads to stale-checkout confusion.)
 - **STATE_HISTORY.md** — the append-only recovery log (read to reconstruct true position).
 
 ## What this is
-128 crops: 120 certified gold-standard anchors + 8 honest shells (the ~105-certified bot-pipeline
-goal is met and passed; the 8 remaining shells are the 5 mushrooms + avocado/olive/artichoke). The armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered
+128 crops: 121 certified gold-standard anchors + 7 honest shells (the ~105-certified bot-pipeline
+goal is met and passed; the 7 remaining shells are the 5 mushrooms + avocado/olive). The armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered
 gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURRENT_STATE.md.
 
 ## The two lanes (who does what)
@@ -70,6 +70,23 @@ Run column passes against a STABLE / complete roster, never mid-certification. O
 is complete it becomes a HARD cert requirement: `whole_crop_gate` A39 enforces presence-or-null and
 A40-A42 enforce value shape for the register fields, run roster-wide by `tools/gate_all.py` -- a new
 crop cannot certify without them (no backfill treadmill).
+
+## Linear (shared work queue + durable record)
+This repo shares one Linear team ("Plant") with plant-app and plant-astro; the claude.ai
+projects carry the same three names, so chat project and repo map 1:1.
+- **Read Linear directly** to see what's next (Todo = ready for Claude Code) -- no relay
+  through a chat session.
+- **Manage this repo's own issue status directly** as work progresses (In Progress /
+  Testing / Done).
+- **On completing a task, append a dated close-out section to the Linear issue's
+  description** -- the record lives in Linear, findable later, not in terminal output for
+  Trevor to copy elsewhere.
+- **Chat sessions remain where judgment happens**: brainstorming new work before it's
+  filed, and discussing/amending a close-out after delivery -- amendments get written back
+  into the same issue.
+- Full wording lives in the team-level **"Linear Working Conventions"** document in Linear
+  ("How work flows between chat and Linear"). If this file and that document conflict, the
+  Linear document is current.
 
 ## Workflow / git
 - Dataset commits go on `main` here. **Don't commit until Trevor approves** each change; when a

@@ -34,7 +34,7 @@ roster pass.
 
 ## Also on the crop backlog (existing)
 - The GS-anchor certification backlog: staged §E draft crops + the design/retire shells (the 5
-  mushrooms + avocado/olive/artichoke/asparagus). See memory `remaining-gs-anchors-roadmap`.
+  mushrooms + avocado/olive). See memory `remaining-gs-anchors-roadmap`.
 - Full family -> crop -> variety inventory: `~/Documents/plant-project/08-reference/master_crop_list.pdf`
   (outside the repo).
 
