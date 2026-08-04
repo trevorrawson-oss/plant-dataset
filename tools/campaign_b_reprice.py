@@ -61,6 +61,52 @@ BLOOM_FINDING = {
     'mid_atlantic': 'mid_atlantic_bloom_offset_undocumented',
 }
 
+# HUNT 2 (mid_atlantic / ncsu_ext, 2026-08-03) -- docs/2026-08-03-mid-atlantic-ncsu-ext-citation-hunt.md
+#
+# Two rules below this line went STALE the moment that hunt landed, and both are transcribed here
+# rather than patched in place so the staleness stays visible:
+#
+#   1. The crop-scoped bloom lookup only knew the SLUG-FIRST spelling
+#      (`strawberry_mid_south_bloom_offset_undocumented`). mid_atlantic's house style is
+#      REGION-FIRST (`mid_atlantic_nectarine_harvest_divergent`,
+#      `mid_atlantic_cherry_sour_marginal_ruling`), so hunt 2's records were invisible to it and
+#      it reported 12 arms as still needing document work AFTER they had been adjudicated. That
+#      is the stale-record trap this tool exists to stop, reproduced inside the tool itself.
+#   2. "hunt 1 was mid_south/UAEX; never adjudicated NC State" was CORRECT when written and is
+#      now false for exactly these four crops.
+#
+# Every entry is verified PRESENT ON THAT CROP before it fires -- a table asserting adjudication
+# that no longer exists is the exact failure being guarded against.
+HUNT2 = {
+    ('mid_atlantic', 'apricot', 'bloom'): 'mid_atlantic_apricot_bloom_offset_undocumented',
+    ('mid_atlantic', 'apricot', 'harvest_start'): 'mid_atlantic_apricot_harvest_divergent',
+    ('mid_atlantic', 'apricot', 'harvest_end'): 'mid_atlantic_apricot_harvest_divergent',
+    ('mid_atlantic', 'cherry-sour', 'bloom'):
+        'mid_atlantic_cherry_sour_bloom_offset_undocumented',
+    ('mid_atlantic', 'cherry-sour', 'harvest_start'):
+        'mid_atlantic_cherry_sour_harvest_undocumented',
+    ('mid_atlantic', 'cherry-sour', 'harvest_end'):
+        'mid_atlantic_cherry_sour_harvest_undocumented',
+    ('mid_atlantic', 'cherry-sweet', 'bloom'):
+        'mid_atlantic_cherry_sweet_bloom_offset_undocumented',
+    ('mid_atlantic', 'cherry-sweet', 'harvest_start'):
+        'mid_atlantic_cherry_sweet_harvest_undocumented',
+    ('mid_atlantic', 'cherry-sweet', 'harvest_end'):
+        'mid_atlantic_cherry_sweet_harvest_undocumented',
+    ('mid_atlantic', 'cherry-sweet', 'resolved_by_zone'):
+        'mid_atlantic_cherry_sweet_sour_steer_attribution_unsupported',
+    ('mid_atlantic', 'pomegranate', 'bloom'):
+        'mid_atlantic_pomegranate_bloom_window_narrower_than_source',
+    ('mid_atlantic', 'pomegranate', 'harvest_start'):
+        'mid_atlantic_pomegranate_harvest_season_only',
+    ('mid_atlantic', 'pomegranate', 'harvest_end'):
+        'mid_atlantic_pomegranate_harvest_season_only',
+    ('mid_atlantic', 'pomegranate', 'plant_out'):
+        'mid_atlantic_pomegranate_not_covered_by_ncsu_publications',
+    ('mid_atlantic', 'pomegranate', 'plantings'):
+        'mid_atlantic_pomegranate_not_covered_by_ncsu_publications',
+}
+
 # tools/promote_mid_south_fruit_tree_repoint.py docstring, "WHAT IS DELIBERATELY *NOT* REPOINTED":
 #   "harvest ... Left on the bare host for apple (already pathed to ext_org_apples), and for
 #    apricot / cherry / mulberry / peach / pear / plum / pomegranate, because UAEX publishes NO
@@ -120,7 +166,19 @@ def declares_modeled(crop):
 
 
 def adjudicate(slug, crop, region, arm):
-    """-> (verdict, evidence). Verdicts: RULED, DECLARED, OPEN."""
+    """-> (verdict, evidence). Verdicts: RULED, DECLARED, OPEN.
+
+    RULED means "a named finding adjudicates this arm", whatever that finding's own status is --
+    the status is printed alongside so an `open` ruling still reads as needing a DECISION while
+    no longer needing DOCUMENT WORK. Those are different kinds of debt and the buckets must not
+    conflate them.
+    """
+    fid = HUNT2.get((region, slug, arm))
+    if fid is not None:
+        st = finding_status(crop, fid)
+        if st is None:
+            return 'OPEN', 'HUNT2 table claims %s but it is NOT on this crop' % fid
+        return 'RULED', '%s [%s]' % (fid, st)
     if arm == 'bloom':
         # Two shapes are equally binding: the ROSTER-WIDE ruling, and a CROP-SCOPED one filed
         # because that crop was outside the roster ruling's set. strawberry is the second shape
@@ -128,7 +186,12 @@ def adjudicate(slug, crop, region, arm):
         # arms but was never in the 13-crop mid_south roster. Checking only the roster id told the
         # next session strawberry still needed document work AFTER it had been adjudicated, which
         # is the stale-record trap this whole tool exists to stop.
-        for fid in (BLOOM_FINDING[region], '%s_%s' % (slug, BLOOM_FINDING[region])):
+        # three spellings: the roster ruling, mid_south's SLUG-FIRST crop-scoped form, and
+        # mid_atlantic's REGION-FIRST one. Checking only the first two told the next session that
+        # 4 crops still needed document work after hunt 2 had adjudicated them.
+        region_first = BLOOM_FINDING[region].replace(
+            '%s_' % region, '%s_%s_' % (region, slug.replace('-', '_')), 1)
+        for fid in (BLOOM_FINDING[region], '%s_%s' % (slug, BLOOM_FINDING[region]), region_first):
             st = finding_status(crop, fid)
             if st is not None:
                 return 'RULED', '%s [%s]' % (fid, st)
