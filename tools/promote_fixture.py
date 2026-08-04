@@ -59,6 +59,8 @@ COMMIT_FOR = {
     '78e5d8e3b649151e4f049aa02cf6de23f05592448942c234e1016802f5652d19': '76db16a',
     # campaign B, the mid_atlantic/ncsu_ext hunt -- one promote, so one commit, no CHAIN entry
     '370806b54252628b49502d3b85476504be24e461bb479445f056d02514f529b7': '4a2f3ec',
+    # campaign B closeout (fig, strawberry, apple, elderberry, fava) -- likewise one promote
+    '47a502afd95a8248c790ee005e7970672a62434cf4f1cc76dd3e7edac9b62286': '18687d5',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
