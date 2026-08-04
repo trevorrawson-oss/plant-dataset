@@ -28,8 +28,46 @@ Modes:
 """
 import json, subprocess, sys, os, argparse, tempfile
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import doc_roster_claim_gate as roster
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 GATE = os.path.join(HERE, "whole_crop_gate.py")
+
+# Live docs whose roster claims must track the canonical (see doc_roster_claim_gate).
+ROSTER_DOCS = sorted(set(roster.DOCS_WITH_COUNT_SENTENCE) | set(roster.DOCS_WITH_SHELL_ENUMERATION))
+ROSTER_TRIGGERS = set(ROSTER_DOCS) | {"crops_data_final.json", "LATEST.txt"}
+
+
+def _index_bytes(path):
+    """The bytes of `path` as they will be COMMITTED (the index), or None if absent.
+    Not the working tree: an unstaged fix must not buy a green commit."""
+    r = subprocess.run(["git", "show", f":./{path}"], capture_output=True)
+    return r.stdout if r.returncode == 0 else None
+
+
+def roster_claim_concerns(staged_names):
+    """Block a commit that would leave a LIVE doc's roster claim contradicting the canonical.
+
+    Runs ONLY when the commit touches the canonical, LATEST.txt, or a gated doc -- a commit that
+    touches none of them cannot make a claim go stale, and a net that fires on unrelated commits
+    gets bypassed by habit. Complements the regression arm below, which SKIPS doc-only commits."""
+    if not ROSTER_TRIGGERS & set(staged_names):
+        return []
+    canon = _index_bytes("crops_data_final.json")
+    if canon is None:
+        return []
+    facts = roster.roster_facts(json.loads(canon.decode("utf-8")))
+    concerns = []
+    for rel in ROSTER_DOCS:
+        blob = _index_bytes(rel)
+        if blob is None:
+            continue          # doc absent from the index: not this net's business
+        concerns += roster.doc_claim_violations(blob.decode("utf-8"), rel, facts)
+    latest = _index_bytes("LATEST.txt")
+    if latest is not None:
+        concerns += roster.latest_sha_violations(latest.decode("utf-8"), canon)
+    return concerns
 
 
 def gate_violations(path, slug):
@@ -137,6 +175,15 @@ def main():
         else:
             staged = subprocess.run(["git", "diff", "--cached", "--name-only"],
                                     capture_output=True, text=True).stdout.split()
+            # The roster-claim arm runs FIRST and independently: a doc-only commit skips the
+            # regression arm below, and that is exactly where a stale roster claim ships.
+            stale = roster_claim_concerns(staged)
+            if stale:
+                print("pre-commit roster-claim: BLOCKED -- a live doc contradicts the canonical:")
+                for c in stale:
+                    print("  VIOLATION: " + c)
+                print("Fix the doc (or bypass with: git commit --no-verify)")
+                return 1
             if "crops_data_final.json" not in staged:
                 print("pre-commit release-verify: crops_data_final.json not staged -> skip")
                 return 0
