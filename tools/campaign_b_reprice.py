@@ -107,6 +107,26 @@ HUNT2 = {
         'mid_atlantic_pomegranate_not_covered_by_ncsu_publications',
 }
 
+# HUNT 3 (campaign B closeout, 2026-08-04) -- docs/2026-08-04-campaign-b-closeout-hunt.md.
+# Closes the block: fig's 2 harvest arms, strawberry's z8 plant_out and its containers, and the
+# two remaining region-anchor decisions. apple dropped out entirely (its container repointed to
+# uada_ext_fruit_trees) and fava's two heat_pause nodes repointed to the NC State Toolbox entry
+# for Vicia faba, so neither appears here.
+HUNT3 = {
+    ('mid_south', 'fig', 'harvest_start'): 'mid_south_fig_harvest_undocumented',
+    ('mid_south', 'fig', 'harvest_end'): 'mid_south_fig_harvest_undocumented',
+    ('mid_south', 'strawberry', 'plant_out'): 'mid_south_strawberry_z8_plant_out_late_tail',
+    ('mid_south', 'strawberry', 'plantings'):
+        'mid_south_strawberry_plasticulture_guide_is_ncsu_not_uaex',
+    ('mid_south', 'strawberry', 'resolved_by_zone'):
+        'mid_south_strawberry_plasticulture_guide_is_ncsu_not_uaex',
+    ('mid_south', 'elderberry', 'plantings'): 'mid_south_elderberry_no_uaex_planting_model',
+    ('mid_south', 'elderberry', 'resolved_by_zone'):
+        'mid_south_elderberry_no_uaex_planting_model',
+    ('mid_atlantic', 'broad-beans-fava', 'resolved_by_zone'):
+        'mid_atlantic_fava_absent_from_vegetable_calendars',
+}
+
 # tools/promote_mid_south_fruit_tree_repoint.py docstring, "WHAT IS DELIBERATELY *NOT* REPOINTED":
 #   "harvest ... Left on the bare host for apple (already pathed to ext_org_apples), and for
 #    apricot / cherry / mulberry / peach / pear / plum / pomegranate, because UAEX publishes NO
@@ -173,7 +193,7 @@ def adjudicate(slug, crop, region, arm):
     no longer needing DOCUMENT WORK. Those are different kinds of debt and the buckets must not
     conflate them.
     """
-    fid = HUNT2.get((region, slug, arm))
+    fid = HUNT2.get((region, slug, arm)) or HUNT3.get((region, slug, arm))
     if fid is not None:
         st = finding_status(crop, fid)
         if st is None:
