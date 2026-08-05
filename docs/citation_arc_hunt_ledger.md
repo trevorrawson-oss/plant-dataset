@@ -4,8 +4,10 @@
 are closed**. Created 2026-08-03 because that had never been written down: the counts lived only as
 prose snapshots inside kickoffs 46, 47, 48, 49 and 50, and every one of those went stale.
 
-**Last reconciled:** 2026-08-03, canonical `3b7dc544`, HEAD `bc5250d` on `main` (pushed; campaign A
-is live). Campaign B re-priced the same day -- see **Campaign B, re-priced** below.
+**Last reconciled:** 2026-08-05, canonical `754c51a0`. Campaign A is live; campaign B closed
+2026-08-04; **campaign C CLOSED 2026-08-05 (PLA-113)** in one promote (`5a52a76c` -> `754c51a0`)
+-- see the campaign table and `docs/2026-08-05-campaign-c-reprice-and-arid-document-read.md`.
+Campaign B was re-priced 2026-08-03 -- see **Campaign B, re-priced** below.
 
 > **COUNT RECONCILED 2026-08-03 — the shipped scan is the authority, confirmed.** Kickoff 50 §2 made
 > this gating. An independent re-derivation that does *not* import the scan reproduces it exactly
@@ -131,7 +133,7 @@ is the unit that actually amortizes a hunt, since one document read serves N cro
 |---|---|---|---|---|
 | **A. California / UC** | 8 (#3-6, #9-12) | **76 -> 9** | one planting-date table, four regions, two source ids | **CLOSED 2026-08-03** in three promotes (`e65aa63a` -> `3f6d6ce4` -> `3b7dc544`). 52 repointed, 16 ruled, + the `ca_desert` July-sowing note. 4 of 8 hunts fully resolved. Residue: `lemon`/`lime` 7 -> campaign D, 2 pears -> fruit-tree read |
 | **B. Region templates** | 2 (#1, #2) | **33 -> 0** | `mid_south`/`uada_ext` + `mid_atlantic`/`ncsu_ext` — the two find-and-replace parents | **CLOSED 2026-08-04** in three promotes (`370806b5` -> `47a502af` -> `4065e23b`; commits `4a2f3ec`, `18687d5`, `be3abea`, all pushed). Re-priced 33 -> 6, then the mid_atlantic four (`apricot`/`cherry-sour`/`cherry-sweet`/`pomegranate`) and the closeout five (`fig`/`strawberry`/`apple`/`elderberry`/`broad-beans-fava`) worked out: **13 nodes repointed, 29 held bare with per-crop stated reasons, 18 findings filed, 2 catalog ids minted**, then Trevor's rulings closed 7 decisions / 8 finding records. `campaign_b_reprice` now reports **0 of 32 decisions open**. **ONE finding stays open on purpose** (`strawberry_mid_south_plasticulture_home_garden_tension`, guard-pinned). Docs: `2026-08-03-mid-atlantic-ncsu-ext-citation-hunt.md`, `2026-08-04-campaign-b-closeout-hunt.md` |
-| **C. Arid + Texas** | 7 (#7, #8, #13, #14, #17, #21, #24) | **35** | NMSU + TAMU AgriLife + Arizona across `warm_arid`/`rgv`/`low_desert_az`/`ca_desert` | **KICKOFF WRITTEN 2026-08-04: `docs/kickoffs/53-campaign-c-arid-and-texas.md`**, not started. MEASURED at 35 decisions / **116 SOLE nodes**, of which **82 are CONTAINERS and only 34 are claim arms** -- the opposite ratio to campaign B, so price the two classes separately. **0 of 35 decisions carry any finding naming their region**, so unlike B there is nothing to reclassify and the 35 is real. Two structural facts in the kickoff should reshape it: **lemon + lime are 31 of the 116 nodes and belong with campaign D** (hunt #21 is 100% citrus), and **8 `warm_arid` crops cite BOTH bare hosts**, so one read closes 17 decisions and repointing either makes the other stop being SOLE |
+| **C. Arid + Texas** | 7 (#7, #8, #13, #14, #17, #21, #24) | **35 -> 6 -> 0 document work** | NMSU + TAMU AgriLife + Arizona across `warm_arid`/`rgv`/`low_desert_az`/`ca_desert` | **CLOSED 2026-08-05 (PLA-113)** in ONE promote (`5a52a76c` -> `754c51a0`): **5 nodes repointed, 29 held bare with per-crop stated reasons, 8 findings filed, no catalog id minted**, guards proving no consumer string moved and 40 standalone gates byte-identical. Still open by choice: hunt #14's 3 melons (AZ1005 is a live lead, so no absence was filed), lavender's `nmsu_chart` url, and `tools/catalog_divergence_scan.py`. Doc: `2026-08-05-campaign-c-reprice-and-arid-document-read.md`; reproduce with `python3 tools/campaign_c_reprice.py` (27 tests, every check mutation-tested). Kickoff 53's shape numbers ALL reproduce (116 nodes / 82 containers / 34 arms / 31 citrus). **Its adjudication test does not**: "0 of 35 carry a finding naming their REGION" is correct and is the wrong question -- these crops declare bare anchors by **SOURCE ID** in crop-scoped pilot findings, and **17 of 35 decisions carry one** (`okra_pilot_region_anchor_base_urls` alone names 3 of the 5 source ids). After the citrus re-scope C keeps **30 decisions / 85 nodes**: 1 catalog-repointable, 17 declared-anchor, 6 modeled-only, **6 honestly open** -- 5 of them one hunt. **NO DOCUMENT HUNT REMAINS.** #13's RGV guide (cached as a 403, refetched) has **ZERO rows for all six crops** and its only pea is Cowpea (*Vigna*, wrong genus); all six already declare that absence in their own `synthesis_note_seasoned` -- a THIRD adjudication vocabulary no scan checks. #17 + #24 both repoint at the Dona Ana chart, whose bars were read visually (text layer has no dates) and MATCH the data. Open work is authoring, not research |
 | **D. The tail** | 11 (#16, #18, #23, #25-32) | **14** | one or two crops each; **7 of the 11 are lemon** | not written; likely one sitting |
 | | **28** | **158 -> 106** | | |
 
@@ -273,6 +275,16 @@ fruit nodes.
 ---
 
 ### Campaign C — arid + Texas · hunts #7, #8, #13, #14, #17, #21, #24
+
+> **SUPERSEDED 2026-08-05 (PLA-113) — read
+> `docs/2026-08-05-campaign-c-reprice-and-arid-document-read.md` first.** "The most research-heavy
+> campaign" was wrong: re-priced to **6 open decisions**, and all four governing documents have now
+> been read, leaving **no document hunt at all** — only authoring. The `nmsu_chart` note below is
+> also wrong in an instructive way: it is not a mis-classification, it is a bare **Texas** host
+> under a **New Mexico** source id, and the catalog already holds the right document. The two
+> Arizona/NMSU traps below stand, and a THIRD was found: the Dona Ana chart's planting windows are
+> drawn as graphical bars, so its text layer yields no dates at all. Everything below is kept as
+> written, per the arc's append-don't-rewrite convention.
 
 `nmsu_ext`, `tamu_agrilife`, `uariz_ext`, `nmsu_donaana_mg`, `nmsu_chart` across `warm_arid`, `rgv`,
 `low_desert_az`, `ca_desert`. **The most research-heavy campaign** — five source ids, four regions,
