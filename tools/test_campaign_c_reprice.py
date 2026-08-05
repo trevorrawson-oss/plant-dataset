@@ -51,22 +51,26 @@ def verdicts(data):
 # originally pinned are kept in the assertions' comments, because the DELTA is the campaign's
 # result and a bare "112" tells the next reader nothing.
 
-def test_shape_is_112_nodes_over_32_decisions(data, crops):
-    """Was 116 / 35 / 7 before the closeout promote. Four nodes stopped being bare hosts
-    (carrot's heat_pause, both tomatoes' zone cells, garlic's plant_out), which closed hunts
-    #17 and #24 outright."""
+def test_shape_is_99_nodes_over_30_decisions(data, crops):
+    """116 / 35 / 7 at kickoff. The closeout promote took it to 112 / 32 / 5 (carrot's
+    heat_pause, both tomatoes' zone cells and garlic's plant_out stopped being bare hosts,
+    closing hunts #17 and #24). The AZ1005 follow-up took it to 99 / 30: thirteen more
+    low_desert_az nodes moved to uariz_ext_az1005, closing cantaloupe and honeydew-melon
+    entirely and leaving watermelon only its two deliberately-held summer nodes."""
     nodes = R.collect(data, crops)
-    assert len(nodes) == 112
-    assert len({(n[3], n[1], n[2]) for n in nodes}) == 32
+    assert len(nodes) == 99
+    assert len({(n[3], n[1], n[2]) for n in nodes}) == 30
     assert len({n[0] for n in nodes}) == 5
 
 
-def test_node_class_split_is_33_claim_79_container(data, crops):
-    """Was 34 claim / 82 container. garlic's plant_out was the one claim arm repointed."""
+def test_node_class_split_is_33_claim_66_container(data, crops):
+    """34 claim / 82 container at kickoff. garlic's plant_out was the only claim arm ever
+    repointed; everything the AZ1005 pass moved was a container, which is why the claim count
+    is unchanged from the closeout while the container count fell by 13."""
     nodes = R.collect(data, crops)
     claim = [n for n in nodes if n[5] in R.CLAIM_ARMS]
     assert len(claim) == 33
-    assert len(nodes) - len(claim) == 79
+    assert len(nodes) - len(claim) == 66
 
 
 def test_nineteen_decisions_are_declared_by_an_anchor_finding(data):
@@ -106,8 +110,9 @@ def test_kickoff_53_region_test_no_longer_reproduces_zero_and_that_is_our_doing(
             if reg in (f.get('id') or ''):
                 named.add((slug, f['id']))
     assert sorted(s for s, _f in named) == [
-        'arugula', 'broad-beans-fava', 'garlic', 'shallot', 'snow-peas', 'sugar-snap-peas']
-    assert all(fid.startswith('rgv_') for _s, fid in named), named
+        'arugula', 'broad-beans-fava', 'garlic', 'shallot', 'snow-peas', 'sugar-snap-peas',
+        'watermelon']
+    assert all(fid.startswith(('rgv_', 'low_desert_az_')) for _s, fid in named), named
 
 
 # --------------------------------------------------------------------------------------------

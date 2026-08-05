@@ -132,6 +132,13 @@ ABSENCE_FINDING = {
     # garlic is the split case: its plant_out repointed to a real document, and what stays bare
     # is the harvest pair, whose finding records that our Apr 13 start runs ahead of every source.
     ('rgv', 'garlic'): 'rgv_garlic_harvest_start_runs_ahead_of_every_source',
+    # Filed 2026-08-05 by the AZ1005 follow-up. watermelon's two remaining low_desert_az nodes are
+    # its second_planting pair, held bare ON PURPOSE: AZ1005 gives low-desert watermelon a spring
+    # sowing window only (S at Feb 15, Mar 1, Mar 15 and nothing else all year), so repointing
+    # them would cite a document that contradicts them. cantaloupe and honeydew-melon left this
+    # scan entirely in the same pass.
+    ('low_desert_az', 'watermelon'):
+        'low_desert_az_watermelon_summer_planting_absent_from_az1005',
 }
 
 # MODELED-CLASS findings: they declare the region's WINDOWS derived from days-to-maturity plus

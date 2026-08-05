@@ -341,7 +341,13 @@ def test_applied_reprice_shows_hunt_13_and_24_resolved(applied):
     # garlic's harvest arms stay bare BY DESIGN, and the promote files the finding that
     # adjudicates them, so the decision reads DECLARED-ABSENCE rather than disappearing.
     assert dec[('garlic', 'rgv', 'tamu_agrilife')] == 'DECLARED-ABSENCE'
-    assert not [k for k, v in dec.items() if v == 'OPEN' and k[0] not in R.CITRUS]
+    # Everything this promote adjudicates must be closed. watermelon is the one exception and it
+    # is an ORDERING fact, not a gap: its low_desert_az verdict was filed by the LATER AZ1005
+    # follow-up, so against this promote's own fixture the reprice table correctly reports that
+    # the finding it names is not yet on the crop. Asserting the exception by name keeps the
+    # check honest -- a genuinely missed decision would still fail here.
+    still_open = {k[0] for k, v in dec.items() if v == 'OPEN' and k[0] not in R.CITRUS}
+    assert still_open == {'watermelon'}, still_open
     # 30 non-citrus decisions before; hunt 24's carrot and hunt 17's two tomatoes stop being
     # bare hosts entirely once repointed, so the campaign loses three decisions, not one.
     assert ('beefsteak-tomato', 'warm_arid', 'nmsu_donaana_mg') not in dec
