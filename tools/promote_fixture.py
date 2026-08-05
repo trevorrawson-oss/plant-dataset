@@ -67,6 +67,8 @@ COMMIT_FOR = {
     '5a52a76cabb5ca34dcda7756220fcc34db05f408722e27562bdfd96cd4b0b160': 'cad5157',
     # campaign C closeout (PLA-113) -- one promote, so one commit, no CHAIN entry
     '754c51a0de23daceff87c081cd84c6d60274e416fc19639bd2ee2520f5f309f5': '0022763',
+    # AZ1005 + divergence + lavender, campaign C's residue -- one promote, one commit
+    'ca40d90f008b645a8a01791b30d454759c42d905e1b3fc552ab0c25f9bf07e49': '369321f',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
