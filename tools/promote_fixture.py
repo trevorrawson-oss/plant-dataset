@@ -65,6 +65,8 @@ COMMIT_FOR = {
     '4065e23bf7cbfd2945c476c93e7326e9a6d2f0646ac88bac9a66f7b9d857023e': 'be3abea',
     # USCRN soil-temp validation (PLA-110) -- one promote, so one commit, no CHAIN entry
     '5a52a76cabb5ca34dcda7756220fcc34db05f408722e27562bdfd96cd4b0b160': 'cad5157',
+    # campaign C closeout (PLA-113) -- one promote, so one commit, no CHAIN entry
+    '754c51a0de23daceff87c081cd84c6d60274e416fc19639bd2ee2520f5f309f5': '0022763',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
