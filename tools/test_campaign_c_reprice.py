@@ -23,10 +23,24 @@ sys.path.insert(0, os.path.join(REPO, 'tools'))
 import campaign_c_reprice as R  # noqa: E402
 
 
+# PINNED to `6b2dcb8e`, the canonical at campaign C's close, where this suite's published numbers
+# (99 nodes / 33 claim / 66 container / 5 citrus rows) are true. Verified: the same collect() over
+# the kickoff's `5a52a76c` yields 116 nodes, so these constants were always describing C's CLOSE
+# state, not its start.
+#
+# Why it is pinned rather than re-baselined: the 2026-08-06 PLA-114 promote repointed
+# `lemon/warm_arid/tamu_agrilife` -- which IS campaign C's hunt #8, whose citrus residue C
+# explicitly deferred into campaign D. So C's bare set legitimately fell 99 -> 98 and its citrus
+# rows 5 -> 4. Chasing that with new constants each time a later campaign closes one of C's
+# deferred rows would erase the record of what C was priced at, and the number would slowly stop
+# meaning anything. The TOOL still reads live canonical.
+BASE_SHA = '6b2dcb8ed4f51c833fa4d44845b15e7f609079a24a544af025c067dfca45d4db'
+
+
 @pytest.fixture(scope='module')
 def data():
-    with open(R.CANONICAL, encoding='utf-8') as fh:
-        return json.load(fh)
+    import promote_fixture
+    return json.loads(promote_fixture.pre_state(BASE_SHA))
 
 
 @pytest.fixture(scope='module')
