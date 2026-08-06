@@ -69,6 +69,8 @@ COMMIT_FOR = {
     '754c51a0de23daceff87c081cd84c6d60274e416fc19639bd2ee2520f5f309f5': '0022763',
     # AZ1005 + divergence + lavender, campaign C's residue -- one promote, one commit
     'ca40d90f008b645a8a01791b30d454759c42d905e1b3fc552ab0c25f9bf07e49': '369321f',
+    # PLA-122 rulings on campaign C's five open findings -- one promote, one commit
+    '6b2dcb8ed4f51c833fa4d44845b15e7f609079a24a544af025c067dfca45d4db': '8ee1b0b',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
