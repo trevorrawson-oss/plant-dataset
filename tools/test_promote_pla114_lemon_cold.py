@@ -264,8 +264,21 @@ def test_f5_states_scope_and_the_duration_qualifier(post):
 
 @pytest.mark.parametrize('path', CONFLATION_PATHS, ids=lambda p: '.'.join(map(str, p)))
 def test_the_fourteen_conflation_strings_are_byte_identical(pre, post, path):
-    """The disposition ruled NO edit is owed to these. Pinned so a later pass cannot drift them."""
-    assert _resolve(_crop(post), path) == _resolve(_crop(pre), path)
+    """The disposition ruled NO edit is owed to these. Pinned so a later pass cannot drift them.
+
+    NARROWED 2026-08-06 for `hardiness_notes_seasoned` ONLY, by the Task 2 credit-line promote.
+    That promote rewrote the source parenthetical appended to this string -- the mis-credit F1
+    exists to record -- and touched nothing else. The pin's purpose, stated when it was written,
+    is "so a later pass cannot 'fix' correct copy", and the correct copy is the stage-aware CLAIM,
+    not the credit. So the CLAIM text is still pinned byte-identical here; the credit is asserted
+    separately, per claim, in test_promote_pla114_credit_line.py. Dropping the check for this
+    field outright would have handed the next pass exactly the licence the pin denies.
+    """
+    before, after = _resolve(_crop(pre), path), _resolve(_crop(post), path)
+    if path == ('crop', 'hardiness_notes_seasoned'):
+        before, after = before.split(' (Sources:')[0], after.split(' (Sources:')[0]
+        assert before, 'the split found no claim text -- the field shape changed'
+    assert after == before
 
 
 def test_the_fourteen_paths_all_resolve_and_asserted_the_threshold(pre):
@@ -276,7 +289,13 @@ def test_the_fourteen_paths_all_resolve_and_asserted_the_threshold(pre):
 
 
 def test_no_lemon_string_moved_at_all(pre, post):
-    """Wholesale: every string on lemon, not just the fourteen. Only non-string fields may move."""
+    """Wholesale: every string on lemon, not just the fourteen. Only non-string fields may move.
+
+    The Task 2 credit-line promote later rewrote ONE credit parenthetical, so that single string is
+    compared on its claim text here and per claim in test_promote_pla114_credit_line.py. Every
+    other string on the crop is still compared whole, which is what makes this a coverage check
+    rather than a spot check.
+    """
     def strings(node, out, trail=''):
         if isinstance(node, dict):
             for k, v in node.items():
@@ -298,6 +317,10 @@ def test_no_lemon_string_moved_at_all(pre, post):
                 cell.pop('anchoring_urls', None)
     strings(pre_crop, before)
     strings(post_crop, after)
+    key = '.hardiness_notes_seasoned'
+    for bag in (before, after):
+        bag[key] = bag[key].split(' (Sources:')[0]
+    assert before[key], 'the split found no claim text -- the field shape changed'
     assert before == after
 
 
