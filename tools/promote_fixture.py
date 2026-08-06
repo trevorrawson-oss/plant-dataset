@@ -71,6 +71,10 @@ COMMIT_FOR = {
     'ca40d90f008b645a8a01791b30d454759c42d905e1b3fc552ab0c25f9bf07e49': '369321f',
     # PLA-122 rulings on campaign C's five open findings -- one promote, one commit
     '6b2dcb8ed4f51c833fa4d44845b15e7f609079a24a544af025c067dfca45d4db': '8ee1b0b',
+    # PLA-114 lemon cold anchor. Pinned by BOTH re-price suites as well as its own promote
+    # guards -- test_campaign_c_reprice and test_campaign_d_reprice read `6b2dcb8e` (above)
+    # rather than live canonical, so neither this entry nor that one may be rewritten.
+    '29b96b65a0969a8ad654762b5d84276bafbd2a8747706cb512ed1414305abf6f': 'ae15df4',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
