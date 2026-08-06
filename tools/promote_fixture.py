@@ -79,6 +79,11 @@ COMMIT_FOR = {
     # `6b2dcb8e`, because the narrowed fourteen-string pin compares the claim text against the
     # state it was originally pinned to, not merely against the previous promote.
     'bce8bcc72aeebb42269b2d96310b427d9502a3670241ca7621e91810588f16cd': 'ebfd537',
+    # PLA-114 section 7. Four consecutive PLA-114 states are now pinned, and every one is
+    # load-bearing: 6b2dcb8e (both re-price suites + the narrowed fourteen-string pin),
+    # 29b96b65 and bce8bcc7 (their own guard suites, re-pointed here from live canonical
+    # because this promote legitimately moved past them), and 820af861.
+    '820af861e38070a375441803db7e2ddddc72a67e20dd8be580998aa7110a8d1c': 'b7dbc81',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
