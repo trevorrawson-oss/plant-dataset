@@ -44,10 +44,19 @@ def _f1(data):
     return next(f for f in _crop(data)['verification_status']['open_findings'] if f['id'] == F1)
 
 
+# Pinned to the state THIS promote produced, `bce8bcc7`, for the same reason as its predecessor:
+# the §7 promote landed on top of it and legitimately moved things these guards assert did not
+# move. The mutation harness still overrides via PLA114B_CANONICAL.
+POST_SHA = 'bce8bcc72aeebb42269b2d96310b427d9502a3670241ca7621e91810588f16cd'
+
+
 @pytest.fixture(scope='module')
 def post():
-    with open(CANONICAL, 'rb') as fh:
-        return json.loads(fh.read())
+    override = os.environ.get('PLA114B_CANONICAL')
+    if override:
+        with open(override, 'rb') as fh:
+            return json.loads(fh.read())
+    return json.loads(promote_fixture.pre_state(POST_SHA))
 
 
 @pytest.fixture(scope='module')
@@ -199,13 +208,13 @@ def test_top_level_is_untouched(pre, post):
 
 
 def test_canonical_is_still_compact():
-    raw = open(CANONICAL, 'rb').read()
+    raw = promote_fixture.pre_state(POST_SHA)
     assert b'\n' not in raw and not raw.endswith(b'\n')
 
 
 def test_the_promote_actually_ran():
-    got = hashlib.sha256(open(CANONICAL, 'rb').read()).hexdigest()
-    assert got != BASE_SHA, 'canonical is still the pre-state'
+    got = hashlib.sha256(promote_fixture.pre_state(POST_SHA)).hexdigest()
+    assert got != BASE_SHA, 'the post state is the pre-state'
 
 
 if __name__ == '__main__':

@@ -154,5 +154,46 @@ def test_tamu_citrus_has_only_freeze_protection_operating_points():
     assert 29 not in values, "a 29F figure would change the verdict -- re-read the document"
 
 
+
+
+# --- a cached FILE is not a cached DOCUMENT ----------------------------------------------------
+
+def test_a_cached_fetch_failure_is_not_treated_as_readable(tmp_path, monkeypatch):
+    """The fetcher writes its own failures into the cache as content.
+
+    48 `\\x00FETCHFAIL ...` stubs and 10 Incapsula challenge pages were found in tools/.doc_cache
+    on 2026-08-06. Unfiltered they report as CACHED and scan clean -- an absence manufactured by
+    our own fetcher rather than by the network ([[waf-block-pages-cached-as-absence]]).
+    """
+    assert ccs.is_document('\x00FETCHFAIL HTTPError: HTTP Error 403: Forbidden') is False
+    assert ccs.is_document(' ' * 10 + 'Request unsuccessful. Incapsula incident ID: 1234') is False
+    assert ccs.is_document('x' * 50) is False, 'implausibly short'
+    assert ccs.is_document('The lemon tree is damaged at 29 degrees F. ' * 20) is True
+
+
+def test_MUTATION_a_poisoned_cache_entry_is_reported_as_undetermined(monkeypatch):
+    """Point one cited URL at a FETCHFAIL stub and assert absence becomes unreportable."""
+    real = ccs.cache_path
+    poisoned = {}
+
+    def fake(url):
+        if url == CLEMSON_COLD:
+            return poisoned['path']
+        return real(url)
+
+    import tempfile
+    d = tempfile.mkdtemp()
+    poisoned['path'] = os.path.join(d, 'stub.txt')
+    open(poisoned['path'], 'w').write('\x00FETCHFAIL HTTPError: HTTP Error 403: Forbidden')
+    monkeypatch.setattr(ccs, 'cache_path', fake)
+
+    report = ccs.scan_crop('lemon', 24, 32)
+    states = {url: state for _sid, url, state, _h, _s in report.rows}
+    assert states[CLEMSON_COLD] == 'NOT-A-DOCUMENT'
+    assert CLEMSON_COLD in {u for _s, u in report.uncached}
+    with pytest.raises(ccs.UnreportableAbsence, match='uncached'):
+        ccs.assert_absence_reportable(report, used_proximity=False)
+
+
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-q"]))

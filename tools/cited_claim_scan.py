@@ -92,6 +92,20 @@ def cache_path(url):
     return os.path.join(DOC_CACHE, hashlib.sha1(url.encode()).hexdigest() + '.txt')
 
 
+# A cached FILE is not a cached DOCUMENT. The fetcher writes its own failures into the cache as
+# content -- 48 `\x00FETCHFAIL ...` stubs and 10 Incapsula challenge pages were sitting in
+# tools/.doc_cache on 2026-08-06. Left unfiltered they read as CACHED and scan clean, which is
+# [[waf-block-pages-cached-as-absence]] arriving through our own fetcher instead of the network.
+_NOT_A_DOCUMENT = re.compile(
+    r'FETCHFAIL|Request unsuccessful\. Incapsula|Access Denied|Attention Required', re.I)
+MIN_DOCUMENT_BYTES = 300
+
+
+def is_document(text):
+    """False when the cached bytes are a fetch failure, a WAF challenge, or implausibly short."""
+    return len(text) >= MIN_DOCUMENT_BYTES and not _NOT_A_DOCUMENT.search(text[:400])
+
+
 def _load():
     with open(CANONICAL, encoding='utf-8') as fh:
         return json.load(fh)
@@ -176,6 +190,11 @@ def scan_crop(slug, lo, hi, data=None):
             report.rows.append((sid, url, 'UNCACHED', [], False))
             continue
         text = open(path, encoding='utf-8', errors='replace').read()
+        if not is_document(text):
+            # cached, but what was cached is not the document -- UNDETERMINED, never absence
+            report.uncached.append((sid, url))
+            report.rows.append((sid, url, 'NOT-A-DOCUMENT', [], False))
+            continue
         report.rows.append(
             (sid, url, 'CACHED', band_hits(text, lo, hi), document_subject_is(text, slug)))
     return report

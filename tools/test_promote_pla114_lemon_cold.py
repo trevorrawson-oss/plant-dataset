@@ -86,10 +86,21 @@ def _url(crop, region, zone, sid):
     return cell['anchoring_urls'][sid]['url']
 
 
+# This suite validates the state THIS promote produced, `29b96b65` -- not whatever canonical
+# happens to be later. Pinned 2026-08-06 when the §7 promote legitimately added seven catalog ids,
+# three findings and four citations on top of it, which broke the "nothing else moved" guards.
+# Re-baselining those each time a later promote lands would hollow them out; the mutation harness
+# still overrides via PLA114_CANONICAL, so the guards stay falsifiable.
+POST_SHA = '29b96b65a0969a8ad654762b5d84276bafbd2a8747706cb512ed1414305abf6f'
+
+
 @pytest.fixture(scope='module')
 def post():
-    with open(CANONICAL, 'rb') as fh:
-        return json.loads(fh.read())
+    override = os.environ.get('PLA114_CANONICAL')
+    if override:
+        with open(override, 'rb') as fh:
+            return json.loads(fh.read())
+    return json.loads(promote_fixture.pre_state(POST_SHA))
 
 
 @pytest.fixture(scope='module')
@@ -336,15 +347,15 @@ def test_no_other_crop_changed(pre, post):
 
 
 def test_canonical_is_still_compact():
-    raw = open(CANONICAL, 'rb').read()
+    raw = promote_fixture.pre_state(POST_SHA)
     assert b'\n' not in raw, 'canonical must be single-line compact'
     assert not raw.endswith(b'\n'), 'canonical must have no trailing newline'
 
 
 def test_the_promote_actually_changed_canonical():
-    """If canonical still hashes to the base, every check above is comparing a file to itself."""
-    got = hashlib.sha256(open(CANONICAL, 'rb').read()).hexdigest()
-    assert got != BASE_SHA, 'canonical is still the pre-state -- the promote did not run'
+    """If the post state hashes to the base, every check above compares a file to itself."""
+    got = hashlib.sha256(promote_fixture.pre_state(POST_SHA)).hexdigest()
+    assert got != BASE_SHA, 'the post state is the pre-state -- the promote did not run'
 
 
 if __name__ == '__main__':
