@@ -75,6 +75,10 @@ COMMIT_FOR = {
     # guards -- test_campaign_c_reprice and test_campaign_d_reprice read `6b2dcb8e` (above)
     # rather than live canonical, so neither this entry nor that one may be rewritten.
     '29b96b65a0969a8ad654762b5d84276bafbd2a8747706cb512ed1414305abf6f': 'ae15df4',
+    # PLA-114 task 2, the per-claim credit fix. Its guard suite rebuilds BOTH this entry and
+    # `6b2dcb8e`, because the narrowed fourteen-string pin compares the claim text against the
+    # state it was originally pinned to, not merely against the previous promote.
+    'bce8bcc72aeebb42269b2d96310b427d9502a3670241ca7621e91810588f16cd': 'ebfd537',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
