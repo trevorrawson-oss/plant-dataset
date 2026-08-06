@@ -128,6 +128,43 @@ ANCHOR_FINDING = {
     # makes the refusal visible in the output instead of looking like an omission.
     ('fl_peninsula', 'jalapeno', 'ufifas_ext'):
         'jalapeno_pilot_regional_source_anchors_general',
+    # --- PLA-114 close, 2026-08-06. Both findings NAME the id AND DECLARE the anchor, which is
+    # the distinction that closes a decision. The section-7 findings named these same ids only to
+    # DECLINE them ("the ucanr_ext arm stays bare; that is hunt #3 and it is still open"), which
+    # satisfies the V2 vocabulary scan and closes nothing. Verified present on the crop and
+    # verified to name each id verbatim before being listed here.
+    ('ca_interior', 'lemon', 'ucanr_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('ca_north_coast', 'lemon', 'ucanr_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('ca_south_coast', 'lemon', 'ucanr_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('ca_desert', 'lemon', 'ucanr_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('ca_desert', 'lemon', 'uariz_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('low_desert_az', 'lemon', 'uariz_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('warm_arid', 'lemon', 'uariz_ext'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('warm_arid', 'lemon', 'clemson_hgic'):
+        'lemon_regional_anchor_ids_declared_modeled_where_no_document_exists',
+    ('ca_north_coast', 'lime', 'ucanr_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
+    ('ca_south_coast', 'lime', 'ucanr_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
+    ('ca_desert', 'lime', 'ucanr_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
+    ('ca_interior', 'lime', 'ucanr_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
+    ('low_desert_az', 'lime', 'uariz_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
+    ('ca_desert', 'lime', 'uariz_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
+    # hunt #32 is (low_desert_az, ucanr_ext) -- NOT uariz_ext. Caught by reading the hunt table
+    # rather than assuming the desert region implies the Arizona id.
+    ('low_desert_az', 'lime', 'ucanr_ext'):
+        'lime_regional_anchor_ids_declared_modeled_same_class_as_lemon',
 }
 
 # MODELED-CLASS findings: they declare the region's WINDOWS (and, for lime, the per-cell

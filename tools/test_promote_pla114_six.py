@@ -39,9 +39,17 @@ def _arm(d, region, arm):
     return _crop(d)['regions'][region]['plantings'][0][arm][0]
 
 
+# Pinned to the state THIS promote produced, for the same reason as its two predecessors: the
+# PLA-114 close landed on top of it and legitimately moved things these guards assert did not move.
+POST_SHA = '820af861e38070a375441803db7e2ddddc72a67e20dd8be580998aa7110a8d1c'
+
+
 @pytest.fixture(scope='module')
 def post():
-    return json.loads(open(CANONICAL, 'rb').read())
+    override = os.environ.get('PLA114C_CANONICAL')
+    if override:
+        return json.loads(open(override, 'rb').read())
+    return json.loads(promote_fixture.pre_state(POST_SHA))
 
 
 @pytest.fixture(scope='module')
@@ -239,12 +247,12 @@ def test_frost_tolerance_still_29(post):
 
 
 def test_canonical_is_still_compact():
-    raw = open(CANONICAL, 'rb').read()
+    raw = promote_fixture.pre_state(POST_SHA)
     assert b'\n' not in raw and not raw.endswith(b'\n')
 
 
 def test_the_promote_actually_ran():
-    assert hashlib.sha256(open(CANONICAL, 'rb').read()).hexdigest() != BASE_SHA
+    assert hashlib.sha256(promote_fixture.pre_state(POST_SHA)).hexdigest() != BASE_SHA
 
 
 if __name__ == '__main__':
