@@ -84,6 +84,9 @@ COMMIT_FOR = {
     # 29b96b65 and bce8bcc7 (their own guard suites, re-pointed here from live canonical
     # because this promote legitimately moved past them), and 820af861.
     '820af861e38070a375441803db7e2ddddc72a67e20dd8be580998aa7110a8d1c': 'b7dbc81',
+    # PLA-114 campaign D close. FIVE consecutive PLA-114 states are pinned and all are
+    # load-bearing; see the note above. Never amend ae15df4, ebfd537, b7dbc81, 3b222f8 or 8ee1b0b.
+    '72284f0291442919d005a8546f6cfbdcdf06502fe7842327fa77201e5c9c8571': '3b222f8',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
