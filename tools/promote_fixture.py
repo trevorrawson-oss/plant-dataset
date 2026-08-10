@@ -101,6 +101,9 @@ COMMIT_FOR = {
     # amend 596cd65 or 503c29f.
     '060b91b807f7988d3d22ebbae77e90d285ee5f7dfe6a18a11c4de37cf6debbbd': '596cd65',
     'c16071bc34e3f41e0224264adc7d372061ce1b8de9fd2ab61ca5d232b63e4e3b': '46f143e',
+    # PLA-202 verbatim rewrite pass. Its suite pins c16071bc (base, replayed to the post
+    # state) AND this; never amend 46f143e or e1b3ac3.
+    '76f92a20faae0b8e5336ef8e7e1d9c852b9c734c93ae84fc6cccd65f49bcf3ce': 'e1b3ac3',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
