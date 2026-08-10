@@ -25,9 +25,9 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Re-based 2026-08-10: PLA-155 promoted first (ce9eb12f -> 4f610318, disjoint footprint --
 # zinnia/bee-balm/marigold byte-identical across the move, verified before re-pinning).
 BASE_SHA = '4f6103183ac9c07475b3e0c2d3a71159d0662a10a61383e1d792c049957cac23'
-# Pin to the state THIS promote produces once it lands + is registered in COMMIT_FOR.
-# None = read live canonical (pre-pin bootstrap only).
-POST_SHA = None
+# Pinned to the state THIS promote produced (registered in COMMIT_FOR as 596cd65), so the suite
+# keeps protecting after canonical moves on. None = read live canonical (pre-pin bootstrap only).
+POST_SHA = '060b91b807f7988d3d22ebbae77e90d285ee5f7dfe6a18a11c4de37cf6debbbd'
 
 FOOTPRINT = {'zinnia', 'bee-balm'}
 CLEMSON_URL = 'https://hgic.clemson.edu/factsheet/how-to-grow-zinnias-the-best-varieties-care-tips/'

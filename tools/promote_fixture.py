@@ -96,6 +96,9 @@ COMMIT_FOR = {
     # PLA-155 vce_426_331 credit corrections. Its suite pins ce9eb12f AND this, so never
     # amend 503c29f or 8be1ebb.
     '4f6103183ac9c07475b3e0c2d3a71159d0662a10a61383e1d792c049957cac23': '503c29f',
+    # PLA-157 zinnia trigger register rotation. Its suite pins 4f610318 AND this, so never
+    # amend 596cd65 or 503c29f.
+    '060b91b807f7988d3d22ebbae77e90d285ee5f7dfe6a18a11c4de37cf6debbbd': '596cd65',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
