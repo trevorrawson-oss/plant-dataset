@@ -19,7 +19,9 @@ import promote_fixture  # noqa: E402
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORIG_SHA = '72284f0291442919d005a8546f6cfbdcdf06502fe7842327fa77201e5c9c8571'
 BASE_SHA = 'db853c4b20e889a93d8946e947b31a2c7a00f49042e8774a04dc7386bca9e7a5'
-POST_SHA = None  # pinned after the fix commit registers in COMMIT_FOR
+# Pinned to the state THIS pass produced (registered in COMMIT_FOR as 8be1ebb), so the suite
+# keeps protecting after canonical moves on. None = read live canonical (pre-pin bootstrap only).
+POST_SHA = 'ce9eb12fb85abf9f592ee8bc6621102a5dd785327a74befe2b0e7ddc8146bff5'
 
 CLEMSON_URL = 'https://hgic.clemson.edu/homegrown-grits/'
 ISU_ORN_URL = 'https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-ornamental-corn'

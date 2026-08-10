@@ -90,6 +90,9 @@ COMMIT_FOR = {
     # PLA-156 corn dispositions -- one promote, one commit. Its guard suite pins BOTH 72284f02
     # (base) and this (post), so never amend 3b222f8 or 8d00f8a.
     'db853c4b20e889a93d8946e947b31a2c7a00f49042e8774a04dc7386bca9e7a5': '8d00f8a',
+    # PLA-156 verification pass -- the two held dispositions corrected. Its suite pins 72284f02,
+    # db853c4b AND this, so never amend 3b222f8, 8d00f8a or 8be1ebb.
+    'ce9eb12fb85abf9f592ee8bc6621102a5dd785327a74befe2b0e7ddc8146bff5': '8be1ebb',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
