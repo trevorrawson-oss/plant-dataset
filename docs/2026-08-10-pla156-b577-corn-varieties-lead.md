@@ -42,6 +42,15 @@ variety-class figures; the defect is attribution, not (on current evidence) the 
 2. **Row 2 (minor):** rule whether a subset plant-out window needs its narrowing basis noted.
 3. No action on sweet corn.
 
+## RESOLVED 2026-08-10 (same day)
+
+Ruled in the claude.ai lane (dispositions on PLA-156) and applied as `72284f02` -> `db853c4b`:
+popcorn's harvest arms repointed to UMN + Iowa State and its DTM prose widened to UMN's
+published 90-120; field/flint harvest arms went honestly uncited with MODELED findings (no T1
+publishes their DTMs; B577's own Corn row, 80-100, CONTRADICTS all three -- pinned as a
+do-not-repoint); `uga_b577` re-scoped to the sow layer it supports; the Apr 30 cutoff recorded
+in provenance as our narrowing. See `docs/2026-08-10-pla156-corn-promote.md`.
+
 Not repeated here but related: the USCRN validation already marks field/pop/flint `direct_sow`
 `offset_band: misaligned` (stored Mar 15 vs soil-60°F median Feb 28) while sweet-corn reads
 `aligned` -- consistent with these three crops' timing being copied rather than independently
