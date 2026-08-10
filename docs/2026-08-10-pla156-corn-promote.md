@@ -45,7 +45,36 @@ popcorn is between 13 percent and 14 percent"; Iowa State publishes "between 13 
 13-variety DTM table (85-112). Both ids (`umn_ext`, `iastate_ext`) were already in the catalog
 and already cited on popcorn; no id minted.
 
-## Guards + gauntlet
+## Verification pass, same day (`db853c4b` -> `ce9eb12f`)
+
+The claude.ai lane held dispositions 2 and 3 and asked for verification rather than acceptance.
+**Both failed verification, for one root cause: neither lane had read the crops' own cert
+records.** Script `tools/promote_pla156_corn_fix.py`, guards
+`tools/test_promote_pla156_corn_fix.py`.
+
+- **The widen (disposition 2), REVERTED.** The dependency check found "100 to 110" living in
+  twelve harvest cells (eleven regions the widen never touched), yield_expectations saying
+  90-110, and popcorn's `verification_log` recording [90,110] as a SYNTHESIS **Trevor ratified
+  at certification** (ISU 85-112d + UMN 90-120, "no single T1 quotes the exact band"). The
+  widen re-adjudicated a settled band and created a third value. The prose is restored
+  byte-identical to the 72284f02 original (guard-asserted against the fixture). The UMN +
+  Iowa State repoint stays: they publish the moisture figure and are the band's named inputs.
+- **The modeled declarations (disposition 3), CORRECTED.** field-corn's cert log names
+  **Clemson HGIC "from 90 to 120 days after planting for most varieties"** as the band's first
+  convergent input -- a home-garden extension DTM, the exact genre the sourcing pass reported
+  absent. Re-found independently and read (Homegrown Grits): it publishes the band, the husk
+  cue, and the drying guidance, and now anchors both field-corn harvest arms for the claims it
+  publishes. flint-corn's log ratifies [90,110] from Cornell + NCSU variety figures; ISU's
+  ornamental-corn page (read: cues + drying, no DTM) anchors its arms. Both findings corrected
+  in place (same ids, correction acknowledged inline); cert logs byte-untouched.
+- **Unchanged by the fix:** the do-not-repoint-at-B577 pin, B577's sow-layer footprint
+  (5/5/5/11), sweet-corn, all harvest prose on field/flint.
+
+Fix guards: 10 groups, RED watched, 6 mutations all caught (widen reintroduced, forbidden B577
+repoint, pin softened, cert-log touch, provenance history rewrite, citation drop). Gauntlet
+re-run clean at `ce9eb12f`.
+
+## Guards + gauntlet (morning promote)
 
 12 guard groups, RED watched before GREEN, POST_SHA pinned after commit. 7 mutations ALL CAUGHT:
 over-drop of the sow layer, the forbidden B577 repoint, a sweet-corn touch, widen revert,
