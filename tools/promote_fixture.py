@@ -93,6 +93,9 @@ COMMIT_FOR = {
     # PLA-156 verification pass -- the two held dispositions corrected. Its suite pins 72284f02,
     # db853c4b AND this, so never amend 3b222f8, 8d00f8a or 8be1ebb.
     'ce9eb12fb85abf9f592ee8bc6621102a5dd785327a74befe2b0e7ddc8146bff5': '8be1ebb',
+    # PLA-155 vce_426_331 credit corrections. Its suite pins ce9eb12f AND this, so never
+    # amend 503c29f or 8be1ebb.
+    '4f6103183ac9c07475b3e0c2d3a71159d0662a10a61383e1d792c049957cac23': '503c29f',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the

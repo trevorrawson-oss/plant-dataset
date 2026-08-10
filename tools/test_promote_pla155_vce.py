@@ -35,9 +35,9 @@ import promote_fixture  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_SHA = 'ce9eb12fb85abf9f592ee8bc6621102a5dd785327a74befe2b0e7ddc8146bff5'
-# Pinned to the state THIS promote produced (register in COMMIT_FOR after the commit), so the
+# Pinned to the state THIS promote produced (registered in COMMIT_FOR as 503c29f), so the
 # suite keeps protecting after canonical moves on. None = read live canonical (bootstrap only).
-POST_SHA = None
+POST_SHA = '4f6103183ac9c07475b3e0c2d3a71159d0662a10a61383e1d792c049957cac23'
 
 URL_331 = 'https://www.pubs.ext.vt.edu/426/426-331/426-331.html'
 URL_840 = 'https://www.pubs.ext.vt.edu/426/426-840/426-840.html'
