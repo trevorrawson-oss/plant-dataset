@@ -6,7 +6,6 @@ refuses to write as what it writes: the three held-back harvest arms must stay b
 stay modeled everywhere, and UC IPM must not end up cited on a bloom arm. A suite that only
 checked the additions would pass on a promote that quietly did the wrong thing.
 """
-import hashlib
 import json
 import os
 import sys
@@ -76,7 +75,10 @@ def test_lazaneo_admitted_under_the_existing_san_diego_id(pre, post):
     after = post['source_catalog']['ucanr_san_diego_mg']['citable_for']
     assert after.startswith(before), 'the existing entry was rewritten rather than appended to'
     assert 'Lazaneo' in after and 'citrus-for-the-home-garden.pdf' in after
-    assert 'lazaneo' not in {k.lower() for k in post['source_catalog']}
+    # SUBSTRING, not set membership: `'lazaneo' not in {k.lower() ...}` let a minted
+    # `ucanr_lazaneo_citrus` sail through, and only the adjacent minted-set test caught it
+    # ([[guard-tests-pass-because-an-earlier-check-fires]], measured 2026-08-10).
+    assert not any('lazaneo' in k.lower() for k in post['source_catalog'])
 
 
 def test_lazaneo_is_barred_from_the_hardiness_ranking(post):
@@ -213,6 +215,11 @@ def test_earlier_findings_survive(pre, post):
 def test_no_other_crop_changed(pre, post):
     pre_by = {c['slug']: c for c in pre['crops']}
     post_by = {c['slug']: c for c in post['crops']}
+    # key-set equality FIRST: iterating pre alone is one-directional, and a whole crop APPENDED
+    # in post (measured with a lime clone as `ghost-crop`, 2026-08-10) was invisible to it.
+    # The lemon_cold suite had this line from day one; this file was written alongside and
+    # did not ([[blast-radius-guards-iterate-pre-only]]).
+    assert set(pre_by) == set(post_by), sorted(set(pre_by) ^ set(post_by))
     changed = [s for s in pre_by
                if json.dumps(pre_by[s], ensure_ascii=False, sort_keys=True)
                != json.dumps(post_by[s], ensure_ascii=False, sort_keys=True)]
@@ -225,9 +232,12 @@ def test_no_consumer_prose_moved(pre, post):
         if isinstance(node, dict):
             for k, v in node.items():
                 # `open_findings` and `source_set` are the structured records this promote is
-                # SUPPOSED to add to; `anchoring_urls` holds the citations it repoints. Everything
-                # else a reader could see must be byte-identical.
-                if k in ('open_findings', 'source_set', 'anchoring_urls'):
+                # SUPPOSED to add to; `anchoring_urls` holds the citations it repoints, and
+                # `sources` the id lists those citations append to. Everything else a reader
+                # could see must be byte-identical. (`sources` joined this list 2026-08-10: the
+                # one-directional iteration this guard used before PLA-162 could never see the
+                # promote's own legitimate sources[] additions, so the omission was invisible.)
+                if k in ('open_findings', 'source_set', 'anchoring_urls', 'sources'):
                     continue
                 strings(v, out, f'{trail}.{k}')
         elif isinstance(node, list):
@@ -238,7 +248,9 @@ def test_no_consumer_prose_moved(pre, post):
     a, b = {}, {}
     strings(_crop(pre), a)
     strings(_crop(post), b)
-    moved = {k for k in a if a.get(k) != b.get(k)}
+    # union of both key sets: `for k in a` alone cannot see a string ADDED in post
+    # ([[blast-radius-guards-iterate-pre-only]], measured green on an added string 2026-08-10)
+    moved = {k for k in set(a) | set(b) if a.get(k) != b.get(k)}
     assert moved == set(), sorted(moved)
 
 
@@ -246,14 +258,12 @@ def test_frost_tolerance_still_29(post):
     assert _crop(post)['frost_tolerance_f'] == 29
 
 
-def test_canonical_is_still_compact():
-    raw = promote_fixture.pre_state(POST_SHA)
-    assert b'\n' not in raw and not raw.endswith(b'\n')
-
-
-def test_the_promote_actually_ran():
-    assert hashlib.sha256(promote_fixture.pre_state(POST_SHA)).hexdigest() != BASE_SHA
-
+# `test_canonical_is_still_compact` and `test_the_promote_actually_ran` were DELETED here
+# (PLA-162): once `post` was repointed from live canonical to the pinned POST_SHA, both reduced
+# to comparing two source literals -- pre_state() hash-verifies before returning, so neither
+# could ever fail, and an unfalsifiable test reads as coverage it does not provide. The promote
+# DID run is proven by data-level non-vacuity checks (test_exactly_the_seven_were_minted);
+# live-canonical compactness is asserted for real in test_canonical_live_hygiene.py.
 
 if __name__ == '__main__':
     raise SystemExit(pytest.main([__file__, '-q']))

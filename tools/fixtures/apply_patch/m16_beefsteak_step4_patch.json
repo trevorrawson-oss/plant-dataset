@@ -1,0 +1,2469 @@
+{
+  "_meta": {
+    "session": "m16_beefsteak_step4_warm_regions",
+    "lane": "claude.ai",
+    "date": "2026-06-07",
+    "schema_version": "2.8",
+    "crop": "beefsteak-tomato",
+    "start_sha": "006cd0afbab0d3b9fab8909a870c3ac98909b3f066c5d6c0f8f4457693ec0071",
+    "end_sha": "a87932cd063f20f06863b3fd04b919909a6cfb7be220d78299d4ebb7962b413d",
+    "write_recipe": "json.dump(data, f, separators=(',',':'), ensure_ascii=False) -- minified, no trailing newline",
+    "collateral_audit": "EXPECTED PASS -- only beefsteak-tomato.regions changes (9 warm cells set_value); northern_tier untouched; zones{}, lettuce-leaf, cherry-tomato, source_catalog must be byte-identical. Claude Code to confirm via release_verify.",
+    "apply_note": "Each correction is a set_value writing a full populated region cell over the Step 3.5 skeleton. No structural reshape -- the cell shapes already match cherry's reference (Step 3.5 built them); Step 4 fills the windows + region_notes + heat_pause/second_planting data values. northern_tier NOT in this patch (its calendar cold_pause + region_notes are Steps 5.5/6/7).",
+    "scope_note": "Step 4 of the beefsteak M16 arc, claude.ai lane. Steps 5 (verification side-by-side), 5.5 (NT calendar cold_pause), 6/7/8 (30 dual-voice _beginner siblings), 9 (1 source-name dash), 10 (1 T2 de-cite + 1 harvest_urgency anchoring), 11 (validation + launch_ready reset-then-flip + status->verified_gs_arc) remain open. Beefsteak still carries STALE launch_ready=true/verified_complete (M11 artifacts) -- do NOT promote as arc-done; reset at Step 11.",
+    "catalog_note": "NO new catalog mints required. All 9 region anchors + corroborators already exist as T1 in source_catalog (uga_ext, ufifas_ext, ucanr_ext, uc_mg, uc_ipm, nmsu_ext, nmsu_donaana_mg, uariz_ext, uhawaii_ctahr, tamu_agrilife; doc IDs uf_ifas_vh021/south_cal/central_cal, ucanr_marin_mg, ucanr_san_diego_mg). Claude Code: validate catalog IDs against actual catalog keys before any verification_status write at Step 5.",
+    "region_tip_override_attestation": "ATTESTED. All 6 beefsteak tips_by_stage (12 tips incl _seasoned/_beginner) checked against the regional T1 sources for divergent grower actions. NO override authored -- all tips are region-neutral horticultural-technique tips (bottom-heat, hardening off, deep planting, blossom-shake, pinch at low temp); regional divergence lives entirely in planting timing/pauses (encoded in calendars/windows/heat_pause), not editorial tips. Matches cherry's outcome. Scope: tips only; pests/sunlight out of scope."
+  },
+  "corrections": [
+    {
+      "id": "m16_beefsteak_step4_se_gulf",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "se_gulf: window_structure=two_window (source finding, not analogy); heat_pause=Jun-Aug [6,7,8] WIDER than cherry's [7]; second_planting=second_planting z8,z9; sources_pending_admission ufifas_ext cleared. Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.se_gulf",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "se_gulf",
+            "region_label": "Southeast / Gulf",
+            "zone_span": [
+              "8",
+              "9"
+            ],
+            "sources": [
+              "uga_ext",
+              "ufifas_ext"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "tomatoes will take 6 weeks",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks before the spring transplant date. In the Southeast and Gulf region that is roughly mid-February for the Georgia interior (zone 8) and two to three weeks earlier toward the warmer Gulf-coastal zone 9 end. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                    "sources": [
+                      "uga_ext",
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      },
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 7,
+                    "window_days": 21,
+                    "source_quote": "the last week of March or first week or two of April",
+                    "synthesis_note_seasoned": "Set beefsteak transplants out in spring once frost danger passes. UGA gives late March into the first half of April for middle Georgia (zone 8); the warmer zone 9 end runs two to three weeks earlier. Beefsteak is large-fruited and slower to mature than cherry types, so time it to set fruit before peak summer heat arrives. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                    "sources": [
+                      "uga_ext",
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      },
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": "90-110 ... (70-90)",
+                    "synthesis_note_seasoned": "Beefsteak begins ripening roughly three months after transplanting (about 75 to 90 days to maturity, longer than cherry types). The spring crop comes in from late June, just as the summer heat begins to shut fruit set down. (UF/IFAS VH021; UGA Cooperative Extension C943)",
+                    "sources": [
+                      "ufifas_ext",
+                      "uga_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      },
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_start",
+                    "offset_days": 0,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The spring crop ends as summer heat sets in. Large-fruited tomatoes are more sensitive to high day and night temperatures than cherry types, so blossom drop and fruit-set failure begin earlier for beefsteak, by about June. (UF/IFAS VH021; UGA Cooperative Extension C943)",
+                    "sources": [
+                      "ufifas_ext",
+                      "uga_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      },
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "uga_ext": {
+                    "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                    "verified": "2026-06-07"
+                  },
+                  "ufifas_ext": {
+                    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                    "verified": "2026-06-07"
+                  }
+                }
+              },
+              {
+                "succession_id": 2,
+                "label": "second",
+                "track": "second_planting",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "tomatoes will take 6 weeks",
+                    "synthesis_note_seasoned": "For the fall crop, start seed indoors about six weeks before the late-summer transplant date, roughly mid-to-late spring across the region. Because beefsteak needs 75 to 90 days to mature, start early enough that the fall transplant can go out as soon as the summer heat-pause lifts. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                    "sources": [
+                      "uga_ext",
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      },
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_end",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": "Plant the following vegetables no later than July 20 ... tomatoes",
+                    "synthesis_note_seasoned": "Set the fall crop out as the worst summer heat eases so plants establish and produce into the cooler fall. UGA gives a fall tomato deadline of about July 20 for middle Georgia (zone 8) so the crop matures before frost; large-fruited beefsteak, being slower than cherry, should hit the early end of the fall window. The warmer zone 9 end runs about two weeks later, into early August. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                    "sources": [
+                      "uga_ext",
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      },
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": "(70-90)",
+                    "synthesis_note_seasoned": "The fall crop begins ripening about three months after the late-summer transplant, bringing beefsteak tomatoes in from roughly October across the region. (UF/IFAS VH021; UGA Cooperative Extension C943)",
+                    "sources": [
+                      "ufifas_ext",
+                      "uga_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      },
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": -7,
+                    "window_days": 21,
+                    "source_quote": "Harvest mature green peppers and tomatoes before frost gets them",
+                    "synthesis_note_seasoned": "The fall crop produces into the cooler autumn and is harvested up to first frost. Large-fruited beefsteak has a shorter productive fall tail here than quick-maturing cherry types. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                    "sources": [
+                      "uga_ext",
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uga_ext": {
+                        "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                        "verified": "2026-06-07"
+                      },
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {}
+              }
+            ],
+            "resolved_by_zone": {
+              "8": {
+                "plant_out": "Mar 25 - Apr 15, Jul 1 - Jul 20",
+                "start_indoors": "Feb 11 - Feb 25, May 20 - Jun 8",
+                "harvest": "Jun, Oct - Nov",
+                "harvest_start": "Jun 23",
+                "harvest_end": "Nov 1",
+                "first_plant_date": "Mar 25",
+                "last_plant_date": "Jul 20",
+                "calendar": [
+                  "cold_pause",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "cold_pause"
+                ],
+                "zone_notes": null,
+                "planting_note": "multi_season",
+                "sources": [
+                  "uga_ext"
+                ],
+                "anchoring_urls": {
+                  "uga_ext": {
+                    "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "se_gulf_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "Summer fruit-set failure is a heat exclusion, not a frost gap: high day and especially night temperatures push tomato flowers to drop and fruit set to fail. Large-fruited beefsteak is more heat-sensitive than cherry types (which are heat resistant), so its summer pause is wider, running across June through August rather than the single midsummer month a cherry holds. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                  "sources": [
+                    "uga_ext",
+                    "ufifas_ext"
+                  ],
+                  "anchoring_urls": {
+                    "uga_ext": {
+                      "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                      "verified": "2026-06-07"
+                    },
+                    "ufifas_ext": {
+                      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                },
+                "second_planting": {
+                  "start_indoors": "May 20 - Jun 8",
+                  "plant_out": "Jul 1 - Jul 20",
+                  "harvest_start": "Sep 29",
+                  "harvest_end": "Nov 1",
+                  "sources": [
+                    "uga_ext"
+                  ],
+                  "anchoring_urls": {
+                    "uga_ext": {
+                      "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              },
+              "9": {
+                "plant_out": "Mar 4 - Mar 25, Jul 25 - Aug 8",
+                "start_indoors": "Jan 21 - Feb 4, Jun 13 - Jun 27",
+                "harvest": "Jun, Oct - Dec",
+                "harvest_start": "Jun 2",
+                "harvest_end": "Dec 1",
+                "first_plant_date": "Mar 4",
+                "last_plant_date": "Aug 8",
+                "calendar": [
+                  "growing",
+                  "start_indoors",
+                  "plant",
+                  "harvest",
+                  "harvest",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "multi_season",
+                "sources": [
+                  "uga_ext",
+                  "ufifas_ext"
+                ],
+                "anchoring_urls": {
+                  "uga_ext": {
+                    "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                    "verified": "2026-06-07"
+                  },
+                  "ufifas_ext": {
+                    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "se_gulf_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "Summer fruit-set failure is a heat exclusion, not a frost gap: high day and especially night temperatures push tomato flowers to drop and fruit set to fail. Large-fruited beefsteak is more heat-sensitive than cherry types (which are heat resistant), so its summer pause is wider, running across June through August rather than the single midsummer month a cherry holds. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+                  "sources": [
+                    "uga_ext",
+                    "ufifas_ext"
+                  ],
+                  "anchoring_urls": {
+                    "uga_ext": {
+                      "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                      "verified": "2026-06-07"
+                    },
+                    "ufifas_ext": {
+                      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                },
+                "second_planting": {
+                  "start_indoors": "Jun 13 - Jun 27",
+                  "plant_out": "Jul 25 - Aug 8",
+                  "harvest_start": "Oct 23",
+                  "harvest_end": "Dec 1",
+                  "sources": [
+                    "uga_ext",
+                    "ufifas_ext"
+                  ],
+                  "anchoring_urls": {
+                    "uga_ext": {
+                      "url": "https://fieldreport.caes.uga.edu/publications/C943/vegetable-garden-calendar/",
+                      "verified": "2026-06-07"
+                    },
+                    "ufifas_ext": {
+                      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              }
+            },
+            "region_notes_beginner": "In the Southeast and Gulf area you can grow beefsteak tomatoes twice a year, once in spring and again in fall, with a summer break in between when it gets too hot for the plants to set fruit. Big beefsteak tomatoes handle the heat less well than small cherry tomatoes, so their summer break is longer, running through most of the summer. Plant your spring crop early enough to pick before the heat, then plant again in late summer once the worst heat passes for a fall crop.",
+            "region_notes_seasoned": "The Southeast and Gulf region runs two beefsteak seasons, spring and fall, split by a summer heat window when high day and night temperatures cause blossom drop and fruit set fails. Large-fruited beefsteak is more heat-sensitive than cherry types, so its summer pause is wider, spanning roughly June through August rather than a single midsummer month. Beefsteak also needs 75 to 90 days to mature, longer than cherry, so time the spring crop to set fruit before peak heat and set the fall crop out promptly once the heat eases (UGA gives a July 20 fall deadline for middle Georgia so the crop beats frost). The warmer zone 9 end plants the spring crop earlier and the fall crop later than the zone 8 interior. Frost dates shift across the band, so confirm local last and first frost. (UGA Cooperative Extension C943; UF/IFAS VH021)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "two_window",
+              "window_structure_basis": "UGA Cooperative Extension C943 gives two major planting periods (spring March-May, fall mid-July-September) with an explicit fall tomato deadline (no later than July 20 for middle Georgia), corroborated by UF/IFAS VH021 (North FL tomato Late Mar-Apr + Aug). Two-window is the source grammar, not analogy.",
+              "governing_variable": "frost_primary_heat_secondary",
+              "heat_pause_basis": "WIDER than cherry (Jun-Aug vs single Jul). Large-fruited tomatoes are not heat-set-bred and abort flowers at lower thresholds (UF/IFAS VH021: 'Cherry types are heat resistant' -- large-fruited not; Alabama Coop Ext and U.Missouri IPM: day >85 / night >72 deg-F abort). SE/Gulf high summer breaches this June through August.",
+              "succession_carried_by": "second_planting band (discrete, not succession; succession_policy.suitable=false)",
+              "verified_against": [
+                "uga_c943",
+                "ufifas_vh021"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones{8,9} data (umn_ext/msu_ext orphan prose dropped, gs_exemplar_finding_001)"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_ca_interior",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "ca_interior: window_structure=single_window (source finding, not analogy); heat_pause=none (production-tail; midsummer dip in prose); second_planting=none; sources_pending_admission (none). Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.ca_interior",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "ca_interior",
+            "region_label": "California: Interior Valleys",
+            "zone_span": [
+              "8",
+              "9"
+            ],
+            "sources": [
+              "ucanr_ext",
+              "uc_mg"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "April-May",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks before the April-May transplant window, so seeding falls in late winter. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 75,
+                    "window_days": 31,
+                    "source_quote": "April-May",
+                    "synthesis_note_seasoned": "Set beefsteak transplants out in the interior valleys from April into May, once soil and air have warmed (UC ANR gives a single April-May tomato window). The interior valleys grow one long warm season rather than a spring-and-fall split. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "Beefsteak begins ripening about three months after transplanting, bringing the first fruit in roughly July. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": -7,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The crop produces through summer into fall and is harvested up to first frost. Fruit set dips during the hottest part of the interior-valley summer for large-fruited beefsteak, then resumes as nights cool. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                }
+              }
+            ],
+            "resolved_by_zone": {
+              "8": {
+                "plant_out": "Apr 1 - May 1",
+                "start_indoors": "Feb 18 - Mar 4",
+                "harvest": "Jul - Dec",
+                "harvest_start": "Jul 1",
+                "harvest_end": "Nov 23",
+                "first_plant_date": "Apr 1",
+                "last_plant_date": "May 1",
+                "calendar": [
+                  "cold_pause",
+                  "start_indoors",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "single_season",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_interior_month_resolution"
+              },
+              "9": {
+                "plant_out": "Apr 1 - May 1",
+                "start_indoors": "Feb 18 - Mar 4",
+                "harvest": "Jul - Nov",
+                "harvest_start": "Jul 1",
+                "harvest_end": "Dec 8",
+                "first_plant_date": "Apr 1",
+                "last_plant_date": "May 1",
+                "calendar": [
+                  "cold_pause",
+                  "start_indoors",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "cold_pause"
+                ],
+                "zone_notes": null,
+                "planting_note": "single_season",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_interior_month_resolution"
+              }
+            },
+            "region_notes_beginner": "In California's interior valleys you plant beefsteak tomatoes once, in spring (April into May), and the same plant produces all summer into fall. You do not need a second planting. Big beefsteak tomatoes may slow down and set fewer fruit during the hottest weeks of summer, then pick back up as the nights cool in late summer and fall.",
+            "region_notes_seasoned": "California's interior valleys (Sacramento, San Joaquin) grow beefsteak as a single long warm season: set transplants out April into May and harvest from midsummer into fall up to first frost. UC ANR lists one April-May tomato window with no separate fall planting, so this is one continuous crop, not a spring-and-fall split. Large-fruited beefsteak sets fewer fruit through the peak-heat weeks of the valley summer (it is more heat-sensitive than cherry types), with set resuming as nights cool; the plant stays in the ground through the dip. Cages suit the valley heat. (UC ANR Master Gardener Handbook Table 13.2)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "single_window",
+              "window_structure_basis": "UC ANR Master Gardener Handbook Table 13.2 (Time-of-Planting page) gives interior-valley tomatoes as April-May with no documented fall window. Single-season; no second_planting and no heat_pause token (the plant stays in ground through a midsummer set dip, which is disclosed in prose, not a no-sow exclusion). Same structural call as cherry's ca_interior; beefsteak's lower heat tolerance widens the prose caveat, not the window count (UC ANR lists no fall tomato planting for the Interior Valleys).",
+              "governing_variable": "frost_primary_heat_secondary",
+              "second_planting_absence": "z8 + z9 single-season; no sourced fall window. Midsummer set dip carried in region_notes.",
+              "verified_against": [
+                "ucmg_time_of_planting_table_13_2"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_ca_north_coast",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "ca_north_coast: window_structure=single_window (source finding, not analogy); heat_pause=none (cool-limited); second_planting=none; sources_pending_admission (none). Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.ca_north_coast",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "ca_north_coast",
+            "region_label": "California: North Coast",
+            "zone_span": [
+              "9",
+              "10"
+            ],
+            "sources": [
+              "ucanr_ext",
+              "ucanr_marin_mg"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "Transplant May-June, possibly April",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks before the May transplant date. (UC ANR Master Gardener Handbook Table 13.2; Santa Clara County Master Gardeners)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 0,
+                    "window_days": 31,
+                    "source_quote": "May",
+                    "synthesis_note_seasoned": "On the cool North Coast, set beefsteak transplants out in May, once daytime temperatures are regularly above 70 degrees F (UC ANR gives May for North and North Coast tomatoes). The limit here is cool marine air, not heat. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "Beefsteak begins ripening about three months after the May transplant, bringing fruit in from roughly August. Cool coastal summers can slow ripening for large-fruited types, so choose a variety suited to your season length. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 183,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The crop produces into the fall and winds down as cool, short days return rather than at a heat pause. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                }
+              }
+            ],
+            "resolved_by_zone": {
+              "9": {
+                "plant_out": "May 1 - May 31",
+                "start_indoors": "Mar 20 - Apr 3",
+                "harvest": "Aug - Oct",
+                "harvest_start": "Aug 9",
+                "harvest_end": "Oct 31",
+                "first_plant_date": "May 1",
+                "last_plant_date": "May 31",
+                "calendar": [
+                  "cold_pause",
+                  "cold_pause",
+                  "start_indoors",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "cold_pause",
+                  "cold_pause"
+                ],
+                "zone_notes": null,
+                "planting_note": "cool_limited",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_north_coast_month_resolution"
+              },
+              "10": {
+                "plant_out": "May 1 - May 31",
+                "start_indoors": "Mar 20 - Apr 3",
+                "harvest": "Aug - Nov",
+                "harvest_start": "Aug 9",
+                "harvest_end": "Oct 31",
+                "first_plant_date": "May 1",
+                "last_plant_date": "May 31",
+                "calendar": [
+                  "wait",
+                  "wait",
+                  "start_indoors",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "wait",
+                  "wait"
+                ],
+                "zone_notes": null,
+                "planting_note": "cool_limited",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_north_coast_month_resolution"
+              }
+            },
+            "region_notes_beginner": "On California's cool North Coast you plant beefsteak tomatoes once, in May, after the air has warmed up. There is no hot-summer break here; the coast stays mild. Big beefsteak tomatoes need warm days to ripen, so pick a variety that does well in cooler summers and give the plants the sunniest, most sheltered spot you have.",
+            "region_notes_seasoned": "California's North and North Coast (Monterey County north) grow beefsteak as a single cool-limited season: set transplants out in May once daytime temperatures are reliably above 70 °F, and harvest from late summer into fall. The constraint here is cool marine air, not heat, so there is no summer pause. Large-fruited beefsteak needs warm days to ripen and can be slow in the coolest coastal pockets, so choose a variety matched to your season length and give it the warmest, most sheltered exposure. (UC ANR Master Gardener Handbook Table 13.2)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "single_window",
+              "window_structure_basis": "UC ANR Table 13.2 (North/North Coast) gives tomatoes as May only; Santa Clara + Sonoma County MG corroborate a May (possibly late-April) single planting gated on soil/air warmth. Cool-limited single season, no fall window, no heat_pause.",
+              "governing_variable": "cool_limited",
+              "verified_against": [
+                "ucmg_time_of_planting_table_13_2"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_ca_south_coast",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "ca_south_coast: window_structure=single_window (source finding, not analogy); heat_pause=none (mild marine); second_planting=none; sources_pending_admission (none). Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.ca_south_coast",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "ca_south_coast",
+            "region_label": "California: South Coast",
+            "zone_span": [
+              "9",
+              "10"
+            ],
+            "sources": [
+              "ucanr_ext",
+              "ucanr_san_diego_mg"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "April-July 15",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks ahead of the spring transplant; the mild South Coast allows a long planting window from April. (UC ANR Master Gardener Handbook Table 13.2; San Diego County Master Gardeners)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 0,
+                    "window_days": 105,
+                    "source_quote": "April - July 15",
+                    "synthesis_note_seasoned": "On the mild South Coast, set beefsteak transplants out across a long window from April through mid-July (UC ANR gives April-July 15 for South Coast tomatoes). The mild marine climate avoids a hard summer fruit-set pause. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "Beefsteak begins ripening about three months after transplanting; with the long planting window, harvest runs from roughly July into late fall. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The crop produces into late fall and is harvested up to first frost; the mild coast extends the season well past the interior. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                }
+              }
+            ],
+            "resolved_by_zone": {
+              "9": {
+                "plant_out": "Apr 1 - Jul 15",
+                "start_indoors": "Feb 18 - Jun 3",
+                "harvest": "Jul - Dec",
+                "harvest_start": "Jul 1",
+                "harvest_end": "Dec 15",
+                "first_plant_date": "Apr 1",
+                "last_plant_date": "Jul 15",
+                "calendar": [
+                  "cold_pause",
+                  "cold_pause",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "cold_pause"
+                ],
+                "zone_notes": null,
+                "planting_note": "long_season",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_south_coast_month_resolution"
+              },
+              "10": {
+                "plant_out": "Apr 1 - Jul 15",
+                "start_indoors": "Feb 18 - Jun 3",
+                "harvest": "Jul - Dec",
+                "harvest_start": "Jul 1",
+                "harvest_end": "Dec 31",
+                "first_plant_date": "Apr 1",
+                "last_plant_date": "Jul 15",
+                "calendar": [
+                  "wait",
+                  "wait",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "long_season",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_south_coast_month_resolution"
+              }
+            },
+            "region_notes_beginner": "On California's mild South Coast you have a long stretch to plant beefsteak tomatoes, from April all the way to mid-July, and you only need to plant once. The coast stays mild enough that there is no hot-summer break. Plant when you like in that window and harvest from summer into late fall.",
+            "region_notes_seasoned": "California's South Coast (San Luis Obispo County south) gives beefsteak a long single planting window, April through mid-July, with harvest from summer into late fall. The mild marine climate means there is no hard summer fruit-set pause, so unlike the interior valleys or deserts, beefsteak does not need a heat break here. Choose your planting date within the window to match how you want to pace the harvest. (UC ANR Master Gardener Handbook Table 13.2)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "single_window",
+              "window_structure_basis": "UC ANR Table 13.2 (South Coast) gives tomatoes as April-July 15, a single long mild-marine window; San Diego County MG corroborates the long coastal season. Single band, no fall split, no heat_pause (mild marine summer does not breach the set-failure threshold as a hard exclusion).",
+              "governing_variable": "frost_primary_heat_secondary_mild",
+              "verified_against": [
+                "ucmg_time_of_planting_table_13_2"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_ca_desert",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "ca_desert: window_structure=two_window (source finding, not analogy); heat_pause=Jun-Aug [6,7,8] climatic-absolute SAME as cherry; second_planting=second_planting z9,z10; sources_pending_admission (none). Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.ca_desert",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "ca_desert",
+            "region_label": "California: Desert Valleys",
+            "zone_span": [
+              "9",
+              "10"
+            ],
+            "sources": [
+              "ucanr_ext",
+              "uc_ipm"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "Dec-March",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks before the cool-season transplant date; in the desert valleys that is fall into winter for the December-March planting window. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 0,
+                    "window_days": 105,
+                    "source_quote": "Dec-March",
+                    "synthesis_note_seasoned": "In the low desert (Imperial, Coachella) set beefsteak transplants out across the cool season, December through March (UC ANR gives Dec-March for desert-valley tomatoes), so the crop matures and sets fruit before the brutal summer heat. (UC ANR Master Gardener Handbook Table 13.2; UC IPM)",
+                    "sources": [
+                      "ucanr_ext",
+                      "uc_ipm"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      },
+                      "uc_ipm": {
+                        "url": "https://ipm.ucanr.edu",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The cool-season crop begins ripening about three months after transplanting, bringing fruit in from roughly February through spring. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_start",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The cool-season crop ends as summer heat arrives; in the low desert fruit set fails completely through the deep summer for all tomato types, large-fruited especially. (UC ANR Master Gardener Handbook Table 13.2; UC IPM)",
+                    "sources": [
+                      "ucanr_ext",
+                      "uc_ipm"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      },
+                      "uc_ipm": {
+                        "url": "https://ipm.ucanr.edu",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  },
+                  "uc_ipm": {
+                    "url": "https://ipm.ucanr.edu",
+                    "verified": "2026-06-07"
+                  }
+                }
+              },
+              {
+                "succession_id": 2,
+                "label": "second",
+                "track": "second_planting",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "For the fall crop, start seed indoors about six weeks before the early-fall transplant, in mid-summer under shade. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": -120,
+                    "window_days": 30,
+                    "source_quote": "Dec-March",
+                    "synthesis_note_seasoned": "Set the fall crop out in early fall (about September) as the extreme summer heat begins to break, back-timed so a 75-90 day beefsteak matures into the mild late-fall and winter. (UC ANR Master Gardener Handbook Table 13.2; UC IPM)",
+                    "sources": [
+                      "ucanr_ext",
+                      "uc_ipm"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      },
+                      "uc_ipm": {
+                        "url": "https://ipm.ucanr.edu",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The fall crop begins ripening about three months after the early-fall transplant, producing from roughly November into the new year. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The fall crop produces through the mild desert winter, limited by occasional light frost rather than heat. (UC ANR Master Gardener Handbook Table 13.2)",
+                    "sources": [
+                      "ucanr_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ucanr_ext": {
+                        "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {}
+              }
+            ],
+            "resolved_by_zone": {
+              "9": {
+                "plant_out": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+                "start_indoors": "Oct 20 - Feb 1, Jul 21 - Aug 19",
+                "harvest": "Feb - Jun, Nov - Jan",
+                "harvest_start": "Feb 28",
+                "harvest_end": "Jan 31",
+                "first_plant_date": "Dec 1",
+                "last_plant_date": "Sep 30",
+                "calendar": [
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "plant"
+                ],
+                "zone_notes": null,
+                "planting_note": "multi_season",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_desert_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "The low desert summer is a climatic-absolute fruit-set exclusion: extreme day and night temperatures cause complete blossom drop from June through August for every tomato type. Large-fruited beefsteak is at least as heat-sensitive as cherry, so this Jun-Aug pause is not narrowed (it cannot be shortened the way a marginal-zone pause can). (UC ANR Master Gardener Handbook Table 13.2; UC IPM)",
+                  "sources": [
+                    "ucanr_ext",
+                    "uc_ipm"
+                  ],
+                  "anchoring_urls": {
+                    "ucanr_ext": {
+                      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                      "verified": "2026-06-07"
+                    },
+                    "uc_ipm": {
+                      "url": "https://ipm.ucanr.edu",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                },
+                "second_planting": {
+                  "start_indoors": "Jul 21 - Aug 19",
+                  "plant_out": "Sep 1 - Sep 30",
+                  "harvest_start": "Nov 30",
+                  "harvest_end": "Jan 31",
+                  "sources": [
+                    "ucanr_ext"
+                  ],
+                  "anchoring_urls": {
+                    "ucanr_ext": {
+                      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              },
+              "10": {
+                "plant_out": "Dec 1 - Mar 15, Sep 1 - Sep 30",
+                "start_indoors": "Oct 20 - Feb 1, Jul 21 - Aug 19",
+                "harvest": "Feb - Jun, Nov - Jan",
+                "harvest_start": "Feb 28",
+                "harvest_end": "Jan 31",
+                "first_plant_date": "Dec 1",
+                "last_plant_date": "Sep 30",
+                "calendar": [
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "plant"
+                ],
+                "zone_notes": null,
+                "planting_note": "multi_season",
+                "sources": [
+                  "ucanr_ext"
+                ],
+                "anchoring_urls": {
+                  "ucanr_ext": {
+                    "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "ca_desert_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "The low desert summer is a climatic-absolute fruit-set exclusion: extreme day and night temperatures cause complete blossom drop from June through August for every tomato type. Large-fruited beefsteak is at least as heat-sensitive as cherry, so this Jun-Aug pause is not narrowed (it cannot be shortened the way a marginal-zone pause can). (UC ANR Master Gardener Handbook Table 13.2; UC IPM)",
+                  "sources": [
+                    "ucanr_ext",
+                    "uc_ipm"
+                  ],
+                  "anchoring_urls": {
+                    "ucanr_ext": {
+                      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                      "verified": "2026-06-07"
+                    },
+                    "uc_ipm": {
+                      "url": "https://ipm.ucanr.edu",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                },
+                "second_planting": {
+                  "start_indoors": "Jul 21 - Aug 19",
+                  "plant_out": "Sep 1 - Sep 30",
+                  "harvest_start": "Nov 30",
+                  "harvest_end": "Jan 31",
+                  "sources": [
+                    "ucanr_ext"
+                  ],
+                  "anchoring_urls": {
+                    "ucanr_ext": {
+                      "url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              }
+            },
+            "region_notes_beginner": "In California's low desert (Imperial and Coachella valleys) you grow beefsteak tomatoes in the cool months, not the summer. Plant the main crop from December through March so it makes fruit before the extreme heat, and plant a second crop in early fall (around September) once the worst heat breaks. Summer (June through August) is simply too hot for any tomato to set fruit, so the plants rest then.",
+            "region_notes_seasoned": "California's desert valleys (Imperial, Coachella) grow beefsteak on an inverted, two-window calendar driven by extreme summer heat. The main crop is set out across the cool season, December through March, to mature and set fruit before summer; a second fall crop goes out in early fall (about September) as the heat breaks and produces into the mild winter. June through August is a climatic-absolute fruit-set exclusion: complete blossom drop for every tomato type, not narrowed for beefsteak, which is at least as heat-sensitive as cherry. Confirm local frost for the winter harvest tail. (UC ANR Master Gardener Handbook Table 13.2; UC IPM)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "two_window",
+              "window_structure_basis": "UC ANR Table 13.2 (Desert Valleys) gives tomatoes as Dec-March (cool-season main); the early-fall second window and the Jun-Aug heat exclusion are the established low-desert grammar (cf. UA AZ1005 for the adjacent AZ low desert). Two-window.",
+              "governing_variable": "heat_primary_frost_secondary",
+              "heat_pause_basis": "Jun-Aug climatic-absolute (SAME as cherry). An absolute exclusion cannot be narrowed; beefsteak's lower heat tolerance certainly does not narrow it. Contrast the marginal zones (se_gulf z8, warm_arid z8) where the pause width differs by type.",
+              "succession_carried_by": "second_planting band (discrete; succession_policy.suitable=false)",
+              "verified_against": [
+                "ucmg_time_of_planting_table_13_2"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_warm_arid",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "warm_arid: window_structure=two_window (source finding, not analogy); heat_pause=[7] calendar-legible; Aug poor-set in prose (FLAG: fruit_set_temp_f); second_planting=second_planting z8; sources_pending_admission nmsu_ext cleared. Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.warm_arid",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "warm_arid",
+            "region_label": "Warm Arid (Southern High Desert)",
+            "zone_span": [
+              "8"
+            ],
+            "sources": [
+              "nmsu_ext",
+              "nmsu_donaana_mg"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "1st planting start mid-Jan",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors in mid-winter, about six weeks before the early-spring transplant. The Dona Ana County Master Gardener Las Cruces chart starts the first tomato planting in mid-January for an early-March transplant. (NMSU Circular 457; Dona Ana County Master Gardener Las Cruces planting chart)",
+                    "sources": [
+                      "nmsu_ext",
+                      "nmsu_donaana_mg"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      },
+                      "nmsu_donaana_mg": {
+                        "url": "https://donaanamastergardeners.nmsu.edu/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": "transplant early March",
+                    "synthesis_note_seasoned": "Set the spring beefsteak crop out in late March to early April, after the high-desert last frost (Las Cruces sits in Chihuahuan high desert, last frost about March 19). The Master Gardener chart's early-March transplant is an experienced-grower date; reconcile to the local last frost for a first crop. (NMSU Circular 457; Dona Ana County Master Gardener Las Cruces planting chart)",
+                    "sources": [
+                      "nmsu_ext",
+                      "nmsu_donaana_mg"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      },
+                      "nmsu_donaana_mg": {
+                        "url": "https://donaanamastergardeners.nmsu.edu/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The spring crop begins ripening about three months after transplanting, bringing beefsteak in from roughly late June. (NMSU Circular 457)",
+                    "sources": [
+                      "nmsu_ext"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_start",
+                    "offset_days": 0,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The spring crop's fruit set falls off as the high-desert summer peaks; for large-fruited beefsteak, set is poor once day temperatures exceed 95 degrees F, beginning in July. (NMSU Circular 457)",
+                    "sources": [
+                      "nmsu_ext"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "nmsu_ext": {
+                    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                    "verified": "2026-06-07"
+                  },
+                  "nmsu_donaana_mg": {
+                    "url": "https://donaanamastergardeners.nmsu.edu/",
+                    "verified": "2026-06-07"
+                  }
+                }
+              },
+              {
+                "succession_id": 2,
+                "label": "second",
+                "track": "second_planting",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "2nd planting start mid-June",
+                    "synthesis_note_seasoned": "For the fall crop, start seed indoors in mid-June, about six weeks before the mid-July transplant the Master Gardener chart specifies. (Dona Ana County Master Gardener Las Cruces planting chart; NMSU Circular 457)",
+                    "sources": [
+                      "nmsu_donaana_mg",
+                      "nmsu_ext"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_donaana_mg": {
+                        "url": "https://donaanamastergardeners.nmsu.edu/",
+                        "verified": "2026-06-07"
+                      },
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_end",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": "2nd planting ... transplant mid-July",
+                    "synthesis_note_seasoned": "Set the fall beefsteak crop out in mid-July to early August (the Las Cruces chart transplants the fall tomato crop in mid-July). For large-fruited beefsteak this fall crop is marginal in this short-autumn high desert: a 75-90 day plant set in mid-July only just matures before the November frost, and fruit set through the hot July-August transplant period is poor. (Dona Ana County Master Gardener Las Cruces planting chart; NMSU Circular 457)",
+                    "sources": [
+                      "nmsu_donaana_mg",
+                      "nmsu_ext"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_donaana_mg": {
+                        "url": "https://donaanamastergardeners.nmsu.edu/",
+                        "verified": "2026-06-07"
+                      },
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The fall crop begins ripening about three months after the mid-July transplant, bringing fruit in from roughly mid-October. (NMSU Circular 457)",
+                    "sources": [
+                      "nmsu_ext"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": -7,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The fall crop is harvested up to the high-desert first frost (about November 12); the productive tail is short for slow-maturing beefsteak. (NMSU Circular 457)",
+                    "sources": [
+                      "nmsu_ext"
+                    ],
+                    "anchoring_urls": {
+                      "nmsu_ext": {
+                        "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {}
+              }
+            ],
+            "resolved_by_zone": {
+              "8": {
+                "plant_out": "Mar 19 - Apr 8, Jul 15 - Aug 4",
+                "start_indoors": "Feb 5 - Feb 19, Jun 3 - Jun 17",
+                "harvest": "Jun - Jul, Oct - Nov",
+                "harvest_start": "Jun 17",
+                "harvest_end": "Nov 5",
+                "first_plant_date": "Mar 19",
+                "last_plant_date": "Aug 4",
+                "calendar": [
+                  "cold_pause",
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "heat_pause",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "harvest",
+                  "cold_pause"
+                ],
+                "zone_notes": null,
+                "planting_note": "multi_season",
+                "sources": [
+                  "nmsu_donaana_mg"
+                ],
+                "anchoring_urls": {
+                  "nmsu_donaana_mg": {
+                    "url": "https://donaanamastergardeners.nmsu.edu/",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "warm_arid_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    7
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "July is the peak fruit-set-failure month: high-desert day temperatures exceed 95 degrees F and large-fruited beefsteak drops blossoms and fails to set, though arid nights recover into the 60s. Set failure continues through August for large-fruited types; the fall crop is transplanted into this window (mid-July) and establishes through the back of the heat, so July reads as the fall-planting month while fruit set itself is poor through August. (NMSU Circular 457; Dona Ana County Master Gardener Las Cruces planting chart)",
+                  "sources": [
+                    "nmsu_ext",
+                    "nmsu_donaana_mg"
+                  ],
+                  "anchoring_urls": {
+                    "nmsu_ext": {
+                      "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                      "verified": "2026-06-07"
+                    },
+                    "nmsu_donaana_mg": {
+                      "url": "https://donaanamastergardeners.nmsu.edu/",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                },
+                "second_planting": {
+                  "start_indoors": "Jun 3 - Jun 17",
+                  "plant_out": "Jul 15 - Aug 4",
+                  "harvest_start": "Oct 13",
+                  "harvest_end": "Nov 5",
+                  "sources": [
+                    "nmsu_donaana_mg",
+                    "nmsu_ext"
+                  ],
+                  "anchoring_urls": {
+                    "nmsu_donaana_mg": {
+                      "url": "https://donaanamastergardeners.nmsu.edu/",
+                      "verified": "2026-06-07"
+                    },
+                    "nmsu_ext": {
+                      "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              }
+            },
+            "region_notes_beginner": "In the southern high desert (around Las Cruces, New Mexico) you can grow beefsteak tomatoes in spring and again in fall, with a hot-summer gap. Plant the spring crop in late March or early April so it makes fruit before the July heat. You can try a fall crop planted in mid-July, but big beefsteak tomatoes set fruit poorly in the July and August heat and are slow to ripen, so the fall crop is a bit of a gamble before the November frost. Pick fast-maturing, heat-tolerant varieties.",
+            "region_notes_seasoned": "The southern high desert (Las Cruces, Mesilla Valley; Chihuahuan high desert, zone 8) runs two beefsteak windows split by peak summer heat. Set the spring crop out in late March to early April, after the local last frost (about March 19), so it sets fruit before July. A fall crop can be transplanted in mid-July per the Dona Ana County Master Gardener chart, but for large-fruited beefsteak this is marginal: fruit set is poor once day temperatures exceed 95 °F through July and August, and a 75-90 day plant only just matures before the November frost (about November 12). Favor fast-maturing, heat-tolerant cultivars for the fall attempt. The fall window and two-window structure rest on the single Las Cruces Master Gardener chart, a regional source; the spring dates are anchored to the high-desert frost data with NOAA cross-check. (NMSU Circular 457; Dona Ana County Master Gardener Las Cruces planting chart)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "two_window",
+              "window_structure_basis": "Dona Ana County MG Las Cruces chart (Path A, carried from cherry 5e read 2026-06-07): 1st planting start mid-Jan -> transplant early March; 2nd planting start mid-June -> transplant mid-July. NMSU CR457 confirms southern NM gets both spring + fall windows. Chart is the window-count authority; frost data is the date authority.",
+              "governing_variable": "frost_primary_heat_secondary",
+              "frost_basis": "zone-8 arid_highland NOAA variant (BSk): last_spring Mar 19, first_fall Nov 12, 236 frost-free days. Las Cruces/Mesilla is Chihuahuan high desert, not generic humid-subtropical z8. Same basis as cherry's warm_arid.",
+              "heat_pause_basis": "WIDER in effect than cherry. heat_pause.months=[7] for calendar legibility (the chart transplants the fall crop mid-July, so July reads as the fall-plant month). Beefsteak's poor large-fruited set extends through August (>95 deg-F day threshold) -- DISCLOSED in the seasoned region_note and the heat_pause basis rather than blanking August to heat_pause, which would contradict the mid-July fall transplant. FLAG to Trevor: a fruit_set_temp_f field or an explicit Aug heat-quality token would let this be structural rather than prose -- parked with the fruit_set_temp_f shape decision.",
+              "fall_window_basis": "single Dona Ana County MG chart (regional MG source, not independently corroborated) -- disclosed in seasoned note.",
+              "succession_carried_by": "second_planting band (discrete; succession_policy.suitable=false)",
+              "verified_against": [
+                "nmsu_cr457",
+                "nmsu_donaana_mg_las_cruces_chart"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_low_desert_az",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "low_desert_az: window_structure=two_window (source finding, not analogy); heat_pause=Jun-Aug [6,7,8] WIDER than cherry's [7,8]; second_planting=second_planting z9; sources_pending_admission uariz_ext cleared. Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.low_desert_az",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "low_desert_az",
+            "region_label": "Low Desert (Arizona)",
+            "zone_span": [
+              "9"
+            ],
+            "sources": [
+              "uariz_ext"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "T (transplant) marks Jan 15 - Mar 1",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks before the late-winter transplant; in the low desert the chart marks tomato transplants from mid-January. (University of Arizona Cooperative Extension AZ1005, Maricopa County)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "last_frost",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": "Tomatoes ... T ... through early March",
+                    "synthesis_note_seasoned": "In the low desert (Maricopa) set beefsteak transplants out in late winter, finishing by about early March so fruit set completes before the May heat wall (AZ1005 marks tomato transplants from mid-January through early March). Large-fruited beefsteak, being slower than cherry, should aim for the early-March end of the window. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The spring crop begins ripening about three months after transplanting, bringing fruit in from roughly late May before the deep summer. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_start",
+                    "offset_days": 0,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The spring crop ends as the desert summer arrives; fruit set fails completely for large-fruited beefsteak once June day temperatures climb past 100 degrees F with warm nights. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "uariz_ext": {
+                    "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                    "verified": "2026-06-07"
+                  }
+                }
+              },
+              {
+                "succession_id": 2,
+                "label": "second",
+                "track": "second_planting",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "T marks ... Aug 15 - Sept",
+                    "synthesis_note_seasoned": "For the fall crop, start seed indoors in mid-summer under shade, about six weeks before the late-summer transplant. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": -90,
+                    "window_days": 30,
+                    "source_quote": "T marks ... Aug 15 - Sept",
+                    "synthesis_note_seasoned": "Set the fall crop out in September as the extreme heat begins to break (AZ1005 marks fall tomato transplants from mid-August into September), back-timed so a 75-90 day beefsteak matures into the mild late fall. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The fall crop begins ripening about three months after the September transplant, producing from roughly December. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "first_frost",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The fall crop produces into the mild desert winter, limited by occasional light frost rather than heat. (University of Arizona Cooperative Extension AZ1005)",
+                    "sources": [
+                      "uariz_ext"
+                    ],
+                    "anchoring_urls": {
+                      "uariz_ext": {
+                        "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {}
+              }
+            ],
+            "resolved_by_zone": {
+              "9": {
+                "plant_out": "Feb 8 - Mar 1, Sep 1 - Sep 30",
+                "start_indoors": "Dec 28 - Jan 18, Jul 21 - Aug 19",
+                "harvest": "May - Jun, Dec - Jan",
+                "harvest_start": "May 30",
+                "harvest_end": "Jan 31",
+                "first_plant_date": "Feb 8",
+                "last_plant_date": "Sep 30",
+                "calendar": [
+                  "start_indoors",
+                  "plant",
+                  "growing",
+                  "growing",
+                  "harvest",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "growing",
+                  "harvest",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "multi_season",
+                "sources": [
+                  "uariz_ext"
+                ],
+                "anchoring_urls": {
+                  "uariz_ext": {
+                    "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "low_desert_az_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "The Maricopa low-desert summer is a fruit-set exclusion from June through August: extreme day and night temperatures cause complete blossom drop. AZ1005 marks no tomato transplant from late spring through midsummer. Large-fruited beefsteak fails earlier than cherry here, so the pause runs the full June-August rather than cherry's July-August. (University of Arizona Cooperative Extension AZ1005)",
+                  "sources": [
+                    "uariz_ext"
+                  ],
+                  "anchoring_urls": {
+                    "uariz_ext": {
+                      "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                },
+                "second_planting": {
+                  "start_indoors": "Jul 21 - Aug 19",
+                  "plant_out": "Sep 1 - Sep 30",
+                  "harvest_start": "Nov 30",
+                  "harvest_end": "Jan 31",
+                  "sources": [
+                    "uariz_ext"
+                  ],
+                  "anchoring_urls": {
+                    "uariz_ext": {
+                      "url": "https://www.extension.arizona.edu/sites/default/files/2024-08/az1005-2018.pdf",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              }
+            },
+            "region_notes_beginner": "In Arizona's low desert (around Phoenix) you grow beefsteak tomatoes in the cooler months, not the summer. Plant the spring crop in late winter (finish by about early March) so it makes fruit before the brutal heat, then plant a fall crop in September once the worst heat breaks. June through August is too hot for any tomato to set fruit, so the plants rest then. Choose fast-maturing varieties.",
+            "region_notes_seasoned": "Arizona's low desert (Maricopa County, around Phoenix) grows beefsteak on a two-window calendar bracketing the extreme summer. Set the spring crop out in late winter, finishing by about early March, so a slow 75-90 day beefsteak sets and matures before the June heat wall; plant the fall crop in September as the heat breaks, for a late-fall and winter harvest. June through August is a complete fruit-set exclusion for all tomatoes, and large-fruited beefsteak fails earlier than cherry, so the pause runs the full June-August. AZ1005 marks no tomato transplant through that span. Favor quick-maturing cultivars. (University of Arizona Cooperative Extension AZ1005)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "two_window",
+              "window_structure_basis": "UA AZ1005 (Maricopa) garden planting calendar: tomato transplant ('T') marks Jan 15-Mar 1 (spring) and Aug 15-Sept (fall), two optimal seasons with summer + deep-winter excluded. Two-window from the chart.",
+              "governing_variable": "heat_primary_frost_secondary",
+              "heat_pause_basis": "WIDER than cherry (Jun-Aug vs Jul-Aug). AZ1005 marks no tomato transplant late-spring through midsummer; large-fruited beefsteak breaches the set-failure threshold by June in Maricopa (day >100, night >75).",
+              "spring_date_basis": "Spring window pulled to the early-March end vs the chart's full mid-Jan-to-early-March span, so a 75-90 DTM beefsteak finishes fruit set before the May/June heat. last_frost-anchored.",
+              "succession_carried_by": "second_planting band (discrete; succession_policy.suitable=false)",
+              "verified_against": [
+                "uariz_az1005_maricopa"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_fl_peninsula",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "fl_peninsula: window_structure=near_continuous_inverted (source finding, not analogy); heat_pause=Jun-Sep [6,7,8,9] WIDER than cherry's [7,8]; second_planting=none; sources_pending_admission ufifas_ext cleared. Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.fl_peninsula",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "fl_peninsula",
+            "region_label": "Florida Peninsula",
+            "zone_span": [
+              "10",
+              "11"
+            ],
+            "sources": [
+              "ufifas_ext",
+              "uf_ifas_south_cal"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -42,
+                    "window_days": 14,
+                    "source_quote": "Aug-Sept ... Aug-Feb",
+                    "synthesis_note_seasoned": "Start beefsteak seed indoors about six weeks before the fall transplant; on the Florida peninsula that is mid-to-late summer for the fall-through-winter growing season. (UF/IFAS VH021; UF/IFAS South Florida Gardening Calendar)",
+                    "sources": [
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "date",
+                    "offset_days": 0,
+                    "window_days": 165,
+                    "source_quote": "Central: Jan-Feb, Aug-Sept; South: Aug-Feb",
+                    "synthesis_note_seasoned": "On the Florida peninsula, set beefsteak transplants out across the cool growing season, roughly September through mid-February (UF/IFAS gives central Florida tomato as Aug-Sept and Jan-Feb, and south Florida as Aug-Feb on an inverted winter-growing calendar). The peninsula grows tomatoes in the cool months and pauses through the hot summer. (UF/IFAS VH021)",
+                    "sources": [
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 90,
+                    "window_days": 14,
+                    "source_quote": "(70-90)",
+                    "synthesis_note_seasoned": "Beefsteak begins ripening about three months after transplanting, so the peninsula's cool-season crop produces from roughly November through spring. (UF/IFAS VH021)",
+                    "sources": [
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "heat_pause_start",
+                    "offset_days": 0,
+                    "window_days": 21,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "The cool-season crop winds down as summer heat and humidity return; large-fruited beefsteak stops setting fruit well by late spring, earlier than heat-resistant cherry types. (UF/IFAS VH021)",
+                    "sources": [
+                      "ufifas_ext"
+                    ],
+                    "anchoring_urls": {
+                      "ufifas_ext": {
+                        "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "ufifas_ext": {
+                    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                    "verified": "2026-06-07"
+                  }
+                }
+              }
+            ],
+            "resolved_by_zone": {
+              "10": {
+                "plant_out": "Sep 1 - Feb 12",
+                "start_indoors": "Jul 21 - Jan 1",
+                "harvest": "Nov - May",
+                "harvest_start": "Nov 30",
+                "harvest_end": "May 31",
+                "first_plant_date": "Sep 1",
+                "last_plant_date": "Feb 12",
+                "calendar": [
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "growing",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "plant",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "inverted_winter_season",
+                "sources": [
+                  "ufifas_ext"
+                ],
+                "anchoring_urls": {
+                  "ufifas_ext": {
+                    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "fl_peninsula_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8,
+                    9
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "The Florida peninsula summer, June through September, is a fruit-set exclusion for large-fruited tomatoes: high day and night temperatures plus high humidity drive blossom drop and failed set. UF/IFAS marks no large-fruit tomato planting through deep summer on the peninsula. Beefsteak's pause is wider than cherry's because large-fruited types are not heat resistant and the humid heat compounds the failure. (UF/IFAS VH021)",
+                  "sources": [
+                    "ufifas_ext"
+                  ],
+                  "anchoring_urls": {
+                    "ufifas_ext": {
+                      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              },
+              "11": {
+                "plant_out": "Sep 1 - Feb 12",
+                "start_indoors": "Jul 21 - Jan 1",
+                "harvest": "Nov - May",
+                "harvest_start": "Nov 30",
+                "harvest_end": "May 31",
+                "first_plant_date": "Sep 1",
+                "last_plant_date": "Feb 12",
+                "calendar": [
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "growing",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "heat_pause",
+                  "plant",
+                  "plant",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "inverted_winter_season",
+                "sources": [
+                  "ufifas_ext"
+                ],
+                "anchoring_urls": {
+                  "ufifas_ext": {
+                    "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "fl_peninsula_month_resolution",
+                "heat_pause": {
+                  "months": [
+                    6,
+                    7,
+                    8,
+                    9
+                  ],
+                  "classification": "heat_pause",
+                  "basis_seasoned": "The Florida peninsula summer, June through September, is a fruit-set exclusion for large-fruited tomatoes: high day and night temperatures plus high humidity drive blossom drop and failed set. UF/IFAS marks no large-fruit tomato planting through deep summer on the peninsula. Beefsteak's pause is wider than cherry's because large-fruited types are not heat resistant and the humid heat compounds the failure. (UF/IFAS VH021)",
+                  "sources": [
+                    "ufifas_ext"
+                  ],
+                  "anchoring_urls": {
+                    "ufifas_ext": {
+                      "url": "https://edis.ifas.ufl.edu/publication/VH021",
+                      "verified": "2026-06-07"
+                    }
+                  }
+                }
+              }
+            },
+            "region_notes_beginner": "On the Florida peninsula you grow beefsteak tomatoes in the cool months, not the summer, which is the opposite of most of the country. Plant from early fall (September) through mid-winter (February) and harvest from late fall into spring. The hot, humid summer (about June through September) is too much for big tomatoes to set fruit, so that is the off-season here.",
+            "region_notes_seasoned": "The Florida peninsula grows beefsteak on an inverted, near-continuous winter calendar: set transplants out from about September through mid-February and harvest from late fall into spring. The hot, humid peninsula summer, June through September, is a fruit-set exclusion for large-fruited beefsteak; high day and night temperatures with high humidity drive blossom drop, and large-fruited types are not heat resistant the way cherry types are, so the pause is wider here. Set fruit fails by late spring as the heat returns. Confirm local timing: south Florida (zone 11) plants and harvests on a slightly earlier, longer inverted calendar than the zone 10 central peninsula. (UF/IFAS VH021)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "near_continuous_inverted",
+              "window_structure_basis": "UF/IFAS VH021 gives central FL tomato as Jan-Feb + Aug-Sept and south FL as Aug-Feb (inverted winter-growing season). Near-continuous cool-season planting with a deep-summer pause. Single band on an inverted calendar (no spring/fall split -- the whole cool season is one window).",
+              "governing_variable": "heat_primary_inverted",
+              "heat_pause_basis": "WIDER than cherry (Jun-Sep vs Jul-Aug). Large-fruited beefsteak is not heat resistant; the humid peninsula summer compounds blossom drop (cf. U.Maryland: day>90 + night>70 + RH>80% => failed set). UF/IFAS marks no large-fruit tomato planting through deep summer.",
+              "verified_against": [
+                "ufifas_vh021"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m16_beefsteak_step4_hawaii_tropical",
+      "step": 4,
+      "finding": "gold-standard arc v1.5 Step 4 (warm-region sourcing) -- fills the Step 3.5 empty rule skeleton with verified region-appropriate windows + dual-register region_notes; independent heat biology (NOT analogized from cherry)",
+      "ruling": "hawaii_tropical: window_structure=year_round (source finding, not analogy); heat_pause=none (HGV-5 no exclusion; large-fruit night-set caveat in prose); second_planting=none; sources_pending_admission uhawaii_ctahr cleared. Orphaned cold-sourced zones{} prose (umn_ext/msu_ext) NOT carried into the region cell (gs_exemplar_finding_001). All sources T1, live-verified 2026-06-07. region_notes use the degrees-sign; backend synthesis prose keeps the spelled form (matches cherry).",
+      "changes": [
+        {
+          "path": "crops[beefsteak-tomato].regions.hawaii_tropical",
+          "op": "set_value",
+          "before": "{Step 3.5 empty rule skeleton: plantings[0]={succession_id:1,label:'main',track:'beginner',start_indoors:[],plant_out:[],harvest_start:[],harvest_end:[],anchoring_urls:{}}; region_notes_seasoned/_beginner=null; sources_pending_admission per PUNCH_LIST}",
+          "after": {
+            "region_id": "hawaii_tropical",
+            "region_label": "Hawaii (Tropical)",
+            "zone_span": [
+              "11"
+            ],
+            "sources": [
+              "uhawaii_ctahr"
+            ],
+            "plantings": [
+              {
+                "succession_id": 1,
+                "label": "main",
+                "track": "beginner",
+                "start_indoors": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": -28,
+                    "window_days": 14,
+                    "source_quote": "transplanted 3-5 weeks after sowing",
+                    "synthesis_note_seasoned": "Start beefsteak seed and transplant three to five weeks after sowing, in any month. (University of Hawaii CTAHR HGV-5)",
+                    "sources": [
+                      "uhawaii_ctahr"
+                    ],
+                    "anchoring_urls": {
+                      "uhawaii_ctahr": {
+                        "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "plant_out": [
+                  {
+                    "label": "primary",
+                    "from": "year_round",
+                    "offset_days": 0,
+                    "window_days": 365,
+                    "source_quote": "can be grown throughout the year in most places in Hawaii",
+                    "synthesis_note_seasoned": "Set beefsteak transplants out in any month of the year. CTAHR gives year-round tomato planting for most of Hawaii contingent on choosing adapted varieties, with no spring/fall bracketing and no summer no-sow exclusion. Note that large-fruited beefsteak sets fruit poorly under Hawaii's warm lowland nights, so cooler-elevation siting, cooler-season timing, and heat-tolerant or locally bred cultivars give the best results. (University of Hawaii CTAHR HGV-5; CTAHR Field Tomato Production Guidelines for Hawaii)",
+                    "sources": [
+                      "uhawaii_ctahr"
+                    ],
+                    "anchoring_urls": {
+                      "uhawaii_ctahr": {
+                        "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_start": [
+                  {
+                    "label": "primary",
+                    "from": "plant_out_start",
+                    "offset_days": 75,
+                    "window_days": 14,
+                    "source_quote": "Most varieties mature in 60-80 days",
+                    "synthesis_note_seasoned": "Beefsteak begins ripening about two and a half to three months after transplanting (CTAHR gives 60-80 days for most varieties; large-fruited beefsteak runs to the longer end). (University of Hawaii CTAHR HGV-5)",
+                    "sources": [
+                      "uhawaii_ctahr"
+                    ],
+                    "anchoring_urls": {
+                      "uhawaii_ctahr": {
+                        "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "harvest_end": [
+                  {
+                    "label": "primary",
+                    "from": "year_round",
+                    "offset_days": 0,
+                    "window_days": 14,
+                    "source_quote": null,
+                    "synthesis_note_seasoned": "Harvest is continuous through the year on healthy indeterminate plants; there is no seasonal production stop, only the steady disease, insect, and heavy-rain pressure of the tropical lowland. (University of Hawaii CTAHR HGV-5)",
+                    "sources": [
+                      "uhawaii_ctahr"
+                    ],
+                    "anchoring_urls": {
+                      "uhawaii_ctahr": {
+                        "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+                        "verified": "2026-06-07"
+                      }
+                    },
+                    "uscrn_validation": null
+                  }
+                ],
+                "anchoring_urls": {
+                  "uhawaii_ctahr": {
+                    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+                    "verified": "2026-06-07"
+                  }
+                }
+              }
+            ],
+            "resolved_by_zone": {
+              "11": {
+                "plant_out": "Jan - Dec",
+                "start_indoors": "Jan - Dec",
+                "harvest": "Jan - Dec",
+                "harvest_start": "Year-round",
+                "harvest_end": "Year-round",
+                "first_plant_date": "Jan 1",
+                "last_plant_date": "Dec 31",
+                "calendar": [
+                  "harvest",
+                  "harvest",
+                  "plant",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "plant",
+                  "harvest",
+                  "harvest",
+                  "harvest",
+                  "plant",
+                  "harvest"
+                ],
+                "zone_notes": null,
+                "planting_note": "year_round",
+                "sources": [
+                  "uhawaii_ctahr"
+                ],
+                "anchoring_urls": {
+                  "uhawaii_ctahr": {
+                    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+                    "verified": "2026-06-07"
+                  }
+                },
+                "resolution_method": "hawaii_year_round_resolution",
+                "year_round": true,
+                "calendar_basis": "Beefsteak tomato can be planted YEAR-ROUND in tropical zone 11; both heat_pause and cold_pause are intentionally absent. There is no winter cold to pause for (frost-free) and no documented summer no-sow exclusion: CTAHR HGV-5 states tomato can be grown throughout the year in most places in Hawaii by choosing adapted varieties, and names no seasonal fruit-set gap. UNLIKE cherry (which CTAHR treats as cleanly heat resistant), CTAHR's Field Tomato Production Guidelines specifically warn that large-fruited varieties set fruit poorly under Hawaii's warm lowland nights (optimum fruit set 60-70 deg-F). This is a fruit-set-QUALITY caveat, disclosed in the seasoned region_note, not an absolute no-sow month, so the year-round structure holds (guardrail: heat_pause is read from the source per region, never defaulted; HGV-5 documents no exclusion month). Hawaii's dominant challenge is disease, insect, and heavy-rain pressure, managed with resistant locally bred cultivars (Kewalo, Anahu, Healani, N-series) and cultural practice. Absence of both pauses is intentional and carries this reason; year_round:true makes the all-active calendar machine-readable. (University of Hawaii CTAHR HGV-5; CTAHR Field Tomato Production Guidelines for Hawaii)"
+              }
+            },
+            "region_notes_beginner": "In Hawaii's tropical lowlands you can plant beefsteak tomatoes any month of the year; there is no cold winter and no planting season to wait for. The catch is that big beefsteak tomatoes do not set fruit well in the warm tropical nights, so they do best at cooler elevations and in the cooler parts of the year, and you will have the most luck with heat-tolerant or locally bred varieties. The bigger day-to-day challenges are disease, bugs, and heavy rain.",
+            "region_notes_seasoned": "Hawaii's tropical zone 11 grows beefsteak year-round: CTAHR gives a year-round planting capability for most of the islands contingent on adapted varieties, with no winter cold pause and no documented summer no-sow exclusion. The important caveat for beefsteak specifically is fruit-set quality, not timing: CTAHR's field production guidance notes that large-fruited varieties are sensitive to high night temperatures and set fruit poorly in the warm lowland (optimum set 60-70 °F), unlike heat-resistant cherry types. Favor cooler-elevation siting, the cooler part of the year, and heat-tolerant or locally bred wilt-resistant cultivars (Kewalo, Anahu, Healani, the N-series). The dominant production challenges here are disease, insect, and heavy-rain pressure, managed with resistant varieties and cultural practice rather than a seasonal stop. (University of Hawaii CTAHR HGV-5; CTAHR Field Tomato Production Guidelines for Hawaii)",
+            "plantings_provenance": {
+              "authored_session": "m16_beefsteak_step4_warm_regions",
+              "authored_date": "2026-06-07",
+              "shape": "region_constant_plantings_plus_resolved_by_zone",
+              "window_structure": "year_round",
+              "window_structure_basis": "CTAHR HGV-5: tomato can be grown throughout the year in most places in Hawaii by choosing adapted varieties; no seasonal bracketing, no no-sow month. year_round:true.",
+              "governing_variable": "aseasonal_oceanic_tropical",
+              "heat_pause_basis": "NONE as a no-sow exclusion (HGV-5 documents no exclusion month). DIVERGES from cherry in PROSE only: CTAHR Field Production Guide flags large-fruited types for poor lowland-night fruit set (optimum 60-70 deg-F) -- disclosed as a quality caveat in region_notes_seasoned, NOT a structural pause. The no-pause structure is the source finding; the size-specific set caveat is the honest beefsteak-vs-cherry difference.",
+              "verified_against": [
+                "uhawaii_ctahr_hgv5",
+                "uhawaii_ctahr_field_tomato_guide"
+              ],
+              "supersedes": "Step 3.5 empty shell + uncarried cold-sourced zones data"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "base_sha": "3a482908b610d81824f2151cc2aa95ecb9ca50e925077085d4ba293bfbec1994",
+  "session": "m16_beefsteak_step5_5_nt_cold_pause",
+  "patches": [
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[0]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[1]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[2]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[9]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[10]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.3.calendar[11]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.4.calendar[0]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.4.calendar[1]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.4.calendar[2]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.4.calendar[9]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.4.calendar[10]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.4.calendar[11]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.5.calendar[0]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.5.calendar[1]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.5.calendar[10]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.5.calendar[11]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.6.calendar[0]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.6.calendar[1]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.6.calendar[10]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.6.calendar[11]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.7.calendar[0]",
+      "from": "wait",
+      "value": "cold_pause"
+    },
+    {
+      "op": "replace",
+      "json_path": "$.crops[?(@.slug=='beefsteak-tomato')].regions.northern_tier.resolved_by_zone.7.calendar[11]",
+      "from": "wait",
+      "value": "cold_pause"
+    }
+  ]
+}

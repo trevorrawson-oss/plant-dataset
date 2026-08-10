@@ -26,6 +26,7 @@ NEVER mutates canonical -- every mutation is applied to a deepcopy.
 import copy
 import json
 import os
+import re
 import sys
 
 import pytest
@@ -34,6 +35,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'tools'))
 
 import campaign_d_reprice as R  # noqa: E402
+import promote_fixture  # noqa: E402
 
 
 # The re-price is a MEASUREMENT OF A SPECIFIC CANONICAL -- `6b2dcb8e`, 2026-08-05, the state
@@ -61,27 +63,65 @@ def crops(data):
     return {c['slug']: c for c in data['crops']}
 
 
-@pytest.fixture(autouse=True, scope='module')
-def _table_as_of_the_pinned_state(data):
-    """Evaluate the adjudication table AS IT WAS at `6b2dcb8e`, for the whole suite.
+# Evaluate ALL FOUR adjudication tables AS THEY WERE at `6b2dcb8e`, for the whole suite.
+#
+# THE PIN PROTECTS THE DATA BUT NOT THE MEASUREMENT, and that gap is real: the tables are
+# applied at READ time, so extending one (as the PLA-114 close did, adding 15 lemon/lime rows
+# to ANCHOR_FINDING) changes the verdicts this suite computes even against a frozen fixture.
+# The original fix here covered ANCHOR_FINDING alone; PLA-162 measured that one added
+# MODELED_FINDING row turned a pinned presence assertion red the same way, and re-baselining
+# would have destroyed the historical numbers the pin exists to keep.
+#
+# The kept counts are the row counts each table held at the pin -- promote_fixture.tables_as_of
+# fails loudly if the filter keeps more (a post-pin row escaped) or fewer (a row the
+# measurement asserts on got eaten). The live "TABLE CLAIMS x BUT IT IS NOT ON THIS CROP"
+# guards below run against current canonical over the FULL tables (via this fixture's yielded
+# value), where they are the check that caught the lime declaration filed on the wrong crop.
+_tables = promote_fixture.as_of(
+    BASE_SHA, R, ANCHOR_FINDING=4, MODELED_FINDING=4, SCOPED_OPEN=2)
 
-    THE PIN PROTECTS THE DATA BUT NOT THE MEASUREMENT, and that gap is real: `ANCHOR_FINDING` is
-    applied at READ time, so extending it (as the PLA-114 close did, with 14 new entries) changes
-    the verdicts this suite computes even against a frozen fixture. Three shape assertions went red
-    for exactly that reason, and re-baselining them would have destroyed the historical numbers the
-    pin exists to keep.
+# The hunt rosters are RULES, not rows -- no keyed record in the fixture can scope them, so
+# they are frozen BY VALUE as of `6b2dcb8e`. D closed with these eleven own hunts and seven
+# citrus-residue hunts; test_live_hunt_rosters_match_the_frozen_pin below is the unpinned
+# tripwire that goes red -- once, loudly -- if a live roster ever changes.
+OWN_HUNTS_AT_PIN = {
+    ('ca_north_coast', 'ucanr_marin_mg'): 16,
+    ('fl_peninsula', 'ufifas_ext'): 18,
+    ('se_gulf', 'uga_ext'): 23,
+    ('northern_tier', 'clemson_hgic'): 25,
+    ('northern_tier', 'tamu_agrilife'): 26,
+    ('se_gulf', 'tamu_agrilife'): 27,
+    ('se_gulf', 'clemson_hgic'): 28,
+    ('ca_interior', 'uc_ipm'): 29,
+    ('warm_arid', 'uariz_ext'): 30,
+    ('warm_arid', 'clemson_hgic'): 31,
+    ('low_desert_az', 'ucanr_ext'): 32,
+}
+RESIDUE_HUNTS_AT_PIN = {
+    ('ca_interior', 'ucanr_ext'): 3,
+    ('ca_north_coast', 'ucanr_ext'): 4,
+    ('ca_south_coast', 'ucanr_ext'): 5,
+    ('ca_desert', 'ucanr_ext'): 6,
+    ('warm_arid', 'tamu_agrilife'): 8,
+    ('low_desert_az', 'uariz_ext'): 14,
+    ('ca_desert', 'uariz_ext'): 21,
+}
+HUNTS_AT_PIN = dict(OWN_HUNTS_AT_PIN)
+HUNTS_AT_PIN.update(RESIDUE_HUNTS_AT_PIN)
+_rules = promote_fixture.frozen(
+    R, OWN_HUNTS=OWN_HUNTS_AT_PIN, RESIDUE_HUNTS=RESIDUE_HUNTS_AT_PIN, HUNTS=HUNTS_AT_PIN,
+    BARE=re.compile(r'https?://[^/]+/?$'))
 
-    An entry whose finding does not exist on the crop in this fixture simply was not in the table
-    at that state, so it is filtered out here. The live "TABLE CLAIMS x BUT IT IS NOT ON THIS CROP"
-    guard is untouched and still fires against current canonical, where it is the check that caught
-    the lime declaration being filed on the wrong crop.
-    """
-    crops_now = {c['slug']: c for c in data['crops']}
-    full = R.ANCHOR_FINDING
-    R.ANCHOR_FINDING = {k: v for k, v in full.items()
-                        if R.finding(crops_now.get(k[1], {}), v) is not None}
-    yield
-    R.ANCHOR_FINDING = full
+
+def test_live_hunt_rosters_match_the_frozen_pin(_rules):
+    """The unpinned equality tripwire. `_rules` holds the LIVE values saved before freezing;
+    comparing the module attribute here would be a tautology. A deliberate roster or BARE
+    change fails THIS test, once and loudly, instead of silently re-baselining every pinned
+    count above -- update this expectation only with the change spelled out in the diff."""
+    assert _rules['OWN_HUNTS'] == OWN_HUNTS_AT_PIN
+    assert _rules['RESIDUE_HUNTS'] == RESIDUE_HUNTS_AT_PIN
+    assert _rules['HUNTS'] == HUNTS_AT_PIN
+    assert _rules['BARE'].pattern == r'https?://[^/]+/?$'
 
 
 def verdicts(data):
@@ -116,10 +156,42 @@ def test_campaign_d_is_26_decisions_not_the_ledgers_14(data, crops):
 
 def test_residue_hunts_contribute_citrus_only(data, crops):
     """Campaigns A and C settled the non-citrus rows of hunts #3-#6, #8, #14, #21. Counting them
-    again here would inflate D with work that is already closed."""
-    for _h, reg, sid, slug, _p, _a, _u, _v, _w in R.collect(data, crops):
-        if (reg, sid) in R.RESIDUE_HUNTS:
-            assert slug in R.CITRUS, '%s is not citrus and must not re-enter via residue' % slug
+    again here would inflate D with work that is already closed.
+
+    VACUITY FIXED (PLA-162). The original version iterated collect()'s output asserting a
+    condition collect() itself enforces two lines earlier, so it could never fail -- the
+    corrected mutation audit measured the whole suite GREEN with a non-citrus crop planted
+    inside a residue hunt ([[guard-derived-from-what-it-checks-is-vacuous]]). This version
+    injects exactly that defect and asserts the filter REFUSES it: the campaign's rows must
+    not move, with the raw scan as the positive control proving the planted node was really
+    there to refuse."""
+    d = copy.deepcopy(data)
+    crops2 = {c['slug']: c for c in d['crops']}
+    planted_slug = None
+    for c in d['crops']:
+        if c['slug'] in R.CITRUS:
+            continue
+        region = (c.get('regions') or {}).get('ca_interior')
+        if isinstance(region, dict) and isinstance(region.get('resolved_by_zone'), dict):
+            planted_slug = c['slug']
+            cell = next(v for v in region['resolved_by_zone'].values() if isinstance(v, dict))
+            cell['anchoring_urls'] = {
+                'ucanr_ext': {'url': 'https://ucanr.edu', 'verified': '2026-08-05'}}
+            # `sources` counts toward the node's citations too; leaving another id there
+            # would make the bare citation non-SOLE and the injection invisible to the scan
+            cell['sources'] = ['ucanr_ext']
+            break
+    assert planted_slug, 'no non-citrus ca_interior cell to inject into -- fixture broke'
+    seen = [(s, p) for sid, s, p, sole, _u in R.scan(d)
+            if sole and sid == 'ucanr_ext' and s == planted_slug
+            and R.region_of(p) == 'ca_interior']
+    assert seen, 'the planted node never entered the scan -- the positive control is broken'
+    key = lambda n: (n[0], n[1], n[2], n[3], n[4])  # noqa: E731
+    before = {key(n) for n in R.collect(data, crops)}
+    after = {key(n) for n in R.collect(d, crops2)}
+    assert after == before, (
+        'a non-citrus crop re-entered campaign D via a residue hunt: %s'
+        % sorted(after - before))
 
 
 def test_the_bare_url_map_is_one_per_decision(data, crops):
@@ -343,28 +415,36 @@ def test_MUTATION_unnaming_the_source_drops_bell_pepper_off_declared_anchor(data
 # 5. The adjudication tables must describe the data, not assert over it.
 # --------------------------------------------------------------------------------------------
 
-def test_every_anchor_table_entry_is_present_on_its_crop():
-    """Validated against LIVE canonical, not the pinned fixture.
+@pytest.fixture(scope='module')
+def live():
+    """Current canonical -- the presence tests are a claim about the CURRENT dataset."""
+    with open(R.CANONICAL, encoding='utf-8') as fh:
+        return {c['slug']: c for c in json.load(fh)['crops']}
+
+
+def test_every_anchor_table_entry_is_present_on_its_crop(live, _tables):
+    """Validated against LIVE canonical over the FULL table, not the pinned fixture and not
+    the filtered view the rest of this suite measures through.
 
     The table is a claim about the CURRENT dataset -- "this finding exists on this crop and names
-    this id" -- so it must be checked against current data. The shape and count tests below stay
-    pinned to `6b2dcb8e`, because those are a claim about what the arc was PRICED at. Splitting the
-    two is what lets the table grow as decisions close without the historical measurement drifting.
+    this id" -- so it must be checked against current data, and it must iterate `_tables` (the
+    unfiltered rows) or every post-pin entry would escape the check. The shape and count tests
+    stay pinned to `6b2dcb8e`, because those are a claim about what the arc was PRICED at.
+    Splitting the two is what lets the table grow as decisions close without the historical
+    measurement drifting.
     """
-    with open(R.CANONICAL, encoding='utf-8') as fh:
-        live = {c['slug']: c for c in json.load(fh)['crops']}
-    for (_reg, slug, _sid), fid in R.ANCHOR_FINDING.items():
+    for (_reg, slug, _sid), fid in _tables['ANCHOR_FINDING'].items():
         assert R.finding(live[slug], fid) is not None, '%s missing from %s' % (fid, slug)
 
 
-def test_every_modeled_table_entry_is_present_on_its_crop(crops):
-    for slug, fid in R.MODELED_FINDING.items():
-        assert R.finding(crops[slug], fid) is not None, '%s missing from %s' % (fid, slug)
+def test_every_modeled_table_entry_is_present_on_its_crop(live, _tables):
+    for slug, fid in _tables['MODELED_FINDING'].items():
+        assert R.finding(live[slug], fid) is not None, '%s missing from %s' % (fid, slug)
 
 
-def test_every_scoped_open_entry_is_present_and_still_open(crops):
-    for (_reg, slug), fid in R.SCOPED_OPEN.items():
-        f = R.finding(crops[slug], fid)
+def test_every_scoped_open_entry_is_present_and_still_open(live, _tables):
+    for (_reg, slug), fid in _tables['SCOPED_OPEN'].items():
+        f = R.finding(live[slug], fid)
         assert f is not None and f.get('status') == 'open', (
             '%s must be present AND open -- an accepted one is a different verdict' % fid)
 

@@ -1,0 +1,259 @@
+{
+ "format": "handoff_patch_format_v1_0",
+ "base_sha": "8fdb3ee66c6866ed690949e03d59b90c006f4231d759a2222ecfa1b20ce63f54",
+ "session": "m16_beefsteak_steps678_dual_voice_nt_region_notes",
+ "patches": [
+  {
+   "op": "replace",
+   "json_path": "$.pests[0].cause_seasoned",
+   "from": "Multiple aphid species. Populations explode rapidly in warm weather.",
+   "value": "Several aphid species (most often green peach and potato aphids) colonize tomatoes. They reproduce asexually and explosively in warm weather, so a few founders become dense colonies on tender new growth within days. Soft, nitrogen-flush growth from over-fertilizing is especially attractive, which is why feeding history drives outbreak severity as much as weather."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[1].cause_seasoned",
+   "from": "Manduca quinquemaculata moth larvae. Mid to late summer pest.",
+   "value": "Larvae of the five-spotted hawk moth (Manduca quinquemaculata). Adult moths lay eggs on tomato foliage from early summer; the caterpillars feed and grow through mid-to-late summer, reaching up to about four inches and defoliating fast because a single large larva eats a great deal. They pupate in the soil over winter, so the prior season's population carries forward in an unworked bed."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[2].cause_seasoned",
+   "from": "Multiple flea beetle species. Most active in spring on young plants.",
+   "value": "Several flea beetle species. They overwinter as adults and emerge in spring, so pressure is heaviest early, on seedlings and freshly set transplants whose small leaf area makes the shot-hole feeding proportionally damaging. Established plants with ample foliage tolerate the same beetle numbers easily, which is why the timing of the attack matters more than its size."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[3].cause_seasoned",
+   "from": "Tetranychus urticae and related species. Thrives in heat and drought.",
+   "value": "Twospotted spider mite (Tetranychus urticae) and relatives. They thrive in hot, dry, dusty conditions and complete a generation in under a week in summer heat, so populations explode late in the season. Drought-stressed plants are far more vulnerable, which makes consistent watering and dust suppression the primary cultural controls rather than an afterthought."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[0].cause_seasoned",
+   "from": "Alternaria fungus. Favored by warm wet conditions.",
+   "value": "The fungus Alternaria solani. It overwinters on infected plant debris and in the soil, then splashes up onto the lowest leaves in warm, wet weather, which is why infection starts at the bottom of the plant and moves upward. Repeated tomato plantings in the same bed build the soil inoculum, so rotation and mulch (to block soil splash) are the core preventions."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[2].cause_seasoned",
+   "from": "Septoria lycopersici fungus. One of the most common tomato diseases.",
+   "value": "The fungus Septoria lycopersici, one of the most common tomato leaf diseases. Like early blight it carries over on debris and infected soil and spreads by water splash onto lower foliage, favored by warm, wet, humid weather. It defoliates from the bottom up; the fix is the same set of moisture-management and sanitation practices rather than a single spray."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[1].cause_seasoned",
+   "from": "Calcium deficiency in developing fruit, caused by irregular watering or root damage, not a pest or disease.",
+   "value": "Not an infection but a calcium-delivery failure in the developing fruit. Calcium moves with water, so when soil moisture swings between wet and dry (or roots are damaged), the fast-growing blossom end of the fruit is starved of calcium and its cells break down, leaving the dark sunken patch. It tracks watering consistency, not soil calcium levels, which is why even calcium-rich soils produce it under irregular water."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[3].cause_seasoned",
+   "from": "Phytophthora infestans oomycete. The same pathogen that caused the Irish potato famine. Spreads rapidly in cool wet weather.",
+   "value": "The oomycete Phytophthora infestans, the same pathogen behind the Irish potato famine. Unlike the blights that start at the soil line, its spores travel on wind and rain over long distances and infect leaves, stems, and fruit directly, spreading explosively in cool, wet weather and able to kill a plant in days. Because the inoculum arrives airborne, resistant varieties and immediate removal of infected plants matter more than rotation."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.rotation.avoid_after_seasoned",
+   "from": "Tomatoes, peppers, eggplant, potatoes: all share blight and fusarium diseases",
+   "value": "Tomatoes, peppers, eggplant, and potatoes. All four are nightshades and share the same soilborne diseases, chiefly early blight and the Fusarium and Verticillium wilts, whose spores persist in the soil for several years. Following one nightshade with another lets that inoculum build, so beefsteak does best on a bed that has been out of the family for about three years."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.container_notes.drainage.saucer_practice_seasoned",
+   "from": "Remove standing water within an hour; beefsteak's high water demand means containers should be watered daily in heat, but roots should never sit pooled.",
+   "value": "Empty any standing water from the saucer within an hour of watering. Beefsteak's high water demand means containers are often watered daily in heat, but roots left sitting in pooled water lose oxygen and begin to rot, so the saucer must catch overflow without becoming a reservoir."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[0].cause_beginner",
+   "from": null,
+   "value": "Aphids are tiny soft-bodied insects that breed very fast in warm weather, so a few quickly turn into crowds on the soft new growth at the tips. Too much fertilizer makes that soft growth they love, so going easy on feeding helps keep them down."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[1].cause_beginner",
+   "from": null,
+   "value": "These are the caterpillars of a large moth. The moth lays eggs on the leaves in early summer, and the caterpillars grow big (up to about four inches) through mid and late summer, eating a lot of leaves fast. They spend the winter in the soil, so a bed left undug can carry them into next year."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[2].cause_beginner",
+   "from": null,
+   "value": "Flea beetles are tiny black beetles that jump when you disturb them and chew small round holes in leaves. They come out in spring and hit young seedlings hardest, because small plants do not have many leaves to spare. Bigger, established plants shrug off the same chewing."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.pests[3].cause_beginner",
+   "from": null,
+   "value": "Spider mites are tiny mites (so small they look like moving dust) that love hot, dry, dusty weather and multiply incredibly fast, so they tend to flare up late in summer. Plants that are short on water suffer the most, so keeping plants watered and dust down is the best defense."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[0].cause_beginner",
+   "from": null,
+   "value": "Early blight is a fungus that lives in old plant debris and the soil and splashes up onto the lowest leaves in warm, wet weather, which is why it starts at the bottom and climbs. Planting tomatoes in the same spot year after year builds it up, so moving them and mulching the soil are the main ways to prevent it."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[1].cause_beginner",
+   "from": null,
+   "value": "Blossom end rot is not a bug or an infection. It happens when the fruit cannot get enough calcium, and that is almost always because watering went from wet to dry and back. Calcium travels with water, so steady, even watering, not adding calcium, is what prevents it. Even soils with plenty of calcium get it when watering is uneven."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[2].cause_beginner",
+   "from": null,
+   "value": "Septoria leaf spot is a very common tomato fungus. Like early blight it overwinters in old debris and soil and splashes onto the lower leaves in warm, humid weather, working its way up the plant. The same habits that stop early blight, moving the planting, watering low, and mulching, keep it in check too."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.diseases[3].cause_beginner",
+   "from": null,
+   "value": "Late blight is a fast, destructive disease (the one that caused the Irish potato famine). Its spores blow in on wind and rain rather than starting from the soil, and in cool, wet weather it can kill a plant in just a few days. Because it arrives through the air, the best protection is choosing resistant varieties and pulling out any infected plant right away."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.growth_stages[0].log_prompt_beginner",
+   "from": null,
+   "value": "Any little sprouts poking up yet?"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.growth_stages[1].log_prompt_beginner",
+   "from": null,
+   "value": "How do your young seedlings look so far?"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.growth_stages[2].log_prompt_beginner",
+   "from": null,
+   "value": "Are your plants outside in the garden yet, or still getting used to outdoor air?"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.growth_stages[3].log_prompt_beginner",
+   "from": null,
+   "value": "Have any flowers opened up yet?"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.growth_stages[4].log_prompt_beginner",
+   "from": null,
+   "value": "Picked your first tomatoes? Add them to your log."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.growth_stages[5].log_prompt_beginner",
+   "from": null,
+   "value": "How did the season go? It helps to jot down what worked and what did not."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.watering.frequency_beginner",
+   "from": null,
+   "value": "In the hottest part of summer, water about every 2 to 3 days; when it is cooler, once a week or less is plenty. Rather than following a strict schedule, check the soil a few inches down and water when it is starting to dry out."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.watering.amount_beginner",
+   "from": null,
+   "value": "Aim for about 1 to 2 inches of water a week, and water deeply so it soaks well down. Beefsteak roots go quite deep, and deep watering pulls them down where they handle heat and dry spells better; quick shallow sprinkles keep roots near the surface where they dry out fast."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.watering.method_beginner",
+   "from": null,
+   "value": "Water at the base of the plant, not over the top, using a drip line, soaker hose, or just the hose at the soil. Wet leaves invite leaf-spot diseases, so keeping the foliage dry helps. Watering in the morning is best, so any leaves that do get splashed dry off before night."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.container_notes.shape_requirements_beginner",
+   "from": null,
+   "value": "Use a pot at least 18 inches deep, and a wide one (15 inches across or more) so the big roots have room. A 20-gallon pot works for smaller varieties, but full-size beefsteak plants will struggle even in a 20-gallon pot unless you prune them back hard."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.container_notes.drainage.saucer_practice_beginner",
+   "from": null,
+   "value": "Pour out any water that collects in the saucer within an hour of watering. In hot weather you may water a pot every day, but the roots should never sit in standing water or they start to rot."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.storage.room_temp_beginner",
+   "from": null,
+   "value": "Keep tomatoes on the counter for up to a week, stem-scar side down. They actually keep getting sweeter and tastier at room temperature, and resting them scar-side down helps them lose less moisture."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.storage.fridge_beginner",
+   "from": null,
+   "value": "Do not refrigerate tomatoes you plan to eat fresh. Cold below about 50 to 55°F permanently damages them, turning the flesh mealy and watery and dulling the flavor for good, even after they warm back up. Just a few hours in the fridge can leave a big beefsteak slice noticeably worse."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.storage.freezer_beginner",
+   "from": null,
+   "value": "To freeze, core and slice the tomatoes, freeze the slices on a parchment-lined tray until firm, then bag them up. Freezing makes them soft, so they are not good for fresh eating, but they are perfect for sauces, soups, and roasting where they get cooked down anyway."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.yield_expectations.per_plant_beginner",
+   "from": null,
+   "value": "Expect roughly 10 to 20 pounds of tomatoes per plant over the season. You get fewer tomatoes than cherry or roma types, but each one is big (about 8 to 16 ounces, and some heirlooms top 2 pounds). In short-season cold areas the total is smaller simply because the season is shorter, while in warmer zones a well-tended plant can top 20 pounds."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.yield_expectations.peak_production_beginner",
+   "from": null,
+   "value": "At its peak, a healthy plant gives you 1 to 3 big tomatoes a week. Plants start slow while they grow their vines, hit a busy stretch of about 4 to 8 weeks in midsummer, then taper off as fall cools down. Fruit sets best when nights stay between about 55 and 75°F; colder or hotter nights than that and the flowers often fail to set fruit."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.rotation.avoid_after_beginner",
+   "from": null,
+   "value": "Do not plant beefsteak where tomatoes, peppers, eggplant, or potatoes grew recently. They are all in the same family and share the same soil diseases (mainly early blight and the wilt diseases), which build up in the soil over several years. Give the bed about three years off from this family before planting tomatoes there again."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.companions.good_beginner_seasoned[0].why_beginner",
+   "from": null,
+   "value": "Basil is a classic tomato partner. Gardeners have grown the two together for generations, and basil's strong scent may put off some pest insects. It is not a proven effect for this exact pair, but it is harmless and worth trying."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.companions.good_beginner_seasoned[1].why_beginner",
+   "from": null,
+   "value": "French marigolds help fight root-knot nematodes (tiny soil worms that attack roots). They work best when grown as a thick patch a couple of months before you plant tomatoes, rather than just tucked in alongside them at the same time."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.companions.bad_beginner_seasoned[0].why_beginner",
+   "from": null,
+   "value": "Fennel gives off natural chemicals that stunt the growth of many plants around it, so it is a poor neighbor for most vegetables, including tomatoes. It is best kept in its own spot away from the garden beds."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.companions.bad_beginner_seasoned[1].why_beginner",
+   "from": null,
+   "value": "Cabbage-family plants (like broccoli, kale, and cabbage) and tomatoes are both hungry feeders, so planting them close together makes them fight over nutrients in the soil. It will not poison either one, but both end up less productive."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.companions.bad_beginner_seasoned[2].why_beginner",
+   "from": null,
+   "value": "Corn and tomatoes are attacked by the very same caterpillar (the tomato fruitworm, also called the corn earworm). Planting them side by side gives that pest two favorite foods in one place and makes the problem worse for both crops."
+  },
+  {
+   "op": "replace",
+   "json_path": "$.regions.northern_tier.region_notes_seasoned",
+   "from": null,
+   "value": "The Northern Tier (cold zones 3 through 7) grows beefsteak tomatoes as a single frost-bracketed summer crop: the limiting factor on both ends is frost, not heat. Because large-fruited beefsteak types are slow (about 75 to 90 days from transplant), the season is started indoors well ahead of the last frost, transplants go out a week or two after that last spring frost once nights hold above the low 50s°F and soil warms past about 60°F, and that one planting then produces a single continuous harvest until plants are cut short by the first fall frost. There is no midsummer heat exclusion here: northern summers rarely sustain the high day and night temperatures that stop fruit set, so the only gaps are the winter cold pauses and the season between them is uninterrupted. Unlike cherry types, beefsteak's longer days-to-maturity leaves no room for a second crop even at the warm end of the band, so the whole region runs on one well-timed planting; the short-season north strongly favors the faster large-fruited varieties and starting seed indoors. The coldest zones (3 and 4) depend on early indoor starts, fast-maturing varieties, and season extension (black plastic mulch, Wall-O-Waters) to ripen fruit before frost. Frost dates shift sharply across the band, so confirm your local last and first frost. (University of Minnesota Extension; North Dakota State University Extension; Michigan State University Extension; University of Maine Cooperative Extension)"
+  },
+  {
+   "op": "replace",
+   "json_path": "$.regions.northern_tier.region_notes_beginner",
+   "from": null,
+   "value": "In the cold northern states (zones 3 through 7) you grow beefsteak tomatoes once a year, as a single summer crop. What limits the season here is frost on both ends, not summer heat. Because big beefsteak tomatoes are slow to ripen (about 75 to 90 days after transplanting), start the seeds indoors well before your last frost, then set the plants out a week or two after that last frost, once nights stay warm and the soil has warmed up. That single planting gives you one long harvest until the first fall frost ends it. There is no summer break the way hotter regions have, because northern summers usually are not hot enough to stop the plants from setting fruit. Unlike cherry tomatoes, beefsteaks take too long to fit in a second crop, so plan on one well-timed planting and choose faster varieties. In the coldest zones, start seed early indoors, pick quick-maturing varieties, and warm the soil with black plastic mulch or season-extending covers so the fruit ripens before frost returns."
+  }
+ ]
+}

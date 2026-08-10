@@ -49,9 +49,33 @@ REPO = os.path.dirname(HERE)
 CANON = os.path.join(REPO, 'crops_data_final.json')
 
 import promote_fixture  # noqa: E402
+import frost_anchor_reproduction_gate as G  # noqa: E402
 from frost_anchor_reproduction_gate import violations, IN_SCOPE  # noqa: E402
 
 PRE_FIX_SHA = '3b7dc5440ff989e8a3c1d524d3574230f14e50ae0b9c8469edc4b3a93c8271a1'
+
+# IN_SCOPE is a RULE, not rows -- nothing in a fixture can scope it -- so the value the
+# historical measurement was made with is FROZEN here, literally, next to the SHA (PLA-162).
+# Measured 2026-08-10 before the freeze: dropping one method from the live set turned five
+# tests red including the pinned one. The pinned test below measures with this frozen value;
+# test_live_in_scope_matches_the_frozen_measurement is the unpinned tripwire that goes red --
+# once, loudly -- if the live rule ever changes. The live `violations()` BODY cannot be frozen
+# the same way; the pinned test's exact expected tuple is the guard on it, and a deliberate
+# behavior change there is SUPPOSED to fail that test until re-ruled.
+IN_SCOPE_AT_MEASUREMENT = frozenset({
+    'frost_anchored_resolved',
+    'frost_anchored_offset',
+    'authored_frost_offset',
+    'northern_tier_frost_resolution',
+    'two_source_derived_frost_anchored',
+})
+
+
+def test_live_in_scope_matches_the_frozen_measurement():
+    """The unpinned equality tripwire. A deliberate IN_SCOPE change fails THIS test, once and
+    loudly, instead of silently re-scoping the historical measurement below -- update the
+    frozen copy only with the change spelled out in the diff."""
+    assert G.IN_SCOPE == IN_SCOPE_AT_MEASUREMENT
 
 
 def canonical():
@@ -67,9 +91,13 @@ def cell_of(data, slug, region, zone):
 # ---------------------------------------------------------------- the real historical defect
 
 def test_red_on_the_pre_fix_state():
-    """RED: the gate must FIRE on the state that actually shipped the defect."""
+    """RED: the gate must FIRE on the state that actually shipped the defect.
+
+    Measured with IN_SCOPE frozen as of the measurement -- the pin protects the fixture but
+    not the rule the gate applies at run time, and this is the historical claim."""
     pre = json.loads(promote_fixture.pre_state(PRE_FIX_SHA))
-    v = violations(pre)
+    with promote_fixture.tables_frozen(G, {'IN_SCOPE': IN_SCOPE_AT_MEASUREMENT}):
+        v = violations(pre)
     assert len(v) == 1, v
     slug, region, zone, declared, implied, arms = v[0]
     assert (slug, region, zone) == ('strawberry', 'mid_south', '7')

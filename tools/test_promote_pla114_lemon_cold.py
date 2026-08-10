@@ -15,7 +15,6 @@ the disposition wanted to rewrite them, and that draft was wrong. So they are pi
 by path, and every other lemon string is pinned wholesale.
 """
 import copy
-import hashlib
 import json
 import os
 import sys
@@ -253,7 +252,10 @@ def test_f1_records_the_miscredit_as_two_of_three(post):
     filed = {f['id']: f for f in _crop(post)['verification_status']['open_findings']}
     blob = json.dumps(filed['lemon_cold_threshold_was_miscredited_now_uc8100'], ensure_ascii=False)
     assert 'HS402' in blob
-    assert 'uf_ifas_hs1153' in blob or 'UF/IFAS' in blob
+    # No 'or UF/IFAS' fallback: that string occurs 1,219 times dataset-wide, so the OR let the
+    # exact defect this test exists to catch -- the specific document id degrading to the vague
+    # institution name -- pass (measured 2026-08-10). The id must be named verbatim.
+    assert 'uf_ifas_hs1153' in blob
 
 
 def test_f5_states_scope_and_the_duration_qualifier(post):
@@ -346,17 +348,12 @@ def test_no_other_crop_changed(pre, post):
     assert changed == ['lemon'], changed
 
 
-def test_canonical_is_still_compact():
-    raw = promote_fixture.pre_state(POST_SHA)
-    assert b'\n' not in raw, 'canonical must be single-line compact'
-    assert not raw.endswith(b'\n'), 'canonical must have no trailing newline'
-
-
-def test_the_promote_actually_changed_canonical():
-    """If the post state hashes to the base, every check above compares a file to itself."""
-    got = hashlib.sha256(promote_fixture.pre_state(POST_SHA)).hexdigest()
-    assert got != BASE_SHA, 'the post state is the pre-state -- the promote did not run'
-
+# `test_canonical_is_still_compact` and `test_the_promote_actually_changed_canonical` were
+# DELETED here (PLA-162): once `post` was repointed from live canonical to the pinned POST_SHA,
+# both reduced to comparing two source literals -- pre_state() hash-verifies before returning,
+# so neither could ever fail. The promote DID run is proven at the data level by
+# test_the_value_actually_moved; live-canonical compactness is asserted for real in
+# test_canonical_live_hygiene.py.
 
 if __name__ == '__main__':
     raise SystemExit(pytest.main([__file__, '-q']))

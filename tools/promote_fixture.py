@@ -24,6 +24,7 @@ Two recoveries, in order:
 Every path is HASH-VERIFIED against the requested SHA, so a wrong reconstruction cannot silently
 become a fixture. An unresolvable SHA raises -- loudly, never a skip.
 """
+import contextlib
 import hashlib
 import os
 import shutil
@@ -184,6 +185,133 @@ def pre_state(sha):
                              'stale COMMIT_FOR/CHAIN entry.' % (got[:16], sha[:16]))
     _cache[sha] = raw
     return raw
+
+
+def _slug_in(key, crops):
+    """The crop slug a table key names, or None if its crop is not in this state.
+
+    Keys come in three shapes -- 'slug', (region, slug), (region, slug, source_id) -- and the
+    slug is identified by membership, never by position. Two elements both naming real crops is
+    unresolvable and must be an error: guessing would key the presence check to the wrong crop.
+    """
+    if isinstance(key, str):
+        return key if key in crops else None
+    matches = [k for k in key if k in crops]
+    if len(matches) > 1:
+        raise AssertionError('table key %r is ambiguous: %r all name crops in the fixture'
+                             % (key, matches))
+    return matches[0] if matches else None
+
+
+@contextlib.contextmanager
+def tables_as_of(sha, module, expect_kept):
+    """Rebind `module`'s finding-keyed tables to their state AS OF the canonical at `sha`.
+
+    THE PIN PROTECTS THE DATA BUT NOT THE MEASUREMENT (PLA-162): a pinned suite's fixture is
+    frozen, but the adjudication tables its analysis module applies are read at run time, so a
+    row added for a LATER campaign flips historical assertions red over a fixture that never
+    moved. A row whose finding is not on its crop in `pre_state(sha)` simply was not in the
+    table at that state, so it is dropped for the duration and restored on exit -- live
+    presence tests in the same file must run OUTSIDE this scope and keep seeing the full table.
+
+    `expect_kept` maps table name -> the row count the table held at `sha`. It is REQUIRED and
+    load-bearing: the pinned state never changes (pre_state is hash-verified), so the kept
+    count is a true constant, stable under live-table growth. Fewer kept means the filter ate a
+    row the measurement included; more means a post-pin row escaped it. Without this the helper
+    would be its own vacuity generator -- a broken filter emptying a table would turn every
+    downstream presence loop into a green no-op.
+    """
+    import json
+    crops = {c['slug']: c for c in json.loads(pre_state(sha))['crops']}
+    saved = {}
+    try:
+        for name, kept in expect_kept.items():
+            full = getattr(module, name)
+            filtered = {
+                k: fid for k, fid in full.items()
+                if (lambda slug: slug is not None
+                    and module.finding(crops[slug], fid) is not None)(_slug_in(k, crops))
+            }
+            if len(filtered) != kept:
+                raise AssertionError(
+                    '%s.%s as of %s: kept %d rows, the pinned measurement expects %d '
+                    '(dropped: %s). Fewer than expected means the filter removed a row the '
+                    'suite asserts on; more means a post-pin row escaped it.'
+                    % (module.__name__, name, sha[:16], len(filtered), kept,
+                       sorted(set(full) - set(filtered)) or 'none'))
+            saved[name] = full
+            setattr(module, name, filtered)
+        # the FULL tables, so a live-canonical presence test running inside the scope can
+        # still iterate every row -- reading the module attribute there would let post-pin
+        # rows escape the live check.
+        yield saved
+    finally:
+        for name, full in saved.items():
+            setattr(module, name, full)
+
+
+@contextlib.contextmanager
+def tables_frozen(module, frozen):
+    """Rebind RULE-tables to values frozen by hand next to the pinned SHA.
+
+    Rule-tables (IN_SCOPE, RULES, BARE, the hunt rosters) have no keyed record whose presence
+    in `pre_state(sha)` could scope them, so fixture-presence filtering cannot protect a suite
+    that measures through them -- the value itself must be frozen in the suite, literally,
+    beside the SHA it was true at. The saved live value is yielded so the suite's SEPARATE,
+    unpinned equality test can assert live == frozen without tautology (inside the scope the
+    module attribute IS the frozen value); that one test going red is how a deliberate rule
+    change stays loud instead of silently re-baselining a historical measurement.
+    """
+    saved = {}
+    try:
+        for name, value in frozen.items():
+            if not hasattr(module, name):
+                raise AttributeError('%s defines no table %r -- freezing a misspelled name '
+                                     'pins nothing while reading as protection'
+                                     % (module.__name__, name))
+            saved[name] = getattr(module, name)
+            setattr(module, name, value)
+        yield saved
+    finally:
+        for name, value in saved.items():
+            setattr(module, name, value)
+
+
+def frozen(module, **values):
+    """Pytest fixture factory over `tables_frozen` -- module-scoped, autouse.
+
+        _rules = promote_fixture.frozen(R, HUNTS=HUNTS_AT_PIN, OWN_HUNTS=OWN_HUNTS_AT_PIN)
+
+    A test may request the fixture by name to reach the saved LIVE values for the unpinned
+    equality check: `def test_live_hunts_unchanged(_rules): assert _rules['HUNTS'] == ...`.
+    """
+    import pytest
+
+    @pytest.fixture(autouse=True, scope='module')
+    def _rules_frozen():
+        with tables_frozen(module, values) as saved:
+            yield saved
+
+    return _rules_frozen
+
+
+def as_of(sha, module, **expect_kept):
+    """Pytest fixture factory: assign at module level to pin `module`'s tables for the suite.
+
+        _tables = promote_fixture.as_of(BASE_SHA, R, ANCHOR_FINDING=19, MODELED_FINDING=14)
+
+    Module-scoped and autouse, so every test in the file measures through the pinned tables
+    without naming the fixture. Table names are declared, never guessed (opt-in by name), and
+    each carries its pinned-state row count -- see `tables_as_of` for why that is load-bearing.
+    """
+    import pytest
+
+    @pytest.fixture(autouse=True, scope='module')
+    def _tables_pinned_as_of():
+        with tables_as_of(sha, module, expect_kept) as full:
+            yield full
+
+    return _tables_pinned_as_of
 
 
 def scratch(sha, mutate=None):

@@ -152,6 +152,8 @@ def test_guards():
 
     bb = {c['slug']: c for c in before['crops']}
     aa = {c['slug']: c for c in after['crops']}
+    # key-set first: iterating bb alone cannot see a crop APPENDED by the promote (PLA-162)
+    check('no crop appeared or vanished', set(bb) == set(aa), str(sorted(set(bb) ^ set(aa))))
     added = {}
     for slug in bb:
         b_of = (bb[slug].get('verification_status') or {}).get('open_findings') or []

@@ -329,25 +329,57 @@ def test_applied_drops_the_carrot_decision_from_the_bare_host_scan(applied):
     assert carrot == [], carrot
 
 
+# The state this promote's apply path produces IS the campaign C closeout commit.
+APPLIED_SHA = '754c51a0de23daceff87c081cd84c6d60274e416fc19639bd2ee2520f5f309f5'
+
+# The reprice tool's hunt roster as of the applied state -- a RULE, frozen by value; see
+# test_campaign_c_reprice.py, whose unpinned tripwire guards the live roster.
+REPRICE_HUNTS_AT_APPLIED = {
+    ('warm_arid', 'nmsu_ext'): 7,
+    ('warm_arid', 'tamu_agrilife'): 8,
+    ('rgv', 'tamu_agrilife'): 13,
+    ('low_desert_az', 'uariz_ext'): 14,
+    ('warm_arid', 'nmsu_donaana_mg'): 17,
+    ('ca_desert', 'uariz_ext'): 21,
+    ('warm_arid', 'nmsu_chart'): 24,
+}
+
+
 def test_applied_reprice_shows_hunt_13_and_24_resolved(applied):
     """End-to-end: the re-price tool, run on the applied state, must agree that the campaign
-    moved. If the promote and the measurement tool disagreed, one of them is lying."""
-    _raw, data, _out = applied
+    moved. If the promote and the measurement tool disagreed, one of them is lying.
+
+    THE MEASUREMENT IS SCOPED (PLA-162): the reprice tool's tables are live module state, so a
+    row filed by a later campaign would flip this test red over an applied fixture that never
+    moved. tables_as_of evaluates them AS OF the applied state; tables_frozen pins the hunt
+    roster. The watermelon absence row (filed by the LATER AZ1005 follow-up) is dropped by the
+    filter -- which is exactly the ordering fact the exception below asserts by name."""
+    raw, data, _out = applied
+    assert hashlib.sha256(raw).hexdigest() == APPLIED_SHA, (
+        'the apply path no longer reproduces the historical closeout state')
     import campaign_c_reprice as R
+    import promote_fixture as PF
     crops = {c['slug']: c for c in data['crops']}
-    nodes = R.collect(data, crops)
-    dec = {(n[3], n[1], n[2]): n[7] for n in nodes}
+    with PF.tables_as_of(APPLIED_SHA, R, {'ANCHOR_FINDING': 19, 'ABSENCE_FINDING': 6,
+                                          'MODELED_FINDING': 14}), \
+            PF.tables_frozen(R, {'HUNTS': REPRICE_HUNTS_AT_APPLIED}):
+        nodes = R.collect(data, crops)
+        dec = {(n[3], n[1], n[2]): n[7] for n in nodes}
     assert ('carrot', 'warm_arid', 'nmsu_chart') not in dec
     # garlic's harvest arms stay bare BY DESIGN, and the promote files the finding that
     # adjudicates them, so the decision reads DECLARED-ABSENCE rather than disappearing.
     assert dec[('garlic', 'rgv', 'tamu_agrilife')] == 'DECLARED-ABSENCE'
-    # Everything this promote adjudicates must be closed. watermelon is the one exception and it
-    # is an ORDERING fact, not a gap: its low_desert_az verdict was filed by the LATER AZ1005
-    # follow-up, so against this promote's own fixture the reprice table correctly reports that
-    # the finding it names is not yet on the crop. Asserting the exception by name keeps the
-    # check honest -- a genuinely missed decision would still fail here.
+    # Everything this promote adjudicates must be closed. watermelon is the one exception and
+    # it is an ORDERING fact, not a gap: its low_desert_az ABSENCE verdict was filed by the
+    # LATER AZ1005 follow-up, so the as_of filter drops that table row here and the decision
+    # reads by its era-true record -- the modeled-calendars finding already on the crop. (The
+    # pre-PLA-162 version of this test asserted watermelon OPEN, which was the FUTURE table's
+    # absence row evaluated over the old state claiming a finding not yet filed -- exactly the
+    # anachronism the scoping removes.) Asserting the exception by name keeps the check honest;
+    # a genuinely missed decision would still surface as OPEN here.
     still_open = {k[0] for k, v in dec.items() if v == 'OPEN' and k[0] not in R.CITRUS}
-    assert still_open == {'watermelon'}, still_open
+    assert still_open == set(), still_open
+    assert dec[('watermelon', 'low_desert_az', 'uariz_ext')] == 'MODELED-ONLY'
     # 30 non-citrus decisions before; hunt 24's carrot and hunt 17's two tomatoes stop being
     # bare hosts entirely once repointed, so the campaign loses three decisions, not one.
     assert ('beefsteak-tomato', 'warm_arid', 'nmsu_donaana_mg') not in dec

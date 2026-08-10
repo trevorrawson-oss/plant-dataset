@@ -123,6 +123,8 @@ def main(tmp):
     # blast radius
     bb = {c['slug']: c for c in before['crops']}
     aa = {c['slug']: c for c in after['crops']}
+    # key-set first: iterating bb alone cannot see a crop APPENDED by the promote (PLA-162)
+    check('no crop appeared or vanished', set(bb) == set(aa), str(sorted(set(bb) ^ set(aa))))
     changed = sorted(s for s in bb if bb[s] != aa[s])
     check('exactly one crop changed', changed == ['apple'], changed)
     siblings = ['fig', 'mulberry', 'nectarine', 'pawpaw', 'peach',

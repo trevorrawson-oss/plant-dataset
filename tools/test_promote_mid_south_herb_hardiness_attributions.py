@@ -154,7 +154,10 @@ class TestCleanRun(unittest.TestCase):
         after = load(path)
         ba = {c['slug']: c for c in before['crops']}
         aa = {c['slug']: c for c in after['crops']}
+        # key-set first: iterating ba alone cannot see a crop APPENDED by the promote (PLA-162)
+        self.assertEqual(set(ba), set(aa), 'a crop appeared or vanished')
         self.assertEqual(sorted(s for s in ba if ba[s] != aa[s]), sorted(CROPS))
+        self.assertEqual(set(before), set(after), 'a top-level key appeared or vanished')
         for k in before:
             if k != 'crops':
                 self.assertEqual(before[k], after[k], f'top-level {k} moved')

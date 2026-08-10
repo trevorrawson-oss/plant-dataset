@@ -45,10 +45,18 @@ def check_raises(name, fn):
 # it yields no test names at all, so nobody can see what stopped running.)
 _missing = [p for p in (STRAWBERRY_VARIETIES, HERO_BACKFILL) if not os.path.exists(p)]
 if _missing:
-    print(f"SKIP build_berry_pilot_patch: staged inputs are gone ({', '.join(_missing)}).")
-    print("  The berry variety pilot shipped 2026-07-16; its /private/tmp staging was "
-          "session-scoped. NOT COVERED: the real-batch op-count/shape assertions below. "
-          "Restore the staged inputs to re-enable.")
+    # sys.exit(0) here KILLED pytest's whole collection (PLA-162): under pytest a module-level
+    # SystemExit is an INTERNALERROR that stops every suite after this one alphabetically, so
+    # the exit read as "skip one file" while actually running zero of the rest. Skip properly
+    # when under pytest; keep the plain exit for direct `python3` runs.
+    _msg = (f"SKIP build_berry_pilot_patch: staged inputs are gone ({', '.join(_missing)}). "
+            "The berry variety pilot shipped 2026-07-16; its /private/tmp staging was "
+            "session-scoped. NOT COVERED: the real-batch op-count/shape assertions below. "
+            "Restore the staged inputs to re-enable.")
+    print(_msg)
+    if 'pytest' in sys.modules:
+        import pytest
+        pytest.skip(_msg, allow_module_level=True)
     sys.exit(0)
 
 raw = open(CANON, "rb").read()

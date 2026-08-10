@@ -13,6 +13,7 @@ NEVER mutates canonical -- every mutation is applied to a deepcopy.
 import copy
 import json
 import os
+import re
 import sys
 
 import pytest
@@ -21,6 +22,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'tools'))
 
 import campaign_c_reprice as R  # noqa: E402
+import promote_fixture  # noqa: E402
 
 
 # PINNED to `6b2dcb8e`, the canonical at campaign C's close, where this suite's published numbers
@@ -39,13 +41,58 @@ BASE_SHA = '6b2dcb8ed4f51c833fa4d44845b15e7f609079a24a544af025c067dfca45d4db'
 
 @pytest.fixture(scope='module')
 def data():
-    import promote_fixture
     return json.loads(promote_fixture.pre_state(BASE_SHA))
 
 
 @pytest.fixture(scope='module')
 def crops(data):
     return {c['slug']: c for c in data['crops']}
+
+
+@pytest.fixture(scope='module')
+def live():
+    """Current canonical -- the table presence tests are a claim about the CURRENT dataset."""
+    with open(R.CANONICAL, encoding='utf-8') as fh:
+        return {c['slug']: c for c in json.load(fh)['crops']}
+
+
+# Evaluate the adjudication tables AS THEY WERE at `6b2dcb8e`, for the whole suite.
+#
+# THE PIN PROTECTS THE DATA BUT NOT THE MEASUREMENT (PLA-162): the tables are applied at READ
+# time, so a row filed by a later campaign changes what this suite computes over a fixture that
+# never moved. Measured 2026-08-10 before this fix: one phantom ANCHOR_FINDING row turned two
+# assertions red; one added HUNTS pair turned three shape assertions red. All three tables are
+# 100% pin-era today, so the kept counts equal the live counts -- they will stop being equal
+# the first time a later session files a row, and that is exactly when the filter starts
+# earning its keep. The presence tests below run against LIVE canonical over the FULL tables
+# (via `_tables`), so a stale live row is caught there -- the gap the audit flagged, where this
+# suite's presence check read the pinned fixture and could never see live drift.
+_tables = promote_fixture.as_of(
+    BASE_SHA, R, ANCHOR_FINDING=19, ABSENCE_FINDING=7, MODELED_FINDING=14)
+
+# The hunt roster and the bare-host regex are RULES, not rows -- nothing in the fixture can
+# scope them, so they are frozen BY VALUE as of `6b2dcb8e`. Campaign C closed on exactly these
+# seven hunts; test_live_hunt_roster_matches_the_frozen_pin is the unpinned tripwire.
+HUNTS_AT_PIN = {
+    ('warm_arid', 'nmsu_ext'): 7,
+    ('warm_arid', 'tamu_agrilife'): 8,
+    ('rgv', 'tamu_agrilife'): 13,
+    ('low_desert_az', 'uariz_ext'): 14,
+    ('warm_arid', 'nmsu_donaana_mg'): 17,
+    ('ca_desert', 'uariz_ext'): 21,
+    ('warm_arid', 'nmsu_chart'): 24,
+}
+_rules = promote_fixture.frozen(
+    R, HUNTS=HUNTS_AT_PIN, BARE=re.compile(r'https?://[^/]+/?$'))
+
+
+def test_live_hunt_roster_matches_the_frozen_pin(_rules):
+    """The unpinned equality tripwire. `_rules` holds the LIVE values saved before freezing --
+    comparing the module attribute here would be a tautology. A deliberate roster or BARE
+    change fails THIS test, once and loudly, instead of silently reshaping every pinned count
+    above -- update this expectation only with the change spelled out in the diff."""
+    assert _rules['HUNTS'] == HUNTS_AT_PIN
+    assert _rules['BARE'].pattern == r'https?://[^/]+/?$'
 
 
 def verdicts(data):
@@ -218,19 +265,30 @@ def test_MUTATION_adding_a_competing_id_flips_acorn_to_open(data):
 # 3. Presence. A table asserting an adjudication the data no longer carries must not fire.
 # --------------------------------------------------------------------------------------------
 
-def test_every_anchor_table_entry_is_present_and_names_its_source(crops):
-    """COVERAGE, not overlap: every row must hold, so a deleted finding fails the suite."""
-    for (reg, slug, sid), fid in sorted(R.ANCHOR_FINDING.items()):
-        f = R.finding(crops[slug], fid)
+def test_every_anchor_table_entry_is_present_and_names_its_source(live, _tables):
+    """COVERAGE, not overlap: every row must hold, so a deleted finding fails the suite.
+
+    Validated against LIVE canonical over the FULL table -- the audit's finding was that this
+    check read the pinned fixture, where a live row going stale is structurally invisible. The
+    shape and count tests stay pinned to `6b2dcb8e`; this one is the claim about now."""
+    for (reg, slug, sid), fid in sorted(_tables['ANCHOR_FINDING'].items()):
+        f = R.finding(live[slug], fid)
         assert f is not None, '%s is NOT on %s' % (fid, slug)
-        matched, mode, why = R.names_source(crops[slug], f, sid)
+        matched, mode, why = R.names_source(live[slug], f, sid)
         assert matched, '%s does not name %s on %s (%s)' % (fid, sid, slug, why)
         assert mode in ('STRICT', 'ALIAS')
 
 
-def test_every_modeled_table_entry_is_present(crops):
-    for slug, fid in sorted(R.MODELED_FINDING.items()):
-        assert R.finding(crops[slug], fid) is not None, '%s is NOT on %s' % (fid, slug)
+def test_every_modeled_table_entry_is_present(live, _tables):
+    for slug, fid in sorted(_tables['MODELED_FINDING'].items()):
+        assert R.finding(live[slug], fid) is not None, '%s is NOT on %s' % (fid, slug)
+
+
+def test_every_absence_table_entry_is_present(live, _tables):
+    """ABSENCE_FINDING had no presence check at all -- test_promote_campaign_c_closeout pins
+    the rows it asserted at promote time, but nothing watched the live table for drift."""
+    for (_reg, slug), fid in sorted(_tables['ABSENCE_FINDING'].items()):
+        assert R.finding(live[slug], fid) is not None, '%s is NOT on %s' % (fid, slug)
 
 
 def test_anchor_table_has_no_phantom_rows(data, crops):

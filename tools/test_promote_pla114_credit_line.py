@@ -11,7 +11,6 @@ dropped: everything before " (Sources:" must still be byte-identical to `6b2dcb8
 thirteen strings stay whole-string identical. A guard that simply stopped checking this field
 would hand the next pass exactly the licence the pin exists to deny.
 """
-import hashlib
 import json
 import os
 import sys
@@ -34,6 +33,28 @@ NEW_TAIL = (' (Sources: cold-damage temperatures UC ANR 8100 and UF/IFAS HS1153;
 
 F1 = 'lemon_cold_threshold_was_miscredited_now_uc8100'
 CORRECTION_TOKEN = '[CORRECTION 2026-08-06:'
+
+# The fourteen conflation paths FROZEN BY VALUE as of this promote (PLA-162). This suite used to
+# parametrize over `prev.CONFLATION_PATHS` read live at import, so an edit to the lemon_cold
+# suite would silently reshape THIS suite's coverage. The frozen copy is what the parametrize
+# below iterates; test_conflation_paths_match_the_live_pin is the tripwire that goes red -- once,
+# loudly -- if the live list ever drifts from it.
+CONFLATION_PATHS_AT_PIN = [
+    ('crop', 'hardiness_notes_seasoned'),
+    ('fd', 2, 'what_happened_seasoned'),
+    ('fd', 2, 'what_happened_beginner'),
+    ('region', 'northern_tier', 'cold_basis_seasoned'),
+    ('zone', 'northern_tier', '3', 'frost_risk_note_seasoned'),
+    ('zone', 'northern_tier', '4', 'frost_risk_note_seasoned'),
+    ('zone', 'northern_tier', '5', 'frost_risk_note_seasoned'),
+    ('zone', 'northern_tier', '6', 'frost_risk_note_seasoned'),
+    ('zone', 'northern_tier', '7', 'frost_risk_note_seasoned'),
+    ('zone', 'se_gulf', '9', 'frost_risk_note_seasoned'),
+    ('zone', 'se_gulf', '10', 'frost_risk_note_seasoned'),
+    ('region', 'rgv', 'cold_basis_seasoned'),
+    ('region', 'pnw', 'cold_basis_seasoned'),
+    ('zone', 'pnw', '8', 'suitability_note_seasoned'),
+]
 
 
 def _crop(data, slug='lemon'):
@@ -125,16 +146,19 @@ def test_the_claim_text_still_carries_the_stage_aware_wording(post):
     assert 'a hard freeze can kill an unprotected young tree to the ground' in claim
 
 
-@pytest.mark.parametrize('path', [p for p in prev.CONFLATION_PATHS
+@pytest.mark.parametrize('path', [p for p in CONFLATION_PATHS_AT_PIN
                                   if p != ('crop', 'hardiness_notes_seasoned')],
                          ids=lambda p: '.'.join(map(str, p)))
 def test_the_other_THIRTEEN_strings_are_whole_string_identical(original, post, path):
     assert prev._resolve(_crop(post), path) == prev._resolve(_crop(original), path)
 
 
-def test_exactly_thirteen_others_are_covered():
-    """Non-vacuity: if the exclusion filter silently emptied, the parametrize above would vanish."""
-    others = [p for p in prev.CONFLATION_PATHS if p != ('crop', 'hardiness_notes_seasoned')]
+def test_conflation_paths_match_the_live_pin_in_lemon_cold():
+    """The unpinned equality tripwire for the frozen list, and the non-vacuity check for the
+    exclusion filter above in one place: the live list must equal the frozen copy, and the
+    frozen copy must yield exactly thirteen others."""
+    assert prev.CONFLATION_PATHS == CONFLATION_PATHS_AT_PIN
+    others = [p for p in CONFLATION_PATHS_AT_PIN if p != ('crop', 'hardiness_notes_seasoned')]
     assert len(others) == 13, others
 
 
@@ -186,7 +210,10 @@ def test_only_two_strings_moved_on_lemon(pre, post):
     before, after = {}, {}
     strings(_crop(pre), before)
     strings(_crop(post), after)
-    moved = {k for k in before if before.get(k) != after.get(k)}
+    # union of both key sets: `for k in before` alone cannot see a string ADDED in post, which
+    # falsifies the docstring's COVERAGE claim ([[blast-radius-guards-iterate-pre-only]],
+    # measured green on an added string 2026-08-10)
+    moved = {k for k in set(before) | set(after) if before.get(k) != after.get(k)}
     assert moved == {'.hardiness_notes_seasoned',
                      '.verification_status.open_findings[4].summary'}, sorted(moved)
 
@@ -194,6 +221,10 @@ def test_only_two_strings_moved_on_lemon(pre, post):
 def test_no_other_crop_changed(pre, post):
     pre_by = {c['slug']: c for c in pre['crops']}
     post_by = {c['slug']: c for c in post['crops']}
+    # key-set equality FIRST -- a crop APPENDED in post was invisible to the pre-only iteration
+    # (measured with a lime clone as `ghost-crop`, 2026-08-10). lemon_cold had the line; this
+    # file was written alongside and did not ([[blast-radius-guards-iterate-pre-only]]).
+    assert set(pre_by) == set(post_by), sorted(set(pre_by) ^ set(post_by))
     changed = [s for s in pre_by
                if json.dumps(pre_by[s], ensure_ascii=False, sort_keys=True)
                != json.dumps(post_by[s], ensure_ascii=False, sort_keys=True)]
@@ -201,21 +232,19 @@ def test_no_other_crop_changed(pre, post):
 
 
 def test_top_level_is_untouched(pre, post):
+    # key-set first: iterating pre alone cannot see a top-level key ADDED in post (PLA-162)
+    assert set(pre) == set(post), sorted(set(pre) ^ set(post))
     for key in pre:
         if key == 'crops':
             continue
         assert json.dumps(pre[key], sort_keys=True) == json.dumps(post[key], sort_keys=True), key
 
 
-def test_canonical_is_still_compact():
-    raw = promote_fixture.pre_state(POST_SHA)
-    assert b'\n' not in raw and not raw.endswith(b'\n')
-
-
-def test_the_promote_actually_ran():
-    got = hashlib.sha256(promote_fixture.pre_state(POST_SHA)).hexdigest()
-    assert got != BASE_SHA, 'the post state is the pre-state'
-
+# `test_canonical_is_still_compact` and `test_the_promote_actually_ran` were DELETED here
+# (PLA-162): once `post` was repointed from live canonical to the pinned POST_SHA, both reduced
+# to comparing two source literals -- pre_state() hash-verifies before returning, so neither
+# could ever fail. The promote DID run is proven by test_the_pre_state_carried_the_miscredit;
+# live-canonical compactness is asserted for real in test_canonical_live_hygiene.py.
 
 if __name__ == '__main__':
     raise SystemExit(pytest.main([__file__, '-q']))

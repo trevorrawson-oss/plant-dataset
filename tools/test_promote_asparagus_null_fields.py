@@ -96,7 +96,10 @@ class TestCleanRun(unittest.TestCase):
             after = json.load(fh)
         b = {c['slug']: c for c in before['crops']}
         a = {c['slug']: c for c in after['crops']}
+        # key-set first: iterating b alone cannot see a crop APPENDED by the promote (PLA-162)
+        self.assertEqual(set(b), set(a), 'a crop appeared or vanished')
         self.assertEqual(sorted(s for s in b if b[s] != a[s]), ['asparagus'])
+        self.assertEqual(set(before), set(after), 'a top-level key appeared or vanished')
         for k in before:
             if k != 'crops':
                 self.assertEqual(before[k], after[k])

@@ -44,6 +44,63 @@ EXPECTED_STRINGS = 106
 # pawpaw is marginal here" is CORRECT comparative prose on a non-lifted row.
 EXPECTED_CROPS = 15
 
+# The rule-tables FROZEN BY VALUE as of the measurement (PLA-162). RULES, SELF_REF and
+# COMPARATIVE are RULES, not rows: nothing in the fixture can scope them, and they are applied
+# at run time, so editing the live module changes what this suite measures over a fixture that
+# never moved. Measured 2026-08-10 before the freeze: pruning one 'apparently dead' RULES pair
+# (every pair looks dead against clean live canonical) turned TWELVE pinned tests red. The
+# pinned classes below measure with these frozen copies via PinnedRulesCase;
+# TestShippedState.test_live_rule_tables_match_the_frozen_pin is the unpinned tripwire.
+RULES_AT_PIN = [
+    ('Zone 11 in tropical Hawaii', 'Tropical Hawaii'),
+    ('Tropical zone 11 in Hawaii', 'Tropical Hawaii'),
+    ('Zone 11 tropical Hawaii', 'Tropical Hawaii'),
+    ('Zone 11 in Hawaii', 'Tropical Hawaii'),
+    ('Tropical zone 11', 'Tropical Hawaii'),
+    ('Zone 11 Hawaii', 'Tropical Hawaii'),
+    ('Zone 10 on the South Coast', 'The South Coast'),
+    ('Zone 10 on the south coast', 'The south coast'),
+    ('The warmest coastal zone 10', 'The warmest coastal ground'),
+    ('The immediate coast in zone 10', 'The immediate coast'),
+    ('South-coast zone 10', 'The south coast'),
+    ('Zone 10 South Coast', 'The South Coast'),
+    ('Zone 10 south coast', 'The south coast'),
+    ('Zone 10 in the California desert', 'The California desert'),
+    ('The hottest desert zone 10', 'The hottest desert'),
+    ('Zone 10 in the low desert', 'The low desert'),
+    ('Zone 10 in the desert', 'The desert'),
+    ('Zone 10 low desert', 'The low desert'),
+    ('Zone 10 desert', 'The desert'),
+    ('Zone 9 in the Arizona low desert', 'The Arizona low desert'),
+    ('The zone 9 Arizona low desert', 'The Arizona low desert'),
+    ('Zone 9 in the Arizona desert', 'The Arizona desert'),
+    ('Zone 9 Arizona low desert', 'The Arizona low desert'),
+    ('Zone 9 across the Gulf region', 'The Gulf coast'),
+    ('Zone 9 across the Gulf', 'The Gulf coast'),
+    ('Zone 9 in the Southeast', 'The Gulf coast'),
+    ('Zone 9 on the Gulf', 'The Gulf coast'),
+    ('Zone 9 Gulf', 'The Gulf coast'),
+    ('Zone 9 grows', 'The Gulf coast grows'),
+    ('Low-desert zone 10', 'The low desert'),
+    ('Low-desert zone 9', 'The low desert'),
+    ('Thyme can persist in zone 9', 'Thyme can persist here'),
+    ('Thyme takes zone 10 heat', 'Thyme takes the heat'),
+    ("Zone 10's mild", 'The mild'),
+    ('In zone 10, sage', 'Sage'),
+    ('In zone 11, sage', 'Sage'),
+    ('In zone 9, sage', 'Sage'),
+    ('In zone 9, heat and humidity', 'Heat and humidity'),
+]
+RULES_AT_PIN.sort(key=lambda r: -len(r[0]))  # mirror the module's longest-first ordering
+
+import re  # noqa: E402
+
+SELF_REF_AT_PIN = re.compile(
+    r'(?:^|(?<=[.;] ))(?:[A-Z][a-z-]+(?:[ -][a-z]+){0,3} )?[Zz]ones? (\d{1,2})\b'
+    r'(?![^.]*\b(?:hardy|rated|than|compared|colder|warmer|below|above|south of|north of)\b)'
+    r'[^.]*?\b(?:is|are|sits|fruits|banks|has|have|does|gets|stays|runs|ripens|grows)\b')
+COMPARATIVE_AT_PIN = re.compile(r'(?i)^\s*(?:as in|like|unlike|compared with|versus)\b')
+
 
 def load():
     """The pinned pre-state. Hash-verified by promote_fixture; an unknown SHA raises."""
@@ -55,6 +112,21 @@ def load_live():
         return json.load(fh)
 
 
+class PinnedRulesCase(unittest.TestCase):
+    """Base for the pinned-measurement classes: evaluate the fixture through the rule-tables
+    AS OF the measurement, restored after every test so TestShippedState still sees live."""
+
+    def setUp(self):
+        ctx = promote_fixture.tables_frozen(dz, {
+            'RULES': RULES_AT_PIN,
+            'SELF_REF': SELF_REF_AT_PIN,
+            'COMPARATIVE': COMPARATIVE_AT_PIN,
+        })
+        ctx.__enter__()
+        self.addCleanup(ctx.__exit__, None, None, None)
+        self.data = load()
+
+
 class TestShippedState(unittest.TestCase):
     """The pass has landed, so live canonical must stay clean. This is the regression guard
     the pinned-fixture tests above cannot provide -- they describe the transformation, this
@@ -63,10 +135,17 @@ class TestShippedState(unittest.TestCase):
     def test_live_canonical_has_no_lifted_row_naming_the_wrong_zone(self):
         self.assertEqual(dz.find_defects(load_live()), [])
 
+    def test_live_rule_tables_match_the_frozen_pin(self):
+        """The unpinned equality tripwire. This class does NOT inherit PinnedRulesCase, so
+        dz.* here is the live module state. A deliberate rule change fails THIS test, once
+        and loudly, instead of silently re-shaping the pinned measurement -- update the
+        frozen copies only with the change spelled out in the diff."""
+        self.assertEqual(dz.RULES, RULES_AT_PIN)
+        self.assertEqual(dz.SELF_REF.pattern, SELF_REF_AT_PIN.pattern)
+        self.assertEqual(dz.COMPARATIVE.pattern, COMPARATIVE_AT_PIN.pattern)
 
-class TestDetection(unittest.TestCase):
-    def setUp(self):
-        self.data = load()
+
+class TestDetection(PinnedRulesCase):
 
     def test_finds_the_measured_defect_set(self):
         d = dz.find_defects(self.data)
@@ -115,9 +194,7 @@ class TestDetection(unittest.TestCase):
             self.assertNotEqual(str(r.named_zone), str(r.zone))
 
 
-class TestRules(unittest.TestCase):
-    def setUp(self):
-        self.data = load()
+class TestRules(PinnedRulesCase):
 
     def test_every_defect_string_is_covered_by_a_rule(self):
         """No silent skips: a string we detect but cannot rewrite is a failure, not a pass."""
@@ -165,9 +242,7 @@ class TestRules(unittest.TestCase):
             self.assertNotRegex(new, r'(?i)\bzones?\s*\d')
 
 
-class TestApply(unittest.TestCase):
-    def setUp(self):
-        self.data = load()
+class TestApply(PinnedRulesCase):
 
     def test_apply_clears_every_defect(self):
         after = dz.apply(copy.deepcopy(self.data))
@@ -232,11 +307,9 @@ class TestApply(unittest.TestCase):
                         self.assertEqual(v, new[k], f'{crop["slug"]}/{region}/z{zone}.{k}')
 
 
-class TestAdversarial(unittest.TestCase):
+class TestAdversarial(PinnedRulesCase):
     """CLAUDE.md: a gate is not done until a defect has been sneaked at it."""
 
-    def setUp(self):
-        self.data = load()
 
     def test_detects_an_injected_wrong_zone_on_a_clean_lifted_cell(self):
         data = copy.deepcopy(self.data)

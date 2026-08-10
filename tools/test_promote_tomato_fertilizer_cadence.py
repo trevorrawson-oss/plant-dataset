@@ -74,6 +74,8 @@ def main():
     # no collateral
     bb = {c['slug']: c for c in pre['crops']}
     aa = {c['slug']: c for c in post['crops']}
+    # key-set first: iterating bb alone cannot see a crop APPENDED by the promote (PLA-162)
+    check('no crop appeared or vanished', set(bb) == set(aa), str(sorted(set(bb) ^ set(aa))))
     check('exactly the 5 tomatoes changed',
           sorted(s for s in bb if bb[s] != aa[s]) == sorted(P.SLUGS))
     check('no other tomato field moved',
