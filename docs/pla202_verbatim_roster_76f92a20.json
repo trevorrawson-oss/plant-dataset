@@ -1,0 +1,3874 @@
+[
+ {
+  "slug": "cherry-tomato",
+  "prose": 404,
+  "compared": 79,
+  "total": 94,
+  "hard": 5,
+  "borderline": 85,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "diseases[0].symptoms_beginner",
+    "url": "https://www.uaex.uada.edu/yard-garden/vegetables/tomato-gardening.aspx",
+    "shared": "starts at the bottom of the plant and"
+   },
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/publications/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "container_notes.watering_adjustment_beginner",
+    "url": "https://pender.ces.ncsu.edu/2024/03/what-causes-tomatoes-to-crack/",
+    "shared": "the most common cause of blossom end rot"
+   },
+   {
+    "path": "regions.hawaii_tropical.region_notes_seasoned",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+    "shared": "be grown throughout the year in most places"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/"
+   },
+   {
+    "reason": "FETCHFAIL URLError: <urlopen error [Errno 8] nodename nor s",
+    "url": "https://anr.ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=55606"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/tomato-in-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.okstate.edu/fact-sheets/growing-tomatoes-in-the-home-garden-2"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.unh.edu/resource/tomatoes-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://store.extension.iastate.edu/product/14425"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes"
+   }
+  ]
+ },
+ {
+  "slug": "beefsteak-tomato",
+  "prose": 386,
+  "compared": 70,
+  "total": 82,
+  "hard": 2,
+  "borderline": 79,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "failure_diagnostics[3].next_season_tip_beginner",
+    "url": "https://extensionpublications.unl.edu/assets/html/g1650/build/g1650.htm",
+    "shared": "need about 1 to 2 inches of water"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/tomato-in-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.unh.edu/resource/tomatoes-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://store.extension.iastate.edu/product/14425"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes"
+   }
+  ]
+ },
+ {
+  "slug": "roma-tomato",
+  "prose": 412,
+  "compared": 77,
+  "total": 92,
+  "hard": 5,
+  "borderline": 90,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "diseases[0].symptoms_beginner",
+    "url": "https://www.uaex.uada.edu/yard-garden/vegetables/tomato-gardening.aspx",
+    "shared": "starts at the bottom of the plant and"
+   },
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/publications/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "container_notes.watering_adjustment_beginner",
+    "url": "https://pender.ces.ncsu.edu/2024/03/what-causes-tomatoes-to-crack/",
+    "shared": "the most common cause of blossom end rot"
+   },
+   {
+    "path": "regions.hawaii_tropical.region_notes_seasoned",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+    "shared": "be grown throughout the year in most places"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/"
+   },
+   {
+    "reason": "FETCHFAIL URLError: <urlopen error [Errno 8] nodename nor s",
+    "url": "https://anr.ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=55606"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/tomato-in-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.okstate.edu/fact-sheets/growing-tomatoes-in-the-home-garden-2"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.unh.edu/resource/tomatoes-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://store.extension.iastate.edu/product/14425"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes"
+   }
+  ]
+ },
+ {
+  "slug": "bell-pepper",
+  "prose": 369,
+  "compared": 30,
+  "total": 30,
+  "hard": 4,
+  "borderline": 28,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "0 0 per 1000 square feet or 300"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-peppers",
+    "shared": "apart in rows 30 to 36 inches apart"
+   },
+   {
+    "path": "growth_stages[2].user_action_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-peppers",
+    "shared": "apart in rows 30 to 36 inches apart"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "jalapeno",
+  "prose": 362,
+  "compared": 33,
+  "total": 33,
+  "hard": 5,
+  "borderline": 32,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "15 5 0 0 per 1000 square feet"
+   },
+   {
+    "path": "pests[2].organic_treatment_seasoned",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/pepper-maggot",
+    "shared": "because eggs and larvae are protected inside the"
+   },
+   {
+    "path": "pests[2].prevention_seasoned",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/pepper-maggot",
+    "shared": "from last year s crop control solanaceous weeds"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "sources_summary.primary[4].name",
+    "url": "https://content.ces.ncsu.edu/insect-and-related-pests-of-vegetables/pests-of-pepper",
+    "shared": "insect and related pests of vegetables pests of"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "slicing-cucumber",
+  "prose": 367,
+  "compared": 26,
+  "total": 26,
+  "hard": 6,
+  "borderline": 23,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "tips_by_stage.flowering[1].text_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+    "shared": "hand pollinate in the morning pick a male"
+   },
+   {
+    "path": "tips_by_stage.flowering[1].text_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+    "shared": "hand pollinate in the morning pick a male"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "kale",
+  "prose": 371,
+  "compared": 39,
+  "total": 40,
+  "hard": 0,
+  "borderline": 18,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   }
+  ]
+ },
+ {
+  "slug": "spinach",
+  "prose": 385,
+  "compared": 36,
+  "total": 40,
+  "hard": 4,
+  "borderline": 8,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "start_method.notes_beginner",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.northern_tier.resolved_by_zone.5.zone_notes",
+    "url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+    "shared": "as soon as the soil is workable in"
+   },
+   {
+    "path": "regions.northern_tier.region_notes_beginner",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+    "shared": "as soon as the soil can be worked"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.msstate.edu/publications/fall-gardening-mississippi"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umaine.edu/gardening/manual/vegetables/spinach/"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/smart_gardening_for_leafy_greens"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/beet-and-spinach-leafminer"
+   }
+  ]
+ },
+ {
+  "slug": "carrot",
+  "prose": 343,
+  "compared": 40,
+  "total": 43,
+  "hard": 1,
+  "borderline": 20,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.nevada.region_notes_beginner",
+    "url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+    "shared": "august to mid september for a fall crop"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1005-2021.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://plantpath.ifas.ufl.edu/u-scout/carrot/root-knot.html"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   }
+  ]
+ },
+ {
+  "slug": "basil",
+  "prose": 282,
+  "compared": 25,
+  "total": 27,
+  "hard": 1,
+  "borderline": 17,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.warm_arid.region_notes_beginner",
+    "url": "https://agrilifeextension.tamu.edu/browse/featured-solutions/gardening-landscaping/fall-vegetable-gardening-guide-for-texas/",
+    "shared": "is one of the easiest herbs to grow"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.psu.edu/fusarium-wilt"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.psu.edu/herbs-in-the-garden"
+   }
+  ]
+ },
+ {
+  "slug": "zucchini-courgette",
+  "prose": 331,
+  "compared": 31,
+  "total": 39,
+  "hard": 6,
+  "borderline": 19,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "description_seasoned",
+    "url": "https://horticulture.oregonstate.edu/oregon-vegetables/squash-zucchini-and-summer",
+    "shared": "male and female flowers on the same plant"
+   },
+   {
+    "path": "description_seasoned",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/documents/squash-summer",
+    "shared": "male and female flowers on the same plant"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umd.edu/resource/cucumber-beetles-vegetables"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umn.edu/diseases/bacterial-wilt-cucurbits"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umn.edu/plant-diseases/powdery-mildew-vegetables"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 429: Too Many Requests",
+    "url": "https://extension.umn.edu/yard-and-garden-insects/striped-cucumber-beetles"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/bacterialwilt.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/squash-summer"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/squash"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/summer-squash"
+   }
+  ]
+ },
+ {
+  "slug": "green-beans-bush",
+  "prose": 349,
+  "compared": 24,
+  "total": 25,
+  "hard": 3,
+  "borderline": 35,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+    "shared": "10 10 at 3 pounds per 100 square"
+   },
+   {
+    "path": "diseases[1].symptoms_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "the veins on lower leaf surfaces turn black"
+   },
+   {
+    "path": "diseases[1].prevention_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "for two to three years avoid overhead watering"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/uploads/resources/pdfs/beans.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "sugar-snap-peas",
+  "prose": 362,
+  "compared": 35,
+  "total": 36,
+  "hard": 6,
+  "borderline": 11,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+    "shared": "the soil to a depth of 6 inches"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "shared": "moisten the soil to a depth of 6"
+   },
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "shared": "deep and 1 to 2 inches apart in"
+   },
+   {
+    "path": "start_method.notes_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "shared": "inches deep and 1 to 2 inches apart"
+   },
+   {
+    "path": "notifications[0].body_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "shared": "inches deep and 1 to 2 inches apart"
+   },
+   {
+    "path": "notifications[0].body_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "shared": "deep and 1 to 2 inches apart in"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources"
+   }
+  ]
+ },
+ {
+  "slug": "broccoli",
+  "prose": 375,
+  "compared": 29,
+  "total": 29,
+  "hard": 0,
+  "borderline": 12,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "garlic",
+  "prose": 337,
+  "compared": 21,
+  "total": 21,
+  "hard": 3,
+  "borderline": 14,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/garlic-in-the-garden",
+    "shared": "21 0 0 per 100 square feet in"
+   },
+   {
+    "path": "diseases[0].identification_seasoned",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/alliums-post-harvest-storage-diseases",
+    "shared": "about the size of a poppy seed form"
+   },
+   {
+    "path": "rotation.note_seasoned",
+    "url": "https://extension.umn.edu/disease-management/stem-and-bulb-nematode",
+    "shared": "rotation crops because they are poor hosts for"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "peach",
+  "prose": 518,
+  "compared": 31,
+  "total": 36,
+  "hard": 0,
+  "borderline": 30,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.okstate.edu/programs/gardening/grow-gardening-columns/grow-columns-2021/april-2-2021-pollination-needs-of-fruit.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umd.edu/resource/fruit-plant-pollination"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/peaches/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/"
+   }
+  ]
+ },
+ {
+  "slug": "apple",
+  "prose": 625,
+  "compared": 41,
+  "total": 45,
+  "hard": 0,
+  "borderline": 19,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/growing-apples-in-the-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 410: Gone",
+    "url": "https://edis.ifas.ufl.edu/publication/HS764"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://fruitsandnuts.ucdavis.edu/general-information/chilling-requirement"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "lemon",
+  "prose": 563,
+  "compared": 32,
+  "total": 33,
+  "hard": 3,
+  "borderline": 28,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "diseases[3].organic_treatment_seasoned",
+    "url": "https://ucanr.edu/sites/default/files/2013-12/178097.pdf",
+    "shared": "there is no cure for an infected tree"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://www.mastergardenersd.org/wp-content/uploads/2016/12/citrus-for-the-home-garden.pdf",
+    "shared": "apply enough water at each irrigation to wet"
+   },
+   {
+    "path": "sources_summary.primary[0].name",
+    "url": "https://edis.ifas.ufl.edu/publication/HS402",
+    "shared": "hs1153 hs402 lemon growing in the florida home"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets"
+   }
+  ]
+ },
+ {
+  "slug": "blueberry",
+  "prose": 584,
+  "compared": 43,
+  "total": 45,
+  "hard": 2,
+  "borderline": 40,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.schedule_by_stage[0].note_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/how-blueberry-plants-develop-grow",
+    "shared": "in the top foot of soil and are"
+   },
+   {
+    "path": "regions.mid_atlantic.region_notes_seasoned",
+    "url": "https://content.ces.ncsu.edu/growing-blueberries-in-the-home-garden",
+    "shared": "best choice for most soils below 2 500"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://content.ces.ncsu.edu/postharvest-cooling-and-handling-of-blueberries"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.oregonstate.edu/crop-production/berries/blueberry-bacterial-fungal-diseases"
+   }
+  ]
+ },
+ {
+  "slug": "heirloom-tomato",
+  "prose": 406,
+  "compared": 73,
+  "total": 84,
+  "hard": 2,
+  "borderline": 80,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "failure_diagnostics[3].next_season_tip_beginner",
+    "url": "https://extensionpublications.unl.edu/assets/html/g1650/build/g1650.htm",
+    "shared": "need about 1 to 2 inches of water"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/tomato-in-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.unh.edu/resource/tomatoes-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://store.extension.iastate.edu/product/14425"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes"
+   }
+  ]
+ },
+ {
+  "slug": "grape-tomato",
+  "prose": 415,
+  "compared": 80,
+  "total": 95,
+  "hard": 5,
+  "borderline": 87,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "diseases[0].symptoms_beginner",
+    "url": "https://www.uaex.uada.edu/yard-garden/vegetables/tomato-gardening.aspx",
+    "shared": "starts at the bottom of the plant and"
+   },
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "watering.amount_beginner",
+    "url": "https://extension.missouri.edu/publications/g6461",
+    "shared": "1 to 2 inches of water a week"
+   },
+   {
+    "path": "container_notes.watering_adjustment_beginner",
+    "url": "https://pender.ces.ncsu.edu/2024/03/what-causes-tomatoes-to-crack/",
+    "shared": "the most common cause of blossom end rot"
+   },
+   {
+    "path": "regions.hawaii_tropical.region_notes_seasoned",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-5.pdf",
+    "shared": "be grown throughout the year in most places"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/"
+   },
+   {
+    "reason": "FETCHFAIL URLError: <urlopen error [Errno 8] nodename nor s",
+    "url": "https://anr.ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=55606"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/tomato-in-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.okstate.edu/fact-sheets/growing-tomatoes-in-the-home-garden-2"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.unh.edu/resource/tomatoes-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://store.extension.iastate.edu/product/14425"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes"
+   }
+  ]
+ },
+ {
+  "slug": "banana-pepper",
+  "prose": 371,
+  "compared": 29,
+  "total": 29,
+  "hard": 4,
+  "borderline": 35,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1005/home-garden-peppers/",
+    "shared": "as 10 10 10 or 13 13 13"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "15 5 0 0 per 1000 square feet"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1005/home-garden-peppers/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "soil to a depth of at least 6"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "cayenne-pepper",
+  "prose": 372,
+  "compared": 38,
+  "total": 39,
+  "hard": 5,
+  "borderline": 33,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.npk_hint_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1005/",
+    "shared": "a complete fertilizer such as 10 10 10"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "of calcium nitrate 15 5 0 0 per"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1005/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "sources_summary.primary[9].name",
+    "url": "https://ucanr.edu/program/uc-master-gardener-program/seed-germination-temperature-and-timing",
+    "shared": "master gardener program seed germination temperature and timing"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan-fresh-hot-peppers"
+   }
+  ]
+ },
+ {
+  "slug": "habanero",
+  "prose": 367,
+  "compared": 35,
+  "total": 36,
+  "hard": 5,
+  "borderline": 27,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.npk_hint_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1005/",
+    "shared": "a complete fertilizer such as 10 10 10"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "of calcium nitrate 15 5 0 0 per"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1005/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/pepper/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "sources_summary.primary[7].name",
+    "url": "https://ucanr.edu/program/uc-master-gardener-program/seed-germination-temperature-and-timing",
+    "shared": "master gardener program seed germination temperature and timing"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan-fresh-hot-peppers"
+   }
+  ]
+ },
+ {
+  "slug": "pickling-cucumber",
+  "prose": 366,
+  "compared": 26,
+  "total": 27,
+  "hard": 8,
+  "borderline": 31,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "tips_by_stage.flowering[1].text_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+    "shared": "hand pollinate in the morning pick a male"
+   },
+   {
+    "path": "tips_by_stage.flowering[1].text_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+    "shared": "hand pollinate in the morning pick a male"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "pollinator_notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-cucumbers",
+    "shared": "male and female flowers on the same plant"
+   },
+   {
+    "path": "pollinator_notes_seasoned",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cucumbers-home-garden",
+    "shared": "male and female flowers on the same plant"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/seedless_cucumbers_are_a_different_pickle"
+   }
+  ]
+ },
+ {
+  "slug": "english-cucumber",
+  "prose": 365,
+  "compared": 28,
+  "total": 28,
+  "hard": 4,
+  "borderline": 22,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "yellow-summer-squash",
+  "prose": 332,
+  "compared": 33,
+  "total": 39,
+  "hard": 6,
+  "borderline": 19,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "description_seasoned",
+    "url": "https://horticulture.oregonstate.edu/oregon-vegetables/squash-zucchini-and-summer",
+    "shared": "male and female flowers on the same plant"
+   },
+   {
+    "path": "description_seasoned",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/documents/squash-summer",
+    "shared": "male and female flowers on the same plant"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umd.edu/resource/cucumber-beetles-vegetables"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umn.edu/plant-diseases/powdery-mildew-vegetables"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found.",
+    "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/bacterialwilt.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/squash-summer"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/squash"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/summer-squash"
+   }
+  ]
+ },
+ {
+  "slug": "butternut-squash",
+  "prose": 326,
+  "compared": 26,
+  "total": 26,
+  "hard": 0,
+  "borderline": 14,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "acorn-squash",
+  "prose": 330,
+  "compared": 26,
+  "total": 26,
+  "hard": 0,
+  "borderline": 14,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "spaghetti-squash",
+  "prose": 331,
+  "compared": 26,
+  "total": 26,
+  "hard": 0,
+  "borderline": 14,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "pole-beans",
+  "prose": 332,
+  "compared": 21,
+  "total": 22,
+  "hard": 4,
+  "borderline": 30,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+    "shared": "10 10 at 3 pounds per 100 square"
+   },
+   {
+    "path": "diseases[0].cause_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "survives the winter in the soil on plant"
+   },
+   {
+    "path": "diseases[1].symptoms_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "the veins on lower leaf surfaces turn black"
+   },
+   {
+    "path": "diseases[1].prevention_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "for two to three years avoid overhead watering"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/uploads/resources/pdfs/beans.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "snow-peas",
+  "prose": 362,
+  "compared": 35,
+  "total": 36,
+  "hard": 2,
+  "borderline": 14,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+    "shared": "the soil to a depth of 6 inches"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/garden-peas/",
+    "shared": "moisten the soil to a depth of 6"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources"
+   }
+  ]
+ },
+ {
+  "slug": "broad-beans-fava",
+  "prose": 376,
+  "compared": 33,
+  "total": 34,
+  "hard": 2,
+  "borderline": 20,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "diseases[1].prevention_seasoned",
+    "url": "https://www.rhs.org.uk/disease/broad-bean-chocolate-spot",
+    "shared": "destroy infected plant material at the end of"
+   },
+   {
+    "path": "sources_summary.primary[0].name",
+    "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/fava-beans",
+    "shared": "master gardeners of santa clara county fava beans"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources"
+   }
+  ]
+ },
+ {
+  "slug": "lettuce-leaf",
+  "prose": 359,
+  "compared": 87,
+  "total": 92,
+  "hard": 2,
+  "borderline": 66,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+    "shared": "a complete fertilizer such as 10 10 10"
+   },
+   {
+    "path": "start_method.notes_beginner",
+    "url": "https://extension.usu.edu/vegetableguide/leafy-greens/planting-spacing",
+    "shared": "when they are 3 to 4 weeks old"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://cales.arizona.edu/crop/vegetables/cropmgt/az1099.html"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 429: Too Many Requests",
+    "url": "https://extension.umn.edu/yard-and-garden-news/growing-cool-season-vegetables-minnesota"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/lettuce-romaine"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/cut_and_come_again_vegetables"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   }
+  ]
+ },
+ {
+  "slug": "swiss-chard",
+  "prose": 373,
+  "compared": 34,
+  "total": 41,
+  "hard": 0,
+  "borderline": 8,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.msstate.edu/publications/fall-gardening-mississippi"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umaine.edu/gardening/manual/vegetables/swiss-chard/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://plants.ces.ncsu.edu/plants/beta-vulgaris-subsp-cicla/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://pnwhandbooks.org/plantdisease/host-disease/swiss-chard-beta-vulgaris-cercospora-leaf-spot"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/smart_gardening_for_leafy_greens"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://www.mastergardenersd.org/swiss-chard/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/beet-and-spinach-leafminer"
+   }
+  ]
+ },
+ {
+  "slug": "arugula",
+  "prose": 371,
+  "compared": 27,
+  "total": 30,
+  "hard": 1,
+  "borderline": 11,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[2].symptoms_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "shared": "cabbage looper and diamondback moth larvae feed on"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.arizona.edu/vegetables"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications"
+   }
+  ]
+ },
+ {
+  "slug": "bok-choy",
+  "prose": 360,
+  "compared": 28,
+  "total": 29,
+  "hard": 5,
+  "borderline": 19,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "shared": "3 pounds per 100 square feet before planting"
+   },
+   {
+    "path": "pests[2].symptoms_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "shared": "cabbage looper and diamondback moth larvae feed on"
+   },
+   {
+    "path": "pests[2].symptoms_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+    "shared": "cabbage looper and diamondback moth larvae feed on"
+   },
+   {
+    "path": "growth_stages[1].user_action_beginner",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "shared": "more than a week of nights below 50\u00b0f"
+   },
+   {
+    "path": "regions.northern_tier.region_notes_beginner",
+    "url": "https://extension.umn.edu/vegetables/growing-chinese-cabbage-and-bok-choy",
+    "shared": "more than a week of nights below 50\u00b0f"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   }
+  ]
+ },
+ {
+  "slug": "radish",
+  "prose": 410,
+  "compared": 30,
+  "total": 30,
+  "hard": 3,
+  "borderline": 27,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "ph.note_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-radishes",
+    "shared": "as long as the soil is not compacted"
+   },
+   {
+    "path": "ph.note_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "shared": "ph of 6 0 to 6 5 for"
+   },
+   {
+    "path": "pests[1].cause_seasoned",
+    "url": "https://extension.umn.edu/yard-and-garden-insects/root-maggots",
+    "shared": "as pupae in the soil in spring the"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "potato",
+  "prose": 332,
+  "compared": 25,
+  "total": 25,
+  "hard": 4,
+  "borderline": 41,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-potatoes",
+    "shared": "deep in rows 30 to 36 inches apart"
+   },
+   {
+    "path": "storage.notes_seasoned",
+    "url": "https://yardandgarden.extension.iastate.edu/article/2020/03/planting-potatoes-home-garden",
+    "shared": "potatoes have thin skins and do not store"
+   },
+   {
+    "path": "notifications[0].body_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/potato/",
+    "shared": "cut side down 3 to 5 inches deep"
+   },
+   {
+    "path": "regions.mid_atlantic.region_notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-potatoes",
+    "shared": "plant seed pieces as soon as the soil"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "sweet-potato",
+  "prose": 295,
+  "compared": 14,
+  "total": 14,
+  "hard": 2,
+  "borderline": 16,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/sweet-potato/",
+    "shared": "4 pounds of 5 10 10 per 100"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/sweet-potato/",
+    "shared": "4 pounds of 5 10 10 per 100"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "cauliflower",
+  "prose": 367,
+  "compared": 35,
+  "total": 36,
+  "hard": 2,
+  "borderline": 10,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cauliflower/",
+    "shared": "10 10 at 3 pounds per 100 square"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cauliflower/",
+    "shared": "3 pounds per 100 square feet before planting"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/how_to_grow_cole_crops"
+   }
+  ]
+ },
+ {
+  "slug": "cabbage",
+  "prose": 362,
+  "compared": 37,
+  "total": 38,
+  "hard": 4,
+  "borderline": 8,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "shared": "10 10 at 3 pounds per 100 square"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-chinese-cabbage/",
+    "shared": "3 pounds per 100 square feet before planting"
+   },
+   {
+    "path": "regions.ca_interior.resolved_by_zone.8.zone_notes",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/cabbage/index.html",
+    "shared": "cabbage grows well in california from late fall"
+   },
+   {
+    "path": "regions.ca_interior.resolved_by_zone.9.zone_notes",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/cabbage/index.html",
+    "shared": "cabbage grows well in california from late fall"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/how_to_grow_cole_crops"
+   }
+  ]
+ },
+ {
+  "slug": "onion",
+  "prose": 412,
+  "compared": 30,
+  "total": 31,
+  "hard": 10,
+  "borderline": 22,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.northern_tier.region_notes_beginner",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.northern_tier.region_notes_beginner",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.resolved_by_zone.7.zone_notes",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.resolved_by_zone.7.zone_notes",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.region_notes_beginner",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.region_notes_beginner",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.zone_notes",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.zone_notes",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_south.region_notes_beginner",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_south.region_notes_beginner",
+    "url": "https://pubs.nmsu.edu/_circulars/CR457/",
+    "shared": "as soon as the ground can be worked"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/best-practices-for-onion-production"
+   }
+  ]
+ },
+ {
+  "slug": "spring-onion",
+  "prose": 342,
+  "compared": 13,
+  "total": 13,
+  "hard": 4,
+  "borderline": 9,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/onion-leek-shallot-garlic/",
+    "shared": "10 10 10 per 1 000 square feet"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/onion-leek-shallot-garlic/",
+    "shared": "10 10 10 per 1 000 square feet"
+   },
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-scallions-home-gardens",
+    "shared": "deep in rows 12 to 18 inches apart"
+   },
+   {
+    "path": "notifications[0].body_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-scallions-home-gardens",
+    "shared": "seed as soon as the soil is workable"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "sweet-corn",
+  "prose": 326,
+  "compared": 27,
+  "total": 27,
+  "hard": 1,
+  "borderline": 12,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "growth_stages[5].what_to_look_for_beginner",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/corn2003.pdf",
+    "shared": "within a week of pollination and the kernels"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "edamame",
+  "prose": 362,
+  "compared": 35,
+  "total": 39,
+  "hard": 3,
+  "borderline": 10,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "storage.freezer_seasoned",
+    "url": "https://extension.missouri.edu/news/edamame-an-easy-crop-to-introduce-to-your-vegetable-garden",
+    "shared": "in boiling water for three to four minutes"
+   },
+   {
+    "path": "storage.freezer_beginner",
+    "url": "https://extension.missouri.edu/news/edamame-an-easy-crop-to-introduce-to-your-vegetable-garden",
+    "shared": "in boiling water for three to four minutes"
+   },
+   {
+    "path": "yield_expectations.per_plant_seasoned",
+    "url": "https://extension.missouri.edu/news/edamame-an-easy-crop-to-introduce-to-your-vegetable-garden",
+    "shared": "more than enough pods for a family of"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umn.edu/soybean/soybean-pest-management"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umn.edu/vegetables"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.vegetables.cornell.edu/"
+   }
+  ]
+ },
+ {
+  "slug": "parsley",
+  "prose": 339,
+  "compared": 25,
+  "total": 29,
+  "hard": 2,
+  "borderline": 14,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-parsley",
+    "shared": "in warm water for up to 24 hours"
+   },
+   {
+    "path": "tips_by_stage.germination[0].text_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-parsley",
+    "shared": "in warm water for up to 24 hours"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az2061.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.arizona.edu/vegetables"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications"
+   }
+  ]
+ },
+ {
+  "slug": "cilantro-coriander",
+  "prose": 353,
+  "compared": 23,
+  "total": 26,
+  "hard": 0,
+  "borderline": 9,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.arizona.edu/vegetables"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications"
+   }
+  ]
+ },
+ {
+  "slug": "chives",
+  "prose": 353,
+  "compared": 32,
+  "total": 34,
+  "hard": 2,
+  "borderline": 28,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-chives",
+    "shared": "a 5 10 5 fertilizer once each spring"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-chives",
+    "shared": "the soil does not dry out around the"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/growing_chives_smart_gardening_tips_for_success"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications"
+   }
+  ]
+ },
+ {
+  "slug": "mint",
+  "prose": 328,
+  "compared": 25,
+  "total": 26,
+  "hard": 7,
+  "borderline": 10,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_description_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+    "shared": "1 inch of well composted organic matter per"
+   },
+   {
+    "path": "soil.preferred_description_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "shared": "moist or even damp soil in part shade"
+   },
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "shared": "mint seed does not come true to type"
+   },
+   {
+    "path": "varieties.note_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "shared": "mint seed does not come true to type"
+   },
+   {
+    "path": "failure_diagnostics[0].what_happened_beginner",
+    "url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+    "shared": "once established it is very hard to eradicate"
+   },
+   {
+    "path": "description_beginner",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
+    "shared": "is one of the easiest herbs to grow"
+   },
+   {
+    "path": "description_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "shared": "is one of the easiest herbs to grow"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources"
+   }
+  ]
+ },
+ {
+  "slug": "thyme",
+  "prose": 468,
+  "compared": 13,
+  "total": 13,
+  "hard": 2,
+  "borderline": 6,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/thyme",
+    "shared": "keep plants on the dry side to avoid"
+   },
+   {
+    "path": "watering.schedule_by_stage[1].note_seasoned",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/thyme",
+    "shared": "on the dry side to avoid root rot"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "dill",
+  "prose": 353,
+  "compared": 21,
+  "total": 24,
+  "hard": 2,
+  "borderline": 6,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+    "shared": "a week or two before the last hard"
+   },
+   {
+    "path": "tips_by_stage.germination[0].text_seasoned",
+    "url": "https://hort.extension.wisc.edu/articles/dill-anethum-graveolens/",
+    "shared": "a week or two before the last hard"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.arizona.edu/vegetables"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications"
+   }
+  ]
+ },
+ {
+  "slug": "rosemary",
+  "prose": 487,
+  "compared": 15,
+  "total": 16,
+  "hard": 2,
+  "borderline": 5,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[0].organic_treatment_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/herbs/",
+    "shared": "plants with a strong stream of water regularly"
+   },
+   {
+    "path": "varieties.recommended[1].note",
+    "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+    "shared": "3 to 4 feet tall with light blue"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/rosemary_the_herb_with_winter_problems"
+   }
+  ]
+ },
+ {
+  "slug": "oregano",
+  "prose": 486,
+  "compared": 13,
+  "total": 13,
+  "hard": 0,
+  "borderline": 22,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "sage",
+  "prose": 494,
+  "compared": 12,
+  "total": 12,
+  "hard": 0,
+  "borderline": 7,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "eggplant",
+  "prose": 347,
+  "compared": 29,
+  "total": 29,
+  "hard": 3,
+  "borderline": 28,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/eggplant/",
+    "shared": "of calcium nitrate 15 5 0 0 per"
+   },
+   {
+    "path": "watering.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/eggplant/",
+    "shared": "soil to a depth of at least 6"
+   },
+   {
+    "path": "growth_stages[2].user_action_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-eggplant",
+    "shared": "apart in rows 30 to 36 inches apart"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "tomatillo",
+  "prose": 342,
+  "compared": 41,
+  "total": 44,
+  "hard": 0,
+  "borderline": 32,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes"
+   }
+  ]
+ },
+ {
+  "slug": "watermelon",
+  "prose": 351,
+  "compared": 24,
+  "total": 24,
+  "hard": 3,
+  "borderline": 12,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[2].symptoms_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+    "shared": "from small specks to large whitish stippled areas"
+   },
+   {
+    "path": "diseases[0].cause_seasoned",
+    "url": "https://cucurbitbreeding.wordpress.ncsu.edu/watermelon-breeding/nc-state-watermelon-disease-handbook/watermelon-disease-descriptions/",
+    "shared": "is caused by the seed borne fungus colletotrichum"
+   },
+   {
+    "path": "diseases[4].cause_seasoned",
+    "url": "https://cucurbitbreeding.wordpress.ncsu.edu/watermelon-breeding/nc-state-watermelon-disease-handbook/watermelon-disease-descriptions/",
+    "shared": "downy mildew is caused by the air borne"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "cantaloupe",
+  "prose": 353,
+  "compared": 23,
+  "total": 23,
+  "hard": 1,
+  "borderline": 14,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "harvest_ready_seasoned",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+    "shared": "skin between the netting turns from green to"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "strawberry",
+  "prose": 599,
+  "compared": 32,
+  "total": 34,
+  "hard": 25,
+  "borderline": 53,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "diseases[0].cause_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "when it rains during bloom and fruit development"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "1 to 1 5 inches of water per"
+   },
+   {
+    "path": "varieties.recommended[3].note_seasoned",
+    "url": "https://cceoneida.com/resources/guide-to-growing-strawberries",
+    "shared": "resistant to both red stele and verticillium wilt"
+   },
+   {
+    "path": "growth_stages[7].timing_beginner",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "2 to 3 inches of loose straw after"
+   },
+   {
+    "path": "notifications[5].body_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "with 2 to 3 inches of loose straw"
+   },
+   {
+    "path": "notifications[5].body_beginner",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "plants with 2 to 3 inches of loose"
+   },
+   {
+    "path": "yield_expectations.per_plant_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "7 to 15 pounds per 10 foot row"
+   },
+   {
+    "path": "failure_diagnostics[4].next_season_tip_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "2 to 3 inches of loose straw after"
+   },
+   {
+    "path": "sources_summary.primary[0].name",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1618-strawberry-cultivars-western-oregon-washington",
+    "shared": "growing strawberries in your home garden ec 1307"
+   },
+   {
+    "path": "sources_summary.primary[9].name",
+    "url": "https://ucanr.edu/sites/sfp/crops/coststudieshtml/BpStrawberrySJV2004comp",
+    "shared": "cooperative extension sample costs to produce strawberries san"
+   },
+   {
+    "path": "regions.northern_tier.region_notes_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.ca_interior.region_notes_seasoned",
+    "url": "https://ucanr.edu/sites/sfp/crops/coststudieshtml/BpStrawberrySJV2004comp",
+    "shared": "is harvested from mid april through mid june"
+   },
+   {
+    "path": "regions.warm_arid.region_notes_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.fl_peninsula.region_notes_beginner",
+    "url": "https://edis.ifas.ufl.edu/publication/hs403",
+    "shared": "the fall from late september to early november"
+   },
+   {
+    "path": "regions.rgv.resolved_by_zone.9.grown_as_note_seasoned",
+    "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+    "shared": "south of houston san antonio and del rio"
+   },
+   {
+    "path": "regions.rgv.resolved_by_zone.10.grown_as_note_seasoned",
+    "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+    "shared": "south of houston san antonio and del rio"
+   },
+   {
+    "path": "regions.rgv.region_notes_seasoned",
+    "url": "https://aggie-horticulture.tamu.edu/smallacreage/crops-guides/fruits-nuts/strawberries/",
+    "shared": "south of houston san antonio and del rio"
+   },
+   {
+    "path": "regions.pnw.resolved_by_zone.8.grown_as_note_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.pnw.resolved_by_zone.9.grown_as_note_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.pnw.region_notes_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.resolved_by_zone.7.grown_as_note_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.utah_dixie.resolved_by_zone.8.grown_as_note_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.utah_dixie.region_notes_seasoned",
+    "url": "https://extension.arizona.edu/sites/default/files/2024-08/az1667-2015.pdf",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "description_seasoned",
+    "url": "https://extension.oregonstate.edu/catalog/ec-1307-growing-strawberries-your-home-garden",
+    "shared": "with a short compressed stem called the crown"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://gardening.cals.cornell.edu/fruit/strawberries/"
+   }
+  ]
+ },
+ {
+  "slug": "pumpkin",
+  "prose": 327,
+  "compared": 28,
+  "total": 28,
+  "hard": 4,
+  "borderline": 12,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+    "shared": "a complete fertilizer such as 13 13 13"
+   },
+   {
+    "path": "fertilizer.npk_hint_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+    "shared": "a complete fertilizer such as 13 13 13"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+    "shared": "a complete fertilizer such as 13 13 13"
+   },
+   {
+    "path": "pests[2].cause_seasoned",
+    "url": "https://extension.umn.edu/yard-and-garden-insects/cucumber-beetles",
+    "shared": "pumpkin plants have four or more leaves they"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "plum",
+  "prose": 504,
+  "compared": 18,
+  "total": 21,
+  "hard": 3,
+  "borderline": 23,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_description_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/plum/",
+    "shared": "a sandy loam to a sandy clay loam"
+   },
+   {
+    "path": "soil.preferred_description_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/plum/",
+    "shared": "a sandy loam to a sandy clay loam"
+   },
+   {
+    "path": "fertilizer.amount_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/plum/",
+    "shared": "1 cup of 10 10 10 for each"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/controlling_black_knot_in_michigan"
+   }
+  ]
+ },
+ {
+  "slug": "apricot",
+  "prose": 525,
+  "compared": 20,
+  "total": 24,
+  "hard": 4,
+  "borderline": 9,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "growth_stages[0].timing_seasoned",
+    "url": "https://extension.umn.edu/fruit/growing-stone-fruits-home-garden",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "growth_stages[6].user_action_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/apricots-in-the-home-garden",
+    "shared": "every 4 to 6 inches along the branch"
+   },
+   {
+    "path": "tips_by_stage.fruit_set[0].text_beginner",
+    "url": "https://extension.usu.edu/yardandgarden/research/apricots-in-the-home-garden",
+    "shared": "every 4 to 6 inches along the branch"
+   },
+   {
+    "path": "regions.pnw.region_notes_seasoned",
+    "url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+    "shared": "very sensitive to frost at bloom time and"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fruit-crops-in-texas/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 410: Gone",
+    "url": "https://edis.ifas.ufl.edu/publication/MG248"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://mgsantaclara.ucanr.edu/garden-help/fruit-trees/"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "pear-european",
+  "prose": 540,
+  "compared": 27,
+  "total": 31,
+  "hard": 0,
+  "borderline": 14,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/growing-pears-in-the-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://fruitsandnuts.ucdavis.edu/general-information/chilling-requirement"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/pears/"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "pear-asian",
+  "prose": 527,
+  "compared": 28,
+  "total": 32,
+  "hard": 0,
+  "borderline": 17,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://content.ces.ncsu.edu/growing-pears-in-the-home-garden"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://fruitsandnuts.ucdavis.edu/general-information/chilling-requirement"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/pears/"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "lime",
+  "prose": 548,
+  "compared": 18,
+  "total": 19,
+  "hard": 6,
+  "borderline": 26,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://ask.ifas.ufl.edu/publication/CH092",
+    "shared": "a week for the first couple of months"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "shared": "a week for the first couple of months"
+   },
+   {
+    "path": "watering.schedule_by_stage[0].note_seasoned",
+    "url": "https://ask.ifas.ufl.edu/publication/CH092",
+    "shared": "a week for the first couple of months"
+   },
+   {
+    "path": "watering.schedule_by_stage[0].note_seasoned",
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "shared": "a week for the first couple of months"
+   },
+   {
+    "path": "sources_summary.primary[0].name",
+    "url": "https://ask.ifas.ufl.edu/publication/CH092",
+    "shared": "ch092 key lime growing in the florida home"
+   },
+   {
+    "path": "sources_summary.primary[1].name",
+    "url": "https://ask.ifas.ufl.edu/publication/CH093",
+    "shared": "ch093 growing tahiti limes in the home landscape"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/lime"
+   }
+  ]
+ },
+ {
+  "slug": "orange-navel",
+  "prose": 611,
+  "compared": 28,
+  "total": 31,
+  "hard": 0,
+  "borderline": 18,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://mgsantaclara.ucanr.edu/garden-help/fruit-trees/citrus/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://www.lsuagcenter.com/topics/crops/citrus"
+   }
+  ]
+ },
+ {
+  "slug": "mandarin-clementine",
+  "prose": 585,
+  "compared": 21,
+  "total": 22,
+  "hard": 2,
+  "borderline": 17,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "sources_summary.primary[6].name",
+    "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/growing-great-citrus",
+    "shared": "gardeners of santa clara county growing great citrus"
+   },
+   {
+    "path": "hardiness_notes_seasoned",
+    "url": "https://www.lsuagcenter.com/profiles/clirette/articles/page1611248225640",
+    "shared": "are the most cold hardy of the commonly"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties"
+   }
+  ]
+ },
+ {
+  "slug": "fig",
+  "prose": 453,
+  "compared": 15,
+  "total": 16,
+  "hard": 4,
+  "borderline": 8,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+    "shared": "per foot of height up to 5 pounds"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C945/home-garden-figs/",
+    "shared": "inches of water per week from rain or"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/fig/",
+    "shared": "of water per week from rain or irrigation"
+   },
+   {
+    "path": "recommended_rootstock_note",
+    "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/fig",
+    "shared": "are grown on their own roots from cuttings"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "pomegranate",
+  "prose": 468,
+  "compared": 17,
+  "total": 20,
+  "hard": 1,
+  "borderline": 18,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "weather_triggers[1].body_seasoned",
+    "url": "https://ucanr.edu/site/ucce-central-sierra-agriculture/pomegranate-production",
+    "shared": "full dormancy in late fall and after buds"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://ucanr.edu/site/fruit-nut-research-information-center/pomegranate-diseases-disorders"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://ucanr.edu/sites/btfnp/fruitnutproduction/Pomegranate/Pomegranate_Propagation/"
+   }
+  ]
+ },
+ {
+  "slug": "raspberry",
+  "prose": 588,
+  "compared": 15,
+  "total": 15,
+  "hard": 10,
+  "borderline": 14,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+    "shared": "10 10 10 per 100 feet of row"
+   },
+   {
+    "path": "pests[0].cause_beginner",
+    "url": "https://extension.psu.edu/raspberry-production",
+    "shared": "an invasive fruit fly that lays eggs in"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/raspberry-management-for-utah",
+    "shared": "1 to 2 inches of water per week"
+   },
+   {
+    "path": "watering.schedule_by_stage[0].rate",
+    "url": "https://extension.usu.edu/yardandgarden/research/raspberry-management-for-utah",
+    "shared": "1 to 2 inches of water per week"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_seasoned",
+    "url": "https://extension.psu.edu/raspberry-production",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_seasoned",
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_seasoned",
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6107.pdf",
+    "shared": "spring as soon as the soil can be"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_beginner",
+    "url": "https://extension.psu.edu/raspberry-production",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_beginner",
+    "url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+    "shared": "as soon as the soil can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.grown_as_note_beginner",
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6107.pdf",
+    "shared": "spring as soon as the soil can be"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "blackberry",
+  "prose": 594,
+  "compared": 18,
+  "total": 18,
+  "hard": 5,
+  "borderline": 16,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+    "shared": "10 10 10 per 100 feet of row"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/blackberry-management-in-utah",
+    "shared": "1 to 2 inches of water per week"
+   },
+   {
+    "path": "watering.schedule_by_stage[0].rate",
+    "url": "https://extension.usu.edu/yardandgarden/research/blackberry-management-in-utah",
+    "shared": "1 to 2 inches of water per week"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.8.type_note_seasoned",
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf",
+    "shared": "blackberries are adapted to all regions of arkansas"
+   },
+   {
+    "path": "regions.mid_south.region_notes_seasoned",
+    "url": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf",
+    "shared": "blackberries are adapted to all regions of arkansas"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "elderberry",
+  "prose": 510,
+  "compared": 8,
+  "total": 9,
+  "hard": 0,
+  "borderline": 4,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/elderberries_an_edible_landscape_plant"
+   }
+  ]
+ },
+ {
+  "slug": "persimmon",
+  "prose": 463,
+  "compared": 17,
+  "total": 20,
+  "hard": 0,
+  "borderline": 9,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://fruitandnuteducation.ucanr.edu/fruitnutproduction/Persimmon/"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/"
+   }
+  ]
+ },
+ {
+  "slug": "mulberry",
+  "prose": 505,
+  "compared": 14,
+  "total": 16,
+  "hard": 0,
+  "borderline": 3,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/popcorn-disease-of-mulberry.html"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "pawpaw",
+  "prose": 446,
+  "compared": 17,
+  "total": 18,
+  "hard": 2,
+  "borderline": 17,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[1].cause_seasoned",
+    "url": "https://extension.umd.edu/resource/native-trees-maryland-pawpaw-asimina-triloba",
+    "shared": "larvae of the zebra swallowtail butterfly protographium marcellus"
+   },
+   {
+    "path": "storage.fridge_seasoned",
+    "url": "https://extension.psu.edu/pawpaw-fruit-in-the-garden-and-the-kitchen",
+    "shared": "be held in the refrigerator for up to"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "parsnip",
+  "prose": 317,
+  "compared": 17,
+  "total": 17,
+  "hard": 4,
+  "borderline": 17,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "ph.note_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+    "shared": "of 6 0 to 6 5 for the"
+   },
+   {
+    "path": "diseases[0].symptoms_seasoned",
+    "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/carrot-parsnip-itersonilia-canker",
+    "shared": "orange to brown lesions with a pale green"
+   },
+   {
+    "path": "diseases[1].cause_seasoned",
+    "url": "https://hort.extension.wisc.edu/articles/aster-yellows/",
+    "shared": "a bacterium like organism that lives in the"
+   },
+   {
+    "path": "tips_by_stage.established[1].text_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+    "shared": "some people develop a rash from contact with"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "kohlrabi",
+  "prose": 348,
+  "compared": 26,
+  "total": 26,
+  "hard": 0,
+  "borderline": 15,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "honeydew-melon",
+  "prose": 346,
+  "compared": 28,
+  "total": 28,
+  "hard": 1,
+  "borderline": 20,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[2].symptoms_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+    "shared": "from small specks to large whitish stippled areas"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "grapefruit",
+  "prose": 604,
+  "compared": 20,
+  "total": 22,
+  "hard": 0,
+  "borderline": 6,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://mgsantaclara.ucanr.edu/garden-help/fruit-trees/citrus/"
+   }
+  ]
+ },
+ {
+  "slug": "cherry-sweet",
+  "prose": 514,
+  "compared": 23,
+  "total": 25,
+  "hard": 0,
+  "borderline": 10,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/netting-in-high-density-sweet-cherries-reduces-bird-damage-and-spotted-wing-drosophila"
+   }
+  ]
+ },
+ {
+  "slug": "artichoke",
+  "prose": 454,
+  "compared": 26,
+  "total": 26,
+  "hard": 0,
+  "borderline": 34,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "turnip",
+  "prose": 381,
+  "compared": 42,
+  "total": 43,
+  "hard": 7,
+  "borderline": 22,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[1].cause_seasoned",
+    "url": "https://extension.umn.edu/yard-and-garden-insects/root-maggots",
+    "shared": "as pupae in the soil in spring the"
+   },
+   {
+    "path": "diseases[2].symptoms_seasoned",
+    "url": "https://content.ces.ncsu.edu/downy-mildew-on-brassica-crops",
+    "shared": "green to yellow lesions on the upper leaf"
+   },
+   {
+    "path": "diseases[4].symptoms_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-diseases/",
+    "shared": "of the leaves with the point of the"
+   },
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+    "shared": "about 1 4 to 1 2 inch deep"
+   },
+   {
+    "path": "start_method.notes_beginner",
+    "url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+    "shared": "about 1 4 to 1 2 inch deep"
+   },
+   {
+    "path": "tips_by_stage.germination[0].text_seasoned",
+    "url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+    "shared": "about 1 4 to 1 2 inch deep"
+   },
+   {
+    "path": "tips_by_stage.germination[0].text_beginner",
+    "url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+    "shared": "about 1 4 to 1 2 inch deep"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications/north-dakota-home-garden-variety-trials"
+   }
+  ]
+ },
+ {
+  "slug": "leek",
+  "prose": 344,
+  "compared": 23,
+  "total": 23,
+  "hard": 2,
+  "borderline": 10,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-leeks",
+    "shared": "a balanced fertilizer such as 10 10 10"
+   },
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+    "shared": "21 0 0 per 100 square feet in"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "brussels-sprouts",
+  "prose": 351,
+  "compared": 33,
+  "total": 34,
+  "hard": 2,
+  "borderline": 42,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "notifications[0].body_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/brussel-sprouts-in-the-garden",
+    "shared": "the growing point at the top of the"
+   },
+   {
+    "path": "tips_by_stage.seedling[0].text_seasoned",
+    "url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-brussels-sprouts/",
+    "shared": "young plants with 4 to 6 true leaves"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/disease-resistant-vegetable-varieties/disease-resistant-brussels-sprouts-varieties/"
+   }
+  ]
+ },
+ {
+  "slug": "okra",
+  "prose": 322,
+  "compared": 21,
+  "total": 22,
+  "hard": 3,
+  "borderline": 21,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://fieldreport.caes.uga.edu/publications/C941/home-garden-okra/",
+    "shared": "10 10 10 per 100 feet of row"
+   },
+   {
+    "path": "harvest_ready_beginner",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+    "shared": "when they are 2 to 4 inches long"
+   },
+   {
+    "path": "growth_stages[4].user_action_beginner",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+    "shared": "when they are 2 to 4 inches long"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umn.edu/vegetables"
+   }
+  ]
+ },
+ {
+  "slug": "nectarine",
+  "prose": 526,
+  "compared": 31,
+  "total": 36,
+  "hard": 1,
+  "borderline": 30,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "growth_stages[2].what_to_look_for_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/peaches-nectarines/",
+    "shared": "nectarines are usually trained to an open center"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://extension.umd.edu/resource/fruit-plant-pollination"
+   },
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/management_of_bacterial_spot_on_peaches_and_nectarines"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/peaches/"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/"
+   }
+  ]
+ },
+ {
+  "slug": "cherry-sour",
+  "prose": 494,
+  "compared": 21,
+  "total": 24,
+  "hard": 0,
+  "borderline": 7,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: extraction too short (155 chars) -- no usable text layer",
+    "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/cherry_leaf_spot_101_understanding_blumeriella_jaapii_biology_and_managemen"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/netting-in-high-density-sweet-cherries-reduces-bird-damage-and-spotted-wing-drosophila"
+   }
+  ]
+ },
+ {
+  "slug": "microgreens-mix",
+  "prose": 185,
+  "compared": 4,
+  "total": 4,
+  "hard": 1,
+  "borderline": 4,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_texture_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "seed starting mix coconut coir or a hydroponic"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "sunflower-sprouts",
+  "prose": 170,
+  "compared": 5,
+  "total": 5,
+  "hard": 0,
+  "borderline": 1,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "pea-shoots",
+  "prose": 173,
+  "compared": 5,
+  "total": 5,
+  "hard": 3,
+  "borderline": 4,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_texture_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "seed starting mix coconut coir or a hydroponic"
+   },
+   {
+    "path": "sources_summary.primary[2].name",
+    "url": "https://extension.psu.edu/a-step-by-step-guide-for-growing-microgreens-at-home",
+    "shared": "a step by step guide for growing microgreens"
+   },
+   {
+    "path": "sources_summary.primary[2].name",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "a step by step guide for growing microgreens"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "celery",
+  "prose": 343,
+  "compared": 17,
+  "total": 18,
+  "hard": 6,
+  "borderline": 38,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+    "shared": "21 0 0 per 10 feet of row"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+    "shared": "21 0 0 per 10 feet of row"
+   },
+   {
+    "path": "watering.frequency_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+    "shared": "at least 1 to 2 inches of water"
+   },
+   {
+    "path": "watering.frequency_beginner",
+    "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+    "shared": "at least 1 to 2 inches of water"
+   },
+   {
+    "path": "notifications[2].body_beginner",
+    "url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+    "shared": "at least 1 to 2 inches of water"
+   },
+   {
+    "path": "sources_summary.primary[3].name",
+    "url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+    "shared": "uc master gardeners of santa clara county celery"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/how_to_grow_celery"
+   }
+  ]
+ },
+ {
+  "slug": "asparagus",
+  "prose": 312,
+  "compared": 38,
+  "total": 41,
+  "hard": 6,
+  "borderline": 18,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+    "shared": "10 10 10 per 100 square feet before"
+   },
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+    "shared": "10 10 10 per 100 square feet before"
+   },
+   {
+    "path": "growth_stages[0].user_action_seasoned",
+    "url": "https://extension.missouri.edu/publications/g6405",
+    "shared": "crowns 12 to 18 inches apart in the"
+   },
+   {
+    "path": "storage.fridge_beginner",
+    "url": "https://extension.umn.edu/vegetables/growing-asparagus",
+    "shared": "in a plastic bag in the crisper drawer"
+   },
+   {
+    "path": "year_one_notes_beginner",
+    "url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2021/03/EHT-066.pdf",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "year_one_notes_beginner",
+    "url": "https://extension.illinois.edu/gardening/asparagus",
+    "shared": "as soon as the ground can be worked"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/michigan-fresh-using-storing-and-preserving-asparagus-hni28-"
+   }
+  ]
+ },
+ {
+  "slug": "shallot",
+  "prose": 388,
+  "compared": 18,
+  "total": 18,
+  "hard": 8,
+  "borderline": 6,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "regions.northern_tier.resolved_by_zone.5.zone_notes",
+    "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.northern_tier.resolved_by_zone.5.zone_notes",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.northern_tier.region_notes_beginner",
+    "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.northern_tier.region_notes_beginner",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.resolved_by_zone.7.zone_notes",
+    "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_atlantic.resolved_by_zone.7.zone_notes",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.zone_notes",
+    "url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+    "shared": "as soon as the ground can be worked"
+   },
+   {
+    "path": "regions.mid_south.resolved_by_zone.7.zone_notes",
+    "url": "https://plants.ces.ncsu.edu/plants/allium-cepa/",
+    "shared": "as soon as the ground can be worked"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "lemongrass",
+  "prose": 284,
+  "compared": 12,
+  "total": 12,
+  "hard": 2,
+  "borderline": 14,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/lemongrass-in-the-garden",
+    "shared": "a balanced soluble fertilizer from june through september"
+   },
+   {
+    "path": "regions.ca_interior.region_notes_seasoned",
+    "url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+    "shared": "out transplants in spring after the last frost"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "marigold",
+  "prose": 310,
+  "compared": 13,
+  "total": 13,
+  "hard": 0,
+  "borderline": 10,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "nasturtium",
+  "prose": 312,
+  "compared": 13,
+  "total": 13,
+  "hard": 0,
+  "borderline": 1,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "lavender",
+  "prose": 483,
+  "compared": 27,
+  "total": 27,
+  "hard": 0,
+  "borderline": 14,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "sunflower",
+  "prose": 328,
+  "compared": 14,
+  "total": 15,
+  "hard": 0,
+  "borderline": 11,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/sunflower_seeds_are_for_the_birds_and_people"
+   }
+  ]
+ },
+ {
+  "slug": "borage",
+  "prose": 291,
+  "compared": 13,
+  "total": 13,
+  "hard": 0,
+  "borderline": 7,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "calendula",
+  "prose": 311,
+  "compared": 11,
+  "total": 11,
+  "hard": 1,
+  "borderline": 6,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "start_method.notes_seasoned",
+    "url": "https://plants.ces.ncsu.edu/plants/calendula-officinalis/",
+    "shared": "6 to 8 weeks before the last frost"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "zinnia",
+  "prose": 301,
+  "compared": 17,
+  "total": 17,
+  "hard": 0,
+  "borderline": 3,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "cosmos",
+  "prose": 305,
+  "compared": 15,
+  "total": 15,
+  "hard": 0,
+  "borderline": 1,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "chamomile",
+  "prose": 313,
+  "compared": 12,
+  "total": 12,
+  "hard": 2,
+  "borderline": 2,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "storage.notes_seasoned",
+    "url": "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+    "shared": "can cause allergic skin reactions or oral swelling"
+   },
+   {
+    "path": "sources_summary.primary[2].name",
+    "url": "https://ucanr.edu/sites/mgscc2016/garden-help/herbs/chamomile",
+    "shared": "uc master gardeners of santa clara county chamomile"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "sweet-alyssum",
+  "prose": 337,
+  "compared": 11,
+  "total": 11,
+  "hard": 1,
+  "borderline": 3,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "companions.good_beginner_seasoned[2].why_seasoned",
+    "url": "https://hort.extension.wisc.edu/articles/sweet-alyssum-lobularia-maritima/",
+    "shared": "attractive to bees flower flies stingless wasps and"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "echinacea",
+  "prose": 272,
+  "compared": 9,
+  "total": 9,
+  "hard": 6,
+  "borderline": 12,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "description_seasoned",
+    "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+    "shared": "native to the central and eastern united states"
+   },
+   {
+    "path": "fertilizer.notes_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/echinacea/",
+    "shared": "1 pound per 100 square feet in late"
+   },
+   {
+    "path": "diseases[3].note_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/echinacea/",
+    "shared": "may not be reliably hardy in poorly drained"
+   },
+   {
+    "path": "varieties.note_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/echinacea/",
+    "shared": "may not be reliably hardy in poorly drained"
+   },
+   {
+    "path": "companions.note_seasoned",
+    "url": "https://plants.ces.ncsu.edu/plants/echinacea-purpurea/",
+    "shared": "native bees nest in the dead hollow stems"
+   },
+   {
+    "path": "yield_expectations.per_plant_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/echinacea/",
+    "shared": "can be divided every 3 to 4 years"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "bee-balm",
+  "prose": 305,
+  "compared": 8,
+  "total": 8,
+  "hard": 0,
+  "borderline": 5,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "viola",
+  "prose": 338,
+  "compared": 10,
+  "total": 10,
+  "hard": 0,
+  "borderline": 6,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "sweet-pea",
+  "prose": 334,
+  "compared": 10,
+  "total": 10,
+  "hard": 0,
+  "borderline": 2,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "radish-microgreens",
+  "prose": 171,
+  "compared": 5,
+  "total": 5,
+  "hard": 1,
+  "borderline": 4,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_texture_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "seed starting mix coconut coir or a hydroponic"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "broccoli-microgreens",
+  "prose": 174,
+  "compared": 8,
+  "total": 8,
+  "hard": 1,
+  "borderline": 10,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_texture_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "seed starting mix coconut coir or a hydroponic"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "arugula-microgreens",
+  "prose": 170,
+  "compared": 4,
+  "total": 4,
+  "hard": 1,
+  "borderline": 4,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_texture_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "a seed starting mix coconut coir or a"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "wheatgrass",
+  "prose": 171,
+  "compared": 5,
+  "total": 5,
+  "hard": 0,
+  "borderline": 2,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "cilantro-microgreens",
+  "prose": 175,
+  "compared": 9,
+  "total": 9,
+  "hard": 1,
+  "borderline": 5,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "soil.preferred_texture_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/grow-your-own-microgreens",
+    "shared": "seed starting mix coconut coir or a hydroponic"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "beet",
+  "prose": 366,
+  "compared": 44,
+  "total": 47,
+  "hard": 1,
+  "borderline": 39,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "pests[0].symptoms_seasoned",
+    "url": "https://agrilifeextension.tamu.edu/library/gardening/beets/",
+    "shared": "beets are grown for both the root and"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden",
+    "url": "https://content.ces.ncsu.edu/beets"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/bolting-in-spring-vegetables"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://www.ndsu.edu/agriculture/extension/publications/north-dakota-home-garden-variety-trials"
+   }
+  ]
+ },
+ {
+  "slug": "cucumber",
+  "prose": 366,
+  "compared": 24,
+  "total": 26,
+  "hard": 6,
+  "borderline": 29,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "tips_by_stage.flowering[1].text_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+    "shared": "hand pollinate in the morning pick a male"
+   },
+   {
+    "path": "tips_by_stage.flowering[1].text_beginner",
+    "url": "https://hgic.clemson.edu/factsheet/cucumber/",
+    "shared": "hand pollinate in the morning pick a male"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   },
+   {
+    "path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+    "url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+    "shared": "feb mar apr may jun jul aug sep"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found",
+    "url": "https://extension.umn.edu/diseases/bacterial-wilt-cucurbits"
+   },
+   {
+    "reason": "FETCHFAIL HTTPError: HTTP Error 429: Too Many Requests",
+    "url": "https://extension.umn.edu/yard-and-garden-insects/striped-cucumber-beetles"
+   }
+  ]
+ },
+ {
+  "slug": "collards",
+  "prose": 372,
+  "compared": 34,
+  "total": 35,
+  "hard": 0,
+  "borderline": 18,
+  "exit": 2,
+  "hard_detail": [],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/resources/garden_planning_calendar"
+   }
+  ]
+ },
+ {
+  "slug": "dry-bean",
+  "prose": 365,
+  "compared": 25,
+  "total": 27,
+  "hard": 5,
+  "borderline": 37,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "fertilizer.amount_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+    "shared": "10 10 at 3 pounds per 100 square"
+   },
+   {
+    "path": "diseases[1].symptoms_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "the veins on lower leaf surfaces turn black"
+   },
+   {
+    "path": "diseases[1].prevention_seasoned",
+    "url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+    "shared": "for two to three years avoid overhead watering"
+   },
+   {
+    "path": "watering.method_beginner",
+    "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-8.pdf",
+    "shared": "do it in the morning so the plants"
+   },
+   {
+    "path": "watering.schedule_by_stage[5].note_seasoned",
+    "url": "https://extension.usu.edu/yardandgarden/research/beans-in-the-garden",
+    "shared": "reduce water applications as the seeds begin to"
+   }
+  ],
+  "uncovered": [
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/news/black-beans-and-rice-history-and-fun-facts"
+   },
+   {
+    "reason": "blocked: challenge page served as HTTP 200",
+    "url": "https://www.canr.msu.edu/uploads/resources/pdfs/beans.pdf"
+   }
+  ]
+ },
+ {
+  "slug": "field-corn",
+  "prose": 358,
+  "compared": 28,
+  "total": 28,
+  "hard": 0,
+  "borderline": 12,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ },
+ {
+  "slug": "popcorn",
+  "prose": 363,
+  "compared": 24,
+  "total": 24,
+  "hard": 2,
+  "borderline": 11,
+  "exit": 1,
+  "hard_detail": [
+   {
+    "path": "growth_stages[8].user_action_seasoned",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+    "shared": "bags and hang them in a warm dry"
+   },
+   {
+    "path": "growth_stages[8].user_action_beginner",
+    "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+    "shared": "a few kernels and try popping them when"
+   }
+  ],
+  "uncovered": []
+ },
+ {
+  "slug": "flint-corn",
+  "prose": 357,
+  "compared": 29,
+  "total": 29,
+  "hard": 0,
+  "borderline": 13,
+  "exit": 0,
+  "hard_detail": [],
+  "uncovered": []
+ }
+]
