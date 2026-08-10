@@ -16,23 +16,36 @@ Adjudication notes from the lettuce run: `.provenance.` paths are BACKEND
 (s11_finding_003 precedent) -- but route the ruling to the voice lane, do not
 self-dismiss.
 
-Two-step usage (fetching is a separate concern so re-scans are cheap):
-  1. python3 tools/verbatim_scan.py <slug> --urls          # print URL list
-     # fetch each into the cache:
-     #   f=$(printf "%s" "$URL" | shasum -a 1 | cut -c1-16)
-     #   curl -sL --compressed --max-time 30 -A "Mozilla/5.0 ..." \
-     #     -o "$CACHE/$f.body" -w "%{http_code} $URL\n" "$URL" > "$CACHE/$f.meta"
-  2. python3 tools/verbatim_scan.py <slug> [--cache DIR]   # run the scan
-Default cache dir: /tmp/verbatim_cache. PDFs need an extractor (none assumed);
-unreadable URLs are listed as NOT COVERED -- state coverage honestly, never
-silently truncate.
-Exit 1 if any HARD hit is found (adjudication owed before any flip).
+Usage (the cache is tools/.doc_cache, SHARED with doc_mentions_crop_scan /
+bloom_datum_scan / cited_claim_scan -- one fetch layer, whose extractor handles
+PDFs via pypdf and stores extracted text keyed sha1(url).txt):
+  1. python3 tools/verbatim_scan.py <slug> --urls     # print URL list
+  2. python3 tools/verbatim_scan.py <slug> --fetch    # populate the shared cache
+  3. python3 tools/verbatim_scan.py <slug> [--cache=DIR]   # run the scan
+Unreadable URLs (unfetched, fetch failures, WAF challenge pages, PDFs with no
+text layer) are listed as NOT COVERED -- state coverage honestly, never silently
+truncate.
+
+THE COVERAGE FLOOR (PLA-160). Until 2026-08-10 this scan read an always-empty
+cache (/tmp/verbatim_cache, a retired .body/.meta format), printed
+`sources text-compared: 0/N` on line one, and exited 0 -- a flip-blocking
+criterion that never blocked, because the verdict ignored its own coverage
+figure. A zero-hit verdict is now reportable ONLY when at least one source was
+compared and none is uncovered.
+Exit contract:
+  0  no HARD hits AND full coverage (len(sources) > 0 and len(uncovered) == 0)
+  1  HARD hit(s) found -- adjudication owed before any flip
+  2  COVERAGE INSUFFICIENT -- a zero over an unmeasured population is not a verdict
 """
 import hashlib
-import html as htmllib
 import json
+import os
 import re
 import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from doc_mentions_crop_scan import fetch_all, unreadable_reason  # noqa: E402
 
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
 flags = [a for a in sys.argv[1:] if a.startswith("--")]
@@ -41,7 +54,7 @@ if not args:
     sys.exit(2)
 SLUG = args[0]
 PATH = args[1] if len(args) > 1 else "crops_data_final.json"
-CACHE = "/tmp/verbatim_cache"
+CACHE = os.path.join(HERE, ".doc_cache")
 for f in flags:
     if f.startswith("--cache="):
         CACHE = f.split("=", 1)[1]
@@ -71,6 +84,9 @@ URLS = sorted(urls)
 if "--urls" in flags:
     for u in URLS:
         print(u)
+    sys.exit(0)
+if "--fetch" in flags:
+    fetch_all(URLS)
     sys.exit(0)
 
 # ---- user-facing prose collection (Step 9 layer classification) ----
@@ -113,29 +129,19 @@ def collect(o, pat):
 
 collect(crop, "")
 
-# ---- source text extraction ----
+# ---- source text (the shared cache stores extracted text, PDFs already through pypdf) ----
 def norm_words(text):
     return re.sub(r"[^a-z0-9°\s]", " ", text.lower()).split()
 
-def extract_text(body):
-    if body[:5] == b"%PDF-":
-        return None
-    txt = body.decode("utf-8", errors="ignore")
-    txt = re.sub(r"<(script|style|noscript)\b.*?</\1>", " ", txt, flags=re.S | re.I)
-    return htmllib.unescape(re.sub(r"<[^>]+>", " ", txt))
-
 sources, uncovered = {}, []
 for u in URLS:
-    h = hashlib.sha1(u.encode()).hexdigest()[:16]
-    try:
-        meta = open(f"{CACHE}/{h}.meta").read().split()[0]
-    except FileNotFoundError:
+    p = os.path.join(CACHE, hashlib.sha1(u.encode()).hexdigest() + ".txt")
+    if not os.path.exists(p):
         uncovered.append((u, "not fetched")); continue
-    if meta != "200":
-        uncovered.append((u, f"HTTP {meta}")); continue
-    txt = extract_text(open(f"{CACHE}/{h}.body", "rb").read())
-    if txt is None:
-        uncovered.append((u, "PDF (no extractor)")); continue
+    txt = open(p, encoding="utf-8", errors="replace").read()
+    reason = unreadable_reason(txt)
+    if reason is not None:
+        uncovered.append((u, reason)); continue
     w = norm_words(txt)
     if len(w) < 50:
         uncovered.append((u, f"only {len(w)} words extracted (JS-rendered?)")); continue
@@ -170,4 +176,13 @@ for path, u, g in borderline:
 print(f"\nNOT COVERED ({len(uncovered)}):")
 for u, r in uncovered:
     print(f"  {r}: {u}")
-sys.exit(1 if hard else 0)
+
+if hard:
+    sys.exit(1)
+# The coverage floor: a zero-hit verdict over an unmeasured population is not a verdict.
+if not sources or uncovered:
+    print(f"\nverbatim_scan COVERAGE INSUFFICIENT: compared {len(sources)} of {len(URLS)} "
+          f"sources -- 'HARD hits: 0' is NOT reportable as verbatim-clean. "
+          f"Fetch the uncovered URLs (--fetch) or adjudicate them before any flip.")
+    sys.exit(2)
+sys.exit(0)

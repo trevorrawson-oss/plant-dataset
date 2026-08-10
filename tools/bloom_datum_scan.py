@@ -19,10 +19,27 @@ Verdicts, per document:
   PUBLISHES_TIMING  a bloom-family word sits within PROXIMITY chars of a month
                     -> do NOT declare; the arm may be supportable, go read it
   MENTION_NO_DATE   bloom discussed, only as risk/management language
-                    -> the declaration shape fits
+                    -> the declaration shape MAY fit -- see the refusal below
   NO_MENTION        the document never mentions bloom at all
-                    -> declare, and note the document does not address bloom
+                    -> the declaration shape MAY fit -- see the refusal below
   UNDETERMINED      unfetchable or uncached. NEVER absence. (lesson 7)
+
+ARM PRECEDENCE (corrected 2026-08-10, PLA-160): PUBLISHES_TIMING > UNDETERMINED
+> MENTION_NO_DATE > NO_MENTION. The shipped order had UNDETERMINED below
+MENTION_NO_DATE, which encoded "absence outranks unread" -- the exact inversion
+of the cited_claim_scan rule. An arm with any unread document is UNDETERMINED.
+
+THE SCAN WRITES ABSENCES, SO IT REFUSES THE ONES IT CANNOT SUPPORT (PLA-160,
+adopting cited_claim_scan.assert_absence_reportable). A declaration-licensing
+arm verdict (MENTION_NO_DATE / NO_MENTION) is reportable only when every cited
+document was read AND none of the absence-verdict documents is a SUBJECT
+document -- one whose head names the citing crop. A crop monograph declares its
+subject in the TITLE and stops repeating it, which is what defeats a proximity
+window: 52 of the audited absence verdicts sat on subject documents
+(extension.psu.edu/the-native-pawpaw-tree -> NO_MENTION for pawpaw), and 46 of
+70 MENTION_NO_DATE verdicts (66%) were artifacts of the 120-char window.
+`classify` keeps the proximity method DELIBERATELY (the mutation witness);
+the refusal layer is what stands between it and a false record.
 
 This is a SCAN a human reads, not a gate. The verdicts are a triage list: a
 PUBLISHES_TIMING document may still not publish a date for OUR crop, and a
@@ -47,8 +64,12 @@ DATA = os.path.join(REPO, 'crops_data_final.json')
 # Reuse hunt 2's fetch/cache/extract layer rather than growing a second one.
 from doc_mentions_crop_scan import (cache_path, extract, fetch_all,  # noqa: E402
                                     unreadable_reason)
+from cited_claim_scan import UnreportableAbsence, document_subject_is  # noqa: E402
 
 PROXIMITY = 120
+
+# Declaration-licensing verdicts: the shapes a *_bloom_offset_undocumented finding rests on.
+ABSENCE_VERDICTS = ('MENTION_NO_DATE', 'NO_MENTION')
 
 BLOOM_RE = re.compile(r'\b(?:bloom(?:s|ing|ed)?|blossom(?:s|ing|ed)?|flowering)\b', re.I)
 
@@ -106,6 +127,45 @@ def classify_doc(cached_text):
     return classify(cached_text)
 
 
+def best_verdict(verdicts):
+    """Collapse an arm's per-document verdicts. UNDETERMINED outranks the absence shapes:
+    an arm with any unread document cannot carry a declaration-licensing verdict."""
+    for v in ('PUBLISHES_TIMING', 'UNDETERMINED', 'MENTION_NO_DATE', 'NO_MENTION'):
+        if v in verdicts:
+            return v
+    return 'NO_URL'
+
+
+def assert_absence_reportable(arm):
+    """Raise unless this arm's absence could honestly be written down as a declaration.
+
+    `arm['doc_verdicts']` is a list of {'url', 'verdict', 'subject'}. EVERY reason is
+    collected and raised together (guard-tests-pass-because-an-earlier-check-fires): a
+    reader who fetches the unread documents must not then be told, as if it were news,
+    that a subject document blocked the declaration too.
+    """
+    docs = arm.get('doc_verdicts') or []
+    reasons = []
+    if not docs:
+        reasons.append('no cited documents at all (NO_URL) -- a declaration would rest '
+                       'on nothing')
+    undet = [d for d in docs if d['verdict'] == 'UNDETERMINED']
+    if undet:
+        reasons.append('%d of %d cited documents are UNDETERMINED (unread), not absent: %s'
+                       % (len(undet), len(docs),
+                          ', '.join(d['url'] for d in undet[:3])
+                          + (' ...' if len(undet) > 3 else '')))
+    subj = [d for d in docs if d['verdict'] in ABSENCE_VERDICTS and d.get('subject')]
+    if subj:
+        reasons.append('a proximity window cannot establish absence over a SUBJECT '
+                       'document (its head names the crop, so the crop name is not '
+                       'repeated near the claim): %s'
+                       % ', '.join(d['url'] for d in subj[:3]))
+    if reasons:
+        raise UnreportableAbsence('bloom_datum_scan: ' + '; '.join(reasons))
+    return True
+
+
 def _urls_of(node):
     au = node.get('anchoring_urls')
     if not isinstance(au, dict):
@@ -133,7 +193,8 @@ def bloom_arms(data):
                         shape = 'synthesis_window'
                     else:
                         shape = 'other'
-                    arms.append({'crop': crop['slug'], 'region': rid, 'shape': shape,
+                    arms.append({'crop': crop['slug'], 'crop_name': crop.get('name'),
+                                 'region': rid, 'shape': shape,
                                  'label': arm.get('label'), 'from': arm.get('from'),
                                  'offset_days': arm.get('offset_days'),
                                  'window_days': arm.get('window_days'),
@@ -141,7 +202,8 @@ def bloom_arms(data):
                                  'sources': list(arm.get('sources') or []),
                                  'urls': _urls_of(arm)})
                 if literals:
-                    arms.append({'crop': crop['slug'], 'region': rid,
+                    arms.append({'crop': crop['slug'], 'crop_name': crop.get('name'),
+                                 'region': rid,
                                  'shape': 'month_literal', 'label': planting.get('label'),
                                  'from': None, 'offset_days': None, 'window_days': None,
                                  'value': ' - '.join(literals),
@@ -210,20 +272,52 @@ def main():
 
     if args.report:
         verdicts = {u: classify_doc(load_cached(u)) for u in urls}
+        readable = {}
+        for u in urls:
+            txt = load_cached(u)
+            if txt is not None and unreadable_reason(txt) is None:
+                readable[u] = txt
         tally = {}
         for a in arms:
-            vs = [verdicts[u]['verdict'] for u in a['urls']]
-            best = ('PUBLISHES_TIMING' if 'PUBLISHES_TIMING' in vs
-                    else 'MENTION_NO_DATE' if 'MENTION_NO_DATE' in vs
-                    else 'UNDETERMINED' if 'UNDETERMINED' in vs
-                    else 'NO_MENTION' if vs else 'NO_URL')
+            terms = [t for t in (a.get('crop_name'), a['crop'].replace('-', ' ')) if t]
+            a['doc_verdicts'] = [
+                {'url': u, 'verdict': verdicts[u]['verdict'],
+                 'subject': u in readable and any(
+                     document_subject_is(readable[u], t) for t in terms)}
+                for u in a['urls']]
+            best = best_verdict([d['verdict'] for d in a['doc_verdicts']])
             a['verdict'] = best
+            if best in ABSENCE_VERDICTS:
+                try:
+                    assert_absence_reportable(a)
+                    a['absence_reportable'] = True
+                except UnreportableAbsence as exc:
+                    a['absence_reportable'] = False
+                    a['refusal'] = str(exc)
             key = (best, (a['crop'], a['region']) in dec)
             tally[key] = tally.get(key, 0) + 1
 
         print('\n=== ARM VERDICTS (best verdict across the arm\'s documents) ===')
         for (v, isdec), n in sorted(tally.items(), key=lambda kv: -kv[1]):
             print('  %-18s %s  %4d' % (v, 'declared    ' if isdec else 'NOT declared', n))
+
+        refused = [a for a in arms if a.get('absence_reportable') is False]
+        print('\n=== ABSENCE NOT REPORTABLE (%d arms with a declaration-shaped verdict '
+              'the scan refuses to license) ===' % len(refused))
+        for a in refused:
+            print('  %s/%s [%s]%s' % (a['crop'], a['region'], a['verdict'],
+                                      '  DECLARED' if (a['crop'], a['region']) in dec
+                                      else ''))
+            print('    %s' % a['refusal'][:260])
+
+        dec_bad = sorted({(a['crop'], a['region']) for a in arms
+                          if (a['crop'], a['region']) in dec
+                          and (a.get('absence_reportable') is False
+                               or a['verdict'] in ('UNDETERMINED', 'PUBLISHES_TIMING'))})
+        print('\n=== DECLARED FINDINGS WHOSE SUPPORT DID NOT SURVIVE (re-verify these) ===')
+        for cr in dec_bad:
+            worst = [a['verdict'] for a in arms if (a['crop'], a['region']) == cr]
+            print('  %s/%s  (arm verdicts now: %s)' % (cr[0], cr[1], ', '.join(sorted(set(worst)))))
 
         print('\n=== DOCUMENTS PUBLISHING BLOOM TIMING (do not declare these blind) ===')
         for u in urls:

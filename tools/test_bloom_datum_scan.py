@@ -172,3 +172,112 @@ def test_month_literal_inherits_the_planting_level_urls():
                             'anchoring_urls': {'z': {'url': 'http://g/'}}}]}}}]}
     arms = S.bloom_arms(data)
     assert arms[0]['urls'] == ['http://g/'], 'literal blooms carry no arm urls of their own'
+
+
+# --------------------------------------------------------------------------
+# PLA-160: absence precedence. The shipped order PUBLISHES_TIMING >
+# MENTION_NO_DATE > UNDETERMINED encoded "absence outranks unread" -- the exact
+# inversion of the cited_claim_scan rule. An arm with ANY unread document must
+# not carry a declaration-licensing verdict.
+# --------------------------------------------------------------------------
+
+def test_undetermined_outranks_mention_no_date():
+    assert S.best_verdict(['MENTION_NO_DATE', 'UNDETERMINED']) == 'UNDETERMINED', \
+        'an unread document must block a declaration-licensing verdict'
+
+
+def test_undetermined_outranks_no_mention():
+    assert S.best_verdict(['NO_MENTION', 'UNDETERMINED']) == 'UNDETERMINED'
+
+
+def test_publishes_timing_still_outranks_everything():
+    assert S.best_verdict(['UNDETERMINED', 'PUBLISHES_TIMING']) == 'PUBLISHES_TIMING'
+    assert S.best_verdict(['MENTION_NO_DATE', 'PUBLISHES_TIMING']) == 'PUBLISHES_TIMING'
+
+
+def test_mention_no_date_outranks_no_mention():
+    assert S.best_verdict(['NO_MENTION', 'MENTION_NO_DATE']) == 'MENTION_NO_DATE'
+
+
+def test_empty_doc_list_is_no_url():
+    assert S.best_verdict([]) == 'NO_URL'
+
+
+# --------------------------------------------------------------------------
+# PLA-160: assert_absence_reportable -- the scan writes absences, so it adopts
+# the cited_claim_scan refusal. 52 of the audited absence-verdict documents
+# were SUBJECT documents (title names the citing crop, e.g.
+# extension.psu.edu/the-native-pawpaw-tree -> NO_MENTION for pawpaw): a
+# proximity window cannot establish absence over a document about the crop.
+# --------------------------------------------------------------------------
+
+def _arm(doc_verdicts):
+    return {'crop': 'pawpaw', 'region': 'mid_south', 'doc_verdicts': doc_verdicts}
+
+
+def test_subject_document_absence_is_not_reportable():
+    from cited_claim_scan import UnreportableAbsence
+    arm = _arm([{'url': 'http://e/the-native-pawpaw-tree', 'verdict': 'MENTION_NO_DATE',
+                 'subject': True}])
+    try:
+        S.assert_absence_reportable(arm)
+    except UnreportableAbsence as exc:
+        assert 'subject' in str(exc).lower(), exc
+    else:
+        raise AssertionError('a subject-document absence was reported as declarable')
+
+
+def test_undetermined_document_blocks_absence():
+    from cited_claim_scan import UnreportableAbsence
+    arm = _arm([{'url': 'http://e/a', 'verdict': 'MENTION_NO_DATE', 'subject': False},
+                {'url': 'http://e/b', 'verdict': 'UNDETERMINED', 'subject': False}])
+    try:
+        S.assert_absence_reportable(arm)
+    except UnreportableAbsence as exc:
+        assert 'UNDETERMINED' in str(exc) or 'unread' in str(exc).lower(), exc
+    else:
+        raise AssertionError('an arm with an unread document was reported as declarable')
+
+
+def test_no_documents_at_all_blocks_absence():
+    from cited_claim_scan import UnreportableAbsence
+    try:
+        S.assert_absence_reportable(_arm([]))
+    except UnreportableAbsence:
+        pass
+    else:
+        raise AssertionError('a declaration resting on zero documents was allowed')
+
+
+def test_all_reasons_are_collected_not_first_only():
+    """guard-tests-pass-because-an-earlier-check-fires: every reason must surface."""
+    from cited_claim_scan import UnreportableAbsence
+    arm = _arm([{'url': 'http://e/subj', 'verdict': 'NO_MENTION', 'subject': True},
+                {'url': 'http://e/und', 'verdict': 'UNDETERMINED', 'subject': False}])
+    try:
+        S.assert_absence_reportable(arm)
+    except UnreportableAbsence as exc:
+        msg = str(exc).lower()
+        assert 'subject' in msg and ('undetermined' in msg or 'unread' in msg), \
+            'reasons must be collected together, not raised one at a time: %s' % exc
+    else:
+        raise AssertionError('nothing raised')
+
+
+def test_clean_absence_is_reportable():
+    arm = _arm([{'url': 'http://e/a', 'verdict': 'MENTION_NO_DATE', 'subject': False},
+                {'url': 'http://e/b', 'verdict': 'NO_MENTION', 'subject': False}])
+    assert S.assert_absence_reportable(arm) is True
+
+
+def test_the_wrong_method_still_classifies_the_pawpaw_shape():
+    """KEPT WRONG METHOD (mutation witness): classify() alone still calls a subject
+    document's far-month bloom mention MENTION_NO_DATE -- which is exactly why the
+    reportability layer above must exist. If classify() starts seeing this, the guard is
+    dead code and this test flags the contract change."""
+    txt = ('The Native Pawpaw Tree. Pawpaw is a small understory tree. '
+           'Its bloom is inconspicuous and often overlooked entirely. '
+           + 'Filler sentence about habitat and soils. ' * 10 +
+           'Fruit ripens in September.')
+    assert S.classify(txt)['verdict'] == 'MENTION_NO_DATE', \
+        'the proximity method changed behavior -- re-verify the reportability layer'

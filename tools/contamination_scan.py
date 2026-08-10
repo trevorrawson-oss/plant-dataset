@@ -123,9 +123,12 @@ for slug in by_slug:
     r = ratios(slug)
     tot_total = sum(t for _, t in r.values())
     tot_shared = sum(s for s, _ in r.values())
-    overall = (tot_shared / tot_total) if tot_total else 0.0
+    # An empty denominator is MEASURED NOTHING, never 0% -- measured-clean and
+    # measured-nothing must not render identically (PLA-160).
+    overall = (tot_shared / tot_total) if tot_total else None
     rows.append((overall, slug, r, tot_shared, tot_total))
-rows.sort(reverse=True)
+rows.sort(key=lambda x: (x[0] is not None, x[0] if x[0] is not None else 0.0, x[1]),
+          reverse=True)
 
 # ---- bucket clusters: for each crop, its top co-sharers (on bio surface) ----
 def top_cosharers(slug, surf="bio", k=5):
@@ -160,7 +163,9 @@ for overall, slug, r, ts, tt in rows:
         s, t = r[surf]
         return f"{s}/{t} ({100*s/t:.0f}%)" if t else "-"
     w = "YES" if slug in walked else ""
-    p(f"| {slug} | {w} | {cell('bio')} | {cell('scalar')} | {cell('window')} | **{100*overall:.0f}%** ({ts}/{tt}) |")
+    tot = f"**{100*overall:.0f}%** ({ts}/{tt})" if overall is not None \
+        else "n/a (0 leaves measured)"
+    p(f"| {slug} | {w} | {cell('bio')} | {cell('scalar')} | {cell('window')} | {tot} |")
 p()
 
 # GS clean check
@@ -169,7 +174,8 @@ p()
 for slug in sorted(walked):
     r = ratios(slug)
     s, t = r["bio"]
-    p(f"- **{slug}**: bio prose shared {s}/{t} ({100*s/t:.0f}% if any) -- co-sharers: {top_cosharers(slug, k=4)}")
+    pct = f"{100*s/t:.0f}% if any" if t else "n/a (0 leaves measured)"
+    p(f"- **{slug}**: bio prose shared {s}/{t} ({pct}) -- co-sharers: {top_cosharers(slug, k=4)}")
 p()
 
 # clusters for the worst N non-walked crops
@@ -179,20 +185,32 @@ shown = 0
 for overall, slug, r, ts, tt in rows:
     if slug in walked:
         continue
-    p(f"- **{slug}** ({100*overall:.0f}%): {top_cosharers(slug, k=6)}")
+    pct = f"{100*overall:.0f}%" if overall is not None else "n/a (0 leaves measured)"
+    p(f"- **{slug}** ({pct}): {top_cosharers(slug, k=6)}")
     shown += 1
     if shown >= 15:
         break
 p()
 
-# dataset summary
+# dataset summary. A mean is only taken over crops that HAVE a denominator; a set whose
+# members were all measured-nothing gets a refusal, not a reassuring 0% (PLA-160).
 nonwalked = [x for x in rows if x[1] not in walked]
-mean_overall = sum(o for o, *_ in nonwalked) / len(nonwalked) if nonwalked else 0
+measurable = [x for x in nonwalked if x[0] is not None]
+unmeasured = len(nonwalked) - len(measurable)
 p("## Summary")
 p()
-p(f"- Mean overall contamination across the {len(nonwalked)} non-walked crops: **{100*mean_overall:.0f}%**")
-hi = sum(1 for o, *_ in nonwalked if o >= 0.6)
-p(f"- Non-walked crops >=60% contaminated: **{hi}** of {len(nonwalked)}")
+if measurable:
+    mean_overall = sum(o for o, *_ in measurable) / len(measurable)
+    excl = f" ({unmeasured} unmeasured crop(s) excluded, reported n/a)" if unmeasured else ""
+    p(f"- Mean overall contamination across the {len(measurable)} measurable non-walked "
+      f"crops: **{100*mean_overall:.0f}%**{excl}")
+else:
+    p(f"- Mean overall contamination: **n/a** -- contamination_scan refuses a mean over "
+      f"{len(nonwalked)} non-walked crop(s) whose denominators are all 0 "
+      f"(0 leaves measured; measured-nothing is not measured-clean)")
+hi = sum(1 for o, *_ in measurable if o >= 0.6)
+p(f"- Non-walked crops >=60% contaminated: **{hi}** of {len(measurable)} measurable"
+  + (f" ({unmeasured} n/a)" if unmeasured else ""))
 p(f"- This per-(crop,field) shared/unique map is the candidate-vs-verified signal the pipeline/bots consume.")
 
 report = "\n".join(L)
