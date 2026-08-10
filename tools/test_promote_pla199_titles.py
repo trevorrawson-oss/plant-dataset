@@ -21,7 +21,7 @@ import promote_fixture  # noqa: E402
 from source_catalog_title_gate import LEGACY_UNFILLED, title_violations  # noqa: E402
 
 BASE_SHA = '060b91b807f7988d3d22ebbae77e90d285ee5f7dfe6a18a11c4de37cf6debbbd'
-POST_SHA = None  # register in COMMIT_FOR at commit time, then pin here
+POST_SHA = 'c16071bc34e3f41e0224264adc7d372061ce1b8de9fd2ab61ca5d232b63e4e3b'  # 46f143e
 
 BARE = re.compile(r'https?://[^/]+/?\Z')
 

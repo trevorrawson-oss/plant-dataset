@@ -99,6 +99,7 @@ COMMIT_FOR = {
     # PLA-157 zinnia trigger register rotation. Its suite pins 4f610318 AND this, so never
     # amend 596cd65 or 503c29f.
     '060b91b807f7988d3d22ebbae77e90d285ee5f7dfe6a18a11c4de37cf6debbbd': '596cd65',
+    'c16071bc34e3f41e0224264adc7d372061ce1b8de9fd2ab61ca5d232b63e4e3b': '46f143e',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
