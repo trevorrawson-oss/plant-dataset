@@ -815,6 +815,30 @@ print(f"  over-length titles: {len(_tlv)}")
 for m in _tlv:
     fail(f"trigger-title: {m}")
 
+# ---------------- A54. source_catalog title discipline (PLA-199) ----------------
+# THE PLA-155 MECHANISM. The catalog carried no titles, so strawberry's wrong-pub-number
+# credit (426-331 for 426-840 content) was invisible at authoring time and the ornamental-lead
+# scan, matching on URL text, missed its own confirmed case. Catalog-level, so it repeats
+# identically under every crop's invocation -- the point is that a promote MINTING a
+# document-scoped id without a title (read off the document, never inferred from the id/URL)
+# cannot pass the gauntlet. Exemptions are FROZEN at the PLA-199 backfill's 52 unfilled ids;
+# a bare institution-root carrying a title flags as fabrication (D2). See
+# source_catalog_title_gate's header for the three checks.
+from source_catalog_title_gate import title_violations as catalog_title_violations
+print("A54. source_catalog titles (document-scoped ids titled; bare roots untitled)")
+if not any("title" in e for e in data["source_catalog"].values()):
+    # D3 is two-phase: hard gate AFTER the PLA-199 backfill, convention until then. Arming
+    # off the DATA keeps a pre-backfill canonical (e.g. the live tree while a parallel arc
+    # runs its gauntlet) from redding 121 crops on unpromoted PLA-199 work. Once ANY title
+    # exists the gate is armed for good; the promote suite pins all 101, so a total strip
+    # cannot silently re-disarm it without that suite going red first.
+    print("  DORMANT: catalog carries no titles (PLA-199 backfill not yet promoted)")
+else:
+    _ctv = catalog_title_violations(data["source_catalog"])
+    print(f"  catalog title violations: {len(_ctv)}")
+    for m in _ctv:
+        fail(f"catalog-title: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
