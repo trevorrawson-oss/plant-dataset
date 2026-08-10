@@ -65,6 +65,21 @@ def online_violations(crop, liveness):
     return V
 
 
+def online_coverage(crops, liveness):
+    """ONLINE coverage report (PLA-156): return (measured, total) over the DISTINCT non-null urls
+    cited in the LIVE layers (zones{} excluded, same scoping as violations). `measured` = urls with a
+    ledger verdict. Absence from the ledger is BLINDNESS, not liveness: `0 known-dead` means nothing
+    without this denominator, so the CLI prints it on every --online run."""
+    urls = set()
+    for c in crops:
+        for _slug, _p, _src, rec in _walk_live_anchors(c):
+            url = rec.get("url")
+            if url:
+                urls.add(url)
+    measured = sum(1 for u in urls if isinstance(liveness.get(u), dict))
+    return measured, len(urls)
+
+
 if __name__ == "__main__":
     import json
     import sys
@@ -84,7 +99,10 @@ if __name__ == "__main__":
             for v in online_violations(c, liveness):
                 print(f"  OFFENDER: {v}")
                 total += 1
-        print(f"url_health --online (live layers, ledger {ledger_path}): {total} known-dead url(s)")
+        measured, distinct = online_coverage(data["crops"], liveness)
+        print(f"url_health --online (live layers, ledger {ledger_path}): {total} known-dead url(s); "
+              f"coverage {measured}/{distinct} distinct urls have a ledger verdict, "
+              f"{distinct - measured} UNMEASURED (absence from the ledger is not liveness)")
         sys.exit(1 if total else 0)
 
     path = args[0] if args else "crops_data_final.json"
