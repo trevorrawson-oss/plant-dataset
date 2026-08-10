@@ -795,6 +795,26 @@ print(f"  region-prose contradictions: {len(_rpv)}")
 for m in _rpv:
     fail(f"region-prose: {m}")
 
+# ---------------- A52/A53. weather_triggers consumer-prose sanity (PLA-157) ----------------
+# THE PLA-157 DEFECT. Certified zinnia shipped raw source ids ('clemson_hgic_1149') as
+# body_beginner on all three triggers, and this suite PASSED: A29 checks the register is non-null,
+# the compound gate checks it is non-empty, and an identifier satisfies both (the
+# fill-the-shape-is-the-defect / optional-field-gates-go-vacuous class in a new spot). A52 flags an
+# identifier-shaped title_*/body_* (never valid copy); A53 flags body-length prose in a title slot.
+# Scope + thresholds are MEASURED, not guessed -- see trigger_prose_gate's header: scoping wider
+# than weather_triggers floods on legitimate enums (container soil_mix type_seasoned, ~17 crops).
+from trigger_prose_gate import identifier_prose_violations, title_length_violations
+print("A52. trigger prose is prose (no identifier-shaped title_*/body_* in weather_triggers)")
+_ipv = identifier_prose_violations(crop)
+print(f"  identifier-shaped consumer prose: {len(_ipv)}")
+for m in _ipv:
+    fail(f"trigger-prose: {m}")
+print("A53. trigger title length (a title slot does not carry body-length prose)")
+_tlv = title_length_violations(crop)
+print(f"  over-length titles: {len(_tlv)}")
+for m in _tlv:
+    fail(f"trigger-title: {m}")
+
 # ---------------- A24. annual calendar token PLACEMENT (the B1 armor; companion to A5) ----------------
 # A5 (annual_coherence_violations) checks length + token enum + heat_pause/declared-months
 # ALIGNMENT, but never checks that a PAUSE token sits in a legitimate slot. The actual
