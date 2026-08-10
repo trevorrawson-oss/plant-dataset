@@ -87,6 +87,9 @@ COMMIT_FOR = {
     # PLA-114 campaign D close. FIVE consecutive PLA-114 states are pinned and all are
     # load-bearing; see the note above. Never amend ae15df4, ebfd537, b7dbc81, 3b222f8 or 8ee1b0b.
     '72284f0291442919d005a8546f6cfbdcdf06502fe7842327fa77201e5c9c8571': '3b222f8',
+    # PLA-156 corn dispositions -- one promote, one commit. Its guard suite pins BOTH 72284f02
+    # (base) and this (post), so never amend 3b222f8 or 8d00f8a.
+    'db853c4b20e889a93d8946e947b31a2c7a00f49042e8774a04dc7386bca9e7a5': '8d00f8a',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the

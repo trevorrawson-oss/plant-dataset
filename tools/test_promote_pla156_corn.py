@@ -18,8 +18,9 @@ import promote_fixture  # noqa: E402
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_SHA = '72284f0291442919d005a8546f6cfbdcdf06502fe7842327fa77201e5c9c8571'
-# Pinned after the promote commit lands and registers in COMMIT_FOR; None = read live canonical.
-POST_SHA = None
+# Pinned to the state THIS promote produced (registered in COMMIT_FOR as 8d00f8a), so the suite
+# keeps protecting after canonical moves on. None = read live canonical (pre-pin bootstrap only).
+POST_SHA = 'db853c4b20e889a93d8946e947b31a2c7a00f49042e8774a04dc7386bca9e7a5'
 
 UMN_URL = 'https://extension.umn.edu/vegetables/growing-popcorn'
 ISU_URL = 'https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden'
