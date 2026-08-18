@@ -27,12 +27,23 @@ SO THIS TOOL REFUSES TO REPORT AN ABSENCE IT CANNOT SUPPORT. `assert_absence_rep
 
   * any cited URL is UNCACHED -- unread is UNDETERMINED, never absent
     ([[absence-findings-are-document-scoped]], [[waf-block-pages-cached-as-absence]]); or
+
   * a proximity filter was used and the set contains a document whose TITLE names the crop; or
   * the cached set came back empty, which means the cache lookup broke rather than the
     literature being silent ([[a-clean-zero-can-be-your-own-parser]]).
 
-`proximity_band_hits` is kept deliberately, as the WRONG method, so the regression test can
-re-introduce the original bug and prove the guard fires.
+WHAT `cited_urls` COUNTS, AND WHY IT WIDENED (PLA-161, 2026-08-14). It used to walk
+`anchoring_urls` by exact key. A source id named only in a `sources` / `source_set` list was
+therefore invisible: it could not reach `report.rows`, so it could not reach `report.uncached`,
+so THE GUARD COULD NOT REFUSE OVER IT. PLA-161 recorded this as latent, because
+`assert_absence_reportable(..., used_proximity=False)` returned True for zero of 128 crops -- every
+crop still had some uncached anchored URL. By 2026-08-14 it returned True for 58 of 128, and 28 of
+those carried unread list-only documents; the guard was certifying absence over documents it could
+not see. A protection that holds only while something else stays broken is not latent, it is
+scheduled ([[latent-guard-gap-goes-live-when-upstream-completes]]).
+
+`proximity_band_hits` and `anchoring_urls_only` are both kept deliberately, as WRONG methods, so
+the regression tests can re-introduce each original bug and prove the guard fires.
 
     $ python3 tools/cited_claim_scan.py lemon              # the 24-32F band, per document
     $ python3 tools/cited_claim_scan.py lemon --lo 20 --hi 35
@@ -111,12 +122,22 @@ def _load():
         return json.load(fh)
 
 
-def cited_urls(slug, data=None):
-    """Every (source_id, url) pair the crop cites in an `anchoring_urls` block."""
-    data = data or _load()
+def _crop(data, slug):
     crop = next((c for c in data['crops'] if c.get('slug') == slug), None)
     if crop is None:
         raise SystemExit(f"no crop with slug {slug!r}")
+    return crop
+
+
+def anchoring_urls_only(slug, data=None):
+    """THE WRONG METHOD, kept so the regression test can prove it under-counts. Do not call it.
+
+    This is `cited_urls` as it stood until PLA-161: an exact-key walk over `anchoring_urls`. A
+    source id named only in a `sources` / `source_set` list is invisible to it, so such a document
+    could never reach `report.rows` and therefore never reach `report.uncached` -- the guard that
+    refuses an absence over UNREAD documents was structurally unable to refuse over them.
+    """
+    data = data or _load()
     pairs = set()
 
     def walk(node):
@@ -132,8 +153,60 @@ def cited_urls(slug, data=None):
             for value in node:
                 walk(value)
 
-    walk(crop)
+    walk(_crop(data, slug))
     return sorted(pairs)
+
+
+# The lists that name a source id without carrying its URL. `sources_read_not_cited` is
+# deliberately excluded: it records documents that WERE read and consciously not cited, so it is
+# not an unread-document risk.
+_ID_LIST_KEYS = ('sources', 'source_set')
+
+
+def listed_source_ids(slug, data=None):
+    """Every source id the crop names in a `sources` / `source_set` list, with no URL attached."""
+    data = data or _load()
+    got = set()
+
+    def walk(node):
+        if isinstance(node, dict):
+            for key in _ID_LIST_KEYS:
+                value = node.get(key)
+                if isinstance(value, list):
+                    got.update(s for s in value if isinstance(s, str))
+            for value in node.values():
+                walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+
+    walk(_crop(data, slug))
+    return got
+
+
+def cited_urls(slug, data=None):
+    """Every (source_id, url) document the crop cites, from ANCHORS *and* from id-only lists.
+
+    A source id is NOT a document -- cherry-tomato anchors `clemson_hgic` at six different
+    factsheets -- so the unit here is the URL and every anchored URL is kept. What PLA-161 added
+    is the tail: an id named only in a `sources` / `source_set` list carries no URL at the node,
+    and is resolved through `source_catalog` instead.
+
+    The catalog URL is added ONLY for ids this crop never anchors. When an id is anchored the
+    crop's real documents are already enumerated, and folding in the catalog's institution
+    landing page would pad the denominator with a portal nobody needs to read.
+
+    An id that resolves to nothing is emitted as `(sid, None)` and becomes an UNRESOLVED row.
+    Dropping it would shrink the denominator, which is the same defect this tool exists to catch.
+    """
+    data = data or _load()
+    pairs = set(anchoring_urls_only(slug, data))
+    anchored = {sid for sid, _url in pairs}
+    catalog = data.get('source_catalog') or {}
+    for sid in listed_source_ids(slug, data) - anchored:
+        row = catalog.get(sid)
+        pairs.add((sid, (row or {}).get('url') or None))
+    return sorted(pairs, key=lambda p: (p[0], p[1] or ''))
 
 
 def band_hits(text, lo, hi):
@@ -184,6 +257,11 @@ def _ctx(text, start, end, pad=200):
 def scan_crop(slug, lo, hi, data=None):
     report = Report(slug, lo, hi)
     for sid, url in cited_urls(slug, data):
+        if not url:
+            # cited by id, resolves to no URL -- UNREAD, and never to be silently dropped
+            report.uncached.append((sid, f'<unresolved source id {sid}>'))
+            report.rows.append((sid, url, 'UNRESOLVED', [], False))
+            continue
         path = cache_path(url)
         if not os.path.exists(path):
             report.uncached.append((sid, url))
@@ -244,8 +322,12 @@ def main():
     print(f"band {args.lo}-{args.hi}F, NO proximity filter\n")
 
     for sid, url, state, hits, subject in report.rows:
-        if state == 'UNCACHED':
-            print(f"  UNDETERMINED  {sid:18s} {url}")
+        if state == 'UNRESOLVED':
+            print(f"  UNRESOLVED    {sid:18s} <cited by id; no URL in source_catalog>")
+            continue
+        if state in ('UNCACHED', 'NOT-A-DOCUMENT'):
+            print(f"  UNDETERMINED  {sid:18s} {url}"
+                  f"{'  [cached bytes are not the document]' if state == 'NOT-A-DOCUMENT' else ''}")
             continue
         flag = ' [SUBJECT DOCUMENT]' if subject else ''
         print(f"  {'HIT ' if hits else 'none'}          {sid:18s} {url}{flag}")

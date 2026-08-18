@@ -70,6 +70,7 @@ from urllib.parse import urlsplit
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'tools'))
 from bare_host_scan import scan  # noqa: E402
+import reporting_contract  # noqa: E402
 
 CANONICAL = os.path.join(REPO, 'crops_data_final.json')
 BARE = re.compile(r'https?://[^/]+/?$')
@@ -260,7 +261,18 @@ def finding(crop, fid):
 
 
 def blob(f):
-    return ' '.join(str(f.get(k, '')) for k in ('id', 'summary', 'detail', 'resolution', 'note'))
+    """The finding's full text, for vocabulary searching. SERIALISE, do not enumerate.
+
+    PLA-161, and identical to `campaign_c_reprice.blob` -- see its docstring for the measurement.
+    The five-field list named `detail` (carried by zero findings) and omitted `basis` (361
+    findings, 88,392 chars), reading 77.5% of finding characters. Enumerating fields is what
+    caused the defect, so it serialises the whole object instead.
+
+    Verdict reach in THIS campaign: zero. All 26 decisions at `6b2dcb8e` and all 20 at
+    `76f92a20` keep their verdicts; the single flipped pair that is also a D decision
+    (edamame/ucanr_marin_mg) already closes as DECLARED-ANCHOR by another route.
+    """
+    return json.dumps(f, ensure_ascii=False)
 
 
 def cited_ids(crop):
@@ -359,15 +371,69 @@ def vocab_prose(crop, region, sid):
 
 # --- the sibling check, which is what actually prices D ----------------------------------------
 
+# Every cohort whose members may stand in for one another. A crop that belongs to none of them
+# has no siblings and must never be handed another cohort's documents.
+SIBLING_SETS = (CITRUS_SIBLINGS,)
+
+
+def sibling_set_for(slug):
+    """The sibling cohort this crop belongs to, or None if it has none.
+
+    PLA-161. The sibling checks used to iterate `CITRUS_SIBLINGS` looking for leads without ever
+    asking whether the SUBJECT was citrus. Campaign D's SOLE nodes include 15 non-citrus subject
+    NODES over 5 crops (jalapeno 5, pear-european 3, pear-asian 3, bell-pepper 2, edamame 2), so
+    a legume was being compared against five citrus crops. The same-id join returns 0 for all 15,
+    which is why nobody noticed -- but `sibling_leads` would hand edamame a citrus IPM page and a
+    citrus variety collection. Cohort membership is the guard.
+    """
+    for cohort in SIBLING_SETS:
+        if slug in cohort:
+            return cohort
+    return None
+
+
 def pathed_by_sibling(crops, slug, path, sid):
-    """Does a SIBLING citrus crop carry a PATHED url for this exact node path + source id?
+    """Does a SIBLING crop carry a PATHED url for this exact node path + the SAME source id?
+
+    THE VERDICT FUNCTION. Campaign D closed its SIBLING-PATHED decisions on this join, so it is
+    deliberately left on the narrow same-id key -- re-pricing a closed campaign as a side effect
+    of a tooling change is the shape PLA-161 exists to refuse. `sibling_leads` is the widened
+    view, and it is additive.
 
     Not vacuous: it interrogates a DIFFERENT crop's data than the one being adjudicated, so it
     genuinely returns nothing when no sibling covers the cell. Verified by the fact that it
     returns nothing for several of D's decisions.
+
+    THE REFACTOR IS BEHAVIOUR-PRESERVING OVER THIS CAMPAIGN, AND THAT WAS MEASURED, not assumed:
+    old-vs-new over every real node gives 0 differences at BOTH `6b2dcb8e` (123 nodes) and
+    `76f92a20` (100 nodes) -- pinned by `test_the_refactor_is_behaviour_preserving_over_real_nodes`.
+    It is NOT an identity in general: over a synthetic crop x path x source-id cross product the
+    two disagree on 468 combinations at the pin and 117 live, and every one of them is a
+    NON-CITRUS subject that the old code would have handed citrus documents. The cohort guard is
+    therefore load-bearing here too -- just not on any input campaign D actually feeds it, which
+    is precisely why it went unnoticed ([[guard-reachability-must-be-measured]]).
     """
+    return [(other, url) for other, osid, url in sibling_leads(crops, slug, path)
+            if osid == sid]
+
+
+def sibling_leads(crops, slug, path, sid=None):
+    """Every PATHED sibling citation at this exact node path, under ANY source id.
+
+    A DISCOVERY, NEVER A VERDICT ([[sibling-pathed-is-a-discovery-not-a-verdict]]). A sibling
+    documenting the same cell under a different id is a lead worth reading; whether that document
+    supports THIS crop's claim is a read, not a join. PLA-161's re-key, measured:
+
+        pinned 6b2dcb8e : sibling leads 15 -> 53 NODES
+        live   76f92a20 : sibling leads  3 -> 38 NODES  (3 -> 13 at the DECISION unit)
+
+    Pass `sid` to filter to one source id; omit it for the widened view.
+    """
+    cohort = sibling_set_for(slug)
+    if cohort is None:
+        return []
     out = []
-    for other in CITRUS_SIBLINGS:
+    for other in cohort:
         if other == slug or other not in crops:
             continue
         node = resolve(crops[other], path)
@@ -376,9 +442,11 @@ def pathed_by_sibling(crops, slug, path, sid):
         a = node.get('anchoring_urls')
         if not isinstance(a, dict):
             continue
-        m = a.get(sid)
-        if isinstance(m, dict) and m.get('url') and not BARE.fullmatch(m['url']):
-            out.append((other, m['url']))
+        for osid, m in a.items():
+            if sid is not None and osid != sid:
+                continue
+            if isinstance(m, dict) and m.get('url') and not BARE.fullmatch(m['url']):
+                out.append((other, osid, m['url']))
     return out
 
 
@@ -545,6 +613,29 @@ def sibling_node_coverage(crops, nodes):
     return out
 
 
+def _footprint():
+    import hunt_footprint
+    return hunt_footprint.FOOTPRINT
+
+
+def _masked_residue(campaign):
+    """(masked-only DECISIONS, masked node-CITATIONS) in this campaign's own hunts.
+
+    Re-derived live from `hunt_footprint`, never pinned -- a stale constant would put the
+    completion contract back to sleep the moment the residue moved.
+    """
+    import hunt_footprint
+    with open(CANONICAL, encoding='utf-8') as fh:
+        data = json.load(fh)
+    dec_count = rows = 0
+    for (_slug, reg, sid), d in hunt_footprint.decisions(data).items():
+        entry = hunt_footprint.FOOTPRINT.get((reg, sid))
+        if entry and entry[1] == campaign and d['sole'] == 0 and d['masked']:
+            dec_count += 1
+            rows += d['masked']
+    return dec_count, rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--nodes', action='store_true', help='itemize every node and its verdict')
@@ -670,9 +761,25 @@ def main():
     collapsed = sorted(h for h, vs in hunt_state.items() if vs <= {'SIBLING-PATHED',
                                                                   'DECLARED-ANCHOR',
                                                                   'CATALOG-REPOINTABLE'})
-    print('\n   HUNTS WITH NO SEARCH LEFT (every decision has a named document or a')
-    print('   filed declaration): %d of %d  -> %s'
-          % (len(collapsed), len(hunt_state), ', '.join('#%d' % h for h in collapsed)))
+    # PLA-161 predicate 2. "N of M hunts have no search left" is a completion claim, and it was
+    # made over the SOLE-visible view only. Campaign D's own hunts carry masked-only decisions
+    # that never entered `hunt_state` at all, and a hunt absent from that dict is indistinguishable
+    # from one that closed.
+    masked_dec, masked_rows = _masked_residue('D')
+    d_hunts = sorted({h for (reg, sid), (h, camp) in _footprint().items() if camp == 'D'})
+    try:
+        reporting_contract.assert_completion_reportable(
+            'HUNTS WITH NO SEARCH LEFT', len(collapsed), len(hunt_state),
+            masked_units=masked_dec, masked_rows=masked_rows,
+            hunts_expected=d_hunts, hunts_with_rows=sorted(hunt_state),
+            unit='hunts', masked_unit='decisions')
+        print('\n   HUNTS WITH NO SEARCH LEFT (every decision has a named document or a')
+        print('   filed declaration): %d of %d  -> %s'
+              % (len(collapsed), len(hunt_state), ', '.join('#%d' % h for h in collapsed)))
+    except reporting_contract.UnreportableCompletion as exc:
+        print('\n   COMPLETION REFUSED -- %s' % reporting_contract.describe_refusal(exc))
+        print('   counted (SOLE-visible only): %d of %d hunts  -> %s'
+              % (len(collapsed), len(hunt_state), ', '.join('#%d' % h for h in collapsed)))
 
     open_dec = [k for k, v in dec.items() if v[0][7] in ('OPEN', 'OPEN-SCOPED', 'MODELED-ONLY')]
     print('   STILL NEEDING A DECISION: %d of %d decisions, %d of %d nodes'

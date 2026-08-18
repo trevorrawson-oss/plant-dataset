@@ -46,6 +46,7 @@ import sys
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'tools'))
 from bare_host_scan import scan  # noqa: E402
+import reporting_contract  # noqa: E402
 
 CANONICAL = os.path.join(REPO, 'crops_data_final.json')
 
@@ -270,6 +271,24 @@ def bucket_of(ns):
     return 'OPEN -- needs document work'
 
 
+def _masked_residue(campaign):
+    """(masked-only DECISIONS, masked node-CITATIONS) in this campaign's own hunts.
+
+    Re-derived live from `hunt_footprint` on every run, never pinned: a stale constant would put
+    the completion contract back to sleep the moment the residue moved.
+    """
+    import hunt_footprint
+    with open(CANONICAL, encoding='utf-8') as fh:
+        data = json.load(fh)
+    dec_count = rows = 0
+    for (_slug, reg, sid), d in hunt_footprint.decisions(data).items():
+        entry = hunt_footprint.FOOTPRINT.get((reg, sid))
+        if entry and entry[1] == campaign and d['sole'] == 0 and d['masked']:
+            dec_count += 1
+            rows += d['masked']
+    return dec_count, rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--nodes', action='store_true', help='itemize every node and its verdict')
@@ -361,8 +380,20 @@ def main():
 
     hd, hn = tally('OPEN -- needs document work')
     cd, cn = tally('OPEN -- container only (region anchor)')
-    print('\n   HONEST OPEN, document work : %2d of %d decisions, %3d of %d nodes'
-          % (hd, len(dec), hn, len(nodes)))
+    # PLA-161 predicate 2. This line reported only what survived `if not sole: continue`.
+    # Campaign B's own hunts (#1, #2) carry masked-only decisions that never entered the
+    # denominator, so a bare "0 of 33" cannot be printed without accounting for them.
+    masked_dec, masked_rows = _masked_residue('B')
+    try:
+        reporting_contract.assert_completion_reportable(
+            'HONEST OPEN, document work', hd, len(dec),
+            masked_units=masked_dec, masked_rows=masked_rows)
+        print('\n   HONEST OPEN, document work : %2d of %d decisions, %3d of %d nodes'
+              % (hd, len(dec), hn, len(nodes)))
+    except reporting_contract.UnreportableCompletion as exc:
+        print('\n   COMPLETION REFUSED -- %s' % reporting_contract.describe_refusal(exc))
+        print('   counted (SOLE-visible only): %2d of %d decisions, %3d of %d nodes'
+              % (hd, len(dec), hn, len(nodes)))
     print('   plus region-anchor only    : %2d of %d decisions, %3d of %d nodes'
           % (cd, len(dec), cn, len(nodes)))
     print('   ledger carries 33; %d are closed, declared or claim-adjudicated already.'

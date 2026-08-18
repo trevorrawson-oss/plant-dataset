@@ -54,6 +54,7 @@ from urllib.parse import urlsplit
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'tools'))
 from bare_host_scan import scan  # noqa: E402
+import reporting_contract  # noqa: E402
 
 CANONICAL = os.path.join(REPO, 'crops_data_final.json')
 BARE = re.compile(r'https?://[^/]+/?$')
@@ -209,7 +210,24 @@ def finding(crop, fid):
 
 
 def blob(f):
-    return ' '.join(str(f.get(k, '')) for k in ('id', 'summary', 'detail', 'resolution', 'note'))
+    """The finding's full text, for vocabulary searching. SERIALISE, do not enumerate.
+
+    PLA-161. This read a hand-maintained five-field list -- ('id','summary','detail','resolution',
+    'note') -- and the list was wrong in both directions: `detail` is carried by ZERO findings
+    dataset-wide, while `basis` (361 findings, 88,392 chars, the second-largest prose field) was
+    never read at all. Measured at `76f92a20` the list saw 476,233 of 614,886 finding characters,
+    77.5%, missing 22.5%. Enumerating fields is what caused this, so it now serialises the whole
+    object -- the same rule `hunt_footprint.classify` already uses.
+
+    Provably not looser: whole-finding and the enumerated wide list return the SAME answer on
+    every (crop, finding, source_id) triple in the dataset, pinned by
+    `test_the_widened_blob_reads_the_whole_finding_and_that_is_deliberate`.
+
+    Reach, stated so nobody quotes this as a re-price: it moves 45 TRIPLES over 20 FINDINGS on 13
+    CROPS, and ZERO decision verdicts in campaign C or D at either SHA. Where it bites is
+    campaign A and the masked residue (arugula/uc_mg is hunts #9 and #11, campaign A).
+    """
+    return json.dumps(f, ensure_ascii=False)
 
 
 def cited_ids(crop):
@@ -325,6 +343,45 @@ def collect(data, crops):
     return nodes
 
 
+def _campaign_c_masked_residue(data):
+    """(masked-only DECISIONS, masked node-CITATIONS) inside campaign C's own hunts.
+
+    Re-derived live from `hunt_footprint`, never pinned: a stale constant here would put the
+    completion contract back to sleep the moment the residue moved.
+    """
+    import hunt_footprint
+    masked_dec = masked_rows = 0
+    for (_slug, reg, sid), d in hunt_footprint.decisions(data).items():
+        entry = hunt_footprint.FOOTPRINT.get((reg, sid))
+        if not entry or entry[1] != 'C':
+            continue
+        if d['sole'] == 0 and d['masked']:
+            masked_dec += 1
+            masked_rows += d['masked']
+    return masked_dec, masked_rows
+
+
+def _empty_hunt_reasons(data, hunts_with_rows):
+    """Why each of C's hunts produced no rows -- 'fixed' vs 'fully masked'.
+
+    The distinction predicate 2 exists to force: at `76f92a20` hunt #24 is genuinely closed and
+    hunt #17 is 0 SOLE / 18 MASKED, and the old output rendered them identically.
+    """
+    import hunt_footprint
+    masked_by_hunt = collections.Counter()
+    for (_slug, reg, sid), d in hunt_footprint.decisions(data).items():
+        entry = hunt_footprint.FOOTPRINT.get((reg, sid))
+        if entry and entry[1] == 'C' and d['sole'] == 0 and d['masked']:
+            masked_by_hunt[entry[0]] += d['masked']
+    reasons = {}
+    for (reg, sid), hunt in HUNTS.items():
+        if hunt in hunts_with_rows:
+            continue
+        reasons[hunt] = ('fully masked (%d masked rows)' % masked_by_hunt[hunt]
+                         if masked_by_hunt[hunt] else 'fixed -- no bare citations remain')
+    return reasons
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--nodes', action='store_true', help='itemize every node and its verdict')
@@ -407,8 +464,26 @@ def main():
     open_dec = [k for k, v in veg.items() if v[0][7] == 'OPEN']
     open_nodes = [n for n in vnodes if n[7] == 'OPEN']
     open_claim = [n for n in open_nodes if n[5] in CLAIM_ARMS]
-    print('\n   HONEST OPEN after re-scope : %2d of %d decisions, %3d of %d nodes'
-          % (len(open_dec), len(veg), len(open_nodes), len(vnodes)))
+    # PLA-161 predicate 2. This line used to print unconditionally, and it was the exact defect:
+    # `0 of 25 decisions, 0 of 68 nodes` is true of what SURVIVED `if not sole: continue` and
+    # silent about the masked-only decisions the filter removed first. The residue is re-derived
+    # from the live footprint rather than pinned, and the contract decides whether a completion
+    # may be printed at all.
+    masked_dec, masked_rows = _campaign_c_masked_residue(data)
+    hunts_with_rows = {HUNTS[(n[1], n[2])] for n in nodes}
+    try:
+        reporting_contract.assert_completion_reportable(
+            'HONEST OPEN after re-scope', len(open_dec), len(veg),
+            masked_units=masked_dec, masked_rows=masked_rows,
+            hunts_expected=sorted(set(HUNTS.values())),
+            hunts_with_rows=hunts_with_rows,
+            empty_hunt_reasons=_empty_hunt_reasons(data, hunts_with_rows))
+        print('\n   HONEST OPEN after re-scope : %2d of %d decisions, %3d of %d nodes'
+              % (len(open_dec), len(veg), len(open_nodes), len(vnodes)))
+    except reporting_contract.UnreportableCompletion as exc:
+        print('\n   COMPLETION REFUSED -- %s' % reporting_contract.describe_refusal(exc))
+        print('   counted (SOLE-visible only) : %2d of %d decisions, %3d of %d nodes'
+              % (len(open_dec), len(veg), len(open_nodes), len(vnodes)))
     print('   of those open nodes        : %3d CLAIM arms, %3d containers'
           % (len(open_claim), len(open_nodes) - len(open_claim)))
     print('   ledger carries 35 decisions / 116 nodes for campaign C.')

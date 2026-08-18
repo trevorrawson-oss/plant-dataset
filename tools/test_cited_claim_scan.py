@@ -195,5 +195,105 @@ def test_MUTATION_a_poisoned_cache_entry_is_reported_as_undetermined(monkeypatch
         ccs.assert_absence_reportable(report, used_proximity=False)
 
 
+# --- PLA-161: the guard could not refuse over documents it never enumerated -------------------
+#
+# `cited_urls` walked `anchoring_urls` by exact key, so a source id named only in a `sources` or
+# `source_set` list never entered `report.rows` and therefore could never enter `report.uncached`.
+# The guard that refuses an absence over UNREAD documents was structurally unable to see them.
+#
+# PLA-161 recorded this as latent -- "protected today only by cache incompleteness",
+# `assert_absence_reportable(..., used_proximity=False)` returning True for ZERO of 128 crops. By
+# 2026-08-14 it returned True for 58 of 128, and 28 of those had unread list-only documents: the
+# guard was actively certifying absence over documents it could not read. A protection that holds
+# only while some unrelated thing stays broken is not latent, it is scheduled
+# ([[latent-guard-gap-goes-live-when-upstream-completes]]).
+#
+# Expected values below are transcribed from the dataset BY HAND, never computed from the walk
+# they validate ([[computed-guard-expectations-are-vacuous]]).
+
+# lemon names these four ONLY in sources/source_set -- never as an anchoring_urls key.
+LEMON_LIST_ONLY = {
+    'uc_anr_8100',                 # https://escholarship.org/content/qt5hh528qp/qt5hh528qp.pdf
+    'ucce_placer_nevada_31_018c',  # https://ucanr.edu/sites/default/files/2020-10/63813.pdf
+    'umd_ext',                     # https://extension.umd.edu
+    'umn_ext',                     # https://extension.umn.edu/vegetables
+}
+
+# Crops that PASSED the absence guard on 2026-08-14 while carrying UNCACHED list-only documents.
+# Both are deliberately uncached-not-poisoned, so they survive any doc-cache repair.
+#   shallot          -> ncsu_ext_bulb_onions, uada_ext_fsa6014
+#   english-cucumber -> uiuc_ext
+FALSE_PASS_CROPS = ('shallot', 'english-cucumber')
+
+
+def test_cited_urls_reaches_ids_named_only_in_sources_lists():
+    """RED before the widening: the four ids lemon names only in lists must be enumerated."""
+    seen = {sid for sid, _url in ccs.cited_urls('lemon')}
+    missing = LEMON_LIST_ONLY - seen
+    assert not missing, (
+        f"cited_urls cannot see {sorted(missing)} -- they are named in sources/source_set and "
+        f"resolve through source_catalog, so the guard cannot refuse an absence over them"
+    )
+
+
+def test_every_enumerated_pair_carries_a_usable_url():
+    """A widening that emitted (sid, None) would crash the fetcher rather than refuse."""
+    for sid, url in ccs.cited_urls('lemon'):
+        assert isinstance(url, str) and url, f"{sid} enumerated without a URL"
+
+
+@pytest.mark.parametrize("slug", FALSE_PASS_CROPS)
+def test_absence_is_refused_over_documents_named_only_in_sources_lists(slug):
+    """RED before the widening: these crops passed the guard over documents nobody had read."""
+    report = ccs.scan_crop(slug, 24, 32)
+    with pytest.raises(ccs.UnreportableAbsence, match="uncached"):
+        ccs.assert_absence_reportable(report, used_proximity=False)
+
+
+def test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass():
+    """Re-introduce the narrow walk and assert the guard STOPS firing.
+
+    Without this the widening looks like a preference rather than a fix. `anchoring_urls_only`
+    is kept in the module as THE WRONG METHOD for exactly this purpose, the same way
+    `proximity_band_hits` is.
+    """
+    for slug in FALSE_PASS_CROPS:
+        narrow = {sid for sid, _u in ccs.anchoring_urls_only(slug)}
+        wide = {sid for sid, _u in ccs.cited_urls(slug)}
+        assert wide - narrow, f"{slug} has no list-only ids -- it cannot pin this regression"
+
+    original = ccs.cited_urls
+    try:
+        ccs.cited_urls = ccs.anchoring_urls_only
+        for slug in FALSE_PASS_CROPS:
+            report = ccs.scan_crop(slug, 24, 32)
+            assert ccs.assert_absence_reportable(report, used_proximity=False) is True, (
+                f"{slug} was expected to reproduce the false pass under the narrow walk"
+            )
+    finally:
+        ccs.cited_urls = original
+
+
+def test_a_source_id_with_no_resolvable_url_still_blocks_absence(monkeypatch):
+    """An id we cannot resolve is UNREAD, not absent -- it must never be dropped silently.
+
+    Every list-only id resolves through source_catalog today (48 of 48). This pins the behaviour
+    for the day one does not: dropping it would shrink the denominator, which is the same defect
+    in a different costume ([[a-clean-zero-can-be-your-own-parser]]).
+    """
+    data = ccs._load()
+    victim = sorted(LEMON_LIST_ONLY)[0]
+    data['source_catalog'][victim] = {'id': victim}  # a catalog row with no url
+
+    report = ccs.scan_crop('lemon', 24, 32, data)
+    states = {sid: state for sid, _u, state, _h, _s in report.rows}
+    assert states.get(victim) == 'UNRESOLVED', (
+        f"{victim} lost its URL and vanished from the report instead of blocking"
+    )
+    assert victim in {sid for sid, _u in report.uncached}
+    with pytest.raises(ccs.UnreportableAbsence):
+        ccs.assert_absence_reportable(report, used_proximity=False)
+
+
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-q"]))

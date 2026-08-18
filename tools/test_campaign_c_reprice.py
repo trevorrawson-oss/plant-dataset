@@ -388,3 +388,121 @@ def test_citrus_is_reported_not_dropped(data):
     nodes = [n for n in R.collect(data, {c['slug']: c for c in data['crops']})
              if n[3] in R.CITRUS]
     assert len(nodes) == 31
+
+
+# --------------------------------------------------------------------------------------------
+# PLA-161 -- blob() read 5 fields, one of which does not exist, and missed the second-largest
+# prose field on every finding.
+#
+# `blob()` fed V2 (the source-id vocabulary) from ('id','summary','detail','resolution','note').
+# `detail` is carried by ZERO findings dataset-wide; `basis` is carried by 361 and is 88,392
+# characters. Measured at `76f92a20`: the narrow list read 476,233 of 614,886 finding characters
+# = 77.5%, missing 22.5%.
+#
+# THE NAMED RED CASE, chosen and re-verified before this test was written:
+#
+#   arugula / arugula_ca_uc_table_has_no_row / uc_mg
+#
+#   Its `basis` reads "Covers ca_interior/uc_mg and ca_south_coast/uc_mg, both of which cite
+#   https://mg.ucanr.edu, a domain root, as their sole source." That is an adjudication OF THE
+#   BARE-HOST DECISION, BY SOURCE ID -- precisely what V2 exists to detect -- and the narrow blob
+#   could not see it, because the summary describes the finding without ever naming the id.
+#
+# UNITS, and the honest reach. The widening moves:
+#     45 (crop, finding, source_id) TRIPLES  /  38 (crop, source_id) PAIRS
+#     20 FINDINGS  /  13 CROPS
+# and it moves ZERO DECISION verdicts in campaign C or campaign D, at `6b2dcb8e` or `76f92a20`.
+# The overlap between the flipped pairs and C's decisions is 0; with D's it is 1
+# (edamame/ucanr_marin_mg), which already closes as DECLARED-ANCHOR by another route. Where the
+# widening actually bites is campaign A and the masked residue -- arugula/uc_mg is hunts #9 and
+# #11, campaign A, 14 MASKED rows. So this is a correctness fix to the instrument, NOT a re-price
+# of C or D, and it is reported that way rather than as a number going up.
+
+WIDE_FIELDS = ('id', 'summary', 'detail', 'resolution', 'note',
+               'basis', 'finding', 'note_internal', 'resolution_note', 'title')
+
+
+def test_the_dead_field_is_carried_by_no_finding(live):
+    """`detail` was in the read list and does not exist. Pinned so nobody re-adds it as real."""
+    assert not [1 for c in live.values() for f in R.findings(c) if 'detail' in f]
+
+
+def test_basis_is_the_field_the_narrow_list_was_missing(live):
+    """Non-vacuity for the widening: `basis` must be big enough to matter."""
+    n = sum(1 for c in live.values() for f in R.findings(c) if f.get('basis'))
+    chars = sum(len(str(f['basis'])) for c in live.values() for f in R.findings(c) if f.get('basis'))
+    assert n > 300 and chars > 80_000, f'basis carried by {n} findings, {chars} chars'
+
+
+def test_RED_the_narrow_blob_could_not_see_arugulas_uc_mg_adjudication(live):
+    """The named RED case, both halves, asserted against the live finding text."""
+    f = R.finding(live['arugula'], 'arugula_ca_uc_table_has_no_row')
+    assert f is not None, 'the RED case finding is gone -- re-derive before trusting this test'
+    assert 'uc_mg' in str(f.get('basis', '')), (
+        "the adjudication must still live in `basis`, or this case no longer demonstrates anything")
+    narrow = ' '.join(str(f.get(k, '')) for k in ('id', 'summary', 'detail', 'resolution', 'note'))
+    assert 'uc_mg' not in narrow, (
+        'the narrow list must MISS it, or there is no defect to fix')
+    assert R.names_source(live['arugula'], f, 'uc_mg')[0], (
+        'V2 must now see the adjudication that `basis` carries')
+
+
+def test_the_widened_blob_reads_the_whole_finding_and_that_is_deliberate(live):
+    """Serialising the finding beats maintaining a field allowlist, and the two agree TODAY.
+
+    A hand-maintained field list is what produced this defect: it named a field that never
+    existed and omitted the largest one. `hunt_footprint.classify` already searches
+    `json.dumps(f)` for exactly this reason. This pins that whole-finding and the enumerated wide
+    list return the SAME answer on every (crop, finding, source_id) triple -- so the simpler rule
+    is provably not looser. If they ever diverge, read why rather than re-pinning the number.
+    """
+    import json as _json
+    import re as _re
+    disagreements = []
+    for c in live.values():
+        for f in R.findings(c):
+            wide = ' '.join(str(f.get(k, '')) for k in WIDE_FIELDS)
+            whole = _json.dumps(f, ensure_ascii=False)
+            for sid in R.cited_ids(c):
+                pat = _re.compile(r'\b%s\b' % _re.escape(sid))
+                if bool(pat.search(wide)) != bool(pat.search(whole)):
+                    disagreements.append((c['slug'], f.get('id'), sid))
+    assert disagreements == [], f'whole-finding and the wide list diverge: {disagreements[:5]}'
+
+
+def test_MUTATION_restoring_the_narrow_list_reproduces_the_miss(live):
+    """Prove the widening is load-bearing: put the old five fields back and V2 goes blind."""
+    original = R.blob
+    try:
+        R.blob = lambda f: ' '.join(
+            str(f.get(k, '')) for k in ('id', 'summary', 'detail', 'resolution', 'note'))
+        f = R.finding(live['arugula'], 'arugula_ca_uc_table_has_no_row')
+        assert not R.names_source(live['arugula'], f, 'uc_mg')[0], (
+            'the narrow list was expected to reproduce the miss')
+    finally:
+        R.blob = original
+    assert R.names_source(live['arugula'],
+                          R.finding(live['arugula'], 'arugula_ca_uc_table_has_no_row'),
+                          'uc_mg')[0], 'and the widened one must still see it'
+
+
+def test_the_widening_moves_no_campaign_C_decision_verdict(data, crops):
+    """Reported as a NO-OP on this campaign, deliberately, rather than left to look like a win.
+
+    The under-read is real (22.5% of finding characters) but its verdict reach into C is zero:
+    every flipped (crop, source_id) pair is outside C's decision set. Asserting this keeps a
+    later reader from quoting the widening as having re-priced C.
+    """
+    before = {}
+    for h, reg, sid, slug, path, arm, url, v, why in R.collect(data, crops):
+        before.setdefault((slug, reg, sid), v)
+    original = R.blob
+    try:
+        R.blob = lambda f: ' '.join(
+            str(f.get(k, '')) for k in ('id', 'summary', 'detail', 'resolution', 'note'))
+        narrow = {}
+        for h, reg, sid, slug, path, arm, url, v, why in R.collect(data, crops):
+            narrow.setdefault((slug, reg, sid), v)
+    finally:
+        R.blob = original
+    assert before == narrow, 'the blob widening was not expected to move any C verdict'

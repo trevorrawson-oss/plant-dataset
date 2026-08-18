@@ -580,3 +580,195 @@ def test_lime_is_modeled_only_and_that_does_not_close_the_anchor(data):
     assert {s for s, _r, _i in modeled} == {'lime', 'jalapeno'}
     assert len([1 for s, _r, _i in modeled if s == 'lime']) == 6
     assert not (modeled & bucket(data, 'DECLARED-ANCHOR'))
+
+
+# --------------------------------------------------------------------------------------------
+# 8. PLA-161 -- the RE-KEYED sibling lead, and the subject-membership guard it forced.
+#
+# `pathed_by_sibling` joins on the SAME source id at the SAME path. A sibling that documents the
+# same cell under a DIFFERENT id is invisible to it. PLA-161 asked for a re-key to same-path /
+# any-id, and originally named lemon/`lsu_agcenter` as the RED case -- which turned out to be a
+# PHANTOM: `lsu_agcenter` has zero bare citations dataset-wide and lemon never cites it at all,
+# at `76f92a20` AND at the issue's own stated base. An acceptance test can be wrong from the
+# moment it is written, so this one was NAMED AND RE-VERIFIED at both SHAs before being written.
+#
+# UNITS, because this arc keeps re-pricing itself by sliding between them:
+#   pinned 6b2dcb8e : 123 SOLE NODES, sibling leads 15 -> 53 NODES
+#   live   76f92a20 : 100 SOLE NODES, sibling leads  3 -> 38 NODES  (the figure PLA-161 quotes)
+#   the live re-key at the DECISION unit is 3 -> 13, not 3 -> 38.
+#
+# The re-key is ADDITIVE. `pathed_by_sibling` still drives the SIBLING-PATHED verdict campaign D
+# closed on; silently re-pricing a closed campaign inside a tooling change is the exact defect
+# PLA-161 exists to refuse. A sibling document is a DISCOVERY, not a verdict
+# ([[sibling-pathed-is-a-discovery-not-a-verdict]]).
+
+LIME_DESERT = 'regions.low_desert_az.resolved_by_zone.9'
+AZ_DOC = 'https://extension.arizona.edu/publication/low-desert-citrus-varieties'
+
+
+def test_the_same_id_join_MISSES_the_lime_low_desert_lead(crops):
+    """The RED half, pinned: lime's node is bare and the same-id join finds nothing for it."""
+    own = R.resolve(crops['lime'], LIME_DESERT)['anchoring_urls']
+    assert R.BARE.fullmatch(own['uariz_ext']['url']), (
+        "lime's uariz_ext must still be bare -- otherwise there is nothing to adjudicate")
+    assert R.pathed_by_sibling(crops, 'lime', LIME_DESERT, 'uariz_ext') == [], (
+        'the same-id join must MISS this, or the re-key proves nothing')
+
+
+def test_the_rekeyed_check_FINDS_the_lime_low_desert_lead(crops):
+    """The GREEN half: grapefruit documents the same cell under a different id.
+
+    `uariz_ext` and `az_coop_ext` are ONE institution under two id spellings -- the trap PLA-187
+    recorded for `ufifas_ext` vs `uf_ifas_vh021` -- and the document is literally *Low Desert
+    Citrus Varieties* against a low-desert citrus zone cell.
+    """
+    leads = R.sibling_leads(crops, 'lime', LIME_DESERT)
+    assert ('grapefruit', 'az_coop_ext', AZ_DOC) in leads, (
+        f'the re-key must reach grapefruit at this path; got {leads}')
+    assert all(other != 'lime' for other, _sid, _u in leads), 'a crop cannot be its own sibling'
+
+
+def test_the_rekey_REFUSES_a_non_citrus_subject(crops):
+    """edamame is a legume. The citrus cohort cannot source its planting window.
+
+    `pathed_by_sibling` never checked that the SUBJECT belongs to the sibling set -- it only
+    iterated the set looking for leads. Campaign D's SOLE nodes include 15 non-citrus subject
+    NODES over 5 crops (jalapeno 5, pear-european 3, pear-asian 3, bell-pepper 2, edamame 2).
+    Today the same-id join returns 0 for all of them, so the bug is invisible; the re-key would
+    hand edamame a citrus IPM page and a citrus variety collection.
+    """
+    for path in ('regions.ca_north_coast.resolved_by_zone.9',
+                 'regions.ca_north_coast.resolved_by_zone.10'):
+        assert R.sibling_leads(crops, 'edamame', path) == [], (
+            'a legume must never be handed a citrus document')
+    assert R.sibling_set_for('edamame') is None
+    assert R.sibling_set_for('lime') == R.CITRUS_SIBLINGS
+
+
+def test_MUTATION_without_the_subject_guard_a_legume_gets_citrus_leads(crops, monkeypatch):
+    """Prove the guard is LOAD-BEARING rather than decorative.
+
+    Disable the cohort check and edamame immediately collects citrus documents. Without this the
+    guard is a green assertion over a case that could not have failed
+    ([[computed-guard-expectations-are-vacuous]]).
+    """
+    monkeypatch.setattr(R, 'sibling_set_for', lambda slug: R.CITRUS_SIBLINGS)
+    leaked = R.sibling_leads(crops, 'edamame', 'regions.ca_north_coast.resolved_by_zone.9')
+    assert leaked, 'the mutation must reproduce the leak, or the guard proves nothing'
+    hosts = {u for _o, _s, u in leaked}
+    assert any('citrus' in u for u in hosts), (
+        f'expected citrus-specific documents to leak in; got {hosts}')
+
+
+def test_the_rekey_does_NOT_disturb_the_closed_campaign_verdicts(data):
+    """Additive by construction: campaign D still closes on exactly its six SIBLING-PATHED."""
+    assert bucket(data, 'SIBLING-PATHED') == EXPECTED_SIBLING
+
+
+def test_the_rekey_is_a_strict_superset_of_the_same_id_join(data, crops):
+    """A re-key that LOST a lead would be a regression wearing a widening's clothes."""
+    nodes = R.collect(data, crops)
+    for _h, _reg, sid, slug, path, _a, _u, _v, _w in nodes:
+        narrow = R.pathed_by_sibling(crops, slug, path, sid)
+        wide = {(o, u) for o, _s, u in R.sibling_leads(crops, slug, path)}
+        for other, url in narrow:
+            assert (other, url) in wide, f'{slug}/{path}/{sid}: re-key dropped {other} {url}'
+
+
+def test_the_refactor_is_behaviour_preserving_over_real_nodes(data, crops):
+    """`pathed_by_sibling` now delegates to `sibling_leads`. Prove that changed no verdict.
+
+    The suite going green is NOT proof -- it would stay green if the delegation quietly dropped
+    leads on nodes no assertion happens to cover. So this re-implements the ORIGINAL same-id walk
+    inline and diffs it across every node the campaign actually scans: 0 differences.
+
+    Deliberately scoped to real nodes. Over a synthetic crop x path x sid cross product the two
+    DO differ (468 combinations at this pin, 117 live) and every one is a non-citrus subject the
+    old code would have handed citrus documents -- which is the cohort guard working, not a
+    regression. Asserting equality over that population would be asserting the bug.
+    """
+    def original(slug, path, sid):
+        out = []
+        for other in R.CITRUS_SIBLINGS:
+            if other == slug or other not in crops:
+                continue
+            node = R.resolve(crops[other], path)
+            if not isinstance(node, dict):
+                continue
+            a = node.get('anchoring_urls')
+            if not isinstance(a, dict):
+                continue
+            m = a.get(sid)
+            if isinstance(m, dict) and m.get('url') and not R.BARE.fullmatch(m['url']):
+                out.append((other, m['url']))
+        return out
+
+    nodes = R.collect(data, crops)
+    assert nodes, 'no nodes to compare -- the guard would be vacuous'
+    for _h, _reg, sid, slug, path, _a, _u, _v, _w in nodes:
+        assert original(slug, path, sid) == R.pathed_by_sibling(crops, slug, path, sid), (
+            f'delegation changed the verdict join at {slug}/{path}/{sid}')
+
+
+def test_MUTATION_the_cohort_guard_does_bite_outside_the_campaign(crops):
+    """The other half of the claim above: the guard is not decorative, it is merely unreached.
+
+    A non-citrus subject at a path where citrus siblings ARE pathed is exactly the input the old
+    code got wrong; campaign D just never feeds it one.
+    """
+    leaked = R.sibling_leads(crops, 'edamame', 'regions.ca_north_coast.resolved_by_zone.9')
+    assert leaked == [], 'the guard must refuse a legume'
+    # ...and without the cohort check the same call returns citrus documents
+    real = R.sibling_set_for
+    try:
+        R.sibling_set_for = lambda slug: R.CITRUS_SIBLINGS
+        assert R.sibling_leads(crops, 'edamame', 'regions.ca_north_coast.resolved_by_zone.9'), (
+            'the unguarded call must leak, or the guard is untestable'
+        )
+    finally:
+        R.sibling_set_for = real
+
+
+def test_the_blob_widening_moves_no_campaign_D_decision_verdict(data, crops):
+    """PLA-161. `blob()` now serialises the whole finding instead of five enumerated fields.
+
+    The under-read it fixes was real -- `detail` existed on zero findings, `basis` on 361 and was
+    never read, 22.5% of finding characters unseen. Its verdict reach into D is nonetheless ZERO,
+    and that is asserted rather than left implicit so the widening cannot later be quoted as
+    having re-priced this campaign. Exactly one flipped (crop, source_id) pair is also a D
+    decision -- edamame/ucanr_marin_mg -- and it already closes as DECLARED-ANCHOR by another
+    route, so the wider text changes nothing about it.
+    """
+    def snapshot():
+        out = {}
+        for _h, reg, sid, slug, _p, _a, _u, v, _w in R.collect(data, crops):
+            out.setdefault((slug, reg, sid), v)
+        return out
+
+    wide = snapshot()
+    original = R.blob
+    try:
+        R.blob = lambda f: ' '.join(
+            str(f.get(k, '')) for k in ('id', 'summary', 'detail', 'resolution', 'note'))
+        narrow = snapshot()
+    finally:
+        R.blob = original
+    assert wide == narrow, 'the blob widening was not expected to move any D verdict'
+    assert len(wide) == 26, 'the pinned fixture should still carry 26 DECISIONS'
+
+
+def test_MUTATION_the_widened_blob_does_see_a_basis_only_adjudication(crops):
+    """Non-vacuity for the no-op above: prove the widening actually reads `basis`.
+
+    A test asserting "nothing moved" is worthless if the widening reads nothing. Inject a
+    basis-only mention on a crop D adjudicates and demand V2 find it.
+    """
+    import copy as _copy
+    crop = _copy.deepcopy(crops['lemon'])
+    f = R.findings(crop)[0]
+    for k in ('summary', 'note', 'resolution', 'id'):
+        f.pop(k, None)
+    f['id'] = 'synthetic_basis_only'
+    f['basis'] = 'This cell rests on totally_made_up_source_id and nothing else.'
+    assert R.names_source(crop, f, 'totally_made_up_source_id')[0], (
+        'the widened blob must read `basis`, or the no-op assertion above is vacuous')
