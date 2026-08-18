@@ -104,6 +104,7 @@ COMMIT_FOR = {
     # PLA-202 verbatim rewrite pass. Its suite pins c16071bc (base, replayed to the post
     # state) AND this; never amend 46f143e or e1b3ac3.
     '76f92a20faae0b8e5336ef8e7e1d9c852b9c734c93ae84fc6cccd65f49bcf3ce': 'e1b3ac3',
+    '394bb8bdf63c989eeff7241ba41d1c37c829201733ce199f4dffc88490d8f660': '4dde2c8',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
