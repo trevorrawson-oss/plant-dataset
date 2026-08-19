@@ -115,6 +115,9 @@ COMMIT_FOR = {
     # state) AND this; never amend 46f143e or e1b3ac3.
     '76f92a20faae0b8e5336ef8e7e1d9c852b9c734c93ae84fc6cccd65f49bcf3ce': 'e1b3ac3',
     '394bb8bdf63c989eeff7241ba41d1c37c829201733ce199f4dffc88490d8f660': '4dde2c8',
+    # PLA-253's END state. Its INTERMEDIATE 5f2d9555 is deliberately NOT here -- it was
+    # never a commit and lives in CHAIN, rebuilt by replay.
+    '3bf8b4ce25fbeaa9f3b2cf7f5b7fe9b5c6344784204780c3f393b2bc2e0eec3e': 'a07bf86',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
