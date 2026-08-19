@@ -23,6 +23,16 @@ Two recoveries, in order:
 
 Every path is HASH-VERIFIED against the requested SHA, so a wrong reconstruction cannot silently
 become a fixture. An unresolvable SHA raises -- loudly, never a skip.
+
+IF YOU ARE IMPORTING THIS TO WRITE A NEW PROMOTE GUARD SUITE, READ THIS FIRST.
+A live fixture buys you nothing if the guards running against it cannot fail. The suite ships
+MUTATION-TESTED or it does not ship: one mutation per guard family verified RED, a liveness
+defense (MUTATION-APPLIED marker + a sentinel that must redden, else `HARNESS DEAD`), a positive
+control where the injection could be invisible, and `assert set(pre) == set(post)` BEFORE any
+value comparison -- iterating `pre` makes everything added in `post` invisible, which was all four
+PLA-162 defects. A guard that REFUSES an input staying green is a REFUSAL-SPEC pass, not vacuous.
+Ruled 2026-08-19 (PLA-215); the bar and its evidence are in
+`docs/promote_suite_mutation_convention.md`, the binding line is in CLAUDE.md's Hard rules.
 """
 import contextlib
 import hashlib
@@ -137,6 +147,12 @@ CHAIN = {
     '093581673b519fa00337e61a238e99da725eaee7645c2e79d11e2c4f56ba0d51': (
         '0ab9b42b58e5a047d302a4dd865b82b997688ad21129a3bd64f2cc1f5116820c',
         'promote_strawberry_mid_south_z7_anchor.py'),
+    # PLA-253 ran two promotes on the same leaf before a commit: the safety rewrite, then
+    # the bee hedge as a second pass. 5f2d9555 is the state between them -- a real base
+    # for the second suite, and never its own commit, so it is rebuilt by replay.
+    '5f2d95559256df1553dd2ac0ba19cfa275ec497ab9ba0264ca28dbd94290af0e': (
+        '394bb8bdf63c989eeff7241ba41d1c37c829201733ce199f4dffc88490d8f660',
+        'promote_pla253_bt_safety.py'),
 }
 
 _cache = {}
