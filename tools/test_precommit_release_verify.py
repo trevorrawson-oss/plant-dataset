@@ -60,3 +60,49 @@ assert drop_precert_anchoring({other}, precert) == {other}, "non-anchoring viola
 assert drop_precert_anchoring({ANCH, other}, precert) == {other}, "only anchoring dropped, pre-cert"
 
 print("PASS precommit_release_verify pre-cert anchoring allowance")
+
+# --- export-currency arm (PLA-258) ---------------------------------------------
+# The arm blocks a canonical commit whose downstream export was built from different
+# bytes. Guarded here for the two ways it could go quietly wrong: firing on commits it
+# has no business judging, and passing a stale export because it measured the wrong
+# canonical.
+import json as _json, shutil as _shutil, tempfile as _tempfile, hashlib as _hashlib
+from precommit_release_verify import export_currency_concerns
+import export_staleness_gate as _esg
+
+_tmp = _tempfile.mkdtemp()
+
+def _mk_app(root, stamped_sha):
+    for rel in _esg.APP_ARTIFACTS:
+        full = os.path.join(root, rel)
+        os.makedirs(os.path.dirname(full), exist_ok=True)
+        open(full, "w").write(f"body-of-{rel}")
+    m = {"canonical_sha256": stamped_sha, "artifacts":
+         {r: _hashlib.sha256(f"body-of-{r}".encode()).hexdigest() for r in _esg.APP_ARTIFACTS}}
+    p = os.path.join(root, _esg.APP_PROVENANCE)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    _json.dump(m, open(p, "w"))
+    return root
+
+# case 9: a commit that does NOT stage the canonical is none of this arm's business.
+# (An arm that fires on doc-only commits gets bypassed by habit, and then never fires.)
+assert export_currency_concerns(["docs/foo.md"], _mk_app(os.path.join(_tmp, "a1"), "x"*64)) == [], \
+    "must not judge a commit that does not stage the canonical"
+
+# case 10: canonical staged + export stamped with a DIFFERENT canonical -> blocks.
+# The staged canonical is read from the git index, so this asserts against the real
+# repo's staged/HEAD bytes rather than a synthetic hash.
+_real = _esg.sha256_bytes(open(os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "crops_data_final.json"), "rb").read())
+_stale = export_currency_concerns(["crops_data_final.json"],
+                                  _mk_app(os.path.join(_tmp, "a2"), "0"*64))
+assert _stale and any("E1" in c for c in _stale), \
+    f"a stale stamp must block a canonical commit, got {_stale}"
+
+# case 11: an absent plant-app SKIPS rather than blocks. This backstop must never make a
+# dataset-only checkout uncommittable; the RELEASE gate is where unmeasured stays red.
+assert export_currency_concerns(["crops_data_final.json"], os.path.join(_tmp, "nope")) == [], \
+    "absent plant-app must fail open in the backstop"
+
+_shutil.rmtree(_tmp, ignore_errors=True)
+print("PASS precommit_release_verify export-currency arm")

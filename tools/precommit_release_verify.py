@@ -70,6 +70,44 @@ def roster_claim_concerns(staged_names):
     return concerns
 
 
+def export_currency_concerns(staged_names, app_root=None):
+    """Block a canonical commit whose downstream EXPORT was built from a different canonical.
+
+    PLA-258: for three weeks the app shipped a byte-exact projection of a canonical that was
+    three promotes old, and the only reason it went unnoticed is that a faithful projection
+    of stale bytes is indistinguishable from a faithful projection of current ones. The fix
+    is to make the two states unable to coexist across a commit boundary, which is what this
+    arm does.
+
+    Measured against the STAGED canonical, not the working tree: the export must have been
+    built from the bytes about to be committed. `npm run build:guides` reads the working
+    tree, so the intended order is promote -> build:guides -> commit, and a commit that
+    reorders those is exactly what this catches.
+
+    ONLY the app arm (E1/E2). The astro submodule pin is deliberately excluded: it can only
+    ever point at an ALREADY-COMMITTED dataset commit, so at pre-commit time a current pin
+    is not merely absent, it is impossible. The site's currency is the release gate's
+    question (`tools/export_staleness_gate.py`), not this hook's.
+
+    SKIPS when plant-app is not on this disk. That is a deliberate departure from the gate's
+    "unmeasured is not green" rule, and it is safe only because this is the fail-open
+    backstop: a dataset-only checkout must stay committable. The release gate still refuses
+    to call an unmeasured surface clean."""
+    if "crops_data_final.json" not in set(staged_names):
+        return []
+    sys.path.insert(0, HERE)
+    import export_staleness_gate as esg
+    root = app_root or esg.DEFAULT_APP_ROOT
+    if not os.path.isdir(root):
+        print(f"  export-currency: no plant-app at {root} -> skip (backstop fails open)")
+        return []
+    staged = _index_bytes("crops_data_final.json")
+    if staged is None:
+        return []
+    violations, _ = esg.app_violations(root, esg.sha256_bytes(staged))
+    return violations
+
+
 def gate_violations(path, slug):
     out = subprocess.run([sys.executable, GATE, slug, path],
                          capture_output=True, text=True).stdout
@@ -192,6 +230,15 @@ def main():
             tmp = [cand_path, base_path]
         print("pre-commit release-verify (safety net -- NOT a substitute for protocol #6):")
         concerns = check(base_path, cand_path)
+        if not (a.base and a.candidate):
+            stale_export = export_currency_concerns(staged)
+            if stale_export:
+                print("\nBLOCKED -- the shipped export does not match the canonical being committed:")
+                for c in stale_export:
+                    print("  VIOLATION: " + c)
+                print("Fix: run `npm run build:guides` in ~/plant-app, then commit again.")
+                print("(Or bypass with: git commit --no-verify)")
+                return 1
         if concerns:
             print("\nBLOCKED -- regression(s) detected:")
             for c in concerns:
