@@ -118,6 +118,8 @@ COMMIT_FOR = {
     # PLA-253's END state. Its INTERMEDIATE 5f2d9555 is deliberately NOT here -- it was
     # never a commit and lives in CHAIN, rebuilt by replay.
     '3bf8b4ce25fbeaa9f3b2cf7f5b7fe9b5c6344784204780c3f393b2bc2e0eec3e': 'a07bf86',
+    # PLA-253 third pass: beneficial_nematodes anchored to pnw_handbook_epn.
+    'be8a6d1e10c014906ad66aff03fc307525f6f22d9045ff28cb850ffecfc686f4': '8118eaa',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
