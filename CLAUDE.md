@@ -30,6 +30,21 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
 - **Tests-first (TDD): RED before GREEN.** Adversarially stress-test every new gate — inject the
   defect class into a SCRATCH COPY, confirm it bounces — before trusting it. A gate isn't done
   until a defect has been sneaked at it and caught.
+- **A NEW PROMOTE OR GATE SUITE SHIPS MUTATION-TESTED, OR IT DOESN'T SHIP.** Minimum bar, at
+  authoring time, not later: (1) one mutation per guard family, injected into a scratch copy,
+  verified RED; (2) a **liveness defense** -- a MUTATION-APPLIED marker plus a sentinel that must
+  redden, or the run exits `HARNESS DEAD` (PLA-138's harness dedented an already-indented template,
+  silently ran the CLEAN fixture, and reported every mutation as surviving); (3) a positive control
+  wherever the injection could plausibly be invisible; (4) `assert set(pre) == set(post)` BEFORE any
+  value comparison in a two-state guard -- iterating pre makes additions in post invisible, which was
+  all four PLA-162 defects; (5) a guard that REFUSES an input staying green is a REFUSAL-SPEC pass,
+  not vacuous. An unverified guard is worse than no guard because it reads as coverage: PLA-114 had
+  guards passing on `'202'` matching an accessed date, PLA-162 had four staying green while a clone
+  of `lime` was appended to the roster as `ghost-crop`. Treat birth-time "all mutation-tested" claims
+  as unverified until rerun under an instrumented harness. Ruled 2026-08-19 (PLA-215); full bar,
+  evidence and the out-of-scope list in `docs/promote_suite_mutation_convention.md`. The 24-suite
+  backlog is opportunistic and is NOT a condition of this rule -- a written list of what was not
+  verified is a legitimate close.
 - **Release verification before any promote** (protocol #6): `whole_crop_gate` 18/18 +
   `tools/gate_all.py` (the whole suite on **every** certified crop) + `release_verify` + the
   per-batch source-truth sample. A green gate is NOT a clean release.
