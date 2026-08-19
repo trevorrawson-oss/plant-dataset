@@ -1,0 +1,711 @@
+{
+  "crop_slug": "turnip",
+  "record_count": 21,
+  "records": [
+    {
+      "crop_slug": "turnip",
+      "field_path": "failure_diagnostics[1].what_happened_seasoned",
+      "our_prose": "Roots grew coarse, fibrous, spongy in the center (pithy), and sharp-tasting. The usual causes are maturing in sustained heat above about 75°F, over-maturity from being left in the ground too long, or drought and uneven moisture. Pithiness and strong flavor are the classic signs of turnips grown or held through hot, dry weather.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/b-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Young car­ rots less than 1 inch in diameter at the shoulder are usually the most tender. Quality will be reduced if carrots are left in the ground too long before harvesting-as they often are in Hawaii. Vitamin value of carrots, both young and old, is very high.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "failure_diagnostics[5].next_season_tip_beginner",
+      "our_prose": "Keep the soil surface damp from sowing until the seedlings appear, plant shallow (about 1/4 to 1/2 inch) with fresh seed, and wait until the soil warms to at least 40 to 45°F before planting.",
+      "run_normalized": "about 1 4 to 1 2 inch",
+      "run_in_our_prose": "about 1/4 to 1/2 inch",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 1 4 to 1 2 inch"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Seeds are cheap, so get the best available. Don’t seed too thickly. Plant small seed, such as turnips and carrots, about 1⁄4 to 1⁄2 inch deep. Plant larger seed, such as beans, cucumbers, and peas, about 1 inch deep.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 4 to 1 2 inch"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "failure_diagnostics[5].next_season_tip_seasoned",
+      "our_prose": "Keep the surface evenly moist from sowing to emergence, sow shallowly (about 1/4 to 1/2 inch) with fresh seed, and wait for the soil to warm to at least 40 to 45°F before sowing.",
+      "run_normalized": "about 1 4 to 1 2 inch",
+      "run_in_our_prose": "about 1/4 to 1/2 inch",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 1 4 to 1 2 inch"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Seeds are cheap, so get the best available. Don’t seed too thickly. Plant small seed, such as turnips and carrots, about 1⁄4 to 1⁄2 inch deep. Plant larger seed, such as beans, cucumbers, and peas, about 1 inch deep.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 4 to 1 2 inch"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "fertilizer.npk_hint_beginner",
+      "our_prose": "The three numbers on a fertilizer bag are nitrogen, phosphorus, and potassium (N-P-K). Turnips do well with a balanced blend where the numbers are about even, like a 10-10-10, mixed into the soil before planting along with compost. Do not pile on high-nitrogen fertilizer if you want roots, since it grows leaves instead. If you are after the greens, a bit more nitrogen is okay.",
+      "run_normalized": "mixed into the soil before planting",
+      "run_in_our_prose": "mixed into the soil before planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mixed into the soil before planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "For most vegetables, the soil pH should be around 6.0 to 6.5. To be effective, the lime must be mixed into the soil before planting. Long-season crops such as tomatoes, cabbage, pepper, okra, and potatoes need more fertilizer than short-season crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "mixed into the soil before planting"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "notifications[0].body_beginner",
+      "our_prose": "Plant turnip seeds right in the garden about 2 to 3 weeks before your last frost, once the ground is no longer frozen or soggy. Plant them 1/4 to 1/2 inch deep and a bit thick, and plan to thin. The fall crop, planted in late summer, is often the best one.",
+      "run_normalized": "1 4 to 1 2 inch deep",
+      "run_in_our_prose": "1/4 to 1/2 inch deep",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "1 4 to 1 2 inch deep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Seeds are cheap, so get the best available. Don’t seed too thickly. Plant small seed, such as turnips and carrots, about 1⁄4 to 1⁄2 inch deep. Plant larger seed, such as beans, cucumbers, and peas, about 1 inch deep. Use only stocky, healthy, fresh plants.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 4 to 1 2 inch"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "notifications[0].body_seasoned",
+      "our_prose": "Direct-sow turnips about 2 to 3 weeks before your last frost, once the soil is workable and at least 40 to 45°F. Sow 1/4 to 1/2 inch deep, a little thick, and plan to thin. The fall crop, sown in late summer, is often the better one.",
+      "run_normalized": "1 4 to 1 2 inch deep",
+      "run_in_our_prose": "1/4 to 1/2 inch deep",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "1 4 to 1 2 inch deep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Seeds are cheap, so get the best available. Don’t seed too thickly. Plant small seed, such as turnips and carrots, about 1⁄4 to 1⁄2 inch deep. Plant larger seed, such as beans, cucumbers, and peas, about 1 inch deep. Use only stocky, healthy, fresh plants.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 4 to 1 2 inch"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[0].cause_seasoned",
+      "our_prose": "Adult flea beetles, chiefly the crucifer flea beetle (Phyllotreta cruciferae) and striped flea beetle (Phyllotreta striolata), which overwinter in leaf litter and field edges and emerge in early spring to feed on brassica foliage. Turnip, radish, mustard, and other crucifers are highly preferred hosts. Pressure is heaviest in spring and early summer and tapers as the season warms, which is one reason fall turnip crops face less of it.",
+      "run_normalized": "the crucifer flea beetle phyllotreta cruciferae and",
+      "run_in_our_prose": "the crucifer flea beetle (Phyllotreta cruciferae) and",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the crucifer flea beetle phyllotreta cruciferae and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cabbage-broccoli-other-cole-crop-insect-pests/",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[1].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Justin Ballew, ©2020, Clemson Extension Flea Beetles Flea beetles are small, chewing insects with powerful hind legs that allow them to leap away when disturbed. The crucifer flea beetle (Phyllotreta cruciferae) and the striped flea beetle (Phyllotreta striolata) are the predominant species affecting brassica crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "crucifer flea beetle phyllotreta cruciferae and"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[0].prevention_beginner",
+      "our_prose": "Clear away old plants and weeds at the end of the season so fewer beetles survive the winter nearby. Covering the seedbed with a row cover is the surest fix for early spring turnips. Leaning on fall plantings, which get hit less, and keeping the turnips growing fast with steady water also help.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/flea-beetles",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Protect your crops if 10-30% of leaves on seedlings and transplants have dropped off. It is generally not necessary to treat flea beetles during summer, especially at the end of the season. By summer, crops reach the 4- or 5-leaf stage and are strong enough to survive feeding damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[0].prevention_beginner",
+      "our_prose": "Clear away old plants and weeds at the end of the season so fewer beetles survive the winter nearby. Covering the seedbed with a row cover is the surest fix for early spring turnips. Leaning on fall plantings, which get hit less, and keeping the turnips growing fast with steady water also help.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[0].prevention_seasoned",
+      "our_prose": "Clean up crop debris and weeds at the end of the season to cut overwintering sites. A row cover over the seedbed is the most reliable defense for early spring sowings. Favoring fall plantings, which see lighter pressure, and keeping the stand growing fast with even moisture both reduce impact.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/flea-beetles",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Protect your crops if 10-30% of leaves on seedlings and transplants have dropped off. It is generally not necessary to treat flea beetles during summer, especially at the end of the season. By summer, crops reach the 4- or 5-leaf stage and are strong enough to survive feeding damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[0].prevention_seasoned",
+      "our_prose": "Clean up crop debris and weeds at the end of the season to cut overwintering sites. A row cover over the seedbed is the most reliable defense for early spring sowings. Favoring fall plantings, which see lighter pressure, and keeping the stand growing fast with even moisture both reduce impact.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[1].cause_beginner",
+      "our_prose": "The maggots (young) of the cabbage maggot fly, a small gray fly. It spends the winter as pupae in the soil, and in spring the females lay tiny white eggs at the base of cabbage-family plants. The eggs hatch in about a week and the maggots burrow into the roots for three to four weeks. It goes after the whole cabbage family, turnips, radishes, cabbage, broccoli, and is worst in cool, damp spring weather.",
+      "run_normalized": "the winter as pupae in the soil",
+      "run_in_our_prose": "the winter as pupae in the soil",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the winter as pupae in the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/root-maggots",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Plants attacked by root maggots Onion maggot damage Onion maggots attack Onion Garlic Carrot Radish Cabbage maggots attack Cabbage Broccoli Cauliflower Brussels sprouts Radishes Turnips Biology Root maggots spend the winter as pupae in the soil. In spring, the maggots transform into adult flies. Adult females lay about 50-200 small, white eggs at the base of plant stems and in nearby cracks in the soil.",
+      "source_context_available": true,
+      "tool_first_6gram": "the winter as pupae in the"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[2].prevention_beginner",
+      "our_prose": "Let helpful bugs like ladybugs live in your garden by not spraying broadly, go easy on nitrogen fertilizer, and pull cabbage-family weeds nearby. Check the undersides of leaves now and then so you catch aphids while there are only a few, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/flea-beetles",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Protect your crops if 10-30% of leaves on seedlings and transplants have dropped off. It is generally not necessary to treat flea beetles during summer, especially at the end of the season. By summer, crops reach the 4- or 5-leaf stage and are strong enough to survive feeding damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[2].prevention_beginner",
+      "our_prose": "Let helpful bugs like ladybugs live in your garden by not spraying broadly, go easy on nitrogen fertilizer, and pull cabbage-family weeds nearby. Check the undersides of leaves now and then so you catch aphids while there are only a few, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[3].prevention_beginner",
+      "our_prose": "Clean up old cabbage-family plants and weeds at the end of the season, which is the biggest help since that is where the bugs spend winter. Rotate where you plant brassicas, check under the leaves for the striped eggs, and plant a little mustard as bait if the bug keeps coming back.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/flea-beetles",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Protect your crops if 10-30% of leaves on seedlings and transplants have dropped off. It is generally not necessary to treat flea beetles during summer, especially at the end of the season. By summer, crops reach the 4- or 5-leaf stage and are strong enough to survive feeding damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "pests[3].prevention_beginner",
+      "our_prose": "Clean up old cabbage-family plants and weeds at the end of the season, which is the biggest help since that is where the bugs spend winter. Rotate where you plant brassicas, check under the leaves for the striped eggs, and plant a little mustard as bait if the bug keeps coming back.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Apr, May, Jun, Jul, Aug, Sep). Turnip is a cool-season crop that grows and tastes best around 60 to 65°F; sustained summer heat above about 75°F turns the roots woody, pithy, and sharp-flavored, slows germination, and pushes plants to bolt, so turnips are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UF/IFAS Extension)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's Dixie belt (Mojave-edge high desert) grows turnips on two direct-sown cycles, per Utah State University Extension's suggested vegetable planting dates for Utah. The spring sowing runs February 15 to March 1, the Group A (Hardy) date for St. George, with roots ready in about 50 days and the crop pulled by late April before the heat builds. USU Extension's Washington County frost and elevation notes put St. George over 100°F in June, July, and August, and USU's Group E \"Special Plants for Fall Harvest\" table does not open the fall turnip window until July 1, so May and June together form a genuine bare-ground pause between the two cycles. The fall sowing runs July 1 to August 1, and USU's fall-gardening guidance for the St. George area specifically groups turnips with carrots and beets as roots that hold well and can be dug quite late into winter, well past the November 1 average first frost.",
+      "run_normalized": "group e special plants for fall harvest",
+      "run_in_our_prose": "Group E \"Special Plants for Fall Harvest",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "group e special plants for fall harvest"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Plant: Celery Group D: Very Tender (Plant when the soil is warm, about 2 weeks after 'C' group.) Seed: Cantalope, Lima Bean, Winter Squash Plants: Eggplant, Pepper, Pumpkin, Tomato, Watermelon Fall-Season Vegetables Group E: Special Plants for Fall Harvest (Many vegetables can be planted for a fall harvest.",
+      "source_context_available": true,
+      "tool_first_6gram": "e special plants for fall harvest"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "sources_summary.primary[17].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "For larger harvests, main-crop turnips are fair keepers. In cold climates they can be left in the ground under a thick straw mulch and pulled until the soil freezes hard, or packed unwashed in damp sand in a box in a root cellar or unheated garage held near 32 to 40°F at high humidity, where they hold for two to four months. Store roots only; use the greens fresh.",
+      "run_normalized": "can be left in the ground",
+      "run_in_our_prose": "can be left in the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "can be left in the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_fall_veg"
+      ],
+      "source_names": [
+        "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].harvest_end[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_fall_veg"
+      ],
+      "source_context": "Green onions can be planted spring or fall as they do not take long to mature. Turnips, carrots and beets can be left in the ground quite late into the winter before being harvested. When direct seeding various crops, consult the package for “days to maturity”.",
+      "source_context_available": true,
+      "tool_first_6gram": "can be left in the ground"
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Even, consistent moisture is the rule, and it matters most during germination and again as the roots size up. Turnip seed and seedlings need a moist, uncrusted surface for the roughly 7 to 10 days to emergence. Once established, turnips want steady moisture rather than a wet-dry swing: aim for about 1 inch of water per week including rain, up to 1 to 2 inches in heat or sandy soil, delivered in deeper, less frequent soakings.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

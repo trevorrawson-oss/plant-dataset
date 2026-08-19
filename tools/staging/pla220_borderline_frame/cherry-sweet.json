@@ -1,0 +1,472 @@
+{
+  "crop_slug": "cherry-sweet",
+  "record_count": 10,
+  "records": [
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "bloom_time_seasoned",
+      "our_prose": "Sweet cherries bloom in early spring, typically March in mild regions and April to early May in cold-winter areas, usually just before or as the leaves emerge. Bloom is the year's chief vulnerability: the white blossoms open early and a hard late frost on open bloom kills that year's crop. Because most cultivars are self-incompatible, the pollinizer must bloom at the same time, so overlapping bloom periods, not just the presence of a second tree, decide fruit set.",
+      "run_normalized": "must bloom at the same time",
+      "run_in_our_prose": "must bloom at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "must bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "This cross-pollination ensures genetic diversity and, generally, a larger crop. To cross-pollinate each other, cultivars must bloom at the same time: early season, midseason, or late season. Ideally, plant trees 50 feet to 100 feet apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "must bloom at the same time"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Feed lightly in early spring before growth begins, broadcasting evenly around the root zone out to the drip line, off the trunk, and watering it in. Sweet cherry needs less nitrogen than peach: aim for about 8 to 12 inches of new shoot growth a year on a bearing tree, and ease off if it makes more. Never feed late in the season, since late nitrogen pushes soft growth that winter cold injures, and that injury is the main entry point for bacterial canker.",
+      "run_normalized": "in early spring before growth begins",
+      "run_in_our_prose": "in early spring before growth begins",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in early spring before growth begins"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cherries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.iastate_ext",
+        "companions.bad_seasoned[0].anchoring_urls.iastate_ext",
+        "companions.good_seasoned[0].anchoring_urls.iastate_ext",
+        "container_notes.anchoring_urls.iastate_ext",
+        "diseases[0].anchoring_urls.iastate_ext",
+        "diseases[2].anchoring_urls.iastate_ext",
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[2].anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "pollination.anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.iastate_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.plantings[0].bloom[0].anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.iastate_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.iastate_ext",
+        "regions.low_desert_az.plantings[0].anchoring_urls.iastate_ext",
+        "regions.low_desert_az.plantings[0].bloom[0].anchoring_urls.iastate_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.iastate_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.iastate_ext",
+        "regions.rgv.plantings[0].anchoring_urls.iastate_ext",
+        "regions.rgv.plantings[0].bloom[0].anchoring_urls.iastate_ext",
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.iastate_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.iastate_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.iastate_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.iastate_ext",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.iastate_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.iastate_ext",
+        "rotation.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.dormancy[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.planting[1].anchoring_urls.iastate_ext",
+        "watering.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Fertilization For optimal fruit set and growth, a modest amount of fertilizer can be applied in early spring, before growth begins, to support shoot development and fruiting. Using a 10-10-10 fertilizer, apply at a rate of 1/2 pound per year of age, never exceeding 5 pounds.",
+      "source_context_available": true,
+      "tool_first_6gram": "in early spring before growth begins"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "pests[0].cause_seasoned",
+      "our_prose": "The western cherry fruit fly (Rhagoletis indifferens), a small fly with banded wings. Pupae overwinter in the soil; adults emerge from late spring, and after a 5-to-7-day maturation the females lay eggs just under the skin of coloring fruit. There is one generation a year, and green fruit is safe, so timing tracks the color change.",
+      "run_normalized": "the western cherry fruit fly rhagoletis indifferens",
+      "run_in_our_prose": "The western cherry fruit fly (Rhagoletis indifferens",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the western cherry fruit fly rhagoletis indifferens"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/planthealth/research/western-cherry-fruit-fly",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.usu_ext"
+      ],
+      "source_context": "Post-harvest sanitation can reduce populations. The western cherry fruit fly (Rhagoletis indifferens, Order Diptera, Family Tephritidae) is the most important pest of sweet and tart cherries in Utah.",
+      "source_context_available": true,
+      "tool_first_6gram": "the western cherry fruit fly rhagoletis"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "pests[4].symptoms_seasoned",
+      "our_prose": "Gummy ooze mixed with sawdust-like frass at the base of the trunk or on the lower scaffolds, centered on wounds, the graft, or bark cracks. Larvae tunnel in the inner bark; repeated attacks weaken or girdle a young tree, and the wounds also open the door to bacterial canker.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "pollinator_notes_seasoned",
+      "our_prose": "Plant a second compatible variety unless you choose a self-fertile one. Most sweet cherries are self-incompatible: a lone Bing sets no crop. Compatibility is governed by S-alleles, so the pollinizer must be in a DIFFERENT incompatibility group AND bloom at the same time (the classic trap is that Bing, Lambert, and Royal Ann/Napoleon are all cross-incompatible and cannot pollinize one another). The self-fertile cultivars (Stella, Lapins, Sweetheart, Skeena, Black Gold, White Gold, Compact Stella) fruit alone and serve as universal pollinizers for most self-sterile varieties of matching bloom. Bees do the work, so strong bee activity during the short bloom is essential for set.",
+      "run_normalized": "bloom at the same time the",
+      "run_in_our_prose": "bloom at the same time (the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "bloom at the same time the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cherries Pollination of cherries is complicated by the fact that some varieties are genetically incompatible and will not pollinate each other even when they bloom at the same time. The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "bloom at the same time the"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "University of California Agriculture and Natural Resources (UC IPM)",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/cherry/",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.ucanr_ext",
+        "diseases[0].anchoring_urls.ucanr_ext",
+        "diseases[1].anchoring_urls.ucanr_ext",
+        "diseases[3].anchoring_urls.ucanr_ext",
+        "pests[1].anchoring_urls.ucanr_ext",
+        "pests[3].anchoring_urls.ucanr_ext",
+        "pests[4].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "rotation.anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "sources_summary.primary[9].name",
+      "our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/chill-hours",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.plantings[0].bloom[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].bloom[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].bloom[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].bloom[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Chill Hours | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "start_method.hardening_off_seasoned",
+      "our_prose": "Hardening off does not apply to sweet cherry. It arrives as a dormant, bare-root tree and goes in the ground in late winter to early spring, not raised from a seedling indoors, so there is no tender transplant to acclimate.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, no leaves) in late winter to early spring, before the buds open, once the ground can be dug. Soak the roots in a bucket for an hour or two first. Dig a hole wide enough to spread the roots without bending them, and set the tree so the graft union (the bumpy joint near the base, where the variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill with the same soil, water in well, and add a stake only if it is windy. Unless your variety is self-fertile, plant a second compatible cherry within about 100 feet.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while dormant in late winter to early spring, before bud break, once the ground can be worked. Soak the roots an hour or two beforehand. Dig a hole wide enough to spread the roots without bending them and set the tree with the graft union (the swollen joint near the base) 2 to 3 inches above the final soil line. Do not fertilize the hole; backfill with native soil, water in well, and stake if the site is windy. Plant a compatible pollinizer within about 100 feet unless the variety is self-fertile.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    }
+  ]
+}

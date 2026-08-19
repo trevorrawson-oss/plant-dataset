@@ -1,0 +1,343 @@
+{
+  "crop_slug": "spinach",
+  "record_count": 8,
+  "records": [
+    {
+      "crop_slug": "spinach",
+      "field_path": "bolting.prevention_seasoned",
+      "our_prose": "Spinach bolts primarily in response to long days, so the spring window is short: sow as early as the soil can be worked, choose slow-bolting (long-standing) varieties, keep moisture and nitrogen steady, and harvest before the longest days of June. The fall crop, grown under shortening days, rarely bolts and is the main season; overwintered plants bolt in spring as days lengthen, so crop them before the flower stalk elongates.",
+      "run_normalized": "as the soil can be worked",
+      "run_in_our_prose": "as the soil can be worked",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "as the soil can be worked"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-leafy-greens-iowa",
+      "anchor_paths": [
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Planting Leafy green vegetables can be directly sown into the garden. In spring, they can be planted as soon as the soil can be worked. Take care to not work in soil that is too wet. The soil should crumble apart when a handful is squeezed.",
+      "source_context_available": true,
+      "tool_first_6gram": "as the soil can be worked"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "fertilizer.example_product",
+      "our_prose": "Calcium nitrate (15.5-0-0), blood meal, or 21-0-0",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "Calcium nitrate (15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/spinach/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Working the fertilizer into the soil ensures that the nutrients are available to the plants when they are seeded or transplanted. Side dress 1 pound of calcium nitrate (15.5-0-0) per 100 square feet (30 feet of row) three to four weeks after planting. On sandier soil, this may need to be split into two applications.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "High N for leafy growth; e.g. a quarter cup of 21-0-0 per 10 ft of row, or calcium nitrate (15.5-0-0), side-dressed 3 to 4 weeks after sowing. No phosphorus or potassium needed beyond a soil-test baseline.",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate (15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/spinach/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Working the fertilizer into the soil ensures that the nutrients are available to the plants when they are seeded or transplanted. Side dress 1 pound of calcium nitrate (15.5-0-0) per 100 square feet (30 feet of row) three to four weeks after planting. On sandier soil, this may need to be split into two applications.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Spinach is ready when the leaves are 3 to 6 inches long, dark green, and tender, usually 37 to 50 days from sowing (baby leaf sooner). Harvest the outer leaves cut-and-come-again, or cut the whole rosette about an inch above the crown and let it regrow; pick in the cool morning and crop faster as days lengthen, since the leaves turn bitter once the plant bolts.",
+      "run_normalized": "are 3 to 6 inches long",
+      "run_in_our_prose": "are 3 to 6 inches long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "are 3 to 6 inches long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/spinach/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Harvest & Storage Spinach should be ready to harvest in about 37 to 45 days after planting. Harvest dark green, tender leaves that are 3 to 6 inches long by picking or cutting individual leaves. Start by picking the outer leaves and then harvest the newer leaves as they reach the desired size.",
+      "source_context_available": true,
+      "tool_first_6gram": "are 3 to 6 inches long"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "pests[0].cause_beginner",
+      "our_prose": "A small fly lays eggs on the underside of the leaves, and the maggots that hatch tunnel inside the leaf between the top and bottom layers, eating as they go. Spinach, beets, and chard are its favorites.",
+      "run_normalized": "on the underside of the leaves",
+      "run_in_our_prose": "on the underside of the leaves",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "on the underside of the leaves"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "cornell_ext"
+      ],
+      "source_names": [
+        "Cornell Cooperative Extension"
+      ],
+      "source_publishers": [
+        "Cornell University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cvp.cce.cornell.edu/submission.php?id=139",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.cornell_ext",
+        "pests[0].anchoring_urls.cornell_ext",
+        "rotation.anchoring_urls.cornell_ext"
+      ],
+      "source_context": "The adults can be seen flying near the ground between the plants. The females deposit eggs singly or in rows of two to five side by side on the underside of the leaves. In as little as three days but more commonly in four to six days the tiny legless, white to yellowish maggots hatch from the eggs and work their way into the leaf tissue.",
+      "source_context_available": true,
+      "tool_first_6gram": "on the underside of the leaves"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "pests[0].organic_treatment_beginner",
+      "our_prose": "Once a maggot is inside a leaf, sprays do not reach it well, so pick off and destroy mined leaves as soon as you see them, before the maggots drop to the soil. Crushing the maggot inside the leaf works too.",
+      "run_normalized": "before the maggots drop to the",
+      "run_in_our_prose": "before the maggots drop to the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "before the maggots drop to the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "cornell_ext"
+      ],
+      "source_names": [
+        "Cornell Cooperative Extension"
+      ],
+      "source_publishers": [
+        "Cornell University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cvp.cce.cornell.edu/submission.php?id=139",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.cornell_ext",
+        "pests[0].anchoring_urls.cornell_ext",
+        "rotation.anchoring_urls.cornell_ext"
+      ],
+      "source_context": "Deep plowing in the spring can reduce the overwintering population by burying existing pupae. In smaller stands, infected leaves can be picked before the maggots drop to the ground. Removing and destroying these infected leaves can lessen the leafminer pressure -Ray Range Asparagus Beets Broccoli Brussels Sprouts Cabbage Carrots Cauliflower Cucumbers Dry Beans Eggplant Ethnic Vegetables Garlic Horseradish Kohlrabi Lee",
+      "source_context_available": true,
+      "tool_first_6gram": "before the maggots drop to the"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's Dixie belt (Mojave-edge high desert) grows spinach on two direct-sown cycles, per Utah State University Extension's suggested vegetable planting dates for Utah. The spring sowing runs February 15 to March 1, the Group A (Hardy) date for St. George, with leaves ready in about 45 days and the crop cut by mid-April before it bolts. USU Extension's Washington County frost and elevation notes put St. George over 100°F in June, July, and August, and USU's Group E \"Special Plants for Fall Harvest\" table does not open the fall spinach window until July 1, so May and June together form a genuine two-month bare-ground pause, the longest of this family's fall-paired crops. Spinach is very cold tolerant, so the fall stand, sown July 1 to August 15, keeps producing well past the November 1 average first frost.",
+      "run_normalized": "group e special plants for fall harvest",
+      "run_in_our_prose": "Group E \"Special Plants for Fall Harvest",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "group e special plants for fall harvest"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Plant: Celery Group D: Very Tender (Plant when the soil is warm, about 2 weeks after 'C' group.) Seed: Cantalope, Lima Bean, Winter Squash Plants: Eggplant, Pepper, Pumpkin, Tomato, Watermelon Fall-Season Vegetables Group E: Special Plants for Fall Harvest (Many vegetables can be planted for a fall harvest.",
+      "source_context_available": true,
+      "tool_first_6gram": "e special plants for fall harvest"
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "Quality is highest straight from the garden. Spinach is more perishable than sturdier greens like kale, so chill it fast and use it within a week or so fresh; freezing is the best way to hold a glut from a fast spring or fall crop.",
+      "run_normalized": "freezing is the best way to",
+      "run_in_our_prose": "freezing is the best way to",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "freezing is the best way to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "It is best to pick these vegetables as you need them. For a large end-of-season harvest, freezing is the best way to preserve leafy greens.",
+      "source_context_available": true,
+      "tool_first_6gram": "freezing is the best way to"
+    }
+  ]
+}

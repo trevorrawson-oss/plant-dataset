@@ -1,0 +1,448 @@
+{
+  "crop_slug": "sweet-corn",
+  "record_count": 12,
+  "records": [
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "diseases[2].cause_beginner",
+      "our_prose": "A bacterium spread by the corn flea beetle as it feeds. After a mild winter more beetles survive, so the disease tends to be worse the next year.",
+      "run_normalized": "spread by the corn flea beetle",
+      "run_in_our_prose": "spread by the corn flea beetle",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "spread by the corn flea beetle"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Later-infected plants are stunted and contain yellow streaks on the leaves. The disease is spread by the corn flea beetle, especially after mild winters. New cultivars resistant to Stewart's wilt should be used if early sweet corn is to be planted where flea beetle populations were high the previous year.",
+      "source_context_available": true,
+      "tool_first_6gram": "spread by the corn flea beetle"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "growth_stages[5].what_to_look_for_seasoned",
+      "our_prose": "The ears bulk up and the kernels swell and fill, the husks tightening around them. The cob reaches near-full length within a week of pollination, with kernels obviously swollen by about two weeks.",
+      "run_normalized": "full length within a week of pollination",
+      "run_in_our_prose": "full length within a week of pollination",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "full length within a week of pollination"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr"
+      ],
+      "source_names": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_publishers": [
+        "University of Hawaii College of Tropical Agriculture and Human Resources"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/corn2003.pdf",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[1].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[1].direct_sow[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[1].harvest_end[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[1].harvest_start[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr"
+      ],
+      "source_context": "Also, temperate hybrids often lose most of their seeds to earworms in Hawaii. The cob elongates to full length within a week of pollination, and the kernels become obviously swol- len at two weeks. The “roasting-ear” stage for field and vegetable corns is about 18 days after pollination, when the kernel splits if punctured with a thumbnail.",
+      "source_context_available": true,
+      "tool_first_6gram": "full length within a week of"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Pick at the milk stage: the silks have browned and dried at the ear tip, the ear feels full and firm, and a punctured kernel runs a milky (not clear, not doughy) juice. This is roughly 18 to 20 days after the first silks show, and the window lasts only about 4 to 5 days.",
+      "run_normalized": "20 days after the first silks",
+      "run_in_our_prose": "20 days after the first silks",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "20 days after the first silks"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/lawn-and-garden/vegetable-gardens/corn-sweet",
+      "anchor_paths": [
+        "varieties.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "Continue to apply insecticide on a 3- to 4-day schedule until silks are brown and dry. Sweet corn is ready to harvest about 20 days after the first silks appear. The ear should feel full, the kernels should be plump, and the juice should be milky in the normal and sugary enhanced types.",
+      "source_context_available": true,
+      "tool_first_6gram": "20 days after the first silks"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "notifications[3].body_seasoned",
+      "our_prose": "About 18 to 20 days after the first silks, the ears reach the milk stage: silks browned, kernels running milky under a thumbnail. The window lasts only 4 to 5 days, so check daily.",
+      "run_normalized": "20 days after the first silks",
+      "run_in_our_prose": "20 days after the first silks",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "20 days after the first silks"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/lawn-and-garden/vegetable-gardens/corn-sweet",
+      "anchor_paths": [
+        "varieties.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "Continue to apply insecticide on a 3- to 4-day schedule until silks are brown and dry. Sweet corn is ready to harvest about 20 days after the first silks appear. The ear should feel full, the kernels should be plump, and the juice should be milky in the normal and sugary enhanced types.",
+      "source_context_available": true,
+      "tool_first_6gram": "20 days after the first silks"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "regions.mid_atlantic.region_notes_beginner",
+      "our_prose": "In the Piedmont and Coastal Plain, sow sweet corn straight into the garden after your last frost, once the soil feels warm. You can keep sowing every couple of weeks into midsummer for a longer harvest instead of one big batch. Always plant corn in a block of several short rows rather than one long row; the wind carries pollen from plant to plant, and a block pollinates far better than a line.",
+      "run_normalized": "several short rows rather than one",
+      "run_in_our_prose": "several short rows rather than one",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "several short rows rather than one"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/lawn-and-garden/vegetable-gardens/corn-sweet",
+      "anchor_paths": [
+        "varieties.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "For an ear of corn to develop properly, corn pollen from the tassel at the top of the plant must fall to the silks of the ear located about halfway up the stalk. Plant several short rows, rather than one or two long rows, for better pollination. Better pollination means fuller ears.",
+      "source_context_available": true,
+      "tool_first_6gram": "several short rows rather than one"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "regions.mid_south.region_notes_beginner",
+      "our_prose": "In the Ozark Uplands and Delta Lowlands, sow sweet corn straight into the garden after your last frost, once the soil feels warm, and keep sowing every couple of weeks for a longer harvest instead of one big batch. University of Arkansas Cooperative Extension also documents a dedicated fall planting here: sow in the first half of July, or the last week of June into early July in zone 7, for a fresh run of ears in September and October. Always plant corn in a block of several short rows rather than one long row; the wind carries pollen from plant to plant, and a block pollinates far better than a line.",
+      "run_normalized": "several short rows rather than one",
+      "run_in_our_prose": "several short rows rather than one",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "several short rows rather than one"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/lawn-and-garden/vegetable-gardens/corn-sweet",
+      "anchor_paths": [
+        "varieties.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "For an ear of corn to develop properly, corn pollen from the tassel at the top of the plant must fall to the silks of the ear located about halfway up the stalk. Plant several short rows, rather than one or two long rows, for better pollination. Better pollination means fuller ears.",
+      "source_context_available": true,
+      "tool_first_6gram": "several short rows rather than one"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Sweet corn is a warm-season crop here, so wait to sow until the soil has warmed to at least 60°F, usually about two weeks after the last spring frost. The season is short in the coldest zones, so favor early su or se hybrids under about 70 days to maturity and stagger a few blocks rather than one late sowing. A block of short rows pollinates far better than a single long row.",
+      "run_normalized": "sweet corn is a warm season crop",
+      "run_in_our_prose": "Sweet corn is a warm-season crop",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sweet corn is a warm season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2013/09/EHT-044.pdf",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[1].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[1].direct_sow[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[1].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[1].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "thinning.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Sweet corn is not ready when the juice of the kernel is watery. It is overripe when the Planting Sweet corn is a warm-season crop and must be planted after the soil warms and there is no more danger of frost.",
+      "source_context_available": true,
+      "tool_first_6gram": "corn is a warm season crop"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Sweet corn is a warm-season crop here, so wait to sow until the soil has warmed to at least 60°F, usually about two weeks after the last spring frost. The season is short in the coldest zones, so favor early su or se hybrids under about 70 days to maturity and stagger a few blocks rather than one late sowing. A block of short rows pollinates far better than a single long row.",
+      "run_normalized": "corn is a warm season crop",
+      "run_in_our_prose": "corn is a warm-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "corn is a warm season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "However, sweet corn does have some specific environmental and cultural needs that must be met for the plant to produce high-marketable yields. Corn is a warm-season crop that requires high temperatures for optimum germination and rapid growth. For most varieties, soil temperature should be between 55 and 65°F for best germination.",
+      "source_context_available": true,
+      "tool_first_6gram": "corn is a warm season crop"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "regions.utah_dixie.region_notes_beginner",
+      "our_prose": "In St. George, direct-sow sweet corn once, at the front of the spring window from about March 15 to April 5 per USU Extension, once the last frost has passed. Ears are ready to pick from late May, over about a five-week window as the different sowing dates catch up; corn does best planted in blocks of at least four short rows so the wind pollinates every ear. There is no fall corn crop here; this is a single spring planting.",
+      "run_normalized": "planted in blocks of at least",
+      "run_in_our_prose": "planted in blocks of at least",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "planted in blocks of at least"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "This is very rarely a problem with commercially available sweet corn varieties in the Southeast, but a grower should be mindful of day length when planting heirloom or tropical corn varieties. Corn is wind-pollinated and should be planted in blocks of at least 4 rows for good pollination to occur. Sweet corn can also cross-pollinate with other types of corn.",
+      "source_context_available": true,
+      "tool_first_6gram": "planted in blocks of at least"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "regions.utah_dixie.region_notes_beginner",
+      "our_prose": "In St. George, direct-sow sweet corn once, at the front of the spring window from about March 15 to April 5 per USU Extension, once the last frost has passed. Ears are ready to pick from late May, over about a five-week window as the different sowing dates catch up; corn does best planted in blocks of at least four short rows so the wind pollinates every ear. There is no fall corn crop here; this is a single spring planting.",
+      "run_normalized": "in blocks of at least four",
+      "run_in_our_prose": "in blocks of at least four",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in blocks of at least four"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-sweet-corn",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Wind moves corn pollen from the tassel at the top of the plant to the silks of the ears and to lower parts of the plant. Tassel emerging from top of corn plant Always plant corn in blocks of at least four rows. Corn planted in a single row will have much of its pollen blown out of the row, and will produce ears that have blank areas where kernels did not form.",
+      "source_context_available": true,
+      "tool_first_6gram": "in blocks of at least four"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[1].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[1].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[1].harvest_end[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[1].harvest_start[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "About 1 inch of water per week from rain and irrigation, rising toward 1.5 inches per week across the pollination and ear-fill window; water deeply to wet the full root zone.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

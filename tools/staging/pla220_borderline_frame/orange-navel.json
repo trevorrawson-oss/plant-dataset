@@ -1,0 +1,648 @@
+{
+  "crop_slug": "orange-navel",
+  "record_count": 18,
+  "records": [
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "failure_diagnostics[2].what_happened_beginner",
+      "our_prose": "Sometimes fruit that looks ripe on the outside is dry and pithy inside. This usually happens to fruit left on the tree too long in a hot, dry climate, especially in the desert late in the season. Heat, dryness, and over-ripeness are the causes, and the skin can look fine even when the inside has dried out.",
+      "run_normalized": "left on the tree too long",
+      "run_in_our_prose": "left on the tree too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left on the tree too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "az_coop_ext"
+      ],
+      "source_names": [
+        "Arizona Cooperative Extension (University of Arizona)"
+      ],
+      "source_publishers": [
+        "U of A Cooperative Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.arizona.edu/publication/oranges-southern-arizona",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.az_coop_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.az_coop_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.az_coop_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.az_coop_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.az_coop_ext"
+      ],
+      "source_context": "Fruits have thin light orange peels and seven to ten seeds each. ‘Marrs’ fruit will become insipid if left on the tree too long. Pineapple This selection originated as a seedling in Florida in 1860, probably from fruit brought to Charleston, South Carolina from China 18 .",
+      "source_context_available": true,
+      "tool_first_6gram": "left on the tree too long"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "failure_diagnostics[2].what_happened_beginner",
+      "our_prose": "Sometimes fruit that looks ripe on the outside is dry and pithy inside. This usually happens to fruit left on the tree too long in a hot, dry climate, especially in the desert late in the season. Heat, dryness, and over-ripeness are the causes, and the skin can look fine even when the inside has dried out.",
+      "run_normalized": "left on the tree too long",
+      "run_in_our_prose": "left on the tree too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left on the tree too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Both fall and winter pears are picked when they are mature (harvest ready) but not yet ripe (eating ready). Fruits will still look “green” at the time they are ready to pick. If left on the tree too long, internal browning may result. Commercially, pears are tested for harvest using the hand-held penetrometer mentioned above.",
+      "source_context_available": true,
+      "tool_first_6gram": "left on the tree too long"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "pests[0].symptoms_beginner",
+      "our_prose": "This tiny brown insect has a distinctive resting posture: it perches on new leaves at an angle, with its rear end raised and pointed upward, which is your identification clue. The young ones produce little waxy white threads and cause the new leaf tips to curl. The real danger is not the feeding itself but a fatal disease the psyllid spreads, citrus greening, so it is worth acting on even where the pest is uncommon.",
+      "run_normalized": "cause the new leaf tips to",
+      "run_in_our_prose": "cause the new leaf tips to",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cause the new leaf tips to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/asian-citrus-psyllid/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.uc_ipm",
+        "tips_by_stage.establishment[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "While Asian citrus psyllid adults can feed on mature, hardened citrus leaves, all stages of this pest prefer to feed on, and therefore damage, new leaf growth . The salivary toxin that Asian citrus psyllid injects while feeding can cause the new leaf tips to turn back . Beyond feeding damage, Asian citrus psyllid vectors the lethal bacterium (Candidatus Liberibacter asiaticus) that causes huanglongbing (HLB or citrus greening) disease.",
+      "source_context_available": true,
+      "tool_first_6gram": "cause the new leaf tips to"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "UF/IFAS Citrus Culture in the Home Landscape (HS132)",
+      "run_normalized": "citrus culture in the home landscape",
+      "run_in_our_prose": "Citrus Culture in the Home Landscape",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "citrus culture in the home landscape"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_hs132"
+      ],
+      "source_names": [
+        "UF/IFAS Citrus Culture in the Home Landscape (HS132)"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/HS132",
+      "anchor_paths": [
+        "companions.anchoring_urls.uf_ifas_hs132",
+        "diseases[0].anchoring_urls.uf_ifas_hs132",
+        "diseases[1].anchoring_urls.uf_ifas_hs132",
+        "diseases[2].anchoring_urls.uf_ifas_hs132",
+        "diseases[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[1].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[4].anchoring_urls.uf_ifas_hs132",
+        "pests[0].anchoring_urls.uf_ifas_hs132",
+        "pests[1].anchoring_urls.uf_ifas_hs132",
+        "pests[2].anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uf_ifas_hs132",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[0].anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.bloom[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.ripening_harvest[1].anchoring_urls.uf_ifas_hs132"
+      ],
+      "source_context": "HS-867/HS132: Citrus Culture in the Home Landscape Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Citrus Culture in the Home Landscape Robert E.",
+      "source_context_available": true,
+      "tool_first_6gram": "citrus culture in the home landscape"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "az_coop_ext"
+      ],
+      "source_names": [
+        "Arizona Cooperative Extension (University of Arizona)"
+      ],
+      "source_publishers": [
+        "U of A Cooperative Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.arizona.edu/publication/oranges-southern-arizona",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.az_coop_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.az_coop_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.az_coop_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.az_coop_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.az_coop_ext"
+      ],
+      "source_context": "In: L. Ferguson and E.E. Grafton Cardwell (eds). California citrus production manual. University of California Agriculture and Natural Resources Publication 3539. Saunt, Citrus varieties, p. 17. Hodgson, Horticultural varieties, p.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/aphids/",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/asian-citrus-psyllid/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.uc_ipm",
+        "tips_by_stage.establishment[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/brown-rot/",
+      "anchor_paths": [
+        "diseases[5].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/citrus-leafminer/",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/citrus-red-mite/",
+      "anchor_paths": [
+        "pests[4].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/cottony-cushion-scale/",
+      "anchor_paths": [
+        "diseases[4].anchoring_urls.uc_ipm",
+        "pests[2].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/huanglongbing/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/citrus/precautions-for-using-petroleum-oil-sprays/",
+      "anchor_paths": [
+        "pests[5].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a grafted nursery tree from a reputable source with certified disease-free stock. Container-grown trees can be planted year-round in frost-free zones; bare-root trees are planted in late winter to early spring. Set the tree at the same soil line as in the nursery container. Do not bury the graft union.",
+      "run_normalized": "at the same soil line as",
+      "run_in_our_prose": "at the same soil line as",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the same soil line as"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_hs132"
+      ],
+      "source_names": [
+        "UF/IFAS Citrus Culture in the Home Landscape (HS132)"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/HS132",
+      "anchor_paths": [
+        "companions.anchoring_urls.uf_ifas_hs132",
+        "diseases[0].anchoring_urls.uf_ifas_hs132",
+        "diseases[1].anchoring_urls.uf_ifas_hs132",
+        "diseases[2].anchoring_urls.uf_ifas_hs132",
+        "diseases[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[1].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[4].anchoring_urls.uf_ifas_hs132",
+        "pests[0].anchoring_urls.uf_ifas_hs132",
+        "pests[1].anchoring_urls.uf_ifas_hs132",
+        "pests[2].anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uf_ifas_hs132",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.uf_ifas_hs132",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uf_ifas_hs132",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[0].anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.bloom[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.ripening_harvest[1].anchoring_urls.uf_ifas_hs132"
+      ],
+      "source_context": "For the person planting only a few trees, this assurance and relief from care is usually worth the difference in cost. These trees may be set out at any time of the year. They should be set at the same soil line as they grew in the nursery row or container and be provided with a basin to hold water around each tree.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the same soil line as"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a grafted nursery tree from a reputable source with certified disease-free stock. Container-grown trees can be planted year-round in frost-free zones; bare-root trees are planted in late winter to early spring. Set the tree at the same soil line as in the nursery container. Do not bury the graft union.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "The defining storage feature of navels is the long on-tree hold. Late-maturing selections such as Lane Late extend the harvest and storage season the furthest, holding sound fruit into spring. The exception is hot, dry climates, where fruit left on the tree too long can granulate and dry inside, so in the desert harvest within the prime window rather than relying on the full hold. Handle fruit gently, since rind damage shortens storage life.",
+      "run_normalized": "left on the tree too long",
+      "run_in_our_prose": "left on the tree too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left on the tree too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "az_coop_ext"
+      ],
+      "source_names": [
+        "Arizona Cooperative Extension (University of Arizona)"
+      ],
+      "source_publishers": [
+        "U of A Cooperative Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.arizona.edu/publication/oranges-southern-arizona",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.az_coop_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.az_coop_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.az_coop_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.az_coop_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.az_coop_ext"
+      ],
+      "source_context": "Fruits have thin light orange peels and seven to ten seeds each. ‘Marrs’ fruit will become insipid if left on the tree too long. Pineapple This selection originated as a seedling in Florida in 1860, probably from fruit brought to Charleston, South Carolina from China 18 .",
+      "source_context_available": true,
+      "tool_first_6gram": "left on the tree too long"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "The defining storage feature of navels is the long on-tree hold. Late-maturing selections such as Lane Late extend the harvest and storage season the furthest, holding sound fruit into spring. The exception is hot, dry climates, where fruit left on the tree too long can granulate and dry inside, so in the desert harvest within the prime window rather than relying on the full hold. Handle fruit gently, since rind damage shortens storage life.",
+      "run_normalized": "left on the tree too long",
+      "run_in_our_prose": "left on the tree too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left on the tree too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Both fall and winter pears are picked when they are mature (harvest ready) but not yet ripe (eating ready). Fruits will still look “green” at the time they are ready to pick. If left on the tree too long, internal browning may result. Commercially, pears are tested for harvest using the hand-held penetrometer mentioned above.",
+      "source_context_available": true,
+      "tool_first_6gram": "left on the tree too long"
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "varieties.note_seasoned",
+      "our_prose": "All navel oranges are clonal bud sports or mutations tracing back to the original Washington navel, which was introduced to the United States from Bahia, Brazil in the 1870s. Variety differences are primarily in maturity timing, rind color development, and flesh pigmentation rather than tree habit or hardiness. All are seedless and parthenocarpic. In regions with marginal heat, early-coloring selections like Fukumoto may reach acceptable sugar levels sooner. Late selections like Lane Late extend the harvest window without requiring a second tree.",
+      "run_normalized": "was introduced to the united states",
+      "run_in_our_prose": "was introduced to the United States",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "was introduced to the united states"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mgsantaclara.ucanr.edu/garden-help/monthly-tips/fruit-and-nut-tips/",
+      "anchor_paths": [
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Growing Blueberries Months: July Tags: Fruits & Nuts To-Dos What to Plant Brown Marmorated Stink Bug Native to Eastern Asia, this pest was introduced to the United States in the 1990s and has been established in Santa Clara County. Some features to distinguish these bugs from other stink bugs are white stripes on the antennae, a blunt head shape, and smooth shoulder margins.",
+      "source_context_available": true,
+      "tool_first_6gram": "was introduced to the united states"
+    }
+  ]
+}

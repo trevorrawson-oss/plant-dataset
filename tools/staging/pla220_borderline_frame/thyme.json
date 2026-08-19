@@ -1,0 +1,324 @@
+{
+  "crop_slug": "thyme",
+  "record_count": 6,
+  "records": [
+    {
+      "crop_slug": "thyme",
+      "field_path": "diseases[0].prevention_seasoned",
+      "our_prose": "Plant in sharply drained, lean soil in full sun, keep plants on the dry side, and never let thyme sit in wet ground. On clay or in humid regions, use a mound or raised bed and space plants for airflow.",
+      "run_normalized": "keep plants on the dry side",
+      "run_in_our_prose": "keep plants on the dry side",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "keep plants on the dry side"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/thyme",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[0].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[1].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[2].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[3].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[4].anchoring_urls.ucanr_marin_mg",
+        "container_notes.anchoring_urls.ucanr_marin_mg",
+        "harvest_ready_anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.cut_back[0].anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.cut_back[1].anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.vegetative[1].anchoring_urls.ucanr_marin_mg",
+        "varieties.anchoring_urls.ucanr_marin_mg",
+        "watering.anchoring_urls.ucanr_marin_mg",
+        "yield_expectations.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "To raise the pH, you can add lime. Does well in rocky soil and full sun. Water Requirements Keep plants on the dry side to avoid root rot. In general, water deeply when dry. Thyme does not require much water and is quite drought tolerant.",
+      "source_context_available": true,
+      "tool_first_6gram": "keep plants on the dry side"
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "harvest_ready_beginner",
+      "our_prose": "You can snip thyme anytime once it is established: cut the top few inches of leafy stems, taking no more than about a third at once. The flavor is strongest just before and as it flowers, so that is the best time to cut thyme to dry. Cut in the morning after the dew dries. Snipping it often also keeps it from getting woody.",
+      "run_normalized": "in the morning after the dew dries",
+      "run_in_our_prose": "in the morning after the dew dries",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in the morning after the dew dries"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.rgv.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "tips_by_stage.bloom[1].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Herbs grown for seeds as the seed pods change in color from green to brown to gray but before they shatter. Collect herb flowers just before full flower. Harvest herbs early in the morning, after the dew dries, but before the heat of the day. Herb roots should be harvested in the fall after the foliage fades.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the morning after the dew"
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "regions.fl_peninsula.region_notes_beginner",
+      "our_prose": "Central and south Florida are hard on thyme because it is a Mediterranean herb that hates the humid heat, which rots its roots. Grow it in a pot or raised bed with fast-draining soil, plant in the cooler months, choose a heat-tolerant upright type, and give afternoon shade. In central Florida a potted plant may last a few years; in the far south, treat it as a short-lived plant you replace.",
+      "run_normalized": "in a pot or raised bed with",
+      "run_in_our_prose": "in a pot or raised bed with",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in a pot or raised bed with"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/23/spice-up-your-life-a-beginners-guide-to-growing-thyme/",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.uf_ifas",
+        "fertilizer.anchoring_urls.uf_ifas",
+        "ph.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].anchoring_urls.uf_ifas",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.uf_ifas",
+        "regions.se_gulf.plantings[0].anchoring_urls.uf_ifas",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas",
+        "soil.anchoring_urls.uf_ifas",
+        "tips_by_stage.dormancy[1].anchoring_urls.uf_ifas",
+        "tips_by_stage.establishment[1].anchoring_urls.uf_ifas",
+        "tips_by_stage.transplant[0].anchoring_urls.uf_ifas",
+        "varieties.anchoring_urls.uf_ifas",
+        "watering.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "It is common in humid in humid conditions, so check your plant for these signs regularly. Treatment : To prevent the disease, space your plants out and grow them in a pot or raised bed with well-draining soil to improve air circulation. To treat diseased plants, apply fungicidal sprays containing sulfur or copper to control powdery mildew.",
+      "source_context_available": true,
+      "tool_first_6gram": "a pot or raised bed with"
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "In Utah's Dixie high desert, thyme is a desert-strong perennial: thyme is hardy well below zone 8, to about zone 4 to 5, so winter cold is not this region's real constraint. What matters here is the opposite of a humid-belt cell: this crop thrives in the heat, summer temperatures are not a problem, and established plants are genuinely drought-tolerant, and its low, wiry habit is built for exactly this kind of dry, sunny, alkaline ground. Give it full sun, gritty alkaline soil with sharp drainage, and little water once established. Establish plants in the shoulder season, spring or fall, per USU Extension's Suggested Vegetable Planting Dates for Utah.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "tips_by_stage.bloom[0].text_beginner",
+      "our_prose": "For the best flavor, cut thyme to dry just before or as it starts to flower, when the oils are strongest. Cut in the morning after the dew dries.",
+      "run_normalized": "in the morning after the dew dries",
+      "run_in_our_prose": "in the morning after the dew dries",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in the morning after the dew dries"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/herbs/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.rgv.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "tips_by_stage.bloom[1].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Herbs grown for seeds as the seed pods change in color from green to brown to gray but before they shatter. Collect herb flowers just before full flower. Harvest herbs early in the morning, after the dew dries, but before the heat of the day. Herb roots should be harvested in the fall after the foliage fades.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the morning after the dew"
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Deep and infrequent. Water new plants until they are established, then let the soil dry between waterings; mature thyme needs little water and is quite drought-tolerant. Container plants dry faster and need checking, but should still dry out between drinks.",
+      "run_normalized": "water and is quite drought tolerant",
+      "run_in_our_prose": "water and is quite drought-tolerant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "water and is quite drought tolerant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/thyme",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[0].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[1].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[2].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[3].anchoring_urls.ucanr_marin_mg",
+        "companions.good_seasoned[4].anchoring_urls.ucanr_marin_mg",
+        "container_notes.anchoring_urls.ucanr_marin_mg",
+        "harvest_ready_anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.cut_back[0].anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.cut_back[1].anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.ucanr_marin_mg",
+        "tips_by_stage.vegetative[1].anchoring_urls.ucanr_marin_mg",
+        "varieties.anchoring_urls.ucanr_marin_mg",
+        "watering.anchoring_urls.ucanr_marin_mg",
+        "yield_expectations.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "Water Requirements Keep plants on the dry side to avoid root rot. In general, water deeply when dry. Thyme does not require much water and is quite drought tolerant. It will not thrive in hot, humid climates. Fertilizing No fertilizer required.",
+      "source_context_available": true,
+      "tool_first_6gram": "water and is quite drought tolerant"
+    }
+  ]
+}

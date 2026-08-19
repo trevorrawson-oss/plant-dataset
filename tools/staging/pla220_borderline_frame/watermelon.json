@@ -1,0 +1,437 @@
+{
+  "crop_slug": "watermelon",
+  "record_count": 12,
+  "records": [
+    {
+      "crop_slug": "watermelon",
+      "field_path": "diseases[1].cause_seasoned",
+      "our_prose": "Gummy stem blight is caused by the seed-borne fungus Didymella bryoniae (Stagonosporopsis), a warm-weather, southern cucurbit disease driven by prolonged rainy periods and leaf wetness. It survives on seed and infected debris.",
+      "run_normalized": "is caused by the seed borne fungus",
+      "run_in_our_prose": "is caused by the seed-borne fungus",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "is caused by the seed borne fungus"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cucurbitbreeding.wordpress.ncsu.edu/watermelon-breeding/nc-state-watermelon-disease-handbook/watermelon-disease-descriptions/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "diseases[3].anchoring_urls.ncsu_ext",
+        "diseases[4].anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "The most economical method for control of virus diseases is genetic resistance. Anthracnose Anthracnose is a very common fungal disease and is caused by the seed-borne fungus Colletotrichum lagenarium . Most cucurbits are susceptible. Most commercial watermelon varieties have some resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "caused by the seed borne fungus"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "diseases[1].symptoms_seasoned",
+      "our_prose": "Round, black, wrinkled spots form on young leaves and dark, sunken, sometimes girdling lesions develop on the stems, often with a brown gummy ooze on the surface. Brownish circular leaf spots expand rapidly into large tan lesions, and a brown streak can appear at the blossom end of the fruit. In warm, wet weather the foliage and vines can collapse quickly.",
+      "run_normalized": "on young leaves and dark sunken",
+      "run_in_our_prose": "on young leaves and dark, sunken",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "on young leaves and dark sunken",
+        "the blossom end of the fruit"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cucurbitbreeding.wordpress.ncsu.edu/watermelon-breeding/nc-state-watermelon-disease-handbook/watermelon-disease-descriptions/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "diseases[3].anchoring_urls.ncsu_ext",
+        "diseases[4].anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "All cucurbits are susceptible, and depending on the weather, stem and leafspotting may occur on young plants, especially in late plantings.Early symptoms are round black, wrinkled spots on young leaves and dark sunken areas on stems. Early infection usually develops from contaminated seed.Many times it produces brownish circular spots which rapidly expand into large tan lesions of round, indefinite size.",
+      "source_context_available": true,
+      "tool_first_6gram": "on young leaves and dark sunken"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "diseases[2].symptoms_seasoned",
+      "our_prose": "Foliage turns yellow and wilts, often starting on one side or one runner, and infected plants decline and die soon after symptoms appear even though the soil is moist. A pinkish-white cottony growth can show near the soil line on dying stems, and a cut stem reveals browned, discolored vascular tissue. It is the most damaging soilborne disease of watermelon.",
+      "run_normalized": "a pinkish white cottony growth can",
+      "run_in_our_prose": "A pinkish-white cottony growth can",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "a pinkish white cottony growth can"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cucurbitbreeding.wordpress.ncsu.edu/watermelon-breeding/nc-state-watermelon-disease-handbook/watermelon-disease-descriptions/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "diseases[3].anchoring_urls.ncsu_ext",
+        "diseases[4].anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "If inoculum levels of Fusarium are high, seedlings may wilt in the field.Foliage of infected plants turn yellow and wilt.Plants die soon after symptoms are observed.On the dying vine’s stem, a pinkish white cottony growth can appear near ground level. The fungus spreads outward from infected plants.There are three races of the wilt fungus.",
+      "source_context_available": true,
+      "tool_first_6gram": "a pinkish white cottony growth can"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "diseases[3].symptoms_seasoned",
+      "our_prose": "White, powdery patches appear on the upper and lower leaf surfaces and stems, spreading until leaves yellow, brown, and die back ahead of schedule. Early defoliation cuts the season short, reduces fruit size and sugar, and exposes melons to sunscald.",
+      "run_normalized": "the upper and lower leaf surfaces",
+      "run_in_our_prose": "the upper and lower leaf surfaces",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the upper and lower leaf surfaces"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "Malathion, carbaryl, and pyrethroids are especially harmful to bees (Figure 5). Spray the plant thoroughly , covering both the upper and lower leaf surfaces. Do not apply pesticides on windy days or when rain is imminent. Prevent spray burn ; make sure the plants are not under moisture stress.",
+      "source_context_available": true,
+      "tool_first_6gram": "the upper and lower leaf surfaces"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common approach is a lower-nitrogen complete fertilizer such as 5-10-10 worked into the bed before planting (Clemson cites about 30 pounds per 1,000 square feet, or a balanced scoop per hill), then a nitrogen side-dress about three to four weeks after planting as vines run, placed a few inches out from the plants and watered in, repeated lightly at flowering.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/watermelon/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "ert Miller, Area Vegetable Specialist, ©2014, Clemson Edisto REC Recommended Varieties Standard Seeded Varieties: Crimson Sweet Royal Sweet Top Gun Sentinel Sangria Seedless Varieties: Liberty 7197 7187 Majestic Obsession Fascination Fertilizing It is best to base fertilizer application on the results of a soil test. If a soil test has not been taken, apply 5-10-10 at 30 pounds per 1,000 square feet before planting. Melons should be side-dressed before the vines start to “run.” Side-dress with 34-0-0 at 1 pound per 100 feet of row or calcium nitrate (15.5-0-0) at 2 pounds per 100 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Watermelon is a moderate feeder that wants more phosphorus and potassium than nitrogen, since excess nitrogen drives leafy vine at the expense of fruit set and sugar. Work a lower-nitrogen complete fertilizer such as 5-10-10 into the bed before planting (Clemson suggests about 30 pounds per 1,000 square feet), then side-dress with a nitrogen source as the vines begin to run, and again lightly at flowering. Ease off nitrogen once fruit has set so the plant pours its energy into sizing and sweetening the melons rather than growing more vine. Pair feeding with even moisture, because the nutrients only help a plant that is not also drought-stressed.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/watermelon/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "ert Miller, Area Vegetable Specialist, ©2014, Clemson Edisto REC Recommended Varieties Standard Seeded Varieties: Crimson Sweet Royal Sweet Top Gun Sentinel Sangria Seedless Varieties: Liberty 7197 7187 Majestic Obsession Fascination Fertilizing It is best to base fertilizer application on the results of a soil test. If a soil test has not been taken, apply 5-10-10 at 30 pounds per 1,000 square feet before planting. Melons should be side-dressed before the vines start to “run.” Side-dress with 34-0-0 at 1 pound per 100 feet of row or calcium nitrate (15.5-0-0) at 2 pounds per 100 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "pests[1].organic_treatment_beginner",
+      "our_prose": "Blast them off with a strong spray of water and treat the undersides of the leaves with insecticidal soap, repeating every few days. Ladybugs and other helpful insects eat aphids, so welcome them.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow watermelon or its relatives (cucumbers, melons, squash) in the same spot more than once every 3 years, and wait longer, up to five years, if you have had wilt or anthracnose. Moving them around the garden is the best way to avoid a buildup of disease. Clean up old vines at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "soil_prep_beginner",
+      "our_prose": "Pick a sunny spot with light, well-drained soil and mix in some compost before planting, but do not overdo rich, high-nitrogen material, or you get more vine than melon. Plant watermelon on low hills or mounds, which warm up and drain better. Give it lots of room: space hills about 4 to 8 feet apart for full-size types, since the vines can spread 8 to 12 feet (icebox and bush types need less). In cooler or shorter-summer areas, laying down black plastic mulch warms the soil and gives the plants an earlier, faster start. If your soil is heavy or stays wet, build the mounds up higher so water drains away from the roots and fruit.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/watermelon-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "succession_policy.anchoring_urls.usu_ext",
+        "thinning.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Avoid damaging the roots when planting which slows establishment and growth. Mulch Black plastic mulch warms the soil, conserves water, and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "sources_summary.primary[10].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "sources_summary.primary[9].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "tips_by_stage.seedling[0].text_seasoned",
+      "our_prose": "Cucumber beetles swarm young cucurbits. A floating row cover protects seedlings, but pull it off at flowering so bees can pollinate. In cooler areas, black plastic mulch warms the soil and speeds growth.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/watermelon-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "succession_policy.anchoring_urls.usu_ext",
+        "thinning.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Avoid damaging the roots when planting which slows establishment and growth. Mulch Black plastic mulch warms the soil, conserves water, and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    }
+  ]
+}

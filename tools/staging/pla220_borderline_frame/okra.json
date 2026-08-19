@@ -1,0 +1,999 @@
+{
+  "crop_slug": "okra",
+  "record_count": 21,
+  "records": [
+    {
+      "crop_slug": "okra",
+      "field_path": "companions.good_beginner_seasoned[0].why_beginner",
+      "our_prose": "Southern peas are a classic okra partner in the South. They add nitrogen to the soil, and they pull stink bugs and leaf-footed bugs toward themselves and away from the okra pods. A traditional pairing with a sound reason behind it.",
+      "run_normalized": "stink bugs and leaf footed bugs",
+      "run_in_our_prose": "stink bugs and leaf-footed bugs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stink bugs and leaf footed bugs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Limiting and properly managing nitrogen can help control aphids and ants. Corn Earworms Corn earworms are often found feeding on the pods. Stink bugs and leaf-footed bugs Stink bugs and leaf-footed bugs will cause the pods to be twisted and distorted.",
+      "source_context_available": true,
+      "tool_first_6gram": "stink bugs and leaf footed bugs"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "companions.good_beginner_seasoned[0].why_seasoned",
+      "our_prose": "Cowpeas fix nitrogen for the long-season okra crop and serve as a documented trap crop for stink bugs and leaf-footed bugs, which prefer the peas to the okra pods. A traditional Southern intercrop with a mechanistically sound basis rather than a trial-isolated yield effect.",
+      "run_normalized": "stink bugs and leaf footed bugs",
+      "run_in_our_prose": "stink bugs and leaf-footed bugs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stink bugs and leaf footed bugs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Limiting and properly managing nitrogen can help control aphids and ants. Corn Earworms Corn earworms are often found feeding on the pods. Stink bugs and leaf-footed bugs Stink bugs and leaf-footed bugs will cause the pods to be twisted and distorted.",
+      "source_context_available": true,
+      "tool_first_6gram": "stink bugs and leaf footed bugs"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "companions.good_seasoned[0].why_seasoned",
+      "our_prose": "Cowpeas fix nitrogen for the long-season okra crop and serve as a documented trap crop for stink bugs and leaf-footed bugs, which prefer the peas to the okra pods. A traditional Southern intercrop with a mechanistically sound basis rather than a trial-isolated yield effect.",
+      "run_normalized": "stink bugs and leaf footed bugs",
+      "run_in_our_prose": "stink bugs and leaf-footed bugs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stink bugs and leaf footed bugs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Limiting and properly managing nitrogen can help control aphids and ants. Corn Earworms Corn earworms are often found feeding on the pods. Stink bugs and leaf-footed bugs Stink bugs and leaf-footed bugs will cause the pods to be twisted and distorted.",
+      "source_context_available": true,
+      "tool_first_6gram": "stink bugs and leaf footed bugs"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "companions.note_seasoned",
+      "our_prose": "Okra companion pairings are largely traditional rather than trial-tested, and the useful ones fall into a few practical roles. As a tall, late, heat-loving Malvaceae, okra does not share the disease load of tomatoes and other nightshades, so it makes a good rotational and bed neighbor for them rather than a competitor for the same soil pests. Southern peas and other legumes are a long-standing Southern partner, fixing nitrogen and, in the case of cowpeas, acting as a trap that pulls stink bugs and leaf-footed bugs off the pods. Quick crops like lettuce and radish use the open ground while young okra is small, and flowering insectary plants draw the bees and beneficial insects that help. The firmest rule is a rotation one: keep okra away from cotton, hibiscus, and other mallows, which share its root-knot nematode and fusarium problems.",
+      "run_normalized": "stink bugs and leaf footed bugs",
+      "run_in_our_prose": "stink bugs and leaf-footed bugs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stink bugs and leaf footed bugs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Limiting and properly managing nitrogen can help control aphids and ants. Corn Earworms Corn earworms are often found feeding on the pods. Stink bugs and leaf-footed bugs Stink bugs and leaf-footed bugs will cause the pods to be twisted and distorted.",
+      "source_context_available": true,
+      "tool_first_6gram": "stink bugs and leaf footed bugs"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "failure_diagnostics[3].what_happened_seasoned",
+      "our_prose": "Okra's main problems are sucking and chewing pests on the pods (aphids, corn earworm, stink bugs and leaf-footed bugs) and soilborne diseases (root-knot nematode, fusarium wilt, southern blight). Pitted or distorted pods point to stink bugs; sudden wilt with a rotted stem base is southern blight; stunting with knotted roots is root-knot nematode, which also opens the way for wilt.",
+      "run_normalized": "stink bugs and leaf footed bugs",
+      "run_in_our_prose": "stink bugs and leaf-footed bugs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stink bugs and leaf footed bugs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Limiting and properly managing nitrogen can help control aphids and ants. Corn Earworms Corn earworms are often found feeding on the pods. Stink bugs and leaf-footed bugs Stink bugs and leaf-footed bugs will cause the pods to be twisted and distorted.",
+      "source_context_available": true,
+      "tool_first_6gram": "stink bugs and leaf footed bugs"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common rate is about 2 pounds of 10-10-10 per 100 square feet worked into the bed before planting, then a side-dress of roughly 3 ounces of 10-10-10 per 100 feet of row (or a comparable nitrogen source such as calcium nitrate) once the first pods are picked, repeated two to three weeks later, scratched in a few inches out from the plants and watered in.",
+      "run_normalized": "10 10 10 per 100 square feet",
+      "run_in_our_prose": "10-10-10 per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "10 10 10 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "thinning.anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Fertilizing Before planting, apply 1 to 2 pounds of an all-purpose garden fertilizer, such as 10-10-10, per 100 square feet. When harvesting begins, sprinkle a small amount of nitrogen around each plant.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per 100 square"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.example_product",
+      "our_prose": "balanced 10-10-10 at planting, then calcium nitrate (15.5-0-0) or 10-10-10 to side-dress",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate (15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The use of additional nitrogen should be avoided on vigorous plantings until fruiting begins to manage plant growth and ensure pod production. Sidedressing schedule Apply 3 to 6 pounds of calcium nitrate (15.5-0-0) per 1,000 square feet. Or 1 to 2 pounds per 100 feet of row. Sidedressing should occur at 3 to 4 weeks and again at 6 to 8 weeks after planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.notes_beginner",
+      "our_prose": "Okra needs only modest feeding, and too much nitrogen makes a big leafy plant with few pods. Mix a balanced fertilizer such as 10-10-10 into the soil before planting, then give a light feeding once the first pods come in and again a few weeks later. Water it in, and keep the granules off the stems and leaves.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "thinning.anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Okra is generally free of serious insect and disease problems. Fertilizing Before planting, apply 1 to 2 pounds of an all-purpose garden fertilizer, such as 10-10-10, per 100 square feet. When harvesting begins, sprinkle a small amount of nitrogen around each plant.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Okra is a moderate, steady feeder over a long season, and the classic mistake is too much nitrogen, which gives a tall leafy plant with few pods. Work a complete fertilizer such as 10-10-10 into the bed before planting (about 2 pounds per 100 square feet), then side-dress lightly once the first pods are harvested and again two to three weeks later, with 10-10-10 or a nitrogen source like calcium nitrate. Pair feeding with steady moisture, since the nutrients only help a plant that is not also drought-stressed at pod set.",
+      "run_normalized": "and again two to three weeks later",
+      "run_in_our_prose": "and again two to three weeks later",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "and again two to three weeks later"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C941/home-garden-okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[1].anchoring_urls.uga_ext",
+        "diseases[3].anchoring_urls.uga_ext",
+        "failure_diagnostics[0].anchoring_urls.uga_ext",
+        "failure_diagnostics[2].anchoring_urls.uga_ext",
+        "failure_diagnostics[3].anchoring_urls.uga_ext",
+        "failure_diagnostics[4].anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "harvest_ready_anchoring_urls.uga_ext",
+        "pests[1].anchoring_urls.uga_ext",
+        "pests[2].anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "rotation.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "storage.anchoring_urls.uga_ext",
+        "succession_policy.anchoring_urls.uga_ext",
+        "thinning.anchoring_urls.uga_ext",
+        "tips_by_stage.end_of_season[0].anchoring_urls.uga_ext",
+        "tips_by_stage.established[0].anchoring_urls.uga_ext",
+        "tips_by_stage.flowering[0].anchoring_urls.uga_ext",
+        "tips_by_stage.germination[1].anchoring_urls.uga_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.uga_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.uga_ext",
+        "watering.anchoring_urls.uga_ext",
+        "yield_expectations.anchoring_urls.uga_ext"
+      ],
+      "source_context": "With no soil test, a general recommendation would be to apply 2 pounds of 10-10-10 per 100 square feet and make two sidedressings of 3 ounces of 10-10-10 per 100 feet of row, beginning when plants are 6- to 8-inches tall and again two to three weeks later. Additional sidedressing may be needed if heavy rains occur. Do not over-use nitrogen , since it can cause excessive vegetative growth with poor yield.",
+      "source_context_available": true,
+      "tool_first_6gram": "again two to three weeks later"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Okra is a moderate, steady feeder over a long season, and the classic mistake is too much nitrogen, which gives a tall leafy plant with few pods. Work a complete fertilizer such as 10-10-10 into the bed before planting (about 2 pounds per 100 square feet), then side-dress lightly once the first pods are harvested and again two to three weeks later, with 10-10-10 or a nitrogen source like calcium nitrate. Pair feeding with steady moisture, since the nutrients only help a plant that is not also drought-stressed at pod set.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "thinning.anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Okra is generally free of serious insect and disease problems. Fertilizing Before planting, apply 1 to 2 pounds of an all-purpose garden fertilizer, such as 10-10-10, per 100 square feet. When harvesting begins, sprinkle a small amount of nitrogen around each plant.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "A complete fertilizer such as 10-10-10 worked in before planting, then a light nitrogen side-dress (10-10-10 or calcium nitrate 15.5-0-0) once pods begin and again a few weeks later. Go easy on nitrogen, which trades pods for leaf.",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate 15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/okra/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.end_of_season[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The use of additional nitrogen should be avoided on vigorous plantings until fruiting begins to manage plant growth and ensure pod production. Sidedressing schedule Apply 3 to 6 pounds of calcium nitrate (15.5-0-0) per 1,000 square feet. Or 1 to 2 pounds per 100 feet of row. Sidedressing should occur at 3 to 4 weeks and again at 6 to 8 weeks after planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "A complete fertilizer such as 10-10-10 worked in before planting, then a light nitrogen side-dress (10-10-10 or calcium nitrate 15.5-0-0) once pods begin and again a few weeks later. Go easy on nitrogen, which trades pods for leaf.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "thinning.anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Okra is generally free of serious insect and disease problems. Fertilizing Before planting, apply 1 to 2 pounds of an all-purpose garden fertilizer, such as 10-10-10, per 100 square feet. When harvesting begins, sprinkle a small amount of nitrogen around each plant.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "growth_stages[4].user_action_beginner",
+      "our_prose": "Pods are ready just a few days after flowering, when they are 2 to 4 inches long and still tender. Cut them off (do not pull) every day or two, because pods left even an extra day or two turn tough and stringy. Picking often keeps the plant producing. Wear gloves and long sleeves if your variety is spiny.",
+      "run_normalized": "2 to 4 inches long and",
+      "run_in_our_prose": "2 to 4 inches long and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 to 4 inches long and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-okra/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.aces_ext",
+        "fertilizer.anchoring_urls.aces_ext",
+        "harvest_ready_anchoring_urls.aces_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.aces_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.aces_ext"
+      ],
+      "source_context": "Dwarf varieties are less likely to fall over when growing in containers. For better germination, soak seeds 6 hours before planting. Harvest pods when 2 to 4 inches long and then continually every 2 or 3 days. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 to 4 inches long and"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "harvest_ready_beginner",
+      "our_prose": "Pick okra young and often. Pods are ready just a few days after the flower opens, when they are 2 to 4 inches long and still tender. Cut them off with a short stem rather than pulling. Check every day or two, because okra pods turn tough and stringy within a day or two if you leave them. A good test: a ready pod snaps easily and your thumbnail dents the tip; if it is hard, it is too old to eat. Pull off any pods that got too big and compost them, so the plant keeps making new ones. Many okra plants have little spines, so wear long sleeves and gloves when you pick.",
+      "run_normalized": "2 to 4 inches long and",
+      "run_in_our_prose": "2 to 4 inches long and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 to 4 inches long and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-okra/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.aces_ext",
+        "fertilizer.anchoring_urls.aces_ext",
+        "harvest_ready_anchoring_urls.aces_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.aces_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.aces_ext"
+      ],
+      "source_context": "Dwarf varieties are less likely to fall over when growing in containers. For better germination, soak seeds 6 hours before planting. Harvest pods when 2 to 4 inches long and then continually every 2 or 3 days. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 to 4 inches long and"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "regions.rgv.region_notes_beginner",
+      "our_prose": "In the Rio Grande Valley, plant okra Feb 14 - Mar 20, once the soil is warm. Harvest runs May 25 - Dec 1, a long summer-into-fall picking season since it rarely if ever frosts here. There is no fall replanting for okra: one spring planting carries the whole Valley season.",
+      "run_normalized": "in the rio grande valley plant",
+      "run_in_our_prose": "In the Rio Grande Valley, plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the rio grande valley plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+      "anchor_paths": [
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Cilantro Santo, Slo-Bolting, Marino, Calypso Early October through early February Almost any variety of Cilantro does well in the Rio Grande Valley. Plant spacing – Sow 3-4 inches apart and thin to 6 inches apart. Dill Long Island Mammoth, Dukat, Bouquet Early October through mid- December High soil heat seems to reduce germination rate and although it can be planted in early October, it is best to wait until late October or early November.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the rio grande valley plant"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow okra or its relatives (cotton, hibiscus) in the same spot more than once every 3 years or so. Moving it around the garden and following it with corn, grasses, or beans helps avoid a buildup of soil pests and disease. Clean up old stalks at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "sources_summary.primary[10].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mg.ucanr.edu",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "More than just a gardening program, UC Master Gardener is an education and outreach statewide program of the University of California, Agriculture and Natural Resources (UC ANR) . UC Master Gardeners are in their communities, helping build more sustainable landscapes.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "tips_by_stage.harvest[0].text_beginner",
+      "our_prose": "Pick okra every day or two, when pods are 2 to 4 inches long. Pods left even an extra day or two turn woody and stringy. Cut them off with a short stem rather than pulling, and wear gloves if your variety is spiny.",
+      "run_normalized": "are 2 to 4 inches long",
+      "run_in_our_prose": "are 2 to 4 inches long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "are 2 to 4 inches long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-okra-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "thinning.anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.germination[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "During prolonged dry periods, a deep soaking once every 7 to 10 days should be adequate. Harvest pods when they are 2 to 4 inches long (3) Harvesting When fruiting begins, okra should be harvested at least every other day as the pods grow rapidly.",
+      "source_context_available": true,
+      "tool_first_6gram": "are 2 to 4 inches long"
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "About 1 inch of water per week once established, more in extreme heat or on sandy soil. Okra is notably drought-tolerant for a vegetable thanks to a deep taproot, but it sets and sizes the most pods with steady moisture, so do not let it bake dry during flowering and pod set.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

@@ -1,0 +1,1063 @@
+{
+  "crop_slug": "onion",
+  "record_count": 22,
+  "records": [
+    {
+      "crop_slug": "onion",
+      "field_path": "diseases[1].identification_seasoned",
+      "our_prose": "Browning, decay, and pink-to-brown discoloration at the basal plate, with roots dying back; bulbs rot from the bottom in the field and in storage.",
+      "run_normalized": "in the field and in storage",
+      "run_in_our_prose": "in the field and in storage",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the field and in storage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B1198/",
+      "anchor_paths": [
+        "varieties.anchoring_urls.uga_ext",
+        "varieties.recommended[5].anchoring_urls.uga_ext"
+      ],
+      "source_context": "Botrytis Neck Rot Botrytis neck rot is the most damaging fungal disease affecting onions in Georgia with severe losses occurring both in the field and in storage. The fungus causing botrytis neck rot, Botrytis allii , can survive in the soil or on rotting bulbs as sclerotia.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the field and in storage"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About half a pound of ammonium sulfate (21-0-0) per 100 square feet at each side-dressing, or the label rate of a balanced fertilizer.",
+      "run_normalized": "21 0 0 per 100 square feet",
+      "run_in_our_prose": "21-0-0) per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "21 0 0 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/onions-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "thinning.anchoring_urls.usu_ext",
+        "tips_by_stage.germination_emergence[0].anchoring_urls.usu_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.usu_ext",
+        "tips_by_stage.leaf_canopy_building[1].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "varieties.recommended[0].anchoring_urls.usu_ext",
+        "varieties.recommended[1].anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization In addition to the fertilizer used at planting, onions need additional nitrogen fertilizer to produce optimum yields. Side-dress onions with ½ pounds of nitrogen fertilizer (21-0-0) per 100 square feet in mid-May and again in late June. Do not fertilize after mid-July as extra nitrogen stimulates late season leaf growth and reduces storage potential of dry onions.",
+      "source_context_available": true,
+      "tool_first_6gram": "0 0 per 100 square feet"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.mid_atlantic.region_notes_beginner",
+      "our_prose": "In the Piedmont and Coastal Plain, onions are a one-time spring crop. In the warmer Coastal Plain (zone 8) grow intermediate-day onions, set out early from late February into late March so they build size before the day-length trigger; true short-day (Southern) types are the traditional choice in the southern Coastal Plain. The cooler Piedmont (zone 7) is long-day onion country. Set sets or seedlings out as soon as the ground can be worked; onions shrug off a light frost. They are ready mid-to-late summer when about half the tops flop over and dry. Pull them, then cure in a warm, airy spot for two to four weeks before storing.",
+      "run_normalized": "out as soon as the ground",
+      "run_in_our_prose": "out as soon as the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "out as soon as the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "piedmont_mg"
+      ],
+      "source_names": [
+        "Piedmont Master Gardeners"
+      ],
+      "source_publishers": [
+        "Piedmont Master Gardeners (VA)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.piedmontmastergardeners.org/article/whats-light-got-to-do-with-it/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.piedmont_mg",
+        "photoperiod.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.piedmont_mg"
+      ],
+      "source_context": "Several of our local garden centers often carry intermediate-day onions in the early spring. In our area onion plants should be set out as soon as the ground is workable and up into mid-April. As for the bulk small onion bulbs (labeled: yellow, white and red) on sale in garden centers and big box stores or at our local hardware stores, their variety and length of day requirements are unknown; however, if your goal is to grow spring onions for their green foliage — not for a big “bulb” onion — they will work in our area for that purpose.",
+      "source_context_available": true,
+      "tool_first_6gram": "out as soon as the ground"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.mid_atlantic.region_notes_seasoned",
+      "our_prose": "Onion in the Mid-Atlantic is a single spring-planted crop with no fall crop. Day-length suitability splits by zone: the cooler Piedmont north (zone 7) is long-day onion country, while the Coastal Plain south (zone 8, at or below the 36°N line) is intermediate-day country, where NC State recommends short-day types for eastern North Carolina and calls long-day onions not recommended there. Virginia Cooperative Extension's 426-331 tables carry only a spring window and no fall column; for the intermediate-day Coastal Plain we close the planting window by the end of March, about Feb 20 to Mar 31 in zone 8, rather than running to the table's April date, since intermediate-day onions size up best when set early, while the long-day Piedmont keeps the fuller spring window, about Mar 1 to May 1 in zone 7. Set sets or seedlings out as soon as the soil is workable, well ahead of the last frost since onion is cold-hardy. Bulbing is triggered by day length rather than by planting date, so bulbs mature on roughly the same midsummer calendar regardless of exactly when they went in; lift and cure two to four weeks before storage.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "They contain weed killers that will kill vegetable plants. Planting Direct seed as soon as the soil is workable in the spring. Sow seeds in a 2-inch wide band 1/4 to 1/2 inch deep in rows 12 to 18 inches apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.mid_atlantic.resolved_by_zone.8.zone_notes",
+      "our_prose": "Coastal Plain and Piedmont warm edge: set onion sets or seedlings Feb 20 to Mar 31 as soon as the soil is workable, well ahead of the last frost since onion tolerates cold, and set them early so intermediate-day bulbs build size before the day-length trigger. Bulbs size up through early summer and pull late June into late July. This is intermediate-day territory at or below the 36°N line, and true short-day types are the traditional choice in the southern Coastal Plain.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "They contain weed killers that will kill vegetable plants. Planting Direct seed as soon as the soil is workable in the spring. Sow seeds in a 2-inch wide band 1/4 to 1/2 inch deep in rows 12 to 18 inches apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.mid_south.region_notes_beginner",
+      "our_prose": "In the Ozark Uplands and Delta Lowlands, onions are a one-time spring crop. Grow intermediate-day onions, which bulb at this belt's day length; set them out early, from February into late March, so they build size before the day-length trigger. Short-day (Southern) types also do well in the warm lowland south, and long-day types work at the cooler northern edge. Set sets or seedlings out as soon as the ground can be worked; onions shrug off a light frost. They are ready mid-to-late summer when about half the tops flop over and dry. Pull them, then let them cure in a warm, airy spot for two to four weeks before storing.",
+      "run_normalized": "out as soon as the ground",
+      "run_in_our_prose": "out as soon as the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "out as soon as the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "piedmont_mg"
+      ],
+      "source_names": [
+        "Piedmont Master Gardeners"
+      ],
+      "source_publishers": [
+        "Piedmont Master Gardeners (VA)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.piedmontmastergardeners.org/article/whats-light-got-to-do-with-it/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.piedmont_mg",
+        "photoperiod.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.piedmont_mg"
+      ],
+      "source_context": "Several of our local garden centers often carry intermediate-day onions in the early spring. In our area onion plants should be set out as soon as the ground is workable and up into mid-April. As for the bulk small onion bulbs (labeled: yellow, white and red) on sale in garden centers and big box stores or at our local hardware stores, their variety and length of day requirements are unknown; however, if your goal is to grow spring onions for their green foliage — not for a big “bulb” onion — they will work in our area for that purpose.",
+      "source_context_available": true,
+      "tool_first_6gram": "out as soon as the ground"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.mid_south.region_notes_seasoned",
+      "our_prose": "Onion in the Mid-South is a single spring-planted crop with no fall crop. This belt is intermediate-day onion country: it sits around and below the 36°N line where growers move off long-day types, so intermediate-day varieties (the widely adaptable Candy is the regional standard) are the reliable pick, with short-day (Southern) types also succeeding in the lowland south and long-day types workable only at the cooler northern edge. Set sets or seedlings out as soon as the soil is workable, roughly mid February into late March in zone 8 and about a week and a half later in the cooler zone 7 uplands; intermediate-day onions size up best when set early, so the window closes by the end of March rather than running into April. Onion is cold-hardy and goes in well before the last frost. Bulbing is triggered by day length rather than by planting date, so bulbs mature on roughly the same midsummer calendar regardless of exactly when they went in; lift and cure two to four weeks before storage. University of Arkansas, Oklahoma State, and University of Tennessee Extension all steer this belt to short-day or intermediate-day onions.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "They contain weed killers that will kill vegetable plants. Planting Direct seed as soon as the soil is workable in the spring. Sow seeds in a 2-inch wide band 1/4 to 1/2 inch deep in rows 12 to 18 inches apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.mid_south.resolved_by_zone.8.zone_notes",
+      "our_prose": "Delta Lowlands and Ozark Uplands warm edge: set onion sets or seedlings Feb 15 to Mar 25 as soon as the soil is workable, well ahead of the last frost since onion tolerates cold, and set them early so intermediate-day bulbs build size before the day-length trigger. Bulbs size up through early summer and pull late June into late July. This is intermediate-day territory below the 36°N line, and short-day (Southern) types also do well in the warm lowland south.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "They contain weed killers that will kill vegetable plants. Planting Direct seed as soon as the soil is workable in the spring. Sow seeds in a 2-inch wide band 1/4 to 1/2 inch deep in rows 12 to 18 inches apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.nevada.resolved_by_zone.10.day_length_note_seasoned",
+      "our_prose": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are set out in fall or late winter and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
+      "run_normalized": "intermediate day onions such as candy",
+      "run_in_our_prose": "intermediate-day onions such as Candy",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "intermediate day onions such as candy"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "piedmont_mg"
+      ],
+      "source_names": [
+        "Piedmont Master Gardeners"
+      ],
+      "source_publishers": [
+        "Piedmont Master Gardeners (VA)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.piedmontmastergardeners.org/article/whats-light-got-to-do-with-it/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.piedmont_mg",
+        "photoperiod.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.piedmont_mg"
+      ],
+      "source_context": "In our area, short-day and long-day onions will have limited success, whereas the intermediate-day onions — such as Candy F1, Candy (Red) F1, Crystal, Gladstone or Super Star — will have greater success .",
+      "source_context_available": true,
+      "tool_first_6gram": "intermediate day onions such as candy"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.nevada.resolved_by_zone.8.day_length_note_seasoned",
+      "our_prose": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are set out in fall or late winter and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
+      "run_normalized": "intermediate day onions such as candy",
+      "run_in_our_prose": "intermediate-day onions such as Candy",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "intermediate day onions such as candy"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "piedmont_mg"
+      ],
+      "source_names": [
+        "Piedmont Master Gardeners"
+      ],
+      "source_publishers": [
+        "Piedmont Master Gardeners (VA)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.piedmontmastergardeners.org/article/whats-light-got-to-do-with-it/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.piedmont_mg",
+        "photoperiod.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.piedmont_mg"
+      ],
+      "source_context": "In our area, short-day and long-day onions will have limited success, whereas the intermediate-day onions — such as Candy F1, Candy (Red) F1, Crystal, Gladstone or Super Star — will have greater success .",
+      "source_context_available": true,
+      "tool_first_6gram": "intermediate day onions such as candy"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.nevada.resolved_by_zone.9.day_length_note_seasoned",
+      "our_prose": "At the Las Vegas Valley's latitude, about 36 degrees N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are set out in fall or late winter and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
+      "run_normalized": "intermediate day onions such as candy",
+      "run_in_our_prose": "intermediate-day onions such as Candy",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "intermediate day onions such as candy"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "piedmont_mg"
+      ],
+      "source_names": [
+        "Piedmont Master Gardeners"
+      ],
+      "source_publishers": [
+        "Piedmont Master Gardeners (VA)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.piedmontmastergardeners.org/article/whats-light-got-to-do-with-it/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.piedmont_mg",
+        "photoperiod.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.piedmont_mg"
+      ],
+      "source_context": "In our area, short-day and long-day onions will have limited success, whereas the intermediate-day onions — such as Candy F1, Candy (Red) F1, Crystal, Gladstone or Super Star — will have greater success .",
+      "source_context_available": true,
+      "tool_first_6gram": "intermediate day onions such as candy"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "In the cold-winter North (zones 3 to 7), onion is a single spring-planted crop. Grow long-day cultivars: they need 14 to 16 hours of daylight to bulb, which northern summers deliver, and they build a full leaf canopy before the solstice trigger so bulbs size up large. Start seed indoors about 10 weeks ahead (sow in February for a May transplant in the coldest zones), then set cold-hardy transplants or sets out as soon as the soil is workable, roughly two weeks before the last frost. Bulbs mature in mid-to-late summer when about half the tops fall over; lift and cure them two to four weeks before storage. Day length gates which cultivar bulbs here, not when you plant: planting stays anchored to frost and workable soil. The bolting trap here is cold-driven, not day-length driven, so it stays minor for a spring crop set as a small transplant, but oversized sets exposed to a cold snap can run to seed instead of bulbing.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "They contain weed killers that will kill vegetable plants. Planting Direct seed as soon as the soil is workable in the spring. Sow seeds in a 2-inch wide band 1/4 to 1/2 inch deep in rows 12 to 18 inches apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "In the cold-winter North (zones 3 to 7), onion is a single spring-planted crop. Grow long-day cultivars: they need 14 to 16 hours of daylight to bulb, which northern summers deliver, and they build a full leaf canopy before the solstice trigger so bulbs size up large. Start seed indoors about 10 weeks ahead (sow in February for a May transplant in the coldest zones), then set cold-hardy transplants or sets out as soon as the soil is workable, roughly two weeks before the last frost. Bulbs mature in mid-to-late summer when about half the tops fall over; lift and cure them two to four weeks before storage. Day length gates which cultivar bulbs here, not when you plant: planting stays anchored to frost and workable soil. The bolting trap here is cold-driven, not day-length driven, so it stays minor for a spring crop set as a small transplant, but oversized sets exposed to a cold snap can run to seed instead of bulbing.",
+      "run_normalized": "16 hours of daylight to bulb",
+      "run_in_our_prose": "16 hours of daylight to bulb",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "16 hours of daylight to bulb"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Day length is also important, and there are long-, intermediate-, and short-day onion varieties. Most long-day varieties require 14-16 hours of daylight to bulb, while short-day varieties require only 12 hours as weather warms in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "16 hours of daylight to bulb"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.se_gulf.region_notes_seasoned",
+      "our_prose": "In the Southeast and Gulf (zones 8 to 9), onion is a fall-planted, overwintering short-day crop. Grow short-day cultivars: they bulb at only 10 to 12 hours of daylight, which the region's mild fall and winter provide. Start seed in early-to-mid fall, then set transplants or sets from November through February so the plant builds a strong leaf canopy over winter before short days trigger bulbing. Bulbs mature in mid-spring, harvested April into May before summer heat; lift when about half the tops fall and cure before storage. Day length gates which cultivar bulbs here, not when you plant. The central pitfall is bolting: a transplant or set that is too large going into winter cold vernalizes and runs to seed instead of bulbing, so use pencil-sized or smaller transplants and sets under half an inch.",
+      "run_normalized": "only 10 to 12 hours of",
+      "run_in_our_prose": "only 10 to 12 hours of",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "only 10 to 12 hours of"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext"
+      ],
+      "source_names": [
+        "Oregon State University Extension"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://horticulture.oregonstate.edu/oregon-vegetables/onions-dry-bulb-western-oregon",
+      "anchor_paths": [
+        "varieties.anchoring_urls.osu_ext",
+        "varieties.recommended[0].anchoring_urls.osu_ext"
+      ],
+      "source_context": "Technically, all onions are \"long-day\" plants, in that bulbing begins as day length increases. \"Short-day\" varieties are those requiring only 10 to 12 hours of day length for bulbing to occur. These are grown in southern states generally below the 35th parallel, and are not suitable for bulb production in the northwest, except as pearl or boiler varieties, or for overwinter production.",
+      "source_context_available": true,
+      "tool_first_6gram": "only 10 to 12 hours of"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "regions.utah_dixie.resolved_by_zone.8.day_length_note_seasoned",
+      "our_prose": "At St. George's latitude, about 37°N, grow intermediate-day onions such as Candy or Super Star, which bulb at around 12 to 14 hours of daylight. They are fall-set and bulb as days lengthen through spring. A long-day (northern) variety here rarely reaches its longer daylength trigger and bulbs poorly, while a short-day variety may bulb too early and small.",
+      "run_normalized": "intermediate day onions such as candy",
+      "run_in_our_prose": "intermediate-day onions such as Candy",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "intermediate day onions such as candy"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "piedmont_mg"
+      ],
+      "source_names": [
+        "Piedmont Master Gardeners"
+      ],
+      "source_publishers": [
+        "Piedmont Master Gardeners (VA)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.piedmontmastergardeners.org/article/whats-light-got-to-do-with-it/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.piedmont_mg",
+        "photoperiod.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.piedmont_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.piedmont_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.piedmont_mg",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.piedmont_mg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.piedmont_mg"
+      ],
+      "source_context": "In our area, short-day and long-day onions will have limited success, whereas the intermediate-day onions — such as Candy F1, Candy (Red) F1, Crystal, Gladstone or Super Star — will have greater success .",
+      "source_context_available": true,
+      "tool_first_6gram": "intermediate day onions such as candy"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "sources_summary.primary[14].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].start_indoors[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "storage.room_temp_seasoned",
+      "our_prose": "After curing, store cured bulbs in a cool, dry, well-ventilated spot near 32 to 40°F; warmer than about 40°F encourages sprouting. Use thick-necked bulbs first; they do not keep.",
+      "run_normalized": "in a cool dry well ventilated",
+      "run_in_our_prose": "in a cool, dry, well-ventilated",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in a cool dry well ventilated"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "After curing, tops can be cut 1 in. above the shoulder of the bulb. Store onions in a cool, dry, well-ventilated area. Scallions Scallions can be harvested from bulbing onions (Allium cepa) before the onions begin to bulb or non-bulbing bunching onions (Allium fistulosum).",
+      "source_context_available": true,
+      "tool_first_6gram": "in a cool dry well ventilated"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "tips_by_stage.maturity_curing[1].text_beginner",
+      "our_prose": "Dry (cure) the onions in a warm, airy, shaded place for two to four weeks until the outer skins are papery and the neck is tight and dry. Then cut the tops about an inch above the bulb. Onions that are not dried well are the ones that rot in storage.",
+      "run_normalized": "for two to four weeks until",
+      "run_in_our_prose": "for two to four weeks until",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for two to four weeks until"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Curing is essential if you plan to store your onions. Keep the onions in a warm (75°F - 90°F), well-ventilated area for two to four weeks, until outer bulb scales are dry and the neck is tight. Poor curing will result in decay during storage.",
+      "source_context_available": true,
+      "tool_first_6gram": "for two to four weeks until"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "tips_by_stage.maturity_curing[1].text_beginner",
+      "our_prose": "Dry (cure) the onions in a warm, airy, shaded place for two to four weeks until the outer skins are papery and the neck is tight and dry. Then cut the tops about an inch above the bulb. Onions that are not dried well are the ones that rot in storage.",
+      "run_normalized": "cure the onions in a warm",
+      "run_in_our_prose": "cure) the onions in a warm",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cure the onions in a warm"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/faq/how-do-you-harvest-dry-and-store-onions",
+      "anchor_paths": [
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Carefully pull or dig the bulbs with the tops attached. Harvesting and Drying After harvesting, dry or cure the onions in a warm, dry, well-ventilated location, such as a shed or garage. Spread out the onions in a single layer on a clean, dry surface.",
+      "source_context_available": true,
+      "tool_first_6gram": "cure the onions in a warm"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "tips_by_stage.maturity_curing[1].text_seasoned",
+      "our_prose": "Cure in a warm, airy, shaded spot (about 75 to 90°F) for two to four weeks until outer scales are papery and the neck is tight and dry, then trim tops about an inch above the bulb. Poor curing is the main cause of storage loss.",
+      "run_normalized": "for two to four weeks until outer",
+      "run_in_our_prose": "for two to four weeks until outer",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "for two to four weeks until outer"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Curing is essential if you plan to store your onions. Keep the onions in a warm (75°F - 90°F), well-ventilated area for two to four weeks, until outer bulb scales are dry and the neck is tight. Poor curing will result in decay during storage.",
+      "source_context_available": true,
+      "tool_first_6gram": "for two to four weeks until"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "varieties.recommended[3].hero_description",
+      "our_prose": "Bred for the central band, where long-day and short-day onions both fall short.",
+      "run_normalized": "long day and short day onions",
+      "run_in_our_prose": "long-day and short-day onions",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "long day and short day onions"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.umn_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "You must dry them in a warm, dry, well-ventilated area. Long-day and short-day onions Onions ( Allium cepa ) have relatives that include garlic, chives, leeks and shallots.",
+      "source_context_available": true,
+      "tool_first_6gram": "long day and short day onions"
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "watering.schedule_by_stage[1].rate",
+      "our_prose": "about 1 inch of water per week including rain",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

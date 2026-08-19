@@ -1,0 +1,565 @@
+{
+  "crop_slug": "leek",
+  "record_count": 10,
+  "records": [
+    {
+      "crop_slug": "leek",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About a quarter pound of ammonium sulfate (21-0-0) per 100 square feet at each side-dressing (USU), or roughly one cup of 10-10-10 per 10 feet of row mid-season (UMN), or the label rate of a balanced fertilizer.",
+      "run_normalized": "21 0 0 per 100 square feet",
+      "run_in_our_prose": "21-0-0) per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "21 0 0 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/leeks-in-the-garden",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination_emergence[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.shaft_lengthening[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "varieties.recommended[0].anchoring_urls.usu_ext",
+        "varieties.recommended[2].anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "winter_hardiness.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization In addition to any fertilizer used at planting, leeks need additional nitrogen to produce optimum yields. Side dress with nitrogen at ¼ lb. (21-0-0) per 100 square feet in mid-May and again in late June. Problems with Growing Leeks Weeds Control weeds through regular cultivation but avoid root damage that slows plant growth by damaging shallow roots.",
+      "source_context_available": true,
+      "tool_first_6gram": "0 0 per 100 square feet"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "A balanced base such as 10-10-10 at planting, then nitrogen side-dressings (for example ammonium sulfate, 21-0-0) through summer to build long, thick shanks.",
+      "run_normalized": "such as 10 10 10 at",
+      "run_in_our_prose": "such as 10-10-10 at",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "such as 10 10 10 at"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-leeks",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "tips_by_stage.seedling_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.shaft_lengthening[1].anchoring_urls.umn_ext",
+        "varieties.recommended[1].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "winter_hardiness.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Do not use fresh manure as it may contain harmful bacteria and may increase weed problems. In mid-summer, side-dress with a balanced fertilizer such as 10-10- 10 at a rate of one cup per 10 feet of row. Spread the fertilizer alongside the row, about six inches away from the plants, and scratch it into the soil.",
+      "source_context_available": true,
+      "tool_first_6gram": "such as 10 10 10 at"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "pests[1].identification_seasoned",
+      "our_prose": "Pale, papery window-pane patches where caterpillars have eaten the inner leaf tissue, then tunnels bored down into the shaft; two generations feed roughly May to June and August to October.",
+      "run_normalized": "may to june and august to october",
+      "run_in_our_prose": "May to June and August to October",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "may to june and august to october"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rhs"
+      ],
+      "source_names": [
+        "Royal Horticultural Society"
+      ],
+      "source_publishers": [
+        "RHS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.rhs.org.uk/biodiversity/leek-moth",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.rhs"
+      ],
+      "source_context": "Encourage natural enemies in gardens; predators such as ground and rove beetles are likely to consume some pupae Look for the white, net-like silk cocoons on the foliage and squash them Biology .rtc]:mt-6\" data-astro-cid-g3i4jeg7> Leek moth has two generations during the summer with larvae feeding on the plants in May to June and August to October. The second generation is the more numerous. Initially the caterpillars mine the foliage but the older larvae bore into the stems and bulbs These are fleshy, rounded, underground storage organs, usually sold and planted while dormant.",
+      "source_context_available": true,
+      "tool_first_6gram": "may to june and august to"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "pests[3].identification_seasoned",
+      "our_prose": "Neat rows of white dots punched in the leaves by the egg-laying flies, then white legless maggots and small brown pupae tunneling in leaves and shafts; the autumn generation is usually the most damaging.",
+      "run_normalized": "generation is usually the most damaging",
+      "run_in_our_prose": "generation is usually the most damaging",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "generation is usually the most damaging"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rhs"
+      ],
+      "source_names": [
+        "Royal Horticultural Society"
+      ],
+      "source_publishers": [
+        "RHS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.rhs.org.uk/biodiversity/allium-leaf-miner",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.rhs"
+      ],
+      "source_context": "llium leaf miner ( Phytomyza gymnostoma ) pupa on leek Biology .rtc]:mt-6\" data-astro-cid-g3i4jeg7> Allium leaf miner has two generations a year: First generation female flies lay eggs on the stems or base of leaves during March and April The second generation repeats the process in late summer and autumn, this generation is usually the most damaging The maggots bore into the foliage, stems or bulbs These are fleshy, rounded, underground storage organs, usually sold and planted while dormant.",
+      "source_context_available": true,
+      "tool_first_6gram": "generation is usually the most damaging"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "pests[3].management_seasoned",
+      "our_prose": "Cover the crop with insect-proof mesh during the two flight periods (about March to April and September to November) and rotate alliums, since the flies emerge from pupae in the soil.",
+      "run_normalized": "march to april and september to november",
+      "run_in_our_prose": "March to April and September to November",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "march to april and september to november"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rhs"
+      ],
+      "source_names": [
+        "Royal Horticultural Society"
+      ],
+      "source_publishers": [
+        "RHS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.rhs.org.uk/biodiversity/allium-leaf-miner",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.rhs"
+      ],
+      "source_context": "arly prevalent in autumn: Plants affected by allium leaf miner or leek moth tend to rot due to secondary infections from fungi and bacteria that develop in the damaged tissues Management .rtc]:mt-6\" data-astro-cid-g3i4jeg7> Plants can be effectively protected by covering them with an insect-proof mesh , at times when the adult flies are active and laying eggs. Peak adult activity is March to April and September to November. Crop rotation must be used, as adult flies might emerge from pupae underneath the covering if susceptible plants are grown in the same piece of ground in successive years.",
+      "source_context_available": true,
+      "tool_first_6gram": "march to april and september to"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "sources_summary.primary[2].name",
+      "our_prose": "University of Maryland Extension -- Growing Leeks in a Home Garden",
+      "run_normalized": "growing leeks in a home garden",
+      "run_in_our_prose": "Growing Leeks in a Home Garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growing leeks in a home garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-leeks-home-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umd_ext",
+        "pests[3].anchoring_urls.umd_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umd_ext",
+        "tips_by_stage.maturity_harvest[0].anchoring_urls.umd_ext",
+        "tips_by_stage.seedling_growth[0].anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Growing Leeks in a Home Garden | University of Maryland Extension Skip to main content",
+      "source_context_available": true,
+      "tool_first_6gram": "growing leeks in a home garden"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "UF/IFAS HS1388 Leek Cultivation Guide for Florida",
+      "run_normalized": "hs1388 leek cultivation guide for florida",
+      "run_in_our_prose": "HS1388 Leek Cultivation Guide for Florida",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "hs1388 leek cultivation guide for florida"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/HS1388",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uf_ifas",
+        "diseases[2].anchoring_urls.uf_ifas",
+        "failure_diagnostics[1].anchoring_urls.uf_ifas",
+        "ph.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.uf_ifas",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.uf_ifas",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.uf_ifas",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uf_ifas",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uf_ifas",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uf_ifas",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uf_ifas",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas",
+        "soil.anchoring_urls.uf_ifas",
+        "varieties.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "HS1388/HS1388: Leek Cultivation Guide for Florida Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Leek Cultivation Guide for Florida Mary Dixon and Guodong Liu Leek Cultivation Guide for Florida",
+      "source_context_available": true,
+      "tool_first_6gram": "hs1388 leek cultivation guide for florida"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "sources_summary.primary[6].name",
+      "our_prose": "UC Master Gardener Program -- time of planting",
+      "run_normalized": "uc master gardener program time of planting",
+      "run_in_our_prose": "UC Master Gardener Program -- time of planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardener program time of planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Get Involved News & Media About Our Work & Impact Toggle submenu Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes UC Cooperative Extensions (UCCEs) Get Involved News & Media UC ANR UC Master Gardener Program Time of planting UC Master Gardener Program Time of planting Print California has a unique vegetable growing climate, we can grow many different types of vegetable crops throughout the year.",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardener program time of planting"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "watering.method_beginner",
+      "our_prose": "Water the soil at the base of the plants, not over the leaves. Keeping the tops dry helps prevent rust.",
+      "run_normalized": "at the base of the plants",
+      "run_in_our_prose": "at the base of the plants",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the plants"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-leeks-home-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umd_ext",
+        "pests[3].anchoring_urls.umd_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.umd_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.umd_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.umd_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.umd_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umd_ext",
+        "tips_by_stage.maturity_harvest[0].anchoring_urls.umd_ext",
+        "tips_by_stage.seedling_growth[0].anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Leeks left to grow in the spring will go to seed and can be the start of a self-perpetuating leek bed. Leeks left to flower may also produce bulblets at the base of the plants. These can be separated and used to propagate a new crop. Water - Leeks require regular watering throughout growth for best production.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the plants"
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "watering.schedule_by_stage[3].rate",
+      "our_prose": "about 1 inch of water per week, wetting to roughly 18 inches deep",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

@@ -1,0 +1,678 @@
+{
+  "crop_slug": "mint",
+  "record_count": 10,
+  "records": [
+    {
+      "crop_slug": "mint",
+      "field_path": "failure_diagnostics[0].what_happened_seasoned",
+      "our_prose": "The patch colonized the bed through shallow rhizomes and stolons, the defining mint behavior every extension source warns about (contain it in a sunken bottomless container or lined bed). Runners left unpulled root at the nodes and become hard to eradicate. Next time confine at planting and edge the container above the soil line.",
+      "run_normalized": "the container above the soil line",
+      "run_in_our_prose": "the container above the soil line",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the container above the soil line"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-mint-home-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umd_ext",
+        "harvest_ready_anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umd_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umd_ext"
+      ],
+      "source_context": "As an alternative, grow mint in a bottomless container (remove the base of a utilitarian plastic pot) and plant the container into the ground, leaving about an inch of the container above the soil line. This forces the runners up and over the container lip where they can be seen and trimmed off before they root into soil on the other side.",
+      "source_context_available": true,
+      "tool_first_6gram": "the container above the soil line"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Mint is a light feeder and is easily overfed. Utah State suggests about one teaspoon of a balanced 16-16-16 fertilizer per plant in early spring as growth resumes; a compost-rich bed often needs no more than a light topdressing. Go easy, because rich soil and heavy nitrogen push soft, floppy stems and thin the essential oils that carry mint's flavor and aroma, a point Wisconsin Horticulture makes for mints grown in lean ground. In a container, where frequent watering leaches nutrients, a dilute liquid feed every few weeks through the growing season keeps the leaves green.",
+      "run_normalized": "16 16 16 fertilizer per plant",
+      "run_in_our_prose": "16-16-16 fertilizer per plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "16 16 16 fertilizer per plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.spring_regrowth[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization One early spring application of a slow release, complete fertilizer incorporated into the soil will supply adequate nutrients for mint. Use one teaspoon of a 16-16-16 fertilizer per plant as growth resumes in the spring. Over watering and fertilizing promotes rust and diminishes mint oil production.",
+      "source_context_available": true,
+      "tool_first_6gram": "16 16 16 fertilizer per plant"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "regions.fl_peninsula.region_notes_seasoned",
+      "our_prose": "In the Florida peninsula (zones 10 and 11), mint is an evergreen, year-round perennial; UF/IFAS reports it does well in Florida's hot, humid weather given part shade and moisture-retentive soil, so no heat pause is needed, though afternoon shade eases the peak of summer. Establish a contained plant, keep it evenly moist, and manage rust and leaf spot in the humidity by thinning, soil-line watering, and shearing. Contain the vigorous rhizomes.",
+      "run_normalized": "does well in florida s hot",
+      "run_in_our_prose": "does well in Florida's hot",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "does well in florida s hot"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].transplant[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.uf_ifas",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.uf_ifas",
+        "storage.anchoring_urls.uf_ifas",
+        "varieties.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "s About Us About Gardening Solutions About CLUE Plants Edible Plants Vegetables Mint Mint Mint ( Mentha spp.) is an excellent herb for beginning gardeners. It’s very easy to grow, attracts pollinators, and does well in Florida’s hot and humid weather. This popular herb can be used fresh or dry in a variety of ways in your kitchen.",
+      "source_context_available": true,
+      "tool_first_6gram": "does well in florida s hot"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "sources_summary.primary[15].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mg.ucanr.edu",
+      "anchor_paths": [
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "More than just a gardening program, UC Master Gardener is an education and outreach statewide program of the University of California, Agriculture and Natural Resources (UC ANR) . UC Master Gardeners are in their communities, helping build more sustainable landscapes.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "sources_summary.primary[16].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "storage.freezer_seasoned",
+      "our_prose": "Mint freezes well chopped into ice-cube trays with water for drinks and cooking, or blended into sauces; frozen sprigs lose their crispness for garnish but keep their flavor. It also dries, but as UF/IFAS warns, dry it in darkness and low humidity or the leaves turn dark and moldy.",
+      "run_normalized": "darkness and low humidity or the leaves",
+      "run_in_our_prose": "darkness and low humidity or the leaves",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "darkness and low humidity or the leaves"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/mint/",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].transplant[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uf_ifas",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.uf_ifas",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.uf_ifas",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.uf_ifas",
+        "storage.anchoring_urls.uf_ifas",
+        "varieties.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "Mint is considered a tender-leaf herb, meaning that the leaves have a high moisture content. As a tender-leaf herb, mint needs to be dried somewhere with darkness and low humidity or the leaves will turn dark and moldy. For more information on growing mint and other herbs contact your county Extension office .",
+      "source_context_available": true,
+      "tool_first_6gram": "and low humidity or the leaves"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "About 1 to 2 inches per week, more in heat and in containers, which dry fast; the goal is steady, even moisture rather than a soak-and-dry cycle. Mulch helps hold it.",
+      "run_normalized": "1 to 2 inches per week",
+      "run_in_our_prose": "1 to 2 inches per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.spring_regrowth[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Water regularly during the growing season, supplying up to 1 to 2 inches per week, depending on temperatures, exposure and soil conditions. Avoid overwatering as it leads to disease.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches per week"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Roughly 1 to 2 inches of water per week, kept even; mint is a moisture lover that must not dry out, and Utah State advises 1 to 2 inches per week while cautioning against overwatering, which invites disease.",
+      "run_normalized": "1 to 2 inches per week",
+      "run_in_our_prose": "1 to 2 inches per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.spring_regrowth[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Water regularly during the growing season, supplying up to 1 to 2 inches per week, depending on temperatures, exposure and soil conditions. Avoid overwatering as it leads to disease.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches per week"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "watering.schedule_by_stage[1].rate",
+      "our_prose": "about 1 to 2 inches per week, even and generous",
+      "run_normalized": "1 to 2 inches per week",
+      "run_in_our_prose": "1 to 2 inches per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.spring_regrowth[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Water regularly during the growing season, supplying up to 1 to 2 inches per week, depending on temperatures, exposure and soil conditions. Avoid overwatering as it leads to disease.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches per week"
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 to 2 inches per week, even and generous",
+      "run_normalized": "1 to 2 inches per week",
+      "run_in_our_prose": "1 to 2 inches per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.spring_regrowth[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Water regularly during the growing season, supplying up to 1 to 2 inches per week, depending on temperatures, exposure and soil conditions. Avoid overwatering as it leads to disease.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches per week"
+    }
+  ]
+}

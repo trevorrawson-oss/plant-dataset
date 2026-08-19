@@ -1,0 +1,896 @@
+{
+  "crop_slug": "lemongrass",
+  "record_count": 14,
+  "records": [
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "failure_diagnostics[0].next_season_tip_beginner",
+      "our_prose": "Wait until frost is fully past and the soil is warm to plant it out. In fall, harvest before frost and bring a potted piece indoors for winter. In cold areas, plan to grow it in a pot you can move inside.",
+      "run_normalized": "to grow it in a pot",
+      "run_in_our_prose": "to grow it in a pot",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "to grow it in a pot"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_mg",
+        "container_notes.anchoring_urls.uc_mg",
+        "diseases[2].anchoring_urls.uc_mg",
+        "failure_diagnostics[0].anchoring_urls.uc_mg",
+        "failure_diagnostics[2].anchoring_urls.uc_mg",
+        "fertilizer.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.mature[0].anchoring_urls.uc_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "How to grow Lemongrass is frost-sensitive, so in colder microclimates, it may be convenient to grow it in a pot and bring it inside during winter. In early spring, cut the plants back to about a foot in height.",
+      "source_context_available": true,
+      "tool_first_6gram": "to grow it in a pot"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "failure_diagnostics[3].what_happened_seasoned",
+      "our_prose": "Lemongrass rust, caused by Puccinia nakanishikii, produces yellow flecks that redden into streaks and orange-brown pustules on the leaf undersides, drying the foliage in severe cases. It is the most notable disease of lemongrass in warm, humid regions and is worsened by crowding and prolonged leaf wetness.",
+      "run_normalized": "lemongrass rust caused by puccinia nakanishikii",
+      "run_in_our_prose": "Lemongrass rust, caused by Puccinia nakanishikii",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "lemongrass rust caused by puccinia nakanishikii"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr"
+      ],
+      "source_names": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_publishers": [
+        "University of Hawaii College of Tropical Agriculture and Human Resources"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/PD-57.pdf",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uhawaii_ctahr",
+        "failure_diagnostics[3].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr"
+      ],
+      "source_context": "The rust fungi of cereals, grasses, and bamboos. Springer-Verlag, New York. Gardner, D.E. 1985. Lemongrass rust caused by Puccinia nakanishikii in Hawaii. Plant Disease 69: 1100. Gardner, D.E., and C.S. Hodges, Jr. 1989. The rust fungi (Uredinales) of Hawaii.",
+      "source_context_available": true,
+      "tool_first_6gram": "lemongrass rust caused by puccinia nakanishikii"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "hardiness_notes_beginner",
+      "our_prose": "Lemongrass only survives winter outdoors in the warmest, nearly frost-free areas (roughly zones 8b to 11). There it comes back year after year. Anywhere colder, frost kills it, so you either grow it as a one-season plant or keep it in a pot and bring it indoors for winter. Temperatures below about 40 °F start to hurt it, and a frost kills the leaves.",
+      "run_normalized": "it in a pot and bring it",
+      "run_in_our_prose": "it in a pot and bring it",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "it in a pot and bring it"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_mg",
+        "container_notes.anchoring_urls.uc_mg",
+        "diseases[2].anchoring_urls.uc_mg",
+        "failure_diagnostics[0].anchoring_urls.uc_mg",
+        "failure_diagnostics[2].anchoring_urls.uc_mg",
+        "fertilizer.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.mature[0].anchoring_urls.uc_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "How to grow Lemongrass is frost-sensitive, so in colder microclimates, it may be convenient to grow it in a pot and bring it inside during winter. In early spring, cut the plants back to about a foot in height.",
+      "source_context_available": true,
+      "tool_first_6gram": "in a pot and bring it"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "regions.ca_desert.region_notes_seasoned",
+      "our_prose": "California's desert valleys deliver the intense heat and sun lemongrass thrives on, and disease pressure is very low in the dry air. The catch is water: a fast-growing clump in desert heat needs deep, frequent irrigation, ideally by flood or drip at the base rather than sprinklers. Plant out in spring after the last frost and feed a nitrogen-forward fertilizer through the season. Harvest stalks from late spring into fall or, in the warmest zone 10 low desert, into early winter. Zone 9 winter frost ends the season, so overwinter a potted division indoors; in near-frost-free zone 10 pockets a clump may persist as a perennial.",
+      "run_normalized": "in spring after the last frost",
+      "run_in_our_prose": "in spring after the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in spring after the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_mg",
+        "container_notes.anchoring_urls.uc_mg",
+        "diseases[2].anchoring_urls.uc_mg",
+        "failure_diagnostics[0].anchoring_urls.uc_mg",
+        "failure_diagnostics[2].anchoring_urls.uc_mg",
+        "fertilizer.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.mature[0].anchoring_urls.uc_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Fertilize regularly with nitrogen during the growing season Water: Moderate; do not overwater to avoid root rot Size: 3 to 4 feet tall, 2 to 3 feet wide When to plant/propagate Transplants: Set out transplants in spring after the last frost date Cuttings: Best propagated by division in spring Harvesting Harvest anytime during the growing season once the stalks are ½-inch in diameter Harvest stalks by using a sharp knife to cut as close to the root as possible, or by bending the stalk and twisting.",
+      "source_context_available": true,
+      "tool_first_6gram": "in spring after the last frost"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "regions.ca_south_coast.region_notes_seasoned",
+      "our_prose": "Southern California's mild coast suits lemongrass well: warm, sunny, and with mild winters. Set out transplants in spring after any frost, then water and feed generously through the warm months for a full clump. In zone 9, an established clump usually overwinters, though an occasional frost can cut it back, so harvest before a hard freeze. In the near-frost-free zone 10 coast, lemongrass becomes a true perennial, harvestable year round, with growth slowing only in the coolest winter weeks. Divide clumps in spring every few years to keep the center vigorous.",
+      "run_normalized": "set out transplants in spring after",
+      "run_in_our_prose": "Set out transplants in spring after",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "set out transplants in spring after"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_mg",
+        "container_notes.anchoring_urls.uc_mg",
+        "diseases[2].anchoring_urls.uc_mg",
+        "failure_diagnostics[0].anchoring_urls.uc_mg",
+        "failure_diagnostics[2].anchoring_urls.uc_mg",
+        "fertilizer.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.mature[0].anchoring_urls.uc_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Fertilize regularly with nitrogen during the growing season Water: Moderate; do not overwater to avoid root rot Size: 3 to 4 feet tall, 2 to 3 feet wide When to plant/propagate Transplants: Set out transplants in spring after the last frost date Cuttings: Best propagated by division in spring Harvesting Harvest anytime during the growing season once the stalks are ½-inch in diameter Harvest stalks by using a sharp knife to cut as close to the root as possible, or by bending the stalk and twisting.",
+      "source_context_available": true,
+      "tool_first_6gram": "set out transplants in spring after"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "regions.hawaii_tropical.region_notes_seasoned",
+      "our_prose": "In Hawaii's frost-free lowlands, lemongrass is a continuous year-round perennial, thriving in the warm, humid, sunny climate and harvestable in any month. Plant or divide at any time in full sun and rich, well-drained soil, and water steadily. The main concern is disease rather than season: lemongrass rust (caused by Puccinia nakanishikii and documented on lemongrass in Hawaii) can dry the foliage in humid, crowded plantings, so keep clumps open and divided for airflow, water at the base, and remove infected leaves. An established clump becomes a large, ongoing source of stalks and tea leaves; divide it every few years to keep the center vigorous.",
+      "run_normalized": "lemongrass rust caused by puccinia nakanishikii",
+      "run_in_our_prose": "lemongrass rust (caused by Puccinia nakanishikii",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "lemongrass rust caused by puccinia nakanishikii"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr"
+      ],
+      "source_names": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_publishers": [
+        "University of Hawaii College of Tropical Agriculture and Human Resources"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/PD-57.pdf",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uhawaii_ctahr",
+        "failure_diagnostics[3].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr"
+      ],
+      "source_context": "The rust fungi of cereals, grasses, and bamboos. Springer-Verlag, New York. Gardner, D.E. 1985. Lemongrass rust caused by Puccinia nakanishikii in Hawaii. Plant Disease 69: 1100. Gardner, D.E., and C.S. Hodges, Jr. 1989. The rust fungi (Uredinales) of Hawaii.",
+      "source_context_available": true,
+      "tool_first_6gram": "lemongrass rust caused by puccinia nakanishikii"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "regions.pnw.region_notes_seasoned",
+      "our_prose": "Lemongrass is tender and heat-hungry, and the maritime Pacific Northwest's cool, marine-tempered summer is a genuinely marginal climate for it: the region's long frost-free window gives this crop plenty of time but not the sustained warmth it wants. Start a division, nursery plant, or rooted grocery-store stalk indoors about 8 weeks before last frost, then set it out about a week after frost once the soil has warmed; it will sulk in cold ground. Site it in the single warmest microsite available (a south wall or over paving), feed it hard through summer, and expect a smaller clump with thinner stalks than a hot-summer garden produces, more so on the cooler immediate coast (z9) than the valley interior (z8). Harvest stalks once they reach about half an inch thick. Because frost kills the top growth, do a heavy final harvest just before the first fall frost, then dig and pot a division to overwinter indoors in a bright window; this crop will not survive the region's winter outdoors.",
+      "run_normalized": "just before the first fall frost",
+      "run_in_our_prose": "just before the first fall frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "just before the first fall frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/lemongrass-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.usu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.mature[0].anchoring_urls.usu_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "How to Harvest and Store Lemongrass In cooler areas of Utah, harvesting occurs at the end of the growing season just before the first fall frost. However, lemongrass can be harvested at any time, once the plant stalks have reached ½ inch thick.",
+      "source_context_available": true,
+      "tool_first_6gram": "just before the first fall frost"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "regions.se_gulf.region_notes_seasoned",
+      "our_prose": "The Southeast and Gulf's long, hot, humid summers are excellent for lemongrass, which thrives on the heat and moisture. Plant out in spring after the last frost and feed and water generously for a large clump by summer. Harvest stalks from early summer through fall. The one caution is disease: warm, humid, crowded conditions favor rust and leaf blight, so space and divide clumps for airflow and water at the base to keep foliage dry. In zone 8, winter frost ends the season, so harvest before frost and overwinter a potted division indoors or mulch the crown heavily. In zone 9, milder winters often let an established clump persist as a perennial, though a hard freeze can still cut it down.",
+      "run_normalized": "in spring after the last frost",
+      "run_in_our_prose": "in spring after the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in spring after the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_mg",
+        "container_notes.anchoring_urls.uc_mg",
+        "diseases[2].anchoring_urls.uc_mg",
+        "failure_diagnostics[0].anchoring_urls.uc_mg",
+        "failure_diagnostics[2].anchoring_urls.uc_mg",
+        "fertilizer.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.mature[0].anchoring_urls.uc_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Fertilize regularly with nitrogen during the growing season Water: Moderate; do not overwater to avoid root rot Size: 3 to 4 feet tall, 2 to 3 feet wide When to plant/propagate Transplants: Set out transplants in spring after the last frost date Cuttings: Best propagated by division in spring Harvesting Harvest anytime during the growing season once the stalks are ½-inch in diameter Harvest stalks by using a sharp knife to cut as close to the root as possible, or by bending the stalk and twisting.",
+      "source_context_available": true,
+      "tool_first_6gram": "in spring after the last frost"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "regions.warm_arid.region_notes_seasoned",
+      "our_prose": "The warm arid interior (parts of Texas, New Mexico, and the southern High Plains) gives lemongrass the hot, sunny summers it wants, with low disease pressure in the dry air. The essential input is water: irrigate deeply and often, at the base, to keep a fast-growing clump satisfied in the dry heat, and feed a nitrogen-forward fertilizer through the season. Plant out in spring after the last frost. Winter frost ends the outdoor season, so harvest before frost and overwinter a potted division in a garage, greenhouse, or bright indoor window; growers here commonly carry lemongrass over in a large pot rather than replanting each year.",
+      "run_normalized": "in spring after the last frost",
+      "run_in_our_prose": "in spring after the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in spring after the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lemongrass",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_mg",
+        "container_notes.anchoring_urls.uc_mg",
+        "diseases[2].anchoring_urls.uc_mg",
+        "failure_diagnostics[0].anchoring_urls.uc_mg",
+        "failure_diagnostics[2].anchoring_urls.uc_mg",
+        "fertilizer.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].start_indoors[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.mature[0].anchoring_urls.uc_mg",
+        "tips_by_stage.vegetative[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Fertilize regularly with nitrogen during the growing season Water: Moderate; do not overwater to avoid root rot Size: 3 to 4 feet tall, 2 to 3 feet wide When to plant/propagate Transplants: Set out transplants in spring after the last frost date Cuttings: Best propagated by division in spring Harvesting Harvest anytime during the growing season once the stalks are ½-inch in diameter Harvest stalks by using a sharp knife to cut as close to the root as possible, or by bending the stalk and twisting.",
+      "source_context_available": true,
+      "tool_first_6gram": "in spring after the last frost"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "soil.preferred_description_seasoned",
+      "our_prose": "Lemongrass grows best in a moist, rich, well-drained loam with high organic content. As a fast-growing grass it is a heavy user of both nutrients and water, so a fertile soil amended generously with compost supports the vigorous clump growth that produces thick, harvestable stalks. Good drainage matters despite the high water demand: soils that stay waterlogged invite root rot. The plant tolerates a range of soil types, so the practical goal is a soil that holds moisture and feeds well while still draining freely.",
+      "run_normalized": "plant tolerates a range of soil types",
+      "run_in_our_prose": "plant tolerates a range of soil types",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "plant tolerates a range of soil types"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/cymbopogon-citratus/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Phonetic Spelling sim-boh-POH-gon sih-TRAY-tus Description Strongly scented lemon leaves used in India and Southern Asian cuisine; overwinter as a container plant but do not let it dry out. This plant tolerates a range of soil types. The plant oils are used for perfumes and herbal medicines. VIDEO created by Andy Pulte for “Landscape Plant Identification, Taxonomy and Morphology” a plant identification course offered by the Department of Plant Sciences, University of Tennessee.",
+      "source_context_available": true,
+      "tool_first_6gram": "plant tolerates a range of soil"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "tips_by_stage.establishment[0].text_seasoned",
+      "our_prose": "The simplest way to start lemongrass is to root a fresh grocery-store stalk: remove any leaves, stand the bare stalk in a glass of water in a bright spot, refresh the water every couple of days, and roots form in about two to three weeks. Pot it up once roots are an inch or two long. A nursery plant or a division from a friend's clump works just as well.",
+      "run_normalized": "in a glass of water in",
+      "run_in_our_prose": "in a glass of water in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in a glass of water in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/lemongrass-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.usu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.mature[0].anchoring_urls.usu_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fresh stalks of lemongrass (leaves and roots absent) can be purchased at grocery stores specializing in Asian cuisine and will root in a glass of water in about 2 weeks. Water and feed regularly from June through September to maximize growth.",
+      "source_context_available": true,
+      "tool_first_6gram": "in a glass of water in"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "watering.frequency_beginner",
+      "our_prose": "Water often. In the ground, water deeply a few times a week in hot weather; in a pot, check daily and do not let it dry out.",
+      "run_normalized": "do not let it dry out",
+      "run_in_our_prose": "do not let it dry out",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "do not let it dry out"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/cymbopogon-citratus/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Phonetic Spelling sim-boh-POH-gon sih-TRAY-tus Description Strongly scented lemon leaves used in India and Southern Asian cuisine; overwinter as a container plant but do not let it dry out. This plant tolerates a range of soil types. The plant oils are used for perfumes and herbal medicines.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not let it dry out"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "watering.schedule_by_stage[0].note_beginner",
+      "our_prose": "Keep a new plant's soil moist while it settles in. Do not let it dry out.",
+      "run_normalized": "do not let it dry out",
+      "run_in_our_prose": "Do not let it dry out",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "do not let it dry out"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/cymbopogon-citratus/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Phonetic Spelling sim-boh-POH-gon sih-TRAY-tus Description Strongly scented lemon leaves used in India and Southern Asian cuisine; overwinter as a container plant but do not let it dry out. This plant tolerates a range of soil types. The plant oils are used for perfumes and herbal medicines.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not let it dry out"
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "watering.schedule_by_stage[0].note_seasoned",
+      "our_prose": "A newly set-out division or rooted start needs consistently moist soil to establish its roots; do not let it dry out during the first few weeks.",
+      "run_normalized": "do not let it dry out",
+      "run_in_our_prose": "do not let it dry out",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "do not let it dry out"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/cymbopogon-citratus/",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].start_indoors[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Phonetic Spelling sim-boh-POH-gon sih-TRAY-tus Description Strongly scented lemon leaves used in India and Southern Asian cuisine; overwinter as a container plant but do not let it dry out. This plant tolerates a range of soil types. The plant oils are used for perfumes and herbal medicines.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not let it dry out"
+    }
+  ]
+}

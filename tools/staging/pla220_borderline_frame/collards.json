@@ -1,0 +1,720 @@
+{
+  "crop_slug": "collards",
+  "record_count": 18,
+  "records": [
+    {
+      "crop_slug": "collards",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Collards are leafy and N-hungry, and steady nitrogen drives the deep green color and tender growth that make the crop. Work a balanced fertilizer into the bed at planting, then side-dress with nitrogen about 3 to 4 weeks later, and feed again after a heavy cutting to push new leaves. Extension guides commonly cite a nitrogen side-dressing such as calcium nitrate or 27-3-3 along the row; on long-held plants a feed every 3 to 4 weeks keeps them productive. Avoid overdoing nitrogen, which softens growth and draws aphids.",
+      "run_normalized": "deep green color and tender growth",
+      "run_in_our_prose": "deep green color and tender growth",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "deep green color and tender growth"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/collard-greens",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Soil Requirements Leafy vegetables require quick, continuous growth for best quality. They need ample nitrogen for deep green color and tender growth. Collect soil and have it tested to get recommendations for the types and amounts of fertilizers and other amendments needed.",
+      "source_context_available": true,
+      "tool_first_6gram": "deep green color and tender growth"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "growth_stages[1].user_action_seasoned",
+      "our_prose": "Harden off over 7 to 10 days before setting out; thin or set plants 18 to 24 inches apart and protect seedlings from flea beetles with row cover.",
+      "run_normalized": "plants 18 to 24 inches apart",
+      "run_in_our_prose": "plants 18 to 24 inches apart",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plants 18 to 24 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/sites/default/files/publications/P3616_web.pdf",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "Sections of concrete reinforcing rods (rebar) make excellent tomato stakes. Space plants 18 to 24 inches apart in the row and drive a stake next to each plant or every other plant. Place the stake 3 to 4 inches from the base of the plant on the side, away from the first bloom cluster, to prevent trapping the fruit between the plant and the stake.",
+      "source_context_available": true,
+      "tool_first_6gram": "plants 18 to 24 inches apart"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "growth_stages[1].user_action_seasoned",
+      "our_prose": "Harden off over 7 to 10 days before setting out; thin or set plants 18 to 24 inches apart and protect seedlings from flea beetles with row cover.",
+      "run_normalized": "18 to 24 inches apart and",
+      "run_in_our_prose": "18 to 24 inches apart and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "18 to 24 inches apart and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "The varieties mentioned are all small-plant types if planted during the months indicated. They can be planted in rows 18 to 24 inches apart and spaced 3 to 5 inches in the row. Repeat plantings should be made every 2 to 4 weeks.",
+      "source_context_available": true,
+      "tool_first_6gram": "18 to 24 inches apart and"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "pests[4].cause_beginner",
+      "our_prose": "A small fly lays eggs at the base of the plant, and the maggots that hatch burrow down and eat the roots. The fly is most active in cool spring weather.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Fertilizer applied at time of transplanting or as side dressings should be placed 3 or 4 inches from the base of the plant and to a depth of 3 or 4 inches. Roughly, two level table­ spoons of fertilizer applied in a band Ii to 12 inches long supply a rather heavy application.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.mid_atlantic.region_notes_beginner",
+      "our_prose": "Collards are a real Southern staple in this region and grow through more of the year than most cole crops. Sow in early spring for a spring crop, then sow again in late summer for a fall and winter crop; a touch of frost only makes the leaves taste better.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.mid_south.region_notes_beginner",
+      "our_prose": "Collards are a real Southern staple in this region and grow through more of the year than most cole crops. Sow in early spring for a spring crop, then sow again in late summer for a fall and winter crop; a touch of frost only makes the leaves taste better.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.northern_tier.resolved_by_zone.4.zone_notes",
+      "our_prose": "Plant in spring once the soil is workable and again in midsummer for fall; harvest runs through the fall frosts, then deep winter ends it.",
+      "run_normalized": "and again in midsummer for fall",
+      "run_in_our_prose": "and again in midsummer for fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and again in midsummer for fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_caes_collards"
+      ],
+      "source_names": [
+        "UGA CAES Cultivating Collards"
+      ],
+      "source_publishers": [
+        "University of Georgia CAES"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/news/cultivating-collards-a-step-by-step-guide/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.uga_caes_collards",
+        "harvest_ready_anchoring_urls.uga_caes_collards",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.uga_caes_collards",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.uga_caes_collards",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uga_caes_collards",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uga_caes_collards",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.uga_caes_collards",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.uga_caes_collards",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_caes_collards",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_caes_collards",
+        "storage.anchoring_urls.uga_caes_collards",
+        "varieties.anchoring_urls.uga_caes_collards",
+        "watering.anchoring_urls.uga_caes_collards",
+        "yield_expectations.anchoring_urls.uga_caes_collards"
+      ],
+      "source_context": "It has large, crumpled, dark green leaves, holds color in cold weather, resists bolting and offers good yields. Plant collards in early spring for summer harvest and again in midsummer for fall and early winter harvest. For best results, sow seed one-quarter to one-half inch deep.",
+      "source_context_available": true,
+      "tool_first_6gram": "and again in midsummer for fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.pnw.region_notes_beginner",
+      "our_prose": "Collards do very well here, though neither Oregon's nor Washington's extension planting tables call the crop out by name for this region, so this guidance leans on collards' own well-documented performance in other mild, frost-anchored climates. Plant in early spring and again in late summer for a fall crop; collards shrugs off the season's light frosts, so you can keep picking outer leaves for most of the year, with only a short break around each sowing.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.pnw.region_notes_seasoned",
+      "our_prose": "Collards is thin-sourced for the maritime PNW specifically (absent by name from both OSU's EM9027 and WSU's EM057E planting tables), so this cell is modeled on the crop's own established mild-zone pattern elsewhere, re-anchored to the region's real, milder frost dates. Direct sow or set transplants out a few weeks ahead of the last frost, then sow again in late summer for a fall and winter crop; as the hardiest cole crop, collards tolerates this region's light frosts well and keeps producing through nearly the entire year, pausing only around the two sowing windows themselves. The mild maritime winter should let the fall crop run later here than in a harder-frost climate, though that specific extension is not independently sourced for this region.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.se_gulf.region_notes_seasoned",
+      "our_prose": "The Gulf and coastal plain are collard country, where the crop grows nearly year-round. Plant in late winter for a spring-into-summer crop and again in late summer for a fall-and-winter crop; collards keep producing right through the hot, humid summer with even moisture, where lettuce and most brassicas cannot. Midsummer leaves are a touch tougher and pest pressure (harlequin bugs, caterpillars, aphids) peaks, so quality is best in the cool shoulders.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "regions.utah_dixie.region_notes_beginner",
+      "our_prose": "Collards grow twice a year in St. George. Set plants out about February 15, USU Extension's St. George date, for tender leaves by late April. Collards shrug off more heat than most cole crops, but St. George's June heat is still too much, so let the bed rest and set a second round from mid-June to mid-July, following cabbage's fall window, for leaves into September. Frost returns around November 1.",
+      "run_normalized": "from mid june to mid july",
+      "run_in_our_prose": "from mid-June to mid-July",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from mid june to mid july"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unh_ext"
+      ],
+      "source_names": [
+        "University of New Hampshire Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UNH Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.unh.edu/resource/growing-vegetables-when-plant-your-vegetable-garden-fact-sheet",
+      "anchor_paths": [
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.unh_ext"
+      ],
+      "source_context": "epper (T) Time from seed to transplant: 8-10 weeks Safe to set out in garden: 2 weeks after last frost Potato Plant seed potatoes in garden 1-2 weeks before last frost Pumpkin Time from seed to transplant: 3-4 weeks Safe to set out in garden: 2 weeks after last frost Plant seed in garden when soil warms to 70°F Radish Plant seed in garden 2-4 weeks before last frost Rutabaga Plant seed in garden from mid-June to mid-July Spinach Time from seed to transplant: 4-6 weeks Safe to set out in garden: 3-6 weeks before last frost Summer Squash Time from seed to transplant: 3-4 weeks Safe to set out in garden: 2 weeks after last frost Plant seeds in garden when soil warms to 70°F Sweetpotato Plant slips (i.e.",
+      "source_context_available": true,
+      "tool_first_6gram": "from mid june to mid july"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Do not plant collards or other cabbage-family crops in the same spot year after year. Waiting at least 3 years between them, and longer if you have had clubroot, helps avoid soil diseases.",
+      "run_normalized": "in the same spot year after year",
+      "run_in_our_prose": "in the same spot year after year",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in the same spot year after year"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/sites/default/files/publications/P3616_web.pdf",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "For example, yellow squash planted from midsummer to fall often suffers from squash bugs, though squash vine borers are typically less of a concern later in the season. Southern peas grown in the same spot year after year are prone to cowpea curculios without timely insecticide treatments. Similarly, fall tomatoes commonly face stink MISSISSIPPI VEGETABLE GARDENER’S GUIDE 33 bugs and tomato fruitworms.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the same spot year after"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "sources_summary.primary[18].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "You can sow collard seeds right in the garden or start them indoors. For spring, start seeds about a month before planting out, and set plants in the garden a few weeks before your last frost, or just sow seeds once the soil can be worked. For a fall crop, sow in mid to late summer so it is ready before winter. Space full-size plants 18 to 24 inches apart. If you grow your own transplants, let them get used to the outdoors over a week before planting.",
+      "run_normalized": "in the garden or start them",
+      "run_in_our_prose": "in the garden or start them",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the garden or start them",
+        "plants 18 to 24 inches apart"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/sites/default/files/publications/P3616_web.pdf",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "Plant in well-drained soil; propagate by seeds or division Lavender Perennial (short-lived) Ornamental; essential oils; culinary (flowers in French cuisine) Needs well-drained soil; struggles in humidity; plant in full sun; may decline after 2–3 years Most herbs transplant readily from starts into the garden, but there are exceptions. Cilantro, borage, and dill are best planted by seed. Scatter seeds directly in the garden or start them in containers. The flavors and scents of herbs come from the oils stored in their tissues.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the garden or start them"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Collards can be direct sown or transplanted, and in the South direct sowing is the norm. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 3 to 4 weeks before the last frost, or direct sow as soon as the soil is workable; collards tolerate frost. For a fall and winter crop, sow in mid to late summer so plants size up before cold, then harvest through fall and, in mild zones, winter. Harden transplants off over 7 to 10 days. Thin or set plants 18 to 24 inches apart for full-size plants.",
+      "run_normalized": "plants 18 to 24 inches apart",
+      "run_in_our_prose": "plants 18 to 24 inches apart",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plants 18 to 24 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/sites/default/files/publications/P3616_web.pdf",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "Sections of concrete reinforcing rods (rebar) make excellent tomato stakes. Space plants 18 to 24 inches apart in the row and drive a stake next to each plant or every other plant. Place the stake 3 to 4 inches from the base of the plant on the side, away from the first bloom cluster, to prevent trapping the fruit between the plant and the stake.",
+      "source_context_available": true,
+      "tool_first_6gram": "plants 18 to 24 inches apart"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Collards can be direct sown or transplanted, and in the South direct sowing is the norm. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 3 to 4 weeks before the last frost, or direct sow as soon as the soil is workable; collards tolerate frost. For a fall and winter crop, sow in mid to late summer so plants size up before cold, then harvest through fall and, in mild zones, winter. Harden transplants off over 7 to 10 days. Thin or set plants 18 to 24 inches apart for full-size plants.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Direct seeding Sow seeds in the spring for an early summer crop as soon as the soil is workable. Direct seed again about three months before the average frost date for a fall crop.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "tips_by_stage.germination[1].text_beginner",
+      "our_prose": "Start seeds indoors about a month before planting out, sow them in the garden once the soil can be worked, or sow in late summer for a fall crop.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "tips_by_stage.germination[1].text_seasoned",
+      "our_prose": "For a spring crop start indoors about 4 to 5 weeks before set-out, or direct sow as soon as the soil is workable; for a fall crop sow in mid to late summer.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Direct seeding Sow seeds in the spring for an early summer crop as soon as the soil is workable. Direct seed again about three months before the average frost date for a fall crop.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "crop_slug": "mulberry",
+  "record_count": 3,
+  "records": [
+    {
+      "crop_slug": "mulberry",
+      "field_path": "failure_diagnostics[0].what_happened_seasoned",
+      "our_prose": "The tree is vigorous but never fruits. The usual causes are a young tree not yet of bearing age (mulberry typically starts around years 2 to 3), a fruitless ornamental mulberry (some are sold specifically as non-fruiting shade trees), or, less commonly, a single-sex seedling, since a few wild mulberries are dioecious with male and female flowers on separate trees. Named fruiting cultivars are self-fruitful and often parthenocarpic, so a lone one fruits on its own. The fix is the plant, not the care: buy a named FRUITING cultivar (not a fruitless ornamental), and give a young tree a couple more seasons.",
+      "run_normalized": "male and female flowers on separate",
+      "run_in_our_prose": "male and female flowers on separate",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "male and female flowers on separate"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://blogs.ifas.ufl.edu/orangeco/2023/09/11/marvelous-mulberries/",
+      "anchor_paths": [
+        "pollination.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "Individual trees are either monoecious (containing both male and female flowers) or dioecious (male and female flowers on separate plants). Whether dioecious or monecious, catkin flowers produced are single-sexed.",
+      "source_context_available": true,
+      "tool_first_6gram": "male and female flowers on separate"
+    },
+    {
+      "crop_slug": "mulberry",
+      "field_path": "hardiness_notes_seasoned",
+      "our_prose": "Mulberry as a group spans a very wide climate range because three species and their hybrids cover it: white mulberry (Morus alba) and the hardy hybrids (Illinois Everbearing, Silk Hope) are cold-hardy to about zones 4 to 5 and up; red mulberry (Morus rubra), the native, runs roughly zones 4 to 9; and black mulberry (Morus nigra) and low-chill types are tender, warm-climate trees for about zones 7 to 10 and into the subtropics. The practical result is that some mulberry fruits well across nearly the whole country: choose a hardy hybrid for cold winters and a low-chill or black type for mild and warm regions. Zone 3 is the cold limit for reliable survival; the warm and tropical edge is limited less by heat than by whether enough winter chill accrues for the chosen cultivar, which is why low-chill types are used there.",
+      "run_normalized": "white mulberry morus alba and the",
+      "run_in_our_prose": "white mulberry (Morus alba) and the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "white mulberry morus alba and the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://blogs.ifas.ufl.edu/orangeco/2023/09/11/marvelous-mulberries/",
+      "anchor_paths": [
+        "pollination.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "There are three species of mulberry most commonly cultivated here in the United States: the red mulberry ( Morus rubra ), the white mulberry ( Morus alba ), and the black mulberry ( Morus nigra ), along with a handful of hybrid cultivars. The fruit of mulberries can range in color from white to pink, purple or black, depending on the species, variety or cultivar selected.",
+      "source_context_available": true,
+      "tool_first_6gram": "white mulberry morus alba and the"
+    },
+    {
+      "crop_slug": "mulberry",
+      "field_path": "watering.method_note_beginner",
+      "our_prose": "Give a deep soak now and then at the ground rather than a little every day, and make sure the soil drains between waterings. Mulberry handles dry soil far better than wet. Young trees need steady water for the first year or two to get established; after that, an older tree can often go without watering entirely.",
+      "run_normalized": "for the first year or two",
+      "run_in_our_prose": "for the first year or two",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for the first year or two"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "Restorative pruning of a large fruit tree takes a few years and quite a bit of work. You never want to remove more than 25% of a tree’s canopy in one year. For the first year or two, remove dead wood, suckers, water sprouts, or crossing branches. Next, make two to four cuts of major branches.",
+      "source_context_available": true,
+      "tool_first_6gram": "for the first year or two"
+    }
+  ]
+}

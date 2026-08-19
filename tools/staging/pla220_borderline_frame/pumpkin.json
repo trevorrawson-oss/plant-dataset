@@ -1,0 +1,473 @@
+{
+  "crop_slug": "pumpkin",
+  "record_count": 12,
+  "records": [
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "diseases[0].cause_seasoned",
+      "our_prose": "Powdery mildew fungi that thrive in warm conditions with high humidity but do not need leaf wetness, spreading by wind-blown spores. Crowded plantings, poor airflow, and shade worsen it, and it is one of the most common late-season pumpkin diseases.",
+      "run_normalized": "is one of the most common",
+      "run_in_our_prose": "is one of the most common",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is one of the most common"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Squash Bugs An adult squash bug ( Anasa tristis ). Zack Snipes, ©2020, Clemson Extension The squash bug ( Anasa tristis ) is one of the most common and troublesome pests in the home vegetable garden. Squash plants frequently are killed by this sap-feeding pest.",
+      "source_context_available": true,
+      "tool_first_6gram": "is one of the most common"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "White, powdery patches appear first on the upper and lower leaf surfaces and stems, spreading until leaves yellow, brown, and die back ahead of schedule. Early defoliation cuts the season short, reduces fruit size and sugars, and exposes pumpkins to sunscald.",
+      "run_normalized": "the upper and lower leaf surfaces",
+      "run_in_our_prose": "the upper and lower leaf surfaces",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the upper and lower leaf surfaces"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "Malathion, carbaryl, and pyrethroids are especially harmful to bees (Figure 5). Spray the plant thoroughly , covering both the upper and lower leaf surfaces. Do not apply pesticides on windy days or when rain is imminent. Prevent spray burn ; make sure the plants are not under moisture stress.",
+      "source_context_available": true,
+      "tool_first_6gram": "the upper and lower leaf surfaces"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "failure_diagnostics[1].next_season_tip_beginner",
+      "our_prose": "Cover plants until they flower, check the stem base for pests, and keep cucumber beetles down. Clean up old vines at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "growth_stages[5].user_action_beginner",
+      "our_prose": "Cut the pumpkins off the vine with a knife, leaving a few inches of stem, and bring them in before a hard frost. Let them cure in a warm, humid place for about 10 days, then store them somewhere cool.",
+      "run_normalized": "leaving a few inches of stem",
+      "run_in_our_prose": "leaving a few inches of stem",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "leaving a few inches of stem"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "A light frost that kills the vine will usually not harm the fruit. Cut the fruit from the vine, leaving a few inches of stem attached. Be careful not to cut or bruise the fruit. After cutting pumpkins and squash from the vines, you should field-cure them in place for a week or two in dry, sunny weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "leaving a few inches of stem"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Harvest pumpkins once at full maturity, not young: wait for full, deep color for the variety, a hard rind a thumbnail cannot dent, and a dried, corky stem. Tapping a ripe pumpkin gives a hollow sound. Cut the fruit from the vine with shears or a knife, leaving a 3 to 4 inch handle of stem (never carry a pumpkin by the stem, since a broken stem invites rot). Get the crop in before a hard frost, which damages the rind and shortens storage. Then cure the pumpkins about 10 days in a warm, dry spot to toughen the skin before storing.",
+      "run_normalized": "cut the fruit from the vine",
+      "run_in_our_prose": "Cut the fruit from the vine",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cut the fruit from the vine"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Harvest and storage Harvest Pick winter squash and pumpkins before a hard freeze. A light frost that kills the vine will usually not harm the fruit. Cut the fruit from the vine, leaving a few inches of stem attached. Be careful not to cut or bruise the fruit.",
+      "source_context_available": true,
+      "tool_first_6gram": "cut the fruit from the vine"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "pests[0].prevention_beginner",
+      "our_prose": "Cover young plants with a light fabric row cover until they flower to keep the moths out, then take it off so bees can reach the flowers. Check the base of the stem for sawdust-like specks starting in early summer, and clean up old vines at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "pests[3].organic_treatment_beginner",
+      "our_prose": "Blast them off with a strong spray of water and treat the undersides of the leaves with insecticidal soap, repeating every few days. Ladybugs and other helpful insects eat aphids, so welcome them.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "regions.nevada.region_notes_beginner",
+      "our_prose": "Pumpkin goes in the ground from early March through early July in the valley, direct-sown once the soil is warm, and grows through the whole desert summer with no pause. Earliest March sowings mature first; later sowings timed for a Halloween harvest go in through early July and finish by mid-October. Let the rind harden and the stem turn brown and dry before cutting, leaving a few inches of stem attached.",
+      "run_normalized": "leaving a few inches of stem attached",
+      "run_in_our_prose": "leaving a few inches of stem attached",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "leaving a few inches of stem attached"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "A light frost that kills the vine will usually not harm the fruit. Cut the fruit from the vine, leaving a few inches of stem attached. Be careful not to cut or bruise the fruit. After cutting pumpkins and squash from the vines, you should field-cure them in place for a week or two in dry, sunny weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "a few inches of stem attached"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "regions.utah_dixie.region_notes_beginner",
+      "our_prose": "Pumpkin is direct-sown around April 1 in St. George, once the soil has warmed, and the long vines grow all the way through the desert summer without pausing. Fruit starts turning ready in mid-July, and later fruit on the same vines keeps ripening into late October, a natural fit for a Halloween harvest. Let the rind harden fully and the stem turn brown and dry before cutting, and leave a few inches of stem attached to help the fruit keep.",
+      "run_normalized": "a few inches of stem attached",
+      "run_in_our_prose": "a few inches of stem attached",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "a few inches of stem attached"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "A light frost that kills the vine will usually not harm the fruit. Cut the fruit from the vine, leaving a few inches of stem attached. Be careful not to cut or bruise the fruit. After cutting pumpkins and squash from the vines, you should field-cure them in place for a week or two in dry, sunny weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "a few inches of stem attached"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow pumpkins or their relatives in the same spot more than once every 3 years or so. Moving them around the garden each year helps avoid a buildup of pests and disease. Clean up old vines at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "sources_summary.primary[13].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "sources_summary.primary[2].name",
+      "our_prose": "UMass Extension Vegetable Program (Pumpkin and Winter Squash Harvest, Curing, Storage)",
+      "run_normalized": "pumpkin and winter squash harvest curing",
+      "run_in_our_prose": "Pumpkin and Winter Squash Harvest, Curing",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "pumpkin and winter squash harvest curing"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umass_ext"
+      ],
+      "source_names": [
+        "UMass Extension Vegetable Program"
+      ],
+      "source_publishers": [
+        "University of Massachusetts Amherst"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/pumpkin-winter-squash-harvest-curing-storage",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.umass_ext",
+        "storage.anchoring_urls.umass_ext"
+      ],
+      "source_context": "Pumpkin and Winter Squash Harvest, Curing, and Storage : Vegetable : Center for Agriculture, Food, and the Environment (CAFE) at UMass Amherst Skip to content Skip to navigation The University of Massachusetts Amherst Open UMass Global Links Menu Visit Apply Give",
+      "source_context_available": true,
+      "tool_first_6gram": "pumpkin and winter squash harvest curing"
+    }
+  ]
+}

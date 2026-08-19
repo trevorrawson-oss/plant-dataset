@@ -1,0 +1,2155 @@
+{
+  "issue": "PLA-220",
+  "canonical_sha": "394bb8bdf63c989eeff7241ba41d1c37c829201733ce199f4dffc88490d8f660",
+  "data_path": "crops_data_final.json",
+  "cache_dir": ".doc_cache",
+  "definition": "one record per (user-facing prose field, cited source URL) pair sharing a 6- or 7-word consecutive normalized run with the cached document and NO 8-word run; the unit verbatim_scan counts as 'Borderline (6-7 words)'",
+  "selection_applied": "NONE -- complete frame; no sample, filter, rank or dedupe",
+  "exclusion_applied": "the 22 fields rewritten under PLA-202 (tools/staging/pla202_rewrites.json), itemized below",
+  "pla202_excluded_fields": [
+    "asparagus::description_seasoned",
+    "asparagus::hardiness_notes_seasoned",
+    "asparagus::soil.preferred_description_seasoned",
+    "beet::regions.utah_dixie.region_notes_beginner",
+    "cabbage::regions.hawaii_tropical.region_notes_seasoned",
+    "cabbage::regions.hawaii_tropical.resolved_by_zone.10.zone_notes",
+    "cabbage::regions.hawaii_tropical.resolved_by_zone.11.zone_notes",
+    "cabbage::regions.hawaii_tropical.resolved_by_zone.12.zone_notes",
+    "cabbage::regions.hawaii_tropical.resolved_by_zone.13.zone_notes",
+    "carrot::regions.utah_dixie.region_notes_beginner",
+    "cherry-sour::regions.mid_atlantic.resolved_by_zone.7.suitability_note_seasoned",
+    "cherry-sour::regions.mid_atlantic.resolved_by_zone.8.suitability_note_seasoned",
+    "chives::regions.fl_peninsula.region_notes_beginner",
+    "echinacea::regions.fl_peninsula.region_notes_beginner",
+    "english-cucumber::diseases[1].symptoms_seasoned",
+    "fig::companions.bad_seasoned[0].why_seasoned",
+    "lime::diseases[5].cause_seasoned",
+    "pawpaw::pests[0].cause_seasoned",
+    "raspberry::regions.utah_dixie.region_notes_seasoned",
+    "spring-onion::regions.utah_dixie.region_notes_seasoned",
+    "strawberry::regions.ca_north_coast.region_notes_seasoned",
+    "turnip::regions.utah_dixie.region_notes_beginner"
+  ],
+  "crops": {
+    "acorn-squash": {
+      "records": 14,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 330,
+      "sources_text_compared": 26,
+      "sources_cited": 26,
+      "uncovered": [],
+      "shard": "acorn-squash.json"
+    },
+    "apple": {
+      "records": 19,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 625,
+      "sources_text_compared": 41,
+      "sources_cited": 45,
+      "uncovered": [
+        {
+          "url": "https://content.ces.ncsu.edu/growing-apples-in-the-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://edis.ifas.ufl.edu/publication/HS764",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 410: Gone"
+        },
+        {
+          "url": "https://fruitsandnuts.ucdavis.edu/general-information/chilling-requirement",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "apple.json"
+    },
+    "apricot": {
+      "records": 9,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 525,
+      "sources_text_compared": 20,
+      "sources_cited": 24,
+      "uncovered": [
+        {
+          "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fruit-crops-in-texas/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://edis.ifas.ufl.edu/publication/MG248",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 410: Gone"
+        },
+        {
+          "url": "https://mgsantaclara.ucanr.edu/garden-help/fruit-trees/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "apricot.json"
+    },
+    "artichoke": {
+      "records": 34,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 454,
+      "sources_text_compared": 26,
+      "sources_cited": 26,
+      "uncovered": [],
+      "shard": "artichoke.json"
+    },
+    "arugula": {
+      "records": 11,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 371,
+      "sources_text_compared": 27,
+      "sources_cited": 30,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "arugula.json"
+    },
+    "arugula-microgreens": {
+      "records": 4,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 170,
+      "sources_text_compared": 4,
+      "sources_cited": 4,
+      "uncovered": [],
+      "shard": "arugula-microgreens.json"
+    },
+    "asparagus": {
+      "records": 17,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 312,
+      "sources_text_compared": 38,
+      "sources_cited": 41,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/availability_of_asparagus_varieties_for_commercial_production_in_michigan",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/asparagus_in_the_home_garden",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan-fresh-using-storing-and-preserving-asparagus-hni28-",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "asparagus.json"
+    },
+    "avocado": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "banana-pepper": {
+      "records": 35,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 371,
+      "sources_text_compared": 29,
+      "sources_cited": 29,
+      "uncovered": [],
+      "shard": "banana-pepper.json"
+    },
+    "basil": {
+      "records": 17,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 282,
+      "sources_text_compared": 25,
+      "sources_cited": 27,
+      "uncovered": [
+        {
+          "url": "https://extension.psu.edu/fusarium-wilt",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.psu.edu/herbs-in-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "basil.json"
+    },
+    "bee-balm": {
+      "records": 5,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 305,
+      "sources_text_compared": 8,
+      "sources_cited": 8,
+      "uncovered": [],
+      "shard": "bee-balm.json"
+    },
+    "beefsteak-tomato": {
+      "records": 79,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 386,
+      "sources_text_compared": 70,
+      "sources_cited": 82,
+      "uncovered": [
+        {
+          "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://content.ces.ncsu.edu/tomato-in-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.unh.edu/resource/tomatoes-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://store.extension.iastate.edu/product/14425",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "beefsteak-tomato.json"
+    },
+    "beet": {
+      "records": 39,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 366,
+      "sources_text_compared": 44,
+      "sources_cited": 47,
+      "uncovered": [
+        {
+          "url": "https://content.ces.ncsu.edu/beets",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/bolting-in-spring-vegetables",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications/north-dakota-home-garden-variety-trials",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "beet.json"
+    },
+    "bell-pepper": {
+      "records": 28,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 369,
+      "sources_text_compared": 30,
+      "sources_cited": 30,
+      "uncovered": [],
+      "shard": "bell-pepper.json"
+    },
+    "blackberry": {
+      "records": 16,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 594,
+      "sources_text_compared": 18,
+      "sources_cited": 18,
+      "uncovered": [],
+      "shard": "blackberry.json"
+    },
+    "blueberry": {
+      "records": 40,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 584,
+      "sources_text_compared": 43,
+      "sources_cited": 45,
+      "uncovered": [
+        {
+          "url": "https://content.ces.ncsu.edu/postharvest-cooling-and-handling-of-blueberries",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.oregonstate.edu/crop-production/berries/blueberry-bacterial-fungal-diseases",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "blueberry.json"
+    },
+    "bok-choy": {
+      "records": 19,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 360,
+      "sources_text_compared": 28,
+      "sources_cited": 29,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "bok-choy.json"
+    },
+    "borage": {
+      "records": 7,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 291,
+      "sources_text_compared": 13,
+      "sources_cited": 13,
+      "uncovered": [],
+      "shard": "borage.json"
+    },
+    "broad-beans-fava": {
+      "records": 20,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 376,
+      "sources_text_compared": 33,
+      "sources_cited": 34,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "broad-beans-fava.json"
+    },
+    "broccoli": {
+      "records": 12,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 375,
+      "sources_text_compared": 29,
+      "sources_cited": 29,
+      "uncovered": [],
+      "shard": "broccoli.json"
+    },
+    "broccoli-microgreens": {
+      "records": 10,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 174,
+      "sources_text_compared": 8,
+      "sources_cited": 8,
+      "uncovered": [],
+      "shard": "broccoli-microgreens.json"
+    },
+    "brussels-sprouts": {
+      "records": 42,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 351,
+      "sources_text_compared": 33,
+      "sources_cited": 34,
+      "uncovered": [
+        {
+          "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/disease-resistant-vegetable-varieties/disease-resistant-brussels-sprouts-varieties/",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "brussels-sprouts.json"
+    },
+    "butternut-squash": {
+      "records": 14,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 326,
+      "sources_text_compared": 26,
+      "sources_cited": 26,
+      "uncovered": [],
+      "shard": "butternut-squash.json"
+    },
+    "button-mushroom": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "cabbage": {
+      "records": 8,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 362,
+      "sources_text_compared": 37,
+      "sources_cited": 38,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/how_to_grow_cole_crops",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "cabbage.json"
+    },
+    "calendula": {
+      "records": 6,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 311,
+      "sources_text_compared": 11,
+      "sources_cited": 11,
+      "uncovered": [],
+      "shard": "calendula.json"
+    },
+    "cantaloupe": {
+      "records": 14,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 353,
+      "sources_text_compared": 23,
+      "sources_cited": 23,
+      "uncovered": [],
+      "shard": "cantaloupe.json"
+    },
+    "carrot": {
+      "records": 20,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 343,
+      "sources_text_compared": 40,
+      "sources_cited": 43,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1005-2021.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://plantpath.ifas.ufl.edu/u-scout/carrot/root-knot.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "carrot.json"
+    },
+    "cauliflower": {
+      "records": 10,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 367,
+      "sources_text_compared": 35,
+      "sources_cited": 36,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/how_to_grow_cole_crops",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "cauliflower.json"
+    },
+    "cayenne-pepper": {
+      "records": 33,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 372,
+      "sources_text_compared": 38,
+      "sources_cited": 39,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan-fresh-hot-peppers",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "cayenne-pepper.json"
+    },
+    "celery": {
+      "records": 38,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 343,
+      "sources_text_compared": 17,
+      "sources_cited": 18,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/how_to_grow_celery",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "celery.json"
+    },
+    "chamomile": {
+      "records": 2,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 313,
+      "sources_text_compared": 12,
+      "sources_cited": 12,
+      "uncovered": [],
+      "shard": "chamomile.json"
+    },
+    "cherry-sour": {
+      "records": 7,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 494,
+      "sources_text_compared": 21,
+      "sources_cited": 24,
+      "uncovered": [
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/cherry_leaf_spot_101_understanding_blumeriella_jaapii_biology_and_managemen",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/netting-in-high-density-sweet-cherries-reduces-bird-damage-and-spotted-wing-drosophila",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "cherry-sour.json"
+    },
+    "cherry-sweet": {
+      "records": 10,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 514,
+      "sources_text_compared": 23,
+      "sources_cited": 25,
+      "uncovered": [
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/netting-in-high-density-sweet-cherries-reduces-bird-damage-and-spotted-wing-drosophila",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "cherry-sweet.json"
+    },
+    "cherry-tomato": {
+      "records": 85,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 404,
+      "sources_text_compared": 79,
+      "sources_cited": 94,
+      "uncovered": [
+        {
+          "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://anr.ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=55606",
+          "reason": "FETCHFAIL URLError: <urlopen error [Errno 8] nodename nor s"
+        },
+        {
+          "url": "https://content.ces.ncsu.edu/tomato-in-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.okstate.edu/fact-sheets/growing-tomatoes-in-the-home-garden-2",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.unh.edu/resource/tomatoes-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://store.extension.iastate.edu/product/14425",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "cherry-tomato.json"
+    },
+    "chives": {
+      "records": 27,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 353,
+      "sources_text_compared": 32,
+      "sources_cited": 34,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/growing_chives_smart_gardening_tips_for_success",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "chives.json"
+    },
+    "cilantro-coriander": {
+      "records": 9,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 353,
+      "sources_text_compared": 23,
+      "sources_cited": 26,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "cilantro-coriander.json"
+    },
+    "cilantro-microgreens": {
+      "records": 5,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 175,
+      "sources_text_compared": 9,
+      "sources_cited": 9,
+      "uncovered": [],
+      "shard": "cilantro-microgreens.json"
+    },
+    "collards": {
+      "records": 18,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 372,
+      "sources_text_compared": 34,
+      "sources_cited": 35,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "collards.json"
+    },
+    "cosmos": {
+      "records": 1,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 305,
+      "sources_text_compared": 15,
+      "sources_cited": 15,
+      "uncovered": [],
+      "shard": "cosmos.json"
+    },
+    "cucumber": {
+      "records": 29,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 366,
+      "sources_text_compared": 24,
+      "sources_cited": 26,
+      "uncovered": [
+        {
+          "url": "https://extension.umn.edu/diseases/bacterial-wilt-cucurbits",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/yard-and-garden-insects/striped-cucumber-beetles",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 429: Too Many Requests"
+        }
+      ],
+      "shard": "cucumber.json"
+    },
+    "dill": {
+      "records": 6,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 353,
+      "sources_text_compared": 21,
+      "sources_cited": 24,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "dill.json"
+    },
+    "dry-bean": {
+      "records": 37,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 365,
+      "sources_text_compared": 25,
+      "sources_cited": 27,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/black-beans-and-rice-history-and-fun-facts",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/uploads/resources/pdfs/beans.pdf",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "dry-bean.json"
+    },
+    "echinacea": {
+      "records": 12,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 272,
+      "sources_text_compared": 9,
+      "sources_cited": 9,
+      "uncovered": [],
+      "shard": "echinacea.json"
+    },
+    "edamame": {
+      "records": 10,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 362,
+      "sources_text_compared": 35,
+      "sources_cited": 39,
+      "uncovered": [
+        {
+          "url": "https://extension.umn.edu/soybean/soybean-pest-management",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.umn.edu/vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.vegetables.cornell.edu/",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "edamame.json"
+    },
+    "eggplant": {
+      "records": 28,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 347,
+      "sources_text_compared": 29,
+      "sources_cited": 29,
+      "uncovered": [],
+      "shard": "eggplant.json"
+    },
+    "elderberry": {
+      "records": 4,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 510,
+      "sources_text_compared": 8,
+      "sources_cited": 9,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/elderberries_an_edible_landscape_plant",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "elderberry.json"
+    },
+    "english-cucumber": {
+      "records": 22,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 365,
+      "sources_text_compared": 28,
+      "sources_cited": 28,
+      "uncovered": [],
+      "shard": "english-cucumber.json"
+    },
+    "field-corn": {
+      "records": 12,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 358,
+      "sources_text_compared": 28,
+      "sources_cited": 28,
+      "uncovered": [],
+      "shard": "field-corn.json"
+    },
+    "fig": {
+      "records": 8,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 453,
+      "sources_text_compared": 15,
+      "sources_cited": 16,
+      "uncovered": [
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "fig.json"
+    },
+    "flint-corn": {
+      "records": 13,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 357,
+      "sources_text_compared": 29,
+      "sources_cited": 29,
+      "uncovered": [],
+      "shard": "flint-corn.json"
+    },
+    "garlic": {
+      "records": 14,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 337,
+      "sources_text_compared": 21,
+      "sources_cited": 21,
+      "uncovered": [],
+      "shard": "garlic.json"
+    },
+    "grape-tomato": {
+      "records": 87,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 415,
+      "sources_text_compared": 80,
+      "sources_cited": 95,
+      "uncovered": [
+        {
+          "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://anr.ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=55606",
+          "reason": "FETCHFAIL URLError: <urlopen error [Errno 8] nodename nor s"
+        },
+        {
+          "url": "https://content.ces.ncsu.edu/tomato-in-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.okstate.edu/fact-sheets/growing-tomatoes-in-the-home-garden-2",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.unh.edu/resource/tomatoes-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://store.extension.iastate.edu/product/14425",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "grape-tomato.json"
+    },
+    "grapefruit": {
+      "records": 6,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 604,
+      "sources_text_compared": 20,
+      "sources_cited": 22,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://mgsantaclara.ucanr.edu/garden-help/fruit-trees/citrus/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "grapefruit.json"
+    },
+    "green-beans-bush": {
+      "records": 35,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 349,
+      "sources_text_compared": 24,
+      "sources_cited": 25,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/uploads/resources/pdfs/beans.pdf",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "green-beans-bush.json"
+    },
+    "habanero": {
+      "records": 27,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 367,
+      "sources_text_compared": 35,
+      "sources_cited": 36,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan-fresh-hot-peppers",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "habanero.json"
+    },
+    "heirloom-tomato": {
+      "records": 80,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 406,
+      "sources_text_compared": 73,
+      "sources_cited": 84,
+      "uncovered": [
+        {
+          "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://content.ces.ncsu.edu/tomato-in-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.unh.edu/resource/tomatoes-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://store.extension.iastate.edu/product/14425",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "heirloom-tomato.json"
+    },
+    "honeydew-melon": {
+      "records": 20,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 346,
+      "sources_text_compared": 28,
+      "sources_cited": 28,
+      "uncovered": [],
+      "shard": "honeydew-melon.json"
+    },
+    "jalapeno": {
+      "records": 32,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 362,
+      "sources_text_compared": 33,
+      "sources_cited": 33,
+      "uncovered": [],
+      "shard": "jalapeno.json"
+    },
+    "kale": {
+      "records": 18,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 371,
+      "sources_text_compared": 39,
+      "sources_cited": 40,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "kale.json"
+    },
+    "kohlrabi": {
+      "records": 15,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 348,
+      "sources_text_compared": 26,
+      "sources_cited": 26,
+      "uncovered": [],
+      "shard": "kohlrabi.json"
+    },
+    "lavender": {
+      "records": 14,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 483,
+      "sources_text_compared": 27,
+      "sources_cited": 27,
+      "uncovered": [],
+      "shard": "lavender.json"
+    },
+    "leek": {
+      "records": 10,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 344,
+      "sources_text_compared": 23,
+      "sources_cited": 23,
+      "uncovered": [],
+      "shard": "leek.json"
+    },
+    "lemon": {
+      "records": 28,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 563,
+      "sources_text_compared": 32,
+      "sources_cited": 33,
+      "uncovered": [
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "lemon.json"
+    },
+    "lemongrass": {
+      "records": 14,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 284,
+      "sources_text_compared": 12,
+      "sources_cited": 12,
+      "uncovered": [],
+      "shard": "lemongrass.json"
+    },
+    "lettuce-leaf": {
+      "records": 66,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 359,
+      "sources_text_compared": 87,
+      "sources_cited": 92,
+      "uncovered": [
+        {
+          "url": "https://cales.arizona.edu/crop/vegetables/cropmgt/az1099.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/yard-and-garden-news/growing-cool-season-vegetables-minnesota",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 429: Too Many Requests"
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/lettuce-romaine",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/cut_and_come_again_vegetables",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "lettuce-leaf.json"
+    },
+    "lime": {
+      "records": 26,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 548,
+      "sources_text_compared": 18,
+      "sources_cited": 19,
+      "uncovered": [
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/lime",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "lime.json"
+    },
+    "lions-mane-mushroom": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "mandarin-clementine": {
+      "records": 17,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 585,
+      "sources_text_compared": 21,
+      "sources_cited": 22,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "mandarin-clementine.json"
+    },
+    "marigold": {
+      "records": 10,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 310,
+      "sources_text_compared": 13,
+      "sources_cited": 13,
+      "uncovered": [],
+      "shard": "marigold.json"
+    },
+    "microgreens-mix": {
+      "records": 4,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 185,
+      "sources_text_compared": 4,
+      "sources_cited": 4,
+      "uncovered": [],
+      "shard": "microgreens-mix.json"
+    },
+    "mint": {
+      "records": 10,
+      "hard_hits_skipped": 7,
+      "prose_strings_scanned": 328,
+      "sources_text_compared": 25,
+      "sources_cited": 26,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "mint.json"
+    },
+    "mulberry": {
+      "records": 3,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 505,
+      "sources_text_compared": 14,
+      "sources_cited": 16,
+      "uncovered": [
+        {
+          "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/popcorn-disease-of-mulberry.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "mulberry.json"
+    },
+    "nasturtium": {
+      "records": 1,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 312,
+      "sources_text_compared": 13,
+      "sources_cited": 13,
+      "uncovered": [],
+      "shard": "nasturtium.json"
+    },
+    "nectarine": {
+      "records": 30,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 526,
+      "sources_text_compared": 31,
+      "sources_cited": 36,
+      "uncovered": [
+        {
+          "url": "https://extension.umd.edu/resource/fruit-plant-pollination",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/management_of_bacterial_spot_on_peaches_and_nectarines",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/peaches/",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "nectarine.json"
+    },
+    "okra": {
+      "records": 21,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 322,
+      "sources_text_compared": 21,
+      "sources_cited": 22,
+      "uncovered": [
+        {
+          "url": "https://extension.umn.edu/vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "okra.json"
+    },
+    "olive": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "onion": {
+      "records": 22,
+      "hard_hits_skipped": 10,
+      "prose_strings_scanned": 412,
+      "sources_text_compared": 30,
+      "sources_cited": 31,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/best-practices-for-onion-production",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "onion.json"
+    },
+    "orange-navel": {
+      "records": 18,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 611,
+      "sources_text_compared": 28,
+      "sources_cited": 31,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://mgsantaclara.ucanr.edu/garden-help/fruit-trees/citrus/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.lsuagcenter.com/topics/crops/citrus",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "orange-navel.json"
+    },
+    "oregano": {
+      "records": 22,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 486,
+      "sources_text_compared": 13,
+      "sources_cited": 13,
+      "uncovered": [],
+      "shard": "oregano.json"
+    },
+    "oyster-mushroom": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "parsley": {
+      "records": 14,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 339,
+      "sources_text_compared": 25,
+      "sources_cited": 29,
+      "uncovered": [
+        {
+          "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az2061.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.arizona.edu/vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/garden_planning_calendar",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "parsley.json"
+    },
+    "parsnip": {
+      "records": 17,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 317,
+      "sources_text_compared": 17,
+      "sources_cited": 17,
+      "uncovered": [],
+      "shard": "parsnip.json"
+    },
+    "pawpaw": {
+      "records": 17,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 446,
+      "sources_text_compared": 17,
+      "sources_cited": 18,
+      "uncovered": [
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "pawpaw.json"
+    },
+    "pea-shoots": {
+      "records": 4,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 173,
+      "sources_text_compared": 5,
+      "sources_cited": 5,
+      "uncovered": [],
+      "shard": "pea-shoots.json"
+    },
+    "peach": {
+      "records": 30,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 518,
+      "sources_text_compared": 31,
+      "sources_cited": 36,
+      "uncovered": [
+        {
+          "url": "https://extension.okstate.edu/programs/gardening/grow-gardening-columns/grow-columns-2021/april-2-2021-pollination-needs-of-fruit.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.umd.edu/resource/fruit-plant-pollination",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://www.canr.msu.edu/peaches/",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "peach.json"
+    },
+    "pear-asian": {
+      "records": 17,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 527,
+      "sources_text_compared": 28,
+      "sources_cited": 32,
+      "uncovered": [
+        {
+          "url": "https://content.ces.ncsu.edu/growing-pears-in-the-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://fruitsandnuts.ucdavis.edu/general-information/chilling-requirement",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/pears/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "pear-asian.json"
+    },
+    "pear-european": {
+      "records": 14,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 540,
+      "sources_text_compared": 27,
+      "sources_cited": 31,
+      "uncovered": [
+        {
+          "url": "https://content.ces.ncsu.edu/growing-pears-in-the-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://fruitsandnuts.ucdavis.edu/general-information/chilling-requirement",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/pears/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        }
+      ],
+      "shard": "pear-european.json"
+    },
+    "persimmon": {
+      "records": 9,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 463,
+      "sources_text_compared": 17,
+      "sources_cited": 20,
+      "uncovered": [
+        {
+          "url": "https://fruitandnuteducation.ucanr.edu/fruitnutproduction/Persimmon/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "persimmon.json"
+    },
+    "pickling-cucumber": {
+      "records": 31,
+      "hard_hits_skipped": 8,
+      "prose_strings_scanned": 366,
+      "sources_text_compared": 26,
+      "sources_cited": 27,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/seedless_cucumbers_are_a_different_pickle",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "pickling-cucumber.json"
+    },
+    "plum": {
+      "records": 23,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 504,
+      "sources_text_compared": 18,
+      "sources_cited": 21,
+      "uncovered": [
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://ucanr.edu/site/fruit-nut-research-information-center/plum-rootstock-scion-selection",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/controlling_black_knot_in_michigan",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "plum.json"
+    },
+    "pole-beans": {
+      "records": 30,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 332,
+      "sources_text_compared": 21,
+      "sources_cited": 22,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/uploads/resources/pdfs/beans.pdf",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "pole-beans.json"
+    },
+    "pomegranate": {
+      "records": 18,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 468,
+      "sources_text_compared": 17,
+      "sources_cited": 20,
+      "uncovered": [
+        {
+          "url": "https://naes.agnt.unr.edu/PMS/Pubs/2020-3713.pdf",
+          "reason": "blocked: extraction too short (155 chars) -- no usable text layer"
+        },
+        {
+          "url": "https://ucanr.edu/site/fruit-nut-research-information-center/pomegranate-diseases-disorders",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://ucanr.edu/sites/btfnp/fruitnutproduction/Pomegranate/Pomegranate_Propagation/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "shard": "pomegranate.json"
+    },
+    "popcorn": {
+      "records": 11,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 363,
+      "sources_text_compared": 24,
+      "sources_cited": 24,
+      "uncovered": [],
+      "shard": "popcorn.json"
+    },
+    "potato": {
+      "records": 41,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 332,
+      "sources_text_compared": 25,
+      "sources_cited": 25,
+      "uncovered": [],
+      "shard": "potato.json"
+    },
+    "pumpkin": {
+      "records": 12,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 327,
+      "sources_text_compared": 28,
+      "sources_cited": 28,
+      "uncovered": [],
+      "shard": "pumpkin.json"
+    },
+    "radish": {
+      "records": 27,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 410,
+      "sources_text_compared": 30,
+      "sources_cited": 30,
+      "uncovered": [],
+      "shard": "radish.json"
+    },
+    "radish-microgreens": {
+      "records": 4,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 171,
+      "sources_text_compared": 5,
+      "sources_cited": 5,
+      "uncovered": [],
+      "shard": "radish-microgreens.json"
+    },
+    "raspberry": {
+      "records": 14,
+      "hard_hits_skipped": 10,
+      "prose_strings_scanned": 588,
+      "sources_text_compared": 15,
+      "sources_cited": 15,
+      "uncovered": [],
+      "shard": "raspberry.json"
+    },
+    "roma-tomato": {
+      "records": 90,
+      "hard_hits_skipped": 5,
+      "prose_strings_scanned": 412,
+      "sources_text_compared": 77,
+      "sources_cited": 92,
+      "uncovered": [
+        {
+          "url": "https://agrilifeextension.tamu.edu/solutions/tomatoes/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://anr.ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=55606",
+          "reason": "FETCHFAIL URLError: <urlopen error [Errno 8] nodename nor s"
+        },
+        {
+          "url": "https://content.ces.ncsu.edu/tomato-in-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.okstate.edu/fact-sheets/growing-tomatoes-in-the-home-garden-2",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.psu.edu/selecting-tomato-cultivars-for-the-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://extension.unh.edu/resource/tomatoes-home-garden",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://hort.extension.wisc.edu/articles/tomatoes-lycopersicum-esculentum/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/PLANTS/INVERT/aphids.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/tomato",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://sfyl.ifas.ufl.edu/media/sfylifasufledu/miami-dade/docs/hort/tomatoes.pdf",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://store.extension.iastate.edu/product/14425",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "roma-tomato.json"
+    },
+    "rosemary": {
+      "records": 5,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 487,
+      "sources_text_compared": 15,
+      "sources_cited": 16,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/rosemary_the_herb_with_winter_problems",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "rosemary.json"
+    },
+    "sage": {
+      "records": 7,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 494,
+      "sources_text_compared": 12,
+      "sources_cited": 12,
+      "uncovered": [],
+      "shard": "sage.json"
+    },
+    "shallot": {
+      "records": 6,
+      "hard_hits_skipped": 8,
+      "prose_strings_scanned": 388,
+      "sources_text_compared": 18,
+      "sources_cited": 18,
+      "uncovered": [],
+      "shard": "shallot.json"
+    },
+    "shiitake-mushroom": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "slicing-cucumber": {
+      "records": 23,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 367,
+      "sources_text_compared": 26,
+      "sources_cited": 26,
+      "uncovered": [],
+      "shard": "slicing-cucumber.json"
+    },
+    "snow-peas": {
+      "records": 14,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 362,
+      "sources_text_compared": 35,
+      "sources_cited": 36,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "snow-peas.json"
+    },
+    "spaghetti-squash": {
+      "records": 14,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 331,
+      "sources_text_compared": 26,
+      "sources_cited": 26,
+      "uncovered": [],
+      "shard": "spaghetti-squash.json"
+    },
+    "spinach": {
+      "records": 8,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 385,
+      "sources_text_compared": 36,
+      "sources_cited": 40,
+      "uncovered": [
+        {
+          "url": "https://extension.msstate.edu/publications/fall-gardening-mississippi",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umaine.edu/gardening/manual/vegetables/spinach/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/smart_gardening_for_leafy_greens",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/beet-and-spinach-leafminer",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "spinach.json"
+    },
+    "spring-onion": {
+      "records": 9,
+      "hard_hits_skipped": 4,
+      "prose_strings_scanned": 342,
+      "sources_text_compared": 13,
+      "sources_cited": 13,
+      "uncovered": [],
+      "shard": "spring-onion.json"
+    },
+    "strawberry": {
+      "records": 50,
+      "hard_hits_skipped": 25,
+      "prose_strings_scanned": 599,
+      "sources_text_compared": 32,
+      "sources_cited": 34,
+      "uncovered": [
+        {
+          "url": "https://content.ces.ncsu.edu/strawberry-plasticulture-production-guide-for-north-carolina",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://gardening.cals.cornell.edu/fruit/strawberries/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "strawberry.json"
+    },
+    "sugar-snap-peas": {
+      "records": 11,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 362,
+      "sources_text_compared": 35,
+      "sources_cited": 36,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/resources",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "sugar-snap-peas.json"
+    },
+    "sunflower": {
+      "records": 11,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 328,
+      "sources_text_compared": 14,
+      "sources_cited": 15,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/sunflower_seeds_are_for_the_birds_and_people",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "sunflower.json"
+    },
+    "sunflower-sprouts": {
+      "records": 1,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 170,
+      "sources_text_compared": 5,
+      "sources_cited": 5,
+      "uncovered": [],
+      "shard": "sunflower-sprouts.json"
+    },
+    "sweet-alyssum": {
+      "records": 3,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 337,
+      "sources_text_compared": 11,
+      "sources_cited": 11,
+      "uncovered": [],
+      "shard": "sweet-alyssum.json"
+    },
+    "sweet-corn": {
+      "records": 12,
+      "hard_hits_skipped": 1,
+      "prose_strings_scanned": 326,
+      "sources_text_compared": 27,
+      "sources_cited": 27,
+      "uncovered": [],
+      "shard": "sweet-corn.json"
+    },
+    "sweet-pea": {
+      "records": 2,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 334,
+      "sources_text_compared": 10,
+      "sources_cited": 10,
+      "uncovered": [],
+      "shard": "sweet-pea.json"
+    },
+    "sweet-potato": {
+      "records": 16,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 295,
+      "sources_text_compared": 14,
+      "sources_cited": 14,
+      "uncovered": [],
+      "shard": "sweet-potato.json"
+    },
+    "swiss-chard": {
+      "records": 8,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 373,
+      "sources_text_compared": 34,
+      "sources_cited": 41,
+      "uncovered": [
+        {
+          "url": "https://extension.msstate.edu/publications/fall-gardening-mississippi",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umaine.edu/gardening/manual/vegetables/swiss-chard/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://plants.ces.ncsu.edu/plants/beta-vulgaris-subsp-cicla/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://pnwhandbooks.org/plantdisease/host-disease/swiss-chard-beta-vulgaris-cercospora-leaf-spot",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/smart_gardening_for_leafy_greens",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.mastergardenersd.org/swiss-chard/",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/beet-and-spinach-leafminer",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "swiss-chard.json"
+    },
+    "thyme": {
+      "records": 6,
+      "hard_hits_skipped": 2,
+      "prose_strings_scanned": 468,
+      "sources_text_compared": 13,
+      "sources_cited": 13,
+      "uncovered": [],
+      "shard": "thyme.json"
+    },
+    "tomatillo": {
+      "records": 32,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 342,
+      "sources_text_compared": 41,
+      "sources_cited": 44,
+      "uncovered": [
+        {
+          "url": "https://www.canr.msu.edu/news/time_to_start_vegetable_garden_seeds",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/news/tips_for_growing_tomatoes_in_your_home_garden",
+          "reason": "blocked: challenge page served as HTTP 200"
+        },
+        {
+          "url": "https://www.canr.msu.edu/resources/michigan_fresh_growing_tomatoes",
+          "reason": "blocked: challenge page served as HTTP 200"
+        }
+      ],
+      "shard": "tomatillo.json"
+    },
+    "turnip": {
+      "records": 21,
+      "hard_hits_skipped": 7,
+      "prose_strings_scanned": 381,
+      "sources_text_compared": 42,
+      "sources_cited": 43,
+      "uncovered": [
+        {
+          "url": "https://www.ndsu.edu/agriculture/extension/publications/north-dakota-home-garden-variety-trials",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "turnip.json"
+    },
+    "viola": {
+      "records": 6,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 338,
+      "sources_text_compared": 10,
+      "sources_cited": 10,
+      "uncovered": [],
+      "shard": "viola.json"
+    },
+    "watermelon": {
+      "records": 12,
+      "hard_hits_skipped": 3,
+      "prose_strings_scanned": 351,
+      "sources_text_compared": 24,
+      "sources_cited": 24,
+      "uncovered": [],
+      "shard": "watermelon.json"
+    },
+    "wheatgrass": {
+      "records": 2,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 171,
+      "sources_text_compared": 5,
+      "sources_cited": 5,
+      "uncovered": [],
+      "shard": "wheatgrass.json"
+    },
+    "wine-cap-mushroom": {
+      "records": 0,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 11,
+      "sources_text_compared": 0,
+      "sources_cited": 0,
+      "uncovered": [],
+      "shard": null
+    },
+    "yellow-summer-squash": {
+      "records": 19,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 332,
+      "sources_text_compared": 33,
+      "sources_cited": 39,
+      "uncovered": [
+        {
+          "url": "https://extension.umd.edu/resource/cucumber-beetles-vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/powdery-mildew-vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/bacterialwilt.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/squash-summer",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/squash",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/summer-squash",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "yellow-summer-squash.json"
+    },
+    "zinnia": {
+      "records": 3,
+      "hard_hits_skipped": 0,
+      "prose_strings_scanned": 301,
+      "sources_text_compared": 17,
+      "sources_cited": 17,
+      "uncovered": [],
+      "shard": "zinnia.json"
+    },
+    "zucchini-courgette": {
+      "records": 19,
+      "hard_hits_skipped": 6,
+      "prose_strings_scanned": 331,
+      "sources_text_compared": 31,
+      "sources_cited": 39,
+      "uncovered": [
+        {
+          "url": "https://extension.umd.edu/resource/cucumber-beetles-vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/diseases/bacterial-wilt-cucurbits",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/plant-diseases/powdery-mildew-vegetables",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://extension.umn.edu/yard-and-garden-insects/striped-cucumber-beetles",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 429: Too Many Requests"
+        },
+        {
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/VEGES/DISEASES/bacterialwilt.html",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not found."
+        },
+        {
+          "url": "https://postharvest.ucdavis.edu/produce-facts-sheets/squash-summer",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/squash",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://yardandgarden.extension.iastate.edu/encyclopedia/summer-squash",
+          "reason": "FETCHFAIL HTTPError: HTTP Error 404: Not Found"
+        }
+      ],
+      "shard": "zucchini-courgette.json"
+    }
+  },
+  "totals": {
+    "records_exported": 2358,
+    "pla202_excluded_hits": 6,
+    "borderline_before_exclusion": 2364,
+    "hard_hits_skipped": 308,
+    "crops_total": 128,
+    "crops_with_records": 121,
+    "sources_cited_total": 3355,
+    "sources_uncovered_total": 213,
+    "crops_with_uncovered_sources": 66,
+    "records_missing_source_context": 0
+  },
+  "pla202_excluded_hits": [
+    {
+      "crop_slug": "asparagus",
+      "field_path": "description_seasoned",
+      "source_url": "https://sebsnjaesnews.rutgers.edu/2012/11/seven-decades-of-asparagus-breeding-at-rutgers/",
+      "run_words": 6
+    },
+    {
+      "crop_slug": "chives",
+      "field_path": "regions.fl_peninsula.region_notes_beginner",
+      "source_url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/16/spice-up-your-life-chives/",
+      "run_words": 6
+    },
+    {
+      "crop_slug": "strawberry",
+      "field_path": "regions.ca_north_coast.region_notes_seasoned",
+      "source_url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/CULTURAL/strawberrytime.html",
+      "run_words": 6
+    },
+    {
+      "crop_slug": "strawberry",
+      "field_path": "regions.ca_north_coast.region_notes_seasoned",
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-strawberry",
+      "run_words": 6
+    },
+    {
+      "crop_slug": "strawberry",
+      "field_path": "regions.ca_north_coast.region_notes_seasoned",
+      "source_url": "https://ucanr.edu/sites/default/files/2018-03/281247.pdf",
+      "run_words": 6
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "regions.utah_dixie.region_notes_beginner",
+      "source_url": "https://extension.umn.edu/vegetables/growing-turnips-and-rutabagas",
+      "run_words": 6
+    }
+  ]
+}

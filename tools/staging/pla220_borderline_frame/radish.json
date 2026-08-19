@@ -1,0 +1,1856 @@
+{
+  "crop_slug": "radish",
+  "record_count": 27,
+  "records": [
+    {
+      "crop_slug": "radish",
+      "field_path": "bolting.note_seasoned",
+      "our_prose": "Radishes bolt, sending up a flower stalk, as temperatures rise and days lengthen in late spring and early summer. Bolting is driven by heat and long days together, not by a cold-then-warm vernalization sequence, so it is mainly a late-spring and summer problem. A bolting radish turns its energy to the flower stalk: the root stops sizing, turns woody and pithy, and the flavor goes sharp and hot. Because the crop is fast, the practical fix is timing, growing radishes in the cool windows on either side of summer, with heat-tolerant or slow-bolt varieties for the late-spring edge.",
+      "run_normalized": "in late spring and early summer",
+      "run_in_our_prose": "in late spring and early summer",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late spring and early summer"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Radishes planted in late spring will bolt (form a flower stalk) as the temperatures get warm in late spring and early summer. Radishes that have bolted have a strong flavor and are pithy. Harvest & Storage: Radishes will be ready to harvest in about 3 to 4 weeks after planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late spring and early summer"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "failure_diagnostics[1].what_happened_beginner",
+      "our_prose": "The radishes came out spongy and hollow inside, woody, or so hot they are hard to eat. This usually means they grew too slowly or sat too long, from heat, dry soil, crowding, or being left in the ground too long.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "You can pull them any time they reach a usable size. They will get fibrous and develop a strong taste if left in the ground too long. Remove greens and wash roots well. The daikon’s shoulders, or the top of the vegetable, typically stand up out of the soil, so the width of the root will be obvious.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "failure_diagnostics[1].what_happened_beginner",
+      "our_prose": "The radishes came out spongy and hollow inside, woody, or so hot they are hard to eat. This usually means they grew too slowly or sat too long, from heat, dry soil, crowding, or being left in the ground too long.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Young car­ rots less than 1 inch in diameter at the shoulder are usually the most tender. Quality will be reduced if carrots are left in the ground too long before harvesting-as they often are in Hawaii. Vitamin value of carrots, both young and old, is very high.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "Radishes are light feeders. If feeding at all, work a low-nitrogen complete fertilizer such as 5-10-10 into the bed before sowing at about 1 to 2 pounds per 100 square feet (Clemson gives 5-10-10 at roughly 30 pounds per 1,000 square feet), then side-dress only the slower winter or daikon types lightly once plants reach about 4 inches tall. Fast garden radishes usually finish before any side-dressing is needed. Err low, since excess nitrogen grows tops at the expense of the root.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The garden should be limed to a soil pH of 6.0 to 6.5 for the best growth of these root crops. If a soil test has not been taken, apply 5-10-10 fertilizer at 30 pounds per 1,000 square feet of garden before planting. For more information, see HGIC 1652, Soil Testing .",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "Radishes are light feeders. If feeding at all, work a low-nitrogen complete fertilizer such as 5-10-10 into the bed before sowing at about 1 to 2 pounds per 100 square feet (Clemson gives 5-10-10 at roughly 30 pounds per 1,000 square feet), then side-dress only the slower winter or daikon types lightly once plants reach about 4 inches tall. Fast garden radishes usually finish before any side-dressing is needed. Err low, since excess nitrogen grows tops at the expense of the root.",
+      "run_normalized": "2 pounds per 100 square feet",
+      "run_in_our_prose": "2 pounds per 100 square feet",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 pounds per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "(b) Before the manure is spaded in, broadcast an application of 8-12~-6, 4-12-8, 6-9-5, or 11-48 ammonium phosphate fertilizer at the rate of about 2 pounds per 100 square feet (800 to 1,000 pounds per acre). The inorganic material will expedite the breakdown of the manure, aid in maintaining the organic matter of the soil, and provide the total soil mass with a moderate supply of nutrients.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 pounds per 100 square feet"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "growth_stages[1].user_action_seasoned",
+      "our_prose": "Thin promptly to a final 2 inches for garden types (4 to 6 for daikons) at the one-to-two true-leaf stage, snipping extras at the soil line. Keep moisture even, and protect young seedlings from flea beetles with a row cover if pressure is heavy.",
+      "run_normalized": "the one to two true leaf stage",
+      "run_in_our_prose": "the one-to-two true-leaf stage",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the one to two true leaf stage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Radish can be broadcast-seeded in a 12-inch bed and then thinned to 2 to 3 inches apart when plants are in the one to two “true leaf” stage, about 2 inches tall. Radishes are some of the fastest germinating seeds and should emerge in just a few days.",
+      "source_context_available": true,
+      "tool_first_6gram": "one to two true leaf stage"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "harvest_ready_beginner",
+      "our_prose": "Radishes are ready quickly and then go downhill fast, so check by size and pull them on time. The small round kinds are usually ready about 22 to 30 days after planting, when the radish is about an inch across. The tops of the radishes often poke up out of the soil, so you can see how big they are; pull one to check. Do not leave ready radishes sitting in the ground, especially in warm weather, or they turn hollow, woody, and very hot, and may crack. Pull round red radishes before they get bigger than about an inch, and white ones a little smaller. The long daikon kinds take longer, around 50 to 60 days; loosen the soil with a fork before pulling so the long root does not snap.",
+      "run_normalized": "up out of the soil so",
+      "run_in_our_prose": "up out of the soil, so",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "up out of the soil so"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Remove greens and wash roots well. The daikon’s shoulders, or the top of the vegetable, typically stand up out of the soil, so the width of the root will be obvious. Spade or fork underneath the planting to harvest long daikon roots without breaking them.",
+      "source_context_available": true,
+      "tool_first_6gram": "up out of the soil so"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Radishes are ready fast and over-mature even faster, so check by size and on time rather than by a fixed date. Small round garden types are usually ready about 22 to 30 days from sowing, when the root is roughly 1 inch across at the shoulder; the shoulders often push up out of the soil, so you can see the width. Pull a test radish to judge. Do not leave mature radishes in the ground: held too long, or in warm weather, they turn pithy, woody, and sharply hot, and can crack. Round red types are best pulled before they exceed about an inch, white types before about three-quarters of an inch. Long daikon and winter types take longer, around 50 to 60 days; lift them with a fork to avoid snapping the long root.",
+      "run_normalized": "up out of the soil so",
+      "run_in_our_prose": "up out of the soil, so",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "up out of the soil so"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Remove greens and wash roots well. The daikon’s shoulders, or the top of the vegetable, typically stand up out of the soil, so the width of the root will be obvious. Spade or fork underneath the planting to harvest long daikon roots without breaking them.",
+      "source_context_available": true,
+      "tool_first_6gram": "up out of the soil so"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[0].prevention_beginner",
+      "our_prose": "Clear away old plants and weeds at the end of the season so fewer beetles survive the winter nearby. Covering the seedbed with a row cover is the surest fix for early spring radishes. Planting a bit later, after the first wave of beetles, and keeping the radishes growing fast with steady water also help. You can even plant a little arugula or mustard nearby as bait to draw the beetles away.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/flea-beetles",
+      "anchor_paths": [
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Protect your crops if 10-30% of leaves on seedlings and transplants have dropped off. It is generally not necessary to treat flea beetles during summer, especially at the end of the season. By summer, crops reach the 4- or 5-leaf stage and are strong enough to survive feeding damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[0].prevention_beginner",
+      "our_prose": "Clear away old plants and weeds at the end of the season so fewer beetles survive the winter nearby. Covering the seedbed with a row cover is the surest fix for early spring radishes. Planting a bit later, after the first wave of beetles, and keeping the radishes growing fast with steady water also help. You can even plant a little arugula or mustard nearby as bait to draw the beetles away.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "With a fall planting, plants exposed to near freezing temperatures for 2 to 4 weeks at the end of the season may better develop the unique sweet flavor for which they are known. Harvest & Storage: The time from seeding to harvest may take from 120 to 180 days.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[0].prevention_beginner",
+      "our_prose": "Clear away old plants and weeds at the end of the season so fewer beetles survive the winter nearby. Covering the seedbed with a row cover is the surest fix for early spring radishes. Planting a bit later, after the first wave of beetles, and keeping the radishes growing fast with steady water also help. You can even plant a little arugula or mustard nearby as bait to draw the beetles away.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[0].prevention_seasoned",
+      "our_prose": "Clean up crop debris and weeds at the end of the season to cut overwintering sites. A row cover over the seedbed is the most reliable defense for early spring sowings. Planting a little later, once the first beetle flush has passed, and keeping the stand growing fast with even moisture both reduce the impact. A sacrificial trap crop of arugula or mustard can pull beetles off the main planting.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/flea-beetles",
+      "anchor_paths": [
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Protect your crops if 10-30% of leaves on seedlings and transplants have dropped off. It is generally not necessary to treat flea beetles during summer, especially at the end of the season. By summer, crops reach the 4- or 5-leaf stage and are strong enough to survive feeding damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[0].prevention_seasoned",
+      "our_prose": "Clean up crop debris and weeds at the end of the season to cut overwintering sites. A row cover over the seedbed is the most reliable defense for early spring sowings. Planting a little later, once the first beetle flush has passed, and keeping the stand growing fast with even moisture both reduce the impact. A sacrificial trap crop of arugula or mustard can pull beetles off the main planting.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "With a fall planting, plants exposed to near freezing temperatures for 2 to 4 weeks at the end of the season may better develop the unique sweet flavor for which they are known. Harvest & Storage: The time from seeding to harvest may take from 120 to 180 days.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[0].prevention_seasoned",
+      "our_prose": "Clean up crop debris and weeds at the end of the season to cut overwintering sites. A row cover over the seedbed is the most reliable defense for early spring sowings. Planting a little later, once the first beetle flush has passed, and keeping the stand growing fast with even moisture both reduce the impact. A sacrificial trap crop of arugula or mustard can pull beetles off the main planting.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "pests[1].cause_beginner",
+      "our_prose": "The maggots (young larvae) of the cabbage maggot fly, a small gray fly. It spends the winter as pupae in the soil, and in spring the females lay lots of tiny white eggs at the base of cabbage-family plants. The eggs hatch in about a week and the maggots burrow into the roots for three to four weeks. It goes after the whole cabbage family, radishes, turnips, cabbage, broccoli, and kale, and is worst in cool, damp spring weather.",
+      "run_normalized": "the winter as pupae in the soil",
+      "run_in_our_prose": "the winter as pupae in the soil",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the winter as pupae in the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/root-maggots",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Plants attacked by root maggots Onion maggot damage Onion maggots attack Onion Garlic Carrot Radish Cabbage maggots attack Cabbage Broccoli Cauliflower Brussels sprouts Radishes Turnips Biology Root maggots spend the winter as pupae in the soil. In spring, the maggots transform into adult flies. Adult females lay about 50-200 small, white eggs at the base of plant stems and in nearby cracks in the soil.",
+      "source_context_available": true,
+      "tool_first_6gram": "the winter as pupae in the"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "ph.note_beginner",
+      "our_prose": "Soil pH measures how acidic or alkaline your soil is, on a scale from 1 to 14 where 7 is neutral. Radishes like it right around 6.0 to 6.8, slightly acidic, and they are not fussy as long as the soil is not packed hard. Do not stress over pH if your radishes are coming out fine, getting the soil loose and growing them fast matters more. If you want to know your number for certain, a cheap soil test from your local extension office will tell you, and let you know whether to add anything before planting.",
+      "run_normalized": "as long as the soil is not",
+      "run_in_our_prose": "as long as the soil is not",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as long as the soil is not"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Any well-drained, slightly acidic to neutral soil with pH 6 to 7 will do for radishes, as long as the soil is not compacted. Although daikon can penetrate heavy soils to depths more than one foot, the roots will not be as smooth, uniform and tender as those grown in lighter, prepared soils.",
+      "source_context_available": true,
+      "tool_first_6gram": "as long as the soil is"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "soil.preferred_description_seasoned",
+      "our_prose": "Radishes want loose, well-drained soil free of stones and clods, ideally a sandy loam or loam. Light, loose soil lets the root swell quickly and evenly, which is the whole game with radishes, because fast, unchecked growth is what keeps them mild and crisp. Loosen the bed at least 6 inches deep for small garden types, and a foot or more for long daikon and winter radishes; compacted or heavy clay soil gives small, misshapen, or forked roots. Work in well-rotted compost, but avoid fresh manure and heavy nitrogen, since excess nitrogen drives leafy tops and can cause the roots to branch or fork while the radish itself stays small. A slightly acidic to neutral pH around 6.0 to 6.8 suits them. If your soil is heavy, choose short round types or grow in a raised bed or deep container.",
+      "run_normalized": "a foot or more for long",
+      "run_in_our_prose": "a foot or more for long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "a foot or more for long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Growing radishes Quick facts Radishes do best when grown in cooler conditions, and are tolerant of cold weather. Loosen soil before planting at least six inches deep, a foot or more for long types. Plant seeds from April through early May, and again in August. Drought stress can cause the roots to develop poor flavor and tough texture.",
+      "source_context_available": true,
+      "tool_first_6gram": "a foot or more for long"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "soil_prep_beginner",
+      "our_prose": "Radishes like loose, crumbly soil, but they are much more forgiving than carrots. Loosen the soil about 6 inches deep for the small round kinds, and a foot or more for long daikon types, pulling out rocks and hard clumps so the radish can swell fast and evenly. Loose, sandy soil grows the cleanest radishes; heavy clay grows small, twisted ones, so mix in compost or use a raised bed. Do not add fresh manure or lots of high-nitrogen fertilizer before planting, since too much grows big leafy tops and can make the roots branch. Rake the top smooth so the little seeds sit snug against the soil, and aim for a soil pH around 6.0 to 6.8, which is slightly acidic.",
+      "run_normalized": "a foot or more for long",
+      "run_in_our_prose": "a foot or more for long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "a foot or more for long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Growing radishes Quick facts Radishes do best when grown in cooler conditions, and are tolerant of cold weather. Loosen soil before planting at least six inches deep, a foot or more for long types. Plant seeds from April through early May, and again in August. Drought stress can cause the roots to develop poor flavor and tough texture.",
+      "source_context_available": true,
+      "tool_first_6gram": "a foot or more for long"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "soil_prep_seasoned",
+      "our_prose": "Radishes reward a loose, fine seedbed, though they are far more forgiving than carrots. Loosen the soil at least 6 inches deep for small garden types, and a foot or more for long daikon and winter types, removing stones and clods so the root can swell quickly and evenly. A loose sandy loam grows the cleanest radishes; heavy clay and compacted ground give small or misshapen roots and are best improved with compost or worked into raised beds. Avoid fresh manure and heavy nitrogen before planting, since excess nitrogen drives leafy tops and can cause the roots to branch while the radish stays small. Rake the surface smooth and fine for good seed-to-soil contact, and aim for a slightly acidic to neutral pH, roughly 6.0 to 6.8.",
+      "run_normalized": "a foot or more for long",
+      "run_in_our_prose": "a foot or more for long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "a foot or more for long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Growing radishes Quick facts Radishes do best when grown in cooler conditions, and are tolerant of cold weather. Loosen soil before planting at least six inches deep, a foot or more for long types. Plant seeds from April through early May, and again in August. Drought stress can cause the roots to develop poor flavor and tough texture.",
+      "source_context_available": true,
+      "tool_first_6gram": "a foot or more for long"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "sources_summary.primary[4].name",
+      "our_prose": "UC ANR / UC Master Gardener Program (Table 13.2)",
+      "run_normalized": "uc anr uc master gardener program",
+      "run_in_our_prose": "UC ANR / UC Master Gardener Program",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc anr uc master gardener program"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext_mg_timeplanting"
+      ],
+      "source_names": [
+        "UC ANR Master Gardener -- Time of planting (regional Table 13.2)"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/program/uc-master-gardener-program/time-planting",
+      "anchor_paths": [
+        "bolting.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "failure_diagnostics[0].anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_desert.plantings[0].direct_sow[0].anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_interior.plantings[1].direct_sow[0].anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext_mg_timeplanting",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_ext_mg_timeplanting"
+      ],
+      "source_context": "CCEs) Get Involved News & Media About Our Work & Impact Toggle submenu Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes UC Cooperative Extensions (UCCEs) Get Involved News & Media UC ANR UC Master Gardener Program Time of planting UC Master Gardener Program Time of planting Print California has a unique vegetable growing climate, we can grow many different types of vegetable crops throughout the year.",
+      "source_context_available": true,
+      "tool_first_6gram": "uc anr uc master gardener program"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "sources_summary.primary[4].name",
+      "our_prose": "UC ANR / UC Master Gardener Program (Table 13.2)",
+      "run_normalized": "uc anr uc master gardener program",
+      "run_in_our_prose": "UC ANR / UC Master Gardener Program",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc anr uc master gardener program"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardener-program-sonoma-county/radish",
+      "anchor_paths": [
+        "rotation.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "Es) Get Involved News & Media About Our Work & Impact Toggle submenu Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes UC Cooperative Extensions (UCCEs) Get Involved News & Media UC ANR UC Master Gardener Program of Sonoma County Radish UC Master Gardener Program of Sonoma County Radish Print Radishes are usually thought of as a root vegetable of the Brassicaceae (cabbage) family although tops are equally as edible when treated like collard or mustard greens.",
+      "source_context_available": true,
+      "tool_first_6gram": "uc anr uc master gardener program"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "thinning.tip_seasoned",
+      "our_prose": "Thinning is not optional for radishes: sown about an inch apart and germinating thickly, the stand comes up crowded, and crowded radishes simply fail to form usable roots, the tops grow but the radish does not bulb. Thin to a final 2 inches for small garden types and 4 to 6 inches for large daikons, as soon as the seedlings reach the one-to-two true-leaf stage. Snip or pinch the extras at the soil line instead of pulling, which disturbs the roots of the neighbors you are keeping, and pull any weeds in the row at the same time.",
+      "run_normalized": "pull any weeds in the row",
+      "run_in_our_prose": "pull any weeds in the row",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "pull any weeds in the row"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-radishes",
+      "anchor_paths": [
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "days_to_maturity_anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "For larger varieties, such as daikons, allow four to six inches between plants. Pull any weeds in the row when thinning occurs. Like other seedlings in the cabbage family, radishes have a distinct appearance: two fleshy cotyledons shaped like capital Bs, followed by true leaves that may be somewhat hairy and toothed.",
+      "source_context_available": true,
+      "tool_first_6gram": "pull any weeds in the row"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "thinning.tip_seasoned",
+      "our_prose": "Thinning is not optional for radishes: sown about an inch apart and germinating thickly, the stand comes up crowded, and crowded radishes simply fail to form usable roots, the tops grow but the radish does not bulb. Thin to a final 2 inches for small garden types and 4 to 6 inches for large daikons, as soon as the seedlings reach the one-to-two true-leaf stage. Snip or pinch the extras at the soil line instead of pulling, which disturbs the roots of the neighbors you are keeping, and pull any weeds in the row at the same time.",
+      "run_normalized": "the one to two true leaf stage",
+      "run_in_our_prose": "the one-to-two true-leaf stage",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the one to two true leaf stage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Radish can be broadcast-seeded in a 12-inch bed and then thinned to 2 to 3 inches apart when plants are in the one to two “true leaf” stage, about 2 inches tall. Radishes are some of the fastest germinating seeds and should emerge in just a few days.",
+      "source_context_available": true,
+      "tool_first_6gram": "one to two true leaf stage"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "thinning.when",
+      "our_prose": "As soon as seedlings reach a small edible size, at the one-to-two true-leaf stage.",
+      "run_normalized": "the one to two true leaf stage",
+      "run_in_our_prose": "the one-to-two true-leaf stage",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the one to two true leaf stage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Radish can be broadcast-seeded in a 12-inch bed and then thinned to 2 to 3 inches apart when plants are in the one to two “true leaf” stage, about 2 inches tall. Radishes are some of the fastest germinating seeds and should emerge in just a few days.",
+      "source_context_available": true,
+      "tool_first_6gram": "one to two true leaf stage"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "tips_by_stage.seedling[0].text_seasoned",
+      "our_prose": "Thin without delay once seedlings reach the one-to-two true-leaf stage: a final 2 inches for round garden types, 4 to 6 inches for daikons. Crowded radishes put their energy into leaves and never form a usable root.",
+      "run_normalized": "the one to two true leaf stage",
+      "run_in_our_prose": "the one-to-two true-leaf stage",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the one to two true leaf stage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "bolting.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "days_to_maturity_mid_anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[4].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_north_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[1].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "thinning.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Radish can be broadcast-seeded in a 12-inch bed and then thinned to 2 to 3 inches apart when plants are in the one to two “true leaf” stage, about 2 inches tall. Radishes are some of the fastest germinating seeds and should emerge in just a few days.",
+      "source_context_available": true,
+      "tool_first_6gram": "one to two true leaf stage"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Even, consistent moisture is the rule, since radishes crack and split when soil swings from dry to wet and turn hot and woody under drought stress. Radish taproots reach for moisture but the feeder roots stay shallow, so the top few inches must not dry out. Aim for about 1 inch of water per week including rain, more in heat or sandy soil, keeping the bed evenly moist through the short, fast growing cycle.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 inch of water per week including rain, more in heat",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

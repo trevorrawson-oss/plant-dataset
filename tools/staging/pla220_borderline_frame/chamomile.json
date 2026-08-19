@@ -1,0 +1,121 @@
+{
+  "crop_slug": "chamomile",
+  "record_count": 2,
+  "records": [
+    {
+      "crop_slug": "chamomile",
+      "field_path": "pet_safe.note",
+      "our_prose": "German chamomile is a mild irritant that can cause contact dermatitis or oral swelling; the related Roman chamomile is listed by the ASPCA as toxic to cats, dogs, and horses.",
+      "run_normalized": "can cause contact dermatitis or oral swelling",
+      "run_in_our_prose": "can cause contact dermatitis or oral swelling",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "can cause contact dermatitis or oral swelling"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/matricaria-chamomilla/",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.good_seasoned[0].anchoring_urls.ncsu_ext",
+        "companions.good_seasoned[2].anchoring_urls.ncsu_ext",
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[1].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[4].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[5].anchoring_urls.ncsu_ext",
+        "growth_stages[0].anchoring_urls.ncsu_ext",
+        "growth_stages[1].anchoring_urls.ncsu_ext",
+        "growth_stages[3].anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "notifications[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "pests[1].anchoring_urls.ncsu_ext",
+        "pests[2].anchoring_urls.ncsu_ext",
+        "pet_safe.anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[1].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[1].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[1].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[1].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[1].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[1].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[1].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[1].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "storage.anchoring_urls.ncsu_ext",
+        "tips_by_stage.budding[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.budding[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.established[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "weather_triggers[1].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Poisonous to Humans: Poison Severity: Low Poison Symptoms: Can cause contact dermatitis or oral swelling in those sensitive to it.",
+      "source_context_available": true,
+      "tool_first_6gram": "can cause contact dermatitis or oral"
+    },
+    {
+      "crop_slug": "chamomile",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's Mojave-edge high desert grows German chamomile on two cool-season cycles: a spring sowing (early March through April, ahead of USU Extension's own hardy-crop planting dates) blooms into June, then a real midsummer heat gap once temperatures push over 100°F in June and July (USU Extension, Washington County frost and elevation data), then a fresh August sowing (USU's Fall Gardening in the St. George Area guidance) blooms into late October before winter cold ends the season around the November 1 average first frost.",
+      "run_normalized": "fall gardening in the st george area",
+      "run_in_our_prose": "Fall Gardening in the St. George Area",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "fall gardening in the st george area"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_fall_veg"
+      ],
+      "source_names": [
+        "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_fall_veg"
+      ],
+      "source_context": "44 N. 100 E., St. George, UT 84770 (435)634-5706 extension.usu.edu/washington FALL GARDENING In the St. George Area By Rick Heflebower, Washington County Horticulture Agent Here are a few tips that will help you with your fall vegetable garden: 1.",
+      "source_context_available": true,
+      "tool_first_6gram": "fall gardening in the st george"
+    }
+  ]
+}

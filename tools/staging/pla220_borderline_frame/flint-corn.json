@@ -1,0 +1,443 @@
+{
+  "crop_slug": "flint-corn",
+  "record_count": 13,
+  "records": [
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "diseases[2].cause_beginner",
+      "our_prose": "A bacterium spread by the corn flea beetle as it feeds. After a mild winter more beetles survive, so the disease tends to be worse the next year.",
+      "run_normalized": "spread by the corn flea beetle",
+      "run_in_our_prose": "spread by the corn flea beetle",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "spread by the corn flea beetle"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Later-infected plants are stunted and contain yellow streaks on the leaves. The disease is spread by the corn flea beetle, especially after mild winters. New cultivars resistant to Stewart's wilt should be used if early sweet corn is to be planted where flea beetle populations were high the previous year.",
+      "source_context_available": true,
+      "tool_first_6gram": "spread by the corn flea beetle"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "growth_stages[0].user_action_beginner",
+      "our_prose": "Plant the seeds about 1 to 2 inches deep once the soil has warmed to at least 60°F, laying out a block of short rows rather than one long row. Keep the bed evenly damp but not soggy, since cold, wet soil rots the seed.",
+      "run_normalized": "about 1 to 2 inches deep",
+      "run_in_our_prose": "about 1 to 2 inches deep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "about 1 to 2 inches deep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+      "anchor_paths": [
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Be sure to select a variety that will mature in your area before the first frost . Sow seed directly in the garden in spring about 1 to 2 inches deep, or somewhat more shallowly for varieties with small kernels (in Iowa, this is typically done in the first half of May).",
+      "source_context_available": true,
+      "tool_first_6gram": "about 1 to 2 inches deep"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "growth_stages[0].user_action_seasoned",
+      "our_prose": "Sow about 1 to 2 inches deep once soil is at least 60°F, into a block of short rows. Keep the seedbed evenly moist but not saturated; cold, wet soil rots the seed.",
+      "run_normalized": "about 1 to 2 inches deep",
+      "run_in_our_prose": "about 1 to 2 inches deep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "about 1 to 2 inches deep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+      "anchor_paths": [
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Be sure to select a variety that will mature in your area before the first frost . Sow seed directly in the garden in spring about 1 to 2 inches deep, or somewhat more shallowly for varieties with small kernels (in Iowa, this is typically done in the first half of May).",
+      "source_context_available": true,
+      "tool_first_6gram": "about 1 to 2 inches deep"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "growth_stages[8].user_action_beginner",
+      "our_prose": "Pull the husks back off the picked ears and spread them out in a warm, dry, airy spot to finish drying, using a fan to speed things up. When the kernels are hard and glassy, twist them off the cobs and store the dry grain, grinding it into cornmeal only when you need it.",
+      "run_normalized": "when the kernels are hard and",
+      "run_in_our_prose": "When the kernels are hard and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "when the kernels are hard and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://richmond.ces.ncsu.edu/news/glass-gem-corn/",
+      "anchor_paths": [
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Consult your local Extension office for Integrated Pest Management program information. Harvest: Ears can be picked when the kernels are hard and glossy, and the husk has mostly dried down. If necessary, bring husked ears under cover to complete drying.",
+      "source_context_available": true,
+      "tool_first_6gram": "when the kernels are hard and"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "notifications[2].body_seasoned",
+      "our_prose": "Flint corn is left to mature and dry on the stalk. Watch for the husks to turn brown and papery and the kernels to harden to a hard, glassy grain, then pick and finish drying under cover. There is no narrow window.",
+      "run_normalized": "mature and dry on the stalk",
+      "run_in_our_prose": "mature and dry on the stalk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mature and dry on the stalk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/homegrown-grits/",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.cure_thresh[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Cory Tanner, ©2021, Clemson Extension Unlike sweet corn, ears of dent corn for grits should fully mature and dry on the stalk before harvest (from 90 to 120 days after planting for most varieties). Harvest when the husks are dry, brown and papery.",
+      "source_context_available": true,
+      "tool_first_6gram": "mature and dry on the stalk"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Flint corn is a warm-season crop here, sown once the soil reaches 60°F, roughly two weeks after the last spring frost. Season length is the binding constraint: favor an early flint and sow at the first warm soil. In the coldest zones a short-season flint like Painted Mountain (about 85 days, and tolerant of cold spring soil) is the dependable pick, where a full-season flint may not fully field-dry before frost and must finish drying under cover.",
+      "run_normalized": "corn is a warm season crop",
+      "run_in_our_prose": "corn is a warm-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "corn is a warm season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2013/09/EHT-044.pdf",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "thinning.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Sweet corn is not ready when the juice of the kernel is watery. It is overripe when the Planting Sweet corn is a warm-season crop and must be planted after the soil warms and there is no more danger of frost.",
+      "source_context_available": true,
+      "tool_first_6gram": "corn is a warm season crop"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Flint corn is a warm-season crop here, sown once the soil reaches 60°F, roughly two weeks after the last spring frost. Season length is the binding constraint: favor an early flint and sow at the first warm soil. In the coldest zones a short-season flint like Painted Mountain (about 85 days, and tolerant of cold spring soil) is the dependable pick, where a full-season flint may not fully field-dry before frost and must finish drying under cover.",
+      "run_normalized": "corn is a warm season crop",
+      "run_in_our_prose": "corn is a warm-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "corn is a warm season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "However, sweet corn does have some specific environmental and cultural needs that must be met for the plant to produce high-marketable yields. Corn is a warm-season crop that requires high temperatures for optimum germination and rapid growth. For most varieties, soil temperature should be between 55 and 65°F for best germination.",
+      "source_context_available": true,
+      "tool_first_6gram": "corn is a warm season crop"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "storage.room_temp_seasoned",
+      "our_prose": "Fully dried, shelled flint corn is a dry grain and stores at room temperature. Keep the shelled kernels in an airtight container in a cool, dry, dark place once they reach about 13 to 15 percent moisture; grain that is not fully dry will mold or attract insects.",
+      "run_normalized": "moisture grain that is not fully",
+      "run_in_our_prose": "moisture; grain that is not fully",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "moisture grain that is not fully"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr"
+      ],
+      "source_names": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_publishers": [
+        "University of Hawaii College of Tropical Agriculture and Human Resources"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/corn2003.pdf",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr"
+      ],
+      "source_context": "For example, 1000 lb of corn at 30 percent moisture will become X = dry weight = 824 lb at 15 percent moisture, obtained by the formula X = 1000 × (100 – 30) ÷ (100 – 15) Several processing methods can be used to improve feed efficiency. One of them is to harvest high-moisture grain that is not fully dried down in the field. Ears har- vested at 25 percent or higher moisture are as much as 8 p ercent more efficient as feedstuffs.",
+      "source_context_available": true,
+      "tool_first_6gram": "moisture grain that is not fully"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "tips_by_stage.dry_down[0].text_beginner",
+      "our_prose": "Let flint corn dry out on the plant and stop watering once the kernels harden. In dry weather you can leave the ears standing to keep drying on the stalk. In humid weather, watch for mold and be ready to pick them as soon as the kernels are hard.",
+      "run_normalized": "as soon as the kernels are",
+      "run_in_our_prose": "as soon as the kernels are",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "as soon as the kernels are"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Once the skin begins to feel smooth or slick, they are past the best eating stage. Harvest sweet corn as soon as the kernels are well-filled and milky. The tip of the ear within the husk should be blunt and not pointed.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the kernels are"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "tips_by_stage.seedling[0].text_beginner",
+      "our_prose": "Keep flint corn away from sweet corn and popcorn. Its pollen will drift in and spoil them, making sweet corn starchy and stopping popcorn from popping. Keep them at least 300 feet apart, or, since that is a lot of room, plant them so they tassel about two weeks apart instead.",
+      "run_normalized": "at least 300 feet apart or",
+      "run_in_our_prose": "at least 300 feet apart, or",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 300 feet apart or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "As mentioned previously, because sweet corn is wind pollinated, quality is best if the stands are isolated from field corn, popcorn, and ornamental corn, as well as from other types of sweet corn. Isolation, in this sense, means either planting the crops at least 300 feet apart, or staggering plantings so that there is a 10 to 14 day difference in maturity between crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 300 feet apart or"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "varieties.recommended[0].note",
+      "our_prose": "A short-season, cold-hardy open-pollinated flint developed for northern and high-elevation gardens, with 6- to 7-inch ears of gold, orange, red, and purple kernels. It reaches dry grain in roughly 85 days and tolerates cold spring soil better than almost any other corn, so it is the reliable choice where the season is short. Grind it into cornmeal or flour.",
+      "run_normalized": "of gold orange red and purple kernels",
+      "run_in_our_prose": "of gold, orange, red, and purple kernels",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "of gold orange red and purple kernels"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "cornell_ext"
+      ],
+      "source_names": [
+        "Cornell Cooperative Extension"
+      ],
+      "source_publishers": [
+        "Cornell University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://vegvariety.cce.cornell.edu/main/showVarieties.php?searchCriteria=corn&searchIn=1&crop_id=0&sortBy=overallrating&order=DESC",
+      "anchor_paths": [
+        "varieties.anchoring_urls.cornell_ext"
+      ],
+      "source_context": "Painted Mountain Corn Overall Rating: (5.0 Stars) 1 Review Days to Maturity: 85 Open-pollinated, late-season, ornamental corn with 6- to 7-inch ears with 8 rows of gold, orange, red, and purple kernels. 5-foot plants. Tolerates high winds, cold soil and nights, as well as hot days and drought.",
+      "source_context_available": true,
+      "tool_first_6gram": "gold orange red and purple kernels"
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "About 1 inch of water per week from rain and irrigation, rising toward 1.5 inches per week across the pollination and ear-fill window; water deeply to wet the full root zone.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

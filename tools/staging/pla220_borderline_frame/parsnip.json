@@ -1,0 +1,925 @@
+{
+  "crop_slug": "parsnip",
+  "record_count": 17,
+  "records": [
+    {
+      "crop_slug": "parsnip",
+      "field_path": "diseases[0].symptoms_beginner",
+      "our_prose": "Brown, black, or purple-black rotten patches form mostly on the crown and shoulders (the top) of the root, and the rot can spread until the whole root is ruined. Leaves can get small orange-brown spots with a pale halo. It is worst on roots left late in the season. (UMass)",
+      "run_normalized": "the top of the root and",
+      "run_in_our_prose": "the top) of the root, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the top of the root and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rhs"
+      ],
+      "source_names": [
+        "Royal Horticultural Society"
+      ],
+      "source_publishers": [
+        "RHS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.rhs.org.uk/vegetables/parsnips/grow-your-own",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.rhs",
+        "pests[0].anchoring_urls.rhs",
+        "soil.anchoring_urls.rhs",
+        "start_method.anchoring_urls.rhs",
+        "tips_by_stage.germination[0].anchoring_urls.rhs"
+      ],
+      "source_context": "Hoeing to remove weeds is best done on a warm, dry day, so you slice easily through weed stems just below the surface. , avoids accidentally damaging the top of the root and making it susceptible to canker (see Problems , below). Also try not to touch the leaves when weeding, as the smell may attract carrot fly .",
+      "source_context_available": true,
+      "tool_first_6gram": "the top of the root and"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "fertilizer.amount_beginner",
+      "our_prose": "Mix a low-nitrogen balanced fertilizer like 5-10-10 into the bed before planting (about 30 pounds per 1,000 square feet), and feed lightly just once more if the plants look weak. A little compost goes a long way.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The garden should be limed to a soil pH of 6.0 to 6.5 for the best growth of these root crops. If a soil test has not been taken, apply 5-10-10 fertilizer at 30 pounds per 1,000 square feet of garden before planting. For more information, see HGIC 1652, Soil Testing .",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Parsnips are light feeders and especially sensitive to excess nitrogen, which drives leafy tops and forked, hairy roots at the expense of a clean taproot. Clemson recommends a 5-10-10 fertilizer worked in before planting at about 30 pounds per 1,000 square feet, with an optional side-dressing of a nitrogen source such as calcium nitrate when plants are about 4 inches tall. (Clemson HGIC) Avoid fresh manure entirely, and lean on well-finished compost rather than concentrated nitrogen.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The garden should be limed to a soil pH of 6.0 to 6.5 for the best growth of these root crops. If a soil test has not been taken, apply 5-10-10 fertilizer at 30 pounds per 1,000 square feet of garden before planting. For more information, see HGIC 1652, Soil Testing .",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "Parsnips want steady phosphorus and potassium for root development and only modest nitrogen, so a low-first-number blend such as 5-10-10 worked into the bed before sowing suits them well. Clemson gives a rate near 30 pounds per 1,000 square feet. Excess nitrogen is the classic parsnip mistake, producing lush tops and forked, hairy roots.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The garden should be limed to a soil pH of 6.0 to 6.5 for the best growth of these root crops. If a soil test has not been taken, apply 5-10-10 fertilizer at 30 pounds per 1,000 square feet of garden before planting. For more information, see HGIC 1652, Soil Testing .",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "ph.note_beginner",
+      "our_prose": "Soil pH measures how acidic or alkaline your soil is, on a scale from 1 to 14 where 7 is neutral. Parsnips do best from about 6.0 to 7.0, slightly acidic to neutral. Very acidic soil, below about 5.5, holds them back and worsens problems like canker, so a soil test from your local extension office tells you your number and whether to add lime. Clemson suggests liming to about 6.0 to 6.5 for this group of root crops.",
+      "run_normalized": "6 0 to 6 5 for",
+      "run_in_our_prose": "6.0 to 6.5 for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "6 0 to 6 5 for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Fertilizing: It is best to base fertilizer and lime applications on the results of a soil test. The garden should be limed to a soil pH of 6.0 to 6.5 for the best growth of these root crops. If a soil test has not been taken, apply 5-10-10 fertilizer at 30 pounds per 1,000 square feet of garden before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "6 0 to 6 5 for"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Parsnip is a cool-season root that germinates and grows best at roughly 50 to 70°F and develops its sweet flavor only after near-freezing weather, so in peninsular Florida the late-spring and summer months (Apr, May, Jun, Jul, Aug, Sep) are far too hot to sow or grow it. The crop is handled as a fall-sown, winter-harvested vegetable, and those hot months carry no sowing or active growth. (Clemson HGIC)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Parsnip is a cool-season root that germinates and grows best at roughly 50 to 70°F and develops its sweet flavor only after near-freezing weather, so in peninsular Florida the late-spring and summer months (Apr, May, Jun, Jul, Aug, Sep) are far too hot to sow or grow it. The crop is handled as a fall-sown, winter-harvested vegetable, and those hot months carry no sowing or active growth. (Clemson HGIC)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Parsnip is a cool-season root that germinates and grows best at roughly 50 to 70°F and develops its sweet flavor only after near-freezing weather, so in tropical-lowland Hawaii the late-spring and summer months (Apr, May, Jun, Jul, Aug, Sep) are far too hot to sow or grow it. The crop is handled as a fall-sown, winter-harvested vegetable, and those hot months carry no sowing or active growth. (Clemson HGIC)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Parsnip is a cool-season root that germinates and grows best at roughly 50 to 70°F and develops its sweet flavor only after near-freezing weather, so in tropical-lowland Hawaii the late-spring and summer months (Apr, May, Jun, Jul, Aug, Sep) are far too hot to sow or grow it. The crop is handled as a fall-sown, winter-harvested vegetable, and those hot months carry no sowing or active growth. (Clemson HGIC)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.basis_seasoned",
+      "our_prose": "Parsnip is a cool-season root that germinates and grows best at roughly 50 to 70°F and develops its sweet flavor only after near-freezing weather, so in tropical-lowland Hawaii the late-spring and summer months (Apr, May, Jun, Jul, Aug, Sep) are far too hot to sow or grow it. The crop is handled as a fall-sown, winter-harvested vegetable, and those hot months carry no sowing or active growth. (Clemson HGIC)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.basis_seasoned",
+      "our_prose": "Parsnip is a cool-season root that germinates and grows best at roughly 50 to 70°F and develops its sweet flavor only after near-freezing weather, so in tropical-lowland Hawaii the late-spring and summer months (Apr, May, Jun, Jul, Aug, Sep) are far too hot to sow or grow it. The crop is handled as a fall-sown, winter-harvested vegetable, and those hot months carry no sowing or active growth. (Clemson HGIC)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "regions.northern_tier.resolved_by_zone.7.zone_notes",
+      "our_prose": "In the milder zone-7 edge, mulched parsnips can be left in the ground and dug right through winter into early spring, gaining sweetness with each frost.",
+      "run_normalized": "can be left in the ground",
+      "run_in_our_prose": "can be left in the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "can be left in the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rhs"
+      ],
+      "source_names": [
+        "Royal Horticultural Society"
+      ],
+      "source_publishers": [
+        "RHS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.rhs.org.uk/vegetables/parsnips/grow-your-own",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.rhs",
+        "pests[0].anchoring_urls.rhs",
+        "soil.anchoring_urls.rhs",
+        "start_method.anchoring_urls.rhs",
+        "tips_by_stage.germination[0].anchoring_urls.rhs"
+      ],
+      "source_context": "Choosing What To Grow Preparing The Ground Sowing Plant Care Harvesting Problem Solving Grow The new app packed with trusted gardening know-how Download app Getting Started .rtc]:mt-6\" data-astro-cid-g3i4jeg7> Delicious roasted or added to hearty winter stews, parsnips need little maintenance and can be left in the ground until you’re ready to eat them. Sow in spring and you’ll have sweet, tasty parsnips by autumn – and for your Christmas dinner too.",
+      "source_context_available": true,
+      "tool_first_6gram": "can be left in the ground"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "Parsnip's signature storage is in-ground overwintering. The roots are extremely frost-hardy and the cold converts starch to sugar, so in cold climates they are left in the ground under a thick straw mulch and dug as needed through winter and into early spring; UMN notes the later they are dug, the sweeter they are. (UMN Extension) For fall-dug roots, a root cellar or unheated garage near 32 to 40°F at high humidity is best, packing unwashed roots in damp sand, where they hold for months. (UMN Extension; Clemson HGIC) One caution: overwintered roots must be dug before they regrow in spring, since once the plant bolts in its second year the root turns woody.",
+      "run_normalized": "for fall dug roots a root cellar",
+      "run_in_our_prose": "For fall-dug roots, a root cellar",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "for fall dug roots a root cellar"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.germination[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Parsnips can be 10 to 12 inches long, so be careful not to break them when harvesting. It is best to dig them up with a spading fork. For fall-dug roots, a root cellar is the best storage option.",
+      "source_context_available": true,
+      "tool_first_6gram": "fall dug roots a root cellar"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "tips_by_stage.established[1].text_seasoned",
+      "our_prose": "Wear gloves and long sleeves when handling parsnip foliage in bright sun: some people develop a rash from contact with the juice from the leaves and stems in sunlight (phytophotodermatitis). (Clemson HGIC)",
+      "run_normalized": "develop a rash from contact with",
+      "run_in_our_prose": "develop a rash from contact with",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "develop a rash from contact with"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Problems: Seed does not keep well, and fresh seed should be planted each year. Roots will crack if soil is allowed to become too dry. Some people may develop a rash from contact with juice from the foliage when working with the plants in direct sunlight, so wear gloves to prevent contact during harvest.",
+      "source_context_available": true,
+      "tool_first_6gram": "develop a rash from contact with"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Even, consistent moisture is the rule, and it matters most during the long, slow germination window and again as the roots size up. From sowing until the seedlings are up, often 2 to 3 weeks, the surface must stay moist and uncrusted. Once established, parsnips want steady moisture rather than a wet-dry swing: aim for about 1 inch of water per week including rain.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 inch of water per week including rain",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "watering.schedule_by_stage[3].note_seasoned",
+      "our_prose": "Hold even moisture through sizing. Parsnips can stay in the ground into winter and sweeten after frost, needing little water once cool weather sets in.",
+      "run_normalized": "in the ground into winter and",
+      "run_in_our_prose": "in the ground into winter and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the ground into winter and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rhs"
+      ],
+      "source_names": [
+        "Royal Horticultural Society"
+      ],
+      "source_publishers": [
+        "RHS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.rhs.org.uk/vegetables/parsnips/grow-your-own",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.rhs",
+        "pests[0].anchoring_urls.rhs",
+        "soil.anchoring_urls.rhs",
+        "start_method.anchoring_urls.rhs",
+        "tips_by_stage.germination[0].anchoring_urls.rhs"
+      ],
+      "source_context": "Use a garden fork to carefully ease the long roots out of the ground intact. Parsnip roots are very hardy, so can be left in the ground into winter and harvested as required. However, they can be difficult to harvest from frozen ground, so it may be worth lifting a few extra in November to ensure you have parsnips to enjoy however cold it gets.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the ground into winter and"
+    }
+  ]
+}

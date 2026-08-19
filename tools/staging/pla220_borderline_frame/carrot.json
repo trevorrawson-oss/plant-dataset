@@ -1,0 +1,783 @@
+{
+  "crop_slug": "carrot",
+  "record_count": 20,
+  "records": [
+    {
+      "crop_slug": "carrot",
+      "field_path": "companions.good_beginner_seasoned[2].why_seasoned",
+      "our_prose": "Lettuce and carrots work as a classic interplant on root structure and timing. Lettuce is shallow-rooted and quick, carrots are deep-rooted and slow, so they pull from different parts of the soil profile and the lettuce canopy shades the surface, holding moisture and suppressing weeds while the carrots establish. Harvest the lettuce as the carrots fill in. This is a space-and-soil benefit rather than a pest one, and it is one of the more reliable interplants for that reason.",
+      "run_normalized": "from different parts of the soil profile",
+      "run_in_our_prose": "from different parts of the soil profile",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "from different parts of the soil profile"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/planting-and-growing-guides/companion-planting-home-gardens",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Soil health By planting plants with different root structures together, you can aerate the soil and allow plants to pull nutrients from different parts of the soil profile. Plants with taproots or tubers like carrots or potatoes can help to break up compaction in the soil.",
+      "source_context_available": true,
+      "tool_first_6gram": "different parts of the soil profile"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "container_notes.notes_beginner",
+      "our_prose": "Carrots grow well in pots, which is great if your garden soil is hard clay. The main thing is a deep enough pot, deeper than the carrots will be long, and keeping the soil evenly moist. Choose a short or round variety for most pots, use loose potting mix, make sure the pot has drainage holes, and thin the little seedlings to about 2 to 3 inches apart once they are an inch or two tall.",
+      "run_normalized": "about 2 to 3 inches apart",
+      "run_in_our_prose": "about 2 to 3 inches apart",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "about 2 to 3 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "As soon as seedlings appear, the or paper should be removed and the flat placed in partial shade for one day; thereafter the flat should be given full sunlight or only lightly. When the plants have three or four leaves, they be thinned to stand about 2 to 3 inches apart each way. 45 success­ sand. be growing eggplant, rate scat­ crops shallower.",
+      "source_context_available": true,
+      "tool_first_6gram": "about 2 to 3 inches apart"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "Dark brown to black, irregularly shaped spots with yellow halos appear first on the older, lower leaflet margins and tips; this is Alternaria dauci. Tan to gray circular spots with darker margins, showing on younger leaves and earlier in the season, point to the closely related Cercospora carotae. As the spots multiply they run together and the foliage takes on a scorched, blighted look, and large lesions can girdle and kill the petioles. The two fungi are difficult to tell apart and are managed identically. The roots are not infected directly but size up poorly when the canopy is badly damaged. A third, bacterial blight (Xanthomonas campestris pv. carotae), looks similar, with water-soaked, varnished lesions that track down the veins.",
+      "run_normalized": "dark brown to black irregularly shaped",
+      "run_in_our_prose": "Dark brown to black, irregularly shaped",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "dark brown to black irregularly shaped"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/carrot/alternaria-leaf-blight/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Comments on the Disease Management Symptoms and Signs Alternaria leaf blight initial symptoms typically begin on older leaves as brown spots surrounded by a yellow margin. At later stages of disease development, dark brown to black irregularly shaped necrotic lesions develop on leaf blades and petioles. Leaves can be killed when foliar spots grow together or by lesions that develop on petioles.",
+      "source_context_available": true,
+      "tool_first_6gram": "dark brown to black irregularly shaped"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "diseases[1].prevention_seasoned",
+      "our_prose": "Control broadleaf weeds in and around the garden that host the phytoplasma and the leafhopper, especially wild carrot and dandelion. Row covers exclude the leafhopper from a planting, and prompt removal of any infected plant limits a local reservoir. Risk is highest where migrating aster leafhoppers are abundant, which varies by region and year.",
+      "run_normalized": "weeds in and around the garden",
+      "run_in_our_prose": "weeds in and around the garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "weeds in and around the garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ext"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].direct_sow[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].harvest_end[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ufifas_ext"
+      ],
+      "source_context": "The garden soil should be turned and free of weeds, grass, and woody material at least 30 days before planting. Control weeds in and around the garden because they can be a source of insects and diseases. Weed control is best accomplished by mulching and hand-pulling or hoeing small weeds.",
+      "source_context_available": true,
+      "tool_first_6gram": "weeds in and around the garden"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "failure_diagnostics[1].what_happened_beginner",
+      "our_prose": "The carrots cracked open, usually because the soil went dry and then got soaked: the root drinks fast and splits. Carrots left in the ground too long after they are ready also crack more easily.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Young car­ rots less than 1 inch in diameter at the shoulder are usually the most tender. Quality will be reduced if carrots are left in the ground too long before harvesting-as they often are in Hawaii. Vitamin value of carrots, both young and old, is very high.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "failure_diagnostics[4].what_happened_seasoned",
+      "our_prose": "Roots developed strong, bitter flavor and a coarse, fibrous, woody texture. The usual causes are maturing in sustained heat (air above about 75°F degrades root quality), over-maturity from being left in the ground too long, or green shoulders from sun exposure.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Young car­ rots less than 1 inch in diameter at the shoulder are usually the most tender. Quality will be reduced if carrots are left in the ground too long before harvesting-as they often are in Hawaii. Vitamin value of carrots, both young and old, is very high.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "Carrots are light feeders. Work 1 to 2 pounds of a low-nitrogen complete fertilizer such as 5-10-10 per 100 feet of row into the bed before sowing (UC IPM), then, only if the tops pale, side-dress nitrogen lightly once plants are 3 to 4 inches tall, on the order of 0.1 to 0.5 pound of actual nitrogen per 100 feet of row. Excess nitrogen produces forked, hairy roots and lush tops, so err low.",
+      "run_normalized": "are 3 to 4 inches tall",
+      "run_in_our_prose": "are 3 to 4 inches tall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "are 3 to 4 inches tall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "germination_temp_f_anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[2].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[3].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[4].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[1].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Plant beets in rows 10 to 30 inches apart and place the seed ½ inch deep with about 2 inches between the seeds. When the seedlings are 3 to 4 inches tall, thin them to 2 to 3 inches between plants. Planting Dates for Beets Area Spring Fall Piedmont March 1 – 30 Aug.",
+      "source_context_available": true,
+      "tool_first_6gram": "are 3 to 4 inches tall"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "pests[0].cause_beginner",
+      "our_prose": "The maggots (young larvae) of the carrot rust fly, a small fly. The female is drawn to the smell of carrot leaves and lays her eggs near the base of the plant, and the maggots that hatch burrow into the roots. It also goes after parsnip, celery, and parsley. It is mainly a problem in cool, damp, coastal areas and much less common where summers are hot.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/carrot/cavity-spot/",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Apply at a 14- to 21-day interval. When applying with ground equipment, direct spray to the base of the plant and follow immediately with 0.25–1 inch of irrigation to promote movement of material into the root zone.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "pests[0].cause_beginner",
+      "our_prose": "The maggots (young larvae) of the carrot rust fly, a small fly. The female is drawn to the smell of carrot leaves and lays her eggs near the base of the plant, and the maggots that hatch burrow into the roots. It also goes after parsnip, celery, and parsley. It is mainly a problem in cool, damp, coastal areas and much less common where summers are hot.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Fertilizer applied at time of transplanting or as side dressings should be placed 3 or 4 inches from the base of the plant and to a depth of 3 or 4 inches. Roughly, two level table­ spoons of fertilizer applied in a band Ii to 12 inches long supply a rather heavy application.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "pests[1].organic_treatment_beginner",
+      "our_prose": "There is no home cure once the soil is infested, so pull up and throw away affected carrots instead of composting them. Plan around it next time: grow carrots in the cool season when the worms are inactive, rotate to other crops, and add organic matter to the soil, which helps the natural enemies that keep nematodes down.",
+      "run_normalized": "add organic matter to the soil",
+      "run_in_our_prose": "add organic matter to the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "add organic matter to the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ext"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].direct_sow[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].harvest_end[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ufifas_ext"
+      ],
+      "source_context": "See Nematode Management in the Vegetable Garden ( https://edis.ifas.ufl.edu/NG005 ). Add organic matter to the soil to help reduce nematode populations. Organic matter improves the capacity of the soil to hold water and nutrients and, in turn, improves plant vigor and resistance to pests.",
+      "source_context_available": true,
+      "tool_first_6gram": "add organic matter to the soil"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "pests[1].symptoms_seasoned",
+      "our_prose": "The diagnostic sign is galling: firm, beadlike knots on the feeder and lateral roots, distinct from the fine, soft secondary roots of aster yellows. The taproot forks, twists, and grows malformed, often with several prongs, because the nematodes enter the root tip and disrupt it. Aboveground, plants in affected patches are stunted and yellowish and pull from the soil easily. Galls from northern root-knot nematode (Meloidogyne hapla) are small; other Meloidogyne species make larger, more conspicuous galls.",
+      "run_normalized": "northern root knot nematode meloidogyne hapla",
+      "run_in_our_prose": "northern root-knot nematode (Meloidogyne hapla",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "northern root knot nematode meloidogyne hapla"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/carrot/roothairy.html",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Michael Davis, University of California Statewide IPM Program Credit: XXX XXX XXX XXX XXX --> - CLICK PHOTO TO ENLARGE - Northern root knot nematode Meloidogyne hapla Many fibrous roots may be present Tap root is stunted, deformed, or forked Many small round to irregular lumps and swellings can be found on both the tap root and fibrous roots In severely infected plants, carrot tops may be stunted, yellow, and wilt during the day More information on Northern Root Knot Nematode Don't see what you're looking for?",
+      "source_context_available": true,
+      "tool_first_6gram": "northern root knot nematode meloidogyne hapla"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "regions.fl_peninsula.region_notes_beginner",
+      "our_prose": "In peninsular Florida, carrots are a cool-season crop, so grow them in fall and winter and skip summer completely. Plant from about October through winter (you can start in September in the cooler north of the peninsula), and in the far south, stick to the middle of winter. Because the cool season is long, sow a short row every few weeks for a steady supply. Stop before spring heat arrives, because hot soil makes the roots tough and bitter. Carrots are usually ready about 60 to 75 days after planting.",
+      "run_normalized": "carrots are a cool season crop",
+      "run_in_our_prose": "carrots are a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "carrots are a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ae588"
+      ],
+      "source_names": [
+        "UF/IFAS Extension AE588 (vegetable air-temperature growth ranges)"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/AE588",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.ufifas_ae588",
+        "heat_threshold_temp_f.anchoring_urls.ufifas_ae588",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.ufifas_ae588",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ufifas_ae588",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ufifas_ae588",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ufifas_ae588",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ufifas_ae588",
+        "tips_by_stage.harvest[1].anchoring_urls.ufifas_ae588"
+      ],
+      "source_context": "Credit: Morgan Morrow and Vivek Sharma, UF/IFAS Carrot Growth Characteristics Carrots are a cool-season crop with optimum growth and root color when the air temperatures are 61 o F–75 o F (16 o C–24 o C).",
+      "source_context_available": true,
+      "tool_first_6gram": "carrots are a cool season crop"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Northern-tier carrots run two sowings around a summer that is workable but marginal for root quality. Sow the spring crop as soon as the soil reaches about 40°F (UMN: late April to early May in most of the region, earlier toward zone 7, later in zone 3 where soils warm slowly); carrots tolerate cold soil and light frost. Sow the fall and storage crop in mid-summer, 10 to 12 weeks before the first frost (UMD), in the colder zones at the earlier edge. Carrots tolerate frost and can be held in the cooling ground or lifted and refrigerated for several months, so the fall crop extends well past first frost. Stop spring sowings before sustained heat, which turns near-mature roots coarse and strong-flavored. Days to maturity run about 60 to 75. Windows verified against UMN Extension, University of Maryland Extension, and MSU Extension; maturity against UGA Circular 1232.",
+      "run_normalized": "12 weeks before the first frost",
+      "run_in_our_prose": "12 weeks before the first frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "12 weeks before the first frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-carrots-home-garden",
+      "anchor_paths": [
+        "days_to_maturity_anchoring_urls.umd_ext",
+        "days_to_maturity_mid_anchoring_urls.umd_ext",
+        "failure_diagnostics[5].anchoring_urls.umd_ext",
+        "harvest_ready_anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].direct_sow[1].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_start[1].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[1].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[2].direct_sow[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[2].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "soil.anchoring_urls.umd_ext",
+        "spacing_inches_anchoring_urls.umd_ext",
+        "start_method.anchoring_urls.umd_ext",
+        "sunlight_hours_anchoring_urls.umd_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umd_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umd_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umd_ext"
+      ],
+      "source_context": "Carrots are best planted in the spring and fall. They do not grow well during hot weather. For a fall crop, plant 10 – 12 weeks before the first frost. Raised beds work well for carrots. Full sun requires direct light at least 6 hours/day; prefers 8 - 10 hours/day.",
+      "source_context_available": true,
+      "tool_first_6gram": "12 weeks before the first frost"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "soil.preferred_description_seasoned",
+      "our_prose": "Carrots need deep, loose, friable soil free of stones, clods, and debris, ideally a light sandy loam or loam worked to at least 8 inches deep (deeper for long Imperator types). The texture matters more for carrots than for almost any other vegetable: roots grown in heavy clay or compacted ground grow poorly and come out forked, stunted, or misshapen. Work in well-rotted compost or manure before planting, but go easy on nitrogen, since excess nitrogen drives leafy top growth at the expense of root development and can cause forking and splitting. Moderate organic matter improves both moisture retention and friability; the goal is an open, stone-free root channel, not a rich heavy bed.",
+      "run_normalized": "growth at the expense of root",
+      "run_in_our_prose": "growth at the expense of root",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growth at the expense of root"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.established[1].anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.germination[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[3].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[4].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "If the plants develop healthy green tops, but limited root growth, it is usually because the plants are crowded. Excessive nitrogen fertilization can also contribute to lots of leaf growth at the expense of root growth. Skin sensitivity to parsnip leaves can be a problem. Some people develop a rash from contact with parsnip leaves, particularly on bright sunny days.",
+      "source_context_available": true,
+      "tool_first_6gram": "growth at the expense of root"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "sources_summary.primary[14].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ext"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].direct_sow[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].harvest_end[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ufifas_ext"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Always direct-sow carrots into the garden; never start them in pots or cells. The taproot begins extending almost immediately and transplanting damages and misdirects its growth, producing forked or stunted roots. Direct-seed about 3 to 4 weeks before the last spring frost once the soil is workable and has reached at least 45°F, sowing seed shallowly (1/8 to 1/4 inch) and keeping the surface evenly moist, since a crusted seedbed blocks the small seedlings. Germination is slow, often 2 to 3 weeks; many growers sow a few fast radishes in the same row to mark it. There is no indoor-start or hardening-off step for carrots.",
+      "run_normalized": "garden never start them in pots",
+      "run_in_our_prose": "garden; never start them in pots",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "garden never start them in pots"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-carrots-and-parsnips",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.established[1].anchoring_urls.umn_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umn_ext",
+        "tips_by_stage.germination[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[3].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[4].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "garden Growing carrots and parsnips A quick guide to carrots and parsnips Carrots and parsnips grow best in sandy loam soil. Always plant seeds directly into your garden. Never start them in pots. The seeds can take up to three weeks to germinate. Thin out seedlings to allow room for the roots to develop.",
+      "source_context_available": true,
+      "tool_first_6gram": "garden never start them in pots"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "For larger harvests, carrots are excellent long-term keepers. In cold climates they can be left in the ground under a thick straw mulch and pulled as needed until the soil freezes hard. Alternatively, pack unwashed roots in damp sand or sawdust in a box in a root cellar or unheated garage held near 32 to 40°F at high humidity, where they hold for months. Store roots only; trimmed tops are best used fresh or composted.",
+      "run_normalized": "can be left in the ground",
+      "run_in_our_prose": "can be left in the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "can be left in the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_fall_veg"
+      ],
+      "source_names": [
+        "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].direct_sow[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].harvest_end[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_fall_veg"
+      ],
+      "source_context": "Green onions can be planted spring or fall as they do not take long to mature. Turnips, carrots and beets can be left in the ground quite late into the winter before being harvested. When direct seeding various crops, consult the package for “days to maturity”.",
+      "source_context_available": true,
+      "tool_first_6gram": "can be left in the ground"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "succession_policy.tip_beginner",
+      "our_prose": "Instead of planting all your carrots at once, sow a short row every 3 weeks or so. That way they are ready a few at a time over several weeks rather than all on the same day. In places with cool summers, start in spring and keep going into early summer, then sow one more batch in late summer for fall. In places with hot summers, grow them in fall, winter, and early spring and skip the summer heat. Carrots left in the ground too long in hot weather get tough and lose their sweet flavor, so stop sowing before the hottest part of the year.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Young car­ rots less than 1 inch in diameter at the shoulder are usually the most tender. Quality will be reduced if carrots are left in the ground too long before harvesting-as they often are in Hawaii. Vitamin value of carrots, both young and old, is very high.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Even, consistent moisture is the rule, and it matters most in the first few weeks. From sowing until the seedlings are up, often 2 to 3 weeks, the surface must never dry out or crust, so light daily watering may be needed in warm or windy weather. Once established, carrots want steady moisture rather than a wet-dry swing: aim for about 1 inch of water per week including rain, delivered in deeper, less frequent soakings that draw the roots downward.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 inch of water per week including rain",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

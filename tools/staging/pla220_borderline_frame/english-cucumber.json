@@ -1,0 +1,832 @@
+{
+  "crop_slug": "english-cucumber",
+  "record_count": 22,
+  "records": [
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "White, powdery patches spread over the upper and lower leaf surfaces and stems until leaves yellow, brown, and die back early. It is the most common disease of cucumbers under cover, where crowding, shade, and still humid air favor it, and early defoliation cuts the crop short and exposes fruit to sunscald.",
+      "run_normalized": "the upper and lower leaf surfaces",
+      "run_in_our_prose": "the upper and lower leaf surfaces",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the upper and lower leaf surfaces"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ext"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.plantings[1].anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ufifas_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ufifas_ext"
+      ],
+      "source_context": "Malathion, carbaryl, and pyrethroids are especially harmful to bees (Figure 5). Spray the plant thoroughly , covering both the upper and lower leaf surfaces. Do not apply pesticides on windy days or when rain is imminent. Prevent spray burn ; make sure the plants are not under moisture stress.",
+      "source_context_available": true,
+      "tool_first_6gram": "the upper and lower leaf surfaces"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "White, powdery patches spread over the upper and lower leaf surfaces and stems until leaves yellow, brown, and die back early. It is the most common disease of cucumbers under cover, where crowding, shade, and still humid air favor it, and early defoliation cuts the crop short and exposes fruit to sunscald.",
+      "run_normalized": "upper and lower leaf surfaces and",
+      "run_in_our_prose": "upper and lower leaf surfaces and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "upper and lower leaf surfaces and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/diseases/powdery-mildew-cucurbits",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Disease management Powdery mildew of cucurbits Quick facts White powdery spots can form on both upper and lower leaf surfaces, and quickly expand into large blotches. Symptoms of powdery mildew first appear mid to late summer in Minnesota.",
+      "source_context_available": true,
+      "tool_first_6gram": "upper and lower leaf surfaces and"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "harvest_ready_beginner",
+      "our_prose": "Pick English cucumbers while they are firm and glossy. The long ones are usually picked at about 12 to 14 inches and the short Beit Alpha types at about 5 to 8 inches. Cut or clip the stem instead of pulling, because the skin and vine are tender. They grow fast, ready in a couple of weeks once they set, so check every day or two. The thin skin does not need peeling, and picking often keeps more cucumbers coming.",
+      "run_normalized": "at about 5 to 8 inches",
+      "run_in_our_prose": "at about 5 to 8 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at about 5 to 8 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/growing-cucumbers-in-high-tunnels",
+      "anchor_paths": [
+        "companions.anchoring_urls.psu_ext",
+        "diseases[1].anchoring_urls.psu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.psu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.psu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.psu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.psu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.psu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.psu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.psu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.psu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.psu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.psu_ext",
+        "varieties.anchoring_urls.psu_ext"
+      ],
+      "source_context": "They also grow well in high tunnels. Fruit are parthenocarpic (seedless) and not as long as European cucumbers, at about 5 to 8 inches long. Fruit skin thickness is between slicing cucumbers and European cucumbers.",
+      "source_context_available": true,
+      "tool_first_6gram": "at about 5 to 8 inches"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Harvest English cucumbers young and often, while the skin is glossy and firm. Pick the long Dutch or English types at about 12 to 14 inches (the USDA fresh-market minimum is 11 inches) and the shorter Beit Alpha and mini types at about 5 to 8 inches, cutting or clipping the stem rather than pulling, since the thin-skinned fruit and brittle vine bruise easily. Fruit sizes up fast, often reaching pickable size within about 10 to 11 days of set, so check every 1 to 2 days at peak. The thin, tender skin needs no peeling. Pick promptly, because an overheld fruit stops the plant setting new ones and the crop keeps best when cut young.",
+      "run_normalized": "at about 5 to 8 inches",
+      "run_in_our_prose": "at about 5 to 8 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at about 5 to 8 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/growing-cucumbers-in-high-tunnels",
+      "anchor_paths": [
+        "companions.anchoring_urls.psu_ext",
+        "diseases[1].anchoring_urls.psu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.psu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.psu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.psu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.psu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.psu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.psu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.psu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.psu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.psu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.psu_ext",
+        "varieties.anchoring_urls.psu_ext"
+      ],
+      "source_context": "They also grow well in high tunnels. Fruit are parthenocarpic (seedless) and not as long as European cucumbers, at about 5 to 8 inches long. Fruit skin thickness is between slicing cucumbers and European cucumbers.",
+      "source_context_available": true,
+      "tool_first_6gram": "at about 5 to 8 inches"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "pests[0].cause_seasoned",
+      "our_prose": "Two-spotted spider mites feed on the contents of individual leaf cells and multiply explosively in hot, dry, dusty conditions, exactly the environment of a warm greenhouse or high tunnel. They are not insects, so many insecticides do not touch them, and they build unseen on leaf undersides.",
+      "run_normalized": "mites feed on the contents of individual",
+      "run_in_our_prose": "mites feed on the contents of individual",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "mites feed on the contents of individual"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider Mites Two-spotted spider mites ( Tetranychus urticae ) can be a serious problem on cucurbits, especially on watermelons and cantaloupes, during hot, dry weather. These tiny mites feed on the contents of individual cells of the leaves. This damage appears as pale yellow and reddish-brown spots ranging in size from small specks to large whitish, stippled areas on the upper sides of leaves.",
+      "source_context_available": true,
+      "tool_first_6gram": "feed on the contents of individual"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "pests[0].organic_treatment_seasoned",
+      "our_prose": "Raise humidity and hose the leaf undersides with a strong spray of water, and treat with insecticidal soap or horticultural oil twice about five days apart with thorough underside coverage. Predatory mites (Phytoseiulus persimilis) are the standard and effective biological control under cover; conserve them and avoid broad-spectrum sprays that wipe them out.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "pests[1].organic_treatment_beginner",
+      "our_prose": "Blast them off with a strong spray of water and treat the undersides of the leaves with insecticidal soap, repeating every few days. Ladybugs and other helpful insects eat aphids, so welcome them, especially under cover.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.ca_interior.region_notes_seasoned",
+      "our_prose": "In California's interior valleys (zones 8 to 9) cucumber has a long, warm growing season. Direct-sow from spring once frost has passed and the soil warms, with successions every few weeks into early summer for a continuous supply. The long, hot summer extends the window, but keep moisture steady and mulched through the heat to prevent bitterness.",
+      "run_normalized": "frost has passed and the soil",
+      "run_in_our_prose": "frost has passed and the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "frost has passed and the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber/",
+      "anchor_paths": [
+        "ph.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Smith, ©HGIC 2018, Clemson Extension Plant seed or transplants after the fear of frost has passed , and the soil temperature has reached 70 °F. Seeds will not germinate at soil temperatures below 50 °F.",
+      "source_context_available": true,
+      "tool_first_6gram": "frost has passed and the soil"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.ca_north_coast.region_notes_seasoned",
+      "our_prose": "Along California's cooler north and north coast (zones 9 to 10), cucumber is a warm-season crop that wants the warmest, sunniest spot. Sow once the soil warms in late spring, with successions through early summer; cool coastal nights and fog can slow set, so a warm microclimate and a trellis help. The mild fall extends harvest later than inland.",
+      "run_normalized": "cucumber is a warm season crop",
+      "run_in_our_prose": "cucumber is a warm-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cucumber is a warm season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/CV268",
+      "anchor_paths": [
+        "companions.anchoring_urls.uf_ifas",
+        "container_notes.anchoring_urls.uf_ifas",
+        "diseases[2].anchoring_urls.uf_ifas",
+        "diseases[3].anchoring_urls.uf_ifas",
+        "diseases[4].anchoring_urls.uf_ifas",
+        "fertilizer.anchoring_urls.uf_ifas",
+        "harvest_ready_anchoring_urls.uf_ifas",
+        "pests[2].anchoring_urls.uf_ifas",
+        "ph.anchoring_urls.uf_ifas",
+        "soil.anchoring_urls.uf_ifas",
+        "watering.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "Hochmuth Greenhouse Cucumber Production—Florida Greenhouse Vegetable Production Handbook, Vol 3 Download Related Pages Menu Close Greenhouse cucumber production is very popular in many areas of the world (Figure 1). The cucumber is a warm season crop with required growing conditions of 80°F to 85°F and plenty of sunlight. Traditionally the primary type of cucumber grown in Florida greenhouses is the standard European seedless type.",
+      "source_context_available": true,
+      "tool_first_6gram": "cucumber is a warm season crop"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.se_gulf.region_notes_beginner",
+      "our_prose": "In the Southeast and Gulf, cucumber grows in two seasons, spring and fall, with a break in the hottest part of summer. Plant in spring once frost has passed, then plant again in late summer for a fall crop. Skip the peak of summer, when heat and pests make cucumbers struggle and turn bitter.",
+      "run_normalized": "late summer for a fall crop",
+      "run_in_our_prose": "late summer for a fall crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "late summer for a fall crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "The latter technique results in a longer harvest and greater yields. Spinach can also be sown in the late summer for a fall crop. New Zealand spinach, unlike most other greens, is a warm-season crop with a flavor similar to spinach but without its astringency.",
+      "source_context_available": true,
+      "tool_first_6gram": "late summer for a fall crop"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's low-elevation Dixie belt (Mojave-edge high desert) runs English cucumbers on one spring cycle only, per USU Extension's Suggested Vegetable Planting Dates for Utah. Direct-sow around March 15, the Group C (Tender) date for St. George, about two weeks ahead of the March 30 average last frost; the table's explicit local date runs earlier than a generic frost-relative rule would. Harvest begins about 60 days later, around May 14, and continues into late June. Once St. George's daytime highs push past 95°F and the county's own frost-and-elevation data show summer highs routinely reaching 100°F in June through August, vines stop setting fruit and any that does form turns bitter. USU documents fall planting for cool-season crops in the St. George area but gives no fall or summer-replant window for English cucumbers, so there is no second cycle here; frost returns around November 1, well after the plants have already stopped producing for the year.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.utah_dixie.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "St. George summers routinely reach 100°F in June, July, and August (USU Extension, Elevations for Washington County), so the spring English cucumbers crop is picked before the worst of the heat and vines stop setting fruit and any that does form turns bitter. USU's Suggested Vegetable Planting Dates for Utah lists no St. George fall or summer-replant window for this crop, so the season ends here rather than resuming with a second planting.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.warm_arid.region_notes_seasoned",
+      "our_prose": "In the warm arid Southwest (southern New Mexico and West Texas, zone 8), cucumber is a warm-season crop with a long window. Sow after the last frost once the soil warms, with successions into early summer; the intense heat and low humidity make steady, deep watering and mulch essential to prevent bitterness and spider mites. A fall sowing extends harvest into the mild autumn.",
+      "run_normalized": "cucumber is a warm season crop with",
+      "run_in_our_prose": "cucumber is a warm-season crop with",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "cucumber is a warm season crop with"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/CV268",
+      "anchor_paths": [
+        "companions.anchoring_urls.uf_ifas",
+        "container_notes.anchoring_urls.uf_ifas",
+        "diseases[2].anchoring_urls.uf_ifas",
+        "diseases[3].anchoring_urls.uf_ifas",
+        "diseases[4].anchoring_urls.uf_ifas",
+        "fertilizer.anchoring_urls.uf_ifas",
+        "harvest_ready_anchoring_urls.uf_ifas",
+        "pests[2].anchoring_urls.uf_ifas",
+        "ph.anchoring_urls.uf_ifas",
+        "soil.anchoring_urls.uf_ifas",
+        "watering.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "Hochmuth Greenhouse Cucumber Production—Florida Greenhouse Vegetable Production Handbook, Vol 3 Download Related Pages Menu Close Greenhouse cucumber production is very popular in many areas of the world (Figure 1). The cucumber is a warm season crop with required growing conditions of 80°F to 85°F and plenty of sunlight. Traditionally the primary type of cucumber grown in Florida greenhouses is the standard European seedless type.",
+      "source_context_available": true,
+      "tool_first_6gram": "cucumber is a warm season crop"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "regions.warm_arid.region_notes_seasoned",
+      "our_prose": "In the warm arid Southwest (southern New Mexico and West Texas, zone 8), cucumber is a warm-season crop with a long window. Sow after the last frost once the soil warms, with successions into early summer; the intense heat and low humidity make steady, deep watering and mulch essential to prevent bitterness and spider mites. A fall sowing extends harvest into the mild autumn.",
+      "run_normalized": "is a warm season crop with a",
+      "run_in_our_prose": "is a warm-season crop with a",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "is a warm season crop with a"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Spinach can also be sown in the late summer for a fall crop. New Zealand spinach, unlike most other greens, is a warm-season crop with a flavor similar to spinach but without its astringency. Seeding should be delayed until after frost and the soil temperature is at least 50°F.",
+      "source_context_available": true,
+      "tool_first_6gram": "a warm season crop with a"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow cucumbers or their relatives in the same spot more than once every 3 years or so, and clean up old vines at the end of the season. Under cover, use fresh growing medium between crops if disease has been a problem. Also keep English cucumbers away from ordinary cucumbers so bees cannot cross-pollinate them.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "storage.fridge_beginner",
+      "our_prose": "Keep English cucumbers in the fridge for about a week, in the warmer crisper drawer rather than the coldest spot, and leave them wrapped or bagged so the thin skin does not dry out. Too-cold storage causes soft, pitted spots. Keep them away from apples and tomatoes, which make them go bad faster.",
+      "run_normalized": "for about a week in the",
+      "run_in_our_prose": "for about a week, in the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for about a week in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-cucumbers",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "A cool basement might work as a place to hold cucumbers in perforated plastic bags. Cucumbers will keep for about a week in the refrigerator. The time-honored way to preserve cucumbers is by pickling .",
+      "source_context_available": true,
+      "tool_first_6gram": "for about a week in the"
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for even, steady moisture, roughly 1 inch of water per week and more in heat or in fast-draining substrate, delivered deeply rather than in light daily sprinkles. English cucumbers are bred to be mild and are far less prone to the classic stress-bitterness of open-field slicers, but steady water still drives straight, well-filled fruit and keeps the plant cropping.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

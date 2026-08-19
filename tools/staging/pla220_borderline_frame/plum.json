@@ -1,0 +1,1108 @@
+{
+  "crop_slug": "plum",
+  "record_count": 23,
+  "records": [
+    {
+      "crop_slug": "plum",
+      "field_path": "companions.bad_seasoned[0].why_seasoned",
+      "our_prose": "A plum's worst neighbors are other Prunus you do not manage. Wild plum, chokecherry, ornamental purple-leaf plum, and abandoned plum or cherry trees are reservoirs of black knot and brown rot: the black-knot fungus overwinters in galls on those hosts and releases spores that infect your tree every wet spring, so an unmanaged thicket downwind undoes your own pruning. Where practical, remove or prune the black knot out of nearby wild hosts, or at least scout them, and site a new plum away from them.",
+      "run_normalized": "the black knot fungus overwinters in",
+      "run_in_our_prose": "the black-knot fungus overwinters in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the black knot fungus overwinters in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/plant-diseases/black-knot",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[1].anchoring_urls.umn_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "triloba ) How does black knot survive and spread? Black knot is caused by the fungus Apiosporina morbosa . The black knot fungus overwinters in the galls on branches and trunks. Spores are released during wet periods in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "the black knot fungus overwinters in"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "companions.good_seasoned[0].why_seasoned",
+      "our_prose": "For Japanese plums, and for the many European cultivars that set more heavily with a partner, the single most useful companion is a second compatible plum. Match type to type: a Japanese cultivar needs another Japanese (or an American-Japanese hybrid) blooming at the same time, since European and Japanese plums bloom weeks apart and will not pollinate each other. Santa Rosa and Methley are widely used pollenizers for other Japanese plums; a self-fruitful European such as Stanley or Damson can stand alone but still crops more reliably with a second European nearby. Plant the pollenizer within about 100 feet so bees move freely between the trees.",
+      "run_normalized": "another japanese or an american japanese hybrid",
+      "run_in_our_prose": "another Japanese (or an American-Japanese hybrid",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "another japanese or an american japanese hybrid"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "mu_ext"
+      ],
+      "source_names": [
+        "University of Missouri Extension"
+      ],
+      "source_publishers": [
+        "MU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.missouri.edu/publications/g6001",
+      "anchor_paths": [
+        "companions.anchoring_urls.mu_ext",
+        "pollination.anchoring_urls.mu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.mu_ext",
+        "tips_by_stage.planting[1].anchoring_urls.mu_ext",
+        "varieties.anchoring_urls.mu_ext"
+      ],
+      "source_context": "Japanese plums, such as Santa Rosa, Burbank, Redheart, Shiro, Methley and Ozark Premier, require pollination from another Japanese or an American-Japanese hybrid. Follow nursery recommendations for suitable pollinizers. Pollination of small fruit crops Grape, strawberry, raspberry, blackberry, gooseberry and currant plants are all self-fruitful.",
+      "source_context_available": true,
+      "tool_first_6gram": "another japanese or an american japanese"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "companions.good_seasoned[0].why_seasoned",
+      "our_prose": "For Japanese plums, and for the many European cultivars that set more heavily with a partner, the single most useful companion is a second compatible plum. Match type to type: a Japanese cultivar needs another Japanese (or an American-Japanese hybrid) blooming at the same time, since European and Japanese plums bloom weeks apart and will not pollinate each other. Santa Rosa and Methley are widely used pollenizers for other Japanese plums; a self-fruitful European such as Stanley or Damson can stand alone but still crops more reliably with a second European nearby. Plant the pollenizer within about 100 feet so bees move freely between the trees.",
+      "run_normalized": "and will not pollinate each other",
+      "run_in_our_prose": "and will not pollinate each other",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and will not pollinate each other"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cherries Pollination of cherries is complicated by the fact that some varieties are genetically incompatible and will not pollinate each other even when they bloom at the same time. The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "and will not pollinate each other"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "diseases[1].organic_treatment_beginner",
+      "our_prose": "The main control is cleanup: take off and destroy every dried mummy from the tree and the ground, and prune out the gummy dead twig patches, since these hold the spores. If the weather is wet during bloom, an organic-approved spray at bloom helps protect the flowers. As soon as you see a plum rotting, pick it and throw it away, and thin the fruit so plums are not touching.",
+      "run_normalized": "from the tree and the ground",
+      "run_in_our_prose": "from the tree and the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from the tree and the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "Prune trees to a low height for easy access to fruit and braches. Remove infected fruit immediately from the tree and the ground to maintain orchard sanitation. Bagging individual fruit four weeks to six weeks after bloom provides excellent control, but bagging is a labor-intensive process only practical for small trees.",
+      "source_context_available": true,
+      "tool_first_6gram": "from the tree and the ground"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "diseases[1].organic_treatment_seasoned",
+      "our_prose": "Sanitation is the core control: remove and destroy every mummy from the tree and the ground, and prune out gummy twig cankers, because these are the spore sources. During a wet bloom, an organic-approved bloom-time fungicide reduces blossom blight. Once fruit is rotting, pick and dispose of it promptly, and thin fruit so plums do not touch, which slows spread through a cluster.",
+      "run_normalized": "from the tree and the ground",
+      "run_in_our_prose": "from the tree and the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from the tree and the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "Prune trees to a low height for easy access to fruit and braches. Remove infected fruit immediately from the tree and the ground to maintain orchard sanitation. Bagging individual fruit four weeks to six weeks after bloom provides excellent control, but bagging is a labor-intensive process only practical for small trees.",
+      "source_context_available": true,
+      "tool_first_6gram": "from the tree and the ground"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "failure_diagnostics[0].next_season_tip_beginner",
+      "our_prose": "If it is a Japanese plum, plant a second Japanese variety that blooms at the same time (Santa Rosa or Methley work well); make sure both flower together, keep a cover handy for frost, and check the variety suits your winters.",
+      "run_normalized": "variety that blooms at the same time",
+      "run_in_our_prose": "variety that blooms at the same time",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "variety that blooms at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/plum/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.good_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rootstock_options[0].anchoring_urls.clemson_hgic",
+        "rootstock_options[3].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormancy[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "As a rule of thumb, plums are not self-fruitful; they need to be pollinated from a different variety that blooms at the same time. However, A.U. Amber and Methley are exceptions to this rule because they are partially self-fruitful.",
+      "source_context_available": true,
+      "tool_first_6gram": "that blooms at the same time"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "failure_diagnostics[0].next_season_tip_seasoned",
+      "our_prose": "If it is a Japanese plum, add a compatible Japanese pollenizer that blooms at the same time (Santa Rosa and Methley are reliable); confirm bloom overlap, keep a frost cover ready, and check the variety's chill requirement fits your region.",
+      "run_normalized": "that blooms at the same time",
+      "run_in_our_prose": "that blooms at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "that blooms at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/plum/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.good_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rootstock_options[0].anchoring_urls.clemson_hgic",
+        "rootstock_options[3].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormancy[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "As a rule of thumb, plums are not self-fruitful; they need to be pollinated from a different variety that blooms at the same time. However, A.U. Amber and Methley are exceptions to this rule because they are partially self-fruitful.",
+      "source_context_available": true,
+      "tool_first_6gram": "that blooms at the same time"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "failure_diagnostics[1].what_happened_seasoned",
+      "our_prose": "Hard, black, elongated warty galls have appeared along twigs and branches, girdling and killing the wood beyond them. This is black knot, the signature disease of plum, caused by the fungus Apiosporina morbosa. Growers often reach for a spray, but the galls are already established; the effective action is to cut them out. Prune each gall 3 to 4 inches below the visible swelling into clean wood during the dormant season before the fungus sporulates, remove and destroy the prunings, and deal with any wild or neglected Prunus nearby that re-infect the tree each spring.",
+      "run_normalized": "caused by the fungus apiosporina morbosa",
+      "run_in_our_prose": "caused by the fungus Apiosporina morbosa",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "caused by the fungus apiosporina morbosa"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umaine_ext"
+      ],
+      "source_names": [
+        "University of Maine Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UMaine Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umaine.edu/ipm/ipddl/publications/5091e/",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.umaine_ext",
+        "diseases[0].anchoring_urls.umaine_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.umaine_ext"
+      ],
+      "source_context": "Black Knot is one of the most common diseases of plum and cherry (rare on other Prunus spp.) in Maine. It is caused by the fungus Apiosporina morbosa and can severely limit the production of fruit trees or ruin the esthetic value of ornamentals on about 25 species of Prunus .",
+      "source_context_available": true,
+      "tool_first_6gram": "caused by the fungus apiosporina morbosa"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "failure_diagnostics[1].what_happened_seasoned",
+      "our_prose": "Hard, black, elongated warty galls have appeared along twigs and branches, girdling and killing the wood beyond them. This is black knot, the signature disease of plum, caused by the fungus Apiosporina morbosa. Growers often reach for a spray, but the galls are already established; the effective action is to cut them out. Prune each gall 3 to 4 inches below the visible swelling into clean wood during the dormant season before the fungus sporulates, remove and destroy the prunings, and deal with any wild or neglected Prunus nearby that re-infect the tree each spring.",
+      "run_normalized": "caused by the fungus apiosporina morbosa",
+      "run_in_our_prose": "caused by the fungus Apiosporina morbosa",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "caused by the fungus apiosporina morbosa"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/plant-diseases/black-knot",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[1].anchoring_urls.umn_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "triloba ) How does black knot survive and spread? Black knot is caused by the fungus Apiosporina morbosa . The black knot fungus overwinters in the galls on branches and trunks. Spores are released during wet periods in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "caused by the fungus apiosporina morbosa"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "failure_diagnostics[3].label_seasoned",
+      "our_prose": "Gummy ooze and frass at the base of the trunk",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common home-garden rate is about 1 cup of 10-10-10 per year of tree age, applied in spring from bloom to petal fall, up to roughly 8 to 10 cups for a mature tree. Do not fertilize at planting or place fertilizer in the hole; wait until growth begins. Judge by shoot growth: a bearing tree making 8 to 15 inches of new wood a year is fed about right, and one growing faster than that needs less nitrogen, not more.",
+      "run_normalized": "1 cup of 10 10 10",
+      "run_in_our_prose": "1 cup of 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 cup of 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/plum/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.good_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rootstock_options[0].anchoring_urls.clemson_hgic",
+        "rootstock_options[3].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormancy[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Use these rules of thumb for the two fertilizer applications: March application – Apply 1 cup of 10-10-10 for each year of tree age to a maximum of 12 cups for mature trees. August application – Apply 1 cup of calcium nitrate or ammonium nitrate (equivalent) per tree per year of tree age to a maximum of 6 cups for mature trees.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 cup of 10 10 10"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "notifications[7].body_beginner",
+      "our_prose": "It has been a while since you logged anything. A quick look at the tree is worth it: check the branches for black knot, look at the base of the trunk for sap or sawdust, make sure no old dried fruit is left hanging, and jot down when the tree bloomed and when you picked. Writing the dates down helps you see the tree's rhythm year to year.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "pests[0].symptoms_seasoned",
+      "our_prose": "Small developing fruit carries a distinctive crescent-shaped scar where the female cut a slit to lay an egg. Infested fruit often drops early; fruit that hangs on may be gnarled or have a grub tunneling inside. Damage appears shortly after petal fall and is one of the most common causes of wormy backyard plums.",
+      "run_normalized": "is one of the most common",
+      "run_in_our_prose": "is one of the most common",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is one of the most common"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umaine_ext"
+      ],
+      "source_names": [
+        "University of Maine Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UMaine Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umaine.edu/ipm/ipddl/publications/5091e/",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.umaine_ext",
+        "diseases[0].anchoring_urls.umaine_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.umaine_ext"
+      ],
+      "source_context": "Black Knot causing a sharp bend due to disease. Photo by Bruce Watt. Black Knot is one of the most common diseases of plum and cherry (rare on other Prunus spp.) in Maine. It is caused by the fungus Apiosporina morbosa and can severely limit the production of fruit trees or ruin the esthetic value of ornamentals on about 25 species of Prunus .",
+      "source_context_available": true,
+      "tool_first_6gram": "is one of the most common"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "pests[2].symptoms_seasoned",
+      "our_prose": "Gummy ooze mixed with sawdust-like frass at the base of the trunk, right around the soil line, often with a mounded look where the bark meets the ground. Plums, like other stone fruit, are a host. A heavily infested young tree loses vigor as the larvae girdle the inner bark; several borers in one trunk can kill a newly planted tree in a season.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "pollinator_notes_seasoned",
+      "our_prose": "Pollination is the headline decision for plum, and it splits by type. European plums (Prunus domestica) such as Stanley, Italian prune, and damson are largely self-fruitful, so a single tree bears, though most crop somewhat more heavily with a second European variety nearby. Japanese plums (Prunus salicina) such as Santa Rosa, Burbank, and Methley are usually self-unfruitful and need a second compatible Japanese cultivar blooming at the same time; Methley and Santa Rosa are partial exceptions and also serve as good pollenizers. Crucially, European and Japanese plums bloom weeks apart and will not pollinate each other, so a pollenizer must match type. Plums are insect-pollinated, mainly by bees, so bloom-time pollinator activity matters; place a pollenizer within about 100 feet.",
+      "run_normalized": "and will not pollinate each other",
+      "run_in_our_prose": "and will not pollinate each other",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and will not pollinate each other"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cherries Pollination of cherries is complicated by the fact that some varieties are genetically incompatible and will not pollinate each other even when they bloom at the same time. The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "and will not pollinate each other"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "sources_summary.primary[7].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/plum/mealy-plum-aphid/",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.uc_ipm",
+        "pests[3].anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Recursos en español Statewide Integrated Pest Management Program University of California Agriculture and Natural Resources Follow Us Home and Landscape: Twitter Facebook Instagram ©1996—2026 Statewide IPM Program, Agriculture and Natural Resources, Unive",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.hardening_off_beginner",
+      "our_prose": "Hardening off (slowly getting an indoor-grown seedling used to outdoor conditions) does not apply to plum. You plant it bare-root and dormant, in late winter or early spring, rather than as a seedling started inside, so there is no tender young plant to ease outdoors.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "storage.anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Pruning is a corrective process used to remove a part of the tree to maintain or correct tree structure. Major pruning should be done during dormant months, typically in late winter or early spring. Training, on the other hand, takes place periodically throughout the year.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.hardening_off_seasoned",
+      "our_prose": "Hardening off does not apply to plum. It arrives as a dormant, bare-root tree and goes in the ground in late winter or early spring, not raised from a seedling indoors, so there is no tender transplant to acclimate to the outdoors.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "storage.anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Pruning is a corrective process used to remove a part of the tree to maintain or correct tree structure. Major pruning should be done during dormant months, typically in late winter or early spring. Training, on the other hand, takes place periodically throughout the year.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, with no leaves) in late winter to early spring, before the buds open, once the ground has thawed enough to dig. Soak the roots in a bucket of water for an hour or two first so they do not stay dried out. Dig a hole wide enough to spread the roots out without bending them, and set the tree so the graft union (that bumpy joint near the base, where the fruiting variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill with the same soil you removed, water it in well, and add a stake only if the spot is windy.",
+      "run_normalized": "2 to 3 inches above the soil",
+      "run_in_our_prose": "2 to 3 inches above the soil",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "2 to 3 inches above the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "storage.anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Important: When planting a grafted tree, the graft union (where the scion meets the rootstock) should be at least 2 to 3 inches above the soil after the soil has settled. Planting the graft union below the soil will encourage the scion to put out roots overriding the disease resistance or size controlling characteristics of the rootstock or, in the case of pecans, not forming surface roots ( Figure 6 ).",
+      "source_context_available": true,
+      "tool_first_6gram": "2 to 3 inches above the"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, with no leaves) in late winter to early spring, before the buds open, once the ground has thawed enough to dig. Soak the roots in a bucket of water for an hour or two first so they do not stay dried out. Dig a hole wide enough to spread the roots out without bending them, and set the tree so the graft union (that bumpy joint near the base, where the fruiting variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill with the same soil you removed, water it in well, and add a stake only if the spot is windy.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "add fertilizer to the planting hole",
+      "run_in_our_prose": "add fertilizer to the planting hole",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "add fertilizer to the planting hole"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "When graft unions are planted below the soil surface, the top portion, or scion, often grows roots and negates the effect of the grafted root system. After the tree is in place, fill the hole with native soil. Never add fertilizer to the planting hole. Fertilizers are very caustic and can burn and kill the roots of young trees. After the hole is backfilled, water the area well.",
+      "source_context_available": true,
+      "tool_first_6gram": "add fertilizer to the planting hole"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "2 to 3 inches above the",
+      "run_in_our_prose": "2 to 3 inches above the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 to 3 inches above the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.ncsu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "storage.anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Important: When planting a grafted tree, the graft union (where the scion meets the rootstock) should be at least 2 to 3 inches above the soil after the soil has settled. Planting the graft union below the soil will encourage the scion to put out roots overriding the disease resistance or size controlling characteristics of the rootstock or, in the case of pecans, not forming surface roots ( Figure 6 ).",
+      "source_context_available": true,
+      "tool_first_6gram": "2 to 3 inches above the"
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    }
+  ]
+}

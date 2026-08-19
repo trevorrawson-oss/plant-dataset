@@ -1,0 +1,617 @@
+{
+  "crop_slug": "asparagus",
+  "record_count": 17,
+  "records": [
+    {
+      "crop_slug": "asparagus",
+      "field_path": "container_notes.notes_seasoned",
+      "our_prose": "Skip containers for asparagus. It is a long-lived permanent planting (the University of Georgia notes a well-established bed can last 30 years) whose roots, the University of Illinois observes, spread laterally 5 feet or more over the years, all fed from a deep planting trench. An ordinary pot cannot supply the depth, root run, or longevity the crop needs. A deep raised bed is the only container-adjacent option worth pursuing, and even then it must be permanent and generously sized; for most gardeners an in-ground bed is the right call.",
+      "run_normalized": "5 feet or more over the years",
+      "run_in_our_prose": "5 feet or more over the years",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "5 feet or more over the years"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "illinois_ext",
+        "uiuc_ext"
+      ],
+      "source_names": [
+        "University of Illinois Extension",
+        "University of Illinois Extension"
+      ],
+      "source_publishers": [
+        "University of Illinois Extension",
+        "Illinois Extension"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://extension.illinois.edu/gardening/asparagus",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uiuc_ext",
+        "harvest_ready_anchoring_urls.illinois_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.illinois_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.illinois_ext",
+        "storage.anchoring_urls.uiuc_ext"
+      ],
+      "source_context": "Unless adequate space is allowed between rows, asparagus roots will compete with those of other crops for food and water. Asparagus roots may spread out laterally for 5 feet or more over the years. Cover the crown with two inches of soil. Gradually fill the remaining portion of the trench during the first summer as the plants grow taller.",
+      "source_context_available": true,
+      "tool_first_6gram": "5 feet or more over the"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "diseases[2].control_ladder[2].note_beginner",
+      "our_prose": "Cut down and clear away the old ferns at the end of the season, since the fungus overwinters on that dead fern litter and reinfects next spring's spears.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2021/03/EHT-066.pdf",
+      "anchor_paths": [
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "(a) Planting crown; (b) immediately after planting; (c) several weeks after planting; (d) at the end of the season -2- (a) (b) (c) (d) 4-12” 2-3” Care during the season Asparagus competes poorly with weeds.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "diseases[2].control_ladder[2].note_beginner",
+      "our_prose": "Cut down and clear away the old ferns at the end of the season, since the fungus overwinters on that dead fern litter and reinfects next spring's spears.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_em051e"
+      ],
+      "source_names": [
+        "WSU EM051E, Home Vegetable Gardening in Washington"
+      ],
+      "source_publishers": [
+        "Washington State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_em051e",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_em051e"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "failure_diagnostics[0].what_happened_beginner",
+      "our_prose": "Your spears are coming up thin and wispy instead of fat. On a young bed this is normal, since the crown is still building underground for the first two or three years. On an older bed, thin spears usually mean it was cut too long or too hard and the roots ran low on energy. Give a young bed time and do not harvest yet; on an older bed, stop cutting as soon as the spears thin down and let them all grow into ferns to rebuild the crown.",
+      "run_normalized": "for the first two or three",
+      "run_in_our_prose": "for the first two or three",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for the first two or three"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "mu_ext"
+      ],
+      "source_names": [
+        "University of Missouri Extension"
+      ],
+      "source_publishers": [
+        "MU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.missouri.edu/publications/g6405",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.mu_ext",
+        "harvest_ready_anchoring_urls.mu_ext",
+        "harvest_stop_rule.anchoring_urls.mu_ext",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.mu_ext",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.mu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.mu_ext",
+        "tips_by_stage.fern_growth[0].anchoring_urls.mu_ext",
+        "tips_by_stage.spear_emergence[0].anchoring_urls.mu_ext"
+      ],
+      "source_context": "Irrigation Plants that are stressed by drought can become weak and susceptible to insect, disease and weed pressure. Growers should be prepared to irrigate new asparagus plantings for the first two or three seasons after establishment, and each year during the spring harvest season in case of a spring drought.",
+      "source_context_available": true,
+      "tool_first_6gram": "for the first two or three"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "failure_diagnostics[0].what_happened_seasoned",
+      "our_prose": "Spears emerged thin and spindly. On an establishing bed (years one to three) this is expected while the crown accumulates reserves. On a bearing bed it signals crown exhaustion, usually from harvesting too long or too heavily: plants cut too hard too soon become weak and spindly and the crown may never fully recover, and spring vigor tracks directly with the prior year's fern growth. End harvest when the majority of spears drop to pencil diameter (under 3/8 inch), let the rest fern out, and feed and water to rebuild the crown.",
+      "run_normalized": "become weak and spindly and the",
+      "run_in_our_prose": "become weak and spindly and the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "become weak and spindly and the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/asparagus/",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.spear_emergence[0].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "In high-wind areas, plant the rows parallel to the prevailing winds so that the plants support each other to some extent. Problems Plants harvested too heavily too soon often become weak and spindly, and the crowns may never recover. Crown rot or poor production may occur in heavy soil that is inadequately prepared.",
+      "source_context_available": true,
+      "tool_first_6gram": "become weak and spindly and the"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "failure_diagnostics[0].what_happened_seasoned",
+      "our_prose": "Spears emerged thin and spindly. On an establishing bed (years one to three) this is expected while the crown accumulates reserves. On a bearing bed it signals crown exhaustion, usually from harvesting too long or too heavily: plants cut too hard too soon become weak and spindly and the crown may never fully recover, and spring vigor tracks directly with the prior year's fern growth. End harvest when the majority of spears drop to pencil diameter (under 3/8 inch), let the rest fern out, and feed and water to rebuild the crown.",
+      "run_normalized": "become weak and spindly and the",
+      "run_in_our_prose": "become weak and spindly and the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "become weak and spindly and the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/statewide-program/uc-master-gardener-program/asparagus",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.uc_mg"
+      ],
+      "source_context": "The fleshy root system still needs to develop and store food reserves to support perennial growth in future seasons. Plants harvested too heavily and too soon often become weak and spindly, and the crowns may never recover. Add an extra year to the above schedule for asparagus started from seed; that is, do not harvest at all the first two seasons, and harvest lightly the third.",
+      "source_context_available": true,
+      "tool_first_6gram": "become weak and spindly and the"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About 1 to 1.5 pounds of 10-10-10 per 100 square feet before planting (UMN), a balanced spring application on an established bed, and an after-harvest nitrogen side-dressing to fuel fern growth.",
+      "run_normalized": "pounds of 10 10 10 per 100",
+      "run_in_our_prose": "pounds of 10-10-10 per 100",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "pounds of 10 10 10 per 100"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C1026/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.uga_ext"
+      ],
+      "source_context": "In general, asparagus responds well to a balanced fertilizer at planting and early in the growing season. In the absence of a soil test, apply 2 pounds of 10-10-10 per 100 feet of row. In addition, apply an extra half pound of 34-0-0 or equivalent per 50 feet of row after harvesting asparagus.",
+      "source_context_available": true,
+      "tool_first_6gram": "of 10 10 10 per 100"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Feed a balanced fertilizer such as 10-10-10 in early spring, then feed again right after the final harvest to fuel the summer fern growth that recharges the crown, the two-feeding pattern the University of Georgia and Missouri both describe. The University of Minnesota suggests roughly 1 to 1.5 pounds of 10-10-10 per 100 square feet before planting, with nitrogen added once the crowns are growing; UGA pairs a balanced fertilizer at planting and early season with an after-harvest nitrogen side-dressing. Asparagus is a heavy user of potassium and a light user of phosphorus once the bed is established, so lean on a balanced or potassium-forward feed rather than piling on phosphate.",
+      "run_normalized": "a balanced fertilizer at planting and early",
+      "run_in_our_prose": "a balanced fertilizer at planting and early",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "a balanced fertilizer at planting and early",
+        "pounds of 10 10 10 per 100"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C1026/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.uga_ext"
+      ],
+      "source_context": "Fertilization Photo: Bob Westerfield Soil test the bed to find the specific nutrient requirements of your crop. In general, asparagus responds well to a balanced fertilizer at planting and early in the growing season. In the absence of a soil test, apply 2 pounds of 10-10-10 per 100 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "a balanced fertilizer at planting and"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "fertilizer.timing",
+      "our_prose": "in early spring before spears emerge, and again right after the final spring harvest for established beds",
+      "run_normalized": "in early spring before spears emerge",
+      "run_in_our_prose": "in early spring before spears emerge",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in early spring before spears emerge"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_h/H227/index.html",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.nmsu_ext",
+        "harvest_stop_rule.anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Always read and follow label directions and check with the county Extension agent for the latest recommendations for pest control. Weed Control Shallow cultivation can be used on tops of beds in early spring before spears emerge if the cultivator does not damage crowns. Sweeps can be used to clean furrows if they are set to avoid root damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "in early spring before spears emerge"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "regions.ca_desert.resolved_by_zone.10.notes",
+      "our_prose": "The low desert is not marginal ground for asparagus: UC ANR names the southern desert valleys one of California's three primary asparagus districts, and UC 157, the standard desert variety, was bred at UC's research station in the Imperial Valley. What the crop needs here is a rest it cannot get from winter. Cut irrigation in September or October and let the ferns dry down, then cut them to the ground (in January if they are still green), and set crowns any time from November into early February. Spears follow in March and April for a home bed; growers who chop and force-irrigate in December cut far earlier. Through the summer the fern grows on regular deep water, slowed but not stopped by heat above 85°F. Beds here have run 10 to 20 years.",
+      "run_normalized": "in january if they are still green",
+      "run_in_our_prose": "in January if they are still green",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in january if they are still green"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/asparagus",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.ucanr_santa_clara_mg",
+        "harvest_stop_rule.anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Post harvest Allow the ferns to grow over the summer to replenish the roots, then prune to the ground after they have turned brown or in January if they are still green. Support or corral the ferns with fencing to keep them from flopping into pathways or onto other plants.",
+      "source_context_available": true,
+      "tool_first_6gram": "in january if they are still"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "regions.ca_south_coast.region_notes_beginner",
+      "our_prose": "Asparagus is worth growing on the South Coast if you are willing to give it a dry rest each fall: stop watering in September and October and let the ferns brown off. Zone 9 takes to that well. In the frost-free stretches of zones 10 and 11 it will still crop, but the bed needs your attention rather than looking after itself. Pick from March into mid May.",
+      "run_normalized": "stop watering in september and october",
+      "run_in_our_prose": "stop watering in September and October",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stop watering in september and october"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/asparagus",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.ucanr_marin_mg",
+        "harvest_stop_rule.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "Water until the soil is wet several feet deep and allow it to drain. Unless your bed gets extremely dry, stop watering in September and October so that the plants will go dormant. Fertilizing When starting your asparagus bed, mix in generous amounts of compost and well-rotted manure.",
+      "source_context_available": true,
+      "tool_first_6gram": "stop watering in september and october"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "rotation.note_seasoned",
+      "our_prose": "Asparagus is not rotated. It is a permanent 15-to-20-year bed, chosen once and left in place, so the usual annual crop-rotation logic does not apply. Rotation matters only at siting: establish the bed on fresh, well-drained ground that has not recently grown asparagus, to keep clear of the soil-persistent Fusarium crown and root rot, and never replant a failing bed into the same spot.",
+      "run_normalized": "fusarium crown and root rot and",
+      "run_in_our_prose": "Fusarium crown and root rot, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fusarium crown and root rot and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rutgers_njaes"
+      ],
+      "source_names": [
+        "Rutgers New Jersey Agricultural Experiment Station"
+      ],
+      "source_publishers": [
+        "Rutgers NJAES"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://sebsnjaesnews.rutgers.edu/2012/11/seven-decades-of-asparagus-breeding-at-rutgers/",
+      "anchor_paths": [
+        "varieties.recommended[1].anchoring_urls.rutgers_njaes"
+      ],
+      "source_context": "Improved purple and unique light green cultivars, like recently released “NJ977” and “NJ953,” are very high yielding varieties that can be grown in both warm and cool climates. In addition, they are highly resistant to rust and tolerant to Fusarium crown and root rot , and have very good spear quality. Rutgers asparagus breeding program wins patent award In recognition of their contribution to New Jersey agriculture for the patent of “NJ953” male asparagus hybrid plant, the breeding team of Chin, Garrison, and Kinelski was selected as a 2012 Patent Award Winner by the Research & Development Council of New Jersey.",
+      "source_context_available": true,
+      "tool_first_6gram": "fusarium crown and root rot and"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "soil_prep_beginner",
+      "our_prose": "Dig the bed deeply and mix in compost. Then open a planting trench about 6 to 12 inches deep (shallower, around 6 inches, in heavy clay; deeper, 8 to 12 inches, in sandy soil), set the crowns in the bottom with the roots spread out, and cover them with 2 inches of soil at first. As the spears grow, gradually fill the trench back in over the season.",
+      "run_normalized": "them with 2 inches of soil",
+      "run_in_our_prose": "them with 2 inches of soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "them with 2 inches of soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/asparagus/",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.spear_emergence[0].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Place the asparagus crowns over this ridge, spread out their roots, and covered them with 2 inches of soil. Joey Williamson, © 2016 HGIC, Clemson Extension The bed above has been planted with asparagus crowns, covered with 2 inches of soil, and the cultivars labelled.",
+      "source_context_available": true,
+      "tool_first_6gram": "them with 2 inches of soil"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "storage.fridge_seasoned",
+      "our_prose": "Refrigerate spears standing upright in a glass or jar with an inch or two of water, loosely covered with a plastic bag, the way the University of Illinois recommends, which holds them a few days; kept dry in a plastic bag in the crisper they last up to about a week. Either way, refrigerate promptly and use them while the tips are still tight.",
+      "run_normalized": "in a plastic bag in the crisper",
+      "run_in_our_prose": "in a plastic bag in the crisper",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in a plastic bag in the crisper"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-asparagus",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.umn_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fern_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.spear_emergence[0].anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "varieties.recommended[0].anchoring_urls.umn_ext",
+        "varieties.recommended[2].anchoring_urls.umn_ext",
+        "varieties.recommended[3].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Storage Fresh asparagus is such a springtime treat that you can eat it within hours of picking, but it can also keep for up to a week in the refrigerator. Put it in a plastic bag in the crisper drawer. You can freeze asparagus. When canning asparagus, you must process it in a pressure canner.",
+      "source_context_available": true,
+      "tool_first_6gram": "a plastic bag in the crisper"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "tips_by_stage.dormancy[0].text_beginner",
+      "our_prose": "After frost turns the ferns brown, cut them down to the ground and rake away the old growth. Beetles and rust spend winter hiding in that dead fern, so clearing it out means fewer problems next year. Any time from late fall to late winter works, as long as you finish before the new spears come up. Do not dig or till the bed, since the roots are just resting underground.",
+      "run_normalized": "them down to the ground and rake",
+      "run_in_our_prose": "them down to the ground and rake",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "them down to the ground and rake"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/asparagus/cultural-tips/index.html",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "After the frost turns the ferns brown or during January if ferns are still green, prune them down to the ground and rake them out. Dispose of the ferns rather than leaving them in the field to avoid overwintering pests.",
+      "source_context_available": true,
+      "tool_first_6gram": "down to the ground and rake"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "varieties.recommended[1].note_seasoned",
+      "our_prose": "Rutgers' fresh-market benchmark: a high-yielding, all-male member of the Jersey hybrid class. That class, rather than each cultivar by name, is documented for vigor-based field tolerance (not immunity) to rust and to Fusarium crown and root rot: MSU rates the Jersey hybrids more tolerant of rust and purple spot than Millennium, and UC IPM credits hybrid vigor for a degree of Fusarium tolerance. Now largely discontinued at retail, but still a benchmark for the class.",
+      "run_normalized": "to fusarium crown and root rot",
+      "run_in_our_prose": "to Fusarium crown and root rot",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "to fusarium crown and root rot"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "rutgers_njaes"
+      ],
+      "source_names": [
+        "Rutgers New Jersey Agricultural Experiment Station"
+      ],
+      "source_publishers": [
+        "Rutgers NJAES"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://sebsnjaesnews.rutgers.edu/2012/11/seven-decades-of-asparagus-breeding-at-rutgers/",
+      "anchor_paths": [
+        "varieties.recommended[1].anchoring_urls.rutgers_njaes"
+      ],
+      "source_context": "Improved purple and unique light green cultivars, like recently released “NJ977” and “NJ953,” are very high yielding varieties that can be grown in both warm and cool climates. In addition, they are highly resistant to rust and tolerant to Fusarium crown and root rot , and have very good spear quality. Rutgers asparagus breeding program wins patent award In recognition of their contribution to New Jersey agriculture for the patent of “NJ953” male asparagus hybrid plant, the breeding team of Chin, Garrison, and Kinelski was selected as a 2012 Patent Award Winner by the Research & Development Council of New Jersey.",
+      "source_context_available": true,
+      "tool_first_6gram": "to fusarium crown and root rot"
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "year_one_notes_beginner",
+      "our_prose": "Plant the crowns while they are still asleep, as soon as the ground can be worked in spring. You will not pick any asparagus this year, and that is normal. The ferny growth that comes up is doing the real work: it feeds the roots underground so the bed can feed you for the next 15 to 20 years. Leave the ferns alone all summer, and cut them back only after frost turns them brown. Your first small harvest comes a couple of years in.",
+      "run_normalized": "as the ground can be worked in",
+      "run_in_our_prose": "as the ground can be worked in",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as the ground can be worked in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uada_ext"
+      ],
+      "source_names": [
+        "University of Arkansas Cooperative Extension Service"
+      ],
+      "source_publishers": [
+        "U of A Division of Agriculture"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.uaex.uada.edu/publications/PDF/FSA-6002.pdf",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.uada_ext",
+        "harvest_stop_rule.anchoring_urls.uada_ext",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uada_ext",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uada_ext"
+      ],
+      "source_context": "Asparagus is one of the earliest vegetables harvested in the spring. Cultural Practices Planting Time Asparagus crowns can be planted as early as the ground can be worked in the spring and as late as June 1. Use one­year­old crowns or plants because it takes one to two years longer to produce asparagus from seed.",
+      "source_context_available": true,
+      "tool_first_6gram": "as the ground can be worked"
+    }
+  ]
+}

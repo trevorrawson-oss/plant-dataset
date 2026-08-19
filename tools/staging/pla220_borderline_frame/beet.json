@@ -1,0 +1,1383 @@
+{
+  "crop_slug": "beet",
+  "record_count": 39,
+  "records": [
+    {
+      "crop_slug": "beet",
+      "field_path": "failure_diagnostics[2].what_happened_seasoned",
+      "our_prose": "Roots grew coarse, fibrous, and strong-tasting. The usual causes are maturing in sustained heat above about 75°F, over-maturity from being left in the ground too long, or drought and uneven moisture.",
+      "run_normalized": "left in the ground too long",
+      "run_in_our_prose": "left in the ground too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left in the ground too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/b-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].direct_sow[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Young car­ rots less than 1 inch in diameter at the shoulder are usually the most tender. Quality will be reduced if carrots are left in the ground too long before harvesting-as they often are in Hawaii. Vitamin value of carrots, both young and old, is very high.",
+      "source_context_available": true,
+      "tool_first_6gram": "left in the ground too long"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "fertilizer.npk_hint_beginner",
+      "our_prose": "The three numbers on a fertilizer bag are nitrogen, phosphorus, and potassium (N-P-K). Beets do well with a balanced blend where the numbers are about even, like a 10-10-10, mixed into the soil before planting along with some compost. Do not pile on high-nitrogen fertilizer, which gives you lots of leaves and small roots. The one extra thing beets care about is boron, and only add that if a soil test says to.",
+      "run_normalized": "mixed into the soil before planting",
+      "run_in_our_prose": "mixed into the soil before planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mixed into the soil before planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/planting-guide-for-home-gardening-in-alabama/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "For most vegetables, the soil pH should be around 6.0 to 6.5. To be effective, the lime must be mixed into the soil before planting. Long-season crops such as tomatoes, cabbage, pepper, okra, and potatoes need more fertilizer than short-season crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "mixed into the soil before planting"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "harvest_ready_beginner",
+      "our_prose": "Beets give you two harvests. You can pick the leaves young all along, taking a few outer ones per plant so the root keeps growing, and the seedlings you thin out are your first baby greens. The roots are ready by size, not a set date: brush the soil off a shoulder and pull when the beet is about 1 1/2 to 2 inches across, the sweet, tender stage, usually around 50 to 70 days. You can let them grow up to about 3 inches, but bigger beets get woody and strong. There is no rush in cool weather: they get sweeter after a light frost and hold in the ground, and the roots take more cold than the leaves. In cold areas, pile straw over the row and dig them into early winter until the ground freezes. Pull by hand, or loosen with a fork in heavy soil, and twist off the tops, leaving an inch of stem on beets you want to store so they do not bleed out their color.",
+      "run_normalized": "around 50 to 70 days you",
+      "run_in_our_prose": "around 50 to 70 days. You",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "around 50 to 70 days you"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/beets",
+      "anchor_paths": [
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "If the plant forms a flower stem, known as bolting, pull and compost as root will no longer be succulent. Harvesting Expect to harvest your mature beets around 50 to 70 days. You will be harvesting the greens and the root. If the plant forms a flower stem, known as bolting, pull and compost as root will no longer be succulent.",
+      "source_context_available": true,
+      "tool_first_6gram": "around 50 to 70 days you"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "notifications[2].body_beginner",
+      "our_prose": "Once the seedlings are 2 to 4 inches tall, thin them to 3 to 4 inches apart, snipping the extras at the soil line. Eat the thinnings as baby greens. Crowded beets stay small.",
+      "run_normalized": "to 4 inches tall thin them to",
+      "run_in_our_prose": "to 4 inches tall, thin them to",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "to 4 inches tall thin them to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[5].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Plant beets in rows 10 to 30 inches apart and place the seed ½ inch deep with about 2 inches between the seeds. When the seedlings are 3 to 4 inches tall, thin them to 2 to 3 inches between plants. Planting Dates for Beets Area Spring Fall Piedmont March 1 – 30 Aug.",
+      "source_context_available": true,
+      "tool_first_6gram": "4 inches tall thin them to"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "notifications[2].body_beginner",
+      "our_prose": "Once the seedlings are 2 to 4 inches tall, thin them to 3 to 4 inches apart, snipping the extras at the soil line. Eat the thinnings as baby greens. Crowded beets stay small.",
+      "run_normalized": "to 3 to 4 inches apart",
+      "run_in_our_prose": "to 3 to 4 inches apart",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "to 3 to 4 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-beets-home-garden",
+      "anchor_paths": [
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Overcrowded seedlings are another common problem when growing beets. Seedlings should be thinned to 3 to 4 inches apart to ensure good root development. Each \"seed\" that is sown is actually a fruit that contains several seeds.",
+      "source_context_available": true,
+      "tool_first_6gram": "to 3 to 4 inches apart"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_desert.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (May, Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC ANR Master Gardener Program)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_desert.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (May, Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC ANR Master Gardener Program)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_desert.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (May, Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC ANR Master Gardener Program)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_interior.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC ANR Master Gardener Program)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_interior.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC ANR Master Gardener Program)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC Master Gardeners San Diego County)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC Master Gardeners San Diego County)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UC Master Gardeners San Diego County)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (May, Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UF/IFAS Extension)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Apr, May, Jun, Jul, Aug, Sep). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UF/IFAS Extension)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Apr, May, Jun, Jul, Aug, Sep). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UF/IFAS Extension)",
+      "run_normalized": "apr may jun jul aug sep",
+      "run_in_our_prose": "Apr, May, Jun, Jul, Aug, Sep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "apr may jun jul aug sep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Suggested planting calendar for vegetable crops in the Pacific Northwest; specific dates should be obtained by experimenting in your area (adapted from Miles et al. 2010, 6-29–31). Crop Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Beginning Middle End Artichoke Arugula • • • • • • Asparagus, Seed * Asparagus, Crown ** Basil Bean, Bush • • Bean, Faba • Bean, Pole • Beet • • • • Bok Choy Broccoli, Summer B",
+      "source_context_available": true,
+      "tool_first_6gram": "apr may jun jul aug sep"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug, Sep). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UH Manoa CTAHR (Bulletin B-91))",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug, Sep). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UH Manoa CTAHR (Bulletin B-91))",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug, Sep). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UH Manoa CTAHR (Bulletin B-91))",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul, Aug, Sep). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (UH Manoa CTAHR (Bulletin B-91))",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.low_desert_az.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (University of Arizona Cooperative Extension (AZ1005))",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.low_desert_az.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (University of Arizona Cooperative Extension (AZ1005))",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.nevada.region_notes_beginner",
+      "our_prose": "In the Las Vegas Valley, direct-sow beets outdoors in late winter through spring, from about mid-February to the end of March, for a late-spring harvest. Once daytime highs push past 90°F, roots held in the hot soil turn woody and pale, so pull them and let the ground rest through the worst weeks. Sow again from about mid-August to mid-September for a fall and early-winter crop that holds well in the ground once it is cool.",
+      "run_normalized": "august to mid september for a fall",
+      "run_in_our_prose": "August to mid-September for a fall",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "august to mid september for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+      "anchor_paths": [
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Sweet Corn Golden Queen, Silver Queen, G90 Late February through late March and again in late August to Mid- September for a fall crop Plant spacing – Sow 4-6 inches apart and thin to 8-12 inches apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "august to mid september for a"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.se_gulf.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (May, Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (Clemson Cooperative Extension; LSU AgCenter)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.se_gulf.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (Clemson Cooperative Extension; University of Georgia Extension)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.se_gulf.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (May, Jun, Jul, Aug). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (Clemson Cooperative Extension; LSU AgCenter)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's Dixie belt (Mojave-edge high desert) grows beets on two direct-sown cycles, per Utah State University Extension's suggested vegetable planting dates for Utah. The spring sowing runs March 1 to March 15, the Group B (Semi-Hardy) date for St. George, with roots ready in about 58 days and the crop pulled by mid-May before the heat builds. USU Extension's Washington County frost and elevation notes put St. George over 100°F in June, July, and August; since the documented fall window (USU's Group E \"Special Plants for Fall Harvest\" table) does not open until July 1, June is a genuine bare-ground pause between the two cycles. The fall sowing runs July 1 to August 1, and USU's fall-gardening guidance for the St. George area specifically groups beets with turnips and carrots as roots that hold well and can be dug quite late into winter, well past the November 1 average first frost.",
+      "run_normalized": "group e special plants for fall harvest",
+      "run_in_our_prose": "Group E \"Special Plants for Fall Harvest",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "group e special plants for fall harvest"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Plant: Celery Group D: Very Tender (Plant when the soil is warm, about 2 weeks after 'C' group.) Seed: Cantalope, Lima Bean, Winter Squash Plants: Eggplant, Pepper, Pumpkin, Tomato, Watermelon Fall-Season Vegetables Group E: Special Plants for Fall Harvest (Many vegetables can be planted for a fall harvest.",
+      "source_context_available": true,
+      "tool_first_6gram": "e special plants for fall harvest"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "regions.warm_arid.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Summer heat exclusion (Jun, Jul). Beet is a cool-season crop that grows and colors best around 60 to 65°F; sustained summer heat above about 75°F runs the roots woody, strong-flavored, and pale, dulls germination, and pushes plants toward bolting, so beets are grown as a fall-through-spring crop here and the hottest months are left out of the planting calendar. (Texas A&M AgriLife Extension; NMSU Extension)",
+      "run_normalized": "is a cool season crop that",
+      "run_in_our_prose": "is a cool-season crop that",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is a cool season crop that"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_b577"
+      ],
+      "source_names": [
+        "UGA Extension Bulletin 577 (Vegetable Garden Planting Chart)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B577/home-gardening/",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_b577",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.uga_b577"
+      ],
+      "source_context": "Plants may not be available when needed, so it’s best to plant seeds in flats or cold frames about 6 weeks before they are needed. Cabbage Cabbage is a cool season crop that can be grown in both the fall and early spring. Space medium-head varieties 12 in.",
+      "source_context_available": true,
+      "tool_first_6gram": "is a cool season crop that"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "sources_summary.primary[21].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Direct-sow beets into the garden; they resent transplanting and are simplest grown from seed in place. Sow about 1/2 inch deep once the soil is workable and at least 45 to 50°F, roughly 2 to 3 weeks before the last spring frost, and again in late summer for a fall crop. Soaking the seed in warm water for about 24 hours before sowing speeds the slow germination. The key beet-specific point is that each beet seed is a multigerm seedball, a dried fruit containing several embryos, so a single seed sprouts a small cluster of seedlings and the stand must be thinned. Monogerm cultivars (one seedling per seed) avoid this. Keep the surface moist and uncrusted until the seedlings emerge, often 1 to 2 weeks.",
+      "run_normalized": "weeks before the last spring frost",
+      "run_in_our_prose": "weeks before the last spring frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "weeks before the last spring frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umd_ext",
+        "diseases[0].anchoring_urls.umd_ext",
+        "failure_diagnostics[0].anchoring_urls.umd_ext",
+        "failure_diagnostics[4].anchoring_urls.umd_ext",
+        "failure_diagnostics[5].anchoring_urls.umd_ext",
+        "harvest_ready_anchoring_urls.umd_ext",
+        "pests[0].anchoring_urls.umd_ext",
+        "pests[2].anchoring_urls.umd_ext",
+        "soil.anchoring_urls.umd_ext",
+        "start_method.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "thinning.anchoring_urls.umd_ext",
+        "tips_by_stage.established[1].anchoring_urls.umd_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umd_ext",
+        "tips_by_stage.germination[1].anchoring_urls.umd_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umd_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.umd_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Unless you buy seed designated as monogerm seed — one embryo per fruit — you will need to thin the planting when plants are 2 inches in height. Sow beets several weeks before the last spring frost, throughout the summer, and up until 6 weeks before the first killing frost in the fall.",
+      "source_context_available": true,
+      "tool_first_6gram": "weeks before the last spring frost"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "For larger harvests, beets are good keepers. In cold climates they can be left in the ground under a thick straw mulch and pulled until the soil freezes hard, or packed unwashed in damp sand or sawdust in a box in a root cellar or unheated garage held near 32 to 40°F at high humidity, where they hold for two to four months. Store roots only; use the greens fresh.",
+      "run_normalized": "can be left in the ground",
+      "run_in_our_prose": "can be left in the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "can be left in the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife_fall_veg"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife -- Fall Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/browse/featured-solutions/gardening-landscaping/fall-vegetable-gardening-guide-for-texas/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.tamu_agrilife_fall_veg"
+      ],
+      "source_context": "If the tip is white, the carrot is still growing. There is no need to harvest the carrot crop all at once. Carrots can be left in the ground for several weeks after they mature. In fact, the best place in Texas to store carrots is in cool garden soil.",
+      "source_context_available": true,
+      "tool_first_6gram": "can be left in the ground"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "For larger harvests, beets are good keepers. In cold climates they can be left in the ground under a thick straw mulch and pulled until the soil freezes hard, or packed unwashed in damp sand or sawdust in a box in a root cellar or unheated garage held near 32 to 40°F at high humidity, where they hold for two to four months. Store roots only; use the greens fresh.",
+      "run_normalized": "can be left in the ground",
+      "run_in_our_prose": "can be left in the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "can be left in the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_fall_veg"
+      ],
+      "source_names": [
+        "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].harvest_end[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_fall_veg"
+      ],
+      "source_context": "Green onions can be planted spring or fall as they do not take long to mature. Turnips, carrots and beets can be left in the ground quite late into the winter before being harvested. When direct seeding various crops, consult the package for “days to maturity”.",
+      "source_context_available": true,
+      "tool_first_6gram": "can be left in the ground"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "For larger harvests, beets are good keepers. In cold climates they can be left in the ground under a thick straw mulch and pulled until the soil freezes hard, or packed unwashed in damp sand or sawdust in a box in a root cellar or unheated garage held near 32 to 40°F at high humidity, where they hold for two to four months. Store roots only; use the greens fresh.",
+      "run_normalized": "they can be left in the",
+      "run_in_our_prose": "they can be left in the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "they can be left in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uwi_hort"
+      ],
+      "source_names": [
+        "Wisconsin Horticulture Extension"
+      ],
+      "source_publishers": [
+        "UW Madison Horticulture"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hort.extension.wisc.edu/articles/chioggia-beets/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uwi_hort",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uwi_hort",
+        "tips_by_stage.harvest[1].anchoring_urls.uwi_hort"
+      ],
+      "source_context": "However, beet roots can be harvested anytime after the root reaches 1 inch in diameter. Beets will tolerate temperatures down to about 20ºF, so they can be left in the garden late into the fall. Twist off the leaves rather than cutting them to prevent “bleeding” which causes less intense color and perhaps less flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "they can be left in the"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Even, consistent moisture is the rule, and it matters most during the slow germination window and again as the roots size up. From sowing until the seedlings are up, often 1 to 2 weeks, the surface must stay moist and uncrusted. Once established, beets want steady moisture rather than a wet-dry swing: aim for about 1 inch of water per week including rain, delivered in deeper, less frequent soakings.",
+      "run_normalized": "about 1 inch of water per week",
+      "run_in_our_prose": "about 1 inch of water per week",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife_fall_veg"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife -- Fall Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/browse/featured-solutions/gardening-landscaping/fall-vegetable-gardening-guide-for-texas/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.tamu_agrilife_fall_veg"
+      ],
+      "source_context": "Care for the herb garden is the same as for a vegetable or flower garden. Watering Water as necessary during dry periods. Generally, herbs need about 1 inch of water per week, either from rainfall or from irrigation. Mulch will help conserve soil moisture as well as reduce weed growth.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Even, consistent moisture is the rule, and it matters most during the slow germination window and again as the roots size up. From sowing until the seedlings are up, often 1 to 2 weeks, the surface must stay moist and uncrusted. Once established, beets want steady moisture rather than a wet-dry swing: aim for about 1 inch of water per week including rain, delivered in deeper, less frequent soakings.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 inch of water per week including rain",
+      "run_normalized": "about 1 inch of water per week",
+      "run_in_our_prose": "about 1 inch of water per week",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife_fall_veg"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife -- Fall Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/browse/featured-solutions/gardening-landscaping/fall-vegetable-gardening-guide-for-texas/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.tamu_agrilife_fall_veg"
+      ],
+      "source_context": "Care for the herb garden is the same as for a vegetable or flower garden. Watering Water as necessary during dry periods. Generally, herbs need about 1 inch of water per week, either from rainfall or from irrigation. Mulch will help conserve soil moisture as well as reduce weed growth.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 inch of water per week including rain",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "yield_expectations.peak_production_beginner",
+      "our_prose": "Beets do not regrow a new root after you pull them, since each plant makes one root. A planting is ready about 50 to 70 days after sowing and you harvest it over a couple of weeks, while the leaves give a longer, light harvest. For a steady supply, plant a new short row every 2 to 3 weeks.",
+      "run_normalized": "about 50 to 70 days after",
+      "run_in_our_prose": "about 50 to 70 days after",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "about 50 to 70 days after"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[5].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Keep the cultivation shallow to avoid root injury. Harvest & Storage: Harvest beets about 50 to 70 days after planting. Beets should be harvested at 1½ to 2 inches in diameter. Beets allowed to get larger than 2 inches in diameter may be woody.",
+      "source_context_available": true,
+      "tool_first_6gram": "about 50 to 70 days after"
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "yield_expectations.peak_production_seasoned",
+      "our_prose": "There is no repeat root harvest; a sowing matures over a short window roughly 50 to 70 days after planting and is pulled over a couple of weeks. The greens give a longer, light pick-as-you-go harvest. Continuous supply comes from succession sowing every 2 to 3 weeks.",
+      "run_normalized": "50 to 70 days after planting",
+      "run_in_our_prose": "50 to 70 days after planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "50 to 70 days after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[5].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "start_method.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "tips_by_stage.established[0].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Keep the cultivation shallow to avoid root injury. Harvest & Storage: Harvest beets about 50 to 70 days after planting. Beets should be harvested at 1½ to 2 inches in diameter. Beets allowed to get larger than 2 inches in diameter may be woody.",
+      "source_context_available": true,
+      "tool_first_6gram": "50 to 70 days after planting"
+    }
+  ]
+}

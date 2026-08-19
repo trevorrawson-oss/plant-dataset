@@ -1,0 +1,857 @@
+{
+  "crop_slug": "raspberry",
+  "record_count": 14,
+  "records": [
+    {
+      "crop_slug": "raspberry",
+      "field_path": "cane_management_seasoned",
+      "our_prose": "Cane management is the heart of growing raspberries, because the crown is perennial but each cane is biennial: it grows one year, fruits the next, then dies. How you prune depends entirely on the type. On SUMMER-BEARING (floricane-fruiting) raspberries, first-year primocanes grow vegetatively, overwinter, and fruit the following early summer as floricanes, then die; immediately after harvest cut those spent floricanes to the ground and remove them, and in late winter thin the surviving primocanes to 4 to 6 sturdy canes per foot of row, narrow the row to about a foot, and tie the canes to a trellis. On EVERBEARING (primocane-fruiting, or fall-bearing) raspberries, the first-year canes fruit on their tips in late summer or fall; the simplest and recommended management is to mow every cane to the ground in late winter for a single, clean, heavy fall crop with no training of overwintered canes and reduced disease and cane-borer pressure. The same everbearing planting can instead be double-cropped, leaving the lower canes to fruit again as floricanes the next summer, but the single-crop mow is far easier and the usual home choice. Red and yellow raspberries also sucker aggressively from the roots and need their spread contained to the row every season.",
+      "run_normalized": "primocane fruiting or fall bearing raspberries",
+      "run_in_our_prose": "primocane-fruiting, or fall-bearing) raspberries",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "primocane fruiting or fall bearing raspberries"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/raspberry-production",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.psu_ext",
+        "diseases[0].anchoring_urls.psu_ext",
+        "diseases[1].anchoring_urls.psu_ext",
+        "diseases[2].anchoring_urls.psu_ext",
+        "failure_diagnostics[2].anchoring_urls.psu_ext",
+        "failure_diagnostics[3].anchoring_urls.psu_ext",
+        "fertilizer.anchoring_urls.psu_ext",
+        "growth_stages[0].anchoring_urls.psu_ext",
+        "growth_stages[2].anchoring_urls.psu_ext",
+        "growth_stages[8].anchoring_urls.psu_ext",
+        "notifications[0].anchoring_urls.psu_ext",
+        "notifications[1].anchoring_urls.psu_ext",
+        "notifications[6].anchoring_urls.psu_ext",
+        "pests[1].anchoring_urls.psu_ext",
+        "pests[3].anchoring_urls.psu_ext",
+        "ph.anchoring_urls.psu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.psu_ext",
+        "soil.anchoring_urls.psu_ext",
+        "storage.anchoring_urls.psu_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.psu_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.psu_ext",
+        "tips_by_stage.planting[1].anchoring_urls.psu_ext",
+        "weather_triggers[2].anchoring_urls.psu_ext",
+        "weather_triggers[4].anchoring_urls.psu_ext",
+        "yield_expectations.anchoring_urls.psu_ext"
+      ],
+      "source_context": "Therefore, a mature summer-bearing raspberry planting has two types of canes: vegetative canes that originated during the current year (primocanes) and fruiting canes that originated during the previous year (floricanes). Fruit is usually harvested in mid-summer. Everbearing (also referred to as primocane-fruiting or fall-bearing) raspberries produce primocanes that are capable of flowering and fruiting in the same year they emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "primocane fruiting or fall bearing raspberries"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "cane_management_seasoned",
+      "our_prose": "Cane management is the heart of growing raspberries, because the crown is perennial but each cane is biennial: it grows one year, fruits the next, then dies. How you prune depends entirely on the type. On SUMMER-BEARING (floricane-fruiting) raspberries, first-year primocanes grow vegetatively, overwinter, and fruit the following early summer as floricanes, then die; immediately after harvest cut those spent floricanes to the ground and remove them, and in late winter thin the surviving primocanes to 4 to 6 sturdy canes per foot of row, narrow the row to about a foot, and tie the canes to a trellis. On EVERBEARING (primocane-fruiting, or fall-bearing) raspberries, the first-year canes fruit on their tips in late summer or fall; the simplest and recommended management is to mow every cane to the ground in late winter for a single, clean, heavy fall crop with no training of overwintered canes and reduced disease and cane-borer pressure. The same everbearing planting can instead be double-cropped, leaving the lower canes to fruit again as floricanes the next summer, but the single-crop mow is far easier and the usual home choice. Red and yellow raspberries also sucker aggressively from the roots and need their spread contained to the row every season.",
+      "run_normalized": "sturdy canes per foot of row",
+      "run_in_our_prose": "sturdy canes per foot of row",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "sturdy canes per foot of row"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[1].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "diseases[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[0].anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "growth_stages[3].anchoring_urls.umn_ext",
+        "growth_stages[4].anchoring_urls.umn_ext",
+        "growth_stages[5].anchoring_urls.umn_ext",
+        "growth_stages[6].anchoring_urls.umn_ext",
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[2].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "notifications[4].anchoring_urls.umn_ext",
+        "notifications[5].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.umn_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.post_harvest[0].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext",
+        "weather_triggers[3].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "This eliminates a disease source and gives primocanes more room to grow. Thin primocanes to 4 to 5 sturdy canes per foot of row. In areas where winter injury is common, you may delay thinning the primocanes until the following spring, when you will be able to tell which canes have survived.",
+      "source_context_available": true,
+      "tool_first_6gram": "sturdy canes per foot of row"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "fertilizer.npk_hint_beginner",
+      "our_prose": "Use a balanced fertilizer such as 10-10-10, or composted manure.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "vce_426_840"
+      ],
+      "source_names": [
+        "Virginia Cooperative Extension Publication 426-840"
+      ],
+      "source_publishers": [
+        "Virginia Tech"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.vce_426_840"
+      ],
+      "source_context": "Repeat this fertilization at the same timing and rates in the second and third seasons. A blended fertilizer, such as 10-10-10, applied at 3 ounces per vine can be substituted where phosphorus and potassium are also needed.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "growth_stages[2].what_to_look_for_seasoned",
+      "our_prose": "Each spring, overwintered floricanes leaf out and push fruiting laterals, while new primocanes emerge from the crown and from root suckers. Growth is fast now. This is the spring feeding window.",
+      "run_normalized": "new primocanes emerge from the crown",
+      "run_in_our_prose": "new primocanes emerge from the crown",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new primocanes emerge from the crown"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/plant-growth",
+      "anchor_paths": [
+        "companions.bad_seasoned[1].anchoring_urls.ncsu_ext",
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "diseases[3].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[3].anchoring_urls.ncsu_ext",
+        "growth_stages[1].anchoring_urls.ncsu_ext",
+        "growth_stages[3].anchoring_urls.ncsu_ext",
+        "notifications[2].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "weather_triggers[0].anchoring_urls.ncsu_ext",
+        "weather_triggers[2].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "The secondary bud center is green and will continue to grow and produce flowers and fruit. New primocanes emerge from the crown. Summer Fruit development for floricane-fruiting types. The number of days for fruit to develop from a full-bloom flower to some fruit varies by cultivar and region and can range from 35 to 60 days.",
+      "source_context_available": true,
+      "tool_first_6gram": "new primocanes emerge from the crown"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "growth_stages[3].what_to_look_for_seasoned",
+      "our_prose": "Small white five-petaled flowers open on the fruiting laterals: in late spring on the floricanes of summer-bearing types, in mid to late summer on the primocane tips of fall-bearing types. Raspberries are self-fertile, but bees boost fruit set.",
+      "run_normalized": "types in mid to late summer",
+      "run_in_our_prose": "types, in mid to late summer",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "types in mid to late summer"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/plant-growth",
+      "anchor_paths": [
+        "companions.bad_seasoned[1].anchoring_urls.ncsu_ext",
+        "diseases[0].anchoring_urls.ncsu_ext",
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "diseases[3].anchoring_urls.ncsu_ext",
+        "failure_diagnostics[3].anchoring_urls.ncsu_ext",
+        "growth_stages[1].anchoring_urls.ncsu_ext",
+        "growth_stages[3].anchoring_urls.ncsu_ext",
+        "notifications[2].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.ncsu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "weather_triggers[0].anchoring_urls.ncsu_ext",
+        "weather_triggers[2].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Fruit develops from green to pink to red and finally black as it ripens. Flower bud development on primocanes begins for primocane-fruiting types in mid to late summer. Primocane-fruiting types begin to flower in late summer/early fall and fruit matures until frost in the fall Floricanes produce fruit and after fruit has ripened, the canes will begin to die back.",
+      "source_context_available": true,
+      "tool_first_6gram": "types in mid to late summer"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "growth_stages[5].what_to_look_for_beginner",
+      "our_prose": "Ripe berries pull off easily, leaving a hollow center. They ripen a few at a time over a couple of weeks, so you pick every two or three days. Picking often also fights the fruit-fly maggots.",
+      "run_normalized": "over a couple of weeks so",
+      "run_in_our_prose": "over a couple of weeks, so",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "over a couple of weeks so"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[1].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "diseases[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[0].anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "growth_stages[3].anchoring_urls.umn_ext",
+        "growth_stages[4].anchoring_urls.umn_ext",
+        "growth_stages[5].anchoring_urls.umn_ext",
+        "growth_stages[6].anchoring_urls.umn_ext",
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[2].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "notifications[4].anchoring_urls.umn_ext",
+        "notifications[5].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.umn_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.post_harvest[0].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext",
+        "weather_triggers[3].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Another indicator of ripeness is when the fruit comes off the plant easily when gently pulled. Berries ripen over a couple of weeks, so simply pick them as they ripen. Pick berries into a shallow container. If they get piled too deep they'll crush each other.",
+      "source_context_available": true,
+      "tool_first_6gram": "over a couple of weeks so"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "growth_stages[8].user_action_seasoned",
+      "our_prose": "Prune in late winter before growth starts. Summer-bearing: remove dead and spent canes, thin to 4 to 6 sturdy canes per foot of row, narrow the row to about a foot wide, and top the canes. Fall-bearing for a single fall crop: cut all canes to the ground. Tie the remaining canes to the trellis.",
+      "run_normalized": "cut all canes to the ground",
+      "run_in_our_prose": "cut all canes to the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cut all canes to the ground",
+        "sturdy canes per foot of row"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[1].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "diseases[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[0].anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "growth_stages[3].anchoring_urls.umn_ext",
+        "growth_stages[4].anchoring_urls.umn_ext",
+        "growth_stages[5].anchoring_urls.umn_ext",
+        "growth_stages[6].anchoring_urls.umn_ext",
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[2].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "notifications[4].anchoring_urls.umn_ext",
+        "notifications[5].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.umn_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.post_harvest[0].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext",
+        "weather_triggers[3].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "spider mites and Japanese beetles July, August— Pinch black and purple raspberry cane tips July, August— Harvest August— Cut fruit-producing canes to the ground after harvest November— Apply mulch for winter protection November— Set up fence around plants if rabbit damage is expected during winter For fall-bearing (primocane) red and yellow raspberries: March— For fall-only primocane raspberries, cut all canes to the ground before growth begins April, May— Plant bare-root transplants as soon as the soil can be worked May, June— Plant potted transplants after threat of frost has passed June through August— Keep an eye out for spider mites and Japanese beetles August, September— Harvest Raspberries begin to bloom in late May or early June.",
+      "source_context_available": true,
+      "tool_first_6gram": "cut all canes to the ground"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "notifications[6].body_seasoned",
+      "our_prose": "In late winter, do the annual pruning that decides the crop. Summer-bearing: remove dead and spent canes and thin the rest to 4 to 6 sturdy canes per foot of row, then narrow the row and tie canes up. Fall-bearing managed for one crop: mow every cane to the ground. Getting the type right is the most common raspberry mistake.",
+      "run_normalized": "sturdy canes per foot of row",
+      "run_in_our_prose": "sturdy canes per foot of row",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "sturdy canes per foot of row"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[1].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "diseases[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[0].anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "growth_stages[3].anchoring_urls.umn_ext",
+        "growth_stages[4].anchoring_urls.umn_ext",
+        "growth_stages[5].anchoring_urls.umn_ext",
+        "growth_stages[6].anchoring_urls.umn_ext",
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[2].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "notifications[4].anchoring_urls.umn_ext",
+        "notifications[5].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.umn_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.post_harvest[0].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext",
+        "weather_triggers[3].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "This eliminates a disease source and gives primocanes more room to grow. Thin primocanes to 4 to 5 sturdy canes per foot of row. In areas where winter injury is common, you may delay thinning the primocanes until the following spring, when you will be able to tell which canes have survived.",
+      "source_context_available": true,
+      "tool_first_6gram": "sturdy canes per foot of row"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "planting_method_notes_beginner",
+      "our_prose": "Plant dormant bare-root canes in late winter or early spring. Set them so the roots are an inch or two deep, then cut the old cane back to a few inches. Space red and yellow raspberries about 18 to 24 inches apart, and the bigger black and purple types 30 to 48 inches apart. Use a slightly raised, well-drained row and put up the support before the canes grow.",
+      "run_normalized": "18 to 24 inches apart and",
+      "run_in_our_prose": "18 to 24 inches apart, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "18 to 24 inches apart and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uada_ext_fsa6107"
+      ],
+      "source_names": [
+        "UAEX FSA6107, Raspberry Production in the Home Garden (Keith Striegler)"
+      ],
+      "source_publishers": [
+        "University of Arkansas Division of Agriculture, Cooperative Extension Service"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.uaex.uada.edu/publications/PDF/FSA-6107.pdf",
+      "anchor_paths": [
+        "regions.mid_south.plantings[0].anchoring_urls.uada_ext_fsa6107",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uada_ext_fsa6107",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uada_ext_fsa6107"
+      ],
+      "source_context": "‘Heritage’ raspberries may be allowed to grow untrellised (A), but crossarm trellising (B) is recommended. Set crossarms to space the wires 18 to 24 inches apart and about 4 feet above the ground. Adapted from: Poling, E.B., Raspberries in the Home Garden.",
+      "source_context_available": true,
+      "tool_first_6gram": "18 to 24 inches apart and"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "planting_method_notes_seasoned",
+      "our_prose": "Plant dormant bare-root canes in late winter or early spring, setting the crown so the roots sit 1 to 2 inches below the surface, then cut the old handle cane back to a few inches. Space red and yellow raspberries about 18 to 24 inches apart in rows 6 to 8 feet apart; space the larger black and purple raspberries 30 to 48 inches apart. Plant on a slightly raised, well-drained row and install the trellis before growth begins.",
+      "run_normalized": "18 to 24 inches apart in",
+      "run_in_our_prose": "18 to 24 inches apart in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "18 to 24 inches apart in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[1].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "diseases[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[0].anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "growth_stages[3].anchoring_urls.umn_ext",
+        "growth_stages[4].anchoring_urls.umn_ext",
+        "growth_stages[5].anchoring_urls.umn_ext",
+        "growth_stages[6].anchoring_urls.umn_ext",
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[2].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "notifications[4].anchoring_urls.umn_ext",
+        "notifications[5].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.umn_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.post_harvest[0].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext",
+        "weather_triggers[3].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "This step is especially important if the area was previously in turf, as the soil will be too compacted for gardening. Step 2: Plant the raspberry plants Plant them 18 to 24 inches apart in moist soil. Water thoroughly after planting. Apply woodchip or straw mulch to help keep moisture in and weeds out.",
+      "source_context_available": true,
+      "tool_first_6gram": "18 to 24 inches apart in"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "planting_method_notes_seasoned",
+      "our_prose": "Plant dormant bare-root canes in late winter or early spring, setting the crown so the roots sit 1 to 2 inches below the surface, then cut the old handle cane back to a few inches. Space red and yellow raspberries about 18 to 24 inches apart in rows 6 to 8 feet apart; space the larger black and purple raspberries 30 to 48 inches apart. Plant on a slightly raised, well-drained row and install the trellis before growth begins.",
+      "run_normalized": "18 to 24 inches apart in",
+      "run_in_our_prose": "18 to 24 inches apart in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "18 to 24 inches apart in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "vce_426_840"
+      ],
+      "source_names": [
+        "Virginia Cooperative Extension Publication 426-840"
+      ],
+      "source_publishers": [
+        "Virginia Tech"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.vce_426_840"
+      ],
+      "source_context": "Under the matted-row system used by many home gardeners, runner plants are allowed to set freely in all directions. The original plants should be set 18 to 24 inches apart in the row. Keeping the width of the plant bed narrow (16 to 18 inches) results in a good grade of fruit that is easy to pick.",
+      "source_context_available": true,
+      "tool_first_6gram": "18 to 24 inches apart in"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "regions.warm_arid.resolved_by_zone.8.grown_as_note_beginner",
+      "our_prose": "In the dry interior, raspberries rest through a cold winter, flower in spring, and ripen in late spring or early summer. They need steady watering in the dry heat and a good mulch over the shallow roots. Cooler, higher spots work best.",
+      "run_normalized": "in late spring or early summer",
+      "run_in_our_prose": "in late spring or early summer",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late spring or early summer"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/raspberry-production",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.psu_ext",
+        "diseases[0].anchoring_urls.psu_ext",
+        "diseases[1].anchoring_urls.psu_ext",
+        "diseases[2].anchoring_urls.psu_ext",
+        "failure_diagnostics[2].anchoring_urls.psu_ext",
+        "failure_diagnostics[3].anchoring_urls.psu_ext",
+        "fertilizer.anchoring_urls.psu_ext",
+        "growth_stages[0].anchoring_urls.psu_ext",
+        "growth_stages[2].anchoring_urls.psu_ext",
+        "growth_stages[8].anchoring_urls.psu_ext",
+        "notifications[0].anchoring_urls.psu_ext",
+        "notifications[1].anchoring_urls.psu_ext",
+        "notifications[6].anchoring_urls.psu_ext",
+        "pests[1].anchoring_urls.psu_ext",
+        "pests[3].anchoring_urls.psu_ext",
+        "ph.anchoring_urls.psu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.psu_ext",
+        "soil.anchoring_urls.psu_ext",
+        "storage.anchoring_urls.psu_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.psu_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.psu_ext",
+        "tips_by_stage.planting[1].anchoring_urls.psu_ext",
+        "weather_triggers[2].anchoring_urls.psu_ext",
+        "weather_triggers[4].anchoring_urls.psu_ext",
+        "yield_expectations.anchoring_urls.psu_ext"
+      ],
+      "source_context": "This pest does not survive cold winters in high numbers, but each female lay 100 to 200 eggs starting in late spring or early summer and rapidly develops through multiple generations in a growing season, resulting in severe infestations if not controlled.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late spring or early summer"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "type_selection_seasoned",
+      "our_prose": "The first choice is cane type, and it sets everything else. Summer-bearing (floricane-fruiting) raspberries fruit once, in early summer, on canes grown the previous year; you prune by removing the spent floricanes and thinning the new primocanes. Everbearing (primocane-fruiting, also called fall-bearing) types fruit on first-year canes in late summer or fall, and can simply be mowed to the ground each winter for one clean crop and the easiest pruning. Beyond that, red and yellow raspberries sucker and are the hardiest; black and purple raspberries do not sucker, are less hardy and more disease-prone, but are richly flavored. In the hot South, only heat-tolerant low-chill types succeed.",
+      "run_normalized": "black and purple raspberries do not",
+      "run_in_our_prose": "black and purple raspberries do not",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black and purple raspberries do not"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "companions.good_seasoned[1].anchoring_urls.umn_ext",
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "diseases[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[0].anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "growth_stages[3].anchoring_urls.umn_ext",
+        "growth_stages[4].anchoring_urls.umn_ext",
+        "growth_stages[5].anchoring_urls.umn_ext",
+        "growth_stages[6].anchoring_urls.umn_ext",
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[2].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "notifications[4].anchoring_urls.umn_ext",
+        "notifications[5].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.umn_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.umn_ext",
+        "tips_by_stage.first_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.umn_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.post_harvest[0].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext",
+        "weather_triggers[3].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "The \"hill\" is not made by mounding the soil; it refers to the cluster of canes that develops from a single plant. Although black and purple raspberries do not send up new primocanes outside the hill, they can spread. The long, vigorous canes often arch down to the soil surface, where they may take root.",
+      "source_context_available": true,
+      "tool_first_6gram": "black and purple raspberries do not"
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "varieties.recommended[1].hardiness_note",
+      "our_prose": "Extremely cold-tolerant, hardy to zone 3.",
+      "run_normalized": "extremely cold tolerant hardy to zone 3",
+      "run_in_our_prose": "Extremely cold-tolerant, hardy to zone 3",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "extremely cold tolerant hardy to zone 3"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/raspberry-farming/raspberry-types-and-varieties",
+      "anchor_paths": [
+        "varieties.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Ripening begins late June to early July in MN, which can extend into early August. Extremely cold tolerant, hardy to zone 3. Also heat tolerant, making it a great choice for MN high tunnel growers. Vigorous, upright canes have fewer spines.",
+      "source_context_available": true,
+      "tool_first_6gram": "cold tolerant hardy to zone 3"
+    }
+  ]
+}

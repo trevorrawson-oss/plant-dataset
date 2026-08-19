@@ -1,0 +1,1749 @@
+{
+  "crop_slug": "potato",
+  "record_count": 41,
+  "records": [
+    {
+      "crop_slug": "potato",
+      "field_path": "diseases[2].prevention_seasoned",
+      "our_prose": "Keep soil acidic, around pH 5.0 to 5.3 where scab is a problem, and never lime a potato bed. Keep the soil evenly moist for the 4 to 9 weeks after planting when tubers form, avoid fresh manure, and grow scab-resistant varieties (such as Russet Burbank or Superior) where the disease recurs. Rotate on a 3 to 4 year cycle.",
+      "run_normalized": "4 to 9 weeks after planting",
+      "run_in_our_prose": "4 to 9 weeks after planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "4 to 9 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/irish-sweet-potato-diseases/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.bad_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Scab is favored under low soil moisture conditions, so the garden soil must be kept moist during the active growing period of the tubers (particularly 4 to 9 weeks after planting). Although potatoes are heavy feeders, high nitrogen levels can increase scab severity.",
+      "source_context_available": true,
+      "tool_first_6gram": "4 to 9 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "diseases[2].symptoms_seasoned",
+      "our_prose": "Rough, brown, corky scabs or pits on the tuber skin that can merge into larger patches; sometimes raised, sometimes sunken. The leaves and stems are not affected, so it is found only at harvest. It is a skin-quality problem rather than a rot, and the potatoes are fine to eat after peeling, but it downgrades appearance and storage.",
+      "run_normalized": "leaves and stems are not affected",
+      "run_in_our_prose": "leaves and stems are not affected",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "leaves and stems are not affected"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/irish-sweet-potato-diseases/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.bad_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Brown corky scabs or pits occur on potato tubers. These spots enlarge and merge together, sometimes covering most of the tuber. Leaves and stems are not affected. Scab is most severe in dry soil with a pH above 5.5 and in soil low in nutrients.",
+      "source_context_available": true,
+      "tool_first_6gram": "leaves and stems are not affected"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "diseases[3].prevention_seasoned",
+      "our_prose": "Plant certified, well-cured seed pieces (or whole small seed potatoes) in warm, well-drained soil, let cut seed suberize before planting, avoid overwatering and waterlogged beds, harvest in dry conditions, cure the crop, and avoid bruising. Do not store damaged or wet tubers.",
+      "run_normalized": "seed pieces or whole small seed potatoes",
+      "run_in_our_prose": "seed pieces (or whole small seed potatoes",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "seed pieces or whole small seed potatoes"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.second_planting.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Because the cage is above ground, potatoes dry out quickly, so this method will require more frequent irrigation. When transplanting potatoes , place the seed pieces or whole small seed potatoes into 3-inch deep furrows, spaced 6 to 12 inches apart. The closer the spacing the smaller the harvested potatoes will be.",
+      "source_context_available": true,
+      "tool_first_6gram": "pieces or whole small seed potatoes"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "diseases[3].symptoms_beginner",
+      "our_prose": "Blackleg makes the bottom of the stem turn black and slimy while the top of the plant yellows, wilts, and stays small, usually from a bad seed piece. Soft rot turns the potatoes themselves into a soft, wet, smelly mush, in the ground or in storage. Both get into the potato through cuts and bruises and spread in wet conditions.",
+      "run_normalized": "in the ground or in storage",
+      "run_in_our_prose": "in the ground or in storage",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the ground or in storage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/irish-sweet-potato-diseases/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.bad_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The bacteria rarely infect potato leaves, but they severely infect the tubers, rendering them inedible. The tubers may be infected either in the ground or in storage. Bacteria can rot tubers completely in three to 10 days. Pectobacterium is almost always present in the soil, but the bacterium only infects potatoes that have been wounded.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the ground or in storage"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "diseases[3].symptoms_seasoned",
+      "our_prose": "Blackleg shows as an inky-black, slimy rot at the base of the stem with yellowed, wilting, stunted tops, often from infected seed; bacterial soft rot turns tubers into a soft, wet, foul-smelling mush, in the ground or in storage, and can rot a tuber completely within days. The bacteria enter through wounds and spread in wet conditions.",
+      "run_normalized": "in the ground or in storage",
+      "run_in_our_prose": "in the ground or in storage",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the ground or in storage"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/irish-sweet-potato-diseases/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.bad_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The bacteria rarely infect potato leaves, but they severely infect the tubers, rendering them inedible. The tubers may be infected either in the ground or in storage. Bacteria can rot tubers completely in three to 10 days. Pectobacterium is almost always present in the soil, but the bacterium only infects potatoes that have been wounded.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the ground or in storage"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "fertilizer.amount_beginner",
+      "our_prose": "Mix in about 1.5 pounds of 10-10-10 per 100 square feet when you plant, then feed lightly again about a month later. Go easy: more fertilizer does not mean more potatoes, and too much nitrogen just grows leaves.",
+      "run_normalized": "10 10 10 per 100 square feet",
+      "run_in_our_prose": "10-10-10 per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "10 10 10 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/article/2020/03/planting-potatoes-home-garden",
+      "anchor_paths": [
+        "days_to_maturity_anchoring_urls.iastate_ext",
+        "days_to_maturity_mid_anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.sprouting[1].anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, applying 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet should be adequate for most home gardens. Broadcast and incorporate the fertilizer shortly before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per 100 square"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "Work about 1.5 pounds of 10-10-10 per 100 square feet into the row at planting (UGA), and side-dress a similar light amount about 4 weeks later and again as the vines spread. Keep nitrogen modest; excess nitrogen delays tuberization and grows vines at the expense of tubers.",
+      "run_normalized": "10 10 10 per 100 square feet",
+      "run_in_our_prose": "10-10-10 per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "10 10 10 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/article/2020/03/planting-potatoes-home-garden",
+      "anchor_paths": [
+        "days_to_maturity_anchoring_urls.iastate_ext",
+        "days_to_maturity_mid_anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.sprouting[1].anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, applying 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet should be adequate for most home gardens. Broadcast and incorporate the fertilizer shortly before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per 100 square"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Potatoes are moderate feeders. Work a balanced fertilizer such as 10-10-10 into the row at planting (UGA suggests about 1.5 pounds per 100 square feet), then side-dress lightly about 4 weeks later as the tops fill in and again as the vines spread. Favor balanced feeding over heavy nitrogen: excess nitrogen grows lush vines and delays tuber formation, and fresh manure encourages scab, so use only well-finished compost. Adequate potassium supports tuber quality.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/article/2020/03/planting-potatoes-home-garden",
+      "anchor_paths": [
+        "days_to_maturity_anchoring_urls.iastate_ext",
+        "days_to_maturity_mid_anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.sprouting[1].anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, applying 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet should be adequate for most home gardens. Broadcast and incorporate the fertilizer shortly before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "growth_stages[3].what_to_look_for_beginner",
+      "our_prose": "The potatoes are growing bigger underground while the plants stay green and leafy. You can sneak a few small new potatoes now, about 7 to 8 weeks after planting, by digging gently at the edge.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "growth_stages[3].what_to_look_for_seasoned",
+      "our_prose": "Tubers sizing up underground while the tops stay green and full. You can dig a few thin-skinned new potatoes now, about 7 to 8 weeks after planting, without disturbing the rest.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "growth_stages[4].what_to_look_for_seasoned",
+      "our_prose": "Tops yellowing and dying back, the signal that the main crop is mature and the skins are setting. For storage potatoes, wait about two weeks after the vines die before digging so the skins toughen.",
+      "run_normalized": "about two weeks after the vines die",
+      "run_in_our_prose": "about two weeks after the vines die",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about two weeks after the vines die"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/potato/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.vegetative[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "True seed potatoes may be bred for higher yields with time, but at present, good quality stock potatoes yield the best crop. Harvesting & Storage Harvest potatoes for storage about two weeks after the vines die down in midsummer. Barbara H. Smith, ©2017 HGIC, Clemson Extension Potatoes average 100 to 120 days to maturity.",
+      "source_context_available": true,
+      "tool_first_6gram": "about two weeks after the vines"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "harvest_ready_beginner",
+      "our_prose": "You can tell potatoes are ready by the plants, not a set date. Small new potatoes can be dug gently at the side of a plant from about 7 to 8 weeks after planting, and are best eaten fresh. The main crop is ready when the tops turn yellow and die down, about 3 to 4 months after planting. If you want to store them, leave them in the ground about two weeks after the tops die so the skins toughen, then dig on a dry day with a fork, pushing it in well away from the plant so you do not stab the potatoes. Let them dry off out of the sun, brush off the dirt (do not wash them), and keep them in the dark. Always keep potatoes covered and out of the light, because light turns them green and bitter, and green potatoes are mildly poisonous.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Potatoes are ready to harvest based on the foliage, not a fixed date. New potatoes, thin-skinned and best used fresh, can be dug carefully at the edge of a hill from about 7 to 8 weeks after planting. The main crop is mature when the tops yellow and die back, roughly 90 to 120 days from planting. For storage potatoes, leave them in the ground about two weeks after the vines die so the skins set and toughen, then dig on a dry day, pushing a fork in well outside the hill so you do not spear tubers. Lift, let them dry briefly out of direct sun, brush off soil (do not wash), and cure in the dark at about 50 to 60°F for two weeks before storing. Keep tubers covered and shaded at every stage, since light greens them and produces bitter, mildly toxic solanine.",
+      "run_normalized": "about two weeks after the vines die",
+      "run_in_our_prose": "about two weeks after the vines die",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about two weeks after the vines die"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/potato/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.vegetative[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "True seed potatoes may be bred for higher yields with time, but at present, good quality stock potatoes yield the best crop. Harvesting & Storage Harvest potatoes for storage about two weeks after the vines die down in midsummer. Barbara H. Smith, ©2017 HGIC, Clemson Extension Potatoes average 100 to 120 days to maturity.",
+      "source_context_available": true,
+      "tool_first_6gram": "about two weeks after the vines"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Potatoes are ready to harvest based on the foliage, not a fixed date. New potatoes, thin-skinned and best used fresh, can be dug carefully at the edge of a hill from about 7 to 8 weeks after planting. The main crop is mature when the tops yellow and die back, roughly 90 to 120 days from planting. For storage potatoes, leave them in the ground about two weeks after the vines die so the skins set and toughen, then dig on a dry day, pushing a fork in well outside the hill so you do not spear tubers. Lift, let them dry briefly out of direct sun, brush off soil (do not wash), and cure in the dark at about 50 to 60°F for two weeks before storing. Keep tubers covered and shaded at every stage, since light greens them and produces bitter, mildly toxic solanine.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "notifications[4].body_seasoned",
+      "our_prose": "When the tops yellow and die back, the crop is mature. Dig new potatoes earlier (about 7 to 8 weeks); for storage, wait about two weeks after the vines die.",
+      "run_normalized": "about two weeks after the vines die",
+      "run_in_our_prose": "about two weeks after the vines die",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about two weeks after the vines die"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/potato/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.vegetative[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "True seed potatoes may be bred for higher yields with time, but at present, good quality stock potatoes yield the best crop. Harvesting & Storage Harvest potatoes for storage about two weeks after the vines die down in midsummer. Barbara H. Smith, ©2017 HGIC, Clemson Extension Potatoes average 100 to 120 days to maturity.",
+      "source_context_available": true,
+      "tool_first_6gram": "about two weeks after the vines"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "pests[0].cause_seasoned",
+      "our_prose": "Larvae and adults of the Colorado potato beetle (Leptinotarsa decemlineata), which overwinter 5 to 10 inches deep in soil in and around last year's potatoes and emerge in spring to feed and lay eggs. Each female lays up to 350 eggs, and there is often a second generation by midsummer in central and southern areas. It also attacks eggplant and other nightshades.",
+      "run_normalized": "the colorado potato beetle leptinotarsa decemlineata",
+      "run_in_our_prose": "the Colorado potato beetle (Leptinotarsa decemlineata",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the colorado potato beetle leptinotarsa decemlineata"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/colorado-potato-beetle",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Yard and garden insects Colorado potato beetle Quick facts The Colorado potato beetle ( Leptinotarsa decemlineata ) is a major potato pest throughout North America. It can also feed on eggplant, tomatillo and related crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "the colorado potato beetle leptinotarsa decemlineata"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "pests[0].symptoms_seasoned",
+      "our_prose": "Ragged, chewed foliage that can be stripped to the stems in a bad outbreak. Look for oval, 3/8-inch adults with yellow and black lengthwise stripes, plump pink-to-salmon larvae with black heads and two rows of dark spots, and bright yellowish-orange egg clusters on the undersides of leaves. The last-stage larvae do most of the damage. Potatoes tolerate up to about 30 percent defoliation before flowering but only about 10 percent once tubers are sizing.",
+      "run_normalized": "30 percent defoliation before flowering but only",
+      "run_in_our_prose": "30 percent defoliation before flowering but only",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 percent defoliation before flowering but only"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/yard-and-garden-insects/colorado-potato-beetle",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "A key part of management is keeping an eye on their populations and damage so that you can intervene when damage is becoming too much for your plants to handle. Potatoes can tolerate up to 30 percent defoliation before flowering but only 10 percent at the onset of tuber initiation. A key time to spot beetles is when the adults first start emerging in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "30 percent defoliation before flowering but"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "ph.note_seasoned",
+      "our_prose": "Potatoes grow best in acidic soil, roughly pH 5.0 to 6.0, lower than most garden vegetables. The acidity is deliberate disease management: common scab (Streptomyces scabies) is suppressed in acidic soil and worsens as pH rises above about 5.5, especially in dry soil. Where scab is a recurring problem, hold the pH between about 5.0 and 5.3 and keep the soil evenly moist for the 4 to 9 weeks after planting when tubers are forming. Potatoes tolerate a wider band (down to about 4.8 and up to 6.5), and they will grow at neutral pH, but scab pressure climbs with pH, so do not lime a potato bed. A soil test removes the guesswork before planting.",
+      "run_normalized": "4 to 9 weeks after planting",
+      "run_in_our_prose": "4 to 9 weeks after planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "4 to 9 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/irish-sweet-potato-diseases/",
+      "anchor_paths": [
+        "companions.anchoring_urls.clemson_hgic",
+        "companions.bad_seasoned[0].anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Scab is favored under low soil moisture conditions, so the garden soil must be kept moist during the active growing period of the tubers (particularly 4 to 9 weeks after planting). Although potatoes are heavy feeders, high nitrogen levels can increase scab severity.",
+      "source_context_available": true,
+      "tool_first_6gram": "4 to 9 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.ca_desert.region_notes_beginner",
+      "our_prose": "In California's low desert, potatoes are a cool-season crop. Plant the seed pieces from December through February and dig the crop in spring. The blazing desert summer is no time for potatoes, so the whole hot stretch is skipped. Winters are mild with only light frost.",
+      "run_normalized": "potatoes are a cool season crop",
+      "run_in_our_prose": "potatoes are a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "potatoes are a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C1011/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.uga_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.uga_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.uga_ext"
+      ],
+      "source_context": "Potatoes are a wonderful and easy vegetable to grow for feeding the family, as well as for sharing with hungry neighbors. Potatoes are a cool-season crop most often planted in early spring in Georgia. In order to have a successful crop the homeowner must provide good soil, ample water and proper fertilization.",
+      "source_context_available": true,
+      "tool_first_6gram": "potatoes are a cool season crop"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.ca_south_coast.region_notes_seasoned",
+      "our_prose": "On California's mild south coast (San Luis Obispo County south), UC IPM gives a long potato window: February to May, then June to August. The coastal climate stays mild enough that summer planting is workable, so the season runs from late winter through summer with harvest into fall. Frost is rare, and there is no real summer heat shutdown the way there is inland. (cool-season basis per Clemson; regional windows modeled per open findings)",
+      "run_normalized": "south coast san luis obispo county south",
+      "run_in_our_prose": "south coast (San Luis Obispo County south",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "south coast san luis obispo county south"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.second_planting.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Planting Dates for Potato in California* North and North Coast Monterey County north February April–May South Coast San Luis Obispo County south February–May June–August Interior Valleys Sacramento, San Joaquin valleys February–March August Desert Valleys Imperial and Coachella valleys December–February Footnotes * Planting dates are only approximate as the climate may vary greatly within the regions denoted.",
+      "source_context_available": true,
+      "tool_first_6gram": "coast san luis obispo county south"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.fl_peninsula.region_notes_seasoned",
+      "our_prose": "On the Florida peninsula, potatoes are a cool-season crop planted from fall through winter. UF/IFAS plants potatoes statewide in January, still into February in north and central Florida, and from October to January in south Florida, with harvest from midwinter into spring. The hot, wet summer is left out: it is far too warm for tubers and it favors disease. Light winter frost is the only cold risk. (UF/IFAS)",
+      "run_normalized": "potatoes are a cool season crop",
+      "run_in_our_prose": "potatoes are a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "potatoes are a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C1011/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.uga_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.uga_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.uga_ext"
+      ],
+      "source_context": "Potatoes are a wonderful and easy vegetable to grow for feeding the family, as well as for sharing with hungry neighbors. Potatoes are a cool-season crop most often planted in early spring in Georgia. In order to have a successful crop the homeowner must provide good soil, ample water and proper fertilization.",
+      "source_context_available": true,
+      "tool_first_6gram": "potatoes are a cool season crop"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.fl_peninsula.region_notes_seasoned",
+      "our_prose": "On the Florida peninsula, potatoes are a cool-season crop planted from fall through winter. UF/IFAS plants potatoes statewide in January, still into February in north and central Florida, and from October to January in south Florida, with harvest from midwinter into spring. The hot, wet summer is left out: it is far too warm for tubers and it favors disease. Light winter frost is the only cold risk. (UF/IFAS)",
+      "run_normalized": "february in north and central florida",
+      "run_in_our_prose": "February in north and central Florida",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "february in north and central florida"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/vegetables/potatoes/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas",
+        "varieties.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "Cut your seed potatoes, leaving at least one eye per section, and let them dry for a few days. Plant potatoes throughout the state in January; you can still plant them in February in North and Central Florida. In South Florida, plant them from October to January. Plant the sections in a six-inch deep trench in a spot that receives full sun.",
+      "source_context_available": true,
+      "tool_first_6gram": "february in north and central florida"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.mid_atlantic.region_notes_beginner",
+      "our_prose": "In the Piedmont and Coastal Plain, grow potatoes once, in spring. Plant cut seed pieces as soon as the soil can be worked in late winter to spring, and mound soil over the row as plants grow so new potatoes stay covered. Dig new potatoes a couple of months in, and the main crop once the tops turn yellow and die down, from late spring into late summer. Skip a fall crop here; the summer heat that follows is past what potato likes.",
+      "run_normalized": "seed pieces as soon as the soil",
+      "run_in_our_prose": "seed pieces as soon as the soil",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "seed pieces as soon as the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-potatoes",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "germination_temp_f_anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "sunlight_hours_anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "tips_by_stage.sprouting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[1].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Yard and garden Growing potatoes Quick facts Buy disease-free seed tubers from a certified grower or seed distributor. Plant seed pieces as soon as the soil warms. Once the green shoots emerge, plan to hill soil up along plants as they grow.",
+      "source_context_available": true,
+      "tool_first_6gram": "pieces as soon as the soil"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.northern_tier.region_notes_beginner",
+      "our_prose": "In the cold-winter North, grow potatoes once, in spring. Plant the cut seed pieces 2 to 4 weeks before your last frost, when the soil has warmed to about 50°F, usually early to mid April in the middle of the region (a little earlier in the warmest parts, later in the coldest). The leafy tops can be hurt by a hard frost, but the plants bounce back and the seed underground is safe. As the plants grow, mound (hill) soil over the row so the new potatoes stay covered and do not turn green. You can sneak a few new potatoes about 7 to 8 weeks after planting, and dig the main crop when the tops turn yellow and die down, usually 3 to 4 months after planting, in late summer. Skip a fall crop here: it gets cold too soon.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.northern_tier.region_notes_beginner",
+      "our_prose": "In the cold-winter North, grow potatoes once, in spring. Plant the cut seed pieces 2 to 4 weeks before your last frost, when the soil has warmed to about 50°F, usually early to mid April in the middle of the region (a little earlier in the warmest parts, later in the coldest). The leafy tops can be hurt by a hard frost, but the plants bounce back and the seed underground is safe. As the plants grow, mound (hill) soil over the row so the new potatoes stay covered and do not turn green. You can sneak a few new potatoes about 7 to 8 weeks after planting, and dig the main crop when the tops turn yellow and die down, usually 3 to 4 months after planting, in late summer. Skip a fall crop here: it gets cold too soon.",
+      "run_normalized": "usually early to mid april in the",
+      "run_in_our_prose": "usually early to mid April in the",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "usually early to mid april in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/article/2020/03/planting-potatoes-home-garden",
+      "anchor_paths": [
+        "days_to_maturity_anchoring_urls.iastate_ext",
+        "days_to_maturity_mid_anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.sprouting[1].anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Planting Potatoes should be planted as soon as the ground can be worked in the spring. This is usually early to mid-April in the central part of the state, a week earlier in southern Iowa, and a week later in northern Iowa.",
+      "source_context_available": true,
+      "tool_first_6gram": "early to mid april in the"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Northern-tier potatoes are a single spring crop. Plant seed pieces 2 to 4 weeks before the last spring frost, once the soil reaches about 50°F: University of Minnesota places this in early April in the Twin Cities (zone 4), Iowa State in early to mid April (zone 5), earlier toward zone 7 and later in zone 3 where the soil warms slowly. The tops are frost tender, so a hard late frost can nip emerged foliage, but the plants recover and the seed underground is protected. Hill soil over the row as the plants grow to keep developing tubers covered and out of the light. Dig new potatoes about 7 to 8 weeks after planting and the main crop when the tops yellow and die back, roughly 90 to 120 days, in late summer across most of the region. There is no fall crop: the season is too short and the foliage will not survive frost. Windows from UMN, Iowa State, and University of Maine; maturity 90 to 120 days.",
+      "run_normalized": "early april in the twin cities",
+      "run_in_our_prose": "early April in the Twin Cities",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "early april in the twin cities"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-potatoes",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "germination_temp_f_anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "sunlight_hours_anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "tips_by_stage.sprouting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[1].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Planting seed pieces Plant seed pieces as soon as the soil warms. This period is early April in the Twin Cities area of Minnesota. Gardeners in southern Minnesota may plant earlier, while locations further north may not have warmer soil until May.",
+      "source_context_available": true,
+      "tool_first_6gram": "early april in the twin cities"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Northern-tier potatoes are a single spring crop. Plant seed pieces 2 to 4 weeks before the last spring frost, once the soil reaches about 50°F: University of Minnesota places this in early April in the Twin Cities (zone 4), Iowa State in early to mid April (zone 5), earlier toward zone 7 and later in zone 3 where the soil warms slowly. The tops are frost tender, so a hard late frost can nip emerged foliage, but the plants recover and the seed underground is protected. Hill soil over the row as the plants grow to keep developing tubers covered and out of the light. Dig new potatoes about 7 to 8 weeks after planting and the main crop when the tops yellow and die back, roughly 90 to 120 days, in late summer across most of the region. There is no fall crop: the season is too short and the foliage will not survive frost. Windows from UMN, Iowa State, and University of Maine; maturity 90 to 120 days.",
+      "run_normalized": "to 4 weeks before the last",
+      "run_in_our_prose": "to 4 weeks before the last",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "to 4 weeks before the last"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.second_planting.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "The shoots of potato plants are sensitive to frost so they may need some protection in colder areas of the central valley. They can be planted 1 to 4 weeks before the last frost date, depending upon the soil temperature.",
+      "source_context_available": true,
+      "tool_first_6gram": "to 4 weeks before the last"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Northern-tier potatoes are a single spring crop. Plant seed pieces 2 to 4 weeks before the last spring frost, once the soil reaches about 50°F: University of Minnesota places this in early April in the Twin Cities (zone 4), Iowa State in early to mid April (zone 5), earlier toward zone 7 and later in zone 3 where the soil warms slowly. The tops are frost tender, so a hard late frost can nip emerged foliage, but the plants recover and the seed underground is protected. Hill soil over the row as the plants grow to keep developing tubers covered and out of the light. Dig new potatoes about 7 to 8 weeks after planting and the main crop when the tops yellow and die back, roughly 90 to 120 days, in late summer across most of the region. There is no fall crop: the season is too short and the foliage will not survive frost. Windows from UMN, Iowa State, and University of Maine; maturity 90 to 120 days.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.pnw.region_notes_seasoned",
+      "our_prose": "OSU Extension's Oregon planting-date table (EM9027) places the valley's potato window at April into June, from seed pieces, and the coast earlier, February into May; the coastal seed pieces are dormant underground well ahead of frost-tender foliage emerging, so the earlier start is the source's own claim rather than a general mildness assumption. Hill soil over developing tubers as the plants grow. New potatoes can be dug 7 to 8 weeks after planting; the main crop is dug when the foliage yellows and dies back, roughly 90 to 120 days. There is no second, fall planting: the tops are frost-tender and the maritime PNW's season does not support a genuine second cycle for this crop.",
+      "run_normalized": "7 to 8 weeks after planting",
+      "run_in_our_prose": "7 to 8 weeks after planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "Potatoes in St. George's Dixie belt (Mojave-edge high desert) run a single spring crop, per Utah State University Extension's suggested vegetable planting dates for Utah, which gives St. George a Group B (Semi-Hardy) date around March 1. Plant certified seed potato pieces then; tubers are ready to dig roughly 100 days later, finishing by the end of June. USU Extension's Washington County frost and elevation notes put St. George over 100°F in June, July, and August, and tuber formation falls off sharply in that sustained heat, so digging finishes before that wall and the ground then sits idle through the brutal Jul-Sep stretch rather than carrying a fall replant.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "suggested vegetable planting dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "soil_prep_seasoned",
+      "our_prose": "Potato quality starts in loose, well-drained, acidic soil. Work the bed deep and incorporate compost, breaking up clods so the tubers can expand smoothly; heavy clay rots seed pieces and produces knobby, misshapen tubers and is best improved with organic matter or replaced with a raised bed. Aim for an acidic pH, roughly 5.0 to 6.0, to suppress common scab, and do not lime a potato bed. Avoid fresh manure (which encourages scab) and heavy nitrogen (which grows vines over tubers); use well-finished compost and a balanced fertilizer instead. Plant cut, suberized seed pieces 3 to 5 inches deep, 10 to 12 inches apart in rows 30 to 36 inches apart, once the soil reaches about 50°F, and plan to hill soil over the row as the plants grow.",
+      "run_normalized": "in rows 30 to 36 inches apart",
+      "run_in_our_prose": "in rows 30 to 36 inches apart",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in rows 30 to 36 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-potatoes",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "germination_temp_f_anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "sunlight_hours_anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "tips_by_stage.sprouting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[1].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Plant seed pieces cut side down, 10 to 12 inches apart and about three to five inches deep, in rows 30 to 36 inches apart. Space pieces closer for smaller tubers and farther apart for fewer but larger tubers.",
+      "source_context_available": true,
+      "tool_first_6gram": "in rows 30 to 36 inches"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "sources_summary.primary[11].name",
+      "our_prose": "Alabama Cooperative Extension System -- Simple Guide for Harvesting Popular Crops",
+      "run_normalized": "simple guide for harvesting popular crops",
+      "run_in_our_prose": "Simple Guide for Harvesting Popular Crops",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "simple guide for harvesting popular crops"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "auburn_aces"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System -- Simple Guide for Harvesting Popular Crops"
+      ],
+      "source_publishers": [
+        "ACES (Alabama A&M & Auburn)"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/fruits-vegetables-urban/simple-guide-for-harvesting-popular-crops/",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.auburn_aces",
+        "tips_by_stage.harvest[0].anchoring_urls.auburn_aces"
+      ],
+      "source_context": "Simple Guide for Harvesting Popular Crops - Alabama Cooperative Extension System Skip to main content --> Nearest Offic",
+      "source_context_available": true,
+      "tool_first_6gram": "simple guide for harvesting popular crops"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Grow potatoes from seed potatoes, which are small whole potatoes or cut pieces, bought as certified disease-free stock (not from the grocery store, and not from packets of seed). Cut bigger ones into chunky pieces about the size of an egg, each with one or two eyes (the little dimples that sprout), and let the cut sides dry and heal for a few days before planting. Plant the pieces cut-side down about 3 to 5 inches deep, 10 to 12 inches apart, in rows about 3 feet apart, once the soil has warmed to about 50°F. There is nothing to start indoors and nothing to harden off.",
+      "run_normalized": "from seed potatoes which are small",
+      "run_in_our_prose": "from seed potatoes, which are small",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from seed potatoes which are small"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Potatoes also may be grown in trenches to make the process of hilling easier. Potatoes are most often grown from \"seed potatoes,\" which are small tubers or pieces of tubers that sprout into a new plant. Buying certified disease-free seeds can help prevent problems such as potato late blight.",
+      "source_context_available": true,
+      "tool_first_6gram": "from seed potatoes which are small"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "tips_by_stage.bulking[1].text_beginner",
+      "our_prose": "For baby new potatoes, dig gently at the side of a plant about 7 to 8 weeks after planting, then cover it back up so the rest keep growing. Eat new potatoes fresh, because their thin skins do not store.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "tips_by_stage.bulking[1].text_seasoned",
+      "our_prose": "For new potatoes, dig carefully at the edge of a hill about 7 to 8 weeks after planting and re-cover the plant; the rest keep bulking. Use new potatoes fresh, since their thin skins do not store.",
+      "run_normalized": "about 7 to 8 weeks after planting",
+      "run_in_our_prose": "about 7 to 8 weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about 7 to 8 weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/solanum-tuberosum/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "These young potatoes still have thin, delicate skins and are considered a delicacy. New potatoes can be harvested about 7 to 8 weeks after planting. Mature potatoes can take 3 to 4 months before they are ready for harvest. Proper crop rotation, clean garden tools and using disease-resistant cultivars will reduce pests and diseases which ultimately improves crop yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "7 to 8 weeks after planting"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "tips_by_stage.harvest[0].text_seasoned",
+      "our_prose": "Harvest the main crop when the tops yellow and die back. For storage, wait about two weeks after the vines die so the skins set, then dig on a dry day, lifting with a fork well outside the hill.",
+      "run_normalized": "about two weeks after the vines die",
+      "run_in_our_prose": "about two weeks after the vines die",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about two weeks after the vines die"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/potato/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "days_to_maturity_anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "heat_threshold_temp_f.anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "spacing_inches_anchoring_urls.clemson_hgic",
+        "sunlight_hours_anchoring_urls.clemson_hgic",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.vegetative[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "True seed potatoes may be bred for higher yields with time, but at present, good quality stock potatoes yield the best crop. Harvesting & Storage Harvest potatoes for storage about two weeks after the vines die down in midsummer. Barbara H. Smith, ©2017 HGIC, Clemson Extension Potatoes average 100 to 120 days to maturity.",
+      "source_context_available": true,
+      "tool_first_6gram": "about two weeks after the vines"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "tips_by_stage.sprouting[1].text_seasoned",
+      "our_prose": "Plant once the soil reaches about 50°F, roughly 2 to 4 weeks before the last frost; the seed underground tolerates cold, but cold, wet soil rots seed pieces, so do not rush into mud.",
+      "run_normalized": "to 4 weeks before the last frost",
+      "run_in_our_prose": "to 4 weeks before the last frost",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "to 4 weeks before the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-potato/",
+      "anchor_paths": [
+        "failure_diagnostics[4].anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_interior.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uc_ipm",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.10.second_planting.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uc_ipm",
+        "regions.low_desert_az.resolved_by_zone.9.second_planting.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.uc_ipm",
+        "regions.warm_arid.resolved_by_zone.8.second_planting.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "The shoots of potato plants are sensitive to frost so they may need some protection in colder areas of the central valley. They can be planted 1 to 4 weeks before the last frost date, depending upon the soil temperature. Planting Dates for Potato in California* North and North Coast Monterey County north February April–May South Coast San Luis Obispo County south February–May June–August Interior Valleys Sacramento, San Joaquin valleys",
+      "source_context_available": true,
+      "tool_first_6gram": "4 weeks before the last frost"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "tips_by_stage.vegetative[0].text_beginner",
+      "our_prose": "Begin mounding (hilling) soil up around the plants when they are 6 to 12 inches tall, leaving the leafy tops out. This gives the potatoes room to form and keeps them covered.",
+      "run_normalized": "hilling soil up around the plants",
+      "run_in_our_prose": "hilling) soil up around the plants",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "hilling soil up around the plants"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-potatoes",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "germination_temp_f_anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "spacing_inches_anchoring_urls.umn_ext",
+        "start_method.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "sunlight_hours_anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.umn_ext",
+        "tips_by_stage.bulking[1].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.umn_ext",
+        "tips_by_stage.sprouting[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[0].anchoring_urls.umn_ext",
+        "tips_by_stage.tuber_initiation[1].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.umn_ext",
+        "tips_by_stage.vegetative[1].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Hoe just deeply enough to cut the weeds off below the surface of the soil. Be careful not to damage the potato plants when cultivating, and continue hilling soil up around the plants.",
+      "source_context_available": true,
+      "tool_first_6gram": "hilling soil up around the plants"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "tips_by_stage.vegetative[0].text_beginner",
+      "our_prose": "Begin mounding (hilling) soil up around the plants when they are 6 to 12 inches tall, leaving the leafy tops out. This gives the potatoes room to form and keeps them covered.",
+      "run_normalized": "around the plants when they are",
+      "run_in_our_prose": "around the plants when they are",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "around the plants when they are"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "(d) Do not permit plants to remain overcrowded-give such plants as tomatoes and eggplants room for free circulation of air. (e) Rotate the crops as much as possible. (f) Do not work around the plants when they are wet. (g) Control insects, for some of them carry plant diseases. (h ) Use disease-resistant varieties when possible.",
+      "source_context_available": true,
+      "tool_first_6gram": "around the plants when they are"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Potatoes want steady, even moisture, especially from the time tubers begin forming (around flowering) through bulking. Aim for about 1 inch of water per week including rain, delivered in deeper, less frequent soakings. Even moisture is what produces smooth, well-shaped tubers; a dry-then-wet swing causes knobby growth, growth cracks, and hollow heart, and it worsens scab.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Potatoes want steady, even moisture, especially from the time tubers begin forming (around flowering) through bulking. Aim for about 1 inch of water per week including rain, delivered in deeper, less frequent soakings. Even moisture is what produces smooth, well-shaped tubers; a dry-then-wet swing causes knobby growth, growth cracks, and hollow heart, and it worsens scab.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/article/2020/03/planting-potatoes-home-garden",
+      "anchor_paths": [
+        "days_to_maturity_anchoring_urls.iastate_ext",
+        "days_to_maturity_mid_anchoring_urls.iastate_ext",
+        "failure_diagnostics[1].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.bulking[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.iastate_ext",
+        "tips_by_stage.sprouting[1].anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Plant potatoes 4 inches deep, about 1 foot apart. (3) Care Watering Like most other vegetables, potatoes require 1 inch of water per week during the growing season. This is especially true during tuber development, which typically begins early to mid-June.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

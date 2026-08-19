@@ -1,0 +1,508 @@
+{
+  "crop_slug": "cilantro-coriander",
+  "record_count": 9,
+  "records": [
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About a quarter cup of 21-0-0 per 25 square feet, side-dressed once or twice during the crop; a compost-rich bed often needs no extra feed at all.",
+      "run_normalized": "21 0 0 per 25 square",
+      "run_in_our_prose": "21-0-0 per 25 square",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "21 0 0 per 25 square"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.bolting[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization Fertilize 1-2 times during the growing season by applying ¼ cup of a nitrogen based fertilizer (21-0-0) per 25 square foot of growing area. Be careful of over fertilization, too much nitrogen can make the plant less flavorful.",
+      "source_context_available": true,
+      "tool_first_6gram": "21 0 0 per 25 square"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Cilantro is a fast leafy herb that runs on nitrogen, but the crop is so quick that a modest charge is plenty. Utah State University suggests about a quarter cup of 21-0-0 per 25 square feet, one to two times during the season. Work compost or a balanced fertilizer in before sowing, then side-dress lightly with nitrogen once the seedlings are established to push tender, mild leaves. Avoid heavy late nitrogen, which draws aphids and does little for a crop you cut within a few weeks; a plant grown on for coriander seed needs no extra feeding once it bolts.",
+      "run_normalized": "21 0 0 per 25 square",
+      "run_in_our_prose": "21-0-0 per 25 square",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "21 0 0 per 25 square"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.bolting[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization Fertilize 1-2 times during the growing season by applying ¼ cup of a nitrogen based fertilizer (21-0-0) per 25 square foot of growing area. Be careful of over fertilization, too much nitrogen can make the plant less flavorful.",
+      "source_context_available": true,
+      "tool_first_6gram": "21 0 0 per 25 square"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "regions.pnw.region_notes_beginner",
+      "our_prose": "In the maritime Pacific Northwest, cilantro gets a real break most of the country does not: our cool, mild summer rarely gets hot enough to bolt it the way a hot inland summer would. Direct sow as soon as the soil can be worked in late winter or early spring, since cilantro takes a light frost, and sow a little every 2 to 3 weeks for a steady supply. Ease off new sowings around midsummer when the days are longest, then sow again in late summer for a fall crop that keeps going right up to the first frost, which is often cilantro's best season here.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "However, be aware that vegetables planted in late summer or early fall (August or September) will be susceptible to insects and diseases that thrive in hot weather. Likewise, cold-tender vegetables planted in late winter or early spring may be damaged by frosts or freezes if not protected with covers (see \"Extending the Gardening Season\" above for more information on covers).",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "Cilantro is not one of USU Extension's Table 1 vegetable rows, so this spring window follows the Group A (Hardy) February 15 date given to St. George's other cold-hardy, quick-germinating spring crops. Leaves are ready in about 60 days; cilantro's own heat threshold runs around 75°F, one of the lowest of this family's herbs, so the plant bolts to coriander seed early once the season warms. St. George's summers routinely reach 100°F in June and July, per USU Extension's Washington County frost and elevation data, so leaf sowing pauses through that stretch. A second direct sowing in early August, once the worst heat has broken, follows USU's general fall-gardening guidance for restarting cool-season crops (Fall Gardening in the St. George Area); the fall stand crops from late September up to just ahead of the average November 1 first frost, with less pressure to bolt as days shorten.",
+      "run_normalized": "fall gardening in the st george area",
+      "run_in_our_prose": "Fall Gardening in the St. George Area",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "fall gardening in the st george area"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_fall_veg"
+      ],
+      "source_names": [
+        "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].direct_sow[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.resolved_by_zone.8.second_planting.anchoring_urls.usu_ext_fall_veg"
+      ],
+      "source_context": "44 N. 100 E., St. George, UT 84770 (435)634-5706 extension.usu.edu/washington FALL GARDENING In the St. George Area By Rick Heflebower, Washington County Horticulture Agent Here are a few tips that will help you with your fall vegetable garden: 1.",
+      "source_context_available": true,
+      "tool_first_6gram": "fall gardening in the st george"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "sources_summary.primary[10].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mg.ucanr.edu",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "More than just a gardening program, UC Master Gardener is an education and outreach statewide program of the University of California, Agriculture and Natural Resources (UC ANR) . UC Master Gardeners are in their communities, helping build more sustainable landscapes.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "sources_summary.primary[12].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_h/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "Cilantro is best straight from the garden, delicate and short-lived once cut, so chill it fast and use it within a week; its flavor is also strongest fresh. The seed is the keeper: harvest coriander when the seed heads turn tan but before they shatter, dry them in a paper bag, and the threshed seed stores airtight for months to a year.",
+      "run_normalized": "them in a paper bag and",
+      "run_in_our_prose": "them in a paper bag, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "them in a paper bag and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cilantro-coriander-in-the-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.bolting[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Coriander For seeds, let the plants grow until the seeds form in late summer or early fall. When plants begin to turn brown, cut off the seed heads, put them in a paper bag and hang this until the plant dries and seeds fall to the bottom of the bag. Store seeds in sealed containers.",
+      "source_context_available": true,
+      "tool_first_6gram": "them in a paper bag and"
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "weather_triggers[1].body_seasoned",
+      "our_prose": "Cilantro tolerates frost and light freezes and overwinters under cover in mild zones, but it will not survive a hard freeze. For most frosts keep harvesting; in cold zones a low tunnel or row cover carries an overwintered crop to the earliest spring leaves.",
+      "run_normalized": "will not survive a hard freeze",
+      "run_in_our_prose": "will not survive a hard freeze",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "will not survive a hard freeze"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uwi_hort"
+      ],
+      "source_names": [
+        "Wisconsin Horticulture Extension"
+      ],
+      "source_publishers": [
+        "UW Madison Horticulture"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hort.extension.wisc.edu/articles/cilantro-coriander-coriandrum-sativum/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uwi_hort",
+        "harvest_ready_anchoring_urls.uwi_hort",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.uwi_hort",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.uwi_hort",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.uwi_hort",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.uwi_hort",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.uwi_hort",
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.uwi_hort",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.uwi_hort",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.uwi_hort",
+        "soil.anchoring_urls.uwi_hort",
+        "storage.anchoring_urls.uwi_hort",
+        "tips_by_stage.established[0].anchoring_urls.uwi_hort",
+        "tips_by_stage.harvest[0].anchoring_urls.uwi_hort",
+        "varieties.anchoring_urls.uwi_hort",
+        "yield_expectations.anchoring_urls.uwi_hort"
+      ],
+      "source_context": "Cilantro is a cool season crop that tends to bolt (go to seed) in hot weather but will not survive a hard freeze. The young plants produce wide, flat leaves but when the plant begins to bolt, it produces lacy and fern-like leaves along the flower stalk.",
+      "source_context_available": true,
+      "tool_first_6gram": "will not survive a hard freeze"
+    }
+  ]
+}

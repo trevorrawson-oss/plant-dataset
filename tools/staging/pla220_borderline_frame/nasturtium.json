@@ -1,0 +1,79 @@
+{
+  "crop_slug": "nasturtium",
+  "record_count": 1,
+  "records": [
+    {
+      "crop_slug": "nasturtium",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Nasturtium is the rare flower that should not be fed: it blooms best in lean soil, and added nitrogen or fertilizer drives leafy growth at the expense of flowers. On genuinely poor or sandy soil, at most one light, low-nitrogen feeding can help, but in average soil skip fertilizer entirely. Over-feeding is the most common reason a healthy-looking nasturtium refuses to bloom.",
+      "run_normalized": "leafy growth at the expense of",
+      "run_in_our_prose": "leafy growth at the expense of",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "leafy growth at the expense of"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/news/writers-guild-article-nasturtiums",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.good_seasoned[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[0].anchoring_urls.umn_ext",
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "growth_stages[1].anchoring_urls.umn_ext",
+        "growth_stages[2].anchoring_urls.umn_ext",
+        "notifications[0].anchoring_urls.umn_ext",
+        "notifications[1].anchoring_urls.umn_ext",
+        "notifications[3].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[1].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[1].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[1].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[1].plant_out[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.established[1].anchoring_urls.umn_ext",
+        "tips_by_stage.germination[1].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "weather_triggers[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Interestingly, nasturtiums tolerate and bloom best in poor, low nitrogen soils. Too much nitrogen encourages leafy growth at the expense of flower production. Be sure to deadhead flowers regularly to prolong the blooms.",
+      "source_context_available": true,
+      "tool_first_6gram": "leafy growth at the expense of"
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "crop_slug": "popcorn",
+  "record_count": 11,
+  "records": [
+    {
+      "crop_slug": "popcorn",
+      "field_path": "description_beginner",
+      "our_prose": "Popcorn is a type of corn grown for its small, hard kernels that burst into fluffy popped corn when heated. Each kernel has a hard, moisture-sealed shell around a dense, starchy center; when it gets hot, the tiny bit of water trapped inside flashes to steam and the kernel explodes, turning itself inside out. You grow it just like other corn, in a square block of short rows so the wind can pollinate it, and you let the ears dry down on the stalk. Popular home types include the reliable yellow Robust hybrids, the tender heirloom Japanese Hulless, and ornamentals like deep-red Strawberry popcorn and blue-black Dakota Black that look as good on the shelf as they taste in the bowl. The single most important rule: keep popcorn away from all other corn, because pollen from sweet corn or field corn drifting onto your popcorn ruins its ability to pop. Keep them at least 300 feet apart, or time your plantings so they tassel about two weeks apart. Getting the kernels to the right dryness, about 13 to 14 percent moisture, is what makes them pop well.",
+      "run_normalized": "at least 300 feet apart or",
+      "run_in_our_prose": "at least 300 feet apart, or",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 300 feet apart or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "As mentioned previously, because sweet corn is wind pollinated, quality is best if the stands are isolated from field corn, popcorn, and ornamental corn, as well as from other types of sweet corn. Isolation, in this sense, means either planting the crops at least 300 feet apart, or staggering plantings so that there is a 10 to 14 day difference in maturity between crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 300 feet apart or"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "description_seasoned",
+      "our_prose": "Popcorn (Zea mays var. everta) is a flint-type corn whose kernels carry an exceptionally hard, moisture-tight hull over a dense, glassy endosperm. When heated, the small amount of water sealed inside each kernel flashes to steam and pressure builds against the hard hull until it ruptures, and the gelatinized starch turns the kernel inside out into a crisp flake. That mechanism makes moisture the whole game: the ideal kernel moisture for popping is 13 to 14 percent, and kernels that are too wet pop small and chewy while kernels dried too far fail to pop at all. Representative types run from dependable modern yellow hybrids (the Robust series) and the classic tender heirloom Japanese Hulless to ornamentals like ruby Strawberry and blue-black Dakota Black that pop as well as they display. It is wind-pollinated and block-planted like any corn, a heavy nitrogen feeder with the same critical moisture window at tasseling and silking. Its isolation rule is the strictest of all the corns: because popping depends on an intact hard endosperm, any foreign pollen, sweet or dent, crossing onto the ear degrades the pop, so isolate by about 300 feet or stagger tasseling by roughly two weeks.",
+      "run_normalized": "popcorn zea mays var everta is a",
+      "run_in_our_prose": "Popcorn (Zea mays var. everta) is a",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "popcorn zea mays var everta is a"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-popcorn",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.cure_thresh[0].anchoring_urls.umn_ext",
+        "tips_by_stage.dry_down[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "When most of the kernels in the sample pop up crisp and fluffy, it is time to store the whole crop. Store popcorn in airtight containers. Popcorn ( Zea mays var. everta ) is a type of corn with kernels that burst when heated. A small amount of moisture within the hard kernel turns to steam, causing the kernel to explode.",
+      "source_context_available": true,
+      "tool_first_6gram": "popcorn zea mays var everta is"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "diseases[2].cause_beginner",
+      "our_prose": "A bacterium spread by the corn flea beetle as it feeds. After a mild winter more beetles survive, so the disease tends to be worse the next year.",
+      "run_normalized": "spread by the corn flea beetle",
+      "run_in_our_prose": "spread by the corn flea beetle",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "spread by the corn flea beetle"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Later-infected plants are stunted and contain yellow streaks on the leaves. The disease is spread by the corn flea beetle, especially after mild winters. New cultivars resistant to Stewart's wilt should be used if early sweet corn is to be planted where flea beetle populations were high the previous year.",
+      "source_context_available": true,
+      "tool_first_6gram": "spread by the corn flea beetle"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "failure_diagnostics[3].next_season_tip_beginner",
+      "our_prose": "Dry the kernels to the right point and test-pop a batch before storing the crop, and do not over-dry them. Just as important, keep popcorn well away from all other corn next year, at least 300 feet apart or planted to tassel about two weeks apart, so its pollen is not spoiled.",
+      "run_normalized": "at least 300 feet apart or",
+      "run_in_our_prose": "at least 300 feet apart or",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 300 feet apart or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "As mentioned previously, because sweet corn is wind pollinated, quality is best if the stands are isolated from field corn, popcorn, and ornamental corn, as well as from other types of sweet corn. Isolation, in this sense, means either planting the crops at least 300 feet apart, or staggering plantings so that there is a 10 to 14 day difference in maturity between crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 300 feet apart or"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "growth_stages[0].user_action_beginner",
+      "our_prose": "Plant the seeds about 1 to 2 inches deep once the soil has warmed to at least 60°F, laying out a block of short rows rather than one long row. Plant small-kerneled kinds a bit shallower. Keep the bed evenly damp but not soggy, because cold, wet soil rots the seed.",
+      "run_normalized": "about 1 to 2 inches deep",
+      "run_in_our_prose": "about 1 to 2 inches deep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "about 1 to 2 inches deep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.cure_thresh[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.dry_down[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Be sure to select a variety that will mature in your area before the first frost . Sow seed directly in the garden in spring about 1 to 2 inches deep, or somewhat more shallowly for varieties with small kernels (in Iowa, this is typically done in the first half of May).",
+      "source_context_available": true,
+      "tool_first_6gram": "about 1 to 2 inches deep"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "growth_stages[0].user_action_seasoned",
+      "our_prose": "Sow about 1 to 2 inches deep once soil is at least 60°F, into a block of short rows; sow the small-kerneled types a little shallower. Keep the seedbed evenly moist but not saturated, since cold, wet soil rots the seed.",
+      "run_normalized": "about 1 to 2 inches deep",
+      "run_in_our_prose": "about 1 to 2 inches deep",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "about 1 to 2 inches deep"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.cure_thresh[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.dry_down[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Be sure to select a variety that will mature in your area before the first frost . Sow seed directly in the garden in spring about 1 to 2 inches deep, or somewhat more shallowly for varieties with small kernels (in Iowa, this is typically done in the first half of May).",
+      "source_context_available": true,
+      "tool_first_6gram": "about 1 to 2 inches deep"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "tips_by_stage.cure_thresh[0].text_beginner",
+      "our_prose": "After you pick the ears, pull the husks back, put them in mesh bags, and hang them somewhere warm, dry, and airy for two to three weeks. Test-pop a few kernels each week, and once they pop up crisp and fluffy, shell and store them. Do not over-dry them, or they will stop popping.",
+      "run_normalized": "in mesh bags and hang them",
+      "run_in_our_prose": "in mesh bags, and hang them",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in mesh bags and hang them"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.cure_thresh[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.dry_down[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Many varieties will be ready to harvest by mid- to late-September. After harvest, remove the husks, place the ears in mesh bags, and hang them in a warm, dry, well-ventilated location away from rodents. The ideal moisture content for popcorn is between 13 and 14%.",
+      "source_context_available": true,
+      "tool_first_6gram": "in mesh bags and hang them"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "tips_by_stage.cure_thresh[0].text_seasoned",
+      "our_prose": "After picking, shuck the ears, bag them in mesh, and hang them in a warm, dry, airy place for two to three weeks. Test-pop a few kernels once or twice a week; when they pop crisp and fluffy, shell and store. Stop at the popping window of about 13 to 14 percent moisture, since over-dry kernels will not pop.",
+      "run_normalized": "and hang them in a warm dry",
+      "run_in_our_prose": "and hang them in a warm, dry",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "and hang them in a warm dry"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-and-harvesting-popcorn-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.iastate_ext",
+        "failure_diagnostics[4].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.cure_thresh[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.dry_down[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.iastate_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Many varieties will be ready to harvest by mid- to late-September. After harvest, remove the husks, place the ears in mesh bags, and hang them in a warm, dry, well-ventilated location away from rodents. The ideal moisture content for popcorn is between 13 and 14%.",
+      "source_context_available": true,
+      "tool_first_6gram": "and hang them in a warm"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "tips_by_stage.seedling[0].text_beginner",
+      "our_prose": "Keep popcorn away from sweet corn and field corn. Pollen from either will drift in and ruin its popping. Keep them at least 300 feet apart, or, since that is a lot of room, plant them so they tassel about two weeks apart instead.",
+      "run_normalized": "at least 300 feet apart or",
+      "run_in_our_prose": "at least 300 feet apart, or",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 300 feet apart or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/organic-sweet-corn-production",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.ncsu_ext",
+        "pests[0].anchoring_urls.ncsu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "As mentioned previously, because sweet corn is wind pollinated, quality is best if the stands are isolated from field corn, popcorn, and ornamental corn, as well as from other types of sweet corn. Isolation, in this sense, means either planting the crops at least 300 feet apart, or staggering plantings so that there is a 10 to 14 day difference in maturity between crops.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 300 feet apart or"
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "About 1 inch of water per week from rain and irrigation, rising toward 1.5 inches per week across the pollination and ear-fill window; water deeply to wet the full root zone.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

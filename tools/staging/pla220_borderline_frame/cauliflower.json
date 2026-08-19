@@ -1,0 +1,354 @@
+{
+  "crop_slug": "cauliflower",
+  "record_count": 10,
+  "records": [
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Cauliflower is a heavy feeder, and steady fertility matters even more than with other cole crops because a hungry plant buttons, forming a tiny premature curd instead of a full one. Work a balanced fertilizer such as 5-10-10 or 10-10-10 into the bed before planting (Clemson: 5-10-10 at 3 pounds per 100 square feet), then side-dress with nitrogen about 3 to 4 weeks after transplanting, using roughly 33-0-0 or calcium nitrate. Keep the plant growing vigorously and without interruption right up to curd formation; the most common cause of failed curds is any stall in growth from low fertility or uneven water. On acid or sandy soils, a boron and molybdenum deficiency can cause hollow stem and whiptail, so a soil rich in organic matter at a near-neutral pH is the best insurance.",
+      "run_normalized": "fertilizer such as 5 10 10 or",
+      "run_in_our_prose": "fertilizer such as 5-10-10 or",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "fertilizer such as 5 10 10 or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/library/gardening/texas-home-vegetable-gardening-guide/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "In general, if your garden is located on deep, sandy soil, apply a complete preplant fertilizer such as 5-10-10 or 6-12-12 at the rate of 1 to 2 pounds per 100 square feet. If your soil has a high percentage of clay, a fertilizer such as 10-20-10 or 12-24-12 applied at 1 to 2 pounds per 100 square feet should be suitable.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 5 10 10"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "pests[2].cause_beginner",
+      "our_prose": "A small fly lays eggs at the base of the plant, and the maggots that hatch burrow down and eat the roots. The fly is most active in cool, damp weather, so spring transplants are most at risk.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Fertilizer applied at time of transplanting or as side dressings should be placed 3 or 4 inches from the base of the plant and to a depth of 3 or 4 inches. Roughly, two level table­ spoons of fertilizer applied in a band Ii to 12 inches long supply a rather heavy application.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "pests[3].symptoms_seasoned",
+      "our_prose": "Shield-shaped bugs up to about 3/8 inch, brightly black-and-yellow or black-and-red, feeding with piercing-sucking mouthparts that leave white stipples; affected leaves brown and look tattered, and heavy feeding wilts and deforms plants. A warm-region brassica specialist.",
+      "run_normalized": "black and yellow or black and red",
+      "run_in_our_prose": "black-and-yellow or black-and-red",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "black and yellow or black and red"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/harlequin-bug-vegetables/",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.umd_ext"
+      ],
+      "source_context": "Five instars (growth stages between two periods of molting in the development of a nymph). Adults : Shield-shaped body, up to 3/8\" long, brightly colored, typically black and yellow or black and red— color patterns vary with the season.",
+      "source_context_available": true,
+      "tool_first_6gram": "and yellow or black and red"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.10.zone_notes",
+      "our_prose": "On the warm Southern California coast, cauliflower is a cool-season crop grown fall through spring. Set transplants in January-February for a spring harvest and again in September-October for a late-fall and winter harvest. The hottest weeks of summer can ruin curds, so the crop avoids midsummer. UC planting guides time cole crops for the cooler months here. Harvest months derived.",
+      "run_normalized": "cauliflower is a cool season crop",
+      "run_in_our_prose": "cauliflower is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cauliflower is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "How to Grow Cauliflower in Your Garden Summary Cauliflower is a cool-season crop that thrives in full sun and fertile, well-drained soil enriched with organic matter and fertilizer before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "cauliflower is a cool season crop"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.11.zone_notes",
+      "our_prose": "On the warm Southern California coast, cauliflower is a cool-season crop grown fall through spring. Set transplants in January-February for a spring harvest and again in September-October for a late-fall and winter harvest. The hottest weeks of summer can ruin curds, so the crop avoids midsummer. UC planting guides time cole crops for the cooler months here. Harvest months derived.",
+      "run_normalized": "cauliflower is a cool season crop",
+      "run_in_our_prose": "cauliflower is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cauliflower is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "How to Grow Cauliflower in Your Garden Summary Cauliflower is a cool-season crop that thrives in full sun and fertile, well-drained soil enriched with organic matter and fertilizer before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "cauliflower is a cool season crop"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.9.zone_notes",
+      "our_prose": "On the warm Southern California coast, cauliflower is a cool-season crop grown fall through spring. Set transplants in January-February for a spring harvest and again in September-October for a late-fall and winter harvest. The hottest weeks of summer can ruin curds, so the crop avoids midsummer. UC planting guides time cole crops for the cooler months here. Harvest months derived.",
+      "run_normalized": "cauliflower is a cool season crop",
+      "run_in_our_prose": "cauliflower is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cauliflower is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "How to Grow Cauliflower in Your Garden Summary Cauliflower is a cool-season crop that thrives in full sun and fertile, well-drained soil enriched with organic matter and fertilizer before planting.",
+      "source_context_available": true,
+      "tool_first_6gram": "cauliflower is a cool season crop"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "regions.northern_tier.region_notes_beginner",
+      "our_prose": "In cold regions, cauliflower is a spring crop and a fall crop. Start seeds indoors and set young plants out in spring for a summer harvest, and start a second batch in early-to-mid summer for a fall harvest, when the cool weather makes the best heads. Cauliflower is fussier than cabbage: keep it growing steadily with even water and food so it does not head early, and protect young plants from sudden cold.",
+      "run_normalized": "mid summer for a fall harvest",
+      "run_in_our_prose": "mid summer for a fall harvest",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mid summer for a fall harvest"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ndsu_ext"
+      ],
+      "source_names": [
+        "North Dakota State University Extension"
+      ],
+      "source_publishers": [
+        "NDSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ag.ndsu.edu/news/columns/dakota-gardener/dakota-gardener-cool-season-garden-crops",
+      "anchor_paths": [
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ndsu_ext"
+      ],
+      "source_context": "It is a great site to explore for other weather-related information. Some cool-season crop seed can be seeded mid-summer for a fall harvest. Examples are radish, lettuce, spinach and turnips. These crops must be planted with enough time to grow and mature before the weather turns cold.",
+      "source_context_available": true,
+      "tool_first_6gram": "mid summer for a fall harvest"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Cauliflower is almost always transplanted, since precise timing and an unstressed start matter so much. For spring, start seeds indoors about 4 to 6 weeks before set-out and transplant sturdy young plants out around 2 weeks before the last frost; cauliflower transplants are less cold-hardy than cabbage or broccoli, so do not rush them into hard cold. For fall, start indoors or direct sow in early-to-mid summer and set out so the curd matures in cool fall weather. The single biggest transplant mistake is setting out an old, root-bound, or cold-checked plant: that stress triggers buttoning, where the plant forms a tiny premature curd. Set out stocky plants with 4 to 6 true leaves, harden them off over 7 to 10 days, and keep them growing without a stall.",
+      "run_normalized": "2 weeks before the last frost",
+      "run_in_our_prose": "2 weeks before the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 weeks before the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/season-extenders-and-growing-fall-vegetables",
+      "anchor_paths": [
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.psu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.psu_ext"
+      ],
+      "source_context": "By way of example, here are a few sample seed starting and planting dates: Brussels sprouts - start indoors 5 to 6 weeks before planting outdoors Plant outdoors 5 weeks after last frost DTM - 90 to 120 days Head lettuce - indoor growing time: 5 to 7 weeks Transplant outdoors 1 to 2 weeks before the last frost date DTM - 40 to 90 days Onions - indoor growing time prior to transplanting: 9 to 11 weeks When to plant outdoors: 4 weeks before last frost DTM - 60 to 110 days The list below may be helpful in determining the \"drop dead\" planting dates for certain fall vegetables.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 weeks before the last frost"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Cauliflower is almost always transplanted, since precise timing and an unstressed start matter so much. For spring, start seeds indoors about 4 to 6 weeks before set-out and transplant sturdy young plants out around 2 weeks before the last frost; cauliflower transplants are less cold-hardy than cabbage or broccoli, so do not rush them into hard cold. For fall, start indoors or direct sow in early-to-mid summer and set out so the curd matures in cool fall weather. The single biggest transplant mistake is setting out an old, root-bound, or cold-checked plant: that stress triggers buttoning, where the plant forms a tiny premature curd. Set out stocky plants with 4 to 6 true leaves, harden them off over 7 to 10 days, and keep them growing without a stall.",
+      "run_normalized": "2 weeks before the last frost",
+      "run_in_our_prose": "2 weeks before the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 weeks before the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cauliflower-in-the-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Cauliflower grown for transplants should be sown 6-7 weeks before the expected planting date in the garden. Transplants may be planted 1-2 weeks before the last frost free date for the growing area. Seeded cauliflower may be planted at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 weeks before the last frost"
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "tips_by_stage.seedling[0].text_beginner",
+      "our_prose": "Space plants about 18 to 24 inches apart and plant them while they are still young and stocky, never old or root-bound. Harden them off over about a week first.",
+      "run_normalized": "18 to 24 inches apart and",
+      "run_in_our_prose": "18 to 24 inches apart and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "18 to 24 inches apart and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "The varieties mentioned are all small-plant types if planted during the months indicated. They can be planted in rows 18 to 24 inches apart and spaced 3 to 5 inches in the row. Repeat plantings should be made every 2 to 4 weeks.",
+      "source_context_available": true,
+      "tool_first_6gram": "18 to 24 inches apart and"
+    }
+  ]
+}

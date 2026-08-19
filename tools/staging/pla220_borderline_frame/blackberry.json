@@ -1,0 +1,699 @@
+{
+  "crop_slug": "blackberry",
+  "record_count": 16,
+  "records": [
+    {
+      "crop_slug": "blackberry",
+      "field_path": "cane_management_seasoned",
+      "our_prose": "Cane management is the heart of growing blackberries, because the crown and roots are perennial but each cane is biennial: it grows one year as a primocane, fruits the next as a floricane, then dies. How you prune depends on both habit and cane type. On ERECT SUMMER-BEARING types, tip the primocanes at 3 to 4 feet in summer to force fruiting laterals; the next year those canes fruit as floricanes and then die, so cut spent floricanes to the ground right after harvest, and in late winter shorten the laterals to 12 to 18 inches and thin to 4 to 6 sturdy canes per foot of row. Erect types also sucker from the roots and need their spread contained to the row. On SEMI-ERECT and TRAILING types, which form a crown and do not sucker, train the long primocanes onto a trellis through the season, remove spent floricanes after harvest, and in late winter shorten laterals (about 10 to 12 inches on semi-erect) and keep 6 to 8 strong canes per crown. On PRIMOCANE-FRUITING (everbearing) types, the first-year canes fruit on their tips in late summer and fall; the simplest management is to mow every cane to the ground in late winter for one clean, heavy fall crop with the easiest pruning and reduced disease and borer pressure. The same planting can instead be double-cropped, leaving the lower canes to fruit again as floricanes the next summer, but the single-crop mow is the usual home choice.",
+      "run_normalized": "sturdy canes per foot of row",
+      "run_in_our_prose": "sturdy canes per foot of row",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "sturdy canes per foot of row"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-raspberries-home-garden",
+      "anchor_paths": [
+        "growth_stages[7].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.umn_ext",
+        "weather_triggers[1].anchoring_urls.umn_ext"
+      ],
+      "source_context": "This eliminates a disease source and gives primocanes more room to grow. Thin primocanes to 4 to 5 sturdy canes per foot of row. In areas where winter injury is common, you may delay thinning the primocanes until the following spring, when you will be able to tell which canes have survived.",
+      "source_context_available": true,
+      "tool_first_6gram": "sturdy canes per foot of row"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About 4 to 5 pounds of 10-10-10 per 100 feet of row per year, split between early spring and just after harvest; less on rich or recently manured ground.",
+      "run_normalized": "10 per 100 feet of row",
+      "run_in_our_prose": "10 per 100 feet of row",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "10 per 100 feet of row"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uada_ext_fsa6105"
+      ],
+      "source_names": [
+        "UAEX FSA6105, Blackberry Production in the Home Garden (M. Elena Garcia)"
+      ],
+      "source_publishers": [
+        "University of Arkansas Division of Agriculture, Cooperative Extension Service"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf",
+      "anchor_paths": [
+        "regions.mid_south.plantings[0].anchoring_urls.uada_ext_fsa6105",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uada_ext_fsa6105",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uada_ext_fsa6105"
+      ],
+      "source_context": "If soil tests are not available, a general recommendation for the first year is to apply 5 pounds of a complete fertilizer, such as 10-20-10, per 100 feet of row after the newly set plants have started growing or after root cuttings begin to emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 per 100 feet of row"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "fertilizer.notes_beginner",
+      "our_prose": "Feed blackberries in early spring when growth starts, using a balanced fertilizer or some composted manure spread along the row, and again lightly right after you finish picking. That feeding fuels the new canes for next year. Go easy late in the season, since too much makes weak, floppy canes.",
+      "run_normalized": "blackberries in early spring when growth starts",
+      "run_in_our_prose": "blackberries in early spring when growth starts",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "blackberries in early spring when growth starts"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/blackberry/",
+      "anchor_paths": [
+        "companions.bad_seasoned[1].anchoring_urls.clemson_hgic",
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "growth_stages[0].anchoring_urls.clemson_hgic",
+        "growth_stages[1].anchoring_urls.clemson_hgic",
+        "growth_stages[2].anchoring_urls.clemson_hgic",
+        "growth_stages[4].anchoring_urls.clemson_hgic",
+        "growth_stages[5].anchoring_urls.clemson_hgic",
+        "growth_stages[6].anchoring_urls.clemson_hgic",
+        "growth_stages[8].anchoring_urls.clemson_hgic",
+        "notifications[0].anchoring_urls.clemson_hgic",
+        "notifications[1].anchoring_urls.clemson_hgic",
+        "notifications[2].anchoring_urls.clemson_hgic",
+        "notifications[4].anchoring_urls.clemson_hgic",
+        "notifications[5].anchoring_urls.clemson_hgic",
+        "notifications[6].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.first_growth[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.post_harvest[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "weather_triggers[3].anchoring_urls.clemson_hgic",
+        "weather_triggers[4].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Apply about 1 inch of water per week by irrigation if rainfall does not meet the need. Fertilization Fertilize blackberries in early spring when growth starts and again just after harvest. A soil test will provide recommendations for fertilization at the planting site.",
+      "source_context_available": true,
+      "tool_first_6gram": "blackberries in early spring when growth"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "fertilizer.npk_hint_beginner",
+      "our_prose": "Use a balanced fertilizer such as 10-10-10, or composted manure.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "vce_426_840"
+      ],
+      "source_names": [
+        "Virginia Cooperative Extension Publication 426-840"
+      ],
+      "source_publishers": [
+        "Virginia Tech"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.vce_426_840"
+      ],
+      "source_context": "Repeat this fertilization at the same timing and rates in the second and third seasons. A blended fertilizer, such as 10-10-10, applied at 3 ounces per vine can be substituted where phosphorus and potassium are also needed.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "growth_stages[4].what_to_look_for_beginner",
+      "our_prose": "The flowers turn into small green berries that grow and change from green to red to black. This is when they need steady water.",
+      "run_normalized": "from green to red to black",
+      "run_in_our_prose": "from green to red to black",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from green to red to black"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/fruit-development",
+      "anchor_paths": [
+        "pollination.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Blackberry Skip to Blackberry As the fruit ripens, it grows in size and weight. The color changes from green to red to black. Blackberries need 45 to 60 days to mature after they are pollinated.",
+      "source_context_available": true,
+      "tool_first_6gram": "from green to red to black"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "growth_stages[4].what_to_look_for_seasoned",
+      "our_prose": "Pollinated flowers form green aggregate fruits that swell and turn from green to red to black. Steady moisture now determines berry size and drupelet fill.",
+      "run_normalized": "from green to red to black",
+      "run_in_our_prose": "from green to red to black",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from green to red to black"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/southeast-regional-caneberry-production-guide/fruit-development",
+      "anchor_paths": [
+        "pollination.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Blackberry Skip to Blackberry As the fruit ripens, it grows in size and weight. The color changes from green to red to black. Blackberries need 45 to 60 days to mature after they are pollinated.",
+      "source_context_available": true,
+      "tool_first_6gram": "from green to red to black"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "hardiness_notes_seasoned",
+      "our_prose": "Blackberries are hardy in roughly zones 5 to 9, less cold-tolerant than raspberries but far more heat-tolerant, which is why they are the caneberry of the South. Cold hardiness follows habit: erect and semi-erect types are the toughest (Illini Hardy, Apache, and Chester are the standouts, reliable to about zone 5 and the edge of zone 4), while trailing types (marionberry, boysenberry) are the most tender and can be injured below about 13 °F, suiting them to mild coastal regions. In the far North (zones 3 to 4) blackberries are marginal and need winter protection; at the warm end, low-chill types thrive through the Deep South, and only the frost-free tropics push past their need for winter chill.",
+      "run_normalized": "and semi erect types are the",
+      "run_in_our_prose": "and semi-erect types are the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and semi erect types are the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/blackberry-management-in-utah",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "growth_stages[7].anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "weather_triggers[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Blackberries often suffer from some cold injury in northern Utah, which typically results in loss of floricane buds, or dieback of the entire cane (Figure 1). As a general rule, trailing types of blackberries are the most cold sensitive, and semi-erect types are the most cold hardy. Although Utah winter conditions rarely cause permanent damage to the plant, floricane damage reduces or eliminates potential yields.",
+      "source_context_available": true,
+      "tool_first_6gram": "and semi erect types are the"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "notifications[3].body_seasoned",
+      "our_prose": "As the first berries begin to color, spotted-wing drosophila will lay eggs in ripening fruit. Hang an apple-cider-vinegar monitoring trap, consider fine exclusion netting, and commit to picking every one to two days. Remove and bag all overripe and fallen fruit; do not compost it.",
+      "run_normalized": "spotted wing drosophila will lay eggs",
+      "run_in_our_prose": "spotted-wing drosophila will lay eggs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "spotted wing drosophila will lay eggs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "vce_426_840"
+      ],
+      "source_names": [
+        "Virginia Cooperative Extension Publication 426-840"
+      ],
+      "source_publishers": [
+        "Virginia Tech"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.vce_426_840"
+      ],
+      "source_context": "They are suspended by a string or wire above the bushes such that they twist and turn in the breeze and keep the birds away. Spotted wing drosophila will lay eggs on ripe or ripening fruits; infestations can be minimized by picking fruits as soon as they are ripe.",
+      "source_context_available": true,
+      "tool_first_6gram": "spotted wing drosophila will lay eggs"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "ph.note_seasoned",
+      "our_prose": "Blackberries prefer a slightly acidic soil, roughly pH 6.0 to 6.5, and tolerate about 5.5 to 7.0. This is close to what most vegetable gardens already carry, so no special acidification is needed, unlike a blueberry. In strongly alkaline soils above about 7.5 the plants can develop iron chlorosis (yellowing between the veins), best corrected with added organic matter and a chelated-iron product rather than a drastic pH change.",
+      "run_normalized": "6 0 to 6 5 and",
+      "run_in_our_prose": "6.0 to 6.5, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "6 0 to 6 5 and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "vce_426_840"
+      ],
+      "source_names": [
+        "Virginia Cooperative Extension Publication 426-840"
+      ],
+      "source_publishers": [
+        "Virginia Tech"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.vce_426_840"
+      ],
+      "source_context": "Establishing the Planting Soils Caneberries grow best in deep, sandy loam soils rich in organic matter. Ideal soil should have a pH of 6.0 to 6.5 and be well-drained to a depth of at least 3 feet. Caneberries are sensitive to excess waterlogging, and even temporary water accumulation can weaken canes, hinder plant growth, and increase incidences of diseases — particularly root rots.",
+      "source_context_available": true,
+      "tool_first_6gram": "6 0 to 6 5 and"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "planting_method_notes_beginner",
+      "our_prose": "Plant dormant bare-root canes so the roots are an inch or two deep, then cut the old cane back to a few inches. Plant in late winter or early spring in cold areas, or over winter where winters are mild. Space upright types about 2 to 4 feet apart, and the big arching or trailing types about 6 to 8 feet apart, in rows 8 to 10 feet apart. Use a slightly raised, well-drained row in full sun, and put up the trellis before the canes grow.",
+      "run_normalized": "6 to 8 feet apart in",
+      "run_in_our_prose": "6 to 8 feet apart, in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "6 to 8 feet apart in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/blackberry/",
+      "anchor_paths": [
+        "companions.bad_seasoned[1].anchoring_urls.clemson_hgic",
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "growth_stages[0].anchoring_urls.clemson_hgic",
+        "growth_stages[1].anchoring_urls.clemson_hgic",
+        "growth_stages[2].anchoring_urls.clemson_hgic",
+        "growth_stages[4].anchoring_urls.clemson_hgic",
+        "growth_stages[5].anchoring_urls.clemson_hgic",
+        "growth_stages[6].anchoring_urls.clemson_hgic",
+        "growth_stages[8].anchoring_urls.clemson_hgic",
+        "notifications[0].anchoring_urls.clemson_hgic",
+        "notifications[1].anchoring_urls.clemson_hgic",
+        "notifications[2].anchoring_urls.clemson_hgic",
+        "notifications[4].anchoring_urls.clemson_hgic",
+        "notifications[5].anchoring_urls.clemson_hgic",
+        "notifications[6].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.first_growth[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.post_harvest[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "weather_triggers[3].anchoring_urls.clemson_hgic",
+        "weather_triggers[4].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "If possible, rows should be oriented north to south so that both sides of the blackberry plant will receive even sunlight, ensuring maximum production and ripening of the fruit. Semi-trailing varieties should be planted 6 to 8 feet apart in the row, with rows 10 feet apart. Erect varieties should be planted 2 to 4 feet apart in the row and 10 feet between rows.",
+      "source_context_available": true,
+      "tool_first_6gram": "6 to 8 feet apart in"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "planting_method_notes_seasoned",
+      "our_prose": "Plant dormant bare-root canes, setting the crown so the roots sit 1 to 2 inches below the surface, then cut the old handle cane back to a few inches. Plant in late winter or early spring in the North, or from late fall through winter in mild regions. Space erect types about 2 to 4 feet apart, and the vigorous semi-erect and trailing types about 6 to 8 feet apart, in rows 8 to 10 feet apart. Plant on a slightly raised, well-drained row in full sun and install the trellis before growth begins; only compact erect types can be grown without support.",
+      "run_normalized": "6 to 8 feet apart in",
+      "run_in_our_prose": "6 to 8 feet apart, in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "6 to 8 feet apart in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/blackberry/",
+      "anchor_paths": [
+        "companions.bad_seasoned[1].anchoring_urls.clemson_hgic",
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[2].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "growth_stages[0].anchoring_urls.clemson_hgic",
+        "growth_stages[1].anchoring_urls.clemson_hgic",
+        "growth_stages[2].anchoring_urls.clemson_hgic",
+        "growth_stages[4].anchoring_urls.clemson_hgic",
+        "growth_stages[5].anchoring_urls.clemson_hgic",
+        "growth_stages[6].anchoring_urls.clemson_hgic",
+        "growth_stages[8].anchoring_urls.clemson_hgic",
+        "notifications[0].anchoring_urls.clemson_hgic",
+        "notifications[1].anchoring_urls.clemson_hgic",
+        "notifications[2].anchoring_urls.clemson_hgic",
+        "notifications[4].anchoring_urls.clemson_hgic",
+        "notifications[5].anchoring_urls.clemson_hgic",
+        "notifications[6].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.first_growth[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.post_harvest[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "weather_triggers[3].anchoring_urls.clemson_hgic",
+        "weather_triggers[4].anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "If possible, rows should be oriented north to south so that both sides of the blackberry plant will receive even sunlight, ensuring maximum production and ripening of the fruit. Semi-trailing varieties should be planted 6 to 8 feet apart in the row, with rows 10 feet apart. Erect varieties should be planted 2 to 4 feet apart in the row and 10 feet between rows.",
+      "source_context_available": true,
+      "tool_first_6gram": "6 to 8 feet apart in"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "regions.mid_south.region_notes_beginner",
+      "our_prose": "The Mid-South is prime blackberry country, and Arkansas is its home turf. The University of Arkansas fruit breeding program developed most of the thornless upright cultivars grown across the state, and blackberries thrive in both the Ozark uplands and the lowland South, fruiting heavily from late spring into summer. Plant dormant canes over winter into early spring, give them a simple trellis, watch for rosette disease, and cut out the old fruited canes each year. Winters here are far more than cold enough, so chill is never something to worry about.",
+      "run_normalized": "the university of arkansas fruit breeding program",
+      "run_in_our_prose": "The University of Arkansas fruit breeding program",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the university of arkansas fruit breeding program"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uada_ext_fsa6105"
+      ],
+      "source_names": [
+        "UAEX FSA6105, Blackberry Production in the Home Garden (M. Elena Garcia)"
+      ],
+      "source_publishers": [
+        "University of Arkansas Division of Agriculture, Cooperative Extension Service"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf",
+      "anchor_paths": [
+        "regions.mid_south.plantings[0].anchoring_urls.uada_ext_fsa6105",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uada_ext_fsa6105",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uada_ext_fsa6105"
+      ],
+      "source_context": "They are a good addition to the home fruit garden and can be grown with fewer inputs than most other fruit crops. Further­ more, the fruit is flavorful and nutritious. Varieties developed by the University of Arkansas fruit breeding program are recommended for use in the state. These varieties have an upright growth habit and do not require the use of an elaborate trellis system.",
+      "source_context_available": true,
+      "tool_first_6gram": "the university of arkansas fruit breeding"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "regions.mid_south.resolved_by_zone.7.type_note_seasoned",
+      "our_prose": "Summer-bearing (floricane-fruiting) blackberry is the type to grow across the Ozark uplands, and it is squarely at home here: the University of Arkansas fruit breeding program developed most of the state's standard cultivars. Thornless erect and semi-erect types (Ouachita, Navaho, Apache) are the easiest to pick and manage, and chill is never a limiter, since even the highest-chill University of Arkansas releases (about 800 to 900 hours) are cleared many times over by the uplands' winter.",
+      "run_normalized": "the university of arkansas fruit breeding program",
+      "run_in_our_prose": "the University of Arkansas fruit breeding program",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the university of arkansas fruit breeding program"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uada_ext_fsa6105"
+      ],
+      "source_names": [
+        "UAEX FSA6105, Blackberry Production in the Home Garden (M. Elena Garcia)"
+      ],
+      "source_publishers": [
+        "University of Arkansas Division of Agriculture, Cooperative Extension Service"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.uaex.uada.edu/publications/PDF/FSA-6105.pdf",
+      "anchor_paths": [
+        "regions.mid_south.plantings[0].anchoring_urls.uada_ext_fsa6105",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.uada_ext_fsa6105",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.uada_ext_fsa6105"
+      ],
+      "source_context": "They are a good addition to the home fruit garden and can be grown with fewer inputs than most other fruit crops. Further­ more, the fruit is flavorful and nutritious. Varieties developed by the University of Arkansas fruit breeding program are recommended for use in the state. These varieties have an upright growth habit and do not require the use of an elaborate trellis system.",
+      "source_context_available": true,
+      "tool_first_6gram": "the university of arkansas fruit breeding"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "soil_prep_beginner",
+      "our_prose": "Get the row ready before you plant, in a full-sun spot. Most garden soil is fine; aim for a pH around 6.0 to 6.5 and only adjust if it is far off. Mix in plenty of compost or aged manure, and on heavy or wet soil, plant on a raised mound so the roots stay dry. Pull out weeds and any wild brambles nearby, and avoid spots that recently grew tomatoes, potatoes, or strawberries.",
+      "run_normalized": "6 0 to 6 5 and",
+      "run_in_our_prose": "6.0 to 6.5 and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "6 0 to 6 5 and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "vce_426_840"
+      ],
+      "source_names": [
+        "Virginia Cooperative Extension Publication 426-840"
+      ],
+      "source_publishers": [
+        "Virginia Tech"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.pubs.ext.vt.edu/426/426-840/426-840.html",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.vce_426_840",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.vce_426_840"
+      ],
+      "source_context": "Establishing the Planting Soils Caneberries grow best in deep, sandy loam soils rich in organic matter. Ideal soil should have a pH of 6.0 to 6.5 and be well-drained to a depth of at least 3 feet. Caneberries are sensitive to excess waterlogging, and even temporary water accumulation can weaken canes, hinder plant growth, and increase incidences of diseases — particularly root rots.",
+      "source_context_available": true,
+      "tool_first_6gram": "6 0 to 6 5 and"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Keep the soil consistently moist, about 1 to 2 inches of water per week, more in heat. The most water-sensitive window runs from bloom through harvest, when the developing berries need steady moisture to size and stay plump.",
+      "run_normalized": "2 inches of water per week",
+      "run_in_our_prose": "2 inches of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 inches of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-san-luis-obispo-county/blackberries",
+      "anchor_paths": [
+        "regions.ca_interior.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Water and Fertilizer Blackberries require frequent irrigation during the growing season, ensuring they are always moist but not saturated. Provide 1-2 inches of water per week from mid-May through October, irrigating two times per week. Overhead irrigation is not recommended as it promotes fruit rot and other diseases Fertilize with annual application of nitrogen fertilizer prior to growing season in January.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 inches of water per week"
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "watering.schedule_by_stage[0].rate",
+      "our_prose": "1 to 2 inches of water per week including rain",
+      "run_normalized": "2 inches of water per week",
+      "run_in_our_prose": "2 inches of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 inches of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-san-luis-obispo-county/blackberries",
+      "anchor_paths": [
+        "regions.ca_interior.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.plantings[0].anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uc_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Water and Fertilizer Blackberries require frequent irrigation during the growing season, ensuring they are always moist but not saturated. Provide 1-2 inches of water per week from mid-May through October, irrigating two times per week. Overhead irrigation is not recommended as it promotes fruit rot and other diseases Fertilize with annual application of nitrogen fertilizer prior to growing season in January.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 inches of water per week"
+    }
+  ]
+}

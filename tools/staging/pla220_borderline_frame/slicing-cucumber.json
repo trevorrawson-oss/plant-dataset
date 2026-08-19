@@ -1,0 +1,827 @@
+{
+  "crop_slug": "slicing-cucumber",
+  "record_count": 23,
+  "records": [
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "diseases[0].cause_seasoned",
+      "our_prose": "Powdery mildew fungi thrive between about 50 and 90°F in dry weather with high humidity, and unlike most leaf diseases they do not need leaf wetness to infect. Crowded plantings, poor airflow, and shade worsen it, and it is one of the most common late-season cucumber diseases.",
+      "run_normalized": "is one of the most common",
+      "run_in_our_prose": "is one of the most common",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is one of the most common"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Squash Bugs An adult squash bug ( Anasa tristis ). Zack Snipes, ©2020, Clemson Extension The squash bug ( Anasa tristis ) is one of the most common and troublesome pests in the home vegetable garden. Squash plants frequently are killed by this sap-feeding pest.",
+      "source_context_available": true,
+      "tool_first_6gram": "is one of the most common"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "White, powdery patches spread over upper and lower leaf surfaces and stems until leaves yellow, brown, and die back ahead of schedule. Early defoliation shortens the season, cuts yield, and leaves slicing fruit exposed to sunscald.",
+      "run_normalized": "upper and lower leaf surfaces and",
+      "run_in_our_prose": "upper and lower leaf surfaces and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "upper and lower leaf surfaces and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/diseases/powdery-mildew-cucurbits",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Disease management Powdery mildew of cucurbits Quick facts White powdery spots can form on both upper and lower leaf surfaces, and quickly expand into large blotches. Symptoms of powdery mildew first appear mid to late summer in Minnesota.",
+      "source_context_available": true,
+      "tool_first_6gram": "upper and lower leaf surfaces and"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "diseases[3].prevention_beginner",
+      "our_prose": "Buy clean seed and resistant varieties, water at the base, stay out of the patch when it is wet, and clean up old vines at the end of the season. Move cucumbers to a new spot each year.",
+      "run_normalized": "vines at the end of the season",
+      "run_in_our_prose": "vines at the end of the season",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "vines at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/disease-management/angular-leaf-spot",
+      "anchor_paths": [
+        "diseases[3].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Do not work in plants when leaves are wet. Remove and destroy infected fruit and vines at the end of the season in small gardens.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "diseases[3].prevention_beginner",
+      "our_prose": "Buy clean seed and resistant varieties, water at the base, stay out of the patch when it is wet, and clean up old vines at the end of the season. Move cucumbers to a new spot each year.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "growth_stages[5].user_action_beginner",
+      "our_prose": "Pull out finished plants and clear them away at the end of the season. This helps prevent pests and disease next year. A second planting made in summer often keeps producing after the first one is done.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/disease-management/angular-leaf-spot",
+      "anchor_paths": [
+        "diseases[3].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Do not work in plants when leaves are wet. Remove and destroy infected fruit and vines at the end of the season in small gardens.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "growth_stages[5].user_action_beginner",
+      "our_prose": "Pull out finished plants and clear them away at the end of the season. This helps prevent pests and disease next year. A second planting made in summer often keeps producing after the first one is done.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "pests[2].organic_treatment_beginner",
+      "our_prose": "Blast them off with a strong spray of water and treat the undersides of the leaves with insecticidal soap, repeating every few days. Ladybugs and other helpful insects eat aphids, so welcome them.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "pests[3].cause_seasoned",
+      "our_prose": "Two-spotted spider mites feed on the contents of individual leaf cells and multiply explosively in hot, dry, dusty conditions, especially on water-stressed plants. They are not insects, so many insecticides do not touch them.",
+      "run_normalized": "mites feed on the contents of individual",
+      "run_in_our_prose": "mites feed on the contents of individual",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "mites feed on the contents of individual"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider Mites Two-spotted spider mites ( Tetranychus urticae ) can be a serious problem on cucurbits, especially on watermelons and cantaloupes, during hot, dry weather. These tiny mites feed on the contents of individual cells of the leaves. This damage appears as pale yellow and reddish-brown spots ranging in size from small specks to large whitish, stippled areas on the upper sides of leaves.",
+      "source_context_available": true,
+      "tool_first_6gram": "feed on the contents of individual"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "pests[3].organic_treatment_seasoned",
+      "our_prose": "Knock mites off with a strong spray of water to the leaf undersides, and treat with insecticidal soap or horticultural oil twice, about five days apart, covering the undersides well. Conserve predatory mites, ladybugs, and minute pirate bugs, the main natural controls.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "pests[3].symptoms_seasoned",
+      "our_prose": "Fine pale yellow and reddish-brown stippling on the upper leaf surface, often with faint webbing beneath, in hot, dry weather. Damage develops very fast: leaves bronze, dry, and drop, and a heavy infestation of two-spotted spider mite (Tetranychus urticae) can stunt or kill a plant.",
+      "run_normalized": "of two spotted spider mite tetranychus urticae",
+      "run_in_our_prose": "of two-spotted spider mite (Tetranychus urticae",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "of two spotted spider mite tetranychus urticae"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Whitney Cranshaw, Colorado State University, www.insectimages.org Extreme close-up of two-spotted spider mite ( Tetranychus urticae ). David Cappaert, Michigan State University, www.insectimages.org Insecticidal soaps generally offer adequate control when applied before the numbers are too high.",
+      "source_context_available": true,
+      "tool_first_6gram": "of two spotted spider mite tetranychus"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's low-elevation Dixie belt (Mojave-edge high desert) runs slicing cucumbers on one spring cycle only, per USU Extension's Suggested Vegetable Planting Dates for Utah. Direct-sow around March 15, the Group C (Tender) date for St. George, about two weeks ahead of the March 30 average last frost; the table's explicit local date runs earlier than a generic frost-relative rule would. Harvest begins about 63 days later, around May 17, and continues into late June. Once St. George's daytime highs push past 95°F and the county's own frost-and-elevation data show summer highs routinely reaching 100°F in June through August, vines stop setting fruit and any that does form turns bitter. USU documents fall planting for cool-season crops in the St. George area but gives no fall or summer-replant window for slicing cucumbers, so there is no second cycle here; frost returns around November 1, well after the plants have already stopped producing for the year.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "regions.utah_dixie.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "St. George summers routinely reach 100°F in June, July, and August (USU Extension, Elevations for Washington County), so the spring slicing cucumbers crop is picked before the worst of the heat and vines stop setting fruit and any that does form turns bitter. USU's Suggested Vegetable Planting Dates for Utah lists no St. George fall or summer-replant window for this crop, so the season ends here rather than resuming with a second planting.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow cucumbers or their relatives in the same spot more than once every 3 years or so. Moving them around the garden each year helps avoid a buildup of pests and disease. Clean up old vines at the end of the season too.",
+      "run_normalized": "vines at the end of the season",
+      "run_in_our_prose": "vines at the end of the season",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "vines at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/disease-management/angular-leaf-spot",
+      "anchor_paths": [
+        "diseases[3].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Do not work in plants when leaves are wet. Remove and destroy infected fruit and vines at the end of the season in small gardens.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow cucumbers or their relatives in the same spot more than once every 3 years or so. Moving them around the garden each year helps avoid a buildup of pests and disease. Clean up old vines at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "sources_summary.primary[1].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "storage.fridge_beginner",
+      "our_prose": "Keep slicing cucumbers in the fridge for about a week, in the warmer crisper drawer rather than the coldest spot, since too-cold storage causes soft, pitted spots. Keep them away from apples and tomatoes, which make them go bad faster.",
+      "run_normalized": "for about a week in the",
+      "run_in_our_prose": "for about a week, in the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for about a week in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-cucumbers",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.umn_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[1].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "A cool basement might work as a place to hold cucumbers in perforated plastic bags. Cucumbers will keep for about a week in the refrigerator. The time-honored way to preserve cucumbers is by pickling .",
+      "source_context_available": true,
+      "tool_first_6gram": "for about a week in the"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "tips_by_stage.end_of_season[0].text_beginner",
+      "our_prose": "At the end of the season, pull up old vines and clear them away. This cuts down on pests and disease next year.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "At the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/disease-management/angular-leaf-spot",
+      "anchor_paths": [
+        "diseases[3].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Do not work in plants when leaves are wet. Remove and destroy infected fruit and vines at the end of the season in small gardens.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "tips_by_stage.end_of_season[0].text_beginner",
+      "our_prose": "At the end of the season, pull up old vines and clear them away. This cuts down on pests and disease next year.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "At the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for about 1 inch of water per week, more in heat or sandy soil, delivered deeply and less often rather than in light daily sprinkles. Even, steady moisture is what keeps slicing cucumbers from turning bitter and misshapen.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "crop_slug": "apricot",
+  "record_count": 9,
+  "records": [
+    {
+      "crop_slug": "apricot",
+      "field_path": "diseases[2].cause_seasoned",
+      "our_prose": "The bacterium Xanthomonas arboricola pv. pruni. It spreads in warm, wet weather and builds up where susceptible stone fruit grow nearby. On apricot the leaf and fruit spotting is sometimes confused with the fungal shot hole (Coryneum blight).",
+      "run_normalized": "the bacterium xanthomonas arboricola pv pruni",
+      "run_in_our_prose": "The bacterium Xanthomonas arboricola pv. pruni",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the bacterium xanthomonas arboricola pv pruni"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peach-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[2].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Apply all chemicals according to label directions. Bacterial Spot This disease is caused by the bacterium Xanthomonas arboricola pv. pruni , and affects peach fruit and leaves. Infected leaves develop small reddish-purple spots that often have a white center.",
+      "source_context_available": true,
+      "tool_first_6gram": "the bacterium xanthomonas arboricola pv pruni"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "growth_stages[2].what_to_look_for_beginner",
+      "our_prose": "Apricots are usually trained to an open-center or vase shape: three to four evenly spaced main branches (called scaffolds) from a short trunk, with an open middle. Apricot fruits on short spurs that live several years as well as on last year's wood, so it needs less hard pruning than a peach.",
+      "run_normalized": "apricots are usually trained to an open",
+      "run_in_our_prose": "Apricots are usually trained to an open",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "apricots are usually trained to an open"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/cultural-tips-for-growing-apricot/",
+      "anchor_paths": [
+        "companions.bad_seasoned[0].anchoring_urls.ucanr_ext",
+        "companions.good_seasoned[1].anchoring_urls.ucanr_ext",
+        "diseases[1].anchoring_urls.ucanr_ext",
+        "diseases[3].anchoring_urls.ucanr_ext",
+        "fertilizer.anchoring_urls.ucanr_ext",
+        "harvest_ready_anchoring_urls.ucanr_ext",
+        "pests[0].anchoring_urls.ucanr_ext",
+        "pests[2].anchoring_urls.ucanr_ext",
+        "pests[3].anchoring_urls.ucanr_ext",
+        "pests[4].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].bloom[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "rootstock_options[0].anchoring_urls.ucanr_ext",
+        "rootstock_options[1].anchoring_urls.ucanr_ext",
+        "rootstock_options[2].anchoring_urls.ucanr_ext",
+        "rootstock_options[3].anchoring_urls.ucanr_ext",
+        "rotation.anchoring_urls.ucanr_ext",
+        "soil.anchoring_urls.ucanr_ext",
+        "tips_by_stage.dormancy[1].anchoring_urls.ucanr_ext",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.ucanr_ext",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.ucanr_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ucanr_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.ucanr_ext",
+        "tips_by_stage.fruit_set[1].anchoring_urls.ucanr_ext",
+        "tips_by_stage.planting[1].anchoring_urls.ucanr_ext",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.ucanr_ext",
+        "varieties.anchoring_urls.ucanr_ext",
+        "watering.anchoring_urls.ucanr_ext",
+        "yield_expectations.anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "Training occurs during the first 2 to 3 years after planting and should be completed before fruit is allowed to set. Apricots are usually trained to an open vase or modified vase system where the center is open and has 3 or 4 main scaffolds with no central leader.",
+      "source_context_available": true,
+      "tool_first_6gram": "apricots are usually trained to an"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "growth_stages[6].user_action_beginner",
+      "our_prose": "Thin the little fruits so that about one apricot is left every 4 to 6 inches along each branch, picking off the extras while they are small. This one step does the most for fruit size, keeps branches from breaking, and helps the tree crop more evenly each year. It also lets you remove damaged fruit early.",
+      "run_normalized": "every 4 to 6 inches along",
+      "run_in_our_prose": "every 4 to 6 inches along",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "every 4 to 6 inches along"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/apricots-in-the-home-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.usu_ext",
+        "companions.good_seasoned[0].anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "pests[3].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "pollination.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "rootstock_options[0].anchoring_urls.usu_ext",
+        "rootstock_options[1].anchoring_urls.usu_ext",
+        "rootstock_options[2].anchoring_urls.usu_ext",
+        "rootstock_options[3].anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.blossom[0].anchoring_urls.usu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[0].anchoring_urls.usu_ext",
+        "tips_by_stage.dormancy[1].anchoring_urls.usu_ext",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.usu_ext",
+        "tips_by_stage.establishment[0].anchoring_urls.usu_ext",
+        "tips_by_stage.fruit_set[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[2].anchoring_urls.usu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.usu_ext",
+        "tips_by_stage.planting[1].anchoring_urls.usu_ext",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Trees typically over-bear and will produce many small, less-useable fruits unless fruit is thinned. When fruits are grape-sized, thin to one fruit every 4 to 6 inches along the branch to increase size of remaining fruit and to maintain tree health.",
+      "source_context_available": true,
+      "tool_first_6gram": "every 4 to 6 inches along"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "pests[1].symptoms_seasoned",
+      "our_prose": "Gummy ooze mixed with sawdust-like frass at the base of the trunk, right around the soil line, often with a mounded look where the bark meets the ground. Larvae tunnel the inner bark at the crown; several borers can girdle and kill a young apricot in a single season, and the wounds also open the door to canker.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "regions.pnw.resolved_by_zone.8.suitability_note_seasoned",
+      "our_prose": "Chill is amply met in every zone here (this variety range needs 350 to 700 hours; the region banks far more), so the limiting factor is not cold, it is the cool, wet maritime spring. Apricot blooms earliest of any tree fruit grown here, and WSU's western Washington fruit handbook flags it as very sensitive to frost at bloom time; even where frost does not strike, cool, damp bloom-time weather keeps pollinators from working the flowers well and favors brown rot and coryneum blight on stone fruit generally. Reliable fruiting is genuinely site-dependent: the warmest, driest, most sheltered spot available, a late-blooming variety, and attentive dormant-season disease control are what turn a marginal crop into a real one.",
+      "run_normalized": "very sensitive to frost at bloom time",
+      "run_in_our_prose": "very sensitive to frost at bloom time",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "very sensitive to frost at bloom time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Apricots Apricots (Prunus armeniaca) are difficult to grow in our conditions because they bloom early and are susceptible to many diseases. They are very sensitive to frost at bloom time and require sprays to control brown rot both at bloom and pre-harvest. Even when the trees are healthy they may produce a good crop only about one year in three.",
+      "source_context_available": true,
+      "tool_first_6gram": "sensitive to frost at bloom time"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "start_method.hardening_off_beginner",
+      "our_prose": "Hardening off (slowly getting an indoor-grown seedling used to the outdoors) does not apply to apricot. You plant it bare-root and dormant in late winter or early spring, not as a seedling started inside, so there is no tender young plant to ease outdoors.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/prunus-armeniaca/",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "The winters must be chilly for the chilling requirements, and spring should be dry and frost-free. They prefer moist, well-drained soil in full sun. The apricot blooms in late winter or early spring so you should plant them in a protected area to minimize frost damage. Do not plant them in low-lying areas which could be a frost pocket.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "start_method.hardening_off_seasoned",
+      "our_prose": "Hardening off does not apply to apricot. It arrives as a dormant, bare-root tree and goes in the ground in late winter to early spring, not raised from a seedling indoors, so there is no tender transplant to acclimate.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, no leaves) in late winter to early spring, before the buds open, once the ground can be dug; in mild-winter areas that means December through February. Soak the roots in a bucket for an hour or two first. Dig a hole wide enough to spread the roots without bending them, and set the tree so the graft union (the bumpy joint near the base, where the variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill with the same soil, water in well, and add a stake only if it is windy. Most of all, avoid low, frosty spots, because apricot blooms so early that late frosts are its biggest threat.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while dormant in late winter to early spring, before bud break, once the ground can be worked; in mild-winter regions this is December through February. Soak the roots an hour or two beforehand. Dig a hole wide enough to spread the roots without bending them and set the tree with the graft union (the swollen joint near the base) 2 to 3 inches above the final soil line. Do not fertilize the hole; backfill with native soil, water in well, and stake if the site is windy. Above all, choose a planting spot that is not a frost pocket, since apricot's very early bloom is its greatest vulnerability.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    }
+  ]
+}

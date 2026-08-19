@@ -1,0 +1,579 @@
+{
+  "crop_slug": "lavender",
+  "record_count": 14,
+  "records": [
+    {
+      "crop_slug": "lavender",
+      "field_path": "diseases[1].prevention_seasoned",
+      "our_prose": "Space plants at least 2 to 3 feet apart for air circulation, site in full sun, and avoid overhead watering. Good airflow is the main defense.",
+      "run_normalized": "at least 2 to 3 feet apart",
+      "run_in_our_prose": "at least 2 to 3 feet apart",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "at least 2 to 3 feet apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext_prune_lavender"
+      ],
+      "source_names": [
+        "OSU Extension Ask Extension -- When is the best time to prune lavender?"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.oregonstate.edu/ask-extension/featured/when-best-time-prune-lavender",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_interior.plantings[0].anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.osu_ext_prune_lavender",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.osu_ext_prune_lavender",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.osu_ext_prune_lavender",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.osu_ext_prune_lavender",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.osu_ext_prune_lavender",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.osu_ext_prune_lavender",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.osu_ext_prune_lavender",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.osu_ext_prune_lavender",
+        "regions.mid_south.plantings[0].anchoring_urls.osu_ext_prune_lavender",
+        "regions.mid_south.resolved_by_zone.7.anchoring_urls.osu_ext_prune_lavender",
+        "regions.mid_south.resolved_by_zone.8.anchoring_urls.osu_ext_prune_lavender",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.osu_ext_prune_lavender",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.osu_ext_prune_lavender",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.osu_ext_prune_lavender",
+        "regions.pnw.plantings[0].anchoring_urls.osu_ext_prune_lavender",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.osu_ext_prune_lavender",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.rgv.plantings[0].anchoring_urls.osu_ext_prune_lavender",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.osu_ext_prune_lavender",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.osu_ext_prune_lavender",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.osu_ext_prune_lavender",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.osu_ext_prune_lavender",
+        "tips_by_stage.cut_back[1].anchoring_urls.osu_ext_prune_lavender",
+        "tips_by_stage.transplant[1].anchoring_urls.osu_ext_prune_lavender",
+        "tips_by_stage.vegetative[1].anchoring_urls.osu_ext_prune_lavender"
+      ],
+      "source_context": "This is due to inadequate air circulation. It is recommended that your plants be at least 2 to 3 feet apart and 3 to 6 feet between rows. Here is a Colorado Extension article about lavender.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 2 to 3 feet"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Lavender has very low fertility needs and is one of the few plants you can harm by feeding. A single inch of compost worked in at planting, or one application of a slow-release fertilizer for the season, is plenty. Over-fertilized plants put on lush foliage at the expense of flowers and fragrance and become more prone to disease and winter injury.",
+      "run_normalized": "one application of a slow release fertilizer",
+      "run_in_our_prose": "one application of a slow-release fertilizer",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "one application of a slow release fertilizer"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_english_lavender"
+      ],
+      "source_names": [
+        "USU Extension -- How to Grow English Lavender in Your Garden (peer-reviewed fact sheet)"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext_english_lavender",
+        "companions.good_seasoned[0].anchoring_urls.usu_ext_english_lavender",
+        "companions.good_seasoned[1].anchoring_urls.usu_ext_english_lavender",
+        "companions.good_seasoned[2].anchoring_urls.usu_ext_english_lavender",
+        "companions.good_seasoned[3].anchoring_urls.usu_ext_english_lavender",
+        "companions.good_seasoned[4].anchoring_urls.usu_ext_english_lavender",
+        "companions.good_seasoned[5].anchoring_urls.usu_ext_english_lavender",
+        "container_notes.anchoring_urls.usu_ext_english_lavender",
+        "fertilizer.anchoring_urls.usu_ext_english_lavender",
+        "harvest_ready_anchoring_urls.usu_ext_english_lavender",
+        "ph.anchoring_urls.usu_ext_english_lavender",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext_english_lavender",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext_english_lavender",
+        "regions.northern_tier.plantings[0].anchoring_urls.usu_ext_english_lavender",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext_english_lavender",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext_english_lavender",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext_english_lavender",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext_english_lavender",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext_english_lavender",
+        "regions.pnw.plantings[0].anchoring_urls.usu_ext_english_lavender",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext_english_lavender",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext_english_lavender",
+        "soil.anchoring_urls.usu_ext_english_lavender",
+        "storage.anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.bloom[0].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.bloom[1].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.cut_back[0].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.cut_back[1].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.dormancy[1].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.establishment[0].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.establishment[1].anchoring_urls.usu_ext_english_lavender",
+        "tips_by_stage.transplant[1].anchoring_urls.usu_ext_english_lavender",
+        "varieties.anchoring_urls.usu_ext_english_lavender",
+        "watering.anchoring_urls.usu_ext_english_lavender",
+        "yield_expectations.anchoring_urls.usu_ext_english_lavender"
+      ],
+      "source_context": "Too much fertilizer also makes plants vulnerable to disease and cold weather injury. Compost (1 inch under plants) is enough to feed the plants. One application of a slow release fertilizer (1 T/plant) covers the growing season’s needs.",
+      "source_context_available": true,
+      "tool_first_6gram": "application of a slow release fertilizer"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "growth_stages[0].user_action_seasoned",
+      "our_prose": "Loosen the rootball, set the crown level with the soil surface, and water in once to settle the roots. Do not amend with rich compost or fertilizer; lavender wants lean ground.",
+      "run_normalized": "level with the soil surface and",
+      "run_in_our_prose": "level with the soil surface, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "level with the soil surface and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_san_diego_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners San Diego County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardener Program of San Diego County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/blog/savvy-sage/article/growing-lavender",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_san_diego_mg"
+      ],
+      "source_context": "Alternatively, it can be planted in the fall as long as the roots have enough time to become established before the first frost. Dig a hole so that the crown of the root ball is level with the soil surface and space the plants so that they get good air circulation. If you are planting your lavender with other types of plants, make sure they are drought-tolerant varieties as well.",
+      "source_context_available": true,
+      "tool_first_6gram": "level with the soil surface and"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "growth_stages[0].user_action_seasoned",
+      "our_prose": "Loosen the rootball, set the crown level with the soil surface, and water in once to settle the roots. Do not amend with rich compost or fertilizer; lavender wants lean ground.",
+      "run_normalized": "level with the soil surface and",
+      "run_in_our_prose": "level with the soil surface, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "level with the soil surface and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-marin-master-gardeners/article/lovely-lavender",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.northern_tier.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ucanr_marin_mg",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.ucanr_marin_mg",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.ucanr_marin_mg",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.ucanr_marin_mg",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "Plant in spring after the risk of frost has passed or in the fall so long as the roots have enough time to become established before the first frost. Dig a hole large enough so that the crown of the root ball is level with the soil surface, and space the plants so that they get good air circulation, typically about three feet apart.",
+      "source_context_available": true,
+      "tool_first_6gram": "level with the soil surface and"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "regions.fl_peninsula.region_notes_seasoned",
+      "our_prose": "Central and south Florida are hard country for lavender, and the honest guidance is to keep expectations low. UF/IFAS is clear that lavender is a Mediterranean plant that grows best in Florida's cooler seasons and that the state's high humidity brings fungal root rot. Across the peninsula it is a container or raised-bed plant, not a landscape perennial: plant in sharply drained mix, give afternoon shade against the intense sun, mulch the crown in winter against cold wet soil, keep air moving, and choose only heat- and humidity-tolerant types such as Spanish lavender or the hybrid Phenomenal. Common English lavender reliably fails. In central Florida (zone 10) a well-tended container plant may persist for a few years before declining; in the deep south (zone 11) lavender is genuinely marginal and best treated as a short-lived, cool-season container novelty. Where it flowers, the flush comes in the cooler half of the year, roughly spring into summer.",
+      "run_normalized": "grows best in florida s cooler seasons",
+      "run_in_our_prose": "grows best in Florida's cooler seasons",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "grows best in florida s cooler seasons"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://blogs.ifas.ufl.edu/pascoco/2024/05/07/spice-up-your-life-a-beginners-guide-to-growing-lavender/",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "This herb blooms from June – August. But since this herb is native to the Mediterranean, it grows best in Florida’s cooler seasons. In the winter, protect the crowns with several inches of mulch. When the soil is wet and heavy in the winter, it could cause injury to your lavender plant.",
+      "source_context_available": true,
+      "tool_first_6gram": "best in florida s cooler seasons"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.10.grown_as_note_seasoned",
+      "our_prose": "Perennial only in a container or raised bed with heat-tolerant cultivars, and even then short-lived. UF/IFAS is clear that lavender, a Mediterranean plant, grows best in Florida's cooler seasons and that high humidity brings fungal root rot. Plant in raised beds or pots with sharp drainage, give afternoon shade against the intense sun, mulch the crown in winter against wet, cold soil, and choose heat- and humidity-tolerant types such as Spanish lavender or the hybrid Phenomenal. English lavender reliably fails in central and south Florida.",
+      "run_normalized": "grows best in florida s cooler seasons",
+      "run_in_our_prose": "grows best in Florida's cooler seasons",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "grows best in florida s cooler seasons"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://blogs.ifas.ufl.edu/pascoco/2024/05/07/spice-up-your-life-a-beginners-guide-to-growing-lavender/",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas"
+      ],
+      "source_context": "This herb blooms from June – August. But since this herb is native to the Mediterranean, it grows best in Florida’s cooler seasons. In the winter, protect the crowns with several inches of mulch. When the soil is wet and heavy in the winter, it could cause injury to your lavender plant.",
+      "source_context_available": true,
+      "tool_first_6gram": "best in florida s cooler seasons"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "regions.mid_atlantic.region_notes_seasoned",
+      "our_prose": "Across the Mid-Atlantic Piedmont and Coastal Plain, English lavender is comfortably hardy in both zone 7 and zone 8, so cold is not the constraint it is farther north. The real test here is the region's humid summer: NC State's own profile of the species names root rot from overwatering and leaf spot as the main threats. Plant on a raised, sharply drained mound in full sun, water sparingly once established, and space plants generously for airflow, the same discipline growers rely on across the humid Southeast. Set plants out in spring after the last frost and do the hard cut back the month after bloom fades, never in fall.",
+      "run_normalized": "in spring after the last frost",
+      "run_in_our_prose": "in spring after the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in spring after the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lavender",
+      "anchor_paths": [
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Lavender can also be transplanted successfully in the fall. Transplants: Transplant in spring after the last frost or in the fall Cuttings: Propagate from cuttings after bloom, or via layering at any time of the year Harvesting Harvest the flower heads after bloom Pruning Prune after flowering to keep plants from becoming woody Indoors Lavender can be grown as an indoor plant with a minimum of 5 to 6 hours of bright light from a sunny window, or with supplemental light from fluorescent or LED lamps for 14 to 16 hour",
+      "source_context_available": true,
+      "tool_first_6gram": "in spring after the last frost"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "regions.mid_south.region_notes_seasoned",
+      "our_prose": "Across the Mid-South Ozark Uplands and Delta Lowlands, English lavender is comfortably hardy in both zone 7 and zone 8, so cold is not the constraint it is farther north. The real test here is the region's humid summer: the University of Arkansas's own profile of the species names root rot from overwatering and leaf spot as the main threats. Plant on a raised, sharply drained mound in full sun, water sparingly once established, and space plants generously for airflow, the same discipline growers rely on across the humid Southeast. Set plants out in spring after the last frost and do the hard cut back the month after bloom fades, never in fall.",
+      "run_normalized": "in spring after the last frost",
+      "run_in_our_prose": "in spring after the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in spring after the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lavender",
+      "anchor_paths": [
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Lavender can also be transplanted successfully in the fall. Transplants: Transplant in spring after the last frost or in the fall Cuttings: Propagate from cuttings after bloom, or via layering at any time of the year Harvesting Harvest the flower heads after bloom Pruning Prune after flowering to keep plants from becoming woody Indoors Lavender can be grown as an indoor plant with a minimum of 5 to 6 hours of bright light from a sunny window, or with supplemental light from fluorescent or LED lamps for 14 to 16 hour",
+      "source_context_available": true,
+      "tool_first_6gram": "in spring after the last frost"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "regions.pnw.resolved_by_zone.8.synthesis_note_beginner",
+      "our_prose": "In zone 8 of the maritime Pacific Northwest, lavender does very well. Plant it in spring, a few weeks after your last frost, on a raised, sharply drained, sunny spot. It blooms in early summer and gets its hard trim once the flowers fade. The region's dry, sunny pockets, like Sequim, are genuinely famous lavender country.",
+      "run_normalized": "it blooms in early summer and",
+      "run_in_our_prose": "It blooms in early summer and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "it blooms in early summer and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_san_diego_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners San Diego County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardener Program of San Diego County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/blog/savvy-sage/article/growing-lavender",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_san_diego_mg"
+      ],
+      "source_context": "A very hardy species, it grows on the smaller size to about two feet high depending on the variety. It blooms in early summer and can bloom again in late summer to fall. A popular variety is ‘Royal Velvet’, which is known for its sweet fragrance and mild flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "it blooms in early summer and"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "In Utah's Dixie high desert, lavender is a desert-strong perennial: English lavender is hardy well below zone 8, to about zone 5, so winter cold is not this region's real constraint. What matters here is the opposite of a humid-belt cell: this crop thrives in the heat, summer temperatures are not a problem, and established plants are genuinely drought-tolerant, and St. George's alkaline, fast-draining soil is close to lavender's native Mediterranean hillside ground. Give it full sun, lean alkaline soil with sharp drainage, and only occasional deep water once established. Establish plants in the shoulder season, spring or fall, per USU Extension's Suggested Vegetable Planting Dates for Utah.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "soil_prep_beginner",
+      "our_prose": "Pick the sunniest spot with the best drainage. Mix a little coarse compost into the top of the soil. If your ground is heavy clay, plant lavender in a raised bed or mound instead, because that drains better. The goal is poor, gritty soil, not rich soil.",
+      "run_normalized": "lavender in a raised bed or",
+      "run_in_our_prose": "lavender in a raised bed or",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "lavender in a raised bed or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_san_diego_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners San Diego County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardener Program of San Diego County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/blog/savvy-sage/article/growing-lavender",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_san_diego_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_san_diego_mg"
+      ],
+      "source_context": "If the latter is an issue in your garden, amend with organic compost and consider planting on a mound to help with drainage. Another option is to plant your lavender in a raised bed or a container where you will have control over the soil. Planting Plant lavender in the spring after the risk of hard frost has passed.",
+      "source_context_available": true,
+      "tool_first_6gram": "lavender in a raised bed or"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Lavender is almost always started from a nursery transplant or from softwood cuttings taken after bloom, not from seed. English lavender does not come true from seed and germination is slow and variable (roughly 100 to 200 days from seeding to a plantable size), so named cultivars are propagated vegetatively. To raise it from seed anyway, cold-stratify the seed for three to six weeks (moist, in the refrigerator) to improve and even germination, then surface-sow at about 70°F since light aids germination, starting indoors roughly 10 weeks before the last frost; expect slow, erratic emergence.",
+      "run_normalized": "10 weeks before the last frost",
+      "run_in_our_prose": "10 weeks before the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "10 weeks before the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/lavender",
+      "anchor_paths": [
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "How to grow Type: Perennial, semi-evergreen, woody Light: Full sun Soil: Well-drained Water: Drought-tolerant once established Size: 1 to 3 feet high, 2 to 4 feet wide When to plant/propagate From seed: Sow seeds indoors 8 to 10 weeks before the last frost date . Lavender can also be transplanted successfully in the fall. Transplants: Transplant in spring after the last frost or in the fall Cuttings: Propagate from cuttings after bloom, or via layering at any time of the year Harvesting Harvest the flower heads after bloom Pruning Prune after flowering to keep plants from becoming woody Indoors Lavender can be grown as an indoor plant with a minimum of 5",
+      "source_context_available": true,
+      "tool_first_6gram": "10 weeks before the last frost"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "storage.notes_seasoned",
+      "our_prose": "To dry lavender, cut stems as the first buds open, gather them into small bundles of 50 to 100 stems secured with a rubber band, and hang them upside down in a cool, dark, well-ventilated place. Once dry, strip the buds and store them in a sealed, opaque container away from light and air, which fade the color and scent.",
+      "run_normalized": "bundles of 50 to 100 stems",
+      "run_in_our_prose": "bundles of 50 to 100 stems",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "bundles of 50 to 100 stems"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "csu_ext_lavender_07245"
+      ],
+      "source_names": [
+        "CSU Extension Fact Sheet 7.245 (Growing Lavender in Colorado)"
+      ],
+      "source_publishers": [
+        "CSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.colostate.edu/resource/growing-lavender-in-colorado/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.csu_ext_lavender_07245",
+        "harvest_ready_anchoring_urls.csu_ext_lavender_07245",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.csu_ext_lavender_07245",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.csu_ext_lavender_07245",
+        "soil.anchoring_urls.csu_ext_lavender_07245",
+        "storage.anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.bloom[0].anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.cut_back[0].anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.dormancy[0].anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.dormancy[1].anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.transplant[0].anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.vegetative[0].anchoring_urls.csu_ext_lavender_07245",
+        "tips_by_stage.vegetative[1].anchoring_urls.csu_ext_lavender_07245",
+        "varieties.anchoring_urls.csu_ext_lavender_07245",
+        "watering.anchoring_urls.csu_ext_lavender_07245",
+        "yield_expectations.anchoring_urls.csu_ext_lavender_07245"
+      ],
+      "source_context": "Harvest the lavender stems in the morning hours when the oils are the most concentrated and when approximately 50 percent of the flower buds have opened. Use a sickle or pruning shears to cut stems as long as possible. Form bundles of 50 to 100 stems and secure them with rubber bands (Figure 5). Rubber bands will contract when the stems dry out.",
+      "source_context_available": true,
+      "tool_first_6gram": "bundles of 50 to 100 stems"
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "watering.method_beginner",
+      "our_prose": "Pour water at the base of the plant, not over the leaves, and let it dry out before watering again. Wet leaves and a soggy crown are what make lavender rot.",
+      "run_normalized": "at the base of the plant",
+      "run_in_our_prose": "at the base of the plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_h/H221/index.html",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "A perennial plant with light green, fleshy tapered leaves and spiny margins. Leaves form a rosette at the base of the plant. Cultivate in a greenhouse, sunroom or windowsill to keep from freezing (minimum of 41° F).",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the plant"
+    }
+  ]
+}

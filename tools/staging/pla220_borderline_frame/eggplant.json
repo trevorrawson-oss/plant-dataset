@@ -1,0 +1,1022 @@
+{
+  "crop_slug": "eggplant",
+  "record_count": 28,
+  "records": [
+    {
+      "crop_slug": "eggplant",
+      "field_path": "diseases[1].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, do not plant eggplant in the same spot for about four years, water at the soil instead of over the leaves, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "diseases[1].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, do not plant eggplant in the same spot for about four years, water at the soil instead of over the leaves, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.amount_beginner",
+      "our_prose": "Mix 1 to 2 pounds of 10-10-10 per 100 square feet (or a few inches of compost) into the soil before planting. Then, once fruit has set, scratch a nitrogen fertilizer into the soil a few inches out from each plant and water it in, repeating every three to four weeks.",
+      "run_normalized": "10 10 10 per 100 square feet",
+      "run_in_our_prose": "10-10-10 per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "10 10 10 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, apply and incorporate 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet prior to planting. Set plants in the garden after the danger of frost is past.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per 100 square"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common rate is 1 to 2 pounds of 10-10-10 per 100 square feet worked into the bed before transplanting, then a side-dress of about 0.5 pound of calcium nitrate (15.5-0-0) per 100 square feet once the first fruits set, repeated every three to four weeks through harvest, placed a few inches out from the plants and watered in.",
+      "run_normalized": "10 10 10 per 100 square feet",
+      "run_in_our_prose": "10-10-10 per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "10 10 10 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, apply and incorporate 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet prior to planting. Set plants in the garden after the danger of frost is past.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per 100 square"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.example_product",
+      "our_prose": "10-10-10 at planting, then calcium nitrate (15.5-0-0) as a side-dress",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate (15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/eggplant/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Working the fertilizer into the soil ensures that the nutrients are available to the plants when they are transplanted. Side dress plants with 5 pounds of calcium nitrate (15.5-0-0) per 1000 square feet or 300 feet of row three to four weeks after planting. For smaller gardens, use ½ pound of calcium nitrate fertilizer per 100 square feet or 30 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.notes_beginner",
+      "our_prose": "Eggplant grows for a long time and likes steady feeding, but the timing matters. Mix a balanced fertilizer such as 10-10-10 into the soil before you plant. Then wait: once the first little eggplants have set, feed with a nitrogen fertilizer, and again a few weeks later. Going heavy on fertilizer too early gives you a big leafy plant with few flowers, so save the feeding for after the fruit starts forming.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, apply and incorporate 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet prior to planting. Set plants in the garden after the danger of frost is past.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Eggplant is a moderately heavy feeder over a long season. Work a complete fertilizer such as 1 to 2 pounds of 10-10-10 per 100 square feet into the bed before transplanting, then side-dress with nitrogen once the first fruits have set and again three to four weeks later through the harvest. Hold the nitrogen back before fruit set, since too much early on drives leafy growth and few flowers; the time to push it is after the plant starts carrying fruit. Pair feeding with steady moisture, because fertilizer only helps a plant that is not also drought-stressed.",
+      "run_normalized": "10 10 10 per 100 square feet",
+      "run_in_our_prose": "10-10-10 per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "10 10 10 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, apply and incorporate 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet prior to planting. Set plants in the garden after the danger of frost is past.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per 100 square"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "A complete fertilizer such as 10-10-10 worked in at planting, then a nitrogen side-dress (for example calcium nitrate, 15.5-0-0) once fruit sets. Avoid heavy nitrogen before fruit set, which gives leaf at the expense of flowers.",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate, 15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/eggplant/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Working the fertilizer into the soil ensures that the nutrients are available to the plants when they are transplanted. Side dress plants with 5 pounds of calcium nitrate (15.5-0-0) per 1000 square feet or 300 feet of row three to four weeks after planting. For smaller gardens, use ½ pound of calcium nitrate fertilizer per 100 square feet or 30 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "A complete fertilizer such as 10-10-10 worked in at planting, then a nitrogen side-dress (for example calcium nitrate, 15.5-0-0) once fruit sets. Avoid heavy nitrogen before fruit set, which gives leaf at the expense of flowers.",
+      "run_normalized": "fertilizer such as 10 10 10",
+      "run_in_our_prose": "fertilizer such as 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fertilizer such as 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "If a soil test has not been conducted, apply and incorporate 1 to 2 pounds of all-purpose garden fertilizer, such as 10-10-10, per 100 square feet prior to planting. Set plants in the garden after the danger of frost is past.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 10 10 10"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "growth_stages[2].user_action_beginner",
+      "our_prose": "Harden the plants off over about a week, then plant them 18 to 24 inches apart into warm soil, and put a stake or cage in right away. A sheet of black plastic mulch warms the soil and helps.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "If plants are quite tall, they can be planted deeper as tomatoes form roots from their stems. Mulch Black plastic mulch warms the soil, conserves water and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "growth_stages[2].what_to_look_for_beginner",
+      "our_prose": "Strong young plants up to a foot tall, ready to go outside only when nights stay above 50°F and the soil is warm. Planting too early into cold soil stalls them.",
+      "run_normalized": "plants up to a foot tall",
+      "run_in_our_prose": "plants up to a foot tall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plants up to a foot tall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-eggplant",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Yard and garden Growing eggplant Quick facts Eggplant needs warm weather and will not thrive during a cool season. When buying plants, choose sturdy plants up to a foot tall. Start eggplant seeds about eight weeks before planting them outside. Transplant outdoors after nighttime low temperatures are above 50°F.",
+      "source_context_available": true,
+      "tool_first_6gram": "plants up to a foot tall"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "pests[1].symptoms_beginner",
+      "our_prose": "Striped yellow-and-black beetles and plump red larvae with black spots eat the leaves, sometimes stripping a plant bare. Eggplant is one of their favorite foods. Check the undersides of leaves for clusters of orange-yellow eggs.",
+      "run_normalized": "check the undersides of leaves for",
+      "run_in_our_prose": "Check the undersides of leaves for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "check the undersides of leaves for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/spider-mites/",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "You’ll usually notice plant damage such as stippled or yellow leaves before you spot the mites themselves (Figure 6). Check the undersides of leaves for mites, their eggs, and webbing; you’ll need a hand lens to identify them. To observe mites more closely, shake a few off the leaf surface onto a white sheet of paper.",
+      "source_context_available": true,
+      "tool_first_6gram": "check the undersides of leaves for"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "pests[4].prevention_beginner",
+      "our_prose": "Clear away old plants at the end of the season, move eggplant to a new spot each year, and check the undersides of the lower leaves early so you catch the bugs before they spread.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "pests[4].prevention_beginner",
+      "our_prose": "Clear away old plants at the end of the season, move eggplant to a new spot each year, and check the undersides of the lower leaves early so you catch the bugs before they spread.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "pests[5].prevention_beginner",
+      "our_prose": "Turn the soil at the end of the season to destroy the pupae, watch for droppings and missing leaves from midsummer, and welcome the helpful wasps that attack hornworms.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "pests[5].prevention_beginner",
+      "our_prose": "Turn the soil at the end of the season to destroy the pupae, watch for droppings and missing leaves from midsummer, and welcome the helpful wasps that attack hornworms.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "regions.rgv.region_notes_beginner",
+      "our_prose": "In the Rio Grande Valley, plant eggplant transplants Feb 14 - Mar 20. Harvest runs May 25 - Dec 13, a long picking season since it rarely if ever frosts here. Many Valley growers set out a fresh round of transplants in midsummer (June into August) alongside the original planting, just to keep vigor up through such a long season, rather than replacing the crop outright.",
+      "run_normalized": "in the rio grande valley plant",
+      "run_in_our_prose": "In the Rio Grande Valley, plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the rio grande valley plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+      "anchor_paths": [
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Cilantro Santo, Slo-Bolting, Marino, Calypso Early October through early February Almost any variety of Cilantro does well in the Rio Grande Valley. Plant spacing – Sow 3-4 inches apart and thin to 6 inches apart. Dill Long Island Mammoth, Dukat, Bouquet Early October through mid- December High soil heat seems to reduce germination rate and although it can be planted in early October, it is best to wait until late October or early November.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the rio grande valley plant"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "regions.utah_dixie.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Fruit set in the wider Solanaceae group eggplant belongs to fails once days push above about 95°F or nights stay above 50°F, the same threshold USU documents for tomato; St. George summers routinely reach 100°F in June, July, and August, well past that ceiling, so the spring crop is picked out before the heat and no fall crop is set (USU Extension: How to Grow Tomatoes in Your Garden, extended by family to eggplant; Washington County Elevations and frost dates).",
+      "run_normalized": "how to grow tomatoes in your garden",
+      "run_in_our_prose": "How to Grow Tomatoes in Your Garden",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "how to grow tomatoes in your garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "How to Grow Tomatoes in Your Garden | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "how to grow tomatoes in your"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Move eggplant to a different part of the garden each year, and do not return it, or its relatives tomato, pepper, and potato, to the same spot for about four years. Soil diseases like verticillium wilt and the pests that bother eggplant build up where nightshades grow, and rotation is the main tool to keep them in check. Clean up old plants at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Move eggplant to a different part of the garden each year, and do not return it, or its relatives tomato, pepper, and potato, to the same spot for about four years. Soil diseases like verticillium wilt and the pests that bother eggplant build up where nightshades grow, and rotation is the main tool to keep them in check. Clean up old plants at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "sources_summary.primary[10].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "sources_summary.primary[14].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "sources_summary.primary[2].name",
+      "our_prose": "University of Maryland Extension (Growing Eggplant in a Home Garden)",
+      "run_normalized": "growing eggplant in a home garden",
+      "run_in_our_prose": "Growing Eggplant in a Home Garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growing eggplant in a home garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umd_ext",
+        "harvest_ready_anchoring_urls.umd_ext",
+        "pests[4].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "watering.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Growing Eggplant in a Home Garden | University of Maryland Extension Skip to main content",
+      "source_context_available": true,
+      "tool_first_6gram": "growing eggplant in a home garden"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "Iowa State University Extension (Growing Eggplant in the Home Garden)",
+      "run_normalized": "growing eggplant in the home garden",
+      "run_in_our_prose": "Growing Eggplant in the Home Garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growing eggplant in the home garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "varieties.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Growing Eggplant in the Home Garden | Yard and Garden Skip to main content Menu",
+      "source_context_available": true,
+      "tool_first_6gram": "growing eggplant in the home garden"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Start eggplant seeds indoors about 8 weeks before transplanting (UMD uses 8 to 10 week old transplants), with bottom heat of 75 to 85°F for fast, even germination. Eggplant needs a longer, warmer start than tomato and is set out later, once nights hold above 50°F and the soil has warmed to at least 60 to 65°F. Choose sturdy transplants up to a foot tall with stems about pencil thick, and set plant supports at planting. Direct sowing is practical only in the longest, warmest regions; everywhere else this is a transplant crop.",
+      "run_normalized": "8 to 10 week old transplants",
+      "run_in_our_prose": "8 to 10 week old transplants",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "8 to 10 week old transplants"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-eggplant-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umd_ext",
+        "harvest_ready_anchoring_urls.umd_ext",
+        "pests[4].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "watering.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Frost will injure top growth; needs warm weather to grow. Planting: Transplant after danger of frost, when soil is thoroughly warm. Use 8- to 10-week-old transplants. Full sun, requires direct light at least 6 hours/day; prefers 8 - 10 hours/day.",
+      "source_context_available": true,
+      "tool_first_6gram": "8 to 10 week old transplants"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "tips_by_stage.transplanting[0].text_beginner",
+      "our_prose": "Do not rush eggplant outside. Planting into cold soil stalls it badly. Wait until nights stay above 50°F and the soil is warm, a couple of weeks after tomato time. Black plastic mulch warms the soil and helps.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "Black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "If plants are quite tall, they can be planted deeper as tomatoes form roots from their stems. Mulch Black plastic mulch warms the soil, conserves water and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "Around 1 inch per week is the working range, leaning higher during flowering and fruit set, wetting the soil to a depth of at least 6 to 8 inches so the roots follow the moisture down. Even, deep watering is what sizes well-shaped fruit; letting the soil swing from dry to soaked stresses the plant and drops blossoms.",
+      "run_normalized": "the soil to a depth of",
+      "run_in_our_prose": "the soil to a depth of",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the soil to a depth of"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "However, lime may be applied as late as one or two weeks before planting. Make sure the lime is thoroughly mixed into the soil to a depth of 6-8 inches, then water the soil to promote the chemical reaction. If your soil pH is naturally above 7.0 (alkaline), where limestone, marl, or shells are present, there is no practical way of permanently lowering soil pH.",
+      "source_context_available": true,
+      "tool_first_6gram": "the soil to a depth of"
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for about 1 inch of water per week from rain plus irrigation, more in heat or on sandy soil, delivered deeply and less often rather than in light daily sprinkles. As a heat-loving plant grown through the hottest part of the year, eggplant transpires heavily in summer, and container plants dry out far faster still.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

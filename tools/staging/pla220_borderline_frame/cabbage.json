@@ -1,0 +1,301 @@
+{
+  "crop_slug": "cabbage",
+  "record_count": 8,
+  "records": [
+    {
+      "crop_slug": "cabbage",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Cabbage is a heavy feeder that needs steady nitrogen to build a large, solid head. Work a balanced fertilizer such as 5-10-10 or 10-10-10 into the bed before planting (Clemson: 5-10-10 at 3 pounds per 100 square feet), then side-dress with nitrogen once the plants are established and again as heads begin to cup, using about 34-0-0 or calcium nitrate. Keep nitrogen steady through heading, but pair it with even moisture: a late surge of growth from heavy feeding plus a sudden drink of water is what splits heads.",
+      "run_normalized": "fertilizer such as 5 10 10 or",
+      "run_in_our_prose": "fertilizer such as 5-10-10 or",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "fertilizer such as 5 10 10 or"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/library/gardening/texas-home-vegetable-gardening-guide/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "In general, if your garden is located on deep, sandy soil, apply a complete preplant fertilizer such as 5-10-10 or 6-12-12 at the rate of 1 to 2 pounds per 100 square feet. If your soil has a high percentage of clay, a fertilizer such as 10-20-10 or 12-24-12 applied at 1 to 2 pounds per 100 square feet should be suitable.",
+      "source_context_available": true,
+      "tool_first_6gram": "fertilizer such as 5 10 10"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "growth_stages[4].user_action_beginner",
+      "our_prose": "Cut the head off at the base with a sharp knife once it is firm. If you are not ready to pick, give the plant a quarter turn or tug to slow it down so it does not split.",
+      "run_normalized": "you are not ready to pick",
+      "run_in_our_prose": "you are not ready to pick",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "you are not ready to pick"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-cabbage",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "pests[4].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Heavy rain can cause split heads. You can minimize splitting of cabbages that you are not ready to pick by twisting the head a quarter turn or shearing one side of the roots with a spade.",
+      "source_context_available": true,
+      "tool_first_6gram": "you are not ready to pick"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "pests[2].cause_beginner",
+      "our_prose": "A small fly lays eggs at the base of the plant, and the maggots that hatch burrow down and eat the roots. The fly is most active in cool, damp weather, so spring transplants are most at risk.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Fertilizer applied at time of transplanting or as side dressings should be placed 3 or 4 inches from the base of the plant and to a depth of 3 or 4 inches. Roughly, two level table­ spoons of fertilizer applied in a band Ii to 12 inches long supply a rather heavy application.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "pests[3].symptoms_seasoned",
+      "our_prose": "Shield-shaped bugs up to about 3/8 inch, brightly black-and-yellow or black-and-red, feeding with piercing-sucking mouthparts that leave white stipples; affected leaves brown and look tattered, and heavy feeding wilts and deforms plants. A warm-region brassica specialist.",
+      "run_normalized": "black and yellow or black and red",
+      "run_in_our_prose": "black-and-yellow or black-and-red",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "black and yellow or black and red"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/harlequin-bug-vegetables/",
+      "anchor_paths": [
+        "pests[3].anchoring_urls.umd_ext"
+      ],
+      "source_context": "Five instars (growth stages between two periods of molting in the development of a nymph). Adults : Shield-shaped body, up to 3/8\" long, brightly colored, typically black and yellow or black and red— color patterns vary with the season.",
+      "source_context_available": true,
+      "tool_first_6gram": "and yellow or black and red"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "regions.northern_tier.region_notes_beginner",
+      "our_prose": "In cold regions, cabbage is a spring crop and a fall crop. Start seeds indoors and set plants out in spring for a summer harvest, and start a second batch in early-to-mid summer for a fall harvest, when the cool weather makes especially good heads. In the very coldest zones the season is short, so lean on quick early varieties. Keep the watering even so the heads do not crack.",
+      "run_normalized": "mid summer for a fall harvest",
+      "run_in_our_prose": "mid summer for a fall harvest",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mid summer for a fall harvest"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ndsu_ext"
+      ],
+      "source_names": [
+        "North Dakota State University Extension"
+      ],
+      "source_publishers": [
+        "NDSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ag.ndsu.edu/news/columns/dakota-gardener/dakota-gardener-cool-season-garden-crops",
+      "anchor_paths": [
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.ndsu_ext"
+      ],
+      "source_context": "It is a great site to explore for other weather-related information. Some cool-season crop seed can be seeded mid-summer for a fall harvest. Examples are radish, lettuce, spinach and turnips. These crops must be planted with enough time to grow and mature before the weather turns cold.",
+      "source_context_available": true,
+      "tool_first_6gram": "mid summer for a fall harvest"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "regions.northern_tier.region_notes_seasoned",
+      "our_prose": "Across the cold northern tier cabbage is a spring-and-fall double crop. Start transplants under cover and set them out from April (cold zones) to March (mild end) for a late-spring to midsummer harvest, then set a second crop in mid-to-late summer for a fall harvest that runs into November and, at the mild end, December. The coolest zones (3 to 5) crop through a moderate summer with no real heat gap; the warmer zones (6 to 7) reach genuine midsummer heat that excludes heading, so those calendars carry a backed summer pause. Quick early varieties suit short seasons and the fall crop; late storage types want the long fall window. Harvest months are derived from the sourced planting windows plus the crop's 60-to-120-day maturity.",
+      "run_normalized": "in mid to late summer for",
+      "run_in_our_prose": "in mid-to-late summer for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in mid to late summer for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cabbage-home-garden",
+      "anchor_paths": [
+        "pests[2].anchoring_urls.iastate_ext",
+        "pests[4].anchoring_urls.iastate_ext",
+        "ph.anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "een heads Savoy Blue – mid-season; dark blue-green, heavily savoyed heads Stonehead – early season; small heads Thunderhead – mid-season; dark blue-green heads Red Red Jewel – mid-season; deep red heads Ruby Perfection – late season; medium-size, reddish-purple heads Planting Cabbage is best started by seed indoors, and transplants are planted in the garden in early spring. A second crop can be planted in mid-to-late summer for fall harvest. Schedule Plant cabbage in the garden in early to mid-April in central Iowa.",
+      "source_context_available": true,
+      "tool_first_6gram": "in mid to late summer for"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "regions.warm_arid.resolved_by_zone.8.zone_notes",
+      "our_prose": "In the warm-arid high desert (El Paso and similar zone-8 areas), grow cabbage as a late-winter spring crop and a late-summer fall crop. NMSU lists cabbage as hardy, planted as soon as the ground can be worked in spring or in midsummer for the fall garden; Texas A&M gives spring 4 to 6 weeks before the frost-free date and fall 10 to 16 weeks before the first freeze. The exact month tables are in PDF/complex sources that did not parse, so the planting window is modeled on those rules. Harvest months derived.",
+      "run_normalized": "weeks before the frost free date",
+      "run_in_our_prose": "weeks before the frost-free date",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "weeks before the frost free date"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].plant_out[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[1].plant_out[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "For example, artichokes need to be planted from seed indoors in early January and then grown for 2-3 months to be large enough for the transplant to be planted outside 3-4 weeks before the frost free date. Tomatoes are generally planted indoors in early April and then planted outside mid to late May.",
+      "source_context_available": true,
+      "tool_first_6gram": "weeks before the frost free date"
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "yield_expectations.per_plant_seasoned",
+      "our_prose": "One head per plant, typically about 2 to 5 pounds depending on variety and spacing (early types and close spacing give smaller 2-to-3-pound heads; late and widely spaced plants give larger ones). Some varieties resprout small secondary heads after the main head is cut.",
+      "run_normalized": "after the main head is cut",
+      "run_in_our_prose": "after the main head is cut",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "after the main head is cut"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "Broccoli Early Green, Early Dividend, Green Sprouting/Calabrese, Waltham, Packman, De Cicco, Broccoli Raab (Rapini) Harvest heads before flowers open. Many small side shoots develop after the main head is cut. Very cold hardy and nutritious. Broccoli raab is not related to broccoli.",
+      "source_context_available": true,
+      "tool_first_6gram": "after the main head is cut"
+    }
+  ]
+}

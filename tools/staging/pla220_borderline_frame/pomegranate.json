@@ -1,0 +1,749 @@
+{
+  "crop_slug": "pomegranate",
+  "record_count": 18,
+  "records": [
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A light hand is the rule. A common home approach is about 1 to 2 ounces of actual nitrogen per year of plant age in the early years (for example, a modest handful of 10-10-10 per foot of height), capped for a mature plant, applied in late winter. Skip feeding at planting; wait until growth begins. If growth is already vigorous and green, feed less or not at all.",
+      "run_normalized": "of 10 10 10 per foot of",
+      "run_in_our_prose": "of 10-10-10 per foot of",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "of 10 10 10 per foot of"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+      "anchor_paths": [
+        "companions.anchoring_urls.uga_ext",
+        "companions.bad_seasoned[0].anchoring_urls.uga_ext",
+        "companions.good_seasoned[0].anchoring_urls.uga_ext",
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "harvest_ready_anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "pollination.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.bloom[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext",
+        "yield_expectations.anchoring_urls.uga_ext"
+      ],
+      "source_context": "If you are planting a 1 gallon-size plant, a suggested rate of fertilization is 1 ounce of 10-10-10 per foot of bush height three times a year (early spring, late spring and summer) applied evenly in a circle about 18 inches in diameter with the plant in the center.",
+      "source_context_available": true,
+      "tool_first_6gram": "10 10 10 per foot of"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "fertilizer.notes_beginner",
+      "our_prose": "Pomegranate does not need much feeding. In late winter or early spring, scatter a small amount of balanced fertilizer around the plant and water it in. Do not overdo nitrogen (the first number on the bag), because too much grows leaves and base shoots instead of fruit. On poor or sandy soil, a light second feeding in late spring helps a young plant, but an established one usually needs very little.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "In late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+      "anchor_paths": [
+        "companions.anchoring_urls.uga_ext",
+        "companions.bad_seasoned[0].anchoring_urls.uga_ext",
+        "companions.good_seasoned[0].anchoring_urls.uga_ext",
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "harvest_ready_anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "pollination.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.bloom[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext",
+        "yield_expectations.anchoring_urls.uga_ext"
+      ],
+      "source_context": "After establishment, transfer to tall 1-gallon pots in soil, and support with bamboo. Orchard Establishment Rooted hardwood cuttings are planted bare root in late winter or early spring. Pomegranates can be placed directly in-ground or on raised beds. The latter is recommended, especially if a high water table or poor drainage is suspected.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "hardiness_notes_seasoned",
+      "our_prose": "Pomegranate is the cold-tender member of this group: it survives winters across roughly zones 7 to 11 but is damaged by hard freezes. Standard cultivars like 'Wonderful' tolerate winter lows to about 10 to 15°F; the cold-hardy Russian types (Salavatski and kin) push to around 7°F, and a plant cut back by a severe freeze often resprouts from the base. It is also frost-sensitive in the shoulder seasons, before it is fully dormant in late fall and after buds swell in early spring. Surviving is only half the story: RELIABLE, well-colored fruit needs a long hot summer (roughly temperatures above 85°F for 120-plus days), so the dependable-fruit band is the hot-summer heart of zones 8 to 10. Zone 7 is the cold edge for hardy cultivars on protected sites, and the frost-free tropics (zone 11) are limited by humidity and too little chill or dry heat, not by cold.",
+      "run_normalized": "in late fall and after buds",
+      "run_in_our_prose": "in late fall and after buds",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late fall and after buds"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/ucce-central-sierra-agriculture/pomegranate-production",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "The tree is quite resistant to cold when dormant , withstanding temperatures down to 10°F. However, it is very sensitive to frost before it reaches full dormancy in late fall and after buds have begun to swell in early spring. The main trunk near the ground, particularly on the south and west sides of the tree, is sometimes damaged by frost during these periods.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late fall and after buds"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "pests[0].symptoms_beginner",
+      "our_prose": "Usually you see nothing wrong on the outside of the fruit, because the damage is inside. If you cut a fruit open, you find brown spots on the inner skin and seeds (arils) that have gone dark, shriveled, or corky. It is worst late in the season as the fruit ripens, and it can let rot start inside.",
+      "run_normalized": "on the outside of the fruit",
+      "run_in_our_prose": "on the outside of the fruit",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "on the outside of the fruit"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/pomegranate/leaffooted-bug/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.uc_ipm",
+        "tips_by_stage.fruit_set[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Due to their aggregation behavior, it is not uncommon to find more than 100 nymphs on a single piece of fruit. Feeding damage is not easy to see on the outside of the fruit. If the fruit are cut open, brown spots can be seen on the inside of the skin where the insect's proboscis penetrated.",
+      "source_context_available": true,
+      "tool_first_6gram": "on the outside of the fruit"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "regions.rgv.region_notes_seasoned",
+      "our_prose": "Pomegranate fruits reliably in the Rio Grande Valley: Valley winters easily clear its roughly 100-hour chill need, and Texas A&M AgriLife Extension reports fruiting types surviving most winters across central, southern, and southeastern Texas. This is a real, fruiting dooryard crop here, not just a survivor: the Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of annual rainfall against the Gulf coast's 50 to 60, so it crops here much as it does in the low desert, where pomegranate is classically prime. An occasional wet late-summer spell can still cause some fruit splitting, but that is a modest, manageable risk, not the season-defining humidity problem of the wetter Gulf coast; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively adapted from a reliably-fruiting desert pattern.",
+      "run_normalized": "and texas a m agrilife extension",
+      "run_in_our_prose": "and Texas A&M AgriLife Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and texas a m agrilife extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/asset-external/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "rootstock_options[0].anchoring_urls.tamu_agrilife",
+        "soil.anchoring_urls.tamu_agrilife",
+        "tips_by_stage.establishment[1].anchoring_urls.tamu_agrilife",
+        "varieties.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "l Materials Extension Topics County Offices Menu About News & Events Programs & Services Educational Materials Extension Topics County Offices Site Search Search Staff Directory Contact Giving Get the latest information on New World screwworm Access fact sheets, news and videos from Texas A&M AgriLife Research and Texas A&M AgriLife Extension Service experts at our New World screwworm web page . Circled letter \"i\" (for \"information\") Texas Fruit and Nut Production: Pomegranates Type Publication Date of Publication January 25, 2022 Price See Agrilife Learn Price: See Agrilife Learn All Topics Texas Fruit and Nut Production: Pomegranates Topics: Crops & Produce Fruits & Tr",
+      "source_context_available": true,
+      "tool_first_6gram": "and texas a m agrilife extension"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "regions.rgv.region_notes_seasoned",
+      "our_prose": "Pomegranate fruits reliably in the Rio Grande Valley: Valley winters easily clear its roughly 100-hour chill need, and Texas A&M AgriLife Extension reports fruiting types surviving most winters across central, southern, and southeastern Texas. This is a real, fruiting dooryard crop here, not just a survivor: the Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of annual rainfall against the Gulf coast's 50 to 60, so it crops here much as it does in the low desert, where pomegranate is classically prime. An occasional wet late-summer spell can still cause some fruit splitting, but that is a modest, manageable risk, not the season-defining humidity problem of the wetter Gulf coast; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published by TAMU; this window is conservatively adapted from a reliably-fruiting desert pattern.",
+      "run_normalized": "and texas a m agrilife extension",
+      "run_in_our_prose": "and Texas A&M AgriLife Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and texas a m agrilife extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "l Materials Extension Topics County Offices Menu About News & Events Programs & Services Educational Materials Extension Topics County Offices Site Search Search Staff Directory Contact Giving Get the latest information on New World screwworm Access fact sheets, news and videos from Texas A&M AgriLife Research and Texas A&M AgriLife Extension Service experts at our New World screwworm web page . Circled letter \"i\" (for \"information\") Texas Fruit and Nut Production: Pomegranates Type Publication Date of Publication January 25, 2022 Price See Agrilife Learn Price: See Agrilife Learn All Topics Texas Fruit and Nut Production: Pomegranates Topics: Crops & Produce Fruits & Tr",
+      "source_context_available": true,
+      "tool_first_6gram": "and texas a m agrilife extension"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "regions.rgv.resolved_by_zone.10.suitability_note_seasoned",
+      "our_prose": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. The Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of rain a year against the Gulf coast's 50 to 60, so pomegranate crops reliably here much as it does in the low desert. An occasional wet late-summer spell can cause some fruit splitting, but that is a modest, manageable risk here, not the season-defining humidity problem the wetter Gulf coast poses; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern.",
+      "run_normalized": "and texas a m agrilife extension",
+      "run_in_our_prose": "and Texas A&M AgriLife Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and texas a m agrilife extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/asset-external/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "rootstock_options[0].anchoring_urls.tamu_agrilife",
+        "soil.anchoring_urls.tamu_agrilife",
+        "tips_by_stage.establishment[1].anchoring_urls.tamu_agrilife",
+        "varieties.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "l Materials Extension Topics County Offices Menu About News & Events Programs & Services Educational Materials Extension Topics County Offices Site Search Search Staff Directory Contact Giving Get the latest information on New World screwworm Access fact sheets, news and videos from Texas A&M AgriLife Research and Texas A&M AgriLife Extension Service experts at our New World screwworm web page . Circled letter \"i\" (for \"information\") Texas Fruit and Nut Production: Pomegranates Type Publication Date of Publication January 25, 2022 Price See Agrilife Learn Price: See Agrilife Learn All Topics Texas Fruit and Nut Production: Pomegranates Topics: Crops & Produce Fruits & Tr",
+      "source_context_available": true,
+      "tool_first_6gram": "and texas a m agrilife extension"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "regions.rgv.resolved_by_zone.10.suitability_note_seasoned",
+      "our_prose": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. The Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of rain a year against the Gulf coast's 50 to 60, so pomegranate crops reliably here much as it does in the low desert. An occasional wet late-summer spell can cause some fruit splitting, but that is a modest, manageable risk here, not the season-defining humidity problem the wetter Gulf coast poses; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern.",
+      "run_normalized": "and texas a m agrilife extension",
+      "run_in_our_prose": "and Texas A&M AgriLife Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and texas a m agrilife extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "l Materials Extension Topics County Offices Menu About News & Events Programs & Services Educational Materials Extension Topics County Offices Site Search Search Staff Directory Contact Giving Get the latest information on New World screwworm Access fact sheets, news and videos from Texas A&M AgriLife Research and Texas A&M AgriLife Extension Service experts at our New World screwworm web page . Circled letter \"i\" (for \"information\") Texas Fruit and Nut Production: Pomegranates Type Publication Date of Publication January 25, 2022 Price See Agrilife Learn Price: See Agrilife Learn All Topics Texas Fruit and Nut Production: Pomegranates Topics: Crops & Produce Fruits & Tr",
+      "source_context_available": true,
+      "tool_first_6gram": "and texas a m agrilife extension"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "regions.rgv.resolved_by_zone.9.suitability_note_seasoned",
+      "our_prose": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. The Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of rain a year against the Gulf coast's 50 to 60, so pomegranate crops reliably here much as it does in the low desert. An occasional wet late-summer spell can cause some fruit splitting, but that is a modest, manageable risk here, not the season-defining humidity problem the wetter Gulf coast poses; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern.",
+      "run_normalized": "and texas a m agrilife extension",
+      "run_in_our_prose": "and Texas A&M AgriLife Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and texas a m agrilife extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/asset-external/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "rootstock_options[0].anchoring_urls.tamu_agrilife",
+        "soil.anchoring_urls.tamu_agrilife",
+        "tips_by_stage.establishment[1].anchoring_urls.tamu_agrilife",
+        "varieties.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "l Materials Extension Topics County Offices Menu About News & Events Programs & Services Educational Materials Extension Topics County Offices Site Search Search Staff Directory Contact Giving Get the latest information on New World screwworm Access fact sheets, news and videos from Texas A&M AgriLife Research and Texas A&M AgriLife Extension Service experts at our New World screwworm web page . Circled letter \"i\" (for \"information\") Texas Fruit and Nut Production: Pomegranates Type Publication Date of Publication January 25, 2022 Price See Agrilife Learn Price: See Agrilife Learn All Topics Texas Fruit and Nut Production: Pomegranates Topics: Crops & Produce Fruits & Tr",
+      "source_context_available": true,
+      "tool_first_6gram": "and texas a m agrilife extension"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "regions.rgv.resolved_by_zone.9.suitability_note_seasoned",
+      "our_prose": "Rio Grande Valley winters comfortably meet pomegranate's roughly 100-hour chill need, and Texas A&M AgriLife Extension reports many fruiting pomegranate types surviving most winters across central, southern, and southeastern Texas, including the Valley. The Valley is hot and considerably drier than the humid upper Gulf coast, roughly 20 to 27 inches of rain a year against the Gulf coast's 50 to 60, so pomegranate crops reliably here much as it does in the low desert. An occasional wet late-summer spell can cause some fruit splitting, but that is a modest, manageable risk here, not the season-defining humidity problem the wetter Gulf coast poses; favor an open, breezy, well-drained site and even irrigation. Exact Valley bloom and harvest months are not separately published; this window is a conservative estimate adapted from a reliably-fruiting low-chill desert pattern.",
+      "run_normalized": "and texas a m agrilife extension",
+      "run_in_our_prose": "and Texas A&M AgriLife Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and texas a m agrilife extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "l Materials Extension Topics County Offices Menu About News & Events Programs & Services Educational Materials Extension Topics County Offices Site Search Search Staff Directory Contact Giving Get the latest information on New World screwworm Access fact sheets, news and videos from Texas A&M AgriLife Research and Texas A&M AgriLife Extension Service experts at our New World screwworm web page . Circled letter \"i\" (for \"information\") Texas Fruit and Nut Production: Pomegranates Type Publication Date of Publication January 25, 2022 Price See Agrilife Learn Price: See Agrilife Learn All Topics Texas Fruit and Nut Production: Pomegranates Topics: Crops & Produce Fruits & Tr",
+      "source_context_available": true,
+      "tool_first_6gram": "and texas a m agrilife extension"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "UC Statewide IPM Program (UC IPM), Pomegranate",
+      "run_normalized": "uc statewide ipm program uc ipm",
+      "run_in_our_prose": "UC Statewide IPM Program (UC IPM",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc statewide ipm program uc ipm"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/pomegranate/alternaria-fruit-rot-black-heart/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Alternaria Fruit Rot (Black Heart) / Pomegranate / Agriculture: Pest Management Guidelines / UC Statewide IPM Program (UC IPM) Home, Garden, Turf and Landscape Home and Garden Plant Pest Diagnostic Tool Retail Nurseries & Garden Centers Landscape Professionals UC Master Gardeners Agriculture Pest Management Guidelines Decision Support Tool Weather, Mo",
+      "source_context_available": true,
+      "tool_first_6gram": "uc statewide ipm program uc ipm"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "UC Statewide IPM Program (UC IPM), Pomegranate",
+      "run_normalized": "uc statewide ipm program uc ipm",
+      "run_in_our_prose": "UC Statewide IPM Program (UC IPM",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc statewide ipm program uc ipm"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/pomegranate/leaffooted-bug/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.uc_ipm",
+        "tips_by_stage.fruit_set[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Leaffooted Bug / Pomegranate / Agriculture: Pest Management Guidelines / UC Statewide IPM Program (UC IPM) Home, Garden, Turf and Landscape Home and Garden Plant Pest Diagnostic Tool Retail Nurseries & Garden Centers Landscape Professionals UC Master Gardeners Agriculture Pest Management Guidelines Decision Support Tool Weather, Mo",
+      "source_context_available": true,
+      "tool_first_6gram": "uc statewide ipm program uc ipm"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "UC Statewide IPM Program (UC IPM), Pomegranate",
+      "run_normalized": "uc statewide ipm program uc ipm",
+      "run_in_our_prose": "UC Statewide IPM Program (UC IPM",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc statewide ipm program uc ipm"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/home-and-landscape/pomegranate/",
+      "anchor_paths": [
+        "companions.anchoring_urls.uc_ipm",
+        "companions.good_seasoned[0].anchoring_urls.uc_ipm",
+        "diseases[1].anchoring_urls.uc_ipm",
+        "pests[1].anchoring_urls.uc_ipm",
+        "pests[2].anchoring_urls.uc_ipm",
+        "pests[3].anchoring_urls.uc_ipm",
+        "rotation.anchoring_urls.uc_ipm",
+        "watering.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Pomegranate / Home and Landscape / UC Statewide IPM Program (UC IPM) Notifications Loading...",
+      "source_context_available": true,
+      "tool_first_6gram": "uc statewide ipm program uc ipm"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "Texas A&M AgriLife Extension, Texas Fruit and Nut Production: Pomegranates",
+      "run_normalized": "texas a m agrilife extension texas",
+      "run_in_our_prose": "Texas A&M AgriLife Extension, Texas",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "texas a m agrilife extension texas",
+        "texas fruit and nut production pomegranates"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/asset-external/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].bloom[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife",
+        "rootstock_options[0].anchoring_urls.tamu_agrilife",
+        "soil.anchoring_urls.tamu_agrilife",
+        "tips_by_stage.establishment[1].anchoring_urls.tamu_agrilife",
+        "varieties.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Texas Fruit and Nut Production: Pomegranates - Texas A&M AgriLife Extension Service Skip to content Texas A&M AgriLife Extension Texas A&M AgriLife tamu.edu Staff Directory Contact Giving Close Search Site Search Site Search Search Trending Searches: Drought Childcare Training Beef Cattle Screwworm About News & Events Programs & Services Educational Materials Extension Topics County Offices Menu About Ne",
+      "source_context_available": true,
+      "tool_first_6gram": "texas a m agrilife extension texas"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "Texas A&M AgriLife Extension, Texas Fruit and Nut Production: Pomegranates",
+      "run_normalized": "texas a m agrilife extension texas",
+      "run_in_our_prose": "Texas A&M AgriLife Extension, Texas",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "texas a m agrilife extension texas",
+        "texas fruit and nut production pomegranates"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/library/farming/texas-fruit-and-nut-production-pomegranates/",
+      "anchor_paths": [
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Texas Fruit and Nut Production: Pomegranates - Texas A&M AgriLife Extension Service Skip to content Texas A&M AgriLife Extension Texas A&M AgriLife tamu.edu Staff Directory Contact Giving Close Search Site Search Site Search Search Trending Searches: Drought Childcare Training Beef Cattle Screwworm About News & Events Programs & Services Educational Materials Extension Topics County Offices Menu About Ne",
+      "source_context_available": true,
+      "tool_first_6gram": "texas a m agrilife extension texas"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "start_method.hardening_off_beginner",
+      "our_prose": "Hardening off (slowly getting an indoor-grown seedling used to the outdoors) does not apply to pomegranate. You plant it as a dormant bare-root or potted plant in late winter or early spring, not as a tender seedling started inside, so there is nothing to ease outdoors.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+      "anchor_paths": [
+        "companions.anchoring_urls.uga_ext",
+        "companions.bad_seasoned[0].anchoring_urls.uga_ext",
+        "companions.good_seasoned[0].anchoring_urls.uga_ext",
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "harvest_ready_anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "pollination.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.bloom[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext",
+        "yield_expectations.anchoring_urls.uga_ext"
+      ],
+      "source_context": "After establishment, transfer to tall 1-gallon pots in soil, and support with bamboo. Orchard Establishment Rooted hardwood cuttings are planted bare root in late winter or early spring. Pomegranates can be placed directly in-ground or on raised beds. The latter is recommended, especially if a high water table or poor drainage is suspected.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant a dormant bare-root or potted pomegranate in late winter or early spring, after the worst cold and once the ground can be dug. Soak bare roots in water for an hour or two first. Dig a hole wide enough to spread the roots and set the plant at the same depth it grew before. Unlike a peach, a pomegranate is on its own roots with no graft joint to worry about. Decide now whether you want a bush with several trunks or a single small tree, and cut the plant back a bit to start it. If your soil is heavy or wet, plant on a raised mound. Fill in with the soil you dug out, water it well, and add mulch.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+      "anchor_paths": [
+        "companions.anchoring_urls.uga_ext",
+        "companions.bad_seasoned[0].anchoring_urls.uga_ext",
+        "companions.good_seasoned[0].anchoring_urls.uga_ext",
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "harvest_ready_anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "pollination.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.bloom[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext",
+        "yield_expectations.anchoring_urls.uga_ext"
+      ],
+      "source_context": "After establishment, transfer to tall 1-gallon pots in soil, and support with bamboo. Orchard Establishment Rooted hardwood cuttings are planted bare root in late winter or early spring. Pomegranates can be placed directly in-ground or on raised beds. The latter is recommended, especially if a high water table or poor drainage is suspected.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "year_one_notes_beginner",
+      "our_prose": "The first year is about growing a strong plant, not getting fruit. Plant a bare-root or potted young plant in late winter or early spring after the worst cold has passed, water it in, and decide the shape early: a natural bush with several trunks (keep three to six strong ones) or a single small tree (rub off the shoots that pop up from the base). Pomegranates send up lots of these base shoots (suckers), so pulling the extras is the main job the first year. Keep the young plant watered steadily through its first summer so the roots get going, and pick off any fruit that forms so the plant can focus on growing. Go easy on fertilizer, and avoid a lot of nitrogen, which grows leaves instead of fruit.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C997/pomegranate-production/",
+      "anchor_paths": [
+        "companions.anchoring_urls.uga_ext",
+        "companions.bad_seasoned[0].anchoring_urls.uga_ext",
+        "companions.good_seasoned[0].anchoring_urls.uga_ext",
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "harvest_ready_anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "pollination.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].bloom[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.bloom[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext",
+        "yield_expectations.anchoring_urls.uga_ext"
+      ],
+      "source_context": "After establishment, transfer to tall 1-gallon pots in soil, and support with bamboo. Orchard Establishment Rooted hardwood cuttings are planted bare root in late winter or early spring. Pomegranates can be placed directly in-ground or on raised beds. The latter is recommended, especially if a high water table or poor drainage is suspected.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    }
+  ]
+}

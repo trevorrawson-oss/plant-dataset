@@ -1,0 +1,496 @@
+{
+  "crop_slug": "broccoli",
+  "record_count": 12,
+  "records": [
+    {
+      "crop_slug": "broccoli",
+      "field_path": "description_seasoned",
+      "our_prose": "Broccoli is a cool-season brassica grown for its tight head of immature flower buds, harvested before the buds open. It performs best in the cool shoulders of spring and fall, bolts or fails to head in summer heat, and rewards a steady supply of moisture and nitrogen. After the central head is cut, most types keep producing smaller side shoots.",
+      "run_normalized": "after the central head is cut",
+      "run_in_our_prose": "After the central head is cut",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "after the central head is cut"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext",
+        "umd_ext_broccoli"
+      ],
+      "source_names": [
+        "University of Maryland Extension",
+        "UMD Extension -- Growing broccoli in a home garden"
+      ],
+      "source_publishers": [
+        "UMD Extension",
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umd_ext_broccoli",
+        "diseases[1].anchoring_urls.umd_ext_broccoli",
+        "diseases[2].anchoring_urls.umd_ext_broccoli",
+        "fertilizer.anchoring_urls.umd_ext",
+        "pests[0].anchoring_urls.umd_ext_broccoli",
+        "pests[1].anchoring_urls.umd_ext_broccoli",
+        "pests[2].anchoring_urls.umd_ext_broccoli",
+        "pests[3].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].harvest_start[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].plant_out[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].start_indoors[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "soil.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext_broccoli",
+        "yield_expectations.anchoring_urls.umd_ext_broccoli"
+      ],
+      "source_context": "The heads of broccoli are really flower buds that must be harvested before the flowers open or show yellow. Mature heads measure 3 to 8 inches across. Smaller, lateral heads develop after the central head is cut. The spiraling heads of Romanesco broccoli are quite dramatic. Sprouting or Italian broccoli forms many florets or small heads, but do not produce a solid head.",
+      "source_context_available": true,
+      "tool_first_6gram": "after the central head is cut"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "growth_stages[3].user_action_beginner",
+      "our_prose": "Keep watering steadily and check the head often. When it's full-sized but the buds are still tight and closed, get ready to cut it. Hot or stressful weather now can make the head loose or cause it to flower.",
+      "run_normalized": "the buds are still tight and",
+      "run_in_our_prose": "the buds are still tight and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the buds are still tight and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext"
+      ],
+      "source_names": [
+        "Oregon State University Extension"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+      "anchor_paths": [
+        "ph.anchoring_urls.osu_ext"
+      ],
+      "source_context": "Harvest and Storage Broccoli is hand harvested prior to flowering. Harvest the head while the buds are still tight and before any yellow petals begin to show. If harvested too late, the stem will harden.",
+      "source_context_available": true,
+      "tool_first_6gram": "the buds are still tight and"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "growth_stages[3].what_to_look_for_beginner",
+      "our_prose": "A tight head of tiny green flower buds appears in the center of the plant and grows bigger. The buds should stay green and closed.",
+      "run_normalized": "appears in the center of the plant",
+      "run_in_our_prose": "appears in the center of the plant",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "appears in the center of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife_fall_veg"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife -- Fall Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Fall-Vegetable-Gardening-Guide.pdf",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[1].harvest_end[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.plantings[1].harvest_start[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.plantings[1].plant_out[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.plantings[1].start_indoors[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.plantings[2].harvest_end[0].anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.tamu_agrilife_fall_veg",
+        "regions.warm_arid.resolved_by_zone.8.second_planting.anchoring_urls.tamu_agrilife_fall_veg"
+      ],
+      "source_context": "The yellowish color of the cauliflower surface is caused by exposure to sunlight. To prevent discol- oration, when the small bud head appears in the center of the plant, draw the lower leaves of the plant loosely over the bud in a tent-like fashion.",
+      "source_context_available": true,
+      "tool_first_6gram": "appears in the center of the"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "growth_stages[4].user_action_beginner",
+      "our_prose": "Cut the main head with about 6 inches of stem while the buds are still tight. Cutting it on time is what makes the plant grow side shoots next. Harvest in the cool morning if you can.",
+      "run_normalized": "while the buds are still tight",
+      "run_in_our_prose": "while the buds are still tight",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "while the buds are still tight"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext"
+      ],
+      "source_names": [
+        "Oregon State University Extension"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+      "anchor_paths": [
+        "ph.anchoring_urls.osu_ext"
+      ],
+      "source_context": "Harvest and Storage Broccoli is hand harvested prior to flowering. Harvest the head while the buds are still tight and before any yellow petals begin to show. If harvested too late, the stem will harden.",
+      "source_context_available": true,
+      "tool_first_6gram": "while the buds are still tight"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "growth_stages[4].what_to_look_for_beginner",
+      "our_prose": "The main head is full-sized, the buds are still tight and closed, and there's no yellow. This is the moment to cut it, before the buds open into yellow flowers.",
+      "run_normalized": "the buds are still tight and",
+      "run_in_our_prose": "the buds are still tight and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the buds are still tight and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext"
+      ],
+      "source_names": [
+        "Oregon State University Extension"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+      "anchor_paths": [
+        "ph.anchoring_urls.osu_ext"
+      ],
+      "source_context": "Harvest and Storage Broccoli is hand harvested prior to flowering. Harvest the head while the buds are still tight and before any yellow petals begin to show. If harvested too late, the stem will harden.",
+      "source_context_available": true,
+      "tool_first_6gram": "the buds are still tight and"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "growth_stages[5].what_to_look_for_seasoned",
+      "our_prose": "After the central head is cut, smaller florets form on side shoots from leaf joints down the stem, especially on side-shoot varieties, continuing for several weeks in cool weather.",
+      "run_normalized": "after the central head is cut",
+      "run_in_our_prose": "After the central head is cut",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "after the central head is cut"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext",
+        "umd_ext_broccoli"
+      ],
+      "source_names": [
+        "University of Maryland Extension",
+        "UMD Extension -- Growing broccoli in a home garden"
+      ],
+      "source_publishers": [
+        "UMD Extension",
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umd_ext_broccoli",
+        "diseases[1].anchoring_urls.umd_ext_broccoli",
+        "diseases[2].anchoring_urls.umd_ext_broccoli",
+        "fertilizer.anchoring_urls.umd_ext",
+        "pests[0].anchoring_urls.umd_ext_broccoli",
+        "pests[1].anchoring_urls.umd_ext_broccoli",
+        "pests[2].anchoring_urls.umd_ext_broccoli",
+        "pests[3].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].harvest_start[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].plant_out[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].start_indoors[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "soil.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext_broccoli",
+        "yield_expectations.anchoring_urls.umd_ext_broccoli"
+      ],
+      "source_context": "The heads of broccoli are really flower buds that must be harvested before the flowers open or show yellow. Mature heads measure 3 to 8 inches across. Smaller, lateral heads develop after the central head is cut. The spiraling heads of Romanesco broccoli are quite dramatic. Sprouting or Italian broccoli forms many florets or small heads, but do not produce a solid head.",
+      "source_context_available": true,
+      "tool_first_6gram": "after the central head is cut"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "pests[3].cause_beginner",
+      "our_prose": "A small fly lays eggs at the base of the plant, and the maggots that hatch burrow down and eat the roots. The fly is most active in cool spring weather.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].start_indoors[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[1].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[1].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[1].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[1].start_indoors[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.season_over.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.season_over.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.season_over.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.season_over.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Fertilizer applied at time of transplanting or as side dressings should be placed 3 or 4 inches from the base of the plant and to a depth of 3 or 4 inches. Roughly, two level table­ spoons of fertilizer applied in a band Ii to 12 inches long supply a rather heavy application.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "regions.nevada.region_notes_beginner",
+      "our_prose": "Broccoli genuinely likes a Las Vegas Valley fall: warm days ease into cool nights right as the heads size up, and that is when broccoli tastes best. Set out transplants in late winter for a quicker spring crop ahead of the summer heat, then plant again in mid-to-late summer for the fall crop many desert gardeners prefer.",
+      "run_normalized": "in mid to late summer for",
+      "run_in_our_prose": "in mid-to-late summer for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in mid to late summer for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext",
+        "iastate_ext_colecrops"
+      ],
+      "source_names": [
+        "Iowa State University Extension",
+        "Iowa State Extension -- Planting broccoli, cabbage, and cauliflower in the home garden"
+      ],
+      "source_publishers": [
+        "Iowa State Extension",
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-broccoli-home-garden",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.iastate_ext_colecrops",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.iastate_ext_colecrops",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.iastate_ext_colecrops"
+      ],
+      "source_context": "tight heads Green Magic – medium-size, blue-green heads; good heat tolerance Gypsy – mid-season; heat tolerant Imperial – late maturing; dark green heads; good heat tolerance Marathon – late maturing; blue-green heads Packman – early to mid-season; uniform, large heads Planting Broccoli is best started by seed indoors, and transplants are planted in the garden in early spring. A second crop can be planted in mid-to-late summer for fall harvest. Schedule Plant broccoli in the garden in mid-April in central Iowa.",
+      "source_context_available": true,
+      "tool_first_6gram": "in mid to late summer for"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "regions.northern_tier.region_notes_beginner",
+      "our_prose": "Up north, grow broccoli twice a year in the cooler weather at each end of the season. Plant your spring crop a couple of weeks before your last frost date so it makes heads before summer heat, and harvest starting in early summer. Then plant a second crop in mid-July for a fall harvest. The fall crop often tastes better and lasts longer because broccoli likes cool weather, and in the milder cold zones it can give you more than the spring crop. Pick fast-maturing varieties in the coldest areas, and keep a row cover handy to protect young plants from a late spring frost or an early fall one.",
+      "run_normalized": "in mid july for a fall harvest",
+      "run_in_our_prose": "in mid-July for a fall harvest",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in mid july for a fall harvest"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext",
+        "umd_ext_broccoli"
+      ],
+      "source_names": [
+        "University of Maryland Extension",
+        "UMD Extension -- Growing broccoli in a home garden"
+      ],
+      "source_publishers": [
+        "UMD Extension",
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-broccoli-home-garden",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umd_ext_broccoli",
+        "diseases[1].anchoring_urls.umd_ext_broccoli",
+        "diseases[2].anchoring_urls.umd_ext_broccoli",
+        "fertilizer.anchoring_urls.umd_ext",
+        "pests[0].anchoring_urls.umd_ext_broccoli",
+        "pests[1].anchoring_urls.umd_ext_broccoli",
+        "pests[2].anchoring_urls.umd_ext_broccoli",
+        "pests[3].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[0].start_indoors[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].harvest_start[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].plant_out[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.plantings[2].start_indoors[0].anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.5.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext_broccoli",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.umd_ext_broccoli",
+        "soil.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext_broccoli",
+        "yield_expectations.anchoring_urls.umd_ext_broccoli"
+      ],
+      "source_context": "Transplants for fall planting can be produced along with cabbage and cauliflower transplants, taking about 4 to 6 weeks from seeding to setting into the garden. Seeds can be sown directly in mid-July for a fall harvest or transplants are set out by the first week in August. Fall broccoli often produces higher yields than spring plantings in the mid-Atlantic region.",
+      "source_context_available": true,
+      "tool_first_6gram": "in mid july for a fall"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "watering.amount_beginner",
+      "our_prose": "Aim for roughly 1 to 1.5 inches of water a week.",
+      "run_normalized": "1 to 1 5 inches of water",
+      "run_in_our_prose": "1 to 1.5 inches of water",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "1 to 1 5 inches of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/basics-of-broccoli-production",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "At the same time, it can lead to higher yields of high-quality heads. Broccoli generally requires 1 to 1.5 inches of water per week, though this depends on location, cultivar, production system, and soil type.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 1 5 inches of"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "watering.schedule_by_stage[4].note_seasoned",
+      "our_prose": "Keep even moisture and cut the central head while the buds are still tight, before it flowers.",
+      "run_normalized": "head while the buds are still tight",
+      "run_in_our_prose": "head while the buds are still tight",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "head while the buds are still tight"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext"
+      ],
+      "source_names": [
+        "Oregon State University Extension"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+      "anchor_paths": [
+        "ph.anchoring_urls.osu_ext"
+      ],
+      "source_context": "Harvest and Storage Broccoli is hand harvested prior to flowering. Harvest the head while the buds are still tight and before any yellow petals begin to show. If harvested too late, the stem will harden.",
+      "source_context_available": true,
+      "tool_first_6gram": "head while the buds are still"
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "yield_expectations.first_year_note_seasoned",
+      "our_prose": "Cutting the central head while the buds are still tight is what triggers the side shoots, so a timely first harvest actually increases total yield. New growers often wait too long and let the head loosen or flower, which both ends the side-shoot run early and gives a coarser main head.",
+      "run_normalized": "head while the buds are still tight",
+      "run_in_our_prose": "head while the buds are still tight",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "head while the buds are still tight"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "osu_ext"
+      ],
+      "source_names": [
+        "Oregon State University Extension"
+      ],
+      "source_publishers": [
+        "OSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ohioline.osu.edu/factsheet/hyg-1605",
+      "anchor_paths": [
+        "ph.anchoring_urls.osu_ext"
+      ],
+      "source_context": "Harvest and Storage Broccoli is hand harvested prior to flowering. Harvest the head while the buds are still tight and before any yellow petals begin to show. If harvested too late, the stem will harden.",
+      "source_context_available": true,
+      "tool_first_6gram": "head while the buds are still"
+    }
+  ]
+}

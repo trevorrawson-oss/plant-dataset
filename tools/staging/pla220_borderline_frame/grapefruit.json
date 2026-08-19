@@ -1,0 +1,255 @@
+{
+  "crop_slug": "grapefruit",
+  "record_count": 6,
+  "records": [
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "failure_diagnostics[2].what_happened_beginner",
+      "our_prose": "Sometimes grapefruit that looks ripe outside is dry and pithy inside. This happens to fruit left on the tree too long in a hot, dry climate, which is easy to do because grapefruit hangs so well for months. Heat, dryness, and over-ripeness are the causes, and the skin can look fine even when the inside has dried out.",
+      "run_normalized": "left on the tree too long",
+      "run_in_our_prose": "left on the tree too long",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "left on the tree too long"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Both fall and winter pears are picked when they are mature (harvest ready) but not yet ripe (eating ready). Fruits will still look “green” at the time they are ready to pick. If left on the tree too long, internal browning may result. Commercially, pears are tested for harvest using the hand-held penetrometer mentioned above.",
+      "source_context_available": true,
+      "tool_first_6gram": "left on the tree too long"
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "UF/IFAS Citrus Culture in the Home Landscape (HS132/HS-867)",
+      "run_normalized": "citrus culture in the home landscape",
+      "run_in_our_prose": "Citrus Culture in the Home Landscape",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "citrus culture in the home landscape"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_hs132"
+      ],
+      "source_names": [
+        "UF/IFAS Citrus Culture in the Home Landscape (HS132)"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/HS132",
+      "anchor_paths": [
+        "companions.anchoring_urls.uf_ifas_hs132",
+        "diseases[0].anchoring_urls.uf_ifas_hs132",
+        "diseases[1].anchoring_urls.uf_ifas_hs132",
+        "diseases[2].anchoring_urls.uf_ifas_hs132",
+        "diseases[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[1].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[4].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[5].anchoring_urls.uf_ifas_hs132",
+        "pests[0].anchoring_urls.uf_ifas_hs132",
+        "pests[1].anchoring_urls.uf_ifas_hs132",
+        "pests[2].anchoring_urls.uf_ifas_hs132",
+        "pests[4].anchoring_urls.uf_ifas_hs132",
+        "ph.anchoring_urls.uf_ifas_hs132",
+        "pollination.anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[0].anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.bloom[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.bloom[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.establishment[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[1].anchoring_urls.uf_ifas_hs132"
+      ],
+      "source_context": "HS-867/HS132: Citrus Culture in the Home Landscape Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Citrus Culture in the Home Landscape Robert E.",
+      "source_context_available": true,
+      "tool_first_6gram": "citrus culture in the home landscape"
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "sources_summary.primary[1].name",
+      "our_prose": "UC Riverside Givaudan Citrus Variety Collection",
+      "run_normalized": "uc riverside givaudan citrus variety collection",
+      "run_in_our_prose": "UC Riverside Givaudan Citrus Variety Collection",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc riverside givaudan citrus variety collection"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucr_citrus"
+      ],
+      "source_names": [
+        "UC Riverside Citrus Variety Collection / UC ANR Citrus Variety listing (Pub 8472)"
+      ],
+      "source_publishers": [
+        "University of California, Riverside"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://citrusvariety.ucr.edu",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.ucr_citrus",
+        "failure_diagnostics[2].anchoring_urls.ucr_citrus",
+        "pollination.anchoring_urls.ucr_citrus",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucr_citrus",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucr_citrus",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucr_citrus",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucr_citrus",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucr_citrus",
+        "rootstock_options[0].anchoring_urls.ucr_citrus",
+        "rootstock_options[2].anchoring_urls.ucr_citrus"
+      ],
+      "source_context": "Quick Links Find People UC Riverside Givaudan Citrus Variety Collection at UCR College of Natural & Agricultural Sciences Search Welcome About",
+      "source_context_available": true,
+      "tool_first_6gram": "uc riverside givaudan citrus variety collection"
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "sources_summary.primary[1].name",
+      "our_prose": "UC Riverside Givaudan Citrus Variety Collection",
+      "run_normalized": "uc riverside givaudan citrus variety collection",
+      "run_in_our_prose": "UC Riverside Givaudan Citrus Variety Collection",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "uc riverside givaudan citrus variety collection"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucr_citrus"
+      ],
+      "source_names": [
+        "UC Riverside Citrus Variety Collection / UC ANR Citrus Variety listing (Pub 8472)"
+      ],
+      "source_publishers": [
+        "University of California, Riverside"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://citrusvariety.ucr.edu/crc3602",
+      "anchor_paths": [
+        "varieties.anchoring_urls.ucr_citrus"
+      ],
+      "source_context": "Quick Links Find People UC Riverside Givaudan Citrus Variety Collection at UCR College of Natural & Agricultural Sciences Search Welcome About",
+      "source_context_available": true,
+      "tool_first_6gram": "uc riverside givaudan citrus variety collection"
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a grafted nursery tree from a reputable source with certified disease-free stock, matched to a rootstock suited to your soil (Swingle or a trifoliate type for most, but not the highest-pH desert soils). Container-grown trees can be planted year-round in frost-free zones; bare-root trees go in late winter to early spring. Set the tree at the same soil line as in the nursery container, high on a mound in heavy ground, and do not bury the graft union. Give a grapefruit generous room, since it makes a large tree.",
+      "run_normalized": "at the same soil line as",
+      "run_in_our_prose": "at the same soil line as",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the same soil line as"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_hs132"
+      ],
+      "source_names": [
+        "UF/IFAS Citrus Culture in the Home Landscape (HS132)"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/HS132",
+      "anchor_paths": [
+        "companions.anchoring_urls.uf_ifas_hs132",
+        "diseases[0].anchoring_urls.uf_ifas_hs132",
+        "diseases[1].anchoring_urls.uf_ifas_hs132",
+        "diseases[2].anchoring_urls.uf_ifas_hs132",
+        "diseases[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[1].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[3].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[4].anchoring_urls.uf_ifas_hs132",
+        "failure_diagnostics[5].anchoring_urls.uf_ifas_hs132",
+        "pests[0].anchoring_urls.uf_ifas_hs132",
+        "pests[1].anchoring_urls.uf_ifas_hs132",
+        "pests[2].anchoring_urls.uf_ifas_hs132",
+        "pests[4].anchoring_urls.uf_ifas_hs132",
+        "ph.anchoring_urls.uf_ifas_hs132",
+        "pollination.anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas_hs132",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[0].anchoring_urls.uf_ifas_hs132",
+        "rootstock_options[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.bloom[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.bloom[1].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.establishment[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[0].anchoring_urls.uf_ifas_hs132",
+        "tips_by_stage.planting[1].anchoring_urls.uf_ifas_hs132"
+      ],
+      "source_context": "For the person planting only a few trees, this assurance and relief from care is usually worth the difference in cost. These trees may be set out at any time of the year. They should be set at the same soil line as they grew in the nursery row or container and be provided with a basin to hold water around each tree.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the same soil line as"
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a grafted nursery tree from a reputable source with certified disease-free stock, matched to a rootstock suited to your soil (Swingle or a trifoliate type for most, but not the highest-pH desert soils). Container-grown trees can be planted year-round in frost-free zones; bare-root trees go in late winter to early spring. Set the tree at the same soil line as in the nursery container, high on a mound in heavy ground, and do not bury the graft union. Give a grapefruit generous room, since it makes a large tree.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    }
+  ]
+}

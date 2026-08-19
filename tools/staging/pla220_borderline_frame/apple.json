@@ -1,0 +1,791 @@
+{
+  "crop_slug": "apple",
+  "record_count": 19,
+  "records": [
+    {
+      "crop_slug": "apple",
+      "field_path": "bloom_time_beginner",
+      "our_prose": "Apple trees flower in spring. Different varieties bloom a little earlier or later than each other, spread over about two weeks. This matters because two trees can only pollinate each other if they are in bloom at the same time. Watch the forecast while the tree is flowering: a hard late frost on open blossoms can wipe out that year's apples.",
+      "run_normalized": "are in bloom at the same time",
+      "run_in_our_prose": "are in bloom at the same time",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "are in bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "It is usually true that all varieties of any one fruit kind (for example, all apples) that are in bloom at the same time will pollinate one another. In most years, only the earliest and latest blooming varieties may not share an overlapping bloom period.",
+      "source_context_available": true,
+      "tool_first_6gram": "are in bloom at the same"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Fertilize lightly in early spring before bud break, guided by shoot growth: a healthy young apple makes about 12 to 18 inches of new shoot growth per year, so feed to reach that, not beyond. Excess nitrogen drives soft, leafy growth that is highly susceptible to fire blight and delays fruiting. Mature trees on fertile soil often need little or no nitrogen.",
+      "run_normalized": "is highly susceptible to fire blight and",
+      "run_in_our_prose": "is highly susceptible to fire blight and",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "is highly susceptible to fire blight and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/sites/extension.umd.edu/files/publications/AllAboutAppleRootStocks_FS_2022-0638.pdf",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umd_ext",
+        "pests[3].anchoring_urls.umd_ext",
+        "ph.anchoring_urls.umd_ext",
+        "rootstock_options[0].anchoring_urls.umd_ext",
+        "rootstock_options[1].anchoring_urls.umd_ext",
+        "rootstock_options[2].anchoring_urls.umd_ext",
+        "rootstock_options[3].anchoring_urls.umd_ext",
+        "rootstock_options[4].anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "This rootstock performs better in a well- drained site and always requires a leader support. As a limitation, it is highly susceptible to fire blight and can develop burr knots. Several M.9 clones that are free of the tomato ring spot virus and apple stem grooving virus confer more benefits, such as M.9 NAKB 337 and M.9EMLA.",
+      "source_context_available": true,
+      "tool_first_6gram": "highly susceptible to fire blight and"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Fertilize lightly in early spring before bud break, guided by shoot growth: a healthy young apple makes about 12 to 18 inches of new shoot growth per year, so feed to reach that, not beyond. Excess nitrogen drives soft, leafy growth that is highly susceptible to fire blight and delays fruiting. Mature trees on fertile soil often need little or no nitrogen.",
+      "run_normalized": "is highly susceptible to fire blight",
+      "run_in_our_prose": "is highly susceptible to fire blight",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is highly susceptible to fire blight"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/apple-production-and-variety-recommendations-for-the-utah-home-garden",
+      "anchor_paths": [
+        "varieties.anchoring_urls.usu_ext",
+        "varieties.recommended[10].anchoring_urls.usu_ext",
+        "varieties.recommended[11].anchoring_urls.usu_ext",
+        "varieties.recommended[12].anchoring_urls.usu_ext",
+        "varieties.recommended[13].anchoring_urls.usu_ext",
+        "varieties.recommended[4].anchoring_urls.usu_ext",
+        "varieties.recommended[6].anchoring_urls.usu_ext",
+        "varieties.recommended[7].anchoring_urls.usu_ext",
+        "varieties.recommended[8].anchoring_urls.usu_ext",
+        "varieties.recommended[9].anchoring_urls.usu_ext"
+      ],
+      "source_context": "It will not pollinate other apples and cannot be pollinated by Golden Delicious. It is highly susceptible to fire blight. Those growing the apple should adopt management strategies that suppress infection.",
+      "source_context_available": true,
+      "tool_first_6gram": "is highly susceptible to fire blight"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "growth_stages[3].what_to_look_for_beginner",
+      "our_prose": "In late winter the tree is bare, which is the perfect time to prune because you can see all the branches clearly.",
+      "run_normalized": "is the perfect time to prune",
+      "run_in_our_prose": "is the perfect time to prune",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is the perfect time to prune"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/home-orchard-site-selection",
+      "anchor_paths": [
+        "companions.bad_beginner_seasoned[1].anchoring_urls.psu_ext",
+        "ph.anchoring_urls.psu_ext",
+        "soil.anchoring_urls.psu_ext",
+        "watering.anchoring_urls.psu_ext"
+      ],
+      "source_context": "You can increase your fruit trees’ productivity with correct pruning, and you can also renovate old fruit trees that are out of control. A variety of other plants benefit from judicious pruning. The late winter is the perfect time to prune trees and shrubs to ensure continued plant growth and vigor. Pruning plays an essential role in the maintenance of ornamental plants , and it can increase their health and beauty .",
+      "source_context_available": true,
+      "tool_first_6gram": "is the perfect time to prune"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "pollination.notes_beginner",
+      "our_prose": "This is the most important thing about growing apples: one apple tree on its own usually will not make fruit. Apple flowers need pollen from a different apple variety, carried over by bees. So plan to plant two different kinds of apple, not two of the same, within about 50 ft of each other, and make sure they bloom at the same time (an early bloomer cannot help a late bloomer). If you only have room for the idea of one tree, a flowering crabapple planted nearby can do the pollinating job instead. Golden Delicious is a reliable all-around partner that pollinates almost any apple. A few special varieties (Mutsu, Jonagold, Shizuka) cannot pollinate anything and actually need two other partners themselves, so ask the nursery if a variety is \"triploid\" before you rely on it as your second tree.",
+      "run_normalized": "pollen from a different apple variety",
+      "run_in_our_prose": "pollen from a different apple variety",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "pollen from a different apple variety"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-apples",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "varieties.recommended[7].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Two trees will reward any family with enough fruit to enjoy and share with friends. Apples require pollen from a different apple variety to grow fruit. If you only have room in your yard for one tree, there may be crab apples in your neighborhood to provide the pollen your tree needs.",
+      "source_context_available": true,
+      "tool_first_6gram": "pollen from a different apple variety"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "pollination.notes_beginner",
+      "our_prose": "This is the most important thing about growing apples: one apple tree on its own usually will not make fruit. Apple flowers need pollen from a different apple variety, carried over by bees. So plan to plant two different kinds of apple, not two of the same, within about 50 ft of each other, and make sure they bloom at the same time (an early bloomer cannot help a late bloomer). If you only have room for the idea of one tree, a flowering crabapple planted nearby can do the pollinating job instead. Golden Delicious is a reliable all-around partner that pollinates almost any apple. A few special varieties (Mutsu, Jonagold, Shizuka) cannot pollinate anything and actually need two other partners themselves, so ask the nursery if a variety is \"triploid\" before you rely on it as your second tree.",
+      "run_normalized": "they bloom at the same time",
+      "run_in_our_prose": "they bloom at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "they bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cherries Pollination of cherries is complicated by the fact that some varieties are genetically incompatible and will not pollinate each other even when they bloom at the same time. The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "they bloom at the same time"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "pollinator_notes_beginner",
+      "our_prose": "This is the most important thing about growing apples: one apple tree on its own usually will not make fruit. Apple flowers need pollen from a different apple variety, carried over by bees. So plan to plant two different kinds of apple, not two of the same, within about 50 ft of each other, and make sure they bloom at the same time (an early bloomer cannot help a late bloomer). If you only have room for the idea of one tree, a flowering crabapple planted nearby can do the pollinating job instead. Golden Delicious is a reliable all-around partner that pollinates almost any apple. A few special varieties (Mutsu, Jonagold, Shizuka) cannot pollinate anything and actually need two other partners themselves, so ask the nursery if a variety is \"triploid\" before you rely on it as your second tree.",
+      "run_normalized": "pollen from a different apple variety",
+      "run_in_our_prose": "pollen from a different apple variety",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "pollen from a different apple variety"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-apples",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "varieties.recommended[7].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Two trees will reward any family with enough fruit to enjoy and share with friends. Apples require pollen from a different apple variety to grow fruit. If you only have room in your yard for one tree, there may be crab apples in your neighborhood to provide the pollen your tree needs.",
+      "source_context_available": true,
+      "tool_first_6gram": "pollen from a different apple variety"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "pollinator_notes_beginner",
+      "our_prose": "This is the most important thing about growing apples: one apple tree on its own usually will not make fruit. Apple flowers need pollen from a different apple variety, carried over by bees. So plan to plant two different kinds of apple, not two of the same, within about 50 ft of each other, and make sure they bloom at the same time (an early bloomer cannot help a late bloomer). If you only have room for the idea of one tree, a flowering crabapple planted nearby can do the pollinating job instead. Golden Delicious is a reliable all-around partner that pollinates almost any apple. A few special varieties (Mutsu, Jonagold, Shizuka) cannot pollinate anything and actually need two other partners themselves, so ask the nursery if a variety is \"triploid\" before you rely on it as your second tree.",
+      "run_normalized": "they bloom at the same time",
+      "run_in_our_prose": "they bloom at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "they bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cherries Pollination of cherries is complicated by the fact that some varieties are genetically incompatible and will not pollinate each other even when they bloom at the same time. The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "they bloom at the same time"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "rootstock_options[0].traits_seasoned",
+      "our_prose": "M9 produces a true dwarf, about 8 to 12 ft, and is the most precocious option, bearing around year 2 to 3. It requires permanent staking or a trellis for the life of the tree because its root system never fully anchors the canopy, and it is container-suitable in a 20+ gallon pot. Best where space is tight and early fruit and easy picking matter more than tree vigor.",
+      "run_normalized": "for the life of the tree",
+      "run_in_our_prose": "for the life of the tree",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for the life of the tree"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-apples",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "varieties.recommended[7].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "M.9 has poor anchorage due to brittle roots and a high fruit to wood ratio which means it requires staking for the life of the tree. M.9 is very susceptible to fire blight. It produces moderate amounts of root suckers and burr knots.",
+      "source_context_available": true,
+      "tool_first_6gram": "for the life of the tree"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "rootstock_options[0].traits_seasoned",
+      "our_prose": "M9 produces a true dwarf, about 8 to 12 ft, and is the most precocious option, bearing around year 2 to 3. It requires permanent staking or a trellis for the life of the tree because its root system never fully anchors the canopy, and it is container-suitable in a 20+ gallon pot. Best where space is tight and early fruit and easy picking matter more than tree vigor.",
+      "run_normalized": "for the life of the tree",
+      "run_in_our_prose": "for the life of the tree",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for the life of the tree"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/apple-production-and-variety-recommendations-for-the-utah-home-garden",
+      "anchor_paths": [
+        "varieties.anchoring_urls.usu_ext",
+        "varieties.recommended[10].anchoring_urls.usu_ext",
+        "varieties.recommended[11].anchoring_urls.usu_ext",
+        "varieties.recommended[12].anchoring_urls.usu_ext",
+        "varieties.recommended[13].anchoring_urls.usu_ext",
+        "varieties.recommended[4].anchoring_urls.usu_ext",
+        "varieties.recommended[6].anchoring_urls.usu_ext",
+        "varieties.recommended[7].anchoring_urls.usu_ext",
+        "varieties.recommended[8].anchoring_urls.usu_ext",
+        "varieties.recommended[9].anchoring_urls.usu_ext"
+      ],
+      "source_context": "Description Eventual Size (FT)* M.9 Very common commercial rootstock that generally should not be used by homeowners, due to the maintenance required. Trees grafted onto this rootstock require staking or support for the life of the tree. It is susceptible to fire blight. 8-12 M.26 Very common commercial rootstock that, when trees are grafted onto it, requires the tree be somehow supported or staked for the life of the tree.",
+      "source_context_available": true,
+      "tool_first_6gram": "for the life of the tree"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "If your tree comes bare-root (bare roots, no pot), plant it in late winter or early spring while it is still leafless and dormant, as soon as you can dig the soil. Soak the roots in a bucket of water for an hour or two first. Dig a hole wide enough that the roots can spread out without folding. The key thing: find the graft union (the bumpy spot low on the trunk where the top variety was joined to the roots) and keep it about 2 to 3 in above the soil, never bury it. Fill the hole with the same soil you dug out, water well, and tie small trees to a stake. A potted tree is planted the same way and can go in anytime through spring.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/apple-production-and-variety-recommendations-for-the-utah-home-garden",
+      "anchor_paths": [
+        "varieties.anchoring_urls.usu_ext",
+        "varieties.recommended[10].anchoring_urls.usu_ext",
+        "varieties.recommended[11].anchoring_urls.usu_ext",
+        "varieties.recommended[12].anchoring_urls.usu_ext",
+        "varieties.recommended[13].anchoring_urls.usu_ext",
+        "varieties.recommended[4].anchoring_urls.usu_ext",
+        "varieties.recommended[6].anchoring_urls.usu_ext",
+        "varieties.recommended[7].anchoring_urls.usu_ext",
+        "varieties.recommended[8].anchoring_urls.usu_ext",
+        "varieties.recommended[9].anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization Once trees are planted consider the following: Trees that have been in the ground for 1 to 3 years should be fertilized annually in late winter or early spring with approximately ½ cup of ammonium sulfate (20-0-0). This is equal to approximately 1 oz of actual nitrogen.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a bare-root tree while fully dormant, late winter to early spring, as soon as the ground is workable. Soak the roots in water for an hour or two before planting, dig a hole wide enough to spread the roots without bending, and set the tree so the graft union (the swollen knob where the variety meets the rootstock) sits 2 to 3 in above the final soil line, burying it defeats the dwarfing rootstock by letting the variety root over. Backfill with native soil, water in to settle, and stake dwarf stocks (M9, M26) permanently. A potted tree follows the same depth rule but can go in through spring.",
+      "run_normalized": "soak the roots in water for",
+      "run_in_our_prose": "Soak the roots in water for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "soak the roots in water for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.uga.edu/publications/detail.html?number=C740",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext"
+      ],
+      "source_context": "Rootstock Between Trees in Row (ft) Between Rows (ft) Non-spur Spur Spur Seedling 18 22 18 MM 106 16 20 16 MM 111 16 20 14 M 7 12 18 14 M 26 10 16 not recommended M 9 8 14 not recommended Soil Preparation and Planting When fruit trees arrive from the nursery, open the bundles immediately. Soak the roots in water for 6 to 12 hr if they are not moist. The trees should then be planted if the soil is not too wet.",
+      "source_context_available": true,
+      "tool_first_6gram": "soak the roots in water for"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a bare-root tree while fully dormant, late winter to early spring, as soon as the ground is workable. Soak the roots in water for an hour or two before planting, dig a hole wide enough to spread the roots without bending, and set the tree so the graft union (the swollen knob where the variety meets the rootstock) sits 2 to 3 in above the final soil line, burying it defeats the dwarfing rootstock by letting the variety root over. Backfill with native soil, water in to settle, and stake dwarf stocks (M9, M26) permanently. A potted tree follows the same depth rule but can go in through spring.",
+      "run_normalized": "where the variety meets the rootstock",
+      "run_in_our_prose": "where the variety meets the rootstock",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "where the variety meets the rootstock"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-apples",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "varieties.recommended[7].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Put the tree in the hole Position each tree so that the graft union is about 4 inches above the soil line. The graft union is a swelling where the variety meets the rootstock. If the graft union is placed close to or below the soil line, the variety (scion) will root, causing trees to grow to full size.",
+      "source_context_available": true,
+      "tool_first_6gram": "where the variety meets the rootstock"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a bare-root tree while fully dormant, late winter to early spring, as soon as the ground is workable. Soak the roots in water for an hour or two before planting, dig a hole wide enough to spread the roots without bending, and set the tree so the graft union (the swollen knob where the variety meets the rootstock) sits 2 to 3 in above the final soil line, burying it defeats the dwarfing rootstock by letting the variety root over. Backfill with native soil, water in to settle, and stake dwarf stocks (M9, M26) permanently. A potted tree follows the same depth rule but can go in through spring.",
+      "run_normalized": "soak the roots in water for",
+      "run_in_our_prose": "Soak the roots in water for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "soak the roots in water for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/apple/",
+      "anchor_paths": [
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Plow or spade the area, followed by disking or raking to smooth the surface. When fruit trees arrive from the nursery, open the bundles immediately. Soak the roots in water for 6 to 12 hours if they are not moist. The trees should then be planted if the soil is not too wet.",
+      "source_context_available": true,
+      "tool_first_6gram": "soak the roots in water for"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "tips_by_stage.establishment[1].text_beginner",
+      "our_prose": "Spread mulch in a wide circle around the tree, but keep it a few inches away from the trunk itself. Mulch piled against the trunk holds moisture that causes rot and gives mice and voles a place to hide and chew the bark.",
+      "run_normalized": "a few inches away from the trunk",
+      "run_in_our_prose": "a few inches away from the trunk",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "a few inches away from the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-apples",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[4].anchoring_urls.umn_ext",
+        "failure_diagnostics[5].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "pollination.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "varieties.recommended[7].anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Applying a few inches of mulch around the base of the tree will help prevent weeds. Keep the mulch a few inches away from the trunk to prevent rodent damage and fungal growth.",
+      "source_context_available": true,
+      "tool_first_6gram": "a few inches away from the"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "varieties.recommended[8].note_beginner",
+      "our_prose": "A mild, sweet, reliable apple for fresh eating, ripening in September, and one of the most popular apples grown. It sets some fruit alone but does best with a partner.",
+      "run_normalized": "one of the most popular apples",
+      "run_in_our_prose": "one of the most popular apples",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "one of the most popular apples"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/apple-production-and-variety-recommendations-for-the-utah-home-garden",
+      "anchor_paths": [
+        "varieties.anchoring_urls.usu_ext",
+        "varieties.recommended[10].anchoring_urls.usu_ext",
+        "varieties.recommended[11].anchoring_urls.usu_ext",
+        "varieties.recommended[12].anchoring_urls.usu_ext",
+        "varieties.recommended[13].anchoring_urls.usu_ext",
+        "varieties.recommended[4].anchoring_urls.usu_ext",
+        "varieties.recommended[6].anchoring_urls.usu_ext",
+        "varieties.recommended[7].anchoring_urls.usu_ext",
+        "varieties.recommended[8].anchoring_urls.usu_ext",
+        "varieties.recommended[9].anchoring_urls.usu_ext"
+      ],
+      "source_context": "Gala 4-8 Mid September Susceptible Multiple strains of Gala apple are available, including spur types. Gala is one of the most popular apples in the United States.",
+      "source_context_available": true,
+      "tool_first_6gram": "one of the most popular apples"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "watering.frequency_beginner",
+      "our_prose": "Water deeply but not too often, aim for about 1 inch of water a week while the tree is growing and making fruit. Water more in hot, dry spells and less once the leaves drop in fall.",
+      "run_normalized": "while the tree is growing and",
+      "run_in_our_prose": "while the tree is growing and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "while the tree is growing and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Some nutritional elements are slow to move through the soil, and others are washed away by rain, so correct timing is important when applying fertilizers. • While the tree is growing and roots are actively taking up nutrients, quick-leaching fertilizers such as nitrogen [N] should be sectIon II: basIcs of fruIt culture 5 See EB1595 Orchard Soil Sampling for full details.",
+      "source_context_available": true,
+      "tool_first_6gram": "while the tree is growing and"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Deep, infrequent irrigation: about 1 inch of water per week through the growing season, more in heat and during fruit sizing, tapering off as the tree goes dormant.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "You maintain a proper irrigation schedule, making sure the trees receive at least 1 inch of water per week during the dry period. Biological management— No recommended strategies exist.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "watering.signs_overwater_beginner",
+      "our_prose": "If the leaves yellow and the ground stays soggy, the tree is getting too much water or the soil drains poorly. Rot at the base of the trunk is a warning sign.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    }
+  ]
+}

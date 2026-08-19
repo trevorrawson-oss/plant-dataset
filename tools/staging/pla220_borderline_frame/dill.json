@@ -1,0 +1,287 @@
+{
+  "crop_slug": "dill",
+  "record_count": 6,
+  "records": [
+    {
+      "crop_slug": "dill",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Dill is a light feeder and one of the few herbs that prefers lean soil; Utah State University notes that no additional nutrients are needed if the soil is amended at planting. Work a little compost in before sowing and, in poor ground, give one light feeding once the plants are growing. Avoid heavy nitrogen, which makes dill lank and floppy and can dull the aromatic oils that give the leaves and seed their flavor. A plant grown on for seed or pickling heads needs no extra feeding once it bolts.",
+      "run_normalized": "no additional nutrients are needed if",
+      "run_in_our_prose": "no additional nutrients are needed if",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "no additional nutrients are needed if"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/dill-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[0].anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "diseases[2].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.heat_pause.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.heat_pause.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.bolting[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water/Fertility Dill is not a big water user requiring one or two irrigations per week once established. Dill can tolerate drier soil conditions particularly after seed set. No additional nutrients are needed if soil is amended at planting. Problems with Growing Dill Weeds Control weeds when plants are small.",
+      "source_context_available": true,
+      "tool_first_6gram": "no additional nutrients are needed if"
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "regions.pnw.region_notes_beginner",
+      "our_prose": "In the maritime Pacific Northwest, dill gets a real break most of the country does not: our cool, mild summer rarely gets hot enough to bolt it the way a hot inland summer would. Direct sow as soon as the soil can be worked in late winter or early spring, since young dill takes a light frost, and sow a little every 2 to 3 weeks for a steady supply of leaves. Ease off new sowings around midsummer when the days are longest, then sow again in late summer for a fall crop that keeps going right up to the first frost. Dill self-sows readily, so volunteers often show up on their own the following spring.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "However, be aware that vegetables planted in late summer or early fall (August or September) will be susceptible to insects and diseases that thrive in hot weather. Likewise, cold-tender vegetables planted in late winter or early spring may be damaged by frosts or freezes if not protected with covers (see \"Extending the Gardening Season\" above for more information on covers).",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "Dill is not one of USU Extension's Table 1 vegetable rows, so this spring window follows the Group A (Hardy) February 15 date given to St. George's other cold-hardy spring crops. Leaves are ready in about 55 days from an April harvest; dill's own heat threshold runs around 78°F, so the plant bolts to seed heads and leaf quality drops once St. George's summer heat, which routinely reaches 100°F in June and July per USU Extension's Washington County frost and elevation data, sets in. A second direct sowing in early August, once the worst heat has broken, follows USU's general fall-gardening guidance for restarting cool-season crops (Fall Gardening in the St. George Area); the fall stand crops from late September up to just ahead of the average November 1 first frost. Dill self-sows readily if a few heads are left standing.",
+      "run_normalized": "fall gardening in the st george area",
+      "run_in_our_prose": "Fall Gardening in the St. George Area",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "fall gardening in the st george area"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_fall_veg"
+      ],
+      "source_names": [
+        "USU Extension Washington County, Fall Gardening in the St. George Area (Heflebower)"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/washington/files/Fall_Vegetable.pdf",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[1].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].direct_sow[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.plantings[1].harvest_start[0].anchoring_urls.usu_ext_fall_veg",
+        "regions.utah_dixie.resolved_by_zone.8.second_planting.anchoring_urls.usu_ext_fall_veg"
+      ],
+      "source_context": "44 N. 100 E., St. George, UT 84770 (435)634-5706 extension.usu.edu/washington FALL GARDENING In the St. George Area By Rick Heflebower, Washington County Horticulture Agent Here are a few tips that will help you with your fall vegetable garden: 1.",
+      "source_context_available": true,
+      "tool_first_6gram": "fall gardening in the st george"
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "sources_summary.primary[11].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "sources_summary.primary[7].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_h/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "sources_summary.primary[9].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mg.ucanr.edu",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "More than just a gardening program, UC Master Gardener is an education and outreach statewide program of the University of California, Agriculture and Natural Resources (UC ANR) . UC Master Gardeners are in their communities, helping build more sustainable landscapes.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "crop_slug": "pear-asian",
+  "record_count": 17,
+  "records": [
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "bloom_time_beginner",
+      "our_prose": "Asian pears flower in early spring, about the same time as other pears and a bit before apples, so a late frost can catch the open blossoms. Different varieties bloom a few days apart over about two weeks, and two trees can only pollinate each other if they bloom at the same time. One tip: the Chinese kinds (Ya Li, Tsu Li) bloom very early and pollinate each other, but often finish before the Japanese kinds open, so match them up carefully.",
+      "run_normalized": "they bloom at the same time",
+      "run_in_our_prose": "they bloom at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "they bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cherries Pollination of cherries is complicated by the fact that some varieties are genetically incompatible and will not pollinate each other even when they bloom at the same time. The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time.",
+      "source_context_available": true,
+      "tool_first_6gram": "they bloom at the same time"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "description_seasoned",
+      "our_prose": "A long-lived deciduous fruit tree (Pyrus pyrifolia) grown for round, crisp, apple-shaped fruit, also called the apple pear, sand pear, or nashi. Asian pear is a cross-pollination crop: nearly all cultivars are self-unfruitful, so you plant two different, bloom-overlapping varieties and rely on bees to move pollen between them (a couple, like Shinseiki and 20th Century, are partially self-fruitful but still crop far better with a pollinizer). The signature difference from the European pear is at harvest: Asian pears RIPEN ON THE TREE and are eaten crisp and juicy like an apple. You pick them tree-ripe and sweet, not firm-and-green to finish indoors, and a fruit picked too early stays hard and bland. The trees set very heavily and must be thinned hard for decent fruit size. Fire blight is the major disease, worst in warm, humid regions, so cultivar and rootstock choice matter. Chill requirement is moderate and variety-set (roughly 250 to 600 hours), and rootstock choice sets mature size and how soon the tree bears.",
+      "run_normalized": "fire blight is the major disease",
+      "run_in_our_prose": "Fire blight is the major disease",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fire blight is the major disease"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Plastic tree guards can be removed for the growing season and put back on in fall. Diseases, insects and other challenges Fire blight is the major disease of pears in Minnesota. In other areas of the U.S., pear trees are susceptible to a number of insect problems.",
+      "source_context_available": true,
+      "tool_first_6gram": "fire blight is the major disease"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "growth_stages[4].user_action_beginner",
+      "our_prose": "Never spray bug killer while the tree is in bloom, you would kill the bees you need. Cover small trees if a hard frost is coming, since frost on open flowers means no pears. Make sure your second pear variety is blooming too, and do not prune in warm, wet weather.",
+      "run_normalized": "while the tree is in bloom",
+      "run_in_our_prose": "while the tree is in bloom",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "while the tree is in bloom"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Water sprouts or suckers should be removed promptly on susceptible varieties. Do not prune while the tree is in bloom and up to two weeks after blooming. Prune diseased shoots immediately if your pear tree is exhibiting symptoms of fire blight.",
+      "source_context_available": true,
+      "tool_first_6gram": "while the tree is in bloom"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "pollination.notes_beginner",
+      "our_prose": "This is the most important thing about growing Asian pears: one tree alone makes only a small, unreliable crop. The flowers need pollen from a DIFFERENT Asian pear variety, carried by bees, so plant two different kinds within about 50 feet that bloom at the same time. A couple of varieties (Shinseiki, 20th Century) can set a small crop on their own, but they do much better with a partner. Two tips: the Chinese kinds (Ya Li, Tsu Li) bloom too early to pollinate the Japanese kinds, so pair them together; and a Bartlett (European) pear can pollinate Asian pears if it blooms at the same time. Once they do set fruit, expect a lot of it, so be ready to thin heavily.",
+      "run_normalized": "that bloom at the same time",
+      "run_in_our_prose": "that bloom at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "that bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time. VARIETY NAME BLOOM VARIETY NAME BLOOM Methley early stanley Mid Beauty early longjohn Mid Hollywood early Victory Mid to late shiro early to Mid silver Prune Mid to late Obilnaja early to Mid schoolhouse Mid to late italian Prune early to Mid Vision late Valor early to Mid imperial epineuse late Purple Gage early to Mid seneca late early laxton Mid Mirabelle late Queen Victoria Mid Table 4.",
+      "source_context_available": true,
+      "tool_first_6gram": "that bloom at the same time"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "pollinator_notes_beginner",
+      "our_prose": "This is the most important thing about growing Asian pears: one tree alone makes only a small, unreliable crop. The flowers need pollen from a DIFFERENT Asian pear variety, carried by bees, so plant two different kinds within about 50 feet that bloom at the same time. A couple of varieties (Shinseiki, 20th Century) can set a small crop on their own, but they do much better with a partner. Two tips: the Chinese kinds (Ya Li, Tsu Li) bloom too early to pollinate the Japanese kinds, so pair them together; and a Bartlett (European) pear can pollinate Asian pears if it blooms at the same time. Once they do set fruit, expect a lot of it, so be ready to thin heavily.",
+      "run_normalized": "that bloom at the same time",
+      "run_in_our_prose": "that bloom at the same time",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "that bloom at the same time"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "The self-fertile sweet cherry varieties (in pink, below) are universal pollinizers which can be used as universal pollen donors for other varieties that bloom at the same time. VARIETY NAME BLOOM VARIETY NAME BLOOM Methley early stanley Mid Beauty early longjohn Mid Hollywood early Victory Mid to late shiro early to Mid silver Prune Mid to late Obilnaja early to Mid schoolhouse Mid to late italian Prune early to Mid Vision late Valor early to Mid imperial epineuse late Purple Gage early to Mid seneca late early laxton Mid Mirabelle late Queen Victoria Mid Table 4.",
+      "source_context_available": true,
+      "tool_first_6gram": "that bloom at the same time"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "regions.ca_desert.resolved_by_zone.9.suitability_note_seasoned",
+      "our_prose": "Desert valley floors bank only about 150 to 400 chill hours, below even low-chill Asian pears in most years, and summer heat plus fire-blight pressure compound it. Trees may survive and bloom but rarely fruit.",
+      "run_normalized": "asian pears in most years and",
+      "run_in_our_prose": "Asian pears in most years, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "asian pears in most years and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Asian pears (in pink, below) tend to bloom earlier as a group; furthermore, not all European pears are suitable pollinizers. As examples, Conference is a good early blooming pear that can pollinate Asian pears in most years; and the varieties Seckel and Bartlett will not pollinate each other. Additionally, pear flowers are not particularly attractive to bees; so, for good pollination when growing pears and Asian pears, try to minimize the availability of other flowers (e.g., dandelions) when pears are in bloom.",
+      "source_context_available": true,
+      "tool_first_6gram": "asian pears in most years and"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "regions.low_desert_az.resolved_by_zone.10.suitability_note_seasoned",
+      "our_prose": "Low-desert winters bank only about 100 to 400 chill hours, below even low-chill Asian pears in most years, and extreme summer heat plus fire blight finish the case. Trees may survive but rarely crop; choose low-chill apples or other fruit instead.",
+      "run_normalized": "asian pears in most years and",
+      "run_in_our_prose": "Asian pears in most years, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "asian pears in most years and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Asian pears (in pink, below) tend to bloom earlier as a group; furthermore, not all European pears are suitable pollinizers. As examples, Conference is a good early blooming pear that can pollinate Asian pears in most years; and the varieties Seckel and Bartlett will not pollinate each other. Additionally, pear flowers are not particularly attractive to bees; so, for good pollination when growing pears and Asian pears, try to minimize the availability of other flowers (e.g., dandelions) when pears are in bloom.",
+      "source_context_available": true,
+      "tool_first_6gram": "asian pears in most years and"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "regions.low_desert_az.resolved_by_zone.9.suitability_note_seasoned",
+      "our_prose": "Low-desert winters bank only about 100 to 400 chill hours, below even low-chill Asian pears in most years, and extreme summer heat plus fire blight finish the case. Trees may survive but rarely crop; choose low-chill apples or other fruit instead.",
+      "run_normalized": "asian pears in most years and",
+      "run_in_our_prose": "Asian pears in most years, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "asian pears in most years and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Asian pears (in pink, below) tend to bloom earlier as a group; furthermore, not all European pears are suitable pollinizers. As examples, Conference is a good early blooming pear that can pollinate Asian pears in most years; and the varieties Seckel and Bartlett will not pollinate each other. Additionally, pear flowers are not particularly attractive to bees; so, for good pollination when growing pears and Asian pears, try to minimize the availability of other flowers (e.g., dandelions) when pears are in bloom.",
+      "source_context_available": true,
+      "tool_first_6gram": "asian pears in most years and"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "If your tree comes bare-root (bare roots, no pot), plant it in late winter or early spring while it is still leafless and dormant, as soon as you can dig the soil. Soak the roots in a bucket of water for an hour or two first. Dig a hole wide enough that the roots spread out without folding. The key thing: find the graft union (the bumpy spot low on the trunk where the top variety was joined to the roots) and keep it about 2 to 3 in above the soil, never bury it. Fill the hole with the same soil you dug out, water well, and tie small trees to a stake. A potted tree is planted the same way and can go in anytime through spring.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Mainly, you want to prune a tree to have well-spaced branches and a balanced appearance, while eliminating problem branches (those that are broken, diseased or dead). Fruit trees should be pruned every year in late winter or early spring, after the coldest weather is past and before growth begins. Prune minimally, especially with young trees, as excessive pruning will delay or reduce fruiting and create too much leafy growth.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a bare-root tree while fully dormant, late winter to early spring, as soon as the ground is workable. Soak the roots in water for an hour or two before planting, dig a hole wide enough to spread the roots without bending, and set the tree so the graft union (the swollen knob where the variety meets the rootstock) sits 2 to 3 in above the final soil line, burying it lets the variety root over and defeats the rootstock. Backfill with native soil, water in to settle, and stake dwarf and size-controlled stocks. A potted tree follows the same depth rule but can go in through spring.",
+      "run_normalized": "soak the roots in water for",
+      "run_in_our_prose": "Soak the roots in water for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "soak the roots in water for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.uga.edu/publications/detail.html?number=C740",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext"
+      ],
+      "source_context": "Rootstock Between Trees in Row (ft) Between Rows (ft) Non-spur Spur Spur Seedling 18 22 18 MM 106 16 20 16 MM 111 16 20 14 M 7 12 18 14 M 26 10 16 not recommended M 9 8 14 not recommended Soil Preparation and Planting When fruit trees arrive from the nursery, open the bundles immediately. Soak the roots in water for 6 to 12 hr if they are not moist. The trees should then be planted if the soil is not too wet.",
+      "source_context_available": true,
+      "tool_first_6gram": "soak the roots in water for"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant a bare-root tree while fully dormant, late winter to early spring, as soon as the ground is workable. Soak the roots in water for an hour or two before planting, dig a hole wide enough to spread the roots without bending, and set the tree so the graft union (the swollen knob where the variety meets the rootstock) sits 2 to 3 in above the final soil line, burying it lets the variety root over and defeats the rootstock. Backfill with native soil, water in to settle, and stake dwarf and size-controlled stocks. A potted tree follows the same depth rule but can go in through spring.",
+      "run_normalized": "where the variety meets the rootstock",
+      "run_in_our_prose": "where the variety meets the rootstock",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "where the variety meets the rootstock"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Position the tree so that the graft union is 2 to 4 inches above the soil line. The graft union is a swelling where the variety meets the rootstock. If the graft union is placed close to or below the soil line, the variety will root, causing trees to grow to full size.",
+      "source_context_available": true,
+      "tool_first_6gram": "where the variety meets the rootstock"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "tips_by_stage.bloom[0].text_beginner",
+      "our_prose": "Never spray bug killer while the tree is in bloom. Pear flowers do not attract many bees to begin with, and insecticide kills the few you are counting on to set fruit.",
+      "run_normalized": "while the tree is in bloom",
+      "run_in_our_prose": "while the tree is in bloom",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "while the tree is in bloom"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Water sprouts or suckers should be removed promptly on susceptible varieties. Do not prune while the tree is in bloom and up to two weeks after blooming. Prune diseased shoots immediately if your pear tree is exhibiting symptoms of fire blight.",
+      "source_context_available": true,
+      "tool_first_6gram": "while the tree is in bloom"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "watering.frequency_beginner",
+      "our_prose": "Water deeply but not too often, aim for about 1 inch a week while the tree is growing and making fruit. Water more in hot, dry spells and less once the leaves drop in fall.",
+      "run_normalized": "while the tree is growing and",
+      "run_in_our_prose": "while the tree is growing and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "while the tree is growing and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Some nutritional elements are slow to move through the soil, and others are washed away by rain, so correct timing is important when applying fertilizers. • While the tree is growing and roots are actively taking up nutrients, quick-leaching fertilizers such as nitrogen [N] should be sectIon II: basIcs of fruIt culture 5 See EB1595 Orchard Soil Sampling for full details.",
+      "source_context_available": true,
+      "tool_first_6gram": "while the tree is growing and"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Deep, infrequent irrigation: about 1 inch of water per week through the growing season, more in heat and during fruit sizing, tapering off as the tree goes dormant.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "You maintain a proper irrigation schedule, making sure the trees receive at least 1 inch of water per week during the dry period. Biological management— No recommended strategies exist.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "watering.method_seasoned",
+      "our_prose": "Drip or a slow soak at the dripline; keep water off the trunk and crown to avoid collar rot, and mulch to hold moisture (pulled back a few inches from the trunk).",
+      "run_normalized": "a few inches from the trunk",
+      "run_in_our_prose": "a few inches from the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "a few inches from the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Mulch also helps prevent weeds and grasses from growing around the base of the tree. Just remember, keep mulch a few inches from the trunk to prevent trunk rots and damage from rodents. Weeding Fruit trees should not have grass or other plants growing up to the base.",
+      "source_context_available": true,
+      "tool_first_6gram": "a few inches from the trunk"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "watering.signs_overwater_beginner",
+      "our_prose": "If the leaves yellow and the ground stays soggy, the tree is getting too much water or the soil drains poorly. Rot at the base of the trunk is a warning sign.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "weather_triggers[0].body_seasoned",
+      "our_prose": "A hard frost is forecast while the tree is in bloom. Pear blooms early and its open blossoms and young fruitlets are frost-tender, protect small trees with covers or run sprinklers through the frost.",
+      "run_normalized": "while the tree is in bloom",
+      "run_in_our_prose": "while the tree is in bloom",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "while the tree is in bloom"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/fruit/growing-pears",
+      "anchor_paths": [
+        "failure_diagnostics[3].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].bloom[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Water sprouts or suckers should be removed promptly on susceptible varieties. Do not prune while the tree is in bloom and up to two weeks after blooming. Prune diseased shoots immediately if your pear tree is exhibiting symptoms of fire blight.",
+      "source_context_available": true,
+      "tool_first_6gram": "while the tree is in bloom"
+    }
+  ]
+}

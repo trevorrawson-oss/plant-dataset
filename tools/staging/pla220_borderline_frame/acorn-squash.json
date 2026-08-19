@@ -1,0 +1,516 @@
+{
+  "crop_slug": "acorn-squash",
+  "record_count": 14,
+  "records": [
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "diseases[0].cause_seasoned",
+      "our_prose": "Powdery mildew fungi that thrive in warm conditions with high humidity but do not need leaf wetness, spreading by wind-blown spores. Crowded plantings, poor airflow, and shade worsen it, and it is one of the most common late-season winter-squash diseases.",
+      "run_normalized": "is one of the most common",
+      "run_in_our_prose": "is one of the most common",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is one of the most common"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Squash Bugs An adult squash bug ( Anasa tristis ). Zack Snipes, ©2020, Clemson Extension The squash bug ( Anasa tristis ) is one of the most common and troublesome pests in the home vegetable garden. Squash plants frequently are killed by this sap-feeding pest.",
+      "source_context_available": true,
+      "tool_first_6gram": "is one of the most common"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "White, powdery patches appear first on the upper and lower leaf surfaces and stems, spreading until leaves yellow, brown, and die back ahead of schedule. Early defoliation cuts the season short, reduces fruit size and the sugars that make acorn squash sweet, and exposes fruit to sunscald.",
+      "run_normalized": "the upper and lower leaf surfaces",
+      "run_in_our_prose": "the upper and lower leaf surfaces",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the upper and lower leaf surfaces"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "Malathion, carbaryl, and pyrethroids are especially harmful to bees (Figure 5). Spray the plant thoroughly , covering both the upper and lower leaf surfaces. Do not apply pesticides on windy days or when rain is imminent. Prevent spray burn ; make sure the plants are not under moisture stress.",
+      "source_context_available": true,
+      "tool_first_6gram": "the upper and lower leaf surfaces"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common rate is a complete fertilizer such as 10-10-10 worked into the bed before planting (roughly 1.5 pounds per 100 square feet, or a balanced scoop per hill), then a nitrogen side-dress about three to four weeks after planting placed a few inches out from the plants and watered in, repeated lightly at flowering.",
+      "run_normalized": "about three to four weeks after planting",
+      "run_in_our_prose": "about three to four weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about three to four weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_c1206_homegrown_pumpkins"
+      ],
+      "source_names": [
+        "UGA Extension Homegrown Pumpkins (Circular 1206)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "diseases[1].anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "fertilizer.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "ph.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "rotation.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "soil.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "succession_policy.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "thinning.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "watering.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "yield_expectations.anchoring_urls.uga_c1206_homegrown_pumpkins"
+      ],
+      "source_context": "After fruit- set, it is extremely important not to let pumpkins go dry for an extended period of time. Side-dress pumpkins about three to four weeks after planting with additional nitrogen. Take care not to get fertilizer on the plant’s foliage, as it can burn the leaves.",
+      "source_context_available": true,
+      "tool_first_6gram": "about three to four weeks after"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Acorn squash is a moderate feeder over a long season. Work a complete fertilizer such as 10-10-10 into the bed before planting, then side-dress with nitrogen about three to four weeks after planting as the vines begin to run, and again as flowering starts. Ease off heavy nitrogen once fruit has set, since late, lush vine growth comes at the expense of fruit and draws pests. Pair feeding with even moisture, because the nutrients only help a plant that is not also drought-stressed.",
+      "run_normalized": "about three to four weeks after planting",
+      "run_in_our_prose": "about three to four weeks after planting",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "about three to four weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_c1206_homegrown_pumpkins"
+      ],
+      "source_names": [
+        "UGA Extension Homegrown Pumpkins (Circular 1206)"
+      ],
+      "source_publishers": [
+        "University of Georgia Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C1206/homegrown-pumpkins/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "diseases[1].anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "fertilizer.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "ph.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "rotation.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "soil.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "succession_policy.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "thinning.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "watering.anchoring_urls.uga_c1206_homegrown_pumpkins",
+        "yield_expectations.anchoring_urls.uga_c1206_homegrown_pumpkins"
+      ],
+      "source_context": "After fruit- set, it is extremely important not to let pumpkins go dry for an extended period of time. Side-dress pumpkins about three to four weeks after planting with additional nitrogen. Take care not to get fertilizer on the plant’s foliage, as it can burn the leaves.",
+      "source_context_available": true,
+      "tool_first_6gram": "about three to four weeks after"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "Harvest acorn squash once at full maturity, not young. The reliable ripeness sign is the ground spot, the patch where the fruit rests on the soil, which turns from cream or yellow to a deep orange; the rind should also be hard enough that a thumbnail cannot dent it, dull rather than glossy, and the stem dried and corky. Do not go by the dark green rind alone, since acorn squash colors up weeks before it is ripe. Cut the fruit from the vine with shears or a knife, leaving a 1 to 2 inch handle of stem, and avoid carrying it by the stem. Get the crop in before a hard frost, which damages the rind and shortens storage. Acorn squash is good to eat straight from the vine and, unlike a butternut, should not be cured: the heat and humidity of curing reduce its quality and shorten its already brief storage.",
+      "run_normalized": "cut the fruit from the vine",
+      "run_in_our_prose": "Cut the fruit from the vine",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cut the fruit from the vine"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/pumpkins-and-winter-squash",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "succession_policy.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Harvest and storage Harvest Pick winter squash and pumpkins before a hard freeze. A light frost that kills the vine will usually not harm the fruit. Cut the fruit from the vine, leaving a few inches of stem attached. Be careful not to cut or bruise the fruit.",
+      "source_context_available": true,
+      "tool_first_6gram": "cut the fruit from the vine"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "pests[0].symptoms_beginner",
+      "our_prose": "Leaves get yellow spots, then brown and wilt, and you find clusters of shield-shaped gray-brown bugs and their bronze eggs on the undersides of leaves near the base of the plant.",
+      "run_normalized": "near the base of the plant",
+      "run_in_our_prose": "near the base of the plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "near the base of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uiuc_ext"
+      ],
+      "source_names": [
+        "University of Illinois Extension"
+      ],
+      "source_publishers": [
+        "Illinois Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.illinois.edu/blogs/good-growing/2022-07-15-managing-squash-vine-borer-garden",
+      "anchor_paths": [
+        "pests[2].anchoring_urls.uiuc_ext"
+      ],
+      "source_context": "When they enter the plant, they will leave a small hole, and as they feed, they will push sawdust-like frass (insect excrement/poop) out of the hole, which will accumulate over time. While the larvae are most commonly found near the base of the plant, they can be found throughout the plant and even in fruit, particularly later in the season.",
+      "source_context_available": true,
+      "tool_first_6gram": "near the base of the plant"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "pests[3].organic_treatment_beginner",
+      "our_prose": "Blast them off with a strong spray of water and treat the undersides of the leaves with insecticidal soap, repeating every few days. Ladybugs and other helpful insects eat aphids, so welcome them.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cucumber-squash-melon-other-cucurbit-insect-pests/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites can also be controlled with neem oil extract. Mites can be removed with a strong spray of water. Predatory mites and beneficial insects, such as lady beetles and minute pirate bugs, are important natural controls.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow acorn squash or its relatives in the same spot more than once every 3 years or so. Moving them around the garden each year helps avoid a buildup of pests and disease. Clean up old vines at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "sources_summary.primary[10].name",
+      "our_prose": "New Mexico State University Cooperative Extension",
+      "run_normalized": "new mexico state university cooperative extension",
+      "run_in_our_prose": "New Mexico State University Cooperative Extension",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "new mexico state university cooperative extension"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "--> Skip to main content Apply • Visit • Give New Mexico State University Cooperative Extension Service (CES) Publications Toggle navigation Menu |",
+      "source_context_available": true,
+      "tool_first_6gram": "new mexico state university cooperative extension"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "sources_summary.primary[14].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "sources_summary.primary[1].name",
+      "our_prose": "UMass Extension Vegetable Program (Pumpkin and Winter Squash Harvest, Curing, Storage)",
+      "run_normalized": "pumpkin and winter squash harvest curing",
+      "run_in_our_prose": "Pumpkin and Winter Squash Harvest, Curing",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "pumpkin and winter squash harvest curing"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umass_ext"
+      ],
+      "source_names": [
+        "UMass Extension Vegetable Program"
+      ],
+      "source_publishers": [
+        "University of Massachusetts Amherst"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/pumpkin-winter-squash-harvest-curing-storage",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.umass_ext",
+        "storage.anchoring_urls.umass_ext"
+      ],
+      "source_context": "Pumpkin and Winter Squash Harvest, Curing, and Storage : Vegetable : Center for Agriculture, Food, and the Environment (CAFE) at UMass Amherst Skip to content Skip to navigation The University of Massachusetts Amherst Open UMass Global Links Menu Visit Apply Give",
+      "source_context_available": true,
+      "tool_first_6gram": "pumpkin and winter squash harvest curing"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "University of Illinois Extension (Managing squash vine borer in the garden)",
+      "run_normalized": "managing squash vine borer in the garden",
+      "run_in_our_prose": "Managing squash vine borer in the garden",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "managing squash vine borer in the garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uiuc_ext"
+      ],
+      "source_names": [
+        "University of Illinois Extension"
+      ],
+      "source_publishers": [
+        "Illinois Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.illinois.edu/blogs/good-growing/2022-07-15-managing-squash-vine-borer-garden",
+      "anchor_paths": [
+        "pests[2].anchoring_urls.uiuc_ext"
+      ],
+      "source_context": "Managing squash vine borer in the garden | Good Growing | Illinois Extension | Illinois College of Agricultural, Consumer & Environmental Sciences Illinois Extension Search Give",
+      "source_context_available": true,
+      "tool_first_6gram": "managing squash vine borer in the"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "sources_summary.primary[8].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mg.ucanr.edu",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.second_planting.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.second_planting.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.second_planting.anchoring_urls.uc_mg"
+      ],
+      "source_context": "More than just a gardening program, UC Master Gardener is an education and outreach statewide program of the University of California, Agriculture and Natural Resources (UC ANR) . UC Master Gardeners are in their communities, helping build more sustainable landscapes.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for at least 1 inch of water per week, leaning to 1.5 inches in heat or sandy soil, delivered deeply and less often rather than in light daily sprinkles. The long-season, big-leaved vine transpires heavily through summer.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

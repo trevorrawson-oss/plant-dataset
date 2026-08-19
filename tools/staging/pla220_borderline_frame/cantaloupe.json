@@ -1,0 +1,602 @@
+{
+  "crop_slug": "cantaloupe",
+  "record_count": 14,
+  "records": [
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "diseases[1].symptoms_seasoned",
+      "our_prose": "White, powdery patches appear on the upper and lower leaf surfaces and stems, spreading until leaves yellow, brown, and die back ahead of schedule. Early defoliation cuts the season short, reduces fruit size and sugar, and exposes melons to sunscald.",
+      "run_normalized": "the upper and lower leaf surfaces",
+      "run_in_our_prose": "the upper and lower leaf surfaces",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the upper and lower leaf surfaces"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "Malathion, carbaryl, and pyrethroids are especially harmful to bees (Figure 5). Spray the plant thoroughly , covering both the upper and lower leaf surfaces. Do not apply pesticides on windy days or when rain is imminent. Prevent spray burn ; make sure the plants are not under moisture stress.",
+      "source_context_available": true,
+      "tool_first_6gram": "the upper and lower leaf surfaces"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "diseases[4].symptoms_seasoned",
+      "our_prose": "Round, black, wrinkled spots form on young leaves and dark, sunken, sometimes girdling lesions develop on the stems, often with a brown gummy ooze on the surface. Brownish circular leaf spots expand rapidly into large tan lesions, and a black rot can appear on the fruit. In warm, wet weather the foliage and vines can collapse quickly. It is one of the most destructive cucurbit diseases in the humid South.",
+      "run_normalized": "is one of the most destructive",
+      "run_in_our_prose": "is one of the most destructive",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "is one of the most destructive"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B1179/cantaloupe-and-specialty-melons/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "diseases[3].anchoring_urls.uga_ext",
+        "diseases[4].anchoring_urls.uga_ext",
+        "diseases[5].anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "rotation.anchoring_urls.uga_ext",
+        "succession_policy.anchoring_urls.uga_ext"
+      ],
+      "source_context": "Gummy Stem Blight Gummy stem blight, caused by Didymella bryoniae , attacks primarily the leaves and stems of cucurbits and is one of the most destructive diseases of cucurbits in the state. This disease is driven by cool moist periods, especially extended periods of leaf wetness.",
+      "source_context_available": true,
+      "tool_first_6gram": "is one of the most destructive"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common approach is a lower-nitrogen complete fertilizer such as 5-10-10 worked into the bed before planting (Clemson cites about 30 pounds per 1,000 square feet), then a nitrogen side-dress before the vines run, such as calcium nitrate at about 2 pounds of 15.5-0-0 per 100 feet of row placed a few inches out from the plants and watered in, repeated lightly after bloom as fruit develops.",
+      "run_normalized": "2 pounds of 15 5 0 0",
+      "run_in_our_prose": "2 pounds of 15.5-0-0",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "2 pounds of 15 5 0 0",
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cantaloupe-honeydew-melons/",
+      "anchor_paths": [
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "diseases[5].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Melons should be sidedressed before the vines start to “run” with 1 pound of 34-0-0 (urea and ammonium sulfate) per 100 feet of row or 2 pounds of 15.5-0-0 (calcium nitrate) per 100 feet of row. Sidedress a second time after bloom when fruit is developing on the vine.",
+      "source_context_available": true,
+      "tool_first_6gram": "2 pounds of 15 5 0"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "fertilizer.notes_beginner",
+      "our_prose": "Cantaloupe does not need a lot of nitrogen, and too much gives you big leafy vines but fewer, less sweet melons. Mix a fertilizer that is lower in nitrogen, like a 5-10-10, into the soil before planting, then give the plants a little nitrogen before the vines start to run and again after the flowers bloom. Once the melons start to form, stop pushing nitrogen so the plant puts its energy into growing sweet fruit instead of more leaves.",
+      "run_normalized": "before the vines start to run",
+      "run_in_our_prose": "before the vines start to run",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "before the vines start to run"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cantaloupe-honeydew-melons/",
+      "anchor_paths": [
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "diseases[5].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "If a soil test has not been taken, apply 5-10-10 at 30 pounds per 1,000 square feet before planting. Melons should be sidedressed before the vines start to “run” with 1 pound of 34-0-0 (urea and ammonium sulfate) per 100 feet of row or 2 pounds of 15.5-0-0 (calcium nitrate) per 100 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "before the vines start to run"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Cantaloupe is a moderate feeder that wants more phosphorus and potassium than nitrogen, since excess nitrogen drives leafy vine at the expense of fruit set and sugar. Work a lower-nitrogen complete fertilizer such as 5-10-10 into the bed before planting (Clemson suggests about 30 pounds per 1,000 square feet), then side-dress with a nitrogen source before the vines start to run, and again lightly after bloom as fruit develops. Ease off nitrogen once fruit has set so the plant pours its energy into sizing and sweetening the melons rather than growing more vine. Pair feeding with even moisture, because the nutrients only help a plant that is not also drought-stressed.",
+      "run_normalized": "30 pounds per 1 000 square feet",
+      "run_in_our_prose": "30 pounds per 1,000 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "30 pounds per 1 000 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cantaloupe-honeydew-melons/",
+      "anchor_paths": [
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "diseases[5].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Fertilizing It is best to base fertilizer applications on the results of a soil test. If a soil test has not been taken, apply 5-10-10 at 30 pounds per 1,000 square feet before planting. Melons should be sidedressed before the vines start to “run” with 1 pound of 34-0-0 (urea and ammonium sulfate) per 100 feet of row or 2 pounds of 15.5-0-0 (calcium nitrate) per 100 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "30 pounds per 1 000 square"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "fertilizer.timing",
+      "our_prose": "Work into the bed before planting, then side-dress before the vines start to run and again after bloom as fruit develops",
+      "run_normalized": "before the vines start to run",
+      "run_in_our_prose": "before the vines start to run",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "before the vines start to run"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/cantaloupe-honeydew-melons/",
+      "anchor_paths": [
+        "diseases[4].anchoring_urls.clemson_hgic",
+        "diseases[5].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "If a soil test has not been taken, apply 5-10-10 at 30 pounds per 1,000 square feet before planting. Melons should be sidedressed before the vines start to “run” with 1 pound of 34-0-0 (urea and ammonium sulfate) per 100 feet of row or 2 pounds of 15.5-0-0 (calcium nitrate) per 100 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "before the vines start to run"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow cantaloupe or its relatives (cucumbers, melons, squash) in the same spot more than once every 3 years, and wait longer if you have had wilt or leaf disease. Moving them around the garden helps avoid a buildup of soil and debris diseases. Note that this does not stop bacterial wilt, which comes from beetles, not the soil. Clean up old vines at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/B1179/cantaloupe-and-specialty-melons/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.uga_ext",
+        "diseases[2].anchoring_urls.uga_ext",
+        "diseases[3].anchoring_urls.uga_ext",
+        "diseases[4].anchoring_urls.uga_ext",
+        "diseases[5].anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "rotation.anchoring_urls.uga_ext",
+        "succession_policy.anchoring_urls.uga_ext"
+      ],
+      "source_context": "Most growers use thin wall tape (less than 10 mils) and replace it every year. Heavier wall tape can be rolled up at the end of the season and reused; however, care must be taken in removing it from the field. Drip systems can be easily adapted for the injection of fertilizer.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow cantaloupe or its relatives (cucumbers, melons, squash) in the same spot more than once every 3 years, and wait longer if you have had wilt or leaf disease. Moving them around the garden helps avoid a buildup of soil and debris diseases. Note that this does not stop bacterial wilt, which comes from beetles, not the soil. Clean up old vines at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "soil.preferred_description_seasoned",
+      "our_prose": "Cantaloupe does best in deep, well-drained, light soil, with sandy loams and loamy sands the classic choice because they warm quickly in spring and drain freely, which this heat-loving, warm-season vine rewards with earlier, sweeter fruit. Work a few inches of compost or well-rotted manure into the bed before planting, but go easier on high-nitrogen amendments than you would for leafy crops, since too much nitrogen pushes vine at the expense of fruit set and sugar. Many growers plant on low, wide hills or raised mounds, which warm faster, drain better, and lift the crown and developing fruit off wet ground. Heavy clay holds water and stays cold, slowing growth and inviting Fusarium wilt and fruit rot, so amend it generously and build mounds, or grow on sandier ground.",
+      "run_normalized": "compost or well rotted manure into the",
+      "run_in_our_prose": "compost or well-rotted manure into the",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "compost or well rotted manure into the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.iastate_ext",
+        "diseases[2].anchoring_urls.iastate_ext",
+        "diseases[3].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[1].anchoring_urls.iastate_ext",
+        "pests[2].anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "pests[4].anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "watering.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Heavy, poorly drained soils can often be improved by incorporating organic matter, such as compost or well-rotted manure, into the soil. When to Plant Melons are warm-season crops. Plant cantaloupe, muskmelon, and honeydew melon after the danger of frost is past and soil temperatures have warmed to 60 to 70°F.",
+      "source_context_available": true,
+      "tool_first_6gram": "compost or well rotted manure into"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "sources_summary.primary[14].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.second_planting.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.second_planting.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "tips_by_stage.seedling[0].text_seasoned",
+      "our_prose": "Cucumber beetles swarm young melons and, unlike on watermelon, readily infect cantaloupe with bacterial wilt. A floating row cover protects seedlings, but pull it off at flowering so bees can pollinate. In cooler areas, black plastic mulch warms the soil and speeds growth.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/cantaloupe-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "succession_policy.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Avoid damaging the roots when planting which slows establishment and growth. Mulch Black plastic mulch warms the soil, conserves water and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "watering.amount_beginner",
+      "our_prose": "About 1 to 2 inches of water a week is a good target, more while the plant is flowering and the melons are growing.",
+      "run_normalized": "1 to 2 inches of water",
+      "run_in_our_prose": "1 to 2 inches of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.iastate_ext",
+        "diseases[2].anchoring_urls.iastate_ext",
+        "diseases[3].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[1].anchoring_urls.iastate_ext",
+        "pests[2].anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "pests[4].anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "watering.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Drip irrigation works well as it provides water directly to the root zone and reduces the wetting of the foliage, which can promote disease issues and weed growth (both of which are difficult to deal with when growing melons). During dry weather, irrigate by applying 1 to 2 inches of water every 7 to 10 days. Irrigate in the early morning to reduce foliage diseases.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches of water"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "watering.frequency_beginner",
+      "our_prose": "Give cantaloupe about 1 to 2 inches of water a week, more when it is hot and dry. Water deeply rather than a little every day, since the plant roots deep and the fruit is mostly water.",
+      "run_normalized": "1 to 2 inches of water",
+      "run_in_our_prose": "1 to 2 inches of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.iastate_ext",
+        "diseases[2].anchoring_urls.iastate_ext",
+        "diseases[3].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[1].anchoring_urls.iastate_ext",
+        "pests[2].anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "pests[4].anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "watering.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Drip irrigation works well as it provides water directly to the root zone and reduces the wetting of the foliage, which can promote disease issues and weed growth (both of which are difficult to deal with when growing melons). During dry weather, irrigate by applying 1 to 2 inches of water every 7 to 10 days. Irrigate in the early morning to reduce foliage diseases.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches of water"
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for about 1 to 2 inches of water per week, more in heat or on sandy soil, delivered deeply and less often rather than in light daily sprinkles. Cantaloupe is deep-rooted and the fruit is largely water, so steady moisture through vining and fruit sizing is essential, but the plant also wants a dry finish to sweeten.",
+      "run_normalized": "1 to 2 inches of water",
+      "run_in_our_prose": "1 to 2 inches of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-cantaloupe-muskmelon-and-other-melons-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.iastate_ext",
+        "diseases[2].anchoring_urls.iastate_ext",
+        "diseases[3].anchoring_urls.iastate_ext",
+        "harvest_ready_anchoring_urls.iastate_ext",
+        "pests[1].anchoring_urls.iastate_ext",
+        "pests[2].anchoring_urls.iastate_ext",
+        "pests[3].anchoring_urls.iastate_ext",
+        "pests[4].anchoring_urls.iastate_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext",
+        "soil.anchoring_urls.iastate_ext",
+        "storage.anchoring_urls.iastate_ext",
+        "watering.anchoring_urls.iastate_ext",
+        "yield_expectations.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Drip irrigation works well as it provides water directly to the root zone and reduces the wetting of the foliage, which can promote disease issues and weed growth (both of which are difficult to deal with when growing melons). During dry weather, irrigate by applying 1 to 2 inches of water every 7 to 10 days. Irrigate in the early morning to reduce foliage diseases.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches of water"
+    }
+  ]
+}

@@ -1,0 +1,2643 @@
+{
+  "crop_slug": "celery",
+  "record_count": 38,
+  "records": [
+    {
+      "crop_slug": "celery",
+      "field_path": "diseases[0].symptoms_seasoned",
+      "our_prose": "Small yellow spots appear on both surfaces of the leaves and enlarge into gray, roughly circular lesions about 1/4 to 3/4 inch across; as they multiply the tissue between them turns papery and often splits and cracks, and severe spotting blights the foliage. In contrast to late blight, the petioles often stay relatively clean even when the leaves are heavily spotted. Badly blighted plants size up poorly.",
+      "run_normalized": "papery and often splits and cracks",
+      "run_in_our_prose": "papery and often splits and cracks",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "papery and often splits and cracks"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/celery/early-blight/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uc_ipm",
+        "failure_diagnostics[4].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Spots eventually grow into gray, circular lesions between 0.25 and 0.75 inches (6–19 mm) in diameter. As leaf spots dry out, the tissue becomes papery and often splits and cracks. Thus far for outbreaks in California, petioles have remained symptomless even if leaves have substantial spotting.",
+      "source_context_available": true,
+      "tool_first_6gram": "papery and often splits and cracks"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "diseases[1].control_ladder[0].note_beginner",
+      "our_prose": "Rotate out of celery for at least a year.",
+      "run_normalized": "rotate out of celery for at least",
+      "run_in_our_prose": "Rotate out of celery for at least",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "rotate out of celery for at least"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/celery/late-blight/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.uc_ipm",
+        "rotation.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Reduce movement of equipment through fields when foliage is wet because such passage may spread spores from diseased to healthy plants. Plow under infected celery tissue after harvest and rotate out of celery for at least 1 year. Organically Acceptable Methods Use cultural controls and copper sprays in a certified organic crop.",
+      "source_context_available": true,
+      "tool_first_6gram": "out of celery for at least"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "diseases[1].prevention_beginner",
+      "our_prose": "The most important thing is to start with tested, clean seed, because the disease usually comes in on the seed. Use healthy transplants, water at the soil instead of overhead, do not grow celery in the same place two years in a row, clear away infected leftovers, and keep out of the bed when the plants are wet.",
+      "run_normalized": "do not grow celery in the",
+      "run_in_our_prose": "do not grow celery in the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "do not grow celery in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/celery/celery-mosaic-virus/",
+      "anchor_paths": [
+        "pests[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Management Cultural Control A host-free period of at least 2 to 3 months greatly reduces the incidence of Celery mosaic virus . During this time, do not grow celery in the area and eliminate weed hosts in the same plant family such as wild celery and wild parsnip.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not grow celery in the"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "diseases[1].prevention_seasoned",
+      "our_prose": "The single most important step is Septoria-indexed (tested) seed, since seed is the main source; plant only disease-free transplants, avoid overhead sprinkling, rotate out of celery for at least a year, plow under or remove infected residue, and stay out of the bed when foliage is wet.",
+      "run_normalized": "rotate out of celery for at least",
+      "run_in_our_prose": "rotate out of celery for at least",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "rotate out of celery for at least"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/celery/late-blight/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.uc_ipm",
+        "rotation.anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Reduce movement of equipment through fields when foliage is wet because such passage may spread spores from diseased to healthy plants. Plow under infected celery tissue after harvest and rotate out of celery for at least 1 year. Organically Acceptable Methods Use cultural controls and copper sprays in a certified organic crop.",
+      "source_context_available": true,
+      "tool_first_6gram": "out of celery for at least"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "diseases[2].symptoms_seasoned",
+      "our_prose": "Brown, water-soaked lesions develop on the petioles at or near the soil line and expand into soft, watery, decayed areas; in humid conditions a white cottony mold grows over them, later bearing hard black resting bodies (sclerotia) the size of small seeds. Plants weakened by calcium deficiency are especially susceptible. It is a rot of the dense, moist plant base rather than a leaf disease.",
+      "run_normalized": "at or near the soil line",
+      "run_in_our_prose": "at or near the soil line",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at or near the soil line",
+        "expand into soft watery decayed areas"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/celery/pink-rot/",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "Management Symptoms and Signs Celery is susceptible to the pink rot fungus at all stages of plant growth, but the disease is most often observed on older plants when leaf canopies are well developed. Initial symptoms appear as brown lesions on the petioles that develop at or near the soil line or up in the plant canopy. Lesions rapidly expand into soft, watery, decayed areas.",
+      "source_context_available": true,
+      "tool_first_6gram": "at or near the soil line"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "diseases[3].symptoms_seasoned",
+      "our_prose": "The young leaves and growing point in the center of the plant turn brown to black and die, while the outer stalks may still look healthy, so the damage is hidden until the plant is cut open. Secondary soft-rot bacteria often invade the dead tissue, producing a slimy, foul interior. It is a physiological disorder, not an infection, though it opens the door to one.",
+      "run_normalized": "in the center of the plant",
+      "run_in_our_prose": "in the center of the plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the center of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Black Heart Black discoloration of leaves in the center of the plant. Affected tissue eventually dies. Injury occurs gradually and is not visible until later in the season.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the center of the plant"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "failure_diagnostics[0].next_season_tip_beginner",
+      "our_prose": "Never let it dry out (1 to 2 inches of water a week, more in heat), feed it every 3 to 4 weeks, grow it in cool weather, and pick an easier variety like Tango or Conquistador. Mulch helps keep the soil evenly damp.",
+      "run_normalized": "1 to 2 inches of water",
+      "run_in_our_prose": "1 to 2 inches of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 to 2 inches of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 to 2 inches of water"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "heat_threshold_temp_f.basis_seasoned",
+      "our_prose": "Air-temperature ceiling for celery quality. Extension sources put celery's optimum near 60 to 70°F (UC Master Gardeners of Santa Clara County give 60 to 65°F best, tolerating 45 to 75°F; Utah State gives an ideal of 55 to 65°F). Sustained air above roughly 75°F coarsens and bitters the stalks and, combined with drought, can trigger bolting, so the planting calendar in warm regions excludes the hottest months.",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "notifications[2].body_seasoned",
+      "our_prose": "Hold even moisture, at least 1 to 2 inches per week and more in heat. Any dry-down makes celery stringy and bitter and can trigger bolting. Water at the base and mulch to hold moisture.",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "pests[0].symptoms_seasoned",
+      "our_prose": "Pale, winding, snakelike tunnels (mines) trace through the leaf tissue, and heavier infestations leave leaves blotched, blistered, and partly dried. The damage is the larvae feeding between the upper and lower leaf surfaces; pinprick stippling on the foliage marks where adult females punctured leaves to feed and lay eggs. Light mining is cosmetic, but a heavy attack reduces the plant's vigor and the eating quality of the leafy tops.",
+      "run_normalized": "the upper and lower leaf surfaces",
+      "run_in_our_prose": "the upper and lower leaf surfaces",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the upper and lower leaf surfaces"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas_vh021",
+        "spacing_inches_anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "Malathion, carbaryl, and pyrethroids are especially harmful to bees (Figure 5). Spray the plant thoroughly , covering both the upper and lower leaf surfaces. Do not apply pesticides on windy days or when rain is imminent. Prevent spray burn ; make sure the plants are not under moisture stress.",
+      "source_context_available": true,
+      "tool_first_6gram": "the upper and lower leaf surfaces"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_desert.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_desert.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_desert.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_interior.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_interior.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.ca_south_coast.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.fl_peninsula.region_notes_beginner",
+      "our_prose": "In Florida, celery is a cool-season crop for fall, winter, and early spring: start seeds in late summer or early fall and plant out from fall into early winter for a winter-to-spring harvest (UF/IFAS lists roughly September to March). Summer is too hot and wet. The warm, damp weather brings leaf diseases, so use clean seed and keep the leaves dry.",
+      "run_normalized": "in late summer or early fall",
+      "run_in_our_prose": "in late summer or early fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer or early fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.low_desert_az.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.plantings[0].transplant[0].anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uf_ifas_vh021",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uf_ifas_vh021",
+        "spacing_inches_anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "No-Pesticide Approaches Follow recommended planting date(s) listed for each vegetable in Table 1. However, be aware that vegetables planted in late summer or early fall (August or September) will be susceptible to insects and diseases that thrive in hot weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer or early fall"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.fl_peninsula.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.low_desert_az.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.low_desert_az.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.se_gulf.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.se_gulf.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.se_gulf.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "regions.warm_arid.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Summer gap is a HEAT exclusion, not a frost gap. Celery is a cool-season crop that grows best near 60 to 70°F and suffers above about 75°F: heat coarsens the stalks, turns them bitter, and combined with drought can trigger bolting, so the planting calendar in this region brackets the hottest months and grows celery in the cooler fall, winter, and spring windows. (UC Master Gardeners of Santa Clara County; Utah State University Extension; Texas A&M AgriLife Extension)",
+      "run_normalized": "uc master gardeners of santa clara county",
+      "run_in_our_prose": "UC Master Gardeners of Santa Clara County",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "uc master gardeners of santa clara county"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_santa_clara_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Santa Clara County (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Santa Clara County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/mgscc2016/garden-help/vegetables/celery",
+      "anchor_paths": [
+        "companions.anchoring_urls.ucanr_santa_clara_mg",
+        "days_to_maturity_anchoring_urls.ucanr_santa_clara_mg",
+        "failure_diagnostics[0].anchoring_urls.ucanr_santa_clara_mg",
+        "heat_threshold_temp_f.anchoring_urls.ucanr_santa_clara_mg",
+        "ph.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.plantings[0].transplant[0].anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.ucanr_santa_clara_mg",
+        "soil.anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[0].anchoring_urls.ucanr_santa_clara_mg",
+        "tips_by_stage.established[1].anchoring_urls.ucanr_santa_clara_mg"
+      ],
+      "source_context": "Celery | UC Master Gardeners of Santa Clara County Skip to main content Secondary Menu Careers People Blogs Events For Employees User account menu Log in Donate Main navigation About Our Work & Impact Agricultural Experiment Station (AES) Program Areas & Teams Research and Extension Centers (RECs) Statewide Programs & Institutes",
+      "source_context_available": true,
+      "tool_first_6gram": "master gardeners of santa clara county"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "tips_by_stage.established[0].text_beginner",
+      "our_prose": "Steady water is the single most important thing for good celery: at least 1 to 2 inches a week, more in heat, and never let it dry out. A dry spell makes it stringy and bitter for good, so water at the soil and mulch around the plants.",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "tips_by_stage.established[0].text_seasoned",
+      "our_prose": "Even, uninterrupted moisture is the heart of growing good celery: at least 1 to 2 inches per week and more in heat, with no dry-down. A check from drought sets in the stringiness and bitterness that cannot be reversed, so water at the base and mulch the shallow roots.",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "watering.amount_beginner",
+      "our_prose": "At least 1 to 2 inches a week, and more when it is hot or your soil is sandy. It is better to water a bit more often than to soak it once and let it dry out. A layer of mulch helps keep the soil damp.",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "At least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "watering.schedule_by_stage[2].note_beginner",
+      "our_prose": "This is the make-or-break stretch, while the stalks fill out. Celery needs more water, more steadily, than almost anything in the garden: at least 1 to 2 inches a week, more when hot, and never let it dry out even briefly. Drying out now makes the stalks tough, stringy, and bitter, and you cannot fix it later. Water at the base and keep the leaves and crowded plant base dry.",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "watering.schedule_by_stage[2].note_seasoned",
+      "our_prose": "This is the long, punishing window: as the stalks form and bulk up, celery is the thirstiest of the common vegetables and the least forgiving of any dry-down. Keep the soil evenly and constantly moist, at least 1 to 2 inches a week and more in heat, applied often at the base with the canopy and crown kept dry against blight and pink rot. Any interruption turns the petioles stringy, pithy, and bitter, and it does not reverse.",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "at least 1 to 2 inches per week, applied often",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "watering.schedule_by_stage[3].rate",
+      "our_prose": "at least 1 to 2 inches per week, applied often",
+      "run_normalized": "at least 1 to 2 inches",
+      "run_in_our_prose": "at least 1 to 2 inches",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at least 1 to 2 inches"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/celery-in-the-garden",
+      "anchor_paths": [
+        "companions.anchoring_urls.usu_ext",
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[3].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "heat_threshold_temp_f.anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].transplant[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "start_method.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "sunlight_hours_anchoring_urls.usu_ext",
+        "tips_by_stage.established[0].anchoring_urls.usu_ext",
+        "tips_by_stage.established[1].anchoring_urls.usu_ext",
+        "tips_by_stage.established[2].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.usu_ext",
+        "tips_by_stage.harvest[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[1].anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Water Good watering is essential to successful celery production. Celery needs at least 1 to 2 inches of water from rainfall or irrigation each week during the growing season. Always soak the soil thoroughly when watering because celery has a small, shallow root system.",
+      "source_context_available": true,
+      "tool_first_6gram": "at least 1 to 2 inches"
+    }
+  ]
+}

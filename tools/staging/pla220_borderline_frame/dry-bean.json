@@ -1,0 +1,1491 @@
+{
+  "crop_slug": "dry-bean",
+  "record_count": 37,
+  "records": [
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[0].cause_beginner",
+      "our_prose": "A fungus that survives the winter in the soil, on old plant debris, and even on stakes used the year before. Humid weather is what lets it take hold and spread.",
+      "run_normalized": "survives the winter in the soil on",
+      "run_in_our_prose": "survives the winter in the soil, on",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "survives the winter in the soil on"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "This disease is caused by the fungus Uromyces appendiculatus and can infect most types of beans under humid conditions. Prevention & Treatment: The fungus survives the winter in the soil, on plant debris and even on poles used the previous year. In gardens where rust has been severe, crop rotation is important.",
+      "source_context_available": true,
+      "tool_first_6gram": "survives the winter in the soil"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[0].symptoms_beginner",
+      "our_prose": "Rust-colored bumps, mostly on the undersides of the leaves. Badly infected leaves turn yellow, wilt, and fall off. Stems and pods can get it too. It shows up in humid weather and can hit most kinds of beans.",
+      "run_normalized": "infected leaves turn yellow wilt and",
+      "run_in_our_prose": "infected leaves turn yellow, wilt, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "infected leaves turn yellow wilt and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Rust Bean rust is mainly a disease of bean leaves that causes rust-colored spots to form on the lower leaf surfaces. Severely infected leaves turn yellow, wilt, and then drop off of the plant. Stems and pods may also be infected. This disease is caused by the fungus Uromyces appendiculatus and can infect most types of beans under humid conditions.",
+      "source_context_available": true,
+      "tool_first_6gram": "infected leaves turn yellow wilt and"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[1].prevention_beginner",
+      "our_prose": "Plant certified disease-free seed and do not save seed from an infected crop. Clear away all the old plants after harvest, and do not grow beans in that spot for two to three years. Water at the base and avoid splashing soil up onto the plants.",
+      "run_normalized": "plant certified disease free seed and",
+      "run_in_our_prose": "Plant certified disease-free seed and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plant certified disease free seed and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://beans.ucdavis.edu/sites/g/files/dgvnsk13961/files/inline-files/80592.pdf",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "varieties.recommended[0].anchoring_urls.ucanr_ext",
+        "varieties.recommended[2].anchoring_urls.ucanr_ext",
+        "varieties.recommended[3].anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "Under severe disease pressure, the plant may lose its leaves and pods , and seeds may become infected, causing seeds to shrivel and to germinate poorly. To control these diseases it is important that you plant certified disease-free seed and practice a 2- to 3-year crop rotation. In addition, when you are growing dry beans for seed, it is important that you grow the crop under furrow or drip irrigation to guarantee that the seed is free of common and halo blights.",
+      "source_context_available": true,
+      "tool_first_6gram": "plant certified disease free seed and"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[1].prevention_seasoned",
+      "our_prose": "Plant certified disease-free seed and do not save seed from an infected crop. Remove all plant debris after harvest, and do not plant beans where the disease occurred for two to three years. Avoid overhead watering and splashing soil onto the plants.",
+      "run_normalized": "plant certified disease free seed and",
+      "run_in_our_prose": "Plant certified disease-free seed and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plant certified disease free seed and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://beans.ucdavis.edu/sites/g/files/dgvnsk13961/files/inline-files/80592.pdf",
+      "anchor_paths": [
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "varieties.recommended[0].anchoring_urls.ucanr_ext",
+        "varieties.recommended[2].anchoring_urls.ucanr_ext",
+        "varieties.recommended[3].anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "Under severe disease pressure, the plant may lose its leaves and pods , and seeds may become infected, causing seeds to shrivel and to germinate poorly. To control these diseases it is important that you plant certified disease-free seed and practice a 2- to 3-year crop rotation. In addition, when you are growing dry beans for seed, it is important that you grow the crop under furrow or drip irrigation to guarantee that the seed is free of common and halo blights.",
+      "source_context_available": true,
+      "tool_first_6gram": "plant certified disease free seed and"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[2].organic_treatment_seasoned",
+      "our_prose": "There is no cure once plants are infected; copper fungicides applied on a 10-day schedule can slow spread. Avoid overhead watering and do not handle plants when foliage is wet, which moves the bacteria from plant to plant.",
+      "run_normalized": "avoid overhead watering and do not",
+      "run_in_our_prose": "Avoid overhead watering and do not",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "avoid overhead watering and do not"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Prevention & Treatment: These diseases may be initiated when planting infected seeds and spread readily when moisture is present. Avoid overhead watering and do not touch plants when the foliage is wet. However, the bacteria can live in the soil for two years on plant debris.",
+      "source_context_available": true,
+      "tool_first_6gram": "avoid overhead watering and do not"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[2].prevention_seasoned",
+      "our_prose": "Buy new, certified seed each year rather than saving it, since the disease is seedborne. Do not plant beans in the same spot more often than every third year, and stay out of the planting when the foliage is wet.",
+      "run_normalized": "do not plant beans in the same",
+      "run_in_our_prose": "Do not plant beans in the same",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "do not plant beans in the same"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "However, the bacteria can live in the soil for two years on plant debris. Therefore, do not plant beans in the same location more frequently than every third year. Buy new seeds each year. Copper fungicides can be applied at ten day intervals.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not plant beans in the"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[3].symptoms_beginner",
+      "our_prose": "Seeds that rot before they come up, or young seedlings that come up stunted, with a soft, watery rot at the soil line. The roots die and the leaves turn yellow. It is worst in cool, wet soil that makes the seeds sit too long before sprouting.",
+      "run_normalized": "die and the leaves turn yellow",
+      "run_in_our_prose": "die and the leaves turn yellow",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "die and the leaves turn yellow"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Plants are usually affected slightly above or below the soil line with a watery soft rot. Roots of the plant usually die and the leaves turn yellow. Prevention & Treatment: Do not plant beans in low-lying, poorly drained areas.",
+      "source_context_available": true,
+      "tool_first_6gram": "die and the leaves turn yellow"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[3].symptoms_seasoned",
+      "our_prose": "Seeds that rot before emerging, or young seedlings that come up stunted, with a watery soft rot just above or below the soil line; roots die and leaves yellow. The damage shows up most in cool, wet soils that slow germination and keep seedlings vulnerable.",
+      "run_normalized": "above or below the soil line",
+      "run_in_our_prose": "above or below the soil line",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "above or below the soil line"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Seedlings fail to emerge after planting when the seeds rot in the soil, or young seedlings may be stunted. Plants are usually affected slightly above or below the soil line with a watery soft rot. Roots of the plant usually die and the leaves turn yellow.",
+      "source_context_available": true,
+      "tool_first_6gram": "above or below the soil line"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "diseases[4].organic_treatment_seasoned",
+      "our_prose": "There is no recommended chemical control for the home garden; management is cultural. Remove and destroy infected plants, and improve air circulation between plants and rows to dry the canopy.",
+      "run_normalized": "improve air circulation between plants and rows",
+      "run_in_our_prose": "improve air circulation between plants and rows",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "improve air circulation between plants and rows"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Soon infected areas are covered by a white fungal growth. Prevention & Treatment: Improve air circulation between plants and rows. Too much fertilizer favors heavy vine growth and creates conditions for the disease to develop.",
+      "source_context_available": true,
+      "tool_first_6gram": "air circulation between plants and rows"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "failure_diagnostics[0].what_happened_seasoned",
+      "our_prose": "The plant flowered but the blossoms dropped instead of setting pods, because sustained heat above about 90°F interferes with pollination and the plant aborts flowers it cannot fill. Some varieties, such as Blue Lake 274, are especially prone. Water stress during bloom has the same effect. It is a weather problem, not a disease, and the plant usually resumes setting pods once temperatures cool.",
+      "run_normalized": "varieties such as blue lake 274",
+      "run_in_our_prose": "varieties, such as Blue Lake 274",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "varieties such as blue lake 274"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Problems During hot weather when temperatures are above 90 ºF, blossom drop may be a problem, especially for snap bean varieties such as Blue Lake 274. The plants will usually start setting more pods when the daily temperatures become cooler.",
+      "source_context_available": true,
+      "tool_first_6gram": "varieties such as blue lake 274"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "failure_diagnostics[3].what_happened_seasoned",
+      "our_prose": "The pods came out small, fibrous, or misshapen, usually from drought stress during and after flowering, which is the moisture-critical window, or from leaving pods on the plant past their tender stage, when the enlarging seeds make the pod woody. Both are easy to prevent.",
+      "run_normalized": "drought stress during and after flowering",
+      "run_in_our_prose": "drought stress during and after flowering",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "drought stress during and after flowering"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/beans-in-the-garden",
+      "anchor_paths": [
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.flowering[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Do not over water as wet soils promote root rot diseases and slow plant growth. Water needs are most critical during flowering and pod sizing. Drought stress during and after flowering will decrease yield due to flower abortion and reduce pod size and increase stringiness.",
+      "source_context_available": true,
+      "tool_first_6gram": "drought stress during and after flowering"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "growth_stages[7].user_action_seasoned",
+      "our_prose": "Lay the plants in a single layer or hang them somewhere dry and airy for 5 to 7 days, then shell by hand, or bag the pods and thresh by hitting the bag. Winnow the chaff on a breezy day, then let the shelled beans dry a few days more before storing airtight in a cool, dark place.",
+      "run_normalized": "and thresh by hitting the bag",
+      "run_in_our_prose": "and thresh by hitting the bag",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and thresh by hitting the bag"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-beans",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Once the pods and beans are completely dry, strip the pods from the plants and shell out by hand. For a larger crop, place the pods in a burlap sack and thresh by hitting the bag with a stick. Winnowing is the process of removing little bits of plant material from the seed.",
+      "source_context_available": true,
+      "tool_first_6gram": "and thresh by hitting the bag"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[0].cause_seasoned",
+      "our_prose": "The Mexican bean beetle (Epilachna varivestis), a leaf-eating member of the ladybeetle family. Adults emerge from overwintering near woodland edges, feed for a week or two, then lay clusters of yellow eggs on leaf undersides; there are about three generations a year, so populations build through the season. It is most damaging in the Mid-Atlantic and southern Appalachian regions and is largely absent from the Pacific Coast states.",
+      "run_normalized": "the mexican bean beetle epilachna varivestis",
+      "run_in_our_prose": "The Mexican bean beetle (Epilachna varivestis",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the mexican bean beetle epilachna varivestis"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Clemson University – USDA Cooperative Extension Slide Series, www.insectimages.org Mexican Bean Beetle: The Mexican bean beetle ( Epilachna varivestis ) is ¼- to 1/3- inch long, very convex, and yellow to coppery-brown. Each wing cover has eight small, black spots that form three rows across the body.",
+      "source_context_available": true,
+      "tool_first_6gram": "the mexican bean beetle epilachna varivestis"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[0].prevention_seasoned",
+      "our_prose": "Since most damage falls in July and August, quick-maturing varieties sown very early or in late summer can largely escape it. The varieties Wade and Black Valentine are tolerant. Work crop debris into the soil promptly after harvest to remove overwintering shelter, and rotate beans away from last year's bed.",
+      "run_normalized": "july and august quick maturing varieties",
+      "run_in_our_prose": "July and August, quick-maturing varieties",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "july and august quick maturing varieties",
+        "varieties wade and black valentine are"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "During some years, there may be a partial fourth generation. Since most damage occurs during July and August, quick-maturing varieties of green beans planted very early or during late summer may escape damage. The snap bean varieties: ‘Wade’ and ‘Black Valentine’ are resistant or tolerant to Mexican bean beetles.",
+      "source_context_available": true,
+      "tool_first_6gram": "july and august quick maturing varieties"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[1].cause_beginner",
+      "our_prose": "Several kinds of aphids, most common in cool, dry weather on small plants. They multiply fast and build up thick colonies before their natural enemies catch up. Warmer weather and helpful bugs like ladybugs usually knock them back.",
+      "run_normalized": "cool dry weather on small plants",
+      "run_in_our_prose": "cool, dry weather on small plants",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cool dry weather on small plants"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Clemson University – USDA Cooperative Extension Slide Series, www.insectimages.org Major Seedling Feeders Aphids: Aphids ( Aphis species and Macrosiphum euphorbiae ) are soft-bodied “plant lice,” about 1/16 to 1/8 inch in length and are usually green, although some species are yellow, pink, brown, or black. They are most prevalent during cool, dry weather on small plants. Heavy populations of aphids can stunt plants by withdrawing large volumes of plant juices and delaying maturity Treatments for aphid control should begin at any time colonies are found.",
+      "source_context_available": true,
+      "tool_first_6gram": "cool dry weather on small plants"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[1].cause_seasoned",
+      "our_prose": "Several aphid species (Aphis and Macrosiphum), most prevalent in cool, dry weather on small plants. They reproduce rapidly, building dense colonies before natural enemies catch up; warm weather and predators such as ladybugs usually bring them down.",
+      "run_normalized": "cool dry weather on small plants",
+      "run_in_our_prose": "cool, dry weather on small plants",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cool dry weather on small plants"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Clemson University – USDA Cooperative Extension Slide Series, www.insectimages.org Major Seedling Feeders Aphids: Aphids ( Aphis species and Macrosiphum euphorbiae ) are soft-bodied “plant lice,” about 1/16 to 1/8 inch in length and are usually green, although some species are yellow, pink, brown, or black. They are most prevalent during cool, dry weather on small plants. Heavy populations of aphids can stunt plants by withdrawing large volumes of plant juices and delaying maturity Treatments for aphid control should begin at any time colonies are found.",
+      "source_context_available": true,
+      "tool_first_6gram": "cool dry weather on small plants"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[1].organic_treatment_beginner",
+      "our_prose": "Blast the colonies off with a strong spray of water, or use insecticidal soap, which works on contact. Start as soon as you see them. Once it warms up, ladybugs and other helpful insects usually take care of the rest.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Insecticidal soaps generally offer adequate control when applied before the numbers are too high. Additionally, many mites can be removed with a strong spray of water. Natural enemies such as lady bugs are important natural controls. Lima bean vine borer larva ( Monoptilota pergratialis ) and damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[1].organic_treatment_seasoned",
+      "our_prose": "Knock colonies off with a strong spray of water, or treat with insecticidal soap, which gives good control on contact. Begin as soon as colonies are found. Once the weather warms, ladybugs and other natural enemies generally take over.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Insecticidal soaps generally offer adequate control when applied before the numbers are too high. Additionally, many mites can be removed with a strong spray of water. Natural enemies such as lady bugs are important natural controls. Lima bean vine borer larva ( Monoptilota pergratialis ) and damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[2].cause_seasoned",
+      "our_prose": "Two-spotted spider mites (Tetranychus urticae), tiny eight-legged relatives of spiders that pierce leaf cells and suck the contents. Hot, dry conditions favor rapid buildup, and dusty, drought-stressed plants are most prone.",
+      "run_normalized": "two spotted spider mites tetranychus urticae",
+      "run_in_our_prose": "Two-spotted spider mites (Tetranychus urticae",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "two spotted spider mites tetranychus urticae"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Whitney Cranshaw, Colorado State University, www.insectimages.org Spider Mites: Two-spotted spider mites ( Tetranychus urticae ) are minute, eight-legged pests that are more closely related to spiders than to insects.",
+      "source_context_available": true,
+      "tool_first_6gram": "two spotted spider mites tetranychus urticae"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[2].organic_treatment_seasoned",
+      "our_prose": "Hose the undersides of leaves with a strong spray of water to dislodge mites and webbing, and treat with insecticidal soap before numbers climb too high. Keeping plants well watered and unstressed slows buildup, and ladybugs and other predators help.",
+      "run_normalized": "with a strong spray of water",
+      "run_in_our_prose": "with a strong spray of water",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "with a strong spray of water"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Insecticidal soaps generally offer adequate control when applied before the numbers are too high. Additionally, many mites can be removed with a strong spray of water. Natural enemies such as lady bugs are important natural controls. Lima bean vine borer larva ( Monoptilota pergratialis ) and damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "with a strong spray of water"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[2].symptoms_seasoned",
+      "our_prose": "A fine whitish or yellow stippling on the leaves at first, progressing to a bronzed, dried-out look as populations build; fine silken webbing over the leaf undersides is the giveaway. The mites are minute specks on the undersides, easiest to confirm by tapping a leaf over white paper. They build explosively in hot, dry weather, completing a generation in as few as eight days.",
+      "run_normalized": "in as few as eight days",
+      "run_in_our_prose": "in as few as eight days",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in as few as eight days"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Spider mites develop rapidly during hot, dry weather, and one generation can be completed in as few as eight days. Insecticidal soaps generally offer adequate control when applied before the numbers are too high.",
+      "source_context_available": true,
+      "tool_first_6gram": "in as few as eight days"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[3].cause_seasoned",
+      "our_prose": "The bean leaf beetle (Cerotoma trifurcata), rarely a serious pest in most home gardens. Adults feed on foliage and stems, with seedlings the most vulnerable stage.",
+      "run_normalized": "the bean leaf beetle cerotoma trifurcata",
+      "run_in_our_prose": "The bean leaf beetle (Cerotoma trifurcata",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the bean leaf beetle cerotoma trifurcata"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Natasha Wright, Florida Department of Agriculture and Consumer Services, www.insectimages.org Bean Leaf Beetle: The bean leaf beetle ( Cerotoma trifurcata ) is rarely a serious problem on beans or peas grown in South Carolina. The adults are about 1/5- to ¼- inch long.",
+      "source_context_available": true,
+      "tool_first_6gram": "the bean leaf beetle cerotoma trifurcata"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "pests[3].symptoms_seasoned",
+      "our_prose": "Large, irregular holes chewed in leaves, and on young plants, girdling of stems near the soil line that can thin the stand. The adult is small and variable in color, usually reddish or yellowish, marked with a handful of black spots set along each wing cover near where the two covers meet. Damage early in the season matters most because it reduces the stand.",
+      "run_normalized": "girdling of stems near the soil line",
+      "run_in_our_prose": "girdling of stems near the soil line",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "girdling of stems near the soil line"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "They vary considerably in color and markings but are typically red to yellow, with three or four black spots in a row along the inner edge of each wing cover. Damage caused by bean leaf beetles is twofold: (1) girdling of stems near the soil line and (2) large irregular holes chewed in leaves. Damage to beans and peas early in the season may result in stand reduction.",
+      "source_context_available": true,
+      "tool_first_6gram": "girdling of stems near the soil"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "ph.note_beginner",
+      "our_prose": "Beans do well in slightly acidic to neutral soil. If you have not tested your soil, a pH near 6.5 is a safe target and most garden beds are already close.",
+      "run_normalized": "in slightly acidic to neutral soil",
+      "run_in_our_prose": "in slightly acidic to neutral soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in slightly acidic to neutral soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-beans",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Soil testing and fertilizer Have your soil tested . Beans grow best in slightly acidic to neutral soil, pH between 6 and 7. Clay or silt loams are better for bean production than sandy soils, although good drainage is important.",
+      "source_context_available": true,
+      "tool_first_6gram": "in slightly acidic to neutral soil"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "ph.note_seasoned",
+      "our_prose": "A soil pH of 5.8 to 6.5 suits snap beans. A soil test is the reliable way to confirm both pH and fertility before the season starts.",
+      "run_normalized": "ph of 5 8 to 6",
+      "run_in_our_prose": "pH of 5.8 to 6",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "ph of 5 8 to 6"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "psu_ext"
+      ],
+      "source_names": [
+        "Penn State Extension"
+      ],
+      "source_publishers": [
+        "Penn State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.psu.edu/snap-bean-production",
+      "anchor_paths": [
+        "companions.anchoring_urls.psu_ext",
+        "companions.good_seasoned[0].anchoring_urls.psu_ext",
+        "companions.good_seasoned[1].anchoring_urls.psu_ext",
+        "failure_diagnostics[2].anchoring_urls.psu_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.psu_ext"
+      ],
+      "source_context": "Roma II 58 Tapia 54 Usambara 54 Velero 55 Yellow (Wax) Round Podded Carson 56 Eureka 56 Golden Rod 46 Goldrush 53 Rocdor 53 SV1003GF 56 Production Considerations Snap beans (green beans, bush beans, and string beans) grow best on soils that hold water well and have good air and water filtration. Soil should have a pH of 5.8 to 6.6. Snap beans require a constant supply of moisture during the growing season.",
+      "source_context_available": true,
+      "tool_first_6gram": "ph of 5 8 to 6"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "regions.hawaii_tropical.region_notes_seasoned",
+      "our_prose": "UH CTAHR notes that dried beans such as navy, kidney, and pinto are not commonly grown in Hawaii: the warm, humid climate molds pods before they field-dry. Beans grow year-round here, but plan to finish drying any dry-bean crop indoors in a warm oven on low or a dehydrator.",
+      "run_normalized": "are not commonly grown in hawaii",
+      "run_in_our_prose": "are not commonly grown in Hawaii",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "are not commonly grown in hawaii"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr"
+      ],
+      "source_names": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_publishers": [
+        "University of Hawaii College of Tropical Agriculture and Human Resources"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/HGV-8.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr"
+      ],
+      "source_context": "The bean types used for dried beans, such as navy, kid­ ney, pinto, garbanzo, mung, adzuki, and others, are not commonly grown in Hawaii. Varieties Pole bean varieties are usually preferred in home gar­ dens because they yield more for a given space and over a longer period of time.",
+      "source_context_available": true,
+      "tool_first_6gram": "are not commonly grown in hawaii"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "regions.mid_atlantic.region_notes_beginner",
+      "our_prose": "Dry beans need one long, warm, uninterrupted stretch to fill their pods and dry down on the plant, so this is a single spring-only planting here, not a spring-and-fall crop the way fresh snap beans can be. Sow once the soil has warmed in mid to late May, and let the whole planting mature and dry through summer into fall well ahead of frost. There is no fall dry-bean crop in this belt: a second sowing simply would not finish drying down before frost arrives.",
+      "run_normalized": "once the soil has warmed in",
+      "run_in_our_prose": "once the soil has warmed in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "once the soil has warmed in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-beans",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Starting seeds Plant beans once the soil has warmed. In much of Minnesota, this is not until late May or even early June. Bean seed planted in cold soil may rot rather than germinate, and plant growth will be very slow in cooler weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "once the soil has warmed in"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "regions.mid_south.region_notes_beginner",
+      "our_prose": "Dry beans need one long, warm, uninterrupted stretch to fill their pods and dry down on the plant, so this is a single spring-only planting here, not a spring-and-fall crop the way fresh snap beans can be. Sow once the soil has warmed in mid to late May, and let the whole planting mature and dry through summer into fall well ahead of frost. There is no fall dry-bean crop in this belt: a second sowing simply would not finish drying down before frost arrives.",
+      "run_normalized": "once the soil has warmed in",
+      "run_in_our_prose": "once the soil has warmed in",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "once the soil has warmed in"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-beans",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Starting seeds Plant beans once the soil has warmed. In much of Minnesota, this is not until late May or even early June. Bean seed planted in cold soil may rot rather than germinate, and plant growth will be very slow in cooler weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "once the soil has warmed in"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "regions.rgv.region_notes_beginner",
+      "our_prose": "In the Rio Grande Valley, plant dry beans Mar 1 - Mar 31. This is a one-shot crop: let the pods dry down on the plant through May 30 - Jul 9, then cut the plants and finish curing the beans before storing them. The Valley's drier summer is kinder to field-drying beans than the humid Gulf coast, though a spell of rain right at pod-turn can still spot or mold a crop, so bring beans indoors to finish curing if wet weather threatens.",
+      "run_normalized": "in the rio grande valley plant",
+      "run_in_our_prose": "In the Rio Grande Valley, plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the rio grande valley plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "tamu_agrilife"
+      ],
+      "source_names": [
+        "Texas A&M AgriLife Extension"
+      ],
+      "source_publishers": [
+        "Texas A&M AgriLife"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://cameron.agrilife.org/files/2022/05/RGV-Homeowner-Vegetable-Guide-2022.pdf",
+      "anchor_paths": [
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.tamu_agrilife",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.tamu_agrilife"
+      ],
+      "source_context": "Cilantro Santo, Slo-Bolting, Marino, Calypso Early October through early February Almost any variety of Cilantro does well in the Rio Grande Valley. Plant spacing – Sow 3-4 inches apart and thin to 6 inches apart. Dill Long Island Mammoth, Dukat, Bouquet Early October through mid- December High soil heat seems to reduce germination rate and although it can be planted in early October, it is best to wait until late October or early November.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the rio grande valley plant"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "regions.warm_arid.region_notes_seasoned",
+      "our_prose": "In the warm arid band of southern New Mexico and west Texas, beans bridge spring into fall as a near continuous season. Sow in spring after frost for a summer crop, and again in mid summer for a fall crop; the spring planting carries harvest through June and into July just as the fall sowing begins, so the two windows nearly meet rather than splitting around a dead gap. Sow into warm soil and keep moisture steady through the heat.",
+      "run_normalized": "mid summer for a fall crop",
+      "run_in_our_prose": "mid summer for a fall crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mid summer for a fall crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].direct_sow[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Transplant early maturing varieties in the spring to mature in cool weather. Cauliflower grows best in New Mexico when direct-seeded or transplanted during mid-summer for a fall crop. When the cauliflower plants begin to form a small head (button), pull the leaves over the head and tie them together to protect the head from the sun.",
+      "source_context_available": true,
+      "tool_first_6gram": "mid summer for a fall crop"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "rotation.avoid_after_beginner",
+      "our_prose": "Do not plant beans in the same spot two years running. Diseases build up in the soil and can hit the next bean crop.",
+      "run_normalized": "do not plant beans in the same",
+      "run_in_our_prose": "Do not plant beans in the same",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "do not plant beans in the same"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "However, the bacteria can live in the soil for two years on plant debris. Therefore, do not plant beans in the same location more frequently than every third year. Buy new seeds each year. Copper fungicides can be applied at ten day intervals.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not plant beans in the"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "Clemson Cooperative Extension Home & Garden Information Center (HGIC 1302, Bush & Pole-Type Snap Beans)",
+      "run_normalized": "hgic 1302 bush pole type snap beans",
+      "run_in_our_prose": "HGIC 1302, Bush & Pole-Type Snap Beans",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "hgic 1302 bush pole type snap beans"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bean-southern-pea-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "diseases[4].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "More information on successfully growing beans and Southern peas is available in HGIC 1302, Bush & Pole Type Snap Beans , and HGIC 1319, Southern Pea . Anthracnose Bean pods with black, sunken lesions or reddish-brown blotches most likely have anthracnose, a fungal disease caused by Colletotrichum lindemuthianum .",
+      "source_context_available": true,
+      "tool_first_6gram": "1302 bush pole type snap beans"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "sources_summary.primary[5].name",
+      "our_prose": "University of Maryland Extension (Growing Beans in a Home Garden)",
+      "run_normalized": "growing beans in a home garden",
+      "run_in_our_prose": "Growing Beans in a Home Garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growing beans in a home garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-beans-home-garden",
+      "anchor_paths": [
+        "failure_diagnostics[1].anchoring_urls.umd_ext",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umd_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umd_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "soil.anchoring_urls.umd_ext",
+        "tips_by_stage.germination[0].anchoring_urls.umd_ext"
+      ],
+      "source_context": "Growing Beans in a Home Garden | University of Maryland Extension Skip to main content",
+      "source_context_available": true,
+      "tool_first_6gram": "growing beans in a home garden"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "tips_by_stage.seedling[0].text_beginner",
+      "our_prose": "Pull weeds early, but weed shallowly. Young beans do not compete well with weeds, yet their roots are near the surface, so digging deep hurts the plant more than the weeds do. Pull by hand and hoe lightly near the row, especially in the first six weeks.",
+      "run_normalized": "especially in the first six weeks",
+      "run_in_our_prose": "especially in the first six weeks",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "especially in the first six weeks"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The critical period for moisture is during pod set and pod development. Cultural Practices Weed control is essential especially in the first six weeks after planting. Shallow cultivation and hand-pulling are the preferred methods to prevent root damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "especially in the first six weeks"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "tips_by_stage.seedling[0].text_seasoned",
+      "our_prose": "Weed early and cultivate shallowly. Young beans compete poorly with weeds, but their roots run close to the surface, so deep hoeing does more harm than the weeds. Hand-pull and scuffle-hoe lightly near the row, especially in the first six weeks.",
+      "run_normalized": "especially in the first six weeks",
+      "run_in_our_prose": "especially in the first six weeks",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "especially in the first six weeks"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/bush-pole-type-snap-beans/",
+      "anchor_paths": [
+        "failure_diagnostics[0].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[1].anchoring_urls.clemson_hgic",
+        "failure_diagnostics[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.clemson_hgic",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.flowering[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.germination[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.seedling[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "The critical period for moisture is during pod set and pod development. Cultural Practices Weed control is essential especially in the first six weeks after planting. Shallow cultivation and hand-pulling are the preferred methods to prevent root damage.",
+      "source_context_available": true,
+      "tool_first_6gram": "especially in the first six weeks"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "watering.signs_underwater_seasoned",
+      "our_prose": "Drought stress during and after flowering aborts blossoms and produces small, stringy pods.",
+      "run_normalized": "drought stress during and after flowering",
+      "run_in_our_prose": "Drought stress during and after flowering",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "drought stress during and after flowering"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/beans-in-the-garden",
+      "anchor_paths": [
+        "failure_diagnostics[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[3].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "tips_by_stage.flowering[0].anchoring_urls.usu_ext",
+        "tips_by_stage.germination[1].anchoring_urls.usu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.usu_ext",
+        "tips_by_stage.vegetative[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Do not over water as wet soils promote root rot diseases and slow plant growth. Water needs are most critical during flowering and pod sizing. Drought stress during and after flowering will decrease yield due to flower abortion and reduce pod size and increase stringiness.",
+      "source_context_available": true,
+      "tool_first_6gram": "drought stress during and after flowering"
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "yield_expectations.first_year_note_beginner",
+      "our_prose": "Bush beans are one of the most reliable crops for a first-year garden. They come up fast, need little fuss, and give a real harvest in about 50 to 60 days. Even a short row should give you a good pick, and the main thing that affects how much you get is keeping the water steady while they flower and form pods.",
+      "run_normalized": "beans are one of the most",
+      "run_in_our_prose": "beans are one of the most",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "beans are one of the most"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-beans",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].direct_sow[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Preservation: food safety first Pickled beans Home-canned beans are one of the most common sources of botulism poisoning. Properly prepared pickled beans do not cause this poisoning, because they contain so much acid from vinegar.",
+      "source_context_available": true,
+      "tool_first_6gram": "beans are one of the most"
+    }
+  ]
+}

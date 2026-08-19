@@ -1,0 +1,134 @@
+{
+  "crop_slug": "zinnia",
+  "record_count": 3,
+  "records": [
+    {
+      "crop_slug": "zinnia",
+      "field_path": "fertilizer.notify_message_beginner",
+      "our_prose": "It is a good time to feed your zinnias a little. They do not need much, so one light dose of a balanced fertilizer is plenty. If you already mixed compost into the soil when planting, you can skip this.",
+      "run_normalized": "it is a good time to",
+      "run_in_our_prose": "It is a good time to",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "it is a good time to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_south_cal"
+      ],
+      "source_names": [
+        "UF/IFAS South Florida Gardening Calendar (ENH1191/EP452)"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/EP452",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.fl_peninsula.plantings[0].direct_sow[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.fl_peninsula.plantings[0].plant_out[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.fl_peninsula.plantings[1].anchoring_urls.uf_ifas_south_cal",
+        "regions.fl_peninsula.plantings[1].plant_out[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_south_cal",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[0].plant_out[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[0].start_indoors[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[1].harvest_end[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[1].harvest_start[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.plantings[1].plant_out[0].anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.resolved_by_zone.10.anchoring_urls.uf_ifas_south_cal",
+        "regions.rgv.resolved_by_zone.9.anchoring_urls.uf_ifas_south_cal"
+      ],
+      "source_context": "See Ask IFAS : Vegetable Gardening in Florida : https://edis.ifas.ufl.edu/topics/vegetable_gardening What to Do Landscape : It is a good time to plant woody shrubs. Remember “Right Plant/Right Place” and match the mature size with the location.",
+      "source_context_available": true,
+      "tool_first_6gram": "it is a good time to"
+    },
+    {
+      "crop_slug": "zinnia",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "Aim for roughly one inch of water per week from rain plus irrigation during active growth, applied deeply and less often rather than in frequent shallow doses; established plantings tolerate less. Deep, infrequent watering encourages deeper roots and keeps foliage dry.",
+      "run_normalized": "one inch of water per week",
+      "run_in_our_prose": "one inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "one inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_marin_mg"
+      ],
+      "source_names": [
+        "UC Master Gardeners Marin (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Master Gardeners of Marin County"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-marin-master-gardeners/planting-spacing",
+      "anchor_paths": [
+        "regions.ca_north_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[0].direct_sow[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[1].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.plantings[1].plant_out[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[0].direct_sow[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[1].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.plantings[1].plant_out[0].anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.ucanr_marin_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.plantings[1].plant_out[0].anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.ucanr_marin_mg",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.ucanr_marin_mg"
+      ],
+      "source_context": "• Deeply rooting plants include artichokes, asparagus, parsnips, rhubarb and tomatoes. • Most annuals need one inch of water per week and up to two inches in hot weather. Learn how to calculate an inch of water.",
+      "source_context_available": true,
+      "tool_first_6gram": "one inch of water per week"
+    },
+    {
+      "crop_slug": "zinnia",
+      "field_path": "yield_expectations.first_year_note_beginner",
+      "our_prose": "Zinnias flower the same year you plant them, usually about two months after sowing. There is no waiting year. Plant in spring and you will have flowers from summer until the first frost.",
+      "run_normalized": "from summer until the first frost",
+      "run_in_our_prose": "from summer until the first frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from summer until the first frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/zinnia-marylandica/",
+      "anchor_paths": [
+        "growth_stages[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.seedling[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "This low-maintenance, heat- and drought-tolerant, colorful annual is a must for the garden. Its showy, yellow or orange flowers bloom from summer until the first frost and make excellent cut flowers. Plants are compact and bushier than standard varieties.",
+      "source_context_available": true,
+      "tool_first_6gram": "from summer until the first frost"
+    }
+  ]
+}

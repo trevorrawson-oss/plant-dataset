@@ -1,0 +1,710 @@
+{
+  "crop_slug": "yellow-summer-squash",
+  "record_count": 19,
+  "records": [
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "description_seasoned",
+      "our_prose": "Yellow summer squash is a warm-season Cucurbita pepo grown, like zucchini, for its tender immature fruit, picked young while the bright yellow skin is still soft and the seeds have not matured. It comes in two forms: crookneck, with a curved, often bumpy neck, and straightneck, smooth and tapered, both sharing the same buttery yellow color and thin edible skin. Plants are bushy rather than vining, fast from seed, and famously productive, so a single plant in good soil can outpace a household at peak. It is monoecious, carrying separate male and female flowers on the same plant, so one plant sets fruit on its own with insect pollination. The two beats that shape a season are pests and pace: squash vine borer and powdery mildew commonly take down a first planting by midsummer, which is why a second sowing pays off, and fruit sizes up so fast that picking every day or two at peak is the difference between tender squash and tough, seedy ones.",
+      "run_normalized": "summer squash is a warm season",
+      "run_in_our_prose": "summer squash is a warm-season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "summer squash is a warm season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://sfp.ucanr.edu/crops/squash1",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[1].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.plantings[2].anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.10.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.11.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.ucanr_ext",
+        "regions.ca_desert.resolved_by_zone.9.heat_pause.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[0].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.plantings[1].anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.ucanr_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "1996 7,338 9.8 $3,836 1995 5,478 11.2 $3,983 1994 7,905 9.9 $3,498 Climatic Requirements Summer squash is a warm-season crop that will grow in nearly all climates of California. Since summer squash is a short-season crop, it thrives in somewhat cooler climates better than other cucurbits such as cantaloupe and watermelon.",
+      "source_context_available": true,
+      "tool_first_6gram": "summer squash is a warm season"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "failure_diagnostics[2].next_season_tip_beginner",
+      "our_prose": "Cover plants until they flower, check the stem base for pests, and plant a second crop in summer as a backup. Clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[1].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "growth_stages[5].user_action_beginner",
+      "our_prose": "Pull out finished plants and clear them away at the end of the season. This helps prevent pests next year. A second planting made in summer often keeps producing after the first one is done.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[1].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "pests[0].cause_beginner",
+      "our_prose": "A moth lays eggs at the base of the plant in summer. The larvae hatch and tunnel inside the stem, blocking water and killing the plant.",
+      "run_normalized": "at the base of the plant",
+      "run_in_our_prose": "at the base of the plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Another disadvantage is that stake and cage systems require extra work and materials. One-Stem Staking Method. Drive an 8-ft, 2-in. by 2-in. stake at the base of the plant. As the tomato plant grows, pinch out any side branches that form in the leaf axils, allowing only the terminal branches to grow.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the plant"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.ca_desert.region_notes_beginner",
+      "our_prose": "In California's low desert, summer squash grows in two seasons around the extreme summer heat. Plant an early crop in late winter or early spring, before it gets hot. Skip the peak of summer, when squash cannot set fruit well. Then plant again in early fall. Getting plants established before the heat is the key to a good spring crop.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ext"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ufifas_ext"
+      ],
+      "source_context": "However, be aware that vegetables planted in late summer or early fall (August or September) will be susceptible to insects and diseases that thrive in hot weather. Likewise, cold-tender vegetables planted in late winter or early spring may be damaged by frosts or freezes if not protected with covers (see \"Extending the Gardening Season\" above for more information on covers).",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.succession_continuous",
+      "our_prose": "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct",
+      "run_normalized": "mar apr may jun jul aug",
+      "run_in_our_prose": "Mar, Apr, May, Jun, Jul, Aug",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "mar apr may jun jul aug"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "unlv_mg_svn"
+      ],
+      "source_names": [
+        "Vegetable Planting Guide for Southern Nevada (Clarita Huffman, Master Gardener)"
+      ],
+      "source_publishers": [
+        "University of Nevada Cooperative Extension Master Gardener Program (Clark County), hosted by UNLV"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.unlv.edu/sites/default/files/page_files/27/CampusLife_Planting-Calendar-LasVegas.pdf",
+      "anchor_paths": [
+        "regions.nevada.plantings[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[0].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].direct_sow[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_end[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.plantings[1].harvest_start[0].anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.10.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.8.second_planting.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.heat_pause.anchoring_urls.unlv_mg_svn",
+        "regions.nevada.resolved_by_zone.9.second_planting.anchoring_urls.unlv_mg_svn"
+      ],
+      "source_context": "Parsley Parsnips Pea Potatoes-Irish Radish Rhubarb Rutabaga Salsify Spinach Turnips WARM SEASON Mar Apr May Jun Jul Aug E M L E M L E M L E M L E M L E M L Beans-pole Cantaloupe Corn-sweet Cucumber Eggplant* Muskmelon Okra Peanut Pepper* Potato-sweet Pumpkin",
+      "source_context_available": true,
+      "tool_first_6gram": "mar apr may jun jul aug"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.low_desert_az.region_notes_beginner",
+      "our_prose": "In Arizona's low desert, summer squash grows in two seasons with a long break for the extreme summer heat. Plant in late winter to early spring, before it gets hot, and again in late summer for a fall crop. Skip the middle of summer entirely. Getting plants going early, before the heat arrives, makes the biggest difference for the spring crop.",
+      "run_normalized": "late summer for a fall crop",
+      "run_in_our_prose": "late summer for a fall crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "late summer for a fall crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "The latter technique results in a longer harvest and greater yields. Spinach can also be sown in the late summer for a fall crop. New Zealand spinach, unlike most other greens, is a warm-season crop with a flavor similar to spinach but without its astringency.",
+      "source_context_available": true,
+      "tool_first_6gram": "late summer for a fall crop"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.se_gulf.region_notes_beginner",
+      "our_prose": "In the Southeast and Gulf, summer squash grows in two seasons: spring and fall, with a break in the hottest part of summer. Plant in spring once frost has passed, then plant again in late summer for a fall crop. Skip the peak of summer, when heat and pests make squash struggle. A spring sowing plus a second one a couple of weeks later gives you a good early supply.",
+      "run_normalized": "late summer for a fall crop",
+      "run_in_our_prose": "late summer for a fall crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "late summer for a fall crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "The latter technique results in a longer harvest and greater yields. Spinach can also be sown in the late summer for a fall crop. New Zealand spinach, unlike most other greens, is a warm-season crop with a flavor similar to spinach but without its astringency.",
+      "source_context_available": true,
+      "tool_first_6gram": "late summer for a fall crop"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's low-elevation Dixie belt (Mojave-edge high desert) runs yellow summer squash on one spring cycle only, per USU Extension's Suggested Vegetable Planting Dates for Utah. Direct-sow around March 15, the Group C (Tender) date for St. George, about two weeks ahead of the March 30 average last frost; the table's explicit local date runs earlier than a generic frost-relative rule would. Harvest begins about 53 days later, around May 7, and continues into late June. Once St. George's daytime highs push past 95°F and the county's own frost-and-elevation data show summer highs routinely reaching 100°F in June through August, flowers and small fruit drop as pollen viability collapses. USU documents fall planting for cool-season crops in the St. George area but gives no fall or summer-replant window for yellow summer squash, so there is no second cycle here; frost returns around November 1, well after the plants have already stopped producing for the year.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "regions.utah_dixie.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "St. George summers routinely reach 100°F in June, July, and August (USU Extension, Elevations for Washington County), so the spring yellow summer squash crop is picked before the worst of the heat and flowers and small fruit drop as pollen viability collapses. USU's Suggested Vegetable Planting Dates for Utah lists no St. George fall or summer-replant window for this crop, so the season ends here rather than resuming with a second planting.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "Suggested Vegetable Planting Dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Try not to grow summer squash or its relatives in the same spot more than once every 3 years. Moving it around the garden each year helps avoid a buildup of pests and disease. Clean up old plants at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[1].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "sources_summary.primary[14].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ufifas_ext"
+      ],
+      "source_names": [
+        "University of Florida IFAS Extension"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.ufifas_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.ufifas_ext"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "tips_by_stage.end_of_season[0].text_beginner",
+      "our_prose": "At the end of the season, pull up old plants and clear them away. This cuts down on pests and disease next year.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "At the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[1].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for about 1 inch of water per week, more in heat or sandy soil, delivered deeply and less often rather than in light daily sprinkles. Container plants dry out faster and often need water every day or two at peak.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].start_indoors[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[1].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "watering.method_beginner",
+      "our_prose": "Water the soil, not the leaves. Use a soaker hose or aim a watering wand at the base of the plant. Keeping the leaves dry helps prevent powdery mildew, a common summer squash problem. A layer of mulch keeps the soil evenly moist.",
+      "run_normalized": "at the base of the plant",
+      "run_in_our_prose": "at the base of the plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Another disadvantage is that stake and cage systems require extra work and materials. One-Stem Staking Method. Drive an 8-ft, 2-in. by 2-in. stake at the base of the plant. As the tomato plant grows, pinch out any side branches that form in the leaf axils, allowing only the terminal branches to grow.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the plant"
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "watering.method_seasoned",
+      "our_prose": "Water at the base of the plant with a soaker hose, drip line, or a wand aimed at the soil, keeping the leaves as dry as possible. Wet foliage, especially overhead watering late in the day, invites powdery mildew on a plant already prone to it. A 2 to 3 inch mulch holds soil moisture even and keeps splashing down.",
+      "run_normalized": "at the base of the plant",
+      "run_in_our_prose": "at the base of the plant",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the plant"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_circulars/CR457/",
+      "anchor_paths": [
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[1].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Another disadvantage is that stake and cage systems require extra work and materials. One-Stem Staking Method. Drive an 8-ft, 2-in. by 2-in. stake at the base of the plant. As the tomato plant grows, pinch out any side branches that form in the leaf axils, allowing only the terminal branches to grow.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the plant"
+    }
+  ]
+}

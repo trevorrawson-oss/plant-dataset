@@ -1,0 +1,1239 @@
+{
+  "crop_slug": "nectarine",
+  "record_count": 30,
+  "records": [
+    {
+      "crop_slug": "nectarine",
+      "field_path": "diseases[1].organic_treatment_beginner",
+      "our_prose": "The main control is cleanup: take off and destroy every dried mummy from the tree and the ground, and prune out the gummy dead twig patches, since these hold the spores. If the weather is wet during bloom, an organic-approved spray at bloom helps protect the flowers. As soon as you see a nectarine rotting, pick it and throw it away so it does not spread.",
+      "run_normalized": "from the tree and the ground",
+      "run_in_our_prose": "from the tree and the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from the tree and the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "Prune trees to a low height for easy access to fruit and braches. Remove infected fruit immediately from the tree and the ground to maintain orchard sanitation. Bagging individual fruit four weeks to six weeks after bloom provides excellent control, but bagging is a labor-intensive process only practical for small trees.",
+      "source_context_available": true,
+      "tool_first_6gram": "from the tree and the ground"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "diseases[1].organic_treatment_seasoned",
+      "our_prose": "Sanitation is the core control: remove and destroy every mummy from the tree and the ground, and prune out gummy twig cankers, because these are the spore sources. During a wet bloom, an organic-approved bloom-time fungicide reduces blossom blight. Once fruit is rotting, pick and dispose of it promptly so it does not seed more infections.",
+      "run_normalized": "from the tree and the ground",
+      "run_in_our_prose": "from the tree and the ground",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from the tree and the ground"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "Prune trees to a low height for easy access to fruit and braches. Remove infected fruit immediately from the tree and the ground to maintain orchard sanitation. Bagging individual fruit four weeks to six weeks after bloom provides excellent control, but bagging is a labor-intensive process only practical for small trees.",
+      "source_context_available": true,
+      "tool_first_6gram": "from the tree and the ground"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "diseases[2].cause_seasoned",
+      "our_prose": "The bacterium Xanthomonas arboricola pv. pruni. It spreads in warm, wet weather and builds up where susceptible peach and related trees grow nearby. Nectarines are generally more susceptible than peaches, and symptoms are sometimes mistaken for spray injury.",
+      "run_normalized": "the bacterium xanthomonas arboricola pv pruni",
+      "run_in_our_prose": "The bacterium Xanthomonas arboricola pv. pruni",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the bacterium xanthomonas arboricola pv pruni"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic",
+        "clemson_peach_diseases"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center",
+        "Clemson HGIC -- Peach Diseases factsheet"
+      ],
+      "source_publishers": [
+        "Clemson University",
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peach-diseases/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_peach_diseases",
+        "tips_by_stage.dormancy[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[2].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Apply all chemicals according to label directions. Bacterial Spot This disease is caused by the bacterium Xanthomonas arboricola pv. pruni , and affects peach fruit and leaves. Infected leaves develop small reddish-purple spots that often have a white center.",
+      "source_context_available": true,
+      "tool_first_6gram": "the bacterium xanthomonas arboricola pv pruni"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "failure_diagnostics[1].what_happened_seasoned",
+      "our_prose": "Newly emerged spring leaves are thickened, puckered, curled, and flushed red to purple. This is peach leaf curl, caused by the fungus Taphrina deformans, which infects the young leaves as buds swell in cool, wet spring weather. Growers often reach for a spray once they see it, but no spray cures curled leaves; the infection is already complete. The only effective control is a dormant fungicide applied on the leafless tree, so the real action belongs to next dormancy, not this spring. Keep the tree watered and fed to carry it through the season.",
+      "run_normalized": "caused by the fungus taphrina deformans",
+      "run_in_our_prose": "caused by the fungus Taphrina deformans",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "caused by the fungus taphrina deformans"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/encyclopedia/peach-leaf-curl",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Signs of peach leaf curl A grayish powdery coating (spores) can be seen later in the season on infected leaves. Disease cycle of peach leaf curl Peach leaf curl is caused by the fungus Taphrina deformans . This pathogen is we plant doctors called monocyclic, meaning these fungal spores infect peach leaves only once a year in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "caused by the fungus taphrina deformans"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "failure_diagnostics[3].label_seasoned",
+      "our_prose": "Gummy ooze and frass at the base of the trunk",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "fertilizer.amount_beginner",
+      "our_prose": "A simple rule is about 1 cup of 10-10-10 for each year of the tree's age, spread in spring as the tree blooms, up to about 10 cups for a full-grown tree. Do not put fertilizer in the planting hole or feed right at planting; wait until the tree starts growing. If a late frost kills the flowers and you get no fruit that year, skip any summer or fall feeding.",
+      "run_normalized": "1 cup of 10 10 10",
+      "run_in_our_prose": "1 cup of 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 cup of 10 10 10",
+        "fertilizer in the planting hole or"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peaches-nectarines/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rootstock_options[0].anchoring_urls.clemson_hgic",
+        "rootstock_options[1].anchoring_urls.clemson_hgic",
+        "rootstock_options[2].anchoring_urls.clemson_hgic",
+        "rootstock_options[3].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormancy[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "In March, after the trees have been planted and the soil settled by a drenching rain, broadcast 1 cup of 10-10-10 fertilizer over an area 3 feet in diameter. Do not allow fertilizer to accumulate around the tree trunk.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 cup of 10 10 10"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "A common home-garden rate is about 1 cup of 10-10-10 per year of tree age, applied in spring from bloom to petal fall, up to roughly 10 cups for a mature tree (about 1/2 to 1 pound of fertilizer per year of age, to a maximum near 10 pounds). Do not fertilize at planting or place fertilizer in the hole; wait until growth begins. If a late frost takes the crop, skip the postharvest feeding that year.",
+      "run_normalized": "1 cup of 10 10 10",
+      "run_in_our_prose": "1 cup of 10-10-10",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 cup of 10 10 10"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peaches-nectarines/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rootstock_options[0].anchoring_urls.clemson_hgic",
+        "rootstock_options[1].anchoring_urls.clemson_hgic",
+        "rootstock_options[2].anchoring_urls.clemson_hgic",
+        "rootstock_options[3].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormancy[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "In March, after the trees have been planted and the soil settled by a drenching rain, broadcast 1 cup of 10-10-10 fertilizer over an area 3 feet in diameter. Do not allow fertilizer to accumulate around the tree trunk.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 cup of 10 10 10"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "growth_stages[2].user_action_beginner",
+      "our_prose": "Each year in late winter, keep the best-placed main branches and cut away ones that cross, crowd, or grow inward, keeping the center open. Nectarines fruit on wood that grew the year before, so this yearly pruning also keeps new fruiting wood coming.",
+      "run_normalized": "fruit on wood that grew the",
+      "run_in_our_prose": "fruit on wood that grew the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "fruit on wood that grew the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_peaches"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Peaches in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/peaches-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_peaches"
+      ],
+      "source_context": "Once established, keep the center of the tree open by removing any branches that arise within 1 foot of the trunk. Since peaches produce fruit on wood that grew the previous year, it is important to do annual pruning to encourage new wood development for next year’s fruit.",
+      "source_context_available": true,
+      "tool_first_6gram": "fruit on wood that grew the"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "growth_stages[2].what_to_look_for_beginner",
+      "our_prose": "Nectarines are usually trained to an open-center or vase shape: three to five evenly spaced main branches (called scaffolds) coming off a short trunk, with an open middle. This lets light and air reach all the fruit. Look for branches that cross, head inward, or shoot straight up to remove.",
+      "run_normalized": "to an open center or vase",
+      "run_in_our_prose": "to an open-center or vase",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "to an open center or vase"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_peaches"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Peaches in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/peaches-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_peaches"
+      ],
+      "source_context": "Peach tree pruned to an open center training system Pruning Prune peach trees during the dormant season, usually in February or March. Peach trees should be pruned to an open center or vase system. An open center training system is done by selecting 4 to 5 branches that originate 18 to 24 inches above the ground that are evenly spaced around the tree to become the main “scaffold” branches.",
+      "source_context_available": true,
+      "tool_first_6gram": "to an open center or vase"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "notifications[1].body_beginner",
+      "our_prose": "Prune now, in late winter just before the buds start to swell. Nectarines make their fruit on wood that grew last year, so cutting back hard every year, more than other fruit trees, is what keeps the crop coming. Open up the middle of the tree, make clean cuts, and take out any dead or oozing wood.",
+      "run_normalized": "just before the buds start to",
+      "run_in_our_prose": "just before the buds start to",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "just before the buds start to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "Pruning at Planting Fruit trees are frequently purchased as whips, which are unbranched trees ranging from ½-inch to ¾-inch in diameter. Just before the buds start to grow in the spring, head the tree, at 30 inches to 34 inches above the soil surface, 12 inches to 18 inches above where the first whorl of lateral branches is desired.",
+      "source_context_available": true,
+      "tool_first_6gram": "just before the buds start to"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "pests[0].symptoms_seasoned",
+      "our_prose": "Gummy ooze mixed with sawdust-like frass at the base of the trunk, right around the soil line, often with a mounded look where the bark meets the ground. Bark in that zone may be cracked or sunken. A heavily infested young tree loses vigor as the larvae girdle the inner bark; several borers in one trunk can kill a newly planted tree in a single season.",
+      "run_normalized": "at the base of the trunk",
+      "run_in_our_prose": "at the base of the trunk",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the base of the trunk"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "A registered insecticide will be most effective against egg-laying and will kill tiny larvae when they hatch. Apply it at the base of the trunk several times throughout the growing season, especially in early September when adult moths emerge.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the base of the trunk"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "pests[1].cause_seasoned",
+      "our_prose": "Larvae of the lesser peachtree borer (Synanthedon pictipes), a clearwing moth closely related to the peachtree borer. Unlike its relative, it targets wounded bark up in the canopy, so its damage is tightly linked to Cytospora canker and pruning injuries.",
+      "run_normalized": "the lesser peachtree borer synanthedon pictipes",
+      "run_in_our_prose": "the lesser peachtree borer (Synanthedon pictipes",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the lesser peachtree borer synanthedon pictipes"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peach-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Also, do not apply more than 8 applications of permethrin per season for all insect pests. Peach Borers The peachtree borer ( Synanthedon exitiosa ), the lesser peachtree borer ( Synanthedon pictipes ), and the shothole borer ( Scolytus rugulosus ) are all pests of peaches that bore, or tunnel, inside the peach tree.",
+      "source_context_available": true,
+      "tool_first_6gram": "the lesser peachtree borer synanthedon pictipes"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "pests[3].cause_seasoned",
+      "our_prose": "The Oriental fruit moth (Grapholita molesta). It produces several overlapping generations a season; early broods attack shoots, later broods attack fruit, which is why damage shifts from twigs to fruit as summer progresses.",
+      "run_normalized": "the oriental fruit moth grapholita molesta",
+      "run_in_our_prose": "The Oriental fruit moth (Grapholita molesta",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the oriental fruit moth grapholita molesta"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peach-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Eric LaGasa, Plant Protection Division, Washington State Department of Agriculture Oriental Fruit Moth The Oriental fruit moth ( Grapholita molesta ) is grayish-brown and has a wingspan of about ½ inch. It is active at night. When first hatched, its caterpillar (larva) is about 1 / 16 -inch long and white with a black head.",
+      "source_context_available": true,
+      "tool_first_6gram": "the oriental fruit moth grapholita molesta"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "pests[5].cause_seasoned",
+      "our_prose": "Western flower thrips (Frankliniella occidentalis), a tiny slender insect that feeds on the flowers and the young fruit surface at and just after bloom. Their feeding scars the skin, and the scars enlarge as the fruit grows. Nectarines are hit harder cosmetically than peaches because the fuzzless skin offers no protective barrier and shows every mark.",
+      "run_normalized": "scars enlarge as the fruit grows",
+      "run_in_our_prose": "scars enlarge as the fruit grows",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "scars enlarge as the fruit grows"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ucanr_ext"
+      ],
+      "source_names": [
+        "University of California Agriculture and Natural Resources"
+      ],
+      "source_publishers": [
+        "UC ANR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/nectarine/western-flower-thrips/",
+      "anchor_paths": [
+        "pests[5].anchoring_urls.ucanr_ext",
+        "varieties.anchoring_urls.ucanr_ext"
+      ],
+      "source_context": "Damage Nymphs hatch and feed in numbers on tiny fruit , often under the drying calyx or flower parts. Their feeding scars the surface of the fruit. These scars enlarge as the fruit grows, and may cause fruit deformity. Thrips can also cause silvering just before nectarine fruits mature.",
+      "source_context_available": true,
+      "tool_first_6gram": "scars enlarge as the fruit grows"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "pests[5].organic_treatment_seasoned",
+      "our_prose": "Thrips are hard to control once feeding starts, and for a backyard tree the practical approach is tolerance plus habitat management: keep flowering weeds mowed down near the tree during bloom, since they harbor thrips that move onto the opening flowers. Most scarring is cosmetic and the fruit is still good to eat; peel it if the skin is rough.",
+      "run_normalized": "cosmetic and the fruit is still",
+      "run_in_our_prose": "cosmetic and the fruit is still",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cosmetic and the fruit is still"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peach-insect-pests/",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[2].anchoring_urls.clemson_hgic",
+        "pests[3].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[3].anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Initial feeding kills the fruit tissue at the feeding site, resulting in oozing from the fruit, which becomes deep dimples along the surface as the fruit grows. Minor damage is generally cosmetic, and the fruit is still edible. Severe damage creates large crevices and dimples (the “catfacing”) with tough, cork-like flesh in the fruit, which is not remotely appetizing.",
+      "source_context_available": true,
+      "tool_first_6gram": "cosmetic and the fruit is still"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "rootstock_options[1].traits_seasoned",
+      "our_prose": "Standard seedling rootstock similar in stature to Lovell, well-suited to heavier soils where ring nematodes are not a concern. Like Lovell, it lacks strong nematode resistance, so it is best matched to sites without that pressure.",
+      "run_normalized": "heavier soils where ring nematodes are not",
+      "run_in_our_prose": "heavier soils where ring nematodes are not",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "heavier soils where ring nematodes are not"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "'Guardian' rootstock is the only recommended rootstock on sandy soils where ring nematodes can cause issues. 'Lovell' or 'Halford' rootstocks are suggested for peaches planted in heavier soils where ring nematodes are not present. Pears Moonglow, Magness (not a pollen source) , Kieffer, Harrow Sweet, Seckel, Potomoc, Shenandoah At least two varieties are recommended to ensure adequate pollination.",
+      "source_context_available": true,
+      "tool_first_6gram": "heavier soils where ring nematodes are"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "rootstock_options[1].what_to_ask_nursery",
+      "our_prose": "Ask for Halford for heavier soils where ring nematodes are not a problem.",
+      "run_normalized": "heavier soils where ring nematodes are not",
+      "run_in_our_prose": "heavier soils where ring nematodes are not",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "heavier soils where ring nematodes are not"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "'Guardian' rootstock is the only recommended rootstock on sandy soils where ring nematodes can cause issues. 'Lovell' or 'Halford' rootstocks are suggested for peaches planted in heavier soils where ring nematodes are not present. Pears Moonglow, Magness (not a pollen source) , Kieffer, Harrow Sweet, Seckel, Potomoc, Shenandoah At least two varieties are recommended to ensure adequate pollination.",
+      "source_context_available": true,
+      "tool_first_6gram": "heavier soils where ring nematodes are"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "rootstock_options[2].what_to_ask_nursery",
+      "our_prose": "Ask for Guardian on sandy soils where ring nematodes and Peach Tree Short Life occur.",
+      "run_normalized": "on sandy soils where ring nematodes",
+      "run_in_our_prose": "on sandy soils where ring nematodes",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "on sandy soils where ring nematodes"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Only varieties that require at least 750 hours of chilling are recommended. 'Guardian' rootstock is the only recommended rootstock on sandy soils where ring nematodes can cause issues. 'Lovell' or 'Halford' rootstocks are suggested for peaches planted in heavier soils where ring nematodes are not present.",
+      "source_context_available": true,
+      "tool_first_6gram": "on sandy soils where ring nematodes"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "sources_summary.primary[0].name",
+      "our_prose": "Clemson Cooperative Extension Home & Garden Information Center",
+      "run_normalized": "clemson cooperative extension home garden information center",
+      "run_in_our_prose": "Clemson Cooperative Extension Home & Garden Information Center",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "clemson cooperative extension home garden information center"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://plants.ces.ncsu.edu/plants/prunus-persica/",
+      "anchor_paths": [
+        "pet_safe.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Very cold winter temperatures and late spring frosts often cause significant damage to the buds/flowers of peaches. The Clemson Cooperative Extension Home & Garden Information Center has a factsheet on common diseases. The Clemson Cooperative Extension Home & Garden Information Center has a factsheet on common pests.",
+      "source_context_available": true,
+      "tool_first_6gram": "clemson cooperative extension home garden information"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.hardening_off_beginner",
+      "our_prose": "Hardening off (slowly getting an indoor-grown seedling used to outdoor conditions) does not apply to nectarine. You plant it bare-root and dormant, in late winter or early spring, rather than as a seedling started inside, so there is no tender young plant to ease outdoors.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Pruning is a corrective process used to remove a part of the tree to maintain or correct tree structure. Major pruning should be done during dormant months, typically in late winter or early spring. Training, on the other hand, takes place periodically throughout the year.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.hardening_off_seasoned",
+      "our_prose": "Hardening off does not apply to nectarine. It arrives as a dormant, bare-root tree and goes in the ground in late winter or early spring, not raised from a seedling indoors, so there is no tender transplant to acclimate to the outdoors.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Pruning is a corrective process used to remove a part of the tree to maintain or correct tree structure. Major pruning should be done during dormant months, typically in late winter or early spring. Training, on the other hand, takes place periodically throughout the year.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, with no leaves) in late winter to early spring, before the buds open, once the ground has thawed enough to dig. Soak the roots in a bucket of water for an hour or two first so they do not stay dried out. Dig a hole wide enough to spread the roots out without bending them, and set the tree so the graft union (that bumpy joint near the base, where the fruiting variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill the hole with the same soil you removed, water it in well, and add a stake only if the spot is windy.",
+      "run_normalized": "2 to 3 inches above the soil",
+      "run_in_our_prose": "2 to 3 inches above the soil",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "2 to 3 inches above the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Important: When planting a grafted tree, the graft union (where the scion meets the rootstock) should be at least 2 to 3 inches above the soil after the soil has settled. Planting the graft union below the soil will encourage the scion to put out roots overriding the disease resistance or size controlling characteristics of the rootstock or, in the case of pecans, not forming surface roots ( Figure 6 ).",
+      "source_context_available": true,
+      "tool_first_6gram": "2 to 3 inches above the"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, with no leaves) in late winter to early spring, before the buds open, once the ground has thawed enough to dig. Soak the roots in a bucket of water for an hour or two first so they do not stay dried out. Dig a hole wide enough to spread the roots out without bending them, and set the tree so the graft union (that bumpy joint near the base, where the fruiting variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill the hole with the same soil you removed, water it in well, and add a stake only if the spot is windy.",
+      "run_normalized": "dig a hole wide enough to",
+      "run_in_our_prose": "Dig a hole wide enough to",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "dig a hole wide enough to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_peaches"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Peaches in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/peaches-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_peaches"
+      ],
+      "source_context": "Trees can be transplanted in the summer months but it is much more stressful to the plant and careful attention to irrigation is critical. Trees can be purchased as bare root or potted plants. For bare root trees, dig a hole wide enough to easily spread all of the roots out and deep enough to cover the roots back to the original soil line.",
+      "source_context_available": true,
+      "tool_first_6gram": "dig a hole wide enough to"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Plant the bare-root tree while it is still dormant (resting, with no leaves) in late winter to early spring, before the buds open, once the ground has thawed enough to dig. Soak the roots in a bucket of water for an hour or two first so they do not stay dried out. Dig a hole wide enough to spread the roots out without bending them, and set the tree so the graft union (that bumpy joint near the base, where the fruiting variety meets the rootstock) sits 2 to 3 inches above the soil. Do not put fertilizer in the hole. Refill the hole with the same soil you removed, water it in well, and add a stake only if the spot is windy.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "add fertilizer to the planting hole",
+      "run_in_our_prose": "add fertilizer to the planting hole",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "add fertilizer to the planting hole"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_names": [
+        "NC State Extension Gardener Handbook, ch. 15: Tree Fruit and Nuts"
+      ],
+      "source_publishers": [
+        "North Carolina State Extension, NC State University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/extension-gardener-handbook/15-tree-fruit-and-nuts",
+      "anchor_paths": [
+        "regions.mid_atlantic.plantings[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_end[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].harvest_start[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.plantings[0].plant_out[0].anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.7.anchoring_urls.ncsu_ext_handbook_tree_fruit",
+        "regions.mid_atlantic.resolved_by_zone.8.anchoring_urls.ncsu_ext_handbook_tree_fruit"
+      ],
+      "source_context": "When graft unions are planted below the soil surface, the top portion, or scion, often grows roots and negates the effect of the grafted root system. After the tree is in place, fill the hole with native soil. Never add fertilizer to the planting hole. Fertilizers are very caustic and can burn and kill the roots of young trees. After the hole is backfilled, water the area well.",
+      "source_context_available": true,
+      "tool_first_6gram": "add fertilizer to the planting hole"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "2 to 3 inches above the",
+      "run_in_our_prose": "2 to 3 inches above the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "2 to 3 inches above the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/north-carolina-production-guide-for-smaller-orchard-plantings",
+      "anchor_paths": [
+        "companions.anchoring_urls.ncsu_ext",
+        "companions.bad_seasoned[0].anchoring_urls.ncsu_ext",
+        "fertilizer.anchoring_urls.ncsu_ext",
+        "harvest_ready_anchoring_urls.ncsu_ext",
+        "ph.anchoring_urls.ncsu_ext",
+        "pollination.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.ncsu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.ncsu_ext",
+        "rootstock_options[0].anchoring_urls.ncsu_ext",
+        "rootstock_options[1].anchoring_urls.ncsu_ext",
+        "rootstock_options[2].anchoring_urls.ncsu_ext",
+        "rootstock_options[3].anchoring_urls.ncsu_ext",
+        "soil.anchoring_urls.ncsu_ext",
+        "tips_by_stage.blossom[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.establishment[1].anchoring_urls.ncsu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.ncsu_ext",
+        "varieties.anchoring_urls.ncsu_ext",
+        "watering.anchoring_urls.ncsu_ext",
+        "yield_expectations.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "Important: When planting a grafted tree, the graft union (where the scion meets the rootstock) should be at least 2 to 3 inches above the soil after the soil has settled. Planting the graft union below the soil will encourage the scion to put out roots overriding the disease resistance or size controlling characteristics of the rootstock or, in the case of pecans, not forming surface roots ( Figure 6 ).",
+      "source_context_available": true,
+      "tool_first_6gram": "2 to 3 inches above the"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "dig a hole wide enough to",
+      "run_in_our_prose": "Dig a hole wide enough to",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "dig a hole wide enough to"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_peaches"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Peaches in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/peaches-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_peaches"
+      ],
+      "source_context": "Trees can be transplanted in the summer months but it is much more stressful to the plant and careful attention to irrigation is critical. Trees can be purchased as bare root or potted plants. For bare root trees, dig a hole wide enough to easily spread all of the roots out and deep enough to cover the roots back to the original soil line.",
+      "source_context_available": true,
+      "tool_first_6gram": "dig a hole wide enough to"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "soak the roots in water for",
+      "run_in_our_prose": "Soak the roots in water for",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "soak the roots in water for"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/peaches-nectarines/",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "pollination.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "rootstock_options[0].anchoring_urls.clemson_hgic",
+        "rootstock_options[1].anchoring_urls.clemson_hgic",
+        "rootstock_options[2].anchoring_urls.clemson_hgic",
+        "rootstock_options[3].anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "tips_by_stage.blossom[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormancy[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.dormant_prune[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.establishment[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.fruit_set[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.harvest[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[0].anchoring_urls.clemson_hgic",
+        "tips_by_stage.planting[1].anchoring_urls.clemson_hgic",
+        "tips_by_stage.scaffold_formation[0].anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Because root growth may occur during relatively mild winters, plant as early as possible so the roots will establish before spring growth begins. When the fruit trees arrive from the nursery, open the bundles immediately. Soak the roots in water for 6 to 12 hours if they are not moist. The trees should then be planted if the soil is not too wet.",
+      "source_context_available": true,
+      "tool_first_6gram": "soak the roots in water for"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Plant the bare-root tree while it is still dormant in late winter to early spring, before bud break, once the ground has thawed enough to dig. Soak the roots in water for an hour or two beforehand to rehydrate them. Dig a hole wide enough to spread the roots without bending them and set the tree so the graft union (that swollen joint near the base of the trunk) sits 2 to 3 inches above the final soil line. Do not add fertilizer to the planting hole; backfill with native soil, water in well, and stake only if the site is windy.",
+      "run_normalized": "in late winter to early spring",
+      "run_in_our_prose": "in late winter to early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter to early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://wpcdn.web.wsu.edu/wp-extension/uploads/sites/2109/2019/12/fruit_handbook_western_wa.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].bloom[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Cornelian cherry (Cornus mas), a relative of the dogwood, is an excellent ornamental shrub or small tree, covered with bright yellow flowers in late winter to early spring. Two varieties are needed for pollination. Productivity is very good, and fruits have a strong pungent flavor.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter to early spring"
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "storage.freezer_seasoned",
+      "our_prose": "Nectarines freeze well sliced. Peel, pit, and slice ripe fruit, toss the slices with a little lemon juice or an ascorbic-acid dip to limit browning, freeze them in a single layer on a tray, then transfer to freezer bags. Frozen slices keep their quality for several months and are best used for cooking, baking, and smoothies rather than fresh eating.",
+      "run_normalized": "in a single layer on a",
+      "run_in_our_prose": "in a single layer on a",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in a single layer on a"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_edis"
+      ],
+      "source_names": [
+        "UF/IFAS EDIS (Electronic Data Information Source)"
+      ],
+      "source_publishers": [
+        "University of Florida IFAS"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ask.ifas.ufl.edu/publication/HS1459",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_edis",
+        "regions.fl_peninsula.plantings[0].harvest_end[0].anchoring_urls.uf_ifas_edis",
+        "regions.fl_peninsula.plantings[0].harvest_start[0].anchoring_urls.uf_ifas_edis",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_edis",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_edis",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uf_ifas_edis",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uf_ifas_edis",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uf_ifas_edis",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uf_ifas_edis"
+      ],
+      "source_context": "The fastest cooling occurs when the crop is in direct contact with the cooling air or water, as in the case of loose fruit being immersed in cold water or being exposed to cold air in a single layer on a conveyor. Cooling in field bins or field lugs or in shipping trays or cartons on pallets restricts air or water flow, slowing down the cooling process.",
+      "source_context_available": true,
+      "tool_first_6gram": "in a single layer on a"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "crop_slug": "shallot",
+  "record_count": 6,
+  "records": [
+    {
+      "crop_slug": "shallot",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About half a pound of ammonium sulfate (21-0-0) per 100 square feet at each of the two side-dressings, or the label rate of a balanced fertilizer.",
+      "run_normalized": "21 0 0 per 100 square feet",
+      "run_in_our_prose": "21-0-0) per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "21 0 0 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[1].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.germination_emergence[0].anchoring_urls.usu_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization In addition to soil amendments added before planting, shallots should be given a base fertilizer of 1/2 pound of nitrogen fertilizer (21-0-0) per 100 square feet 30 days after planting and again 60 days after planting. Do not fertilize after mid-July as extra nitrogen stimulates late season leaf growth and reduces bulb storage potential.",
+      "source_context_available": true,
+      "tool_first_6gram": "0 0 per 100 square feet"
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "A shallot clump is ready when most of the tops have yellowed and fallen over on their own and the necks have started to soften and dry, usually 90 to 120 days from a spring set. Lift the whole cluster on a dry day, brush off loose soil, and cure before storing. You can also pull green shallots early, at 50 to 60 days, for fresh use like scallions.",
+      "run_normalized": "when most of the tops have",
+      "run_in_our_prose": "when most of the tops have",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "when most of the tops have"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[1].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.germination_emergence[0].anchoring_urls.usu_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Control weeds, insects, and diseases throughout the year for optimal growth. Harvest the leaves for green onions during the year or the mature bulbs when most of the tops have fallen over. Bulbs store best in cool, dry conditions.",
+      "source_context_available": true,
+      "tool_first_6gram": "when most of the tops have"
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "harvest_ready_seasoned",
+      "our_prose": "A shallot clump is ready when most of the tops have yellowed and fallen over on their own and the necks have started to soften and dry, usually 90 to 120 days from a spring set. Lift the whole cluster on a dry day, brush off loose soil, and cure before storing. You can also pull green shallots early, at 50 to 60 days, for fresh use like scallions.",
+      "run_normalized": "when most of the tops have",
+      "run_in_our_prose": "when most of the tops have",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "when most of the tops have"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/faq/how-do-you-harvest-dry-and-store-onions",
+      "anchor_paths": [
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Question: How do you harvest, dry, and store onions? Answer: Onions should be harvested when most of the tops have fallen over and begun to dry. Carefully pull or dig the bulbs with the tops attached.",
+      "source_context_available": true,
+      "tool_first_6gram": "when most of the tops have"
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "The easy way to grow shallots is from sets, which are small bulbs you buy and plant. Each set splits into a clump of several bulbs. Push each set in pointy-end up so the tip just shows at the soil surface, and space them at their final distance because shallots are not thinned. Pick firm sets and avoid big or already-sprouting ones, which tend to flower instead of dividing. You can also grow shallots from seed, started indoors about 8 to 10 weeks early, which gives single bulbs rather than clumps.",
+      "run_normalized": "from sets which are small bulbs",
+      "run_in_our_prose": "from sets, which are small bulbs",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "from sets which are small bulbs"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-onions",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_sizing[0].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Plant 2 inches deep, 3 to 4 inches apart, in rows 12 to 16 inches apart. You can also plant onions from sets, which are small bulbs grown the previous year. Most of the sets available in Minnesota are of the short-day type.",
+      "source_context_available": true,
+      "tool_first_6gram": "from sets which are small bulbs"
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "tips_by_stage.maturity_curing[0].text_beginner",
+      "our_prose": "Harvest when most of the tops have flopped over on their own and the necks feel soft. Lift the whole clumps gently on a dry day, and try not to bruise them, since bruises lead to rot in storage.",
+      "run_normalized": "when most of the tops have",
+      "run_in_our_prose": "when most of the tops have",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "when most of the tops have"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/shallots-in-the-garden",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.usu_ext",
+        "diseases[1].anchoring_urls.usu_ext",
+        "failure_diagnostics[0].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "harvest_ready_anchoring_urls.usu_ext",
+        "ph.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.usu_ext",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.low_desert_az.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.pnw.plantings[0].plant_out[1].anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.germination_emergence[0].anchoring_urls.usu_ext",
+        "tips_by_stage.leaf_canopy_building[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.usu_ext",
+        "tips_by_stage.maturity_curing[1].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Control weeds, insects, and diseases throughout the year for optimal growth. Harvest the leaves for green onions during the year or the mature bulbs when most of the tops have fallen over. Bulbs store best in cool, dry conditions.",
+      "source_context_available": true,
+      "tool_first_6gram": "when most of the tops have"
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "tips_by_stage.maturity_curing[0].text_beginner",
+      "our_prose": "Harvest when most of the tops have flopped over on their own and the necks feel soft. Lift the whole clumps gently on a dry day, and try not to bruise them, since bruises lead to rot in storage.",
+      "run_normalized": "when most of the tops have",
+      "run_in_our_prose": "when most of the tops have",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "when most of the tops have"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/faq/how-do-you-harvest-dry-and-store-onions",
+      "anchor_paths": [
+        "storage.anchoring_urls.iastate_ext",
+        "tips_by_stage.maturity_curing[0].anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Question: How do you harvest, dry, and store onions? Answer: Onions should be harvested when most of the tops have fallen over and begun to dry. Carefully pull or dig the bulbs with the tops attached.",
+      "source_context_available": true,
+      "tool_first_6gram": "when most of the tops have"
+    }
+  ]
+}

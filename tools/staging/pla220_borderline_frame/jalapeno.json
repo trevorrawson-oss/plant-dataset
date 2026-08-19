@@ -1,0 +1,1235 @@
+{
+  "crop_slug": "jalapeno",
+  "record_count": 32,
+  "records": [
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "description_seasoned",
+      "our_prose": "Jalapeno is a warm-season fruiting vegetable (Capsicum annuum), the most popular hot pepper in American gardens, grown for its firm, medium-hot pods. Its culture is that of any pepper, close to a bell: a heat-loving, self-fertile, transplant crop set into warm soil after frost, growing slowly until the ground is truly warm, then bearing continuously through the summer. What sets it apart is pungency. Jalapeno carries capsaicin, roughly 2,500 to 8,000 Scoville units, produced in glands on the placenta inside the pod, and its heat is not fixed: it rises as the fruit ripens from green to red and as the plant meets stress, especially heat and a controlled water pull, so the same variety can be mild or fiery depending on how and when it is grown and picked. Two jalapeno-specific points reassure new growers: corking, the fine tan netting on a mature pod's skin, is a prized sign of quality, not a defect; and pods can be picked firm and dark green (the usual harvest, around 70 to 80 days from transplant) or left to ripen red for more heat and sweetness. Like tomato, jalapeno drops its blossoms and pauses fruit set when days climb above about 90°F and nights above 75°F, so in the hottest regions the crop splits into a spring and a fall flush around the peak of summer. Its pests are aphids (and the mosaic viruses they carry), flea beetles on seedlings, the pepper maggot (which largely spares thin-walled hot types), the pepper weevil in the South, and hornworms; its main diseases are bacterial spot, mosaic viruses, Phytophthora blight, and anthracnose, all held off by clean seed, rotation, warm well-drained soil, and dry foliage. Handle the harvest with gloves: capsaicin is an oil that burns skin and eyes.",
+      "run_normalized": "produced in glands on the placenta",
+      "run_in_our_prose": "produced in glands on the placenta",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "produced in glands on the placenta"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-peppers-home-garden",
+      "anchor_paths": [
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "They often are called capsaicin, for the most prevalent compound. The capsaicinoids are produced in glands on the placenta (membranes that join the seed to the fruit). Seeds are not the source of capsaicin; however, they can absorb it because of their proximity to the placenta.",
+      "source_context_available": true,
+      "tool_first_6gram": "produced in glands on the placenta"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "diseases[0].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, look for resistant varieties, do not plant peppers in the same spot each year, water the soil rather than the leaves, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "diseases[0].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, look for resistant varieties, do not plant peppers in the same spot each year, water the soil rather than the leaves, and clean up old plants at the end of the season.",
+      "run_normalized": "do not plant peppers in the",
+      "run_in_our_prose": "do not plant peppers in the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "do not plant peppers in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Therefore, after the soil has thoroughly warmed in the spring, set out 6 to 8 week-old transplants to get a head start toward harvest. Do not plant peppers in the garden until after the last chance of frost. Start seed indoors six to eight weeks prior to this date.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not plant peppers in the"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "diseases[0].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, look for resistant varieties, do not plant peppers in the same spot each year, water the soil rather than the leaves, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "diseases[3].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, do not plant peppers in the same spot for a few years, water at the soil, keep fruit off the ground, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "diseases[3].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, do not plant peppers in the same spot for a few years, water at the soil, keep fruit off the ground, and clean up old plants at the end of the season.",
+      "run_normalized": "do not plant peppers in the",
+      "run_in_our_prose": "do not plant peppers in the",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "do not plant peppers in the"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Therefore, after the soil has thoroughly warmed in the spring, set out 6 to 8 week-old transplants to get a head start toward harvest. Do not plant peppers in the garden until after the last chance of frost. Start seed indoors six to eight weeks prior to this date.",
+      "source_context_available": true,
+      "tool_first_6gram": "do not plant peppers in the"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "diseases[3].prevention_beginner",
+      "our_prose": "Use clean seed and healthy transplants, do not plant peppers in the same spot for a few years, water at the soil, keep fruit off the ground, and clean up old plants at the end of the season.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "fertilizer.example_product",
+      "our_prose": "5-10-10 at planting, then calcium nitrate (15.5-0-0) as a side-dress",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate (15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Working the fertilizer into the soil ensures that the nutrients are available to the plants when they are seeded or transplanted. Side dress 5 pounds of calcium nitrate (15.5-0-0) per 1000 square feet or 300 feet of row three to four weeks after planting. For smaller gardens, use ½ pound of calcium nitrate fertilizer per 100 square feet or 30 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Jalapeno is a moderate feeder, not a heavy one. Follow a soil test, or work a modest amount of a balanced-to-low-nitrogen fertilizer such as 5-10-10 into the bed before transplanting, then side-dress with nitrogen once the first fruits have set, about three to four weeks after planting, and again during harvest. Hold the nitrogen back before fruit set: too much early on drives a big leafy plant with few flowers, the single most common reason a pepper looks lush but sets almost no pods. Pair feeding with steady moisture, and note that a mild, deliberate water and nitrogen pull as the crop ripens tends to concentrate a hot pepper's heat.",
+      "run_normalized": "three to four weeks after planting",
+      "run_in_our_prose": "three to four weeks after planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "three to four weeks after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Side dress 5 pounds of calcium nitrate (15.5-0-0) per 1000 square feet or 300 feet of row three to four weeks after planting. For smaller gardens, use ½ pound of calcium nitrate fertilizer per 100 square feet or 30 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "three to four weeks after planting"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "fertilizer.npk_hint_seasoned",
+      "our_prose": "A balanced or slightly low-nitrogen fertilizer such as 5-10-10 worked in at planting, then a nitrogen side-dress (for example calcium nitrate, 15.5-0-0) once fruit sets. Avoid heavy nitrogen before fruit set, which gives leaf at the expense of flowers and pods.",
+      "run_normalized": "calcium nitrate 15 5 0 0",
+      "run_in_our_prose": "calcium nitrate, 15.5-0-0",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "calcium nitrate 15 5 0 0"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/pepper/",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.clemson_hgic",
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[0].anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "pests[4].anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "storage.anchoring_urls.clemson_hgic",
+        "succession_policy.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic",
+        "watering.anchoring_urls.clemson_hgic",
+        "yield_expectations.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Working the fertilizer into the soil ensures that the nutrients are available to the plants when they are seeded or transplanted. Side dress 5 pounds of calcium nitrate (15.5-0-0) per 1000 square feet or 300 feet of row three to four weeks after planting. For smaller gardens, use ½ pound of calcium nitrate fertilizer per 100 square feet or 30 feet of row.",
+      "source_context_available": true,
+      "tool_first_6gram": "calcium nitrate 15 5 0 0"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "growth_stages[2].user_action_beginner",
+      "our_prose": "Harden the plants off over about a week, then plant them 12 to 18 inches apart into warm soil. A sheet of black plastic mulch warms the soil and helps.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "If plants are quite tall, they can be planted deeper as tomatoes form roots from their stems. Mulch Black plastic mulch warms the soil, conserves water and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "growth_stages[2].what_to_look_for_beginner",
+      "our_prose": "Strong young plants up to a foot tall, ready to go outside only when nights stay above 50°F and the soil is warm. Planting too early into cold soil stalls them.",
+      "run_normalized": "plants up to a foot tall",
+      "run_in_our_prose": "plants up to a foot tall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plants up to a foot tall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-peppers",
+      "anchor_paths": [
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Growing peppers A quick guide to peppers Start pepper from seeds indoors about eight weeks before planting outside. If you buy plants from a garden center, choose sturdy plants up to a foot tall. Transplant outdoors after nighttime low temperatures are above 50 degrees Fahrenheit.",
+      "source_context_available": true,
+      "tool_first_6gram": "plants up to a foot tall"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "pests[2].symptoms_seasoned",
+      "our_prose": "A tiny white oviposition scar dimples the fruit surface where the fly laid an egg, and the maggot tunnels into the seed core inside; infested peppers often color up (turn red) prematurely and begin to rot from within. It is mainly a Northeastern and Mid-Atlantic pest, worst near tree lines. A useful jalapeno note: damage is negligible on slender, thin-walled peppers such as jalapeno and other hot types, which the maggot largely bypasses in favor of thick-walled bells.",
+      "run_normalized": "turn red prematurely and begin to rot",
+      "run_in_our_prose": "turn red) prematurely and begin to rot",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "turn red prematurely and begin to rot"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu/insect-and-related-pests-of-vegetables/pests-of-pepper",
+      "anchor_paths": [
+        "pests[0].anchoring_urls.ncsu_ext",
+        "pests[1].anchoring_urls.ncsu_ext",
+        "pests[2].anchoring_urls.ncsu_ext",
+        "pests[3].anchoring_urls.ncsu_ext",
+        "pests[4].anchoring_urls.ncsu_ext",
+        "rotation.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "If peppers are picked when green, infested fruit may not be distinguishable from good fruit. Eventually, however, maggot-damaged peppers turn red prematurely and begin to rot. As they rot, peppers attract many kinds of flies, and other kinds of maggots may develop in the decaying fruit.",
+      "source_context_available": true,
+      "tool_first_6gram": "red prematurely and begin to rot"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "pests[4].prevention_beginner",
+      "our_prose": "Turn the soil at the end of the season to destroy the pupae, watch for droppings and missing leaves from midsummer, and welcome the helpful wasps that attack hornworms.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "pests[4].prevention_beginner",
+      "our_prose": "Turn the soil at the end of the season to destroy the pupae, watch for droppings and missing leaves from midsummer, and welcome the helpful wasps that attack hornworms.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "regions.se_gulf.resolved_by_zone.10.heat_pause.basis_seasoned",
+      "our_prose": "Like tomato, jalapeno drops its blossoms and stops setting fruit when daytime highs pass about 90°F and, especially, when nighttime lows stay above 75°F, which UMD notes will slow or stop pod production. Across the Gulf and coastal plain, July and August bring exactly that combination of heat and warm nights (compounded by humidity and disease pressure), so fruit set pauses through the peak of summer. Growers therefore run a spring crop that sets before the heat and a fall crop as it eases, leaving midsummer paused. This pause reflects reduced fruit set at high temperature, not frost or cold. The exact pause months are modeled from the regional warm-season pattern.",
+      "run_normalized": "will slow or stop pod production",
+      "run_in_our_prose": "will slow or stop pod production",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "will slow or stop pod production"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umd_ext",
+        "diseases[3].anchoring_urls.umd_ext",
+        "fertilizer.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "succession_policy.anchoring_urls.umd_ext",
+        "watering.anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Very hot temperatures, especially when evening temperatures are above 75 degrees F., will slow or stop pod production. Plant peppers where they will receive some late afternoon shade and cool down your plants with a water spray during hot, dry weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "will slow or stop pod production"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "regions.se_gulf.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Like tomato, jalapeno drops its blossoms and stops setting fruit when daytime highs pass about 90°F and, especially, when nighttime lows stay above 75°F, which UMD notes will slow or stop pod production. Across the Gulf and coastal plain, July and August bring exactly that combination of heat and warm nights (compounded by humidity and disease pressure), so fruit set pauses through the peak of summer. Growers therefore run a spring crop that sets before the heat and a fall crop as it eases, leaving midsummer paused. This pause reflects reduced fruit set at high temperature, not frost or cold. The exact pause months are modeled from the regional warm-season pattern.",
+      "run_normalized": "will slow or stop pod production",
+      "run_in_our_prose": "will slow or stop pod production",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "will slow or stop pod production"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umd_ext",
+        "diseases[3].anchoring_urls.umd_ext",
+        "fertilizer.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "succession_policy.anchoring_urls.umd_ext",
+        "watering.anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Very hot temperatures, especially when evening temperatures are above 75 degrees F., will slow or stop pod production. Plant peppers where they will receive some late afternoon shade and cool down your plants with a water spray during hot, dry weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "will slow or stop pod production"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "regions.se_gulf.resolved_by_zone.9.heat_pause.basis_seasoned",
+      "our_prose": "Like tomato, jalapeno drops its blossoms and stops setting fruit when daytime highs pass about 90°F and, especially, when nighttime lows stay above 75°F, which UMD notes will slow or stop pod production. Across the Gulf and coastal plain, July and August bring exactly that combination of heat and warm nights (compounded by humidity and disease pressure), so fruit set pauses through the peak of summer. Growers therefore run a spring crop that sets before the heat and a fall crop as it eases, leaving midsummer paused. This pause reflects reduced fruit set at high temperature, not frost or cold. The exact pause months are modeled from the regional warm-season pattern.",
+      "run_normalized": "will slow or stop pod production",
+      "run_in_our_prose": "will slow or stop pod production",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "will slow or stop pod production"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umd_ext",
+        "diseases[3].anchoring_urls.umd_ext",
+        "fertilizer.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "succession_policy.anchoring_urls.umd_ext",
+        "watering.anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Very hot temperatures, especially when evening temperatures are above 75 degrees F., will slow or stop pod production. Plant peppers where they will receive some late afternoon shade and cool down your plants with a water spray during hot, dry weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "will slow or stop pod production"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "regions.utah_dixie.resolved_by_zone.8.heat_pause.basis_seasoned",
+      "our_prose": "Jalapeno sets fruit well into the early summer heat but is more heat-sensitive than habanero or cayenne, dropping blossoms through the peak of the St. George summer, when USU records daytime highs past 100°F in July and August. Fruit set resumes as temperatures ease in September, giving a second flush off the same spring plants before the November 1 frost (USU Extension: How to Grow Tomatoes in Your Garden, extended to the wider Solanaceae group; Washington County Elevations and frost dates).",
+      "run_normalized": "how to grow tomatoes in your garden",
+      "run_in_our_prose": "How to Grow Tomatoes in Your Garden",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "how to grow tomatoes in your garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "How to Grow Tomatoes in Your Garden | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "how to grow tomatoes in your"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Move jalapeno to a different part of the garden each year, and do not return it, or its relatives tomato, eggplant, and potato, to the same spot for about three to four years. Diseases like bacterial spot and Phytophthora blight and pests like the pepper weevil build up where nightshades grow, and rotation is the main tool to keep them in check. Clean up old plants at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "Control insect and diseases throughout the year. Harvest tomatoes when the fruits are fully colored but still firm. At the end of the season, gather all mature green and slightly colored fruits and store at 55°F. There are more than 4,000 tomato varieties worldwide so select varieties based on use, fruit size, earliness, soluble solids, growth habit or disease resistance.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Move jalapeno to a different part of the garden each year, and do not return it, or its relatives tomato, eggplant, and potato, to the same spot for about three to four years. Diseases like bacterial spot and Phytophthora blight and pests like the pepper weevil build up where nightshades grow, and rotation is the main tool to keep them in check. Clean up old plants at the end of the season too.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "soil.preferred_description_seasoned",
+      "our_prose": "Jalapeno wants a deep, fertile, well-drained loam or sandy loam rich in organic matter, and like all peppers it grows slowly until the ground is truly warm. A sandy loam that warms quickly in spring suits it better than a heavy, slow-warming clay, since a pepper set into cold soil simply sits there until it heats up. Work 2 to 3 inches of compost into the bed before planting, and on heavy or cool soils many growers lay black plastic or fabric mulch to raise soil temperature and set transplants into warmer ground. Steady, even moisture in a freely draining soil is the target: soggy roots stall the plant and invite the Phytophthora blight peppers are prone to, while a mild, deliberate water pull late in the season can actually sharpen a hot pepper's heat.",
+      "run_normalized": "well drained loam or sandy loam",
+      "run_in_our_prose": "well-drained loam or sandy loam",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "well drained loam or sandy loam"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "nmsu_ext"
+      ],
+      "source_names": [
+        "New Mexico State University Cooperative Extension"
+      ],
+      "source_publishers": [
+        "NMSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://pubs.nmsu.edu/_h/H240/index.html",
+      "anchor_paths": [
+        "harvest_ready_anchoring_urls.nmsu_ext",
+        "regions.warm_arid.plantings[0].anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.nmsu_ext",
+        "regions.warm_arid.resolved_by_zone.8.heat_pause.anchoring_urls.nmsu_ext"
+      ],
+      "source_context": "Jalapeños are an example of a pepper with pungency. Soil Preparation Chile peppers prefer a well-drained loam or sandy loam soil with a pH of 7.0–8.5. Adding ample quantities of compost will improve almost any soil, and will increase the water-holding capacity and nutrient retention of sandy soils and aeration and drainage of clay soils.",
+      "source_context_available": true,
+      "tool_first_6gram": "well drained loam or sandy loam"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "sources_summary.primary[16].name",
+      "our_prose": "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_normalized": "sp 103 vh021 florida vegetable gardening guide",
+      "run_in_our_prose": "SP 103/VH021 Florida Vegetable Gardening Guide",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "sp 103 vh021 florida vegetable gardening guide"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "SP 103/VH021: Florida Vegetable Gardening Guide Skip to main content IFAS Extension University of Florida Search Link Login MENU MENU Home About Experts Topics Units Collections Publications Search Florida Vegetable Gardening Guide Sydney Park-Brown , Tiare Saracino , Larry Williams , and",
+      "source_context_available": true,
+      "tool_first_6gram": "103 vh021 florida vegetable gardening guide"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "sources_summary.primary[2].name",
+      "our_prose": "University of Maryland Extension (Growing Peppers in a Home Garden)",
+      "run_normalized": "growing peppers in a home garden",
+      "run_in_our_prose": "Growing Peppers in a Home Garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growing peppers in a home garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/growing-peppers-home-garden",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.umd_ext",
+        "diseases[3].anchoring_urls.umd_ext",
+        "fertilizer.anchoring_urls.umd_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umd_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umd_ext",
+        "storage.anchoring_urls.umd_ext",
+        "succession_policy.anchoring_urls.umd_ext",
+        "watering.anchoring_urls.umd_ext",
+        "yield_expectations.anchoring_urls.umd_ext"
+      ],
+      "source_context": "Growing Peppers in a Home Garden | University of Maryland Extension Skip to main content",
+      "source_context_available": true,
+      "tool_first_6gram": "growing peppers in a home garden"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "sources_summary.primary[3].name",
+      "our_prose": "Iowa State University Extension (Growing Peppers in the Home Garden)",
+      "run_normalized": "growing peppers in the home garden",
+      "run_in_our_prose": "Growing Peppers in the Home Garden",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "growing peppers in the home garden"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "iastate_ext"
+      ],
+      "source_names": [
+        "Iowa State University Extension"
+      ],
+      "source_publishers": [
+        "Iowa State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://yardandgarden.extension.iastate.edu/how-to/growing-peppers-home-garden",
+      "anchor_paths": [
+        "regions.northern_tier.plantings[0].anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.iastate_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.iastate_ext"
+      ],
+      "source_context": "Growing Peppers in the Home Garden | Yard and Garden Skip to main content Menu",
+      "source_context_available": true,
+      "tool_first_6gram": "growing peppers in the home garden"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "sources_summary.primary[4].name",
+      "our_prose": "NC State Extension (Insect and Related Pests of Vegetables: Pests of Pepper)",
+      "run_normalized": "insect and related pests of vegetables",
+      "run_in_our_prose": "Insect and Related Pests of Vegetables",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "insect and related pests of vegetables"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "ncsu_ext"
+      ],
+      "source_names": [
+        "NC State Extension"
+      ],
+      "source_publishers": [
+        "NC State"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://content.ces.ncsu.edu",
+      "anchor_paths": [
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.ncsu_ext",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.ncsu_ext"
+      ],
+      "source_context": "to Food Bank Resource Guide for North Carolina Cooperative Extension Guide to Mycotoxins Commonly Found in Animal Feeds How to Manage a Successful Bee Hotel Insect and Related Pests of Shrubs Insect and Related Pests of Vegetables Introduction to the Postharvest Engineering for Fresh Fruits and Vegetables: A Practical Guide for Growers, Packers, Shippers, and Sellers North Carolina Extension Gardener Handbook North Carolina Organic Commodities Production Guide",
+      "source_context_available": true,
+      "tool_first_6gram": "insect and related pests of vegetables"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "sources_summary.primary[9].name",
+      "our_prose": "University of California Agriculture and Natural Resources",
+      "run_normalized": "university of california agriculture and natural resources",
+      "run_in_our_prose": "University of California Agriculture and Natural Resources",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "university of california agriculture and natural resources"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://mg.ucanr.edu",
+      "anchor_paths": [
+        "regions.ca_desert.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.second_planting.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.second_planting.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.second_planting.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "More than just a gardening program, UC Master Gardener is an education and outreach statewide program of the University of California, Agriculture and Natural Resources (UC ANR) . UC Master Gardeners are in their communities, helping build more sustainable landscapes.",
+      "source_context_available": true,
+      "tool_first_6gram": "of california agriculture and natural resources"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Start jalapeno seeds indoors about 8 weeks before you plan to plant out, keeping them warm (80 to 90°F on a heat mat) to sprout well, since pepper seeds are slow to come up in cool soil. Grow stocky plants up to a foot tall in bright light, then plant them outside only once nights stay above 50°F and the soil is warm, around when you would plant tomatoes. Black plastic mulch warms the soil and helps.",
+      "run_normalized": "plants up to a foot tall",
+      "run_in_our_prose": "plants up to a foot tall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "plants up to a foot tall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-peppers",
+      "anchor_paths": [
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Growing peppers A quick guide to peppers Start pepper from seeds indoors about eight weeks before planting outside. If you buy plants from a garden center, choose sturdy plants up to a foot tall. Transplant outdoors after nighttime low temperatures are above 50 degrees Fahrenheit.",
+      "source_context_available": true,
+      "tool_first_6gram": "plants up to a foot tall"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "Start jalapeno seeds indoors about 8 weeks before you plan to plant out, keeping them warm (80 to 90°F on a heat mat) to sprout well, since pepper seeds are slow to come up in cool soil. Grow stocky plants up to a foot tall in bright light, then plant them outside only once nights stay above 50°F and the soil is warm, around when you would plant tomatoes. Black plastic mulch warms the soil and helps.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "Black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "If plants are quite tall, they can be planted deeper as tomatoes form roots from their stems. Mulch Black plastic mulch warms the soil, conserves water and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "tips_by_stage.transplanting[0].text_beginner",
+      "our_prose": "Do not rush jalapeno outside. Planting into cold soil stalls it. Wait until nights stay above 50°F and the soil is warm, around tomato time. Black plastic mulch warms the soil and helps.",
+      "run_normalized": "black plastic mulch warms the soil",
+      "run_in_our_prose": "Black plastic mulch warms the soil",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "black plastic mulch warms the soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_tomato"
+      ],
+      "source_names": [
+        "USU Extension, How to Grow Tomatoes in Your Garden"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/tomatoes-in-the-garden",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_tomato",
+        "regions.utah_dixie.resolved_by_zone.8.heat_pause.anchoring_urls.usu_ext_tomato"
+      ],
+      "source_context": "If plants are quite tall, they can be planted deeper as tomatoes form roots from their stems. Mulch Black plastic mulch warms the soil, conserves water and helps control weeds. Plastic mulches allow earlier planting and maturity, especially with transplants.",
+      "source_context_available": true,
+      "tool_first_6gram": "black plastic mulch warms the soil"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "watering.amount_seasoned",
+      "our_prose": "Around 1 inch per week is the working range, leaning higher during flowering and fruit set, wetting the soil to a depth of at least 6 to 8 inches so the roots follow the moisture down. Even, deep watering sets and fills well-shaped pods; letting the soil swing from dry to saturated stresses the plant, drops blossoms, and invites blossom-end rot and root disease.",
+      "run_normalized": "the soil to a depth of",
+      "run_in_our_prose": "the soil to a depth of",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the soil to a depth of"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "regions.fl_peninsula.plantings[0].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "However, lime may be applied as late as one or two weeks before planting. Make sure the lime is thoroughly mixed into the soil to a depth of 6-8 inches, then water the soil to promote the chemical reaction. If your soil pH is naturally above 7.0 (alkaline), where limestone, marl, or shells are present, there is no practical way of permanently lowering soil pH.",
+      "source_context_available": true,
+      "tool_first_6gram": "the soil to a depth of"
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "watering.frequency_seasoned",
+      "our_prose": "Aim for about 1 inch of water per week from rain plus irrigation, more in heat or on sandy soil, delivered deeply and less often rather than in light daily sprinkles. Peppers want steady, even moisture, and the water-critical stretch is flowering through fruit set: swings from dry to soaked drop blossoms and cause blossom-end rot on the developing pods. Container plants dry out far faster and need closer attention. A note peculiar to hot peppers: a mild, deliberate water pull as the fruit ripens tends to raise the heat, so a hot pepper grown slightly lean and dry late in the season is often the hottest.",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

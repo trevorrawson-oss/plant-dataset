@@ -1,0 +1,665 @@
+{
+  "crop_slug": "garlic",
+  "record_count": 14,
+  "records": [
+    {
+      "crop_slug": "garlic",
+      "field_path": "container_notes.notes_beginner",
+      "our_prose": "Garlic grows fine in a deep pot because its roots are not huge. Use a container at least 8 inches deep with drainage holes, plant cloves 4 to 6 inches apart in fall, and plan to leave it out all winter. Keep it watered in spring and stop a couple of weeks before harvest.",
+      "run_normalized": "plant cloves 4 to 6 inches apart",
+      "run_in_our_prose": "plant cloves 4 to 6 inches apart",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "plant cloves 4 to 6 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/garlic",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.bulb_forming[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Use the largest cloves for planting because larger cloves will yield larger bulbs. Plant cloves 4 to 6 inches apart and 1 to 2 inches deep, with the root side down and the pointy tip up. Fertilize once after planting and again when the weather warms up in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "cloves 4 to 6 inches apart"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "container_notes.notes_seasoned",
+      "our_prose": "Garlic is workable in containers given depth and drainage. Use a pot at least 8 inches deep, 3 gallons or more, set cloves 4 to 6 inches apart in fall, and treat it as a year-long resident: it overwinters in the pot and matures the next summer. Containers dry fast in spring, so water steadily through bulbing, then cut water two weeks before harvest. The main risk is winter waterlogging in a pot that drains poorly.",
+      "run_normalized": "cloves 4 to 6 inches apart",
+      "run_in_our_prose": "cloves 4 to 6 inches apart",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cloves 4 to 6 inches apart"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/site/uc-master-gardeners-santa-clara-county/garlic",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_desert.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.uc_mg",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.11.anchoring_urls.uc_mg",
+        "regions.ca_south_coast.resolved_by_zone.9.anchoring_urls.uc_mg",
+        "tips_by_stage.bulb_forming[0].anchoring_urls.uc_mg",
+        "watering.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Use the largest cloves for planting because larger cloves will yield larger bulbs. Plant cloves 4 to 6 inches apart and 1 to 2 inches deep, with the root side down and the pointy tip up. Fertilize once after planting and again when the weather warms up in the spring.",
+      "source_context_available": true,
+      "tool_first_6gram": "cloves 4 to 6 inches apart"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "description_seasoned",
+      "our_prose": "Garlic (Allium sativum) is a hardy allium grown from individual cloves planted in fall. It roots before winter, overwinters in the ground (mulched in cold regions), then resumes growth in spring and matures the following summer, an eight to nine month crop that spans the year. Winter cold is essential: cloves must be vernalized to divide and bulb properly, which is why fall planting beats spring. Hardneck types suit cold winters, produce edible scapes, and store a few months; softneck types suit mild climates, braid well, and store the longest.",
+      "run_normalized": "garlic allium sativum is a hardy",
+      "run_in_our_prose": "Garlic (Allium sativum) is a hardy",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "garlic allium sativum is a hardy"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C854/garlic-production-for-the-gardener/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[3].anchoring_urls.uga_ext",
+        "failure_diagnostics[0].anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.established[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext"
+      ],
+      "source_context": "UGA Extension contacts: Bob Westerfield Related Content Production and Management of Garlic, Elephant Garlic and Leek Garlic ( Allium sativum ) is a hardy perennial member of the onion family. Garlic is probably native to Central Asia but has long been naturalized in southern Europe and throughout the world.",
+      "source_context_available": true,
+      "tool_first_6gram": "garlic allium sativum is a hardy"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "diseases[2].cause_seasoned",
+      "our_prose": "Botrytis species that overwinter on debris and infected bulbs and as sclerotia in soil; excess late nitrogen, rain or irrigation late in the season, and inadequate curing or storage all worsen it.",
+      "run_normalized": "infected bulbs and as sclerotia in soil",
+      "run_in_our_prose": "infected bulbs and as sclerotia in soil",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "infected bulbs and as sclerotia in soil"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umass_ext"
+      ],
+      "source_names": [
+        "UMass Extension Vegetable Program"
+      ],
+      "source_publishers": [
+        "University of Massachusetts Amherst"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/alliums-post-harvest-storage-diseases",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umass_ext",
+        "diseases[2].anchoring_urls.umass_ext",
+        "rotation.anchoring_urls.umass_ext"
+      ],
+      "source_context": "Botrytis neck rot is caused by Botrytis allii , a fungus that overwinters on plant debris in soil, on infected bulbs, and as sclerotia in soil. The pathogen can also be seed-borne. Botryitis neck rot is caused by a different pathogen from Botrytis leaf spot.",
+      "source_context_available": true,
+      "tool_first_6gram": "bulbs and as sclerotia in soil"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "fertilizer.amount_seasoned",
+      "our_prose": "About half a pound of ammonium sulfate (21-0-0) per 100 square feet as shoots resume in spring, with a lighter follow-up two to three weeks later; finish before early May.",
+      "run_normalized": "21 0 0 per 100 square feet",
+      "run_in_our_prose": "21-0-0) per 100 square feet",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "21 0 0 per 100 square feet"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext",
+        "usu_ext_garlic"
+      ],
+      "source_names": [
+        "Utah State University Extension",
+        "USU Extension, Garlic in the Garden"
+      ],
+      "source_publishers": [
+        "USU Extension",
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1",
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/garlic-in-the-garden",
+      "anchor_paths": [
+        "diseases[2].anchoring_urls.usu_ext",
+        "failure_diagnostics[1].anchoring_urls.usu_ext",
+        "fertilizer.anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.usu_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.usu_ext",
+        "regions.utah_dixie.plantings[0].harvest_end[0].anchoring_urls.usu_ext_garlic",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_garlic",
+        "regions.utah_dixie.plantings[0].plant_out[0].anchoring_urls.usu_ext_garlic",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_garlic",
+        "regions.warm_arid.plantings[0].harvest_end[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].harvest_start[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.plantings[0].plant_out[0].anchoring_urls.usu_ext",
+        "regions.warm_arid.resolved_by_zone.8.anchoring_urls.usu_ext",
+        "rotation.anchoring_urls.usu_ext",
+        "soil.anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "tips_by_stage.curing[0].anchoring_urls.usu_ext",
+        "tips_by_stage.planting[0].anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Fertilization In addition to the fertilizer used at planting, garlic needs additional nitrogen fertilizer to produce optimum yields. Side-dress with ½ pounds of nitrogen fertilizer (21-0-0) per 100 square feet in midApril and ¼ pounds in late May. Mulches Organic mulches help conserve water, supply extra nutrients and reduce weeding.",
+      "source_context_available": true,
+      "tool_first_6gram": "0 0 per 100 square feet"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "fertilizer.notes_seasoned",
+      "our_prose": "Garlic has a moderate to high nitrogen demand and builds its bulb on the leaves it grows in spring, so feeding is front-loaded onto the spring vegetative push. Mix a complete fertilizer or compost into the bed at fall planting, then side-dress nitrogen as the shoots resume growth in early spring and again two to three weeks later. The exact cutoff tracks your season rather than a fixed calendar date. In cold-winter regions with a later crop, the last feedings run later: Utah State suggests about half a pound of 21-0-0 per 100 square feet in mid-April with a quarter pound in late May, and the University of Minnesota feeds through spring growth before bulbing. In the warm Southeast, where the crop runs weeks earlier, UGA advises no nitrogen after the first week of April. The unifying rule is to stop nitrogen several weeks before bulbing begins, since late feeding delays bulbing, thickens necks, and worsens storage.",
+      "run_normalized": "garlic has a moderate to high",
+      "run_in_our_prose": "Garlic has a moderate to high",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "garlic has a moderate to high"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-garlic",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_forming[0].anchoring_urls.umn_ext",
+        "tips_by_stage.early_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Before planting, till your soils to provide a loose growing bed for bulb growth. Garlic has a moderate to high demand for nitrogen, so you can incorporate urea before planting. Top dress as soon as shoots emerge, then again two to three weeks afterward.",
+      "source_context_available": true,
+      "tool_first_6gram": "garlic has a moderate to high"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "growth_stages[3].user_action_beginner",
+      "our_prose": "If you grow hardneck garlic, cut off the curly scape when it appears so the plant puts its energy into the bulb, and cook with the scape. Keep watering evenly while the bulb sizes up, and do not add more fertilizer now.",
+      "run_normalized": "and do not add more fertilizer",
+      "run_in_our_prose": "and do not add more fertilizer",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "and do not add more fertilizer"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "The directions for mixing a starter solution appear on all soluble fertilizer products. Follow the directions carefully, and do not add more fertilizer to the solution than is recommended, as this can burn the transplant. Planting Arrangements Arranging vegetable plants within your garden area depends mainly on the amount of space and time you have available and the types of crops you choose to grow.",
+      "source_context_available": true,
+      "tool_first_6gram": "and do not add more fertilizer"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "growth_stages[4].what_to_look_for_beginner",
+      "our_prose": "The lower leaves turn brown and die back while the top leaves are still green. Garlic is ready when about a third to a half of the leaves have browned. Dig one bulb to check: if the cloves fill out the skins, it is time.",
+      "run_normalized": "the lower leaves turn brown and",
+      "run_in_our_prose": "The lower leaves turn brown and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the lower leaves turn brown and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-garlic",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_forming[0].anchoring_urls.umn_ext",
+        "tips_by_stage.early_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Depending on variety and climate zone, harvest garlic between late June and late July. Begin harvesting when the lower leaves turn brown and when half or slightly more than half of the upper leaves remain green. Alternatively, you can pull a few bulbs and cut them in half.",
+      "source_context_available": true,
+      "tool_first_6gram": "the lower leaves turn brown and"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "growth_stages[4].what_to_look_for_seasoned",
+      "our_prose": "The lower leaves brown and die back while several upper leaves stay green; the cue is when about a third to half of the leaves have turned, with roughly the lower half browning and five or so green leaves remaining (each green leaf is an intact wrapper). Pull a test bulb: if the cloves fill the skins and the wrappers are intact, it is ready.",
+      "run_normalized": "if the cloves fill the skins",
+      "run_in_our_prose": "if the cloves fill the skins",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "if the cloves fill the skins"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-garlic",
+      "anchor_paths": [
+        "container_notes.anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[1].anchoring_urls.umn_ext",
+        "failure_diagnostics[2].anchoring_urls.umn_ext",
+        "fertilizer.anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[1].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.ca_interior.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.5.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.umn_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "tips_by_stage.bulb_forming[0].anchoring_urls.umn_ext",
+        "tips_by_stage.early_growth[0].anchoring_urls.umn_ext",
+        "tips_by_stage.established[0].anchoring_urls.umn_ext",
+        "tips_by_stage.harvest[0].anchoring_urls.umn_ext",
+        "tips_by_stage.planting[0].anchoring_urls.umn_ext",
+        "varieties.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Begin harvesting when the lower leaves turn brown and when half or slightly more than half of the upper leaves remain green. Alternatively, you can pull a few bulbs and cut them in half. If the cloves fill the skins, then the bulbs are ready to harvest. Harvest the garlic plants with shoots and bulbs attached.",
+      "source_context_available": true,
+      "tool_first_6gram": "if the cloves fill the skins"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "pests[2].cause_seasoned",
+      "our_prose": "The stem and bulb nematode (Ditylenchus dipsaci), the garlic bloat nematode, a microscopic worm that feeds inside the leaves, stems, and bulbs. It rides in on infected planting cloves and survives dried in soil and debris for at least four years, favored by cool, moist conditions.",
+      "run_normalized": "nematode ditylenchus dipsaci the garlic bloat nematode",
+      "run_in_our_prose": "nematode (Ditylenchus dipsaci), the garlic bloat nematode",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "nematode ditylenchus dipsaci the garlic bloat nematode"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umass_ext"
+      ],
+      "source_names": [
+        "UMass Extension Vegetable Program"
+      ],
+      "source_publishers": [
+        "University of Massachusetts Amherst"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ag.umass.edu/vegetable/fact-sheets/garlic-bloat-nematode",
+      "anchor_paths": [
+        "pests[2].anchoring_urls.umass_ext"
+      ],
+      "source_context": "Image Image Image Garlic Bloat Nematode Ditylenchus dipsaci , the garlic bloat nematode, attacks onions, chives, and leeks as well as garlic. It is also found on several other bulb producing plant species, as well as hydrangea, iris, parsley, celery, potatoes, peas, carrots, hairy nightshade, and Canada thistle.",
+      "source_context_available": true,
+      "tool_first_6gram": "ditylenchus dipsaci the garlic bloat nematode"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "pests[2].cause_seasoned",
+      "our_prose": "The stem and bulb nematode (Ditylenchus dipsaci), the garlic bloat nematode, a microscopic worm that feeds inside the leaves, stems, and bulbs. It rides in on infected planting cloves and survives dried in soil and debris for at least four years, favored by cool, moist conditions.",
+      "run_normalized": "the stem and bulb nematode ditylenchus dipsaci",
+      "run_in_our_prose": "The stem and bulb nematode (Ditylenchus dipsaci",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "the stem and bulb nematode ditylenchus dipsaci"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/disease-management/stem-and-bulb-nematode",
+      "anchor_paths": [
+        "pests[2].anchoring_urls.umn_ext"
+      ],
+      "source_context": "Bulb damage can progress in storage. Plants affected by stem and bulb nematode The stem and bulb nematode, Ditylenchus dipsaci , can infect over 450 genera of plants. Most nematodes primarily infect a limited number of plants.",
+      "source_context_available": true,
+      "tool_first_6gram": "stem and bulb nematode ditylenchus dipsaci"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "pests[2].cause_seasoned",
+      "our_prose": "The stem and bulb nematode (Ditylenchus dipsaci), the garlic bloat nematode, a microscopic worm that feeds inside the leaves, stems, and bulbs. It rides in on infected planting cloves and survives dried in soil and debris for at least four years, favored by cool, moist conditions.",
+      "run_normalized": "stem and bulb nematode ditylenchus dipsaci",
+      "run_in_our_prose": "stem and bulb nematode (Ditylenchus dipsaci",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "stem and bulb nematode ditylenchus dipsaci"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_ipm"
+      ],
+      "source_names": [
+        "UC Statewide IPM Program (UC ANR)"
+      ],
+      "source_publishers": [
+        "UC Statewide Integrated Pest Management Program"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ipm.ucanr.edu/agriculture/onion-and-garlic/basal-rot/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.uc_ipm"
+      ],
+      "source_context": "This disease progresses most rapidly in warmer soil temperatures, ranging from 77° to 82°F, but can occur when soil temperatures range from 59° to 90°F. Co-occurrence of stem and bulb nematode (Ditylenchus dipsaci) and Fusarium basal rot may result in greater yield reductions and rot incidence.",
+      "source_context_available": true,
+      "tool_first_6gram": "stem and bulb nematode ditylenchus dipsaci"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "regions.low_desert_az.region_notes_beginner",
+      "our_prose": "In the Arizona low desert, plant garlic in fall (September to November) and harvest in late spring or early summer, before the extreme heat. Garlic needs a few weeks of cool weather after planting to form a good bulb, so grow softneck types, and chilling the cloves in the fridge first helps in warm winters.",
+      "run_normalized": "weeks of cool weather after planting",
+      "run_in_our_prose": "weeks of cool weather after planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "weeks of cool weather after planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uga_ext"
+      ],
+      "source_names": [
+        "University of Georgia Cooperative Extension"
+      ],
+      "source_publishers": [
+        "UGA Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://fieldreport.caes.uga.edu/publications/C854/garlic-production-for-the-gardener/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.uga_ext",
+        "diseases[3].anchoring_urls.uga_ext",
+        "failure_diagnostics[0].anchoring_urls.uga_ext",
+        "fertilizer.anchoring_urls.uga_ext",
+        "ph.anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.uga_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.uga_ext",
+        "soil.anchoring_urls.uga_ext",
+        "tips_by_stage.established[0].anchoring_urls.uga_ext",
+        "varieties.anchoring_urls.uga_ext"
+      ],
+      "source_context": "Plant Development Matured garlic cloves planted in the fall go through a dormant period. Garlic cloves require a period of 6–8 weeks of cool weather after planting (below 40 °F) to undergo vernalization (subjected to sufficient cold in order to induce bulbing) by low winter temperatures.",
+      "source_context_available": true,
+      "tool_first_6gram": "weeks of cool weather after planting"
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "watering.schedule_by_stage[2].rate",
+      "our_prose": "about 1 inch of water per week including rain",
+      "run_normalized": "1 inch of water per week",
+      "run_in_our_prose": "1 inch of water per week",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "1 inch of water per week"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.plantings[0].harvest_start[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "If the soil becomes too dry, their growth may be seriously limited. Most vegetable crops require 1 inch of water per week for optimum pro- duction. If your area does not receive this amount of rainfall each week during the growing season, you will need to irrigate your garden using overhead sprinklers, soaker hoses, drip tape or hand watering.",
+      "source_context_available": true,
+      "tool_first_6gram": "1 inch of water per week"
+    }
+  ]
+}

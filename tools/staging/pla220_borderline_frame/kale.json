@@ -1,0 +1,681 @@
+{
+  "crop_slug": "kale",
+  "record_count": 18,
+  "records": [
+    {
+      "crop_slug": "kale",
+      "field_path": "pests[3].cause_beginner",
+      "our_prose": "A small fly lays eggs at the base of the plant, and the maggots that hatch burrow down and eat the roots. The fly is most active in cool spring weather.",
+      "run_normalized": "the base of the plant and",
+      "run_in_our_prose": "the base of the plant, and",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "the base of the plant and"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.plantings[0].harvest_end[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].harvest_start[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.plantings[0].plant_out[0].anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Fertilizer applied at time of transplanting or as side dressings should be placed 3 or 4 inches from the base of the plant and to a depth of 3 or 4 inches. Roughly, two level table­ spoons of fertilizer applied in a band Ii to 12 inches long supply a rather heavy application.",
+      "source_context_available": true,
+      "tool_first_6gram": "the base of the plant and"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "pests[4].symptoms_seasoned",
+      "our_prose": "Shield-shaped bugs up to about 3/8 inch, brightly black-and-yellow or black-and-red, feeding with piercing-sucking mouthparts that leave white stipples; affected leaves brown and look tattered, and heavy feeding wilts and deforms plants. A warm-region pest that prefers kale, mustard, and collards over other cole crops.",
+      "run_normalized": "black and yellow or black and red",
+      "run_in_our_prose": "black-and-yellow or black-and-red",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "black and yellow or black and red"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umd_ext"
+      ],
+      "source_names": [
+        "University of Maryland Extension"
+      ],
+      "source_publishers": [
+        "UMD Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umd.edu/resource/harlequin-bug-vegetables",
+      "anchor_paths": [
+        "pests[4].anchoring_urls.umd_ext"
+      ],
+      "source_context": "Five instars (growth stages between two periods of molting in the development of a nymph). Adults : Shield-shaped body, up to 3/8\" long, brightly colored, typically black and yellow or black and red— color patterns vary with the season.",
+      "source_context_available": true,
+      "tool_first_6gram": "and yellow or black and red"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.ca_interior.region_notes_seasoned",
+      "our_prose": "In the interior valleys kale is a cool-season crop grown from fall through spring. Sow or set transplants in late summer (around August into September) for a fall and winter harvest, and again in February for a spring crop before the heat. Harvest the outer leaves cut-and-come-again; the leaves are sweetest through the cool, sometimes frosty winter. The hot Central Valley summer is left out of the calendar, since heat makes the leaves bitter and pushes plants to bolt. Keep moisture even and give afternoon shade at the warm shoulders.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.ca_interior.resolved_by_zone.8.zone_notes",
+      "our_prose": "Plant in late summer for a fall-through-spring crop and again in late winter; harvest is sweetest through the cool, sometimes frosty winter. Skip the hot summer.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.ca_interior.resolved_by_zone.9.zone_notes",
+      "our_prose": "Plant in late summer for a fall-through-spring crop and again in late winter; harvest is sweetest through the cool, sometimes frosty winter. Skip the hot summer.",
+      "run_normalized": "in late summer for a fall",
+      "run_in_our_prose": "in late summer for a fall",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late summer for a fall"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "diseases[3].anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "pests[1].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Space plants 6 to 18 inches apart on the row. Direct seeding works well when planting in late summer for a fall harvest, when the soil is much warmer. It is critical to keep the soil moist during seedling establishment.",
+      "source_context_available": true,
+      "tool_first_6gram": "in late summer for a fall"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.fl_peninsula.region_notes_seasoned",
+      "our_prose": "On the Florida peninsula kale is a cool-season crop. UF/IFAS lists the planting window from about September into February in central Florida and September into January in the far south, with harvest peaking December through February. Pick the outer leaves cut-and-come-again; the cool, frost-free-to-light-frost winter gives the best quality, and a rare frost only sweetens the leaves. The hot, humid summer, roughly May into September, is the off-season, when only tropical crops thrive. Watch for caterpillars and aphids in the warm shoulders.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.10.zone_notes",
+      "our_prose": "At low elevation kale is a cool-season crop, roughly planted September through winter and harvested into spring; at higher, cooler elevations it can be grown year-round.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.11.zone_notes",
+      "our_prose": "At low elevation kale is a cool-season crop, roughly planted September through winter and harvested into spring; at higher, cooler elevations it can be grown year-round.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.12.zone_notes",
+      "our_prose": "At low elevation kale is a cool-season crop, roughly planted September through winter and harvested into spring; at higher, cooler elevations it can be grown year-round.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.hawaii_tropical.resolved_by_zone.13.zone_notes",
+      "our_prose": "At low elevation kale is a cool-season crop, roughly planted September through winter and harvested into spring; at higher, cooler elevations it can be grown year-round.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "regions.low_desert_az.region_notes_seasoned",
+      "our_prose": "In the Arizona low desert kale is a cool-season crop planted as the extreme summer heat eases. University of Arizona guidance puts the planting window from about September through December, with October ideal once the weather cools, and the harvest from December into April. Pick the outer leaves cut-and-come-again through the mild, sometimes frosty winter. The long, intensely hot summer, roughly May through September, is the off-season. Keep moisture steady and shade young plants set out in early fall.",
+      "run_normalized": "kale is a cool season crop",
+      "run_in_our_prose": "kale is a cool-season crop",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "kale is a cool season crop"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "aces_ext"
+      ],
+      "source_names": [
+        "Alabama Cooperative Extension System"
+      ],
+      "source_publishers": [
+        "Auburn University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.aces.edu/blog/topics/lawn-garden/grow-more-kale/",
+      "anchor_paths": [
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.10.heat_pause.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.aces_ext",
+        "regions.se_gulf.resolved_by_zone.9.heat_pause.anchoring_urls.aces_ext"
+      ],
+      "source_context": "Harvest: Harvest at 50 to 70 days. Harvest time varies depending on the variety. Other: Kale is a cool-season crop that tastes best before the heat of summer or after fall frost. Visit www.aces.edu/go/growmore for more information.",
+      "source_context_available": true,
+      "tool_first_6gram": "kale is a cool season crop"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Do not plant kale or other cabbage-family crops in the same spot year after year. Waiting at least 3 years between them, and longer if you have had clubroot, helps avoid soil diseases.",
+      "run_normalized": "in the same spot year after year",
+      "run_in_our_prose": "in the same spot year after year",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "in the same spot year after year"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/sites/default/files/publications/P3616_web.pdf",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.msstate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.msstate_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.msstate_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.msstate_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "For example, yellow squash planted from midsummer to fall often suffers from squash bugs, though squash vine borers are typically less of a concern later in the season. Southern peas grown in the same spot year after year are prone to cowpea curculios without timely insecticide treatments. Similarly, fall tomatoes commonly face stink MISSISSIPPI VEGETABLE GARDENER’S GUIDE 33 bugs and tomato fruitworms.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the same spot year after"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "rotation.note_beginner",
+      "our_prose": "Do not plant kale or other cabbage-family crops in the same spot year after year. Waiting at least 3 years between them, and longer if you have had clubroot, helps avoid soil diseases.",
+      "run_normalized": "cabbage family crops in the same",
+      "run_in_our_prose": "cabbage-family crops in the same",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "cabbage family crops in the same"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uc_mg"
+      ],
+      "source_names": [
+        "UC Master Gardener Program"
+      ],
+      "source_publishers": [
+        "University of California"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://ucanr.edu/sites/scmg/Vegetable_of_the_Month/Kale",
+      "anchor_paths": [
+        "regions.ca_north_coast.plantings[0].harvest_end[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].harvest_start[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.plantings[0].plant_out[0].anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.10.anchoring_urls.uc_mg",
+        "regions.ca_north_coast.resolved_by_zone.9.anchoring_urls.uc_mg"
+      ],
+      "source_context": "Plant ornamental types for winter color in any garden setting. Growing Collard Greens Rotate planting beds to avoid planting cabbage family crops in the same space year after year. Choose tall or short varieties. ‘Champion’ is short-stemmed with waxy blue-green leaves bred for extended harvest.",
+      "source_context_available": true,
+      "tool_first_6gram": "cabbage family crops in the same"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "start_method.notes_beginner",
+      "our_prose": "You can sow kale seeds right in the garden or start them indoors. For spring, start seeds about a month before planting out, and set plants in the garden a few weeks before your last frost, or just sow seeds once the soil can be worked. For a fall crop, sow in mid to late summer so it is ready before winter. If you grow your own transplants, let them get used to the outdoors over a week before planting.",
+      "run_normalized": "in the garden or start them",
+      "run_in_our_prose": "in the garden or start them",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the garden or start them"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "msstate_ext"
+      ],
+      "source_names": [
+        "Mississippi State University Extension Vegetable Planting Dates"
+      ],
+      "source_publishers": [
+        "Mississippi State Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.msstate.edu/sites/default/files/publications/P3616_web.pdf",
+      "anchor_paths": [
+        "regions.se_gulf.plantings[0].harvest_end[0].anchoring_urls.msstate_ext",
+        "regions.se_gulf.plantings[0].harvest_start[0].anchoring_urls.msstate_ext",
+        "regions.se_gulf.plantings[0].plant_out[0].anchoring_urls.msstate_ext",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.msstate_ext",
+        "regions.se_gulf.resolved_by_zone.8.heat_pause.anchoring_urls.msstate_ext"
+      ],
+      "source_context": "Plant in well-drained soil; propagate by seeds or division Lavender Perennial (short-lived) Ornamental; essential oils; culinary (flowers in French cuisine) Needs well-drained soil; struggles in humidity; plant in full sun; may decline after 2–3 years Most herbs transplant readily from starts into the garden, but there are exceptions. Cilantro, borage, and dill are best planted by seed. Scatter seeds directly in the garden or start them in containers. The flavors and scents of herbs come from the oils stored in their tissues.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the garden or start them"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Kale can be direct sown or transplanted. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 4 to 5 weeks before the last frost, or direct sow as soon as the soil is workable; kale tolerates frost. For a fall and overwintering crop, sow in midsummer (often direct in the garden) so plants size up before cold, then harvest through fall and, in milder zones, winter. Harden transplants off over 7 to 10 days.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Direct seeding Sow seeds in the spring for an early summer crop as soon as the soil is workable. Direct seed again about three months before the average frost date for a fall crop.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "start_method.notes_seasoned",
+      "our_prose": "Kale can be direct sown or transplanted. For a spring crop, start seeds indoors about 4 to 5 weeks before set-out and transplant around 4 to 5 weeks before the last frost, or direct sow as soon as the soil is workable; kale tolerates frost. For a fall and overwintering crop, sow in midsummer (often direct in the garden) so plants size up before cold, then harvest through fall and, in milder zones, winter. Harden transplants off over 7 to 10 days.",
+      "run_normalized": "5 weeks before the last frost",
+      "run_in_our_prose": "5 weeks before the last frost",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "5 weeks before the last frost"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/kale-in-the-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Thin seedlings or transplant kale 12-18 inches apart in the row with rows 2 feet apart. Plant out 4-5 weeks before the last frost. Kale tastes best when plants grow rapidly and mature before the heat of summer or after fall frosts occur.",
+      "source_context_available": true,
+      "tool_first_6gram": "5 weeks before the last frost"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "tips_by_stage.germination[1].text_seasoned",
+      "our_prose": "For a spring crop start indoors about 4 to 5 weeks before set-out, or direct sow as soon as the soil is workable; kale tolerates cool soil.",
+      "run_normalized": "as soon as the soil is workable",
+      "run_in_our_prose": "as soon as the soil is workable",
+      "run_words": 7,
+      "all_maximal_runs": [
+        "as soon as the soil is workable"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-collards-and-kale",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.umn_ext",
+        "diseases[1].anchoring_urls.umn_ext",
+        "diseases[2].anchoring_urls.umn_ext",
+        "diseases[3].anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "pests[2].anchoring_urls.umn_ext",
+        "pests[3].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_end[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].harvest_start[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.plantings[0].plant_out[0].anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Direct seeding Sow seeds in the spring for an early summer crop as soon as the soil is workable. Direct seed again about three months before the average frost date for a fall crop.",
+      "source_context_available": true,
+      "tool_first_6gram": "as soon as the soil is"
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "yield_expectations.per_plant_seasoned",
+      "our_prose": "A single kale plant yields a steady run of outer leaves over a long season rather than one harvest, roughly 0.5 to 1 pound or more per plant depending on variety, season length, and how often you crop it. Extension yields run about 5 to 10 pounds per 10 feet of row.",
+      "run_normalized": "pounds per 10 feet of row",
+      "run_in_our_prose": "pounds per 10 feet of row",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "pounds per 10 feet of row"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext"
+      ],
+      "source_names": [
+        "Utah State University Extension"
+      ],
+      "source_publishers": [
+        "USU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/kale-in-the-garden",
+      "anchor_paths": [
+        "fertilizer.anchoring_urls.usu_ext",
+        "pests[0].anchoring_urls.usu_ext",
+        "pests[1].anchoring_urls.usu_ext",
+        "pests[2].anchoring_urls.usu_ext",
+        "storage.anchoring_urls.usu_ext",
+        "varieties.anchoring_urls.usu_ext",
+        "watering.anchoring_urls.usu_ext",
+        "yield_expectations.anchoring_urls.usu_ext"
+      ],
+      "source_context": "Kale Plant Productivity Plant 5-10 feet of kale per person for fresh use and an additional 15-20 for processing. Expect 3-5 pounds per 10 feet of row. Kale Nutrition Facts Kale has no fat, is high in vitamin A and vitamin C, is a good source of calcium and iron and is considered one of the most nutritious of vegetables.",
+      "source_context_available": true,
+      "tool_first_6gram": "pounds per 10 feet of row"
+    }
+  ]
+}

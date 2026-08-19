@@ -1,0 +1,332 @@
+{
+  "crop_slug": "swiss-chard",
+  "record_count": 8,
+  "records": [
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "bolting.prevention_seasoned",
+      "our_prose": "Chard is a biennial and, unlike spinach and lettuce, does not bolt from summer heat or long days; it flowers only after it has lived through a winter, so a spring planting crops cleanly into fall without running to seed. The two ways to trigger premature bolting in the first year are sowing too early into cold soil, which can vernalize the young plants, and an unusually cold spring snap; avoid both by sowing once the soil has warmed past about 50°F. Overwintered plants will bolt as spring warms, so crop them before the stalk elongates and start a fresh sowing.",
+      "run_normalized": "has lived through a winter so",
+      "run_in_our_prose": "has lived through a winter, so",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "has lived through a winter so"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Many gardeners develop a liking for Swiss chard and learn to cook with it simply because it is a reliable crop. Chard is a biennial. It will not flower until the plant has lived through a winter, so there is no danger of it bolting in summer heat. Chard does best in cooler weather.",
+      "source_context_available": true,
+      "tool_first_6gram": "has lived through a winter so"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "description_seasoned",
+      "our_prose": "Swiss chard (Beta vulgaris) is a leafy member of the goosefoot family grown for its large, tender leaves and its broad, often vividly colored edible stalks. It is the same species as the beet, selected for leaf and stem rather than root, and it shares the beet's pests, diseases, and multigerm seedball. Its defining trait is an unusual tolerance of both heat and cold: unlike lettuce and spinach, chard does not bolt in summer heat or long days (as a biennial it flowers only after a winter), so a single spring planting crops straight through the summer and well into fall, and in mild zones it overwinters for a harvest that spans much of the year. Harvested cut-and-come-again, the outer leaves picked while the crown keeps producing, one chard plant yields for months. The colorful-stemmed types such as Bright Lights are as ornamental as they are useful, and the stalks cook as a vegetable in their own right.",
+      "run_normalized": "it is the same species as",
+      "run_in_our_prose": "It is the same species as",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "it is the same species as",
+        "swiss chard beta vulgaris is a"
+      ],
+      "maximal_run_count": 2,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Stephanie Turner, ©2020, Clemson Extension Other popular greens include beets, collards, spinach, and turnips. Swiss Chard ( Beta vulgaris ) is a colorful and easy-to-grow leafy green. It is the same species as beet but without the swollen root and shares that earthy flavor. Depending upon the cultivar chosen, the ruffled leaves have stalks of white, pink, gold, orange, or red.",
+      "source_context_available": true,
+      "tool_first_6gram": "it is the same species as"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "diseases[3].organic_treatment_beginner",
+      "our_prose": "There is no spray that cures an infected plant, so pull and destroy badly affected plants at the end of the season. The fix is for next time: rotate to a different bed, add lots of compost, and keep plants well watered to help them cope.",
+      "run_normalized": "at the end of the season",
+      "run_in_our_prose": "at the end of the season",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "at the end of the season"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "wsu_ext"
+      ],
+      "source_names": [
+        "Washington State University Extension"
+      ],
+      "source_publishers": [
+        "WSU Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://s3.wp.wsu.edu/uploads/sites/2073/2014/09/Home-Vegetable-Gardening-in-Washington.pdf",
+      "anchor_paths": [
+        "regions.pnw.plantings[0].harvest_end[0].anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.8.anchoring_urls.wsu_ext",
+        "regions.pnw.resolved_by_zone.9.anchoring_urls.wsu_ext"
+      ],
+      "source_context": "Do not till bark or wood chip mulches into the soil close to plants, as they will tie up nitrogen as they decompose. Synthetic mulches should be removed and discarded at the end of the season or when they are no longer useful as mulches. Organic mulch materials can be turned into the soil with a spade or rototiller or placed in your compost pile.",
+      "source_context_available": true,
+      "tool_first_6gram": "at the end of the season"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "diseases[3].symptoms_beginner",
+      "our_prose": "The plants grow slowly and wilt in the heat of the day even when the soil is moist, and the leaves yellow and stay stunted. If you dig up a plant, the roots have small knots or swellings (galls) on them. It is worst in warm, sandy soils, which is why it matters most in places like Florida.",
+      "run_normalized": "in the heat of the day",
+      "run_in_our_prose": "in the heat of the day",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in the heat of the day"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "umn_ext"
+      ],
+      "source_names": [
+        "University of Minnesota Extension"
+      ],
+      "source_publishers": [
+        "UMN Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.umn.edu/vegetables/growing-spinach-and-swiss-chard",
+      "anchor_paths": [
+        "companions.anchoring_urls.umn_ext",
+        "companions.bad_seasoned[0].anchoring_urls.umn_ext",
+        "harvest_ready_anchoring_urls.umn_ext",
+        "pests[0].anchoring_urls.umn_ext",
+        "ph.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.3.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.4.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.6.anchoring_urls.umn_ext",
+        "regions.northern_tier.resolved_by_zone.7.anchoring_urls.umn_ext",
+        "rotation.anchoring_urls.umn_ext",
+        "soil.anchoring_urls.umn_ext",
+        "storage.anchoring_urls.umn_ext",
+        "thinning.anchoring_urls.umn_ext",
+        "watering.anchoring_urls.umn_ext",
+        "yield_expectations.anchoring_urls.umn_ext"
+      ],
+      "source_context": "Both spinach and chard will only last for a few days in the refrigerator. Harvesting when plants are cool, rather than in the heat of the day, running leaves under cold water and immediately refrigerating them, will make it possible for spinach to last a week.",
+      "source_context_available": true,
+      "tool_first_6gram": "in the heat of the day"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "ph.note_seasoned",
+      "our_prose": "Aim for a soil pH of about 6.0 to 7.0, slightly acidic to neutral. The University of Minnesota notes chard tolerates soil somewhat more acidic than spinach, as low as about pH 6.0, and Clemson cites a 6.0 to 6.5 range; like the beet it is the same species as, chard also handles mildly alkaline soil (to about 7.5) better than most leafy greens. Acidity well below 6.0 is the main risk, where germination and micronutrient uptake suffer. A standard soil test removes the guesswork before sowing.",
+      "run_normalized": "it is the same species as",
+      "run_in_our_prose": "it is the same species as",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "it is the same species as"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "clemson_hgic"
+      ],
+      "source_names": [
+        "Clemson Cooperative Extension Home & Garden Information Center"
+      ],
+      "source_publishers": [
+        "Clemson University"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://hgic.clemson.edu/factsheet/arugula-kale-mesclun-mustard-and-swiss-chard/",
+      "anchor_paths": [
+        "diseases[0].anchoring_urls.clemson_hgic",
+        "diseases[1].anchoring_urls.clemson_hgic",
+        "diseases[2].anchoring_urls.clemson_hgic",
+        "fertilizer.anchoring_urls.clemson_hgic",
+        "harvest_ready_anchoring_urls.clemson_hgic",
+        "ph.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.7.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.mid_atlantic.resolved_by_zone.8.heat_pause.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.10.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.8.second_planting.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.anchoring_urls.clemson_hgic",
+        "regions.se_gulf.resolved_by_zone.9.second_planting.anchoring_urls.clemson_hgic",
+        "rotation.anchoring_urls.clemson_hgic",
+        "soil.anchoring_urls.clemson_hgic",
+        "varieties.anchoring_urls.clemson_hgic"
+      ],
+      "source_context": "Stephanie Turner, ©2020, Clemson Extension Other popular greens include beets, collards, spinach, and turnips. Swiss Chard ( Beta vulgaris ) is a colorful and easy-to-grow leafy green. It is the same species as beet but without the swollen root and shares that earthy flavor. Depending upon the cultivar chosen, the ruffled leaves have stalks of white, pink, gold, orange, or red.",
+      "source_context_available": true,
+      "tool_first_6gram": "it is the same species as"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "regions.ca_south_coast.region_notes_beginner",
+      "our_prose": "On California's south coast, grow chard nearly year-round. Plant in fall and again in late winter or early spring and keep picking the outer leaves. It handles the warm, dry summers well if you keep it watered, and the winters are mild.",
+      "run_normalized": "in late winter or early spring",
+      "run_in_our_prose": "in late winter or early spring",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "in late winter or early spring"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uf_ifas_vh021"
+      ],
+      "source_names": [
+        "UF/IFAS SP 103/VH021 Florida Vegetable Gardening Guide"
+      ],
+      "source_publishers": [
+        "UF/IFAS Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://edis.ifas.ufl.edu/publication/VH021",
+      "anchor_paths": [
+        "diseases[3].anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.10.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.anchoring_urls.uf_ifas_vh021",
+        "regions.fl_peninsula.resolved_by_zone.11.heat_pause.anchoring_urls.uf_ifas_vh021",
+        "varieties.anchoring_urls.uf_ifas_vh021"
+      ],
+      "source_context": "However, be aware that vegetables planted in late summer or early fall (August or September) will be susceptible to insects and diseases that thrive in hot weather. Likewise, cold-tender vegetables planted in late winter or early spring may be damaged by frosts or freezes if not protected with covers (see \"Extending the Gardening Season\" above for more information on covers).",
+      "source_context_available": true,
+      "tool_first_6gram": "in late winter or early spring"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "regions.utah_dixie.region_notes_seasoned",
+      "our_prose": "St. George's Dixie belt (Mojave-edge high desert) grows Swiss chard on a single direct-sown spring stand, per Utah State University Extension's suggested vegetable planting dates for Utah, which gives St. George a Group B (Semi-Hardy) date around March 1. Leaves are ready to cut in about 55 days, from late April into early June. USU Extension's Washington County frost and elevation notes put St. George over 100°F in June, July, and August, and chard leaves toughen and turn bitter in that heat, so the stand is cut back and let go before it, and USU's suggested planting dates document no St. George fall chard window, so the bed rests through the hottest months rather than carrying a second stand.",
+      "run_normalized": "suggested vegetable planting dates for utah",
+      "run_in_our_prose": "suggested vegetable planting dates for Utah",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "suggested vegetable planting dates for utah"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "usu_ext_veg_dates"
+      ],
+      "source_names": [
+        "USU Extension, Suggested Vegetable Planting Dates for Utah"
+      ],
+      "source_publishers": [
+        "Utah State University Extension"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://extension.usu.edu/yardandgarden/research/suggested-vegetable-planting-dates-for-utah",
+      "anchor_paths": [
+        "regions.utah_dixie.plantings[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].direct_sow[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.plantings[0].harvest_start[0].anchoring_urls.usu_ext_veg_dates",
+        "regions.utah_dixie.resolved_by_zone.8.anchoring_urls.usu_ext_veg_dates"
+      ],
+      "source_context": "Suggested Vegetable Planting Dates for Utah | USU",
+      "source_context_available": true,
+      "tool_first_6gram": "suggested vegetable planting dates for utah"
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "tips_by_stage.germination[1].text_beginner",
+      "our_prose": "Soak the seeds for a few hours before planting to help them sprout faster, and do not plant too early into cold soil, which can make plants flower too soon.",
+      "run_normalized": "for a few hours before planting",
+      "run_in_our_prose": "for a few hours before planting",
+      "run_words": 6,
+      "all_maximal_runs": [
+        "for a few hours before planting"
+      ],
+      "maximal_run_count": 1,
+      "source_ids": [
+        "uhawaii_ctahr_b91"
+      ],
+      "source_names": [
+        "UH Manoa CTAHR Bulletin B-91 (home-garden vegetables for Hawaii)"
+      ],
+      "source_publishers": [
+        "University of Hawaii CTAHR"
+      ],
+      "source_tiers": [
+        "T1"
+      ],
+      "source_url": "https://www.ctahr.hawaii.edu/oc/freepubs/pdf/B-91.pdf",
+      "anchor_paths": [
+        "regions.hawaii_tropical.resolved_by_zone.10.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.10.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.11.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.12.heat_pause.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.anchoring_urls.uhawaii_ctahr_b91",
+        "regions.hawaii_tropical.resolved_by_zone.13.heat_pause.anchoring_urls.uhawaii_ctahr_b91"
+      ],
+      "source_context": "Only a few plants are necessary for the average family. If seeds are soaked in water for a few hours before planting, germination will be speeded. Occasional side dressings of a complete fertilizer or ammonium sulfate should keep the plants in a thrifty condition and prolong the harvest period.",
+      "source_context_available": true,
+      "tool_first_6gram": "for a few hours before planting"
+    }
+  ]
+}
