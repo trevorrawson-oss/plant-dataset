@@ -46,6 +46,19 @@ CANONICAL = os.path.join(REPO, 'crops_data_final.json')
 
 BASE_SHA = '76f92a20faae0b8e5336ef8e7e1d9c852b9c734c93ae84fc6cccd65f49bcf3ce'
 
+# The canonical this promote PRODUCES from BASE_SHA (committed as 4dde2c8, registered in
+# promote_fixture.COMMIT_FOR). Added 2026-08-19 so the guard suite can compare pre against
+# THIS PROMOTE'S OWN OUTPUT instead of against live canonical.
+#
+# Why that mattered: the suite's blast-radius guard compared the replayed pre-state against
+# whatever canonical happened to be on disk, so it asserted "nothing in the dataset moved
+# except this finding" about the WHOLE HISTORY SINCE, not about this promote. PLA-253's
+# `control_methods.bt` edit reddened it the moment it landed, and every future promote would
+# have reddened it again. A guard that fails on every unrelated change gets ignored, and an
+# ignored guard is not a guard -- it is a permanently red line in the suite that trains people
+# to skip the run.
+POST_SHA = '394bb8bdf63c989eeff7241ba41d1c37c829201733ce199f4dffc88490d8f660'
+
 NODE_PATH = ('se_gulf', '8')
 SOURCE_ID = 'clemson_hgic'
 BARE_URL = 'https://hgic.clemson.edu'

@@ -1,9 +1,24 @@
 #!/usr/bin/env python3
 """Guards for the hunt #28 declaration promote (PLA-161).
 
-REPLAY-PINNED: base `76f92a20` -> post state, so every guard compares the PRE state reconstructed
-from git against live canonical rather than against a snapshot of itself. Never skip on a SHA
-mismatch -- rebuild the pre-state ([[promote-guards-went-vacuous-on-sha-skip]]).
+REPLAY-PINNED AT BOTH ENDS: base `76f92a20` -> post `394bb8bd`, BOTH reconstructed from git and
+hash-verified. Never skip on a SHA mismatch -- rebuild ([[promote-guards-went-vacuous-on-sha-skip]]).
+
+CORRECTED 2026-08-19. `post` used to be LIVE canonical, which made every pre-vs-post guard
+assert something it was never meant to: not "this promote changed only the one finding" but
+"nothing in the dataset has changed since, anywhere, ever". PLA-253's `control_methods.bt`
+edit reddened `test_nothing_else_in_the_dataset_moved` the moment it landed, and every future
+promote would have reddened it again -- the guard was structurally unable to survive its own
+repo moving forward. A guard that fails on every unrelated change gets ignored, and an ignored
+guard is not a guard.
+
+So the two questions are now asked separately, against the state that can actually answer each:
+
+  pre  vs POST (rebuilt)  -- what did THIS promote do? Blast radius, byte-identity, roster.
+                             Stable forever, because both ends are pinned SHAs.
+  vs LIVE canonical       -- is the promote's effect STILL there and still correct? Narrow
+                             enough (lemon's one finding, one node) to stay green across
+                             unrelated promotes, so it keeps real regression value.
 
 The blast-radius guard iterates the PRE state AND asserts the key sets match, because a guard that
 walks pre only cannot see an ADDITION ([[blast-radius-guards-iterate-pre-only]]).
@@ -33,6 +48,15 @@ def pre():
 
 @pytest.fixture(scope='module')
 def post():
+    """The state THIS promote produced, rebuilt from git and hash-verified -- NOT live
+    canonical. See the module docstring for why that distinction is the whole point."""
+    return json.loads(promote_fixture.pre_state(P.POST_SHA))
+
+
+@pytest.fixture(scope='module')
+def live():
+    """Canonical as it stands today. Only for guards asking whether the promote's effect
+    SURVIVES -- never for blast radius, which is a property of the transform, not of today."""
     with open(CANONICAL, encoding='utf-8') as fh:
         return json.load(fh)
 
@@ -47,25 +71,25 @@ def findings(data, slug='lemon'):
 
 # --- the declaration itself --------------------------------------------------------------------
 
-def test_the_declaration_is_filed(post):
-    ids = [f['id'] for f in findings(post)]
+def test_the_declaration_is_filed(live):
+    ids = [f['id'] for f in findings(live)]
     assert P.FINDING['id'] in ids
     assert ids.count(P.FINDING['id']) == 1, 'filed twice'
 
 
-def test_it_mirrors_the_warm_arid_declarations_key_shape_exactly(post):
+def test_it_mirrors_the_warm_arid_declarations_key_shape_exactly(live):
     """Ruling: mirror the exact keys of the existing warm_arid clemson_hgic declaration."""
-    filed = next(f for f in findings(post) if f['id'] == P.FINDING['id'])
-    mirror = next(f for f in findings(post) if f['id'] == MIRROR)
+    filed = next(f for f in findings(live) if f['id'] == P.FINDING['id'])
+    mirror = next(f for f in findings(live) if f['id'] == MIRROR)
     assert list(filed.keys()) == list(mirror.keys()), (
         f'key shape diverged: {list(filed.keys())} vs {list(mirror.keys())}')
     assert (filed['severity'], filed['status'], filed['blocks_launch']) == (
         mirror['severity'], mirror['status'], mirror['blocks_launch'])
 
 
-def test_the_summary_carries_the_document_read_not_a_conclusion(post):
+def test_the_summary_carries_the_document_read_not_a_conclusion(live):
     """Every load-bearing fact from the read must survive in the record."""
-    s = next(f for f in findings(post) if f['id'] == P.FINDING['id'])['summary']
+    s = next(f for f in findings(live) if f['id'] == P.FINDING['id'])['summary']
     for fragment in ('15F for satsuma', 'taxonomy list', 'no lemon damage temperature',
                      'no zone-level judgement for the Southeast Gulf', 'uc_anr_8100',
                      'lemon_cold_threshold_was_miscredited_now_uc8100',
@@ -73,9 +97,9 @@ def test_the_summary_carries_the_document_read_not_a_conclusion(post):
         assert fragment in s, f'missing from the declaration: {fragment!r}'
 
 
-def test_the_summary_uses_commas_not_dashes(post):
+def test_the_summary_uses_commas_not_dashes(live):
     """Ruling: commas rather than dashes, so it reads consistently beside its neighbours."""
-    s = next(f for f in findings(post) if f['id'] == P.FINDING['id'])['summary']
+    s = next(f for f in findings(live) if f['id'] == P.FINDING['id'])['summary']
     assert '--' not in s, 'double-hyphen dash in the declaration'
     for dash in ('—', '–'):
         assert dash not in s, f'{dash!r} in the declaration'
@@ -83,10 +107,10 @@ def test_the_summary_uses_commas_not_dashes(post):
 
 # --- what it must NOT have done -----------------------------------------------------------------
 
-def test_the_citation_is_still_bare(post):
+def test_the_citation_is_still_bare(live):
     """CASE 2: the decision is declared, the URL is NOT repointed."""
     region, zone = P.NODE_PATH
-    node = crop(post)['regions'][region]['resolved_by_zone'][zone]
+    node = crop(live)['regions'][region]['resolved_by_zone'][zone]
     assert node['anchoring_urls'][P.SOURCE_ID]['url'] == P.BARE_URL
     assert P.SOURCE_ID in node['sources'], 'the citation must stay recorded, not be dropped'
 
@@ -120,13 +144,42 @@ def test_no_other_crop_was_touched(pre, post):
         assert pre_by[slug] == post_by[slug], f'{slug} changed'
 
 
-def test_canonical_is_still_compact(post):
+def test_canonical_is_still_compact(live):
+    """Against LIVE, and re-serialized from LIVE: this is a standing property of the file on
+    disk, not of the state this promote produced."""
     raw = open(CANONICAL, 'rb').read()
     assert b'\n' not in raw, 'canonical gained a newline; it must stay COMPACT'
-    assert raw == json.dumps(post, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    assert raw == json.dumps(live, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
 
 
 # --- non-vacuity ---------------------------------------------------------------------------------
+
+def test_the_post_fixture_is_pinned_to_this_promotes_output(post):
+    """THE GUARD ON THE FIX ITSELF. If `post` is ever repointed back at live canonical, this
+    reddens as soon as the next promote lands -- which is exactly when the old shape started
+    lying. Pinning the fixture by hash means the correction cannot be quietly undone by an
+    edit that looks harmless."""
+    raw = json.dumps(post, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    assert hashlib.sha256(raw).hexdigest() == P.POST_SHA, (
+        'the post fixture is not this promote\'s output; blast radius would be measured '
+        'against the wrong state')
+
+
+def test_the_blast_radius_guard_survives_later_promotes(pre, post, live):
+    """The DURABILITY property, asserted rather than hoped for. Live canonical is ahead of
+    POST_SHA by however many promotes have landed since; the pre-vs-post comparison must be
+    unaffected by that. When this suite was written live WAS post, so the distinction was
+    invisible and the defect shipped."""
+    live_raw = json.dumps(live, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    if hashlib.sha256(live_raw).hexdigest() == P.POST_SHA:
+        pytest.skip('canonical has not moved past this promote yet; nothing to prove')
+    assert live != post, 'fixture wiring bug: `live` and `post` resolved to the same state'
+    # ...and the blast-radius comparison is still exact, despite live having moved on.
+    a, b = copy.deepcopy(pre), copy.deepcopy(post)
+    fb = crop(b)['verification_status']['open_findings']
+    fb.remove(next(f for f in fb if f['id'] == P.FINDING['id']))
+    assert a == b
+
 
 def test_MUTATION_the_blast_radius_guard_catches_a_stray_edit(pre, post):
     """A guard that cannot fail is not a guard. Perturb the post state and demand a difference."""
