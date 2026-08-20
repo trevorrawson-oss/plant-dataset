@@ -725,3 +725,46 @@ When these 40 are read and classified under §9.1:
 5. **n = 10 in stratum C is a direction, not an estimate.** It answers "is C visibly worse than
    A" and does not carry a confidence interval worth quoting.
 
+---
+
+## OUTCOME, APPENDED 2026-08-20 -- these 40 were read
+
+*Everything above this line is the draw and the contract it was drawn under, left
+byte-for-byte as written BEFORE any pair was read. This section is appended, not merged,
+per the repo's append-only record convention. The contract above is in future tense
+because it was written in future tense; that is the evidence it preceded the reading.*
+
+**The 40 were read on 2026-08-20 against §9.1.** The verdicts are not in this file. They
+live in the classification standard itself, now vendored into the repo at:
+
+> `docs/vendored/language_and_copy_architecture_v1_3_amendment.md` -- **§9.5**
+
+Read that section before quoting any number from this batch. Headline, per the contract's
+rule 1 (two rates, never one):
+
+| stratum | result | note |
+| -- | -- | -- |
+| **A -- rendered** | **13 cosmetic of 45 = 29%** (95% interval roughly 17%-44%) | combines round 2's 30 with round 1's 15, re-ruled against the standard now that it exists |
+| **C -- unrendered** | **1 cosmetic of 10 = 10%** | a direction, not an estimate, and it generalizes to region prose (7 of the 10) |
+
+**~4,200 of the 14,541 rendered pairs are cosmetic.** Adding contradictory and inverted
+pairs, **36% of rendered pairs carry a defect of some kind.**
+
+**The hypothesis behind stratum C was WRONG.** Prose that renders nowhere is not
+worse-written than prose that renders. The concern that unrendered fields received less
+care is not supported by this draw.
+
+**The standard discriminates.** The borderline band fell from **5 of 15 in round 1 to 1 of
+30 in round 2** -- round 1 had no rule and its calls were judgment, round 2 had one and
+they were not. That collapse is the main evidence §9.1 is usable by someone other than its
+author, and it is a finding about the standard rather than about the data, exactly as the
+contract's rule 2 anticipated.
+
+### One correction to the method above, from §9.4 B2
+
+The exclusion table's **93 str-typed `soil.*_texture` pairs** were dropped as part of the
+45-pair texture exclusion. Per §9.5.1 that was **"correct at the time and wrong in
+retrospect"**: they are ordinary prose register pairs, not controlled-vocabulary values,
+and they belong in any future draw. The 45 list-typed texture pairs remain correctly
+excluded. Nothing about round 2's reported rates changes -- the pairs were never drawn --
+but a future draw must not reuse this exclusion table verbatim.

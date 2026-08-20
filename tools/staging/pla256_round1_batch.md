@@ -784,3 +784,36 @@ still unreconciled, and the 3 citrus crops are where it became visible.
 **Common thread.** All of B1 and B3 sit in render status A -- on a screen today. B2 is entirely
 render status C. So the schema question and the render question do not line up, and a ruling that
 keys on one will get the other wrong.
+
+---
+
+## OUTCOME, APPENDED 2026-08-20 -- these 15 were re-ruled
+
+*Appended, not merged. Everything above is left byte-for-byte as written, including its
+judgment-call verdicts, because those calls are the evidence for the finding below.*
+
+Round 1 was read BEFORE a written standard existed, so its calls were judgment: **4 clearly
+cosmetic, 5 borderline, 6 clearly substantive** -- 27% strict, 60% inclusive, which is why
+round 1's rate was reported as a range and not a number.
+
+That standard was then written out of this batch as **§9.1**, and these same 15 pairs were
+**re-ruled against it** and folded into the combined stratum A figure of **13 cosmetic of
+45 = 29%**. The standard and the verdicts are vendored at:
+
+> `docs/vendored/language_and_copy_architecture_v1_3_amendment.md` -- **§9.1** the test,
+> **§9.5** the rate.
+
+**What this batch's 5-wide borderline band turned out to mean.** Round 2 applied the
+written rule to 30 fresh pairs and its borderline band was **1 of 30**. The collapse from
+5-of-15 to 1-of-30 is the main evidence that §9.1 is usable by someone other than its
+author -- so this file's wide band is not noise to be embarrassed about, it is the
+before-measurement in a before/after pair.
+
+**The 0.4% similarity figure is retired** and should not be cited again. A similarity
+metric scores a thesaurus pass as substantively different because every word changed; a
+reader scores it as identical because nothing was learned. The metric was measuring the
+wrong property competently.
+
+**Sections B1-B3 above remain open schema questions**, not prose questions, and were not
+resolved by either round. §9.4 rules on their shape; the array-level register split
+flagged in B3 is still unreconciled.
