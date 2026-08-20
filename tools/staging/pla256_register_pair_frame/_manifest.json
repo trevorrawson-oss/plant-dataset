@@ -1,5 +1,6 @@
 {
-  "canonical_sha_note": "run shasum -a 256 crops_data_final.json to confirm",
+  "canonical_sha": "be8a6d1e10c014906ad66aff03fc307525f6f22d9045ff28cb850ffecfc686f4",
+  "canonical_sha_meaning": "sha256 of crops_data_final.json AT EXPORT TIME. If this does not match `shasum -a 256 crops_data_final.json` today, the frame is STALE -- it describes an older canonical, and every count below is that canonical's.",
   "record_count": 20168,
   "crops_with_pairs": 122,
   "distinct_field_families": 166,

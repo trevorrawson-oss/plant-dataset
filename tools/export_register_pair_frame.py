@@ -53,8 +53,22 @@ Classification is PATH-KEYED, not name-keyed -- the repo's own standing lesson.
 `note` is Bucket A at `ph.note` and Bucket C at `harvest_stop_rule.note`. A
 name-keyed table would call both the same and be wrong about one of them.
 
+PROVENANCE IS STAMPED, NOT SUGGESTED
+------------------------------------
+`_manifest.json` carries `canonical_sha`: the sha256 of crops_data_final.json as it was
+when this frame was cut. It used to carry an instruction to go run shasum instead, which
+hashes whatever canonical is on disk at READING time and compares it to nothing -- a check
+a stale frame passes every time. PLA-258 is the precedent: a faithful projection of a
+stale canonical is byte-indistinguishable from a current one, and only provenance written
+at export time separates them.
+
+The manifest holds no timestamp, deliberately. The export is deterministic, so re-running
+it against unchanged canonical reproduces every byte, and `git status` after a re-run is
+itself the staleness test.
+
 READ-ONLY. Opens canonical, writes only under tools/staging/.
 """
+import hashlib
 import json
 import os
 import re
@@ -65,6 +79,27 @@ CANON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "crops_da
 OUTDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "staging", "pla256_register_pair_frame")
 
 BEG, SEA = "_beginner", "_seasoned"
+
+
+def canonical_sha256():
+    """The SHA of the canonical bytes this export was actually cut from.
+
+    STAMPED, NOT SUGGESTED. The manifest used to carry the string "run shasum -a 256
+    crops_data_final.json to confirm", which asks a future reader to hash whatever
+    canonical happens to be on disk when they read it -- a different file. That check
+    passes for a stale frame and always has, because it never compares anything to the
+    export. PLA-258 exists because a faithful projection of a STALE canonical looks
+    identical to a current one; only provenance recorded AT EXPORT TIME tells them apart.
+
+    Deliberately no timestamp anywhere in the manifest: the export stays deterministic, so
+    re-running it against unchanged canonical reproduces every byte and a diff against the
+    committed frame is a real staleness check.
+    """
+    h = hashlib.sha256()
+    with open(CANON, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
 
 # --- render-status table -----------------------------------------------------
 # Keyed on (generalized container path, leaf key). Value: (bucket, evidence).
@@ -337,7 +372,12 @@ def main():
     by_type = Counter(r["value_type"] for r in records)
 
     manifest = {
-        "canonical_sha_note": "run shasum -a 256 crops_data_final.json to confirm",
+        "canonical_sha": canonical_sha256(),
+        "canonical_sha_meaning": (
+            "sha256 of crops_data_final.json AT EXPORT TIME. If this does not match "
+            "`shasum -a 256 crops_data_final.json` today, the frame is STALE -- it "
+            "describes an older canonical, and every count below is that canonical's."
+        ),
         "record_count": len(records),
         "crops_with_pairs": len(by_crop),
         "distinct_field_families": len(by_family),
