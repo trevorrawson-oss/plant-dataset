@@ -1,0 +1,5074 @@
+{
+  "canonical_sha_note": "run shasum -a 256 crops_data_final.json to confirm",
+  "record_count": 20168,
+  "crops_with_pairs": 122,
+  "distinct_field_families": 166,
+  "excluded_one_side_empty": 683,
+  "by_render_status": {
+    "A": 14595,
+    "B": 1583,
+    "C": 3990
+  },
+  "by_value_type": {
+    "str": 20101,
+    "list": 50,
+    "bool": 17
+  },
+  "by_field_family": [
+    {
+      "field_family": "regions.<R> :: region_notes",
+      "pairs": 1808,
+      "render_status": "C"
+    },
+    {
+      "field_family": "tips_by_stage.<stage>[] :: text",
+      "pairs": 1147,
+      "render_status": "A"
+    },
+    {
+      "field_family": "regions.<R>.resolved_by_zone.<Z> :: suitability_note",
+      "pairs": 789,
+      "render_status": "A"
+    },
+    {
+      "field_family": "growth_stages[] :: user_action",
+      "pairs": 728,
+      "render_status": "A"
+    },
+    {
+      "field_family": "growth_stages[] :: what_to_look_for",
+      "pairs": 728,
+      "render_status": "A"
+    },
+    {
+      "field_family": "growth_stages[] :: log_prompt",
+      "pairs": 728,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering.schedule_by_stage[] :: note",
+      "pairs": 591,
+      "render_status": "A"
+    },
+    {
+      "field_family": "notifications[] :: title",
+      "pairs": 505,
+      "render_status": "A"
+    },
+    {
+      "field_family": "notifications[] :: body",
+      "pairs": 505,
+      "render_status": "A"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: what_happened",
+      "pairs": 493,
+      "render_status": "A"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: next_season_tip",
+      "pairs": 493,
+      "render_status": "A"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: label",
+      "pairs": 420,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pests[] :: cause",
+      "pairs": 407,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pests[] :: symptoms",
+      "pairs": 392,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pests[] :: prevention",
+      "pairs": 392,
+      "render_status": "A"
+    },
+    {
+      "field_family": "regions.<R>.resolved_by_zone.<Z> :: grown_as_note",
+      "pairs": 390,
+      "render_status": "A"
+    },
+    {
+      "field_family": "diseases[] :: cause",
+      "pairs": 383,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pests[] :: organic_treatment",
+      "pairs": 374,
+      "render_status": "A"
+    },
+    {
+      "field_family": "diseases[] :: symptoms",
+      "pairs": 366,
+      "render_status": "A"
+    },
+    {
+      "field_family": "diseases[] :: prevention",
+      "pairs": 366,
+      "render_status": "A"
+    },
+    {
+      "field_family": "diseases[] :: organic_treatment",
+      "pairs": 350,
+      "render_status": "A"
+    },
+    {
+      "field_family": "weather_triggers[] :: title",
+      "pairs": 348,
+      "render_status": "B"
+    },
+    {
+      "field_family": "weather_triggers[] :: body",
+      "pairs": 348,
+      "render_status": "B"
+    },
+    {
+      "field_family": "companions.good_beginner_seasoned[] :: why",
+      "pairs": 312,
+      "render_status": "A"
+    },
+    {
+      "field_family": "regions.<R> :: chill_basis",
+      "pairs": 214,
+      "render_status": "C"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: cause",
+      "pairs": 196,
+      "render_status": "B"
+    },
+    {
+      "field_family": "regions.<R>.resolved_by_zone.<Z> :: synthesis_note",
+      "pairs": 195,
+      "render_status": "C"
+    },
+    {
+      "field_family": "regions.<R>.resolved_by_zone.<Z> :: type_note",
+      "pairs": 156,
+      "render_status": "C"
+    },
+    {
+      "field_family": "companions.bad_beginner_seasoned[] :: why",
+      "pairs": 129,
+      "render_status": "A"
+    },
+    {
+      "field_family": "growth_stages[] :: timing",
+      "pairs": 126,
+      "render_status": "B"
+    },
+    {
+      "field_family": "ph :: note",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "fertilizer :: notes",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "companions :: note",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering :: frequency",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering :: amount",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering :: method",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering :: signs_overwater",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering :: signs_underwater",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "watering :: method_note",
+      "pairs": 121,
+      "render_status": "B"
+    },
+    {
+      "field_family": "watering :: critical_periods",
+      "pairs": 121,
+      "render_status": "B"
+    },
+    {
+      "field_family": "start_method :: notes",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "container_notes :: notes",
+      "pairs": 121,
+      "render_status": "C"
+    },
+    {
+      "field_family": "varieties :: note",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "rotation :: note",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "storage :: room_temp",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "storage :: fridge",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "storage :: freezer",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "storage :: notes",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "(crop root) :: description",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "(crop root) :: harvest_ready",
+      "pairs": 121,
+      "render_status": "A"
+    },
+    {
+      "field_family": "start_method :: hardening_off",
+      "pairs": 120,
+      "render_status": "A"
+    },
+    {
+      "field_family": "container_notes.soil_mix :: type",
+      "pairs": 120,
+      "render_status": "C"
+    },
+    {
+      "field_family": "container_notes.soil_mix :: amendments",
+      "pairs": 120,
+      "render_status": "C"
+    },
+    {
+      "field_family": "container_notes :: self_watering_notes",
+      "pairs": 120,
+      "render_status": "C"
+    },
+    {
+      "field_family": "yield_expectations :: per_plant",
+      "pairs": 120,
+      "render_status": "A"
+    },
+    {
+      "field_family": "yield_expectations :: first_year_note",
+      "pairs": 120,
+      "render_status": "A"
+    },
+    {
+      "field_family": "fertilizer :: amount",
+      "pairs": 119,
+      "render_status": "A"
+    },
+    {
+      "field_family": "soil :: preferred_description",
+      "pairs": 118,
+      "render_status": "A"
+    },
+    {
+      "field_family": "rotation :: avoid_after",
+      "pairs": 116,
+      "render_status": "A"
+    },
+    {
+      "field_family": "container_notes :: watering_adjustment",
+      "pairs": 115,
+      "render_status": "C"
+    },
+    {
+      "field_family": "container_notes :: fertilizer_adjustment",
+      "pairs": 115,
+      "render_status": "C"
+    },
+    {
+      "field_family": "fertilizer :: npk_hint",
+      "pairs": 113,
+      "render_status": "A"
+    },
+    {
+      "field_family": "container_notes.overwintering :: approach",
+      "pairs": 102,
+      "render_status": "C"
+    },
+    {
+      "field_family": "yield_expectations :: peak_production",
+      "pairs": 100,
+      "render_status": "A"
+    },
+    {
+      "field_family": "succession_policy :: tip",
+      "pairs": 82,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pests[].control_ladder[] :: note",
+      "pairs": 82,
+      "render_status": "A"
+    },
+    {
+      "field_family": "regions.<R> :: cold_basis",
+      "pairs": 80,
+      "render_status": "C"
+    },
+    {
+      "field_family": "regions.<R>.plantings[] :: synthesis_note",
+      "pairs": 80,
+      "render_status": "C"
+    },
+    {
+      "field_family": "regions.<R>.resolved_by_zone.<Z> :: day_length_note",
+      "pairs": 78,
+      "render_status": "A"
+    },
+    {
+      "field_family": "fertilizer :: notify_message",
+      "pairs": 69,
+      "render_status": "A"
+    },
+    {
+      "field_family": "rootstock_options[] :: traits",
+      "pairs": 66,
+      "render_status": "C"
+    },
+    {
+      "field_family": "container_notes :: shape_requirements",
+      "pairs": 64,
+      "render_status": "C"
+    },
+    {
+      "field_family": "diseases[].control_ladder[] :: note",
+      "pairs": 56,
+      "render_status": "A"
+    },
+    {
+      "field_family": "varieties.recommended[] :: note",
+      "pairs": 53,
+      "render_status": "A"
+    },
+    {
+      "field_family": "regions.<R> :: heat_basis",
+      "pairs": 48,
+      "render_status": "C"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: symptom",
+      "pairs": 47,
+      "render_status": "B"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: fix",
+      "pairs": 47,
+      "render_status": "B"
+    },
+    {
+      "field_family": "pests[] :: note",
+      "pairs": 47,
+      "render_status": "B"
+    },
+    {
+      "field_family": "soil :: preferred_texture",
+      "pairs": 46,
+      "render_status": "C"
+    },
+    {
+      "field_family": "soil :: tolerated_texture",
+      "pairs": 46,
+      "render_status": "C"
+    },
+    {
+      "field_family": "soil :: problematic_texture",
+      "pairs": 46,
+      "render_status": "C"
+    },
+    {
+      "field_family": "diseases[] :: note",
+      "pairs": 44,
+      "render_status": "B"
+    },
+    {
+      "field_family": "(crop root) :: soil_prep",
+      "pairs": 40,
+      "render_status": "C"
+    },
+    {
+      "field_family": "container_notes.drainage :: saucer_practice",
+      "pairs": 39,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: pollinator_notes",
+      "pairs": 38,
+      "render_status": "A"
+    },
+    {
+      "field_family": "notifications[] :: message",
+      "pairs": 33,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: hardiness_notes",
+      "pairs": 32,
+      "render_status": "A"
+    },
+    {
+      "field_family": "failure_diagnostics[] :: prevention",
+      "pairs": 32,
+      "render_status": "B"
+    },
+    {
+      "field_family": "(crop root) :: bloom_time",
+      "pairs": 29,
+      "render_status": "C"
+    },
+    {
+      "field_family": "pollination :: notes",
+      "pairs": 28,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: year_one_notes",
+      "pairs": 26,
+      "render_status": "C"
+    },
+    {
+      "field_family": "regions.<R>.resolved_by_zone.<Z> :: region_notes",
+      "pairs": 24,
+      "render_status": "C"
+    },
+    {
+      "field_family": "diseases[] :: management",
+      "pairs": 24,
+      "render_status": "B"
+    },
+    {
+      "field_family": "(crop root) :: chill_hours_note",
+      "pairs": 24,
+      "render_status": "A"
+    },
+    {
+      "field_family": "thinning :: tip",
+      "pairs": 23,
+      "render_status": "C"
+    },
+    {
+      "field_family": "container_notes :: container_overwintering",
+      "pairs": 23,
+      "render_status": "C"
+    },
+    {
+      "field_family": "pests[] :: management",
+      "pairs": 22,
+      "render_status": "B"
+    },
+    {
+      "field_family": "(crop root) :: tip",
+      "pairs": 18,
+      "render_status": "C"
+    },
+    {
+      "field_family": "diseases[] :: identification",
+      "pairs": 17,
+      "render_status": "B"
+    },
+    {
+      "field_family": "pests[] :: identification",
+      "pairs": 15,
+      "render_status": "B"
+    },
+    {
+      "field_family": "bolting :: prevention",
+      "pairs": 14,
+      "render_status": "B"
+    },
+    {
+      "field_family": "bolting :: note",
+      "pairs": 14,
+      "render_status": "B"
+    },
+    {
+      "field_family": "(crop root) :: deadheading",
+      "pairs": 13,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pruning_window :: note",
+      "pairs": 10,
+      "render_status": "A"
+    },
+    {
+      "field_family": "regions.<R>.tip_overrides.<stage>[] :: text",
+      "pairs": 8,
+      "render_status": "C"
+    },
+    {
+      "field_family": "pests[] :: name",
+      "pairs": 8,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pests[] :: description",
+      "pairs": 8,
+      "render_status": "A"
+    },
+    {
+      "field_family": "diseases[] :: name",
+      "pairs": 8,
+      "render_status": "A"
+    },
+    {
+      "field_family": "diseases[] :: description",
+      "pairs": 8,
+      "render_status": "A"
+    },
+    {
+      "field_family": "indoor_cycle :: tip",
+      "pairs": 8,
+      "render_status": "C"
+    },
+    {
+      "field_family": "det_indet :: detail",
+      "pairs": 6,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: type_selection",
+      "pairs": 5,
+      "render_status": "A"
+    },
+    {
+      "field_family": "zones.<Z> :: safe_sowing_note",
+      "pairs": 5,
+      "render_status": "C"
+    },
+    {
+      "field_family": "dormancy_window :: note",
+      "pairs": 5,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: planting_method_notes",
+      "pairs": 4,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: cane_management",
+      "pairs": 4,
+      "render_status": "C"
+    },
+    {
+      "field_family": "companions :: good",
+      "pairs": 3,
+      "render_status": "A"
+    },
+    {
+      "field_family": "photoperiod :: explainer",
+      "pairs": 2,
+      "render_status": "A"
+    },
+    {
+      "field_family": "companions :: bad",
+      "pairs": 2,
+      "render_status": "A"
+    },
+    {
+      "field_family": "harvest_stop_rule :: note",
+      "pairs": 2,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: disease_resistance_notes_default",
+      "pairs": 1,
+      "render_status": "C"
+    },
+    {
+      "field_family": "(crop root) :: renovation",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "(crop root) :: harvest_ramp_na",
+      "pairs": 1,
+      "render_status": "C"
+    },
+    {
+      "field_family": "winter_hardiness :: explainer",
+      "pairs": 1,
+      "render_status": "C"
+    },
+    {
+      "field_family": "control_methods.crop_rotation :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.garden_sanitation :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.resistant_varieties :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.balance_nitrogen :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.raise_soil_ph :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.airflow_spacing :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.bottom_watering :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.sensible_seeding_rate :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.even_watering :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.floating_row_cover :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.handpick :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.stem_collars :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.water_spray :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.yellow_sticky_traps :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.beneficial_predators :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.bt :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.beneficial_nematodes :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.insecticidal_soap :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.neem_oil :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.copper_fungicide :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.spinosad :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.sulfur :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.pyrethroid :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.carbaryl :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.fruit_bagging :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.kaolin_clay :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.codling_moth_pheromone_trap :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.red_sphere_trap :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.horticultural_oil :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.prune_out_infection :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.slug_traps_barriers :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.iron_phosphate_slug_bait :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.swd_exclusion_netting :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.swd_monitoring_traps :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.bird_netting :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.bird_scare_deterrents :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "control_methods.straw_mulch :: how_it_works",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pesticide_safety_education :: label_note",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pesticide_safety_education :: preharvest_interval",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pesticide_safety_education :: pollinator_note",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pesticide_safety_education :: handling_note",
+      "pairs": 1,
+      "render_status": "A"
+    },
+    {
+      "field_family": "pesticide_safety_education :: resistance_note",
+      "pairs": 1,
+      "render_status": "A"
+    }
+  ],
+  "by_crop": {
+    "apple": 283,
+    "strawberry": 277,
+    "blueberry": 266,
+    "raspberry": 265,
+    "blackberry": 264,
+    "elderberry": 251,
+    "orange-navel": 249,
+    "grapefruit": 248,
+    "sage": 245,
+    "cherry-sweet": 243,
+    "oregano": 242,
+    "nectarine": 242,
+    "apricot": 241,
+    "pear-european": 241,
+    "peach": 238,
+    "rosemary": 238,
+    "pear-asian": 237,
+    "mandarin-clementine": 235,
+    "cherry-sour": 235,
+    "lavender": 235,
+    "thyme": 233,
+    "plum": 232,
+    "lemon": 228,
+    "lime": 228,
+    "persimmon": 222,
+    "mulberry": 220,
+    "fig": 217,
+    "pomegranate": 216,
+    "pawpaw": 211,
+    "onion": 177,
+    "heirloom-tomato": 175,
+    "roma-tomato": 171,
+    "grape-tomato": 171,
+    "artichoke": 170,
+    "cherry-tomato": 167,
+    "tomatillo": 167,
+    "beefsteak-tomato": 166,
+    "honeydew-melon": 165,
+    "watermelon": 164,
+    "cantaloupe": 164,
+    "bell-pepper": 163,
+    "slicing-cucumber": 163,
+    "banana-pepper": 163,
+    "pickling-cucumber": 163,
+    "shallot": 163,
+    "cucumber": 163,
+    "dry-bean": 163,
+    "english-cucumber": 161,
+    "okra": 161,
+    "popcorn": 161,
+    "cayenne-pepper": 160,
+    "habanero": 160,
+    "eggplant": 159,
+    "field-corn": 158,
+    "flint-corn": 158,
+    "bok-choy": 157,
+    "pumpkin": 156,
+    "jalapeno": 155,
+    "turnip": 155,
+    "potato": 154,
+    "kohlrabi": 154,
+    "broccoli": 153,
+    "butternut-squash": 152,
+    "acorn-squash": 152,
+    "spaghetti-squash": 152,
+    "pole-beans": 152,
+    "sweet-corn": 152,
+    "green-beans-bush": 151,
+    "radish": 151,
+    "carrot": 149,
+    "lettuce-leaf": 149,
+    "sweet-potato": 149,
+    "cauliflower": 149,
+    "cabbage": 149,
+    "beet": 149,
+    "celery": 147,
+    "kale": 146,
+    "edamame": 146,
+    "brussels-sprouts": 146,
+    "collards": 146,
+    "spinach": 144,
+    "swiss-chard": 144,
+    "sugar-snap-peas": 143,
+    "snow-peas": 143,
+    "zucchini-courgette": 142,
+    "yellow-summer-squash": 142,
+    "chives": 142,
+    "basil": 141,
+    "broad-beans-fava": 140,
+    "arugula": 140,
+    "sunflower": 138,
+    "parsnip": 137,
+    "leek": 134,
+    "garlic": 133,
+    "marigold": 132,
+    "parsley": 131,
+    "cosmos": 131,
+    "cilantro-coriander": 130,
+    "mint": 129,
+    "calendula": 129,
+    "zinnia": 129,
+    "chamomile": 129,
+    "viola": 129,
+    "sweet-pea": 129,
+    "lemongrass": 128,
+    "dill": 127,
+    "nasturtium": 127,
+    "sweet-alyssum": 127,
+    "borage": 125,
+    "bee-balm": 123,
+    "echinacea": 120,
+    "asparagus": 119,
+    "spring-onion": 115,
+    "microgreens-mix": 94,
+    "pea-shoots": 91,
+    "sunflower-sprouts": 90,
+    "radish-microgreens": 90,
+    "broccoli-microgreens": 90,
+    "arugula-microgreens": 90,
+    "wheatgrass": 90,
+    "cilantro-microgreens": 90,
+    "_catalog": 42
+  },
+  "one_side_empty_detail": [
+    {
+      "crop_slug": "cherry-tomato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cherry-tomato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cherry-tomato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "beefsteak-tomato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "beefsteak-tomato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "beefsteak-tomato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "roma-tomato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "roma-tomato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "roma-tomato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "bell-pepper",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "bell-pepper",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "jalapeno",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "slicing-cucumber",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "kale",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "spinach",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "carrot",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "basil",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "basil",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "zucchini-courgette",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "zucchini-courgette",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "green-beans-bush",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "green-beans-bush",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sugar-snap-peas",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sugar-snap-peas",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "broccoli",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "garlic",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "peach",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "peach",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "peach",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "peach",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "apple",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "zones.8.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemon",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "blueberry",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "blueberry",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "heirloom-tomato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "heirloom-tomato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "heirloom-tomato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "grape-tomato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "grape-tomato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "grape-tomato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "banana-pepper",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "banana-pepper",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cayenne-pepper",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cayenne-pepper",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "habanero",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "habanero",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pickling-cucumber",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pickling-cucumber",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "english-cucumber",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "yellow-summer-squash",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "butternut-squash",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "butternut-squash",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "butternut-squash",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "acorn-squash",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "spaghetti-squash",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "spaghetti-squash",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "spaghetti-squash",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pole-beans",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pole-beans",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "snow-peas",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "snow-peas",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "broad-beans-fava",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "broad-beans-fava",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "lettuce-leaf",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "lettuce-leaf",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "lettuce-leaf",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "swiss-chard",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "arugula",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "arugula",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "bok-choy",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "bok-choy",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "radish",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "potato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sweet-potato",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sweet-potato",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sweet-potato",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cauliflower",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cabbage",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "onion",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "spring-onion",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "spring-onion",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sweet-corn",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "edamame",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "edamame",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "parsley",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "parsley",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cilantro-coriander",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "chives",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "chives",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "mint",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "thyme",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "dill",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "rosemary",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "rosemary",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "rosemary",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "rosemary",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "oregano",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oregano",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oregano",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "oregano",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sage",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sage",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sage",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sage",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "eggplant",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "tomatillo",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "tomatillo",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "tomatillo",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "watermelon",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cantaloupe",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "strawberry",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "strawberry",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pumpkin",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "plum",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "apricot",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pear-european",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pear-european",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pear-asian",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "zones.8.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lime",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "orange-navel",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mandarin-clementine",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mandarin-clementine",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mandarin-clementine",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mandarin-clementine",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mandarin-clementine",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mandarin-clementine",
+      "field_path": "companions.bad",
+      "beginner_empty": false,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "fig",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "fig",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "fig",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "fig",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "fig",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pomegranate",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "raspberry",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "blackberry",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "elderberry",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "elderberry",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "persimmon",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "persimmon",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "persimmon",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "persimmon",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "fertilizer.npk_hint",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "container_notes.container_overwintering",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "bloom_time",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "hardiness_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "chill_hours_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "pollinator_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "avocado",
+      "field_path": "pollination.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mulberry",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "mulberry",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "mulberry",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pawpaw",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pawpaw",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "pawpaw",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "fertilizer.npk_hint",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "container_notes.container_overwintering",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "bloom_time",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "hardiness_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "chill_hours_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "pollinator_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "olive",
+      "field_path": "pollination.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "parsnip",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "kohlrabi",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "kohlrabi",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "honeydew-melon",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "honeydew-melon",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "honeydew-melon",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "grapefruit",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cherry-sweet",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "artichoke",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "artichoke",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "artichoke",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "artichoke",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "artichoke",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "artichoke",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "turnip",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "leek",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "brussels-sprouts",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "brussels-sprouts",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "okra",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "nectarine",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cherry-sour",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cherry-sour",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cherry-sour",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cherry-sour",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "microgreens-mix",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "microgreens-mix",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sunflower-sprouts",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sunflower-sprouts",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pea-shoots",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "pea-shoots",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "celery",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "asparagus",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "shallot",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "zones.5.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "zones.6.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "zones.7.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "zones.8.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lemongrass",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "indoor_cycle.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "succession_policy.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "oyster-mushroom",
+      "field_path": "substrate_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "indoor_cycle.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "succession_policy.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "shiitake-mushroom",
+      "field_path": "substrate_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "indoor_cycle.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "succession_policy.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lions-mane-mushroom",
+      "field_path": "substrate_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "indoor_cycle.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wine-cap-mushroom",
+      "field_path": "substrate_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "soil.preferred_description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "ph.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "fertilizer.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "fertilizer.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "companions.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.frequency",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.amount",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.method",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.signs_overwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.signs_underwater",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.method_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "watering.critical_periods",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "storage.room_temp",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "storage.fridge",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "storage.freezer",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "storage.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "varieties.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "start_method.hardening_off",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "start_method.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.soil_mix.type",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.soil_mix.amendments",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.watering_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.fertilizer_adjustment",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "container_notes.self_watering_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "rotation.avoid_after",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "rotation.note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "yield_expectations.per_plant",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "yield_expectations.peak_production",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "yield_expectations.first_year_note",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "indoor_cycle.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "succession_policy.tip",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.northern_tier.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.se_gulf.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.ca_interior.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.ca_north_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.ca_south_coast.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.ca_desert.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.warm_arid.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.low_desert_az.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.fl_peninsula.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "regions.hawaii_tropical.region_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "description",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "harvest_ready",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "button-mushroom",
+      "field_path": "substrate_notes",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "marigold",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "marigold",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "nasturtium",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "nasturtium",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "zones.3.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "zones.4.suitability_reason",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "lavender",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sunflower",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sunflower",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "borage",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "borage",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "calendula",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "calendula",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "zinnia",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "zinnia",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cosmos",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cosmos",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "chamomile",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "chamomile",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sweet-alyssum",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sweet-alyssum",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "echinacea",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "echinacea",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "bee-balm",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "bee-balm",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "viola",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "viola",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "sweet-pea",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "sweet-pea",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "radish-microgreens",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "radish-microgreens",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "broccoli-microgreens",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "broccoli-microgreens",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "arugula-microgreens",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "arugula-microgreens",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wheatgrass",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "wheatgrass",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cilantro-microgreens",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cilantro-microgreens",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "beet",
+      "field_path": "container_notes.overwintering.approach",
+      "beginner_empty": true,
+      "seasoned_empty": true
+    },
+    {
+      "crop_slug": "cucumber",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "cucumber",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "collards",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "dry-bean",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "field-corn",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "field-corn",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "popcorn",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "companions.good",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    },
+    {
+      "crop_slug": "flint-corn",
+      "field_path": "companions.bad",
+      "beginner_empty": true,
+      "seasoned_empty": false
+    }
+  ],
+  "no_similarity_score": "deliberate -- see module docstring"
+}
