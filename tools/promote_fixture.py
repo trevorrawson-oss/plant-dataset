@@ -120,6 +120,8 @@ COMMIT_FOR = {
     '3bf8b4ce25fbeaa9f3b2cf7f5b7fe9b5c6344784204780c3f393b2bc2e0eec3e': 'a07bf86',
     # PLA-253 third pass: beneficial_nematodes anchored to pnw_handbook_epn.
     'be8a6d1e10c014906ad66aff03fc307525f6f22d9045ff28cb850ffecfc686f4': '8118eaa',
+    # PLA-290: the prose-string variety entries become {id, name, note} records.
+    '2d496da51b37c68a60402b82cc30a5252d07e45474b6b98edaf299afbc5c69c4': 'dc5008f',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
