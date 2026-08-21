@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Guards for the PLA-253 nematode-anchor promote.
 
-REPLAY-PINNED: base `3bf8b4ce` -> live canonical, so every guard compares a PRE state
-reconstructed from git against the real post state, never against a snapshot of itself
-([[promote-guards-went-vacuous-on-sha-skip]] -- never skip on a SHA mismatch, rebuild).
+REPLAY-PINNED BOTH ENDS: the PRE state is reconstructed from git by hash and the POST state by
+REPLAYING this promote on that fixture, so the suite never reads live canonical
+([[promote-guards-went-vacuous-on-sha-skip]] -- never skip on a SHA mismatch, rebuild;
+[[promote-suite-post-must-be-replayed-not-live]] -- and never read live canonical either).
 
 The blast-radius guard asserts KEY-SET EQUALITY BEFORE comparing any value, in both
 directions, because a guard that walks the PRE state cannot see anything ADDED in POST --
@@ -16,6 +17,7 @@ Mutation evidence: tools/mutate_pla253_nematode_suite.py
 import copy
 import json
 import os
+import subprocess
 import sys
 
 import pytest
@@ -26,7 +28,28 @@ sys.path.insert(0, os.path.join(REPO, 'tools'))
 import promote_fixture  # noqa: E402
 import promote_pla253_nematode_anchor as P  # noqa: E402
 
-CANONICAL = os.path.join(REPO, 'crops_data_final.json')
+SCRIPT = os.path.join(REPO, 'tools', 'promote_pla253_nematode_anchor.py')
+
+_post = {}
+
+
+def post_bytes():
+    """The bytes THIS promote produces, by replaying it on the rebuilt pre-state.
+
+    WAS live canonical, and that was a defect, not a style choice: the two blast-radius
+    guards compared the pinned pre-state against whatever canonical happened to be, so the
+    NEXT promote by anyone reddened them. PLA-290 converted 59 variety entries across 11
+    crops and turned both red for a reason that had nothing to do with this promote. A
+    promote suite validates ITS OWN promote; live canonical is release_verify's and
+    gate_all's job ([[promote-suite-post-must-be-replayed-not-live]]). Repaired 2026-08-21.
+    """
+    if 'raw' not in _post:
+        path, sha = promote_fixture.scratch(P.BASE_SHA)
+        assert sha == P.BASE_SHA
+        r = subprocess.run([sys.executable, SCRIPT, path], capture_output=True, text=True)
+        assert r.returncode == 0, f'replay failed: {(r.stdout + r.stderr)[-800:]}'
+        _post['raw'] = open(path, 'rb').read()
+    return _post['raw']
 
 
 @pytest.fixture(scope='module')
@@ -36,8 +59,7 @@ def pre():
 
 @pytest.fixture(scope='module')
 def post():
-    with open(CANONICAL, encoding='utf-8') as fh:
-        return json.load(fh)
+    return json.loads(post_bytes())
 
 
 def method(data):
@@ -167,7 +189,7 @@ def test_the_pros_list_kept_its_length_and_its_other_entry(pre, post):
 
 
 def test_canonical_is_still_compact(post):
-    raw = open(CANONICAL, 'rb').read()
+    raw = post_bytes()
     assert b'\n' not in raw, 'canonical gained a newline; it must stay COMPACT'
     assert raw == json.dumps(post, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
 
