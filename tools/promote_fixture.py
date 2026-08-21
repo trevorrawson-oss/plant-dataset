@@ -122,6 +122,8 @@ COMMIT_FOR = {
     'be8a6d1e10c014906ad66aff03fc307525f6f22d9045ff28cb850ffecfc686f4': '8118eaa',
     # PLA-290: the prose-string variety entries become {id, name, note} records.
     '2d496da51b37c68a60402b82cc30a5252d07e45474b6b98edaf299afbc5c69c4': 'dc5008f',
+    # PLA-346: echinacea's paren-variant entry, the last prose variety string.
+    'fe26f7833cb9c932fa621c20fb6ebc08af2eb5e66866089e21d847fa4970f57c': 'c2696b4',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
