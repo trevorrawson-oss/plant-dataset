@@ -815,6 +815,40 @@ print(f"  over-length titles: {len(_tlv)}")
 for m in _tlv:
     fail(f"trigger-title: {m}")
 
+# ---------------- A56. control-ladder INTEGRITY (PLA-8; the coverage floor is NOT here) ----------
+# ARMED 2026-08-22, ahead of the roster-wide ladder rollout and DELIBERATELY ONLY HALF OF IT.
+#
+# `control_ladder_gate` bundles two separable things, and they have opposite readiness:
+#
+#   INTEGRITY (armed here)  catalog validity + T1 sources, rung referential soundness, softest-first
+#                           tier monotonicity, applies_to coherence via TYPE_TARGETS, and unique
+#                           kebab problem ids. All three families NO-OP on a crop with no ladder
+#                           (`ladder_violations` and `identity_violations` both `continue` when
+#                           `control_ladder is None`; `catalog_violations` is top-level), so on the
+#                           114 certified crops that carry no ladder yet this costs exactly nothing.
+#                           Measured before arming: 0 violations roster-wide.
+#
+#   COVERAGE FLOOR (NOT armed)  "a certified crop must HAVE a ladder." Measured 2026-08-22: 7 of 121
+#                           certified crops carry one, so arming this today would take gate_all from
+#                           121/121 to 7/121 and block every unrelated promote, including any
+#                           parallel session's. That is the gates-arm-off-the-data rule. It arms
+#                           when the rollout actually lands, which is `control_ladder_gate`'s own
+#                           stated INV-1 condition.
+#
+# WHY ARM THE HALF NOW rather than waiting for both. The rollout is ~23 batches of 5 crops. Left
+# standalone, ladder integrity is enforced by a side script somebody has to remember to run on each
+# batch; wired here it rides the gauntlet every batch already passes. The window where a defect can
+# enter is every batch, so the check belongs upstream of every batch, not after the last one.
+from control_ladder_gate import (catalog_violations as _cl_catalog,
+                                 ladder_violations as _cl_ladder,
+                                 identity_violations as _cl_identity)
+print("A56. control-ladder integrity (catalog + referential + softest-first + unique ids)")
+_clv = list(_cl_catalog(data)) + list(_cl_ladder(data, crop)) + list(_cl_identity(crop))
+print(f"  control-ladder integrity violations: {len(_clv)}"
+      f"{'  (no-op: crop carries no ladder)' if not any('control_ladder' in p for f_ in ('pests','diseases') for p in crop.get(f_) or [] if isinstance(p, dict)) else ''}")
+for m in _clv:
+    fail(f"control-ladder: {m}")
+
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
 # discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was
