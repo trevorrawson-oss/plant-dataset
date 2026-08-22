@@ -815,6 +815,38 @@ print(f"  over-length titles: {len(_tlv)}")
 for m in _tlv:
     fail(f"trigger-title: {m}")
 
+# ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
+# HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
+# discipline A49/A50 followed. It shipped standalone on 2026-08-22 with 4 live findings and was
+# deliberately NOT wired in then: arming a gate that is RED on certified crops breaks the roster
+# gauntlet for everyone. The year-pill rollout cleared all four, so it arms now.
+#
+# WHAT IT OWNS, and why nothing else covers it. plant-app renders three establishment pills per
+# perennial and, until PLA-362, composed their captions from prose authored for other purposes --
+# pointing TWO pills at ONE string and shearing the third out of `harvest_ready_*` with a
+# first-sentence truncation. Measured on fe26f783: Establishing and First harvests were
+# byte-identical on 36 of 38 perennials, and certified artichoke's mature-bed guidance rendered as
+# "Squeeze the bud." Every existing check read the WHOLE field and passed -- the
+# optional-field-gates-go-vacuous class in a new spot.
+#
+#   PILL-CAPTION   the Full-harvest caption must stand alone. SUPPRESSED per register once
+#                  `full_harvest_notes_*` exists, because the app prefers that field and never
+#                  shears it, so measuring the fallback would name a defect nobody can see.
+#   ESTAB-CAPTION  a pill-rendering perennial carries both registers of the establishment tip.
+#   YEAR-DUP       two stages of the SAME crop carrying near-identical text. The gold-standard
+#                  template check compares ACROSS crops, so an intra-crop duplicate is invisible
+#                  to it. A refusal-spec guard: 0 hits over 5,484 comparisons, and the mutation
+#                  harness is its only non-vacuity evidence.
+#
+# No-op for every crop that renders no pills (no well-formed years_to_first_harvest), which is 12
+# of the 38 perennials and the entire annual roster.
+from perennial_year_gate import violations as perennial_year_violations
+print("A55. perennial year-pill coherence (caption stands alone; no two stages duplicate)")
+_pyv = perennial_year_violations(crop)
+print(f"  perennial year-pill violations: {len(_pyv)}")
+for m in _pyv:
+    fail(f"perennial-year: {m}")
+
 # ---------------- A54. source_catalog title discipline (PLA-199) ----------------
 # THE PLA-155 MECHANISM. The catalog carried no titles, so strawberry's wrong-pub-number
 # credit (426-331 for 426-840 content) was invisible at authoring time and the ornamental-lead
