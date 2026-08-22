@@ -138,6 +138,16 @@ EXCLUDED_KEYS = {
     # is enforced by planting_layout_gate (whole_crop_gate A44); pollination_block_min_rows is an int,
     # out of this string check. Added when sweet-corn became the first crop to carry the field.
     "planting_layout",
+    # VARIETY LADDER-DELTA TRANSFORM VERB (PLA-8 Round 2, ruled by Trevor 2026-08-22): `op` is the
+    # operation a variety's `ladder_delta` rung performs on its parent `control_ladder` rung --
+    # drop|replace|add. A controlled-vocab backend token consumed by the delta RESOLVER when it
+    # composes the variety's ladder (parent -> Layer 1 -> Layer 2); it is never rendered, and the
+    # prose a reader actually sees lives in the register-suffixed siblings (`note_beginner` /
+    # `note_seasoned` on a replace or add, `why_beginner` / `why_seasoned` on a drop) which A25
+    # already rules by suffix. Same class as heat_effect/frost_effect/tray_sowing/planting_layout.
+    # Its referential + shape coherence is enforced by variety_ladder_delta_gate G1-G4; `method`
+    # and `basis` in the same object were already ruled, so `op` was the only novel key.
+    "op",
     # `harvest_stop_rule.signal` ruled 2026-07-27: an ENUM naming the observable a
     # grower watches (spear_diameter), machinery the app dispatches display on --
     # not consumer prose. The rule's consumer copy lives in the sibling dual-register
