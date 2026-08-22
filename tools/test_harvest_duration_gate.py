@@ -299,6 +299,50 @@ class RampProseCheck(unittest.TestCase):
         self.assertEqual(len(v), 1, v)
         self.assertIn("RAMP-PROSE", v[0])
 
+    # --- RAMP NARRATIVE (added 2026-08-22, PLA-6 Round 2) ---
+    # A string that enumerates the ramp YEAR BY YEAR is the opposite of the defect this check
+    # exists to catch. RAMP-PROSE was written against a stale FLAT week count contradicting the
+    # ramp; a faithful per-bed-year narrative states several ranges, and the first-match parser
+    # compared only the first of them to the MATURE entry and flagged correct prose. Register
+    # row 26 has carried this as a known parser gap ("cannot parse ramp-narrative phrasing such
+    # as 'lengthening to four and then six weeks'") that was previously worked around by hand,
+    # by never naming the week numbers at all -- which is why the numbers a grower actually
+    # wants were missing from the prose.
+
+    def test_a_faithful_ramp_narrative_passes(self):
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "full_harvest_notes_beginner": (
+                    "About two to four weeks in year three, six to eight in year four, and "
+                    "eight to ten weeks from year five onward.")}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
+    def test_a_narrative_with_ONE_wrong_year_still_flags(self):
+        # The whole point: enumerating several ranges must not become a way to smuggle a wrong
+        # one past the check.
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "full_harvest_notes_beginner": (
+                    "About two to four weeks in year three, nine to eleven in year four, and "
+                    "eight to ten weeks from year five onward.")}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("RAMP-NARRATIVE", v[0])
+        self.assertIn("9 to 11", v[0])
+
+    def test_a_single_range_is_still_measured_against_the_MATURE_entry(self):
+        # Unchanged behavior for the one-figure case, which is the original defect class.
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "harvest_ready_beginner": "Cut for two to four weeks."}
+        v = ramp_prose_violations(crop)
+        self.assertEqual(len(v), 1, v)
+        self.assertIn("RAMP-PROSE", v[0])
+
+    def test_two_ranges_that_are_both_the_mature_entry_is_not_a_narrative(self):
+        # Repeating the mature figure twice is not an enumeration; it must still pass, and for
+        # the ordinary reason rather than by being mistaken for a narrative.
+        crop = {"slug": "c", "harvest_ramp_weeks": RAMP_OK,
+                "harvest_ready_beginner": "Eight to ten weeks, and eight to ten weeks again."}
+        self.assertEqual(ramp_prose_violations(crop), [])
+
     # --- the check reads EVERY crop-level consumer string, not just harvest_ready_* ---
     # Narrowing it to harvest_ready_* is what let nine other asparagus strings keep
     # asserting a superseded figure while the gate reported clean.

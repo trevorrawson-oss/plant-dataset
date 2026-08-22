@@ -133,6 +133,21 @@ COMMIT_FOR = {
 # canonical SHA -> (predecessor SHA, promote script that produces it).
 # Hunt 1's intermediate states, which were never committed on their own.
 CHAIN = {
+    # PLA-6 Round 2 runs the year-pill trio as a PILOT plus rollout WAVES, back to back before
+    # a commit, so each wave's base is the previous wave's output and is not a commit. Replay is
+    # the only way to rebuild them; each is verified by hash on use, so a wrong link fails loudly.
+    '0cc37afe6597d43eac4e867b5eefa625aed5002dfc20628e4a5fbac80215e66b': (
+        'fe26f7833cb9c932fa621c20fb6ebc08af2eb5e66866089e21d847fa4970f57c',
+        'promote_pla6_year_trio.py'),
+    '647fe432076030a3bef240d953a31b04c8a4b31140b445d00b78f1b9a18f108f': (
+        '0cc37afe6597d43eac4e867b5eefa625aed5002dfc20628e4a5fbac80215e66b',
+        'promote_pla6_wave1.py'),
+    '64428067a44b369b550b6d11d8287e7578afbadf022b14e2fe7c8238e0ebc393': (
+        '647fe432076030a3bef240d953a31b04c8a4b31140b445d00b78f1b9a18f108f',
+        'promote_pla6_wave2.py'),
+    '97c63704812e2192fe8ec27ba0007e24db5dadbc88473aeccca5bba217c1521c': (
+        '64428067a44b369b550b6d11d8287e7578afbadf022b14e2fe7c8238e0ebc393',
+        'promote_pla6_wave3.py'),
     'e353fadb83277605192d55fa4312854bf648a835c41666130d41905fc04cc9d2': (
         '172e4e7af950f0b98bf7883f5386c2b701a9d88f4d4347fc30d520cce7e91298',
         'promote_artichoke_findings_key.py'),

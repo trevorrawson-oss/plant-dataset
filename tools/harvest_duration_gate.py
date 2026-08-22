@@ -404,6 +404,35 @@ def _bare_week_range(text):
     return (_num(m.group(1)), _num(m.group(2))) if m else None
 
 
+def _all_week_ranges(text):
+    """Every 'N to M weeks' in the text, in order, deduplicated.
+
+    A RAMP NARRATIVE enumerates the ramp bed year by bed year, so it states several ranges in
+    one string. `_bare_week_range` returns only the first, which is correct for the flat-count
+    defect RAMP-PROSE was built for and wrong for a narrative -- it compared year three's figure
+    against the MATURE entry and flagged prose that was faithful to every entry.
+
+    The unit-dropped form ("six to eight in year four") is deliberately included: a narrative
+    names the unit once and then drops it, so requiring "weeks" on every range would see only
+    the first and last of a three-part enumeration.
+
+    But it is admitted ONLY when a bed-year phrase follows ("in year four", "at year four",
+    "from year five"). Prose should not contort itself for a regex, so the preposition set is
+    what authors actually write rather than one canonical form. Making the unit merely optional was
+    tried first and was wrong: it swallowed "keeps feeding you for 15 to 20 years" and "wait two
+    to three years" out of asparagus's own description and reported them as bad ramp entries.
+    A range with no unit and no bed year is not a week count.
+    """
+    out = []
+    pat = rf"({_NUM_RE}){_RANGE_SEP}({_NUM_RE})(?:[-\s]+weeks?|\s+(?:in|at|from)\s+year\b)"
+    for m in re.finditer(pat, text, re.I):
+        pair = (_num(m.group(1)), _num(m.group(2)))
+        if None in pair or pair in out:
+            continue
+        out.append(pair)
+    return out
+
+
 def ramp_prose_violations(crop):
     """RAMP-PROSE: a bare week count in ANY crop-level consumer string must equal the
     ramp's mature entry.
@@ -422,10 +451,32 @@ def ramp_prose_violations(crop):
     if mature is None:
         return []
     bed_year, weeks = mature
+    authored = [list(e["weeks"]) for e in crop.get("harvest_ramp_weeks") or []
+                if isinstance(e, dict) and isinstance(e.get("weeks"), list)]
     out = []
     for path, text in _crop_prose_strings(crop):
         dur = _bare_week_range(text)
-        if dur and list(dur) != list(weeks):
+        if not dur:
+            continue
+
+        # RAMP NARRATIVE: the string enumerates the ramp rather than asserting one flat count.
+        # Recognised by stating MORE THAN ONE distinct range; then every range must match some
+        # authored bed year, not merely the mature one. A narrative is not a licence to smuggle
+        # a wrong year through -- one bad entry still flags, and names the offending figure.
+        ranges = _all_week_ranges(text)
+        if len(ranges) > 1:
+            wrong = [r for r in ranges if list(r) not in authored]
+            if wrong:
+                stated = ", ".join(f"{a} to {b}" for a, b in wrong)
+                out.append(
+                    f"RAMP-NARRATIVE: {path} enumerates the bed-age ramp but states "
+                    f"{stated} weeks, which matches no authored harvest_ramp_weeks entry "
+                    f"({'; '.join(f'{a} to {b}' for a, b in authored)}). A per-year narrative "
+                    f"must agree with every year it names."
+                )
+            continue
+
+        if list(dur) != list(weeks):
             out.append(
                 f"RAMP-PROSE: {path} states {dur[0]} to {dur[1]} weeks but "
                 f"harvest_ramp_weeks bed year {bed_year} says {weeks[0]} to {weeks[1]}. "

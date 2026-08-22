@@ -17,10 +17,20 @@ it leads to stale-checkout confusion.)
 goal is met and passed; the 7 remaining shells are the 5 mushrooms + avocado/olive). The armor is the gate suite — `tools/whole_crop_gate.py` (the A-numbered
 gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURRENT_STATE.md.
 
-## The two lanes (who does what)
-- **claude.ai** AUTHORS content: biology, dual-register consumer prose, sourcing, evidence calls.
-- **Claude Code (here)** PROMOTES + GATES: applies authored content, runs/writes gates, releases.
-  Deterministic transforms + programmatic gates + git ceremony live here.
+## Who does what (the two-lane split is RETIRED)
+- **Claude Code (here) does BOTH**: AUTHORS content (biology, dual-register consumer prose,
+  sourcing, evidence calls) *and* PROMOTES + GATES it (deterministic transforms, programmatic
+  gates, git ceremony, releases).
+- **The old claude.ai authoring lane is retired** -- since the 30-crop overnight batch (waves 1-6,
+  roster 50 -> 80, 2026-07-01/02). It required Trevor awake to shuttle content between tools, which
+  is a non-starter at scale. Re-confirmed 2026-08-22 (PLA-6). Issues written before that date may
+  still say "Round 2 moves to a claude.ai chat"; that wording is stale, not an instruction.
+- **To author a batch without draining the orchestrator session**, fan authoring out to parallel
+  subagents (one crop or a few per bot, isolated context) and have the orchestrator only collect +
+  stage finished records into `_handoff/`. Keep an INDEPENDENT source-truth review pass -- that is
+  the adversarial catch that found the dead-URL / mis-pointed-key / UC-IPM-warm-weather defects.
+- **claude.ai chat sessions remain where judgment happens**: brainstorming work before it is filed,
+  and discussing a close-out after delivery.
 
 ## Hard rules
 - **Canonical JSON is COMPACT**: written with `separators=(",",":")`, `ensure_ascii=False`, no
