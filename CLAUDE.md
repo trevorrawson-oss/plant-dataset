@@ -68,6 +68,16 @@ gates) + `tools/release_verify.py`. Gate detail + the live roster live in CURREN
   within those months), never day-precise spans -- but a month may be named only if the cell's
   sourced duration can actually reach it (explicit source dates govern over arithmetic). Ruled
   2026-07-27; rationale + renderer evidence in `docs/2026-07-27-harvest-window-semantics-ruling.md`.
+- **A `pests[]` / `diseases[]` `id` IS A JOIN KEY. PIN IT AT FIRST AUTHORING AND NEVER RE-DERIVE IT.**
+  Once a crop's problems carry ids, those ids are what `varieties[].resistance` and
+  `varieties[].ladder_delta` point at, so renaming one silently orphans every grade and every delta
+  hanging off it. Re-authoring a crop's ladder must REUSE the existing ids, never regenerate them
+  from the problem name. Measured 2026-08-23: two independent authoring passes over the same five
+  crops produced different ids for the same problems (`leafminer` vs `beet-spinach-leafminer`,
+  `dried-fruit-beetle` vs `dried-fruit-beetle-souring`), which is harmless only because nothing
+  referenced them yet. This is a DATASET rule, not a consumer one -- plant-app never reads a problem
+  id; the two gates that do are `variety_resistance_gate` and `variety_ladder_delta_gate`, and both
+  fail LOUD on a dangling key rather than silently, which is the safety net, not the rule.
 - **RE-VERIFY THE DATA BEFORE ACTING ON ANY RECORD THAT DESCRIBES IT** -- an `open_finding`, a
   kickoff item, a `log_ref`, a state-history entry, a failing test you assume is stale. Confirm the
   defect still exists, and **run the gate that already covers the claim** before researching it.
