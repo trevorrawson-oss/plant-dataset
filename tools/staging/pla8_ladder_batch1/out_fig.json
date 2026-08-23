@@ -1,0 +1,107 @@
+{
+ "pests": [
+  {
+   "id": "root-knot-nematode",
+   "type": "nematode",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start clean, because this one is decided before you plant. Root-knot nematodes are microscopic worms in the soil that feed inside fig roots, and a badly infested plant cannot be rescued. Skip sandy ground with a known history of them, choose the best-drained spot you have, and where the only in-ground soil is known trouble, plant into a large container of fresh potting mix instead.",
+     "note_seasoned": "Site selection carries almost the whole load here: own-rooted figs offer no resistant rootstock, and heavy Meloidogyne infestations do not reverse. Avoid ground with a known nematode history, favor the best-drained site available, and under high pressure in sandy soils use container culture in clean mix so the root zone starts free of the pest."
+    }
+   ]
+  },
+  {
+   "id": "dried-fruit-beetle-souring",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a fig with a small, tight eye, the little opening at the bottom of the fruit, such as Celeste. Beetles and damp air get in through a wide-open eye, so a tight one cuts down souring before you have to do anything else.",
+     "note_seasoned": "Eye size is the varietal lever: large open-eye types admit sap beetles and the souring yeasts they carry, while closed-eye selections such as Celeste sharply narrow that entry route. The payoff is largest in humid summers, where pressure is heaviest."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Harvest every ripe fig as it comes, and take off or pick up any that have gone fizzy, sour, or dropped. Soft, fermenting fruit is what pulls the beetles in, so clearing it out stops the problem from feeding itself. No spray reaches the yeasts once they are inside a fig, so this is the real control.",
+     "note_seasoned": "Frequent harvest plus removal of soured and fallen fruit strips out the fermenting material that recruits Carpophilus beetles and builds the yeast load. Since nothing sprayed reaches yeasts already inside the fruit, picking interval and litter removal are the durable controls."
+    }
+   ]
+  },
+  {
+   "id": "birds-and-squirrels",
+   "type": "vertebrate",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick ripe figs often instead of letting them hang. Every fig you take is one the birds and squirrels cannot get, and fruit sitting there waiting is what keeps them coming back.",
+     "note_seasoned": "Frequent harvest shrinks the standing reward. A fig crop ripens over many weeks, so it is exposed again and again; tightening the picking interval lowers how much soft fruit is available at any one moment."
+    },
+    {
+     "method": "bird_netting",
+     "note_beginner": "Drape bird netting over the plant when the figs first start to color up, not after you notice damage. Keep the fig pruned to a size you can actually cover and reach, since netting helps only where it goes. If your fig is in a pot, moving it to a more sheltered spot is another option.",
+     "note_seasoned": "Netting the canopy, or at least the fruiting branches, at first color is the most effective home control; hang it ahead of the crop rather than in response to the first losses. Holding the plant to a manageable size is what keeps both netting and picking practical, and a container plant can be relocated to a more protected position."
+    },
+    {
+     "method": "bird_scare_deterrents",
+     "note_beginner": "Reflective tape and other scare items can buy you some time, but the effect tends to fade, so lean on them as a helper alongside netting rather than as the main defense.",
+     "note_seasoned": "Reflective tape and scare devices give short-lived protection at best; their value is as a supplement through peak ripening, not a substitute for exclusion."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "fig-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up the fallen leaves under your fig and get rid of them, during the season and again at the end of it. The fungus rides out the winter on that old leaf litter, so leaving it in place under the plant sets up next summer's outbreak.",
+     "note_seasoned": "Cerotelium fici overwinters in fallen infected leaves, so annual removal and destruction of that litter is the backbone of the program. It lowers the inoculum that starts the following season rather than doing anything for the current one."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune so air moves through the plant and wet leaves dry quickly. Rust spreads in warm, humid, wet weather, so a canopy that dries fast gives it less to work with.",
+     "note_seasoned": "Opening the canopy shortens the leaf wetness the rust depends on after rain and dew. Paired with litter removal, it is what holds foliage on the plant later into the season in humid regions."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plant rather than spraying the leaves. Wetting the foliage hands the rust the damp conditions it needs, which matters most in humid weather.",
+     "note_seasoned": "Ground-level irrigation avoids stacking added leaf wetness on top of ambient humidity. In wet summers and humid regions the weather is already supplying most of what the fungus needs, so there is no reason to supply more."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Where rust shows up most years, an organic copper spray on the new leaves is the usual treatment. It works as protection, so start it in spring and keep it going through the season; it will not clear the spots already on a leaf.",
+     "note_seasoned": "Neutral copper or Bordeaux on new foliage, on a preventive schedule from spring, is the standard organic option in rust-prone humid regions. It protects unspotted tissue rather than curing existing lesions, so timing and reapplication through the growing season decide whether it earns its place."
+    }
+   ]
+  },
+  {
+   "id": "fig-mosaic",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start with a plant or cutting whose leaves look clean and un-mottled, and do not take cuttings from a fig showing the blotchy pattern, since the virus goes along with the wood. There is no cure once a plant has it, so keep the fig well cared for; many infected plants still fruit alright. If one is badly stunted and barely setting figs, taking it out is reasonable.",
+     "note_seasoned": "Clean propagation stock is the practical lever, since the virus complex is systemic and permanent in an infected plant and moves readily in cuttings taken from it. Rogue out severely stunted, poor-cropping specimens; lightly affected plants often crop acceptably and can be kept in production."
+    }
+   ]
+  },
+  {
+   "id": "fig-endosepsis",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "In a humid area, choose a fig with a small, tight eye, the opening at the base of the fruit, such as Celeste. The fungi that rot the inside of the fig get in through that opening, so a narrow one gives them less of a way in.",
+     "note_seasoned": "Eye diameter governs access for the Fusarium and related fungi behind the internal rot, so closed-eye selections such as Celeste are the varietal control wherever humidity keeps pressure up."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick figs as they ripen and clear away any that are rotting inside or have dropped. The same little beetles that sour figs carry these fungi in, and soft, rotting fruit lying around is what draws them, so the cleanup does double duty.",
+     "note_seasoned": "Prompt harvest plus removal of affected and fallen fruit denies the sap beetles that carry the fungi their attractant, which is the whole practical handle: nothing you apply reaches the rot once it is inside the fruit."
+    }
+   ]
+  }
+ ]
+}

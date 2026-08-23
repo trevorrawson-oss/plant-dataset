@@ -1,0 +1,151 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer, the kind that pushes fast leafy growth. Soft, sweet new shoots are what aphids feed on best, so basil that is not force-fed tends to draw fewer of them.",
+     "note_seasoned": "Surplus nitrogen produces the succulent flush aphid colonies build on fastest; holding fertility moderate keeps new growth less hospitable and slows the population curve in warm weather."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a hard stream from the hose, aiming up under the leaves where they sit. Go back and do it again over the next few days, because stragglers regroup.",
+     "note_seasoned": "A directed jet dislodges colonies mechanically with no pesticide input at all; repeat over several days so survivors and newly emerged individuals do not simply rebuild the colony."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs and parasitic wasps, tiny wasps that lay their eggs inside aphids, will hunt aphids for you. Plant flowering herbs and companion flowers close by to give those helpers a reason to stay.",
+     "note_seasoned": "Ladybugs and parasitoid wasps can hold light pressure on their own; nearby flowering herbs and companion blooms supply the nectar that keeps predators resident rather than transient."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray sold for garden use, kills aphids it actually touches. Wet the undersides of the leaves where the clusters hide. Do not spray in full sun or when it is above 90°F.",
+     "note_seasoned": "Soap is contact-only, so undersides coverage of the colony decides the outcome; hold off in full sun and above 90°F to limit phytotoxicity on tender basil foliage."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, a plant oil pressed from neem tree seeds, is the other spray option for aphid colonies. Same rules apply: coat the leaf undersides, and keep it off plants in full sun or above 90°F.",
+     "note_seasoned": "Neem is the second contact material where soap has not held a colony; observe the same sun and heat restrictions, and place it on the colony directly rather than broadcasting over the canopy."
+    }
+   ]
+  },
+  {
+   "id": "japanese-beetle",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Drape a light fabric row cover over the plants through July and August, when the beetles are out. It keeps them from ever landing on the leaves, so it has to go on before they show up.",
+     "note_seasoned": "Cover across the peak flight window, roughly July into August, is straight physical exclusion; it has to be sealed at the edges and in place ahead of adult emergence rather than after feeding starts."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Early in the morning the beetles are cool and sluggish, so knock them into a jar of soapy water. Skip the beetle traps sold at garden centers, at least near your garden, since they pull in more beetles than they hold.",
+     "note_seasoned": "Morning collection exploits low-temperature sluggishness in the adults; drop them straight into soapy water. Keep pheromone traps well away from the planting, since they recruit more adults than they capture."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, a plant oil pressed from neem tree seeds, sprayed onto the leaves has some deterrent effect. Treat it as backup for hand-picking rather than a swap for it.",
+     "note_seasoned": "Neem applied to foliage offers partial deterrence rather than control of established adults; it supplements collection and exclusion instead of replacing either."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Send water to the soil at the base of each plant instead of sprinkling the whole plant from above. Slugs and snails need damp ground and they come out to feed after dark, so a surface that has dried off by evening gives them much less to work with.",
+     "note_seasoned": "Delivering water at the soil line rather than across the canopy keeps the bed surface from sitting wet, and numbers tend to run highest in the stretch following heavy rain or overhead irrigation; since feeding is nocturnal, ground that has drained by dusk withholds habitat rather than killing anything."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear boards, pots, and piles of debris away from the basil. Slugs and snails shelter in those damp hiding places by day and come out to feed after dark.",
+     "note_seasoned": "Stripping boards and debris removes the daytime refuge that lets a population build alongside the planting; feeding happens at night, so the harborage is the part you can act on directly."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Take a flashlight out after dark and pick them off by hand. Night is when they are actually on the plants, so a daytime hunt finds almost nothing.",
+     "note_seasoned": "Night collection catches them while active on foliage; run consecutive passes during cool, wet stretches in spring and fall, when numbers peak."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Sink beer traps so the rim sits level with the soil surface. You can also ring the base of each plant with diatomaceous earth, a gritty powder made from fossil algae, as a barrier they dislike crossing.",
+     "note_seasoned": "Beer traps set flush to the soil line draw and drown them; a diatomaceous earth ring at the stem base is an abrasive barrier placed exactly where seedlings get severed."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "Iron phosphate slug pellets are approved for organic gardens and carry low risk around food plants, so they are a reasonable step if traps and hand-picking are not keeping up.",
+     "note_seasoned": "These baits carry organic approval and low risk to non-target organisms, which is what earns them a place at the end of the ladder; concentrate them around fresh transplants, the most vulnerable stage."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Start with a variety bred to resist this disease. Look for Devotion, Obsession, Passion, Thunderstruck, or Prospera, or any seed labeled DMR, which stands for downy mildew resistant. This one choice does more than anything else on this list.",
+     "note_seasoned": "Variety selection is the highest-leverage control available here. The Rutgers breeding lines Devotion, Obsession, Passion, and Thunderstruck, along with the organic-approved Prospera, rated strongly resistant in replicated field trials. Sweet Ocimum basilicum types carry the most susceptibility, while spice and citrus basils hold up better."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil, not over the top of the plants. The spores need wet leaves to get started, so foliage that stays dry is far harder to infect.",
+     "note_seasoned": "Sporangia require leaf wetness to germinate, so overhead irrigation hands the pathogen the one condition it cannot work without; delivering water at ground level withholds it."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant enough elbow room that air moves between them and the leaves dry quickly after rain or morning dew.",
+     "note_seasoned": "Wider spacing shortens canopy leaf-wetness duration; on a planting already showing symptoms, opening it up is worth doing at once rather than waiting for the next season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull infected plants as soon as you find the fuzzy gray-purple growth under the leaves, and carry them out of the garden. Every infected plant is shedding spores onto its neighbors.",
+     "note_seasoned": "Prompt removal and destruction of infected plants cuts the local spore load, which matters because warm, humid weather can carry this disease across a planting inside a few days."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "If only part of a plant is affected, cut those heavily infected stems out and take them away from the garden instead of dropping them on the ground.",
+     "note_seasoned": "Cutting out heavily infected stems buys time on a planting that is not yet fully involved; once infection turns systemic no organic curative applies, so treat this as spore-load reduction and not a cure."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Copper fungicide can help, but only when you spray ahead of the disease showing up, and even then it works moderately at best. Follow the label rates, and expect it to protect a future planting rather than rescue a covered one.",
+     "note_seasoned": "Copper is preventive at label rates with moderate efficacy, and timing relative to infection governs the result. This pathogen is an oomycete, a water mold rather than a true fungus, so fungicide classes aimed at true fungi are often ineffective against it."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Some basil varieties are sold carrying resistance to this wilt. Check the disease-resistance notes in the seed catalog before you order.",
+     "note_seasoned": "Fusarium wilt resistance is present in some cultivars but is not general across sweet basil; seed catalog disease-resistance notation is where to confirm a given line carries it."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move basil to a fresh spot each year. Once this wilt turns up in a bed, keep basil out of that bed for the next two to three years.",
+     "note_seasoned": "The fungus persists in soil and infects through the roots, so shifting the planting location breaks that reservoir; work to a 2 to 3 year gap before returning basil to an affected bed."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sort out soggy ground before you plant. Wet soil, plus warm soil above 70°F, is what pushes this disease along fastest.",
+     "note_seasoned": "Wet conditions paired with soil above 70°F accelerate symptom development; drainage work removes the half of that pairing you can actually change in a garden bed."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "When a plant wilts and does not perk up after watering, pull it and put it in the trash. Keep it out of the compost pile.",
+     "note_seasoned": "No effective organic curative exists once a plant is infected, so removal is the whole response: destroy affected plants rather than composting them, since the pathogen survives in soil and debris."
+    }
+   ]
+  }
+ ]
+}

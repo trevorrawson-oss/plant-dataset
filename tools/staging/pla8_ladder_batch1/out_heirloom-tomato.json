@@ -1,0 +1,286 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on high-nitrogen fertilizer. It pushes out the soft, fast new growth that aphids settle on first, so a lighter feeding hand gives them less to work with.",
+     "note_seasoned": "Nitrogen-flush growth is the preferred feeding substrate, which is why feeding history drives outbreak severity about as much as weather does. Moderate the nitrogen and there is less tender tip growth to support rapid colony buildup."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Hit the clusters with a strong jet from the hose, aiming up under the leaves where they hide. This dislodges most of them and it is the first thing to reach for.",
+     "note_seasoned": "A directed jet knocks the colony off mechanically, which suits an insect that reproduces asexually and rebuilds within days. Repeat as fresh tip growth is recolonized, and work the leaf undersides."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs and lacewings feed on aphids, and you can buy and release them onto active clusters. Planting marigolds or nasturtiums near your tomatoes draws in helpful insects that do the same job on their own.",
+     "note_seasoned": "Released ladybugs or lacewings work the colonies directly; interplanted marigold and nasturtium recruit resident beneficials for the same effect without a purchase."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For an infestation that keeps coming back, spray insecticidal soap, a soap-based spray that acts on soft-bodied insects it touches. Coat the undersides of the leaves, since that is where the aphids sit.",
+     "note_seasoned": "Coverage decides the outcome: target leaf undersides and growing tips where the colonies concentrate, and expect to re-treat as populations rebuild in warm weather."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, pressed from the seeds of the neem tree, is the other spray option for stubborn clusters. Like the soap, it has to reach the aphids, so wet the leaf undersides thoroughly.",
+     "note_seasoned": "Interchangeable with soap where colonies rebuild after washing. Direct the application onto the colonies themselves, leaf undersides and growing tips, rather than over the top of the canopy."
+    }
+   ]
+  },
+  {
+   "id": "tomato-hornworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Turn or till the soil in your tomato bed in autumn. The caterpillars spend the winter in the soil as pupae, a resting stage, and digging brings them up, which cuts how many carry over into next year.",
+     "note_seasoned": "Larvae pupate in soil and overwinter there, so an unworked bed carries the prior season's population forward. Autumn tillage exposes the pupae and lowers local carryover."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick them off by hand and drop them into a bucket of soapy water. They blend into the stems, so look for the dark droppings on the leaves below and search upward from there. If a caterpillar has small white capsules stuck on its back, leave it in place: parasitic wasps have laid eggs on it and are already at work.",
+     "note_seasoned": "Handpicking is the workhorse. A single large larva strips a great deal of foliage, so pulling a few off by hand goes further than it would with a small pest. Frass on lower leaves is the locating cue. Leave larvae bearing white cocoons so the wasp brood completes."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Plant dill, fennel, or basil near your tomatoes. They attract predatory wasps that prey on hornworms, and those wasps are the reason some caterpillars end up carrying white capsules.",
+     "note_seasoned": "Dill, fennel, and basil interplantings support the predatory wasps that attack hornworms. The white cocoons on a larva's back are that biological control already running, so preserving parasitized larvae feeds the next wasp generation."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, short for Bacillus thuringiensis, is a naturally occurring bacterium sold as a spray that acts on caterpillars which eat treated leaves. It is worth considering when there are more hornworms than you want to pick off one by one.",
+     "note_seasoned": "Bt is the material option where handpicking cannot keep pace. It acts through feeding, so coverage on the foliage the larvae are actively working is what determines the result."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Drape row cover fabric, a light woven sheet, over seedlings and young plants. It is a physical barrier that keeps the beetles off during the stretch when small plants suffer most.",
+     "note_seasoned": "Exclusion during the early window is the main play. Overwintered adults emerge in spring and hit small transplants, whose limited leaf area makes shot-hole feeding proportionally damaging; the timing of the attack matters more than its size."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, pressed from the seeds of the neem tree, is a spray option if the peppering gets heavy on small plants. Cover the leaves where you see fresh holes.",
+     "note_seasoned": "The material fallback where exclusion was not in place early. Reserve it for the seedling stage, since well-established plants with ample foliage usually tolerate the same feeding without major harm."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep plants well watered through hot weather. Mites hit water-stressed plants hardest, so steady moisture is your strongest everyday defense. Keeping dust down around the bed helps too, since dry, dusty conditions suit them.",
+     "note_seasoned": "Drought stress raises susceptibility sharply and the mites favor hot, dry, dusty conditions, so consistent irrigation plus dust suppression are the primary cultural controls here rather than an afterthought."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Spray the plant with a strong jet of water, especially under the leaves, and repeat over several days. That knocks mites off and breaks up their colonies.",
+     "note_seasoned": "Repeated jetting dislodges mites and disrupts colony structure and webbing. Repetition is what makes it work against a pest that completes a generation in under a week in summer heat."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "You can buy and release predatory mites, which are mites that hunt spider mites, so a living control is working on the plants for you.",
+     "note_seasoned": "Released predatory mites put a control into the canopy itself, which is useful late in the season when spider mite populations are compounding fastest."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray that acts on the pests it touches, is a good follow-up after the water blasts. Aim it at the leaf undersides where the mites and webbing are.",
+     "note_seasoned": "Follow-up to the water treatment. Leaf-underside coverage is the whole game, and the short summer generation time sets the reapplication interval."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, pressed from the seeds of the neem tree, is the other follow-up spray. Same rule as the soap: it has to reach the undersides of the leaves to do anything.",
+     "note_seasoned": "Interchangeable with soap as the post-jetting follow-up. Direct it at the leaf undersides where the colonies and webbing sit."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "early-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your tomatoes to a new spot each year. The spores build up in soil where tomatoes keep going in, so shifting the planting keeps that buildup from working against you.",
+     "note_seasoned": "Rotate tomatoes out of a bed on a 3 to 4 year cycle. Repeated plantings build soil inoculum, and the fungus carries over on infected debris and in the soil between seasons."
+    },
+    {
+     "method": "straw_mulch",
+     "note_beginner": "Lay mulch over the soil around the base of each plant. Rain splashing off bare soil is how the fungus travels from the ground onto the lowest leaves, and a mulch layer gets in the way of that.",
+     "note_seasoned": "Mulch interrupts the splash pathway that carries overwintered inoculum from soil onto the lowest foliage, which is why infection starts low and climbs. Core prevention here, not a finishing touch."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plant rather than over the top of it. Overhead watering drives soil up onto the lowest leaves, which is exactly the route the spores take.",
+     "note_seasoned": "Soil-level irrigation removes an operator-generated splash event; paired with mulch it closes the main route from soil inoculum to lower foliage."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Stake or cage your plants and give them room, so the leaves stay off the ground and air moves through. Pruning out the densest growth helps as well.",
+     "note_seasoned": "Staking lifts foliage clear of the soil surface, while spacing and canopy pruning keep air moving. Heirlooms mostly lack the partial early-blight tolerance bred into some modern hybrids, so this canopy work carries more of the load."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Bag the spotted leaves you pull and put them in the trash rather than the compost pile. Clear old tomato debris out of the bed too, since the fungus rides out the winter on it.",
+     "note_seasoned": "The pathogen overwinters on infected debris, so offsite disposal of that material lowers what is available to splash up the following spring. Composting symptomatic tissue keeps it in circulation."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Pick off the spotted lower leaves as soon as you notice them. Getting them off the plant early slows how fast the disease climbs.",
+     "note_seasoned": "In-season removal of symptomatic lower leaves takes out sporulating tissue and slows the upward progression. Act on the first bullseye lesions rather than waiting for the lower canopy to yellow and shed."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper-based spray can slow how fast the disease moves up the plant. It does its best work applied before the disease takes hold, so treat it as protection rather than a rescue once spots are everywhere.",
+     "note_seasoned": "Copper is a preventive application, most useful through warm, wet spells when splash infection is active. It slows spread rather than clearing established lesions."
+    }
+   ]
+  },
+  {
+   "id": "late-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Airflow is your best defense here. Stake your plants and space them so air moves freely through the leaves.",
+     "note_seasoned": "Excellent airflow is the leading cultural control. Stake and space generously to keep the canopy open, which matters because this pathogen spreads explosively once cool, wet weather sets in."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear every bit of tomato debris out of the garden before winter, and send affected material to the trash rather than the compost pile.",
+     "note_seasoned": "Tomato debris left in the garden over winter is the local carryover to close. Bag and bin infected material; composting it returns the tissue to the bed."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Heirlooms rarely carry late-blight resistance. If this disease has hit your area before, it is worth growing a resistant variety and watching all your plants closely through cool, wet weather.",
+     "note_seasoned": "Resistance matters more here than rotation, since the inoculum arrives airborne over long distances. A few modern hybrids carry late-blight resistance genes and heirlooms rarely do, so reserve the variety swap for areas with a recurrence history."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Pull off and bin affected leaves and stems the moment you spot them. If a plant is badly hit, take the whole plant out so it cannot spread to its neighbors.",
+     "note_seasoned": "Immediate removal of infected tissue, and roguing whole plants that are badly affected, is the highest-value in-season action against a pathogen that can take a plant down in days."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper-based fungicide can help as protection during wet spells. Apply it ahead of trouble rather than expecting it to save a plant that is already collapsing.",
+     "note_seasoned": "Copper is preventive here. Time applications to wet weather windows and pair them with removal, since this disease outruns a curative approach."
+    }
+   ]
+  },
+  {
+   "id": "septoria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Shift your tomatoes to a new spot each year. This fungus overwinters in old debris and soil, so a fresh bed starts you with less of it.",
+     "note_seasoned": "Rotation reduces the carryover this pathogen holds in debris and infested soil, the same lever that works on early blight."
+    },
+    {
+     "method": "straw_mulch",
+     "note_beginner": "Mulch the soil around the base of your plants. The spores travel in water splashing off bare soil onto the lowest leaves, and mulch blocks that route.",
+     "note_seasoned": "Mulch interrupts the splash route from infested soil to lower foliage, which is how the bottom-up defoliation gets started."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plant instead of overhead, so you are not splashing soil onto the lower leaves yourself.",
+     "note_seasoned": "Soil-level irrigation removes an operator-generated splash event during the warm, humid weather when this fungus spreads fastest."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Keep plants staked and prune out very dense growth so air moves through the canopy. Heirlooms are not bred to resist leaf-spot diseases, so airflow does a lot of the work here.",
+     "note_seasoned": "Spacing and canopy pruning are load-bearing on heirlooms, which carry no bred leaf-spot resistance. Open canopies plus sanitation stand in for the genetics."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Send the leaves you remove to the trash rather than the compost pile, and clear old tomato debris out of the bed, since the fungus carries over on it.",
+     "note_seasoned": "Carryover lives on debris and in infested soil, so offsite disposal of removed foliage and end-of-season debris keeps that reservoir from rebuilding."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Strip off the spotted lower leaves as soon as you find them. The sooner they are off the plant, the slower the spots climb.",
+     "note_seasoned": "Prompt removal of symptomatic lower leaves reduces the sporulating tissue driving defoliation from the bottom up. Pair it with canopy opening rather than treating it as the alternative."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper-based fungicide is an option once you are keeping up with leaf removal and airflow. It supports those habits rather than replacing them.",
+     "note_seasoned": "Copper is a supporting material. Moisture management and sanitation, rather than a single spray, are what hold this back on a host with no bred resistance."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-verticillium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep tomatoes out of an affected bed for several years. Both fungi survive in soil for a long time, so a one-year break does not clear them.",
+     "note_seasoned": "Long rotation, on the order of 4 to 6 years out of the bed, because both pathogens persist as resting structures in soil for many years. Fusarium favors warm soils and Verticillium cooler ones, so an infested bed stays risky across a range of seasons."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "For heirlooms this is the control that matters most. Most heirlooms have little or no resistance to these two soil fungi, while many hybrids are bred to resist them; look for V and F on a hybrid's tag. Cherokee Purple is one heirloom reported to have some tolerance. Where wilt has struck before, heirlooms can also be grafted onto resistant rootstock, meaning the root system of a resistant plant supporting the heirloom top.",
+     "note_seasoned": "The V and F of the VFN codes mark exactly the bred resistance heirlooms lack, leaving them fully susceptible where these pathogens are established. Cherokee Purple is a noted heirloom exception with some tolerance. On infested ground, grafting onto resistant (VF) rootstock keeps the heirloom fruit on a root system that holds up."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Keep the bed well drained. Good drainage is one of the few site conditions that works in your favor here, so improve or avoid ground that stays soggy.",
+     "note_seasoned": "Drainage is a standing site condition to maintain, sitting alongside long rotation as prevention, since no curative material exists once the vascular tissue is colonized."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Once a plant has wilted for good, no spray will bring it back. Pull it, bag it, and get it out of the garden so it does not add more fungus to the soil.",
+     "note_seasoned": "Rogue out and destroy symptomatic plants. The purpose is limiting further soil loading rather than rescue, since the fungi plug the water-conducting tissue and no curative treatment exists."
+    }
+   ]
+  },
+  {
+   "id": "blossom-end-rot",
+   "type": "physiological",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Steady watering is the fix. This is not an infection and it is not a shortage of calcium in your soil: the fruit misses out on calcium when watering swings from wet to dry and back, because calcium travels with water. Water deeply on a regular rhythm once fruit sets, mulch around the plant to smooth out the swings, and try not to disturb the roots at the base. Adding calcium is not the answer.",
+     "note_seasoned": "This tracks watering consistency, not soil calcium levels. Calcium moves with water, so moisture swings or root damage starve the fast-growing blossom end and its cells break down. Deep, regular irrigation, mulch to buffer the soil, and no root disturbance at the base are the control. Large-fruited heirlooms show it more severely, and the first fruits of the season take the worst of it, so hold the rhythm tightest early."
+    },
+    {
+     "method": "moisture_buffering_mulch",
+     "note_beginner": "Spread a layer of mulch over the soil around the plant. It slows how quickly the ground dries between waterings, so the soil holds a steadier moisture level instead of drying hard and then soaking again, which is the pattern that starves the fruit end.",
+     "note_seasoned": "Mulch functions here as a moisture buffer on the root zone, damping the swings between irrigations so calcium keeps moving into the developing fruit. It supports the watering rhythm rather than substituting for it, and it earns the most on large-fruited heirlooms carrying the season's first set."
+    },
+    {
+     "method": "avoid_ammoniacal_nitrogen",
+     "note_beginner": "Go easy on heavy nitrogen feeding, ammonium-based fertilizers included, while fruit is setting. The problem here is calcium reaching the fruit, and pushing a lot of nitrogen at the plant works against that rather than helping.",
+     "note_seasoned": "Hold the nitrogen back through fruit set, ammonium sources included, since a heavy feed pulls against the calcium delivery this disorder actually tracks. Skipping the sidedress is the move, not offsetting it with a calcium product, because soil calcium levels are not the limiting factor."
+    }
+   ]
+  },
+  {
+   "id": "fruit-cracking",
+   "type": "physiological",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Even soil moisture is the whole defense. Water deeply and regularly through dry spells and mulch to soften the swings, so the inside of the fruit is not suddenly swelling faster than the skin can stretch. A crack cannot be undone, so pick cracked fruit promptly and use it quickly; if heavy rain is coming, pick the nearly ripe fruit first.",
+     "note_seasoned": "Cracking follows rapid water uptake, typically heavy rain onto a dried-out bed, when the interior expands faster than the skin can grow. Deep, regular irrigation during drought plus mulch to buffer the fluctuation is the control; harvesting near-ripe fruit ahead of a forecast soaking takes the vulnerable fruit out of the event. Radial cracking is the more serious form and worsens in hot, humid weather, and thin-skinned, large-fruited heirlooms split more readily than crack-resistant hybrids."
+    },
+    {
+     "method": "moisture_buffering_mulch",
+     "note_beginner": "Lay mulch over the soil around the plant. It keeps the ground from drying out hard between waterings, so a heavy rain lands on soil that is already damp and the fruit gets a gentler change rather than a sudden one.",
+     "note_seasoned": "The buffer earns its place going into a dry stretch: mulched soil holds moisture more evenly, so a soaking does not translate into the fast uptake that outpaces skin growth. Run it with the deep watering rhythm, since thin-skinned, large-fruited heirlooms have less margin in that event."
+    }
+   ]
+  }
+ ]
+}

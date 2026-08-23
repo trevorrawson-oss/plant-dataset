@@ -1,0 +1,254 @@
+{
+ "pests": [
+  {
+   "id": "beet-spinach-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give chard a different bed than the one that held chard, beets, or spinach last season. The flies spend the winter in the soil under those crops, so a fresh spot starts you off with fewer of them nearby.",
+     "note_seasoned": "Pupae overwinter in the soil beneath the previous host crop, so siting chard away from last year's chard, beet, or spinach separates the emerging adults from the planting. Keeping these relatives apart in the garden rather than side by side works on the same logic."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull the weeds around the bed, particularly lambsquarters and chickweed, which feed the same pest. Clearing spent chard, beet, and spinach leaves helps too, since they give the flies somewhere to keep going.",
+     "note_seasoned": "Goosefoot weeds such as lambsquarters and chickweed carry the leafminer between plantings, so weeding the bed and its margins narrows the host bridge that the several overlapping generations depend on across a season."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put a light row cover over the bed as soon as the seed is in the ground, and leave it on while the plants are young. If the flies cannot reach the leaves, they cannot start the tunnels.",
+     "note_seasoned": "Exclusion has to be in place from sowing, ahead of the first egg-laying flight. Females deposit rows of white eggs on leaf undersides, so any open edge or gap in the cover gives them the access they need."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "The moment you spot a tunneled leaf, take it off the plant and get rid of it, or pinch the leaf and squash the maggot inside. Do it before the maggots drop out to the soil, where they turn into the next round of flies.",
+     "note_seasoned": "Removing mined leaves ahead of larval drop is the main lever, because the larva sits protected between the leaf surfaces where insecticides reach it poorly. Crushing in place is the alternative when you would rather not strip leaf area off a young plant."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Tiny wild wasps that attack the maggots are usually already working in the garden, and they often hold the numbers down on their own. Go easy on sprays that kill a wide range of insects so those helpers stay in the bed.",
+     "note_seasoned": "Naturally occurring parasitic wasps generally keep leafminer numbers in check, which is a large part of why this pest is handled culturally. An insecticide application tends to cost more in parasitoids than it takes out of larvae shielded inside the leaf."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease off high-nitrogen feeding. A lot of nitrogen pushes out soft, sappy new leaves, and that is the growth aphids multiply on fastest.",
+     "note_seasoned": "Excess nitrogen produces the lush, soft tissue on which colonies build most quickly, so feeding for steady growth rather than a flush leaves the crop less favorable to them."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Keep the weeds down around the planting. Winged aphids fly in from weeds and other plants nearby, so fewer of those close by means fewer arrivals landing on your chard.",
+     "note_seasoned": "Weedy margins act as a reservoir for the winged forms that colonize the crop, so clearing them lowers the immigration pressure that scouting otherwise has to catch on the new growth."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "The same light row cover you would put up against leafminers keeps aphids off as well, so if it is already over the young plants you are covered for both.",
+     "note_seasoned": "Row cover deployed for the leafminer also excludes colonizing aphid flights, so one exclusion decision on this crop returns against two pests."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard jet from the hose knocks the clusters off, and that is often enough on its own. Aim up underneath the leaves and down into the crinkles and along the stalks, where they hide.",
+     "note_seasoned": "A strong water jet dislodges colonies from leaf undersides and petioles and is frequently sufficient by itself. Savoyed types need the jet worked into the crinkling, which shelters colonies from a straight-on spray."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and small wasps eat aphids and usually clean up what is left after a water blast. They stay around if you skip broad sprays, so give them a few days to work before doing anything else.",
+     "note_seasoned": "Conserving ladybugs, lacewings, and parasitoid wasps generally handles the residual population. Broad-spectrum applications cost more in natural enemies than they return against a pest that rebuilds quickly from winged immigrants."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If colonies keep rebuilding, spray insecticidal soap and wet the undersides of the leaves, since that is where the aphids sit. It only affects what it actually lands on, so coverage is the whole job.",
+     "note_seasoned": "Soap is a contact material, so results track coverage of undersides and petioles rather than dose, and it needs repeating as new colonies appear on fresh growth."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other option and works the same way, by coating the aphids where the spray lands, so again get it well up under the leaves.",
+     "note_seasoned": "Horticultural oil fills the same contact niche as soap on leaf undersides; the limiting factor is placement into sheltered colonies, not choice of the two materials."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetle",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake out old plant debris when the season ends, since that is where the beetles pass the winter, and pull the weeds around the bed that they also feed on. Fewer wintering spots means fewer beetles waiting when your seedlings come up.",
+     "note_seasoned": "Adults pass the winter under garden residue and emerge in spring onto whatever tender growth is up first, so clearing residue and weedy hosts lowers the local carryover that lands hardest on the seedbed."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Stretch a row cover over the seedbed and leave it there through the first few weeks. While the plants are tiny, that is the protection you can count on most; once they are up and growing well, the little holes are mostly a looks problem.",
+     "note_seasoned": "Cover through the seedling stage, when heavy feeding can stunt or kill outright. On established plants the shot-holing is largely cosmetic, though it still disfigures foliage that is being grown as the crop."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "When beetles are thick on young plants, coat the foliage with kaolin clay, a fine white mineral clay applied as a dust. Seedlings that are watered well and growing fast usually outgrow the pitting on their own, so save this for heavy pressure.",
+     "note_seasoned": "Kaolin is the option under high seedling pressure. Keeping plants unstressed and evenly watered so they grow through the feeding does most of the work, and mature chard seldom warrants any treatment."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take away the boards, piles of leaves, and weedy cover close to the plants, since that is where they sit out the daylight hours. Leave room between plants so air moves through, and strip off the lowest leaves lying flat on the soil.",
+     "note_seasoned": "Cutting daytime harborage and the humid microclimate under a full stand is the base layer: spacing for air movement, plus removal of the ground-contact lower leaves that hold moisture at the crown."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Aim the hose at the soil and water early in the day instead of in the evening. Slugs come out at night and travel over damp ground, so a surface that has had hours to dry is less inviting by the time they start moving.",
+     "note_seasoned": "Delivering irrigation at ground level early in the day sets the surface up to dry before dusk, when nocturnal feeding begins. Evening watering leaves the bed damp straight through their active hours, and under a full chard canopy that moisture lingers longer than it does in the open."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Take a flashlight out to the bed after dark and collect them by hand. They feed at night, so that is when you will actually find them up on the leaves instead of hidden away.",
+     "note_seasoned": "Nocturnal hand-collection is the most direct removal and is best timed to damp evenings, after irrigation or rain, when feeding is heaviest under the canopy."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Sink shallow dishes of beer at soil level to trap them, or lay a board on the ground as a daytime hiding place and lift it each morning to collect whatever gathered underneath. A ring of coarse, scratchy material around the plants can slow them down as well.",
+     "note_seasoned": "Beer dishes trap directly, while boards set out as artificial daytime refuges concentrate them for collection. A coarse abrasive ring is a supporting barrier rather than a control on its own."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "Where they keep chewing through the leaves, scatter an iron-phosphate slug bait, the type usually recommended for gardens with pets and wildlife around. Spread it thinly at the rate on the label rather than in piles.",
+     "note_seasoned": "Iron-phosphate bait is the material for sustained pressure and the usual choice where pets and wildlife move through the beds. It supplements the harborage reduction above rather than substituting for it, since fresh slugs move in from any damp cover left nearby."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "cercospora-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If the spots show up in your garden year after year, look for a chard variety described as tolerant to leaf spot. It will not shut the disease out, but it holds up better through a warm, wet spell.",
+     "note_seasoned": "Tolerant cultivars are worth seeking where the disease recurs. Tolerance moderates the loss rather than excluding infection, so it stacks with the cultural measures instead of replacing them."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give the bed a break of two or three years from chard and its relatives, beets and spinach, before you plant any of them there again. The fungus carries over on the leftovers of those crops.",
+     "note_seasoned": "A two to three year break from chard, beet, and spinach in a given bed starves the residue-borne inoculum. Because the relatives share the pathogen, moving chard alone within a group of them accomplishes little."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up and dispose of the old chard and beet leaves and debris at the end of the season, and pull related weeds nearby. That is where the fungus lives between crops.",
+     "note_seasoned": "Cercospora beticola survives on infected chard and beet residue and on related weed hosts, so destroying that debris removes the reservoir that supplies the following season's splash-borne spores."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room, and thin them if they are crowded, so air moves through and the leaves dry off quickly after rain. This fungus needs the leaves to stay wet to get started.",
+     "note_seasoned": "Spacing and thinning shorten leaf wetness duration, the variable this pathogen responds to most under warm, humid conditions and through a long harvest window."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the top of the plants, and do it in the morning. Overhead water splashes spores up onto the leaves and then keeps them wet, which is what the fungus is waiting for.",
+     "note_seasoned": "Rain and overhead irrigation are the splash-dispersal route from residue to leaf, so base watering removes both the dispersal event and an added wetness period; morning timing shortens whatever wetness does occur."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Pick off the worst-spotted leaves and throw them out, starting with the older outer ones where the spots turn up first. Spotted leaves will not heal, so taking them off slows the march inward toward the leaves you want to eat.",
+     "note_seasoned": "Spotted tissue does not recover, so removing the heavily infected older outer leaves is about cutting the inoculum that moves inward. It slows progression rather than arresting it, and it opens the canopy slightly at the same time."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Through a genuinely wet season, a copper product carrying a vegetable label can slow it, though only when you begin before the spotting is widespread. It protects leaves that are still clean rather than curing the ones already marked.",
+     "note_seasoned": "Copper acts as a protectant, so it suppresses spread only when applications begin ahead of heavy spotting. Confirm the product carries a vegetable label, and expect the cultural measures to carry most of the load regardless."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Shift chard away from ground that just grew chard, beets, or spinach. All three catch this one, and it carries over on what gets left behind in the bed.",
+     "note_seasoned": "Chard shares this water mold with beet and spinach, so rotation has to move away from the whole group. The pathogen persists on crop debris and on related goosefoot hosts between plantings."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out old leaves and crop leftovers from the bed. Stay out of the planting while the leaves are still wet, too, since brushing past wet plants carries it from leaf to leaf.",
+     "note_seasoned": "Destroy the crop residue that carries the pathogen over, and keep out of the stand while foliage is wet, when spores move most readily on contact and splash."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew keeps turning up in your garden, pick a chard variety listed as tolerant for the next sowing.",
+     "note_seasoned": "Where it recurs, tolerant cultivars are the durable lever on a disease whose remaining controls all reduce to keeping foliage dry."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves through the stand and the leaves can dry. Drying the foliage out is the bulk of the control here, more than anything you spray.",
+     "note_seasoned": "Spacing and thinning shorten the moisture periods this pathogen infects during. Because it is favored by cool, wet conditions, drying the canopy is the primary control rather than a supporting one."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plants instead of wetting the leaves. Splashing water moves it around, and leaves that stay damp let it in.",
+     "note_seasoned": "Base irrigation removes both the splash dispersal and the added leaf wetness that infection depends on, which matters most through the cool, damp stretches when pressure peaks."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Strip out the leaves that are furthest gone, the twisted, thickened ones in the middle of the plant included, and bin them. They will not come back from it, and taking them off leaves less there to spread.",
+     "note_seasoned": "Infected tissue cannot be cured, so removing the yellow-blotched and distorted leaves reduces the sporulating surface on the undersides while opening the canopy for drying."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper fungicide is the last thing to reach for, and only in a stretch of weather so wet that nothing dries out. Keeping the leaves dry is still doing most of the work.",
+     "note_seasoned": "Copper is a last resort for a persistently wet season. It supplements cultural control on this disease rather than substituting for it, since infection tracks leaf wetness more than inoculum load."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sow into soil that drains well and has warmed up, not into cold, soggy ground. Cold wet soil is what lets these soil organisms get at the seed while it is still slow to sprout.",
+     "note_seasoned": "Pythium and Rhizoctonia are favored by cold, wet, poorly drained soil, so improving drainage and holding off until the bed warms compresses the window in which germinating seed and stem base are exposed."
+    },
+    {
+     "method": "sensible_seeding_rate",
+     "note_beginner": "Sow fresh seed at the depth it calls for, and resist burying it deeper. Soaking chard's corky seedballs in water for a day before sowing gets them up faster, which cuts the time they spend at risk.",
+     "note_seasoned": "Old or weak seed and excessive sowing depth prolong emergence and therefore exposure. A day's presoak of the seedball brings emergence forward and narrows the vulnerable window in a crop whose seedball is slow to sprout to begin with."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Give the seedbed just enough water to stay moist, and stop short of leaving it wet, watering at the soil rather than drenching the row. If seedlings start flopping over, hold off watering and let the surface dry down a little.",
+     "note_seasoned": "Overwatering is the controllable driver: keep the bed evenly moist without saturating it, and once collapse begins, withholding water to dry the surface is the main lever available to slow the pathogens."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out the seedlings that have already flopped, because they will not pick back up. There is no good home cure once this gets going, so everything above is where the real protection lives.",
+     "note_seasoned": "Collapsed seedlings cannot be recovered, so pull them out. With no effective home treatment once the pathogens are active, this ladder is deliberately front-loaded into the sowing and moisture decisions above."
+    }
+   ]
+  },
+  {
+   "id": "root-knot-nematode",
+   "type": "nematode",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Root-knot nematodes are microscopic worms in the soil, and they build up where the same host crops are grown in warm ground season after season. Move chard to a fresh bed, and pick one that did not just carry another crop they feed on. Work plenty of compost and other organic matter in, and keep the plants watered so they cope better with the strain. Where a bed is badly infested, growing chard in containers of fresh mix, or growing it through the cooler months when the nematodes are less active, gets you around the problem.",
+     "note_seasoned": "Rotate into non-host or resistant crops, and keep chard from following a susceptible host in a warm sandy bed, since populations build under continuous host cropping. Ample organic matter and steady moisture help the crop tolerate galling rather than reducing the population itself. Container culture in fresh mix and cool-season scheduling are the fallbacks where the nematodes are established, which matters because chard is reported as very susceptible."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "At the end of the season, pull the badly affected plants with their roots and get rid of them instead of turning them back into the bed. No spray cures a plant once the roots are knotted, so clearing them out is the part you control.",
+     "note_seasoned": "There is no rescue treatment for an infected plant, so lift and destroy heavily galled root systems at season end rather than incorporating them, which keeps galled tissue out of the bed you intend to plant next."
+    }
+   ]
+  }
+ ]
+}
