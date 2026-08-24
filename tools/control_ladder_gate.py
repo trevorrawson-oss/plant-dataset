@@ -78,6 +78,17 @@ def ladder_violations(data, crop):
         pid = p.get("id") or p.get("name") or "?"
         ladder = p.get("control_ladder")
         if ladder is None:
+            # `None` = not yet laddered. Legal through the rollout; coverage_report tracks it.
+            continue
+        if not ladder:
+            # `[]` = laddered and left BLANK, which is a defect in every case and is NOT the same
+            # state as `None`. Added 2026-08-24: a batch-2 authoring agent correctly refused to pad
+            # sweet-corn's raccoons ladder (no catalog method reaches vertebrate exclusion) and
+            # emitted []. Every gate passed it -- control_ladder_gate 0 violations, gate_all
+            # 121/121 -- so the crop's highest-severity problem would have shipped with no guidance
+            # at all, invisibly. A SHAPE gate cannot see ABSENCE unless absence is spelled out.
+            V.append(f"{slug}/{pid}: control_ladder is empty; use null for 'not yet laddered', "
+                     f"or author at least one rung")
             continue
         ptype = p.get("type")
         if ptype not in TYPE_TARGETS:

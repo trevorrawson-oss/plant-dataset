@@ -55,6 +55,15 @@ def D(crop_obj):  # gate expects (data, crop)
 assert ladder_violations(*D(crop([prob()]))) == []
 # absent ladder -> not a ladder violation (coverage handles it)
 assert ladder_violations(*D(crop([prob(control_ladder=None)]))) == []
+# EMPTY ladder -> IS a violation. `None` means "not yet laddered", which is legal through the
+# rollout; `[]` means "laddered and left blank", which is a defect in every case. Found 2026-08-24
+# when a batch-2 authoring agent correctly refused to pad sweet-corn's raccoons ladder (no catalog
+# method reaches vertebrate exclusion) and emitted []. control_ladder_gate returned 0 violations and
+# gate_all stayed 121/121, so the crop's HIGHEST-SEVERITY problem would have shipped with no
+# guidance at all, invisibly. This is NOT the coverage floor, which stays deliberately unarmed.
+assert any("empty" in v for v in ladder_violations(*D(crop([prob(control_ladder=[])]))))
+# and it must fire on a disease as well as a pest
+assert any("empty" in v for v in ladder_violations(*D(crop([prob(control_ladder=[])], key="diseases"))))
 # dangling method reference
 assert any("unknown method" in v for v in ladder_violations(*D(crop([prob(control_ladder=[{"method": "ghost"}])]))))
 # NON-monotonic: conventional before cultural
