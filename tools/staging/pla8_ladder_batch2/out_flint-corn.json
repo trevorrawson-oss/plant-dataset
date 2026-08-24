@@ -1,0 +1,164 @@
+{
+ "pests": [
+  {
+   "id": "corn-earworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Start at the seed packet. Varieties with long, tight husk cover make it harder for the young caterpillars to work their way down into the ear. It slows them rather than shutting them out, so treat it as a head start.",
+     "note_seasoned": "Husk cover is the varietal lever: long, tight husks slow larvae moving down the silk channel toward the tip. It reduces entry rather than preventing it, so keep the later rungs available."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt is a naturally occurring bacterium sold as a spray that sickens young caterpillars once they eat it. It helps only if you put it on fresh silks, because that is where the eggs hatch and where the tiny caterpillars feed before they get down inside the ear.",
+     "note_seasoned": "Bt is a labeled organic option for the exposed window on fresh silks. Once larvae are down the silk channel they are out of reach, which makes silk timing the whole of the decision."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Where earworm pressure is heavy, spinosad is the stronger organic spray, and like Bt it has to land on fresh silks to reach the caterpillars before they tunnel in.",
+     "note_seasoned": "Spinosad is the other labeled organic material for silk-stage treatment, under the same timing constraint as Bt, since neither reaches larvae already feeding inside the ear."
+    }
+   ]
+  },
+  {
+   "id": "european-corn-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "After harvest, chop the old cornstalks up and dig them into the bed. The caterpillars spend the winter inside those stalks, so working the residue in cuts down how many come back.",
+     "note_seasoned": "Shred and incorporate stalk residue post-harvest. The overwintering stage sits inside old stalks, so destroying the residue is the main between-season lever."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move the corn to a different part of the garden each year rather than replanting last year's patch.",
+     "note_seasoned": "Rotating the planting away from last season's block backs up residue destruction; it is offered as a supporting step rather than a stand-alone one."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Scout the whorl, the tight cluster of new leaves at the center of each plant, on a routine. Rub out the egg patches and small caterpillars you find there before they get into the stalk.",
+     "note_seasoned": "Whorl scouting with hand removal of egg masses and early instars covers the window that matters; after larvae enter the stalk or ear shank they are protected from anything applied to the outside."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "A Bt spray, a bacterial product the caterpillars have to eat, reaches the borers while they are still feeding out in the open whorl. Once they are inside the stalk it will not get to them.",
+     "note_seasoned": "Bt covers the same open-whorl window as handpicking and suits widespread whorl feeding; it has no reach on larvae already tunneled into stalk tissue."
+    }
+   ]
+  },
+  {
+   "id": "cutworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "stem_collars",
+     "note_beginner": "Set a cardboard or foil collar around each young stem, pushing it about an inch into the ground. Cutworms chew at the base, so the collar puts a wall between them and the plant.",
+     "note_seasoned": "A cardboard or foil collar set an inch into the soil rings each seedling through establishment, the stage when stems are still soft enough to be severed at the base."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "A flashlight after dark is the tool here: take the caterpillars off by hand, or scratch through the top inch of soil beside a plant that was cut overnight, where the culprit tends to lie curled up.",
+     "note_seasoned": "Night collection plus digging just under the surface next to fresh damage works at low to moderate numbers; the larvae feed after dark and shelter shallowly by day."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where Stewart's wilt occurs in your area, pick a variety described as tolerant of it. That does not stop the beetles chewing the leaves; it limits the disease they can pass along while they feed.",
+     "note_seasoned": "Varietal tolerance here is aimed at Stewart's wilt, the bacterial disease the corn flea beetle vectors, not at the feeding injury itself. It is a seed-buying decision, made where the disease occurs locally."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Where beetles are thick on the seedlings, cover the young plants with lightweight row cover fabric. Take it off when the tassels form so the wind can carry pollen to the silks.",
+     "note_seasoned": "Row cover over the seedling stage is the exclusion step under heavy pressure; it has to come off at tasseling because corn sets its ears by wind pollination."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Light feeding is usually something small plants grow past, so hold an organic spinosad spray back for the times seedlings are actually being set back.",
+     "note_seasoned": "Spinosad is labeled if needed, but fine pitting on plants that are growing away from it does not call for a spray."
+    }
+   ]
+  },
+  {
+   "id": "raccoons",
+   "type": "vertebrate",
+   "control_ladder": [
+    {
+     "method": "exclusion_fencing",
+     "note_beginner": "You cannot spray for raccoons, so the job is keeping them out. Run a short two-wire electric fence around the patch, the wires low at roughly 4 and 8 inches off the ground, and switch it on as the ears get close to ready. Do it before the corn is ripe rather than after the first raid: once raccoons have found your corn they come back every night.",
+     "note_seasoned": "Exclusion is the whole control here, since no spray applies. A two-wire electric fence at about 4 and 8 inches, energized before the ears reach the milk stage, is the most reliable home defense. Timing carries as much weight as the fence itself, because a barrier raised after the first raid is trying to break an established nightly route rather than prevent one."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "common-smut",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If smut turns up year after year, look for a variety described as more tolerant of it when you buy seed.",
+     "note_seasoned": "Varietal tolerance is the seed-buying lever where smut recurs in the same ground. It is tolerance rather than immunity, so keep the removal step running alongside it."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move the corn to a different bed each year. The fungus can sit in the soil for years, so replanting the same spot keeps handing it another crop.",
+     "note_seasoned": "Spores persist in soil for years, so rotating out of an infected bed is the standing cultural step; it lowers what is waiting there rather than clearing it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut off the galls, the puffy silver-white growths, and bag them for the trash before they burst open. Keep them out of the compost, since the black powder inside is spores headed for your soil.",
+     "note_seasoned": "Excise and bag galls while they are still silvery and intact; once one ruptures the teliospores are already loose. Trash rather than compost."
+    }
+   ]
+  },
+  {
+   "id": "common-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Rust-resistant varieties are easy to find, so start there when you buy seed.",
+     "note_seasoned": "Resistant hybrids are widely available and carry most of the load. The pathogen blows in on wind currents rather than overwintering in most northern gardens, so there is little local carryover to manage."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line instead of over the top of the plants where you can. Rust takes hold in cool, damp conditions, so leaving less water sitting on the leaves helps.",
+     "note_seasoned": "Skip overhead irrigation where practical. Infection favors cool, moist, humid weather, and base watering keeps leaf wetness periods shorter."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take the worst of the lower leaves off to slow the spread and let more air through the plant. Most home patches live with some rust and no spray at all.",
+     "note_seasoned": "Removing the most heavily pustuled lower leaves slows spread and opens the canopy; a labeled fungicide is rarely warranted at garden scale, where tolerating the infection is the usual outcome."
+    }
+   ]
+  },
+  {
+   "id": "stewarts-wilt",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Resistant or tolerant varieties are the main defense here, so choose them at seed-buying time if this disease shows up where you garden.",
+     "note_seasoned": "Hybrid resistance is the primary control. Nothing is curative once the bacterium is in the plant, so the decision is made at seed purchase."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for a plant that is already infected. Pull badly affected seedlings and get rid of them rather than waiting to see whether they come back.",
+     "note_seasoned": "Rogue and destroy severely affected seedlings. Infected plants do not recover, and management shifts to the vector rather than the bacterium."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Covering young plants with row cover keeps corn flea beetles, the insects that carry this bacterium from plant to plant, off the seedlings during the stage when infection does the most harm. Take the cover off at tasseling so the corn can pollinate.",
+     "note_seasoned": "Row cover over seedlings breaks the transmission cycle by excluding the corn flea beetle vector through the most damaging infection window; it comes off at tasseling for wind pollination."
+    }
+   ]
+  }
+ ]
+}
