@@ -74,9 +74,27 @@ def cmd_status(a):
 
 
 # ---------------------------------------------------------------- families
+def problem_name(p):
+    """A problem's name under EITHER schema.
+
+    113 certified crops carry `name`; the 8 microgreens crops carry `name_beginner`/`name_seasoned`
+    and no `name` at all. The first version of this grouping read only `name`, so all 8 returned
+    None, collided on a signature of empties, and were reported as one 'twin group' -- a real
+    grouping arrived at for a bogus reason. Read both shapes.
+    """
+    return p.get("name") or p.get("name_seasoned") or p.get("name_beginner")
+
+
 def prose_key(p):
-    """Identity of a problem's SOURCED PROSE. Two crops sharing this share the read."""
-    return (p.get("name"), p.get("organic_treatment_beginner"), p.get("prevention_beginner"))
+    """Identity of a problem's SOURCED PROSE. Two crops sharing this share the read.
+
+    Same two schemas: the classic crops carry `organic_treatment_*`/`prevention_*`, the microgreens
+    carry `management_*`/`description_*`. Reading only the classic pair silently EXCLUDED the
+    microgreens from the duplication measurement rather than reporting them as distinct.
+    """
+    return (problem_name(p),
+            p.get("organic_treatment_beginner") or p.get("management_beginner"),
+            p.get("prevention_beginner") or p.get("description_beginner"))
 
 
 def cmd_families(a, todo=None):
@@ -98,7 +116,7 @@ def cmd_families(a, todo=None):
         todo = [c for c in cert if not laddered(c)]
 
     by = {c["slug"]: c for c in todo}
-    sig = {s: tuple(sorted((p.get("name") or "").lower() for _f, p in problems(c)))
+    sig = {s: tuple(sorted((problem_name(p) or "?").lower() for _f, p in problems(c)))
            for s, c in by.items()}
     groups = collections.defaultdict(list)
     for s, k in sig.items():
