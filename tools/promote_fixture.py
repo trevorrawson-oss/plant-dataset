@@ -58,6 +58,8 @@ COMMIT_FOR = {
     '75b3c0f0c253ffa7cb420d0f9c9d35e2a04c5dd47d9c222271923b2cc2b41d32': '34c0d26',
     # PLA-8: the iron-phosphate slug-bait safety absolute, 9 fields / 6 crops.
     '6b295d440a8d4bfbad240c0cbf1bfdc83ccad1059c2d615ac8f9f5765e9d69ca': 'cffa4a7',
+    # PLA-8 catalog r2: off_season_tillage + certified_clean_stock; prune_out_infection narrowed.
+    '6876840ed629ca5a86f4052697426120b2c245d5895c1663e9b8722112f8e670': 'b51bdbc',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
