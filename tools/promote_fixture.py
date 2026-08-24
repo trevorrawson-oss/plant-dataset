@@ -66,6 +66,8 @@ COMMIT_FOR = {
     '0f911326d2f4ca20c4b92e199afca3c8e842eb8fa422b1b2a1d537a3d20ac093': '9116050',
     # PLA-8 BATCH 1: 5 crops laddered, roster 7 -> 12.
     '76c7048803a0c68d0924b062a40cfb3d8ffdbaf9a12e316a851f40c9b2255bd4': '9fbf655',
+    # PLA-8 catalog r4: exclusion_fencing, closing the vertebrate gap.
+    '0754031d02261241e3ef56dda00f165af884101a85a8673db73016a6b2271263': '49d6182',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
