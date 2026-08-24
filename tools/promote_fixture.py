@@ -70,6 +70,8 @@ COMMIT_FOR = {
     '0754031d02261241e3ef56dda00f165af884101a85a8673db73016a6b2271263': '49d6182',
     # PLA-8 BATCH 2: the four corns, roster 12 -> 16.
     '0e12689ba616bca3316652c9064ca9cbce4aa0c4037b1b69589a1e397abb88a4': 'f389c2d',
+    # PLA-8: the Bt safety absolute closed in the catalog method.
+    'c13ddea5f1320d766847b707d3795c8cc81251d71ed864f61260f9eeb12e73f5': 'b23e05b',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
