@@ -11,7 +11,8 @@ should be expensive: READING the authored prose.
   prepare  pick/accept 5 crops, emit the catalog brief + per-crop inputs + the bot prompts
   merge    fold the bots' JSON back onto a scratch canonical
   verify   run the real gates on the merge, plus the checks that catch what gates cannot
-  status   how far the rollout has got
+  status   how far the rollout has got, and the family cut to batch by
+  families the family cut on its own: which remaining crops SHARE PROSE
 
 WHY EACH STEP EXISTS, in defects that actually happened:
   * `prepare` regenerates the brief FROM CANONICAL every time. Batch 1 was authored against a
@@ -69,9 +70,73 @@ def cmd_status(a):
     print(f"  remaining            : {len(todo)}   ({n_prob} problems)")
     print(f"  batches of 5 left    : {round(len(todo) / 5 + 0.49)}")
     print()
-    print("next candidates (fewest problems first, so a batch is a readable size):")
-    for c in sorted(todo, key=lambda c: len(problems(c)))[:12]:
-        print(f"    {c['slug']:22s} {len(problems(c)):2d} problems   {c.get('category','')}")
+    cmd_families(a, todo=todo)
+
+
+# ---------------------------------------------------------------- families
+def prose_key(p):
+    """Identity of a problem's SOURCED PROSE. Two crops sharing this share the read."""
+    return (p.get("name"), p.get("organic_treatment_beginner"), p.get("prevention_beginner"))
+
+
+def cmd_families(a, todo=None):
+    """Group the remaining crops by SHARED PROSE, because that is what makes a batch cheap.
+
+    WHY THIS REPLACED 'fewest problems first'. That ordering optimised batch SIZE and destroyed
+    batch COHERENCE: it is what produced batch 1 as heirloom-tomato + jalapeno + swiss-chard +
+    basil + fig -- five unrelated crops, 38 problems, and ZERO shared prose, so five separate
+    source sets had to be read from scratch. Measured across the 114 remaining crops, 295 of 861
+    problem-instances (34%) are BYTE-IDENTICAL to a problem on another unladdered crop. Grouping
+    by family collapses those into one read plus a mechanical equality check, and it makes the
+    'fix one member, check its siblings' rule automatic rather than something to remember.
+    """
+    import collections
+    if todo is None:
+        d = load()
+        cert = [c for c in d["crops"]
+                if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
+        todo = [c for c in cert if not laddered(c)]
+
+    by = {c["slug"]: c for c in todo}
+    sig = {s: tuple(sorted((p.get("name") or "").lower() for _f, p in problems(c)))
+           for s, c in by.items()}
+    groups = collections.defaultdict(list)
+    for s, k in sig.items():
+        groups[k].append(s)
+
+    twins = sorted((v for v in groups.values() if len(v) > 1), key=len, reverse=True)
+    singles = sorted(v[0] for v in groups.values() if len(v) == 1)
+
+    # how much prose is shared, so the payoff is stated rather than asserted
+    shared = collections.defaultdict(list)
+    for c in todo:
+        for _f, p in problems(c):
+            k = prose_key(p)
+            if all(k):
+                shared[k].append(c["slug"])
+    dupes = sum(len(v) for v in shared.values() if len(v) > 1)
+    total = sum(len(problems(c)) for c in todo)
+
+    print("BATCH BY FAMILY -- crops that SHARE PROSE share the read.")
+    print(f"  {dupes} of {total} problem-instances ({100*dupes//max(total,1)}%) are byte-identical "
+          f"to a problem on another remaining crop.")
+    print(f"  distinct problems left to READ: ~{len(shared)}, against {total} instances.\n")
+
+    print(f"TWIN GROUPS ({len(twins)} groups, {sum(len(v) for v in twins)} crops) -- "
+          f"one read covers the group:")
+    for v in twins:
+        n = len(problems(by[v[0]]))
+        print(f"  {len(v)}x  {n:2d} problems each   {', '.join(sorted(v))}")
+
+    print(f"\nSINGLETONS ({len(singles)}) -- still need an individual read. "
+          f"Batch these by CATEGORY so sourcing overlaps:")
+    cat = collections.defaultdict(list)
+    for s in singles:
+        cat[by[s].get("category", "?")].append(s)
+    for k in sorted(cat):
+        print(f"  {k:28s} {', '.join(sorted(cat[k]))}")
+    print("\nPick a twin group first: identical prose means the read is one problem set plus a "
+          "mechanical equality check on its siblings.")
 
 
 # ---------------------------------------------------------------- prepare
@@ -235,11 +300,12 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status")
+    sub.add_parser("families")
     p = sub.add_parser("prepare"); p.add_argument("--crops", required=True); p.add_argument("--out", required=True)
     p = sub.add_parser("merge");   p.add_argument("--out", required=True)
     p = sub.add_parser("verify");  p.add_argument("--out", required=True)
     a = ap.parse_args()
-    return {"status": cmd_status, "prepare": cmd_prepare,
+    return {"status": cmd_status, "prepare": cmd_prepare, "families": cmd_families,
             "merge": cmd_merge, "verify": cmd_verify}[a.cmd](a) or 0
 
 

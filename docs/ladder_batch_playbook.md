@@ -28,17 +28,33 @@ process; it is the process.** Everything else is arranged to make the reading af
 ## 1. Prepare
 
 ```
-python3 tools/ladder_batch.py status
+python3 tools/ladder_batch.py status      # includes the family cut
+python3 tools/ladder_batch.py families    # the family cut on its own
 python3 tools/ladder_batch.py prepare --crops a,b,c,d,e --out /tmp/batchN
 ```
 
-**Batch size is 5 crops, and the reason is arithmetic**: ~38 problems -> ~143 rungs -> **~290
-register strings**, which is readable in one sitting. At 8 crops it is ~470 and reading becomes
-skimming. `prepare` warns past ~400.
+**GROUP BY FAMILY FIRST. Size is the second constraint, not the first.** Run
+`python3 tools/ladder_batch.py families` and take a TWIN GROUP off the top.
 
-Group by family where you can (the 5 tomatoes, the 3 peppers, the brassicas). Template families
-share pest prose, so one sourcing read covers several crops, and the cleanup rules warn that fixing
-one member of a template family obliges checking its siblings.
+This is a correction, made 2026-08-24 after batch 1. `status` used to recommend "fewest problems
+first", which optimised batch SIZE and destroyed batch COHERENCE -- it is exactly what produced
+batch 1 as heirloom-tomato + jalapeno + swiss-chard + basil + fig: five unrelated crops, 38
+problems, and **zero shared prose**, so five separate source sets had to be read from scratch.
+Measured across the 114 remaining crops, **295 of 861 problem-instances (34%) are BYTE-IDENTICAL to
+a problem on another unladdered crop**, and 11 twin groups cover 32 crops. Distinct problems left
+to read: ~540, against 861 instances.
+
+A twin group collapses the expensive step: you read ONE problem set and then verify its siblings are
+byte-identical, which is mechanical. It also makes the "fix one member of a template family, check
+its siblings" rule automatic instead of something to remember -- the rule that was violated twice in
+one session when `arugula`/`bok-choy` turned out byte-identical and an iron-phosphate safety claim
+spanned six crops.
+
+**Size is still real**: ~38 problems -> ~143 rungs -> **~290 register strings** is readable in one
+sitting; at ~470 reading becomes skimming, and `prepare` warns past ~400. But a twin group of 7
+microgreens at 2 problems each is 14 problems, and a twin group of 3 cucumbers at 9 each is 27 --
+both well under the ceiling, so family and size rarely conflict. When they do, family wins and the
+batch gets smaller.
 
 `prepare` regenerates the brief FROM CANONICAL every time. Never reuse an old brief: batch 1 was
 authored against a 37-method catalog that grew to 43 mid-batch, and a stale brief silently produces
