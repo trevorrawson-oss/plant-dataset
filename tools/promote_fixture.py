@@ -56,6 +56,8 @@ COMMIT_FOR = {
     'd19abe601ab6c67dbf4037f982307ec26a73f921f70334187dc1ed7fd97954f8': '319e388',
     '208e213cb14dce4e2df6b0a48ad49f7e6818337dcd4ce5b1b52691954af542ce': 'f3732cf',
     '75b3c0f0c253ffa7cb420d0f9c9d35e2a04c5dd47d9c222271923b2cc2b41d32': '34c0d26',
+    # PLA-8: the iron-phosphate slug-bait safety absolute, 9 fields / 6 crops.
+    '6b295d440a8d4bfbad240c0cbf1bfdc83ccad1059c2d615ac8f9f5765e9d69ca': 'cffa4a7',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
