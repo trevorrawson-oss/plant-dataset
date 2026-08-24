@@ -62,6 +62,8 @@ COMMIT_FOR = {
     '6876840ed629ca5a86f4052697426120b2c245d5895c1663e9b8722112f8e670': 'b51bdbc',
     # PLA-8 catalog r3: prompt_harvest, sound_sowing_practice, augmentative_release, resistant_rootstock.
     'afe4d6978aa76ea3a0b8213f8c7f5e57e2dd373292ee20fd14e3f9e04de2fa6e': '0a89792',
+    # PLA-8: the Bt safety absolute hedged on nine crops.
+    '0f911326d2f4ca20c4b92e199afca3c8e842eb8fa422b1b2a1d537a3d20ac093': '9116050',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
