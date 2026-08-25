@@ -76,6 +76,10 @@ def main():
     ap.add_argument("--base")
     ap.add_argument("--slug", default="cherry-tomato")
     ap.add_argument("--ref", default="lettuce-leaf")
+    ap.add_argument("--expect-changed", default="",
+                    help="comma-separated slugs BESIDES --slug that this promote is expected to "
+                         "change. Section A then verifies the declaration EXACTLY: an undeclared "
+                         "crop changing is a concern, and so is declaring one that did not change.")
     a = ap.parse_args()
 
     cand = load(a.candidate)
@@ -88,8 +92,16 @@ def main():
         print("A. collateral (vs base)")
         base = load(a.base)
         changed = [x["slug"] for x, y in zip(cand["crops"], base["crops"]) if x != y]
-        if changed == [a.slug]: ok(f"only {a.slug} changed among crops")
-        else: concern(f"crops changed = {changed} (expected only {a.slug})")
+        # DECLARED BLAST RADIUS. This used to be `changed == [a.slug]`, one crop, so every
+        # multi-crop promote reported a concern no matter how clean it was -- batch 2's four corns
+        # among them, recorded in STATE_HISTORY as "release_verify clean". A gate that always fires
+        # stops being read, and then real collateral rides through under the familiar message.
+        # The declaration is checked EXACTLY, so it cannot be padded to quiet a run.
+        expected = [a.slug] + [s.strip() for s in a.expect_changed.split(",") if s.strip()]
+        if set(changed) == set(expected):
+            if len(expected) == 1: ok(f"only {a.slug} changed among crops")
+            else: ok(f"only the {len(expected)} declared crops changed: {sorted(expected)}")
+        else: concern(f"crops changed = {changed} (expected {sorted(expected)})")
         tl = [k for k in cand if k != "crops" and cand[k] != base.get(k)]
         cat_delta = sorted(set(cand["source_catalog"]) - set(base["source_catalog"]))
         cat_gone = sorted(set(base["source_catalog"]) - set(cand["source_catalog"]))
