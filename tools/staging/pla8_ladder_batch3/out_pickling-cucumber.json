@@ -1,0 +1,295 @@
+{
+ "pests": [
+  {
+   "id": "cucumber-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where bacterial wilt has shown up in your beds before, choose a wilt-tolerant pickling variety such as County Fair when you buy seed. It is a head start rather than a fix on its own, so keep the steps below going as well.",
+     "note_seasoned": "Wilt-tolerant cultivars such as County Fair are the plant-once lever here, settled at seed order. They do not displace vector suppression, since the beetles also feed directly on young leaves, stems, flowers, and fruit."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not sow where squash-family crops grew last year. Moving the patch means this year's seedlings are not sitting on the ground the beetles were feeding on last season.",
+     "note_seasoned": "Rotating out of ground that carried cucurbits separates the seedling stage from last season's feeding sites, which matters most against the early-season colonizers that vector the wilt."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Keep weeds and old plant debris cleared from around the bed. It works with rotation to lower the beetle pressure young cucumbers face.",
+     "note_seasoned": "Weed and debris removal around the planting sits in the prevention set with rotation, aimed at reducing pressure on seedlings rather than at rescuing a vine that is already being fed on."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the seedlings with row cover, a light fabric laid over the bed that keeps beetles off. Take it off once the flowers open so bees can reach the blooms.",
+     "note_seasoned": "Row cover over the seedling stage excludes the vector through the window when cucumber is most at risk. Lift it at first bloom for pollinator access, and let scouting take over from there."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the beetles off by hand in the cool of the morning, when they move slowly and are easy to catch. Keep at it while the plants are small.",
+     "note_seasoned": "Hand removal in the cool morning, while the beetles are sluggish, pays off most on seedlings, the stage where even light feeding pressure can seed the wilt."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Yellow sticky traps set among the plants catch beetles and show you how many are around, which tells you whether the other steps are keeping up.",
+     "note_seasoned": "Sticky traps do double duty as a monitoring readout and a modest population sink. Read them for the early-season numbers, which is the pressure that matters for wilt transmission."
+    }
+   ]
+  },
+  {
+   "id": "squash-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move cucumbers and other squash-family crops to a different spot each year, so the bugs do not start the season on the crop they emerge into.",
+     "note_seasoned": "Rotating cucurbits denies the overwintered adults a host in the same ground they come out of, lowering the founding population that builds through summer."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up the old vines and plant debris after harvest. The adults spend the winter hiding in that litter, so clearing it takes away their cover.",
+     "note_seasoned": "Adults overwinter in garden debris, so an end-of-season clean-out of vines and litter cuts the sheltering sites that seed the following year's build-up."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Lay row cover, a light fabric barrier, over young plants and leave it on until flowering, then take it off so bees can work the blooms.",
+     "note_seasoned": "Cover from planting to first bloom keeps adults off the crown through establishment. Removal at flowering is a pollination requirement, so plan for scouting to pick up where the cover leaves off."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the adults off and scrape the bronze egg clusters off the undersides of the leaves. A board laid flat on the ground overnight draws the bugs under it, so you can turn it over at first light and finish off what has gathered there. Start checking leaf undersides early in the season, because the young bugs are much easier to deal with than grown ones.",
+     "note_seasoned": "Hand removal of adults plus crushing the egg masses along the veins is the core physical control, and a board trap concentrates bugs overnight for a morning collection. Scout undersides from early season, since large nymphs and adults are hard to kill once they get there."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If hand-picking is not keeping up, spray insecticidal soap on the young bugs, the small pale ones. It acts where it lands, so wet them directly, and it does much less against the large ones and the adults.",
+     "note_seasoned": "Soap is a contact material aimed at early-instar nymphs. Coverage of the crown and leaf undersides is what makes it work, and knockdown falls off sharply once nymphs are large or adults dominate."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If cucumber mosaic virus is a problem where you garden, look for a pickling variety bred to resist it. It does not stop aphids from feeding, but it lowers what their feeding can pass on.",
+     "note_seasoned": "CMV-resistant pickling cultivars reduce the virus risk that makes melon aphid more than a sap-feeding nuisance. It is a variety-level answer to what the aphids carry, not to the colonies themselves."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Over-fed plants push soft new growth, and that is what aphids build up on fastest.",
+     "note_seasoned": "Restrained nitrogen avoids the succulent flush colonies compound on. Over-fertilized and stressed plants are where numbers run away quickest in warm weather."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Lay reflective or aluminum-foil mulch while the plants are young. It deters aphids from settling on small plants.",
+     "note_seasoned": "Reflective or aluminum-foil mulch deters aphids from young plants, so it earns its place at planting rather than as a mid-season response once the vines have run."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet of water, aimed under the leaves where they gather. Repeat as new clusters show up.",
+     "note_seasoned": "A forceful water jet dislodges established colonies from leaf undersides and growing tips without setting back natural enemies, which makes it the right move before any spray."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and tiny parasitic wasps feed on aphids and usually bring them under control on their own. Leave them be, and avoid blanket spraying that takes them out along with the aphids.",
+     "note_seasoned": "Conserving resident ladybugs, lacewings, and parasitic wasps is what usually resolves aphid pressure here. Broad sprays remove that control and are a reliable way to let colonies rebound."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep rebuilding, spray insecticidal soap and coat the undersides of the leaves thoroughly, since it acts where it lands. Expect to repeat every few days.",
+     "note_seasoned": "Soap is a contact material, so undersides coverage and a repeat every few days are what carry it. It is the lighter of the two sprays here and the kinder one to the natural enemies you are conserving."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other option for a heavier infestation, used the same way: thorough coverage of the leaf undersides, repeated every few days.",
+     "note_seasoned": "Oil suits denser colonies and, like soap, lives or dies on undersides coverage and a repeat interval of a few days. Sooty mold on the honeydew clears as the colonies go, rather than needing its own treatment."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep the plants steadily watered. Mites flare on dry, dusty, drought-stressed plants, and that same stress is what turns the small pickling fruit bitter.",
+     "note_seasoned": "Steady soil moisture is the primary cultural lever, since hot dry conditions and water stress are what let two-spotted mite populations multiply. The same stress drives bitterness in the small fruit, so one habit covers both problems."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Turn a strong jet of water up under the foliage. It knocks mites loose and rinses off the dust film they thrive in. Repeat through hot spells, when the numbers climb fastest.",
+     "note_seasoned": "Hosing undersides both dislodges mites and suppresses the dust film that favors them. Worth repeating through hot, dry spells, the conditions in which populations expand explosively."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Predatory mites, ladybugs, and minute pirate bugs are the main things that keep spider mites down. Protect them by staying off broad-spectrum insecticides, the ones that kill a wide range of bugs at once.",
+     "note_seasoned": "Predatory mites, ladybugs, and minute pirate bugs are the resident controls. Broad-spectrum insecticides remove them and are a common trigger for mite flare-ups, so conservation outranks any spray decision here."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the mites persist, spray insecticidal soap with good coverage of the leaf undersides, then spray a second time about five days later.",
+     "note_seasoned": "Two passes about five days apart, with thorough undersides coverage, catch the mites that were eggs at the first application. Soap acts on contact, so whatever it misses carries on."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the alternative, used the same way: cover the undersides well and treat twice, about five days apart.",
+     "note_seasoned": "Oil runs on the same two-pass, five-day interval as soap. Mites are not insects, so many general insecticides do not touch them, which is why the ladder ends at these contact materials rather than climbing further."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a variety listed as resistant. It is the easiest step you can take, because everything else here is about preventing a disease that is hard to stop once it has spread across the plant.",
+     "note_seasoned": "Cultivar resistance is the durable lever against one of the most common late-season cucumber diseases. Once the coating is widespread, management is damage limitation, so the choice made at seed order carries a lot of the load."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Set the plants far enough apart that air moves freely between them, and site them in full sun. Crowded, shaded plantings get it worse.",
+     "note_seasoned": "Generous spacing and a full-sun site cut the crowding, poor airflow, and shade that favor the fungus. Unlike the wet-leaf diseases, this one infects without leaf wetness, so canopy humidity is what the layout is managing."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil rather than the leaves. Overhead watering is worth avoiding here even though this mildew does not need wet leaves to take hold.",
+     "note_seasoned": "Base watering is listed for this disease despite its independence from leaf wetness. The value is in not raising humidity around the canopy, which is the condition the fungus does respond to."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the worst-affected leaves as you spot them. Start looking from midsummer and act at the first white patches rather than waiting to see how far it goes.",
+     "note_seasoned": "Removing the most heavily colonized leaves lowers the local spore load. Pair it with scouting from midsummer, since early action is what separates a manageable case from the early defoliation that shortens the season and exposes small fruit to sunscald."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "If it keeps coming back, sulfur is a labeled organic spray. Apply it at the very first white spots, covering both the tops and the undersides of the leaves. Once the coating is all over the plant, spraying will not turn it around.",
+     "note_seasoned": "Sulfur is a protectant, so its value sits at first symptom with coverage of both leaf surfaces, ahead of spread. Where the coating is already general, a spray is damage limitation rather than a recovery."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew is common where you live, choose a resistant variety where one is offered. Cucumbers catch this disease easily, so the head start counts.",
+     "note_seasoned": "Resistant cultivars where available are the front lever. Cucumber is among the most susceptible cucurbits, and the disease moves fast enough once established that prevention carries most of the weight."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants so air moves between them and the leaves dry quickly after rain or dew. Crowding keeps foliage wet, which is what this disease needs in order to infect.",
+     "note_seasoned": "Spacing shortens the leaf-wetness periods this water mold requires for infection. Crowding and prolonged wetness are the two conditions that favor it, and layout addresses both at once."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line instead of over the top of the plants, since wet leaves feed the infection. Stay out of the patch while the vines are still wet, too.",
+     "note_seasoned": "Base irrigation removes the share of leaf wetness you control, and keeping out of wet vines is listed alongside it in the same prevention set."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take the worst-affected leaves off and get them out of the patch. Look the planting over carefully through humid weather, which is when it tends to show up and take off.",
+     "note_seasoned": "Removing badly affected foliage trims inoculum and opens the canopy a little. Scouting intensity should track humid spells, since wind-borne spores can establish and run through a planting in a short window."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "When wet, humid weather sets in, a labeled copper fungicide can help hold the line. Cover the leaf undersides, where the fuzzy gray growth appears. It works ahead of the disease rather than curing what is already there.",
+     "note_seasoned": "Copper goes on when conditions favor the disease, with undersides coverage where sporulation occurs. Treat it as protection through the wet window rather than a rescue once defoliation is under way."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-wilt",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where this wilt has hit before, start with a wilt-tolerant variety such as County Fair. Once a vine has it, nothing on the shelf will cure it, so anything that shortens the odds up front is worth doing.",
+     "note_seasoned": "Wilt-tolerant cultivars such as County Fair are the plant-once step for a disease with no curative option. Cucumber and muskmelon sit far above squash and pumpkin in susceptibility, so variety choice carries more weight here than it does across the rest of the cucurbits."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out and destroy any vine that wilts and passes the sap test: cut a wilted stem and slowly draw the two cut ends apart to see whether the sap stretches into sticky white strands. Getting infected plants out of the patch limits the spread.",
+     "note_seasoned": "Prompt removal and destruction of wilting plants is the in-season limit on spread. Confirm with the stem-sap strand test first, which is what the field diagnosis rests on, since the plant wilts despite moist soil and can read as a watering problem."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young plants with row cover from the seedling stage and keep it on until they flower, then take it off so bees can get to the blooms. Keeping cucumber beetles off the seedlings is what keeps this disease out, since the beetles are what carry it. Keep the young plants growing strongly while they are covered. There is no spray that cures an infected vine, so the ladder ends with excluding the beetles rather than treating the disease.",
+     "note_seasoned": "Row cover through the seedling window excludes the beetle vector at the stage that sets up the wilt, with removal at flowering required for pollination, and vigorous early growth alongside it. Beetle management carries the rest of the season, since control of this disease is really control of its vector."
+    }
+   ]
+  },
+  {
+   "id": "angular-leaf-spot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with certified disease-free seed. This bacterium rides on seed, so seed saved from home-grown open-pollinated pickling heirlooms can carry it into next year's patch.",
+     "note_seasoned": "The pathogen is seedborne, so clean seed is the entry-point control. Saved seed off open-pollinated pickling heirlooms is the route that walks it forward from one season to the next."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Lean on resistant varieties as well, since there is no spray that cures this one once it is in the planting.",
+     "note_seasoned": "Resistant cultivars pair with clean seed as the two pre-season steps. With no curative material available, the choices made before sowing carry disproportionate weight."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move cucumbers to a new spot on a three to four year cycle. The bacteria survive the winter in old crop debris, so coming back too soon puts new plants right on top of it.",
+     "note_seasoned": "A three to four year cucurbit rotation outlasts survival in residue. A shorter cycle leaves infested debris in the root zone of the next susceptible planting."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil rather than the leaves, because splashing water is how the spots spread. Stay out of the patch while the plants are wet, since handling wet vines moves it too.",
+     "note_seasoned": "Splashing water and handling wet foliage are the two spread routes named here, so base irrigation and a rule against working among wet vines address the same mechanism from opposite ends."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off the badly affected leaves, and clear the old vines out of the bed after harvest so there is less debris for the bacteria to sit in over the winter.",
+     "note_seasoned": "In-season removal of the worst leaves plus a post-harvest debris clean-out narrows the overwintering reservoir. It works with rotation rather than substituting for it."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A labeled copper spray applied at the first sign can slow the spread, though it will not clear the spots that are already there. It is worth the trouble because the fruit spots matter more for a whole-pack pickle than they would on a fruit you were going to slice.",
+     "note_seasoned": "Copper is used as a bactericide at first symptom to slow spread, not to recover infected tissue. The payoff calculation leans on the sunken fruit lesions, which downgrade a whole-pack pickle further than they would a sliced fruit."
+    }
+   ]
+  },
+  {
+   "id": "anthracnose",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with disease-free seed, and do not save seed off plants that showed the disease. The fungus travels on infected seed as well as in old debris.",
+     "note_seasoned": "The fungus survives on infected seed and on cucurbit residue, so clean seed closes one of the two carryover routes. Discard seed from symptomatic plants rather than replanting it."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a resistant variety where you can, alongside the clean seed.",
+     "note_seasoned": "Resistant cultivars sit with seed sourcing as the pre-season pair, both settled before the first sowing goes in."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate out of cucumbers and other squash-family crops for three years, since the fungus lives on in old vines and residue.",
+     "note_seasoned": "A three-year cucurbit rotation covers survival on residue. It is the counterpart to the seed route, and shortening it undercuts the debris cleanup below."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line rather than over the top of the plants. Infection here takes several rainy days in a row, and the spores travel in splashing water, so anything that keeps the foliage drier works against it.",
+     "note_seasoned": "Infection takes several days of wet weather and dispersal is by splash, so base irrigation removes the share of leaf wetness and splashing you control."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off infected leaves and fruit as you find them, and destroy the old vines and debris after harvest rather than leaving them in the bed.",
+     "note_seasoned": "In-season removal of lesioned leaves and fruit plus destruction of post-harvest residue strips the overwintering substrate. With seed, rotation, and debris covered, the cultural set is where the practical control of this one sits."
+    }
+   ]
+  }
+ ]
+}
