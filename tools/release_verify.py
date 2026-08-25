@@ -97,11 +97,20 @@ def main():
         # among them, recorded in STATE_HISTORY as "release_verify clean". A gate that always fires
         # stops being read, and then real collateral rides through under the familiar message.
         # The declaration is checked EXACTLY, so it cannot be padded to quiet a run.
-        expected = [a.slug] + [s.strip() for s in a.expect_changed.split(",") if s.strip()]
+        decl = [s.strip() for s in a.expect_changed.split(",") if s.strip()]
+        # `none` declares a CATALOG-ONLY promote, which changes zero crops. The first version of
+        # this always put --slug in `expected`, so zero-vs-one mismatched and every catalog-only
+        # promote reported a concern -- the bt safety fix and all four catalog mint rounds were
+        # catalog-only. `none` cannot collide with a slug, and it is checked exactly: declaring it
+        # while a crop DID change is still a concern.
+        expected = [] if [x.lower() for x in decl] == ["none"] else [a.slug] + decl
         if set(changed) == set(expected):
-            if len(expected) == 1: ok(f"only {a.slug} changed among crops")
+            if not expected: ok("no crops changed, as declared (catalog-only promote)")
+            elif len(expected) == 1: ok(f"only {a.slug} changed among crops")
             else: ok(f"only the {len(expected)} declared crops changed: {sorted(expected)}")
-        else: concern(f"crops changed = {changed} (expected {sorted(expected)})")
+        else:
+            concern(f"crops changed = {changed} "
+                    f"(expected {sorted(expected) if expected else 'no crops'})")
         tl = [k for k in cand if k != "crops" and cand[k] != base.get(k)]
         cat_delta = sorted(set(cand["source_catalog"]) - set(base["source_catalog"]))
         cat_gone = sorted(set(base["source_catalog"]) - set(cand["source_catalog"]))

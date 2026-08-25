@@ -111,6 +111,37 @@ class CollateralDeclaration(unittest.TestCase):
                         "--expect-changed", "pickling-cucumber")
         self.assertIn("CONCERN: crops changed", _section_a(out))
 
+    def test_a_CATALOG_ONLY_promote_can_declare_zero_crops(self):
+        """The shape the first fix missed.
+
+        --expect-changed handled MORE crops than the pilot slug, but a catalog-only promote changes
+        NONE, and `expected` always contained `--slug`, so zero-vs-one mismatched and every
+        catalog-only promote reported a concern. That is not a rare case: the bt safety fix and the
+        four catalog mint rounds were all catalog-only. `none` is the literal that declares it, and
+        it cannot collide with a slug.
+        """
+        cand = os.path.join(self.tmp, "catalog_only.json")
+        d = json.loads(json.dumps(self.data))
+        d["control_methods"]["handpick"]["best_use"] += " Widened."
+        with open(cand, "w", encoding="utf-8") as f:
+            json.dump(d, f, ensure_ascii=False, separators=(",", ":"))
+        _rc, out = _run(cand, self.base, "--expect-changed", "none")
+        a = _section_a(out)
+        self.assertNotIn("CONCERN: crops changed", a)
+        self.assertIn("no crops changed", a)
+
+    def test_declaring_none_while_a_crop_DID_change_is_a_concern(self):
+        """`none` must not become a blanket silencer."""
+        cand = self._candidate({"cucumber"}, "none_but_changed")
+        _rc, out = _run(cand, self.base, "--expect-changed", "none")
+        self.assertIn("CONCERN: crops changed", _section_a(out))
+
+    def test_default_behavior_is_unchanged_when_the_flag_is_absent(self):
+        """Backwards compatibility: no flag still means 'only --slug changed'."""
+        cand = self._candidate({"cherry-tomato"}, "default_one")
+        _rc, out = _run(cand, self.base, "--slug", "cherry-tomato")
+        self.assertIn("only cherry-tomato changed", _section_a(out))
+
     def test_declaration_order_does_not_matter(self):
         cand = self._candidate({"cucumber", "pickling-cucumber", "slicing-cucumber"}, "three_ord")
         for decl in ("slicing-cucumber,pickling-cucumber", "pickling-cucumber,slicing-cucumber"):
