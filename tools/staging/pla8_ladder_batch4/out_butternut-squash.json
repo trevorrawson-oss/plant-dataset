@@ -1,0 +1,203 @@
+{
+ "pests": [
+  {
+   "id": "squash-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give butternut a bed where squash-family crops did not grow the year before. Moving the crop is one half of cutting down what carries over from season to season, and the fall cleanup below is the other half.",
+     "note_seasoned": "Cucurbit rotation is named together with end-of-season vine removal. The adults overwinter in place, so relocating the crop and stripping their shelter are two halves of the same carryover problem."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake out the old vines and plant litter once you have picked the last squash. The adult bugs pass the winter tucked into that debris, so hauling it off leaves them fewer places to shelter.",
+     "note_seasoned": "Post-harvest removal of vines and litter cuts overwintering sites, which is where the following season's population begins. Run it as a standing habit rather than a reaction to damage."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Drape row cover, a light fabric laid over the young plants, and leave it in place until flowering starts. Pull it back then so bees can reach the blossoms.",
+     "note_seasoned": "Cover keeps adults off through establishment and lifts at bloom for pollination, which hands the job over to scouting from that point on."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go over the plants and take the adults off by hand, then scrape the flat bronze egg clusters from the leaf undersides. Set a board flat on the soil overnight and bugs will gather beneath it, so turn it over first thing and destroy what is underneath. Get into this early in the season, because the bugs are harder to deal with as they grow.",
+     "note_seasoned": "Removing adults by hand and destroying the egg masses laid along the veins carries most of this rung, and a board set out overnight concentrates adults and nymphs into one spot for a morning sweep. Early scouting of leaf undersides is what makes it work, since maturing nymphs get progressively harder to knock down."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If you do reach for a spray, insecticidal soap, a mild soap-based product, works on the young bugs. The big nymphs and the adults are tough to kill with it, so catching them small matters more than how heavily you spray.",
+     "note_seasoned": "Aim soap at small nymphs. Large nymphs and adults resist it, so a program started after the population has matured tends to disappoint."
+    }
+   ]
+  },
+  {
+   "id": "cucumber-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Put butternut where squash-family crops did not grow last season. The beetles worth worrying about are the ones that show up early, because those are the ones carrying the wilt disease.",
+     "note_seasoned": "Rotating off ground that carried cucurbits lowers pressure from the early-season colonizers, and that is the group to aim at, since they are the wilt vectors."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull weeds and take out old plants around the bed. This one sits in the prevention routine next to rotation, so it is worth keeping up during the season rather than saving for the end of it.",
+     "note_seasoned": "Clearing weeds and residue around the planting is listed with rotation on the prevention side. It reduces harborage and supports seedling exclusion rather than substituting for it."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the seedlings with row cover, a light fabric laid over the bed, right from the start, and take it off once the flowers open so bees can get in. Seedlings are the stage most at risk, which is where this rung earns its keep.",
+     "note_seasoned": "Exclusion through the seedling stage covers the window when the crop is most exposed to wilt infection. The cover comes off at flowering for pollination, so beetle management has to carry on past that point."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the beetles off whenever you spot them. Once a plant has several leaves it can shrug off some chewing, so the aim is to hold numbers down rather than to catch every last beetle.",
+     "note_seasoned": "Hand-collection keeps adult numbers down on a garden-scale planting and is worth most early, against the colonizers that carry the bacterium. Plants past the seedling stage tolerate some feeding, so suppression is the goal here."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Yellow sticky traps, glue-coated cards set among the plants, tell you when beetles are about and catch a share of them. Where the wilt disease has turned up in your garden before, holding beetle numbers down is the most effective way to deal with it, since an infected plant cannot be cured.",
+     "note_seasoned": "Sticky cards do double duty as monitoring and modest adult reduction. Where bacterial wilt is established locally, beetle suppression is the practical route to disease control, because there is no cure once a plant is infected. Winter squash such as butternut are described as generally less severely affected than cucumber and melon, which lowers the stakes without erasing them."
+    }
+   ]
+  },
+  {
+   "id": "squash-vine-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choosing butternut is most of the answer here. It belongs to a squash group with solid, tough stems that this borer largely passes over, so the sudden collapse it causes is uncommon on butternut. Heavy pressure locally can still produce occasional damage, so it stays worth a look.",
+     "note_seasoned": "Butternut is a Cucurbita moschata, a recognized borer-tolerant choice, and the moth strongly prefers the thin-stemmed pepo squash. That makes this a seed-order decision that does most of the work, though occasional entries still happen where local pressure is heavy."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "From early summer, look over the base of the stems for sawdust-like specks around a small hole, which is the sign a grub has gone in. Pull and destroy any vine that is badly chewed up, since that cuts how many moths turn up next year.",
+     "note_seasoned": "Scouting the stem base for frass from early summer catches the rare entry while it is still early, and removing infested vines trims the following season's brood."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "If borers are bad where you garden, cover the plants with row cover, a light fabric laid over them, from planting until they flower. That keeps the egg-laying moths away from the stems. Take it off at flowering so bees can reach the blossoms.",
+     "note_seasoned": "Where local pressure is severe, cover from planting to flowering excludes the egg-laying moths across the early-summer laying period. It comes off at bloom for pollination, so scouting picks the job up from there."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "Butternut is not often the crop that needs this. If a grub does get in, open the stem with a knife, lift it out, and cover the cut with damp soil so the vine can root again there.",
+     "note_seasoned": "Rarely called for on butternut, which this record treats as less bothered than the thin-stemmed types. Where a borer has entered, cut lengthwise, remove the larva, and bury that node under moist soil to re-root."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy with nitrogen fertilizer. Heavily fed plants push out soft new growth, and that is the growth aphid colonies build on fastest.",
+     "note_seasoned": "Excess nitrogen drives the succulent growth melon aphid and its relatives colonize. Restraint on feeding is a prevention habit, not something to reach for once colonies are running."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Reflective mulch, a silvery sheet laid on the soil surface, puts aphids off young plants. Get it down while the plants are still small.",
+     "note_seasoned": "Reflective mulch deters aphids from settling on small plants, which carries extra weight on a cucurbit because several aphid species move mosaic viruses."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies loose with a strong jet from the hose, aimed at the undersides of the leaves and the growing tips where they gather. Check those spots regularly so you catch a colony while it is small.",
+     "note_seasoned": "A hard jet at leaf undersides and growing tips strips colonies off mechanically, and it is where to start before any spray decision comes up. Pair it with routine inspection of undersides and tips."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings and parasitic wasps eat aphids and usually bring a colony down without help. Let them get on with it rather than spraying everything, since a broad spray takes them out along with the aphids.",
+     "note_seasoned": "Conserving lady beetles, lacewings and parasitic wasps is usually what ends an aphid run. Spraying broadly removes that pressure, so support the natural enemies before climbing further up this ladder."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If colonies keep building, treat with insecticidal soap, a mild soap-based spray, and coat the undersides of the leaves where the aphids actually sit. Repeat every few days, and bear in mind it has to touch the aphids to do anything.",
+     "note_seasoned": "Soap is a contact material, so coverage of leaf undersides decides the outcome. Repeat on a few-day interval while colonies persist."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, is the other option, used the same way: thorough coverage underneath the leaves, repeated every few days.",
+     "note_seasoned": "Oil is the alternative contact material at this rung, with the same demand for undersides coverage and the same repeat interval."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Start from a variety sold as resistant to powdery mildew. Several butternut hybrids carry that resistance, and it is the easiest lever you have against one of the most common late-season problems on winter squash.",
+     "note_seasoned": "Powdery-mildew resistance is available in several butternut hybrids, which makes cultivar choice the highest-leverage step against a disease that is hard to reverse once it is general across the canopy."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants generous room so air moves between them, and site the patch in full sun. Crowding and shade both work in the fungus's favor.",
+     "note_seasoned": "Spacing and site are fixed at planting. Crowded, shaded, poorly ventilated plantings favor these fungi, and they infect in humid air without needing leaf wetness to get started."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Put the water on the soil at the base of the plants instead of over the top of the foliage.",
+     "note_seasoned": "Overhead watering is called out on the prevention side even though this fungus can infect without leaf wetness, so treat base watering as a standing habit here rather than a mildew-specific mechanism."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off the worst-coated leaves as you come across them.",
+     "note_seasoned": "Stripping the heaviest-infected leaves trims what is left to spread from. Once the fungus is widespread this is damage limitation rather than a fix."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Start checking plants in midsummer and treat at the first white spots with a labeled fungicide such as sulfur, covering both the top and the underside of the leaves. Acting early is the whole point: once the coating is over the plant it is hard to stop, and losing leaves ahead of schedule costs fruit size and the sugars that make butternut sweet.",
+     "note_seasoned": "Sulfur at first symptom, with both leaf surfaces covered, is the window that pays, and scouting from midsummer is what makes that timing possible. After it goes general the work shifts to limiting defoliation, which is what drives the loss of fruit size and sweetness and leaves fruit open to sunscald."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew turns up most years where you live, pick a resistant variety when one is offered for what you want to grow.",
+     "note_seasoned": "Resistant cultivars, where they exist for the type you want, are the seed-buying lever against a disease whose in-season options amount to slowing something that moves fast."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants enough room that air moves through the patch and the leaves dry off after rain or dew. Wet leaves are what this disease needs to take hold.",
+     "note_seasoned": "An open canopy dries faster, and infection depends on that free moisture, so spacing removes part of the requirement. Crowding sits alongside prolonged leaf wetness as what lets it move through a planting."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line rather than over the leaves. Overhead watering keeps the foliage wet, which is exactly the condition this disease works in.",
+     "note_seasoned": "Overhead irrigation sustains the leaf wetness infection depends on, so base watering takes out the share of it you control. Dew and humid spells supply the rest."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the badly spotted leaves as the blotches spread, and wait until the foliage has dried before you go in among the vines.",
+     "note_seasoned": "Remove the worst leaves on dry foliage and stay out of wet vines, which is named on the prevention side. Removal trims the local source, though wind-borne spores mean it will not hold the disease on its own."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-wilt",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A plant that catches this cannot be cured, so take out the wilting vines and destroy them rather than leaving them in the bed. You can check before you pull: slice through a wilted stem and ease the two cut faces apart, and sap from an infected plant draws out in thin white threads that stick.",
+     "note_seasoned": "Prompt removal and destruction of wilting plants is what in-season management amounts to, since an infected plant cannot be recovered. Confirm with the stem-sap strand test before pulling."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "The real control is keeping cucumber beetles off, since they carry the germ and pass it on as they feed. Cover the plants with row cover, a light fabric laid over the bed, from the seedling stage, and take it off when the flowers open so bees can get in.",
+     "note_seasoned": "Excluding the beetle vector from the seedling stage is the most effective control of the disease itself, because the bacterium goes in as the beetles feed. The cover comes off at flowering, so beetle management carries on past that point with the weight on the early-season colonizers. Butternut is described as generally less susceptible than cucumber and melon, though losses still occur."
+    }
+   ]
+  }
+ ]
+}

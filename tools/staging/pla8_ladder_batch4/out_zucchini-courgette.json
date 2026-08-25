@@ -1,0 +1,151 @@
+{
+ "pests": [
+  {
+   "id": "squash-vine-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take out plants that are too far gone to save and get rid of them rather than leaving them lying in the bed, and clear the spent vines once the season ends. Removing that material is the step that breaks the borer's cycle.",
+     "note_seasoned": "Destroy collapsed plants promptly instead of letting them sit, and pull spent vines after harvest. Residue removal is what is named here for breaking the cycle from one season into the next."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Lay row cover, a light fabric spread over the plants, on young plants and leave it in place until they flower. It keeps the egg-laying moth from reaching the stems while the plants are small.",
+     "note_seasoned": "Cover through establishment excludes the adult clearwing moth during her egg-laying period, which runs from early to midsummer. It comes off at flowering, so scouting has to take over from that point."
+    },
+    {
+     "method": "stem_collars",
+     "note_beginner": "Wrap the lower stem with foil. The eggs go on at the stem base, so covering that stretch puts a barrier over the spot where the grub would tunnel in.",
+     "note_seasoned": "A foil wrap shields the egg-laying site itself, which is the same place the entry hole and the ring of frass show up later. It is a per-plant step, so it fits a small planting better than a large one."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "If you catch it early, cut a slit in the stem, lift out the grub inside, and cover the spot with damp soil so the vine can root again. Pull the plants that are too far gone.",
+     "note_seasoned": "At the first frass, cut lengthwise, remove the larva, and mound moist soil over the wound so it can re-root. Pull and destroy plants past saving; that removal is what carries into next year."
+    }
+   ]
+  },
+  {
+   "id": "squash-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant into a different bed from the one that grew squash-family crops last season.",
+     "note_seasoned": "Rotating cucurbits off last year's ground is listed together with debris removal as the pair that lowers what carries over from the previous season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear old plant debris out of the bed. The adults pass the winter tucked into it, so taking it away removes their shelter.",
+     "note_seasoned": "The overwintering adults sit in garden debris through the cold months, then come out to lay on cucurbits once early summer arrives, so clearing that residue takes away the shelter their season starts from."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put row cover, a light fabric laid over the bed, on the plants and keep it there until they flower.",
+     "note_seasoned": "Cover holds the emerging adults off through establishment and comes off at flowering, so egg scouting on leaf undersides is what carries the program from there."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Look at leaf undersides from early summer and crush the shiny bronze egg clusters you find. Knock the adults and the small gray-brown young into a bucket of soapy water. A board left flat near the plants overnight gives them a place to gather, so lift it at dawn and clear out whatever is underneath.",
+     "note_seasoned": "Crushing egg masses on the undersides plus dropping adults and nymphs into soapy water is the core of it, and an overnight board concentrates them for a dawn sweep. Scouting from early summer is what keeps this ahead of the build-up."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If you do reach for a spray, insecticidal soap is the one that works on the young nymphs, the small gray-brown bugs. It does much less once they have grown, so when you use it matters more than how much you use.",
+     "note_seasoned": "Soap is a young-nymph material here; a program started after the nymphs are large has missed the stage it acts on."
+    }
+   ]
+  },
+  {
+   "id": "cucumber-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give the planting a bed where squash-family crops did not grow the year before.",
+     "note_seasoned": "Cucurbit rotation is named with debris clearing as the standing prevention. Adults spend the winter close by and start moving in as soon as they emerge, so rotation lowers the pressure rather than removing it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear plant debris out of the patch as part of the same routine.",
+     "note_seasoned": "Debris removal sits beside rotation in the prevention line, and it backs up seedling protection rather than standing in for it."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young plants with row cover, a light fabric laid over the bed, until the flowers open, then take it off so bees can reach them. Getting the young plants through is the part that matters most.",
+     "note_seasoned": "Row cover over seedlings is where the payoff sits, because the damage on young plants and the wilt the beetles carry are what actually cost you. Lift it at flowering for pollination and keep scouting past that point."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick beetles off by hand first thing in the morning while it is cool and they are slow, or run a hand vacuum over them.",
+     "note_seasoned": "Hand-collecting or vacuuming adults in the cool of the morning works while they are sluggish, and it is worth most on seedlings. Chasing every beetle all season is not the goal."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Yellow sticky traps, cards coated with glue, help you keep track of how many beetles are around.",
+     "note_seasoned": "Traps are named here for monitoring rather than control, so read them as a gauge of adult activity while seedling protection is still the priority."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Kaolin clay, a fine white clay applied as a coating over the plant, puts beetles off feeding. It deters them rather than killing them.",
+     "note_seasoned": "Kaolin works on feeding behavior, so it takes the chewing down rather than the population; it belongs alongside exclusion and scouting, not in place of them."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Look for a variety labeled as mildew-resistant when you are buying seed. This is a decision made before planting, not something you can add once the season is under way.",
+     "note_seasoned": "Variety resistance is the pre-season lever, and it heads the prevention line here alongside spacing and base watering."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants enough room for air to move between them, and put the patch in full sun. Crowded plantings with poor air flow are where this runs fastest.",
+     "note_seasoned": "Spacing and a full-sun site are set at planting and are weighted above spraying. This fungus can infect without leaf wetness, so what spacing buys is a less humid canopy rather than faster leaf drying."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plants instead of over the top of the leaves. That keeps the air around the foliage from staying humid.",
+     "note_seasoned": "Base irrigation is specified to hold humidity around the foliage down. Since infection here does not depend on wet leaves, humidity is the input you are managing."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the worst-affected leaves as you find them.",
+     "note_seasoned": "Stripping the heaviest-infected leaves trims what is on hand to spread from; it does not restore tissue the fungus has already colonized."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Treat the first white spots with a fungicide that is labeled for it, such as sulfur, and hold off on sulfur in high heat. Repeat as the label directs. Spraying slows the spread, but it does not bring back leaf tissue that is already infected.",
+     "note_seasoned": "Sulfur at first symptom, repeated on label intervals, slows progress rather than curing colonized tissue, and it is one to skip in high heat. Catching the first spots is what makes the application worth making."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-wilt",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Look for a squash-family variety with resistance to this if one is offered for what you want to grow. It is a help where you can find it, not a replacement for keeping beetles off.",
+     "note_seasoned": "Resistant cucurbit types are named as a help where available, which places them behind vector management rather than ahead of it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no bringing an infected plant back, so pull the wilting ones and get rid of them quickly instead of leaving them where beetles keep feeding. To check first: cut through a wilted stem, hold the two cut faces together for a moment, then ease them apart, and infected sap pulls out into sticky white threads.",
+     "note_seasoned": "Prompt removal and destruction of wilting plants is the one in-season action available, and its purpose is limiting beetle-carried spread to the healthy plants around them. Confirm with the stem-sap strand test before pulling."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cucumber beetles are what bring this in, so keeping them off young plants is the real prevention. Cover seedlings with row cover, a light fabric laid over the bed, until they flower, and keep watching for a sudden wilt and collapse on any plant.",
+     "note_seasoned": "The bacterium overwinters in the beetles rather than in the soil, so excluding the vector at the seedling stage is control of the disease itself. The cover comes off at flowering, which is where scouting and prompt removal take over."
+    }
+   ]
+  }
+ ]
+}

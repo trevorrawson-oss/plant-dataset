@@ -1,0 +1,203 @@
+{
+ "pests": [
+  {
+   "id": "squash-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move acorn squash to a bed that did not grow squash-family crops the year before.",
+     "note_seasoned": "Cucurbit rotation is named here together with post-harvest cleanup as the between-season half of the program, working on what carries over rather than on bugs already in the planting."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear old vines and plant debris out of the bed after harvest. The adults spend the winter tucked into that material, so taking it away removes their shelter.",
+     "note_seasoned": "Removing vines and litter at season's end cuts the overwintering sites the adults use, which is where the following year's population starts. Adults and pale nymphs also gather under debris during the season, so piles left around the bed work against you."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young plants with row cover, a light fabric laid over the bed, and leave it on until they flower.",
+     "note_seasoned": "Cover holds adults off through establishment and comes off at flowering, so scouting has to pick the job up from that point."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the adults off by hand and scrape the flat bronze egg clusters off the undersides of the leaves. A board laid flat near the plants overnight draws bugs underneath it, so lift it in the morning and destroy what has gathered there. Check leaf undersides from early in the season, because the young bugs, called nymphs, get harder to deal with as they grow.",
+     "note_seasoned": "Hand-collection of adults plus crushing the egg masses laid along the veins on leaf undersides is the core of it, and an overnight board concentrates bugs for morning removal. Scout undersides from early season and act before nymphs mature, since control gets harder once they are large."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If you do spray, insecticidal soap, a soap-based spray that works on contact, is for the young nymphs. Bigger nymphs and adults are tough to kill with it, so when you treat matters more than how much you use.",
+     "note_seasoned": "Aim soap at small nymphs. Large nymphs and adults are hard to kill, so whether the timing lands before the population matures decides how much the spray is worth."
+    }
+   ]
+  },
+  {
+   "id": "cucumber-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Put this year's plants somewhere other than the bed that carried squash-family crops last season. The beetles that matter most are the ones that arrive early, since those are the ones spreading the wilt disease.",
+     "note_seasoned": "Rotating out of ground that carried cucurbits lowers pressure from the early-season colonizers, and that is the group to aim at because they are the wilt vectors."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear weeds and old plants from around the patch.",
+     "note_seasoned": "Weeds and crop debris around the planting are named alongside rotation in the prevention set here. Clearing them backs up seedling exclusion rather than standing in for it."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover seedlings with row cover, a light fabric laid over the plants, right from the start, and take it off once the flowers open. Seedlings are the stage most at risk, and plants that already have several leaves can take some chewing.",
+     "note_seasoned": "Exclusion over seedlings covers the stage that is most exposed both to feeding and to wilt infection; once several leaves are out, some feeding is tolerated. The cover lifts at flowering, so beetle work continues from there."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the beetles off the plants whenever you find them.",
+     "note_seasoned": "Hand-collection holds numbers down on a small planting and earns most early in the season, against the colonizers carrying the wilt."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Yellow sticky traps, glue-coated cards that catch small flying insects, tell you when beetles are around and take a share of them out. If bacterial wilt has been a problem in your garden, holding beetle numbers down is how you avoid it, because a plant that picks the disease up cannot be treated.",
+     "note_seasoned": "Traps do double duty: they read the population and remove some adults. Beetle suppression carries the disease program as well, since there is no cure available once a plant is infected."
+    }
+   ]
+  },
+  {
+   "id": "squash-vine-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Variety is settled when you buy seed. Some growers find bush and semi-bush types recover better after a borer gets in, so treat that as a small edge rather than as protection.",
+     "note_seasoned": "A seed-order choice: bush and semi-bush types are reported by some growers to come back better, which is a recovery observation rather than documented resistance. It does not displace exclusion, and the moth's strong preference runs to the thin-stemmed Cucurbita pepo group that acorn squash belongs to."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull and destroy badly damaged vines, and clear the old vines out of the bed after harvest so borers have nowhere to spend the winter.",
+     "note_seasoned": "Infested vines taken out and destroyed at the close of the season cut into next year's brood. That is the between-season lever left once larvae are already inside stems."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the plants with row cover, a light fabric laid over them, from planting until they flower. That shuts the egg-laying moths out, and it is the most dependable defense you have here. Take it off at bloom so bees can reach the flowers. From early summer, check the base of the stems for frass, the wet sawdust-like material a borer pushes out of its hole, and act at the first sign of it.",
+     "note_seasoned": "Cover held from planting through bloom shuts out the moths at egg-laying, and it is ranked here as the most dependable defense on offer. It has to come off at flowering for pollination, so stem-base scouting for frass from early summer carries the program past that point."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "Look over the stem bases through the summer, and where a grub is already inside, open the stem with a knife, take it out, and heap damp soil over the cut so the vine can root again at that spot. Worth a try on a vine you would otherwise pull.",
+     "note_seasoned": "Scout the stem base for frass from early summer; on a confirmed entry, cut lengthwise, destroy the larva, then mound moist soil over the node to encourage re-rooting. A salvage move on a single plant rather than a control that lowers pressure."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Hold back on nitrogen fertilizer. Heavy feeding pushes out soft growth, and aphid numbers build fastest on plants that are over-fed or under stress.",
+     "note_seasoned": "Feeding restraint removes one of the two conditions named for rapid buildup, the over-fertilized side, and it shapes the season before colonies appear rather than answering one that has."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Reflective mulch, a silver or foil-faced sheet laid on the soil, puts aphids off young plants. Lay it while the plants are still small.",
+     "note_seasoned": "Reflective mulch deters colonizers from small plants, which counts for more than the feeding damage alone, because several aphid species move cucurbit mosaic viruses."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Wash the colonies off with a hard jet from the hose. Aim at the undersides of the leaves and at the new growth on the tips, where they gather.",
+     "note_seasoned": "A forceful jet dislodges colonies from leaf undersides and growing tips, which are the two sites scouting covers anyway. Run it as the physical pass before anything is sprayed."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings and parasitic wasps eat aphids, and they usually bring an outbreak down on their own. Support them and skip broad sprays that would take them out along with the aphids.",
+     "note_seasoned": "Conserving lady beetles, lacewings and parasitoids is what usually ends an aphid run here, so this rung is about protecting the natural enemies rather than adding anything; broad spraying costs you that pressure."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep building, treat with insecticidal soap, a soap-based contact spray, and coat the undersides of the leaves where the aphids sit. Repeat every few days, since it acts on contact and does nothing where it misses.",
+     "note_seasoned": "Soap is contact-acting, so coverage of leaf undersides governs the outcome, and the every-few-days repeat belongs to the treatment rather than being a follow-up option."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, is the other option and goes on the same way: cover the leaf undersides well and repeat every few days.",
+     "note_seasoned": "Oil sits beside soap as the other thorough-coverage contact material named here, on the same few-day repeat."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where you can get them, pick mildew-tolerant varieties. Some acorn squash types, Honey Bear among them, hold up better than others.",
+     "note_seasoned": "Tolerant cultivars, where they are available, are the pre-season lever against one of the commonest late-season winter-squash diseases, and Honey Bear is named among the acorn types that hold up better. Holding up better is not the same as staying clean, so the rest of the ladder still stands."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Set plants far enough apart that air can move through the patch, and put the patch in full sun. Crowding and shade both make this worse.",
+     "note_seasoned": "Spacing and site are decided at planting: crowded, poorly ventilated, shaded plantings favor it, and these fungi work in warm humid air without needing the leaves to be wet."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plants rather than over the top of the leaves.",
+     "note_seasoned": "Overhead watering is listed among the things to avoid even though leaf wetness is not required for infection, so read base watering as a standing habit here rather than as the mechanism that stops this fungus."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take the worst-affected leaves off as you find them.",
+     "note_seasoned": "Pulling the heaviest-infected foliage trims what is on hand to spread from. Once the fungus is general across the canopy the work shifts to limiting damage."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Begin checking plants in midsummer, and when the first white patches show, reach for sulfur, a labeled mineral fungicide, covering the tops and the undersides of the leaves. Once the coating is over the whole plant it is hard to stop, so acting early is the point.",
+     "note_seasoned": "Sulfur at first symptom with both leaf surfaces covered is the window that pays, and midsummer scouting is what makes that timing reachable. Brought in late, it is damage limitation. Early defoliation is what costs you here: fruit size and the sugars that sweeten acorn squash, plus sunscald on exposed fruit."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew turns up most years where you live, choose a resistant variety when one is offered for what you want to grow.",
+     "note_seasoned": "Resistant cultivars, where they exist, are the pre-season lever against a disease that moves fast once it is established and can defoliate vines outright."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants so air moves between them and the leaves dry off quickly. This one needs wet leaves to get started.",
+     "note_seasoned": "Spacing shortens leaf wetness, and wetness is the infection requirement; crowding plus long wet periods is what lets it run through a planting."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line. Watering over the top keeps the foliage wet, which is exactly what this disease needs.",
+     "note_seasoned": "Overhead irrigation sustains the leaf wetness infection depends on and feeds what is already there, so base watering removes the input you control. Wet spells and heavy dew still do the same work."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off the badly affected leaves, and wait until the vines are dry before you go in among them.",
+     "note_seasoned": "Remove the worst foliage on dry vines rather than working among wet ones, and scout closely through humid weather, when it can show up and spread quickly. Wind-borne spores mean leaf removal will not hold this on its own."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-wilt",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Once a plant is infected, nothing on hand will cure it, so lift the wilting vines and destroy them rather than leaving them in the bed. To check before you pull: cut a wilted stem and draw the two cut ends slowly apart, and infected sap stretches into thin, sticky white strands.",
+     "note_seasoned": "Roguing wilting vines promptly is the listed way to limit spread, and it is what is left once a plant is infected, since nothing on offer saves it. The slow-draw stem test, which pulls sap into sticky white strands, confirms the call before you commit to pulling a vine."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "The real control is keeping cucumber beetles off the plants, since they carry the germ and pass it on as they feed. Cover young plants with row cover, a light fabric laid over the bed, and take it off when the flowers open.",
+     "note_seasoned": "Excluding the beetle vector from the seedling stage is the effective control of the disease itself, because the beetles introduce the bacterium as they feed. Cover comes off at bloom, which puts the rest of the season back onto beetle management."
+    }
+   ]
+  }
+ ]
+}
