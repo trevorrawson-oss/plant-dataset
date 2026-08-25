@@ -3,8 +3,8 @@
 **If you are a session picking this up cold, this file is the procedure. You do not need the chat
 transcript it came from.**
 
-Status as of 2026-08-23: canonical `75b3c0f0`, catalog **43 methods**, **7 of 121** certified crops
-laddered, **114 remaining (861 problems), ~23 batches of 5**. Run `python3 tools/ladder_batch.py
+Status as of 2026-08-24: canonical `c13ddea5`, catalog **50 methods**, **16 of 121** certified crops
+laddered, **105 remaining (791 problems), ~21 batches of 5**. Run `python3 tools/ladder_batch.py
 status` for the live figures rather than trusting this paragraph.
 
 ---
@@ -34,27 +34,60 @@ python3 tools/ladder_batch.py prepare --crops a,b,c,d,e --out /tmp/batchN
 ```
 
 **GROUP BY FAMILY FIRST. Size is the second constraint, not the first.** Run
-`python3 tools/ladder_batch.py families` and take a TWIN GROUP off the top.
+`python3 tools/ladder_batch.py families`. It reports **two different groupings, with two different
+instructions.** Do not confuse them; they were one thing until 2026-08-24 and the conflation was
+wrong.
 
-This is a correction, made 2026-08-24 after batch 1. `status` used to recommend "fewest problems
-first", which optimised batch SIZE and destroyed batch COHERENCE -- it is exactly what produced
-batch 1 as heirloom-tomato + jalapeno + swiss-chard + basil + fig: five unrelated crops, 38
-problems, and **zero shared prose**, so five separate source sets had to be read from scratch.
-Measured across the 114 remaining crops, **295 of 861 problem-instances (34%) are BYTE-IDENTICAL to
-a problem on another unladdered crop**, and 11 twin groups cover 32 crops. Distinct problems left
-to read: ~540, against 861 instances.
+- **TRUE TWINS** -- byte-identical problem prose, in order. This is the only group where you author
+  ONE crop and propagate the ladders mechanically, with the promote asserting the copies are
+  identical (`tools/promote_pla8_batch2.py`). The read is one problem set plus an equality check.
+- **SHARED-NAME FAMILIES** -- the same problems by name, prose NOT identical. The read is still
+  cheap, because the sourcing overlaps and the siblings compare side by side, but **every member
+  needs its own authoring pass.** The percentage printed is the share of problem fields that match.
 
-A twin group collapses the expensive step: you read ONE problem set and then verify its siblings are
-byte-identical, which is mechanical. It also makes the "fix one member of a template family, check
-its siblings" rule automatic instead of something to remember -- the rule that was violated twice in
-one session when `arugula`/`bok-choy` turned out byte-identical and an iron-phosphate safety claim
-spanned six crops.
+**WHY THIS SPLIT EXISTS.** The signature the tool grouped on was `sorted(problem_name(p))` --
+problem NAMES ONLY. It never compared a character of prose, yet it printed "TWIN GROUPS ... one read
+covers the group" and closed with "identical prose means the read is one problem set plus a
+mechanical equality check on its siblings". Measured against canonical `c13ddea5`, **not one of the
+ten reported twin groups was a true twin**: collards/kale shared 28.7% of their problem fields,
+beefsteak/cherry-tomato 34.4%, the three cucumbers 72.2%.
+
+**The corns of batch 2 are why nobody noticed.** They measured 96.2% with all twelve differences on
+a single problem (Raccoons, which says "sweet corn" where the others say "corn", and carries the
+same one-rung `exclusion_fencing` ladder on all four), so that shipped propagation was sound. The
+group was selected for a reason that had nothing to do with prose and came out right anyway, so the
+method read as proven. **A mechanical proxy standing in for reading is reproducible and wrong;
+reproducibility is not validity.**
+
+Applied to the cucumbers the same propagation would have been a content defect in both directions.
+`pickling-cucumber`'s prose names wilt-tolerant varieties **such as County Fair** and asserts
+**CMV-resistant** pickling varieties and resistant angular-leaf-spot varieties; `cucumber`'s and
+`slicing-cucumber`'s name **non-bitter** varieties that attract fewer beetles and claim no
+resistance at all. Copy either way and you erase a sourced control or invent one. Batch 3 was
+authored three times instead.
+
+The correction also finds propagate-safe SUBSETS the old cut could not: `dry-bean` +
+`green-beans-bush` are true twins, while `pole-beans` diverges from both.
+
+The earlier ordering was worse still. `status` used to recommend "fewest problems first", which
+optimised batch SIZE and destroyed batch COHERENCE -- it is exactly what produced batch 1 as
+heirloom-tomato + jalapeno + swiss-chard + basil + fig: five unrelated crops, 38 problems, and
+**zero shared prose**, so five separate source sets had to be read from scratch.
+
+Batching by family still makes the "fix one member of a template family, check its siblings" rule
+automatic instead of something to remember -- the rule that was violated twice in one session when
+`arugula`/`bok-choy` turned out byte-identical and an iron-phosphate safety claim spanned six crops.
+
+Guards: `tools/test_ladder_batch.py` (9 tests), mutation-verified by
+`tools/mutate_ladder_batch_suite.py` -- 8 injections, 8 caught, preflight 9/9, positive control
+green, sentinel red.
 
 **Size is still real**: ~38 problems -> ~143 rungs -> **~290 register strings** is readable in one
-sitting; at ~470 reading becomes skimming, and `prepare` warns past ~400. But a twin group of 7
-microgreens at 2 problems each is 14 problems, and a twin group of 3 cucumbers at 9 each is 27 --
-both well under the ceiling, so family and size rarely conflict. When they do, family wins and the
-batch gets smaller.
+sitting; at ~470 reading becomes skimming, and `prepare` warns past ~400. But a family of 4
+microgreens at 2 problems each is 8 problems, and a family of 3 cucumbers at 9 each is 27 -- both
+well under the ceiling, so family and size rarely conflict. When they do, family wins and the batch
+gets smaller. Note a shared-name family costs one authoring pass PER CROP, not one per group; only
+a true twin collapses that.
 
 `prepare` regenerates the brief FROM CANONICAL every time. Never reuse an old brief: batch 1 was
 authored against a 37-method catalog that grew to 43 mid-batch, and a stale brief silently produces

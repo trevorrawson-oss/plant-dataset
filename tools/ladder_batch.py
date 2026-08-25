@@ -97,16 +97,97 @@ def prose_key(p):
             p.get("prevention_beginner") or p.get("description_beginner"))
 
 
+# The fields a rung is RESTATED FROM, under either schema (classic crops carry
+# `organic_treatment_*`/`prevention_*`; the 8 microgreens carry `management_*`/`description_*`).
+# `anchoring_urls` and `sources` are deliberately NOT here: they are provenance, and a divergence
+# there is a sourcing defect to log, not a reason to refuse a propagation.
+PROSE_FIELDS = ("symptoms_beginner", "symptoms_seasoned", "cause_beginner", "cause_seasoned",
+                "prevention_beginner", "prevention_seasoned",
+                "organic_treatment_beginner", "organic_treatment_seasoned",
+                "management_beginner", "management_seasoned",
+                "description_beginner", "description_seasoned")
+
+_ABSENT = "\x00absent"   # distinct from an explicit null, which is distinct from ""
+_NULL = "\x00null"
+
+
+def prose_signature(crop):
+    """Identity of a crop's ENTIRE sourced problem set, IN ORDER.
+
+    WHAT THIS REPLACED, and why it mattered. The signature here used to be
+    `tuple(sorted(problem_name(p) for ...))` -- problem NAMES ONLY, not one character of prose. Any
+    two crops naming the same problems grouped as a "twin group", and the printed advice told the
+    session that identical prose meant it could author one crop and propagate the ladders
+    mechanically onto the siblings.
+
+    Measured against canonical `c13ddea5`, NOT ONE of the ten reported groups was a true twin:
+    collards/kale 28.7% of fields identical, beefsteak/cherry-tomato 55.4%, the three cucumbers
+    72.7%. The corns of batch 2 measured 96.2% with all twelve differences on a single problem, so
+    that shipped propagation was sound -- which is the trap. The group was picked for a reason that
+    had nothing to do with prose and came out right anyway, so the method read as proven.
+
+    Applied to the cucumbers the same propagation was a content defect in both directions:
+    pickling-cucumber's prose names wilt-tolerant County Fair and CMV-resistant varieties, where
+    cucumber's and slicing-cucumber's name non-bitter varieties and assert no resistance at all.
+    Copy either way and you erase a sourced control or invent one.
+
+    ORDER IS PART OF THE IDENTITY, deliberately. Propagation is index-wise (see
+    `promote_pla8_batch2.py`), so two crops carrying the same problems in a different order are NOT
+    propagate-safe even though their prose SETS match. Sorting here would report them as twins and
+    hand the next session an index-shifted copy. Grouping for cheap READING is a weaker claim and is
+    measured separately, by `prose_key` below.
+    """
+    sig = []
+    for _f, p in problems(crop):
+        # every name field explicitly, NOT problem_name()'s fallback chain: that chain returns the
+        # first of name/name_seasoned/name_beginner that is set, so two crops whose `name_beginner`
+        # differs while `name_seasoned` matches would be declared TRUE TWINS and propagated across.
+        row = [(problem_name(p) or "?").lower()]
+        for k in ("name", "name_beginner", "name_seasoned"):
+            v = p.get(k, _ABSENT)
+            row.append(_NULL if v is None else v)
+        for k in PROSE_FIELDS:
+            v = p.get(k, _ABSENT)
+            if v is None:
+                v = _NULL
+            row.append(v if isinstance(v, str) else json.dumps(v, ensure_ascii=False, sort_keys=True))
+        sig.append(tuple(row))
+    return tuple(sig)
+
+
+def family_cut(todo):
+    """Split crops into TRUE twin groups (byte-identical problem prose) and singletons.
+
+    Returns (twins, singles): twins is a list of slug-lists, longest first; singles a list of slugs.
+    """
+    import collections
+    groups = collections.defaultdict(list)
+    for c in todo:
+        groups[prose_signature(c)].append(c["slug"])
+    twins = sorted((v for v in groups.values() if len(v) > 1), key=len, reverse=True)
+    singles = sorted(v[0] for v in groups.values() if len(v) == 1)
+    return twins, singles
+
+
 def cmd_families(a, todo=None):
     """Group the remaining crops by SHARED PROSE, because that is what makes a batch cheap.
 
     WHY THIS REPLACED 'fewest problems first'. That ordering optimised batch SIZE and destroyed
     batch COHERENCE: it is what produced batch 1 as heirloom-tomato + jalapeno + swiss-chard +
     basil + fig -- five unrelated crops, 38 problems, and ZERO shared prose, so five separate
-    source sets had to be read from scratch. Measured across the 114 remaining crops, 295 of 861
-    problem-instances (34%) are BYTE-IDENTICAL to a problem on another unladdered crop. Grouping
-    by family collapses those into one read plus a mechanical equality check, and it makes the
-    'fix one member, check its siblings' rule automatic rather than something to remember.
+    source sets had to be read from scratch.
+
+    WHY IT NOW REPORTS TWO DIFFERENT THINGS. The first version grouped on problem NAMES and printed
+    one verdict, "twin group", carrying one instruction: propagate the ladders mechanically. Those
+    are two separate claims and only the weaker one was ever true.
+
+      SHARED-NAME FAMILY -- the same problems by name. Makes the READ cheap, because the sourcing
+      overlaps and the siblings can be compared side by side. Says NOTHING about propagation.
+      TRUE TWIN -- byte-identical problem prose, in order. THIS is the group where one crop can be
+      authored and the ladders copied, because every rung restates prose the sibling also carries.
+
+    See `prose_signature` for the measurement that separated them, and what the conflation would
+    have cost on the cucumbers.
     """
     import collections
     if todo is None:
@@ -116,14 +197,16 @@ def cmd_families(a, todo=None):
         todo = [c for c in cert if not laddered(c)]
 
     by = {c["slug"]: c for c in todo}
-    sig = {s: tuple(sorted((problem_name(p) or "?").lower() for _f, p in problems(c)))
-           for s, c in by.items()}
-    groups = collections.defaultdict(list)
-    for s, k in sig.items():
-        groups[k].append(s)
+    twins, _singles = family_cut(todo)
+    twinned = {s for g in twins for s in g}
 
-    twins = sorted((v for v in groups.values() if len(v) > 1), key=len, reverse=True)
-    singles = sorted(v[0] for v in groups.values() if len(v) == 1)
+    # the weaker, read-cheapness grouping: same problem names, prose not necessarily identical
+    named = collections.defaultdict(list)
+    for c in todo:
+        named[tuple(sorted((problem_name(p) or "?").lower() for _f, p in problems(c)))].append(c["slug"])
+    families = sorted((v for v in named.values() if len(v) > 1), key=len, reverse=True)
+    in_family = {s for g in families for s in g}
+    singles = sorted(s for s in by if s not in in_family)
 
     # how much prose is shared, so the payoff is stated rather than asserted
     shared = collections.defaultdict(list)
@@ -135,26 +218,57 @@ def cmd_families(a, todo=None):
     dupes = sum(len(v) for v in shared.values() if len(v) > 1)
     total = sum(len(problems(c)) for c in todo)
 
+    def identity(group):
+        """Fraction of problem fields byte-identical across a group, against its first member."""
+        g = sorted(group)
+        base = by[g[0]]
+        tot = ide = 0
+        for other in g[1:]:
+            o = by[other]
+            for f in ("pests", "diseases"):
+                for i, p in enumerate(base.get(f) or []):
+                    arr = o.get(f) or []
+                    q = arr[i] if i < len(arr) else {}
+                    for k in PROSE_FIELDS:
+                        if k in p or k in q:
+                            tot += 1
+                            ide += (p.get(k) == q.get(k))
+        return 100.0 * ide / max(tot, 1)
+
     print("BATCH BY FAMILY -- crops that SHARE PROSE share the read.")
     print(f"  {dupes} of {total} problem-instances ({100*dupes//max(total,1)}%) are byte-identical "
           f"to a problem on another remaining crop.")
     print(f"  distinct problems left to READ: ~{len(shared)}, against {total} instances.\n")
 
-    print(f"TWIN GROUPS ({len(twins)} groups, {sum(len(v) for v in twins)} crops) -- "
-          f"one read covers the group:")
+    print(f"TRUE TWINS ({len(twins)} groups, {sum(len(v) for v in twins)} crops) -- byte-identical "
+          f"prose. ONE authoring pass, propagate mechanically, and make the promote ASSERT it:")
+    if not twins:
+        print("  (none on the current roster)")
     for v in twins:
         n = len(problems(by[v[0]]))
         print(f"  {len(v)}x  {n:2d} problems each   {', '.join(sorted(v))}")
 
-    print(f"\nSINGLETONS ({len(singles)}) -- still need an individual read. "
+    partial = [g for g in families if not set(g) <= twinned]
+    print(f"\nSHARED-NAME FAMILIES ({len(partial)} groups, {sum(len(g) for g in partial)} crops) -- "
+          f"same problems, DIFFERENT prose. The read is cheap because sourcing overlaps and the")
+    print("  siblings compare side by side, but EACH CROP NEEDS ITS OWN AUTHORING PASS. The percent"
+          " is\n  the share of problem fields that match; the gap is where a copied rung would "
+          "invent or erase a claim:")
+    for g in partial:
+        n = len(problems(by[sorted(g)[0]]))
+        print(f"  {len(g)}x  {n:2d} problems each   {identity(g):5.1f}% identical   "
+              f"{', '.join(sorted(g))}")
+
+    print(f"\nSINGLETONS ({len(singles)}) -- no sibling at all. "
           f"Batch these by CATEGORY so sourcing overlaps:")
     cat = collections.defaultdict(list)
     for s in singles:
         cat[by[s].get("category", "?")].append(s)
     for k in sorted(cat):
         print(f"  {k:28s} {', '.join(sorted(cat[k]))}")
-    print("\nPick a twin group first: identical prose means the read is one problem set plus a "
-          "mechanical equality check on its siblings.")
+    print("\nTake a TRUE TWIN first if one exists: that is the only group where the read is one "
+          "problem set\nplus a mechanical equality check. Otherwise take a shared-name family and "
+          "author every member.")
 
 
 # ---------------------------------------------------------------- prepare
