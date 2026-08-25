@@ -169,6 +169,62 @@ def family_cut(todo):
     return twins, singles
 
 
+def cross_sibling_conflicts(src, out):
+    """Siblings whose SOURCE PROSE agrees but whose authored LADDERS do not.
+
+    `src`: {slug: [problem_dict, ...]} -- the crops' existing sourced prose, in order.
+    `out`: {slug: [[method, ...], ...]} -- the authored ladder method sequences, same order.
+    Returns a list of read rows, most-shared-prose first. It REPORTS; it never refuses.
+
+    WHY. Batch 3's one real defect was cucumber and slicing-cucumber carrying byte-identical
+    `prevention_seasoned` on Cucumber beetles while one keyed it to `resistant_varieties` and the
+    other refused. Same input, different output. Every gate passed both ladders, because each is
+    independently valid; the defect is only visible ACROSS crops, and only exists because family
+    batches author siblings separately. It was caught by a hand-built side-by-side, which does not
+    scale across the ~34 batches left.
+
+    THE SIGNAL IS IDENTICAL INPUT WITH DIFFERENT OUTPUT, and the threshold is deliberately ONE
+    shared field, not all of them. On the real case `prevention_seasoned` matched while both
+    `organic_treatment_*` fields differed, so requiring full agreement would have missed it.
+
+    A REPORTED ROW IS NOT A DEFECT. pickling-cucumber correctly carries `resistant_varieties` on
+    bacterial-wilt where its siblings do not: its prose claims wilt TOLERANCE and theirs claim only
+    reduced beetle attraction. The row exists so that divergence gets ADJUDICATED rather than
+    happening silently, and the evidence travels with it.
+    """
+    rows = []
+    slugs = sorted(src)
+    for i, a in enumerate(slugs):
+        for b in slugs[i + 1:]:
+            pa, pb = src[a], src[b]
+            la, lb_ = out.get(a) or [], out.get(b) or []
+            for idx in range(min(len(pa), len(pb))):
+                x, y = pa[idx], pb[idx]
+                if problem_name(x) != problem_name(y):
+                    continue
+                same, diff = [], []
+                for k in PROSE_FIELDS:
+                    if k not in x and k not in y:
+                        continue
+                    (same if x.get(k) == y.get(k) else diff).append(k)
+                if not same:
+                    continue          # nothing shared: a different ladder is expected, not a signal
+                ma = la[idx] if idx < len(la) else []
+                mb = lb_[idx] if idx < len(lb_) else []
+                if ma == mb:
+                    continue
+                rows.append({
+                    "a": a, "b": b, "index": idx, "problem": problem_name(x),
+                    "only_in_a": sorted(set(ma) - set(mb)),
+                    "only_in_b": sorted(set(mb) - set(ma)),
+                    "identical_fields": same,
+                    "differing_fields": diff,
+                    "ladder_a": ma, "ladder_b": mb,
+                })
+    rows.sort(key=lambda r: (-len(r["identical_fields"]), r["a"], r["b"], r["index"]))
+    return rows
+
+
 def cmd_families(a, todo=None):
     """Group the remaining crops by SHARED PROSE, because that is what makes a batch cheap.
 
@@ -424,6 +480,33 @@ def cmd_verify(a):
                 print(f"      METHOD MEANS: {cm[m]['best_use'][:104]}")
                 print(f"      RUNG SAYS   : {r.get('note_beginner','')[:104]}")
     print(f"\n  {len(seen)} crop/method pairs to compare.")
+
+    # ---- CROSS-SIBLING: identical source prose, different authored ladder --------------------
+    # The mechanical half of the read. Batch 3's only real defect was cucumber and
+    # slicing-cucumber sharing a byte-identical prevention_seasoned while one keyed it to
+    # resistant_varieties and the other refused. Every gate passed both; it is visible only across
+    # crops. Found by hand there; found here from now on.
+    srcp = {c["slug"]: [p for _f, p in problems(c)] for c in changed}
+    outp = {c["slug"]: [[r["method"] for r in (p.get("control_ladder") or [])]
+                        for _f, p in problems(c)] for c in changed}
+    rows = cross_sibling_conflicts(srcp, outp)
+    print("\n=== CROSS-SIBLING LADDER CONFLICTS (identical prose, different ladder) ===")
+    if not rows:
+        print("  none. Either the batch has no siblings sharing prose, or they agree.")
+    else:
+        print(f"  {len(rows)} to ADJUDICATE. A row is not automatically a defect: a divergence is")
+        print("  correct when the two crops' prose makes different CLAIMS. It is a defect when the")
+        print("  prose they share is the prose the differing rung would be built from.\n")
+        for r in rows:
+            print(f"  --- {r['problem']}   [{r['a']} vs {r['b']}]")
+            if r["only_in_a"]:
+                print(f"      only in {r['a']}: {r['only_in_a']}")
+            if r["only_in_b"]:
+                print(f"      only in {r['b']}: {r['only_in_b']}")
+            print(f"      identical ({len(r['identical_fields'])}): {', '.join(r['identical_fields'])}")
+            if r["differing_fields"]:
+                print(f"      differing: {', '.join(r['differing_fields'])}")
+
     print("\n" + ("VERIFY: structural checks PASS" if ok else "VERIFY: FAILURES ABOVE"))
     return 0 if ok else 1
 

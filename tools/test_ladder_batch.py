@@ -122,6 +122,18 @@ class TwinGroupsShareProse(unittest.TestCase):
                          "PROSE_FIELDS contains fields no fixture exercises: "
                          f"{sorted(set(lb.PROSE_FIELDS) - covered)}")
 
+    def test_problem_ORDER_is_part_of_the_identity(self):
+        """Propagation is INDEX-WISE (`promote_pla8_batch2.py` copies ladders by position), so two
+        crops carrying the same problems in a different order are not propagate-safe even though
+        their prose SETS match. Sorting the signature would report them as twins and hand the next
+        session an index-shifted copy: every ladder attached to the wrong problem."""
+        a = {"name": "Aphids", "prevention_seasoned": "avoid excess nitrogen"}
+        b = {"name": "Spider mites", "prevention_seasoned": "keep plants well watered"}
+        twins, _singles = lb.family_cut([crop("crop-a", [dict(a), dict(b)]),
+                                         crop("crop-b", [dict(b), dict(a)])])
+        self.assertEqual(twins, [],
+                         "same problems in a DIFFERENT ORDER were reported as propagate-safe twins")
+
     def test_explicit_null_is_not_the_same_as_an_absent_field(self):
         """A key present with a null value is a DIFFERENT record shape from a missing key.
 
@@ -135,114 +147,6 @@ class TwinGroupsShareProse(unittest.TestCase):
         twins, _singles = lb.family_cut([a, b])
         self.assertEqual(twins, [], "an explicit null collided with an absent field")
 
-    def test_problem_ORDER_is_part_of_the_identity(self):
-        """Propagation is INDEX-WISE (`promote_pla8_batch2.py` copies ladders by position), so two
-        crops carrying the same problems in a different order are not propagate-safe even though
-        their prose SETS match. Sorting the signature would report them as twins and hand the next
-        session an index-shifted copy: every ladder attached to the wrong problem."""
-        a = {"name": "Aphids", "prevention_seasoned": "avoid excess nitrogen"}
-        b = {"name": "Spider mites", "prevention_seasoned": "keep plants well watered"}
-        twins, _singles = lb.family_cut([crop("crop-a", [dict(a), dict(b)]),
-                                         crop("crop-b", [dict(b), dict(a)])])
-        self.assertEqual(twins, [],
-                         "same problems in a DIFFERENT ORDER were reported as propagate-safe twins")
-
-
-class ReportedTwinsAreRealOnCanonical(unittest.TestCase):
-    """The live roster: anything the tool advertises as propagate-safe must survive the check."""
-
-    @classmethod
-    def setUpClass(cls):
-        d = lb.load()
-        cert = [c for c in d["crops"]
-                if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
-        cls.todo = [c for c in cert if not lb.laddered(c)]
-
-    def test_reported_twin_groups_are_byte_identical_in_prose(self):
-        twins, _singles = lb.family_cut(self.todo)
-        by = {c["slug"]: c for c in self.todo}
-        bad = []
-        for g in twins:
-            g = sorted(g)
-            base = by[g[0]]
-            for other in g[1:]:
-                o = by[other]
-                for f in ("pests", "diseases"):
-                    for i, p in enumerate(base.get(f) or []):
-                        q = (o.get(f) or [])[i] if i < len(o.get(f) or []) else {}
-                        for k in PROSE_FIELDS:
-                            if p.get(k) != q.get(k):
-                                bad.append(f"{g[0]}/{other} {f}[{i}] {p.get('name')} :: {k}")
-        self.assertEqual(bad, [], "reported twin groups differ in prose:\n  " + "\n  ".join(bad[:20]))
-
-    def test_the_measurement_is_not_vacuous(self):
-        """REACHABILITY. `test_reported_twin_groups_are_byte_identical_in_prose` passes trivially
-        if `family_cut` reports NO groups at all -- the exact shape of a guard that reads as
-        coverage while checking nothing. Assert the canonical roster actually produces one.
-
-        If this ever fails because the roster genuinely ran out of true twins, DELETE the canonical
-        assertion rather than leaving it green and empty.
-        """
-        twins, singles = lb.family_cut(self.todo)
-        self.assertGreater(len(self.todo), 0, "no unladdered crops: the canonical check is vacuous")
-        self.assertGreater(len(twins), 0,
-                           "family_cut reported ZERO true twin groups on canonical, so the "
-                           "byte-identity assertion above has an empty denominator")
-
-    def test_problem_ORDER_is_part_of_the_identity(self):
-        """Propagation is INDEX-WISE (`promote_pla8_batch2.py` copies ladders by position), so two
-        crops carrying the same problems in a different order are not propagate-safe even though
-        their prose SETS match. Sorting the signature would report them as twins and hand the next
-        session an index-shifted copy: every ladder attached to the wrong problem."""
-        a = {"name": "Aphids", "prevention_seasoned": "avoid excess nitrogen"}
-        b = {"name": "Spider mites", "prevention_seasoned": "keep plants well watered"}
-        twins, _singles = lb.family_cut([crop("crop-a", [dict(a), dict(b)]),
-                                         crop("crop-b", [dict(b), dict(a)])])
-        self.assertEqual(twins, [],
-                         "same problems in a DIFFERENT ORDER were reported as propagate-safe twins")
-
-
-class ReportedTwinsAreRealOnCanonical(unittest.TestCase):
-    """The live roster: anything the tool advertises as propagate-safe must survive the check."""
-
-    @classmethod
-    def setUpClass(cls):
-        d = lb.load()
-        cert = [c for c in d["crops"]
-                if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
-        cls.todo = [c for c in cert if not lb.laddered(c)]
-
-    def test_reported_twin_groups_are_byte_identical_in_prose(self):
-        twins, _singles = lb.family_cut(self.todo)
-        by = {c["slug"]: c for c in self.todo}
-        bad = []
-        for g in twins:
-            g = sorted(g)
-            base = by[g[0]]
-            for other in g[1:]:
-                o = by[other]
-                for f in ("pests", "diseases"):
-                    for i, p in enumerate(base.get(f) or []):
-                        q = (o.get(f) or [])[i] if i < len(o.get(f) or []) else {}
-                        for k in PROSE_FIELDS:
-                            if p.get(k) != q.get(k):
-                                bad.append(f"{g[0]}/{other} {f}[{i}] {p.get('name')} :: {k}")
-        self.assertEqual(bad, [], "reported twin groups differ in prose:\n  " + "\n  ".join(bad[:20]))
-
-    def test_the_measurement_is_not_vacuous(self):
-        """REACHABILITY. `test_reported_twin_groups_are_byte_identical_in_prose` passes trivially
-        if `family_cut` reports NO groups at all -- the exact shape of a guard that reads as
-        coverage while checking nothing. Assert the canonical roster actually produces one.
-
-        If this ever fails because the roster genuinely ran out of true twins, DELETE the canonical
-        assertion rather than leaving it green and empty.
-        """
-        twins, singles = lb.family_cut(self.todo)
-        self.assertGreater(len(self.todo), 0, "no unladdered crops: the canonical check is vacuous")
-        self.assertGreater(len(twins), 0,
-                           "family_cut reported ZERO true twin groups on canonical, so the "
-                           "byte-identity assertion above has an empty denominator")
-
     def test_name_beginner_divergence_breaks_a_twin(self):
         """problem_name() falls back name -> name_seasoned -> name_beginner and returns the FIRST
         one set. Two crops agreeing on name_seasoned while differing on name_beginner must not be
@@ -253,6 +157,129 @@ class ReportedTwinsAreRealOnCanonical(unittest.TestCase):
         b = dict(base, name_beginner="Seedling rot")
         twins, _singles = lb.family_cut([crop("crop-a", [dict(base)]), crop("crop-b", [b])])
         self.assertEqual(twins, [], "a name_beginner divergence did not break the twin group")
+
+
+class CrossSiblingLadderConflicts(unittest.TestCase):
+    """Siblings that share source prose but got DIFFERENT ladders.
+
+    WHY THIS EXISTS. Batch 3's one real defect was found by hand. cucumber and slicing-cucumber
+    carry BYTE-IDENTICAL `prevention_seasoned` on Cucumber beetles ("choose non-bitter varieties
+    that attract fewer beetles"), and slicing's authoring agent keyed it to `resistant_varieties`
+    while cucumber's refused. Same input, different output; one of them had to be wrong.
+
+    No gate can see that, because each ladder is independently valid. It is a CROSS-CROP question
+    that exists only because a family batch authors siblings separately. Finding it took a manual
+    side-by-side, and with ~34 batches left that read is the bottleneck. This makes the mechanical
+    half mechanical, so the human read spends itself on what actually needs judgment.
+
+    IT REPORTS, IT DOES NOT REFUSE. A divergence can be correct: pickling-cucumber legitimately
+    carries `resistant_varieties` on bacterial-wilt where its siblings do not, because its prose
+    claims wilt tolerance and theirs claim only reduced beetle attraction. The output is a read
+    list with the evidence attached, not a verdict.
+    """
+
+    def test_identical_prose_with_differing_ladders_is_reported(self):
+        src = {"a": [{"name": "Cucumber beetles", "prevention_seasoned": "choose non-bitter varieties"}],
+               "b": [{"name": "Cucumber beetles", "prevention_seasoned": "choose non-bitter varieties"}]}
+        out = {"a": [["crop_rotation"]], "b": [["resistant_varieties", "crop_rotation"]]}
+        rows = lb.cross_sibling_conflicts(src, out)
+        self.assertEqual(len(rows), 1, rows)
+        self.assertEqual(rows[0]["problem"], "Cucumber beetles")
+        self.assertEqual(rows[0]["only_in_b"], ["resistant_varieties"])
+        self.assertEqual(rows[0]["only_in_a"], [])
+        self.assertIn("prevention_seasoned", rows[0]["identical_fields"])
+
+    def test_identical_prose_and_identical_ladders_is_silent(self):
+        """POSITIVE CONTROL: without it, `return []` passes every other test in this class."""
+        src = {"a": [{"name": "Aphids", "prevention_seasoned": "avoid excess nitrogen"}],
+               "b": [{"name": "Aphids", "prevention_seasoned": "avoid excess nitrogen"}]}
+        out = {"a": [["balance_nitrogen"]], "b": [["balance_nitrogen"]]}
+        self.assertEqual(lb.cross_sibling_conflicts(src, out), [])
+
+    def test_reported_even_when_only_SOME_fields_match(self):
+        """The real cucumber case: prevention_seasoned matched while organic_treatment_* differed.
+        Requiring EVERY field to match would have missed the actual defect."""
+        src = {"a": [{"name": "Cucumber beetles", "prevention_seasoned": "same",
+                      "organic_treatment_beginner": "cover them"}],
+               "b": [{"name": "Cucumber beetles", "prevention_seasoned": "same",
+                      "organic_treatment_beginner": "cover the plants"}]}
+        out = {"a": [["crop_rotation"]], "b": [["resistant_varieties"]]}
+        rows = lb.cross_sibling_conflicts(src, out)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["identical_fields"], ["prevention_seasoned"])
+        self.assertIn("organic_treatment_beginner", rows[0]["differing_fields"])
+
+    def test_no_shared_prose_at_all_is_NOT_reported(self):
+        """If siblings share nothing on this problem, differing ladders are expected and the row
+        would be noise. The signal is identical INPUT with different OUTPUT."""
+        src = {"a": [{"name": "Aphids", "prevention_seasoned": "one thing"}],
+               "b": [{"name": "Aphids", "prevention_seasoned": "a completely different thing"}]}
+        out = {"a": [["balance_nitrogen"]], "b": [["water_spray"]]}
+        self.assertEqual(lb.cross_sibling_conflicts(src, out), [])
+
+    def test_three_crops_report_each_conflicting_PAIR(self):
+        src = {c: [{"name": "Aphids", "prevention_seasoned": "same"}] for c in ("a", "b", "c")}
+        out = {"a": [["x"]], "b": [["x"]], "c": [["y"]]}
+        rows = lb.cross_sibling_conflicts(src, out)
+        self.assertEqual(sorted((r["a"], r["b"]) for r in rows), [("a", "c"), ("b", "c")])
+
+    def test_it_would_have_caught_the_batch_3_defect(self):
+        """The regression case, in the shape it actually occurred."""
+        shared = ("Exclude beetles from seedlings with row cover, keep young plants vigorous so "
+                  "they grow past the vulnerable stage, choose non-bitter varieties that attract "
+                  "fewer beetles, clear weeds and debris, and rotate away from where cucurbits grew.")
+        src = {"cucumber": [{"name": "Cucumber beetles", "prevention_seasoned": shared}],
+               "slicing-cucumber": [{"name": "Cucumber beetles", "prevention_seasoned": shared}]}
+        out = {"cucumber": [["crop_rotation", "garden_sanitation", "floating_row_cover",
+                             "handpick", "yellow_sticky_traps"]],
+               "slicing-cucumber": [["resistant_varieties", "crop_rotation", "garden_sanitation",
+                                     "floating_row_cover", "handpick", "yellow_sticky_traps"]]}
+        rows = lb.cross_sibling_conflicts(src, out)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["only_in_b"], ["resistant_varieties"])
+
+
+class ReportedTwinsAreRealOnCanonical(unittest.TestCase):
+    """The live roster: anything the tool advertises as propagate-safe must survive the check."""
+
+    @classmethod
+    def setUpClass(cls):
+        d = lb.load()
+        cert = [c for c in d["crops"]
+                if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
+        cls.todo = [c for c in cert if not lb.laddered(c)]
+
+
+    def test_reported_twin_groups_are_byte_identical_in_prose(self):
+        twins, _singles = lb.family_cut(self.todo)
+        by = {c["slug"]: c for c in self.todo}
+        bad = []
+        for g in twins:
+            g = sorted(g)
+            base = by[g[0]]
+            for other in g[1:]:
+                o = by[other]
+                for f in ("pests", "diseases"):
+                    for i, p in enumerate(base.get(f) or []):
+                        q = (o.get(f) or [])[i] if i < len(o.get(f) or []) else {}
+                        for k in PROSE_FIELDS:
+                            if p.get(k) != q.get(k):
+                                bad.append(f"{g[0]}/{other} {f}[{i}] {p.get('name')} :: {k}")
+        self.assertEqual(bad, [], "reported twin groups differ in prose:\n  " + "\n  ".join(bad[:20]))
+
+    def test_the_measurement_is_not_vacuous(self):
+        """REACHABILITY. `test_reported_twin_groups_are_byte_identical_in_prose` passes trivially
+        if `family_cut` reports NO groups at all -- the exact shape of a guard that reads as
+        coverage while checking nothing. Assert the canonical roster actually produces one.
+
+        If this ever fails because the roster genuinely ran out of true twins, DELETE the canonical
+        assertion rather than leaving it green and empty.
+        """
+        twins, singles = lb.family_cut(self.todo)
+        self.assertGreater(len(self.todo), 0, "no unladdered crops: the canonical check is vacuous")
+        self.assertGreater(len(twins), 0,
+                           "family_cut reported ZERO true twin groups on canonical, so the "
+                           "byte-identity assertion above has an empty denominator")
 
 
 if __name__ == "__main__":
