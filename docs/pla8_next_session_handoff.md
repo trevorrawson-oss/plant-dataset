@@ -1,10 +1,48 @@
-# PLA-8 -- handoff after batch 5 (2026-08-25)
+# PLA-8 -- handoff after the conventional-tier disclosure round (2026-08-26)
 
-Canonical **`7c3e5d71`**. Six commits on `main`, **unpushed**. Catalog **53 methods**.
-Roster laddered **27 of 121** -- 94 crops / 706 problems left, **19 batches**.
+Run `python3 tools/ladder_batch.py status` for live figures rather than trusting any number here.
+The procedure is `docs/ladder_batch_playbook.md`. Read it; this file covers only what changed.
 
-Run `python3 tools/ladder_batch.py status` for live figures rather than trusting this paragraph.
-The procedure is `docs/ladder_batch_playbook.md`. Read it; this file only covers what changed.
+Roster laddered **29 of 121**. Catalog **56 methods**. **No true twins left** -- every batch from
+here costs one authoring pass per crop.
+
+---
+
+## THE NEXT TWO PIECES OF WORK, IN ORDER
+
+### 1. The chemical-cohort close-out round -- FULLY PREPPED, START HERE
+`docs/2026-08-26-pla8-chemical-cohort-round-prep.md` has the whole thing: the seven methods, their
+UC IPM uaiKeys, what to check on each, and which guard shapes to reuse.
+
+Seven pilot-era (2026-07-22/23) chemical entries have never been re-read:
+`copper_fungicide` `sulfur` `neem_oil` `spinosad` `insecticidal_soap` `horticultural_oil`
+`iron_phosphate_slug_bait`
+
+**This closes the catalog's safety-bearing surface.** Of 56 methods only 10 are a chemical a person
+applies to food; three are now re-read and these are the other seven. After this round the catalog
+audit is DECLARED CLOSED and batches run straight through, minting a method only when a batch
+genuinely needs one (melons will need `mancozeb`, uaiKey=30 -- that is growth, not debt).
+
+The instrument exists and is tested: `tools/ucipm_uaidb.py`, with `tools/test_ucipm_uaidb.py` as an
+OFFLINE positive control against a cached page. **Run that control in the same pass as any reading.**
+
+### 2. Then the tomatoes
+`beefsteak-tomato` `cherry-tomato` `grape-tomato` `roma-tomato` -- 4 crops, 34 problems. Highest
+likely demand AND the best remaining family cut (grape+roma 68.1%), which will not always coincide.
+
+---
+
+## TREVOR'S ORDERING RULING, 2026-08-26: DEMAND BEATS READ-EFFICIENCY
+
+> "the microgreens are last on my list as nobody has looked them on the website or asked about them"
+
+The playbook batches by FAMILY because that makes the read cheap. That is now subordinate to what
+people actually open. **Microgreens (7 crops / 14 problems) and Companion & Pollinator (10 / 65) go
+LAST** -- 17 crops, about 18% of the remaining work, deferred. Peppers, leafy greens, roots and
+brassicas move up. A cheap read of something nobody opens is still wasted.
+
+Owed: a rough top-20 by page views would let the remaining 92 be ordered against real demand instead
+of a guess. Ask for it.
 
 ---
 
@@ -12,102 +50,68 @@ The procedure is `docs/ladder_batch_playbook.md`. Read it; this file only covers
 
 | commit | |
 | -- | -- |
-| `c1e708f` / `39b6ca8` | catalog **r5**: mint `planting_time_avoidance` + `wet_foliage_discipline`, widen `balance_nitrogen` + `augmentative_release`, mint `ucanr_ext_dry_bean_white_mold`. 51 -> 53 methods. |
-| `22d176c` / `ec33e83` | catalog **r6**: close the `planting_time_avoidance.best_use` self-contradiction. |
-| `d6e8071` / `0a2ffa8` | **BATCH 5**: the three beans, 131 rungs, roster 24 -> 27. |
+| `febf1af` | catalog **r7**: mint `biofungicide` + `weed_host_control`; a widening REFUSED after six T1 docs came back empty, and the refusal is itself a guard. |
+| `603f4f8` | **THE TOOLING FIX.** `ladder_batch.cmd_prepare` emitted `best_use[:150]`, cutting the trailing "Distinct from X" clause that keeps two methods apart -- 37 of 55 fields ran past 150 chars, SIX lost the clause outright. And `cautions` reached the brief NOWHERE (41 strings, 29 of 55 methods). Brief 13.6KB -> 22.6KB. |
+| `99a19c6` | r8: the powdery-mildew exception on `wet_foliage_discipline`. |
+| `d925eb6` | **BATCH 6**: the two peas, 84 rungs, roster 27 -> 29. |
+| `d096415` / `2e86279` | mint `chlorothalonil` + backfill 9 rungs onto 6 CERTIFIED crops. |
+| (this round) | the conventional-tier disclosure round, below. |
 
-**Never amend any of them** -- `promote_fixture.COMMIT_FOR` pins `c1e708f`, `22d176c`, `d6e8071`.
-
----
-
-## The one thing this session would tell the next one
-
-**Read the crop prose BEFORE preparing a batch, not after the authoring agents refuse.**
-
-Every earlier catalog round was reactive: batch 4 minted `borer_stem_surgery` only after three
-agents independently refused to fake the control. That works, but batches 3 AND 4 both ended up
-HOLDING content rather than shipping ladders known to drop a primary control. Reading all nine
-`green-beans-bush` problems first found **five** controls with no catalog home before a single
-ladder was authored, which turned a re-run into a catalog round that shipped ahead of the batch.
-
-The corollary is that the batch then **audits the round**. r5 shipped a method sheet that
-contradicted itself, and the first two authoring passes to use it found that out within hours by
-disagreeing with each other. Batch 5's promote now requires every method the round produced to be
-reachable in the batch: **minting a method the batch does not use means the round was not justified
-by the need it claimed.**
+**Never amend any of them** -- `promote_fixture.COMMIT_FOR` pins them.
 
 ---
 
-## Next batch
+## The conventional-tier disclosure round, and what it should teach the next one
 
-`ladder_batch.py families` will say this, but the shape is already clear:
+**THE DEFECT WAS WRONG ADVICE, NOT A MISSING CAUTION.** Both conventional insecticides told readers
+to "spray at dusk when bees are not foraging". That sunset-to-midnight allowance is UC IPM's MIDDLE
+bee band. Carbaryl and all nine common pyrethroids sit in the STRICTEST band, which grants no time
+window at all. Ten live rungs across apple, strawberry, asparagus and broccoli.
 
-- **There are no true twins left.** `dry-bean` + `green-beans-bush` was the last one. From here
-  every batch costs **one authoring pass per crop**. Anyone planning from the pre-2026-08-24 numbers
-  is wrong by about 3x.
-- **The obvious next family is the two peas** -- `snow-peas` + `sugar-snap-peas`, 8 problems each,
-  **82.8% identical**, the highest-scoring shared-name family left. Same Beans & Peas sourcing this
-  session just read, so the source overlap is real.
-- Then `cayenne-pepper` + `habanero` (11 problems each, 79.5%), `grape-tomato` + `roma-tomato`
-  (9 each, 68.1%), `collards` + `kale` (9 each, 25.0% -- barely a family).
-- **80 singletons** remain; batch those by CATEGORY so sourcing overlaps.
+**A CLASS KEY HIDES INGREDIENT-LEVEL DISAGREEMENT.** `pyrethroid` covers nine ingredients whose
+chronic ratings SPLIT four to five. `copper_fungicide` is the same shape and is in the next round.
+Where a class key's members disagree, the caution names which.
 
----
+**AN ABSENCE WAS DOCUMENT-SCOPED, AGAIN.** UC IPM lists no home-garden product for carbaryl, no Pest
+Note mentions it, and it appears only as a professional product -- three signals from one
+institution. NPIC overturns it nationally: 190+ registered products, "home gardens" named. Carbaryl
+stays. A California shelf survey is not the world.
 
-## Highest-value catalog work, now measured across three batches
+**AND ONE DEFECT WAS SIX HOURS OLD AND MINE.** "Bee rating II" on chlorothalonil was a numeral the
+page does not carry; it renders three CSS bands and the four-numeral scheme lives in a footnote about
+a different database. Caught by the very next pass over the same source, which is the argument for
+re-reading a cohort rather than trusting recency.
 
-**No conventional FUNGICIDE key exists at all.** Both `conventional` entries are insecticides, so
-chlorothalonil is unexpressible. Named on the cucumbers (batch 3) and again by both bean passes.
-This is the biggest remaining hole and it will recur on every crop with a foliar disease.
+### Guard lessons, and the one that cost two harness runs
 
-Also owed, each hit independently by more than one pass:
-
-- **`tool_and_hand_hygiene`** -- third instance. Both bean passes folded stake and trellis cleaning
-  into `garden_sanitation` and both flagged the fit.
-- **A botanical pyrethrin key.** `pyrethroid` is a synthetic conventional; pyrethrin is a botanical
-  soft chemical. Both bean passes refused to file one under the other, correctly.
-- **`weed_host_control`** -- "control nearby weeds that harbor them" has no home. Both passes.
-- **Dust suppression** (spider mites) and **a general scouting key** -- both passes folded the
-  scouting cue into another method's note and flagged that they had.
-- Still open from earlier batches: a plant-vigor method, a disease-side nitrogen key beyond the r5
-  widening, a biofungicide / potassium-bicarbonate key, `container_culture`, `certified_clean_stock`
-  variants, trap cropping, diatomaceous earth.
+1. **WRITE THE `VerifyPostIsDriven` CLASS FIRST.** Eight of twelve first-run survivors were
+   `verify_post` guards with no driver: `check()` refuses every input that could reach them, so the
+   whole post-state half sat untested while green. Fifth time this arc.
+2. **A coverage assertion must not derive its expectation from the table it validates.** Emptying
+   `DISCLOSURE_AXES` made the loop body never run AND the expected set empty, so the test passed
+   having tested nothing. Freeze the axis list as a LITERAL in the test.
+3. **A guard below a stronger neighbour is dead code.** The post-side split check sat under an
+   exact-equality check that subsumed it. Made reachable rather than deleted.
+4. **Order matters between two guards that fire on the same input.** A method with no bee caution
+   trips both the band guard and the `bees` axis; the band message is the specific one, so the band
+   check runs first and the test asserts THAT message.
+5. **Token scans flag correct prose.** The authored caution said "materials one band softer carry a
+   sunset to midnight exception; this one does not" -- correct, and refused, because the scan cannot
+   read a negation. Simplify the prose, do not outsmart the guard.
+6. **Piping a harness through `tail` masks its exit code.** The run reported exit 0 while printing
+   FAIL. Redirect to a file instead.
 
 ---
 
 ## Owed, and NOT done here
 
-- **Linear PLA-8 has no record of batches 1-5.** Its description still ends at the 2026-08-22/23
-  close-out. The MCP token expired mid-write this session. A ready-to-paste close-out covering r5,
-  r6 and the batches-1-4 gap is in the session scratchpad as `PLA-8_closeout_r5.md`; batch 5 and r6
-  need appending to it from `STATE_HISTORY.md`.
-- **plant-app owes its own `data(guides)` commit.** `build:guides` was re-run after each of the
-  three promotes, so `assets/data/guides.dataset`, `src/data/control-methods.json` and
-  `assets/data/dataset-provenance.json` are modified and uncommitted in that repo.
-- **Nothing is pushed.** Six commits sit on `main`.
-- ~~Batch 1 is still STAGED, not promoted.~~ **WRONG, corrected 2026-08-26.** Batch 1 was promoted
-  in `9fbf655` ("5 crops laddered, 18 of 22 read-fixes applied", roster 7 -> 12) and all five crops
-  carry rungs. The claim was carried out of `pla8-batch1-read-outcome`, which recorded it truly at
-  the time of writing and was superseded the same day. **A stale record reads as current truth** --
-  the exact failure `stale-records-commission-phantom-work` exists to prevent, repeated while that
-  memory sat in the index. The roster arithmetic is the check: 7 pilot + 5 + 4 + 3 + 5 + 3 + 2 = 29.
-
----
-
-## Guard lessons from this session, worth carrying into the next promote
-
-1. **A `verify_post` guard needs a test that doctors the POST directly.** `check()` sees only the
-   staged batch, so every input that could reach a post-state guard is refused upstream first. Five
-   of batch 5's six first-run survivors were exactly this.
-2. **Assert a premise where the claim lives.** Comparing staged files proves what the promote did;
-   comparing canonical proves it was allowed.
-3. **Never include the field the promote WRITES in a premise check** -- the premise becomes true by
-   construction.
-4. **A refusal test must assert the message of the guard it names.** Asserting only "something was
-   refused" passes green while an earlier check answers for it; that masked three mutations in r5
-   and two more in batch 5.
-5. **Guards that exist in both `check` and `verify_post` differ only by indentation**, so a bare
-   mutation anchor substring-matches twice. Preflight catches it as `HARNESS DEAD`; it fired twice
-   this session.
-6. **An unreachable guard is deleted, not tested.** r6 had an "already corrected" branch that could
-   never fire because an earlier check returns first.
+- **plant-app owes its `data(guides)` commit.** Regenerate `build:guides` AFTER this round lands;
+  the WIP export sitting in that tree carries the OLD wrong bee cautions. The plant-app session was
+  told this directly and is publishing its OTA from the clean committed tree instead.
+- **`mancozeb`** (uaiKey=30, already read: water H, bees low, acute L, Prop 65 + EPA) is named with
+  chlorothalonil on watermelon and cantaloupe. Mint it when the melons batch needs it.
+- **Chlorothalonil sits inside `organic_treatment_seasoned`** on 11 problems -- a conventional
+  synthetic in a field named `organic_`. Flagged by batch 3, still live, still not fixed.
+- Existing-prose findings recorded but not fixed: the peas' unsourced timing claim; Pediobius
+  credited to `clemson_hgic`; bush beans advised to clean stakes; the sulfur register interval
+  disagreement.

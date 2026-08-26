@@ -1,0 +1,597 @@
+<!-- INF09\startRequest.cfm -->
+
+<!-- cfincludes\startRequest.cfm -->
+
+<!-- INF09\header-v4.cfm -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,300,100&amp;subset=latin,latin-ext" type="text/css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,latin-ext" type="text/css" />
+	
+	
+	<link rel="stylesheet" href="/assets_v6/styles/bootstrap-3.css" type="text/css" />
+	<link rel="icon" type="image/png" href="/assets_v6/images/favicon.ico" />
+			
+	
+	
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+		<script src="https://unpkg.com/htmx.org@1.6.1"></script>
+	
+		<link href="/assets_v6/fontawesome6_5_1/css/fontawesome.css" rel="stylesheet">
+  		<link href="/assets_v6/fontawesome6_5_1/css/brands.css" rel="stylesheet">
+  		<link href="/assets_v6/fontawesome6_5_1/css/solid.css" rel="stylesheet">
+	
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NPR7B4');</script>
+		<!-- End Google Tag Manager -->
+	
+	
+	<script>
+		(function() {
+			var cx = '014616282592139902646:ltwuetmnjdo';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+			})();
+	</script>
+
+	<style>	
+		.icon-bar {
+		position: fixed;
+		z-index: 500;
+		top: calc(100vh - (100vh - 40%));
+		right: 0;
+		left: calc(100vw - 105px);
+		width: 140px;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		transform: rotate(-90deg);
+		}
+
+		.icon-bar a {
+		display: block;
+		text-align: center;
+		padding: 14px;
+		transition: all 0.3s ease;
+		color: white !important;
+		font-size: 16px;
+		border-bottom: none;
+		}
+		
+		.icon-bar a:hover {
+		background-color: #000;
+		}
+		
+		.pdf {
+		background: #bb0000;
+		color: white;
+		}
+
+		.print {
+		background: #008EAA;
+		color: white;
+		}
+		
+		.feedback {
+		background: #005581;
+		color: white;
+		span{
+			font-size:16px!important;
+		}
+		}
+
+		@media print { 
+			.icon-bar {
+				display: none !important;
+			}
+		}
+	</style>
+
+	
+	
+		
+	<title>Pesticide Active Ingredients Database / Home and Landscape / Statewide IPM Program</title>
+</head>
+
+<body>
+	
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPR7B4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	<nav class="navbar fixed-top bg-light">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demoTarget" aria-controls="demoTarget" aria-expanded="false" aria-label="Toggle navigation" id="sandwichButton">
+		<i class="fa fa-bars" aria-hidden="true" id="sandwichButtonImage"></i>
+	</button>
+	<a href="/" class="navbar-brand">
+		<img src="/assets_v6/images/logo/header-logo-ipm.svg" id="CORE_logo" alt="Logo for Statewide Integrated Pest Management Program, University of California Agriculture and Natural Resources Logo" width="150px"/>
+	</a>
+	<div class="collapse navbar-collapse main-nav scroll" id="demoTarget">
+		<gcse:search></gcse:search>
+		<ul class="navbar-nav mainMenu mr-auto mt-2 mt-lg-0">
+			<li class="nav-item">
+				<a class="nav-link dropdown-toggle audience" data-toggle="collapse" href="#HGTF" aria-expanded="false" aria-controls="HGTF">Home, Garden, Turf and Landscape</a>
+			</li>
+			<div class="collapse" id="HGTF">
+				<div class="secondary-nav">
+					<li><a class="nav-link secondary" href="/home-and-landscape/">Home and Garden</a></li>
+					<li><a class="nav-link secondary" href="/home-and-landscape/plant-problem-diagnostic-tool/">Plant Pest Diagnostic Tool</a></li>
+					<li><a class="nav-link secondary" href="/home-and-landscape/resources-for-retail-nurseries-and-garden-centers/">Retail Nurseries &amp; Garden Centers </a></li>
+					<li><a class="nav-link secondary" href="/home-and-landscape/resources-for-landscape-professionals/">Landscape Professionals</a></li>
+					<li><a class="nav-link secondary" href="/home-and-landscape/master-gardeners/">UC Master Gardeners</a></li>
+				</div>
+			</div>
+			<li class="nav-item">
+				<a class="nav-link dropdown-toggle audience" data-toggle="collapse" href="#Ag" aria-expanded="false" aria-controls="Ag">Agriculture</a>
+			</li>
+			<div class="collapse" id="Ag">
+				<div class="secondary-nav">
+					<li><a class="nav-link secondary" href="/agriculture/">Pest Management Guidelines</a></li>
+					<li><a class="nav-link secondary" href="/agriculture/decision-support-tool/">Decision Support Tool</a></li>
+					<li><a class="nav-link secondary" href="/WEATHER/index.html">Weather, Models &amp; Degree-Days</a></li>
+				</div>
+			</div>
+			<li class="nav-item ">
+				<a class="nav-link audience" href="/invasive-and-exotic-pests/">Invasive and Exotic Pests</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link audience" href="/NATURAL/index.html">Natural Environments</a>
+			</li>
+			<div class="secondary-nav">
+				<li class="nav-item">
+					<a class="nav-link dropdown-toggle sub-menu secondary-link" data-toggle="collapse" href="#UCIPM" aria-expanded="false" aria-controls="UCIPM">About UC IPM</a>
+				</li>
+				<div class="collapse" id="UCIPM">
+					<div class="secondary-sub-nav">
+						<li><a class="nav-link" href="/IPMPROJECT/about.html">What We Do</a></li>
+						<li><a class="nav-link" href="/strategic-plan/">Strategic Plan 2015&ndash;2025</a></li>
+						<li><a class="nav-link" href="/highlights/">Annual Report</a></li>
+						<li><a class="nav-link" href="/IPMPROJECT/programs.html">UC IPM Programs</a></li>
+						<li><a class="nav-link" href="/IPMPROJECT/programreview.html">Program Review</a></li>
+					</div>
+				</div>
+				<li class="nav-item">
+					<a class="nav-link dropdown-toggle sub-menu secondary-link" data-toggle="collapse" href="#Galleries" aria-expanded="false" aria-controls="Galleries">Galleries</a>
+				</li>
+				<div class="collapse" id="Galleries">
+					<div class="secondary-sub-nav">
+						<li><a class="nav-link" href="/IPMPROJECT/videolibrary.html">Video Gallery</a></li>
+						<li><a class="nav-link" href="/PMG/weeds_intro.html">Weed Gallery</a></li>
+						<li><a class="nav-link" href="/natural-enemies/">Natural Enemies Gallery</a></li>
+					</div>
+				</div>
+				<li><a class="nav-link secondary secondary-link" href="/PMG/glossary.html">Glossary</a></li>
+				<li><a class="nav-link secondary secondary-link" href="/GENERAL/links.html">Links</a></li>
+				<li><a class="nav-link secondary secondary-link" href="/IPMPROJECT/pubsmenu.html">Publications and Newsletters</a></li>
+				<li><a class="nav-link secondary secondary-link" href="/GENERAL/pesticides.html">Pesticide Information</a></li>
+				<li class="nav-item">
+					<a class="nav-link dropdown-toggle  sub-menu secondary-link" data-toggle="collapse" href="#Tools" aria-expanded="false" aria-controls="Tools">Tools</a>
+				</li>
+				<div class="collapse" id="Tools">
+					<div class="secondary-sub-nav">
+						<li><a class="nav-link  " href="/bee-precaution-pesticide-ratings/">Bee precaution pesticide ratings</a></li>
+						<li><a class="nav-link " href="/agriculture/decision-support-tool/">Decision Support Tool</a></li>
+						<li><a class="nav-link " href="/home-and-landscape/plant-problem-diagnostic-tool/">Plant Problem Diagnostic Tool</a></li>
+						<li><a class="nav-link " href="/home-and-landscape/seasonal-landscape-ipm-checklist/">Seasonal Landscape IPM Checklist</a></li>
+						<li><a class="nav-link " href="/WEATHER/index.html">Weather, models, &amp; degree-days</a></li>
+					</div>
+				</div>
+				<li><a class="nav-link secondary secondary-link" href="/IPMPROJECT/workshops.html">Trainings and Events</a></li>
+				<li><a class="nav-link secondary secondary-link" href="/what-is-ipm/">What is IPM</a></li>
+				<li><a class="nav-link secondary secondary-link" href="/IPMPROJECT/recursos-espanol.html"><span lang="es">Recursos en espa&ntilde;ol<span></a></li>
+			</div>
+		</ul>
+	</div>
+</nav>
+
+
+
+
+	<div class="modal fade" id="imageDisplayModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="vertical-alignment-helper">
+			<div class="modal-dialog vertical-align-center" style="margin-top:50px;">
+				 <div class="modal-header" style="background-color:white; border-bottom-width:0px;">
+				 	<h5 class="modal-title" id="myLargeModalLabel" style="color:black; font-weight:bolder;">&nbsp;</h5>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	            </div>
+				<div class="modal-content" style="border-radius:0px; border-bottom-width:1px; border-top-width:1px; border-left-width:0px; border-right-width:0px; padding-top:5px; padding-bottom:5px; border-bottom-color:rgb(235, 235, 235); border-top-color:rgb(235, 235, 235);">
+					<img id="modalImage" alt="modal image place holder" class="mx-auto img-fluid" src="">
+				</div>
+				<div class="modal-footer" style="background-color:white; border-bottom-width:0px;">
+					<a href="" target="_blank" id="modalImagePageLink" onclick="">Image information and credit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="ModalScrollableSurvey" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="margin-right:20px;">
+					<h3 class="modal-title" id="ModalScrollableSurvey">Feedback</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" style="font-size:24px;">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<iframe id="modalIFrameSurvey" allowfullscreen title="Survey" src="" style="width: 100% !important; max-width: 100% !important; visibility: visible !important; opacity: 1 !important;" height="1000px"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="ae-chatbot-widget"></div>
+
+<!-- INF09\inf_banner_image-v3.cfm -->
+
+
+
+		<div class="divider"></div>
+		<div class="banner">
+			<div class="container">
+				<div class="row">
+					<div>
+							
+								<img class="img-fluid" src="/pmg/images/l/C-CH-LABL-GU.034banner.png" border="0" width="100%" height="100%" alt="Shelves of various consumer pesticides in a retail store." title="Shelves of various consumer pesticides in a retail store. Credit:  Belinda Messenger-Sikes, UC IPM" />
+							
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- INF09\inf_breadcrumb-v3.cfm -->
+
+
+
+<div class="container">
+	<div class="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/">UC IPM</a></li><li class="breadcrumb-item"><a href="/home-and-landscape">Home and Landscape</a></li><li class="breadcrumb-item"><a href="/home-and-landscape/pesticide-active-ingredients-database">Pesticide Active Ingredients Database</a></li><li class="breadcrumb-item active">Active Ingredient Details</li>
+		</ol>
+	</div>
+</div> <!doctype html>
+
+<html>
+<body>
+  
+  <header>
+    <div class="container">
+      <div>
+        <h5 class="audience">Home and Landscape: Pesticide Active Ingredients Database</h5>
+      </div>
+      <h1 id="BackToTop">chlorothalonil</h1>
+      
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class=" col-2 col-md-2 in-page-nav  d-none d-md-block ">
+          <div class="position-sticky sticky-top " style="top:60px">
+            <p class="h3">On This Page</p>
+            <ul class="nav flex-column ">
+              <li><a href="#PesticideType">Pesticide Type</a></li>
+              <li><a href="#HowDoesThisAIWork">How Does This Active Ingredient Work?</a></li>
+              
+              <li><a href="#PotentialHazard">Potential Hazards </a></li>
+              <li><a href="#Safety">Safety Precautions</a></li>
+              <li><a href="#ExampleProducts"> Pest Notes and Example products</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Main page content---->
+        <div class=" col-sm-12 col-md-10 col-lg-10">
+          <article> <span id="PesticideType"></span>
+            <h2>Pesticide Type</h2>
+            <cfoutput>Fungicide</cfoutput>
+            <p>See the <a href="/home-and-landscape/pesticide-active-ingredients-database/pesticide-terms">Pesticide Terms page</a> for definitions of terms used in this database.</p>
+            <span id="HowDoesThisAIWork"></span>
+            <h2>How Does This Active Ingredient Work?</h2>
+            <p><p>This active ingredient is a broad-spectrum, protectant fungicide. Chlorothalonil inhibits fungal growth on plant leaves.</p></p>
+            
+            
+            <span id="PotentialHazard"></span>
+            <h2>Potential Hazards<sup>1</sup></h2>
+            <table class="table text-center">
+              <colgroup span="3"></colgroup>
+              <colgroup span="2"></colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3" scope="colgroup">Environment</th>
+                  <th colspan="2" scope="colgroup">People or other mammals</th>
+                </tr>
+                <tr>
+                  <th scope="col" id="WaterQuality"> Water quality<sup>2</sup><br>
+                    (aquatic wildlife)<span class="sr-only">Footnote 1. Water quality ratings from Pesticide Choice:
+                      Best Management Practice (BMP) for Protecting Surface Water Quality in Agriculture, ANR
+                      Publication 8161, or the USDA-NRCS WIN-PST databaseâ€”see Pesticides: Water-Related Toxicology of
+                      Active Ingredients. Information to be added.</span> </th>
+                  <th scope="col">Natural enemies<sup>3</sup><br>
+                    (beneficials) <span class="sr-only">Information to be added.</span> </th>
+                  <th scope="col"> Honey bees<sup>4</sup><span class="sr-only">Footnote 3.Honey bee ratings are: (Very High) I-Do
+                      not apply to blooming plants; (High) II-Apply only during late evening; (Moderate) III-Apply only
+                      during late evening, night, or early morning; and (Low) IV-Apply at any time with reasonable
+                      safety to bees. For more information, see How to Reduce Bee Poisoning From Pesticides (PDF),
+                      Pacific Northwest Extension Publication PNW591. Information to be added.</span> </th>
+                  <th scope="col"> Acute<sup>5</sup><span class="sr-only">Footnote 4.Acute oral toxicity ratings for people and
+                      other mammals based on LD50 and US EPA Acute Toxicity Ratings system: H = Highly Toxic (LD50 &lt;
+                      50), M = Moderately Toxic (LD50: 50-500), L = Slightly Toxic (LD50: 500-5000), VL = Not Acutely
+                      Toxic (LD50 &gt; 5000). Information to be added.</span> </th>
+                    
+                   <th scope="col"> Chronic<sup>6</sup><span class="sr-only">Footnote 4.Acute oral toxicity ratings for people and
+                      other mammals based on LD50 and US EPA Acute Toxicity Ratings system: H = Highly Toxic (LD50 &lt;
+                      50), M = Moderately Toxic (LD50: 50-500), L = Slightly Toxic (LD50: 500-5000), VL = Not Acutely
+                      Toxic (LD50 &gt; 5000). Information to be added.</span> </th>
+                </tr>
+              </thead>
+              <tbody>
+                
+        <tr><td>H</td><td>L</td><td><span class='bee-precaution-rating-medium'></span></td><td>H</td><td><a href='https://oehha.ca.gov/proposition-65/proposition-65-list'>On CA Prop 65 list</a><br><a href='https://cfpub.epa.gov/ncea/iris/search/'>On US EPA list</a></td>
+              </tbody>
+            </table>
+            <table class="table-key">
+              <tr>
+                <td>Hazards Ratings: VL=Very low, L=Low, LM=Low to Moderate, M=Moderate, LH=Low to High,
+                  MH=Moderate to High, H=High, VH=Very High, N/A=Not Applicable, N=None, NKR=No Known Risk, &mdash; = No data </td>
+              </tr>
+              <tr>
+                <td>Honey Bee Ratings:</td>
+              </tr>
+              <tr>
+                <td><span class="bee-precaution-rating-high"></span> Do not apply or allow to drift to plants that are
+                  flowering including weeds. Do not allow pesticide to contaminate
+                  water accessible to bees including puddles.</td>
+              </tr>
+              <tr>
+                <td><span class="bee-precaution-rating-medium"></span>Do not apply or allow to drift to plants that are
+                  flowering including weeds, except when the application is made between sunset and midnight if allowed
+                  by the pesticide label and regulations. Do not allow pesticide to contaminate water accessible to bees
+                  including puddles.</td>
+              </tr>
+              <tr>
+                <td><span class="bee-precaution-rating-low"></span>No bee precaution, except when required by the
+                  pesticide label or regulations.</td>
+              </tr>
+            </table>
+            <span id="Safety"></span>
+            <h2>Safety Precautions</h2>
+            <p>
+                Read the product label for specific information on personal protective equipment (PPE) and safety requirements. 
+                Note that many consumer pesticide products do not include information about PPE on the label. 
+                You should still wear basic PPE to protect yourself from exposure, such as chemical resistant gloves, 
+                long sleeves, and goggles. <a href="/QT/gardenchemicalscard.html">Learn about safe use and disposal of pesticides.</a>
+              </p>
+              <p>
+                <a href="/PMG/PESTNOTES/warning.html">Warning on the use of pesticides.</a>
+              </p>
+            <span id="Tips"></span>
+            <span id="ExampleProducts"></span>
+            <h2> <i>Pest Notes</i> and Example Products</h2>
+            <span class="sr-only">These products were registered for home and garden use in California in July 2013.
+              Professional use products are not included. If no example products are listed, this active ingredient
+              may be available only for professional use. Individual products are registered for specific uses on
+              specific sites. Read the label to determine if the product is registered for your use. Note that some
+              products may be formulated with additional pesticides. Information to be added</span>
+            <h3>This active ingredient is mentioned in the following <i>Pest Notes</i>:</h3>
+            <div class="container">
+              <div class="row">
+                <ul class="col-6 ">
+                  <a href='/home-and-landscape/anthracnose'>Anthracnose</a>, <a href='/home-and-landscape/peach-leaf-curl'>Peach Leaf Curl</a>, <a href='/home-and-landscape/roses-diseases-and-abiotic-disorders'>Roses: Diseases and Abiotic Disorders</a> 
+                </ul>
+              </div>
+            </div>
+            <h3>Example home, garden or landscape use products<sup>7</sup>:</h3>
+            <div class="container">
+              <div class="row">
+                
+                  <ul>
+                    Bonide Fung-Onil, Gardentech Daconil Fungicide
+                  </ul>
+                
+              </div>
+            </div>
+            <h3>Example professional use products:</h3>
+            <div class="container">
+              <div class="row">
+              
+                <ul>
+                  Concert II, Daconil Action, Enclave, Instrata, Renown Fungicide, Spectro 90
+                </ul>
+              
+              </div>
+            </div>
+          </article>
+          <div class="page-divider"></div>
+          <div>
+            <h2 class="visually-hidden" id="footnote-label">Footnotes</h2>
+            <table class="table-key">
+             <tr>
+                <tr>
+                <td><sup>1</sup></td>
+                <td>Potential hazard ratings may vary depending on the species, environmental conditions, application rate and type (i.e., bait vs spray), application location (i.e., indoors vs outdoors), and pesticide formulation (i.e., rodenticides are not applied in ways that would pose risks to water quality or honey bees). Ratings may not be available for all active ingredients due to these factors. Toxicity ratings may be averages of reported effects and should only be used as a general guide. Missing ratings will be added when data is available.</td>
+              </tr>
+              <tr>
+                <td><sup>2</sup></td>
+                  <td>Water quality ratings are from the <a href="http://npic.orst.edu/ingred/specchem.html">National Pesticide Information Center</a>; U.S. Environmental Protection Agency; and <a href="/TOX/aboutwatertox.html">USDA Natural Resources Conservation Services (NRCS) WIN-PST WaterTox database.</a></td>
+              </tr>
+              <tr>
+                <td><sup>3</sup></td>
+                <td>
+                  Impact on natural enemies ratings are from the <a href="/agriculture/">UC IPM Pest Management Guidelines for Agriculture</a> database and the <a href="https://intermountainfruit.org/pesticide-tables/toxicity-pollinators">USU Pollinator and Beneficials Toxicity Table</a>.
+                </td>
+              </tr>
+              <tr>
+                <td><sup>4</sup></td>
+                <td>Honey bee ratings are from the UC IPM <a href="/bee-precaution-pesticide-ratings/">Bee Precaution Pesticide Ratings</a>. 
+                </td>
+              </tr>
+              <tr>
+                <td><sup>5</sup></td>
+                <td>Acute (short-term) toxicity ratings for people and other mammals are based on toxicological information provided by the technical safety data sheet (SDS) for the given active ingredient. Ratings were determined using the US EPA criteria for determining signal words (High=DANGER; Moderate=WARNING; Low=CAUTION; Very low=optional CAUTION). The rating is based on the most sensitive route of entry (oral, dermal, inhalation, or eye). For example, High ratings may be given for active ingredients that have low oral and dermal toxicity but are highly toxic to the eyes. To learn more about signal words, visit <a href="https://npic.orst.edu/factsheets/signalwords.html">https://npic.orst.edu/factsheets/signalwords.html</a>.</td>
+              </tr>
+              <tr>
+                <td><sup>6</sup></td>
+                <td>Chronic (long-term) toxicity information for people and other mammals is from the <a href="https://oehha.ca.gov/proposition-65/proposition-65-list">California Prop 65 list</a>
+                of chemicals known to cause cancer, birth defects, or other reproductive harm; and the <a href="https://cfpub.epa.gov/ncea/iris/search/">U.S. Environmental Protection Agency
+                list</a> of chemicals evaluated for carcinogenic potential. If an active ingredient is listed on either list as a likely or confirmed carcinogen, it will be listed in the Potential Hazards table. 
+                If an active ingredient is not found on either list, is listed as an unlikely carcinogen, or has been determined to be noncarcinogenic, the rating will be indicated as NKR for No Known Risks.</td>
+              </tr>
+              <tr>
+                <td><sup>7</sup></td>
+                <td>Example consumer and professional products are derived from the <a href="https://apps.cdpr.ca.gov/ereglib/main.cfm">California Department of 
+                Pesticide Regulation database</a> and annual retail shelf survey by the UC Office of Pesticide Information and Coordination.
+                 Some of this information may become out of date as products and active ingredient restrictions change. No endorsements of named products are intended, nor is criticism implied of products not mentioned.
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+  
+  
+</body>
+
+</html> <!-- cfincludes\endRequest.cfm -->
+
+<!-- INF09\footer-v4.cfm -->
+
+<footer class="main-footer-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <p class="h3"><a href="/home-and-landscape/">Home, Garden, Turf, and Landscape</a></p>
+        <ul>
+          
+          <li><a href="/home-and-landscape/plant-problem-diagnostic-tool/">Plant Pest Diagnostic Tool</a></li>
+          <li><a href="/home-and-landscape/resources-for-retail-nurseries-and-garden-centers/">Retail Nurseries &amp; Garden Centers</a></li>
+          <li><a href="/home-and-landscape/resources-for-landscape-professionals/">Landscape Professionals</a></li>
+          <li><a href="/home-and-landscape/master-gardeners/">UC Master Gardeners</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <p class="h3"><a href="/agriculture/">Agriculture Pest Management Guidelines</a></p>
+        <ul>
+          
+          
+          <li><a href="/agriculture/pest-manage/">PestManage Decision Support Tool</a></li>
+          <li><a href="/WEATHER/index.html">Weather Models &amp; Degree-Days</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <p class="h3"><a href="/invasive-and-exotic-pests/">Invasive and Exotic Pests</a></p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <p class="h3"><a href="/NATURAL/index.html">Natural Environment</a></p>
+      </div>
+    </div>
+    <div class="row text-center link-group">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <p class="h6">About UC IPM</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="/IPMPROJECT/about.html">What We Do</a></li>
+          <li class="list-inline-item"><a href="/strategic-plan/">Strategic Plan 2015&ndash;2025</a></li>
+          <li class="list-inline-item"><a href="/highlights/">Annual Report</a></li>
+          <li class="list-inline-item"><a href="/IPMPROJECT/programs.html">UC IPM Programs</a></li>
+          <li class="list-inline-item"><a href="/IPMPROJECT/programreview.html">Program Review</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row text-center link-group" style="border-bottom: 1px primary #747A91;">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <p class="h6">Galleries</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="/IPMPROJECT/videolibrary.html">Videos</a></li>
+          <li class="list-inline-item"><a href="/PMG/weeds_intro.html">Weeds</a></li>
+          <li class="list-inline-item"><a href="/natural-enemies/">Natural Enemies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row text-center link-group" style="border-bottom: 1px primary #747A91;">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="/PMG/glossary.html">Glossary</a></li>
+          <li class="list-inline-item"><a href="/GENERAL/links.html">Links</a></li>
+          <li class="list-inline-item"><a href="/IPMPROJECT/pubsmenu.html">Publications &amp; Newsletters</a></li>
+          <li class="list-inline-item"><a href="/GENERAL/pesticides.html">Pesticide Information</a></li>
+          <li class="list-inline-item"><a href="/IPMPROJECT/workshops.html">Training &amp; Events</a></li>
+          <li class="list-inline-item"><a href="/what-is-ipm/">What is IPM?</a></li>
+          <li class="list-inline-item"><a href="/IPMPROJECT/recursos-espanol.html"><span lang="es">Recursos en espa&ntilde;ol</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row text-center" style="padding-top: 25px;">
+      <div class="col-sm-12 col-md-12 col-sm-12">
+        <div>
+          <p><img src="/assets_v6/images/logo/footer-logo-ipm-white.svg" width="150px" alt="Ipm logo"> </p>
+          <p class="h4">Statewide Integrated Pest Management Program</p>
+          <p class="h6">University of California Agriculture and Natural Resources</p>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center social-media">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <p class="h3"> Follow Us </p>
+        <ul class="list-inline" style="padding-bottom: 15px;">
+          <li class="list-inline-item" style="padding-right: 15px;"><a href="https://twitter.com/ucipm?lang=en" aria-label="twitter"><i class="fa-brands fa-square-twitter"></i></a></li>
+          <li class="list-inline-item" style="padding-right: 15px;"><a href="https://www.facebook.com/UCIPM/" aria-label="facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+          <li class="list-inline-item" style="padding-right: 15px;"><a href="https://www.instagram.com/ucipm/" aria-label="instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+          <li class="list-inline-item" style="padding-right: 15px;" aria-label="youtube"><a href="https://www.youtube.com/user/UCIPM" aria-label="youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+          <li class="list-inline-item" style="padding-right: 15px;"> <a href="https://www.linkedin.com/showcase/uc-integrated-pest-management/" aria-label="linkedin"><i class="fa-brands fa-linkedin"></i></a> </li>
+          <li class="list-inline-item"><a href="/GENERAL/rssfeeds.html" aria-label="subscription"><i class="fa-solid fa-square-rss"></i></a></li>
+        </ul>
+        <ul class="list-inline audience">
+          <li class="list-inline-item">Home and Landscape:&nbsp;&nbsp;<a href="https://twitter.com/ucipmurban/">Twitter</a></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/ucipmurban/">Facebook</a></li>
+          <li class="list-inline-item"><a href="https://www.instagram.com/ucipmurban/">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<footer class="copyright">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 col-md-12 col-lg-4 text-lg-left">
+        <p class="h5"><a href="https://ucanr.edu/?copyright" style="text-decoration: none; border-bottom: 0px; font-weight: 300; font-size: 12px;">&copy;1996&mdash;2026 Statewide IPM Program, Agriculture and Natural Resources, University of California Regents of the University of California unless otherwise noted.</a></p>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-2 text-lg-right">
+        <a href="/GENERAL/ceofficefinder.html">
+          <button type="button" class="btn button-ucce">Find Your Local Cooperative Extension Office</button>
+        </a>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="/GENERAL/copyright.html">Use Permissions &amp; Citation</a></li>
+          <li class="list-inline-item"><a href="/nondiscrimination-statements/">Nondiscrimination Statement</a></li>
+          <li class="list-inline-item"><a href="/GENERAL/acknowledgments.html">Acknowledgements</a></li>
+          <li class="list-inline-item"><a href="/accessibility/">Accessibility</a></li>
+          <li class="list-inline-item"><a href="https://ucanr.edu/?privacyStatement">Privacy</a></li>
+          <li class="list-inline-item"><a href="/ADMIN/">Staff-Only Pages</a></li>
+          <li class="list-inline-item"><a href="mailto:ipm-webmaster@ad3.ucdavis.edu">Contact UC IPM</a></li>
+          <li class="list-inline-item"><a href="mailto:ipm-webmaster@ad3.ucdavis.edu">Contact Webmaster</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>	
+
+
+<script async src="https://siteimproveanalytics.com/js/siteanalyze_8343.js"></script>
+
+</body>
+</html>
