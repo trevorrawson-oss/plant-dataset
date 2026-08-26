@@ -79,6 +79,8 @@ COMMIT_FOR = {
     'e794969f24a670e5c8573d27a66b6d9d7ad885b8637e1768227a643944d6fe71': '56d33bb',
     # PLA-8 catalog r5: planting_time_avoidance + wet_foliage_discipline; two widenings.
     '48478cb5f62edd284674be3f16a7a08c2537d7d510c19c5e3d89517748c973b1': 'c1e708f',
+    # PLA-8: the planting_time_avoidance best_use self-contradiction, closed.
+    'acf337809d9085f748bc45b6dfc38dd9c7e88fb92b1408f53879c6bdc0f970a7': '22d176c',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
