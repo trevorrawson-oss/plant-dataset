@@ -24,6 +24,19 @@ MARKER = "# MUTATION-APPLIED"
 
 # (family, label, anchor, replacement)
 MUTATIONS = [
+    # ---- brief: what an authoring pass is actually SHOWN about a method -------------------------
+    # `cmd_prepare` emitted `best_use[:150]` until 603f4f8. The house pattern puts a method's
+    # disambiguation in a TRAILING "Distinct from <neighbour>" clause, so the slice removed exactly
+    # the sentence that keeps two similar methods apart: 37 of 55 best_use fields ran past 150
+    # characters and SIX lost the clause outright. The methods this arc has actually confused --
+    # off_season_tillage, prompt_harvest, sound_sowing_practice, wet_foliage_discipline -- are the
+    # truncated ones. Cautions reached the brief nowhere at all: 41 strings across 29 methods.
+    ("brief", "restore the [:150] truncation of best_use",
+     '''lines.append(f"      MEANS: {v['best_use']}")''',
+     '''lines.append(f"      MEANS: {v['best_use'][:150]}")'''),
+    ("brief", "stop emitting cautions into the brief, as before",
+     '''            for c in (v.get("cautions") or []):''',
+     '''            for c in ():'''),
     ("signature", "revert to the ORIGINAL defect: group on problem NAMES only",
      '''        for k in PROSE_FIELDS:
             v = p.get(k, _ABSENT)''',
