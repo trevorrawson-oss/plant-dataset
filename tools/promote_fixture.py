@@ -83,6 +83,8 @@ COMMIT_FOR = {
     'acf337809d9085f748bc45b6dfc38dd9c7e88fb92b1408f53879c6bdc0f970a7': '22d176c',
     # PLA-8 BATCH 5: the three beans, roster 24 -> 27.
     '7c3e5d71ae875e013a20b77c3d8dd1f12960bfb8c413e7f8b728df79ef24d145': 'd6e8071',
+    # PLA-8 catalog r7: biofungicide + weed_host_control; the planting-time widening refused.
+    '4a239eefe1d8627b029dc93e9cc5a990078e377eea0a4c8457dcbafe560002a4': 'febf1af',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
