@@ -89,6 +89,8 @@ COMMIT_FOR = {
     '17d0eac762fc22b07fb5ec6a83c9f08471202e3c5ddf9bb7010fc861af5f0688': '99a19c6',
     # PLA-8 BATCH 6: the two peas, roster 27 -> 29.
     '3a87737a60c544453497f67bc3744d8534a400cbcba795b6e4b23fdcbabc3cb5': 'd925eb6',
+    # PLA-8: mint chlorothalonil, the first chronic-health disclosure.
+    '93e32e2b49d9e064b0d687dd5814260186fb71341f072a27b8eec36fa0d578ed': 'd096415',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
