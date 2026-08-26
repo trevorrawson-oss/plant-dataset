@@ -239,8 +239,27 @@ class CrossSiblingLadderConflicts(unittest.TestCase):
         self.assertEqual(rows[0]["only_in_b"], ["resistant_varieties"])
 
 
-class ReportedTwinsAreRealOnCanonical(unittest.TestCase):
-    """The live roster: anything the tool advertises as propagate-safe must survive the check."""
+class TheRosterHasRunOutOfTrueTwins(unittest.TestCase):
+    """RETIRED AND REPLACED, on the instruction the retired test left behind.
+
+    This class used to be `ReportedTwinsAreRealOnCanonical`: it walked every twin group
+    `family_cut` reported on the live roster and asserted the members were byte-identical in prose.
+    Its own reachability guard said, in as many words, "If this ever fails because the roster
+    genuinely ran out of true twins, DELETE the canonical assertion rather than leaving it green
+    and empty."
+
+    That is what happened. Batch 5 laddered `dry-bean` + `green-beans-bush`, the last true twin on
+    the roster, and the reachability guard went red the moment the denominator emptied -- which is
+    the guard doing its job rather than the suite breaking. The byte-identity PROPERTY is still
+    fully covered, synthetically and with a real denominator, by `TwinGroupsShareProse` above.
+
+    What replaces it is the fact that emptying created, which is worth asserting because the whole
+    rollout plan depends on it: **there is no propagation available any more.** Every remaining
+    batch costs one authoring pass per crop, so any estimate built on the old twin-group numbers is
+    wrong by roughly 3x. If a twin ever reappears -- a new crop, or an edit that makes two records
+    identical -- this test fails and the propagation path becomes available again, which is
+    information the next session wants either way.
+    """
 
     @classmethod
     def setUpClass(cls):
@@ -249,37 +268,102 @@ class ReportedTwinsAreRealOnCanonical(unittest.TestCase):
                 if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
         cls.todo = [c for c in cert if not lb.laddered(c)]
 
+    def test_there_are_unladdered_crops_left_to_measure(self):
+        self.assertGreater(len(self.todo), 0)
 
-    def test_reported_twin_groups_are_byte_identical_in_prose(self):
+    def test_no_true_twin_group_remains_on_the_roster(self):
         twins, _singles = lb.family_cut(self.todo)
-        by = {c["slug"]: c for c in self.todo}
-        bad = []
-        for g in twins:
-            g = sorted(g)
-            base = by[g[0]]
-            for other in g[1:]:
-                o = by[other]
-                for f in ("pests", "diseases"):
-                    for i, p in enumerate(base.get(f) or []):
-                        q = (o.get(f) or [])[i] if i < len(o.get(f) or []) else {}
-                        for k in PROSE_FIELDS:
-                            if p.get(k) != q.get(k):
-                                bad.append(f"{g[0]}/{other} {f}[{i}] {p.get('name')} :: {k}")
-        self.assertEqual(bad, [], "reported twin groups differ in prose:\n  " + "\n  ".join(bad[:20]))
+        self.assertEqual(
+            [sorted(g) for g in twins], [],
+            "a true twin group has REAPPEARED on the roster. That is not a failure -- it means a "
+            "propagate-safe pair exists again and the next batch can author one crop instead of "
+            "two. Verify the pair really is byte-identical in prose, then take it as the next "
+            "batch and update this test.")
 
-    def test_the_measurement_is_not_vacuous(self):
-        """REACHABILITY. `test_reported_twin_groups_are_byte_identical_in_prose` passes trivially
-        if `family_cut` reports NO groups at all -- the exact shape of a guard that reads as
-        coverage while checking nothing. Assert the canonical roster actually produces one.
 
-        If this ever fails because the roster genuinely ran out of true twins, DELETE the canonical
-        assertion rather than leaving it green and empty.
-        """
-        twins, singles = lb.family_cut(self.todo)
-        self.assertGreater(len(self.todo), 0, "no unladdered crops: the canonical check is vacuous")
-        self.assertGreater(len(twins), 0,
-                           "family_cut reported ZERO true twin groups on canonical, so the "
-                           "byte-identity assertion above has an empty denominator")
+class BriefCarriesTheWholeMeaning(unittest.TestCase):
+    """THE BRIEF IS THE ONLY THING AN AUTHORING PASS READS ABOUT A METHOD, so anything cut from it
+    is a constraint that cannot be honored.
+
+    `cmd_prepare` used to emit `best_use[:150]`. The house pattern writes a method's disambiguation
+    as a TRAILING clause -- "Distinct from <the confusable neighbour>, which ..." -- so the slice
+    removed exactly the sentence that keeps two similar methods apart. Measured against canonical
+    4a239eef: 37 of 55 best_use fields ran past 150 characters and SIX lost their Distinct-from
+    clause outright, with `weed_host_control` cut mid-word at "Disti|nct from garden sanitation".
+
+    The methods the authoring passes have actually confused across batches 1, 3, 4 and 5 --
+    off_season_tillage, prompt_harvest, sound_sowing_practice, wet_foliage_discipline -- are the
+    truncated ones. This suite exists so that slice cannot come back.
+
+    `cautions` reached the brief nowhere at all: 41 strings across 29 methods, including sulfur's
+    90degF limit, copper's aquatic toxicity, Bt killing all lepidoptera, and spinosad's bee
+    toxicity. Batch 5's read recorded those cautions missing from crop prose without knowing why.
+    An author cannot carry a caution they were never shown."""
+
+    @classmethod
+    def setUpClass(cls):
+        import tempfile, argparse
+        cls.tmp = tempfile.mkdtemp(prefix="brieftest_")
+        d = lb.load()
+        cls.cm = d["control_methods"]
+        target = next(c["slug"] for c in d["crops"]
+                      if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"
+                      and not lb.laddered(c))
+        lb.cmd_prepare(argparse.Namespace(crops=target, out=cls.tmp))
+        cls.brief = open(os.path.join(cls.tmp, "brief_catalog.md")).read()
+
+    @classmethod
+    def tearDownClass(cls):
+        import shutil
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def test_every_best_use_appears_in_full(self):
+        for k, v in self.cm.items():
+            self.assertIn(v["best_use"], self.brief,
+                          f"{k}'s best_use is truncated or altered in the brief")
+
+    def test_the_population_this_protects_is_not_empty(self):
+        """A coverage assertion. If no best_use exceeded the old cut, the test above would pass on
+        a truncating brief and prove nothing."""
+        over = [k for k, v in self.cm.items() if len(v["best_use"]) > 150]
+        self.assertGreater(len(over), 20,
+                           "fewer than 20 methods exceed 150 chars, so this guard has almost no "
+                           "denominator and the truncation it forbids would be nearly invisible")
+
+    def test_every_distinct_from_clause_survives(self):
+        """The clause that keeps two confusable methods apart. Six of these were being cut."""
+        n = 0
+        for k, v in self.cm.items():
+            bu = v["best_use"]
+            i = bu.find("Distinct from")
+            if i < 0:
+                continue
+            n += 1
+            self.assertIn(bu[i:], self.brief, f"{k}'s Distinct-from clause is missing from the brief")
+        self.assertGreater(n, 5, "too few Distinct-from clauses to be measuring anything")
+
+    def test_every_caution_reaches_the_brief(self):
+        n = 0
+        for k, v in self.cm.items():
+            for c in (v.get("cautions") or []):
+                n += 1
+                self.assertIn(c, self.brief, f"{k}: a caution is missing from the brief")
+        self.assertGreater(n, 30, "too few cautions to be measuring anything")
+
+    def test_the_safety_cautions_specifically_are_present(self):
+        """Named rather than counted. These four are the ones a wrong ladder can actually hurt
+        somebody with, and all four were invisible before."""
+        for key, token in (("sulfur", "90"), ("copper_fungicide", "aquatic"),
+                           ("bt", "butterfl"), ("spinosad", "bees")):
+            cautions = " ".join(self.cm[key].get("cautions") or [])
+            self.assertIn(token, cautions, f"{key}'s caution no longer mentions {token!r}")
+            self.assertIn(cautions.split(";")[0][:60], self.brief,
+                          f"{key}'s safety caution does not reach the brief")
+
+    def test_the_brief_still_names_every_method_and_its_targets(self):
+        for k, v in self.cm.items():
+            self.assertIn(k, self.brief, f"{k} is missing from the brief entirely")
+            self.assertIn(f"applies_to={sorted(v['applies_to'])}", self.brief, k)
 
 
 if __name__ == "__main__":

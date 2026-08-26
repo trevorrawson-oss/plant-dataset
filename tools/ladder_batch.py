@@ -348,9 +348,25 @@ def cmd_prepare(a):
     for tier in ("cultural", "physical", "biological", "soft_chemical", "conventional"):
         lines.append(f"## {tier}")
         for k, v in sorted(cm.items()):
-            if v["tier"] == tier:
-                lines.append(f"  {k:28s} applies_to={sorted(v['applies_to'])}")
-                lines.append(f"      MEANS: {v['best_use'][:150]}")
+            if v["tier"] != tier:
+                continue
+            lines.append(f"  {k:28s} applies_to={sorted(v['applies_to'])}")
+            # FULL best_use, NEVER truncated. This was `[:150]` and that slice was the mechanical
+            # cause of the arc's recurring method-meaning mismatches. The house pattern writes the
+            # disambiguation as a trailing "Distinct from <the confusable neighbour>" clause, and
+            # 37 of 55 best_use fields ran past 150 characters, so SIX methods lost that clause
+            # entirely and `weed_host_control` was cut mid-word at "Disti|nct from garden
+            # sanitation". Measured 2026-08-26 against canonical 4a239eef. The methods the
+            # authoring passes actually confused -- off_season_tillage, prompt_harvest,
+            # sound_sowing_practice, wet_foliage_discipline -- are exactly the truncated ones.
+            lines.append(f"      MEANS: {v['best_use']}")
+            # CAUTIONS reached the brief nowhere before this. 41 strings across 29 of 55 methods
+            # were invisible at authoring time, including sulfur's 90degF limit, copper's aquatic
+            # toxicity, Bt killing all lepidoptera and spinosad's bee toxicity. Batch 5's read
+            # recorded that those cautions were missing from crop prose without knowing why: an
+            # author cannot carry a caution they were never shown.
+            for c in (v.get("cautions") or []):
+                lines.append(f"      CAUTION: {c}")
         lines.append("")
     lines.append("# problem.type -> applies_to targets that legitimately fit it.")
     lines.append("# A rung is INVALID unless its method's applies_to includes 'any' OR overlaps this set.")
