@@ -103,6 +103,21 @@ re-reading a cohort rather than trusting recency.
 
 ---
 
+## The `[:150]` defect had a SECOND instance, and it was in the checking tool
+
+`603f4f8` fixed `cmd_prepare`, which builds the AUTHORING brief. It did not fix `cmd_verify`, which
+builds the READ brief -- the pass that holds each shipped rung against what its method means -- and
+that was still cutting `best_use` at **104** characters. Measured on `04b5aa69`: **53 of 56 methods
+run past that cut and 13 lose their trailing "Distinct from <neighbour>" clause outright**,
+including `off_season_tillage` and `planting_time_avoidance`, two of the methods this arc has
+actually confused. **The tool that exists to catch method-meaning mismatches was comparing rungs
+against truncated meanings.** Fixed, with `ReadBriefCarriesTheWholeMeaning` in
+`tools/test_ladder_batch.py` (verified RED with the slice reintroduced, then GREEN).
+
+**Generalize: when you fix a defect in one command, grep for the same shape in its siblings before
+closing.** One fix, two commands, twelve hours apart, and the second one was found only by a
+throwaway probe.
+
 ## Owed, and NOT done here
 
 - **plant-app owes its `data(guides)` commit.** Regenerate `build:guides` AFTER this round lands;

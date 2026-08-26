@@ -493,7 +493,11 @@ def cmd_verify(a):
                     continue
                 seen.add((c["slug"], m))
                 print(f"  --- {c['slug']}/{p.get('id')} :: {m}")
-                print(f"      METHOD MEANS: {cm[m]['best_use'][:104]}")
+                # FULL best_use, never truncated -- same defect as cmd_prepare's `[:150]`
+                # (fixed in 603f4f8). The house pattern puts the disambiguation in a TRAILING
+                # "Distinct from X" clause, so a cut here removes exactly the sentence that
+                # decides whether a rung matches its method.
+                print(f"      METHOD MEANS: {cm[m]['best_use']}")
                 print(f"      RUNG SAYS   : {r.get('note_beginner','')[:104]}")
     print(f"\n  {len(seen)} crop/method pairs to compare.")
 

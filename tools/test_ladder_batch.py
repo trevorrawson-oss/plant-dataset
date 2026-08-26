@@ -281,6 +281,94 @@ class TheRosterHasRunOutOfTrueTwins(unittest.TestCase):
             "batch and update this test.")
 
 
+class ReadBriefCarriesTheWholeMeaning(unittest.TestCase):
+    """THE SECOND INSTANCE OF THE SAME DEFECT, in the CHECKING tool rather than the authoring one.
+
+    `603f4f8` fixed `cmd_prepare`, which builds the authoring brief. `cmd_verify` builds the READ
+    brief -- the pass that holds each shipped rung against what its method actually means -- and it
+    was still cutting `best_use` at 104 characters. Measured against canonical 04b5aa69: 53 of 56
+    methods run past that cut and 13 lose their trailing "Distinct from <neighbour>" clause
+    outright, including `off_season_tillage` and `planting_time_avoidance`, two of the methods this
+    arc has actually confused. **The tool that checks for method-meaning mismatches was comparing
+    rungs against truncated meanings**, which is the failure it exists to catch.
+
+    The gates are stubbed here because they are slow subprocesses and are not what is under test;
+    the real `cmd_verify` print path is exercised."""
+
+    @classmethod
+    def setUpClass(cls):
+        import tempfile, argparse, io, contextlib, copy, subprocess as sp
+        cls.tmp = tempfile.mkdtemp(prefix="readbrieftest_")
+        d = lb.load()
+        cls.cm = d["control_methods"]
+        # one laddered crop, minimally altered so `changed` is non-empty and the pairs print
+        scratch = copy.deepcopy(d)
+        target = next(c for c in scratch["crops"] if lb.laddered(c))
+        cls.target = target["slug"]
+        for _f, prob in lb.problems(target):
+            if prob.get("control_ladder"):
+                prob["control_ladder"][0]["note_beginner"] += " (test edit)"
+                break
+        path = os.path.join(cls.tmp, "scratch_canonical.json")
+        json.dump(scratch, open(path, "w"))
+
+        class _Stub:
+            returncode = 0
+            stdout = "STUBBED: 0 violation(s)"
+            stderr = ""
+
+        real = lb.subprocess.run
+        lb.subprocess.run = lambda *a, **k: _Stub()
+        buf = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(buf):
+                lb.cmd_verify(argparse.Namespace(out=cls.tmp))
+        finally:
+            lb.subprocess.run = real
+        cls.out = buf.getvalue()
+
+    @classmethod
+    def tearDownClass(cls):
+        import shutil
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def test_the_read_brief_actually_ran(self):
+        """Liveness: if cmd_verify printed no method/rung pairs, every assertion below is vacuous."""
+        self.assertIn("METHOD MEANS:", self.out)
+        self.assertIn(self.target, self.out)
+
+    def test_every_method_meaning_it_prints_appears_in_full(self):
+        n = 0
+        for line in self.out.splitlines():
+            i = line.find("METHOD MEANS: ")
+            if i < 0:
+                continue
+            n += 1
+            shown = line[i + len("METHOD MEANS: "):]
+            match = [k for k, v in self.cm.items() if v["best_use"] == shown]
+            self.assertTrue(match, "a printed method meaning is truncated or altered: "
+                                   f"{shown[-60:]!r}")
+        self.assertGreater(n, 0, "no method meanings printed, so this guard has no denominator")
+
+    def test_the_population_this_protects_is_not_empty(self):
+        """Coverage. If nothing exceeded the old 104-char cut the guard would prove nothing."""
+        over = [k for k, v in self.cm.items() if len(v["best_use"]) > 104]
+        self.assertGreater(len(over), 40,
+                           "fewer than 40 methods exceed 104 chars, so the truncation this forbids "
+                           "would be nearly invisible")
+
+    def test_the_distinct_from_clauses_that_the_cut_removed(self):
+        """13 methods lost their disambiguation to the 104-char cut. Name the population."""
+        lost = [k for k, v in self.cm.items()
+                if "Distinct from" in v["best_use"] and "Distinct from" not in v["best_use"][:104]]
+        self.assertGreater(len(lost), 8, "too few cut clauses to be measuring anything")
+        for k in lost:
+            bu = self.cm[k]["best_use"]
+            if bu in self.out:
+                self.assertIn(bu[bu.find("Distinct from"):], self.out,
+                              f"{k}'s Distinct-from clause is missing from the read brief")
+
+
 class BriefCarriesTheWholeMeaning(unittest.TestCase):
     """THE BRIEF IS THE ONLY THING AN AUTHORING PASS READS ABOUT A METHOD, so anything cut from it
     is a constraint that cannot be honored.
