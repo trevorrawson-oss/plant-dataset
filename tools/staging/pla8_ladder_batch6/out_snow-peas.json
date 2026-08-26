@@ -1,0 +1,264 @@
+{
+  "pests": [
+    {
+      "id": "pea-aphid",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Where pea viruses are a known problem in your area, start at the seed rack. Oregon Sugar Pod II is one snow pea sold with virus resistance, and choosing it costs you nothing at planting time.",
+          "note_seasoned": "The aphid's real cost on peas is what it transmits rather than what it eats, so variety choice is the step with the most leverage; Oregon Sugar Pod II carries virus resistance and is worth specifying where pea viruses have a local history."
+        },
+        {
+          "method": "reflective_mulch",
+          "note_beginner": "Lay reflective mulch, a silvery plastic or foil sheet spread on the soil, while the plants are still small. It confuses aphids looking for somewhere to land, so fewer settle in and fewer viruses move around with them.",
+          "note_seasoned": "Reflective film disorients incoming aphids, cutting feeding pressure and the virus spread that matters more here; lay it early while the crop is short enough for the film to still show."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Pull the weeds and clover growing near the bed. Aphids shelter in them and move across onto the peas from there.",
+          "note_seasoned": "Nearby weeds and clover harbor pea aphids between crops, so clearing that ground before sowing and keeping the edges clean removes the bridge into the planting."
+        },
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on the fertilizer. Heavy feeding pushes out soft, sappy new growth, which is the growth aphids do best on.",
+          "note_seasoned": "Overfeeding nitrogen produces the lush, succulent flush pea aphid colonies build on fastest, so hold the feeding back rather than pushing growth."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Knock the clusters off with a strong jet from the hose as soon as you find them, while there are still only a few. It is the first thing to reach for, before any spray.",
+          "note_seasoned": "A forceful water knock-down on the growing tips and flower stalks buys time while natural enemies catch up; given the virus risk, do it at first detection rather than waiting for visible damage."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Ladybugs, lacewings and tiny parasitic wasps (wasps whose young develop inside aphids) usually bring the numbers down on their own. Give them a chance before you spray anything.",
+          "note_seasoned": "Ladybugs, lacewings and parasitic wasps usually pull pea aphid populations down unaided; the gap is early in the cool weather, when the aphid's reproduction outruns them, and that gap is what the physical steps cover."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If colonies keep building, insecticidal soap works on contact, so it has to land on the aphids themselves. Spray while numbers are low and cover the growing tips, the flower stems and the undersides of the leaves.",
+          "note_seasoned": "Soap kills on contact, so coverage of tips, flower stalks and leaf undersides decides the outcome; begin at the first colonies rather than after curling and yellowing have set in."
+        }
+      ]
+    },
+    {
+      "id": "pea-weevil",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clear out and destroy the old pea plants once the last pods are picked. The beetles sit out the winter in that debris, so taking it away leaves them nowhere to shelter.",
+          "note_seasoned": "Adults overwinter in pea trash, so destroying the residue after harvest strips the shelter that carries the single annual generation through to spring."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move the peas to a different part of the garden each year instead of sowing them where last year's crop stood.",
+          "note_seasoned": "Rotating off last season's pea ground puts distance between emerging adults and the only crop they can use, since this weevil's host range is peas alone."
+        },
+        {
+          "method": "planting_time_avoidance",
+          "note_beginner": "Where this beetle is established, sowing early helps: if the pods finish filling before the adults get busy, the crop slips past the worst of it.",
+          "note_seasoned": "An early sowing that completes pod fill ahead of peak adult activity escapes the heaviest egg-laying; a timing lever rather than a control, and it depends on locally observed adult activity."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Watch the plants while they are in flower, which is when the beetles arrive to lay eggs, and pick off any adults you find on the blossoms.",
+          "note_seasoned": "Scout at bloom, when egg-laying begins, and take adults off the flowers by hand; in a home patch that reduces the eggs laid on the young pods."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Drape a light row cover over the planting once flowering starts, so the beetles cannot reach the young pods to lay on them.",
+          "note_seasoned": "Cover applied at flowering excludes adults during the window when they move into the crop to lay on young pods; it is the exclusion half of the same bloom-timed step as handpicking."
+        }
+      ]
+    },
+    {
+      "id": "armyworms-cutworms",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Clear weeds and tall grass out of the bed and along its edges before you sow, and keep the edges clean through the season. The moths lay eggs in that cover, so removing it takes out caterpillars before they hatch.",
+          "note_seasoned": "These caterpillars move in from weedy and grassy ground, so stripping that cover before sowing and holding the row edges clean removes egg-laying sites right next to the crop."
+        },
+        {
+          "method": "off_season_tillage",
+          "note_beginner": "Turn the bed over a couple of weeks before you sow. That brings the caterpillars already living in the soil up to the surface, where they dry out.",
+          "note_seasoned": "Working the empty bed a couple of weeks ahead of sowing exposes resident larvae and dries them out; it is the one step that reaches the stage sheltering in the soil."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Go out at dusk or first thing in the morning, when they feed, and pick the caterpillars off. If a seedling has toppled, scrape the soil beside it and you will often turn up the curled cutworm that cut it.",
+          "note_seasoned": "Both feed at night and shelter in soil or debris by day, so evening and early-morning scouting is when handpicking pays; a toppled seedling marks a larva resting in the soil beside it."
+        },
+        {
+          "method": "stem_collars",
+          "note_beginner": "Slip a collar of cardboard or foil around each young plant so a cutworm cannot reach the stem at soil level. It is fiddly, but at the scale of a home row it works.",
+          "note_seasoned": "A cardboard or foil collar set at the soil line blocks the cut itself, which is the damage that matters at the seedling stage; practical in a small planting."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "A light row cover over the seedlings keeps the moths from laying on the planting in the first place. Worth putting on from the start if these caterpillars turn up most years where you garden.",
+          "note_seasoned": "Cover keeps egg-laying moths off the bed and protects the seedling stage, which is where the loss happens; the step to default to where cutworm or armyworm pressure is a known annual."
+        },
+        {
+          "method": "bt",
+          "note_beginner": "Bt (Bacillus thuringiensis, a naturally occurring bacterium sold as a caterpillar spray) on the foliage controls young armyworms. Time it to small caterpillars, when the chewing first shows.",
+          "note_seasoned": "Bt is the foliar answer for armyworms and works on early instars, so time it to the first chewing rather than to a stripped row; it is aimed at foliage feeders, not at cutworms severing stems at the soil line, which the collars cover."
+        }
+      ]
+    },
+    {
+      "id": "thrips",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Pull the weeds near the bed, since thrips shelter in them and move onto the peas from there.",
+          "note_seasoned": "Weedy ground is where thrips hold and build before moving into the crop, so clearing it ahead of the warm, dry stretch late in the pea season removes the reservoir."
+        },
+        {
+          "method": "reflective_mulch",
+          "note_beginner": "Reflective mulch, a silvery sheet laid on the soil, confuses thrips looking for the plants and cuts the viruses they can carry.",
+          "note_seasoned": "Reflective film disorients incoming thrips and reduces virus movement; lay it at sowing while the crop is still small."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "If the numbers do climb, a strong spray of water knocks them back. Most home pea crops are finished before thrips reach that point.",
+          "note_seasoned": "A forceful water knock-down is the first response where numbers climb; on a spring crop the season usually ends before thrips reach a level that justifies more."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Minute pirate bugs, lacewings and other helpful insects pitch in on their own, and light feeding usually needs no treatment at all.",
+          "note_seasoned": "Minute pirate bugs and lacewings work this pest unaided in most seasons, and peas generally outgrow light feeding, so the bar for intervening should stay high."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Where thrips do build up, insecticidal soap reduces them. It works on contact, so aim at the new growth, where the twisting and scarring show first.",
+          "note_seasoned": "Soap backs up the water knock-down where numbers keep climbing; contact-only, so coverage of the distorted new growth and the silvered pods decides it."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "powdery-mildew",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Start with a resistant variety. It is the strongest single move against this one: Oregon Sugar Pod II and many newer snow peas carry powdery mildew resistance.",
+          "note_seasoned": "Resistance is the highest-leverage step here, since the disease moves fast once established and the window it arrives in is short; Oregon Sugar Pod II and many modern snow peas carry it."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give the plants room and put up a trellis so air moves through the vines instead of sitting still in a dense tangle.",
+          "note_seasoned": "Spacing and a trellis are set at sowing and cannot be retrofitted; an open, trained canopy is also what makes pulling the first affected leaves practical at all."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off the worst leaves as soon as you spot the white dusting. If the spring crop is close to finished anyway, picking what is ready and pulling the plants is often the simplest answer.",
+          "note_seasoned": "Stripping the most affected leaves early keeps the first spots from seeding the rest of the planting; on a spring crop near the end of its run, harvesting off and pulling the vines is often the practical call instead of a spray program."
+        },
+        {
+          "method": "biofungicide",
+          "note_beginner": "A labeled biofungicide (a spray built on a living organism rather than a chemical) can suppress it if you start at the first spots and repeat as the label directs.",
+          "note_seasoned": "A labeled biofungicide begun at the first colonies and repeated on label interval suppresses rather than cures; the value is entirely in starting before the leaves are covered."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "Sulfur started early and repeated on the label schedule helps hold it back. Once the powder covers the leaves and they begin yellowing, spraying is unlikely to turn it around.",
+          "note_seasoned": "Sulfur is the stronger of the two spray options here and works preventively: begun at first signs and repeated per label it suppresses, while a start made after the canopy is coated and yellowing is unlikely to recover the crop."
+        }
+      ]
+    },
+    {
+      "id": "fusarium-wilt",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Plant a wilt-resistant variety. Most modern snow peas are, and Oregon Sugar Pod II, Dwarf Gray Sugar and Mammoth Melting Sugar all carry the resistance.",
+          "note_seasoned": "Resistance is the primary management, since the fungus persists in soil for years and infected plants cannot be treated; Oregon Sugar Pod II, Dwarf Gray Sugar and Mammoth Melting Sugar all carry wilt resistance. Several races of the pathogen exist."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move peas onto different ground on a three-to-four-year cycle, so the bed where the wilt appeared gets a long break from peas.",
+          "note_seasoned": "A three to four year rotation away from infested ground is the companion to resistance; it does not clear a fungus that persists for years, but it keeps a susceptible planting off the worst of the inoculum."
+        },
+        {
+          "method": "improve_drainage",
+          "note_beginner": "Improve the drainage in the bed before you sow. It is one of the standard preventive steps for this wilt, and it does nothing for plants that are already infected.",
+          "note_seasoned": "Drainage work is a preventive site step only; an infested bed cannot be cleared of the fungus, so nothing at this rung recovers a symptomatic plant."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull the affected plants and get rid of them rather than composting them. There is no cure once a plant is infected, and leaving it in place adds to what is in the soil.",
+          "note_seasoned": "Roguing symptomatic plants and destroying them limits further buildup; it is damage control rather than treatment, since the pathogen is already resident in the bed."
+        }
+      ]
+    },
+    {
+      "id": "root-rots-damping-off",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "improve_drainage",
+          "note_beginner": "Sow into well-drained ground or a raised bed rather than a cold, low, wet corner of the garden. Soggy soil is what makes this one bad.",
+          "note_seasoned": "Site and drainage carry most of the weight: cold, saturated ground slows germination and holds seedlings in the vulnerable window, which is where the Pythium and Aphanomyces end of the complex does its damage."
+        },
+        {
+          "method": "sound_sowing_practice",
+          "note_beginner": "Wait for the soil to warm and drain before you sow, and do not put seed into soggy ground. Handle the roots gently at planting, since damaged roots are an opening for these organisms.",
+          "note_seasoned": "Sowing conditions decide this one: seed sitting in cold, wet soil is the setup, and root injury at planting is the second door in. There is no rescue for seed or seedlings that have already rotted, so a replant goes in once the bed has warmed and dried."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move peas around the garden on a three-to-four-year cycle. Growing them in the same spot year after year is what lets these organisms build up.",
+          "note_seasoned": "The three to four year rotation is aimed at Aphanomyces in particular, which builds in beds cropped to peas too often and can kill plants outright where infection is severe."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clear the old pea plants out of the bed after harvest, and pull affected plants during the season instead of leaving them in the row.",
+          "note_seasoned": "Clearing crop debris after harvest and removing affected plants limits further loss, but the organisms are already resident in the soil, so this is containment rather than a fix."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Some varieties offer partial tolerance to root rot, so it is worth reading the seed description. Treat it as a bit of extra margin, not as something that carries the crop on its own.",
+          "note_seasoned": "Partial root-rot tolerance exists in some varieties; take it as margin on top of drainage and rotation rather than a substitute for either."
+        }
+      ]
+    },
+    {
+      "id": "ascochyta-blight",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Buy certified disease-free seed, and do not save seed from a crop that had this blight. The fungus rides inside the seed, so a clean start matters more here than anything you can do later.",
+          "note_seasoned": "The complex is seed-borne, so certified clean seed is the first control; saved seed off an infected crop reintroduces it directly, and the sunken pod lesions are the route the fungus takes into the seed."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull and get rid of affected plants, and clear every scrap of old pea debris after harvest instead of composting it. Nothing will bring infected tissue back, so removal is the job.",
+          "note_seasoned": "Rogue affected plants and strip all pea residue after harvest; with no curative option and a debris-borne carryover, removal is the control."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Once you have had it, keep peas off that ground for at least three to four years.",
+          "note_seasoned": "A minimum three to four year break off infested ground is the debris-side half of the control, since these fungi carry over on pea residue in the soil."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the soil rather than over the top of the plants. Drops hitting infected leaves splash the fungus onto clean ones.",
+          "note_seasoned": "Overhead irrigation is a dispersal mechanism here; watering at the base removes the splash that carries the fungus from infected tissue to clean."
+        },
+        {
+          "method": "wet_foliage_discipline",
+          "note_beginner": "Keep out of the patch while the vines are wet. Brushing past wet plants carries the fungus down the row with you.",
+          "note_seasoned": "Working the planting while the foliage is wet moves the fungus by splash and contact, so when you trellis, pick or weed is itself a control decision."
+        }
+      ]
+    }
+  ]
+}
