@@ -1,0 +1,280 @@
+{
+  "pests": [
+    {
+      "id": "mexican-bean-beetle",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Wade and Black Valentine are listed as tolerant varieties, which means they hold up better under feeding, not that they go untouched. If this beetle turns up most years where you garden, that choice is made at seed-buying time.",
+          "note_seasoned": "Wade and Black Valentine carry documented tolerance rather than immunity; a plant-once decision worth making where Mid-Atlantic or southern Appalachian pressure is routine."
+        },
+        {
+          "method": "planting_time_avoidance",
+          "note_beginner": "Most of the chewing lands in July and August, so a fast-maturing bush bean sown very early, or a second sowing made in late summer, can largely miss the worst of it.",
+          "note_seasoned": "Damage concentrates in July and August as successive generations stack up, so quick-maturing varieties sown well ahead of that window, or a late-summer sowing behind it, sidestep much of the pressure."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move beans to a different bed rather than replanting where they grew last season.",
+          "note_seasoned": "Rotation off last year's bean ground is paired with prompt debris removal in the standing prevention advice; treat the two as one habit rather than as alternatives."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Right after your last picking, pull the spent plants and work them into the soil so the beetles lose the leftover cover they would shelter in over winter.",
+          "note_seasoned": "Prompt incorporation of crop debris after harvest strips the overwintering shelter the bed offers; adults also winter near woodland edges, which is why this sits alongside rotation and sowing time rather than replacing them."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Turn the leaves over and take the coppery adults, the spiny yellow young (called larvae), and the clusters of yellow eggs in one pass. Caught early, this works well in a home-sized patch. Beans shrug off a fair amount of chewing, so light feeding is not worth chasing.",
+          "note_seasoned": "Scout leaf undersides and take adults, egg masses, and larvae in the same pass; effective in a home patch when started early. Beans tolerate roughly 30 percent defoliation before bloom and 15 percent through bloom and pod fill, so light feeding sits below any treatment threshold."
+        },
+        {
+          "method": "augmentative_release",
+          "note_beginner": "A small parasitic wasp, Pediobius foveolatus, is sold as a biological control for bean beetles, meaning it is a living helper you buy and release rather than a spray.",
+          "note_seasoned": "Pediobius foveolatus is commercially available against this beetle; a purchased release, so it fits an active infestation on a planting big enough to justify the cost, with handpicking already in place."
+        },
+        {
+          "method": "spinosad",
+          "note_beginner": "Only where the beetles get heavy despite the steps above. Spinosad is an organic spray labeled for bean beetles. Follow the label, and skip it for light feeding, since beans can lose leaf without losing pods.",
+          "note_seasoned": "Reserve for heavy pressure: spinosad is labeled for bean beetles where timing and handpicking have not held. Weigh it against the defoliation tolerance before treating."
+        }
+      ]
+    },
+    {
+      "id": "aphids",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on the fertilizer. Too much nitrogen pushes out soft, lush growth, which is the tissue aphids favor.",
+          "note_seasoned": "Restrained nitrogen keeps growth from turning soft, denying colonies the flush they build on fastest."
+        },
+        {
+          "method": "reflective_mulch",
+          "note_beginner": "Lay reflective mulch, a shiny surface over the soil, while the plants are still small. It confuses aphids arriving to feed and cuts down on the mosaic viruses they carry from plant to plant.",
+          "note_seasoned": "Reflective mulch disorients incoming aphids, reducing both feeding and spread of the bean mosaic viruses; laid early while the canopy is still open enough for it to work."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "A strong jet from the hose knocks the colonies off the growing tips and leaf undersides. Do it as soon as you find them, before the clusters thicken.",
+          "note_seasoned": "A forceful water spray dislodges colonies without touching natural enemies; start at first detection, since reproduction outruns the predators early in the season."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Ladybugs and other helpful insects usually bring aphids down once the weather warms, so give them a chance before reaching for anything stronger.",
+          "note_seasoned": "Resident predators generally overtake aphid colonies as temperatures rise; conservation is the default control here, with sprays held behind it."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If colonies keep building, insecticidal soap works on contact, so spray it straight onto the aphids under the leaves. Start when you first see colonies rather than waiting.",
+          "note_seasoned": "Insecticidal soap gives good contact control where coverage reaches leaf undersides; begin at first colonies, ahead of the honeydew and sooty mold that follow heavy feeding."
+        }
+      ]
+    },
+    {
+      "id": "two-spotted-spider-mite",
+      "type": "mite",
+      "control_ladder": [
+        {
+          "method": "even_watering",
+          "note_beginner": "Keep the soil evenly moist instead of swinging between soaked and bone dry. Drought-stressed plants are far more likely to be hit, so steady watering is the first thing to fix.",
+          "note_seasoned": "Even soil moisture removes the drought stress that predisposes plants to rapid buildup; the standing preventive through hot, dry spells."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Aim a strong spray of water at the undersides of the leaves to knock the mites and their webbing off. Check those undersides through hot, dry weather so you catch the buildup while numbers are still low.",
+          "note_seasoned": "Hosing leaf undersides dislodges mites and strips webbing; repeat it, since a generation can close in as few as eight days in heat."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Ladybugs and other predators feed on mites and help hold them down, so leave them room to work before you spray.",
+          "note_seasoned": "Resident predators contribute suppression alongside the physical knock-back, which is why they sit ahead of any spray in the sequence."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Insecticidal soap works only where it lands, so coat the undersides of the leaves. Use it before the mites get thick, since it is much harder once they explode in hot weather.",
+          "note_seasoned": "Apply before numbers climb, with coverage on the undersides where colonies sit; in hot, dry weather population growth can outpace a late application."
+        }
+      ]
+    },
+    {
+      "id": "bean-leaf-beetle",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Plant beans in a new spot each year so the beetles are denied the place they would overwinter.",
+          "note_seasoned": "Rotating beans off the previous bed denies overwintering sites, paired with post-harvest debris removal."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clear the finished plants away after your last picking, since leftover debris is where the beetles get through the winter.",
+          "note_seasoned": "Post-harvest residue removal takes out the overwintering shelter; the same pass already run for Mexican bean beetle covers it."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Where this beetle is a known problem, cover the seedlings with a lightweight fabric row cover as they come up. The early weeks are what matter, because chewing around the stem near the soil can kill young plants and thin the stand.",
+          "note_seasoned": "Where this beetle is locally established, covering the row until plants are past the girdling-susceptible stage keeps the stand intact; it is that stand loss, not the leaf holes, that costs yield."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Pick the beetles off as you see them. A fair amount of chewed leaf on an established plant costs you no pods, so ragged holes there usually need nothing. Put your attention on the seedlings.",
+          "note_seasoned": "Handpicking, with the Mexican bean beetle measures already running, generally holds this one; foliar feeding on established plants falls inside the crop's defoliation tolerance, so the seedling stage is where intervention pays."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "bean-rust",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "If rust keeps coming back in your garden, pick a rust-resistant variety when you buy seed.",
+          "note_seasoned": "Rust-resistant cultivars are the standing answer where the disease recurs, chosen at purchase rather than fought in season."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Where rust has shown up before, put beans on new ground. The fungus rides through winter in the soil and in leftover debris.",
+          "note_seasoned": "Rotate off ground with a rust history; the fungus carries season to season in soil and residue, so a repeat planting meets last year's carryover."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water the soil rather than the leaves. Rust develops in humid conditions, so anything that keeps the foliage wet longer works in its favor.",
+          "note_seasoned": "Base watering avoids the overhead wetting that feeds infection; humidity is the named driver for this one."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give the plants enough room that air moves through them and the leaves dry off. Crowded beans hold humidity, which is what rust needs.",
+          "note_seasoned": "Spacing for airflow shortens the humid periods that drive infection; set at planting rather than reached for as a rescue."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off and destroy the leaves carrying rust bumps rather than composting them, clear the old plants at season's end, and clean or replace any stakes or supports you reuse, since the fungus can persist on them.",
+          "note_seasoned": "Remove infected foliage in season and residue at the end of it; carryover on stakes or supports reused from a previous crop is documented, so clean or replace them between seasons."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "Where rust has run severe, sulfur dust or spray gives good control, but begin at first flowers and reapply about every 10 to 14 days. Follow the label.",
+          "note_seasoned": "Sulfur begun at the start of bloom and held to a 10 to 14 day interval is the option where rust has run severe; it is a scheduled program, so the interval is the part that carries it."
+        }
+      ]
+    },
+    {
+      "id": "anthracnose",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start with certified disease-free seed. This fungus travels in the seed itself, so seed held back from a crop that had anthracnose brings it straight back.",
+          "note_seasoned": "The pathogen is seedborne, so certified clean seed is the entry point; saved seed off an affected crop reintroduces it directly."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Keep beans out of that spot for two to three years. The fungus can live on old plant debris in the soil for up to two years.",
+          "note_seasoned": "A two to three year break off affected ground covers the up-to-two-year survival on residue."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull and destroy affected plants rather than composting them, and clear all the old plants after harvest. Tissue that is already infected cannot be cured, so removal is about slowing the spread.",
+          "note_seasoned": "There is no cure for infected tissue, so removing affected plants and clearing residue after harvest is the working control."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the soil line, and keep soil from splashing onto the leaves. Splashing water is how this fungus gets around.",
+          "note_seasoned": "Splash dispersal is the in-season spread mechanism, so base watering and keeping soil off the foliage matter most through the cool, wet spells that favor it."
+        },
+        {
+          "method": "copper_fungicide",
+          "note_beginner": "Copper fungicide can hold it back on snap beans if you begin early, though clean seed and rotation do most of the work.",
+          "note_seasoned": "Copper suppresses rather than cures, and only when started early on snap beans; cultural steps stay the mainstay for a home crop."
+        }
+      ]
+    },
+    {
+      "id": "bacterial-blights",
+      "type": "bacterial",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start every season with fresh certified seed rather than your own saved seed. Both of these blights begin on infected seed.",
+          "note_seasoned": "Both pathogens are seedborne, so new certified seed each season is the primary break in the cycle."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Give any one bed a three year break from beans. The bacteria can last as long as two years in the leftover debris of an infected crop.",
+          "note_seasoned": "A three year interval outruns the up-to-two-year survival on residue in the bed."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the base rather than overhead. Both blights move in rain and damp conditions, and overhead water does the same job for them.",
+          "note_seasoned": "Overhead irrigation reproduces the rain splash both blights travel in; base watering removes that route."
+        },
+        {
+          "method": "wet_foliage_discipline",
+          "note_beginner": "Stay out of the bean patch while the leaves are still wet. Brushing past wet plants carries the bacteria from one to the next.",
+          "note_seasoned": "Handling wet foliage moves bacteria plant to plant, so timing your work to a dry canopy is a no-cost control, separate from how you water."
+        },
+        {
+          "method": "copper_fungicide",
+          "note_beginner": "Infected plants do not recover, but copper sprays on about a 10 day schedule can slow the spread. Follow the label.",
+          "note_seasoned": "Copper on a 10 day interval slows spread only; infected plants do not recover, so the seed and moisture steps carry the program."
+        }
+      ]
+    },
+    {
+      "id": "bean-root-rots",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "sound_sowing_practice",
+          "note_beginner": "Hold off sowing until the soil reaches about 69°F at a depth of 4 inches. Seed that sits in cold, wet soil rots before it can come up.",
+          "note_seasoned": "Sowing once soil reaches about 69°F at 4 inches cuts the time seed and seedling sit exposed in the cold, wet conditions these fungi exploit."
+        },
+        {
+          "method": "improve_drainage",
+          "note_beginner": "Plant on raised beds in ground that drains well and stay out of low, wet spots. Cool, wet soil is what lets these root rots in.",
+          "note_seasoned": "Raised beds on well-drained ground remove the standing wet that Rhizoctonia, Pythium, and Fusarium exploit; these fungi are resident, so the site is the lever rather than any treatment."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move beans around the garden each year, following them with other vegetables.",
+          "note_seasoned": "Rotation with other vegetables is the residual step once site and sowing temperature are handled."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull the seedlings that have rotted, since there is no saving them, and clear the old plants after harvest. If you lose a stand, replant once the soil is warmer and draining better.",
+          "note_seasoned": "Rotted seedlings do not recover: remove them, clear residue after harvest, and treat a replant into warmer, better-drained conditions as the only in-season recovery."
+        }
+      ]
+    },
+    {
+      "id": "white-mold",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give plants and rows enough space for air to move between them. This mold needs still, humid air inside a crowded canopy, so spacing is the main thing you control.",
+          "note_seasoned": "Wider plant and row spacing dries the canopy the fungus depends on; with no recommended home-garden spray, layout carries most of the management."
+        },
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on the fertilizer. Too much nitrogen pushes heavy, leafy growth, and that dense canopy traps the damp, still air this mold needs.",
+          "note_seasoned": "Excess nitrogen drives the lush vine growth that closes the canopy, so restrained feeding is the second half of the airflow strategy."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water the soil, not the leaves, and try not to leave the plants wet and packed together.",
+          "note_seasoned": "Base watering avoids adding to the cool, moist conditions under which lesions run together and choke the stem."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull and destroy infected plants rather than composting them. Nothing on the home-garden shelf is recommended against it, so how you grow and clean up is the whole program.",
+          "note_seasoned": "Rogue out infected plants and destroy them; with nothing recommended chemically at the home-garden scale, removal plus canopy management is the whole of it."
+        }
+      ]
+    }
+  ]
+}
