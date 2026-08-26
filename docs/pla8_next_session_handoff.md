@@ -85,8 +85,12 @@ Also owed, each hit independently by more than one pass:
   three promotes, so `assets/data/guides.dataset`, `src/data/control-methods.json` and
   `assets/data/dataset-provenance.json` are modified and uncommitted in that repo.
 - **Nothing is pushed.** Six commits sit on `main`.
-- **Batch 1 is still STAGED, not promoted** (`tools/staging/pla8_ladder_batch1/`), 17 of 22 items
-  fixable. It has been open since 2026-08-24.
+- ~~Batch 1 is still STAGED, not promoted.~~ **WRONG, corrected 2026-08-26.** Batch 1 was promoted
+  in `9fbf655` ("5 crops laddered, 18 of 22 read-fixes applied", roster 7 -> 12) and all five crops
+  carry rungs. The claim was carried out of `pla8-batch1-read-outcome`, which recorded it truly at
+  the time of writing and was superseded the same day. **A stale record reads as current truth** --
+  the exact failure `stale-records-commission-phantom-work` exists to prevent, repeated while that
+  memory sat in the index. The roster arithmetic is the check: 7 pilot + 5 + 4 + 3 + 5 + 3 + 2 = 29.
 
 ---
 
