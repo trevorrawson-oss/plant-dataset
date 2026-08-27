@@ -33,6 +33,13 @@ genuinely needs one (melons will need `mancozeb`, uaiKey=30 -- that is growth, n
 The instrument exists and is tested: `tools/ucipm_uaidb.py`, with `tools/test_ucipm_uaidb.py` as an
 OFFLINE positive control against a cached page. **Run that control in the same pass as any reading.**
 
+> **UPDATE 2026-08-27: piece 2 is DONE -- batch 7 PROMOTED** (`674fab25` -> `f8678ade`, harness
+> 45/45, gauntlet green, roster 29 -> 33, catalog 57 with `splash_barrier_mulch`). The rollout
+> now follows the FALL-SEASON plan (`docs/2026-08-27-pla8-fall-season-batch-plan.md`): batch 8
+> is the leafy greens (spinach, arugula, lettuce-leaf, bok-choy). plant-app regenerates
+> `build:guides` once, against this canonical, per Trevor.
+>
+> Superseded staging note below, kept for the record:
 > **UPDATE 2026-08-26 (late evening): piece 2 is STAGED AND READ, not promoted.** 154 rungs
 > across the 4 tomatoes sit in `tools/staging/pla8_batch7_tomatoes/` with the read done, two
 > cross-sibling conflicts adjudicated, and ONE mint staged (`splash_barrier_mulch`, all four

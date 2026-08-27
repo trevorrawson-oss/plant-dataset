@@ -1,5 +1,17 @@
 # PLA-8 batch 7 (THE TOMATOES) -- staged, read, NOT promoted (2026-08-26, late evening)
 
+> **PROMOTED 2026-08-27** (`674fab25` -> `f8678ade`, `tools/promote_pla8_batch7.py`), after the
+> chemical-cohort commit (`b0c84a1`) put the base SHA in git and `ed007ca` registered it in
+> COMMIT_FOR. Everything below shipped as staged, with the read's adjudications enforced as
+> promote guards. Harness **45/45 caught, 0 survived** (preflight 46/46, sentinel RED; run 1
+> died at preflight on two ambiguous anchors, run 2 surfaced ONE undriven guard -- the
+> row-cover floor -- whose test was added before the clean run 3). Gauntlet: gate_all 121/121;
+> whole_crop_gate PASS x6; control_ladder_gate 0; register_completeness PASS; release_verify
+> "no new violations" (its single A CONCERN is the tool's single-crop shape reporting the
+> declared 4-crop blast radius); ladder_batch verify PASS with **ids reused 34/34** against the
+> live canonical -- the join-key stability proof; COMPACT preserved; 137 tests green both
+> runners. Roster laddered 29 -> 33; catalog 56 -> 57.
+
 beefsteak-tomato, cherry-tomato, grape-tomato, roma-tomato. 34 problems, **154 rungs staged** in
 `tools/staging/pla8_batch7_tomatoes/` (out_*.json are the authoring record; `merge` re-derives
 scratch_canonical.json from them). Authored by four parallel agents from each crop's OWN prose,
