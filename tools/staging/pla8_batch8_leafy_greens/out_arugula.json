@@ -1,0 +1,254 @@
+{
+ "pests": [
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out leftover plant debris near your arugula at the end of the season. The beetles spend the winter sheltering in old debris, so a clean bed gives next spring's attack a slower start.",
+     "note_seasoned": "Crop-debris removal deprives the overwintering adults of shelter; pressure on the earliest sowings tracks what the bed carried through winter."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Keep the ground near your arugula clear of cabbage-family weeds. Those weedy relatives feed the beetles between crops, so removing them cuts off the bridge.",
+     "note_seasoned": "Clear crucifer weeds around the planting and keep the edges clean; weedy brassica relatives sustain the beetles between crops and reseed the pressure on each new sowing."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Try sowing at a time of year when flea beetles are less active in your area. The overwintered beetles come out in spring and hit the earliest, smallest seedlings hardest.",
+     "note_seasoned": "Overwintered adults emerge onto the season's first, smallest plantings, so shifting a sowing away from peak activity lowers pressure; activity windows vary by region and season, so confirm the timing locally."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put a light row cover over the bed on the day you sow and keep the edges tucked in. This is the best single defense you have: it keeps beetles off while the seedlings grow big enough to shrug off damage.",
+     "note_seasoned": "Cover from sowing, not later; exclusion through the seedling window is the most effective tool here, and the whole aim is rapid establishment past the stage where beetles can stunt or kill a plant."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "If beetles are heavy despite the cover, coat the plants with kaolin clay, a fine white clay spray that leaves a film beetles do not like to land and feed on. Reapply to keep the coating fresh.",
+     "note_seasoned": "A kaolin particle film can help under heavy pressure by deterring feeding on coated foliage; maintain coverage on new growth while the planting pushes past the vulnerable stage."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If beetles are still thick enough to riddle the seedlings, use a spinosad spray. It is toxic to bees while wet and for about a day after, so spray at dusk and keep it off anything in flower.",
+     "note_seasoned": "Reserve spinosad for heavy pressure the cover has not held, aimed at carrying seedlings through establishment; apply at dusk and away from bloom to spare bees."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Aphids breed fastest on the soft, lush growth that heavy feeding pushes out.",
+     "note_seasoned": "Excess nitrogen produces the tender flush growth colonies multiply on; restrained feeding is the preventive baseline on a fast leaf crop."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A row cover over the bed keeps aphids from settling in, and it doubles as your flea beetle defense on arugula.",
+     "note_seasoned": "Row cover excludes colonizers from a short-season planting and pairs with the cover already justified against flea beetles."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock aphids off with a strong jet of water, aiming at the undersides of the leaves and the new growth where they cluster. Come back and do it again every few days until you stop finding them.",
+     "note_seasoned": "A hard water jet dislodges colonies from leaf undersides and growing tips; the waxy gray-green cabbage aphid lodged in sheltered leaf folds is the hardest to dislodge, so make repeat passes every few days."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Welcome the helpful bugs. Ladybugs and lacewings eat aphids and can keep small clusters from becoming big ones, as long as you avoid sprays that kill them too.",
+     "note_seasoned": "Conserve ladybugs, lacewings, and parasitoid wasps; broad-spectrum sprays remove them along with the aphids, so lean on natural enemies before reaching for any spray."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For clusters that keep coming back, spray insecticidal soap directly onto the aphids, coating the undersides of the leaves. It only works where it lands, so coverage matters; repeat every few days.",
+     "note_seasoned": "Soap controls the aphids it directly wets, so direct it into the leaf undersides and the folds where cabbage aphid shelters, repeating at short intervals; it takes out soft-bodied beneficials it hits, so keep it off clean growth."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is another option for stubborn aphids. Coat the leaf undersides where they gather and repeat every few days; keep it off anything in flower and skip it in heat above 90°F.",
+     "note_seasoned": "Neem is a low-residue alternative to soap for colonies on the undersides; avoid applications above 90°F, on drought-stressed plants, or where drift can reach open bloom or water bees drink."
+    }
+   ]
+  },
+  {
+   "id": "cabbageworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out old cabbage-family plants and weeds once a crop is done. Leftover brassicas give the moths and butterflies somewhere to keep breeding nearby.",
+     "note_seasoned": "Brassica debris and weed hosts carry the pest complex between plantings; clearing them removes the reservoir feeding each new generation."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Keep a row cover over the bed so the white butterflies and moths cannot reach the leaves to lay their eggs. Seal the edges well.",
+     "note_seasoned": "Exclusion blocks egg-laying by the adults outright, which prevents the problem rather than treating it; keep the edges sealed."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Check the undersides of the leaves for eggs and small green caterpillars, and pick them off by hand. On a small patch this can keep up on its own.",
+     "note_seasoned": "Scout leaf undersides for eggs and early instars on a routine walk and remove what you find; catching larvae young matters on a crop where even light feeding downgrades the harvest."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Spray Bt, a bacterial insecticide that acts on caterpillars rather than on insects in general and is low in toxicity to people, pets, and bees. It cannot tell a pest caterpillar from a butterfly's, so treat only the plants that have a problem, and spray again after rain washes it off.",
+     "note_seasoned": "Bt (Bacillus thuringiensis) is selective for caterpillars; target young larvae and reapply after rain, and keep it off butterfly host plants, since it acts on caterpillars as a group."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If Bt and handpicking are not keeping up, spinosad is a stronger organic spray for caterpillars. Apply it at dusk when bees are not flying and keep it off flowers.",
+     "note_seasoned": "A stronger organic rescue when the softer rungs have not held, again aimed at young larvae; time it to dusk and away from bloom, since it is toxic to bees while wet and for about a day after."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear damp debris from around the plants and keep mulch light and away from them. Slugs hide in cool, moist cover by day and come out to feed at night, so fewer hiding spots means fewer slugs.",
+     "note_seasoned": "Shelter removal is the base move: keep mulch light and off the crowns and clear moist debris, since populations build where daytime cover and dampness persist."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out at night or right after rain and pick slugs off by hand. That is when they are out feeding on the leaves.",
+     "note_seasoned": "Collect after dark or following rain, timed to when they are actively feeding on the foliage."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Set shallow traps near the plants to draw slugs in, and empty them regularly.",
+     "note_seasoned": "Shallow traps knock numbers down alongside handpicking and shelter removal; they support the cultural work rather than replace it."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "If traps and picking are not enough, scatter an iron phosphate slug bait on the soil, not on the plants. It carries less risk around pets than the older metaldehyde baits, but it is still a pesticide, so follow the label.",
+     "note_seasoned": "Iron phosphate bait backs up the physical controls, with less risk around pets than metaldehyde though still a pesticide; apply it to the soil surface per the label rather than to the foliage."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move where you plant arugula and its cabbage-family relatives from year to year, since the disease can carry over where brassicas grew before.",
+     "note_seasoned": "Rotate away from brassicas for several years; the pathogen survives on debris, and rotation starves that carryover."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "When you buy seed, look for varieties sold as resistant to downy mildew where they are available.",
+     "note_seasoned": "Resistant cultivars, where offered, are the seed-time hedge on a disease with no rescue once it is established."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants out so air moves through and the leaves dry quickly. The disease thrives in cool, damp, crowded plantings.",
+     "note_seasoned": "Wider spacing shortens the leaf wetness that drives infection in cool, humid weather; crowding is what turns scattered lesions into collapsing leaves."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the plants, so the leaves stay dry and splashing water cannot spread the disease.",
+     "note_seasoned": "Drip or base watering instead of overhead irrigation removes the splash route and cuts the leaf-wetness hours the oomycete needs."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the worst leaves and clear infected debris. Once this disease gets going in damp weather it is hard to stop, so removing infection early is the main play.",
+     "note_seasoned": "Remove infected leaves and debris promptly; cultural control dominates here, since there is no rescue once the disease is established in humid weather."
+    }
+   ]
+  },
+  {
+   "id": "white-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where white rust shows up regularly, choose resistant varieties when you buy seed.",
+     "note_seasoned": "Where white rust is endemic, resistant cultivars are the first-line choice, made at seed time."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate your planting spot so arugula and other cabbage-family crops do not follow each other in the same bed.",
+     "note_seasoned": "Rotate away from brassicas; the pathogen survives on debris and as oospores, so a fresh bed lowers carryover."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room so air can move and leaves dry fast. The disease spreads in cool, moist conditions.",
+     "note_seasoned": "Spacing for airflow shortens the leaf wetness the pathogen needs under cool nights and mild days."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line and avoid wetting the leaves, since leaf wetness and splashing water help it spread.",
+     "note_seasoned": "Base or drip irrigation removes splash dispersal and the free moisture that favors infection."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off infected leaves as soon as you see the white blisters and get them out of the garden. Acting early works better than trying to cure it later.",
+     "note_seasoned": "Remove infected foliage and debris promptly; chemical options are limited in the home garden, so sanitation and prevention carry the load."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait until the soil is not cold and soggy, sow shallowly, use fresh seed, and do not overwater. Anything that gets seedlings up fast works against damping-off.",
+     "note_seasoned": "Fast emergence is the control: fresh viable seed, shallow sowing, soil warm enough for quick germination, and restrained watering all shorten the window the soil fungi have to strike."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sow into well-drained ground. Water sitting around the seeds is what lets the rot take hold.",
+     "note_seasoned": "Well-drained soil denies the soilborne pathogens the saturation they favor; a bed that stays wet after watering is the classic setup for a poor stand."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for a seedling once it flops over, so pull collapsed seedlings and throw them away rather than leaving them in the bed.",
+     "note_seasoned": "Rogue out collapsed seedlings; nothing rescues a plant post-infection, so removal plus the sowing practices above is the whole program."
+    }
+   ]
+  },
+  {
+   "id": "alternaria-cercospora-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed from a reliable supplier, since these fungi can ride in on the seed itself.",
+     "note_seasoned": "Clean, disease-free seed closes the seedborne route, one of the drivers alongside crop debris and long leaf wetness."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate away from beds where cabbage-family crops grew recently, so the spot fungi do not pick up where they left off.",
+     "note_seasoned": "Rotation away from brassicas separates the crop from inoculum carried over in prior plantings' debris."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants so air moves through and leaves dry quickly. Crowded, damp plantings are where the spots take off.",
+     "note_seasoned": "Spacing that shortens leaf wetness works directly against both fungi, which spread fastest in warm, wet weather and crowded stands."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line rather than over the plants, since splashing water carries the spores from leaf to leaf.",
+     "note_seasoned": "Base watering removes splash dispersal, one of the two spread routes along with wind-borne spores."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off spotted leaves and get them out of the garden, and clear away crop debris at the end of the season.",
+     "note_seasoned": "Remove spotted foliage during the season and residue after it; debris is where the spores persist between plantings."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Under heavy pressure a copper-based fungicide can help, applied before or at the first sign of spots. It protects leaves rather than curing them, so keep up the other steps, follow the label rate, and keep spray away from ponds and streams.",
+     "note_seasoned": "Copper can help when the cultural steps are not holding, applied preventively at or before first symptoms; it is preventive rather than curative, it accumulates at the soil surface with repeated use, and it is highly toxic to aquatic life, so keep it out of runoff."
+    }
+   ]
+  }
+ ]
+}

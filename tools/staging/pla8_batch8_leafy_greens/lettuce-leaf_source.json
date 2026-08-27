@@ -1,0 +1,154 @@
+{
+ "slug": "lettuce-leaf",
+ "name": "Lettuce (Leaf)",
+ "category": "Leafy Greens",
+ "pests": [
+  {
+   "name": "Aphids",
+   "type": "pest",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Clusters of tiny soft insects on new growth and the undersides of leaves. The leaves may curl, yellow, or turn sticky with a substance called honeydew. A black, sooty mold sometimes grows on that stickiness.",
+   "organic_treatment_beginner": "First knock the colonies off with a strong jet of water, which dislodges most of them, and they rarely find their way back. For any that remain, spray insecticidal soap or neem oil directly onto the aphids, covering the leaf undersides, since both only work when they hit the insect, not by being eaten. Encourage helpful insects like ladybugs, lacewings, and tiny parasitic wasps, which keep small infestations in check on their own.",
+   "prevention_beginner": "Go easy on nitrogen fertilizer. The fast, soft growth that lots of nitrogen produces is exactly what aphids feed on, so an over-fed plant attracts far more of them. Plant flowers like marigolds and nasturtiums nearby, and grow some dill or cilantro too, whose flowers feed the helpful wasps and predators that do most of the real control.",
+   "sources": [
+    "clemson_hgic",
+    "uf_ifas",
+    "wsu_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/insecticidal-soaps-for-garden-pest-control/",
+     "verified": "2026-07-31"
+    },
+    "uf_ifas": {
+     "url": "https://blogs.ifas.ufl.edu/stlucieco/2023/03/31/aphids-on-plants-and-their-management",
+     "verified": "2026-07-31"
+    },
+    "wsu_ext": {
+     "url": "https://depts.washington.edu/hortlib/pal/managing-and-controlling-aphids/",
+     "verified": "2026-07-31"
+    }
+   },
+   "symptoms_seasoned": "Clusters of tiny soft insects on new growth and leaf undersides. Leaves curl, yellow, or become sticky with honeydew. Sooty black mold may follow.",
+   "cause_seasoned": "Several aphid species feed on leafy greens, most commonly the green peach aphid. Through the growing season they reproduce asexually, so a few founders become dense colonies within days once temperatures warm and growth is soft and lush.",
+   "cause_beginner": "Several kinds of aphid feed on leafy greens, most often the green peach aphid. During the growing season they reproduce without mating, so a few can become a dense colony within days once it warms up and the growth is soft and lush.",
+   "organic_treatment_seasoned": "Knock colonies off with a strong jet of water first, which dislodges most of them and they rarely find their way back. For what remains, spray insecticidal soap or neem oil directly onto the aphids, covering leaf undersides, since both work only on contact and kill by disrupting the insect's outer membrane rather than by being eaten. Encourage ladybugs, lacewings, and parasitic wasps, which keep light infestations in check on their own.",
+   "prevention_seasoned": "Go easy on nitrogen fertilizer. The fast, soft growth that high nitrogen pushes is exactly what aphids feed on, so a lush over-fed plant attracts far more of them. Interplant flowers such as marigolds and nasturtiums, and grow some umbellifers like dill or cilantro nearby, whose flowers feed the parasitic wasps and predators that do most of the real control."
+  },
+  {
+   "name": "Slugs & snails",
+   "type": "pest",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Ragged holes appearing in leaves overnight, with shiny slime trails visible in the morning. Seedlings may be cut off right at the soil line.",
+   "organic_treatment_beginner": "Set beer traps with the rim level with the soil so the slugs fall in and cannot climb out, and refresh them every couple of days. Sprinkle diatomaceous earth in a ring around vulnerable plants, but remember it stops working once it gets wet and needs reapplying after rain or watering. Hand-pick them after dark with a flashlight, when they are out feeding. An iron-phosphate bait (sold as Sluggo and similar) is approved for organic gardens and carries less risk around pets and wildlife than the older metaldehyde baits, though it is still a pesticide; it stops the slugs feeding so they die within a few days. Scatter it in the evening after watering, when slugs are most active, for the best results.",
+   "prevention_beginner": "Pull mulch back from around seedlings and clear away the boards, pots, and leaf litter near the bed that give slugs a daytime hiding spot. A bare, raked strip around the planting slows them down on their way in. Encourage ground beetles, and hedgehogs if you have them, since both hunt slugs through the night.",
+   "sources": [
+    "osu_ext",
+    "ucanr_ext"
+   ],
+   "anchoring_urls": {
+    "osu_ext": {
+     "url": "https://extension.oregonstate.edu/catalog/pub/em-9155-how-control-slugs-your-garden",
+     "verified": "2026-07-31"
+    },
+    "ucanr_ext": {
+     "url": "https://ucanr.edu/blog/real-dirt/article/using-integrated-pest-management-control-slugs-and-snails",
+     "verified": "2026-07-31"
+    }
+   },
+   "symptoms_seasoned": "Irregular holes in leaves overnight. Slime trails visible in morning. Seedlings may be severed at soil level.",
+   "cause_seasoned": "Slugs and snails feed mostly at night and in the cool, damp hours, rasping irregular holes through tender leaves and shearing off young seedlings entirely. Damage is heaviest in wet spells and in beds with damp mulch or debris that give them daytime shelter.",
+   "cause_beginner": "Slugs and snails feed mostly at night and in cool, damp weather, rasping ragged holes in tender leaves and shearing off young seedlings completely. The damage is worst in wet spells and in beds with damp mulch or debris that give them somewhere to hide during the day.",
+   "organic_treatment_seasoned": "Set beer traps with the rim at soil level so they fall in and cannot climb back out, and refresh them every couple of days. Ring vulnerable plants with diatomaceous earth, remembering it stops working once wet and needs reapplying after rain or irrigation. Hand-pick after dark with a flashlight, when they are out feeding. Iron phosphate bait (sold as Sluggo and similar) is approved for organic use and is safer around children, pets, birds, fish, and other wildlife than metaldehyde, though it remains a pesticide; it disrupts their gut so they stop feeding and die within a few days. Scatter it in the evening after watering, when slugs are most active, for the best effect.",
+   "prevention_seasoned": "Pull mulch back from around seedlings and clear the boards, pots, and leaf litter that give slugs a daytime hiding place close to the bed. A bare, cultivated strip around the planting slows their approach. Encourage ground beetles and, if you have them, hedgehogs, which prey on slugs through the night."
+  },
+  {
+   "name": "Lettuce root aphid",
+   "type": "pest",
+   "severity": "high",
+   "audience": "core",
+   "symptoms_beginner": "Plants wilt in the heat of the day and just fail to thrive even though you are watering steadily, then slowly decline with no obvious cause above ground. Lift a struggling plant and you find clusters of aphids on the roots under a mass of white, woolly wax. It is easy to mistake for drought or a root disease until you look below the soil.",
+   "organic_treatment_beginner": "Once the aphids are on the roots, no spray will rescue the crop, so the fix is about how you manage the planting rather than treating it. Pull up and remove badly affected plants. Where it has happened, dig the soil over deeply and let it dry out thoroughly before planting lettuce there again, and keep your plants unstressed and well watered so a fast-growing crop can often still finish acceptably.",
+   "prevention_beginner": "Move lettuce around so it does not come back to the same ground each season, and avoid planting it close to Lombardy poplar trees, which are where the aphid spends the winter. Some lettuce varieties are bred to resist root aphid and are worth looking for if this pest keeps showing up in your garden.",
+   "sources": [
+    "uc_ipm",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/lettuce/lettuce-root-aphid/",
+     "verified": "2026-07-31"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/planthealth/ipm/notes_ag/veg-aphids",
+     "verified": "2026-07-31"
+    }
+   },
+   "symptoms_seasoned": "Plants wilt during the heat of the day and fail to thrive despite steady watering, then decline with no obvious cause above ground. Lift a suspect plant and you find clusters of the aphids on the roots under masses of white, woolly wax. The damage is easy to mistake for drought or root disease until you look below the soil.",
+   "cause_seasoned": "The lettuce root aphid, Pemphigus bursarius, feeds on lettuce roots out of sight. It spends winter as eggs on Lombardy poplar, then winged forms migrate to lettuce in early summer, which is why infestations are worst where lettuce grows near those trees.",
+   "cause_beginner": "The lettuce root aphid feeds on lettuce roots out of sight. It spends winter as eggs on Lombardy poplar trees, then winged ones fly to lettuce in early summer, which is why the problem is worst where lettuce grows near those trees.",
+   "organic_treatment_seasoned": "There is no spray that rescues an infested crop once the aphids are on the roots, so control is cultural. Pull and remove badly affected plants. Where the problem has occurred, work the soil deeply and let it dry thoroughly before replanting lettuce there, and keep plants unstressed and well watered so a fast-growing crop can often still finish acceptably.",
+   "prevention_seasoned": "Rotate lettuce so it does not return to the same ground each season, and avoid planting it close to Lombardy poplars, the aphid's overwintering host. Some lettuce varieties carry resistance to root aphid and are worth seeking out if the pest is a recurring problem in your garden."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Downy mildew",
+   "type": "disease",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Pale yellow patches show up on the upper side of the older leaves first, with a downy gray-purple mold underneath them. In cool, wet weather it spreads fast, and the affected areas turn brown and die as it moves up the plant.",
+   "organic_treatment_beginner": "Remove and throw away affected leaves right away, and open the planting up so air moves through and the leaves dry faster. A copper-based spray can help if you use it before the disease takes hold, as a preventive, rather than trying to cure it once it has spread.",
+   "prevention_beginner": "Water at the soil and early in the day so the leaves are not wet overnight, since wet leaves are what this disease needs. Space plants well apart for airflow, and choose resistant varieties, which extension programs rate as the single most effective control. Avoid growing lettuce under cover through fall and winter without good airflow, where the cool, still, humid air is just what the disease likes.",
+   "sources": [
+    "uc_ipm",
+    "umass_ext",
+    "uf_ifas_edis"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/lettuce/downy-mildew/",
+     "verified": "2026-07-31"
+    },
+    "umass_ext": {
+     "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/lettuce-downy-mildew",
+     "verified": "2026-07-31"
+    },
+    "uf_ifas_edis": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS1403",
+     "verified": "2026-07-31"
+    }
+   },
+   "symptoms_seasoned": "Pale yellow patches appear on the upper surface of older leaves first, matched underneath by a downy gray-purple mold. In cool, wet weather it spreads fast, and affected areas brown and die as the infection moves up the plant.",
+   "cause_seasoned": "Downy mildew is caused by Bremia lactucae, an oomycete (a water mold, not a true fungus). It needs cool, damp conditions and water sitting on the leaves to take hold, and its wind-borne spores spread quickly during moist spells. It does not survive in the soil, and because it is not a true fungus, ordinary fungicides aimed at fungi may not touch it.",
+   "cause_beginner": "Downy mildew is caused by an organism called Bremia lactucae, a water mold rather than a true fungus. It needs cool, damp conditions and water sitting on the leaves to take hold, and its spores blow on the wind and spread quickly during wet spells. It does not survive in the soil, and because it is not a true fungus, ordinary fungus sprays may not work against it.",
+   "organic_treatment_seasoned": "Remove and dispose of affected leaves promptly, and open the planting up to improve airflow so leaves dry faster. A copper-based fungicide can help when used preventively, before the disease takes hold, rather than as a cure once it has spread.",
+   "prevention_seasoned": "Water at soil level and early in the day so leaves are not wet overnight, since leaf wetness is what the pathogen needs. Space plants generously for airflow, and choose resistant varieties, which extension programs rate as the single most effective control. Avoid growing under cover through autumn and winter without good ventilation, where the cool, still, humid air is ideal for it."
+  },
+  {
+   "name": "Tipburn",
+   "type": "disorder",
+   "severity": "low",
+   "audience": "core",
+   "symptoms_beginner": "Brown, papery scorch appears along the edges of the inner leaves, down in the heart of the plant rather than on the outer leaves. It does not spread from plant to plant, and it shows up most in romaine types and in hot weather.",
+   "organic_treatment_beginner": "There is no fix for leaves that are already scorched. Keep your watering consistent to steady the plant's calcium uptake, and improve airflow around the planting so the inner leaves can release a little more water.",
+   "prevention_beginner": "Avoid forcing soft, fast growth with heavy nitrogen, which outruns the plant's ability to move calcium into the new leaves. Keep moisture even, harvest before heads are fully tight and mature in hot weather, and choose heat-tolerant varieties if summer tipburn keeps being a problem for you.",
+   "sources": [
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/lettuce/tipburn/",
+     "verified": "2026-07-31"
+    }
+   },
+   "symptoms_seasoned": "Brown, papery scorch appears along the edges of the inner leaves, down in the heart of the plant rather than the outer leaves. It does not spread from plant to plant, and it shows up most in cos and romaine types and in hot weather.",
+   "cause_seasoned": "Tipburn is a physiological disorder, not a disease, and it is rarely about low calcium in the soil. Calcium travels through the plant in the stream of water it pulls up and transpires, so it collects in the fast-transpiring outer leaves. The young inner leaves are enclosed in the head where the air is still and humid and they transpire very little, so during rapid growth they cannot draw enough calcium and their edges collapse. Heat and lush, fast growth make it worse.",
+   "cause_beginner": "Tipburn is a growing problem rather than a disease, and it is rarely about a lack of calcium in the soil. Calcium moves through the plant in the stream of water it pulls up and releases through its leaves, so it ends up in the outer leaves that release the most water. The young inner leaves are tucked inside the head where the air is still and humid, so they release very little water and, during fast growth, cannot pull in enough calcium, and their edges collapse. Heat and lush, fast growth make it worse.",
+   "organic_treatment_seasoned": "There is no fix for leaves already scorched. Keep watering consistent to steady the plant's calcium uptake, and improve air movement around the planting so the inner leaves can transpire a little more.",
+   "prevention_seasoned": "Avoid pushing soft, rapid growth with heavy nitrogen, which outruns the plant's ability to move calcium into the new leaves. Keep moisture even, harvest before heads are fully tight and mature in hot weather, and choose heat-tolerant varieties where summer tipburn is a recurring problem."
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "pests": [
+  {
+   "id": "beet-spinach-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move where you grow spinach, beets, and chard each year instead of reusing the same bed. This pest treats all three crops the same way, so rotating the whole group to fresh ground each season helps keep it from picking up where it left off.",
+     "note_seasoned": "The fly overwinters as pupae in the soil beneath last year's host crop, so rotate away from any ground that carried spinach, beets, or chard, treating the three as one rotation unit; a same-family replant hands the emerging spring flight its first host."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull nearby weeds like lambsquarters, which this pest also feeds on. Clearing them before you sow and keeping the bed edges clean removes the backup homes the flies use when your spinach is not there.",
+     "note_seasoned": "Pegomya hyoscyami sustains itself on goosefoot weeds, lambsquarters above all, between crop plantings; clearing those hosts around the bed removes the reservoir that feeds the three to four overlapping generations it can run in a season."
+    },
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Work the soil deeply in spring wherever spinach, beets, or chard grew last year. The pest waits out winter there as pupae, the resting stage buried in the soil, and deep cultivation buries them so fewer flies come up to start the year.",
+     "note_seasoned": "Deep spring cultivation of last year's host ground buries the overwintering pupae ahead of the emergence around mid-May, thinning the first flight that seeds every later generation."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and destroy any leaf showing pale tunnels or tan blisters as soon as you see it, before the maggot inside can drop to the soil. Crushing the maggot right inside the leaf works too.",
+     "note_seasoned": "Removing mined leaves before larvae exit to pupate is the control that actually reaches this pest, since the larva spends its feeding life sealed between the leaf surfaces; crushing larvae in the mine is just as effective, and either way the leaf was already unmarketable."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put a light row cover or insect netting over the bed right after sowing so the flies cannot reach the leaves to lay their eggs. No eggs on the leaves means no maggots inside them.",
+     "note_seasoned": "Exclusion from sowing onward denies females the leaf undersides where they set their rows of white eggs; pair it with rotation, because covering ground that hosted the pest last year can trap the emerging flies under the net with the crop."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Do not expect a spray to rescue mined leaves; once a maggot is inside a leaf, sprays do not reach it well. Spinosad has some effect on the youngest maggots, and it belongs alongside picking off mined leaves, not in place of it. Spray at dusk so bees are not out.",
+     "note_seasoned": "Larvae feeding between the leaf surfaces are poorly exposed to insecticides, so cultural removal stays primary; spinosad shows some activity on young larvae before they are deep in the mine. It is toxic to bees while wet and for about a day after, so apply at dusk and keep it off anything in flower."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Heavy feeding pushes out the soft new growth that aphids multiply on fastest, so a lighter hand keeps your plants less inviting from the start.",
+     "note_seasoned": "Excess nitrogen drives the tender flush growth colonies build on, so restrained feeding is the preventive baseline; it matters doubly on spinach because the larger threat is the cucumber mosaic and other viruses aphids vector, not the sap they take."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A light row cover from sowing keeps flying aphids from ever landing on the crop, and the same cover is already doing duty against the leafminer fly.",
+     "note_seasoned": "Row cover excludes incoming winged aphids before colonies establish, which also intercepts the viruses they transmit; on spinach the cover pulls double duty as leafminer exclusion."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Blast the clusters off with a strong jet of water from the hose, aiming up at the undersides of the leaves where they gather. Repeat every few days until you stop finding them, and spray early in the day so the leaves can dry.",
+     "note_seasoned": "A hard water jet dislodges colonies from leaf undersides and growing tips; crinkled savoy foliage hides and holds aphids, so work the spray into the folds and repeat every few days. An early-day pass lets foliage dry before evening."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Make the garden friendly to ladybugs and lacewings, the helpful insects that eat aphids, and let them do part of the patrol. Avoid sprays that would kill them along with the pests.",
+     "note_seasoned": "Conserve ladybugs, lacewings, and parasitoid wasps before reaching for any spray; broad-spectrum materials remove the predator pressure that was keeping colonies small, and scouting the growing tips early lets the predators start while the colony is still catchable."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If they keep building up, spray insecticidal soap directly on the clusters, making sure it coats the undersides of the leaves. It only kills what it touches, so coverage is everything. Repeat every few days, and skip it in heat above 90°F or on drought-stressed plants, since it can burn the leaves.",
+     "note_seasoned": "Soap kills the soft-bodied insects it wets, so coverage of the undersides and the savoy folds decides the result; it takes out soft-bodied beneficials the same way, so confine it to infested growth. Foliage burn is the risk above 90°F or on water-stressed plants."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is another option, used the same way: coat the undersides where the aphids cluster and repeat every few days. Keep it off anything in flower so bees are not exposed, and do not spray in heat above 90°F or on plants that are drought-stressed.",
+     "note_seasoned": "Neem is a low-residue alternative to soap for colonies you can wet directly, sparing beneficials once dry; skip applications above 90°F or on drought-stressed plants, and keep spray and drift off open flowers and any water bees drink."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the bed with row cover from the day you sow. These beetles do their real harm to small seedlings, which cannot outgrow the damage, so keeping the beetles off until the plants are bigger is the main defense.",
+     "note_seasoned": "Exclusion from sowing carries seedlings past the stage where shot-hole feeding stunts or kills them; on a leaf crop the cover also keeps the cosmetic pitting off what you harvest."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "If beetles are thick, a coating of kaolin clay, a fine white clay you spray onto the leaves, makes the plants unappealing to them. Renew the coating as new leaves grow; the goal is simply to get the seedlings big enough to shrug the damage off.",
+     "note_seasoned": "A kaolin particle film repels rather than kills, so maintain the coating on expanding foliage through the vulnerable seedling window, then let it lapse once plants can absorb the feeding."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "For heavy beetle numbers that a cover has not handled, a spinosad spray can knock the pressure down while the seedlings grow past the danger stage. Spray at dusk so bees are not out foraging.",
+     "note_seasoned": "Spinosad is the rescue when pressure outruns exclusion; the aim is bridging the seedling window, not season-long suppression. It is toxic to bees while wet and for about a day after, so apply at dusk and keep it off anything in flower."
+    }
+   ]
+  },
+  {
+   "id": "loopers-armyworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up old, finished plants and plant debris where the moths shelter. Less cover around the bed means fewer moths waiting to lay eggs on your spinach.",
+     "note_seasoned": "Clearing crop debris and spent plantings removes the shelter adult moths use between flights; this is mostly a warm-season and southern pressure, and sanitation lowers what the later rungs have to absorb."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A row cover stops the moths from laying eggs on the leaves in the first place, and since the caterpillars come from those eggs, no eggs means no chewing.",
+     "note_seasoned": "Exclusion breaks the cycle at egg-laying; a cover kept sealed from sowing denies looper and armyworm moths the foliage for the life of the planting."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Check the undersides of leaves for eggs and small caterpillars and pick off any you find. Watch for frass, the dark sawdust-like droppings caterpillars leave, to tell you where they are feeding, and remember that on a crop you eat as leaves, even a little chewing counts.",
+     "note_seasoned": "Scout leaf undersides for eggs and early instars and remove them on sight; frass and ragged holes locate larvae fast, and the tolerance for defoliation on a leaf crop is low enough that early picking pays."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "If picking is not keeping up, spray Bt (Bacillus thuringiensis), a bacteria-based spray that kills caterpillars that eat treated leaves and is low in toxicity to people, pets, and bees. It cannot tell a pest caterpillar from a butterfly one, so treat only the plants with a problem, and spray again after rain washes it off.",
+     "note_seasoned": "Bt must be ingested and works best on young larvae, so time it to early instars and reapply after rain or new growth; it acts on moth and butterfly caterpillars as a group, so confine it to the infested crop rather than spraying by calendar."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad is a stronger organic option if Bt and picking have not held the line, and it also works best on small, young caterpillars. Spray at dusk so bees are not foraging.",
+     "note_seasoned": "Where Bt lags, spinosad hits the same young-larva window with more force; it is toxic to bees while wet and for about a day after, so apply at dusk and keep it off flowering plants."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choosing a resistant variety is the main defense against this disease, so start there at seed-buying time. If downy mildew has shown up in your garden, treat resistance as a requirement, not a bonus.",
+     "note_seasoned": "Resistant cultivars are the primary tool; the pathogen runs many physiological races that overcome resistance, so choose the broadest race package available rather than trusting any single resistance label."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Grow spinach in a different spot each year. The disease can carry over where spinach grew before, so moving the crop lets you start clean.",
+     "note_seasoned": "Peronospora effusa survives on debris and as oospores, so rotate away from former spinach ground for several years rather than one."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants out so air can move through and the leaves dry faster. Crowded, damp plantings are exactly where this disease takes off.",
+     "note_seasoned": "Long leaf wetness and high humidity drive infection, so spacing that shortens drying time attacks the disease's core requirement; crowding is an outsized lever on spinach because the crop already grows in the cool, damp weather the pathogen prefers."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the leaves. This disease spreads through wet leaves and splashing water, so keeping the foliage dry slows it down.",
+     "note_seasoned": "Spores are splash- and wind-dispersed and need leaf wetness to infect, so drip or base watering in place of overhead irrigation removes the one wetness period you actually control."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove the worst-affected leaves and clean up spinach debris. This disease is hard to stop once it gets going, so taking out infected leaves early matters more than any cure.",
+     "note_seasoned": "Rogue out sporulating leaves and clear the debris that carries the pathogen forward; once it is established in humid weather there is no rescue, so sanitation is about protecting the rest of the stand and the next planting."
+    }
+   ]
+  },
+  {
+   "id": "white-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where white rust turns up regularly in your area, choose a resistant variety at seed-buying time rather than planning to fight it on susceptible plants.",
+     "note_seasoned": "Where Albugo occidentalis is endemic, notably the southern and south-central states, resistant cultivars are the anchor control; the cultural rungs support that choice rather than replace it."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your spinach to a new spot each year so the disease does not carry over from an earlier infected planting.",
+     "note_seasoned": "The pathogen survives on debris, so rotating away from former spinach ground denies it the carryover bridge into the next crop."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so air moves through and the leaves dry quickly. Cool, moist conditions are what let white rust ruin a crop fast.",
+     "note_seasoned": "Infection rides leaf wetness under cool nights and warm days, so spacing that shortens the wet period works on the same weakness the watering rungs do."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line and avoid wetting the leaves, since the disease spreads on wet foliage and splashing water.",
+     "note_seasoned": "Splash- and wind-dispersed spores need free water on the leaf to infect, so drip irrigation in place of overhead removes the controllable half of that requirement."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off and destroy leaves with the white blisters as soon as you spot them, and clear spinach debris at season's end. As with downy mildew, stopping it early beats trying to cure it.",
+     "note_seasoned": "Remove pustuled leaves and post-harvest debris; with chemical options limited for the home garden, sanitation and the other cultural rungs are the whole in-season toolkit."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait until the soil is no longer cold and wet, sow fresh seed at the right depth, and go easy on the watering. Seedlings that come up fast escape; slow ones sit in the danger zone.",
+     "note_seasoned": "Everything here works through emergence speed: fresh viable seed, correct depth, soil warm enough for quick germination, and restrained watering all shorten the window in which the soil fungi can take the stand."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sow into well-drained ground. Cold, soggy soil is where damping-off strikes, so fix a wet bed before you plant, not after seedlings start collapsing.",
+     "note_seasoned": "The soilborne Pythium, Rhizoctonia, and Fusarium species behind damping-off thrive in saturated soil, so drainage work on heavy or low-lying ground removes their favored conditions before any seed goes in."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no saving a seedling once it flops over at the soil line, so pull collapsed ones and discard them rather than leaving them in the bed.",
+     "note_seasoned": "Affected seedlings are unrecoverable; remove them promptly, and put the real effort into the prevention rungs above, since there is no cure once collapse begins."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where this wilt is a known problem in your soil, resistant varieties help, so look for them at seed-buying time.",
+     "note_seasoned": "Where F. oxysporum f. sp. spinaciae is established, resistant cultivars are the planting-time hedge; they help rather than solve, so run them alongside long rotation and scheduling spinach for the cool side of the season, since symptoms intensify as soil warms."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow spinach in the same spot year after year. This fungus lives in the soil for years, so a long break from spinach in that bed is the point, not a one-year shuffle.",
+     "note_seasoned": "The pathogen persists in soil for years, so only long rotations away from spinach work on the soilborne population; once established it limits where the crop can be grown at all."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure once a plant wilts from this disease, so pull infected plants and destroy them rather than leaving or burying them, then put your effort into rotation and timing for next season.",
+     "note_seasoned": "Roguing wilted plants does not save the stand but removes infected tissue that feeds the soil population; management happens between seasons through rotation and timing, not within one."
+    }
+   ]
+  }
+ ]
+}

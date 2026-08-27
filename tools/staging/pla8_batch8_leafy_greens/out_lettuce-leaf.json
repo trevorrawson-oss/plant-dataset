@@ -1,0 +1,136 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease up on nitrogen fertilizer. Heavy feeding pushes out soft, sappy new leaves, and that tender growth is exactly what aphids feed on, so an over-fed plant draws far more of them.",
+     "note_seasoned": "High nitrogen drives the lush, soft flush that colonies feed and build on fastest, so feeding for steady growth rather than a forced one leaves the crop markedly less attractive to founding aphids."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet of water from the hose, working it up under the leaves where they cluster. This dislodges most of them, and they rarely find their way back onto the plant.",
+     "note_seasoned": "A strong water jet over leaf undersides dislodges the bulk of a colony, and displaced aphids rarely re-establish. It is the first move before any spray, and worth repeating as new clusters appear on fresh growth."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let the helpful insects do the work. Ladybugs, lacewings, and tiny parasitic wasps keep small infestations in check on their own. Feed them by planting flowers like marigolds and nasturtiums nearby and letting some dill or cilantro bloom.",
+     "note_seasoned": "Ladybugs, lacewings, and parasitoid wasps hold light infestations without intervention. Interplanted marigolds and nasturtiums plus flowering umbellifers such as dill and cilantro provision the wasps and predators that do most of the real control."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For aphids that remain after a water blast, spray insecticidal soap directly onto them and cover the undersides of the leaves. It works only where it actually lands on an insect, not by being eaten, so coverage is the whole job.",
+     "note_seasoned": "Soap is strictly a contact material, killing by disrupting the insect's outer membrane rather than through ingestion, so results track coverage of the leaf undersides where colonies sit, and any aphid the spray misses is unaffected."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is the other spray choice and works the same way, only where it touches the aphid, so here too the job is wetting the undersides of the leaves where they hide.",
+     "note_seasoned": "Neem fills the same contact niche as soap on this pest, acting through the insect's outer membrane on direct hit rather than by being eaten, so placement into the colonies decides the outcome more than the choice between the two materials."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take away their daytime hiding spots. Pull mulch back from around seedlings and clear the boards, pots, and leaf litter near the bed. Rake a strip of ground bare around the planting; crossing it slows them down on their way in.",
+     "note_seasoned": "Removing daytime harborage is the base layer: mulch pulled back from seedlings, boards, pots, and litter cleared from near the bed, and a bare, cultivated strip around the planting that slows their nightly approach."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out after dark with a flashlight and pick them off by hand. That is when they come out to feed, so it is the one time you will actually find them up on the leaves.",
+     "note_seasoned": "Hand collection by flashlight after dark removes feeders directly, timed to their nocturnal activity; expect the heaviest pickings during wet spells, when feeding pressure peaks."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Set beer traps with the rim level with the soil so slugs fall in and cannot climb back out, and refresh them every couple of days.",
+     "note_seasoned": "Beer traps set flush with the soil surface capture directly; renew them every few days so they keep drawing slugs off the crop."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "If they keep chewing through, scatter an iron-phosphate bait, sold as Sluggo and similar. It is approved for organic gardens, and while it is still a pesticide, it carries less risk around pets and wildlife than the older metaldehyde baits. It stops the slugs feeding so they die within a few days. Spread it in the evening after watering, when slugs are most active, for the best results.",
+     "note_seasoned": "Iron-phosphate bait, organic-approved and safer around children, pets, birds, fish, and other wildlife than metaldehyde though still a pesticide, disrupts the gut so feeding stops and death follows within a few days. Scatter it in the evening after irrigation, when activity is highest, to back up the traps and harborage removal above."
+    }
+   ]
+  },
+  {
+   "id": "lettuce-root-aphid",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your lettuce around the garden so it does not come back to the same ground each season. This pest attacks below the soil, and rotation keeps a new planting away from a spot where it struck before.",
+     "note_seasoned": "Rotate lettuce off ground that carried it the previous season. With no spray able to reach a root infestation, denying the pest a repeat host in the same bed is one of the few levers available."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If this pest keeps showing up in your garden, look for lettuce varieties bred to resist root aphid at seed-buying time. They are worth seeking out.",
+     "note_seasoned": "Cultivars carrying root aphid resistance exist and are worth seeking out wherever the pest recurs, since once aphids are established on the roots nothing applied to the crop rescues it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull up badly affected plants and remove them from the garden. Once the aphids are on the roots, no spray will rescue that plant, so taking it out is the useful move.",
+     "note_seasoned": "Rogue out and remove heavily infested plants. With the colony feeding on the roots under its white, woolly wax, removal of failing plants is the direct in-season response, since no spray reaches a root infestation."
+    },
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Where the problem struck, dig that soil over deeply and let it dry out thoroughly before you plant lettuce in the same spot again.",
+     "note_seasoned": "Between crops, work an affected bed deeply and let it dry thoroughly before lettuce returns to it. Control of this pest is cultural through and through; the soil work, not any treatment, is what stands between one infested planting and the next."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Pick resistant varieties when you buy seed. Extension programs rate this as the single most effective control for downy mildew, so it is the first decision to get right if the disease has hit your lettuce before.",
+     "note_seasoned": "Cultivar resistance is rated by extension programs as the single most effective control against Bremia lactucae; where the disease has appeared before, select for it at seed-buying time ahead of every in-season measure."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants generous spacing so air moves through and the leaves dry quickly. Skip growing lettuce under cover through fall and winter unless the space has good airflow, because cool, still, humid air is just what this disease likes.",
+     "note_seasoned": "Generous spacing shortens the leaf-wetness periods the pathogen needs, and the same logic argues against unventilated protected culture in autumn and winter, where cool, still, humid air is ideal for it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the leaves, and do it early in the day so the foliage is not sitting wet overnight. Wet leaves are what this disease needs to get started.",
+     "note_seasoned": "Base irrigation early in the day denies the overnight leaf wetness infection depends on. The pathogen does not survive in the soil, so foliar moisture, not the ground, is the lever to manage."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off any leaf showing the pale patches as soon as you spot it and get it out of the garden. Thinning the planting at the same time helps air move through so the remaining leaves dry faster.",
+     "note_seasoned": "Prompt removal and disposal of symptomatic leaves cuts the sporulating surface underneath them, and opening the stand improves drying. Both slow spread through the cool, wet spells when the wind-borne spores move fastest."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper-based spray can help if you put it on before the disease takes hold, as a preventive. It will not cure a planting where downy mildew has already spread.",
+     "note_seasoned": "Copper is preventive only here: applied before the disease takes hold it can help, but it does not act as a cure once spread has begun. Note that Bremia is an oomycete, a water mold rather than a true fungus, so ordinary fungicides aimed at fungi may not touch it."
+    }
+   ]
+  },
+  {
+   "id": "tipburn",
+   "type": "physiological",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep your watering steady instead of swinging between soaked and bone dry. Calcium moves through the plant in the water it pulls up, so even moisture steadies the supply reaching the young inner leaves where tipburn strikes.",
+     "note_seasoned": "Consistent soil moisture steadies transpiration-driven calcium delivery. The disorder is rarely about low soil calcium: the enclosed inner leaves transpire too little during rapid growth to draw their share, so smoothing the water supply does more than adding calcium."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If tipburn keeps showing up in summer, choose heat-tolerant varieties for your next sowing. Hot weather is when this disorder hits hardest, and romaine types show it most.",
+     "note_seasoned": "Heat-tolerant cultivars are the seed-time lever where summer tipburn recurs, since heat plus lush, fast growth is what outruns calcium delivery to the enclosed heart leaves, and cos and romaine types are the most prone."
+    }
+   ]
+  }
+ ]
+}

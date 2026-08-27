@@ -4,6 +4,17 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-08-27 -- PLA-8 batch 8, THE LEAFY GREENS: the fall block opens (`f8678ade` -> `043a7272`)
+
+ONE promote (`tools/promote_pla8_batch8.py`): spinach/arugula/lettuce-leaf/bok-choy gain ids, types and ladders -- 32 problems, 153 rungs, NO mint, methods and sources byte-identical. Roster laddered **33 -> 37**. First batch of the fall-season block (Trevor's 2026-08-27 ruling: order by SEASON; plan in `docs/2026-08-27-pla8-fall-season-batch-plan.md`).
+
+- **The copper split on downy mildew is prose-driven and pinned BOTH ways:** lettuce + bok-choy carry copper (their prose recommends it outright); spinach's rung was authored then DROPPED by the read ("limited efficacy" inside a cultural-control-dominates sentence); arugula's prose never names it. **Lettuce's downy ladder refuses crop_rotation** -- its own prose says the pathogen does not survive in soil; spinach/arugula keep rotation (debris + oospores).
+- **Ids: two deliberate reuses + one convergence.** beet-spinach-leafminer reused from swiss-chard (same pest, the measured divergence pair); cabbage-root-maggot/clubroot/black-rot reused from broccoli; both "Cabbage caterpillars" converge on `cabbageworms`; `cabbage-aphids` minted distinct from `aphids` (Brevicoryne specialist). FINDING FILED, not fixed: swiss-chard ships singular `flea-beetle` vs the roster's `flea-beetles` (12 crops), pre-existing.
+- **DE stripped and pinned out** (a lettuce rung had folded a diatomaceous-earth ring into slug_traps_barriers; DE stays deliberately unminted); batch 7's neem-on-flea-beetles refusal held and ships as a refusal-spec; white-rust (x3) and damping-off (x2) order-normalized per batch 6.
+- **No mint needed:** kaolin_clay, slug_traps_barriers, stem_collars, raise_soil_ph, certified_clean_stock and wet_foliage_discipline all existed with the right scopes. Recorded gaps are the deliberate ones (DE, trap cropping) plus tipburn's physiological-illegal airflow/nitrogen advice (the blossom-end-rot shape) and a mis-pointed spinach fusarium anchor (cornell URL points at the downy factsheet -- source-truth finding).
+- **Harness: 43/43 caught FIRST RUN** (preflight 44/44, sentinel RED) -- second consecutive zero-survivor first run under VerifyPostIsDriven-first. **Gauntlet:** gate_all 121/121; whole_crop_gate PASS x6; control_ladder_gate 0; register_completeness PASS; release_verify no new violations (reference re-run with basil after lettuce-leaf, the DEFAULT reference, turned out to be in the batch); COMPACT preserved.
+- Commit awaiting Trevor. Next: batch 9, the roots (turnip, radish, carrot, beet).
+
 ## 2026-08-27 -- PLA-8 batch 7, THE TOMATOES: 4 crops, 154 rungs, the splash_barrier_mulch mint (`674fab25` -> `f8678ade`)
 
 ONE promote (`tools/promote_pla8_batch7.py`): beefsteak/cherry/grape/roma-tomato gain ids, types and ladders. 34 problems, 154 rungs, 34 ids minted -- every one on the roster convention heirloom-tomato already ships, so the join keys are uniform across all five tomatoes. `splash_barrier_mulch` MINTED (catalog 56 -> 57): all four authoring agents independently hit the same wall (every crop's early-blight AND septoria prose commands splash mulching; no legal key carried it), both UMN anchors read live, 8 rungs pinned directly after water_at_the_base. Roster laddered **29 -> 33**.
