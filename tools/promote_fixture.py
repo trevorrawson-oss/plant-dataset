@@ -94,6 +94,8 @@ COMMIT_FOR = {
     # PLA-8: the chlorothalonil backfill, 9 rungs on 6 certified crops.
     '1330fe5d7b1533eaa165b0a48ddad1c8c9ef0335aa3db74f2c545bc447046781': '2e86279',
     '04b5aa69b2f1fd209d84c4affb975cb78df0ee59657f9259b2896edbbe11c5f9': '4afab82',
+    # PLA-8: the chemical-cohort close-out; the catalog audit declared closed.
+    '674fab251aec7063ffa970f8c81e6156ab6fdbcab1a5800d9a1c93627cdcd740': 'b0c84a1',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
