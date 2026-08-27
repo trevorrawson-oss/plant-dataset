@@ -1,0 +1,208 @@
+{
+ "pests": [
+  {
+   "id": "beet-spinach-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give beets a bed away from wherever beets, Swiss chard, or spinach grew last season. The same flies go after all three crops, so a fresh spot each year keeps them from picking up right where they left off.",
+     "note_seasoned": "Rotate beets away from ground that carried beets, chard, or spinach the previous season, treating the three hosts as one rotation unit. The shared leafminers are a main reason these relatives are kept apart in the garden rather than replanted in place."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull weeds like lambsquarters around the bed, since the leafminer uses them too. Clearing those backup plants and keeping the bed edges clean gives the flies fewer places to keep going between crops.",
+     "note_seasoned": "Lambsquarters and related weeds host the same leafminers, so clearing them from the bed and its margins removes the bridge that carries the several short generations across a season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out old crop leaves and debris at the end of the season, and pull off the first tunneled leaves the moment you see them. Put mined leaves in the trash, not the compost, so the maggots inside cannot finish growing.",
+     "note_seasoned": "Clearing crop debris removes overwintering habitat, and removing the first mined leaves promptly, destroyed rather than composted, takes larvae out of the population before they mature and breaks the cycle early."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Lay a row cover, a light fabric that lets in light and water but keeps insects out, over the bed right at sowing. If the flies cannot land on the leaves to lay their eggs, no tunnels get started, and this is the most effective home defense.",
+     "note_seasoned": "Cover the bed at sowing, ahead of the egg-laying flights, and keep it in place while plants are young. Exclusion is the most effective home defense here because it denies females the leaf undersides where they set their eggs."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Tiny wasps that hunt leafminer maggots are usually already at work in your garden, and they often keep the numbers down on their own. Skip sprays that kill a wide range of insects so these helpers stay in the bed; you rarely need a spray for this pest anyway.",
+     "note_seasoned": "Naturally occurring parasitic wasps usually hold leafminer populations in check, which is much of why insecticide is rarely warranted in a home garden. Most sprays cannot reach larvae shielded inside the leaf, and a broad application tends to cost more in parasitoids than it removes in pest."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up old plant debris in and around the bed at the end of the season. The beetles spend the winter in garden trash, so less shelter means fewer of them waking up next to your seedlings in spring.",
+     "note_seasoned": "Adults overwinter in garden debris, so end-of-season cleanup of the bed and its surroundings trims the local population that emerges onto tender spring growth."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Where the beetles hit hard, you can sow a little later, or sow a few small batches at different times, so at least some seedlings miss the worst spring wave. Once beets are past the seedling stage they shrug off most of the feeding.",
+     "note_seasoned": "Pressure concentrates on tender growth in the spring flush, so where it runs severe, delaying or staggering sowings moves the vulnerable seedling window past the peak. The flush shifts with region and season, so confirm the timing locally."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the seedbed with a row cover, a light fabric barrier, for the first weeks after sowing. Keeping the beetles off while the plants are tiny is the most reliable protection, and bigger plants can handle the nibbling.",
+     "note_seasoned": "Excluding the beetles through the seedling stage is the most reliable defense. Damage on established plants is mostly cosmetic, so the cover has done its work once plants are past the vulnerable window."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "If beetles are swarming young plants, dust the leaves with kaolin clay, a fine natural clay powder that makes the leaves unappealing to them. Keep seedlings well watered and growing fast at the same time, since vigorous plants outgrow the damage, and grown beets rarely need any treatment.",
+     "note_seasoned": "Where pressure runs high on seedlings, a kaolin clay coating deters feeding while the plants grow through the vulnerable stage. Pair it with steady water so unstressed seedlings outgrow the injury; mature plantings seldom justify treatment."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Heavy feeding pushes out soft, lush leaves, which is exactly the growth aphids multiply on fastest, so a moderate hand keeps the outbreak from getting its start.",
+     "note_seasoned": "Populations build fastest on lush, over-fertilized growth, so restrained nitrogen removes the flush of soft tissue that fuels a colony's expansion."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Keep the weeds down near the bed. Winged aphids fly in from weeds and other plants, so fewer weedy hosts nearby means fewer new colonies landing on your beets.",
+     "note_seasoned": "Winged forms move in from weeds and neighboring crops, so controlling the weedy hosts around the planting cuts the supply of colonists reaching the foliage."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a strong stream of water from the hose, aiming at the undersides of the leaves where they gather. In a home garden this alone is often enough.",
+     "note_seasoned": "A strong water jet dislodges colonies from the leaf undersides and is often sufficient in a home planting; repeat as new clusters appear on fresh growth."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and tiny wasps that attack aphids usually bring the numbers down for you. Help them by not using sprays that kill a wide range of insects, and check the undersides of leaves now and then so you catch colonies while they are small.",
+     "note_seasoned": "Natural enemies, including lady beetles, lacewings, and parasitic wasps, usually collapse colonies on their own, so conserving them by avoiding broad-spectrum sprays does most of the work. Scout new growth and leaf undersides so colonies are found small, which matters doubly since aphids can transmit virus diseases."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the helpers are not keeping up, spray insecticidal soap, a mild soap-based product made for plants, directly onto the aphids on the undersides of the leaves. It only works where it touches them, so coverage is what counts.",
+     "note_seasoned": "Where natural enemies are not holding, insecticidal soap applied to the leaf undersides is effective on contact; thorough coverage of the colonies determines the result."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a refined oil spray for plants, is the other option that works when it coats the aphids directly. Spray the undersides of the leaves where they cluster, and skip it in high heat or on drought-stressed plants.",
+     "note_seasoned": "Horticultural oil sprayed to the undersides of the leaves controls the colonies it wets, on the same footing as soap here; both are contact materials, so coverage governs, and neither leaves the broad-spectrum residue that takes out the natural enemies."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "cercospora-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If this disease shows up year after year, start at seed-buying time and pick a variety described as tolerant of Cercospora leaf spot. Tolerant means it holds up better, not that it cannot catch the disease.",
+     "note_seasoned": "Where the disease recurs, choose tolerant varieties at ordering time; tolerance reduces severity rather than conferring immunity, so it sits under the cultural steps rather than replacing them."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move beets, along with their cousins chard and spinach, to a different bed and keep them out of the old spot for two to three years. The fungus waits in the old bed, so replanting there hands it a fresh start.",
+     "note_seasoned": "Rotate beets, chard, and spinach as one unit out of the bed for two to three years. The fungus survives on infected beet debris and related weeds, so a same-host replant reconnects the carryover with the crop."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-spotted leaves and throw them away, and clear out old beet leaves and debris at the end of the season. Leaves already covered in spots cannot be cured, so removing them slows the spread to the rest.",
+     "note_seasoned": "Spotted tissue does not recover; removing badly infected leaves during the season, then clearing and destroying crop debris after it, reduces the inoculum available to move onto healthy foliage."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Thin your beets and give the rows room so air moves through and the leaves dry quickly after rain. The fungus needs warm, humid conditions and leaves that stay wet to build up.",
+     "note_seasoned": "Space and thin for airflow so the canopy dries fast. Disease builds under prolonged leaf wetness in warm, humid weather, fastest in roughly the 77 to 95°F range, so shortening wet periods works directly against it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil, not over the leaves, and do it in the morning so everything dries fast. Rain and overhead watering are what splash the fungus from old debris up onto the leaves.",
+     "note_seasoned": "The fungus reaches foliage by splash from debris, so basal watering in the morning, rather than overhead irrigation, removes a dispersal route and shortens the leaf wetness the disease depends on."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In a very wet season you can add a copper fungicide, a copper-based spray sold for vegetable diseases, starting early at the first spots. It can help slow the spread, but it cannot cure spotted leaves, and the watering and spacing steps still do most of the work.",
+     "note_seasoned": "In a wet season a copper product labeled for vegetables can suppress spread if begun early; it protects clean tissue rather than rescuing spotted leaves, and cultural control carries most of the load in a home garden."
+    }
+   ]
+  },
+  {
+   "id": "common-scab",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move beets to a new bed each year, away from where beets, chard, or spinach grew before. The scab germ lives in the soil, so fresh ground lowers the odds next year's roots pick it up. This year's scabby roots are still fine to eat once peeled.",
+     "note_seasoned": "Streptomyces scabies is soilborne, so rotating away from beets and their relatives reduces recurrence. There is no in-season rescue; affected roots remain edible once the corky skin is peeled away, and the rest of the fix is in how the next crop is grown."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait to sow until the soil is warm enough rather than cold and soggy, use fresh seed, and do not plant too deep. Soaking beet seed for a day before sowing helps it come up faster, which shortens the risky stretch when soil organisms can attack it. Then keep the bed damp but not soaking wet.",
+     "note_seasoned": "Fresh seed sown at a modest depth into warm-enough, well-drained ground, with restrained watering after, narrows the window the pathogens exploit. A day's presoak speeds the slow-germinating beet seedball through emergence, which is where much of this crop's exposure lies."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "If your soil is heavy and stays wet, improve the drainage or sow into a raised bed. The organisms that kill sprouting seeds thrive in cool, soggy ground, so better-drained soil takes away their advantage.",
+     "note_seasoned": "Pythium and Rhizoctonia are favored by cool, saturated, poorly drained soil, so improving drainage, or moving to raised beds on heavy ground, removes the conditions the losses depend on."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "If seedlings start flopping over, clear the fallen ones away and hold off on watering so the soil surface can dry out some. Seedlings that have collapsed will not recover, so the goal is to slow the attack on their neighbors.",
+     "note_seasoned": "Once damping-off appears, remove collapsed seedlings and pause irrigation to let the surface dry somewhat, which slows the pathogens. Affected seedlings are lost, so the move protects the rest of the stand; there is no effective home cure once it takes hold."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew keeps showing up, choose a variety listed as tolerant when you buy seed. Tolerant plants hold up better in the cool, wet weather this disease favors.",
+     "note_seasoned": "Where the disease recurs, select tolerant varieties at seed-buying time as the base layer under the cultural steps."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Grow beets in a different spot from where beets, chard, or spinach were last year. The disease survives on old plant debris and on those related crops, so moving the planting breaks that link.",
+     "note_seasoned": "The pathogen survives on crop debris and related hosts, so rotating beets, chard, and spinach as a group away from last year's ground separates the new planting from its carryover."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and throw away the worst-affected leaves, the ones with fuzzy gray or purple growth underneath, and clean up old plant debris. Infected leaves cannot be cured, so removing them slows the spread.",
+     "note_seasoned": "Infected tissue does not recover; removing affected leaves and clearing crop debris reduces the inoculum available to spread in moist air and splashing water."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Thin the plants and space the rows so air moves through and the leaves can dry out. This disease works in cool, damp conditions, so helping the bed dry is most of the battle.",
+     "note_seasoned": "Space and thin for airflow so foliage dries quickly. Infection runs best in cool, moist conditions, roughly 45 to 59°F with little infection above about 68°F, so shortening damp periods strikes at its working range."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of sprinkling over the leaves. The disease spreads in damp air and splashing water, so dry leaves give it much less to work with.",
+     "note_seasoned": "Basal watering keeps foliage dry and removes the splash dispersal the pathogen uses, which matters most during the cool, moist spells that favor infection."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the beet bed while the leaves are wet from rain, dew, or watering. Brushing through wet plants helps carry the disease from leaf to leaf.",
+     "note_seasoned": "Avoid working among wet plants; handling damp foliage moves the pathogen through the planting, so time weeding and harvest for when the canopy is dry."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper fungicide, a copper-based spray sold for vegetable diseases, is a last resort for a stretch of weather that stays wet. Keeping the leaves dry does most of the work, and copper cannot cure leaves that are already infected.",
+     "note_seasoned": "Copper is a last resort in a persistently wet season, applied to protect rather than to cure; cultural drying measures remain the mainstay for a home crop."
+    }
+   ]
+  }
+ ]
+}

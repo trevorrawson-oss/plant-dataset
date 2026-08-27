@@ -1,0 +1,205 @@
+{
+ "slug": "beet",
+ "name": "Beet",
+ "category": "Root Vegetables",
+ "pests": [
+  {
+   "name": "Leafminer (beet and spinach leafminer)",
+   "type": "pest",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_seasoned": "Pale, winding or blotchy tunnels appear between the upper and lower surfaces of the leaves, where the larvae feed inside the leaf. Early adult feeding leaves the foliage stippled with small white spots. Because beets are grown for both the root and the greens, the damage matters most on the leaves: heavily mined leaves are blotched, brown, and unappetizing, though the root itself sizes up unharmed unless an early planting is severely defoliated.",
+   "symptoms_beginner": "You will see pale, squiggly trails or blotchy patches inside the leaves, with the green skin of the leaf intact above and below the tunnel. Hold a leaf to the light and you can see the larva working inside. Since you eat beet greens too, this mainly ruins the leaves, the root underground usually grows fine.",
+   "cause_seasoned": "The larvae (small yellow maggots) of leafmining flies, chiefly the beet and spinach leafminer (Pegomya species) and the vegetable leafminers (Liriomyza species). The adult is a small black fly that lays eggs on the undersides of leaves; the hatching maggots tunnel within the leaf. The same leafminers attack beet's close relatives Swiss chard and spinach, which is one reason these crops are rotated apart. Generations are short and several can occur per season.",
+   "cause_beginner": "The young (maggots) of small flies called leafminers. The adult fly lays tiny eggs on the underside of the leaves, and the maggots that hatch tunnel inside. The same pest goes after Swiss chard and spinach, beet's close cousins, so it helps not to plant those right next to each other. They can have several generations in a season.",
+   "organic_treatment_seasoned": "Pick off and destroy mined leaves as they appear (do not compost them), which removes the larvae before they mature. Leafminers rarely require insecticide in a home garden, and most sprays are ineffective because the larvae are protected inside the leaf; keeping plants vigorous with even moisture lets them outgrow light damage. Naturally occurring parasitic wasps usually keep populations in check.",
+   "organic_treatment_beginner": "Pick off and throw away (do not compost) any leaves with trails in them, which gets rid of the maggots inside before they grow up. Sprays usually do not work because the pest is tucked inside the leaf, and you rarely need them. Keep the plants healthy and well watered so they grow past light damage, and let the helpful wasps that hunt leafminers do their work.",
+   "prevention_seasoned": "A floating row cover laid over the bed at sowing keeps the egg-laying flies off the seedlings, which is the most effective home defense. Rotate beets away from where beets, chard, or spinach grew last season, clear crop debris and weed hosts such as lambsquarters, and remove the first mined leaves promptly to break the cycle.",
+   "prevention_beginner": "A row cover, a light fabric laid over the bed right after planting, keeps the flies from laying eggs on your seedlings and is the best home defense. Also move beets away from where you grew beets, chard, or spinach last year, clear out old leaves and weeds like lambsquarters that the pest also uses, and pull off the first trailed leaves you see.",
+   "sources": [
+    "uc_ipm",
+    "umd_ext",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "http://ipm.ucanr.edu/PMG/GARDEN/VEGES/PESTS/vegleafminers.html",
+     "verified": "2026-06-29"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+     "verified": "2026-06-29"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Flea beetle",
+   "type": "pest",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_seasoned": "Tiny, round shot-holes and pits riddle the leaves, heaviest on young seedlings, giving the foliage a sandblasted look. The small dark beetles jump like fleas when disturbed. Damage is mostly cosmetic on established plants but can stunt or kill seedlings when populations are high, and it disfigures leaves grown for greens.",
+   "symptoms_beginner": "The leaves get covered in tiny round holes and pits, like buckshot, worst on young seedlings. The beetles themselves are small and dark and hop away like fleas when you come near. On big plants it is mostly a looks problem, but on tiny seedlings heavy damage can stunt or kill them.",
+   "cause_seasoned": "Several species of small leaf-feeding flea beetles whose adults chew the characteristic pits and holes. They overwinter in garden debris and become active in spring, with the heaviest pressure on tender new growth in warm, dry weather. Beet, chard, and spinach are all hosts.",
+   "cause_beginner": "Small jumping beetles called flea beetles that chew the holes. They spend winter in garden trash and come out in spring, hitting tender young plants hardest in warm, dry weather. They feed on beets, chard, and spinach.",
+   "organic_treatment_seasoned": "Healthy, fast-growing plants outgrow flea beetle feeding, so keep seedlings well watered and unstressed. Where pressure is high, treat the leaves with kaolin clay or an insecticidal product labeled for vegetables, and clear nearby weedy hosts. Mature beets seldom need treatment.",
+   "organic_treatment_beginner": "Keep seedlings well watered and growing fast and they will usually outgrow the damage. If beetles are swarming young plants, you can dust the leaves with kaolin clay or use a vegetable-labeled product, and clear out weeds nearby. Grown beets rarely need anything.",
+   "prevention_seasoned": "A floating row cover over the seedbed is the most reliable defense, excluding the beetles during the vulnerable seedling stage. Clean up garden debris where adults overwinter, and delay or stagger sowings to avoid the peak spring flush where it is severe.",
+   "prevention_beginner": "A row cover over the seedbed during the early weeks is the best protection, keeping the beetles off while the plants are small. Clean up old plant debris where the beetles spend winter, and you can stagger your plantings to dodge the worst spring wave.",
+   "sources": [
+    "uc_ipm",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/beet/index.html",
+     "verified": "2026-06-29"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Aphids",
+   "type": "pest",
+   "severity": "low",
+   "audience": "core",
+   "symptoms_seasoned": "Clusters of small soft-bodied insects, often green or black, collect on the undersides of leaves and on new growth, leaving leaves curled, yellowed, and sticky with honeydew that can blacken with sooty mold. Beyond direct feeding, aphids can transmit virus diseases, so colonies on beet foliage are worth removing early.",
+   "symptoms_beginner": "Little soft insects, usually green or black, gather in clusters on the undersides of leaves and on new growth. Leaves curl and yellow and turn sticky from the sugary honeydew the aphids leave behind, which can grow a black sooty mold. Aphids can also spread plant viruses, so it is worth knocking them back early.",
+   "cause_seasoned": "Several aphid species, including the green peach aphid and bean aphid, that feed on beet sap. Populations build fastest in mild weather and on lush, over-fertilized growth, and winged forms move them in from weeds and other crops.",
+   "cause_beginner": "Sap-sucking aphids (such as the green peach aphid and bean aphid). They multiply fast in mild weather, especially on soft, over-fertilized growth, and fly in from weeds and other plants.",
+   "organic_treatment_seasoned": "A strong jet of water knocks colonies off the leaves and is often enough in a home garden. Natural enemies (ladybugs, lacewings, parasitic wasps) usually bring numbers down; where needed, insecticidal soap or horticultural oil sprayed on the undersides of leaves is effective. Avoid over-fertilizing with nitrogen, which fuels aphid buildup.",
+   "organic_treatment_beginner": "Spray the colonies off with a strong stream of water, which often does the trick. Ladybugs and other helpers usually take care of the rest; if not, insecticidal soap or horticultural oil on the undersides of the leaves works well. Do not over-feed with nitrogen, which just grows more aphids.",
+   "prevention_seasoned": "Encourage beneficial insects by avoiding broad-spectrum sprays, keep plants from being pushed with excess nitrogen, and control nearby weeds that host aphids. Inspect new growth and the undersides of leaves so colonies are caught small.",
+   "prevention_beginner": "Let helpful bugs like ladybugs live in your garden by not spraying broadly, go easy on nitrogen fertilizer, and keep weeds down. Check the undersides of leaves now and then so you catch aphids while there are only a few.",
+   "sources": [
+    "uc_ipm",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/beet/index.html",
+     "verified": "2026-06-29"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Cercospora leaf spot",
+   "type": "disease",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_seasoned": "Numerous small, round spots about 1/8 inch across appear on the leaves, each with a tan to gray center and a distinct darker, reddish-purple to brown margin. They show first on the older, outer leaves and spread inward; when spots are numerous they merge and the leaf withers and dies. Because the canopy drives the root, heavy leaf loss reduces root size, and the disease ruins leaves grown for greens.",
+   "symptoms_beginner": "The leaves get many small round spots, about 1/8 inch wide, with a pale tan or gray center and a darker reddish-purple or brown ring around each one. They start on the older outer leaves and spread inward, and when there are lots of them the leaves brown and die. That shrinks the plant's leaves, so the root grows smaller, and it spoils any leaves you wanted to eat.",
+   "cause_seasoned": "The fungus Cercospora beticola, which survives on infected beet debris and on related weeds and is splashed onto the leaves by rain and overhead watering. It is favored by warm, humid weather, with disease building fastest in the roughly 77 to 95°F range under prolonged leaf wetness, so it is most damaging in warm, wet regions and seasons.",
+   "cause_beginner": "A fungus (Cercospora beticola) that lives on old beet leaves and debris and gets splashed onto the plant by rain or overhead watering. It loves warm, humid weather, growing fastest when it is roughly 77 to 95°F and the leaves stay wet, so it is worst in warm, wet areas and rainy spells.",
+   "organic_treatment_seasoned": "There is no cure for tissue already spotted; management slows the spread. Remove and destroy badly infected leaves, water at the base in the morning so foliage dries quickly, and thin or space plants for airflow. In a wet season a copper-based fungicide labeled for vegetables can suppress spread if started early, but cultural control carries most of the load in a home garden.",
+   "organic_treatment_beginner": "You cannot cure leaves that are already spotted, only slow it down. Pick off and throw away the worst leaves, water at the soil in the morning so the leaves dry fast, and give plants room so air moves through. In a very wet year a copper fungicide labeled for vegetables can help if you start early, but mostly it is about keeping the leaves dry and uncrowded.",
+   "prevention_seasoned": "Rotate beets and their relatives (chard, spinach) out of the bed for two to three years, clear and destroy crop debris that harbors the fungus, and avoid overhead watering. Space and thin for airflow, water at the base, and choose tolerant varieties where the disease recurs.",
+   "prevention_beginner": "Do not grow beets (or chard and spinach) in the same spot two or three years running, clean up old leaves and debris where the fungus lives, and water at the base instead of overhead. Give plants room so the leaves dry quickly, and pick a tolerant variety if it keeps coming back.",
+   "sources": [
+    "clemson_hgic",
+    "umd_ext",
+    "osu_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-29"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/growing-beets-home-garden",
+     "verified": "2026-06-29"
+    },
+    "osu_ext": {
+     "url": "https://pnwhandbooks.org/plantdisease/host-disease/beet-red-beta-vulgaris-cercospora-leaf-spot",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Scab",
+   "type": "disease",
+   "severity": "low",
+   "audience": "core",
+   "symptoms_seasoned": "Rough, raised or sunken corky lesions and cracks form on the surface of the root, similar to the scab seen on potatoes. There are no leaf symptoms, so it is found at harvest. It is a cosmetic and quality problem rather than a plant-killer, and affected roots are still edible once peeled.",
+   "symptoms_beginner": "The beet root gets rough, corky, scabby patches or cracks on its surface, much like the scab you see on potatoes. The leaves look fine, so you usually notice it only when you pull and wash the beets. It does not kill the plant and the root is still fine to eat once peeled.",
+   "cause_seasoned": "The soilborne bacterium Streptomyces scabies, the same organism that causes potato scab. It is favored by dry soil and high (alkaline) pH, and it is often associated with boron deficiency, so it tends to appear in dry, sandy, or limed-up beds.",
+   "cause_beginner": "A soil germ (the bacterium Streptomyces scabies, the same one that scabs potatoes). It is worse in dry soil and in soil with a high (alkaline) pH, and it often goes along with low boron, so it shows up most in dry, sandy, or over-limed beds.",
+   "organic_treatment_seasoned": "There is no rescue once roots are infected; the affected skin is simply peeled away in the kitchen. Management is preventive and cultural for future crops.",
+   "organic_treatment_beginner": "There is nothing to spray once the roots have it; just peel off the scabby skin when you cook them. The fix is in how you grow the next crop.",
+   "prevention_seasoned": "Keep the soil evenly moist rather than letting it dry out, especially as roots size up, and avoid pushing the pH high; where it runs above about 7.0, do not lime, and correct any boron deficiency. Maintaining organic matter and rotating away from beets, chard, and spinach reduces recurrence.",
+   "prevention_beginner": "Keep the soil evenly moist instead of letting it dry out, and do not let the pH get too high; if your soil is already above about 7.0, skip the lime, and fix any boron shortage. Adding organic matter and moving beets to a new bed each year both help.",
+   "sources": [
+    "osu_ext"
+   ],
+   "anchoring_urls": {
+    "osu_ext": {
+     "url": "https://pnwhandbooks.org/plantdisease/host-disease/beet-red-beta-vulgaris-common-scab",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Damping-off",
+   "type": "disease",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_seasoned": "Seeds fail to emerge, or young seedlings topple and collapse soon after emergence with a dark, water-soaked, pinched spot at the stem base right at the soil line. Losses show up as bare gaps in the row. Cool, wet soil and the slow beet seedball germination prolong the vulnerable window the pathogens exploit.",
+   "symptoms_beginner": "Seeds that never come up, or tiny seedlings that flop over and die just after sprouting, with a dark, pinched, wet-looking spot on the stem right at the soil line. You see it as bare gaps in the row. Cool, soggy soil and the slow-sprouting beet seed make it more likely.",
+   "cause_seasoned": "Soilborne pathogens, chiefly Pythium and Rhizoctonia species, that attack germinating seed and young seedlings. They are favored by cool, wet, poorly drained soil and by overwatering, and old or weak seed and a crusted, slow-draining seedbed increase losses.",
+   "cause_beginner": "Soil organisms (mostly Pythium and Rhizoctonia, which are fungus-like) that attack sprouting seeds and baby seedlings. They thrive in cool, wet, poorly drained soil and when you overwater, and old seed or a hard, soggy seedbed makes it worse.",
+   "organic_treatment_seasoned": "Affected seedlings cannot be saved. If damping-off appears, stop watering and let the surface dry somewhat to slow the pathogens, and clear collapsed seedlings. There is no effective home cure once it takes hold, so the real lever is prevention.",
+   "organic_treatment_beginner": "Seedlings that have flopped will not recover. If it shows up, stop watering for a bit and let the soil surface dry out some, and clear away the fallen seedlings. There is no good home cure once it starts, so this one is mostly about prevention.",
+   "prevention_seasoned": "Sow into warm-enough, well-drained soil rather than cold, wet ground, and keep the seedbed evenly moist without saturating it. Soaking the seed for a day speeds emergence and shortens the risk window, and using fresh seed, not sowing too deep, and improving drainage or using raised beds on heavy soil all reduce losses.",
+   "prevention_beginner": "Wait until the soil is warm enough and not cold and soggy, and keep the seedbed damp without keeping it soaking wet. Soaking the seed for a day before planting helps it come up faster, and using fresh seed, not planting too deep, and improving drainage (or a raised bed on heavy soil) all cut down losses.",
+   "sources": [
+    "clemson_hgic",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/carrot-beet-radish-parsnip/",
+     "verified": "2026-06-29"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/beets-in-the-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Downy mildew",
+   "type": "disease",
+   "severity": "low",
+   "audience": "core",
+   "symptoms_seasoned": "Pale yellow, indistinct blotches appear on the upper leaf surface, with a grayish to purplish downy growth on the corresponding undersides in damp weather. Young central leaves are often distorted, thickened, and curled. It is most damaging in cool, wet conditions and chiefly disfigures the foliage.",
+   "symptoms_beginner": "Pale yellow patches show on top of the leaves, with a grayish or purplish fuzzy growth underneath in damp weather. The young leaves in the center can be twisted, thick, and curled. It is worst in cool, wet weather and mainly hurts the leaves.",
+   "cause_seasoned": "The water mold Peronospora farinosa (also called P. betae), which infects in cool, moist conditions, with optimal temperatures for infection roughly 45 to 59°F and little infection above about 68°F. It survives on crop debris and related hosts and spreads in moist air and splashing water.",
+   "cause_beginner": "A fungus-like water mold (Peronospora farinosa) that infects in cool, wet weather, best around 45 to 59°F and hardly at all above about 68°F. It survives on old plant debris and spreads in damp air and splashing water.",
+   "organic_treatment_seasoned": "There is no cure for infected tissue; remove and destroy affected leaves to reduce spread, and improve airflow and drying. Cultural control is the mainstay for a home crop, with copper fungicides a last resort in a persistently wet season.",
+   "organic_treatment_beginner": "You cannot cure infected leaves, so pick off and throw away the worst ones and help the plants dry out by giving them room. Keeping the leaves dry does most of the work; a copper fungicide is a last resort in a very wet stretch.",
+   "prevention_seasoned": "Water at the base rather than overhead, space and thin for airflow, and avoid working among wet plants. Rotate away from beets, chard, and spinach, clear crop debris, and where it recurs choose tolerant varieties.",
+   "prevention_beginner": "Water at the soil instead of overhead, give plants room so air moves through, and stay out of the bed when the leaves are wet. Move beets away from where you grew beets, chard, or spinach, clean up old debris, and pick a tolerant variety if it keeps showing up.",
+   "sources": [
+    "osu_ext"
+   ],
+   "anchoring_urls": {
+    "osu_ext": {
+     "url": "https://pnwhandbooks.org/plantdisease/host-disease/beet-red-beta-vulgaris-downy-mildew",
+     "verified": "2026-06-29"
+    }
+   }
+  }
+ ]
+}

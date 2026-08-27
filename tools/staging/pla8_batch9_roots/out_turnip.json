@@ -1,0 +1,305 @@
+{
+ "pests": [
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "When the season winds down, clear out the old plants and nearby weeds. The beetles spend the winter hiding in leftover leaf litter and weedy spots, so removing that shelter means fewer of them show up hungry next spring.",
+     "note_seasoned": "Adults overwinter in leaf litter and along weedy field edges; removing crop debris and weeds at season's end cuts the overwintering population that emerges onto early spring crucifers."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Lean on fall plantings where you can. These beetles do most of their damage in spring and early summer and ease off as the weather heats up, so a fall turnip crop usually faces fewer of them. Whenever you plant, keep the patch growing fast with steady water so it can grow through light chewing.",
+     "note_seasoned": "Pressure peaks in spring and early summer and tapers as the season warms, so favoring fall sowings sidesteps the heaviest feeding window. A vigorous, evenly watered stand typically outgrows light feeding in any season; the vulnerable stage is the seedling."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "For early spring sowings, lay a floating row cover, a light fabric that lets in light and water but keeps insects out, over the bed right at sowing and tuck the edges into the soil. Sealed well, it keeps the beetles off entirely, and it is the surest home defense. This matters most if you are growing turnips for greens, since the chewed leaves are the part you eat.",
+     "note_seasoned": "A cover set at sowing and sealed at the edges excludes the beetles outright and is the most reliable home defense for spring seedbeds. It protects the two things at stake: seedlings that lose leaf area slow down, and on a greens crop the riddled foliage is the harvest itself."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Dusting the plants with kaolin clay, a fine white clay coating, can cut down on the beetles' feeding. It reduces damage rather than wiping the beetles out, so use it alongside the other steps.",
+     "note_seasoned": "A kaolin coating reduces feeding pressure on exposed plantings. It is a repellent barrier rather than a knockdown, so treat it as a supplement to exclusion and timing rather than a substitute."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If seedlings are losing a lot of leaf despite everything else, roughly a quarter to a third of their leaf area, a spinosad spray is a labeled option. Check the plants in the cool of the morning, when the beetles are slow and easier to size up, and follow the label.",
+     "note_seasoned": "Spinosad is a labeled option when a seedling stand is losing more than roughly a quarter to a third of its leaf area. Scout in the cool morning while the beetles are sluggish to judge whether that threshold has actually been crossed before spraying."
+    }
+   ]
+  },
+  {
+   "id": "cabbage-root-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant turnips away from spots that grew cabbage-family crops recently. The fly's pupae, its resting stage, wait in the soil where those crops were, so moving the bed keeps the new crop away from them.",
+     "note_seasoned": "The insect overwinters as pupae in soil that carried crucifers, so rotating turnips and their relatives away from recent brassica ground reduces the carryover population emerging under the new planting."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Favor fall plantings where you can. This pest is at its worst in cool, damp spring weather, and fall crops usually see fewer maggots.",
+     "note_seasoned": "Damage concentrates in cool, moist spring conditions, so shifting the crop to a fall sowing puts it outside the period of heaviest pressure."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A turnip that is already tunneled cannot be fixed, but do not just leave it. Pull it and throw it away, not in the compost, so the maggots inside never get the chance to turn into the next round of flies. Think of a ruined root as an early warning that tells you to protect the rest.",
+     "note_seasoned": "There is no rescue for a scored root, but pulling and destroying infested turnips before the larvae pupate removes them from the cycle; do not compost them. A tunneled root is unsalable but useful as a sentinel that the bed is carrying the pest."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "The best home defense is a floating row cover, a light fabric sheet, laid over the bed right after sowing with the edges tucked in, so the flies can never reach the plants to lay their eggs. One catch: make sure the soil is not already carrying flies from an earlier cabbage-family crop, or you seal them in with your turnips.",
+     "note_seasoned": "A cover sealed at the edges at sowing blocks the egg-laying flies and is the most effective home defense. It only works over clean ground; confirm no flies are carrying over in the soil from a previous crucifer crop, or the cover traps them with the plants."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Over-fed plants push out soft, lush growth, and that is exactly what these aphids multiply on fastest.",
+     "note_seasoned": "Populations build quickest on lush, over-fertilized growth, so a restrained nitrogen program removes the flush that fuels colony buildup without starving the crop."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull up cabbage-family weeds growing near the bed. The turnip and cabbage aphids feed only on this plant family, and winged ones fly in from those weeds to start new colonies.",
+     "note_seasoned": "Both the turnip aphid and cabbage aphid are crucifer specialists, and winged forms colonize from cruciferous weeds and neighboring brassica crops; controlling those weed hosts removes a standing source of reinfestation."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Check the undersides of the leaves and the new growth now and then so you catch colonies while they are still small, and clear away the old plants at the end of the season. Catching them early matters more here because they can also spread plant viruses, especially if you are eating the greens.",
+     "note_seasoned": "Inspect new growth and leaf undersides so colonies are caught small, and clear crop debris at season's end. Early removal earns extra weight on this crop because the aphids can transmit virus, and fall greens crops are where they tend to be most troublesome."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Blast the clusters off with a strong jet of water from the hose. In a home garden that is often all it takes.",
+     "note_seasoned": "A forceful water jet dislodges colonies from the foliage and is often sufficient at garden scale; it is a purely physical knockdown that leaves the natural-enemy complex intact."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let the helpful insects do their share. Ladybugs, lacewings, and tiny parasitic wasps usually bring aphid numbers down on their own, so avoid broad sprays that would kill these helpers along with the pests.",
+     "note_seasoned": "Ladybugs, lacewings, and parasitic wasps usually regulate these colonies if conserved; avoiding broad-spectrum sprays is what keeps that service running, since removing the enemies is how a minor aphid problem becomes a persistent one."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the softer steps are not holding, spray insecticidal soap on the undersides of the leaves where the aphids cluster. Take extra care to soak the dusty-looking cabbage aphid colonies, whose waxy coating shelters them, since the spray only works where it touches.",
+     "note_seasoned": "Soap applied to the leaf undersides is effective when knockdown and predators have not held. Coverage is the whole game: the cabbage aphid's waxy bloom protects its colonies, so spray deliberately into them rather than misting the plant in general."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, is the other option for coating the colonies. Aim for the undersides of the leaves and the protected clusters, the same as with soap, and avoid spraying in high heat.",
+     "note_seasoned": "Horticultural oil is the alternative contact spray, applied to the same targets: leaf undersides and the wax-protected cabbage aphid colonies. Whichever contact material you choose, thoroughness of coverage decides the result."
+    }
+   ]
+  },
+  {
+   "id": "harlequin-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up old cabbage-family plants and weeds at the end of the season. That is the single biggest help, because the adults spend the winter in exactly that kind of garden trash. During the season, pull and destroy any plant that is badly overrun rather than trying to save it.",
+     "note_seasoned": "Adults overwinter in garden debris in warmer regions, so clearing brassica debris and weeds at season's end removes the overwintering sites and is the single most useful step. Removing and destroying heavily infested plants during the season is part of the same discipline."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Change where you plant your cabbage-family crops from year to year rather than using the same bed every time.",
+     "note_seasoned": "Rotate brassica plantings so the bugs emerging from last year's site do not find this year's crop waiting in the same spot."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Check the plants and pick off the showy black-and-orange bugs and their young, and look under the leaves for the odd barrel-shaped eggs laid in two neat striped rows. Drop everything into soapy water. Started early, this works well in a home garden.",
+     "note_seasoned": "Handpicking adults, nymphs, and the distinctive double rows of barrel-shaped eggs into soapy water is effective at garden scale when started early; scouting the leaf undersides for the egg rows is what makes the pass thorough."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap can help against the young bugs, called nymphs, which are softer than the shield-backed adults. It only works on the ones it actually wets, so spray the insects directly.",
+     "note_seasoned": "Soap helps on nymphs, the soft-bodied stage; expect much less from it against the armored adults. It is strictly a contact material, so direct the spray onto the insects rather than the foliage."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "clubroot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow turnips or their cabbage-family relatives in the same bed year after year. This organism survives in the soil for years, so where it has shown up, keep the whole family out of that spot on a multi-year cycle.",
+     "note_seasoned": "The pathogen persists in soil as resting spores for many years and builds wherever crucifers are grown repeatedly, so rotate the family out of an affected bed on a multi-year cycle; where the disease is established, a long rotation of several years is advised."
+    },
+    {
+     "method": "raise_soil_ph",
+     "note_beginner": "Add lime to raise the soil pH, a measure of how acidic the soil is, toward 7.2 to 7.5, which is neutral to slightly alkaline. Acidic soil favors this disease, and liming to that range holds it back. Save this treatment for the affected bed rather than liming the whole garden.",
+     "note_seasoned": "Liming toward a pH of about 7.2 to 7.5 suppresses the pathogen, which is favored by acidic soil. Confine the treatment to the affected ground; most vegetables prefer soil closer to neutral-acidic, so this is a targeted clubroot measure, not general practice."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Fix wet spots before planting. This disease is worst in soil that stays wet and drains poorly, so better drainage takes away the conditions it likes.",
+     "note_seasoned": "Wet, poorly drained soil favors infection, so improving drainage in the bed removes one of the two soil conditions, alongside acidity, that drive the disease."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure once a plant has it, so pull the stunted, clubbed-root plants and throw them away, never in the compost. Clean the soil off your tools afterward, since the disease travels on dirt carried from an infected bed.",
+     "note_seasoned": "Infected plants cannot be cured; remove and destroy them without composting. The pathogen also moves on contaminated soil, tools, and transplants, so clean equipment after working an infested bed and avoid transferring its soil elsewhere."
+    }
+   ]
+  },
+  {
+   "id": "white-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If white rust keeps coming back in your garden, choose a tolerant variety at seed-buying time, one bred to hold up better against the disease.",
+     "note_seasoned": "Where the disease recurs, tolerant varieties are the seed-time defense; on a crop grown for greens, foliage that stays cleaner is the harvest protected."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your cabbage-family plantings around instead of using the same spot repeatedly, since the disease carries over where those crops have grown.",
+     "note_seasoned": "The pathogen survives as thick-walled resting spores on crop debris and in soil, so rotating crucifers out of the bed breaks the carryover between plantings."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear away wild mustard and other cabbage-family weeds near the bed. This disease lives only on that plant family, and those weeds keep it going between your crops.",
+     "note_seasoned": "The water mold is specific to crucifers, and cruciferous weeds carry it near the crop; clearing them removes a standing reservoir the rotation alone does not touch."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room, and thin crowded rows, so air moves through and the leaves dry quickly. Cool, damp conditions are what this disease needs.",
+     "note_seasoned": "Space and thin for airflow so foliage dries fast; the disease is favored by cool, moist conditions, and drying time is the lever spacing controls."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the leaves. The spores spread in splashing water, so keeping the foliage dry slows it down.",
+     "note_seasoned": "Spores spread by splash as well as air, so basal irrigation instead of overhead watering removes the splash route and shortens leaf wetness."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off infected leaves, and pull the worst plants, and throw them away to slow the spread. Clear old plant debris too, since the disease survives on it. There is no spray for this in a home garden, so these habits are the whole fix.",
+     "note_seasoned": "Remove and destroy infected leaves and badly affected plants to reduce spread, and clear the crop debris that carries the resting spores between seasons. No fungicides are registered for home-garden use against it, so the cultural steps carry the entire load."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant turnips away from where cabbage-family crops grew recently. The disease survives on old plant debris and on related plants, so moving the crop helps break the cycle.",
+     "note_seasoned": "The pathogen survives on crop debris and related crucifer hosts, so rotating away from recent brassica ground reduces the inoculum waiting under the new planting."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew shows up year after year, pick a tolerant variety when you buy seed.",
+     "note_seasoned": "Where the disease recurs, tolerant varieties chosen at seed time reduce the pressure the in-season steps have to carry, which matters most on a fall greens crop growing through its favored cool, wet weather."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants out, and thin crowded spots, so air can move through and dry the leaves. This disease thrives in cool, damp conditions, which is also rainy fall weather, right when turnip greens are growing.",
+     "note_seasoned": "Space and thin for airflow so foliage dries quickly. Infection is favored in cool, moist conditions around 50 to 60°F, which lines up with the fall greens season, so drying time is worth real attention."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than sprinkling over the leaves. The disease spreads in damp air and splashing water, so dry leaves are your friend.",
+     "note_seasoned": "The pathogen spreads in moist air and splashing water, so basal irrigation removes the splash route and keeps the leaf-wetness periods that drive infection as short as possible."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the bed while the leaves are wet from rain, dew, or watering. Brushing through wet plants helps carry the disease from leaf to leaf.",
+     "note_seasoned": "Avoid working among wet plants; movement through wet foliage spreads the pathogen. This governs when you enter the bed and still applies after rain or dew, which no irrigation choice controls."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Infected leaves cannot be cured, so pick off and throw away the worst ones to slow the spread, and clear old plant debris between seasons since the disease carries over on it.",
+     "note_seasoned": "There is no cure for infected tissue; removing and destroying affected leaves reduces spread, and clearing crop debris removes the material the pathogen survives on between crops."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In a stretch of weather that stays wet for weeks, a copper fungicide is a last resort if the steps above are not holding. It works by protecting leaves before the disease lands on them, so it earns little once the disease is everywhere. Keep the spray away from ponds and drains, since copper is harmful to fish, and follow the label.",
+     "note_seasoned": "Copper is the last resort for a persistently wet season when cultural control is not holding. It is protectant in action, so it belongs early in an outbreak rather than after spread. Copper is highly toxic to aquatic life and accumulates in surface soil with repeat use, so keep it away from water, limit how often you rely on it across seasons, and follow the label rate to avoid foliage injury."
+    }
+   ]
+  },
+  {
+   "id": "alternaria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed from a trusted supplier. These fungi can travel on the seed itself, so a clean packet keeps the disease from arriving with the crop.",
+     "note_seasoned": "The Alternaria fungi are seedborne, so clean seed is the first control and one of the main home levers; it is set once, at purchase, before anything else matters."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move turnips and their cabbage-family relatives to a different spot between plantings, since the fungi carry over where those crops grew.",
+     "note_seasoned": "The fungi survive on crop debris between seasons, so rotating crucifers out of the bed separates the new crop from the carryover inoculum."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so air moves through and the leaves dry quickly. The spots need wet leaves to take hold, so drying time is most of the battle.",
+     "note_seasoned": "Infection requires leaf wetness, so spacing for airflow shortens the wet periods that let spots establish, enlarge, and merge. Alongside clean seed, this is a main home lever."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil, in the morning, so any splash dries off fast. The disease spreads in splashing water and needs wet leaves to grow.",
+     "note_seasoned": "The fungi spread in splashing water and infect only through wet foliage, so basal morning irrigation removes the splash route and gives leaves the day to dry."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-spotted leaves as you see them, and clear away old plant material between plantings, since that debris is where the fungi wait for the next crop.",
+     "note_seasoned": "Remove badly spotted leaves during the season and clear crop debris between plantings; debris is where the fungi persist, and on a greens crop the spotted foliage is quality lost directly."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In a very wet spell, a copper fungicide can help if you start early, before the spots are widespread. Keep it away from ponds and drains, since copper harms fish, and follow the label.",
+     "note_seasoned": "Copper can help in a persistently wet season if started early; as a protectant it offers little once lesions are merging. Copper is highly toxic to aquatic life and builds up in soil with repeated use, so keep it out of waterways, limit reliance on it across seasons, and follow the label rate."
+    }
+   ]
+  },
+  {
+   "id": "black-rot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean, disease-free seed. This bacterium can ride in on the seed itself, and along with rotation it does most of the work of keeping the disease out of a home garden.",
+     "note_seasoned": "The bacterium is seedborne, so clean, disease-free seed is the foundational control; together with rotation it carries most of the home-garden defense."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep cabbage-family crops out of the affected spot for at least a year or more. The disease hits the whole family and waits in the bed between crops.",
+     "note_seasoned": "Rotate crucifers out of the bed for at least a year or more; the bacterium attacks the whole cabbage family and persists locally in debris, so the entire family counts in the rotation."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves through and the leaves dry quickly. Warm, humid, wet conditions are what this disease needs to spread.",
+     "note_seasoned": "The disease is favored by warm, humid, wet conditions, so spacing for airflow shortens the leaf-wetness periods that let it advance."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the leaves. The bacterium travels in splashing water and slips into leaves through their edges and any wounds.",
+     "note_seasoned": "The pathogen spreads by splash and enters through the leaf-margin water pores and wounds, so basal irrigation removes the dispersal route overhead watering provides."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the bed while the plants are wet, and do not handle wet leaves. Working among wet plants helps spread the bacterium from one to the next.",
+     "note_seasoned": "Avoid working among or handling wet plants; the bacterium moves readily on wet foliage and tools, so choosing when you enter the bed limits plant-to-plant spread."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Leaves that already show the yellow V-shaped patches cannot be cured, so pull affected plants and throw them away, and clean up old plant material, which shelters the bacterium between crops.",
+     "note_seasoned": "There is no cure for infected tissue; remove and destroy affected plants and clear the crop debris that harbors the bacterium. It also moves on contaminated water and tools, which is one more reason roguing beats leaving a sick plant standing."
+    }
+   ]
+  }
+ ]
+}

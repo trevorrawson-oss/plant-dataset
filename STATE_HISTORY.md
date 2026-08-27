@@ -4,6 +4,18 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-08-27 -- PLA-8 batch 9, THE ROOTS (`043a7272` -> `4725bcbb`)
+
+ONE promote (`tools/promote_pla8_batch9.py`): turnip/radish/carrot/beet gain ids, types and ladders -- 29 problems, 134 rungs, NO mint, methods and sources byte-identical. Roster laddered **37 -> 41**. Second batch of the fall block.
+
+- **The authoring run died and the outputs survived.** All four agents were killed by a spend limit AFTER writing their files; the files verified complete against source. The four self-reports were lost, so the read did that work directly instead of starting from the bots' flags.
+- **THE FIND: `handpick` dropped from beet's leafminer ladder** -- its note described picking off mined leaves, the same action as its own `garden_sanitation` rung, under a key that means catching free-living insects on a scouting walk. The `bottom_watering` shape. SCOPED: handpick stays on turnip's harlequin bug.
+- **beet's `flea-beetle` converged to `flea-beetles`** (14-crop majority); swiss-chard untouched, still the filed outlier.
+- **Five prose-driven divergences pinned both ways** (copper on alternaria and on downy mildew, spinosad on flea beetles, aphid sanitation, damping-off rung counts) and **three deliberate `prompt_harvest` uses**, each restating its crop's own harvest-sooner sentence.
+- **Harness 49/49 caught.** Run 2's single survivor was the content-identity guard whose driver never reached it (a substantive pin answered first while the test asserted only "something refused"); isolated, then clean. TWO DEAD GUARDS found while writing the suite and fixed, not decorated: a singular-id check below the ID_CONVENTION loop that already refuses it (deleted), and the post-side sweep below ladder_of pins that crash on a renamed id (hoisted).
+- **Gauntlet:** gate_all 121/121; whole_crop_gate PASS x5; control_ladder_gate 0; register_completeness PASS; release_verify no new violations, catalog +none -none; COMPACT preserved; 54 guard tests both runners.
+- Next: batch 10, the brassica family (cabbage, cauliflower, kohlrabi, collards, kale).
+
 ## 2026-08-27 -- PLA-8 batch 8, THE LEAFY GREENS: the fall block opens (`f8678ade` -> `043a7272`)
 
 ONE promote (`tools/promote_pla8_batch8.py`): spinach/arugula/lettuce-leaf/bok-choy gain ids, types and ladders -- 32 problems, 153 rungs, NO mint, methods and sources byte-identical. Roster laddered **33 -> 37**. First batch of the fall-season block (Trevor's 2026-08-27 ruling: order by SEASON; plan in `docs/2026-08-27-pla8-fall-season-batch-plan.md`).

@@ -1,0 +1,193 @@
+{
+ "pests": [
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out old plants and weeds when the season winds down. The beetles ride out the winter in leaf litter and leftover growth nearby, so a fall cleanup means fewer of them waking up hungry next to your spring radishes.",
+     "note_seasoned": "Adults overwinter in leaf litter, crop debris, and field edges and emerge onto the earliest spring crucifers; end-of-season removal of spent plants and weeds cuts the local overwintering population before the next sowing."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Sow a bit later in spring, after the first wave of beetles has passed. Radishes grow fast enough that a slightly later start still makes a crop, and steady water keeps them moving quickly through the risky seedling stage.",
+     "note_seasoned": "Feeding is heaviest on early spring seedlings as overwintered adults emerge, then tapers as the season warms. Shifting the sowing past that first flush, and keeping the stand growing fast with even moisture, shrinks the window when leaf loss actually costs you, since a slowed seedling makes a tougher, hotter root."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the row with a floating row cover, a light fabric that lets in light and water but keeps insects out, right after sowing, and tuck the edges into the soil so the beetles cannot slip underneath. It is the most reliable protection for early spring sowings.",
+     "note_seasoned": "A cover set at sowing and sealed at the edges excludes the beetles entirely and is the most reliable defense for the early sowings that see the worst pressure. The seedling stage is what needs protecting; an established, well-watered stand usually outgrows light feeding on its own."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Dusting the plants with kaolin clay, a fine white clay powder that coats the leaves, can cut down on the beetles' feeding. It is a barrier rather than a poison, so it helps most while the plants are small.",
+     "note_seasoned": "Kaolin clay can reduce feeding as a repellent particle barrier on the vulnerable seedlings. Scout on cool mornings, when the beetles are sluggish, to judge whether it and the other steps are holding."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If the seedlings are still losing a lot of leaf despite everything else, a spinosad spray is a labeled option. Save it for a stand that is truly getting hammered, follow the label, and spray toward dusk so foraging bees are not out.",
+     "note_seasoned": "Spinosad is a labeled rescue where a seedling stand is losing roughly a quarter to a third of its leaf area; lighter feeding on a vigorous planting rarely justifies it. Time applications toward dusk to spare bees."
+    }
+   ]
+  },
+  {
+   "id": "cabbage-root-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant radishes away from spots where cabbage-family crops grew recently. The flies head for ground that carried their host plants, and soil from an earlier planting may already be holding the next generation.",
+     "note_seasoned": "Rotate radishes and other crucifers away from recent brassica ground. The insect overwinters as pupae in the soil, so a bed that just grew the family can supply its own infestation, with the flies emerging exactly where the new sowing goes in."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Shift your timing. Sow spring radishes to miss the main egg-laying period, or lean toward a fall planting, which usually sees fewer maggots than a cool, wet spring.",
+     "note_seasoned": "Time spring sowings to dodge the main egg-laying flush, or favor fall plantings, which see less pressure. The worst damage comes in cool, moist spring weather, when the overwintered flies are active and laying at the base of crucifer stems."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A radish that is already tunneled cannot be rescued, so pull it and throw it away, keeping it out of the compost. Getting it out quickly removes the maggots before they can grow into the next round of flies.",
+     "note_seasoned": "There is no rescue for a tunneled root. Pull and destroy infested radishes promptly, keeping them out of the compost, so larvae are removed before they pupate; a scored radish is ruined for eating but works as a sentinel that tells you the flies have found the bed."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the bed with a floating row cover, a light fabric that keeps insects out, right after sowing, and tuck the edges in so the flies cannot reach the plants to lay their eggs. Just make sure that spot did not grow a cabbage-family crop recently, or flies already in the soil can end up trapped under the cover with your radishes.",
+     "note_seasoned": "A cover sealed at the edges from sowing blocks the egg-laying flies and is the most effective home defense. It only works if the soil is not already carrying the insect from a previous crucifer crop, so pair it with the rotation above."
+    }
+   ]
+  },
+  {
+   "id": "wireworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not sow radishes in ground that was lawn or grass last year, since that is where wireworms gather, and move root crops to a different spot if a bed turns out to be infested. Numbers come down over a few seasons.",
+     "note_seasoned": "Avoid sowing radishes and other root crops into beds newly broken from sod or pasture, where populations run highest, and rotate away from heavily infested ground. The larvae persist in soil for years, so this is a multi-season lever rather than a quick fix."
+    },
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Turning over and working the soil helps, because it exposes the wireworms to birds and weather. Expect it to take a season or two of steady work, not a single pass.",
+     "note_seasoned": "Cultivation exposes wireworms to predators and weather. There is no quick home cure once they are present, but worked over a season or two, tillage steadily brings the population down."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pull your radishes as soon as they are ready. The less time a root sits in the ground, the less time the wireworms have to bore into it.",
+     "note_seasoned": "Harvest promptly so roots spend the minimum time exposed in infested soil; on a crop this quick, taking the roots on time meaningfully shortens the window for tunneling."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "clubroot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep radishes and their cabbage-family relatives out of an affected bed for a few years, moving them around the garden on a rotation. The organism lives on in the soil and builds up wherever the family is grown in the same spot over and over.",
+     "note_seasoned": "The pathogen persists in soil as resting spores for many years and builds where crucifers repeat, so rotate the family out of the bed for several years. Management is preventive across seasons; nothing rescues the current crop."
+    },
+    {
+     "method": "raise_soil_ph",
+     "note_beginner": "Add lime to bring the soil pH, a measure of how acidic the soil is, up toward neutral. The disease takes hold most easily in acidic soil, so liming holds it back.",
+     "note_seasoned": "Liming toward a neutral pH suppresses the pathogen; wet, acidic conditions are what favor infection, so this pairs with the drainage work rather than standing alone."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Fix spots where water sits, since wet, poorly drained soil is where this disease does best. Where it is a known problem, a raised bed filled with clean soil avoids it altogether for that planting.",
+     "note_seasoned": "Wet, poorly drained soil favors infection, so correct drainage on heavy or low ground. Where the disease is established, raised beds with a clean mix sidestep the contaminated soil."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for a plant that has it, so pull affected plants, swollen roots and all, and throw them away rather than composting them. Try not to carry soil from an affected bed around on your tools, since the disease travels with it.",
+     "note_seasoned": "Remove and destroy infected plants without composting them, and avoid moving soil from an infested bed; the pathogen spreads on contaminated soil, tools, and transplants, so removal and clean habits are the in-season program."
+    }
+   ]
+  },
+  {
+   "id": "black-rot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean, disease-free seed. This bacterial disease can ride into the garden on the seed itself, so a clean start is the main defense.",
+     "note_seasoned": "The bacterium is seedborne, so clean, disease-free seed closes the primary entry route. Because the fast radish crop usually finishes before severe disease develops, clean seed and the cultural habits below do most of the work."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow radishes or other cabbage-family crops in the same spot again and again. The bacteria hang on in what earlier plantings leave behind.",
+     "note_seasoned": "Rotate crucifers out of the bed; the pathogen carries over on crop debris and moves through the whole cabbage family, so returning the family to the same ground restocks it."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so air moves between them and the leaves dry fast. Warm, wet foliage is where this disease spreads quickest.",
+     "note_seasoned": "Space for airflow so foliage dries quickly; spread is favored by warm, humid, wet conditions, and shortening the hours of leaf wetness slows it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the tops of the plants, so you are not splashing the bacteria from leaf to leaf.",
+     "note_seasoned": "Basal watering removes the splash route; the bacterium spreads in water and enters through leaf margins and wounds, so keeping irrigation off the foliage matters."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Do your thinning and pulling while the leaves are dry, and stay out of the bed when the plants are wet. Handling wet leaves can carry the bacteria from a sick plant to a healthy one.",
+     "note_seasoned": "Avoid working among the plants while foliage is wet; wet handling moves the bacterium efficiently, and the discipline applies after rain and dew as much as after watering."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Infected leaves cannot be cured, so pull affected plants and throw them away, and clear old plant scraps from the bed. The bacteria live on in that debris.",
+     "note_seasoned": "There is no cure for infected tissue; remove and destroy symptomatic plants and clear the crop debris that harbors the bacterium. The yellow V-shaped marginal lesions with darkened veins make cases identifiable early."
+    }
+   ]
+  },
+  {
+   "id": "alternaria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Use clean, disease-free seed, since this leaf fungus can arrive in the garden on the seed itself.",
+     "note_seasoned": "Alternaria is seedborne, so clean seed removes the infections that would otherwise be sown along with the crop."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move radishes and their cabbage-family relatives to a different spot between plantings, so the fungus waiting on old plant scraps does not meet a new crop.",
+     "note_seasoned": "Rotating crucifers separates the crop from inoculum surviving on the previous planting's residues between seasons."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so the leaves dry quickly after rain or dew. The dark spots grow and run together fastest when leaves stay wet in warm weather.",
+     "note_seasoned": "Open spacing shortens the leaf wetness the fungus needs to infect; warm, humid spells with prolonged wet foliage are what drive it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil, in the morning, so the leaves stay dry and anything that does get wet dries fast. The fungus travels in splashing water.",
+     "note_seasoned": "Basal morning watering removes splash dispersal and lets foliage dry quickly, cutting the wet hours the pathogen requires."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-spotted leaves and clear away old plant material between plantings. On a crop this fast, that plus clean seed and airflow is usually enough.",
+     "note_seasoned": "Remove badly spotted leaves and clear the debris that carries the fungus between seasons. The fast crop usually outpaces serious damage, so these levers, with clean seed and airflow, are the main program; heavy infection mostly costs vigor rather than the root."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Give the seeds a fast start: wait until the soil is warm enough and not cold and soggy, use fresh seed, do not sow too deep, and go easy on the watering while they sprout. Radishes come up so quickly that a good start usually carries them past the danger.",
+     "note_seasoned": "Speed of emergence is the control. Sow fresh seed shallowly into warm-enough, well-drained soil and restrain watering on the seedbed; radish's fast germination already narrows the window Pythium and Rhizoctonia need, so sowing conditions do the rest."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "If your soil is heavy and stays wet, improve the drainage or sow into a raised bed. Seedlings that have flopped over will not recover, so re-sow the bare gaps once conditions are warmer and drier.",
+     "note_seasoned": "Cold, saturated seedbeds favor the pathogens, so improve drainage or use raised beds on heavy soil, and let the surface dry somewhat rather than overwatering. Affected seedlings cannot be saved; re-sow losses under warmer, better-drained conditions."
+    }
+   ]
+  }
+ ]
+}

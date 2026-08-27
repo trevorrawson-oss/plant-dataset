@@ -1,0 +1,162 @@
+{
+ "pests": [
+  {
+   "id": "carrot-rust-fly",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant carrots well away from where they grew last year. This fly is a weak flier that tends to stay in one small area, so simply moving the bed can leave much of the local population behind.",
+     "note_seasoned": "Rotate well away from the previous season's carrot ground. Psila rosae is a weak flier with localized populations, so distance from last year's bed is a meaningful lever rather than a token move, and it compounds with sanitation of overwintered roots."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Time your sowing to dodge the periods when the female flies are out laying eggs. In cold areas that means sowing in early summer; in mild areas, in late winter or in late summer. The right window depends on your region, so treat these as starting points.",
+     "note_seasoned": "Schedule sowings to miss the main egg-laying flights: an early-summer sowing in cold regions, late winter or late summer in mild ones. Pressure is concentrated in cool, humid, maritime areas and much lighter where summers are hot, so weight this step by your local flight pattern rather than a carried-over calendar date."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear out wild carrots and any leftover or self-sown carrots growing nearby. Those plants feed the flies between your plantings and keep the local population going.",
+     "note_seasoned": "Remove wild and volunteer carrots around the garden; they sustain the localized fly population between crop plantings, and clearing them denies the flights a reservoir your rotation cannot touch."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Harvest on time instead of leaving carrots sitting in the ground, and where this fly is active, do not leave roots in the soil over winter. Pulling a whole block at once, rather than a few here and there, gives the maggots less to live on.",
+     "note_seasoned": "Harvest promptly and in blocks rather than holding mature roots in the ground, and do not overwinter roots in soil where the fly is active. Roots left in place extend the feeding window and carry the population into the next season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "When you find tunneled carrots, trim off the damaged parts before eating the rest, and throw badly infested roots in the trash rather than the compost so they cannot keep feeding the next generation.",
+     "note_seasoned": "There is no rescue for roots already mined; trim damaged portions at the kitchen and dispose of heavily infested roots outside the compost so larvae do not complete development on your culls."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "The most dependable defense at home is a row cover, a light fabric or fine mesh laid over the bed right at sowing with the edges tucked in tight. The female fly flies low and is blocked from reaching the base of the plants to lay her eggs.",
+     "note_seasoned": "A row cover or fine mesh set at sowing and sealed at the edges is the most reliable home defense: the low-flying females are excluded from the crowns where they lay. Pair it with rotation, since covering ground that carried carrots last year risks confining any overwintered flies with the crop."
+    }
+   ]
+  },
+  {
+   "id": "root-knot-nematode",
+   "type": "nematode",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no home cure once the soil has these tiny worms, so pull up affected carrots and throw them in the trash, not the compost. Getting galled roots out of the garden keeps you from spreading the problem around.",
+     "note_seasoned": "No home treatment rescues an infested crop; rogue out galled carrots and dispose of them outside the compost. This limits what you return to the bed, though the nematodes themselves persist in the soil."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep carrots out of beds where knotted, deformed roots have shown up before, and do not plant them right after crops these worms feed on heavily. Rotating to other crops helps, though it is not a complete fix, since the worms can live on many different plants.",
+     "note_seasoned": "Rotate away from beds with a root-knot history and avoid following known host crops. Carrots are among the more susceptible garden crops, and because Meloidogyne persists in soil and feeds on a wide host range, rotation suppresses rather than eliminates pressure."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "carrot-leaf-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If leaf blight keeps coming back in your garden, pick a blight-tolerant variety at seed-buying time rather than fighting it on a susceptible one every year.",
+     "note_seasoned": "Where Alternaria or Cercospora blight recurs, choose tolerant varieties at ordering time; tolerance lowers the load the cultural steps have to carry through a wet season."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with fresh, clean seed. These fungi can travel on the seed itself, so the packet you buy is your first line of defense.",
+     "note_seasoned": "Both pathogens are seedborne, so start from clean or treated seed; infected seed puts the disease in the row before any in-season practice can act."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow carrots, or relatives like parsley and dill, in the same spot two years running. Keeping the family out of the bed for at least two years starves the fungi waiting in the soil and old debris.",
+     "note_seasoned": "Rotate carrots and other carrot-family crops out of the bed for at least two years; the fungi carry over on infected debris, and a same-family replant hands them their host back."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear away wild carrots and any self-sown carrots near the garden. The blight fungi live on them between your plantings, so those weeds can reinfect a clean bed.",
+     "note_seasoned": "Remove wild and volunteer carrots around the planting; they harbor Alternaria dauci and Cercospora carotae between crops and undercut rotation if left standing at the bed edges."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Thin crowded rows and give plants room so air can move through and the leaves dry quickly after rain or dew. These fungi need wet leaves to take hold, so faster drying works directly against them.",
+     "note_seasoned": "Thin to proper spacing so the canopy dries fast; infection requires prolonged leaf wetness, and a crowded planting in warm, humid weather supplies exactly that."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the leaves, and do it in the morning so any splashed foliage dries fast. The spots spread in splashing water, so keeping the tops dry slows them down.",
+     "note_seasoned": "Irrigate at the base in the morning rather than overhead; the fungi spread in splashing water and need leaf wetness to infect, so removing the one wetness period you control matters, especially in warm, humid spells."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-spotted leaves and throw them away, not in the compost, and clear out old carrot tops after harvest. Leaves already infected cannot be cured, so removing them protects the rest.",
+     "note_seasoned": "There is no cure for infected tissue; remove and destroy badly blighted leaves during the season and clear crop debris afterward, since both fungi overwinter on what is left behind."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In a very wet year, a copper fungicide labeled for vegetables can help slow the spread if you start early, before the spots are everywhere. It backs up the other steps rather than replacing them; keeping leaves dry and plants uncrowded does most of the work. Follow the label rate, and keep spray and runoff away from ponds and drains since copper is harmful to fish and other water life.",
+     "note_seasoned": "In a wet season a copper product labeled for vegetables can suppress spread if begun early; it does not cure established lesions, and cultural control remains the mainstay for a home planting. Mind the label rate to avoid foliage injury, limit repeat use over the years since copper accumulates in the surface soil, and keep spray and runoff out of waterways."
+    }
+   ]
+  },
+  {
+   "id": "aster-yellows",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for a plant that already has it. Pull any carrot with the twisted, yellow-to-purple bunchy top as soon as you spot it and throw it in the trash, not the compost, so leafhoppers cannot pick the disease up from that plant and carry it to the rest of your row.",
+     "note_seasoned": "No treatment recovers an infected plant. Rogue out symptomatic carrots promptly and destroy them rather than composting; each one left standing is a reservoir the aster leafhopper can acquire the phytoplasma from and spread onward."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A row cover, a light fabric laid over the planting, keeps the aster leafhopper, the insect that carries this disease, off your carrots in the first place. How much this matters varies by region and by year, since it depends on how many leafhoppers arrive.",
+     "note_seasoned": "Row cover excludes the aster leafhopper from the planting, which intercepts transmission rather than the pathogen itself. Risk tracks the abundance of migrating leafhoppers, which varies by region and year, so weight this step by your local pressure."
+    }
+   ]
+  },
+  {
+   "id": "cavity-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If your carrots have come up with these sunken pits before, pick a tolerant variety at seed-buying time. It is a soil problem that rotation alone does not clear, so variety choice is one of the few levers you set in advance.",
+     "note_seasoned": "Where cavity spot has a history in the bed, choose tolerant varieties; the Pythium species persist in soil as resting spores with a wide host range, so rotation alone does not eliminate them and tolerance is a lever worth setting at ordering time."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Grow carrots in loose soil that drains well, and use a raised bed if your ground stays soggy. Go easy on watering too. The organisms behind these pits thrive where soil sits wet, so a well-drained bed is low risk to begin with.",
+     "note_seasoned": "Plant into loose, well-drained ground, raise beds where drainage is poor, and avoid overwatering; the causal Pythium species are favored by prolonged wet soil and poor drainage, which is why the problem concentrates in wet in-ground rows rather than well-drained raised beds."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pull carrots when they are ready instead of leaving them sitting in wet ground. The longer mature roots stay in infested wet soil, the worse the pitting gets.",
+     "note_seasoned": "Harvest at maturity rather than holding roots in the ground; older roots left longer in infested wet soil are more susceptible, so lifting on time caps the exposure."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Give the seed its best start: sow fresh seed, not too deep, and wait until the soil is warm enough rather than cold and soggy. Carrot seed can take 2 to 3 weeks to come up, so keep the bed evenly damp at seed depth without soaking it, and resist the urge to water more during the long wait.",
+     "note_seasoned": "Sow fresh seed at proper depth into warm-enough, well-drained soil, and hold the seedbed evenly moist at seed depth rather than saturated. Carrot's 2 to 3 week germination keeps the bed damp for exactly the stretch Pythium and Rhizoctonia exploit, so restrained watering through that window is the core of prevention."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "If your soil is heavy or crusts over and stays soggy, improve the drainage or sow into a raised bed. These organisms move in soil water, so a bed that sheds extra water gives seedlings a fair chance.",
+     "note_seasoned": "On heavy or slow-draining ground, improve drainage or use raised beds; the pathogens spread in soil water and are favored by cool, wet, poorly drained conditions, and a crusted, slow-draining seedbed raises losses."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Seedlings that have flopped over will not recover, so clear the fallen ones away. If damping-off shows up, also hold off on watering for a bit and let the soil surface dry out some to slow it down; there is no good home cure once it starts.",
+     "note_seasoned": "Collapsed seedlings cannot be saved; clear them out, and pause irrigation so the surface dries somewhat to slow the pathogens. Prevention is the real lever, since there is no effective home cure once damping-off takes hold."
+    }
+   ]
+  }
+ ]
+}
