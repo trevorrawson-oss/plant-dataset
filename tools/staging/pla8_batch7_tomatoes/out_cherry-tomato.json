@@ -1,0 +1,229 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on high-nitrogen fertilizer. Heavy feeding pushes out lots of soft new shoots, and that tender growth is exactly what aphids like to settle on.",
+     "note_seasoned": "Restrain nitrogen inputs; lush nitrogen-driven flushes produce the tender tissue aphid colonies build up on fastest, so moderate feeding removes their favorite substrate."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a hard stream of water from the hose, aiming at the growing tips and the undersides of the leaves where they gather. Do it early in the day so the leaves can dry.",
+     "note_seasoned": "A forceful water jet directed into colonies dislodges aphids and disrupts buildup; repeat as clusters reappear on new growth, early enough in the day for foliage to dry."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let the helpful insects work for you. Growing marigolds or nasturtiums near the tomatoes draws in the insects that eat aphids, like ladybugs.",
+     "note_seasoned": "Conserve and attract natural enemies: interplanted marigolds and nasturtiums draw aphid predators, and avoiding broad-spectrum sprays keeps them on the job."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "For a stubborn colony you can buy ladybugs or lacewings, both natural aphid hunters, and release them right onto the infested plants.",
+     "note_seasoned": "Purchased ladybug or lacewing releases can supplement resident predators; release onto an active, located infestation rather than preventively."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the aphids persist, spray insecticidal soap directly onto them, coating the undersides of the leaves where they cluster. It works on contact, so it has to wet the insects themselves.",
+     "note_seasoned": "Insecticidal soap gives contact knockdown; thorough coverage of colonized leaf undersides determines results, and spraying only where the pests are spares the soft-bodied beneficials it would otherwise wet."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is another spray option for an infestation that keeps coming back. Coat the leaf undersides thoroughly, and skip it in heat above 90°F or on plants that are already drought-stressed.",
+     "note_seasoned": "Neem oil covers persistent colonies as a low-residue alternative to soap; underside coverage matters, avoid applications above 90°F or on drought-stressed plants, and keep it off anything in flower."
+    }
+   ]
+  },
+  {
+   "id": "tomato-hornworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "After the season ends, turn over the soil in the bed. Hornworms spend the winter as pupae, the resting stage buried in the soil, and autumn tilling destroys them before they can become next year's moths.",
+     "note_seasoned": "Autumn tillage of the finished bed destroys overwintering pupae in the soil, cutting the local population before the next flight."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the caterpillars off by hand and drop them into soapy water. It sounds too simple, but it works well at garden scale. They blend into the stems, so scout for the black droppings on the leaves below to find them. If one has small white capsules stuck to its back, leave it alone: those belong to a helpful wasp whose young will finish that hornworm for you.",
+     "note_seasoned": "Hand removal is effective despite the camouflage; scout by frass on the lower leaves. Spare any larva carrying white parasitoid cocoons, since the emerging wasps continue the suppression."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Plant dill or fennel near the tomatoes. They attract the small wasps that hunt hornworms, so the wasps patrol the planting for you.",
+     "note_seasoned": "Interplant dill, fennel, or basil to draw the parasitoid wasps that attack hornworms; conserving that pressure, together with sparing parasitized larvae, keeps later flushes down."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "If picking is not keeping up, spray Bt, short for Bacillus thuringiensis, a bacteria-based spray that acts on caterpillars. Spray while the caterpillars are still small, reapply after rain, and keep it off plants you grow for butterflies, since it affects their caterpillars too.",
+     "note_seasoned": "Bt kurstaki controls hornworm larvae, most effectively while they are young; reapply after rain or new growth, and confine it to the crop since it acts on lepidopteran larvae as a group."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Drape a floating row cover, a light fabric that lets sun and rain through, over young plants right after planting. Keep it on until they are a few inches tall and growing strongly, since seedlings take the worst of the damage.",
+     "note_seasoned": "Row cover over new transplants excludes the beetles through the vulnerable seedling stage; remove once plants are established and outgrowing the shot-hole injury."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep the plants steadily watered through hot spells. Mites build up fastest on plants that are dry and stressed, so consistent moisture is your first line of defense.",
+     "note_seasoned": "Maintain steady soil moisture in heat; drought-stressed plants favor rapid mite buildup, so irrigation consistency is the foundational check on populations."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Spray a strong jet of water onto the undersides of the leaves every day for about a week. This breaks up the mite colonies and can set them back significantly. Do it early in the day so the leaves dry quickly.",
+     "note_seasoned": "Repeated forceful sprays to the leaf undersides, daily over about a week, disrupt colonies and webbing; apply early in the day so foliage dries before evening."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "You can buy predatory mites, tiny mites that hunt the pest mites instead of feeding on plants, and release them onto an infested planting.",
+     "note_seasoned": "Released predatory mites can suppress an active infestation; introduce them onto located colonies rather than ahead of the pest."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the mites persist after the water treatment, spray insecticidal soap onto the leaf undersides where they live. Avoid spraying drought-stressed plants or in heat above 90°F, since soap can burn leaves then.",
+     "note_seasoned": "Insecticidal soap applied to the leaf undersides gives contact knockdown where coverage is thorough; skip water-stressed plants and temperatures above 90°F to avoid foliage burn."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is an alternative spray, again aimed at the undersides of the leaves. Do not apply it in heat above 90°F or to plants that are already drought-stressed.",
+     "note_seasoned": "Neem oil is the low-residue alternative when soap is not holding; underside coverage governs results, and the same heat and drought-stress restrictions apply."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "early-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your tomatoes to a fresh spot each year, and keep them out of the same bed for at least 3 years, so the fungus waiting in that soil runs out of hosts.",
+     "note_seasoned": "A 3 to 4 year rotation away from tomato ground separates the crop from inoculum carried over in soil and debris."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plant instead of sprinkling from overhead. Rain and splashing water carry the fungus from the soil up onto the lower leaves, so the drier the foliage stays, the slower it moves.",
+     "note_seasoned": "Base watering keeps foliage dry and cuts the splash that lifts spores from the soil onto the lower canopy, which is where infection starts."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Mulch the soil around the base of the plant. Rain hitting bare soil splashes the fungus up onto the lower leaves, and mulch takes that splash out of play.",
+     "note_seasoned": "Mulching the soil under the plant stops rain splash from lifting soil and spores onto the lower foliage, the entry point this disease works upward from."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant room, and stake it so air can move through the leaves and the foliage stays up off the ground. Leaves that dry quickly after rain get less disease.",
+     "note_seasoned": "Spacing for airflow, plus staking to hold foliage off the soil, shortens leaf wetness and reduces the ground contact that feeds lower-leaf infection."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off spotted leaves as soon as you see them and put them in the trash, not the compost pile. Getting infected leaves out early slows the disease's climb up the plant.",
+     "note_seasoned": "Prompt removal of symptomatic leaves lowers in-season spread up the plant; destroy the tissue rather than composting it."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If it keeps spreading, a copper-based fungicide can help, but it works by protecting healthy leaves, so start early rather than waiting. Follow the label rate, and keep spray and runoff away from ponds and streams, since copper is very toxic to fish and other water life.",
+     "note_seasoned": "Copper applied preventively protects uninfected tissue; begin before or at first sign rather than after spread. Observe label rates to avoid foliage injury, limit repeat use across seasons since copper accumulates at the soil surface, and keep it out of waterways."
+    }
+   ]
+  },
+  {
+   "id": "blossom-end-rot",
+   "type": "physiological",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Water deeply and on a steady schedule, not in big bursts after letting the soil dry out. Uneven watering is the usual trigger: the fruit cannot take up enough calcium when soil moisture swings, and calcium sprays are not the fix.",
+     "note_seasoned": "Consistent deep irrigation is the primary control. The disorder is a calcium delivery failure in the sizing fruit, driven by moisture swings or root damage rather than by a pest or pathogen, so steady water does what supplements cannot."
+    },
+    {
+     "method": "moisture_buffering_mulch",
+     "note_beginner": "Spread mulch around the base of the plant. It evens out the swings between wet and dry soil, and those swings are what set off the rot on the fruit.",
+     "note_seasoned": "Mulch buffers soil moisture between waterings, smoothing the wet-dry cycling that interrupts calcium movement into developing fruit."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and discard any fruit showing the dark sunken patch. Once it appears, that fruit will not recover.",
+     "note_seasoned": "Cull affected fruit as it appears; the lesion is irreversible and not contagious, and it concentrates in the earliest fruit of the season."
+    }
+   ]
+  },
+  {
+   "id": "septoria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give your tomatoes a different bed each year so the fungus left behind in the old spot does not find them again.",
+     "note_seasoned": "Annual rotation out of last year's tomato ground separates the crop from overwintered inoculum."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil, not over the top of the plant. The spots spread in wet conditions, so keeping the leaves dry slows the disease down.",
+     "note_seasoned": "Soil-level irrigation denies the splash dispersal this fungus relies on and keeps leaf wetness periods short."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Put mulch down over the soil under the plant so rain cannot splash the fungus up onto the leaves.",
+     "note_seasoned": "A mulch layer over the soil denies the splash route the spots use to reach the lower leaves; pair it with base watering so neither rain nor the hose does the carrying."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Stake or cage the plants so the leaves are not resting against each other. Air moving between them dries the foliage faster, which slows new spots.",
+     "note_seasoned": "Staking or caging to separate foliage improves circulation through the canopy; faster drying checks new infection."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off spotted leaves the moment you notice them. The disease starts on the lowest leaves and works upward, so early removal buys you time.",
+     "note_seasoned": "Immediate removal of symptomatic lower leaves slows the upward progression; destroy the tissue rather than leaving it in the bed."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If the spots keep multiplying despite the steps above, a copper-based fungicide is the next step. Follow the label rate so it does not burn the leaves, and keep spray and runoff away from ponds and streams, since copper is very toxic to fish and other water life.",
+     "note_seasoned": "Copper is warranted when spread continues despite sanitation and dry foliage; it protects clean tissue rather than curing spotted leaves, so begin at first sign. Limit repeat seasons of use, as copper persists at the soil surface."
+    }
+   ]
+  },
+  {
+   "id": "late-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "When you buy seed, look for varieties described as resistant to late blight whenever you can find them. With a disease that can kill a healthy plant in a week, the variety you choose is the biggest lever you have.",
+     "note_seasoned": "Resistant cultivars are the highest-leverage control against a pathogen that can destroy plants in days; the decision is made at seed-buying time."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Stake the plants and give them room so air movement keeps the leaves as dry as possible. The disease moves fastest in cool, damp conditions.",
+     "note_seasoned": "Generous spacing and staking maximize airflow and shorten the leaf wetness this oomycete needs; spread is fastest in cool, wet weather."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "At the first sign, remove every affected plant part, bag it, and put it in the trash. Do not compost it, since the disease can survive there and carry over. At season's end, clear all tomato debris out of the garden rather than leaving it over winter.",
+     "note_seasoned": "Remove and destroy all symptomatic material immediately, bagged for the trash rather than composted, and strip tomato debris from the garden at season's end so nothing carries the pathogen into the next year."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If late blight is showing up in your area and the weather is wet, a copper-based fungicide applied before your plants have symptoms can help protect them. Follow the label, and keep spray and runoff away from ponds and streams, since copper is very toxic to fish and other water life.",
+     "note_seasoned": "Copper is purely protective here: apply ahead of infection when regional presence and wet conditions align, since it does not cure tissue already infected. Observe label rates and limit repeat use across seasons, as copper accumulates at the soil surface."
+    }
+   ]
+  }
+ ]
+}

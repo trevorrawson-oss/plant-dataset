@@ -10,7 +10,14 @@ here costs one authoring pass per crop.
 
 ## THE NEXT TWO PIECES OF WORK, IN ORDER
 
-### 1. The chemical-cohort close-out round -- FULLY PREPPED, START HERE
+> **UPDATE 2026-08-26 (evening): piece 1 is DONE.** The chemical-cohort round ran and promoted
+> (`04b5aa69` -> `674fab25`, uncommitted pending Trevor): 4 methods changed (neem's invented
+> low-bee rating fixed in THREE fields including a live strawberry rung; copper acute split
+> named; soap's Moderate acute disclosed; hort oil's medium-band bee caution added), 3 verified
+> byte-for-byte, harness 49/49 first run. **The catalog audit is DECLARED CLOSED.** Evidence:
+> `docs/2026-08-26-pla8-chemical-cohort-closeout.md`. Next is the tomatoes (piece 2 below).
+
+### 1. The chemical-cohort close-out round -- DONE (see update above; prep kept for the record)
 `docs/2026-08-26-pla8-chemical-cohort-round-prep.md` has the whole thing: the seven methods, their
 UC IPM uaiKeys, what to check on each, and which guard shapes to reuse.
 
@@ -25,6 +32,13 @@ genuinely needs one (melons will need `mancozeb`, uaiKey=30 -- that is growth, n
 
 The instrument exists and is tested: `tools/ucipm_uaidb.py`, with `tools/test_ucipm_uaidb.py` as an
 OFFLINE positive control against a cached page. **Run that control in the same pass as any reading.**
+
+> **UPDATE 2026-08-26 (late evening): piece 2 is STAGED AND READ, not promoted.** 154 rungs
+> across the 4 tomatoes sit in `tools/staging/pla8_batch7_tomatoes/` with the read done, two
+> cross-sibling conflicts adjudicated, and ONE mint staged (`splash_barrier_mulch`, all four
+> agents hit the same wall, UMN anchors read live). The promote waits on the chemical-cohort
+> COMMIT so its suite can replay-pin from `674fab25`. Everything the promote session needs:
+> `docs/2026-08-26-pla8-batch7-tomatoes-staging-read.md`.
 
 ### 2. Then the tomatoes
 `beefsteak-tomato` `cherry-tomato` `grape-tomato` `roma-tomato` -- 4 crops, 34 problems. Highest

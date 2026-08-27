@@ -1,0 +1,261 @@
+{
+ "slug": "roma-tomato",
+ "name": "Roma Tomato",
+ "category": "Tomatoes",
+ "pests": [
+  {
+   "name": "Aphids",
+   "type": "pest",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Clusters of tiny soft green or black insects on the growing tips and the undersides of leaves, often so small they look like dots. The leaves may start to curl or feel sticky. You might see ants walking up the stems, as they farm aphids for the sweet liquid the aphids produce.",
+   "organic_treatment_beginner": "Spray the colonies directly with a strong jet of water from a hose. For persistent infestations, apply insecticidal soap or neem oil spray, making sure to coat the leaf undersides where the aphids cluster.",
+   "prevention_beginner": "Plant marigolds or nasturtiums near your tomatoes, as both attract beneficial insects that eat aphids. Avoid over-fertilizing with high-nitrogen fertilizer, which produces the soft new growth aphids prefer.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/yard-and-garden-insects/aphids",
+     "verified": "2026-05-22"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/tomato-insect-pests/",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Clusters of tiny soft insects on new growth and leaf undersides. Leaves curl, yellow, or become sticky with honeydew. Sooty black mold may follow.",
+   "cause_seasoned": "Multiple aphid species. Populations explode rapidly in warm weather.",
+   "cause_beginner": "Tiny soft-bodied insects that cluster on stems and the undersides of leaves. Their numbers can build up very fast in warm weather.",
+   "organic_treatment_seasoned": "Blast off with strong water jet. Apply insecticidal soap or neem oil directly to colonies. Introduce ladybugs or lacewings.",
+   "prevention_seasoned": "Plant marigolds and nasturtiums nearby. Avoid excess nitrogen fertilizer which creates soft, aphid-attractive growth. Encourage beneficial insects."
+  },
+  {
+   "name": "Tomato hornworm",
+   "type": "pest",
+   "severity": "high",
+   "audience": "core",
+   "symptoms_beginner": "Large sections of leaves or whole stems stripped overnight. Look for fat green caterpillars (up to 4 inches long) that blend almost perfectly into the stems, but they are easier to spot by looking for the black droppings on the leaves below.",
+   "organic_treatment_beginner": "Hand-pick and drop in soapy water, it sounds simple but it works well. If you spot any with small white oval capsules stuck to their backs, leave those ones; parasitic wasps have laid eggs on them and the wasps will do the work for you.",
+   "prevention_beginner": "Till or turn your soil in autumn to destroy overwintering pupae. Planting dill or fennel nearby attracts the predatory wasps that prey on hornworms.",
+   "sources": [
+    "umn_ext",
+    "ncsu_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/yard-and-garden-insects/tomato-hornworms",
+     "verified": "2026-05-22"
+    },
+    "ncsu_ext": {
+     "url": "https://content.ces.ncsu.edu/insect-and-related-pests-of-vegetables/pests-of-tomato",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Large green caterpillars (up to 4 inches) stripping foliage. Leaves disappear rapidly. Black droppings on leaves.",
+   "cause_seasoned": "Manduca quinquemaculata moth larvae. Mid to late summer pest.",
+   "cause_beginner": "Large green caterpillars, the larvae of a moth, that feed on leaves and stems. They show up mostly in mid to late summer.",
+   "organic_treatment_seasoned": "Hand-pick, they are well camouflaged but easy to remove. Apply Bt (Bacillus thuringiensis) spray. If white cocoons visible on back, leave them, as parasitic wasps are doing the work.",
+   "prevention_seasoned": "Till soil in autumn to kill overwintering pupae. Plant dill and basil nearby to attract predatory wasps."
+  },
+  {
+   "name": "Flea beetles",
+   "type": "pest",
+   "severity": "low",
+   "audience": "core",
+   "symptoms_beginner": "Tiny round holes scattered across the leaves, especially on young plants and seedlings. If you approach the plant quickly you'll see tiny shiny black beetles jumping off the leaves: that's the flea beetle.",
+   "organic_treatment_beginner": "Cover seedlings with floating row cover until plants are a few inches tall and growing strongly. Diatomaceous earth dusted on and around the leaves can help; reapply after rain.",
+   "prevention_beginner": "Transplanting larger, more established plants rather than direct-sowing reduces flea beetle damage, since seedlings are most vulnerable.",
+   "sources": [
+    "umn_ext",
+    "ncsu_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/plant-diseases/insects-and-diseases-tomatoes",
+     "verified": "2026-05-22"
+    },
+    "ncsu_ext": {
+     "url": "https://content.ces.ncsu.edu/insect-and-related-pests-of-vegetables/pests-of-tomato",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Tiny round shot-holes in leaves, especially on seedlings and young plants. Small shiny black beetles jump when disturbed.",
+   "cause_seasoned": "Multiple flea beetle species. Most active in spring on young plants.",
+   "cause_beginner": "Small dark beetles that jump like fleas when disturbed and chew tiny holes in leaves. They are most active in spring on young plants.",
+   "organic_treatment_seasoned": "Use row covers on seedlings. Apply diatomaceous earth. Neem oil spray.",
+   "prevention_seasoned": "Delay transplanting until plants are large. Use transplants rather than seeds."
+  },
+  {
+   "name": "Whiteflies",
+   "type": "pest",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Tiny white moth-like insects that fly up in a little cloud when you brush the plant, clustered on the undersides of the leaves. Leaves may yellow, and a sticky coating (honeydew) can develop, sometimes followed by black sooty mold. Whiteflies are worst in warm regions and on greenhouse or container plants.",
+   "organic_treatment_beginner": "Spray the undersides of the leaves with insecticidal soap or neem oil, repeating every 5 to 7 days because the eggs keep hatching. Yellow sticky traps catch the adults, and a strong jet of water knocks many off. Remove heavily infested lower leaves.",
+   "prevention_beginner": "Check new transplants before you buy them, since whiteflies often arrive on nursery plants. Reflective (silver) mulch confuses them, and keeping plants healthy without over-feeding nitrogen reduces the soft growth they prefer.",
+   "sources": [
+    "clemson_hgic",
+    "ncsu_ext"
+   ],
+   "anchoring_urls": {
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/tomato-insect-pests/",
+     "verified": "2026-06-30"
+    },
+    "ncsu_ext": {
+     "url": "https://content.ces.ncsu.edu/insect-and-related-pests-of-vegetables/pests-of-tomato",
+     "verified": "2026-06-30"
+    }
+   },
+   "symptoms_seasoned": "Clouds of tiny white insects on leaf undersides that flush up when disturbed. Yellowing leaves, honeydew, and sooty mold in heavy infestations. Most severe in warm regions, greenhouses, and on container plants.",
+   "cause_seasoned": "Several species (greenhouse whitefly, silverleaf/sweetpotato whitefly). Populations build rapidly in warm weather, and some species transmit plant viruses.",
+   "cause_beginner": "Small white flying insects that suck sap from the leaves. They multiply fast in warm weather and can spread plant viruses.",
+   "organic_treatment_seasoned": "Insecticidal soap or neem oil on leaf undersides, repeated every 5 to 7 days to catch newly hatched nymphs. Yellow sticky traps for adults. Conserve natural enemies (Encarsia wasps, ladybugs). Remove heavily infested foliage.",
+   "prevention_seasoned": "Inspect transplants before introducing them. Reflective mulch deters colonization. Avoid excess nitrogen. Monitor leaf undersides early in warm weather."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Early blight",
+   "type": "disease",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Dark brown spots on the lower leaves, often with rings inside them like a target pattern. The leaves around the spots turn yellow, then the whole leaf dies and drops. The pattern starts at the bottom of the plant and moves upward.",
+   "organic_treatment_beginner": "Remove and throw away (do not compost) any affected leaves as soon as you spot them. Mulch the soil around the base of the plant to stop rain from splashing soil and fungal spores up onto the lower leaves.",
+   "prevention_beginner": "Rotate your tomatoes, avoiding the same spot for at least 3 years. Water at the base of the plant rather than from overhead, and stake the plant to keep the foliage off the ground.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/disease-management/early-blight-tomato-and-potato",
+     "verified": "2026-05-22"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/tomato-diseases-disorders/",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Dark brown spots with concentric rings on lower leaves first. Affected leaves yellow and drop. Spreads upward through plant.",
+   "cause_seasoned": "Alternaria fungus. Favored by warm wet conditions.",
+   "cause_beginner": "A fungus that causes dark spots on the lower, older leaves first. It spreads in warm, wet weather, so keep the leaves as dry as you can.",
+   "organic_treatment_seasoned": "Remove affected leaves immediately. Apply copper-based fungicide preventively. Mulch soil to prevent splash-up.",
+   "prevention_seasoned": "Rotate tomatoes every 3-4 years. Water at soil level. Space plants for airflow. Stake to keep foliage off ground."
+  },
+  {
+   "name": "Blossom end rot",
+   "type": "disorder",
+   "severity": "high",
+   "audience": "core",
+   "symptoms_beginner": "Dark, sunken, leathery patches on the bottom of the fruit, the end where the flower was attached. Roma and other paste tomatoes are especially prone to it, and it usually shows up on the first fruits of the season. It is not contagious and does not spread between plants.",
+   "organic_treatment_beginner": "The fix is consistent watering, not calcium supplements. Mulch around the base so the soil holds moisture evenly, and water on a regular schedule rather than in big irregular bursts. Remove affected fruit, since they will not recover. With a determinate roma, steady moisture through the concentrated fruit set is the key window.",
+   "prevention_beginner": "Water consistently and deeply, since the most common trigger is irregular watering during fruit development, which for a determinate roma is a short, heavy window. Mulch to buffer soil moisture, avoid disturbing the roots by cultivating too close, and do not over-fertilize with nitrogen, which pushes fast growth the plant cannot supply calcium to. Choosing a variety and watering steadily matter more than any calcium product.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/plant-diseases/tomato-disorders",
+     "verified": "2026-05-22"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/gardening-myths-fix-blossom-end-rot-with-calcium-sprays/",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Dark, sunken, leathery patch at the blossom (bottom) end of the fruit, affecting the earliest fruit most. Paste and roma types are notably susceptible. Not contagious.",
+   "cause_seasoned": "Localized calcium deficiency in the developing fruit, driven by uneven soil moisture or root damage rather than a true soil calcium shortage in most gardens. Roma and paste types are especially prone because their dense, blocky fruit and heavy, near-simultaneous fruit load outpace calcium delivery to the fruit's far (blossom) end.",
+   "cause_beginner": "A dark, sunken patch on the bottom of the fruit. It is not a pest or a disease: the fruit cannot get enough calcium, almost always because watering has been uneven. Romas get it more than most tomatoes because they set a heavy crop of dense fruit all at once. Water steadily to prevent it.",
+   "organic_treatment_seasoned": "Mulch to maintain even soil moisture. Water consistently. Foliar calcium spray provides some relief. Remove affected fruit.",
+   "prevention_seasoned": "Consistent soil moisture is the primary prevention, especially through the concentrated fruit set of a determinate plant; mulch heavily to buffer moisture swings. Avoid root disturbance and excess nitrogen. Soil calcium is rarely the limiting factor, so foliar calcium sprays give only marginal relief."
+  },
+  {
+   "name": "Septoria leaf spot",
+   "type": "disease",
+   "severity": "medium",
+   "audience": "core",
+   "symptoms_beginner": "Small circular spots on the leaves, with tan or pale gray centers with dark brown borders, often with a faint yellow halo around the outside. They start on the lower leaves and move upward. Not as aggressive as early blight but disfiguring.",
+   "organic_treatment_beginner": "Remove affected leaves immediately. Apply copper-based fungicide if the problem is spreading. Improve airflow by staking or caging so leaves aren't touching each other.",
+   "prevention_beginner": "Water at the soil level rather than overhead. Mulch to prevent soil splash. Rotate tomatoes to a different bed each year.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/plant-diseases/tomato-leaf-spot-diseases",
+     "verified": "2026-05-22"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/tomato-diseases-disorders/",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Small circular spots with dark borders and pale gray centers, starting on lower leaves. Spots may have yellow halos.",
+   "cause_seasoned": "Septoria lycopersici fungus. One of the most common tomato diseases.",
+   "cause_beginner": "A common fungus that makes many small, round spots on the leaves. It spreads in wet conditions, so water at the soil and keep the leaves dry.",
+   "organic_treatment_seasoned": "Remove affected leaves. Apply copper fungicide. Ensure good air circulation.",
+   "prevention_seasoned": "Rotate crops. Water at soil level. Mulch around plants."
+  },
+  {
+   "name": "Late blight",
+   "type": "disease",
+   "severity": "high",
+   "audience": "core",
+   "symptoms_beginner": "Large, irregularly shaped brown patches that look water-soaked and spread fast, days not weeks. In humid weather you may see white fuzzy growth on the undersides of affected leaves. This one is serious; it can kill a healthy plant in a week.",
+   "organic_treatment_beginner": "Remove and destroy all affected plant material immediately, bag it and throw it in the trash, do not compost it. Apply copper-based fungicide preventively if you see it starting in your area and conditions are wet.",
+   "prevention_beginner": "Choose disease-resistant varieties whenever possible. Stake for good airflow. Never leave tomato plant debris in the garden over winter, clear it all out at season's end.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/disease-management/late-blight",
+     "verified": "2026-05-22"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/tomato-diseases-disorders/",
+     "verified": "2026-05-22"
+    }
+   },
+   "symptoms_seasoned": "Water-soaked, rapidly expanding brown patches on leaves and stems. White fuzzy growth on undersides in humid conditions. Can destroy plants in days.",
+   "cause_seasoned": "Phytophthora infestans oomycete. The same pathogen that caused the Irish potato famine. Spreads rapidly in cool wet weather.",
+   "cause_beginner": "A fast-moving disease that can collapse a plant within days in cool, wet weather. Remove and throw away affected plants right away so it does not spread.",
+   "organic_treatment_seasoned": "Remove and destroy all affected material immediately, do not compost. Apply copper fungicide preventively in wet conditions.",
+   "prevention_seasoned": "Plant resistant varieties. Ensure excellent airflow. Never leave tomato debris in the garden over winter."
+  },
+  {
+   "name": "Fusarium and Verticillium wilt",
+   "type": "disease",
+   "severity": "high",
+   "audience": "core",
+   "symptoms_beginner": "The plant wilts during the day and may recover at night at first, then wilts for good. It often starts on one side of the plant or one branch. Lower leaves yellow, sometimes in a V-shaped patch, and the plant slowly declines. If you slice the main stem near the base, you may see brown streaks inside. There is no cure once a plant is infected.",
+   "organic_treatment_beginner": "There is no spray that cures these soil fungi. Pull and throw away (do not compost) infected plants to reduce spread. The real solution is prevention: next year plant a resistant variety and rotate to a new spot.",
+   "prevention_beginner": "Choose resistant varieties. Look for the letters V and F on the label or plant tag (for example Roma VF), which mean the variety resists Verticillium and Fusarium wilt. Rotate tomatoes away from where any nightshade grew for at least 3 years, and clean up plant debris at season's end.",
+   "sources": [
+    "umn_ext",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/plant-diseases/tomato-disorders",
+     "verified": "2026-06-30"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/tomato-diseases-disorders/",
+     "verified": "2026-06-30"
+    }
+   },
+   "symptoms_seasoned": "Progressive wilting, often one-sided or one-branch first, yellowing of lower leaves sometimes in a V-shaped pattern, and browning of the vascular tissue visible when the stem is sliced. Plants decline and die with no recovery once infected. Fusarium favors warm soils and Verticillium cooler soils, so together they cover a wide range of conditions.",
+   "cause_seasoned": "Soilborne fungi Fusarium oxysporum f. sp. lycopersici and Verticillium dahliae/albo-atrum that invade the roots and plug the water-conducting xylem. They persist in soil for years.",
+   "cause_beginner": "Fungi that live in the soil and clog the plant's water pipes from the inside, so the plant wilts and dies. They stay in the soil for years, which is why rotation and resistant varieties matter.",
+   "organic_treatment_seasoned": "No effective curative treatment for the home gardener. Remove and destroy infected plants; do not compost. Management is preventive: resistant cultivars and rotation.",
+   "prevention_seasoned": "Plant resistant cultivars (the V and F in a VFN code denote Verticillium and Fusarium resistance; Roma VF is a common resistant paste variety). Rotate out of Solanaceae for 3 or more years, sanitize tools, and remove crop debris. Grafting onto resistant rootstock is an option for repeated problems."
+  }
+ ]
+}

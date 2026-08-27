@@ -1,0 +1,270 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on high-nitrogen fertilizer. Heavy feeding pushes out the soft new shoots aphids like best, so a leaner-fed plant gives them less to build up on.",
+     "note_seasoned": "Excess nitrogen drives the flush of soft growth colonies multiply on; moderating the feed removes the resource that lets populations explode in warm weather."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a strong jet of water from the hose, aiming at the growing tips and the undersides of the leaves where they gather. Spray early in the day so the leaves can dry.",
+     "note_seasoned": "A hard water jet dislodges colonies from tips and leaf undersides as a first physical knock-back before reaching for any spray; do it early enough in the day that foliage dries quickly."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let the aphids' natural enemies work for you. Plant marigolds or nasturtiums nearby, since both draw in beneficial insects, the helpful bugs such as ladybugs that eat aphids.",
+     "note_seasoned": "Conserve the resident natural enemies before spraying anything: interplanted marigolds and nasturtiums attract aphid predators, and avoiding broad-spectrum insecticides keeps them alive to do the work."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "For an infestation you have actually found, you can buy and release ladybugs or lacewings onto the affected plants. Release onto aphids that are present, not ahead of time.",
+     "note_seasoned": "Purchased ladybug or lacewing releases go onto a located, active colony once conservation is already in place; results are more conditional than what the resident predators give you for free."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For colonies that keep coming back, spray insecticidal soap right onto them, coating the undersides of the leaves where they cluster; it works only where it wets the insects. Avoid spraying above 90°F or on a drought-stressed plant, which can burn the leaves.",
+     "note_seasoned": "Soap is a contact material for infestations you can coat directly. Target the colonies on the leaf undersides and spare clean foliage, since it also kills soft-bodied beneficials it wets; skip it above 90°F or on water-stressed plants."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is the other spray option for persistent colonies; coat the leaf undersides where they cluster. Do not spray in heat above 90°F, and keep it off anything in flower so bees are not exposed.",
+     "note_seasoned": "Neem is a low-residue option that spares beneficials once dry; direct coverage of the colonies on the undersides is what does the work. Observe the 90°F ceiling, avoid drought-stressed plants, and keep it off open bloom while bees forage."
+    }
+   ]
+  },
+  {
+   "id": "tomato-hornworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "After the season ends, till or turn the soil in that bed. Hornworms spend the winter as pupae, the resting stage buried in the soil, and turning the bed destroys them before next year.",
+     "note_seasoned": "Autumn tillage of the finished bed breaks up overwintering pupae, cutting next season's emergence; weigh it against no-dig practice where pressure is light and handpicking is keeping up."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the caterpillars off by hand and drop them into soapy water. It sounds too simple, but it works well. They blend into the stems, so look for the black droppings on the leaves below and trace upward to find them.",
+     "note_seasoned": "Hand removal is effective despite the camouflage; scout by the frass on lower leaves rather than by the larvae themselves, and pull them into soapy water on a regular walk-through."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Tiny parasitic wasps, helpful wasps that lay their eggs on hornworms, will do much of the work if you let them. If you find a hornworm with small white oval capsules stuck to its back, leave that one alone; the wasps are already finishing it off. Planting dill or fennel nearby helps draw the wasps in.",
+     "note_seasoned": "Conserve the parasitoids: a larva carrying white cocoons is already parasitized and doomed, so leave it in place as a wasp nursery, and interplant dill to attract the adults. Avoid broad-spectrum sprays that would remove them."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "If picking is not keeping up, spray Bt, short for Bacillus thuringiensis, a bacteria-based spray that targets caterpillars. Spray while the caterpillars are still young, and reapply after rain. It acts on caterpillars as a group, so keep it off any plants you grow for butterflies.",
+     "note_seasoned": "Bt kurstaki controls larvae best while they are small; reapply after rain or a flush of new growth. It is caterpillar-wide, taking swallowtails and monarchs along with the pests, so confine it to the affected crop."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young transplants with a floating row cover, a light fabric blanket that lets sun and rain through but keeps the beetles off, until the plants are a few inches tall and growing strongly. Seedlings take the worst damage, so protection matters most early.",
+     "note_seasoned": "Row cover excludes the beetles through the vulnerable seedling stage, which is where the shot-hole feeding concentrates; established plants are far less at risk. Do not lay it over a bed that carried the same family last year, or emerging soil pests can be trapped underneath with the crop."
+    }
+   ]
+  },
+  {
+   "id": "whiteflies",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Keep the plants healthy without over-feeding nitrogen. Heavy feeding produces the soft growth whiteflies prefer, so a moderate feed gives them less to work with.",
+     "note_seasoned": "Avoid excess nitrogen; the soft flush it drives is what colonizing whiteflies build on, and populations climb fastest in warm weather. Monitor the leaf undersides early in the warm season."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Lay a reflective (silver) mulch under the plants while they are still small. The shiny surface confuses incoming whiteflies looking for a place to land.",
+     "note_seasoned": "Reflective mulch deters colonization by disorienting incoming adults; lay it at planting while the crop is small, before a population is established."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Snap off the lower leaves that are heavily infested and get them out of the garden. Each leaf removed takes part of the population with it.",
+     "note_seasoned": "Removing the most heavily infested foliage lowers the resident population and the honeydew load that would otherwise feed sooty mold."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong jet of water from the hose knocks many of them off the leaf undersides. Spray early in the day so the foliage dries quickly.",
+     "note_seasoned": "A hard water jet dislodges a good share of the population from the undersides as a first knock-back; keep it early in the day so leaves dry."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Hang yellow sticky traps near the plants to catch the flying adults, the little cloud that rises when you brush the foliage. The traps do not reach the young stages on the leaves, so pair them with the other steps.",
+     "note_seasoned": "Yellow traps pull down the adult flight and double as a monitoring tool; the nymphs on the leaf undersides are untouched, so traps supplement coverage sprays rather than replace them."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Whiteflies have natural enemies, including ladybugs and tiny wasps that attack them. Protect these helpers by avoiding broad sprays that kill everything, and they will help hold the numbers down.",
+     "note_seasoned": "Conserve Encarsia wasps, ladybugs, and the rest of the natural-enemy complex; avoid broad-spectrum materials, which kill the beneficials along with the pests."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Spray insecticidal soap onto the undersides of the leaves where the whiteflies sit, and repeat every 5 to 7 days, because the eggs keep hatching after each spray. Avoid spraying above 90°F or on drought-stressed plants, which can burn the leaves.",
+     "note_seasoned": "Soap works by contact on the nymphs, so underside coverage and a 5 to 7 day repeat cycle to catch new hatch are both essential. Mind the 90°F limit, and spray only where pests are, since it kills soft-bodied beneficials it wets."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is the other spray choice; coat the leaf undersides and repeat every 5 to 7 days for the same reason, the eggs keep hatching. Do not spray above 90°F, and keep it off open flowers so bees are not exposed.",
+     "note_seasoned": "Neem on the undersides, repeated on the same 5 to 7 day cycle, is a low-residue alternative that spares beneficials once dry; observe the 90°F ceiling and the bee precaution around anything in flower."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "early-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your tomatoes to a different spot each year, and do not bring them back to the same bed for at least 3 years. The fungus carries over where tomatoes grew before.",
+     "note_seasoned": "Rotate tomatoes out of the old ground for 3 to 4 years to starve the carryover inoculum; with a splash-driven disease, distance in time is the foundation the other steps build on."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plant instead of over the top. This fungus spreads in warm, wet weather, so keeping the leaves as dry as you can slows it down.",
+     "note_seasoned": "Soil-level irrigation keeps foliage dry and cuts the splash that lifts soil and spores onto the lower leaves, which is where infection starts before it moves up the plant."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Lay mulch over the soil around the plant. Rain splashing bare soil is how the fungus reaches the lower leaves, and mulch blocks the splash.",
+     "note_seasoned": "Mulch over the soil intercepts the splash that lifts carryover spores onto the lower canopy, complementing base watering by handling the rain you cannot redirect."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant room, and stake it so the leaves are up off the ground and air can move through. Foliage that dries quickly gets less disease.",
+     "note_seasoned": "Spacing for airflow plus staking keeps the canopy drier and the lowest leaves off the soil, working against the warm, wet conditions the fungus favors."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "The moment you spot the dark target-patterned spots, pull those leaves off and throw them in the trash, not the compost. Removing them early slows the disease's climb up the plant.",
+     "note_seasoned": "Rogue out affected leaves immediately and destroy rather than compost them; the disease ladders upward from the lowest leaves, so early removal buys time."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If it keeps spreading, a copper-based fungicide can protect the remaining leaves, but it works as prevention, not a cure, so it has to go on early. Follow the label rate, and keep spray and runoff away from ponds and drains, since copper is very harmful to fish and other water life.",
+     "note_seasoned": "Copper is a protectant, applied preventively at or before first symptoms rather than into an infected canopy. Respect the label rate to avoid leaf injury, limit repeat use over the years since copper accumulates at the soil surface, and keep it out of waterways."
+    }
+   ]
+  },
+  {
+   "id": "blossom-end-rot",
+   "type": "physiological",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Water deeply on a steady, regular schedule instead of in big irregular bursts. The dark sunken patch is not a disease; it appears when uneven watering keeps the fruit from getting enough calcium, and consistent moisture is the fix, not calcium supplements. For a roma, the make-or-break stretch is the short, heavy window when most of the fruit sets at once.",
+     "note_seasoned": "Consistent soil moisture through fruit development is the primary control; the disorder is a localized calcium-delivery failure driven by moisture swings or root damage, not a true soil calcium shortage in most gardens. A determinate roma's near-simultaneous set of dense fruit compresses the critical window, which is why paste types show it most, and why foliar calcium gives only marginal relief."
+    },
+    {
+     "method": "moisture_buffering_mulch",
+     "note_beginner": "Mulch around the base of the plant so the soil holds moisture evenly between waterings, smoothing out the wet-to-dry swings that trigger the problem.",
+     "note_seasoned": "A heavy mulch buffers soil moisture swings between irrigations, backstopping the even-watering regime through the concentrated fruit set."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off the affected fruit when you see it. A fruit with the dark patch will not recover, and the problem is not contagious, so this is housekeeping rather than disease control.",
+     "note_seasoned": "Cull affected fruit; the lesion is permanent and the disorder does not spread between plants, so removal is a quality measure, not sanitation against a pathogen."
+    }
+   ]
+  },
+  {
+   "id": "septoria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant your tomatoes in a different bed each year, so the fungus left behind in last year's spot does not get a fresh host.",
+     "note_seasoned": "Annual rotation to fresh ground denies the pathogen its carryover; this is one of the most common tomato diseases, so make the move routine rather than reactive."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil level, not over the leaves. This fungus spreads in wet conditions, so dry foliage is your cheapest protection.",
+     "note_seasoned": "Soil-level watering limits both leaf wetness and splash; the disease moves in wet conditions, starting on the lower leaves and working upward."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Cover the soil under the plant with mulch so rain cannot splash the fungus up from the ground onto the lowest leaves.",
+     "note_seasoned": "A soil mulch blocks the splash route from ground to lower foliage; with a disease that climbs from the lowest leaves, cutting the first splash matters most."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Stake or cage the plants so the leaves are not touching each other and air can move through. Leaves that dry fast give the spots less chance to spread.",
+     "note_seasoned": "Staking or caging opens the canopy so foliage dries quickly and leaves are not resting against each other; air circulation is part of the control, not cosmetics."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off spotted leaves as soon as you find them and get them out of the garden. The spots start low on the plant and climb, so early removal slows the climb.",
+     "note_seasoned": "Immediate removal of symptomatic leaves lowers the inoculum on the plant; infection begins on the lower leaves and moves upward, so scout low and early."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If the spots keep spreading despite all that, a copper-based fungicide can hold the disease back; it protects new growth rather than curing old spots. Follow the label rate, and keep spray and runoff away from ponds and drains, since copper is very harmful to fish and other water life.",
+     "note_seasoned": "Copper, applied when spread is active, protects tissue preventively rather than curing established spots. Watch the label rate for foliage safety, limit repeated use since copper persists at the soil surface, and keep it out of waterways."
+    }
+   ]
+  },
+  {
+   "id": "late-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a disease-resistant variety whenever you can. With a disease that can kill a healthy plant in a week, the variety you pick at planting is the strongest card you hold.",
+     "note_seasoned": "Resistant cultivars are the highest-leverage control against a pathogen that can collapse a plant in days in cool, wet weather; select for late blight resistance at seed-buying time."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Stake the plants so air moves freely through the foliage. This disease races in wet conditions, so anything that helps the leaves dry works in your favor.",
+     "note_seasoned": "Staking for excellent airflow shortens leaf wetness, working against the cool, wet conditions that drive the epidemic; airflow is a brake, not a cure."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "If you spot it, act right away: remove every affected plant part, bag it, and put it in the trash, not the compost. At season's end, clear all tomato debris out of the garden rather than leaving any of it over winter.",
+     "note_seasoned": "Immediate removal and destruction of symptomatic tissue, bagged for the trash rather than composted, plus a clean end-of-season teardown of all tomato debris, denies the pathogen both its in-season spread and its overwintering bridge."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If late blight is showing up in your area and the weather is wet, a copper-based fungicide applied before your plants have symptoms can protect them; it is a preventive, not a cure. Follow the label rate, and keep spray and runoff out of ponds and streams, since copper is very harmful to fish and other water life.",
+     "note_seasoned": "Copper is protectant-only, applied ahead of infection when regional reports and wet conditions coincide. Mind aquatic toxicity, soil accumulation with repeat use, and the label rate."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-verticillium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "This one is beaten at the seed rack, not in the garden: buy a resistant variety. Look for the letters V and F on the label or plant tag, Roma VF for example, which mean the plant resists Verticillium and Fusarium wilt.",
+     "note_seasoned": "Resistant cultivars are the primary control; the V and F of a VFN code denote Verticillium and Fusarium resistance, and Roma VF is a common resistant paste variety. With no cure once a plant is infected, this choice carries most of the load."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move tomatoes to ground where no nightshade-family crop, such as tomato, pepper, potato, or eggplant, has grown for at least 3 years. These fungi live in the soil for years, so the long wait is the point.",
+     "note_seasoned": "Rotate out of Solanaceae for 3 or more years; the pathogens persist in soil for years, so the rotation must be long enough to matter."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull up infected plants and throw them away, not in the compost, and clean up plant debris at the end of the season. You cannot cure an infected plant, but removing it helps reduce spread.",
+     "note_seasoned": "Rogue and destroy infected plants rather than composting them, and clear crop debris at season's end; with no effective curative treatment for the home gardener, sanitation and prevention are the whole program."
+    },
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "If the wilt keeps coming back in a bed you want to keep using, grafting your chosen variety onto resistant roots is an option. The top stays the tomato you want; the roots are swapped for a resistant type.",
+     "note_seasoned": "Grafting a susceptible cultivar onto resistant rootstock is an option for repeated problems in established ground; it keeps the scion variety while changing the root system these soil fungi invade through."
+    }
+   ]
+  }
+ ]
+}

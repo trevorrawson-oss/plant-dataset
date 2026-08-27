@@ -1,0 +1,31 @@
+{
+ "_provenance": "PLA-8 batch 7 (the tomatoes), 2026-08-26. All four authoring agents independently reported the same control blocked: every crop's early-blight AND septoria prose commands mulching the soil to stop splash, and no legal key carried it (moisture_buffering_mulch is physiological-only and MEANS moisture; straw_mulch MEANS a strawberry fruit-contact barrier). Eight problem instances with nowhere to go is the playbook's mint signal. Both UMN anchors were fetched and READ from live bytes 2026-08-26: the early-blight page ('Apply plastic or organic mulch to provide a barrier between contaminated soil and leaves') and the tomato-leaf-spot page ('Cover the soil below the tomato plants with mulch. This will reduce the ability of diseases in the soil to splash onto the lower leaves. Landscape fabric, straw, plastic mulch or dried leaves are all acceptable mulches.'), which also carries the herbicide-residue caution verbatim.",
+ "key": "splash_barrier_mulch",
+ "entry": {
+  "name": "Splash-barrier mulch",
+  "tier": "cultural",
+  "applies_to": ["fungal_foliar", "bacterial", "disease_general"],
+  "how_it_works_beginner": "A layer of mulch over the soil under the plant puts a barrier between the ground and the leaves. Many leaf diseases wait in the soil and ride rain splash up onto the lowest leaves, and mulch stops that ride at the ground.",
+  "how_it_works_seasoned": "Mulch covering the soil surface interrupts rain-splash dispersal of soilborne inoculum onto the lower canopy; landscape fabric, straw, plastic mulch, or dried leaves all serve, laid before the splash-driven part of the season.",
+  "best_use": "Under plants whose leaf diseases carry over in the soil and reach the foliage by rain splash, such as the tomato leaf blights and spots, laid at planting. Distinct from moisture buffering mulch, which manages soil moisture swings for disorders such as blossom end rot, and from straw mulch, which is a fruit-contact and splash barrier under strawberries.",
+  "find_it_beginner": "Any common garden mulch works as the barrier: straw, dried leaves, landscape fabric, or plastic mulch from the garden center.",
+  "pros": [
+   "Blocks the main soil-to-leaf route of splash-dispersed diseases without any spray",
+   "Several everyday materials work: landscape fabric, straw, plastic mulch, or dried leaves"
+  ],
+  "cons": [
+   "Does nothing against disease already on the foliage or arriving by air",
+   "Needs to be in place before the splashy weather, not after spots appear"
+  ],
+  "cautions": [
+   "Do not use grass clippings or leaves from a lawn treated with an herbicide; residues carried in the mulch can injure the crop, and tomatoes are sensitive to many lawn herbicides"
+  ],
+  "sources": ["umn_ext"],
+  "anchoring_urls": {
+   "umn_ext": {
+    "url": "https://extension.umn.edu/plant-diseases/tomato-leaf-spot-diseases",
+    "verified": "2026-08-26"
+   }
+  }
+ }
+}
