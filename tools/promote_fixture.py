@@ -100,6 +100,8 @@ COMMIT_FOR = {
     'f8678adea533447445ee2679d7d333065763a7481c39371b98d0b39d55aeeec1': '2127645',
     # PLA-8 BATCH 8: the leafy greens; fall block opens; roster 33 -> 37.
     '043a7272e76d640f287df420d319f209de8bd4443ffa75d327175958bf3b76e0': 'dd6657a',
+    # PLA-8 BATCH 9: the roots; fall block batch 2; roster 37 -> 41.
+    '4725bcbbe0cc78046b718c40bb5f97bdcd6638f7f55bec83e1ab465e1a5846f4': '8d395a6',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
