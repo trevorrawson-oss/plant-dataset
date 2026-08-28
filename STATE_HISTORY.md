@@ -4,6 +4,104 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-08-28 -- PLA-8, THE `trap_cropping` CATALOG ROUND: a mint whose safety lives in its timing, and six refusals (`be444e25` -> `86c5396a` -> `96cbc68c`)
+
+TWO promotes, the chlorothalonil pairing (`d096415` mint / `2e86279` backfill) applied again.
+`tools/promote_pla8_trap_cropping.py` mints the key (catalog **58 -> 59**, zero crops, zero sources,
+zero existing methods); `tools/promote_pla8_trap_cropping_backfill.py` attaches **10 rungs on 9
+certified crops**, 20 register strings, zero catalog change. Roster laddered stays **46/121** because
+these are rungs on ladders that already existed. Run in parallel with the main session's batches
+11/12 under the SHA-collision protocol; this session took slot 1 by agreement.
+
+**WHY IT WAS OWED.** Trap cropping is planting a sacrificial patch of a MORE preferred host to
+concentrate a pest, then destroying that patch before it disperses. It was the single largest
+unplaceable control in TWO CONSECUTIVE batches and all five batch-10 agents flagged it independently.
+Every near-miss fails differently: `weed_host_control` REMOVES a host while this ADDS one;
+`crop_rotation` moves the crop in space and `planting_time_avoidance` in time, while this leaves the
+crop and changes what grows beside it; `garden_sanitation` covers the destroy step but not the
+planting step; `beneficial_predators` attracts the pest's ENEMIES, this attracts the PEST.
+
+**THE T1 READ ANCHORED THE TIMING, NOT THE PRACTICE.** A trap left standing is a nursery. UMass gave
+the deadline ("must receive an insecticide application or be mechanically destroyed before eggs
+hatch"), UF/IFAS the dispersal half ("you must eradicate them to prevent them from moving on to the
+main crop") plus the harlequin-bug-on-collards case covering seven of the ten targets, UGA C1118 the
+definition, two-weeks-early establishment and 8 to 12 ft separation. **TWO DOCUMENTS READ AND
+DELIBERATELY NOT CITED:** Purdue's Vegetable Crops Hotline (right claim, but it lives on
+vegcropshotline.org while `purdue_ext` is anchored at extension.purdue.edu -- the catalog-divergence
+shape) and WVU's harlequin page, which carries the cleanest nursery warning of all and returned
+**403 on both user agents**. A page that could not be read is not evidence, whatever a search summary
+says about it.
+
+**THE BRIEF WAS WRONG TWICE, AND BOTH WERE CAUGHT BY CHECKING RATHER THAN TRUSTING.** (1) It named
+Clemson's cole-crop factsheet as carrying the harlequin trap-crop advice verbatim; fetched and read,
+it says nothing about trap cropping. (2) Its scan reported 20 problems on 18 crops; re-run over EVERY
+string field the true figure is **22 on 20**. `nasturtium`/Aphids and `zinnia`/Japanese beetles carry
+their prose in `note_beginner`/`note_seasoned`, a shape used by **91 problems** on the shell and
+ornamental crops and absent from the eight-field scan. Both are the INVERTED class and both are
+textbook trap crops, so they are the records a later pass is most likely to get wrong. **The
+exclusion set is SIX, not four.** The main session re-scanned independently, confirmed 22/20, and
+corrected the brief in place.
+
+**TWO RUNG CONTRACTS, ASSERTED IN CANONICAL IN BOTH DIRECTIONS.** DESTROY_STATED (7 harlequin
+entries) carry the removal step in their own prose, so their rungs restate it and attribute it with
+"this crop's guidance". DIVERT_ONLY (3 flea-beetle entries) stop at the diversion and name no
+endpoint, so their rungs route the timing through the METHOD's cautions and are FORBIDDEN the
+attribution phrase -- crediting a source with a removal step it never states would author a
+recommendation. That is batch 10's `planting_time_avoidance` ruling in a different field.
+
+**THE SPECIES GUARD STOPS A PROPAGATION DEFECT.** The ten name different trap plants and jalapeno's
+is NASTURTIUM, on a crop that is not a brassica. Every species a rung names is checked against THAT
+CROP'S own prose. Exactly one pair is byte-identical (cabbage/cauliflower) and shares a rung text;
+`check_rung_distinctness` pins the prose/rung correspondence in BOTH directions, catching a copied
+rung and a needlessly forked one with the same check. Placement is the END OF THE CULTURAL RUN, not
+the end of the ladder: all ten end above cultural, so appending would break monotonicity.
+
+**SIX EXCLUSIONS, PINNED BOTH WAYS, EACH WITH ITS OWN REASON.** INVERTED (radish/flea-beetles,
+nasturtium, zinnia), REPURPOSED (radish/cabbage-root-maggot), CONSERVATION (dill and parsley
+parsleyworm, where larvae are relocated to KEEP THEM ALIVE on a host grown partly for the
+butterflies, and a method meaning "then destroy the trap" is actively wrong rather than redundant).
+**nasturtium is the most dangerous** and gets its own message: its text describes pulling a loaded
+trap stand, which reads exactly like this method, but the dataset carries it as an ornamental and
+edible crop, so a rung tells the reader to destroy the crop they are growing. Both promotes refuse if
+any exclusion fails to RESOLVE to a real problem -- a typo'd slug would protect nothing while
+reporting green.
+
+**HARNESSES: 34/34 and 42/42, ZERO SURVIVORS, and run 1 of each found a REAL unreachable branch.**
+The mint's per-exclusion branch was masked by the mint-only sweep; the backfill's "sits after a
+non-cultural rung" check was structurally implied by monotonicity (cultural is the lowest rank) and
+was DELETED rather than kept as decoration. **BOTH had been concealed by hedged-OR drivers** --
+`assertTrue(a in out or b in out)` passes whether or not the branch under test can ever fire, which
+makes it a smell rather than a convenience. A third ordering defect was fixed before the harness ran,
+caught by `VerifyPostIsDriven` failing at first write: the verbatim check subsumes every substantive
+check, so with it first the disclosure, contrast, applies_to and tier branches were all unreachable.
+
+**A CLAIM MADE AND RETRACTED, recorded because it would have caused an audit.** This round first
+reported that the `X or {...}` mutation idiom is inert wherever it appears, including in shipped
+harnesses. **False.** `{} or {MANGLED FIRST KEY, ...rest}` renames a key, the guard's subscript
+raises `KeyError`, and the suite reddens -- verified by evaluating both idioms directly, and the main
+session's re-run of `mutate_pla8_chlorothalonil_backfill_suite.py` gives 30/30 PASS. Only `() or
+(THE ORIGINAL PASTED BACK)` is truly inert. Shipped harnesses are SOUND; their labels are wrong.
+Filed as a labeling cleanup, not an audit.
+
+**GAUNTLET:** gate_all **121/121**; whole_crop_gate PASS on all nine; control_ladder_gate **0**;
+register_completeness PASS; release_verify **clean** (only the nine declared crops changed,
+`control_methods` the only top-level change, catalog +none -none, `lettuce-leaf` byte-identical);
+COMPACT preserved; **134 guard tests green under both runners**. `release_verify` needed
+`--slug cabbage`: its default pilot slug is `cherry-tomato`, which it folds into the expected-changed
+set, so the default reports a spurious CONCERN. Known single-crop-pilot shape, not a finding.
+
+Commits `70a2a9e` (mint), `fcb3ec7` (register `86c5396a`), `c64f8ed` (backfill), `1273c93` (register
+`96cbc68c`). All `--no-verify` on the standing E1 sequencing; NOT pushed. Never amend the two that
+COMMIT_FOR pins.
+
+**OWED:** `brussels-sprouts`/Harlequin bug takes this rung in batch 12, whose promote now REFUSES to
+ship without it; five more crops pick it up free when laddered (`blackberry`, `cayenne-pepper`,
+`eggplant`, `habanero`, `okra`). WVU's 403 page is the best unclaimed anchor. **53 rungs across 5
+crops carry no `note_seasoned` and `control_ladder_gate` never mentions the field** (broccoli 19/30,
+celery 18/25, artichoke 8/30, asparagus 7/20, microgreens-mix 1/7) -- measured twice independently,
+deliberately NOT gated mid-block, and owed a gate plus its own backfill after the fall block.
+Full write-up: `docs/2026-08-28-pla8-trap-cropping-outcome.md`.
+
 ## 2026-08-27 -- PLA-8 batch 10, THE BRASSICA FAMILY: the arc's biggest batch, and a mint that stops a material substitution (`4725bcbb` -> `be444e25`)
 
 ONE promote (`tools/promote_pla8_batch10.py`): cabbage/cauliflower/kohlrabi/collards/kale -- 48 problems, **237 rungs**, roster laddered **41 -> 46**, catalog **57 -> 58**.
