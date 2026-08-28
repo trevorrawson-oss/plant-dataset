@@ -1,0 +1,122 @@
+{
+ "pests": [
+  {
+   "id": "onion-thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give alliums, the onion family, a different bed each season instead of replanting the same ground. Keeping the planting on the move is part of holding thrips numbers down from one year to the next.",
+     "note_seasoned": "Rotating off last season's allium ground is the standing half of thrips management on this crop, decided before anything is sown rather than in response to an outbreak."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "While the numbers are still light, a hard jet of water from the hose knocks thrips off. Aim into the crease where the leaves meet, since that is where they shelter. Spray early in the day so the leaves dry off, and keep the plants healthy and watered so they can carry the feeding they do get. If an infestation keeps building past this, your local extension office can tell you what is recommended in your area.",
+     "note_seasoned": "A forceful water knock-down is the response to a light infestation, worked into the leaf axils where the insects sit. Those same folds are why coverage-dependent materials tend to underperform here, so vigor and steady water matter alongside the physical pass. Keep the pass to early in the day so foliage is not left wet, and take a persistent outbreak to local extension guidance rather than to a material named here."
+    }
+   ]
+  },
+  {
+   "id": "onion-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not put alliums back into the same bed year after year. The problem carries over in old onion material left behind in the ground, so moving the planting keeps a new crop away from it.",
+     "note_seasoned": "Populations carry over in allium residue from one crop to the next, so shifting the planting off last year's allium ground is the foundation the other two rungs sit on."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out old onion tops, roots and trimmings once a bed is finished, and take them away rather than leaving them lying around. That leftover material is what carries the problem into the next season.",
+     "note_seasoned": "Residue is the carryover reservoir the guidance names, so strip the bed of allium culls, tops and root plates at the end of the crop and remove them from the ground rather than leaving them in place."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Lay a floating row cover, a light fabric that lets in light and water while keeping insects out, over the bed as the seedlings come up. The fly has to reach the base of a plant to lay its eggs, so a sealed cover shuts that out. Do not use a cover on a bed where alliums grew last year, or you can seal the emerging flies in with the crop.",
+     "note_seasoned": "Cover at emergence, which is the window the guidance points at, and seal the edges: eggs go in at the plant base, so the barrier counts only if the fly cannot get underneath it. Pair it with the rotation rung, since covering ground that carried alliums last season can trap what comes up out of it under the net with the crop."
+    }
+   ]
+  },
+  {
+   "id": "allium-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Grow your alliums somewhere new each year rather than returning to the same bed. Rotating the planting is part of keeping this fly from settling into one patch of the garden.",
+     "note_seasoned": "Rotate off last year's allium ground. With flights in both spring and fall working the same crop group, a planting left in place offers the same target twice a season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off and get rid of leaves showing the tunneling or the rows of small white dots, and clear infested material out of the bed rather than leaving it there.",
+     "note_seasoned": "Strip and destroy mined foliage and infested debris. The larvae feed inside the leaf tissue and work down toward the base, so taking the tissue out takes them with it."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the plants with fine insect netting during the spring and fall stretches when the fly is out. It cannot lay eggs in leaves it cannot land on. Pair the netting with rotation so you are not covering ground that carried alliums the year before.",
+     "note_seasoned": "Netting across both flight periods is the primary control here. Adults puncture and feed on the leaf and lay into it, so exclusion has to be up ahead of a flight rather than after the rows of white dots appear, and it belongs on rotated ground rather than over a repeat allium bed."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "botrytis-neck-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room when you sow or set them out so air can move between them. Crowded scallions hold dampness around the leaf bases, and that is the setting this mold gets going in.",
+     "note_seasoned": "Spacing is set once, at planting, for air movement through the stand. Crowding is one half of the condition this rot wants and foliage that stays wet is the other, so a stand that dries quickly takes pressure off both."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Put the water on the soil rather than over the leaves. Watering from above wets the tops and the leaf bases, and this rot starts where they stay wet.",
+     "note_seasoned": "Deliver water to the root zone rather than across the canopy. Overhead irrigation is called out as a factor, and the neck and leaf bases are where the soft, sunken rot actually appears."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on the fertilizer. Too much nitrogen, the nutrient that drives leafy growth, pushes out soft, thick growth that holds dampness longer.",
+     "note_seasoned": "Excess nitrogen sits alongside overhead watering in the guidance as something that worsens this one. Heavy feeding thickens the stand and slows how fast it dries, so restrained feeding is preventive rather than corrective."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Harvest when the leaves are dry rather than straight after rain or while the dew is still on the plants. Lingering wetness on the tops is the condition this rot favors, so pick your moment.",
+     "note_seasoned": "This rung is about when you work rather than what you apply: take the crop on dry days, because leaf wetness that lingers is the condition tied to this rot, and dew and rain leave foliage wet regardless of how you irrigate."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-basal-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep alliums out of an affected bed for several years, not just one season. This fungus stays alive in the soil for a long stretch, so a single year away is not much of a gap.",
+     "note_seasoned": "The pathogen is soilborne and persists for years, so the rotation is measured in several seasons away from alliums rather than the usual one-year shuffle. Warm soil favors it, which makes the rotation the lever with the longest reach here."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If you can find seed or plants described as resistant to this rot, start there. Not every scallion is offered that way, so treat it as a bonus when it is available.",
+     "note_seasoned": "Take resistant stock where it is offered; availability is the limiting factor rather than the value of the trait, and it is one of the few levers that remains on ground already carrying the fungus."
+    }
+   ]
+  },
+  {
+   "id": "white-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with transplants you have reason to think are clean, since this fungus can arrive on the planting material itself. There is no known cure once it is in the soil, so the effort goes into keeping it out rather than treating it later.",
+     "note_seasoned": "Clean planting stock is the decision that carries the most weight here because it is made before anything reaches the ground. No cure is known for infested soil, so introduction is the failure mode worth preventing."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "If a bed has had it, keep alliums well away from that spot for many years. The fungus leaves behind tough little resting bodies, the tiny black specks you find at the base of a sick plant, and they hold on in the ground a long time. Avoid moving soil out of that bed into clean ground.",
+     "note_seasoned": "Sclerotia, the resting bodies, survive in soil for many years, so the rotation is a long one and it is measured in distance from the infested ground as much as in seasons. It also comes undone if the soil itself travels, so keep soil from an affected bed out of clean beds."
+    }
+   ]
+  }
+ ]
+}

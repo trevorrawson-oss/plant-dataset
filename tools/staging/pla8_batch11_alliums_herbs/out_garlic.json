@@ -1,0 +1,153 @@
+{
+ "pests": [
+  {
+   "id": "onion-thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not plant garlic where onions or garlic grew the year before. Thrips move easily from one allium (the onion family, which includes garlic, onions, and leeks) to the next, so a bed that just carried one of them is the likeliest place for them to turn up again.",
+     "note_seasoned": "Onion thrips move readily between alliums, so siting garlic off ground that carried an allium last season separates the new crop from the population already established there. This is the bed-choice half of the defense, settled before anything is planted."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Reflective mulch is a light-colored or shiny sheet laid on the soil surface, and it is one of the steps named for thrips on garlic. Get it down early, while the plants are still small, rather than after the leaves have closed over the bed.",
+     "note_seasoned": "Reflective mulch is named among the cultural steps for onion thrips on garlic. Lay it while the crop is still small, since it works off an exposed surface rather than one already shaded by the canopy."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "If there are only a few thrips, wash them off with a jet of water from the hose. Aim into the tight folds where the leaves meet, because that is where they shelter. Do it early in the day so the leaves dry off afterward.",
+     "note_seasoned": "A forceful water jet handles light infestations. Direct it into the leaf axils, the tight folds where leaf meets stem, since that is where the insects shelter and the part of the plant a spray of any kind tends to miss. Work early in the day so foliage dries quickly."
+    }
+   ]
+  },
+  {
+   "id": "onion-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant garlic in a different spot rather than returning to the same bed each year. This pest carries over where alliums (garlic, onions, and their relatives) have grown, so a fresh bed starts the crop away from it.",
+     "note_seasoned": "Populations carry over in allium ground, so rotating garlic off beds that recently grew alliums puts the crop out from under the carryover. Rotation and cleanup are the pair that does the work here, since cultural sanitation is described as the main home-garden tool for this pest."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away leftover onion and garlic debris, including cull bulbs, the small or damaged ones you set aside and did not use. The fly breeds in that material, and clearing it is the main home-garden tool against this pest.",
+     "note_seasoned": "Removing crop residue and cull bulbs takes away the material the population carries over in, and it is the primary home-garden lever for onion maggot. Get what you clear out of the garden rather than piling it at the bed edge, where the same tissue still counts as carryover."
+    }
+   ]
+  },
+  {
+   "id": "stem-and-bulb-nematode",
+   "type": "nematode",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Buy clean, tested cloves from a trusted source rather than replanting your own. This nematode usually arrives inside the planting cloves, so starting clean is the single most important step here. Hot-water dips are no longer advised, since they reduce the nematode without clearing it.",
+     "note_seasoned": "Nematode-free, tested seed stock is the primary control, since infected cloves are the usual route into a garden and the pest then persists in soil and debris for years; a clean start is worth more than anything applied afterward. Hot-water seed dips are no longer recommended, because they only reduce rather than eliminate it."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep garlic and onions out of that spot for four years. The worm can survive dried in the soil and in debris for at least four years, so a one-season break is not enough. Poor-host crops, ones it does not feed and multiply well on, are fine to grow there meanwhile: carrots, potatoes, spinach, corn, and wheat.",
+     "note_seasoned": "Rotate garlic out for four years with poor-host crops such as carrots, potatoes, spinach, corn, and wheat. The length is set by the nematode itself, which persists dried in soil and debris for at least that long, so the four years is the point rather than the fact of rotating."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull infected plants and throw them away rather than composting them, and take the debris with them. The worm lives and feeds inside the leaves, stems, and bulbs, so it leaves with the plant it is in.",
+     "note_seasoned": "Remove and destroy infected plants along with the debris. The nematode feeds inside leaf, stem, and bulb tissue, so roguing carries the population out with the plant; leaving that tissue in the bed or in the compost returns it to the soil it survives in."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "white-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with disease-free cloves in clean ground. Infected cloves are one of the ways this fungus arrives, and it is worth settling before planting because there is no cure once the soil carries it.",
+     "note_seasoned": "Infected cloves are one of the listed routes this fungus travels, so disease-free planting stock is set once, at purchase, and it is the step that keeps clean ground clean. It carries more weight here than on most diseases: there is no cure once soil is infested, and the fungus persists there for years."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep garlic and other alliums out of an affected bed for years rather than a single season. The fungus leaves behind tiny hard resting bodies that can sit in the soil a long time waiting for the next allium crop.",
+     "note_seasoned": "Long allium-free rotations are the answer to sclerotia, the hardy resting bodies this fungus makes, which survive in soil for many years. It germinates in the cool soils garlic grows in, and its activity is restricted above about 75°F."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull sick plants and destroy them rather than composting them. Keep soil from an infested bed out of clean ground as well, and clean the dirt off tools after working there, since this fungus travels on soil, tools, and infected cloves.",
+     "note_seasoned": "Rogue and destroy infected plants, and treat the soil itself as a thing that moves: contaminated soil, tools, and cloves are the listed routes of spread, so avoid carrying soil out of an infested bed and clean equipment after working it. With no cure once the ground is infested, keeping the fungus away from clean beds is what the management rests on."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-basal-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Plant clean, tested cloves. Infected cloves are one of the openings this soil fungus uses, along with injuries to the bulb and maggot feeding, and it is the one you can settle before anything goes in the ground.",
+     "note_seasoned": "Clean, tested cloves close one of the three listed entry points; wounds and maggot feeding are the other two. It is the entry point decided at purchase rather than in the bed, which is what puts it first."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where you can find it, choose stock that is less susceptible to this rot. It is not offered for every variety, so treat it as a help when it is available rather than the whole plan.",
+     "note_seasoned": "Less-susceptible stock is worth seeking at seed-buying time where it exists. Availability is the limit on it, so it supplements the rotation rather than standing in for it."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow garlic or other alliums in the same spot for several years. The fungus lives on in the ground for years, so moving the crop puts distance between it and the new planting.",
+     "note_seasoned": "Rotate out of alliums for several years. The fungus persists in soil across seasons and progresses fastest in warm soils, roughly 77 to 82°F, so what you are managing is the bed's history rather than this season's weather."
+    }
+   ]
+  },
+  {
+   "id": "botrytis-neck-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Stop feeding nitrogen by early May. Too much late fertilizer is one of the things that makes this rot worse, along with rain or watering close to harvest and drying the bulbs poorly after they come up.",
+     "note_seasoned": "Cut nitrogen by early May. Excess late nitrogen is listed among the factors that worsen neck rot, alongside late-season rain or irrigation and inadequate curing or storage, and it is the one the feeding schedule settles outright."
+    }
+   ]
+  },
+  {
+   "id": "garlic-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move the garlic patch rather than replanting the same bed. Rotating is one of the cultural steps named for rust, and since rust is usually a minor problem on garlic those steps are generally enough in a home garden.",
+     "note_seasoned": "Rotation is part of the cultural package named for garlic rust. The disease is usually minor here, though worse in cool, humid, crowded plantings and notably in coastal and mild-winter areas, and the cultural steps are described as generally sufficient at garden scale."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants enough room for air to move between them. Crowded plantings in cool, damp weather are where this rust does the most, so spacing gives the leaves a chance to dry.",
+     "note_seasoned": "Space for airflow. The fungus is favored by cool temperatures, leaf wetness, and high humidity, and it runs worse in crowded plantings, so spacing is the layout decision that shortens leaf wetness."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on the fertilizer. Too much nitrogen is called out as something to avoid where rust shows up, and heavy feeding also thickens the stand, which is the crowding the spacing above is meant to relieve.",
+     "note_seasoned": "Avoid excess nitrogen, named among the things to keep off a rust-prone planting. Heavy nitrogen pushes the dense growth that holds a canopy wet, so it works against the spacing rung rather than beside it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the top of the plants. The spores travel in splashing water and the fungus needs wet leaves, so keeping the foliage dry works against both.",
+     "note_seasoned": "Skip overhead watering. Spores spread on wind and on splashing water, so basal irrigation removes the splash route and holds leaf wetness, one of the conditions the fungus needs, to whatever the weather forces on you."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull out volunteer onions and garlic near the bed, the ones that come up on their own from bulbs left behind. The rust survives the winter on them, so they carry it forward into the next crop.",
+     "note_seasoned": "Remove volunteer alliums around the planting. The fungus overwinters on them, which makes them a live reservoir sitting outside the rotation; rotation moves the crop you planted and does nothing about the ones that came up on their own."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the badly spotted leaves and get rid of them. A heavy case yellows the leaves, kills them back early, and leaves you with smaller bulbs, so removing the worst of them is about the harvest rather than about tidiness.",
+     "note_seasoned": "Remove badly infected leaves. Heavy infection yellows the foliage, brings on early dieback, and reduces bulb size, so taking out the worst leaves is aimed at what the bulb has left to size on."
+    }
+   ]
+  }
+ ]
+}

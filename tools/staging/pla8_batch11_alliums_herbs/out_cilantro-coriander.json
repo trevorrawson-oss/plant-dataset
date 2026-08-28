@@ -1,0 +1,167 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen, the fertilizer that pushes fast leafy growth. Aphids tend to build up quickest on the soft new shoots a heavily fed plant puts out, so cilantro that is not overfed usually draws fewer of them.",
+     "note_seasoned": "The several aphid species that feed on cilantro favor the succulent growth surplus nitrogen produces, so holding fertility moderate makes the growing tips less rewarding and tends to slow how fast a colony builds."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Cilantro is a quick crop, so cut the leaves young. Picking before a colony has time to settle in takes the foliage off the plant while it is still clean, which matters on a herb you eat fresh.",
+     "note_seasoned": "Harvesting the fast leaf crop early denies colonies the weeks they need to build, and it takes foliage before honeydew and lodged insects can contaminate a crop that goes to the table raw."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a strong stream from the hose, aiming up under the leaves where they gather. Go back and do it again every few days, because the ones you miss regroup. Cilantro's lacy foliage hides them well, so look closely at the new growth before and after. Spray early in the day so the leaves dry off.",
+     "note_seasoned": "A directed jet dislodges colonies mechanically with no spray involved; repeat at intervals of a few days so survivors do not simply rebuild. The finely divided foliage conceals colonies, so scout the growing tips closely rather than glancing across the canopy, and keep the pass to early in the day so foliage is not left wet."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and parasitoid wasps, which are tiny wasps that lay their eggs inside aphids, will hunt aphids for you. Letting a few cilantro plants go to flower helps, since those flowers draw the predators in.",
+     "note_seasoned": "Conserving resident ladybugs, lacewings, and parasitoid wasps is the living control here, and cilantro's own flowers are a draw for them; letting a few plants flower rather than cutting every one is a low-cost way to keep predators in the bed."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray sold for garden use, kills the aphids it actually touches. Coat the undersides of the leaves where the clusters sit, and go back every few days.",
+     "note_seasoned": "Soap acts on contact only, so coverage of the leaf undersides where the colony sits is what decides the result; repeat every few days to reach what the first pass missed."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, a plant oil pressed from neem tree seeds, is the other spray named for aphids on cilantro. Same approach: wet the leaf undersides directly, and repeat every few days.",
+     "note_seasoned": "Neem is the alternate contact material where soap has not held a colony; place it on the aphids with thorough undersides coverage rather than broadcasting it over the planting, and repeat on the same few-day interval."
+    }
+   ]
+  },
+  {
+   "id": "leafhoppers",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear the weeds around the planting. They shelter the leafhoppers and they also hold the diseases the insects carry, so a weedy edge can keep handing both back to your cilantro.",
+     "note_seasoned": "Weedy reservoirs sustain the leafhoppers and the aster yellows and beet curly top they carry, so clearing host weeds at the bed edges removes part of the source rather than treating the crop."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull any plant that has gone yellowed, twisted, or stunted, and take it out of the garden promptly. These diseases have no cure, so an affected plant is not going to come back, and leaving it standing keeps a source in the bed.",
+     "note_seasoned": "Rogue symptomatic plants promptly: infected plants do not recover, and one left standing keeps aster yellows or beet curly top in the planting where the vector can pick it up again."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A light fabric row cover laid over the bed keeps leafhoppers off the plants in the first place. The insects themselves do little chewing damage, so it is the diseases you are excluding, and since those have no cure, keeping the carriers away is the step that does the most here.",
+     "note_seasoned": "Exclusion is the main lever: the feeding damage is minor next to the aster yellows and beet curly top the insects transmit, and insecticides give poor control of a mobile vector, so a cover sealed over the planting is what actually keeps the pathogens out."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "bacterial-leaf-spot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed. This disease often arrives on infected seed, so buying seed sold as disease free is a choice you make before anything is in the ground.",
+     "note_seasoned": "The bacterium is seed borne, so a clean, disease-free lot, or one that has been hot-water treated, is set at purchase and decides whether the pathogen is present in the planting at all."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Sow the next cilantro somewhere else rather than in the same bed, and give its close relatives a rest from that ground too.",
+     "note_seasoned": "Rotate away from cilantro and its relatives so a new sowing is not put back onto ground that carried the bacterium in the last crop's debris."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so air moves through the planting and the leaves dry. Cilantro sown thickly stays damp, and damp foliage is what this disease works in.",
+     "note_seasoned": "Widen spacing to shorten how long the canopy holds moisture; cool, wet, splashy conditions are what drive the lesions, and a dense stand keeps the foliage wet longer than an open one."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line rather than sprinkling over the top of the plants. The bacteria travel in splashing water and on wet leaves, so drip or a soil-line soak takes that ride away.",
+     "note_seasoned": "Switch to drip or soil-line delivery: overhead irrigation both wets the foliage and splashes the bacterium leaf to leaf, and that is the dispersal route a gardener can remove outright."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off spotted leaves and get rid of them, and clear infected debris out of the bed. Leaves carrying spots are not worth eating anyway, and leaving them keeps the bacteria in the planting.",
+     "note_seasoned": "Remove spotted foliage as it appears and clear crop debris afterward, since the debris is what carries the bacterium over; on a leaf crop even moderate spotting takes the harvest, so there is little reason to leave affected tissue standing."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait for the soil to warm and drain before sowing, set the seed shallow, go easy on the water afterward, and use fresh seed so it comes up faster. Cilantro is slow to sprout, so its seed sits in the ground a while, and cold soggy soil is where that wait turns into rot. Some gardeners soak the dry seed first to shorten the window.",
+     "note_seasoned": "This is set at sowing: fresh, viable seed, shallow placement, soil warm and drained enough for reasonably quick emergence, and restrained watering afterward. Cilantro's slow germination leaves seed exposed longer than most crops, which is why the sowing conditions carry so much of the outcome; soaking the dry seed is one way growers shorten that vulnerable stretch."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sow into ground that drains. Saturated soil is what these soil fungi need, and a bed that stays soggy after watering will keep taking seedlings.",
+     "note_seasoned": "Cold, saturated, poorly drained soil favors the Pythium, Rhizoctonia and Fusarium that attack germinating seed and young seedlings, so drainage work on the bed is preventive and belongs before sowing rather than after a stand fails."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A seedling that has already collapsed is not going to recover, so pull the affected ones and discard them. Everything else here is prevention for the next sowing.",
+     "note_seasoned": "There is no rescue once seedlings collapse, so removing affected plants is cleanup rather than control; the management sits in the sowing and drainage decisions above."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them, and resist sowing cilantro thickly. Crowded, still plantings are where this mildew tends to build.",
+     "note_seasoned": "Dense stands with poor airflow are one of the conditions Erysiphe heraclei favors, alongside warm days and cool humid nights; spacing is the half of that pairing a gardener actually sets."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on the fertilizer. Overfeeding pushes soft crowded growth, which is the kind of canopy this mildew builds in.",
+     "note_seasoned": "Avoid heavy nitrogen: the lush, dense growth it produces closes the canopy and works against the airflow the rung above is trying to create."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Cut the leaf crop young. Most home plantings are picked before mildew does much harm, so harvesting on time does a lot of the work by itself.",
+     "note_seasoned": "The fast leaf crop is usually cut before mildew matters; a plant held on for coriander seed stands far longer and is correspondingly more exposed, so the timing advantage applies to the leaf harvest and not to the seed crop."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take the worst-coated leaves off and get them out of the planting. Badly coated leaves turn yellow and are not pleasant on the plate.",
+     "note_seasoned": "Strip affected foliage as it shows, and keep doing it on plants held for coriander seed, which carry through the stretch where the mildew has time to build."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-soft-rot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant where water drains away, and do not keep the bed waterlogged. Warm, wet, poorly drained ground is where this rot takes hold, and drainage is the part of that you can set before planting.",
+     "note_seasoned": "Warm temperatures paired with wet, poorly drained soil are what favor the soft-rot bacteria; siting on ground that drains, and not overwatering it afterward, removes the condition rather than the organism."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Keep the planting open so the foliage dries. Crowded cilantro holds moisture around the crown, and the crown is where this rot shows up.",
+     "note_seasoned": "Space for drying airflow around the crown and lower stems, since free moisture held in a dense stand is what lets the bacteria macerate tissue once they are in."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the bed while the plants are wet, and handle them gently when you do go in. These bacteria get in through wounds and bruises, so a careless pass through a wet planting can open the door and move the problem around at the same time.",
+     "note_seasoned": "Time your passes through the bed for dry conditions: the bacteria enter through wounds and bruises, so working wet foliage both creates entry points and carries the pathogen between plants. This lowers the rate of spread rather than stopping an infection already underway, so it belongs alongside the drainage and spacing rungs rather than in place of them."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull plants that have gone mushy and throw them away. Once a plant is rotting there is nothing to be done for it, and leaving it in the bed only keeps the problem there.",
+     "note_seasoned": "Remove and destroy affected plants: there is no rescue once rot sets in, and clearing the infected debris keeps that source out of the bed ahead of the next crop."
+    }
+   ]
+  }
+ ]
+}

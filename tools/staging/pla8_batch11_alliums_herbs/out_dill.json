@@ -1,0 +1,131 @@
+{
+ "pests": [
+  {
+   "id": "parsleyworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "On a big, established plant the chewing is usually light, and many gardeners simply leave the caterpillars where they are. If a small planting looks threatened, lift them off by hand rather than reaching for a spray: they are large enough to spot against the feathery leaves and slow enough to catch.",
+     "note_seasoned": "Tolerance is the usual answer on an established plant, where the defoliation tends to be cosmetic. Where hand removal is warranted, the larvae are big and sluggish enough that clearing them off a small planting or a seedling stand by hand is realistic at garden scale."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, short for Bacillus thuringiensis, is a bacterial spray that acts on caterpillars. It works on these, but it is rarely the right call on dill, since dill is one of the plants black swallowtails depend on and Bt does not tell one caterpillar from another. Keep it off dill you are growing partly for the butterflies, and consider it only if a seedling planting is genuinely at risk.",
+     "note_seasoned": "Bt is effective if control is truly needed, but it is seldom warranted on a host plant grown in part for the butterflies it supports. It acts on caterpillars as a group, desirable species included, so hold it for a real threat to a seedling stand and confine any application to the planting with the problem."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen, the nutrient in fertilizer that pushes fast leafy growth. Soft new shoots are what aphids build up on, so dill that has not been overfed tends to give them less to work with.",
+     "note_seasoned": "Excess nitrogen produces the succulent growth these colonies multiply on fastest, so moderate feeding is a setting you choose before there is an outbreak rather than a response to one. It also leaves the natural enemies dill recruits undisturbed."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a strong stream of water from the hose, aiming up under the leaves where they gather. Repeat every few days, since stragglers regroup, and check the new growth often because the feathery leaves hide them well.",
+     "note_seasoned": "A directed jet dislodges colonies mechanically with no pesticide involved; run it again every few days so survivors do not simply rebuild. Scout growing tips closely, since dill's lacy foliage conceals a colony until it is well along."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and parasitic wasps, the tiny wasps that lay their eggs inside aphids, will hunt aphids for you. Letting some of your dill flower helps, because those flat flower heads are a known draw for exactly these helpers.",
+     "note_seasoned": "Conserving resident ladybugs, lacewings, and parasitoid wasps is the living control here, and dill is unusually good at supporting it: allowed to flower, its umbels turn the planting into an insectary that recruits the aphid predators it is known for hosting."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray sold for garden use, kills the aphids it actually touches, so wet the undersides of the leaves where the clusters sit. Repeat every few days, and spray only the growth that has aphids on it, since the soap also hits the soft-bodied helpers it lands on.",
+     "note_seasoned": "Soap works on contact alone, so coverage of the colony on leaf undersides decides the result; expect to repeat every few days rather than to finish it in one pass. Confine the spray to infested growth so the predators dill's own flowers brought in are not knocked back alongside the aphids."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant room so air moves through the planting and the leaves dry off quickly. Crowded dill is where this white coating tends to build, and spacing is the step that carries the most weight here.",
+     "note_seasoned": "Wider spacing is the primary lever on this one: dense stands with poor airflow sit alongside warm days and cool humid nights among the conditions that favor it. Opening up a crowded planting is worth doing mid-season, not only at sowing."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Avoid overfeeding. Heavy nitrogen pushes soft, dense growth, and a thick stand holds the still, humid air this fungus does well in.",
+     "note_seasoned": "Restraining nitrogen limits the dense flush that keeps a canopy still and humid, so it pairs directly with spacing: both act on the canopy condition rather than on the pathogen itself."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plants instead of sprinkling them from overhead, and do not give them more water than they need. Utah State University notes that dill mildews when it is overwatered.",
+     "note_seasoned": "Deliver water at the soil line and keep total moisture in check. Utah State University's observation is that dill mildews where it is overwatered, and the guidance for this crop pairs avoiding overhead watering with avoiding excess moisture generally."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Cut the leaves while they are still good. Most home crops are picked before mildew does much harm, so a leaf crop taken on time often gets ahead of it.",
+     "note_seasoned": "The leaf harvest usually comes off before mildew matters, which makes harvest timing a real control on this crop. A tall plant held for seed stays exposed far longer and has to lean on the other steps to carry it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the worst coated leaves and carry them out of the garden. Heavily coated leaves yellow and are unpleasant to eat anyway, so removing them costs you little.",
+     "note_seasoned": "Stripping affected foliage lowers what the stand is carrying and earns its keep mainly on plants held for seed, which stand long enough for it to matter. Coated leaves have already lost quality, so removal is not a sacrifice."
+    }
+   ]
+  },
+  {
+   "id": "alternaria-cercospora-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean, disease-free seed. These leaf fungi can arrive on the seed itself, so the packet you buy is the first place the problem can be shut out.",
+     "note_seasoned": "Infected seed is a documented entry route for these fungi, which makes seed sourcing a decision set once, before anything is in the ground; nothing later in the season corrects it."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow dill in the same bed year after year. Move it, and other carrot-family crops, to fresh ground, since these fungi carry over in what is left behind.",
+     "note_seasoned": "Rotating away from the carrot family denies the pathogens the host sequence they carry over on. Paired with debris removal, it addresses the between-season reservoir rather than an infection already underway."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them and the leaves dry faster after rain. These fungi do their worst in wet weather, so a planting that dries quickly is a harder place for them.",
+     "note_seasoned": "Widening spacing shortens the leaf wetness these fungi are favored by, and it is one of the few levers still available once a wet, splashy stretch sets in."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line, using drip or a wand held low, rather than over the tops of the plants. This disease spreads on splashing water, so keeping the foliage dry takes away how it travels.",
+     "note_seasoned": "Switching to drip or soil-line delivery removes the overhead irrigation that both wets the foliage and splashes spores through the stand; it is the one irrigation change the crop guidance asks for here."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the spotted leaves and get them out of the garden, then clear the old plants when the crop is done. There is no spray cure for this in the home garden, so removing infected material and heading off the next round is where the effort goes.",
+     "note_seasoned": "Remove spotted foliage as it shows and clear crop debris at the end of the season, since the fungi carry over in it. Once the disease is established there is no effective home-garden cure, which puts the weight on these steps rather than on a rescue."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait until the soil is not cold and soggy before sowing, plant the seed shallowly, use fresh seed, and go easy on the watering. Dill seed is slow to sprout, and the longer it sits in the ground, the longer these soil fungi have at it.",
+     "note_seasoned": "Sowing depth, soil warmth, seed viability, and restrained watering are all set at sowing, and they work by shortening the exposure: dill germinates slowly, and slow emergence in cold, saturated soil leaves seed sitting in the danger zone. Fresh seed matters here for speed of emergence rather than for freedom from a pathogen."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sow into ground that drains well. This strikes hardest in cold, soggy soil, so a bed that does not stay waterlogged gives the seed a better chance.",
+     "note_seasoned": "Saturated, poorly drained soil is the condition these soilborne fungi are favored by. Correcting drainage is preventive by necessity, because nothing rescues a seedling once it has collapsed."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure once a seedling has flopped over at the soil line, so pull the collapsed ones and throw them out rather than waiting to see whether they recover.",
+     "note_seasoned": "Remove affected seedlings; the collapse is not reversible, so this is housekeeping rather than rescue. Everything that actually decides the outcome on this problem happens before or at sowing."
+    }
+   ]
+  }
+ ]
+}

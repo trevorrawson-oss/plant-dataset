@@ -1,0 +1,172 @@
+{
+ "slug": "garlic",
+ "name": "Garlic",
+ "category": "Alliums",
+ "pests": [
+  {
+   "name": "Onion thrips",
+   "severity": "high",
+   "identification_seasoned": "Tiny slender insects rasping silvery streaks and flecks into the leaves and down in the leaf folds; heavy feeding in warm, dry spells reduces bulb size.",
+   "identification_beginner": "Very small insects that leave silvery streaks and specks on the leaves, often hiding in the tight folds where leaves meet. Bad infestations shrink the bulbs.",
+   "cause_seasoned": "Onion thrips (Thrips tabaci) build through warm, dry weather and shelter in the leaf axils where sprays miss them; they move readily between alliums.",
+   "cause_beginner": "A tiny insect called onion thrips. It multiplies fast in warm, dry weather and hides in the tight folds of the leaves.",
+   "management_seasoned": "Keep plants vigorous and watered, hose off light infestations, use reflective mulch, and rotate away from alliums; treat persistent outbreaks per local extension guidance.",
+   "management_beginner": "Keep the plants healthy and watered, spray them off with water if thrips are light, and do not plant garlic where onions or garlic grew last year. For heavy infestations, ask your local extension office what to use.",
+   "sources": [
+    "umn_ext",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-garlic",
+     "verified": "2026-06-29"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/garlic-in-the-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Onion maggot",
+   "severity": "medium",
+   "identification_seasoned": "Wilting, yellowing plants and rotting bulbs riddled by small white larvae; stand loss is worst in cool, wet conditions and where allium debris carries the pest over.",
+   "identification_beginner": "Plants wilt and yellow, and bulbs rot with small white grubs inside. Worst in cool, wet weather.",
+   "cause_seasoned": "Larvae of the onion maggot fly (Delia antiqua), whose eggs are laid at the plant base; populations carry over in allium residue and cull bulbs.",
+   "cause_beginner": "The larvae (maggots) of a small fly that lays eggs at the base of the plants. They survive in leftover onion and garlic debris.",
+   "management_seasoned": "Rotate away from alliums, remove cull bulbs and crop residue, and avoid planting into fresh manure; cultural sanitation is the main home-garden tool.",
+   "management_beginner": "Do not plant garlic in the same place each year, and clean up old onion and garlic scraps where the fly breeds.",
+   "sources": [
+    "usu_ext",
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/garlic-in-the-garden",
+     "verified": "2026-06-29"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-garlic",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Stem and bulb nematode (garlic bloat nematode)",
+   "severity": "high",
+   "identification_seasoned": "Stunting, distortion, yellowing, and premature dieback of leaves, with swollen, distorted stems and bulbs; infected bulbs turn brown, shrivel, go lightweight, and the wrapper layers crack and detach from the basal plate, with damage progressing in storage.",
+   "identification_beginner": "Plants are stunted and yellow and die back early. The bulbs turn brown, shrivel, feel light, and their papery skins crack and peel away from the base. The damage keeps getting worse in storage.",
+   "cause_seasoned": "The stem and bulb nematode (Ditylenchus dipsaci), the garlic bloat nematode, a microscopic worm that feeds inside the leaves, stems, and bulbs. It rides in on infected planting cloves and survives dried in soil and debris for at least four years, favored by cool, moist conditions.",
+   "cause_beginner": "A microscopic worm that lives and feeds inside the leaves, stems, and bulbs. It usually arrives on infected cloves you plant and can survive dried in the soil for years.",
+   "management_seasoned": "Plant only clean, tested, nematode-free seed stock, the single most important practice; rotate garlic out for four years with poor-host crops (carrots, potatoes, spinach, corn, wheat); remove and destroy infected plants and debris. Hot-water seed dips are no longer recommended because they only reduce, not eliminate, the nematode.",
+   "management_beginner": "Start with clean, healthy cloves from a trusted source, since this is how the worm usually arrives. Do not grow garlic or onions in that spot for four years, and pull and throw away any infected plants. Crops like carrots, potatoes, and corn are safe to grow there in between.",
+   "sources": [
+    "umn_ext",
+    "umass_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/disease-management/stem-and-bulb-nematode",
+     "verified": "2026-06-29"
+    },
+    "umass_ext": {
+     "url": "https://ag.umass.edu/vegetable/fact-sheets/garlic-bloat-nematode",
+     "verified": "2026-06-29"
+    }
+   }
+  }
+ ],
+ "diseases": [
+  {
+   "name": "White rot",
+   "severity": "high",
+   "identification_seasoned": "Leaves decay at the base, yellow, wilt, and topple, and the plant pulls up easily; a fluffy white mold and tiny black sclerotia about the size of a poppy seed form on the rotting roots and bulb. It is the most serious soilborne disease of garlic.",
+   "identification_beginner": "The plant yellows and wilts from the bottom and pulls out of the ground easily. You find white fuzzy mold and tiny black specks on the rotting roots and bulb.",
+   "cause_seasoned": "The fungus Sclerotium cepivorum, which produces hardy sclerotia that survive in soil for many years and germinate in the cool soils garlic grows in (activity is restricted above about 75°F). It spreads on contaminated soil, tools, and infected cloves.",
+   "cause_beginner": "A soil fungus that makes tiny long-lived resting bodies that can sit in the ground for years and attack in cool weather. It spreads on dirty tools, soil, and infected cloves.",
+   "management_seasoned": "There is no cure once soil is infested. Plant only disease-free cloves in clean soil, never move contaminated soil into new ground, remove and destroy infected plants, and use long allium-free rotations; the fungus persists for years, so prevention is everything.",
+   "management_beginner": "There is no fix once it is in the soil, so prevention is key. Plant only clean cloves in clean ground, do not move soil from an infected bed, pull and destroy sick plants, and keep alliums out of that spot for years.",
+   "sources": [
+    "umass_ext",
+    "uga_ext"
+   ],
+   "anchoring_urls": {
+    "umass_ext": {
+     "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/alliums-post-harvest-storage-diseases",
+     "verified": "2026-06-29"
+    },
+    "uga_ext": {
+     "url": "https://fieldreport.caes.uga.edu/publications/C854/garlic-production-for-the-gardener/",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Fusarium basal rot",
+   "severity": "medium",
+   "identification_seasoned": "Yellowing and dieback of leaves, stunting, and a brown dry rot that starts at the basal plate (the root end) and spreads up into the bulb, which becomes pitted; roots die back and bulbs rot in the field and in storage.",
+   "identification_beginner": "Leaves yellow and die back and the plant is stunted. The bottom of the bulb turns brown and rots, and the decay works its way up into the bulb.",
+   "cause_seasoned": "Soilborne Fusarium oxysporum (including f. sp. cepae) and related species that persist in soil for years and progress fastest in warm soils (about 77 to 82°F); wounds, maggot feeding, and infected cloves open the door.",
+   "cause_beginner": "A soil fungus that lives in the ground for years and does the most damage in warm soil. Injuries and infected cloves let it in.",
+   "management_seasoned": "Plant clean, tested cloves, rotate out of alliums for several years, avoid wounding bulbs, store cured bulbs cool (below about 39°F) and dry, and choose less-susceptible stock where available.",
+   "management_beginner": "Plant healthy cloves, do not grow garlic in the same spot for several years, handle the bulbs gently so they are not injured, and store them cool and dry.",
+   "sources": [
+    "uc_ipm",
+    "umn_ext"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/onion-and-garlic/basal-rot/",
+     "verified": "2026-06-29"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/vegetables/growing-garlic",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Botrytis neck rot",
+   "severity": "medium",
+   "identification_seasoned": "A soft, water-soaked rot starting at the neck after harvest, with a gray mold on or between the scales and later small black sclerotia; poorly cured, thick-necked, or immature bulbs are most affected.",
+   "identification_beginner": "Garlic goes soft and rotten at the neck after harvest, often with a gray mold. It mostly hits bulbs that were not dried well or were picked too green.",
+   "cause_seasoned": "Botrytis species that overwinter on debris and infected bulbs and as sclerotia in soil; excess late nitrogen, rain or irrigation late in the season, and inadequate curing or storage all worsen it.",
+   "cause_beginner": "A mold that gets into the necks of garlic that was harvested too green or dried poorly. Too much late fertilizer and wet weather near harvest make it worse.",
+   "management_seasoned": "Stop nitrogen by early May, cut water before harvest, cure thoroughly until necks are tight and dry, handle gently, and store cool and dry with good airflow.",
+   "management_beginner": "Stop feeding by early May, stop watering before harvest, dry (cure) the garlic well until the necks are tight, and store it cool, dry, and airy.",
+   "sources": [
+    "umass_ext",
+    "usu_ext"
+   ],
+   "anchoring_urls": {
+    "umass_ext": {
+     "url": "https://www.umass.edu/agriculture-food-environment/vegetable/fact-sheets/alliums-post-harvest-storage-diseases",
+     "verified": "2026-06-29"
+    },
+    "usu_ext": {
+     "url": "https://extension.usu.edu/yardandgarden/research/garlic-in-the-garden",
+     "verified": "2026-06-29"
+    }
+   }
+  },
+  {
+   "name": "Garlic rust",
+   "severity": "low",
+   "identification_seasoned": "Small orange to rust-colored pustules scattered on the leaves, which in heavy cases yellow and die back early and reduce bulb size; usually a minor problem but worse in cool, humid, crowded plantings, notably in coastal and mild-winter areas.",
+   "identification_beginner": "Little orange or rusty spots and bumps on the leaves. Usually minor, but a bad case yellows the leaves early and makes smaller bulbs. It likes cool, damp, crowded plantings.",
+   "cause_seasoned": "A Puccinia rust fungus favored by cool temperatures, leaf wetness, and high humidity; spores spread on wind and splashing water and overwinter on volunteer alliums.",
+   "cause_beginner": "A rust fungus that spreads in cool, damp weather through wet leaves and splashing water.",
+   "management_seasoned": "Space for airflow, avoid overhead watering and excess nitrogen, remove volunteer alliums and badly infected leaves, and rotate; rust is usually minor enough that cultural steps suffice in the home garden.",
+   "management_beginner": "Give plants room for air to move, water at the base, do not over-fertilize, and pull out badly spotted leaves and any volunteer onions or garlic nearby. It is usually minor.",
+   "sources": [
+    "uga_ext"
+   ],
+   "anchoring_urls": {
+    "uga_ext": {
+     "url": "https://fieldreport.caes.uga.edu/publications/C854/garlic-production-for-the-gardener/",
+     "verified": "2026-06-29"
+    }
+   }
+  }
+ ]
+}
