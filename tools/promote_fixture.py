@@ -109,6 +109,10 @@ COMMIT_FOR = {
     '86c5396a185e34a8b07271dc02794bbd54c7a6dba3367dde832e425c23e0bb2b': '70a2a9e',
     # PLA-8: the trap_cropping backfill, 10 rungs on 9 certified crops.
     '96cbc68c7f8a1509bf922e85ad424d6a55a3f1c2a45d6288bfa5ba16a2bec67a': 'c64f8ed',
+    # PLA-8 BATCH 11: alliums + fall herbs; certified_clean_stock widened to nematode; roster
+    # 46 -> 50. Also reachable via CHAIN (batch 12 replayed it there before this commit existed);
+    # _from_commit is tried first and wins.
+    '1e4d0c06ad28ed28642f64a3ae15b537bb7d14367b73280489ebde3befd311ae': '6f2d9d8',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
@@ -251,8 +255,8 @@ CHAIN = {
     # problem. Batch 11 is verified but not committed, so its output is reachable only by replay.
     # Superseded by COMMIT_FOR once batch 11 commits; both paths are hash-verified, and if the
     # trap-cropping round lands first this entry goes STALE and fails loud, which is correct.
-    '745e56cd3044263fcea188b01148cd158005dc9995fde57b98bbe19e2b8c6c05': (
-        'be444e25a614e2a8ff95dae7aebaf6835277545e7d4b4e7905f1309355e57234',
+    '1e4d0c06ad28ed28642f64a3ae15b537bb7d14367b73280489ebde3befd311ae': (
+        '96cbc68c7f8a1509bf922e85ad424d6a55a3f1c2a45d6288bfa5ba16a2bec67a',
         'promote_pla8_batch11.py'),
 }
 
