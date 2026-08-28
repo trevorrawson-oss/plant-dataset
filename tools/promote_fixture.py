@@ -104,6 +104,9 @@ COMMIT_FOR = {
     '4725bcbbe0cc78046b718c40bb5f97bdcd6638f7f55bec83e1ab465e1a5846f4': '8d395a6',
     # PLA-8 BATCH 10: the brassica family; pyrethrin minted; roster 41 -> 46.
     'be444e25a614e2a8ff95dae7aebaf6835277545e7d4b4e7905f1309355e57234': 'ed0d7b3',
+    # PLA-8: mint trap_cropping, the catalog's 59th method. Also reachable via CHAIN (it is the
+    # backfill suite's base and was replayed there before this commit existed); _from_commit wins.
+    '86c5396a185e34a8b07271dc02794bbd54c7a6dba3367dde832e425c23e0bb2b': '70a2a9e',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
