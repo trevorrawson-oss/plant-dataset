@@ -233,6 +233,22 @@ CHAIN = {
     '5f2d95559256df1553dd2ac0ba19cfa275ec497ab9ba0264ca28dbd94290af0e': (
         '394bb8bdf63c989eeff7241ba41d1c37c829201733ce199f4dffc88490d8f660',
         'promote_pla253_bt_safety.py'),
+    # PLA-8 trap_cropping ships as a mint + backfill pair, the chlorothalonil shape. The mint's
+    # output is the backfill suite's base and is not a commit until the mint is committed, so the
+    # backfill is verifiable before either lands. Superseded by COMMIT_FOR once the mint commits;
+    # _from_commit is tried first, and both paths are hash-verified.
+    '86c5396a185e34a8b07271dc02794bbd54c7a6dba3367dde832e425c23e0bb2b': (
+        'be444e25a614e2a8ff95dae7aebaf6835277545e7d4b4e7905f1309355e57234',
+        'promote_pla8_trap_cropping.py'),
+    # PLA-8 batch 12 sits on batch 11's output rather than on live canonical, because parsley
+    # REUSES `parsleyworm` -- the id batch 11 mints for dill -- and that string has to exist in
+    # the base for the reuse to be a reuse rather than a second, divergent mint of the same
+    # problem. Batch 11 is verified but not committed, so its output is reachable only by replay.
+    # Superseded by COMMIT_FOR once batch 11 commits; both paths are hash-verified, and if the
+    # trap-cropping round lands first this entry goes STALE and fails loud, which is correct.
+    '745e56cd3044263fcea188b01148cd158005dc9995fde57b98bbe19e2b8c6c05': (
+        'be444e25a614e2a8ff95dae7aebaf6835277545e7d4b4e7905f1309355e57234',
+        'promote_pla8_batch11.py'),
 }
 
 _cache = {}
