@@ -1,0 +1,326 @@
+{
+ "pests": [
+  {
+   "id": "cabbageworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away old cabbage-family plants when a crop is finished. The caterpillars pass part of their life cycle as pupae, a resting stage, sheltered in that leftover debris, so hauling it off leaves fewer moths and butterflies to start the next round.",
+     "note_seasoned": "Removing spent brassica material takes out the debris that shelters pupae between plantings, trimming the local population of imported cabbageworm, cabbage looper and diamondback moth before the next crop goes in."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put a light fabric row cover over the plants right after planting. It lets in light and water but keeps the white butterflies and small moths from landing to lay eggs, and eggs they cannot lay are caterpillars you do not have to deal with.",
+     "note_seasoned": "Cover from planting with floating row cover or fine mesh to exclude the egg-laying adults of all three species at once. Kohlrabi is a primary host, so the exclusion window matters from the day the crop goes in."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Walk the rows and pick caterpillars and their eggs off the undersides of the leaves. The leaves are part of what makes kohlrabi worth growing, and the caterpillars can chew the bulb too, so a regular pass pays off.",
+     "note_seasoned": "Hand removal of larvae and eggs from leaf undersides catches them at the stage that has done the least damage, and it is practical at garden scale, where heavy feeding sets young plants back and larvae can score the bulb."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Spray Bt, a caterpillar-specific control that carries low toxicity for people, pets and bees. It cannot tell a pest caterpillar from a butterfly's, so keep it to the plantings that actually have caterpillars on them. Watching for the first white butterflies tells you when to start, and spray again after rain washes it off.",
+     "note_seasoned": "Bt kurstaki targets caterpillars and spares beneficials. It breaks down, so reapply after rain, and take the arrival of the first white butterflies as the cue to begin. Because it acts on caterpillars as a group, confine applications to plantings that actually carry the pest."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If Bt and hand-picking are not keeping up, spinosad is the stronger organic option. Spray toward dusk, when bees are not out foraging, and follow the label.",
+     "note_seasoned": "Spinosad is the escalation once the softer rungs have not held. Like Bt it does most against young larvae, and timing it to dusk limits exposure to foraging bees."
+    }
+   ]
+  },
+  {
+   "id": "cabbage-aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. It pushes out soft, sappy new growth, and that is what draws these aphids and lets them build up fastest.",
+     "note_seasoned": "Excess nitrogen produces the succulent growth this brassica specialist colonizes preferentially, so a restrained feeding program removes that flush without holding the crop back."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out old cabbage-family plants after harvest instead of leaving them standing. The aphids carry over on that leftover material and move straight onto the next planting.",
+     "note_seasoned": "Destroy brassica crop debris promptly, since it carries colonies between crops. Winged forms also move in from other brassica plantings, so a cleared bed removes one nearby source."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Keep young plants under a light fabric row cover so winged aphids cannot land and start colonies while the plants are small. Check the growing tips and the folds where the leaves meet the stem often, so anything that does get in is caught early.",
+     "note_seasoned": "Cover young plants to block the winged colonizers, and scout the growing tips and leaf axils weekly. Catching a colony early is what keeps it from lodging in the folds, where coverage is hardest to achieve later."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a strong jet of water from the hose, aiming into the leaf folds where they hide. Repeat every few days while you keep finding them, and do it early in the day so the leaves dry.",
+     "note_seasoned": "A forceful jet dislodges colonies before they settle deep into the axils. It is a purely physical knockdown that leaves the natural-enemy complex untouched; spray early enough in the day that foliage dries."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Make the helpful insects welcome. Ladybugs and lacewings eat aphids, so give them time to find a colony and skip broad sprays that would take them out along with the pests.",
+     "note_seasoned": "Conserve the parasitoid wasps, hoverflies and lady beetles that regulate this aphid. Broad-spectrum material removes them and leaves a rapidly reproducing pest with a clear field."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Spray insecticidal soap onto the aphids themselves, coating the undersides of the leaves, and repeat every few days. It works where it wets them, and the dusty, waxy coating on these aphids means soaking the clusters rather than misting the plant.",
+     "note_seasoned": "Soap kills on contact, so thorough coverage of leaf undersides and axils decides the outcome. The waxy bloom on Brevicoryne colonies is what makes deliberate, repeated application necessary."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is another spray for coating the colonies. Hit the same hidden spots under the leaves and in the folds, repeat every few days, and skip it in high heat or when plants are dry at the roots.",
+     "note_seasoned": "Neem is the coverage-dependent alternative to soap on these colonies. The same thoroughness applies, and it spares beneficials once it has dried."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, can also coat the aphids it reaches. Cover the undersides and the leaf folds the same way, and avoid spraying it in hot weather.",
+     "note_seasoned": "Horticultural oil rounds out the contact options alongside soap and neem. Whichever you pick, coverage of the undersides and axils matters more than the choice of product, and it is worth holding off in high heat or on water-stressed plants."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull the cabbage-family weeds growing near the bed. Those weeds feed the same beetles, so clearing them leaves fewer waiting for your seedlings.",
+     "note_seasoned": "Weedy brassica relatives sustain the crucifer and striped flea beetles between crops, so clearing the bed and its edges removes a standing host bridge to a young planting."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Where you have the choice, lean on fall plantings. These beetles do their worst in spring and ease off as the season warms, so a fall crop usually meets fewer of them. Whatever the season, steady water and feeding keep seedlings growing past light chewing.",
+     "note_seasoned": "Feeding is most damaging on seedlings and through spring, and it lets up once the weather warms, so fall sowings meet lighter pressure. Even watering and feeding keep the stand vigorous enough to grow through damage, which shortens the vulnerable window in any season."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the seedlings with a row cover, a light fabric sheet, from sowing or transplanting on, because a tiny plant cannot grow fast enough to shrug off heavy chewing.",
+     "note_seasoned": "Exclusion from sowing or transplanting protects the stage that is actually at risk. The objective throughout is carrying the crop past the seedling stage, which is the costly one on a crop this quick."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "A kaolin clay coating, a fine white clay dusted over the plants, can cut feeding when there are a lot of beetles. It reduces damage rather than clearing the beetles out, so use it alongside the cover.",
+     "note_seasoned": "Kaolin is a repellent barrier for use where pressure is high. Treat it as a supplement to exclusion and timing rather than a replacement for them."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If beetles are heavy enough to stunt the seedlings, a spinosad spray is an option. Keep the aim on getting plants big enough to handle the damage, spray toward dusk to spare bees, and follow the label.",
+     "note_seasoned": "Spinosad supplements exclusion under high pressure. The objective stays establishment past the vulnerable seedling stage rather than a season-long spray program, and applications belong at dusk to limit bee exposure."
+    }
+   ]
+  },
+  {
+   "id": "cabbage-root-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant kohlrabi where cabbage-family crops have not grown recently. The fly builds up in ground that carried its host plants, so moving the bed puts the new crop away from it.",
+     "note_seasoned": "Rotating away from recent brassica ground reduces the carryover population emerging right where the new transplants go in."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Once the maggots are in the roots, that plant cannot be saved, so pull the badly damaged ones and get them out of the garden. Spend the effort instead on keeping the fly from laying more eggs around the plants that are still sound.",
+     "note_seasoned": "There is no rescue once larvae are tunneling in the roots and lower stem. Rogue out the wilting and collapsing plants and redirect the effort to blocking further egg-laying on the survivors, since the feeding also opens the way to rots."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A row cover, a light fabric sheet laid over the bed, keeps the fly from reaching the plants to lay eggs at their base in the first place.",
+     "note_seasoned": "Exclusion through cool, wet spring establishment covers the period of heaviest adult activity and protects the stage root feeding can kill, the new transplant. Pair it with the rotation above, so the cover is not laid over ground that already carries the pest."
+    },
+    {
+     "method": "stem_collars",
+     "note_beginner": "Set a small collar or disk flat around the base of each transplant. It blocks the fly from laying eggs right against the stem, which is where the maggots start their trip down to the roots.",
+     "note_seasoned": "A basal collar or disk placed at transplanting denies the adult its egg-laying site at the stem base. It is the per-plant option where covering the whole bed is impractical."
+    }
+   ]
+  },
+  {
+   "id": "harlequin-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away garden debris and cabbage-family weeds at the end of the season, since that is where the adults spend the winter. During the season, pull out any plant that is badly overrun rather than trying to defend it.",
+     "note_seasoned": "Adults overwinter in debris and crucifer weeds, so eliminating that shelter is the main preventive lever against a warm-region specialist that completes several generations a year. Roguing heavily infested plants during the season belongs to the same pass."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A row cover, a light fabric sheet, keeps the bugs off the plants. Get it on before they show up rather than after.",
+     "note_seasoned": "Exclusion with floating row cover keeps colonizing adults off the crop, and it earns the most early, as overwintered adults move onto the first cabbage-family plants available."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Search the plants and crush the bugs, the young ones, and the barrel-shaped striped eggs. They are brightly colored and easy to spot on a regular walk through the bed.",
+     "note_seasoned": "Hand destruction of adults, nymphs and the barrel-shaped egg rows is practical at garden scale on an insect this conspicuous. Shield-shaped bugs up to about 3/8 inch in black and yellow or black and red are readily found on a scouting pass."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Where pressure is severe, insecticidal soap sprayed straight onto the bugs can help. It works on the ones it actually wets, so aim at the insects rather than misting the plant.",
+     "note_seasoned": "Soap assists under severe pressure and is strictly a contact material, so direct it onto the bugs and their clusters rather than over the foliage in general."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil is the other spray named for severe pressure. Coat the bugs directly, and hold off in high heat or when the plants are dry at the roots.",
+     "note_seasoned": "Neem is the alternative contact option where pressure is severe. As with soap, coverage of the insects decides the result, and it should be kept off anything in flower nearby, weeds included, where bees forage."
+    },
+    {
+     "method": "pyrethrin",
+     "note_beginner": "Where pressure is severe, pyrethrin, a botanical spray from chrysanthemum flowers, knocks the bugs down on contact and then breaks apart in sunlight within a day or so. Do not let it reach anything in flower; it is in the strictest bee band, which grants no evening window.",
+     "note_seasoned": "Pyrethrin supplies contact knockdown under severe pressure and degrades rapidly in sunlight, so it leaves little residue and often needs repeating. Its organic acceptability does not lower the bee precaution: the strictest band applies, so keep spray and drift off bloom, weeds included."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "clubroot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Once clubroot turns up, stop growing kohlrabi and its cabbage-family relatives in that spot for several years. The organism lives on in the soil, and it slowly starves when it has nothing to infect.",
+     "note_seasoned": "Resting spores persist in soil for many years. Where clubroot is known, rotate brassicas out on a long cycle, up to 7 years, which draws the soil population down over time."
+    },
+    {
+     "method": "raise_soil_ph",
+     "note_beginner": "Keep the soil from staying acidic by liming it toward neutral. The disease takes hold more readily in acid soil, so this holds it back without curing it. Lime the affected bed rather than the whole garden.",
+     "note_seasoned": "Liming toward neutral suppresses the disease, which is favored by soils below about pH 6.5. Confine the treatment to affected ground, since most vegetables prefer soil a little more acid than that, and pair it with the long rotation, as neither clears established ground on its own."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Fix the spots where water sits in the bed. The disease travels and infects in wet soil, so better drainage takes away part of what it needs.",
+     "note_seasoned": "The pathogen spreads in contaminated soil and water, so correcting drainage on heavy or low ground lowers the infection pressure reaching the roots."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "An infected plant cannot be cured, so lift it with the clubbed roots attached and get it out of the garden. Clean the soil off your tools afterward, since the disease rides along on dirt carried from an infested bed.",
+     "note_seasoned": "Rogue out infected plants with the galls intact and destroy them; galls left behind add to a soil burden that already lasts years. Clean soil from tools and boots as well, since moving infested soil is one of the ways it reaches clean ground."
+    }
+   ]
+  },
+  {
+   "id": "black-rot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Begin with clean, certified seed and healthy transplants. This one often arrives on the seed or on the young plants themselves, so a clean start is where most of the defense lives.",
+     "note_seasoned": "The bacterium is seedborne, so certified seed and healthy transplants close the main entry route. It is a purchase-time decision, settled before anything is in the ground."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not plant where cabbage-family crops grew recently. Give the ground two to three years before brassicas come back to it.",
+     "note_seasoned": "Rotate 2 to 3 years away from brassicas, so inoculum carried in old residues is gone before a susceptible crop returns to that ground."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them and the leaves dry off. The disease moves fastest in warm, wet weather, so drying time works against it.",
+     "note_seasoned": "Open spacing shortens the warm, wet leaf conditions this bacterium spreads fastest in, and it slows movement from an infected plant to its neighbors."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the tops of the plants, so you are not splashing bacteria from leaf to leaf.",
+     "note_seasoned": "Basal irrigation removes the overhead wetting and splash that carry the bacterium between plants and lengthen leaf wetness."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the bed while the leaves are wet. Brushing past wet plants carries the bacteria from a sick one to a healthy one.",
+     "note_seasoned": "Work the planting only when foliage is dry, since handling wet plants moves the bacterium efficiently. This governs when you enter the bed, and it still applies after rain and dew, not only after watering."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no real cure, so remove infected plants and get them out of the garden before the disease reaches their neighbors. The yellow V-shaped patches at the leaf edges, with black veins inside them, make it recognizable early.",
+     "note_seasoned": "With no effective cure, roguing is the in-season control, so remove and destroy symptomatic plants promptly. The V-shaped marginal lesions with blackened veins allow an early call, before the pathogen has moved far through the vascular system."
+    }
+   ]
+  },
+  {
+   "id": "alternaria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed. These fungi can travel on the seed itself, so a clean packet keeps the disease from arriving with the crop.",
+     "note_seasoned": "Alternaria is seedborne, so clean seed shuts one of the two main entry routes. Along with airflow, this is where the home-garden leverage sits."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move kohlrabi and its cabbage-family relatives to a different spot between plantings, since the fungi carry over where those crops grew.",
+     "note_seasoned": "The fungi survive on crop debris between seasons, so rotating crucifers out of the bed separates the new crop from the carryover inoculum."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so air moves through and the leaves dry quickly. The spots need wet leaves to take hold, so drying time does much of the work.",
+     "note_seasoned": "Infection requires leaf wetness, so spacing that shortens wet periods works directly against spots establishing, enlarging and running together in wet weather."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil in the morning so any splash dries fast. The disease spreads in splashing water and needs wet leaves to get started.",
+     "note_seasoned": "The fungi spread by splash and infect only through wet foliage, so morning irrigation at the base removes the splash route and leaves the day for drying."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-spotted leaves as you notice them, and clear plant debris between plantings, since that is where the fungi wait for the next crop.",
+     "note_seasoned": "Remove badly spotted foliage during the season and clear crop debris between plantings; residue is the principal carryover reservoir."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In a wet spell that will not let up, a copper fungicide can help if you start it early, before the spots are widespread. Keep the spray out of ponds and drains, since copper is very harmful to fish and other water life, and follow the label.",
+     "note_seasoned": "Copper earns its place only in a season that stays wet, and only where it goes on early; clean seed and airflow remain the main home levers. It protects new growth rather than curing spotted leaves, it is highly toxic to aquatic life, and it accumulates at the soil surface with repeat use, so keep it away from water, limit how often you lean on it, and follow the label rate."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them and dries the leaves. This disease wants cool, damp foliage, and kohlrabi grows through that kind of weather.",
+     "note_seasoned": "Spacing for air movement shortens the long leaf-wetness periods infection depends on. The crop's cool, humid season overlaps the conditions the pathogen favors, so the layout has to do the drying."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line rather than over the leaves. Wet foliage and splashing water are how it gets around.",
+     "note_seasoned": "Basal irrigation removes the overhead wetting and splash dispersal that extend the wet periods the organism needs."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew is common where you live, pick a variety described as resistant when you buy seed.",
+     "note_seasoned": "Where downy mildew recurs regionally, a resistant cultivar is the seed-time decision that lowers the pressure the in-season steps have to carry."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off the worst-affected leaves, the ones with fuzzy grayish growth underneath, so there is less disease to spread. Once damp weather settles in it is hard to stop, so the preventive steps carry most of the load.",
+     "note_seasoned": "Removing badly affected foliage lowers inoculum, but the disease is difficult to arrest once humidity stays high. Treat removal as a supplement to the preventive steps rather than a substitute for them."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "If it keeps spreading despite the rest, a copper spray can help. It does more applied early than after the leaves are covered, and keep it away from ponds and drains, since copper is very harmful to fish and other water life.",
+     "note_seasoned": "Copper is the escalation when cultural steps are not holding under high pressure. It acts preventively, so it belongs at the first sign rather than in an established outbreak; mind runoff, copper being highly toxic to aquatic life, and limit repeat reliance across seasons."
+    }
+   ]
+  },
+  {
+   "id": "blackleg",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean, certified seed and healthy transplants. This fungus mostly comes into a garden on infected seed or plants, so the packet you buy is the main decision.",
+     "note_seasoned": "The fungus is carried chiefly on seed, so the primary control is seed that has been certified and hot-water treated, set out as transplants known to be free of the disease. Management here is preventive by nature, since there is nothing to apply once plants are infected."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep cabbage-family crops out of the affected spot for a few years, about three. The fungus lingers where those crops grew.",
+     "note_seasoned": "Rotate 3 years away from brassicas. The fungus survives in brassica residue, so the interval has to outlast the debris rather than just the season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure, so pull and destroy infected plants. Clear away the old cabbage-family debris too, since that is the other place the fungus survives.",
+     "note_seasoned": "There is no effective cure once plants are infected, so remove and destroy them, and clear out the brassica residue that carries the fungus over rather than leaving it standing in the bed."
+    }
+   ]
+  }
+ ]
+}

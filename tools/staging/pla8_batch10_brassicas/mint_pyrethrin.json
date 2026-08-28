@@ -1,0 +1,40 @@
+{
+ "_provenance": "PLA-8 batch 10 (the brassica family), 2026-08-27. ALL FIVE crops name botanical pyrethrins for harlequin bug and no catalog key carried it: cabbage, cauliflower and kohlrabi say 'Insecticidal soap, pyrethrum, or neem help where pressure is severe'; collards and kale say 'Pyrethrins are permitted in organic production if pressure is severe.' The only near-neighbour, `pyrethroid`, is the SYNTHETIC analog at conventional tier -- mapping one to the other would swap an organic-permitted botanical for a synthetic and attach the wrong hazard profile entirely, the neem-on-beetles defect with a safety dimension. Five crops, one blocked control: the playbook's mint signal. READ 2026-08-27 with the validated raw-HTML parser (`tools/ucipm_uaidb.py`), chlorothalonil re-run as the POSITIVE CONTROL in the same pass and matching its 2026-08-26 reading exactly. UC IPM uaiKey=53: water quality LH, natural enemies M, honey bees HIGH BAND, acute L, chronic NKR. NPIC's pyrethrins factsheet read from live bytes for the mode of action, the sunlight breakdown figures and the organic-agriculture status.",
+ "key": "pyrethrin",
+ "entry": {
+  "name": "Pyrethrin (botanical)",
+  "tier": "soft_chemical",
+  "applies_to": ["insect_general", "insect_chewing", "insect_soft_bodied"],
+  "how_it_works_beginner": "Pyrethrin is an insecticide pressed from chrysanthemum flowers. It hits the insect's nervous system on contact and knocks pests down fast, then breaks apart in sunlight within a day or so, which is why it leaves little behind but often needs repeating.",
+  "how_it_works_seasoned": "Pyrethrins are a mixture of six related compounds extracted from chrysanthemum flowers that disrupt the insect central nervous system on contact. They degrade rapidly in sunlight, with a half-life near 12 hours on soil and in water and less than 3 percent remaining on treated foliage after five days, so knockdown is quick and residual control is short.",
+  "best_use": "A fast-knockdown botanical for a severe insect outbreak the softer rungs have not held, on a crop where you want an organically acceptable material with little persistence. Distinct from the synthetic pyrethroids, which are laboratory analogs of this molecule built to last far longer and sit in the conventional tier; this is the short-lived plant extract.",
+  "find_it_beginner": "Sold as pyrethrin or pyrethrum garden insect sprays; on the label look for 'pyrethrins' as the active ingredient. Products combining it with insecticidal soap are common. Note that a similar-looking name, permethrin, is a longer-lasting synthetic, not this.",
+  "pros": [
+   "Fast knockdown on contact, and acceptable in organic production",
+   "Breaks down quickly in sunlight, so it leaves little residue on the crop"
+  ],
+  "cons": [
+   "Contact-only with almost no residual, so it must hit the pest and often needs repeating",
+   "Broad-spectrum: it takes beneficial insects along with the pest wherever it lands"
+  ],
+  "cautions": [
+   "UC IPM puts pyrethrins in its strictest honey bee band: do not apply them, or let them drift, onto anything in flower including weeds, and do not let them reach water bees can drink such as puddles. Being organically acceptable does not soften this; the band is the same one the synthetic insecticides sit in.",
+   "Rated Moderate for harm to natural enemies, so a spray can remove the predators that were holding a second pest down",
+   "Rated Low to High for water quality risk to aquatic wildlife depending on the product; keep spray and runoff away from ponds, streams and storm drains",
+   "UC IPM rates acute toxicity to people and other mammals Low, and the chronic rating is no known risk, so the short term and long term risks to the person spraying are the mild half of this ingredient's picture",
+   "Many consumer products do not print protective equipment on the label; wear chemical resistant gloves, long sleeves and goggles regardless",
+   "Observe the pre-harvest interval on the label before eating the crop, and read and follow the label every time"
+  ],
+  "sources": ["ucipm_uaidb", "npic_orst"],
+  "anchoring_urls": {
+   "ucipm_uaidb": {
+    "url": "https://ipm.ucanr.edu/home-and-landscape/pesticide-active-ingredients-database/active-ingredient-details/?uaiKey=53",
+    "verified": "2026-08-27"
+   },
+   "npic_orst": {
+    "url": "https://npic.orst.edu/factsheets/pyrethrins.html",
+    "verified": "2026-08-27"
+   }
+  }
+ }
+}

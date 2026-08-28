@@ -4,6 +4,17 @@
 >
 > **Append protocol:** at session close, after fully regenerating `CURRENT_STATE.md`, append a dated entry here capturing what happened (the detail that does not belong on the lean surface). Most-recent-first, beneath this header.
 
+## 2026-08-27 -- PLA-8 batch 10, THE BRASSICA FAMILY: the arc's biggest batch, and a mint that stops a material substitution (`4725bcbb` -> `be444e25`)
+
+ONE promote (`tools/promote_pla8_batch10.py`): cabbage/cauliflower/kohlrabi/collards/kale -- 48 problems, **237 rungs**, roster laddered **41 -> 46**, catalog **57 -> 58**.
+
+- **THE MINT: `pyrethrin`.** All five crops name the botanical for harlequin bug; the only near-neighbour was `pyrethroid`, the SYNTHETIC analog at conventional tier. Substituting would swap an organic-permitted botanical for a synthetic and attach the wrong hazard profile. **All five agents independently refused it** -- the mint signal at full strength. The reading then changed the entry: UC IPM puts pyrethrins in the **STRICTEST honey bee band**, the same one as carbaryl and the synthetics. An organically acceptable material is, on bees, as restricted as the conventional insecticides; the entry and all five rungs say so. Two T1 anchors (uaidb uaiKey=53 + NPIC), chlorothalonil re-run as positive control.
+- **RULING: a risk description is not a recommendation.** `planting_time_avoidance` dropped from every root-maggot ladder -- the prose says only that the fly is most active in cool spring weather. Batch 9's turnip/radish DO recommend the shift verbatim, so their rungs stand. SCOPED: it stays on kohlrabi's flea beetles ("favor fall plantings"). Same key, same crop, two problems, one earned.
+- **Copper pinned both ways**; no black-rot ladder carries it (a deliberate divergence from shipped broccoli, filed not reconciled).
+- **Harness 49/49 after two failed runs, and the failures were the point.** Run 1: HARNESS DEAD, the sandbox omitted the mint spec (liveness defense working). Run 2: 45/49 -- **`MINT` was computed from the staged spec it validates, so the agreement check was VACUOUS by construction** (now an inlined literal with a driver), two premise guards had no driver, and one survivor was a broken mutation of mine (`() or (...)` is inert). Three more guards fixed while writing the suite, including `ladder_signature`, which was POSITIONAL and so could not have caught a reordered wholesale copy at all.
+- **Gauntlet:** gate_all 121/121; whole_crop_gate PASS x6; control_ladder_gate 0; register_completeness PASS; release_verify no new violations; COMPACT preserved; 66 tests both runners.
+- New problem ids: `blackleg`, `fusarium-yellows`, `bacterial-soft-rot`. **Recorded gap: trap cropping has no key**, now hit by 2 batches / 5+ crops -- top candidate for the next catalog round. Next: batch 11, alliums + fall herbs.
+
 ## 2026-08-27 -- PLA-8 batch 9, THE ROOTS (`043a7272` -> `4725bcbb`)
 
 ONE promote (`tools/promote_pla8_batch9.py`): turnip/radish/carrot/beet gain ids, types and ladders -- 29 problems, 134 rungs, NO mint, methods and sources byte-identical. Roster laddered **37 -> 41**. Second batch of the fall block.
