@@ -1,0 +1,157 @@
+{
+ "pests": [
+  {
+   "id": "parsleyworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "These caterpillars are big, easy to spot against the leaves, and there are rarely many, so if you want every leaf you can lift them off by hand as you walk past. Many gardeners simply leave them alone and enjoy the black swallowtail butterflies they become, and only pick when leaf loss is actually costing them something.",
+     "note_seasoned": "Occasional scouting and hand removal is the whole control on most home plantings, and it is realistic because the larvae are large, conspicuous, and present in small numbers. Tolerating what a home planting normally carries is the usual call; picking is for the case where the defoliation is taking the cutting you wanted."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, short for Bacillus thuringiensis, is a bacterial spray for caterpillars, and it is rarely worth reaching for here. It acts on caterpillars as a group and does not tell a pest apart from a butterfly caterpillar, and on parsley these seldom do enough damage to justify it. Keep it off any parsley you are growing for the swallowtails, and treat it as a last option rather than the step that follows hand-picking.",
+     "note_seasoned": "Seldom warranted on this crop: the material acts on caterpillars as a group, desirable species included, and parsley is a black swallowtail host that many growers keep deliberately. It will control them where control is genuinely needed, but the numbers a home planting sees rarely reach that point, so confine any application to a planting with a real problem instead of treating it as the routine next rung."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen, the nutrient in fertilizer that drives fast leafy growth. Aphids build up quickest on soft new shoots, so parsley that has not been overfed usually gives them less to work with.",
+     "note_seasoned": "The several aphid species that feed on parsley all favor the succulent growth surplus nitrogen produces, so moderate feeding is a setting chosen ahead of an outbreak rather than a response to one."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong stream of water knocks the clusters loose, so work the hose up under the leaves where they sit. Repeat every few days, because the ones you miss regroup, and look closely at the new growth: parsley's lacy foliage hides them well. Do it early enough in the day that the foliage dries.",
+     "note_seasoned": "A directed jet dislodges colonies mechanically with nothing applied to a crop eaten fresh; run it again every few days so survivors do not rebuild. Scout the growing tips deliberately rather than glancing across the canopy, since the finely cut foliage conceals a colony until it is well along, and keep the pass early enough that the foliage dries."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and parasitoid wasps, the tiny wasps that lay their eggs inside aphids, will hunt aphids for you. Letting a second-year plant flower helps, because parsley's flower heads draw those helpers in.",
+     "note_seasoned": "Conserving resident ladybugs, lacewings, and parasitoid wasps is the living control here, and parsley supports it directly: allowed to flower in its second year, the umbels pull in aphid predators, so leaving a bolting plant standing costs little and keeps natural enemies resident."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray sold for garden use, kills the aphids it actually touches, so coat the undersides of the leaves where the clusters sit and go back every few days. Rinse what you pick well before it goes in the kitchen.",
+     "note_seasoned": "Soap acts on contact alone, so undersides coverage of the colony decides the result, and a few days between passes is the working interval. Washing the cutting matters on this crop regardless of what you spray, since honeydew and the lodged insects themselves contaminate foliage eaten fresh."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, a plant oil pressed from neem tree seeds, is the other spray named for aphids on parsley. Same approach: wet the leaf undersides where the aphids actually are rather than misting the whole plant, and repeat every few days.",
+     "note_seasoned": "Neem is the alternate contact material where soap has not held a colony; place it on infested growth with thorough undersides coverage instead of broadcasting it across the planting, and keep the same few-day repeat interval."
+    }
+   ]
+  },
+  {
+   "id": "carrot-rust-fly",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move parsley to a fresh spot each year, and keep it off ground that recently grew carrots, parsley, or their carrot-family relatives. These root pests build up where the same family repeats in one bed.",
+     "note_seasoned": "Give Apiaceae ground several seasons off before parsley goes back onto it. Damage runs worst where carrots, parsley, and their relatives return to the same ground season after season, so rotation sets how much pressure the remaining steps have to absorb."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Where these flies are a serious local problem, holding the sowing until the first round of flies has passed can miss the worst of the egg-laying. When that happens shifts with the region and the season, so check local guidance rather than working from a fixed date.",
+     "note_seasoned": "Delaying sowing past the first fly generation is worth doing where pressure is severe. Generation timing is regional and moves with the season, so treat any published window as a starting point and confirm it locally rather than carrying a date across regions."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear old parsley and crop debris out of the bed in fall. What you leave standing gives these pests somewhere to spend the winter, which is how the problem carries into next year.",
+     "note_seasoned": "Remove crop residue at the end of the season, since it harbors overwintering stages. It is the between-season half of the job rotation does, and it costs nothing on a bed you are clearing anyway."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A light fabric row cover laid over the bed keeps the adult flies from reaching the plants to lay eggs, so it needs to go on before they appear rather than after you see tunneling. Use it over ground that did not carry carrots or parsley last year, or you can seal soil pests in under the cover along with the crop.",
+     "note_seasoned": "Exclusion from emergence onward is the main physical lever: a cover sealed at the edges and in place ahead of the flight is what keeps eggs off the crown. Pair it with rotation rather than substituting for it, since laying cover over recently cropped Apiaceae ground risks trapping emerging soil stages in with the planting."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "septoria-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed. This fungus can arrive on the seed itself, so the packet you buy is the first place to shut it out, before anything is in the ground.",
+     "note_seasoned": "Septoria petroselini is seed borne, so a clean or treated lot is a decision set at purchase; nothing later in the season undoes having sown an infected one."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Sow the next parsley somewhere else rather than in the same bed, and give its close relatives a rest from that ground too. The fungus carries over in what gets left behind.",
+     "note_seasoned": "Rotate away from parsley and its relatives so a new sowing does not go back onto ground still holding the fungus in last season's debris."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them and the leaves dry faster. This spot does its worst in cool, wet weather, so a planting that dries quickly is a harder place for it.",
+     "note_seasoned": "Widen spacing to shorten how long the canopy holds moisture. Cool, wet, splashy conditions are what drive the lesions, and canopy drying time is the part of that a gardener sets."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line, with drip tubing or a wand held low, instead of sprinkling over the tops of the plants. The disease spreads on splashing water, so foliage that stays dry takes away how it travels.",
+     "note_seasoned": "Switch to drip or soil-line delivery: overhead watering both wets the foliage and splashes spores through the stand, and it is the dispersal route you can remove outright."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick the clean leaves and use them promptly. Heavily spotted leaves are not good to eat, so taking the good foliage while it is still good is worth doing once a planting has started to spot.",
+     "note_seasoned": "Even a moderately spotted leaf crop is no longer worth cutting, so pulling the clean foliage promptly salvages what the planting still has. Timing here does not act on the fungus; it decides how much of the crop comes off ahead of the lesions."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the spotted leaves and carry them out of the garden, then clear the old plants when the crop is finished. There is no reliable home-garden spray once this is established, so removing infected material and heading off the next round is where the effort goes.",
+     "note_seasoned": "Remove spotted foliage as it shows and clear infected debris at the end of the season, since the debris is what carries the fungus over. Once the disease is established there is no dependable spray to fall back on at home-garden scale, which puts the weight on this rung and the ones above rather than on a rescue."
+    }
+   ]
+  },
+  {
+   "id": "crown-and-root-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant in well-drained soil, raised or loosened enough to give the long root somewhere to go, and then water moderately, especially through winter. These rots take hold where the soil stays soggy, and a plant carried over a wet winter is the usual casualty.",
+     "note_seasoned": "Site on well-drained ground and loosen it for the taproot. Waterlogging is the condition the soilborne water molds and fungi need, so drainage plus restrained winter watering removes the setting rather than the organism; plants held through a wet winter are where this most often shows up."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not put parsley back into a bed where a carrot-family plant has already rotted. Whatever took that plant is still in the ground.",
+     "note_seasoned": "Rotate away from beds with a rot history in the carrot family, since these pathogens sit in the soil and ground that has taken a crop once is the last place to site a susceptible replacement."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A plant whose crown has gone soft and brown is not going to come back, so pull it and get it out of the bed rather than waiting to see.",
+     "note_seasoned": "Remove affected plants; there is no rescue once the crown has decayed, so this is cleanup and the outcome was decided by the siting and watering above."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait until the soil is neither cold nor soggy before you sow, set the seed shallow, and go easy on the watering afterward. Parsley is slow to sprout, so the seed sits in the ground a long time before it comes up, and soaking it first shortens that wait.",
+     "note_seasoned": "This is set at sowing: shallow placement, ground drained and warm enough for reasonably quick emergence, and restrained watering after. Parsley's slow germination leaves seed sitting for weeks, which is why sowing conditions carry most of the outcome, and presoaking the dry seed is the move that shortens the exposed window."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Choose a bed that drains freely before you sow. Cold, soggy soil is what these soil fungi need, and a bed that stays waterlogged after watering will keep taking seedlings.",
+     "note_seasoned": "Cold, saturated, poorly drained soil favors the Pythium, Rhizoctonia, and Fusarium that attack germinating seed, and it also draws out an already slow germination, so drainage work belongs before sowing rather than after a stand has failed."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A seedling that has flopped over at the soil line is not going to recover, so pull the collapsed ones and discard them. The rest of this list is about protecting the next sowing.",
+     "note_seasoned": "There is no rescue once seedlings collapse, so removal is housekeeping rather than control; the management sits entirely in the sowing and drainage decisions above."
+    }
+   ]
+  }
+ ]
+}
