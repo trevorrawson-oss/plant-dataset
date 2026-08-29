@@ -113,6 +113,9 @@ COMMIT_FOR = {
     # 46 -> 50. Also reachable via CHAIN (batch 12 replayed it there before this commit existed);
     # _from_commit is tried first and wins.
     '1e4d0c06ad28ed28642f64a3ae15b537bb7d14367b73280489ebde3befd311ae': '6f2d9d8',
+    # PLA-8 BATCH 12: fall finishers; ZERO catalog edits; roster 50 -> 53. Closes the fall block
+    # at 20/20. Its base is batch 11's output, which is why that entry sits directly above.
+    '7f5079aab0fa4167c87e1373b3d28d598bf2379e05e2f8e2047665eabb13b9c3': '712066c',
     '45409cee243da4196e983198c33505701d44f50842ffb208a224d0b22ddd817b': '7abf386',
     '7ca9e487df51e9d6cd2882c7305c12f536b3733154ac5298bdbd4c0fb079bbe9': 'd8547cd',
     'eb5926edf5e1d75c56ef2f1469bfd1c5cd484c388cb94fc71eb18f9fa8669516': '88a5a21',
