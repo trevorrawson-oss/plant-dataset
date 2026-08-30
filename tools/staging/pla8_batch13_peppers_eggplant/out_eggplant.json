@@ -1,0 +1,326 @@
+{
+ "pests": [
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away weeds and old crop debris at the end of the season. The beetles spend the winter as adults tucked into that litter, then come out in spring aimed at your youngest plants.",
+     "note_seasoned": "Adults overwinter in crop debris and weedy cover, so removing both lowers the spring emergence that lands on the earliest transplants; eggplant is a strongly preferred host, which is why the pressure concentrates here."
+    },
+    {
+     "method": "trap_cropping",
+     "note_beginner": "Plant a border of nasturtiums at the edge of the bed. The beetles find them attractive and can be lured off the eggplant. Treat the patch as a sacrifice rather than part of the crop, and see this method's cautions for when it must be dealt with.",
+     "note_seasoned": "A nasturtium or other preferred trap planting at the bed margin can draw beetles off the crop by preference rather than by treating them. Its value hinges on the removal step in this method's cautions; a loaded patch left standing holds beetles beside the crop instead of away from it."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the plants with floating row cover, a light fabric that lets light and water through while keeping the beetles out, from planting day until the flowers open. Then take it off so pollination can happen.",
+     "note_seasoned": "Row cover from transplanting excludes the overwintered adults through the window when leaf area is smallest and a heavy infestation can shred or kill seedlings outright; remove it at flowering."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "For a heavy attack on young plants, coat the leaves with kaolin clay, a fine white mineral powder mixed with water and sprayed on. The chalky film helps put the beetles off feeding.",
+     "note_seasoned": "A kaolin particle film is one of the two treatments the guidance reserves for heavy early infestations; established plants tolerate considerable feeding, so this is a seedling-stage tool."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, an organic spray made by a soil microbe, is for a heavy infestation that is tearing up seedlings. Mature plants rarely need any treatment at all.",
+     "note_seasoned": "Reserve spinosad for heavy early pressure on seedlings and young transplants; mature plants rarely need treatment, so the spray window is the establishment period, not the season."
+    }
+   ]
+  },
+  {
+   "id": "colorado-potato-beetle",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant eggplant away from wherever potatoes, tomatoes, or eggplant grew last year. The beetles spend winter in the soil near their old food plants and come up right where they left off.",
+     "note_seasoned": "Overwintered adults emerge near last season's nightshade hosts, so rotating well away from the previous solanaceous bed cuts the population that moves straight onto establishing plants."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young plants with floating row cover, a light fabric that keeps the beetles off the leaves while letting light and water through.",
+     "note_seasoned": "Cover on young plants excludes the colonizing adults during establishment; it pairs with rotation, since emergence is heaviest near old host ground."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick off the striped adults, the plump red larvae, and the orange-yellow egg clusters under the leaves and drop them into soapy water, checking every day or two. Squash any egg masses you find. This keeps a small planting clean.",
+     "note_seasoned": "Daily handpicking of adults, larvae, and egg masses keeps small plantings clean, and crushing egg clusters on leaf undersides stops each generation before it feeds. Populations build fast and the species quickly resists many insecticides, which is what makes this the workhorse rung."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Where the plants are still crawling despite picking, spinosad, an organic spray made by a soil microbe, works on the young larvae. Aim it at the small ones rather than the full-grown beetles.",
+     "note_seasoned": "Apply spinosad to young larvae where pressure runs high; the species' record of developing resistance to many insecticides is the argument for leaning on the non-chemical rungs first."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. The soft, lush growth that heavy feeding pushes out is exactly what aphids multiply on fastest.",
+     "note_seasoned": "Excess nitrogen drives the succulent growth aphids favor, so moderating feeding slows colony buildup on growing tips and leaf undersides in warm weather."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Lay reflective mulch, a silvery sheet, around young plants. The bounced light puts arriving aphids off landing while the plants are small.",
+     "note_seasoned": "Reflective mulch deters aphids from young plants, which carries extra weight here because the aphids involved transmit the mosaic viruses that mottle and distort foliage."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet of water from the hose, aiming at the new growth and the undersides of the leaves. Repeat every few days.",
+     "note_seasoned": "A strong jet against the leaf undersides breaks colonies up faster than they can reorganize; repeat the pass every few days through warm spells, when reproduction runs quickest."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Aphids have plenty of enemies, from ladybugs and lacewings to tiny parasitic wasps, and those helpers usually bring an outbreak down on their own. Give them the chance by not spraying everything in sight.",
+     "note_seasoned": "Conserved ladybugs, lacewings, and parasitic wasps usually bring aphids under control without intervention; broad sprays strip that pressure out, so support the natural enemies rather than spraying broadly."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep growing, spray insecticidal soap, wetting the undersides of the leaves where the aphids sit. It works only where it touches them, so repeat every few days.",
+     "note_seasoned": "Soap is contact-only, so thorough coverage of leaf undersides governs the outcome; repeat every few days to catch the colonies rebuilding between passes."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, is the other choice at this step. It also works only on contact, so coat the undersides of the leaves well and repeat as with soap.",
+     "note_seasoned": "Oil is the alternative contact material and carries the same underside-coverage demand and repeat interval as soap, rather than any residual activity."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep the plants steadily watered through hot weather. Mites hit drought-stressed plants hardest, so a plant kept from drying out badly is a tougher target.",
+     "note_seasoned": "Water stress is the amplifier: populations explode on hot, dry, dusty, drought-stressed plants, so steady moisture through midsummer heat removes the predisposing condition rather than treating the symptom."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Spray the undersides of the leaves with a strong jet of water every day for a week. It breaks up the colonies, and hosing dust off the leaves now and then helps too, since mites thrive in dusty conditions.",
+     "note_seasoned": "Repeated forceful water on the leaf undersides disrupts colonies, and the added moisture works against a pest that builds fastest in dry conditions; it is the first pass before reaching for any material."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Helpful insects and mites in the garden eat spider mites. Avoid spraying broad insect killers, which wipe out the helpers that keep mites in check.",
+     "note_seasoned": "Broad-spectrum insecticides remove the predators holding mites in check, so conserving natural enemies is itself a control decision, made mostly by what you choose not to spray."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "Under a heavy infestation you can buy predatory mites, tiny mites that hunt the pest ones, and release them onto the affected plants.",
+     "note_seasoned": "Purchased predatory mites help under heavy pressure once conservation is already in place; release onto an infestation you have actually located rather than ahead of one."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If mites persist after the water treatment, spray insecticidal soap on the undersides of the leaves, repeating every few days.",
+     "note_seasoned": "Follow the water passes with soap applied to the lower leaf surfaces where the mites feed, repeating every few days; it acts on contact only."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, is the other option here. Coat the undersides of the leaves well and repeat if needed.",
+     "note_seasoned": "Oil is the alternate contact material against the same underside-feeding colonies; coverage and repetition, not residue, do the work."
+    }
+   ]
+  },
+  {
+   "id": "eggplant-lace-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move eggplant to a new spot each year so the bugs that wintered near last year's bed do not start the season on top of your plants.",
+     "note_seasoned": "Rotating the planting separates the crop from lace bugs overwintering in debris around last season's bed, and since the pest is fairly eggplant-specific, the move counts for more than it would against a generalist."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out the old plants at the end of the season, since the bugs spend winter in that debris. During the season, pick off and destroy the leaves carrying the worst colonies.",
+     "note_seasoned": "End-of-season debris removal takes out the overwintering sites; in season, removing the worst-infested leaves culls whole underside colonies of adults and nymphs at once."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Check the undersides of the lower leaves from early in the season, and spray any colonies you find directly with insecticidal soap, making sure to coat underneath where the bugs feed.",
+     "note_seasoned": "Soap reaches the soft nymphs when applied directly to the underside colonies; scouting lower leaves early catches colonies while they are small, and thorough underside coverage plus repetition decide the result."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, works the same way at this step. Coat the undersides of the leaves and repeat if the bugs return.",
+     "note_seasoned": "Oil is the alternative contact material against the nymph colonies, with the same demand for thorough underside coverage and repeat passes as needed."
+    }
+   ]
+  },
+  {
+   "id": "hornworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Turn the soil over in fall once the plants come out. The caterpillars pass the winter underground as pupae, the resting stage between caterpillar and moth, and tilling destroys them.",
+     "note_seasoned": "Fall tillage destroys overwintering pupae in the bed, trimming the local carryover before the next summer's moths emerge."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the big caterpillars off by hand and drop them into soapy water. They blend into the stems, so look for the dark droppings, called frass, on the leaves below and search just above that spot.",
+     "note_seasoned": "Handpicking is effective at home-garden scale; frass on lower leaves locates larvae far more reliably than scanning the stems they match."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "If you find a hornworm covered in small white capsules, leave it right where it is. Those are the cocoons of parasitic wasps that will kill it and go on to attack other hornworms.",
+     "note_seasoned": "Leave any larva studded with parasitic-wasp cocoons in place, since the emerging wasps kill it and breed more; encouraging these natural enemies is part of what keeps hornworm numbers in check."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "When there are more caterpillars than you can pick, Bt, short for Bacillus thuringiensis, is an organic spray that works on the smaller, younger ones.",
+     "note_seasoned": "Apply Bt where numbers run high, aimed at younger larvae; it is the material for small caterpillars, with handpicking covering the full-grown ones."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "verticillium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "When you buy seed or plants, look for varieties described as tolerant of verticillium. There is no cure once a plant is infected, so the choice you make before planting carries most of the weight.",
+     "note_seasoned": "Tolerant cultivars are a core preventive move against a pathogen that cannot be cured in the plant or cleared from infested soil by home-garden means; note the sources say tolerant, not immune."
+    },
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "Another option is a grafted plant, the variety you want joined onto roots bred to resist the disease. It lets you keep growing eggplant on ground where the fungus is already present.",
+     "note_seasoned": "Grafting onto resistant rootstock keeps the fruiting variety while swapping out the root system the soilborne fungus infects, the practical route on ground already carrying inoculum."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant eggplant in ground that has not recently grown tomatoes, peppers, potatoes, or eggplant, and keep the break long. The fungus lives on in the soil for years.",
+     "note_seasoned": "The fungus persists for years as resting structures with a wide host range across the Solanaceae and many other crops, so only a long rotation away from susceptible hosts meaningfully lowers exposure."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out and destroy any plant that wilts with it. It will not recover, and removing it is the one useful thing left to do that season.",
+     "note_seasoned": "Infected plants do not recover, so remove and destroy them; in-season management ends there, which is why the weight of this ladder sits on the preventive rungs."
+    },
+    {
+     "method": "soil_solarization",
+     "note_beginner": "Where a bed is known to carry the fungus, solarizing, covering moist soil with clear plastic through the hottest weeks so the sun heats it, can lower the amount of disease in the soil.",
+     "note_seasoned": "Solarizing an infested bed can lower inoculum ahead of replanting; it lowers the population rather than clearing it, so it backs up rotation and resistant or grafted plantings rather than replacing them."
+    }
+   ]
+  },
+  {
+   "id": "phomopsis-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed and healthy, disease-free transplants. This fungus can ride in on the seed itself, so an outbreak is sometimes planted right along with the crop.",
+     "note_seasoned": "The pathogen is seedborne as well as soilborne, and infected seed often starts an outbreak, so clean or treated seed and disease-free transplants are the first control point, set at purchase."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Seed sold as resistant to this disease is one of the clean-start options worth looking for when you buy.",
+     "note_seasoned": "Resistant seed sits alongside clean and treated seed in the guidance; it is a decision made at purchase, before anything else on this ladder applies."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep eggplant out of the same bed for about four years. The fungus survives on old plant debris in the ground.",
+     "note_seasoned": "A rotation of about four years lets debris-borne inoculum decline; volunteer debris can start an outbreak, so the gap only counts if the bed is genuinely clear of it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plants instead of over the leaves, and keep the leaves and fruit as dry as you can. The disease spreads in splashing water and warm, wet weather.",
+     "note_seasoned": "Soil-directed watering removes the splash that spreads the fungus and shortens the warm, humid wetness periods that drive it, which matter most toward fall when the disease peaks."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Spread mulch under the plants so rain cannot splash soil, which can carry the fungus, up onto the leaves and fruit.",
+     "note_seasoned": "A mulch layer intercepts splash off infested soil and residue, cutting the inoculum that reaches foliage and fruit by that route."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them and wet leaves dry quickly. Warm, wet conditions are what this disease runs on.",
+     "note_seasoned": "Spacing for airflow shortens leaf and fruit wetness, working directly against the warm, humid conditions that favor infection."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and throw away any fruit with pale sunken spots as soon as you see it, pull plants that are badly hit, and clear all the old plants out at the end of the season. Rotted fruit cannot be saved.",
+     "note_seasoned": "Prompt removal of infected fruit and plants limits spread, and stripping crop debris at season's end removes the overwintering substrate; there is no rescue for badly rotted fruit, so removal is the in-season play."
+    }
+   ]
+  },
+  {
+   "id": "southern-bacterial-wilt",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If this disease is common where you live, look for varieties described as resistant. There is no cure once a plant has it, so what you plant matters more than anything you can do afterward.",
+     "note_seasoned": "In problem areas, resistant varieties lead the program against a soilborne bacterium that cannot be cured in the plant; everything after infection is containment."
+    },
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "A grafted plant, your chosen variety joined onto resistant roots, is the other way to keep growing eggplant in ground that carries the disease.",
+     "note_seasoned": "Grafting onto resistant rootstock keeps the fruiting variety while replacing the roots the bacterium invades, the practical route where the soil is already infested."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not plant eggplant where tomatoes, potatoes, or eggplant grew in the last three years. The bacterium lives on in the soil and in old infected plant matter.",
+     "note_seasoned": "Keep eggplant off ground that carried tomato, potato, or eggplant within the previous three years; the bacterium persists in soil and infected debris and is favored where soils run hot and wet."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Improve the drainage in wet spots before planting. The bacterium does best in hot, wet soil, so ground that drains freely works against it.",
+     "note_seasoned": "High soil moisture and temperature favor the pathogen, so drainage work on heavy or low-lying ground removes part of what makes a bed conducive."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the bed while the plants are wet, and avoid tracking soil from a spot where plants have wilted into a clean one. The bacterium travels in water and on tools.",
+     "note_seasoned": "The bacterium spreads in water and on tools, so work the planting when it is dry, and avoid moving infested soil between beds; timing your chores is itself part of the control."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull and destroy any plant that wilts and collapses with it, then clean your tools before touching anything else. Removing sick plants quickly is what limits the spread.",
+     "note_seasoned": "Prompt removal and destruction of wilted plants, with tools disinfected afterward, limits spread from a plant that cannot be saved; in-season management is containment, not rescue."
+    }
+   ]
+  },
+  {
+   "id": "phytophthora-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant on raised beds or mounds so water drains away fast, and avoid the low spots that stay soggy after rain. This disease lives in wet soil, so drainage is the main defense.",
+     "note_seasoned": "Raised, well-drained beds and avoiding low ground deny these water molds the saturated soil they need; once plants collapse there is no effective home-garden cure, so drainage is where control actually lives."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil rather than showering the plants from above. The disease spreads in splashing and running water.",
+     "note_seasoned": "Soil-directed irrigation removes the splash and surface flow that carry the pathogen through a warm, wet bed."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Mulch under the plants so rain cannot splash infested soil up onto the stems, leaves, and fruit.",
+     "note_seasoned": "Mulch intercepts splash off infested soil, one of the routes by which the pathogen reaches stems, foliage, and fruit above the soil line."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate eggplant away from beds that grew peppers, tomatoes, or squash-family crops. The disease survives in the soil and in old plant debris.",
+     "note_seasoned": "Rotation off solanaceous and cucurbit hosts matters because the pathogen survives in soil and debris and flares again whenever warm, saturated conditions return."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out affected plants and rotting fruit as soon as you see them and get them out of the garden. Once a plant collapses it cannot be saved.",
+     "note_seasoned": "Prompt removal and destruction of affected plants and fruit limits what running and splashing water can spread through the rest of the bed; beyond removal, control is preventive and drainage-based."
+    }
+   ]
+  }
+ ]
+}

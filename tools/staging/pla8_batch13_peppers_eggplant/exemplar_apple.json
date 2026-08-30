@@ -1,0 +1,398 @@
+{
+ "pests": [
+  {
+   "id": "codling-moth",
+   "name": "Codling moth",
+   "type": "insect",
+   "symptoms_seasoned": "Larvae tunnel into the fruit core, leaving a frass-filled entry hole (often at the calyx end) and brown trails; infested apples drop early or are inedible.",
+   "symptoms_beginner": "This is the classic \"worm in the apple.\" You find a small hole in the apple with brown crumbly stuff (frass) around it, and a tunnel into the core when you cut it open. Bad apples drop early.",
+   "cause_seasoned": "Cydia pomonella; female moths lay eggs on developing fruit and young leaves near bloom, and hatching larvae bore into the apple. Two or more generations per season in most regions.",
+   "cause_beginner": "A small moth lays eggs on the tiny apples in spring; the eggs hatch into caterpillars that crawl into the fruit. There can be two batches a summer, so the problem repeats.",
+   "prevention_seasoned": "Orchard sanitation (clear dropped fruit and debris), keep nearby abandoned apple trees pruned or removed, and band trunks to catch larvae seeking pupation sites.",
+   "prevention_beginner": "Keep the ground under the tree clean of fallen apples, and wrap a band of cardboard around the trunk to trap crawling caterpillars. Nearby neglected apple trees make it worse.",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "umn_ext",
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    },
+    "umn_ext": {
+     "url": "https://extension.umn.edu/yard-and-garden-insects/codling-moths",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start here: pick up and destroy every apple that drops, do not leave them under the tree, since the caterpillars ride out in the fallen fruit. This step alone lowers next year's moths.",
+     "note_seasoned": "Removing and destroying dropped and infested fruit through the season strips out larvae before they exit to pupate; the backbone every other step builds on."
+    },
+    {
+     "method": "codling_moth_pheromone_trap",
+     "note_beginner": "Hang a scented (pheromone) trap to tell you when the moths are flying, so you know the right moment to bag fruit or spray. The trap is a timing tool, not a cure on its own.",
+     "note_seasoned": "Wing traps baited with sex pheromone time the other steps to egg hatch; UC IPM notes trapping alone is not a reliable way to reduce damage on an isolated tree."
+    },
+    {
+     "method": "fruit_bagging",
+     "note_beginner": "Slip a paper bag or nylon footie over each young apple about a month after bloom and staple it shut. It is the most effective spray-free option, worth the effort on a small tree.",
+     "note_seasoned": "Bagging at 1/2 to 1 inch fruit excludes egg-laying moths; UC IPM calls it the only nonchemical method effective enough to use alone, even under heavy pressure."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "A white clay film sprayed on the tree makes it an unpleasant place for moths to lay eggs. It only partly controls codling moth, so reapply through the season and expect to pair it with the steps above.",
+     "note_seasoned": "Kaolin gives only fair to moderate codling moth control and washes off, so keep new growth covered; heavy use can flare European red mites or scale."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If the steps above are not holding, spinosad is a strong organic spray, but it only works if timed to when the eggs hatch, which is what the trap tells you. It is hard on bees while wet, so spray at dusk and never on open blossoms.",
+     "note_seasoned": "Spinosad, timed to egg hatch on a petal-fall or degree-day schedule, controls the boring larvae; toxic to bees while wet, so apply at dusk away from bloom."
+    },
+    {
+     "method": "pyrethroid",
+     "note_beginner": "Only for a heavy infestation nothing else has held. A synthetic that kills fast but hits bees, fish, and the good bugs too, so it is a last resort, not a routine spray.",
+     "note_seasoned": "A broad-spectrum contact pyrethroid is rescue-only; it sets back natural enemies and can trigger mite or aphid resurgence. Observe the label pre-harvest interval."
+    }
+   ]
+  },
+  {
+   "id": "apple-maggot",
+   "name": "Apple maggot",
+   "type": "insect",
+   "symptoms_seasoned": "Adult flies lay eggs under the skin; larvae tunnel through the flesh leaving dimpled, pitted fruit with brown winding trails inside.",
+   "symptoms_beginner": "The apple skin gets little dimples and the inside has brown squiggly trails. Unlike the codling moth's single tunnel to the core, this is a maze of trails through the flesh.",
+   "cause_seasoned": "Rhagoletis pomonella; flies emerge in summer and sting the fruit surface to lay eggs just under the skin.",
+   "cause_beginner": "A fly pokes the apple skin in summer and lays eggs just underneath, and the maggots eat through the apple.",
+   "prevention_seasoned": "Sanitation (remove drops within a few days, before larvae exit into the soil) breaks the cycle; bagging fruit excludes the flies.",
+   "prevention_beginner": "Picking up fallen apples quickly stops the next generation. Bagging the fruit also keeps the flies out.",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "umn_ext",
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/fruit/growing-apples",
+     "verified": "2026-06-11"
+    },
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start here: pick up fallen apples every few days, before the maggots crawl out into the soil to overwinter. Clearing the drops promptly breaks the cycle.",
+     "note_seasoned": "Removing drops within a few days, before larvae exit into the soil, is the foundational step against apple maggot."
+    },
+    {
+     "method": "red_sphere_trap",
+     "note_beginner": "Hang sticky red ball traps that look like ripe apples; the flies land to lay eggs and get stuck. Use about one trap per 100 to 150 apples on the tree, and get them up by mid-June before egg-laying starts.",
+     "note_seasoned": "Baited red spheres at roughly one per 100 to 150 fruit trap out egg-laying females and can control apple maggot in a small planting, not just monitor it; keep them sticky and serviced."
+    },
+    {
+     "method": "fruit_bagging",
+     "note_beginner": "Bagging young apples keeps the flies off the fruit entirely, the surest spray-free option where you have the patience to bag each one.",
+     "note_seasoned": "Paper bags applied at 1/2 to 1 inch fruit exclude apple maggot as well as codling moth for the rest of the season."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "A white clay film repels apple maggot flies and gives strong control of this pest, though it must be reapplied and washed off the fruit at harvest.",
+     "note_seasoned": "Kaolin gives strong control of apple maggot specifically; keep the film renewed on new growth through the egg-laying period."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If traps and clay are not enough, a spinosad spray helps, but it is hard on bees while wet, so spray at dusk and not on open flowers.",
+     "note_seasoned": "Spinosad, applied when flies are active, backs up trapping; toxic to bees while wet, so time it to dusk."
+    },
+    {
+     "method": "pyrethroid",
+     "note_beginner": "A last resort for heavy pressure only. It works fast but kills bees, fish, and beneficial insects, so keep it off flowers and out of water.",
+     "note_seasoned": "Rescue-only; broad-spectrum and disruptive to natural enemies, with a label pre-harvest interval to observe."
+    }
+   ]
+  },
+  {
+   "id": "plum-curculio",
+   "name": "Plum curculio",
+   "type": "insect",
+   "symptoms_seasoned": "Crescent-shaped (D-shaped) scars on young fruit from egg-laying; larvae feed inside, causing misshapen fruit and early drop.",
+   "symptoms_beginner": "Look for little crescent or D-shaped scars on the small green apples in spring. Damaged fruit often drops while still small.",
+   "cause_seasoned": "Conotrachelus nenuphar; a small weevil that attacks young fruit shortly after petal fall.",
+   "cause_beginner": "A tiny beetle (weevil) that scars the baby apples right after the flowers drop their petals.",
+   "prevention_seasoned": "Prompt removal of dropped fruit (which carries larvae) and good sanitation reduce next-year pressure.",
+   "prevention_beginner": "Clean up dropped apples promptly, they carry the next generation.",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start here: clean up dropped apples promptly, since they carry the grubs, and on cool early mornings you can spread a sheet under the tree and tap the branches to jar the beetles down and collect them.",
+     "note_seasoned": "Prompt removal of dropped fruit lowers next year's weevils; jarring adults onto a sheet at first light, when they are sluggish, physically removes them."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "A white clay film applied right after the petals fall, when the weevils attack the young fruit, deters them from feeding and laying eggs. Reapply through the season to keep new fruit covered.",
+     "note_seasoned": "Kaolin gives fair to moderate plum curculio control; start at petal fall, the critical window, and reapply as fruit expands and the film washes off."
+    },
+    {
+     "method": "pyrethroid",
+     "note_beginner": "Only if clay is not holding and the weevils are ruining the crop. If you spray, the timing that matters is just after the blossoms drop their petals, and again about two weeks later. This is a synthetic that hits bees and beneficials, so keep it off open flowers and treat it as a last resort.",
+     "note_seasoned": "A rescue-only conventional; time it to petal fall and a follow-up about two weeks later, after bloom so bees are off the flowers. Broad-spectrum and disruptive to natural enemies, with a label pre-harvest interval."
+    }
+   ]
+  },
+  {
+   "id": "woolly-apple-aphid",
+   "name": "Woolly apple aphid",
+   "type": "insect",
+   "symptoms_seasoned": "White, cottony tufts on shoots, pruning wounds, and roots; heavy colonies cause galls and weaken young trees.",
+   "symptoms_beginner": "Fluffy white cottony patches show up on branches and around pruning cuts, it looks like bits of cotton wool stuck to the bark.",
+   "cause_seasoned": "Eriosoma lanigerum; colonies feed on bark and roots, secreting the protective waxy wool.",
+   "cause_beginner": "A small aphid that covers itself in white waxy fluff while it feeds on the bark and roots.",
+   "prevention_seasoned": "Choosing a resistant rootstock (MM106, MM111 resist woolly apple aphid) avoids the worst root colonies.",
+   "prevention_beginner": "Some rootstocks (MM106, MM111) naturally resist this pest, a good reason to ask which rootstock your tree is on.",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "umd_ext": {
+     "url": "https://extension.umd.edu/sites/extension.umd.edu/files/publications/AllAboutAppleRootStocks_FS_2022-0638.pdf",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "The best defense is the rootstock your tree is grafted on: MM106 and MM111 rootstocks resist woolly apple aphid, so ask which one your tree is on when you buy.",
+     "note_seasoned": "Woolly apple aphid resistant rootstocks (MM106, MM111) avoid the worst root colonies; the highest-leverage, plant-once choice."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong jet of water knocks the cottony colonies off shoots and pruning wounds, and cutting off badly infested twigs removes the worst of them. Both are cheap first steps before any spray.",
+     "note_seasoned": "A forceful spray dislodges the woolly colonies on sturdy wood; prune out heavily infested wood to remove established galls, and repeat as colonies rebuild."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and parasitic wasps feed on woolly apple aphid and often keep it in check on their own, so protect them by avoiding broad sprays.",
+     "note_seasoned": "Conserving resident natural enemies usually keeps woolly apple aphid down; broad-spectrum sprays that wipe them out are what let it flare, so the softer this ladder stays, the better."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For stubborn colonies, spray them directly with insecticidal soap. It only kills what it wets, so hit the cottony patches thoroughly, and it spares beneficials once dry.",
+     "note_seasoned": "Contact soap smothers the exposed colonies but does not reach the wax-protected or root-feeding aphids, so it gives only partial control; coverage and repeat sprays matter."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil smothers the aphids and has a bit more staying power than soap. Do not spray it in heat above 90°F or on a drought-stressed tree, and keep it away from a recent sulfur spray.",
+     "note_seasoned": "Narrow-range oil gives partial control by smothering; the waxy wool shields some aphids, so thorough coverage is key. Avoid oil on stressed trees, above 90°F, or within 2 weeks of sulfur. There is no conventional rung here, since pyrethroids destroy this aphid's natural enemies and make outbreaks worse."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "apple-scab",
+   "name": "Apple scab",
+   "type": "fungal",
+   "symptoms_seasoned": "Olive-green to brown, velvety spots on leaves that later turn dark and corky; scabby, cracked lesions on fruit. Severe infection causes leaf yellowing and early defoliation.",
+   "symptoms_beginner": "Dark, fuzzy olive-green spots appear on the leaves, and the apples get rough, scabby, cracked patches. In a bad year the tree drops its leaves early.",
+   "cause_seasoned": "Venturia inaequalis; spores overwinter in fallen leaves and infect during wet spring weather, with infection periods driven by leaf wetness and temperature.",
+   "cause_beginner": "A fungus that survives winter in last year's fallen leaves and spreads in cool, wet spring weather onto the new leaves and fruit.",
+   "prevention_seasoned": "Rake and remove fallen leaves in autumn (destroys the overwintering source), prune for airflow, and plant scab-resistant varieties such as Liberty.",
+   "prevention_beginner": "The single best move is to rake up and remove fallen leaves every autumn, that is where the fungus hides over winter. Better yet, plant a scab-resistant variety like Liberty so you rarely have to spray.",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "umn_ext",
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/fruit/growing-apples",
+     "verified": "2026-06-11"
+    },
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "The surest fix is to plant a scab-resistant apple like Liberty, so you rarely have to spray at all.",
+     "note_seasoned": "Scab-resistant cultivars such as Liberty remove most of the spray schedule; the highest-leverage control for a disease that is hard to cure once it is going."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up and remove every fallen leaf in autumn. The fungus overwinters in last year's leaves, so clearing them is the single best thing you can do after variety choice.",
+     "note_seasoned": "Removing and destroying fallen leaves in autumn strips out the overwintering source, lowering next spring's spore load."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune the tree so air moves through it and the leaves dry fast after rain. Scab needs long wet periods to infect, so a drier canopy gets less disease.",
+     "note_seasoned": "Opening the canopy shortens leaf-wetness periods, denying the fungus the sustained moisture it needs to infect."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "If you grow a susceptible variety, sulfur is the organic spray, but it must go on in spring before infection, on a protective schedule. Once the spots are everywhere it is too late for that year, so prevention is the game. Do not spray sulfur in heat above 90°F, since it burns leaves.",
+     "note_seasoned": "Sulfur is a protectant only, so time it to spring infection periods and reapply; it will not cure established scab. Avoid it above 90°F and within 2 weeks of an oil spray, and note it can harm predatory mites."
+    }
+   ]
+  },
+  {
+   "id": "fire-blight",
+   "name": "Fire blight",
+   "type": "bacterial",
+   "symptoms_seasoned": "Blossoms and shoot tips suddenly wilt, blacken, and die, bending into a characteristic \"shepherd's crook\"; affected branches look scorched. Sunken, oozing cankers form on wood.",
+   "symptoms_beginner": "Branch tips and flower clusters suddenly turn black and look burned, as if scorched by fire, and the tip bends over into a hook shape. It can kill whole branches or the tree.",
+   "cause_seasoned": "Erwinia amylovora; bacteria infect through blossoms and wounds in warm, wet spring weather and spread fastest on lush, nitrogen-pushed growth.",
+   "cause_beginner": "Bacteria that infect through the flowers in warm, wet spring weather. Fast, soft growth from too much fertilizer makes it much worse.",
+   "prevention_seasoned": "Avoid excess nitrogen (soft growth is most susceptible), plant less-susceptible varieties and rootstocks, and prune in dry conditions. Forecast models guide bloom-time management.",
+   "prevention_beginner": "Go easy on fertilizer, soft sappy growth is what fire blight loves. Prune only in dry weather, and choose varieties known to resist it where this disease is common.",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "umn_ext",
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "umn_ext": {
+     "url": "https://extension.umn.edu/fruit/growing-apples",
+     "verified": "2026-06-11"
+    },
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where fire blight is common, the most important choice is a less-susceptible variety and rootstock. There is no spray that cures this disease, so start by not planting the ones that get it worst.",
+     "note_seasoned": "Variety and rootstock susceptibility varies widely; choosing resistant stock is the highest-leverage control for a bacterial disease with no cure."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Go easy on fertilizer: soft, sappy new growth from too much nitrogen is exactly what fire blight races through, so feed sparingly. Clean up and destroy any blighted prunings rather than leaving them near the tree.",
+     "note_seasoned": "Avoid excess nitrogen, which pushes the succulent growth fire blight colonizes fastest, and destroy infected prunings; there is no cure once the bacteria are in the wood."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "This is the main control: cut off each blackened, hooked shoot about a hand's length (6 to 8 inches) below the damage, into healthy wood, and destroy it. Do it in dry weather, and dip your pruners in a bleach solution between cuts so you do not spread it.",
+     "note_seasoned": "Cut 6 to 8 inches beyond the visible margin into healthy wood, ideally in dry or dormant weather; placing the cut far enough below the strike matters more than tool sterilizing, though dipping shears in 10% bleach is still wise."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper spray at bloom can slow new blossom infections, but it is a limited, preventive help, not a cure, and it cannot save wood that is already infected. Copper is toxic to fish and builds up in the soil, so use it sparingly and follow the label.",
+     "note_seasoned": "Fixed copper at early bloom reduces new blossom infection but does not cure existing strikes; a limited protectant, not a fix. Copper accumulates in soil and is toxic to aquatic life, so limit repeat use over the years."
+    }
+   ]
+  },
+  {
+   "id": "cedar-apple-rust",
+   "name": "Cedar-apple rust",
+   "type": "fungal",
+   "symptoms_seasoned": "Bright yellow-orange spots on upper leaf surfaces (sometimes with small black dots) appearing shortly after bloom, and orange lesions on fruit; heavy infection causes early leaf drop.",
+   "symptoms_beginner": "Vivid yellow-orange spots appear on the tops of the leaves a few weeks after the tree blooms, and sometimes on the fruit. They are hard to miss because the color is so bright.",
+   "cause_seasoned": "Gymnosporangium juniperi-virginianae; the fungus needs two hosts, alternating between apple and nearby red cedar or juniper, releasing spores from cedar galls in spring rains.",
+   "cause_beginner": "An unusual fungus that lives part of its life on apple and part on nearby cedar or juniper trees. It bounces between the two, so apples near cedars get it.",
+   "prevention_seasoned": "Remove red cedar or juniper within a few hundred feet if practical, or choose rust-resistant apple varieties; the disease cannot complete its cycle without the cedar host.",
+   "prevention_beginner": "This disease needs a cedar or juniper tree nearby to survive. Removing those within a few hundred feet, or planting a rust-resistant apple variety, breaks the cycle.",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "umass_ext",
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "umass_ext": {
+     "url": "https://netreefruit.org/apples/diseases/cedar-apple-rusts",
+     "verified": "2026-06-11"
+    },
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Rust needs a nearby cedar or juniper to survive, so two things break its cycle: plant a rust-resistant apple variety, or remove cedars and junipers within a few hundred feet if you can.",
+     "note_seasoned": "Rust-resistant cultivars, or eliminating the alternate juniper host within a few hundred feet, break the two-host cycle; on light infections the damage is mostly cosmetic."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up fallen infected leaves and pick off the bright orange-spotted ones. On most trees rust is more unsightly than harmful, so this and variety choice are usually enough.",
+     "note_seasoned": "Removing infected leaves lowers local inoculum; on a healthy tree light rust is largely cosmetic and rarely warrants spraying."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Only if your tree gets heavy rust every year. A protectant like sulfur must go on in spring, starting around when the buds show pink, before the spots appear; it cannot clear rust that is already there. Do not spray sulfur in heat above 90°F.",
+     "note_seasoned": "Sulfur is a preventive protectant applied from pink-bud through early fruit set where rust has a history; it is weaker on rust than synthetic options and will not cure existing lesions, so most gardeners never need it. Avoid it above 90°F and near an oil spray."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "name": "Powdery mildew",
+   "type": "fungal",
+   "symptoms_seasoned": "White, felt-like fungal growth on leaves, shoots, and buds; infected shoots are stunted and leaves curl. Fruit may develop a russeted netting.",
+   "symptoms_beginner": "A white powdery coating, like flour dusted on the leaves and new shoots. Affected tips grow poorly and the leaves curl.",
+   "cause_seasoned": "Podosphaera leucotricha; overwinters in buds and spreads in spring, favored by warm days and humid nights (it does not need leaf wetness).",
+   "cause_beginner": "A fungus that hides in the buds over winter and spreads in warm, humid spring weather onto the new growth.",
+   "prevention_seasoned": "Prune for good air circulation, choose less-susceptible varieties, and remove infected wood during dormant pruning.",
+   "prevention_beginner": "Prune the tree so air moves through it, mildew hates dry, breezy conditions, and cut out any white-coated twigs in winter.",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "iastate_ext"
+   ],
+   "anchoring_urls": {
+    "iastate_ext": {
+     "url": "https://yardandgarden.extension.iastate.edu/how-to/spray-schedule-home-apple-trees",
+     "verified": "2026-06-11"
+    }
+   },
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If mildew is a yearly problem, choose a less-susceptible variety; it is the easiest long-term fix.",
+     "note_seasoned": "Cultivar susceptibility varies; choosing a less-susceptible variety is the lowest-effort durable control."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune the tree open so air moves through it. Powdery mildew hates dry, breezy conditions, so good airflow makes a big difference.",
+     "note_seasoned": "Opening the canopy for air movement suppresses mildew, which favors humid, still air; unlike scab it does not need leaf wetness to infect."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Snip off the white-coated shoots as you see them, and cut out any infected twigs during winter pruning. Go easy on nitrogen, since soft new growth is what mildew colonizes.",
+     "note_seasoned": "Prune out white-coated shoots and infected wood at dormant pruning, and avoid nitrogen-pushed flushes of the tender growth mildew prefers."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "If mildew keeps coming back, sulfur is the classic organic spray, applied before it takes hold. Do not use it in heat above 90°F, since it burns leaves.",
+     "note_seasoned": "Sulfur is a reliable protectant fungicide and miticide for powdery mildew; apply preventively where it recurs, avoid above 90°F and within 2 weeks of oil, and note it can set back predatory mites."
+    }
+   ]
+  }
+ ]
+}

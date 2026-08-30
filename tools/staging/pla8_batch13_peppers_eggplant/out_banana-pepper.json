@@ -1,0 +1,332 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease up on nitrogen fertilizer. Aphids multiply fastest on the soft, lush growth that heavy feeding pushes out, so a moderately fed pepper gives them less to build on.",
+     "note_seasoned": "Excess nitrogen drives the succulent growth aphids favor; restrained feeding slows colony buildup on growing tips and leaf undersides before any other step is needed."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Lay a silver reflective mulch, a shiny sheet spread on the soil, under young peppers. It helps keep aphids from landing, and since aphids carry plant viruses, it slows virus spread too.",
+     "note_seasoned": "Reflective mulch deters colonizing aphids from young plants, and because virus transmission is their most serious effect on peppers, cutting early landings slows virus spread as well as feeding injury."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the aphids off with a strong jet of water from the hose, aiming at the undersides of the leaves where they gather. Go back every few days while they keep returning.",
+     "note_seasoned": "A forceful water jet dislodges colonies from tips and leaf undersides; populations rebuild quickly in warm weather, so repeat at a few days' interval."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and tiny parasitic wasps all eat aphids and usually bring them under control on their own. Welcome these helpers, and avoid spraying broadly so you do not wipe them out.",
+     "note_seasoned": "Conserved ladybugs, lacewings, and parasitic wasps usually bring aphids under control; supporting natural enemies rather than spraying broadly keeps that pressure working for you."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep growing, spray insecticidal soap onto the undersides of the leaves where the aphids sit, and repeat every few days. It only works where it actually touches them.",
+     "note_seasoned": "Soap demands thorough coverage of leaf undersides, since it acts only on contact; repeat every few days to catch the colonies that rebuild."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil made for plants, is the other option at this step. Like soap, it has to coat the aphids, so wet the undersides of the leaves well and repeat every few days.",
+     "note_seasoned": "Oil is the alternative contact material at this rung, carrying the same coverage demand on leaf undersides and the same need for repeat passes."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away weeds and old plant debris at the end of the season. The adult beetles spend the winter hiding in that litter and come out in spring aimed at your youngest plants.",
+     "note_seasoned": "Adults overwinter in crop debris and weedy cover; clearing both lowers the spring emergence that falls hardest on the earliest, most vulnerable transplants."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young plants with a floating row cover, a light fabric that lets in sun and water while keeping beetles out, from transplanting until they are big and sturdy. Take it off when they flower so pollinators can reach the blooms.",
+     "note_seasoned": "Row cover from transplanting excludes beetles through the window when leaf area is smallest; remove at flowering for pollinator access, by which point established plants tolerate considerable feeding."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "For a heavy attack on young plants, coat the leaves with kaolin clay, a fine white mineral powder you mix with water and spray on. The film helps deter the beetles from feeding.",
+     "note_seasoned": "Kaolin's particle film is a tool for heavy early infestations on small transplants; established peppers shrug off the shot-holing and rarely need treatment."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If a heavy early attack is shredding young plants, spinosad, an organic spray derived from a soil bacterium, helps. Bigger established plants can usually outgrow the damage without it.",
+     "note_seasoned": "Reserve spinosad for heavy early infestations on transplants whose small leaf area is at risk; mature plants tolerate the feeding, so routine application is not warranted."
+    }
+   ]
+  },
+  {
+   "id": "european-corn-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up old pepper plants and nearby cornstalks at the end of the season, since the borer spends winter in that debris; removing it is the biggest help. During the season, pick off and destroy any pepper with a bored hole.",
+     "note_seasoned": "The borer overwinters in crop debris and nearby cornstalks, so destroying both at season's end removes its carryover; through the season, remove and destroy bored fruit, which cannot be salvaged once tunneled."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Watch for the caterpillars from midsummer and spray Bt, short for Bacillus thuringiensis, an organic caterpillar spray, while they are still small and outside the fruit. Once one tunnels into a pepper, no spray reaches it.",
+     "note_seasoned": "Time Bt to newly hatched larvae before they bore in, scouting from midsummer when the moths fly; once inside fruit or stem the caterpillar is protected from any application."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, another organic spray, works the same way: only on the young caterpillars before they tunnel inside. Catch them early or not at all.",
+     "note_seasoned": "Spinosad shares Bt's timing constraint, effective on young surface-feeding larvae and useless after entry, so it is an alternative for the same early window rather than a rescue for bored fruit."
+    }
+   ]
+  },
+  {
+   "id": "pepper-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear out wild weeds in the nightshade family growing near the garden, especially horsenettle. They host the fly that starts this problem.",
+     "note_seasoned": "Wild solanaceous weeds such as horsenettle host the pepper maggot fly; removing them from around the planting takes away the reservoir it works from."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant your peppers in a different spot from last year so the flies do not pick up right where they left off.",
+     "note_seasoned": "Rotating peppers away from last year's bed puts distance between the crop and the population carried over from the previous planting."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and destroy any pepper that turns red too early or shows a tiny pinhole scar on its skin. You cannot save a fruit once the maggot is inside, but removing it stops the next generation.",
+     "note_seasoned": "There is no rescue for infested fruit, so prompt removal and destruction of prematurely coloring or scarred peppers is what breaks the cycle; culls left in place finish rearing the next generation."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Where this pest is a known local problem, put a floating row cover, a light fabric barrier, over the plants before fruit starts to form so the flies cannot reach the peppers.",
+     "note_seasoned": "In problem areas, cover before fruit set to exclude the egg-laying flies; once eggs are in the fruit, nothing applied later reaches the maggot."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Hang a yellow sticky trap, a bright card coated in glue, near the plants. It helps confirm when the flies are active so your other steps are timed right.",
+     "note_seasoned": "A yellow sticky trap serves as a flight monitor, helping confirm when adults are active so exclusion and any treatment can be timed to the egg-laying period."
+    }
+   ]
+  },
+  {
+   "id": "pepper-weevil",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cleanup is the main defense. Gather and destroy every dropped bud and fruit as you go, since the grubs finish growing inside them, and pull and destroy the spent plants at the end of the season. There is no way to save an infested pepper.",
+     "note_seasoned": "Sanitation is central because infested fruit cannot be rescued: prompt destruction of dropped buds and fruit breaks the breeding cycle, and pulling spent plants at season's end removes the material the pest carries over on."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Get rid of volunteer pepper plants, the strays that come up on their own, and nearby nightshade-family weeds. The weevil survives between seasons on both.",
+     "note_seasoned": "Volunteer peppers and solanaceous weeds harbor the weevil between crops; removing both takes away its overwintering hosts."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not plant peppers in the same spot as last year.",
+     "note_seasoned": "Rotating away from last year's pepper ground adds distance from whatever population the previous crop supported."
+    }
+   ]
+  },
+  {
+   "id": "hornworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Turn the soil over in fall once the plants come out. The caterpillars pass the winter underground as pupae, the resting stage between caterpillar and moth, and tilling destroys them.",
+     "note_seasoned": "Fall tillage destroys overwintering pupae in the bed, trimming the local carryover before the next summer's moths emerge."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the big caterpillars off by hand and drop them into soapy water. They blend into the stems, so look for the dark droppings, called frass, on the leaves below and search just above that spot.",
+     "note_seasoned": "Handpicking is effective at home-garden scale; frass on lower leaves locates larvae far more reliably than scanning the stems they match."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "If you find a hornworm covered in small white capsules, leave it right where it is. Those are the cocoons of parasitic wasps that will kill it and go on to attack other hornworms.",
+     "note_seasoned": "Leave any larva studded with parasitic-wasp cocoons in place, since the emerging wasps kill it and breed more; encouraging these natural enemies is part of what keeps hornworm numbers in check."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "When there are more caterpillars than you can pick, Bt, short for Bacillus thuringiensis, is an organic spray that works on the smaller, younger ones.",
+     "note_seasoned": "Apply Bt where numbers run high, aimed at younger larvae; it is the material for small caterpillars, with handpicking covering the full-grown ones."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "bacterial-spot",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with certified disease-free seed, or seed that has had a hot-water treatment, and healthy transplants. This disease often arrives on the seed or the young plants themselves.",
+     "note_seasoned": "The bacteria are seedborne, and outbreaks often start from infected seed or transplants, so certified or hot-water-treated seed and clean transplants are the foundation of control."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Look for a variety listed as resistant when you buy seed. There is no cure once a plant is infected, so the choices you make before planting carry the most weight.",
+     "note_seasoned": "Choose resistant varieties where available; with no curative option after infection, genetics does work that nothing applied later can."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow peppers in the same bed year after year. Give the spot a break of two to three years, since the bacteria carry over in old plant debris.",
+     "note_seasoned": "Rotate peppers out of the bed for two to three years so debris-borne inoculum declines before the crop returns."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plants instead of sprinkling over the leaves. The bacteria travel in splashing water, so dry leaves are protected leaves.",
+     "note_seasoned": "Basal irrigation removes the overhead splash that disperses the bacteria; the disease is worst in warm, wet, splashy conditions, so limiting leaf wetness works directly against it."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Spread mulch under the plants to stop rain from splashing soil, and the bacteria it carries, up onto the leaves.",
+     "note_seasoned": "Mulch intercepts splash off infested soil and debris, cutting one of the short-range routes by which the pathogen reaches foliage."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the pepper patch while the leaves are wet. The disease spreads on hands and tools, and wet plants are when it moves most easily.",
+     "note_seasoned": "The pathogen moves on hands and tools among wet plants, so working the planting only when foliage is dry closes a transmission route that no spray addresses."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the worst-spotted leaves during the season, and clear out all the old pepper plants in fall. There is no cure, so removing infected material is how you slow it down.",
+     "note_seasoned": "Remove the most affected leaves to check spread and strip crop debris at season's end, since debris carries the bacteria over; heavy defoliation also exposes the remaining fruit to sunscald, which is part of the cost of letting it run."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper spray can slow the disease down, but it will not cure it, so treat it as backup for the prevention steps rather than a fix.",
+     "note_seasoned": "Copper-based sprays can slow spread but do not eradicate an established infection; they supplement clean seed, rotation, and dry foliage rather than standing in for them."
+    }
+   ]
+  },
+  {
+   "id": "phytophthora-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant on raised beds or mounds so water drains away fast, and avoid low spots that stay wet after rain. This disease needs soggy soil, so drainage is the heart of the defense, and if it strikes, fix the drainage right away.",
+     "note_seasoned": "Raised, well-drained beds deny this water mold the saturated soil it thrives in, and low spots that stay wet are where it starts; with no effective home-garden cure once plants collapse, drainage correction is the immediate response as well as the prevention."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the plants, and do not overwater. Warm, wet, soggy ground is exactly what lets this disease take off.",
+     "note_seasoned": "Water at the soil and avoid excess; the pathogen spreads in splashing and running water and flares in saturated ground, so volume matters as much as placement."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Mulch under the plants to cut down on splashing, which is one of the ways the disease spreads.",
+     "note_seasoned": "Mulch limits splash dispersal off infested soil, one of the routes by which the pathogen moves through a bed in wet weather."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move peppers to fresh ground and keep them, along with the other crops this disease attacks, out of a troubled bed for at least three to four years. It lives in the soil for years.",
+     "note_seasoned": "Rotate away from peppers and other susceptible crops for at least three to four years; the pathogen persists in soil and debris for years, so a short gap buys little."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull and destroy any plant that wilts and collapses, along with rotted fruit, as soon as you see it.",
+     "note_seasoned": "Prompt removal and destruction of collapsed plants and affected fruit reduces the inoculum that splashing and running water carries onward through the bed."
+    }
+   ]
+  },
+  {
+   "id": "anthracnose",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed. The fungus can ride on or inside seeds, so clean seed keeps it from arriving with the crop.",
+     "note_seasoned": "Colletotrichum survives inside or on the surface of seed; starting from clean, pathogen-free seed removes that entry point before anything is in the ground."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep peppers out of the bed for two to three years. The fungus carries over on old crop debris in that ground.",
+     "note_seasoned": "A 2 to 3 year rotation lets the debris-borne inoculum decline before peppers return to the bed."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the plants. The spores travel in splashing water, so the drier the leaves and fruit stay, the safer they are.",
+     "note_seasoned": "Watering at the soil rather than overhead removes the splash events that carry spores from debris and soil onto fruit; keeping foliage and fruit dry is the working objective."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Put mulch down under the plants to stop rain from splashing spores up from the soil and old debris.",
+     "note_seasoned": "Mulch intercepts splash from infested soil and residue, cutting the inoculum that reaches developing fruit."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them and wet fruit dries quickly. Warm, wet, humid spells are what drive this rot.",
+     "note_seasoned": "Spacing for airflow shortens the wetness periods on foliage and fruit, working against the warm, humid conditions near 80°F that favor infection."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick ripe peppers promptly instead of leaving them hanging in wet weather. Fully colored fruit left on the plant is what this disease hits hardest.",
+     "note_seasoned": "Ripening and colored fruit are the most susceptible tissue, and a late crop left on the plant to color in warm, wet weather is the classic loss; harvesting promptly takes the target out of the infection window."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and throw away any pepper with a sunken spot as soon as you see it, since a rotted fruit cannot be saved, and clear out the old plants at the end of the season.",
+     "note_seasoned": "Prompt removal of symptomatic fruit limits secondary spread, and stripping crop debris at season's end removes the overwintering substrate."
+    }
+   ]
+  },
+  {
+   "id": "mosaic-viruses",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a variety with virus resistance when you buy seed. Many peppers carry it, and since there is no cure for an infected plant, this is your strongest move.",
+     "note_seasoned": "Many pepper cultivars carry virus resistance, and with no curative option once symptoms appear, resistance is the primary control; select for it where available."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Lay reflective mulch, a silvery sheet spread on the soil, under the plants. It helps keep away the aphids that carry most of these viruses, and keeping the carriers down is the real defense.",
+     "note_seasoned": "Reflective mulch repels colonizing aphids, and since aphids and thrips are the main vectors, suppressing them is the practical lever on a disease with no cure."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out and destroy any plant with mottled, crinkled leaves as soon as you spot it, so aphids cannot carry the virus from it to healthy plants. Keep weeds down around the garden, wash your hands and tools after touching a sick plant, and do not handle peppers right after using tobacco, since tobacco mosaic virus can travel on your hands.",
+     "note_seasoned": "Rogue infected plants early: they are standing virus reservoirs that vectors feed on and move from. These viruses overwinter in weeds and perennials, so keep the margins down, and because tobacco mosaic also moves mechanically on hands and tools, wash both after handling infected plants and avoid working peppers after tobacco use."
+    }
+   ]
+  },
+  {
+   "id": "southern-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate away from the crops this fungus attacks, on a long cycle. It lives in the soil for years and hits many kinds of plants, so it builds up wherever susceptible crops follow each other.",
+     "note_seasoned": "Sclerotium rolfsii persists in soil for years as tough resting bodies and has a very wide host range, so only a long rotation away from susceptible crops draws the population down."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Improve the drainage in the bed. The fungus does best in hot weather with moist soil, so ground that does not stay wet works against it.",
+     "note_seasoned": "High soil moisture favors the fungus alongside heat; improving drainage removes one of the two conditions it needs."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "If a plant collapses with white threads and tiny tan balls like mustard seeds at the base of the stem, pull it out and destroy it, and scoop up the soil right around the stem too. Those tan balls are the resting bodies that would start the next attack. Clean up old plant debris as well.",
+     "note_seasoned": "Remove a collapsed plant along with the soil immediately around its stem to carry off the sclerotia, and clear the crop debris that favors infection; an infected plant cannot be saved, so the work is about protecting the bed."
+    },
+    {
+     "method": "soil_solarization",
+     "note_beginner": "In a bed where this disease keeps coming back, try soil solarization, which means heating the soil under clear plastic through the hottest part of summer. It helps lower the amount of fungus in the ground.",
+     "note_seasoned": "Solarizing a recurring-problem bed in summer lowers the resident population; it is a between-crop reset rather than an in-season rescue, since the resting bodies persist for years."
+    }
+   ]
+  }
+ ]
+}
