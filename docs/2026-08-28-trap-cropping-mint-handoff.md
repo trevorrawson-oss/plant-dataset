@@ -36,8 +36,16 @@ the sentence a reader can be harmed by if it is stated loosely.
 
 ## 2. THE MEASUREMENT (done; reproduce only if you doubt it)
 
-Scan: `trap crop|trap-crop|trap planting|sacrificial`, case-insensitive, over the six prose
-fields of every problem on all 128 crops. **20 problems on 18 crops.** Three-way split:
+Scan: `trap crop|trap-crop|trap planting|sacrificial`, case-insensitive, over **every string field**
+of every problem on all 128 crops. **22 problems on 20 crops.** Three-way split:
+
+> **CORRECTED 2026-08-28 by the session running this round.** The first version of this scan read
+> only the eight standard prose fields and reported 20 on 18. The shell and ornamental crops carry
+> their prose in `note_beginner` / `note_seasoned` instead, which hid two records --
+> **nasturtium/Aphids** and **zinnia/Japanese beetles**, both INVERTED and both textbook trap
+> crops, so they are exactly the records a later pass is likeliest to get wrong. Verified
+> independently. The exclusion set is **six, not four**; the backfill is unchanged at 10, since
+> both are unladdered.
 
 ### 2a. BACKFILL -- 10 rungs onto crops whose ladders ALREADY SHIPPED
 
@@ -68,7 +76,7 @@ The other five sit in the peppers / fruiting-veg / berries batches queued right 
 before those and the backfill stays at 10; mint after and it grows to 16 across four more crop
 families.
 
-### 2c. EXCLUDED -- 4 instances that mention trap cropping and MUST NOT get a rung
+### 2c. EXCLUDED -- 6 instances that mention trap cropping and MUST NOT get a rung
 
 **These are deliberate refusals, not oversights. Pin them as guards or a later pass will
 "finish the job" and ship four wrong rungs.**
@@ -85,7 +93,18 @@ families.
 4. **parsley / Parsleyworm -- same as dill.** "Relocate the larvae to a sacrificial plant... many
    gardeners deliberately grow extra parsley as a swallowtail host."
 
-A method whose meaning ends in "then destroy the trap" is actively wrong on 3 and 4.
+5. **nasturtium / Aphids -- INVERTED, and the subtlest of the six.** "Aphids strongly prefer
+   nasturtium, which is the basis of its trap-crop use. On a trap stand, monitor and pull or
+   destroy the planting once it is heavily loaded." That destroy-when-loaded instruction READS
+   exactly like the method, but it describes what you do when nasturtium IS the trap. This dataset
+   carries nasturtium as an ornamental and edible crop, where the same prose says to treat aphids
+   normally. A rung here tells a reader to destroy the crop they are growing.
+6. **zinnia / Japanese beetles -- INVERTED.** "Zinnias are a known preferred host, which is part of
+   their trap-crop value." Again the crop is the trap; the record's own advice is handpicking at
+   dawn.
+
+A method whose meaning ends in "then destroy the trap" is actively wrong on 3 and 4, and points at
+the wrong plant entirely on 5 and 6.
 
 ---
 

@@ -208,6 +208,19 @@ Non-negotiables, each of which exists because it was violated once:
   twice edit a site you did not intend and report a catch for the wrong reason.
 - **A guard that cannot fire in isolation is documented as a forward assertion and NOT counted as
   coverage.** Two exist already; copy that treatment rather than padding a total.
+- **A cross-rung duplicate scan must compare a rung against OTHER rungs only.** Batch 12's compared
+  each rung's `note_seasoned` against its own `note_beginner`, so a rung with identical registers
+  was reported as a duplicate note and MASKED `validate_batch`'s identical-registers refusal, which
+  says it in far clearer words. Found only because a driver asserted on the message it expected and
+  got a different one: assert the message you mean, not merely that something refused.
+- **If a later batch must chain through your promote, it needs `--canonical`.** `promote_fixture.
+  _from_chain` rebuilds an uncommitted intermediate by invoking its producing script as
+  `<script> --canonical PATH --expect-sha SHA --apply`. Most promotes in `tools/` accept a
+  POSITIONAL canonical only and will die with "unrecognized arguments: --canonical". Add
+  `ap.add_argument("--canonical", dest="canonical_flag", default=None)` and
+  `a.canonical = a.canonical_flag or a.canonical`. Needed whenever a batch's base is another
+  batch's output rather than a commit -- batch 12 on batch 11 (for a REUSED id that batch 11
+  mints), and the trap-cropping mint/backfill pair.
 
 Then the gauntlet, the state trio (`LATEST.txt`, `STATE_HISTORY.md` prepend, `CURRENT_STATE.md`
 Current-SHA pointer -- and `test_gen_current_state.py` will catch you if you only do two of three),
