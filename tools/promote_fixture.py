@@ -192,6 +192,12 @@ COMMIT_FOR = {
     '2d496da51b37c68a60402b82cc30a5252d07e45474b6b98edaf299afbc5c69c4': 'dc5008f',
     # PLA-346: echinacea's paren-variant entry, the last prose variety string.
     'fe26f7833cb9c932fa621c20fb6ebc08af2eb5e66866089e21d847fa4970f57c': 'c2696b4',
+    # PLA-8: mint disease_escape_sowing, the catalog's 60th method. Also reachable via CHAIN
+    # (it is the backfill suite's base and was replayed there before this commit existed);
+    # _from_commit wins.
+    '9f38bb007d3abd5b1cfc970178b9a4405088b0a9de46ff27eaba5163bef7b575': 'fd5e7db',
+    # PLA-8: the disease_escape_sowing backfill, 7 rungs on 7 certified crops.
+    'ee0f54a35a4dd1eee0da6daa5992c636cc422f25796e46d4649fd3c9fcc07277': '7ddac14',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
