@@ -252,6 +252,13 @@ CHAIN = {
     '86c5396a185e34a8b07271dc02794bbd54c7a6dba3367dde832e425c23e0bb2b': (
         'be444e25a614e2a8ff95dae7aebaf6835277545e7d4b4e7905f1309355e57234',
         'promote_pla8_trap_cropping.py'),
+    # PLA-8 disease_escape_sowing ships as a mint + backfill pair, the chlorothalonil /
+    # trap_cropping shape. The mint's output is the backfill suite's base and is not a commit
+    # until the mint is committed. Superseded by COMMIT_FOR once the mint commits; _from_commit
+    # is tried first, and both paths are hash-verified.
+    '9f38bb007d3abd5b1cfc970178b9a4405088b0a9de46ff27eaba5163bef7b575': (
+        '7f5079aab0fa4167c87e1373b3d28d598bf2379e05e2f8e2047665eabb13b9c3',
+        'promote_pla8_disease_escape_sowing.py'),
     # PLA-8 batch 12 sits on batch 11's output rather than on live canonical, because parsley
     # REUSES `parsleyworm` -- the id batch 11 mints for dill -- and that string has to exist in
     # the base for the reuse to be a reuse rather than a second, divergent mint of the same
