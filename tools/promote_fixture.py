@@ -198,6 +198,8 @@ COMMIT_FOR = {
     '9f38bb007d3abd5b1cfc970178b9a4405088b0a9de46ff27eaba5163bef7b575': 'fd5e7db',
     # PLA-8: the disease_escape_sowing backfill, 7 rungs on 7 certified crops.
     'ee0f54a35a4dd1eee0da6daa5992c636cc422f25796e46d4649fd3c9fcc07277': '7ddac14',
+    # PLA-8 BATCH 13: the spring fruiting set (four peppers + eggplant); roster 53 -> 58.
+    'b6d366114461fe470aa07c48f18f83ade9e584b86a70898fd12ab5651884088d': '0d45e67',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
