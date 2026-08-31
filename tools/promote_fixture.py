@@ -200,6 +200,11 @@ COMMIT_FOR = {
     'ee0f54a35a4dd1eee0da6daa5992c636cc422f25796e46d4649fd3c9fcc07277': '7ddac14',
     # PLA-8 BATCH 13: the spring fruiting set (four peppers + eggplant); roster 53 -> 58.
     'b6d366114461fe470aa07c48f18f83ade9e584b86a70898fd12ab5651884088d': '0d45e67',
+    # PLA-8: mint mancozeb, the catalog's 61st method. Also reachable via CHAIN (batch 14's
+    # base); _from_commit wins.
+    '4c5a79d34a435117adee9723242d1846a04045eda739226e6b3419892644c739': 'f9cd212',
+    # PLA-8 BATCH 14: okra, tomatillo, and the melons; roster 58 -> 63.
+    'c76f14f19f4d2aa208748d0609f14a86bb5753c57fb21840f826e6a9d37599a0': 'b5c75c2',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
