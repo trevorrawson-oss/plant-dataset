@@ -1,0 +1,138 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock heavier aphid clusters off the tender shoots with a hard stream of water from the hose. On sweet alyssum this is often all that is needed, since light infestations tend to fade on their own.",
+     "note_seasoned": "Hose colonies off new growth as the first knock-back. Aphids rarely build far on this plant, so a physical rinse usually buys enough time for the resident natural enemies to catch up."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Sweet alyssum itself draws hoverflies and tiny parasitic wasps, helpful insects whose young feed on aphids, so light outbreaks often clear up without you doing anything. Protect these helpers by avoiding broad insect sprays on or near the planting.",
+     "note_seasoned": "Conserve the syrphid flies and parasitoids the planting recruits; their pressure tends to suppress aphids here before they matter. Hold off on any broad-spectrum material that would remove the enemies doing that work."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If colonies keep building despite the water and the helper insects, coat them directly with insecticidal soap, a mild contact spray for soft-bodied pests. Spray just the affected patches so the helpful insects are mostly spared.",
+     "note_seasoned": "Reserve soap for colonies that continue to build. Wet the aphids directly and keep the application narrow, since soap also takes out the soft-bodied beneficials it contacts and this plant's value lies partly in the enemies it feeds."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Where flea beetle pressure runs high, drape young seedlings with floating row cover, a light fabric that lets sun and rain through but keeps insects out. Once plants are established, the small round holes usually stay a cosmetic problem.",
+     "note_seasoned": "Cover seedlings where pressure is high; on an established carpet the shot-holing tends to stay cosmetic, so the cover is mainly an establishment-phase tool. As a brassica, sweet alyssum shares this pest with nearby cole crops, which is worth remembering when siting it."
+    }
+   ]
+  },
+  {
+   "id": "cabbageworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "Check the leaves now and then and pick off any caterpillars you find. Numbers on sweet alyssum are usually low enough that picking keeps up with them.",
+     "note_seasoned": "Scout occasionally, especially where the planting sits among cole crops, and remove larvae by hand; the grazing is usually cosmetic on this plant."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "If caterpillars become numerous, spray the foliage with Bt (Bacillus thuringiensis), a bacterium that targets caterpillars while leaving most other insects alone. Reapply after rain.",
+     "note_seasoned": "Apply Bt where populations warrant, aiming at young larvae. It acts on caterpillars as a group, so keep it off nearby plants you are growing for butterflies."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear boards, dense weeds, and other damp daytime hiding spots near the planting. Slugs and snails need somewhere moist to wait out the day, and removing that shelter cuts their numbers.",
+     "note_seasoned": "Reduce harborage around the low, dense canopy. Shaded, mulched, irrigated beds carry the highest pressure, so tidying the edges matters most in those spots."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out after dark with a flashlight and pick slugs and snails off the plants. They do most of their feeding at night during cool, damp weather.",
+     "note_seasoned": "Night patrols during damp, mild spells remove the feeders directly and pair well with trapping; the ragged holes in the low foliage tell you where to look."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Set simple traps near the plants, such as a board they will hide under by day or a shallow dish of beer, and collect what they catch on a regular round.",
+     "note_seasoned": "Board or beer traps checked regularly knock numbers down alongside the night handpicking, and they concentrate the population where it is easy to remove."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "If damage continues, scatter an iron phosphate slug bait, one of the lower-risk bait types, on the soil around the plants rather than on the leaves, and follow the label.",
+     "note_seasoned": "Back up sanitation and traps with iron phosphate bait on the soil surface when pressure stays high. A lower-risk bait is still a pesticide, so keep it off the foliage and follow the label."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "This is the most common way sweet alyssum is lost, so start with the soil. Plant in a bed that drains well, water with restraint, and avoid soggy ground; plants that wilt, yellow, and collapse from the base have usually been sitting in soil that stayed wet.",
+     "note_seasoned": "Management here is cultural, and drainage carries most of it. Excellent drainage plus restrained irrigation addresses the wet-soil conditions that favor these basal rots; collapse at the crown usually traces to a bed that stayed saturated."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room instead of crowding them, especially in beds that hold moisture. Moving air helps the base of each plant dry out between waterings.",
+     "note_seasoned": "Space the planting for airflow and avoid packing plants into damp beds; air movement around the crowns complements the drainage and watering discipline rather than replacing it."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants so air can move between them. This disease is worst where plantings are cool, wet, and crowded, so opening up the canopy takes away much of what it needs.",
+     "note_seasoned": "Open spacing is the lead move; crowding holds the cool, damp, still conditions that favor sporulation on the leaf undersides."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the leaves, and do it in the morning so any foliage that gets wet can dry quickly. Dry leaves are far harder for this disease to work on.",
+     "note_seasoned": "Irrigate at the base, in the morning, to keep the canopy dry through the day; extended leaf wetness is what lets the yellowing above and the gray sporulation beneath get started."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and dispose of leaves showing the yellowing on top and grayish fuzz underneath, so they cannot keep releasing spores into the planting.",
+     "note_seasoned": "Remove infected debris promptly; sanitation limits the inoculum a crowded, damp patch would otherwise keep producing."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Sow into a clean, fresh seed-starting mix that drains freely, and water lightly. Cold, soggy conditions are what let seedlings rot at the soil line and topple over soon after sprouting.",
+     "note_seasoned": "A clean, free-draining medium and restrained watering at sowing address the soilborne fungi behind the seedling collapse. The same drainage discipline that limits this plant's crown and root rots limits damping-off as well."
+    },
+    {
+     "method": "sensible_seeding_rate",
+     "note_beginner": "Sow thinly rather than scattering seed heavily. Overcrowded seedlings stay damp and shade one another, which favors the rot.",
+     "note_seasoned": "Avoid overseeding; a crowded stand holds the saturated, still conditions that drive seedling loss at the soil line."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Once seedlings are up, give them plenty of light and moving air, thinning any patches that came up thick, so the soil surface can dry between waterings.",
+     "note_seasoned": "Light and airflow after emergence finish the job; a stagnant, overcrowded tray keeps the surface wet enough for the pathogens to keep working."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong blast of water from the hose knocks the clusters off new growth and flower buds, and for light infestations that is usually all it takes. Aim it right at the groups you can see.",
+     "note_seasoned": "Hose colonies off tender growth and buds as they appear; a directed water spray is often enough on its own while natural enemies build up around the planting."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Zinnias often draw ladybugs and hoverflies, helpful insects whose young eat aphids, so light clusters tend to get cleaned up on their own. Give those helpers time to work before reaching for a spray.",
+     "note_seasoned": "The ladybugs and hoverfly larvae zinnias attract usually hold aphid pressure in check without intervention; treat only if populations keep building past what that natural control is handling."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the clusters keep growing anyway, insecticidal soap, a mild spray that works only on the soft-bodied insects it wets directly, usually brings them down. Coat the groups on buds and new growth thoroughly.",
+     "note_seasoned": "Reserve insecticidal soap for populations that build despite water sprays and predation; spray the colonies on tender growth directly, since coverage is what does the work."
+    }
+   ]
+  },
+  {
+   "id": "japanese-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "Walk the patch in the morning, when the beetles are still slow, and knock them off flowers and leaves into a cup of soapy water. Doing this regularly through early and midsummer usually keeps the damage tolerable.",
+     "note_seasoned": "Pick beetles at dawn into soapy water while they are sluggish, through the early-to-midsummer flight. Skip pheromone lures; they tend to draw in more beetles than they catch."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "These pests flare on plants left hot, dry, and dusty, so keeping zinnias steadily watered helps head them off. Water at the base and try not to let plants swing between soaked and bone dry.",
+     "note_seasoned": "Mites build fastest on drought-stressed plants in hot, dry, dusty spells; steady base watering keeps the plants less inviting. Watch container plantings in particular, as noted pressure points."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A spray of water over the leaves knocks the mites loose and rinses off the dust they like. Repeat if the fine speckling starts coming back.",
+     "note_seasoned": "Dislodge colonies with a directed water spray on the foliage and repeat as needed; it counters the dry, dusty leaf conditions that favor them."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "The easiest defense is chosen at seed time: resistant types, varieties bred to stand up to the disease, such as Profusion and Zahara, get far less mildew than older zinnias.",
+     "note_seasoned": "Management here is as much varietal as cultural; the interspecific resistant hybrids Profusion and Zahara sidestep most of the pressure and are the natural pick where mildew returns yearly."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Mildew loves humid air and crowded plantings, so give zinnias generous spacing in a full-sun spot. Room between plants lets air move and keeps the humidity around the leaves down.",
+     "note_seasoned": "Crowding plus humidity and cool nights is the recipe for this disease; site in full sun and hold generous spacing so air keeps moving through the planting."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the leaves. Wetting the foliage adds to the humid conditions the mildew likes, so keep irrigation at ground level.",
+     "note_seasoned": "Base watering keeps humidity in the canopy down; overhead irrigation feeds exactly the damp, humid conditions that favor this disease."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "When plants come out, put mildewed foliage in the trash rather than the compost pile, so the disease has less to carry over on.",
+     "note_seasoned": "Keep infected debris out of the compost; bag or trash mildewed material at season's end rather than returning it to the garden."
+    }
+   ]
+  },
+  {
+   "id": "zinnia-leaf-spots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants out so leaves dry quickly after rain or dew. The spots get worse the longer foliage stays wet, and open spacing shortens that wet time.",
+     "note_seasoned": "An open planting that dries fast is the first lever; both the fungal and bacterial spotting ride on prolonged leaf wetness, so hold spacing that keeps air moving through the foliage."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line to keep the leaves dry. If a sprinkler is your only option, run it in the morning so foliage can dry out over the day.",
+     "note_seasoned": "Base watering removes the overhead wetness and splash that spread both organisms; where overhead irrigation is unavoidable, water in the morning so leaves dry before evening."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off badly spotted leaves when you see them and clear away infected plant debris, so the spots have less to spread from.",
+     "note_seasoned": "Remove heavily spotted leaves during the season and get infected debris out of the bed; splash from spotted tissue is how both organisms keep moving."
+    }
+   ]
+  }
+ ]
+}

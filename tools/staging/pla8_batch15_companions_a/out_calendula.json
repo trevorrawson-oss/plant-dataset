@@ -1,0 +1,132 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock early clusters off with a strong stream of water, aiming at new growth, buds, and the undersides of leaves where they gather. Do it in the morning so the foliage can dry.",
+     "note_seasoned": "A hard hose-down of colonized shoots and buds is often knock-back enough early on; repeat as fresh colonies appear on tender growth."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Calendula's flowers draw in ladybugs and hoverflies, beneficial insects (helpful bugs that eat pests). Let them work before reaching for any spray; they usually keep aphid numbers down on their own.",
+     "note_seasoned": "The planting recruits its own predator base, and hoverflies and lady beetles typically hold colonies in check without intervention. Avoid broad-spectrum sprays that would strip out the very insects doing that work."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If clusters keep building anyway, coat them directly with insecticidal soap, a mild spray that only affects the insects it touches. Aim only at the pests so you spare the helpful insects the flowers attract.",
+     "note_seasoned": "Reserve soap for populations the resident predators are not holding. It acts only on contact, so coverage of the colonized shoots is the whole job; spot-treat rather than blanketing the planting, to limit direct hits on beneficials."
+    }
+   ]
+  },
+  {
+   "id": "whiteflies",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off leaves that are heavily coated with the insects, especially the lower ones where they crowd, and get them out of the garden.",
+     "note_seasoned": "Removing the worst-infested lower foliage takes out the eggs and immature stages concentrated there and slows the buildup, along with the honeydew and sooty mold that follow."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard stream of water aimed at the undersides of the leaves knocks the insects back. Check under the leaves often, since that is where they hide and feed.",
+     "note_seasoned": "Direct a strong spray at the lower leaf surfaces where the colonies sit, and repeat on a scouting rhythm rather than counting on one pass."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Hang yellow sticky cards near the plants. They catch some of the flying adults and, just as usefully, show you whether the problem is growing.",
+     "note_seasoned": "Yellow cards are chiefly a monitoring tool here; use the catch to time water sprays and to judge whether a soap application is warranted at all."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If numbers keep climbing, spray insecticidal soap, a mild spray that only affects insects it touches, onto the undersides of the leaves where the insects sit.",
+     "note_seasoned": "Soap has to wet the insects to act, so thorough underside coverage matters; pair it with removal of the worst leaves rather than leaning on the spray alone."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the plants, and not late in the day, so the surface is not sitting damp all evening when slugs come out to feed.",
+     "note_seasoned": "Shift irrigation to the base and to the morning; an evening-wet surface in the cool, moist conditions calendula favors is what sustains the nightly feeding."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away boards, debris, and heavy mulch right around the plants; slugs spend the day hiding in damp cover like that.",
+     "note_seasoned": "Reduce mulch and edge harborage around seedlings and young plantings, which take the heaviest feeding."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out after dark with a flashlight and pick slugs and snails off by hand, dropping them into soapy water. A few nights of this can make a real dent.",
+     "note_seasoned": "Night handpicking on a regular circuit brings numbers down fastest while plantings are young and most exposed."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "Iron phosphate bait is a lower-risk slug pellet. Scatter it on the soil around the plants, not on the leaves, and follow the label.",
+     "note_seasoned": "Back up handpicking and cleanup with iron phosphate bait scattered on the soil around vulnerable seedlings; it is still a pesticide, so keep to the label rate and placement."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room and a spot in full sun. Crowded or shaded plantings trap the humid, still air this mildew thrives in, so the spacing decision at planting time is your main defense.",
+     "note_seasoned": "Generous spacing and a full-sun site are the primary levers; crowding and shade hold the humid canopy air the fungus needs, and pressure climbs as warm, humid weather and summer heat arrive, right when the cool-season plant is declining anyway."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil instead of over the leaves, which helps keep the plants and the air around them drier.",
+     "note_seasoned": "Base watering keeps canopy humidity down and avoids the overhead wetting the crop guidance flags as a favoring condition."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off leaves that are badly coated in the white film and remove them from the garden as you see them.",
+     "note_seasoned": "Remove heavily affected foliage promptly; sanitation plus the cultural steps is usually the whole program, and in mild-winter zones the disease mostly belongs to the warm shoulder rather than the cool months."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait until the ground is no longer cold and soggy before sowing, and go easy on the watering while seedlings are small. Damping-off (a rot that makes young seedlings collapse right at the soil line) gets its start in cold, wet soil.",
+     "note_seasoned": "Hold sowing until the seedbed has drained and warmed out of the cold, saturated range, and keep watering restrained through establishment; prevention at sowing is the working program, since there is no realistic rescue once seedlings begin collapsing."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant in soil that drains well. Beds that stay wet after rain rot the roots and the base of the stems.",
+     "note_seasoned": "Site the planting on ground that sheds water; persistently wet, heavy soil drives the root and stem-base rots as well as seedling loss, the standing risk for a cool-season plant grown through damp weather."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Leave space between plants so air can move through and the soil surface can dry between waterings.",
+     "note_seasoned": "Good airflow across the bed helps the surface dry down between waterings, which takes some of the pressure off both seedlings and established crowns."
+    }
+   ]
+  },
+  {
+   "id": "cucumber-mosaic",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for either problem once a plant shows it, so pull plants with mottled, twisted, or oddly yellowed growth and throw them in the trash rather than the compost, before insects can carry the problem to their neighbors.",
+     "note_seasoned": "Rogue out symptomatic plants promptly, whether showing mosaic mottling and distortion or the chlorosis and greened blooms of aster yellows, and discard them; with no treatment available, removal limits what aphids and leafhoppers can pick up and move."
+    }
+   ]
+  }
+ ]
+}

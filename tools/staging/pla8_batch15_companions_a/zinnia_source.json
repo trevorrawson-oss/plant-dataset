@@ -1,0 +1,44 @@
+{
+ "slug": "zinnia",
+ "name": "Zinnia",
+ "category": "Companion & Pollinator",
+ "pests": [
+  {
+   "name": "Aphids",
+   "audience": "core",
+   "severity": "low",
+   "note_beginner": "Tiny soft insects that cluster on new growth and flower buds. A strong spray of water or insecticidal soap usually handles them, and zinnias often draw ladybugs and hoverflies that eat them.",
+   "note_seasoned": "Soft-bodied sap-feeders on tender growth and buds; usually held in check by the beneficials zinnias attract (ladybugs, hoverfly larvae). Hose off or treat with insecticidal soap if populations build."
+  },
+  {
+   "name": "Japanese beetles",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "Shiny copper-and-green beetles that chew flowers and leaves, especially in early-to-midsummer. Hand-pick them into soapy water in the morning when they are sluggish.",
+   "note_seasoned": "Metallic beetles that skeletonize foliage and feed on blooms in early-to-midsummer; zinnias are a known preferred host, which is part of their trap-crop value. Hand-pick at dawn into soapy water; avoid pheromone traps, which concentrate beetles."
+  },
+  {
+   "name": "Spider mites",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_beginner": "Very tiny pests that show up in hot, dry, dusty conditions and cause fine speckling on leaves. Spraying leaves with water and keeping plants watered helps.",
+   "note_seasoned": "Stippling and fine webbing under hot, dry, dusty conditions; raise humidity around foliage with base watering and dislodge with water sprays. Watch container plants in particular."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Powdery mildew",
+   "audience": "core",
+   "severity": "high",
+   "note_beginner": "A white, powdery coating on leaves, common in humid weather and crowded plantings. Prevent it by spacing plants for good airflow, watering the soil not the leaves, and choosing resistant types like Profusion and Zahara.",
+   "note_seasoned": "The signature zinnia foliar disease (Golovinomyces / Erysiphe spp.), favored by humidity, cool nights, and crowding. Management is cultural and varietal: full sun, generous spacing for airflow, base watering, and the interspecific resistant hybrids (Profusion, Zahara). Do not compost infected debris."
+  },
+  {
+   "name": "Alternaria and bacterial leaf spot",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "Brown or dark spots on leaves and petals, worse when leaves stay wet. Keep foliage dry, space plants out, and remove badly spotted leaves.",
+   "note_seasoned": "Foliar/flower spotting (Alternaria zinniae; Xanthomonas) spread by overhead wetness and splash; manage with base watering, spacing, morning irrigation if overhead is unavoidable, and sanitation of infected debris."
+  }
+ ]
+}

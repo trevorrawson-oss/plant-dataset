@@ -1,0 +1,58 @@
+{
+ "slug": "cosmos",
+ "name": "Cosmos",
+ "category": "Companion & Pollinator",
+ "pests": [
+  {
+   "name": "Aphids",
+   "audience": "core",
+   "severity": "low",
+   "note_seasoned": "Soft-bodied sap-feeders cluster on tender growth and buds and can spread viruses; usually held in check by the beneficial insects cosmos attracts. Hose off or treat with insecticidal soap if populations build.",
+   "note_beginner": "Tiny soft insects that cluster on new growth and buds. A strong spray of water or insecticidal soap usually handles them, and cosmos draws beneficial insects that eat them."
+  },
+  {
+   "name": "Aster leafhoppers",
+   "audience": "core",
+   "severity": "medium",
+   "note_seasoned": "Small wedge-shaped hoppers that feed on sap; they matter chiefly as the vector that spreads aster yellows to cosmos and other asters. Control nearby weed hosts, tolerate low numbers, and promptly remove any aster-yellows plants.",
+   "note_beginner": "Little wedge-shaped hopping insects. On their own they do minor feeding damage, but they spread a serious incurable disease called aster yellows, so keep weeds down nearby and pull out any plants that get it."
+  },
+  {
+   "name": "Spider mites",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_seasoned": "Fine stippling and bronzing under hot, dry, dusty conditions; raise humidity around foliage with base watering and dislodge with water sprays. Watch container plants in particular.",
+   "note_beginner": "Very tiny pests that show up in hot, dry, dusty conditions and cause fine pale speckling on leaves. Spraying the leaves with water and keeping plants watered helps."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Aster yellows",
+   "audience": "core",
+   "severity": "medium",
+   "note_seasoned": "The signature cosmos disease: a phytoplasma spread by leafhoppers that yellows foliage, stunts and distorts growth, and turns flowers into small, greenish, leaf-like structures, often with witches broom. Cosmos is a named host. There is no cure; remove and destroy infected plants, control leafhoppers, and clear weed hosts.",
+   "note_beginner": "A disease spread by leafhoppers that turns leaves yellow, stunts the plant, and makes deformed greenish flowers. It cannot be cured. Pull out and throw away (do not compost) any affected plants, and keep weeds down nearby."
+  },
+  {
+   "name": "Powdery mildew",
+   "audience": "core",
+   "severity": "medium",
+   "note_seasoned": "A white, powdery coating on foliage, favored by humidity, crowding, and shade. Management is cultural: full sun, generous spacing for airflow, and base watering. Do not compost infected debris.",
+   "note_beginner": "A white, powdery coating on the leaves, common in humid weather and crowded plantings. Prevent it with full sun, space between plants for airflow, and watering the soil, not the leaves."
+  },
+  {
+   "name": "Gray mold (Botrytis)",
+   "audience": "core",
+   "severity": "low",
+   "note_seasoned": "Fuzzy gray mold on faded blooms and foliage in damp, humid, crowded conditions. Deadhead spent flowers, improve airflow, avoid overhead watering, and remove affected tissue.",
+   "note_beginner": "A fuzzy gray mold that grows on old flowers and leaves in damp, crowded conditions. Snip off faded blooms, give plants room for air, and keep the leaves dry."
+  },
+  {
+   "name": "Stem canker",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_seasoned": "Occasional problems: sunken stem lesions (canker) or sudden wilting (bacterial wilt), worse in wet, dense plantings. Remove and destroy affected plants, avoid overwatering and crowding, and rotate the bed.",
+   "note_beginner": "Now and then cosmos gets a stem canker (a sunken sore on the stem) or a sudden wilt. Pull and throw away affected plants, avoid overwatering and crowding, and plant somewhere different next year."
+  }
+ ]
+}

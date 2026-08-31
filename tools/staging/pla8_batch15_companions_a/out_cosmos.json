@@ -1,0 +1,128 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong spray of water from the hose knocks aphids off new growth and flower buds, and it usually handles a light cluster. Spray in the morning so the leaves can dry.",
+     "note_seasoned": "Hose clusters off tender growth and buds as the first knock-back; early in the day is best so foliage dries quickly. Populations that rebuild after repeat passes are the signal to step up."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Cosmos draws helpful insects, called beneficials, that eat aphids, and most of the time they keep the aphids in check on their own. Hold off on sprays that would kill those helpers along with the pests.",
+     "note_seasoned": "Aphids on cosmos are usually held down by the beneficial insects the plant itself attracts. Conserve that predator base by avoiding broad-spectrum sprays and give predation time to work before reaching for soap."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If aphids keep building anyway, coat them directly with insecticidal soap, a mild spray that only works where it touches the insect. Treat just the spots where you see aphids so the helpful insects are spared.",
+     "note_seasoned": "For populations the hose and resident beneficials are not holding, spot-treat clusters with insecticidal soap. Coverage of the insects themselves is what matters, and confining the spray to infested growth limits harm to the predators doing the rest of the work."
+    }
+   ]
+  },
+  {
+   "id": "aster-leafhoppers",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Keep the ground near your cosmos weeded, since weeds can shelter these hopping insects. Their feeding alone is minor and a few are usually not worth treating; the real reason to keep numbers down is that they carry a serious disease called aster yellows.",
+     "note_seasoned": "Clear weed hosts near the bed and keep the edges clean. The hoppers matter chiefly as the vector for aster yellows rather than for their own feeding, so lowering the nearby reservoir is the lever; low numbers can be tolerated."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "These tiny pests build up fastest on plants that get hot, dry, and stressed, so water on a steady schedule instead of letting the soil swing between soaked and bone dry. Plants in pots dry out quickest, so watch them closely.",
+     "note_seasoned": "Steady soil moisture blunts flare-ups, since mites multiply fastest on drought-stressed plants in hot, dry, dusty spells. Container plantings dry down first and deserve particular attention."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Spray the leaves with a strong stream of water to knock the mites off and rinse away the dust they like. Repeat if the fine pale speckling on the leaves comes back.",
+     "note_seasoned": "Dislodge colonies with a directed water spray to the foliage; the rinse also cuts the dusty conditions that favor buildup. Apply in the morning so leaves dry promptly, and recheck for fresh stippling."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "aster-yellows",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for aster yellows, so act fast: pull up any plant with yellowing leaves, stunted growth, or small deformed greenish flowers, and put it in the trash rather than the compost. Getting it out quickly protects the rest of the planting.",
+     "note_seasoned": "Rogue out symptomatic plants promptly and destroy them; each infected plant is a reservoir the leafhoppers can pick the phytoplasma up from. Pair removal with the leafhopper and weed-host work nearby, since suppressing the vector is the other half of managing an incurable infection."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Plant cosmos in full sun with real space between plants so air can move through them. The white powdery coating shows up most in humid weather, shade, and crowded plantings, so sun and airflow are your main defense.",
+     "note_seasoned": "Management here is cultural: site in full sun and space generously for airflow. Humidity, crowding, and shade are what favor this fungus, so the layout you set at planting does most of the work."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at ground level rather than sprinkling over the foliage. Drier foliage and less dampness around the plant give the mildew less to work with.",
+     "note_seasoned": "Irrigate at the base rather than overhead; the guidance pairs base watering with sun and spacing as the cultural core, holding down the canopy humidity this disease favors."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "When you clean up mildew-coated leaves or spent plants, bag them for the trash. Do not add that debris to the compost pile.",
+     "note_seasoned": "Keep infected debris out of the compost; bag and discard coated tissue at cleanup rather than letting it linger near the bed."
+    }
+   ]
+  },
+  {
+   "id": "gray-mold",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room so air can move between them. This fuzzy gray mold takes hold in damp, crowded plantings, so improving airflow is a core step.",
+     "note_seasoned": "Space for airflow; Botrytis colonizes tissue that stays damp in a dense canopy, so opening the planting up cuts the humid pockets it depends on."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plant and keep the leaves dry. The mold grows on flowers and leaves that stay wet.",
+     "note_seasoned": "Avoid overhead watering; keeping foliage and spent blooms dry denies the fungus the damp surfaces it establishes on."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Snip off faded flowers regularly, a habit called deadheading, and remove any leaves or blooms that show the fuzzy gray growth as soon as you spot them.",
+     "note_seasoned": "Deadhead spent blooms promptly and strip out affected tissue; faded flowers are where the mold usually starts, so taking them off ahead of it does much of the work."
+    }
+   ]
+  },
+  {
+   "id": "stem-canker",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Avoid crowding your cosmos. These stem troubles, the sunken sores and the sudden wilts, are worse where plantings are wet and dense, so leave room for air to move.",
+     "note_seasoned": "Space plantings so the stand dries out; both the cankers and the wilting described on cosmos run worse in wet, dense plantings."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull up any plant with a sunken sore on the stem or a sudden wilt, and throw it away rather than composting it.",
+     "note_seasoned": "Remove and destroy plants showing sunken stem lesions or sudden collapse; do not leave the debris in the bed to carry the problem forward."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Next year, plant cosmos somewhere different, a practice called crop rotation, so anything left behind in that soil is less likely to find them again.",
+     "note_seasoned": "Rotate the bed after a canker or wilt year; moving the planting denies whatever carried over in the soil and debris a host the following season."
+    }
+   ]
+  }
+ ]
+}

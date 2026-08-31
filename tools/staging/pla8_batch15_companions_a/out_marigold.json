@@ -1,0 +1,149 @@
+{
+ "pests": [
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep marigolds steadily watered through hot, dry spells. Mites (very tiny sap-feeding pests, smaller than insects) build up fastest on plants that have been left thirsty and stressed, and marigolds in midsummer are exactly the plants they go for.",
+     "note_seasoned": "Consistent soil moisture is the base of the program: this pest is worst on stressed and container plants in hot, dry, dusty stretches, so plants that are not drought-stressed give it much less to work with."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Spray the plants with a jet of water, hitting the undersides of the leaves where the fine speckling and webbing show up. This knocks the mites off and helps counter the hot, dusty conditions they thrive in.",
+     "note_seasoned": "Regular forceful water sprays dislodge mites and break up the dry, dusty leaf environment that favors them; direct the spray at the stippled undersides. Often enough on its own for light midsummer pressure."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the speckling and webbing keep spreading despite watering and spraying, treat with insecticidal soap, a mild soap-based spray that works on contact. Coat the leaf undersides thoroughly, since it only kills what it touches.",
+     "note_seasoned": "For a heavy infestation the water rungs have not held, insecticidal soap with thorough underside coverage is the escalation this crop's guidance points to. Avoid spraying drought-stressed plants and repeat as needed for coverage."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong spray of water knocks the clusters off new growth and buds, and that is usually all these soft little insects need. Repeat if they regroup.",
+     "note_seasoned": "Hose colonies off tender growth and buds as a first knock-back; on marigold this is typically sufficient, since populations rarely build far here."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Mostly, just let the good bugs work. Marigold flowers draw ladybugs and hoverflies, which are beneficials (helpful insects that eat pests), and they tend to clean up aphid clusters on their own if you hold off on sprays.",
+     "note_seasoned": "The flowers recruit their own natural enemies: ladybugs and hoverflies drawn to the blooms usually hold aphids in check without intervention. Avoid broad sprays that would take out the predators doing this work."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If clusters keep building anyway, insecticidal soap, a mild soap-based contact spray, usually handles them. Spray only the shoots where aphids actually are, so you spare the ladybugs and hoverflies.",
+     "note_seasoned": "Reserve insecticidal soap for populations that build despite the resident predators; treat infested shoots directly rather than blanketing the planting, since the beneficials this crop attracts are the main long-term control."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away the damp hiding places, such as loose mulch, boards, and plant debris near the bed, where slugs and snails wait out the day. Fewer shelters means fewer of them reaching your seedlings at night.",
+     "note_seasoned": "Reduce harborage around the planting: thin out mulch and clear debris that shelters them by day. Marigold seedlings are a frequent target in damp conditions, so tighten this up before wet spells."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out at night with a flashlight and pick off the slugs and snails you find. They feed after dark, which is why the ragged holes appear on plants that looked fine in the afternoon.",
+     "note_seasoned": "Regular night handpicking during damp weather keeps numbers down on young plants and lower foliage, where the ragged feeding concentrates. Most worthwhile while seedlings are small and vulnerable."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "If picking and cleanup are not keeping up, scatter iron phosphate slug bait, a lower-risk pellet bait, on the soil around the plants rather than on the plants themselves, and follow the label.",
+     "note_seasoned": "Iron phosphate bait backs up sanitation and handpicking when pressure stays high in damp conditions; apply to the soil surface around vulnerable seedlings per the label."
+    }
+   ]
+  },
+  {
+   "id": "japanese-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "In the morning, while the beetles are still sluggish, knock or pick these shiny copper-and-green beetles off the flowers and leaves into a container of soapy water. Early-to-midsummer is when they show up, so make it part of your morning walk then.",
+     "note_seasoned": "Dawn handpicking into soapy water is the whole program here: beetles are torpid early and drop readily. Skip pheromone traps, which draw in and concentrate more beetles than they catch. Feeding runs early-to-midsummer, on blooms and as skeletonized foliage."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "gray-mold",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants generous room in full sun so air moves through and the blooms dry out. This mold takes hold in cool, damp, crowded plantings, and the big double African marigolds are the most at risk because their dense flowers trap moisture.",
+     "note_seasoned": "Site and spacing are the primary controls: full sun and wide spacing keep the canopy and blooms drying fast, denying Botrytis the sustained wetness it needs. The dense double African types, which tend to rot from the center of the bloom, benefit most from the extra room."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil, not over the flowers. Wetting those dense blooms from above gives the gray fuzz exactly the damp conditions it needs to rot buds and petals.",
+     "note_seasoned": "Base watering keeps overhead wetness off the flower heads, which is where this disease does its damage in humid, crowded conditions. Pair it with the spacing rung; the two together remove most of the moisture the mold depends on."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off spent and rotting flowers promptly, since a moldy bloom left on the plant spreads the problem. Throw infected material in the trash rather than the compost.",
+     "note_seasoned": "Prompt removal of spent and rotted heads takes the sporulating tissue out of the planting before it seeds new infections. Do not compost infected debris; destroy or discard it."
+    }
+   ]
+  },
+  {
+   "id": "leaf-spots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants out so air can move between them. Both the dark leaf spots and the white powdery film show up most in damp, humid weather on crowded plantings, so room to dry is the first defense.",
+     "note_seasoned": "Crowding and humidity drive both the foliar spotting and the occasional powdery mildew here; generous spacing for airflow shortens leaf wetness and lowers the canopy humidity both depend on."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Keep the leaves dry by watering at the soil instead of overhead. If you have no choice but to sprinkle from above, do it in the morning so foliage dries during the day.",
+     "note_seasoned": "The spots spread by overhead wetness and splash, so base watering removes the main dispersal route. Where overhead irrigation is unavoidable, run it in the morning so leaves dry quickly."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off badly spotted leaves as you see them, and clean up infected fallen leaves so the problem does not keep reseeding itself.",
+     "note_seasoned": "Remove heavily affected leaves during the season and clear infected debris; sanitation plus the two watering and spacing rungs is the whole program this crop's guidance lays out."
+    }
+   ]
+  },
+  {
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant marigolds in soil that drains well. Wet, poorly drained ground rots the roots and stem bases, and no amount of care later makes up for a waterlogged spot.",
+     "note_seasoned": "Well-drained soil is the foundation: these soilborne rots are driven by poor drainage and standing wetness at the roots and crowns. On heavy or low ground, fix the drainage before planting rather than fighting rot afterward."
+    },
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Wait for the soil to warm before sowing, and water with a light hand. Damping-off (young seedlings suddenly collapsing at the soil line) hits seed sown into cold, wet ground, and overwatering rots older plants too, especially the small French types.",
+     "note_seasoned": "Warm-soil sowing plus restrained watering is the prevention program; this crop's guidance frames these rots as something you prevent rather than treat. Cold, wet seedbeds drive damping-off, and dwarf French types are prone to rotting whenever they are kept too wet."
+    }
+   ]
+  },
+  {
+   "id": "aster-yellows",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for this one. When a plant shows yellowed, distorted growth or flowers turning green and deformed, pull it up and throw it away, not in the compost, so the disease is not passed along by the leafhoppers that spread it.",
+     "note_seasoned": "Rogue out symptomatic plants promptly and discard them; a phytoplasma infection is incurable, so removal is the control. Prompt pulling limits the reservoir leafhoppers can acquire it from as they move through the aster family."
+    }
+   ]
+  }
+ ]
+}
