@@ -88,13 +88,18 @@ def problem_name(p):
 def prose_key(p):
     """Identity of a problem's SOURCED PROSE. Two crops sharing this share the read.
 
-    Same two schemas: the classic crops carry `organic_treatment_*`/`prevention_*`, the microgreens
-    carry `management_*`/`description_*`. Reading only the classic pair silently EXCLUDED the
-    microgreens from the duplication measurement rather than reporting them as distinct.
+    THREE schemas now: the classic crops carry `organic_treatment_*`/`prevention_*`, the
+    microgreens carry `management_*`/`description_*`, and the 10 Companion & Pollinator crops
+    carry `note_beginner`/`note_seasoned` ONLY. Reading only the classic pair silently EXCLUDED
+    the microgreens once; before the note fallback the companions reduced to (name, None, None)
+    and same-named problems on different companion crops collided as FALSE TWINS (measured
+    2026-08-30 ahead of batch 15).
     """
     return (problem_name(p),
-            p.get("organic_treatment_beginner") or p.get("management_beginner"),
-            p.get("prevention_beginner") or p.get("description_beginner"))
+            p.get("organic_treatment_beginner") or p.get("management_beginner")
+            or p.get("note_beginner"),
+            p.get("prevention_beginner") or p.get("description_beginner")
+            or p.get("note_seasoned"))
 
 
 # The fields a rung is RESTATED FROM, under either schema (classic crops carry
@@ -105,7 +110,8 @@ PROSE_FIELDS = ("symptoms_beginner", "symptoms_seasoned", "cause_beginner", "cau
                 "prevention_beginner", "prevention_seasoned",
                 "organic_treatment_beginner", "organic_treatment_seasoned",
                 "management_beginner", "management_seasoned",
-                "description_beginner", "description_seasoned")
+                "description_beginner", "description_seasoned",
+                "note_beginner", "note_seasoned")
 
 _ABSENT = "\x00absent"   # distinct from an explicit null, which is distinct from ""
 _NULL = "\x00null"

@@ -39,7 +39,8 @@ PROSE_FIELDS = ("symptoms_beginner", "symptoms_seasoned", "cause_beginner", "cau
                 "prevention_beginner", "prevention_seasoned",
                 "organic_treatment_beginner", "organic_treatment_seasoned",
                 "management_beginner", "management_seasoned",
-                "description_beginner", "description_seasoned")
+                "description_beginner", "description_seasoned",
+                "note_beginner", "note_seasoned")
 
 
 def crop(slug, problems):
@@ -105,8 +106,10 @@ class TwinGroupsShareProse(unittest.TestCase):
                       "name_seasoned": "Damping-off (and surface mold)",
                       "description_beginner": "d1", "description_seasoned": "d2",
                       "management_beginner": "m1", "management_seasoned": "m2"}
+        # THIRD SCHEMA (2026-08-30): the Companion & Pollinator crops carry note_* only.
+        companion = {"name": "Aphids", "note_beginner": "n1", "note_seasoned": "n2"}
         covered = set()
-        for base in (classic, microgreen):
+        for base in (classic, microgreen, companion):
             for field in [f for f in PROSE_FIELDS if f in base]:
                 covered.add(field)
                 with self.subTest(field=field):
@@ -121,6 +124,33 @@ class TwinGroupsShareProse(unittest.TestCase):
         self.assertEqual(sorted(covered), sorted(lb.PROSE_FIELDS),
                          "PROSE_FIELDS contains fields no fixture exercises: "
                          f"{sorted(set(lb.PROSE_FIELDS) - covered)}")
+
+    def test_note_shaped_crops_with_different_notes_are_not_twins(self):
+        """THE COMPANION SCHEMA. The 10 Companion & Pollinator crops carry their prose in
+        note_beginner/note_seasoned ONLY (no prevention_*, no management_*). Before the note
+        fallback, prose_key reduced every such problem to (name, None, None), so two companion
+        crops naming the same problem with DIFFERENT advice collided as a false twin, the exact
+        shape that excluded the microgreens once and the nasturtium/zinnia records from the
+        trap-cropping scan."""
+        a = crop("crop-a", [{"name": "Aphids",
+                             "note_beginner": "hose them off and let the ladybugs work",
+                             "note_seasoned": "conserve natural enemies; a water jet clears colonies"}])
+        b = crop("crop-b", [{"name": "Aphids",
+                             "note_beginner": "pinch out the worst shoot tips and discard them",
+                             "note_seasoned": "tip removal takes the colony with it on this crop"}])
+        twins, _singles = lb.family_cut([a, b])
+        self.assertEqual(twins, [],
+                         "note-shaped problems with different advice collided as a twin group; "
+                         "the note schema is invisible to prose_key")
+
+    def test_note_shaped_identical_prose_is_a_twin_group(self):
+        """POSITIVE CONTROL for the note schema, so the fix cannot be 'never group note crops'."""
+        p = {"name": "Aphids",
+             "note_beginner": "hose them off and let the ladybugs work",
+             "note_seasoned": "conserve natural enemies; a water jet clears colonies"}
+        twins, _singles = lb.family_cut([crop("crop-a", [dict(p)]), crop("crop-b", [dict(p)])])
+        self.assertEqual([sorted(g) for g in twins], [["crop-a", "crop-b"]],
+                         "byte-identical note-shaped prose must group as twins")
 
     def test_problem_ORDER_is_part_of_the_identity(self):
         """Propagation is INDEX-WISE (`promote_pla8_batch2.py` copies ladders by position), so two
