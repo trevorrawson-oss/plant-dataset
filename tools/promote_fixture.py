@@ -207,6 +207,8 @@ COMMIT_FOR = {
     'c76f14f19f4d2aa208748d0609f14a86bb5753c57fb21840f826e6a9d37599a0': 'b5c75c2',
     # PLA-8 BATCH 15: companions A (the first note-schema batch); roster 63 -> 68.
     '098dd0b18cc85aebf05bbb50071ab9ba1c50bf377afb1235d9359cc07d894bfa': '22dcf6e',
+    # PLA-8 BATCH 16: companions B; the Companion & Pollinator category closes; roster 68 -> 73.
+    '213cb1108cd4960add0a0f9d3a2bd73aee4f1108d6fa743c6ce6075fd5cc6c2f': '234a088',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
