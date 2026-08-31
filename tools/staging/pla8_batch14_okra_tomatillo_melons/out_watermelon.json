@@ -1,0 +1,341 @@
+{
+ "pests": [
+  {
+   "id": "cucumber-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not plant your melons where melons, squash, or cucumbers grew last year. The beetles spend the winter as adults near the old bed, so fresh ground puts distance between them and your seedlings.",
+     "note_seasoned": "Rotation away from last season's cucurbit ground targets the overwintered adults that colonize plantings early, which is where control matters most, since seedlings are the most vulnerable stage."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear weeds and old plants away from the patch. They give the beetles shelter right next to your melons, and a cleanup at season's end leaves the adults fewer places to spend the winter.",
+     "note_seasoned": "Weeds and crop debris shelter beetles adjacent to the planting; clearing them in season and at closedown strips cover from the adults that would otherwise overwinter and colonize early."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover seedlings with floating row cover, a light fabric laid over the bed, and take it off when the flowers open so bees can pollinate. The cover keeps beetles off the plants at the age they are most at risk.",
+     "note_seasoned": "Exclusion through the seedling stage covers the most vulnerable window, and it also limits the beetles' chances to move bacterial wilt and mosaic viruses, though watermelon rides out the wilt better than cucumber or muskmelon. Lift at flowering for pollination."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the beetles off by hand whenever you spot them and destroy what you collect. On a small planting this helps keep the numbers down.",
+     "note_seasoned": "Hand-removal earns its keep early, while plants are small and beetles are concentrated on them; feeding at that stage carries the disease risk along with the chewing damage."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Yellow sticky traps set near the plants catch some of the beetles and show you how many are around, which tells you whether the other steps are keeping up.",
+     "note_seasoned": "Traps monitor arrival and thin adult numbers; read them primarily as a scouting signal for the early-season colonizers rather than as stand-alone control."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Heavy feeding pushes out the soft, sappy growth that aphids settle on and multiply in fastest.",
+     "note_seasoned": "Excess nitrogen drives the succulent flush aphids favor and build up on fastest; restrained feeding removes that condition before colonies establish, which typically happens once the vines begin to run."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Lay a reflective or aluminum-foil mulch around the plants while they are still young. The bright surface helps keep aphids from settling on them.",
+     "note_seasoned": "Reflective mulch deters incoming aphids while plants are small, worth having down early given that melon aphids also transmit the mosaic viruses that can ruin a crop."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet of water, aiming at the undersides of the leaves and the new growth where they gather. Repeat every few days as they build back.",
+     "note_seasoned": "A forceful jet dislodges colonies from leaf undersides and growing tips; treat it as a repeated knock-back on a few-day cycle rather than a single pass."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and tiny parasitic wasps eat aphids and usually bring them under control on their own, so make them welcome instead of spraying broadly.",
+     "note_seasoned": "Resident lady beetles, lacewings, and parasitic wasps usually regulate aphid numbers on their own; conserving them rather than spraying broadly is the control that costs nothing and holds longest."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep building, spray insecticidal soap, a soap-based spray that kills only the insects it touches. Coat the undersides of the leaves well and repeat every few days.",
+     "note_seasoned": "Soap is contact-only, so thorough leaf-underside coverage repeated every few days is what carries it, and its light footprint leaves room for the natural enemies to return."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, does the same job as the soap. Cover the leaf undersides well and repeat every few days if the aphids persist.",
+     "note_seasoned": "Oil is the alternate contact material on identical terms, thorough underside coverage on a several-day repeat; the choice between oil and soap changes little about the technique."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep the plants steadily watered through hot spells. Mites hit drought-stressed plants hardest, and a melon patch's long, hot season is exactly the weather they love.",
+     "note_seasoned": "Drought-stressed plants take the worst damage, and two-spotted mite populations explode in the hot, dry stretch a melon season delivers; steady moisture removes the stress that feeds the flare."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Spray the plants with a strong stream of water, especially the undersides of the leaves where the mites feed. It knocks them off and raises the humidity they dislike.",
+     "note_seasoned": "A forceful rinse to the leaf undersides dislodges mites and raises humidity around the foliage; useful before any spray and worth repeating through hot, dry weather."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Predatory mites and helpful insects normally keep spider mites in check. Avoid broad-spectrum insecticides, meaning sprays that kill many kinds of insects at once, because losing those helpers is what lets mites explode.",
+     "note_seasoned": "Predatory mites and generalist insect predators are what normally hold this pest down, and broad-spectrum sprays removing them is the classic outbreak trigger; conservation is the rung to protect even while treating something else."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based contact spray, works if you coat the undersides of the leaves thoroughly. Put it on early, before the mites peak, and repeat as needed.",
+     "note_seasoned": "Soap applied before populations peak, with deliberate underside coverage and repeat applications as needed; heavy feeding bronzes foliage and costs fruit size and sugar, so early timing beats chasing an established outbreak."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other option, applied the same way: thorough coverage of the leaf undersides, repeated as needed.",
+     "note_seasoned": "Oil on the same terms as soap, applied ahead of the population peak with the undersides covered; both are contact materials, so coverage decides the outcome."
+    }
+   ]
+  },
+  {
+   "id": "squash-bug",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move your melons to a different part of the garden each year. Squash bugs prefer squash and pumpkins, but rotating still breaks up the ground they come back to.",
+     "note_seasoned": "Rotating cucurbits denies overwintered adults a familiar bed; melons are a secondary host next to squash and pumpkin, which shapes how much pressure this rung has to absorb."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up the old vines and debris after harvest. The adults spend the winter tucked into that litter, so clearing it leaves them far fewer places to shelter.",
+     "note_seasoned": "End-of-season removal of vines and debris cuts overwintering sites for the adults, lowering the population that finds the planting the following spring."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick off the gray-brown adults and scrape the bronze egg clusters from the undersides of the leaves. A board laid on the soil overnight draws the bugs underneath, so lift it in the morning and destroy what you find.",
+     "note_seasoned": "Hand-removal of adults plus crushing the egg masses along the veins is the core, with an overnight board to concentrate bugs for morning collection; scout leaf undersides from early season, before nymphs mature."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap is for the young, pale bugs, and only when it lands right on them. The adults are tough to kill, so aim at the young.",
+     "note_seasoned": "Soap is aimed at young nymphs, the stage it can actually reach; adults tolerate it, so timing sprays to hatch from the egg clusters you have been scouting is what makes the coverage worth doing."
+    }
+   ]
+  },
+  {
+   "id": "squash-vine-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move squash-family plantings around the garden each year. The borer's pupae, its resting stage, wait in the soil over winter, and rotating helps break that cycle. The good news is that this pest mostly leaves watermelon alone.",
+     "note_seasoned": "Rotation disrupts the overwintering pupae left under last year's cucurbits; on watermelon it is background insurance, since the borer rarely attacks it."
+    },
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Where borers are a known local problem, till the old bed in late winter. Turning the soil disturbs the pupae waiting underground to become moths.",
+     "note_seasoned": "A late-winter pass through the old bed disrupts overwintering pupae ahead of spring flight, paired with rotation; effort worth spending only where local pressure is severe."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "If a vine is too badly damaged to save, take it out and destroy it rather than leaving it in the bed.",
+     "note_seasoned": "Badly damaged vines come out; removing them beats leaving a colonized stem standing in the planting."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "If borers are bad where you live, cover young plants with floating row cover, a light fabric laid over the bed, from planting until they flower, then take it off so bees can pollinate.",
+     "note_seasoned": "Cover from planting to flowering excludes the egg-laying moths where local pressure is severe; on watermelon the crop's own unattractiveness does most of the work, so this is the reserve measure, not the default."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "Rarely needed on watermelon, but if a vine wilts and you find a hole with sawdust-like specks near the base, slit the stem with a knife, remove the fat white grub, and mound damp soil over the cut so the vine can root again.",
+     "note_seasoned": "Where a larva does enter, slit the stem lengthwise at the frass hole, extract it, and bury that node under moist soil to re-root; a salvage move for the occasional vine under heavy local pressure, not a routine."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "anthracnose",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with disease-free seed from a good supplier. This fungus can ride on the seed itself, so clean seed keeps it out of a bed that does not already have it.",
+     "note_seasoned": "Colletotrichum is seed-borne, so clean seed closes the most direct route of introduction; a purchase decision settled before anything in-season applies."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a resistant variety when you order seed, especially if anthracnose has shown up in your patch before.",
+     "note_seasoned": "Resistance is the companion seed-order decision to clean seed; together they decide how much the rest of this ladder has to carry in a warm, wet year, when late plantings are hit especially hard."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate watermelon and its squash-family relatives out of the bed for several years. The fungus survives the winter on old infected plant debris.",
+     "note_seasoned": "A multi-year rotation of all cucurbits off the ground outlasts carryover on infected residue, the overwintering reservoir alongside seed."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the leaves. This disease needs wet foliage, so keeping the leaves dry slows it down.",
+     "note_seasoned": "Prolonged leaf wetness drives infection, so base watering removes the one wetness source you control; overhead irrigation works directly for the pathogen."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the patch while the vines are wet from rain or dew. Moving through wet leaves helps carry the disease from plant to plant.",
+     "note_seasoned": "Working among wet vines moves the fungus through the planting, so schedule handling for dry foliage; a habit of timing rather than of materials."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove the worst-affected leaves and fruit as soon as you see them, before the spots spread further.",
+     "note_seasoned": "Pulling the most affected leaves and sunken-spotted fruit trims the spore load in the canopy; once the disease is widespread, the realistic aim is damage limitation."
+    },
+    {
+     "method": "chlorothalonil",
+     "note_beginner": "Chlorothalonil is one of the two fungicides this crop's guidance names for anthracnose. It works as protection, so treat at the very first spots and cover both sides of the leaves; in a wet season the guidance is to start spraying before the disease even shows. Read its warnings first, because it is the strongest step here, and stopping at the cultural steps is a real choice.",
+     "note_seasoned": "One of the two materials the guidance names, applied at first symptom with both leaf surfaces covered, or on a protective schedule begun ahead of the disease in wet seasons. Protectant chemistry, so it defends clean tissue and recovers nothing already infected; weigh its cautions before choosing it over stopping a rung lower."
+    },
+    {
+     "method": "mancozeb",
+     "note_beginner": "Mancozeb is the other fungicide named for this disease, used the same way: early, with good coverage of both leaf surfaces. Its warnings differ from chlorothalonil's, so read both before picking either.",
+     "note_seasoned": "The second named material, on the same protective terms as chlorothalonil; the choice between them turns on their differing caution profiles rather than on timing, and declining both leaves the cultural program as the whole of the control."
+    }
+   ]
+  },
+  {
+   "id": "gummy-stem-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean seed from a trusted supplier. This fungus rides on the seed itself, so what you plant decides whether you bring it in.",
+     "note_seasoned": "The pathogen is seed-borne, so clean seed closes the most direct route of introduction; a purchase-time decision the in-season steps do not replace."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Pick a resistant variety at the same time you order that clean seed, especially where warm, wet weather makes this disease a regular visitor.",
+     "note_seasoned": "Resistant varieties pair with clean seed as the two seed-order rungs; in the warm, rainy southern conditions that drive this disease, variety choice is cheap insurance."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep melons and their squash-family relatives out of that bed for several years. The fungus survives in the old plant debris left in the ground.",
+     "note_seasoned": "Rotating cucurbits out of the bed for several years outlasts carryover on infected debris, the second survival route alongside seed."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants room so air moves between them and the leaves dry faster after rain. Long wet spells are what let this disease run.",
+     "note_seasoned": "Spacing for airflow shortens the prolonged leaf wetness that drives this warm-weather disease; in an extended rainy stretch the canopy that dries fastest fares best."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line, not over the leaves, to keep the foliage as dry as you can.",
+     "note_seasoned": "Base watering keeps foliage dry in a disease driven by prolonged rainy periods and leaf wetness; overhead irrigation adds wet hours the weather is already supplying."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the melon patch while the vines are wet from rain or dew. Working among wet plants helps spread the fungus.",
+     "note_seasoned": "Avoid working among wet vines; movement through a wet canopy spreads the pathogen, and this discipline still applies after rain and dew, which no irrigation choice controls."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove and destroy the worst-affected vines when you find them, and clear out the old debris after harvest, since the fungus survives in it.",
+     "note_seasoned": "Rogue badly affected vines in season and destroy crop residue after harvest; infected debris is a survival site, so the cleanup is what carries into next year."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a resistant variety; it is the strongest defense against this soil disease. Know that resistance covers some strains of the fungus and not others, so it may not be complete protection.",
+     "note_seasoned": "Resistance leads the program against the most damaging soilborne disease of watermelon, with the caveat the sources carry: several races exist, and resistance covers only some of them."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not grow watermelon in the same ground for at least five years. The fungus builds up in warm, sandy soil and survives there for years.",
+     "note_seasoned": "A rotation of at least five years out of watermelon and related cucurbits is the floor, not a nicety, against a pathogen that persists in soil for many years."
+    },
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "Where the disease is already in your soil, look into grafted plants: your variety growing on the roots of a resistant relative. You keep the melon you want while the roots resist the fungus.",
+     "note_seasoned": "Grafting onto resistant rootstock keeps a susceptible cultivar viable on infested ground; the option the sources point to where the disease is established rather than merely possible."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull and destroy any plant that wilts and does not recover. There is no cure once a plant is infected, so removal is about protecting the rest of the patch.",
+     "note_seasoned": "Rogue wilting plants promptly; with no rescue for an infected vascular system, removal is the only in-season move, and fungicides do not control a soilborne vascular wilt."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Pick a resistant variety when you order seed. Many modern melons carry partial resistance, which takes real pressure off one of the most common late-season problems.",
+     "note_seasoned": "Many modern melon varieties carry partial resistance, and against one of the most common late-season melon diseases that seed-order choice is the highest-leverage rung; partial means it lightens pressure rather than closing the door."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants plenty of room and a spot in full sun. Crowding, still air, and shade are what let this fungus take hold.",
+     "note_seasoned": "Generous spacing and a full-sun site work against the crowding, poor airflow, and shade that worsen infection; layout is fixed at planting, so this rung cannot be added mid-season."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Do not overdo nitrogen fertilizer. Heavy feeding builds a thick, crowded mass of leaves where the still, humid air this fungus likes can settle.",
+     "note_seasoned": "Excess nitrogen builds the dense canopy that traps the humid air this fungus thrives in; restrained feeding is a preventive habit alongside spacing, not a treatment."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the leaves. This mildew can start without wet leaves, so this step helps less here than with other diseases, but overhead watering is still worth avoiding.",
+     "note_seasoned": "Skip overhead watering. Powdery mildew does not need leaf wetness to infect, so read this as a supporting habit alongside spacing rather than the main lever it is for other foliar diseases."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the worst-coated leaves as you find them. It does not clear the plant, but it removes the heaviest patches of the fungus.",
+     "note_seasoned": "Removing the most heavily colonized leaves lowers the local spore load; once the disease is widespread the realistic aim is damage limitation, protecting fruit size and sugar for what remains of the season."
+    },
+    {
+     "method": "biofungicide",
+     "note_beginner": "A biofungicide, a spray of living microbes that work against the fungus, is one of the treatments this crop's guidance names. Use it at the very first white spots, cover both sides of the leaves, and repeat; it cannot catch up once the coating has spread.",
+     "note_seasoned": "Named in this crop's guidance alongside sulfur for first-spot treatment; apply early with coverage of both leaf surfaces and repeat, since it will not retrieve an established infection."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Sulfur is a labeled fungicide for this disease. Spray at the first white spots, cover the tops and undersides of the leaves, and start scouting in midsummer so you catch it early. Once the coating is widespread, spraying mostly limits the damage.",
+     "note_seasoned": "Sulfur at first symptom with both leaf surfaces covered; midsummer scouting is what makes that timing possible. Once the mildew is widespread, treatment is mostly damage limitation against early defoliation, lost sugar, and sunscald."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a resistant variety where one is offered, especially if downy mildew shows up most years where you live.",
+     "note_seasoned": "Resistance where available is the front rung against a wind-borne disease that arrives on weather moving up from the far South rather than carrying over in your own bed."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the vines room so air moves through and wet leaves dry out fast after rain or dew. This disease needs wet leaves to infect.",
+     "note_seasoned": "Spacing shortens the leaf-wetness periods infection requires; opening the planting is the standing defense against a pathogen that can kill infected leaves within 10 to 14 days once established."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil line, not over the leaves. Overhead watering keeps the leaves wet, which is exactly what this disease needs.",
+     "note_seasoned": "Overhead irrigation sustains the leaf wetness the water mold needs; base watering keeps the controllable moisture off the foliage while humid weather supplies the rest."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove the worst-affected leaves so the plant is not carrying the heaviest infection while the weather favors the disease.",
+     "note_seasoned": "Removing badly affected foliage trims spore production in the canopy; a supporting move, since the epidemic arrives and travels on regional weather."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease off high-nitrogen fertilizer. Aphids multiply fastest on the soft, lush growth that heavy feeding pushes out, so a moderately fed okra plant gives them less to build on.",
+     "note_seasoned": "Excess nitrogen drives the succulent growth aphids favor; restrained feeding slows colony buildup on growing tips and leaf undersides, the sites worth scouting regularly."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet of water from the hose, aiming up at the undersides of the leaves. Come back every few days while numbers are still climbing.",
+     "note_seasoned": "A forceful jet dislodges colonies from tips and leaf undersides; repeat at a few days' interval, since populations rebuild quickly in warm weather."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, and tiny parasitic wasps eat aphids and usually bring an outbreak down on their own. Let them work by keeping broad sprays out of the picture.",
+     "note_seasoned": "Ladybugs, lacewings, and parasitic wasps usually bring okra aphids under control; broad sprays strip that pressure out, so conserve natural enemies before reaching for a material."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep growing, spray insecticidal soap and wet the undersides of the leaves where the aphids sit. It works where it lands and nowhere else, so repeat every few days.",
+     "note_seasoned": "Soap is contact-only, so thorough coverage of leaf undersides governs the result; repeat every few days to catch the nymphs that follow the first pass."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light spray oil, is the other option at this step. It also works on contact, so covering the undersides of the leaves is what decides whether it helps.",
+     "note_seasoned": "Oil is the alternative contact material, carrying the same underside-coverage demand and the same repeat interval rather than any residual activity."
+    }
+   ]
+  },
+  {
+   "id": "corn-earworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick pods every day or two once the plant is producing. Frequent harvest takes away the tender pods the caterpillars bore into, so fewer are left hanging where they can be attacked.",
+     "note_seasoned": "Harvesting on a one-to-two-day cycle removes feeding sites as fast as they form, cutting the pod exposure available to larvae across the season's overlapping generations."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Start checking the plant when the first flowers open, and pick off any caterpillars you find on the buds and pods. Look for the holes and droppings they leave behind.",
+     "note_seasoned": "Scout buds and developing pods from first flowering and remove larvae by hand; holes and frass mark active feeding sites worth searching around."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Helpful insects attack these caterpillars, so make room for them by keeping broad sprays out of the garden.",
+     "note_seasoned": "Conserving natural enemies keeps a standing check on this pest; broad sprays work against that and are worth withholding."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, short for Bacillus thuringiensis, is an organic spray that works on caterpillars while they are still small. Cover the buds and young pods, since that is where they feed.",
+     "note_seasoned": "Bt targets young larvae; direct coverage at buds and developing pods, the feeding sites, and time it before caterpillars bore out of reach."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, another organic spray, is the other material named for these caterpillars. Like Bt it does its work on the young ones, sprayed onto the buds and developing pods.",
+     "note_seasoned": "Spinosad is the second named material for young larvae, applied on the same terms as Bt: coverage of buds and developing pods, timed to small caterpillars."
+    }
+   ]
+  },
+  {
+   "id": "stink-bugs",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Keep the weedy edges around the patch mowed. These bugs build up in weedy borders through the summer and move onto the okra from there.",
+     "note_seasoned": "Mowing weedy borders cuts the harborage these true bugs build up in through the summer, taking away the staging ground they move onto the okra from."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Harvest often. The bugs feed on the pods themselves, so taking pods promptly leaves less on the plant for them to work over.",
+     "note_seasoned": "Frequent picking shortens each pod's exposure to piercing-sucking feeding, which concentrates on the harvested part of the crop."
+    },
+    {
+     "method": "trap_cropping",
+     "note_beginner": "A planting of cowpeas nearby pulls these bugs off the okra and gathers them in one place so you can remove them, which is how this crop's guidance uses it. Read this method's cautions for how soon that patch has to be dealt with and how far away to put it.",
+     "note_seasoned": "A cowpea trap planting draws the bugs off the crop and concentrates them for removal, per this crop's guidance. The removal has to actually happen on schedule, and this method's cautions carry the deadline and the working separation."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out in the cool of the morning, when the bugs are sluggish, and knock them into a bucket of soapy water. Scrape off any egg clusters you find on the pods and the undersides of leaves.",
+     "note_seasoned": "Hand-collect adults into soapy water in the cool morning while they are slow, and crush egg masses found on pods and leaf undersides; scout for them from early summer."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap works on the young bugs, called nymphs, which are easier to kill than the adults. Spray it directly onto the clusters in the hot spots.",
+     "note_seasoned": "Direct soap at nymphs in hot spots; adults tolerate it, so the material's value rests on catching the population young."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear the weeds near the bed. Some weeds host flea beetles, and removing them takes away places the beetles feed and build up right next to your seedlings.",
+     "note_seasoned": "Clearing weedy hosts nearby lowers the local population that lands on emerging seedlings, the stage okra is actually vulnerable at."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover young plants with floating row cover, a light fabric that lets in light and water while keeping beetles off, until they are bigger and growing strongly. A few holes on an established plant are nothing to worry about.",
+     "note_seasoned": "Row cover carries seedlings through the vulnerable window; once plants are established and growing strongly the shot-holing is cosmetic and seldom needs treatment."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "fusarium-wilt",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move okra to a fresh bed and give the old spot several years off, keeping it away from cotton and hibiscus too. The fungus lives in the soil for years, so distance and time are the main defense.",
+     "note_seasoned": "Rotate okra out of the bed for several years and away from cotton and other mallows; the pathogen persists in soil long-term and is shared across the Malvaceae, so the family, not just the crop, defines the break."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "When you buy seed, look for a variety described as tolerant of fusarium wilt. Not every catalog offers one, but where they exist they take pressure off everything else.",
+     "note_seasoned": "Tolerant varieties, where available, are the seed-order lever against a soilborne wilt with no cure; tolerance is partial, so the cultural steps still stand alongside it."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant okra in a spot with well-drained soil. There is no cure once this fungus is inside a plant, so where you plant is part of the defense.",
+     "note_seasoned": "Well-drained soil is one of the stated preventive legs for this wilt; with no curative option, siting carries weight it would not for a treatable disease."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull and destroy any plant that yellows and wilts with brown streaks inside the stem. It will not recover, and removing it keeps the fungus from building up further in the bed.",
+     "note_seasoned": "Rogue infected plants and destroy them to limit soil buildup; management is preventive and cultural, since the pathogen cannot be sprayed out of the soil."
+    }
+   ]
+  },
+  {
+   "id": "southern-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate okra with crops outside its circle, such as corn and other grasses, which this fungus does not feed on. Its resting bodies survive in the soil for years, so the break matters.",
+     "note_seasoned": "Rotate with non-host crops such as grasses and corn; sclerotia persist in soil for years, so denying the fungus a host across seasons is the working control."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Give okra a bed that drains well and fix wet spots before planting. This fungus thrives in hot, humid conditions, so ground that dries out promptly works against it.",
+     "note_seasoned": "Improved drainage sits alongside rotation and sanitation in the preventive set; the pathogen runs in hot, humid conditions and attacks at the soil line."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants so air moves between them. Still, humid air suits this fungus, and room to breathe works against it.",
+     "note_seasoned": "Generous spacing for airflow is part of the stated preventive set against a pathogen that thrives in hot, humid weather; layout is fixed at planting."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clean up old plant debris, since the fungus feeds on it, and keep mulch and dead leaves pulled back from the stems. If a plant collapses, remove it along with the crust of soil right around its base, because there is no saving it.",
+     "note_seasoned": "Bury or remove the crop debris that feeds the fungus, keep mulch and litter off the stem bases where infection starts, and take out collapsed plants together with the surrounding infested soil crust; there is no rescue once a plant goes down."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on the nitrogen. Heavy feeding pushes out dense growth, and crowded leaves where the air sits still are where this mildew does best.",
+     "note_seasoned": "Moderating nitrogen limits the dense growth that worsens infection alongside crowding, shade, and stagnant air; it belongs in the same preventive set as spacing."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants generous room and put them in full sun. This fungus spreads where plants are crowded, shaded, and the air does not move.",
+     "note_seasoned": "Generous spacing and a full-sun site work against the crowding, shade, and poor air movement that favor this pathogen, which needs high humidity but not wet leaves."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plant rather than wetting the leaves. This mildew can take hold without wet leaves, so treat this as a supporting habit rather than the main fix.",
+     "note_seasoned": "Avoid overhead irrigation as the guidance directs, while noting this pathogen infects without leaf wetness; humidity is its requirement, so spacing and sun do more of the work."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-coated leaves when you treat. It will not clear the plant on its own, but it removes the heaviest patches of the fungus.",
+     "note_seasoned": "Removing the most affected leaves lowers the local spore load; pair it with treatment at the first sign rather than relying on it alone."
+    },
+    {
+     "method": "biofungicide",
+     "note_beginner": "A biofungicide, a spray of living microbes that work against the fungus, is one of the treatments this crop's guidance names. Use it at the very first white spots and cover both sides of the leaves.",
+     "note_seasoned": "A biofungicide is among the labeled materials named here, applied at first symptoms with coverage of both leaf surfaces; it is the gentlest of the named options and belongs earliest."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Sulfur is a labeled fungicide for this disease. Spray at the first spots, cover the tops and undersides of the leaves, and do not wait until the coating has spread.",
+     "note_seasoned": "Sulfur at first symptoms with both leaf surfaces covered; scouting from midseason is what makes that timing possible."
+    }
+   ]
+  },
+  {
+   "id": "root-knot-nematode",
+   "type": "nematode",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give okra fresh ground and keep it out of beds that grew okra or cotton last season. Rotating to crops these pests do poorly on, like grains, or growing certain marigolds as a cover crop, helps run their numbers down.",
+     "note_seasoned": "Rotate to poor hosts such as grains or a suppressive marigold cover crop, and avoid following okra with cotton or other susceptible Malvaceae; okra is among this pest's most susceptible hosts, so plan the rotation around it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull badly stunted plants with knotted roots and get the whole root system out of the bed and destroyed. There is no cure once the roots are galled.",
+     "note_seasoned": "Remove and destroy heavily galled plants, roots and all; there is no in-season cure, so removal limits buildup while the preventive program does the real work."
+    },
+    {
+     "method": "soil_solarization",
+     "note_beginner": "Solarization means covering moist, cleared soil with clear plastic through the hottest weeks of summer so the sun heats the bed deeply. It is a between-crops treatment for a bed you know is infested.",
+     "note_seasoned": "Summer solarization of infested beds is the stated in-soil knockdown; run it in the off season on ground with a known history rather than as routine."
+    }
+   ]
+  }
+ ]
+}

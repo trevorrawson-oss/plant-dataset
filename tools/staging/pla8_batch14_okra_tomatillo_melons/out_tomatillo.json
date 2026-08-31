@@ -1,0 +1,240 @@
+{
+ "pests": [
+  {
+   "id": "three-lined-potato-beetle",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant tomatillos in a fresh spot each year. Some of these beetles ride out the winter near the old bed, and moving the crop means fewer of them find it in spring.",
+     "note_seasoned": "Rotation trims the overwintering carryover that would otherwise reload the bed each spring; it lowers early pressure rather than removing it."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull the nightshade weeds growing near the garden. They are relatives of tomatillo that this beetle also feeds on, called alternate hosts, so clearing them takes away the plants it builds up on.",
+     "note_seasoned": "Nightshade weeds and volunteer solanums are the alternate hosts this Solanaceae specialist moves in from; eliminating them removes the reservoir feeding reinfestation."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the adults and the humpbacked larvae off by hand and drop them into soapy water, and knock the egg clusters off the undersides of the leaves. In a home garden this is the control that works best, so check the plants early and often and get the first beetles before they multiply.",
+     "note_seasoned": "Drop adults, larvae, and the orange egg clusters into soapy water on an early, frequent scouting pass, leaf undersides included. Destroying first arrivals and egg masses before populations build is the highest-value move on a crop this beetle prefers."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Keep the plants under floating row cover, a light fabric that lets in sun and water while keeping beetles off, from planting until the flowers open. Then take it off so pollinators can reach the blooms.",
+     "note_seasoned": "Row cover excludes colonizing adults through establishment; remove at bloom so pollinators can work the flowers."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "If the larvae get ahead of your picking, neem oil, a plant-based spray, helps bring heavy larval numbers down.",
+     "note_seasoned": "Neem is one of the two materials the guidance reserves for heavy larval pressure; it backs up handpicking rather than replacing it."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, an organic spray derived from a soil bacterium, is the other option when larvae are heavy and picking cannot keep up.",
+     "note_seasoned": "Spinosad is the alternative material for heavy larval populations, held for genuine outbreaks rather than routine use."
+    }
+   ]
+  },
+  {
+   "id": "tomato-hornworm",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "off_season_tillage",
+     "note_beginner": "Once the plants come out in fall, turn the bed over. Hornworms spend winter underground as pupae, the resting stage between caterpillar and moth, and tilling breaks that cycle up.",
+     "note_seasoned": "Fall tillage destroys soil-dwelling pupae, trimming the local carryover into the next summer's moth flight."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the caterpillars off by hand. They blend into the plant, so look for the dark pellets of droppings on the leaves below and search just above them; at night a UV flashlight makes the caterpillars glow.",
+     "note_seasoned": "Handpicking holds at home-garden scale; scout by frass below the feeding sites, since the damage usually shows before the camouflaged larva does, and a nighttime UV lamp fluoresces larvae the eye misses."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "If you find a hornworm covered in small white cocoons, leave it right where it is. Those are parasitic wasps already killing it, and they will go on to attack the others. Flowering plants nearby help keep those wasps around.",
+     "note_seasoned": "Spare wasp-parasitized larvae as a biocontrol reservoir; the emerging Cotesia parasitoids keep working the population, and insectary plantings support them between outbreaks."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, short for Bacillus thuringiensis, is an organic spray that works well on hornworms while they are still small. Deal with the big ones by hand.",
+     "note_seasoned": "Bt kurstaki is effective on early instars, so time it to young larvae; full-grown hornworms are more reliably removed by hand."
+    }
+   ]
+  },
+  {
+   "id": "flea-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away old plant debris and nightshade weeds around the bed. The adult beetles spend winter sheltering in that litter and come out aimed at your youngest plants.",
+     "note_seasoned": "Adults overwinter in debris and field margins, so weed and residue sanitation lowers the spring population that lands on transplants."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Drape floating row cover, a light fabric that lets light and water through, over young transplants, which is when these beetles do real harm. Once tomatillos are established they mostly shrug the holes off.",
+     "note_seasoned": "Cover through establishment, the stage where shot-holing actually costs the plant; thresholds matter mainly on seedlings, and a vigorous established plant tolerates moderate feeding."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Kaolin clay, a fine white mineral powder you mix with water and spray on, leaves a film on the leaves that discourages the beetles from feeding.",
+     "note_seasoned": "A kaolin particle film is the other physical option for young plantings, used alongside or after covering."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, an organic spray derived from a soil bacterium, is worth reaching for only when the pressure on young plants is heavy. Most established plants outgrow the damage and need no treatment.",
+     "note_seasoned": "Reserve spinosad for heavy pressure on young plants; the guidance is explicit that established tomatillos generally need no treatment at all."
+    }
+   ]
+  },
+  {
+   "id": "cutworms",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear weeds and old crop debris out of the bed before you plant. That cover is where these caterpillars shelter.",
+     "note_seasoned": "Pre-plant weed and residue removal strips the cover the larvae shelter in, ahead of the establishment window when they sever transplants."
+    },
+    {
+     "method": "stem_collars",
+     "note_beginner": "Put a collar of cardboard or foil around each transplant, pushed about an inch into the soil, so nothing can chew through the stem at ground level.",
+     "note_seasoned": "Collar every transplant, set an inch into the soil; the exposure runs through establishment, when larvae cut stems at the soil line overnight."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out after dark and pick the caterpillars off. They feed at night and hide in the soil by day, so an evening pass is when you will actually find them.",
+     "note_seasoned": "Evening handpicking targets the nocturnal feeding window; daytime searches miss larvae holed up in the soil."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, short for Bacillus thuringiensis, an organic spray that targets caterpillars, helps when applied around the stems.",
+     "note_seasoned": "Bt around the stems supplements collars and picking; the guidance lists it as a helper, not the primary control."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Too much pushes out the soft, tender growth aphids like best, so a moderately fed plant is a less inviting target.",
+     "note_seasoned": "Excess nitrogen drives the succulent growth colonies flush on in warm weather; restraint in feeding slows buildup at the tips."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the clusters off with a strong jet of water from the hose, aiming at the growing tips and the undersides of the leaves.",
+     "note_seasoned": "A forceful water jet dislodges colonies from tips and undersides; on this crop populations seldom overwhelm a healthy plant, so knock-back plus natural enemies usually carries it."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let ladybugs and lacewings do the eating. Planting marigolds and nasturtiums nearby helps draw these aphid-eating helpers into the bed.",
+     "note_seasoned": "Conserve ladybugs and lacewings, and use marigold and nasturtium interplantings to draw aphid-eating beneficials; on a pest this minor, conservation is most of the program."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For colonies that hang on after hosing, spray insecticidal soap right onto the insects; it works only where it lands on them.",
+     "note_seasoned": "Soap is one of the two materials the guidance holds for stubborn colonies; being contact-only, coverage of the undersides governs the result."
+    },
+    {
+     "method": "neem_oil",
+     "note_beginner": "Neem oil, a plant-based spray, is the other choice for stubborn colonies.",
+     "note_seasoned": "Neem is the alternative material for persistent colonies; soap or neem is as far up the ladder as this crop's guidance goes."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the plants full sun and plenty of room, and stake them so air moves through the leaves. Good air movement is the main defense against this one, and it rarely does much harm to a vigorous plant anyway.",
+     "note_seasoned": "Full sun, wide spacing, and staking are the core controls; a warm, sunny exposure suppresses this mildew, while dense, shaded plantings favor it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off the worst-coated leaves when you see them to slow the spread.",
+     "note_seasoned": "Prune out the most affected foliage; the disease is generally low-impact on this crop, so leaf removal plus airflow usually holds it."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "If the white coating keeps spreading despite better airflow, a sulfur spray helps.",
+     "note_seasoned": "Sulfur is a material the guidance holds for spread the cultural steps have not checked; on a vigorous tomatillo that point rarely arrives."
+    }
+   ]
+  },
+  {
+   "id": "early-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep tomatillos, tomatoes, and their relatives out of this bed for three years. The fungus lives on in the soil and old plant debris.",
+     "note_seasoned": "A 3-year rotation off Solanaceae lets soilborne Alternaria inoculum decline before the family returns to the ground."
+    },
+    {
+     "method": "splash_barrier_mulch",
+     "note_beginner": "Lay mulch under the plants so rain cannot splash soil, and the fungus in it, up onto the lower leaves.",
+     "note_seasoned": "Mulch interrupts the soil-to-leaf splash path this pathogen rides; lesions start on the older foliage nearest the ground."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil at the base of the plant instead of wetting the leaves. Warm, wet foliage is what this disease runs on.",
+     "note_seasoned": "Base watering removes the overhead moisture that favors Alternaria and cuts splash onto the lower canopy; pair it with staking to keep foliage off the ground."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off spotted leaves and put them in the trash, not the compost, so the fungus does not cycle back into the garden.",
+     "note_seasoned": "Remove and discard infected leaves rather than composting them; sanitation lowers in-season spread and the carryover on debris."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Where this disease hits hard every year, copper sprays applied before symptoms can help protect the leaves. On tomatillo it is usually less common and less damaging than on tomato, so many gardens will not need this step.",
+     "note_seasoned": "Preventive copper is the material reserved for high pressure; incidence on tomatillo runs below tomato, so most plantings stop at the cultural rungs."
+    }
+   ]
+  },
+  {
+   "id": "mosaic-viruses",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with healthy plants from a reliable source. A virus can arrive already inside a transplant, and there is no cure once a plant has one.",
+     "note_seasoned": "Clean, symptom-free transplants are the entry control; with no curative option downstream, exclusion at purchase carries real weight."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull any plant with mottled, puckered leaves and get it out of the garden. It will not recover, and insects feeding on it can carry the virus to your healthy plants. Wash your hands and tools between plants, and keep tobacco products away, since some of these viruses travel on hands and tools.",
+     "note_seasoned": "Rogue symptomatic plants promptly; they are the standing source aphid vectors move virus from. The tobamoviruses also transmit mechanically, so hand and tool hygiene and a no-tobacco rule belong in the same rung."
+    }
+   ]
+  },
+  {
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant in well-drained soil or a raised bed and do not let the ground stay soggy; go easy on the watering too, since tomatillos prefer things on the dry side. This is the most avoidable tomatillo disease, because it comes from waterlogged soil.",
+     "note_seasoned": "Well-drained or raised beds plus moderate irrigation deny the soilborne rot complex the saturated conditions it needs; the crop is drought-adapted, so err dry."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move tomatillos to fresh ground rather than replanting where a plant has rotted before.",
+     "note_seasoned": "Rotate away from Solanaceae on ground with a rot history; the pathogens are soilborne, so the bed itself is the risk."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Once a plant wilts and collapses there is no saving it. Pull it out and remove it from the bed.",
+     "note_seasoned": "Rogue collapsed plants; with no cure available, removal plus the drainage fix is the whole in-season response."
+    }
+   ]
+  }
+ ]
+}
