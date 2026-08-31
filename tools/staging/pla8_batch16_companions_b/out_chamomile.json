@@ -1,0 +1,122 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on fertilizer, especially nitrogen (the nutrient that pushes soft, leafy growth). Aphids settle on lush new shoots first, so a leaner plant tends to draw fewer of them.",
+     "note_seasoned": "Soft, overfed growth is the most susceptible tissue, so keeping nitrogen low denies aphids the tender tips they colonize and multiply on. A preventive habit, set by how you feed rather than anything you spray."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A strong spray of water from the hose usually handles a bad patch, knocking the clusters off tips and buds. Spray early in the day so the plant dries quickly.",
+     "note_seasoned": "Hosing off colonized tips is often all the intervention chamomile needs; the predators the flowers recruit tend to mop up what remains, so save anything stronger for populations that rebuild."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let the good bugs work. Chamomile's own flowers bring in ladybugs and hoverflies, and their young eat aphids, so most outbreaks fade on their own if you avoid sprays that would kill the helpers.",
+     "note_seasoned": "Aphids here are usually held in check by the beneficials the flowers themselves recruit; conserving that pressure by withholding broad sprays is the main control on this plant, not a supplement to it."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If a patch keeps building despite the water spray, insecticidal soap (a mild soap-based spray that dries out soft-bodied insects) usually handles it. Coat the aphids directly, treat only where they cluster, and skip spraying in hot sun.",
+     "note_seasoned": "The endpoint of a deliberately short ladder, for populations that build past what the predators hold. Spot-treat the colonized tips and buds rather than blanketing the planting; soap also wets out the soft-bodied beneficials doing most of the work here."
+    }
+   ]
+  },
+  {
+   "id": "thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A blast of water over the plants knocks back a heavy patch. Thrips are a minor issue on chamomile, showing up mostly in hot, dry spells, so this is often all it takes.",
+     "note_seasoned": "Rarely worth more than this on a trouble-free herb. A water spray during hot, dry weather checks the flare-ups behind silvery stippling and petal distortion; monitor the blooms and act only if numbers climb."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If numbers keep climbing, insecticidal soap (a mild soap-based spray for soft-bodied insects) applied to the flowers and tips knocks them down. Most years chamomile does not need it.",
+     "note_seasoned": "Reserve for the rare season a bloom infestation actually builds; thrips on chamomile are seldom damaging enough to treat, so this rung exists for the exception, not the routine."
+    }
+   ]
+  },
+  {
+   "id": "mealybugs",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "Small clusters can simply be removed by hand: dab each white, cottony mass off with a cotton swab. Mealybugs are mostly an indoor and container problem on chamomile, so a few minutes of picking usually clears them.",
+     "note_seasoned": "Physical removal is the first move: a swab, dipped in rubbing alcohol, lifts the waxy clusters off stem nodes. Rare on healthy garden plants, so spot removal on a container or indoor specimen generally ends it."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For a wider outbreak, treat with insecticidal soap (a mild soap-based spray that dries out soft-bodied insects), coating the cottony clusters directly.",
+     "note_seasoned": "Spot-treat where swabbing is impractical, chiefly on container-grown or indoor plants showing honeydew and sooty mold; direct contact with the clusters is what does the work."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room. The white, powdery film shows up mainly where chamomile is packed together and the air sits still, so space plants generously and pick a spot in full sun where air moves.",
+     "note_seasoned": "The lead control: crowding, shade, humidity, and stagnant air are what favor it on an otherwise disease-free herb. Full sun and generous spacing, set at planting, usually keep it from starting, and matter most as warm, muggy weather sets in."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the leaves. Overhead watering adds to the dampness this fungus likes.",
+     "note_seasoned": "Base watering removes the overhead wetness the humid-weather pattern feeds on; it supports the airflow and sun work rather than replacing it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and throw away badly affected leaves and stems as you see them so the film does not keep spreading from them.",
+     "note_seasoned": "Removing the worst-affected growth as it appears is the in-season half of the program. Cultural control generally carries chamomile through this disease, so sanitation plus spacing is usually the whole answer."
+    }
+   ]
+  },
+  {
+   "id": "gray-mold",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room so air can move. Gray mold (a fuzzy gray rot of flowers and stems) takes hold in cool, damp, crowded plantings, so spacing is the main defense.",
+     "note_seasoned": "Dense plantings and poor airflow are the standing invitation; lean, well-drained, airy plantings rarely see it. Set the room at planting rather than fighting the rot later."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plants rather than over the flowers. Prolonged wet on blooms and stems is what lets the mold start.",
+     "note_seasoned": "Excess moisture is the driver, so keep irrigation off the heads and let the canopy dry between waterings; prolonged wetness is the condition this disease waits for."
+    }
+   ]
+  },
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Start seeds right: sow into well-drained soil that is not soggy or cold, and go easy on the watering can afterward. Damping-off (a soil fungus that makes seedlings collapse at the soil line) mostly starts with cold, wet conditions at sowing.",
+     "note_seasoned": "The standing risk when surface-sown chamomile is kept too wet. Prevention is the whole game: warm, well-drained ground, restrained watering from day one, and no sowing into cold, waterlogged soil."
+    },
+    {
+     "method": "sensible_seeding_rate",
+     "note_beginner": "Do not sow too thickly, and thin crowded seedlings early so air can move through the stand. Packed, damp seedlings are where the collapse spreads.",
+     "note_seasoned": "Overcrowding is a named driver: sow at a restrained rate and thin promptly so the stand gets airflow and the surface dries between waterings."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "If the bed itself stays wet after rain, fix the drainage before sowing there; seedlings in soggy, poorly drained ground are the ones most likely to go down.",
+     "note_seasoned": "Poorly drained ground is a named driver, so on heavy or low-lying beds correct the drainage before sowing rather than trying to water around it."
+    }
+   ]
+  }
+ ]
+}

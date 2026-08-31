@@ -1,0 +1,226 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard spray of water knocks aphid clusters off new shoots and buds. Start here as soon as you spot them, because on sweet pea aphids matter most for the virus diseases they can spread.",
+     "note_seasoned": "Strong water sprays early in a colonization are the first knock-back. On sweet pea the sap feeding is the lesser issue; the point is denying pea aphid, potato aphid, and the other species time to move mosaic viruses through the planting."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs and hoverflies are natural enemies, insects that eat aphids for you. Encourage them, and avoid sprays that would kill them along with the pests.",
+     "note_seasoned": "Conserving ladybugs, hoverflies, and the other resident natural enemies does steady work against the several aphid species that colonize shoots and buds; lean on them before reaching for any spray."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a mild spray that kills soft-bodied insects it touches, works on clusters you can coat directly. Treat early, before numbers build.",
+     "note_seasoned": "Soap applied early, with thorough coverage of shoots, buds, and leaf undersides, checks colonies before they take off. Timing is the whole game here: heavy aphid pressure plus virus is a common way a sweet pea planting gets ruined."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a refined oil spray that smothers small insects, is another gentle option if aphids keep building. Coat the clusters directly.",
+     "note_seasoned": "Oil is the parallel contact option to soap for shoot and bud colonies. Either way, act while the infestation is young rather than after the aphids have had time to spread virus."
+    }
+   ]
+  },
+  {
+   "id": "thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut out badly scarred shoots and flowers, and pull any plant showing virus streaking or distortion, since thrips can spread spotted-wilt virus as they feed.",
+     "note_seasoned": "Remove heavily scarred growth and rogue virus-symptomatic plants promptly. On sweet pea the rasping damage itself is the lesser problem; it is the spotted wilt and necrotic spot viruses thrips seed that turn an infestation serious."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If numbers build, insecticidal soap, a mild spray that works on contact, helps knock thrips back. Coverage matters, since they tuck into flowers and folded growth.",
+     "note_seasoned": "Treat build-ups with soap, aiming for thorough contact in the blooms and growing tips where thrips shelter. Keep an eye on the flowers themselves so you catch a rise early rather than after the silvering spreads."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, a stronger organic spray, is the step up if soap has not held the thrips.",
+     "note_seasoned": "Spinosad is the stronger rescue for thrips pressure soap has not checked. On a planting grown for its flowers and the pollinators they draw, timing and targeting to spare bees is part of the decision, not an afterthought."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep the soil evenly moist, since spider mites build up fastest on plants left dry and stressed in hot weather.",
+     "note_seasoned": "Steady moisture at the base, and a little added humidity around the planting, blunt the hot, dry, dusty conditions mites favor; a drought-stressed plant late in the run is exactly where they take off."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A regular spray of water over the leaves, undersides included, washes mites off and breaks up the dry, dusty conditions they like.",
+     "note_seasoned": "Hosing the foliage knocks mites back and cuts the dustiness that favors them; it pairs naturally with steadier watering as the first response to fine speckling."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a mild spray that works on contact, helps if mites build up; wet the leaf undersides where they feed.",
+     "note_seasoned": "Soap checks a building infestation with thorough underside coverage. Mite flare-ups often coincide with the plant's own heat decline, so weigh how much of the cool-season display is left before spraying."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a refined oil spray that smothers mites, is the other gentle option; coat the speckled, webbed foliage well.",
+     "note_seasoned": "Oil is the parallel contact option to soap for stippling, bronzing, and webbing. As with soap, coverage decides the result, and a planting already fading in the heat may not repay the effort."
+    }
+   ]
+  },
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear boards, debris, and leafy hiding places near young sweet peas so slugs and snails have fewer daytime shelters.",
+     "note_seasoned": "Reducing debris and shelter around emerging and newly set plants lowers the resident population before the cool, damp spring nights that put seedlings most at risk."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out after dark with a flashlight and pick off slugs and snails, especially around seedlings, which they can devour overnight in damp weather.",
+     "note_seasoned": "Night patrols during cool, damp spring weather are the direct defense while plants are small; a single bad night can strip a stand of seedlings, so check often at that stage."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "Iron phosphate bait, a slug bait regarded as lower risk in home gardens, can protect young plants; scatter it on the soil around them, not on the plants.",
+     "note_seasoned": "Ring emerging seedlings and newly set plants with iron phosphate bait when picking and cleanup are not keeping up; the establishment window is where the protection pays most."
+    }
+   ]
+  },
+  {
+   "id": "caterpillars",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and dispose of leaves with pale winding trails, the mark of leafminers feeding inside the leaf.",
+     "note_seasoned": "Removing mined foliage takes the leafminer larvae with it. On a vigorous plant the damage is usually cosmetic, so removal is often the whole program."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Pick caterpillars off leaves and buds when you see them; on sweet pea their numbers are usually low.",
+     "note_seasoned": "Handpicking covers the occasional foliage feeders, corn earworm among them, that chew leaves, buds, and flowers. Scout the buds, where the damage costs the most bloom."
+    },
+    {
+     "method": "bt",
+     "note_beginner": "Bt, a bacterial spray that acts on caterpillars, works on the young ones if picking is not keeping up.",
+     "note_seasoned": "Bt handles a heavier run of caterpillars; spray while larvae are young. Keep the application targeted to the sweet peas themselves, since this is a planting grown to feed a flower border, not to be blanketed."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Spinosad, a stronger organic spray, covers both caterpillars and leafminers if the damage keeps up.",
+     "note_seasoned": "Spinosad reaches both the caterpillars and the vegetable leafminers if pressure ever justifies a spray; on this plant it rarely does, and bloom-time bee caution applies."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room and support at planting so air moves through them; powdery mildew, a white coating fungus, is worst in crowded plantings.",
+     "note_seasoned": "Space and support the planting for air movement from the start. Mildew is the common late-season foliar disease on sweet pea, and an open canopy slows the coating as the weather warms."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base, and do not let the roots go bone dry; crowded plantings with dry roots get mildew worst.",
+     "note_seasoned": "Keep roots evenly moist but foliage dry, watering early and at the base. Drought stress in warming weather is part of what invites the disease, so the moisture side matters as much as the dry leaves."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove whitened, shriveling leaves as they appear to slow the spread.",
+     "note_seasoned": "Pull coated leaves promptly. Cultural care is the whole program here, and once mildew runs, it often marks the natural end of the cool-season display."
+    }
+   ]
+  },
+  {
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Start in clean soil or fresh mix, set plants with the crown, the point where stem meets roots, at the surface rather than buried, and water with restraint while seedlings establish. Damping-off, a rot that topples seedlings, gets its start in wet, sloppy beginnings.",
+     "note_seasoned": "Clean soil, correct depth with the crown left unburied, and restrained early watering are the sowing-time levers against damping-off and the later crown rots. There is no rescue treatment once the complex is established, so this is where the outcome is decided."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant in ground that drains well and avoid waterlogged spots; wilting and browning at the base usually mean the rot is already in, and there is no cure at that point.",
+     "note_seasoned": "Drainage is the standing defense: Rhizoctonia, Pythium, and Fusarium all run in wet, poorly drained ground, so fix the site and the overwatering habit before planting rather than after wilting begins."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "If sweet peas collapsed in a spot before, move them to fresh ground the next season.",
+     "note_seasoned": "Rotate off ground that recently carried peas, beans, or sweet peas; the rot fungi persist where legumes have grown, and reused or legume-cropped soil is a common source of the problem."
+    }
+   ]
+  },
+  {
+   "id": "mosaic-viruses",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for these viruses. Pull and destroy plants showing mottled, streaked, ring-spotted, or distorted growth so they cannot serve as a source for the rest.",
+     "note_seasoned": "Rogue symptomatic plants promptly. With no treatment for the mosaics or spotted wilt, management comes down to removing infected plants and keeping the aphids and thrips that carry them in check through those pests' own ladders."
+    }
+   ]
+  },
+  {
+   "id": "anthracnose",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with healthy seed from a reliable supplier, since these spotting fungi can ride in on seed.",
+     "note_seasoned": "Clean seed is the entry-point control; anthracnose and some of the leaf-spot fungi are at times seed-carried, so sourcing matters before any of the in-season steps do."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants for airflow, since these leaf spots spread fastest on crowded growth in wet weather.",
+     "note_seasoned": "An open, well-supported canopy dries quickly after rain, and wet tissue is what these fungi need to move; airflow is the standing cultural check on lesions spreading up stems and flower stalks."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base so the leaves stay dry.",
+     "note_seasoned": "Base watering keeps foliage and flower stalks dry and limits spread during the wet spells that drive these lesions."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off spotted leaves and shoots as they appear, and clear affected material out of the planting.",
+     "note_seasoned": "Remove lesioned tissue promptly, and favor clean soil where you have the choice. On sweet pea these spots usually run secondary to mildew and the rots, so removal plus the other cultural steps is generally enough."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants for airflow; downy mildew, a grayish moldy growth on the undersides of leaves, favors cool, damp, still conditions.",
+     "note_seasoned": "Airflow is the mainstay: the pathogen sporulates on leaf undersides in cool, humid spells, and an open canopy that dries quickly is the main check."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Keep the leaves dry by watering at the base.",
+     "note_seasoned": "Dry foliage denies the disease the cool, wet leaf surface it needs; base watering is the simple lever, alongside airflow."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove leaves showing the gray growth underneath and yellowing on top.",
+     "note_seasoned": "Sanitation rounds out the cultural program. This is a minor, weather-driven problem next to powdery mildew and the rots, so removal plus airflow generally suffices."
+    }
+   ]
+  }
+ ]
+}

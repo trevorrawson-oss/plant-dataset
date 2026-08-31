@@ -1,0 +1,129 @@
+{
+ "pests": [
+  {
+   "id": "japanese-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "In the cool of early morning the beetles are sluggish and easy to knock into a jar of soapy water. Walk past the flowers every day or two through summer; on an established clump the chewing is mostly a looks problem, so picking usually keeps up with it. Skip the bag-style beetle traps, which pull in more beetles than they catch.",
+     "note_seasoned": "Scout through the June to August flight and knock adults into soapy water early in the day while they are still torpid. Feeding on an established plant is generally cosmetic, so regular hand removal tends to hold home-scale pressure without reaching for a spray. Lure traps tend to draw in more beetles than they remove, so site them far from the planting or leave them out of it entirely."
+    }
+   ]
+  },
+  {
+   "id": "eriophyid-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut off any flower head that sprouts strange tufted or leafy growth and throw it away. The mites live hidden inside the bud where sprays cannot reach them, so removing the odd heads as you see them is the practical way to bring their numbers down.",
+     "note_seasoned": "Prune out and destroy affected heads as they appear. Because the mites are shielded inside the developing bud, contact miticides are largely ineffective, so removal is the control that actually works at home scale. Damage stays localized to individual heads, so the rest of the clump can be left standing."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard blast from the hose knocks aphid clusters off new shoots and buds. Do it in the morning so the leaves dry quickly, and repeat if they build back up.",
+     "note_seasoned": "Direct a stiff stream at colonies on tender growth, buds, and leaf undersides as the first knock-back. On a vigorous established plant this is often all the intervention the problem warrants."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Coneflowers naturally draw in beneficials, the helpful insects such as lady beetles that eat aphids, and those helpers usually keep aphid numbers low on their own. Give them the chance to work, and skip broad insect sprays that would kill the helpers along with the aphids.",
+     "note_seasoned": "Conservation is already doing most of the work here: the planting itself attracts aphid predators and parasitoids that typically hold populations in check. Protect that service by avoiding broad-spectrum insecticides, and keep any treatment narrow and spot-applied."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If aphids keep building on a young plant, spray the clusters directly with insecticidal soap, a mild soap-based spray that works only on the insects it actually coats. Plan on repeating it about three times, 5 to 7 days apart, and do not spray during hot spells.",
+     "note_seasoned": "For populations building on young plants, coat the colonies thoroughly; soap kills only on contact, so coverage decides the result. About three applications at 5 to 7 day intervals is the working schedule. Spray only where the aphids are, since it also takes out soft-bodied beneficials it wets, and hold off in hot weather or on drought-stressed plants."
+    }
+   ]
+  },
+  {
+   "id": "rabbits-and-deer",
+   "type": "vertebrate",
+   "control_ladder": [
+    {
+     "method": "exclusion_fencing",
+     "note_beginner": "A simple wire cage or low fence around a new planting keeps rabbits off the tender spring shoots, which is when coneflowers are most at risk. Established clumps usually shrug off light nibbling, so the barrier matters most in the first season.",
+     "note_seasoned": "Where rabbit pressure is high, cage or fence new plantings until the clumps establish; young spring growth is what gets browsed, and a deer-resistant rating does not rule out occasional sampling when deer are under pressure. Established plants tolerate light browsing, so protection is mainly a first-season job."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "aster-yellows",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure for this one, so act fast. As soon as you see the strange green, leafy growth in the flowers, dig up the entire plant, roots and all, and put it in the trash rather than the compost. Clean your pruners and spade afterward, because the disease can travel on tools to the next plant you work on.",
+     "note_seasoned": "Rogue out infected plants promptly, meaning pull and destroy the whole plant, and keep it out of the compost. There is no cure, and insecticides do not stop the leafhopper vectors from transmitting as they feed, which is why removal is the whole ladder. Disinfect pruners between plants, since the phytoplasma can move on tools."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants generously so air can move between them. Powdery mildew builds where plantings are crowded and humid air sits still, so giving each clump room is the main defense.",
+     "note_seasoned": "The primary lever: generous spacing and an open site keep canopy humidity down through the warm, muggy stretches that favor mildew. In a bed that has grown congested, restoring airflow is worth more than reaching for a spray in most home plantings."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the leaves. Overhead watering keeps the planting damp and humid, which is the condition this fungus likes.",
+     "note_seasoned": "Irrigate at the base rather than overhead to hold humidity in the canopy down. On this disease the point is humidity rather than splash, since powdery mildew needs only a few hours of damp air to get going, so treat this as a companion to the spacing above rather than a control on its own."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and throw away the worst whitened leaves when you see them. It removes a source of the powdery spores and rarely costs a healthy plant much.",
+     "note_seasoned": "Remove heavily affected foliage during the season and clear fallen leaves at cleanup to lower the spore load. On this disease it is a supporting move behind spacing and airflow, and with those in place fungicides are seldom needed in a home garden."
+    }
+   ]
+  },
+  {
+   "id": "leaf-spots",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up and throw away fallen leaves around the plants, and pull off badly spotted lower leaves. These spots rarely go beyond marking the foliage, and basic tidiness is most of the fix.",
+     "note_seasoned": "Remove fallen debris and pull the worst-spotted lower foliage; the complex starts low and works upward in wet spells, and sanitation plus dry leaves generally keeps it cosmetic. Bactericides and fungicides are not warranted for this at home scale."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the ground so the leaves stay dry. Wet foliage is what lets these spots take hold and spread, especially during rainy stretches.",
+     "note_seasoned": "Base watering keeps foliage dry and cuts the splash and leaf wetness these bacteria and fungi need to establish. It matters most in prolonged wet weather, when the spotting climbs from the lower leaves upward."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant room to breathe. In a crowded bed the leaves stay wet longer after rain, and wet leaves are where the spots get started.",
+     "note_seasoned": "Generous spacing shortens how long foliage stays wet after rain or dew, which is the window these pathogens use. It pairs with base watering as the preventive half of managing a mostly cosmetic problem."
+    }
+   ]
+  },
+  {
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "The fix happens at planting: pick a spot where water drains away instead of pooling, and go easy on watering after that. Soggy ground is the most common way to lose a coneflower, and a plant that has collapsed from rot does not come back.",
+     "note_seasoned": "Prevention is the whole game: site in sharply drained soil and water with restraint, since wet, poorly drained ground drives the crown and stem rots that are the practical killers of echinacea. Interspecific hybrids are the least tolerant of wet feet, which is a chief reason the novelty color forms tend to be shorter-lived than the straight species."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Set plants far enough apart that air moves around the base of each clump. A crowded bed stays damp at the crown, and lingering dampness is what gets the rot started.",
+     "note_seasoned": "Generous spacing lets crowns and lower stems dry between rains; in a congested planting the base of each clump stays damp longest, which favors Botrytis and the soilborne rot fungi. It backs up drainage rather than substituting for it."
+    }
+   ]
+  }
+ ]
+}

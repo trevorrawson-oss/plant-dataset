@@ -1,0 +1,121 @@
+{
+ "pests": [
+  {
+   "id": "stalk-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "If a stem top wilts and you find a small hole lower down, cut that whole stem off an inch or two below the hole and throw it out, caterpillar and all. Then in fall, clear weeds and dead stalks from around the planting, because the moth's eggs spend the winter in that kind of debris.",
+     "note_seasoned": "Cut infested stems below the entry hole and destroy them; the larva tunnels up and down inside, so the cut has to land beneath it. Clearing weeds and old stalks at season's end removes the overwintering egg sites and lowers next year's pressure."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Spider mites (tiny sap-feeding pests, kin to spiders rather than insects) build up fastest on plants left to go dry in hot weather. Watering regularly so the soil does not swing bone dry is the first line of defense.",
+     "note_seasoned": "Keep soil moisture even through hot, dry spells; drought-stressed plants are the most vulnerable, and steady water removes the stress that lets populations climb."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard spray of water aimed at the undersides of the leaves, where the mites live, washes many of them off and breaks up their fine webbing. Do it in the morning so the leaves dry quickly.",
+     "note_seasoned": "Direct a forceful jet at the leaf undersides, the feeding surface where the light yellow stippling starts. Repeat during hot, dry stretches; early-day timing lets foliage dry before evening."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Predatory mites (helpful mites that eat the pest kind) usually do much of the work unseen. Holding off on sprays you do not truly need is what keeps them on the job.",
+     "note_seasoned": "Preserve predatory mites; staying off broad-spectrum materials is what conserves them, and their pressure is often part of why an outbreak stays minor."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap (a soap-based spray that kills soft pests it wets directly) is the next step if mites keep building. Coat the leaf undersides well, aim at foliage rather than open flowers since this plant is usually full of bees, and skip it during hot spells.",
+     "note_seasoned": "Treat at 7 to 10 day intervals with thorough underside coverage; it acts by contact, so what it misses survives. Keep it on the foliage and off the blooms and their visitors, and avoid applications on drought-stressed plants or in hot weather."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Ultrafine horticultural oil (a highly refined oil spray that smothers mites and their eggs) is the other option if soap has not held. Keep it off open flowers, and skip it in hot weather or when plants are dry-stressed.",
+     "note_seasoned": "Ultrafine oil at the same 7 to 10 day interval is the alternative soft material. Keep it off anything in flower except where the label allows an evening application after bees are done, and hold off in hot weather or on water-stressed plants."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "Aphids (small, soft-bodied insects that cluster on tender new shoots and suck sap) often need nothing more than a strong jet of water to knock them off. Spray in the morning so leaves dry fast, and repeat if they return.",
+     "note_seasoned": "Hose colonies off the tender growth; on bee balm this pest is usually minor, and a physical knock-back is often the whole job."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "The flowers on this plant draw in ladybugs, lacewings, and other helpers that eat aphids, and most of the time those helpers keep the clusters small on their own. Holding off on sprays protects them.",
+     "note_seasoned": "The predators bee balm's own flowers recruit generally hold aphids in check; conserving them by avoiding broad-spectrum materials is the core control here, not a garnish on it."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If clusters keep growing anyway, insecticidal soap (a soap spray that kills soft-bodied pests on contact) works when sprayed directly onto them. Treat just the infested shoots, not the flowers, to spare the bees working them.",
+     "note_seasoned": "For populations that build despite the predators, wet the colonies directly; low residue means returning beneficials are largely spared. Confine it to infested growth, keep it off the blooms, and skip it in hot weather or on drought-stressed plants."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Ultrafine horticultural oil (a refined oil spray that smothers soft pests) is the other choice if soap has not held. Keep it off open flowers entirely, and do not spray in hot weather.",
+     "note_seasoned": "Ultrafine oil is the alternative soft material if numbers keep climbing. Do not let it reach anything in flower except where the label allows an evening window, avoid heat in hot weather and water-stressed plants, and treat it as a spot rescue rather than a routine."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "The best move happens at buying time: choose a resistant variety (one bred to fight off mildew), such as 'Jacob Cline' or 'Marshall's Delight'. It matters more than anything you can spray later.",
+     "note_seasoned": "Cultivar choice is the strongest lever against this signature disease: 'Jacob Cline', 'Marshall's Delight', 'Raspberry Wine', and the Balmy series carry mildew resistance. If a planting whitens every year, replacing it beats fighting it."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Plant in full sun and give each clump generous room, because the white, powdery coating shows up worst where plants are crowded and the air stays humid and still. Dividing crowded clumps every 2 to 3 years keeps the airflow from closing up as they spread.",
+     "note_seasoned": "Full sun, wide spacing, and periodic division to reopen a congested clump all cut the humid, still air the fungus favors; crowding is one of the main drivers of how bad a season gets."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the leaves, and keep the soil evenly moist; plants stressed by drought get hit harder by mildew.",
+     "note_seasoned": "Base watering with even soil moisture serves double duty here: drought stress predisposes bee balm to mildew, so steady water at the roots and dry foliage are both part of the same habit."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "In fall, remove infected leaves and stems and throw them out rather than composting them, so the fungus has less to restart from next year.",
+     "note_seasoned": "Fall sanitation of infected debris reduces carryover; destroy what you cut and do not compost it."
+    }
+   ]
+  },
+  {
+   "id": "bee-balm-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Rust (a fungus that shows as orange to brown powdery spots on the undersides of leaves) is worse in damp, crowded plantings, so give plants room for air to move and leaves to dry. The same spacing that fights powdery mildew works against this one too.",
+     "note_seasoned": "Spacing, and the same division practices that limit powdery mildew, reduce the leaf wetness and crowding that favor the pustules; on this plant the two diseases share one layout answer."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the base of the plant instead of over the top, since wet leaves are what this disease likes best.",
+     "note_seasoned": "Base watering shortens the leaf-wetness periods that favor infection; combined with airflow it usually keeps this an occasional problem rather than a defining one."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off badly spotted leaves as you find them and throw them away rather than composting them.",
+     "note_seasoned": "Remove infected foliage during the season and clear debris at the end of it; sanitation of affected leaves is the direct in-season action the cultural steps do not cover."
+    }
+   ]
+  }
+ ]
+}

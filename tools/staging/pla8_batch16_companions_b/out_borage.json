@@ -1,0 +1,64 @@
+{
+ "pests": [
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A firm blast of water from the hose knocks aphids (tiny soft-bodied sap-sucking insects) off the tender tips and flower buds where they cluster. Do it early in the day so the leaves dry quickly, and repeat if they regroup.",
+     "note_seasoned": "A hard hose-jet on colonized shoot tips is often all the intervention a light colony needs on borage, which is seldom seriously bothered. Spray in the morning so foliage dries fast, and treat it as a knock-back that buys time for predators rather than an eradication."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Borage's nectar-rich flowers draw in ladybugs, hoverflies, and lacewings, and their young eat aphids. Light infestations often clear on their own, so wait and watch before spraying anything, and avoid sprays that would kill these helpers.",
+     "note_seasoned": "Conservation is the real control here: the planting recruits its own aphid predators (lady beetles, syrphid and lacewing larvae), which is why borage is sometimes grown deliberately as an insectary planting. Withhold broad-spectrum materials, let the resident predators work, and step in only if colonies keep building past what they hold down."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap (a mild spray that kills soft insects it wets directly) handles a stubborn cluster the water spray did not clear. Coat the aphids themselves, and spray only where you see them, since it also harms the soft-bodied helpers it touches.",
+     "note_seasoned": "Reserve soap for populations that keep building despite the predator pressure; the guidance frames it as the fallback, not the opener. It works by contact only, so coverage of colonized tips and buds decides the result, and it kills the syrphid and lacewing larvae it wets, so spot-treat rather than blanket a flowering plant."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant plenty of room and a spot in full sun. Powdery mildew (the white dusty film on leaves) builds where air sits still and plants crowd together, so open spacing and good light are the main defense.",
+     "note_seasoned": "Set the defense at planting: generous spacing, an open sunny site, and thinning where a stand has filled in. This disease builds in warm, humid, still, crowded plantings and worsens as summer heat and humidity climb, and airflow is the lever the guidance leans on rather than any spray."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the leaves. Keeping the foliage dry and the planting less humid gives the mildew less of the damp, still conditions it favors.",
+     "note_seasoned": "Base watering keeps canopy humidity down, which is what matters for a mildew that needs only humid, still air to get going. It supports the spacing and siting work rather than replacing it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off badly affected leaves as you see them, and clear spent plants at the end of the season. Removing the worst foliage slows the spread through the rest of the plant.",
+     "note_seasoned": "Remove heavily affected foliage promptly and clear the planting when it declines; the guidance manages this disease culturally, with removal named alongside spacing and base watering rather than a spray program."
+    }
+   ]
+  },
+  {
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant borage in soil that drains well, and go easy on the watering; it is a drought-tolerant plant that would rather run dry than sit wet. Cold, soggy, poorly drained ground is what rots the roots and the base of the stem.",
+     "note_seasoned": "This is a siting decision, not a treatment: keep borage out of heavy, water-retentive, low-lying beds, and let the soil dry before watering again. The rot shows up in cold, wet, poorly drained ground, and it reflects the plant's intolerance of waterlogging rather than any particular susceptibility."
+    },
+    {
+     "method": "sound_sowing_practice",
+     "note_beginner": "Sow into warm, well-drained soil and water lightly while seedlings come up. In cold, wet ground, young borage seedlings can rot and topple right at the soil line.",
+     "note_seasoned": "Damping-off is the seedling face of the same wet-soil problem, so it is prevented at sowing: wait for the seedbed to warm and drain, and water with restraint until the stand establishes. It is a prevention story; once seedlings collapse there is little to do but resow."
+    }
+   ]
+  }
+ ]
+}

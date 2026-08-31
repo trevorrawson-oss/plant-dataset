@@ -1,0 +1,79 @@
+{
+ "slug": "sweet-pea",
+ "name": "Sweet Pea",
+ "category": "Companion & Pollinator",
+ "pests": [
+  {
+   "name": "Aphids",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "Small soft insects that cluster on new shoots, buds, and leaf undersides, sucking sap and, more importantly, spreading virus diseases. Hose them off, use insecticidal soap, and encourage ladybugs and hoverflies.",
+   "note_seasoned": "The key pest of sweet pea: several species (pea aphid, potato aphid, others) colonize shoots and buds, and as vectors of enation mosaic and pea mosaic viruses they matter far beyond their direct feeding. Manage early with strong water sprays, insecticidal soap, or horticultural oil, and support natural enemies; heavy aphid pressure plus virus is a common cause of ruined plantings."
+  },
+  {
+   "name": "Thrips (including western flower thrips)",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "Tiny slivers that rasp leaves and flowers, leaving silvery flecks and distorted growth, and they spread spotted-wilt virus. Remove badly affected growth and treat with insecticidal soap or spinosad if numbers build.",
+   "note_seasoned": "Thrips scar foliage and blooms with silvery stippling and black specks and, as vectors of tomato spotted wilt and impatiens necrotic spot virus, seed serious virus problems. Monitor with the flowers, treat build-ups with insecticidal soap or spinosad, and rogue virus-symptomatic plants."
+  },
+  {
+   "name": "Spider mites",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_beginner": "Tiny mites that cause fine pale speckling and webbing on leaves in hot, dry weather. Spray plants with water and use insecticidal soap or horticultural oil if they build up.",
+   "note_seasoned": "Hot, dry, dusty conditions late in the season favor spider mites, which stipple and bronze the foliage and spin fine webbing. Base watering, raising humidity, and insecticidal soap or oil check them; they often coincide with the plant's heat decline."
+  },
+  {
+   "name": "Slugs and snails",
+   "audience": "seasoned",
+   "severity": "medium",
+   "note_beginner": "These chew ragged holes in leaves and can devour tender seedlings overnight in damp weather. Hand-pick at night, remove hiding places, or use iron-phosphate bait.",
+   "note_seasoned": "Slugs and snails are a real threat to young sweet peas, capable of stripping seedlings in a night during cool, damp spring weather. Reduce debris, hand-pick after dark, and use iron-phosphate bait around emerging or newly set plants."
+  },
+  {
+   "name": "Caterpillars and leafminers",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_beginner": "Various caterpillars chew leaves and buds, and leafminers make pale winding trails inside the leaves. Pick off caterpillars or use Bt, and remove mined leaves.",
+   "note_seasoned": "Foliage-feeding caterpillars (including corn earworm) and vegetable leafminers occasionally damage sweet pea leaves, buds, and flowers. Hand-pick or treat caterpillars with Bt or spinosad, and remove mined foliage; damage is usually cosmetic on a vigorous plant."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Powdery mildew",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "A white, powdery coating on leaves and stems, worst in warm weather and crowded, dry-rooted plantings, that yellows and shrivels foliage. Improve airflow, water at the base, and remove affected leaves.",
+   "note_seasoned": "Powdery mildew (Microsphaera / Erysiphe spp.) is the common late-season foliar disease, coating leaves with white growth and hastening decline as the weather warms. Manage culturally: space and support for airflow, keep roots moist but foliage dry, water early, and remove affected leaves; it often marks the end of the cool-season run."
+  },
+  {
+   "name": "Root, stem, and crown rots",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "Soilborne rots (in wet or reused soil) cause wilting, browning at the base, and collapse. There is no cure once established; avoid waterlogged soil, do not bury the crown, and rotate to fresh ground.",
+   "note_seasoned": "Rhizoctonia, Pythium, and Fusarium cause damping-off of seedlings and root, stem, and crown rot of older plants, with wilting, basal browning, and collapse, favored by wet, poorly drained, or legume-cropped soil. There is no rescue treatment: ensure drainage, avoid overwatering and burying the crown, use clean soil, and rotate off recent pea, bean, or sweet pea ground."
+  },
+  {
+   "name": "Mosaic and spotted-wilt viruses",
+   "audience": "core",
+   "severity": "medium",
+   "note_beginner": "Aphids and thrips spread viruses that mottle, streak, ring-spot, and distort leaves and flowers. There is no cure; control the insects and pull and destroy affected plants.",
+   "note_seasoned": "Aphid-borne mosaics (pea enation mosaic, pea mosaic) and thrip-borne spotted wilt (TSWV, INSV) cause mottling, ringspots, streaking, and distortion with no treatment. Management is vector control (aphids, thrips) plus prompt roguing of symptomatic plants; keeping sweet pea away from edible peas limits shared virus reservoirs."
+  },
+  {
+   "name": "Anthracnose and leaf spots",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_beginner": "Fungal spotting diseases cause whitish or dark lesions on leaves, shoots, and flower stalks, worse in wet weather. Use healthy seed and clean soil, improve airflow, and remove affected parts.",
+   "note_seasoned": "Anthracnose and several leaf-spot fungi lesion leaves, shoots, and flower stalks, spreading in wet conditions and sometimes carried on seed. Favor clean seed and soil, airflow, and base watering, and remove affected tissue; usually secondary to mildew and the rots on sweet pea."
+  },
+  {
+   "name": "Downy mildew",
+   "audience": "seasoned",
+   "severity": "low",
+   "note_beginner": "Grayish moldy growth on the undersides of leaves in cool, wet, humid spells, with yellowing above. Improve airflow, keep foliage dry, and remove affected leaves.",
+   "note_seasoned": "Downy mildew (Peronospora) produces grayish sporulation on leaf undersides with yellow blotching above under cool, damp, humid conditions. Cultural control (airflow, dry foliage, sanitation) is the mainstay; it is a minor, weather-driven problem relative to powdery mildew and the rots."
+  }
+ ]
+}
