@@ -210,6 +210,7 @@ COMMIT_FOR = {
     # PLA-8 BATCH 16: companions B; the Companion & Pollinator category closes; roster 68 -> 73.
     '213cb1108cd4960add0a0f9d3a2bd73aee4f1108d6fa743c6ce6075fd5cc6c2f': '234a088',
     '2a9d3c85dbb2da3ccbd69cd1798017d3ca8a3bb6280b8e212d5f63b86adef4af': 'b196251',
+    '2cde361bb3b8571576f94637e65d86f557a44e7807d97b2a94c02eb7c3715198': '9e46e0a',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
