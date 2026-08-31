@@ -211,6 +211,8 @@ COMMIT_FOR = {
     '213cb1108cd4960add0a0f9d3a2bd73aee4f1108d6fa743c6ce6075fd5cc6c2f': '234a088',
     '2a9d3c85dbb2da3ccbd69cd1798017d3ca8a3bb6280b8e212d5f63b86adef4af': 'b196251',
     '2cde361bb3b8571576f94637e65d86f557a44e7807d97b2a94c02eb7c3715198': '9e46e0a',
+    # PLA-8 BATCH 18: acid citrus, the first batch on the new ant_exclusion; roster 79 -> 81.
+    '514903dbaa59fa66d550fc88525d56dcdfe7150398f6f639e5b5905f1ddf85e4': 'f4355e3',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
