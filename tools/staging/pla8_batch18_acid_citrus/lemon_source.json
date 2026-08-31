@@ -1,0 +1,315 @@
+{
+ "slug": "lemon",
+ "name": "Lemon",
+ "category": "Citrus",
+ "pests": [
+  {
+   "name": "Scale insects",
+   "type": "insect",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/precautions-for-using-petroleum-oil-sprays/",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Look for small, immobile bumps along stems, leaf midribs, and the undersides of leaves: armored scales sit as hard gray to brown discs, while soft scales are rounder and often shiny. Soft scales excrete honeydew, so the first sign is frequently a sticky leaf surface and the black sooty mold that grows on it, sometimes with ants farming the colony. Heavy infestations cause yellow leaf blotches, leaf drop, and twig dieback.",
+   "symptoms_beginner": "Scale shows up as tiny crusty or waxy bumps stuck to twigs and the backs of leaves. They do not move, so they are easy to mistake for part of the bark. Some kinds leave the leaves sticky and a black film (sooty mold) grows on the stickiness.",
+   "cause_seasoned": "Several armored and soft scale species feed on citrus by sucking sap. Populations build on crowded, dusty, or ant-tended trees because ants protect scale from the natural predators and parasitic wasps that normally keep it in check.",
+   "cause_beginner": "Scale are sap-sucking insects. They build up fastest when ants are present, because ants chase off the helpful bugs that would otherwise eat the scale.",
+   "prevention_seasoned": "Keep trees unstressed and avoid dusty conditions. Control ant access to the canopy (a sticky band on the trunk helps) so resident predators and parasites can work. Inspect new nursery stock before planting, since scale often arrives on it.",
+   "prevention_beginner": "Keep ants out of the tree (a sticky band around the trunk works) so natural predators can do their job, and check any new tree for bumps before you plant it.",
+   "organic_treatment_seasoned": "Horticultural oil (narrow-range petroleum or neem) smothers scale and is the standard backyard control; thorough coverage of stems and leaf undersides matters most. Do not spray oil when temperatures exceed 95°F or the tree is drought-stressed, as oil can burn foliage under heat. Repeat as new crawlers appear.",
+   "organic_treatment_beginner": "Spray horticultural oil to coat the bumps, getting the undersides of leaves and the stems. Do not spray oil on a hot day (over about 95°F) or when the tree is dry and stressed, or it can burn the leaves."
+  },
+  {
+   "name": "Aphids",
+   "type": "insect",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/aphids/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Clusters of soft green, black, or yellowish insects on new flush, flower buds, and the undersides of tender leaves, which curl and distort toward the stem. As with scale, honeydew and sooty mold often appear, along with ants. Aphids are mainly a problem on young trees and on varieties that flush continuously.",
+   "symptoms_beginner": "Aphids are tiny soft insects, often green or black, packed onto new leaves and buds. The new growth curls up. You may also see stickiness, a black film, and ants.",
+   "cause_seasoned": "Several aphid species (spirea, black citrus, and cotton or melon aphid) colonize new growth. Beyond direct feeding, spirea, black, and cotton aphids can transmit citrus tristeza virus, though area-wide spread makes spray control for virus prevention ineffective in a backyard.",
+   "cause_beginner": "Aphids feed on the softest new growth. A few of them can also carry a citrus virus, but spraying one backyard tree does not stop that, so the reason to act is the feeding damage itself.",
+   "prevention_seasoned": "Avoid pushing excessive tender flush with heavy nitrogen, which aphids favor. Tolerate low numbers: natural enemies (ladybugs, lacewings, parasitic wasps) normally bring aphids fully under control within about six weeks, and numbers fall on their own as the flush hardens off.",
+   "prevention_beginner": "Do not over-fertilize, since lots of soft new growth invites aphids. Most of the time you can leave them alone: ladybugs and other helpers usually clean them up within about six weeks as the leaves toughen.",
+   "organic_treatment_seasoned": "A strong jet of water knocks colonies off tender shoots and is often enough. Insecticidal soap or horticultural oil handles heavier outbreaks on young trees; an insecticide is rarely warranted on an established tree.",
+   "organic_treatment_beginner": "Blast them off with a hose, or spray insecticidal soap if there are a lot. On an older tree you usually do not need to spray at all."
+  },
+  {
+   "name": "Citrus leafminer",
+   "type": "insect",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn74137.html",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Silvery, winding tunnels (mines) just under the surface of young leaves, with leaves curled and twisted around the larva's path. Damage is concentrated on new flush in summer and fall. On mature backyard trees the injury is cosmetic and rarely affects tree health or yield; young trees putting on framework growth are more meaningfully set back.",
+   "symptoms_beginner": "Leafminer makes shiny, squiggly trails inside new leaves, and the leaves curl and look distorted. It looks alarming but on an established tree it is mostly a cosmetic problem.",
+   "cause_seasoned": "The larva of a small moth (Phyllocnistis citrella) feeds between the leaf surfaces of tender new growth. It cannot mine hardened mature leaves, so the damage tracks each flush of soft foliage.",
+   "cause_beginner": "A tiny moth lays eggs on brand-new leaves, and the caterpillar tunnels inside them. It can only attack soft new leaves, not older tough ones.",
+   "prevention_seasoned": "Avoid pruning healthy foliage and avoid heavy nitrogen that triggers off-season flushes, since synchronizing growth limits the window of vulnerable leaves. Do not remove mined leaves that are still photosynthesizing; the tree still uses them. Pheromone traps help time and monitor populations.",
+   "prevention_beginner": "Do not over-prune or over-fertilize, because that pushes out tender new leaves for the moth to attack. Leave the damaged leaves on the tree, since they still feed it.",
+   "organic_treatment_seasoned": "On mature trees, no treatment is generally needed. For young trees, horticultural oil on emerging flush deters egg-laying and slows larvae; repeated application as each flush appears is required because oil is short-lived. Broad-spectrum insecticides are discouraged, as they disrupt the parasitic wasps that attack leafminer.",
+   "organic_treatment_beginner": "On an older tree, do nothing. On a young tree, you can coat the new growth with horticultural oil to discourage the moth, reapplying as fresh leaves appear. Avoid strong insecticides, which kill the helpful wasps."
+  },
+  {
+   "name": "Spider mites and citrus mites",
+   "type": "pest",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Fine stippling, bronzing, or a dull silvered cast on leaves and sometimes fruit, with faint webbing in heavy twospotted spider mite infestations. Citrus red mite is monitored February through May; twospotted spider mite can appear year-round and worsens in hot, dusty, water-stressed conditions.",
+   "symptoms_beginner": "Mites are almost too small to see, but they leave leaves looking dusty, speckled, or bronzed, and sometimes a fine webbing. They get worse when the tree is hot, dusty, and dry.",
+   "cause_seasoned": "Several mite species feed by puncturing leaf cells. Dust, drought stress, and the loss of predatory mites to broad-spectrum sprays all favor outbreaks.",
+   "cause_beginner": "Mites are tiny relatives of spiders that suck on leaves. Dust and a dry, stressed tree make them multiply.",
+   "prevention_seasoned": "Keep trees well watered and hose dust off foliage in dry spells. Preserve predatory mites by avoiding broad-spectrum insecticides, which often trigger worse secondary mite flare-ups.",
+   "prevention_beginner": "Water the tree properly and rinse dust off the leaves in dry weather. Avoid strong insecticides, which kill the good mites that eat the bad ones.",
+   "organic_treatment_seasoned": "A forceful water spray to the leaf undersides suppresses populations. Horticultural oil controls heavier infestations; observe the same heat and drought-stress cautions as for scale.",
+   "organic_treatment_beginner": "Spray the undersides of the leaves with water. For a bad case, use horticultural oil, but not on a hot day or a dry, stressed tree."
+  },
+  {
+   "name": "Mealybugs",
+   "type": "insect",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/citrus.html",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Soft, white, cottony masses tucked into leaf axils, fruit clusters, and the calyx end of fruit. Like soft scale and aphids, mealybugs produce honeydew, so sticky foliage and sooty mold are common. Heavy populations cause leaf yellowing and premature fruit drop.",
+   "symptoms_beginner": "Mealybugs look like little tufts of white cotton wedged where leaves meet stems and around the fruit. They leave the same stickiness and black film as aphids and scale.",
+   "cause_seasoned": "Mealybugs are sap-feeders that shelter in protected crevices and on fruit. As with scale, ant tending shields them from natural enemies and lets populations grow.",
+   "cause_beginner": "Mealybugs are sap-suckers that hide in tight spots on the tree. Ants protect them, so ant control matters here too.",
+   "prevention_seasoned": "Control ants, inspect new plants, and avoid the dense, unpruned, dusty conditions mealybugs prefer. Resident predators and parasites (including mealybug destroyer beetles) usually keep backyard numbers low.",
+   "prevention_beginner": "Keep ants out of the tree and check new plants for cottony patches. Natural predators usually handle the rest.",
+   "organic_treatment_seasoned": "Spot-treat colonies with a cotton swab or spray of insecticidal soap or horticultural oil, ensuring contact with the protected masses. Repeat applications are usually needed because the waxy coating sheds spray.",
+   "organic_treatment_beginner": "Dab or spray the cottony clumps with insecticidal soap or horticultural oil, and repeat, since their waxy coat sheds the spray."
+  },
+  {
+   "name": "Asian citrus psyllid (ACP)",
+   "type": "insect",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Tiny mottled-brown insects that feed on new flush at a characteristic 45-degree, tail-up angle, along with their waxy white tubule excretions and twisted, notched new leaves. The psyllid itself does limited feeding damage; its importance is entirely as the vector of Huanglongbing (citrus greening). It is a serious regional concern in Florida and parts of California, Texas, Arizona, and the Gulf states, and is absent or under quarantine in much of the rest of the country, so most backyard growers outside those areas will not encounter it.",
+   "symptoms_beginner": "The Asian citrus psyllid is a small brown insect that feeds on new growth with its back end tilted up in the air. By itself it does little harm. It matters because it spreads citrus greening, a fatal disease. It is a real problem in Florida and parts of California, Texas, Arizona, and the Gulf Coast, but it is absent from most of the country, so most home growers will never see it.",
+   "cause_seasoned": "The psyllid (Diaphorina citri) acquires the greening bacterium from infected trees and transmits it as it feeds on new flush of healthy ones. Movement of infested or infected plant material across regions spreads both insect and disease, which is why citrus is quarantined in affected states.",
+   "cause_beginner": "The psyllid picks up the greening germ from a sick tree and injects it into a healthy one while feeding. Moving citrus plants between regions spreads it, which is why some states restrict carrying citrus around.",
+   "prevention_seasoned": "Only in regions where ACP is present: buy certified disease-free trees, never move citrus plant material across quarantine boundaries, inspect new flush for psyllids, and report suspected finds to your county agricultural commissioner or extension office. Where ACP is absent, no action is needed beyond not importing citrus from quarantined areas.",
+   "prevention_beginner": "If you live where the psyllid is present, buy certified healthy trees, do not carry citrus plants in from other areas, and tell your local extension office if you think you see it. If you live where it is absent, just do not bring in citrus plants from quarantine areas.",
+   "organic_treatment_seasoned": "Backyard chemical control of ACP is of limited value and is best coordinated through regional area-wide programs rather than attempted tree by tree. The meaningful home action is early detection and reporting, plus removing confirmed greening-infected trees to protect the area.",
+   "organic_treatment_beginner": "Spraying your own tree does little against the psyllid. The useful thing you can do is spot it early, report it, and remove a tree confirmed to have greening so it does not infect others."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Phytophthora foot rot, root rot, and gummosis",
+   "type": "fungal",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132",
+    "ucr_citrus"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/DISEASE/phytogumm.html",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/CG009",
+     "verified": "2026-06-12"
+    },
+    "ucr_citrus": {
+     "url": "https://iocv.ucr.edu/citrus-diseases/fungal-diseases-citrus",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Oozing beads of gum on the lower trunk and crown (gummosis), dark, water-soaked or sunken bark near the soil line that later cracks and dries (foot rot), and a slow general decline with yellowing leaves and thin canopy when feeder roots are attacked (root rot). A telling sign is foliage that wilts and yellows but does not recover after watering, which separates it from ordinary water stress. Lemons are among the most susceptible citrus, and infection can extend up onto scaffold branches.",
+   "symptoms_beginner": "This water-mold disease shows up as sticky gum oozing from the lower trunk, dark soft bark near the ground, and a tree that slowly yellows and thins out. A key clue: the leaves wilt and yellow but do not perk up when you water, which tells you it is rot and not just dryness. Lemons catch it more easily than most citrus.",
+   "cause_seasoned": "Soil-dwelling Phytophthora species (water molds, not true fungi) release swimming zoospores under wet conditions that splash onto the trunk or are carried to roots in saturated soil. Disease is driven by poor drainage, soil or mulch piled against the trunk, a buried graft (bud) union, and overwatering, especially of young trees.",
+   "cause_beginner": "The disease lives in the soil and spreads in standing water. It takes hold when the ground stays soggy, when soil or mulch is piled against the trunk, or when the graft union (the knob low on the trunk where the top variety was joined to the roots) is buried. Overwatering young trees is the most common cause.",
+   "prevention_seasoned": "This is the single most important disease to design out at planting, and the practices already built into siting a lemon are the defense: plant high on a raised mound so the first roots are barely covered, keep the graft union well above the soil and mulch line (UF/IFAS advises more than six inches above the soil), provide sharp drainage, keep mulch pulled back a foot from the trunk, and never water the crown directly. Choosing a Phytophthora-tolerant rootstock adds further protection.",
+   "prevention_beginner": "Prevention is mostly about how you plant. Set the tree high on a little mound, keep the graft union and the soil line well apart (UF/IFAS says keep the union more than six inches above the soil), make sure water drains away fast, keep mulch a hand's width back from the trunk, and do not aim water at the base of the trunk. This is the most important disease to prevent up front.",
+   "organic_treatment_seasoned": "Correct the underlying water and soil problem first; recovery is impossible without it. For an active trunk canker, scrape away dark diseased bark down to a margin of healthy greenish bark and let it dry out; exposing a buried crown to air can halt spread. Severe root rot on an established tree is difficult to reverse, which is why prevention carries the weight.",
+   "organic_treatment_beginner": "First fix the drainage or overwatering, or nothing else will help. For a gummy spot on the trunk, you can carefully cut away the dark dead bark back to healthy bark and let it dry. A bad case in the roots is hard to cure, so prevention is what really matters."
+  },
+  {
+   "name": "Greasy spot",
+   "type": "fungal",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Yellow mottling on the upper leaf surface with corresponding greasy, olive-brown to black blisters on the underside, leading to premature leaf drop, most heavily on interior and lower canopy. It is primarily a problem in warm, humid regions such as Florida and the Gulf Coast and is uncommon in arid citrus areas like interior California and Arizona.",
+   "symptoms_beginner": "Greasy spot makes yellow blotches on top of the leaf and greasy dark patches underneath, and the tree drops those leaves early. It is mainly a humid-climate problem (Florida and the Gulf), and dry-climate growers rarely see it.",
+   "cause_seasoned": "A fungus (Zasmidium citri) whose spores develop on decomposing fallen leaves and infect during warm, humid, wet weather. The long warm rainy season of the Southeast drives the disease; dry summers suppress it.",
+   "cause_beginner": "A fungus that grows on old fallen leaves and spreads in warm, wet, humid weather. Dry summers keep it from getting started.",
+   "prevention_seasoned": "Rake up and remove fallen leaves to reduce the spore source, improve air movement through the canopy, and avoid overhead wetting of foliage. In high-pressure humid regions a copper fungicide timed to early summer is the standard preventive.",
+   "prevention_beginner": "Rake up and toss fallen leaves, since the fungus grows on them, and keep the inside of the tree open to air. In humid areas a copper spray in early summer helps prevent it.",
+   "organic_treatment_seasoned": "Copper fungicide is the accepted organic-compatible control where pressure warrants; sanitation of fallen leaves remains the foundation. No treatment is generally needed in dry climates.",
+   "organic_treatment_beginner": "A copper spray is the usual treatment where it is a real problem, along with cleaning up fallen leaves. In a dry climate you usually do not need to treat it at all."
+  },
+  {
+   "name": "Sooty mold",
+   "type": "fungal",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/citrus.html",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "A black, soot-like film coating leaves, twigs, and fruit. It does not infect plant tissue; it grows on the honeydew secreted by aphids, soft scale, mealybugs, and whitefly. Heavy coatings can shade leaves enough to reduce photosynthesis, and it dirties fruit, but it is a symptom of an insect problem rather than a disease of the tree.",
+   "symptoms_beginner": "Sooty mold is a black, dusty coating on leaves and fruit. It does not actually attack the tree. It grows on the sticky honeydew left by aphids, scale, mealybugs, or whitefly, so it is really a sign that one of those insects is present.",
+   "cause_seasoned": "The mold colonizes honeydew. Its presence points directly to a sap-sucking, honeydew-producing pest in the canopy, often tended by ants.",
+   "cause_beginner": "The black film feeds on insect honeydew, so finding it means you have one of the sticky-residue insects (aphids, scale, mealybugs, or whitefly) on the tree.",
+   "prevention_seasoned": "Control the honeydew-producing insect and the mold loses its food source. Managing ants, which protect those insects, is part of the same fix.",
+   "prevention_beginner": "Get rid of the insect making the honeydew and the black film has nothing to grow on. Controlling ants helps, since they protect those insects.",
+   "organic_treatment_seasoned": "Once the pest is controlled, existing mold weathers and flakes off over time; a wash with water or mild soapy water speeds removal from fruit and foliage. The mold itself needs no fungicide.",
+   "organic_treatment_beginner": "After you deal with the insect, the black film slowly washes and wears away on its own. You can rinse it off fruit and leaves with water or mild soapy water. It does not need a fungicide."
+  },
+  {
+   "name": "Citrus canker",
+   "type": "bacterial",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Raised, corky, tan lesions on leaves, fruit, and twigs, each typically ringed by a yellow halo and a water-soaked margin, often with premature leaf and fruit drop and blemished fruit. It is a regulated bacterial disease established in Florida and the Gulf region and is not a concern in most other citrus areas; lemons and limes are among the more susceptible hosts.",
+   "symptoms_beginner": "Canker makes raised, rough, corky spots with a yellow ring on leaves and fruit, and the tree may drop leaves and fruit early. It is a regulated disease found mainly in Florida and the Gulf, so most growers elsewhere do not have to worry about it. Lemons are one of the more easily affected types.",
+   "cause_seasoned": "The bacterium (Xanthomonas citri) is spread by wind-driven rain, contaminated tools, and movement of infected plant material; it enters through pores and wounds, and leafminer damage increases susceptibility. Warm, wet, windy weather drives outbreaks.",
+   "cause_beginner": "A bacterium spread by wind-blown rain, dirty tools, and moving infected plants. It gets in through tiny openings and wounds, and leafminer damage makes it worse. Warm, wet, windy weather helps it spread.",
+   "prevention_seasoned": "Where canker is present: plant resistant or tolerant types where available, avoid working the tree when wet, disinfect pruning tools, manage leafminer to reduce entry wounds, and use copper protectant sprays during the wet season. Never move citrus plant material out of a quarantined area.",
+   "prevention_beginner": "If you live where canker is present: choose tolerant types if you can, do not prune or handle the tree when it is wet, clean your tools, keep leafminer down, and use a copper spray in the wet season. Do not carry citrus plants out of a quarantine area.",
+   "organic_treatment_seasoned": "There is no cure for an infected tree; management is preventive and regulatory. Copper protectants reduce spread, and removing heavily infected material limits inoculum. Follow local regulatory guidance in affected regions.",
+   "organic_treatment_beginner": "There is no cure once a tree has it, so the focus is on preventing spread. Copper sprays slow it and removing badly infected parts helps. Follow your local rules if you are in an affected area."
+  },
+  {
+   "name": "Huanglongbing (HLB, citrus greening)",
+   "type": "bacterial",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uf_ifas_hs132",
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Asymmetric blotchy yellow mottling that crosses leaf veins unevenly, yellow shoots, twig dieback, and small, lopsided, poorly colored fruit that stays partly green and tastes bitter, with seeds often aborted. Decline is progressive and the disease is ultimately fatal to the tree. It is the disease that has devastated the Florida citrus industry and is the reason home citrus growing declined there. It is spread by the Asian citrus psyllid and is a regional concern in Florida and parts of California, Texas, Arizona, and the Gulf; it is absent from most of the country.",
+   "symptoms_beginner": "Greening causes blotchy yellow leaves (in an uneven pattern, not matching on both sides of the vein), dieback, and small lopsided fruit that stays green on one side and tastes bitter. There is no cure and it eventually kills the tree. It is the disease that wrecked Florida's citrus. It is carried by the Asian citrus psyllid and is a problem in Florida and parts of California, Texas, Arizona, and the Gulf, but most of the country does not have it.",
+   "cause_seasoned": "A bacterium (Candidatus Liberibacter species) that colonizes the tree's vascular system, transmitted by the Asian citrus psyllid (see the ACP pest entry) and by grafting infected material. Once a tree is infected there is no recovery.",
+   "cause_beginner": "A bacterium spread by the Asian citrus psyllid (see the psyllid entry under pests) and by grafting from infected trees. Once a tree has it, it cannot be cured.",
+   "prevention_seasoned": "Only relevant where the psyllid and disease are present: buy certified disease-free trees, control the psyllid through area-wide programs, inspect regularly, and promptly remove confirmed infected trees to protect surrounding trees. Where ACP is absent, the practical safeguard is not importing citrus from affected regions.",
+   "prevention_beginner": "This only matters where the psyllid lives. There, the steps are to buy certified healthy trees, help control the psyllid, check your tree often, and remove a tree that is confirmed infected so it does not spread. Elsewhere, just do not bring in citrus from affected areas.",
+   "organic_treatment_seasoned": "There is no treatment that cures HLB. Management is limited to vector control, sourcing clean stock, and removing infected trees. Research into tolerant varieties is ongoing but there is no home cure.",
+   "organic_treatment_beginner": "There is no cure. The only real responses are controlling the psyllid, starting with healthy trees, and removing an infected tree. Scientists are working on resistant types, but for now nothing cures it."
+  },
+  {
+   "name": "Iron and zinc deficiency (high-pH chlorosis)",
+   "type": "disease",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uf_ifas_hs132",
+    "tamu_agrilife"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Interveinal yellowing of leaves with the veins staying green, most pronounced on new growth: iron deficiency yellows the youngest leaves with a fine green vein network, while zinc deficiency produces blotchy yellowing with smaller, narrowed leaves. It is a disorder, not an infection, and is common on alkaline (high-pH) and calcareous soils where these micronutrients are chemically locked up.",
+   "symptoms_beginner": "The leaves turn yellow between the veins while the veins stay green, mostly on new growth. This is not a disease you catch; it means the tree cannot pull enough iron or zinc out of the soil. It is common in high-pH (alkaline) soils, which lock those nutrients away.",
+   "cause_seasoned": "On high-pH soils, iron and zinc become unavailable to the roots even when present in the soil. Lemons on alkaline or calcareous ground are especially prone, and overwatering or poor drainage worsens uptake.",
+   "cause_beginner": "In alkaline soil, iron and zinc are there but the tree cannot absorb them. Lemons in that kind of soil often run short, and soggy soil makes it worse.",
+   "prevention_seasoned": "Match expectations to soil: where soil is alkaline, plan on supplementing micronutrients rather than trying to acidify a whole landscape. Maintain good drainage and avoid overwatering, both of which impair root uptake. A citrus-formulated fertilizer that includes iron, zinc, and manganese heads off most cases.",
+   "prevention_beginner": "If your soil is alkaline, expect to feed the tree micronutrients rather than trying to change the whole soil. Keep it well drained and do not overwater. A fertilizer made for citrus that includes iron and zinc prevents most of this.",
+   "organic_treatment_seasoned": "Apply a citrus micronutrient fertilizer or a chelated iron and zinc product; chelated forms (especially EDDHA iron on high-pH soil) stay available longer than sulfate forms. Foliar micronutrient sprays give a faster but shorter-lived green-up. Correcting drainage supports the response.",
+   "organic_treatment_beginner": "Feed the tree a citrus micronutrient mix or a chelated iron and zinc product (chelated types last longer in alkaline soil). A spray on the leaves greens it up faster but does not last as long. Fixing drainage helps it work."
+  }
+ ]
+}

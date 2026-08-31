@@ -1,0 +1,288 @@
+{
+ "pests": [
+  {
+   "id": "asian-citrus-psyllid",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "The home step that counts is removal, not spraying. Watch the soft new growth (called flush) for the psyllid, and tell your county extension office or agricultural commissioner if you think you have found it. If a tree is confirmed to have greening, take it out so it stops supplying psyllids that carry the germ to trees around you. Destroy the wood where you are rather than hauling citrus material out of an area under quarantine, which is a legal restriction on moving citrus.",
+     "note_seasoned": "Treating one backyard tree does little against ACP, so detection and inoculum removal carry the weight. Scout each flush, report suspect finds to the county agricultural commissioner or extension office, and pull a tree once greening is confirmed rather than leaving it as a reservoir the vector draws from. Dispose of the material inside the quarantine boundary."
+    }
+   ]
+  },
+  {
+   "id": "citrus-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on fertilizer, and hold off on out-of-season pruning. Both push out extra soft new leaves (the flush), and soft new leaves are the only tissue this moth's young can tunnel into. Fewer, more even waves of growth mean a shorter window when the tree is open to it. Where citrus canker occurs, holding leafminer down matters more, because the tunnels give the canker bacteria a way in.",
+     "note_seasoned": "Restrained nitrogen and no off-season pruning keep flush synchronized, compressing the window of tender tissue larvae can mine; hardened leaves are unusable to them. Where canker is established the same restraint pays twice, since mines are entry wounds."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Let the small parasitic wasps that attack leafminer do their work: keep strong, broad-spectrum insecticides off the tree, since those take out the helpful insects along with the pest.",
+     "note_seasoned": "Parasitic wasps attack leafminer larvae, and broad-spectrum materials remove those wasps along with the target, so conservation is the operative reason to keep such products off citrus."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "On a mature tree the tunneling is mostly cosmetic and you can skip this. On a young tree, coat each wave of new leaves with horticultural oil as it emerges; it discourages the moth from laying and slows the larvae already inside. Oil is short-lived, so plan to repeat with every fresh flush.",
+     "note_seasoned": "A dilute horticultural oil, roughly one half to one percent, applied to emerging flush deters oviposition and impedes larval development; residual is brief, so coverage is renewed each flush. Mature trees seldom warrant treatment, the leaf injury being largely cosmetic on an established canopy."
+    }
+   ]
+  },
+  {
+   "id": "citrus-aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Do not overfeed the tree. Heavy fertilizer keeps pushing out soft new growth, and soft growth is what aphid colonies build on.",
+     "note_seasoned": "Excess nitrogen extends the supply of tender flush aphids colonize; restraint shortens the run of susceptible tissue rather than acting on the insects."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a firm jet from the hose, aimed at the crowded shoot tips and the undersides of new leaves. On a backyard tree this is often the whole job. Do it at a time of day when the leaves will dry.",
+     "note_seasoned": "A forceful water jet dislodges colonies from tender shoots and buys the natural enemies time; on an established tree it is frequently the only intervention needed. Time it so foliage dries, since prolonged leaf wetness favors foliar disease."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Low numbers are worth tolerating. Ladybugs, lacewings, and small parasitic wasps usually clear an aphid outbreak within a few weeks, about the time the new leaves toughen up and stop being worth eating.",
+     "note_seasoned": "Resident lady beetles, lacewings and parasitoids typically collapse a colony within a few weeks as the flush hardens off; conserving them is why broad-spectrum products stay off the tree."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If a young tree is still carrying heavy colonies after a hose-down, insecticidal soap sprayed straight onto them works. Spray for the feeding damage only: the brown citrus aphid can carry a citrus virus, but that virus moves across a whole area, so treating one backyard tree does not hold it back. Soap only kills what it wets, so aim at the clusters. An older tree rarely needs it.",
+     "note_seasoned": "Soap is contact-only and worth reaching for on young trees carrying heavy colonies after a water knock-back. Treat for feeding injury rather than for tristeza: area-wide movement of the virus makes single-tree suppression pointless for that purpose. Direct the application at the colonies to spare beneficials it would otherwise wet."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other option for a heavy outbreak on a young tree. It coats and smothers rather than acting as a poison, so coverage of the infested shoots is what decides the result. Keep it off a tree that is dry and stressed, and off the tree during a hot spell.",
+     "note_seasoned": "Oil is the alternative contact material for heavy flush infestations on young trees, working by coverage rather than toxicity; withhold it in hot weather and on a drought-stressed tree, where it turns phytotoxic. Spraying a mature tree is seldom warranted."
+    }
+   ]
+  },
+  {
+   "id": "scale-insects",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "ant_exclusion",
+     "note_beginner": "If ants are running up the trunk, deal with them before anything else. They farm the scale for its sugary waste (honeydew) and drive off the predators and parasitic wasps that would otherwise eat it. Wrap the trunk with heavy paper, duct tape, or fabric tree wrap and put the sticky barrier on that wrap rather than on bare bark, which the sticky material can injure. Then check that ants cannot walk around it: a branch resting on the ground, a wall, or a neighboring plant is a detour, so trim the low skirt of the tree back as part of the same job.",
+     "note_seasoned": "Ant tending is what holds scale above the level natural enemies would otherwise keep it at, so the trunk barrier precedes anything aimed at the insects themselves. Apply the sticky material over a collar of tree wrap, paper, or duct tape rather than to bare bark, and close the bypass routes in the same pass: skirt prune so no branch bridges to soil, a wall, or an adjacent plant, since ants simply route around a band they can walk past."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Scale is normally held down by predator insects and small parasitic wasps that already live in the tree. The way to keep that working is to keep broad, strong insecticides off it, since those take out the helpers along with the pest.",
+     "note_seasoned": "Predators and parasitoids regulate scale on citrus as long as they are left intact, so the operative choice is to keep broad-spectrum materials off the tree rather than to add anything to it."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil smothers scale and is the standard backyard treatment. Coverage is what matters: wet the stems and the undersides of the leaves, since a bump the spray misses survives. Hold off during hot weather and when the tree is dry and stressed, because oil applied then can scorch the foliage. Expect to repeat as the young mobile stages (crawlers) hatch out.",
+     "note_seasoned": "Oil works by smothering, so thorough coverage of stems and leaf undersides governs the result. Withhold it in hot weather and on drought-stressed trees to avoid phytotoxicity, and repeat against successive crawler emergence."
+    }
+   ]
+  },
+  {
+   "id": "citrus-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Water the tree steadily instead of letting it swing between soaked and bone dry. Mites build up fastest on a hot, dry, stressed tree, so consistent moisture is the first thing to fix.",
+     "note_seasoned": "Water stress is a principal driver of mite buildup, so steady soil moisture is the baseline; hot, dry spells are when populations climb."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Rinse the leaves with the hose during dry weather, and in an outbreak aim a firm spray at the undersides of the leaves. It washes off the dust mites thrive in and knocks the mites themselves down.",
+     "note_seasoned": "Overhead rinsing removes the dust that favors buildup, and a forceful jet directed at leaf undersides suppresses populations directly."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Predatory mites eat the pest mites, and strong broad-spectrum insecticides kill them. Skipping those sprays is what prevents the worse flare-up that follows once the predators are gone.",
+     "note_seasoned": "Predatory mites are the standing check; broad-spectrum insecticides remove them and are the usual trigger for a secondary mite flare-up."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "For a heavy infestation, horticultural oil is the treatment. Keep it off the tree in hot weather and when the tree is short of water and stressed, since oil applied then can scorch the leaves.",
+     "note_seasoned": "Oil handles a heavier mite infestation by contact and coverage rather than by residual activity; withhold it in hot weather and on a drought-stressed tree, where the risk of phytotoxicity rises."
+    }
+   ]
+  },
+  {
+   "id": "mealybugs",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "ant_exclusion",
+     "note_beginner": "Ants shelter mealybugs, so shutting the ants out of the canopy comes first. Collar the trunk with heavy paper, duct tape, or fabric tree wrap and apply the sticky barrier to that collar, not to bare bark, which it can damage. Ants will take any other route they can reach, so cut back the low branches that touch the ground, a wall, or another plant.",
+     "note_seasoned": "Ant tending is what lifts mealybug numbers past what resident natural enemies would allow, so the barrier is the opening move rather than a supplement. Band over a paper, tape, or fabric collar instead of bare bark, and take out the low branches that bridge to soil, walls, or adjacent plants; the band holds only while those routes stay closed."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "On a backyard tree, predators and parasitic wasps usually keep mealybug numbers low on their own, which is why this pest often needs no treatment at all. Leave them in place by keeping broad-spectrum insecticides off the tree.",
+     "note_seasoned": "Resident natural enemies generally hold backyard mealybug populations at a level that calls for no intervention; broad-spectrum materials remove those enemies along with the target, which is the reason to keep them off citrus."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For a few colonies, put insecticidal soap directly on the white cottony clumps, working into the leaf joints and around the fruit where they sit. A cotton swab reaches tight spots a spray runs past. Their waxy coating sheds liquid, so plan on repeating.",
+     "note_seasoned": "Soap has to contact the insect through its wax, so spot application, by swab where the crevice is tight, beats broadcast coverage; repeats are needed because the waxy secretion sheds the spray."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other material for the same job, and it is the easier choice when the cottony masses are spread through the fruit clusters rather than in a few spots. Coat them, repeat, and keep it off the tree in hot weather or when the tree is dry and stressed.",
+     "note_seasoned": "Oil is the alternative contact material, better suited where colonies are distributed through fruit clusters and leaf axils than to swab work; it needs the same repeat applications against the shedding wax, and it is withheld in hot weather and on a drought-stressed tree."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "phytophthora-foot-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "This one is prevented at planting far more than it is treated later. Set the tree high on a raised mound where water drains away fast, keep the graft union (the knobby joint low on the trunk where the fruiting variety was joined to the roots) well clear of the soil and the mulch, pull mulch back a hand's width from the trunk, and keep water off the trunk itself. Overwatering a young tree is the most common way this starts.",
+     "note_seasoned": "Site and irrigation design carry this disease. Plant high on a mound with sharp drainage, hold the graft union above the soil and mulch line, keep mulch pulled back from the trunk, and avoid wetting the crown; saturated soil is what lets the swimming spores reach bark and feeder roots. Correct the water problem first, since nothing else holds while the soil stays wet."
+    },
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "When you buy, ask for a tree grafted onto a rootstock (the root system the fruiting variety grows on) that resists foot rot. It does not replace good drainage, but it is protection you cannot add later.",
+     "note_seasoned": "A foot-rot-resistant rootstock adds standing protection where Phytophthora is present in the soil. It is chosen at purchase, complements the drainage work rather than substituting for it, and cannot be retrofitted."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "If gum is already oozing from a dark patch low on the trunk, cut the dark dead bark away until you reach healthy greenish bark all around the edge, then leave the spot open to dry. Uncovering a crown that had been buried can stop the spread. Damage down in the roots of an established tree is much harder to turn around, which is why the planting steps carry the weight.",
+     "note_seasoned": "Excise necrotic bark back to a margin of healthy green tissue and leave the wound to dry; exposing a buried crown to air can arrest an active trunk canker. Root-phase infection on a mature tree is largely irreversible, so the value here is confined to trunk and crown lesions."
+    }
+   ]
+  },
+  {
+   "id": "citrus-canker",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where canker is established, start with what you plant. Key lime is among the easiest citrus for it to infect, so a more tolerant type, where one is sold locally, is the cheapest protection available. Most of the country sits outside the canker regions and does not have to weigh this at all.",
+     "note_seasoned": "Cultivar tolerance is the highest-leverage choice against a regulated bacterial disease with no cure. UF/IFAS rates Key lime highly susceptible, so tolerant selections, where offered, are worth seeking in Florida and the Gulf; outside those regions the question does not arise."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Handle the tree only when it is dry. The bacteria ride in wind-driven rain and on wet leaves, so pruning, picking, or brushing past a wet canopy moves them from spot to spot.",
+     "note_seasoned": "The bacterium moves in wind-driven rain and on contact with wet tissue, so confining pruning and handling to dry conditions cuts the rate of spread. It slows an epidemic rather than clearing an established infection."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take out and destroy heavily spotted twigs, leaves, and fruit to lower the amount of bacteria in the tree, and clean your pruning tools between cuts so they do not carry it along. Destroy what you remove where you are: do not carry citrus prunings or plants out of an area under quarantine, which is a legal restriction on moving citrus material.",
+     "note_seasoned": "Removing heavily infected material lowers inoculum, and disinfecting tools between cuts closes a documented transmission route. Dispose of the material inside the quarantine boundary and follow local regulatory direction where the disease is under a containment or eradication program."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In canker areas, a copper spray on new growth through the wet season slows new infections. It is protective, so it will not clear a tree that already has canker. Copper is toxic to fish, accumulates in the soil, and can burn leaves at too high a rate, so follow the label and keep spray and runoff away from drains and waterways.",
+     "note_seasoned": "Copper protectants on expanding flush during the wet season reduce new infection; they do not eradicate established infection and the tree is not cured. Limit repeat use given soil accumulation and aquatic toxicity, and hold to the label rate to avoid phytotoxicity."
+    }
+   ]
+  },
+  {
+   "id": "lime-anthracnose",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Which lime you plant settles this one. Key lime is the susceptible side of the pair, and UF/IFAS reports that Persian lime, also sold as Tahiti lime, appears to be immune. In a warm humid area, growing Persian lime is the way around the problem.",
+     "note_seasoned": "Host choice governs here. UF/IFAS rates Key lime highly susceptible and reports Persian (Tahiti) lime appears to be immune, so cultivar selection rather than spraying is the decisive control in humid regions."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "If you are growing Key lime, give it full sun and open space so air moves through the canopy and the leaves and blossoms dry quickly. The fungus needs warm, wet, humid conditions to get going.",
+     "note_seasoned": "Full sun and free air movement shorten the wetness periods the fungus needs to infect blossoms and shoot tips; siting is set once and does most of the cultural work."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil, not the tree. Sprinklers that wet the leaves and flowers hand the fungus the film of water it needs to infect.",
+     "note_seasoned": "Direct irrigation to the root zone rather than overhead; foliar and blossom wetting supplies free moisture at the two tissues that get infected."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease off the fertilizer. Heavy feeding pushes out extra tender shoots and flowers, which are exactly the parts this fungus blights.",
+     "note_seasoned": "Restrained nitrogen limits the flushes of tender growth and off-cycle bloom the pathogen colonizes, narrowing the exposed surface rather than protecting it."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "On a Key lime where this keeps costing you fruit, a copper fungicide timed to new growth and bloom is the accepted treatment. A Persian lime does not need treating for it. Copper harms fish and builds up in the soil, so follow the label and keep spray and runoff out of drains and waterways.",
+     "note_seasoned": "Copper timed to protect flush and bloom is the accepted control on Key lime where pressure warrants; it is preventive, so landing it on the susceptible stage is what makes it work. Persian lime requires no program. Observe copper's soil accumulation and aquatic toxicity limits."
+    }
+   ]
+  },
+  {
+   "id": "huanglongbing",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with a tree from a certified disease-free source. The bacteria travel in the plant itself, so a grafted tree from an uncertified source can arrive already infected, and there is no cure once it is inside the tree. If you live outside the areas that have greening, the thing to do is avoid bringing citrus in from areas that do, which is what the quarantines, the legal restrictions on moving citrus, exist to prevent.",
+     "note_seasoned": "Certified clean nursery stock is the primary safeguard, since the pathogen moves in propagation material as readily as in the psyllid. Outside the affected regions the practical control is not importing citrus from them; inside them it is certified stock plus area-wide vector suppression, which is the psyllid entry's subject."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Once a tree is confirmed infected, taking it out is the responsible move: it cannot be cured, and it becomes a source the psyllid feeds on and carries to trees nearby. Key lime is reported to hold up somewhat better than some citrus, but an infected tree still declines. Report a suspected case to your county extension office or agricultural commissioner, follow the direction they give, and dispose of the wood the way local rules allow rather than moving it.",
+     "note_seasoned": "Prompt removal of a confirmed infected tree is inoculum removal, not treatment: the tree is a reservoir the vector draws from. Key lime is described as moderately tolerant, but decline is progressive and there is no recovery. Confirm through the county extension or agricultural commissioner, follow the regulatory direction, and dispose of material within any quarantine boundary."
+    }
+   ]
+  },
+  {
+   "id": "greasy-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake the fallen leaves out from under the tree and get rid of them. The fungus makes its spores on old leaves rotting on the ground, so clearing them cuts the supply that reinfects the canopy.",
+     "note_seasoned": "Spores develop on decomposing leaf litter, so raking and removing fallen leaves reduces the inoculum reaching the canopy; it is the foundation any spray sits on."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Open the inside of the tree so air moves through it. The disease hits the shaded, crowded inner and lower leaves hardest, where foliage stays damp longest.",
+     "note_seasoned": "Damage concentrates in the interior and lower canopy where drying is slowest, so opening the canopy targets the microclimate the fungus depends on."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the ground rather than the canopy. The fungus infects during warm, wet, humid stretches, and overhead watering adds to that on top of whatever rain falls.",
+     "note_seasoned": "Avoid overhead wetting: infection requires warm humid wetness, and irrigation is the portion of that you control."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "In Florida and the Gulf, where this is a real problem, one or two copper sprays in early summer, sometimes mixed with horticultural oil, are the standard prevention. In a dry climate you can usually skip it. Copper is toxic to fish and accumulates in the soil, so keep it out of drains and waterways and follow the label.",
+     "note_seasoned": "One or two well-timed early summer applications of copper, alone or tank-mixed with horticultural oil, are the accepted control in high-pressure humid regions; the material is protective, so timing precedes symptom expression. Arid-region trees seldom need any spray. Mind copper's soil accumulation and aquatic toxicity."
+    }
+   ]
+  },
+  {
+   "id": "postbloom-fruit-drop",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the tree full sun and room for air to move. The fungus infects open flowers during humid, rainy weather, so anything that dries the blossoms faster cuts into what it can do.",
+     "note_seasoned": "Full sun and canopy air movement shorten blossom wetness, which is the limiting condition for infection of open flowers."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Do not run sprinklers over a tree in bloom. Wetting the open flowers is the one part of the wet weather you control.",
+     "note_seasoned": "Overhead irrigation during bloom supplies free water on the petals, which is where infection starts; keep water at the root zone through flowering."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease off the fertilizer. Limes already bloom over and over through the warm months, and heavy feeding pushes out still more off-season flowers, each one another target during a wet spell.",
+     "note_seasoned": "Excess nitrogen extends off-cycle bloom, multiplying the exposed flowers that coincide with rain events; restraint narrows the exposure rather than protecting an individual bloom."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Where this disease is established and the tree blooms into rainy weather, a copper spray timed to bloom is the usual protection. In a dry climate you will probably not need it at all. Copper harms fish and builds up in the soil, so follow the label and keep spray and runoff away from drains and waterways.",
+     "note_seasoned": "Copper timed to bloom during rainy spells is the control where the disease is established; it is preventive and stage-specific, so the application has to be on the open flowers ahead of the wet period. Largely a humid-region concern. Observe the soil accumulation and aquatic toxicity limits."
+    }
+   ]
+  }
+ ]
+}
