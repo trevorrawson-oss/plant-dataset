@@ -1,0 +1,168 @@
+{
+ "pests": [
+  {
+   "id": "cherry-fruit-fly",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Gather and destroy the cherries that drop, wormy ones included, before the maggots (the small white grubs inside) can crawl out into the soil. Each grub that reaches the ground turns into a fly the following spring, so a clean tree floor is the step that pays you back year after year.",
+     "note_seasoned": "Larvae that leave dropped fruit pupate in the soil and emerge as the next season's adults, so gathering and destroying drops is what actually lowers next season's population. With one generation a year, a single well-tended backyard tree can hold pressure very low."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick the tree clean as the fruit ripens instead of letting the last cherries hang. Green fruit is not at risk, so the job starts when the cherries begin to color, and anything left past that point is where the grubs finish growing.",
+     "note_seasoned": "Egg laying tracks the color change, so a prompt and thorough harvest lifts infested fruit off the tree before larvae mature and drop. A tail of late fruit left hanging undoes the sanitation done underneath it."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Hang a yellow sticky trap (a bright card coated in glue) in the tree from mid-spring. It will not control the flies by itself, but it tells you the day they show up, which is what any organic spray timing would hang on. Once a maggot is inside a cherry, nothing you spray reaches it, so cleanup and picking are what actually protect this crop.",
+     "note_seasoned": "Traps hung from mid-spring give a first-catch date, the reference point an organic material would be timed from a few days later. Treat them as monitoring: there is no rescue for larvae already in the fruit, so the working backyard controls here are sanitation and harvest timing."
+    }
+   ]
+  },
+  {
+   "id": "spotted-wing-drosophila",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick every two or three days once the cherries start ripening, and get the fruit into the refrigerator soon after, since cold stops the tiny white maggots (grubs) inside. Ripe fruit left hanging is what this fly breeds in, so a tight picking schedule is the main control you have.",
+     "note_seasoned": "Harvest on a two to three day interval through ripening and chill immediately, since refrigeration arrests larval development in picked fruit. A generation can close in about a week, so pressure climbs steeply the longer ripe fruit hangs, and picking interval carries more weight here than on any other cherry pest."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off any overripe, damaged, or fallen cherries and dispose of them rather than leaving them under the tree. This fly feeds on plenty of other yard and wild plants too, so clearing dropped fruit across the whole yard helps more than tidying one tree.",
+     "note_seasoned": "Culls, overripe fruit, and drops are breeding substrate; removing them lowers local pressure. The fly uses many wild and garden hosts, so yard-scale sanitation counts for more than tree-scale, and unattended fruit nearby keeps reseeding the population."
+    },
+    {
+     "method": "swd_monitoring_traps",
+     "note_beginner": "A cup of apple cider vinegar hung near the fruit catches these flies and tells you they have arrived. It tracks activity rather than protecting the crop, so a catch is a signal to tighten your picking schedule, not a reason to reach for a spray.",
+     "note_seasoned": "Apple cider vinegar traps track adult activity and time the harvest and exclusion steps around it. They are detection rather than control, and the response to a positive catch is a shorter picking interval and sealed netting."
+    },
+    {
+     "method": "swd_exclusion_netting",
+     "note_beginner": "Fine mesh netting over the tree keeps the flies off the fruit. It has to be genuinely fine, since this is a small vinegar fly, and closed at the edges so nothing slips in underneath. Put it up before the fruit ripens rather than after.",
+     "note_seasoned": "Fine no-see-um-grade mesh sealed at every edge excludes adults from the canopy, and it is one of the two practical backyard tools alongside clean picking. Installed after ripening is underway it can shut flies in with the crop instead of out."
+    }
+   ]
+  },
+  {
+   "id": "black-cherry-aphid",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on fertilizer, especially high-nitrogen feed. It pushes out the soft, sappy new growth these aphids multiply on, so a moderately fed tree gives them less to work with.",
+     "note_seasoned": "Nitrogen-driven flush is what the spring colonies build on, so keeping a tree vigorous without forcing succulent growth lowers the peak. This is a feeding habit set ahead of the season rather than a response during it."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet from the hose, aimed at the shoot tips where they cluster. It costs nothing and it spares the ladybugs. Do it early in the day so the leaves dry off quickly.",
+     "note_seasoned": "A forceful water jet dislodges colonies from the tender tips without touching the predator complex; repeat as they rebuild on new flush. Most worth the trouble on a heavily hit young tree, where shoot growth is what is at stake."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Often the best move is to leave it alone. Ladybugs, lacewings, and other helpers usually clear this aphid by midsummer as the shoots toughen, and the curled spring leaves rarely cost you cherries. Protect those helpers by keeping broad-spectrum insecticides off the tree.",
+     "note_seasoned": "Resident natural enemies plus hardening shoots collapse the population by midsummer without intervention, and the early curl is largely cosmetic as far as the crop goes. Conserving that predator complex is the control here, so a broad-spectrum material is the wrong tool for a problem that resolves itself."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If a young tree is badly hit and the hose is not keeping up, spray insecticidal soap straight onto the curled tips. It only kills what it wets, so open the curl as best you can and cover the colonies. Skip it on a dry, stressed tree or above 90°F, since it can burn foliage.",
+     "note_seasoned": "Contact soap works on the colonies it wets, so coverage inside the curled tip is the limiting factor; it also kills soft-bodied beneficials it hits directly, which argues for spot treatment over a whole-tree spray. Avoid it on water-stressed trees and above 90°F."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other option for the curled tips, and a dormant oil spray in late winter cuts back the eggs that overwinter on the tree, which is worth doing where this aphid shows up most years. Do not use oil above 90°F or on a dry, stressed tree, and keep it well apart from any sulfur spray.",
+     "note_seasoned": "Oil smothers exposed colonies in season, and a late-winter dormant application acts on the overwintering egg stage, the better lever where pressure is chronic. Observe the heat and water-stress limits, and leave 2 weeks between oil and sulfur."
+    }
+   ]
+  },
+  {
+   "id": "birds",
+   "type": "vertebrate",
+   "control_ladder": [
+    {
+     "method": "bird_scare_deterrents",
+     "note_beginner": "Reflective tape and scare balloons can push birds off for a short while and cost little to try. Birds get used to them fairly fast, so move the devices around, swap types, and treat this as a stopgap rather than the thing that saves the crop.",
+     "note_seasoned": "Visual deterrents buy short-term relief before habituation sets in; rotate and reposition them weekly, and treat them as a supplement to exclusion rather than a substitute for it."
+    },
+    {
+     "method": "bird_netting",
+     "note_beginner": "Fine bird netting over the whole tree is what reliably works. Put it on as the cherries start to color, before the birds find the tree, and tuck the bottom edge in so they cannot get underneath. A sour cherry is naturally a small tree, and a dwarf such as North Star is smaller still, so covering one is manageable.",
+     "note_seasoned": "Draping fine netting over the canopy at first color with the skirt secured at the bottom is the exclusion that holds; robins, starlings, waxwings, and jays can strip an open tree in a day or two. Sour cherry's small stature, or a dwarf like North Star, makes whole-canopy netting practical in a way it is not on a full-size sweet cherry."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "cherry-leaf-spot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up the fallen leaves in autumn and destroy them. The fungus waits out the winter in that leaf litter, so clearing it does more for this disease than any other step a home grower can take.",
+     "note_seasoned": "Blumeriella jaapii overwinters in fallen leaves, so autumn removal and destruction strips out the primary inoculum before spring. On a highly susceptible sour cherry this is the foundation, since midsummer defoliation costs fruit quality, winter hardiness, and next year's bloom."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune the tree open so air moves through it and the leaves dry quickly after rain. Infection needs warm, wet foliage, so a canopy that dries fast picks up less of it.",
+     "note_seasoned": "An open canopy shortens leaf wetness and damps the repeat infection cycles that drive midsummer defoliation. It matters most through a wet spring and on Montmorency, which sheds leaves after only a few lesions."
+    }
+   ]
+  },
+  {
+   "id": "brown-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off and destroy the dried, shriveled fruit (mummies) still clinging to the tree over winter, and pick up the ones on the ground. They hold the spores that start the next round. During the season, pull any cherry that begins to rot as soon as you spot it.",
+     "note_seasoned": "Mummies on the tree and on the ground carry Monilinia through winter and feed the bloom infections that later seed the fruit rot, so year-round removal is the core control. In season, culling rotting fruit on sight limits the spread that can take a crop within days in warm, humid weather."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune so the tree stays open and the fruit dries fast after rain. Warm, wet conditions are what let a single brown spot swallow a whole cherry in a day or two.",
+     "note_seasoned": "An open canopy shortens post-rain drying on the fruit itself, which is the condition that drives rapid lesion expansion. It is the cultural lever with the most effect during the ripening window."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick on time and handle the cherries gently. Fruit left hanging past ripeness and any bruise or split gives the fungus an opening, so a prompt, careful harvest keeps losses down.",
+     "note_seasoned": "Harvest promptly and handle gently: wounds, rain cracks above all, are entry points, and fruit held past ripeness in warm, humid weather rots first. Prompt picking also lifts out the culls that would otherwise seed the fruit beside them."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Cut out the gummy dead twig patches (cankers), taking the cut back into clean wood well below the damage, and destroy what you remove. Those patches hold spores the same way the mummies do.",
+     "note_seasoned": "Twig cankers formed where a blossom infection ran back into the spur are an overwintering reservoir alongside the mummies; cut well beyond the visible margin into sound wood and destroy the prunings. Disinfecting shears between cuts is sensible, though where you place the cut matters more."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-canker",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant the tree where water drains away well. Soggy ground is one of the stresses that opens the door to this disease, and picking the right spot is far easier than fixing a wet one later. Nothing on the market clears this bacterium out of a tree it has taken hold in, so the work that counts happens before planting.",
+     "note_seasoned": "Poor drainage is one of the named stress factors behind canker severity, so siting on well-drained ground is a plant-once decision that lowers exposure for the life of the tree. No material on offer eradicates the bacterium from wood it has colonized, so the site decisions taken before planting carry more weight than any intervention available afterward."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A young tree that is badly cankered is not likely to come back. Taking it out and destroying it, rather than leaving it standing beside healthy trees, is the honest call once the trunk and main limbs are involved.",
+     "note_seasoned": "Removing and destroying a badly infected young tree caps the loss and takes a bacterial reservoir out of the planting. Sour cherry tolerates this disease better than sweet cherry does, but a young or stressed tree can still be killed by it."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Cut cankered wood out well below the sunken, gummy patch, back into healthy wood, and do it in dry summer weather rather than a wet spring, since the bacteria move in cool, wet conditions and enter through fresh cuts. Clean your pruning tools between cuts, and avoid needless wounds to the trunk while you work.",
+     "note_seasoned": "Excise cankered wood well below the visible margin during dry summer weather; cool, wet spring conditions favor infection through fresh wounds, so timing the cut is part of the control rather than a detail. Disinfect between cuts, and leave the trunk unwounded wherever the work allows."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Copper gives partial protection at best and cures nothing already in the wood, so treat it as a supplement to the steps above. Copper is toxic to fish, builds up in the soil over the years, and burns foliage if overdone, so keep to the label rate and use it sparingly. Read the active ingredient rather than the brand name, since the different copper compounds carry different hazard ratings.",
+     "note_seasoned": "Copper offers only partial protection and does nothing for wood that is already colonized, so its role is limited protectant cover on a tree whose real defenses are siting, low stress, and dry-season pruning. It accumulates at the soil surface and is highly toxic to aquatic life, and the acute hazard band runs from Low to the DANGER band by compound, so read the active ingredient."
+    }
+   ]
+  }
+ ]
+}

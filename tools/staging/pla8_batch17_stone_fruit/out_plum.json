@@ -1,0 +1,158 @@
+{
+ "pests": [
+  {
+   "id": "plum-curculio",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start here: pick up every dropped plum promptly and get it out of the garden, because the grub inside finishes growing in the soil under the tree. On a cool early morning, when the beetles are sluggish, spread a sheet under the branches, tap them so the beetles fall, and destroy what lands. Keeping the ground clear all season means fewer beetles the following year.",
+     "note_seasoned": "Season-long removal of drops denies larvae the soil beneath the canopy, and the effect compounds year over year, which is why sanitation is the backbone rather than a supplement. Jarring limbs over a sheet at first light, while adults are still cold enough to drop instead of fly, physically strips the population that petal fall released."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Kaolin clay is a fine white mineral you mix with water and spray on, leaving a coating the beetles do not want to walk on. Start at petal fall, the moment they begin working the young fruit, and reapply through the season as the fruit expands and rain washes the film thin.",
+     "note_seasoned": "Kaolin from petal fall is the organic deterrent this crop's guidance names, and it works as a particle barrier, so unbroken coverage on expanding fruit is what carries it. Heavy use can flare San Jose scale and mites, worth weighing on a tree that already carries scale."
+    }
+   ]
+  },
+  {
+   "id": "plum-aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen feeding in spring. Rich feeding pushes out soft new shoots, and that tender growth is what these aphids multiply fastest on.",
+     "note_seasoned": "Restraining spring nitrogen limits the succulent flush that drives colony buildup at the shoot tips. It is a feeding habit set before the aphids arrive rather than a response once they have."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Knock the colonies off with a strong jet of water from the hose, aimed up into the curled shoot tips where they hide. Do it early in the day so the leaves dry quickly.",
+     "note_seasoned": "A forceful jet dislodges colonies on sturdy wood without the collateral a broad spray carries. Tightly rolled leaves shelter some of them, so expect to repeat as colonies rebuild, and spray early enough that foliage dries, since long leaf wetness favors disease."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings, hoverfly larvae, and tiny parasitic wasps usually clean up plum aphids by early summer on their own, so the most useful thing you can do is skip the harsh insecticides that kill those helpers along with the aphids. Ants farm aphids for their sugary honeydew and chase the helpers off, so keeping ants off the trunk protects your allies.",
+     "note_seasoned": "Resident natural enemies typically bring both aphid species down by early summer, so conservation is the working control: decline broad-spectrum material, and deny ants access to the colonies they tend and defend."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "For a heavy infestation, spray insecticidal soap straight onto the aphids in the curled shoots. It kills only what it wets, so unroll the tips and coat them. Skip it on a dry, stressed tree or above 90°F, since it can burn leaves.",
+     "note_seasoned": "Contact soap suits a heavy pocket the softer steps have not held, and the rolled leaf is the practical limit, since it shields aphids from coverage. It also kills soft-bodied beneficials it directly wets, so treat only the infested shoots, and avoid water-stressed trees or temperatures above 90°F."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "A narrow-range horticultural oil helps two ways: on the curled shoots in season, and, more usefully, as a dormant or delayed-dormant spray in late fall or winter that smothers the eggs waiting near the buds. Where aphids return every year, that dormant timing is the strongest single step. Do not use oil above 90°F or on a drought-stressed tree, and keep it two weeks clear of any sulfur spray.",
+     "note_seasoned": "In-season oil gives contact control on exposed colonies; the delayed-dormant application is the higher-value use, taking the overwintering eggs before the spring flush rather than chasing colonies after it. Observe the oil constraints: not above 90°F, not on stressed trees, and not within two weeks of sulfur."
+    }
+   ]
+  },
+  {
+   "id": "peachtree-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear the grass and weeds away from the bottom of the trunk so the soil line stays in plain view, and look it over once a year in late summer for fresh gummy ooze. Keep mowers and string trimmers off the bark down there, since the wounds they leave are what draws the egg-laying moths.",
+     "note_seasoned": "A clear, open crown is both a scouting surface and one less shelter at the trunk base, so give the soil line a late-summer inspection for new gum and frass. Mechanical injury gives egg-laying females the wounded bark they favor, so keep machinery off the lower trunk and keep the tree vigorous."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "Once the larvae are tunneling under the bark, no spray reaches them, so this is the backyard fix. In late summer or fall, scrape the soil back from the base, spot each entry hole by the gum and the frass, which is the wet, sawdust-like droppings, push a thin stiff wire into it to kill the larva inside, then smooth the soil back.",
+     "note_seasoned": "Worming out the larvae by hand is the practical home control at and just below the soil line, where the tunnels run in the inner bark and no rescue material follows them. Work the exposed crown in late summer or fall, follow each gum-and-frass entry, and probe with stiff wire. A few borers can girdle a young trunk in one season, so the labor is well spent there."
+    }
+   ]
+  },
+  {
+   "id": "san-jose-scale",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Prune out the twigs and branches that are heavily crusted with scale and destroy what you cut rather than leaving the wood by the tree. That takes out the densest colonies in one pass. Give any new tree a close look before you plant it, since scale often hitches a ride in on nursery stock.",
+     "note_seasoned": "Removing and destroying encrusted wood strips the settled population where it is thickest and lowers the crawler load that spreads along the branches. Inspect incoming nursery stock as well, which is a common way an infestation arrives in the first place."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Tiny parasitic wasps and predatory beetles feed on scale and hold light infestations down on their own. Broad insecticides wipe those helpers out, so leaving them undisturbed is a control in itself.",
+     "note_seasoned": "Resident parasitoids and predatory beetles suppress light populations, and the mobile crawler stage is the window they exploit, since a settled scale sits under an armored cover. Avoiding broad-spectrum material is therefore part of holding the population, not merely a courtesy to the garden."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "This is the main home control: in late winter, while the tree is bare, spray horticultural oil so it wets every bit of bark on the twigs and branches. The oil smothers the scales under their shells, so coverage is the whole job. Do not spray oil on a drought-stressed tree, above 90°F, or within two weeks of a sulfur spray.",
+     "note_seasoned": "A thorough dormant or delayed-dormant oil applied to run-off over all bark is the mainstay here: the armored cover blocks most contact material, so the result rides entirely on wetting the shell. Repeat it in seasons following an infestation rather than waiting for encrustation to rebuild. Keep the oil constraints in view: not above 90°F, not on stressed trees, not within two weeks of sulfur."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "black-knot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Some plum varieties shrug this off better than others, so ask which one you are buying before the tree goes in the ground. It lowers the trouble, but it does not take the place of cutting the knots out each winter.",
+     "note_seasoned": "Cultivar susceptibility varies, so a less-susceptible selection lowers the pressure a tree carries for its whole life. It is a planting-time choice that supports the annual pruning habit rather than substituting for it."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Look past your own tree. Wild plums, chokecherries, and neglected ornamental plums and cherries in the neighborhood carry the same fungus and keep re-seeding your tree with spores each spring, so removing or cleaning up the ones within reach matters as much as pruning your own.",
+     "note_seasoned": "The nearby reservoir governs how much pressure the tree sees: wild and neglected Prunus hold galls that shed spores into the same cool, wet spring weather your tree is pushing green shoots in. Clearing that reservoir within range is what lets annual knot removal actually hold."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "This is the fix, and the timing carries it: cut the knots out in late winter, with the tree still bare and before spring growth resumes. Place each cut into clean wood 3 to 4 inches beyond the lump you can see, because the fungus runs farther along the branch than the swelling shows. Then get the prunings out of the yard, by burning, bagging, or burying them, and disinfect the blades between cuts, for which rubbing alcohol works.",
+     "note_seasoned": "Dormant removal ahead of spring growth, before about April 1, is the core control. Take each cut 3 to 4 inches into clean wood past the gall, since colonized tissue extends beyond what is swollen, and carry the prunings off site rather than piling them nearby. Disinfect between cuts, and where a scaffold is too valuable to lose, excise the gall back to healthy wood instead of taking the limb."
+    }
+   ]
+  },
+  {
+   "id": "brown-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cleanup is the core of it. Take every shriveled, dried fruit, called a mummy, off the tree and off the ground, and clear away the dropped and thinned fruit too. Mummies are where the fungus waits out the winter, so leaving them hanging sets up next year's rot. Pick and dispose of any plum you see rotting as soon as you spot it.",
+     "note_seasoned": "Mummies in the canopy and on the ground are the primary overwintering inoculum, so stripping them at dormancy and clearing drops and thinnings through the season removes what would otherwise meet bloom. In season, pull rotting fruit before the dusty tan spore mass develops and seeds the fruit around it."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune the tree so it is open and air moves through it. This rot runs on wet fruit, so a canopy that dries fast after rain gives it much less to work with.",
+     "note_seasoned": "An open canopy shortens the wetting period on fruit after rain, which is the variable that decides how fast warm, humid weather turns a spot into a rotted plum."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick the plums as they come ready instead of letting them hang, handle them gently so the skins do not break, and chill them soon after picking. Any nick or split in the skin is a way in for the rot.",
+     "note_seasoned": "Harvesting on time removes fruit before the ripe phase the pathogen exploits, and gentle handling protects the skin, since any break, whether a curculio scar, hail, or a growth crack, is an infection court. Cooling soon after picking slows what may already be underway."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Cut out the small gummy dead patches on the twigs, the ones left where the disease ran back from an infected blossom, and destroy what you remove. Those patches hold spores over winter alongside the mummies.",
+     "note_seasoned": "Twig cankers formed where blossom infections ran back into the wood are the second overwintering site, so excise them into clean wood and destroy the prunings, leaving next spring's bloom less inoculum to meet."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-spot-pruni",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "This one is mostly decided before you plant. Varieties differ a lot in how hard they get hit, and Japanese plums often suffer more than European ones, so buy a tree sold as resistant or tolerant to bacterial spot.",
+     "note_seasoned": "Cultivar susceptibility is the dominant variable and it is set at planting, with Japanese types generally taking it harder than European. Once a susceptible tree is in the ground, what remains manages severity rather than removing the disease."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune so air moves through the canopy and the leaves dry off after rain. This will not clear the bacteria, but an open, healthy tree carries the spotting with less damage.",
+     "note_seasoned": "Canopy openness and tree vigor act on severity rather than on presence: faster drying cuts into the warm, wet, windy conditions the bacterium spreads in, and a vigorous tree tolerates the leaf drop better."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Be realistic about this rung. There is no dependable home cure once the spots are on the tree. Copper does more as a preventive than as a rescue, and overusing it can injure the tree itself, so it is not something to lean on. If you do reach for it, follow the label rate, and keep spray and runoff away from ponds and storm drains, since copper is highly toxic to fish.",
+     "note_seasoned": "Copper is a limited protectant here rather than a cure, and phytotoxicity from repeated application is a real cost, which is why it does not amount to a reliable home answer for this disease. Where it is used, the label rate governs, the copper compound named on the label sets the acute hazard band, and the residue accumulates at the soil surface, so keep repeat use over the years restrained."
+    }
+   ]
+  }
+ ]
+}

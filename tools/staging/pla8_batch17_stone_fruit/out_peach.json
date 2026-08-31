@@ -1,0 +1,134 @@
+{
+ "pests": [
+  {
+   "id": "peachtree-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Keep the ground right around the trunk mowed and clear of weeds and tall grass so the soil line stays in view, and keep mower decks and string trimmers off the bark, because the wounds they leave are what draw the egg-laying moths in. Then look that bare zone over every late summer for fresh gummy ooze, so an attack gets caught in its first year.",
+     "note_seasoned": "The lower trunk is the working surface for this pest, so hold it open and undamaged: vegetation cleared back, no mower or trimmer injury, and a scouting pass at the soil line each late summer. Mechanical wounds concentrate egg-laying, and vigor buys tolerance, but the real payoff of a clean crown is that a first-year infestation is visible while it is still a worming job rather than a lost tree."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "Once the larvae (the young, grub-like stage) are tunneling under the bark, no spray gets to them, so you go in after them. In late summer or fall, scrape the soil back from the base, find the holes marked by gum and frass, the wet sawdust-like droppings the larvae push out, and run a thin, stiff wire into each hole. Smooth the soil back when you are done.",
+     "note_seasoned": "Worming is the practical rescue on a backyard tree: expose the crown in late summer or fall, read the entries off the gum and frass, and probe each one with a stiff wire. Nothing applied to the bark reaches larvae already feeding in the inner bark, so no spray substitutes for going in after them by hand. Mating disruption with pheromones is what commercial growers use against this moth, and it does not scale down to a single tree."
+    }
+   ]
+  },
+  {
+   "id": "lesser-peachtree-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "This borer gets in through wounds, so give it fewer of them. Prune in late winter while the tree is dormant, make clean cuts, and leave no torn bark or branch stubs behind. Cut away any canker, a sunken patch of dead bark, and take the removed wood away from the tree and destroy it instead of leaving it lying nearby.",
+     "note_seasoned": "Wound management is the durable control, since colonization tracks pruning injuries and canker margins rather than sound bark. Prune in late dormancy with clean cuts, no stubs and no bark tears, excise cankered wood as it appears, and destroy what comes off. A vigorous tree carrying few open wounds gives this moth little to establish on, and denying it those wounds does more against it than anything attempted once larvae are inside."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "Where an infested spot on the upper trunk or a main branch is within reach, dig the larvae (the grub-like young stage) out with a stiff wire, the same way you would at the base for the peachtree borer. Spraying the bark will not reach them once they are inside.",
+     "note_seasoned": "Established larvae sit past the reach of any bark spray, so hand worming is the only rescue, and only where the entry on the upper trunk or a scaffold limb can actually be worked. Height and access limit it more than technique does, so treat it as salvage on the wood you can reach; most of what protects this tree happens earlier, in how cleanly it is pruned and how few open wounds it carries into the summer."
+    }
+   ]
+  },
+  {
+   "id": "plum-curculio",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick up dropped peaches all season and get rid of them. Each one can be carrying a grub that would otherwise finish growing in the soil under the tree, so clearing the ground is what brings numbers down from one year to the next. Add a morning round to it while the beetles are still cold and slow to move: lay a sheet on the ground beneath the branches, rap the limbs sharply so the beetles tumble down onto it, and destroy what lands there.",
+     "note_seasoned": "Two hand steps do the work here. Season-long removal of drops denies larvae the soil development stage beneath the tree, which is what lowers pressure year over year rather than just this week; jarring the scaffolds at first light, while adults are sluggish and drop rather than fly, physically removes breeding beetles from the tree in front of you. Both are season-long habits rather than a once-a-year cleanup, and thinning the resident population this way is what makes anything applied to the fruit worth doing."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Kaolin clay is a fine white mineral you mix with water and spray on. It leaves a coating that makes the tree an unappealing place to feed and lay eggs. Start at petal fall, once the blossoms have shed their petals, and put on more as the fruit sizes up and the film wears off.",
+     "note_seasoned": "Kaolin is a deterrent film rather than a killer, started at petal fall when adults arrive on the fruit and renewed as fruit expands and rain strips the coating. It gives partial control, so it stacks on the sanitation and jarring below rather than replacing them, and university trials link heavy use to flare-ups of mites and scale."
+    }
+   ]
+  },
+  {
+   "id": "oriental-fruit-moth",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Watch the ends of the new shoots early in the season for tips that wilt and die, which read as little flags of dead growth, and clip them off as they show up. Taking out the larvae (the young, caterpillar-like stage) inside those tips means fewer of them reach your peaches later on. Remove any tunneled or fallen fruit as well.",
+     "note_seasoned": "Flagged shoot tips hold the early broods, so pruning them out and destroying them knocks each generation back before the damage shifts from twigs to fruit, and prompt removal of infested and dropped fruit closes the other half. On a single tree this sanitation is the practical organic program. Mating disruption with pheromones is what commercial growers use against this moth, and it does not scale down to one backyard tree."
+    }
+   ]
+  },
+  {
+   "id": "catfacing-insects",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "These bugs build up in the weeds and brush around the tree and move onto the fruit from there, so spraying the tree itself does little. Keep a mowed, weed-free zone around it, with the broad-leaved weeds in particular cleared out, and you thin the population that feeds in.",
+     "note_seasoned": "This one is habitat management rather than a spray program, because the stink bugs and tarnished plant bug behind catfacing breed in the surrounding broadleaf vegetation and only move in to feed. A mowed, weed-free surround removes those hosts. Weigh the escalation against what the damage actually is: puckered, corky distortion set when the fruit was small, on fruit that stays usable and does not go on to rot from the injury itself."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "peach-leaf-curl",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "One well-timed spray of fixed copper (a copper fungicide accepted for organic growing) is the step that works here, and the timing is the whole trick. It has to land during dormancy, with the branches bare: in fall, once roughly 90 percent of the leaf drop is done, or in late winter just ahead of bud swell. A spray after the leaves are out does nothing for that season, and by the time you see curled leaves the year's damage is already set, so this is a spray you schedule rather than react with. Copper is hard on fish and builds up in the soil, so hold to the label rate and keep spray and runoff away from drains and waterways.",
+     "note_seasoned": "Taphrina infects at bud swell in cool, wet weather and does so once per spring, so a single thorough dormant application of fixed copper, at autumn leaf fall after roughly 90 percent defoliation or in late winter ahead of bud swell, covers the entire control window. Applied after leaf emergence it buys nothing. Repeat annually where the disease has a local history, and hold the line in a mild, damp spring, which is when pressure runs highest. Copper accumulates at the soil surface and is highly toxic to aquatic life, so stay at label rates and limit repeat use over the years."
+    }
+   ]
+  },
+  {
+   "id": "brown-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cleanup is the core of this one. Take every mummy, the hard shriveled fruit left behind by last season's rot, off the tree and off the ground, since that dried fruit is where the fungus sits over winter and where next spring's spores come from. Through the season, pull any peach that starts to rot as soon as you notice it, and clear away thinned and dropped fruit.",
+     "note_seasoned": "Mummified fruit, hanging in the canopy or lying below it, is overwintering inoculum, so stripping and destroying it is the step everything else rests on. Carry it right through the season: thinnings, drops, and the first rotting fruit come off promptly, before they sporulate onto the sound fruit hanging beside them."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune the tree so it is open through the middle and air moves freely in it. Fruit that dries quickly after rain gives this rot far less to work with, since warm, wet conditions are what let it move fast.",
+     "note_seasoned": "An open canopy shortens the wetting period on fruit surfaces, and since spread accelerates under warm, humid conditions, drying time is the variable pruning actually controls."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick peaches as they come ripe instead of letting them hang, handle them gently so you do not bruise or nick the skin, since those wounds are the way in for the rot, and get the fruit chilled soon after picking.",
+     "note_seasoned": "Ripening fruit left hanging is the most susceptible tissue on the tree and any skin break is an entry point, so harvest on time, handle without bruising, and cool promptly after picking to slow infections already underway."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "The fungus also overwinters in the twigs. A blossom infection runs back out of the flower into the shoot and leaves a small gummy dead patch, called a canker. Cut those out, placing the cut into clean wood beyond the edge of the dead area, and carry the prunings away from the tree and destroy them rather than dropping them underneath.",
+     "note_seasoned": "Blossom infections extend into the shoot as gummy twig cankers, which hold the fungus over winter alongside the mummies, so excise them back past the visible margin into sound wood and destroy what comes off. Cankers and mummies are two separate reservoirs and both have to come off: clearing one and leaving the other still hands the fungus a place to overwinter, and it is taking out both that lowers the spore load meeting next season's bloom."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-spot-pruni",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "The strongest move on this disease happens before the tree goes in the ground: choose a peach described as resistant or tolerant to bacterial spot. How hard a tree gets hit depends heavily on which variety it is, and no spray available later amounts to a dependable cure, so this one choice does more for you than anything you can do once the tree is planted.",
+     "note_seasoned": "Cultivar susceptibility spans a wide range, which makes variety selection at planting the highest-leverage decision on offer. It carries more weight here than on most diseases precisely because the in-season options are thin, so treat it as the control rather than as a preference."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "For a tree already in the ground, work on airflow and general health: prune so air moves through the canopy, and keep the tree in good shape so it can carry some leaf loss. This bacterium moves in warm, wet weather, so a canopy that dries out faster gives it fewer openings, though the step lowers how bad the spotting gets rather than clearing the bacteria out.",
+     "note_seasoned": "Canopy airflow and sustained vigor reduce severity and help a tree tolerate shot-hole defoliation, but neither eradicates Xanthomonas arboricola pv. pruni once it is established, so these steps manage the disease down rather than curing it. Worth noting too that the leaf symptoms are sometimes read as spray injury, so confirm the diagnosis before escalating anything."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Copper is the one spray in home use here, and it is a weak option rather than an answer. Once the spots are out on the leaves, nothing a home grower can buy will cure the tree: copper helps a little as prevention and does nothing for tissue that is already infected, and using too much of it injures the tree, so it is not a fix to depend on. Copper is also hard on fish and builds up in the soil. If you use it at all, hold to the label rate, keep the number of applications down, and treat the variety you plant and the airflow you prune for as the real controls.",
+     "note_seasoned": "Fixed copper is the only material in home use for this disease, and the honest framing is that it is preventive at best rather than curative: it does not clear an established infection, and repeated or heavy use carries a real phytotoxicity risk to the tree, which is why it does not amount to a dependable home fix. Cultivar susceptibility is still doing most of the work. Copper accumulates at the soil surface and is highly toxic to aquatic life, so stay at label rates and limit repeat use over the years."
+    }
+   ]
+  }
+ ]
+}

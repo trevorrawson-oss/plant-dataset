@@ -1,0 +1,210 @@
+{
+ "pests": [
+  {
+   "id": "plum-curculio",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start with cleanup: gather and get rid of dropped apricots all season, because a grub inside a fallen fruit finishes growing in the soil under the tree. On a cool early morning, while the beetles are still sluggish, you can also spread an old sheet under the branches, tap the limbs so they drop onto it, and destroy what you collect. A clear ground surface, kept up year after year, means fewer beetles each spring.",
+     "note_seasoned": "Season-long removal of drops denies larvae the soil development they need, and that steady drawdown is the backbone every other rung leans on. Jarring the scaffolds at first light, while adults are still torpid, adds physical removal onto the same sheet, and repeating that pass through the weeks after petal fall is what makes it pay. Pressure concentrates east of the Rockies, so a tree in a dry western climate may need little beyond this."
+    },
+    {
+     "method": "kaolin_clay",
+     "note_beginner": "Kaolin clay is a fine white mineral you mix with water and spray on, leaving a coating that discourages the beetles from feeding and laying eggs. Begin at petal fall, when they move onto the small fruit, and count on repeat sprays through the season, since the barrier only works while the coating is there.",
+     "note_seasoned": "Kaolin is a deterrent film rather than a killer, so timing from petal fall and renewing it as fruit expands is the whole of its value. Weigh it against the tree's other problems: heavy use can flare San Jose scale, which is already on this crop's list."
+    }
+   ]
+  },
+  {
+   "id": "peachtree-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Keep the ground at the foot of the trunk mowed and clear of weeds and tall grass so the soil line stays visible, then look it over each late summer for fresh gummy ooze. Keep mowers and string trimmers off the bark as well, since those wounds draw the egg-laying moths, and white trunk paint helps head off the sunburn cracks they enter through.",
+     "note_seasoned": "A cleared collar around the crown keeps the soil line inspectable, which is how a first-year infestation gets caught before it girdles anything. Mechanical injury and sunscald cracks concentrate egg laying on the lower trunk, so protecting that zone, white paint included, is the preventive half of this rung."
+    },
+    {
+     "method": "borer_stem_surgery",
+     "note_beginner": "By the time the larvae are tunneling under the bark, a spray cannot reach them. In late summer or fall, scrape the soil back from the base, find the holes marked by gum and frass, the sawdust-like droppings, and push a thin stiff wire into each one to kill the larva inside. Smooth the soil back afterward.",
+     "note_seasoned": "Worming is the practical home control: expose the crown, trace each gum and frass mass to its entry hole, and probe it with stiff wire. Several larvae can girdle a young tree in one season, so an annual late-season pass is worth the hour where this moth is present."
+    }
+   ]
+  },
+  {
+   "id": "apricot-aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on the fertilizer. Heavy feeding pushes out the soft, sappy growth these aphids multiply on, so a moderately fed tree is a less inviting target.",
+     "note_seasoned": "High nitrogen sustains the tender spring flush that green peach aphid and mealy plum aphid colonize; moderating it removes the tissue quality that lets colonies build on a vigorous young tree."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "On a young tree that is badly hit, knock the colonies off the shoot tips with a strong jet from the hose. Do it early in the day so the leaves dry quickly.",
+     "note_seasoned": "A forceful water jet dislodges colonies from the tips without removing the predators working the same shoots; repeat as the flush rebuilds, and time it early in the day to limit leaf wetness."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Often the best move is to leave it alone. Ladybugs, lacewings, and similar helpers usually clear these aphids by midsummer as the shoots toughen, and the curled spring leaves seldom cost you fruit. Skip broad-spectrum insecticides so those helpers stay on the job.",
+     "note_seasoned": "Resident natural enemies do most of the control here, and populations tend to crash by midsummer as shoots harden, so the early leaf curl is a tolerable cost rather than a crop loss. Broad-spectrum material is what converts a self-limiting flush into a season-long problem."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If a young tree is still overwhelmed, spray insecticidal soap straight onto the curled tips. It kills only what it wets, so aim at the colonies rather than the whole tree, and hold off when the temperature is above 90°F.",
+     "note_seasoned": "Contact soap is a coverage-dependent knockdown on the curled tips, and it kills the soft-bodied beneficials it wets, so confine it to located colonies. Avoid it above 90°F or on a water-stressed tree."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil smothers aphids it contacts on the tips, and a dormant oil spray in late winter cuts down the eggs that overwinter on the tree, which is worth doing where aphids turn up every year. Keep oil off a drought-stressed tree, off the tree in bloom so bees are not hit, and do not spray above 90°F or within two weeks of sulfur.",
+     "note_seasoned": "In season, oil is a smothering contact spray on the curled tips; the higher-value use is the dormant application, which lowers the overwintering egg load where the pest is chronic. Observe the oil constraints: not above 90°F, not on water-stressed wood, not within two weeks of sulfur, and not onto anything in flower."
+    }
+   ]
+  },
+  {
+   "id": "san-jose-scale",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut out and destroy the twigs and branches that are crusted with scale rather than leaving them on the tree or stacked nearby. Taking out the worst wood removes a large share of the population with it.",
+     "note_seasoned": "Pruning out and destroying heavily encrusted wood removes established colonies wholesale and lowers the crawler load that seeds the rest of the canopy."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Tiny parasitic wasps and small predatory beetles feed on scale and hold it down for you at no cost. Keep harsh, broad-spectrum insecticides off the tree so they can work.",
+     "note_seasoned": "Conserving the parasitoids and predatory beetles that attack armored scale is what keeps a light infestation light; broad-spectrum sprays remove them and give scale room to build."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "The mainstay is a thorough horticultural oil spray while the tree is bare and dormant in late winter, coating every twig and branch so the overwintering scale is smothered. Prune the tree open first so the spray can reach all the bark. A summer spray only helps if it lands when the crawlers are moving, since that is the one stage a spray can hit.",
+     "note_seasoned": "A thorough dormant oil on leafless wood is the mainstay backyard control, and complete coverage of twigs and scaffolds decides the result, which is why an open canopy is part of the method rather than a separate nicety. Time any in-season oil to crawler emergence, the only exposed stage, and keep the usual limits: not above 90°F, not on stressed wood, not within two weeks of sulfur."
+    }
+   ]
+  },
+  {
+   "id": "catfacing-insects",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "These bugs live and breed in the broadleaf weeds around the tree and only visit the fruit, which is why spraying the tree itself does so little. Mow the surrounding ground and pull the broadleaf weeds, especially through spring while the apricots are small, and hold a clean grassy strip around the tree.",
+     "note_seasoned": "Stink bugs and tarnished plant bug commute in from adjacent weedy harborage, so a single-tree spray acts on the visitors and not the source; removing the broadleaf hosts and holding a mowed strip is the lever that lowers how many arrive. Apricot's early fruit set puts the vulnerable stage right in the spring buildup, so the clearing matters most then."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "brown-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take every mummy off the tree and off the ground and destroy it. A mummy is a rotted fruit that has dried hard and stayed hanging, and it is where the fungus waits out the winter, so clearing them is the most useful hour you spend on this disease.",
+     "note_seasoned": "Mummies on the tree and on the ground beneath it are the primary overwintering inoculum, so stripping and destroying them is the core control, and leaving them through winter forfeits it. Pull any rotting fruit during the season as soon as you see it, since one lesion becomes a spore source fast in warm, wet weather."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune so the tree is open and air moves through it, and if you are still choosing a site, favor one with dry summers. Fruit that dries quickly after rain gets much less rot, and apricot is a poor bet in a humid climate.",
+     "note_seasoned": "An open canopy shortens the wetting periods Monilinia needs, and site selection is the same lever at a larger scale: dry western summers suit this crop, humid southeastern ones work against it."
+    },
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Pick the fruit as it ripens instead of letting it hang, handle it gently so the skin is not bruised, and get rid of anything that starts to rot right away. In warm, wet weather a whole apricot can go in a day or two.",
+     "note_seasoned": "Harvesting on time and handling gently limits the over-ripe and wounded fruit the rot exploits, and culling the first rots keeps one infection from seeding the fruit around it."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Cut out the gummy dead patches on the twigs, taking the cut back into healthy wood, and destroy what comes off. Those small cankers carry spores from one season to the next, right alongside the mummies.",
+     "note_seasoned": "Blossom infections run back into the spur and form small gummy cankers that overwinter, so excising them into clean wood and destroying the prunings removes the second inoculum source that sanitation alone leaves standing."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-canker",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_rootstock",
+     "note_beginner": "The rootstock your tree is grafted onto matters more here than anything you can spray. A peach seedling rootstock such as Lovell tolerates this canker better than the plum rootstocks do, so ask which one a tree is on before you buy it.",
+     "note_seasoned": "Rootstock is the plant-once decision on this disease: trees on Myrobalan or Marianna plum stocks run notably more susceptible than those on a peach seedling such as Lovell, and the choice is settled at purchase rather than revisited later."
+    },
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Plant where water drains away, and fix a soggy spot before a tree goes into it. Wet roots stress a tree, and a stressed tree is what this bacterium takes hold in.",
+     "note_seasoned": "Poor drainage sits among the stress factors that turn an exposure into a canker, alongside frost injury and ring nematodes, and it is the one a gardener can genuinely change. Changing it is cheapest before planting."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no cure once this bacterium is established, so a young tree that is badly cankered is better pulled out than nursed along. On the trees you keep, avoid nicking the trunk, since wounds and leaf scars are the way in.",
+     "note_seasoned": "A badly infected young tree is a standing inoculum source with no route back, so removal is the honest call. On retained trees, minimizing wounds matters because infection enters through wounds, leaf scars, and frost-injured tissue during cool, wet spells."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Cut cankered limbs off well below the sunken, gummy area, into wood that still looks healthy, and destroy what you remove. Do this in dry summer weather rather than a wet spring, and wipe or dip your pruners between cuts.",
+     "note_seasoned": "Excise well beyond the canker margin into clean tissue and confine the work to dry summer weather, since cool wet conditions are when Pseudomonas syringae colonizes fresh cuts. Disinfecting between cuts is worth doing, though placing the cut far enough below the margin matters more."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "A copper spray gives only partial protection against this one, and strains that shrug it off are common, so treat it as a small addition to the steps above rather than a fix. Copper is toxic to fish, builds up in the soil over the years, and can burn foliage above the label rate.",
+     "note_seasoned": "Fixed copper is partial protection at best here and resistance in the bacterial population is widespread, so it does not stand in for rootstock choice, drainage, and dry-season pruning. Copper accumulates at the soil surface, is highly toxic to aquatic life, and the compound printed on the label, not the brand, sets the acute hazard band."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-spot-pruni",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "This one is settled mostly before you plant. Choose a variety known to tolerate bacterial spot, because how hard a tree is hit depends a great deal on which variety it is, and there is no good home cure once the spotting shows up.",
+     "note_seasoned": "Cultivar susceptibility spans a wide range and is the highest-leverage control available, precisely because the in-season options are weak; it is a pre-plant decision that an established tree cannot revisit."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give the tree a site with dry summers and moving air, and prune it open so the leaves dry fast. That will not cure an infection, but a healthy, open tree carries the disease better and shows less of it.",
+     "note_seasoned": "Warm, humid conditions drive Xanthomonas arboricola pv. pruni, so site and canopy openness set the severity ceiling while vigor governs how much a tree shows. Neither acts on an established infection, which is why the pre-plant variety choice above carries most of the weight on this disease."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "There is no good home cure once the spotting has appeared, and copper is not a dependable fix. It helps more as prevention than as a cure, so it does far less on a tree that is already spotted than on one you are protecting ahead of time, and it can injure the tree if you overuse it. Copper is also toxic to fish and builds up in the soil over the years, so if you use it at all, hold to the label rate and keep repeat sprays few.",
+     "note_seasoned": "Copper is the one material this crop's guidance names, and it is preventive rather than curative: home options are limited once symptoms are visible, and overuse carries its own phytotoxicity, so this sits as a hedged last option rather than a control. Copper accumulates at the soil surface, is highly toxic to aquatic life, and the compound printed on the label rather than the brand name sets the acute hazard band."
+    }
+   ]
+  },
+  {
+   "id": "shot-hole",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Use drip or a soaker hose at the base instead of sprinklers that throw water over the canopy. Splashing water is how this fungus travels, so keeping the leaves dry is the single biggest change you can make.",
+     "note_seasoned": "The fungus spreads by splash, and overhead irrigation supplies exactly that on a schedule; moving delivery to the root zone removes the driver that turns a wet spring into a defoliating year."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake up the spotted fallen leaves and get rid of them rather than letting them sit under the tree.",
+     "note_seasoned": "Clearing and destroying infected leaf litter lowers the local carryover that sits alongside the infected buds and twig lesions."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Prune the tree so air moves through the canopy and wet leaves dry faster after a spring rain.",
+     "note_seasoned": "Opening the canopy shortens leaf wetness after the cool spring rains that drive infection, and it works with the irrigation change rather than in place of it."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Cut out the infected twigs and buds, taking the cut back into clean wood, and destroy what comes off.",
+     "note_seasoned": "Infected buds and twig lesions are where the fungus overwinters, so removing them into healthy wood strips out the local spore source ahead of the spring rains."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Where this disease is established, a fixed copper spray on the bare, dormant tree in late winter is the main protective option. It protects rather than cures, so it has to go on before the spring rains, not after the holes appear. Copper is toxic to fish, builds up in the soil, and can burn leaves at too high a rate, so follow the label and keep repeat use limited.",
+     "note_seasoned": "A dormant fixed copper application on leafless wood is the standing protectant in wet-spring regions, and its whole value sits in the timing. Copper persists at the soil surface, is highly toxic to aquatic life, and the compound named on the label sets the acute hazard band."
+    }
+   ]
+  }
+ ]
+}
