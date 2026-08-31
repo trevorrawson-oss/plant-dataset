@@ -530,17 +530,12 @@ def validate_batch(batch, cm):
         raise SystemExit("REFUSED: %d rungs total, expected %d" % (tot, TOTAL_RUNGS))
 
 
-_TYPE_TARGETS = {
-    "insect": {"insect_general", "insect_chewing", "insect_boring", "insect_soft_bodied"},
-    "mite": {"mite"},
-    "mollusk": {"mollusk"},
-    "fungal": {"fungal_foliar", "fungal_soilborne", "disease_general"},
-    "bacterial": {"bacterial", "disease_general"},
-    "viral": {"viral", "disease_general"},
-    "nematode": {"nematode"},
-    "physiological": {"physiological"},
-    "vertebrate": {"vertebrate"},
-}
+# IMPORTED, never retyped. This file originally carried a hand-copy of the gate's table with
+# `mite: {"mite"}` where the gate has `mite: {"mite", "insect_general"}`. It never fired here (no
+# stone fruit problem is mite-typed) but batch 18 inherited the copy as a template and it WOULD
+# have refused `beneficial_predators` on citrus mites, which control_ladder_gate passes and which
+# is correct content: predatory mites are the natural enemy. Corrected 2026-08-31.
+from control_ladder_gate import TYPE_TARGETS as _TYPE_TARGETS  # noqa: E402
 
 
 def _type_ok(t, applies):
