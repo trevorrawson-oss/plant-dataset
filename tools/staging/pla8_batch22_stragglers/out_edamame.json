@@ -1,0 +1,275 @@
+{
+ "pests": [
+  {
+   "id": "bean-leaf-beetle",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "Sow as early as your season allows, so the pods are filling before the summer wave of beetles builds. Pod feeding and the clipped pods that come with it are what cost you beans, so getting the crop through that stage ahead of the beetles is worth more than anything applied afterward. Beetle timing shifts from place to place, so treat the summer peak as a regional pattern to confirm.",
+     "note_seasoned": "The costly injury is pod feeding by the summer generation, so a sowing early enough to carry pods through fill ahead of that peak removes the exposure instead of treating it. Emergence timing varies regionally, so confirm the local pattern rather than importing a date."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move edamame to a fresh bed rather than replanting where it grew last year. Adults get through the winter around the ground the crop occupied, so a change of bed takes that shelter away before a seedling is ever up.",
+     "note_seasoned": "Siting the crop away from the previous season's bed strips out the shelter overwintered adults use, and it is the preventive that costs nothing once the garden plan allows for it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Once the last pods are off, take the spent plants and the litter under them out of the bed. What is left lying there over winter is cover for the beetles.",
+     "note_seasoned": "Clearing crop debris after harvest closes the overwintering refuge; a stand left standing through winter preserves it, which is why this pairs with siting the crop elsewhere."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "A lightweight fabric cover laid over the seedlings keeps the spring beetles from reaching them as they emerge, and it is worth using where this beetle turns up most years. Later in the season the same cover keeps beetles off the pods, which is the damage that actually costs you beans.",
+     "note_seasoned": "Cover excludes overwintered adults from emerging seedlings and, later, keeps the summer generation off the pods, which is where the loss sits. Worth deploying where the beetle is locally established rather than as a routine measure."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "In a small patch you can pick the beetles off as you find them. A fair amount of chewed leaf early on does not cost you beans, so put the effort into the pods later in the season instead of into ragged foliage.",
+     "note_seasoned": "Hand-collection is practical at garden scale. Early foliar feeding sits inside what this crop tolerates, so the return on collecting rises once the beetles move onto the pods."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "Where the beetles get heavy on the pods, spinosad, a stronger organic spray, is a labeled option. Keep it for that situation rather than for chewed leaves, and read its cautions about bees before you mix any.",
+     "note_seasoned": "Spinosad is a labeled organic material for heavy pressure here, and the trigger is pod feeding rather than defoliation. Its bee timing caution governs when the application can go on."
+    }
+   ]
+  },
+  {
+   "id": "stink-bugs",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Mow or pull the weeds along the edges of the bed before the season starts, and do not let them come back. Stink bugs gather in that untended growth and cross into the crop from it.",
+     "note_seasoned": "The population builds in the untended border, so clearing it ahead of sowing and holding the edge cut down reduces how many arrive by pod set. It is a running habit rather than one pass."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give edamame a different bed each season rather than returning it to the same ground.",
+     "note_seasoned": "Rotating the bed belongs with the cleanup measures rather than standing on its own here, since these bugs arrive from surrounding cover rather than out of the soil the crop grew in."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear the spent plants out of the bed after the last picking, so less cover is left standing near where you will grow next year.",
+     "note_seasoned": "Removing crop residue after harvest is the closing step of the preventive routine, taken alongside the border work rather than in place of it."
+    },
+    {
+     "method": "planting_time_avoidance",
+     "note_beginner": "A quick-maturing variety can be finished before the bugs reach their late-summer peak, which sidesteps the heaviest pressure instead of fighting it.",
+     "note_seasoned": "An early-maturing crop completes pod fill ahead of peak late-summer numbers, moving the vulnerable stage out from under the pressure curve. Local timing varies, so confirm the late-summer peak regionally."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Walk the bed from the time the pods set and take the shield-shaped adults off by hand, along with the barrel-shaped clusters of eggs. Pod fill is the stretch that matters, because the feeding happens inside pods that still look fine from outside.",
+     "note_seasoned": "Scout from pod set through fill and hand-collect adults, taking out the barrel-shaped egg masses with them. Detection has to lead the symptom, since the injury registers as flat or discolored seed inside a pod that looks intact."
+    },
+    {
+     "method": "pyrethrin",
+     "note_beginner": "If the bugs are genuinely working the pods, pyrethrin, a short-lived organic spray made from a plant extract, is an option. It is for heavy pod feeding rather than routine use, and its cautions about bees and beneficial insects are strict, so read them first.",
+     "note_seasoned": "Reserve pyrethrin for heavy feeding on the pods. It is a short-persistence botanical knockdown rather than a scheduled material, and it carries the strictest bee band along with a moderate rating for harm to natural enemies."
+    }
+   ]
+  },
+  {
+   "id": "soybean-aphid",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Hold back on feeding. A heavy dose of nitrogen produces the soft new growth these aphids multiply on fastest, so a lighter hand gives them less to work with.",
+     "note_seasoned": "Restrained nitrogen limits the flush of succulent tissue colony growth runs on, so the lever sits in the fertility plan rather than in anything you reach for once the colonies are visible."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Keep the weeds down around the bed, and keep an eye on any buckthorn growing nearby, since that shrub is where this aphid spends the winter. Dealing with the winter host lowers what turns up in the crop.",
+     "note_seasoned": "This aphid overwinters on buckthorn, so managing that host along with the surrounding weeds acts on the source rather than on the colonies. The scale is the neighborhood rather than the bed, which is what puts it this early."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "A reflective mulch, a silvery sheet spread on the soil, confuses aphids looking for somewhere to land. It also cuts down the viruses they carry, which is a second reason to have it down early.",
+     "note_seasoned": "Reflective mulch laid while the crop is small disorients incoming winged aphids and reduces virus transmission, which carries extra weight here because this species moves several viruses."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Hose the colonies off. Direct the stream at the growing tips and the undersides of the upper leaves where they sit, and start while only a few clusters are there rather than after they have covered the tips.",
+     "note_seasoned": "A forceful directed rinse is the first physical knock-back. Run it early: this aphid moves viruses as well as feeding, so the value of acting is loaded toward the front of the infestation."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "In a garden, ladybugs, lacewings, and parasitic wasps generally do most of the work on this one. Leaving them undisturbed, and passing on the broad sprays that would kill them off too, is usually the whole decision.",
+     "note_seasoned": "Resident predators and parasitoids usually carry this species at garden scale, which is the argument against a broad-spectrum material: the spray removes the control that was already working."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If the colonies keep building, insecticidal soap kills the aphids it touches directly. Aim it at the growing tips and the undersides of the upper leaves, and use it while the clusters are still small.",
+     "note_seasoned": "Soap acts on contact and leaves nothing behind, so wetting the tips and upper-leaf undersides where colonies sit is what decides the result. Spot application while numbers are low also spares the natural enemies that would otherwise finish it."
+    }
+   ]
+  },
+  {
+   "id": "japanese-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "Pick the beetles off early in the morning, while they are still cool and slow, and drop them into soapy water. That is the step that does the work in a garden. Do not bother with the traps sold for them, since the number they pull toward your yard is larger than the number they hold. Edamame also carries a fair amount of chewed leaf without losing beans, so light damage can be left alone.",
+     "note_seasoned": "Cool-morning collection into soapy water, taken while the adults are torpid, is the workable home control. The traps sold against them amount to a net import of beetles rather than a removal. Defoliation tolerance is high on this crop, so light to moderate skeletonizing is something to note and leave rather than to act on."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "During a heavy flight in midsummer, a light fabric cover over the plants keeps the beetles from landing at all. Put it on ahead of the flight rather than once the leaves have already gone lacy.",
+     "note_seasoned": "Cover through the midsummer adult flight is straight exclusion, and its value depends on going on before the flight rather than after feeding starts. Given how much leaf loss this crop absorbs, it is a heavy-pressure option rather than a standing one."
+    }
+   ]
+  },
+  {
+   "id": "two-spotted-spider-mite",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Hold the soil at an even moisture instead of letting the bed dry out hard between waterings. Stress from drying is what lets mite numbers climb quickly, so steady irrigation is the cheapest thing you control here.",
+     "note_seasoned": "Water stress is the accelerant, so an even irrigation schedule is the lever with the most reach. It matters most through the dry midsummer stretches, which is when this mite flares."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Hose under the leaves with enough force to wash the mites and their webbing away. The mites themselves are barely visible specks, so tap a leaf over a sheet of white paper to check what you actually have.",
+     "note_seasoned": "A forceful directed rinse of leaf undersides removes both mites and webbing. Confirm the population by tapping foliage over white paper rather than reading the stippling alone, and repeat through the dry spell driving it."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Natural predators feed on these mites and take some of the pressure off, which is a reason to treat the hot spots rather than the whole planting.",
+     "note_seasoned": "Natural enemies already in the bed take part of the load, which is the reason to keep any treatment targeted rather than broad."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If numbers keep climbing, insecticidal soap is the next step. It works only on what it wets, so the spray has to get under the leaves, and it is worth doing while the speckling is still fine rather than after the leaves have gone bronze.",
+     "note_seasoned": "Soap acts only where it lands and leaves no residue, so getting the material under the leaf is what decides the result. Timing it while stippling is still fine, ahead of the bronzed stage, matters as much as the coverage does."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil, a light oil sprayed onto the foliage, is the other material named for mites here, used the same way and aimed at the undersides. Read its cautions first: oil does not suit plants that are already hot and dry-stressed, which is exactly the weather mites flare in, so keeping the plants watered is what makes this option usable.",
+     "note_seasoned": "Oil is the second named material, applied for thorough coverage of leaf undersides. Its constraint bites in this exact situation, since it is not for water-stressed plants or hot conditions and that is the weather that produced the outbreak; steady moisture is therefore what keeps it available as an option."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "white-mold",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give each plant room at sowing and keep the rows open, so the leaves dry after rain or dew instead of staying damp. Crowded, still growth is the setting this one needs.",
+     "note_seasoned": "Layout is the primary lever: spacing that lets the stand dry shortens the humid, motionless period the fungus infects in. It is decided at sowing, so it is not something you can add once the stand has closed over."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Hold back on the fertilizer. Feeding hard produces a bulk of lush growth, and the humidity trapped inside it is what the mold works in.",
+     "note_seasoned": "Overfeeding produces the bulk that keeps the interior of the stand humid, so restrained nitrogen and open spacing act on the same condition from two directions."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep edamame on a long rotation away from beans and the other crops this mold hits, and steer clear of ground where it has already been bad. The hard black survival bodies sit in the soil for years, so a single season off is not much of a break.",
+     "note_seasoned": "Rotate on a long cycle away from beans and other susceptible crops, and decline ground with a severe history outright. Sclerotia persist in soil across years, which is what sets the length of the break rather than the fact of taking one."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Put the water on the ground rather than over the tops of the plants. Overhead watering leaves the foliage wet in the same cool, damp conditions that let this mold start.",
+     "note_seasoned": "Irrigating at ground level keeps the foliage out of the wetting cycle, which is worth more in the cool, wet spells the fungus germinates in than at any other point in the season."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull the affected plants and put them in the trash rather than the compost heap, since the hard black lumps in those stems live on and composting hands them back to the garden. Nothing on the home shelf cures this once a plant has it, so removal is the action available to you.",
+     "note_seasoned": "Lift infected plants and destroy the tissue rather than composting it: the sclerotia survive the heap and would return to the bed with it. With no home-garden curative, this removal together with how the stand is grown is all there is to work with."
+    }
+   ]
+  },
+  {
+   "id": "bacterial-blight",
+   "type": "bacterial",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Buy fresh seed rather than saving your own off a crop that carried these spots. Because the bacterium rides inside the seed, the purchase is where you shut the door on it.",
+     "note_seasoned": "Seed carries this one, so the purchase decision does work that nothing applied later can undo. Seed held back from an affected stand puts the bacterium into the next planting at sowing."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move edamame away from where soybeans or beans grew last year. The bacterium gets through the winter in the material those crops leave behind.",
+     "note_seasoned": "Rotating away from soybeans and beans denies the pathogen the infected residue it overwinters on, and it works with clearing that residue rather than substituting for it."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Sow at a spacing that lets each plant dry out soon after a rain. This one spreads while the foliage is wet in cool weather, so a stand that sheds water fast spends less of the season open to it.",
+     "note_seasoned": "Open layout limits the leaf wetness that carries this from leaf to leaf in the cool, wet conditions the bacterium favors, and it is a decision made before the crop is up."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Deliver the water at ground level and keep the sprinkler off the crop. Splashing droplets are one of the ways this moves, so overhead irrigation works for the disease rather than against it.",
+     "note_seasoned": "Splash is a transport mechanism here, so ground-level irrigation removes one of the ways the bacterium reaches new leaves. Wind-driven rain is the other, and no watering choice touches that."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Do your weeding and picking after the foliage has dried, not while it is still damp from rain or dew. The bacteria transfer onto hands and clothing as you push through, and go onto the next plant you touch.",
+     "note_seasoned": "Moving through a wet stand transfers the bacterium leaf to leaf, so timing your passes for dry foliage is a control in its own right. What it buys is a lower rate of spread; it does not clear tissue that is already infected."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear the old plants out after harvest, since the bacterium overwinters on that debris. Pulling the worst-spotted leaves during the season helps too, though this disease seldom costs a garden much yield.",
+     "note_seasoned": "Residue removal at season's end takes out the overwintering substrate, and roguing the most affected leaves in season trims what is available to spread. Weigh the effort against the fact that yield loss at garden scale is usually slight."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Leave room between the plants so a wet leaf has a chance to dry. Warm, humid weather with foliage that stays damp is what this one runs on, and an open planting shortens that wet period.",
+     "note_seasoned": "Spacing shortens how long leaves stay wet in the warm, humid weather that favors it. Layout has the most reach of any step on a disease that stays minor here in most seasons."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Keep the water on the soil rather than the leaves, since wet foliage is what this one needs to get going.",
+     "note_seasoned": "Ground-level irrigation removes an avoidable wetting period. It is a small lever on a small problem, which is exactly why it is worth taking, since it costs nothing to do."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move edamame off last year's ground. The organism carries over on the old plant material left in the bed.",
+     "note_seasoned": "Rotation addresses carryover on residue rather than a soil population, so it works alongside clearing the bed rather than on its own."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Sow clean seed. Seed off infected plants can carry a white crust, and the organism travels with it into the next planting.",
+     "note_seasoned": "Seed is one of the two carryover routes named here, and seed from infected plants can show a white crust; sourcing clean seed closes that route at purchase."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear the finished plants at the end of the season, and take off badly spotted leaves during it where that is easy to do. Edamame usually grows through a light infection, so this rarely needs to be more than tidying.",
+     "note_seasoned": "Strip residue at season's end and remove heavily spotted leaves where practical. The crop generally outgrows light infection, so this sits as tidying rather than rescue, and no spray is called for at garden scale."
+    }
+   ]
+  },
+  {
+   "id": "soybean-cyst-nematode",
+   "type": "nematode",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotate edamame with crops other than soybeans and dry beans, on a long cycle, and keep soybeans out of the same bed season after season. This is the main control, because the egg-filled cysts sit in the soil for years and build up wherever soybeans keep coming back.",
+     "note_seasoned": "A long rotation into non-host crops, meaning anything other than soybeans and dry beans, is the principal control. Cyst-borne eggs persist in soil across years and accumulate under repeated soybean cropping, so the length of the break is what does the work rather than the fact of rotating."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where you already know this nematode is in the ground, plant a resistant soybean variety. The way to tell is to lift a stunted plant in summer and look for the tiny lemon-shaped specks on the roots, since the yellowing above ground is easy to miss or mistake for something else.",
+     "note_seasoned": "On ground with a confirmed population, resistant soybean varieties are the step taken at seed-buying time. Confirmation comes from the roots rather than the canopy: cysts are visible on roots in summer, while patchy stunting above ground reads as any number of other things."
+    }
+   ]
+  }
+ ]
+}

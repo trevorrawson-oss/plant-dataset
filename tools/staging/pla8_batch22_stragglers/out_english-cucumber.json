@@ -1,0 +1,310 @@
+{
+ "pests": [
+  {
+   "id": "two-spotted-spider-mite",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Keep the soil steadily moist instead of letting cucumbers swing between soaked and thirsty. Mites take off on dry, dusty plants, and under cover the air is already dry and still enough to help them.",
+     "note_seasoned": "Steady soil moisture removes the drought and dust stress this pest flares on, which is the cheapest thing available before any scouting starts. Under cover the surrounding air pushes the other way, so irrigation discipline carries more weight on a protected crop than on an open field."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Turn a strong jet of water up under the foliage, where the mites and their fine webbing sit. Letting the air stay a little more humid works with it, since dry, still air is what they thrive in.",
+     "note_seasoned": "Hosing the lower leaf surfaces knocks colonies loose and takes the dust down with them, and raising humidity pushes against the same conditions. Work it into the routine through warm, dry spells rather than waiting for the leaves to bronze."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Helpful bugs already in the planting feed on spider mites, so keep broad insecticides, sprays that kill a wide range of insects at once, off the crop. Because mites are relatives of spiders rather than insects, a lot of that spraying goes straight past them anyway while costing you the helpers.",
+     "note_seasoned": "Conserving the natural enemies present is the base of mite control here, and broad-spectrum material is the usual way it gets lost. Mites are arachnids, so many insecticides do not act on them, which makes a broad spray a poor trade twice over."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "Predatory mites, mites bought to hunt other mites, are the usual control in a greenhouse or tunnel and do the job well there. Where your structure has a bad mite history, bring them in early rather than waiting for stippled leaves.",
+     "note_seasoned": "Phytoseiulus persimilis is the standard and effective biological control under cover. Release early where mite history is bad, and keep broad-spectrum material off afterward or the release is spent for nothing."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray that kills on contact, does nothing where it does not land, so work the nozzle up under the foliage. Go over the plants a second time about five days later.",
+     "note_seasoned": "Coverage of the lower leaf surfaces is the whole job with a contact material, and the second pass around five days on belongs to the treatment rather than being optional. It also wets soft-bodied beneficials, so square it against any predatory mites you have put in."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other choice at this point, used the same way: undersides coated, then repeated about five days on. Read its cautions about heat and dry, stressed plants before you mix any.",
+     "note_seasoned": "Oil is the alternative contact material on the same twice-over schedule, with the same demand for underside coverage. Its heat and water-stress limits sit awkwardly on a crop grown in a warm structure, so time it for the milder part of the day."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Hold back on the nitrogen feed. Rich feeding pushes out soft, lush shoots, and that is the growth aphid numbers climb on quickest, especially in the sheltered warmth under cover.",
+     "note_seasoned": "Restraint on nitrogen denies melon aphid the succulent growth it colonizes, and it counts for more on a crop this open to mosaic virus, since fewer colonies means fewer probing vectors. It is a feeding habit held through the crop, not a response to a colony you have found."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Reflective mulch is a silver or foil sheet laid down over the bed, and it puts arriving aphids off small plants outdoors. Get it in place early, while the plants are low.",
+     "note_seasoned": "Foil or reflective mulch deters colonizing aphids on young outdoor plantings, which is where this crop's guidance places it rather than under cover. It acts on the vector before it settles, which matters on a mosaic-susceptible crop."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard jet from the hose will strip the colonies away, so aim it at the undersides and the soft growing tips where they gather. Pick a time of day that leaves the canopy enough hours to dry.",
+     "note_seasoned": "A forceful pass dislodges colonies from shoot tips and lower leaf surfaces and costs nothing on a sturdy vine. Keep it to the early part of the day, since a canopy left damp under cover feeds other trouble."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs, lacewings and small parasitic wasps, wasps whose young develop inside aphids, feed on them and often bring a colony down without help. Make room for them and leave the broad sprays alone, since those clear the helpers out along with the pest.",
+     "note_seasoned": "Conserving lady beetles, lacewings and parasitoids is the first call under cover as much as outdoors, and blanket spraying is what removes that pressure. On a crop where aphids move virus, continuous predator pressure is worth more than a single knockdown."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "Those same helpers can be bought and released into a greenhouse or tunnel, which is where they are the standard control. Release onto colonies you have actually found rather than ahead of them.",
+     "note_seasoned": "Released lady beetles, lacewings and parasitic wasps are the standard biological control under cover, and an enclosed space is where a purchase is best justified because they stay with the crop. Confirm the infestation first and hold broad-spectrum material off afterward."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Where colonies keep growing, insecticidal soap is a soap-based spray that kills what it touches. Get the nozzle up under the foliage and go over the plants again every few days, because anything the spray misses carries on.",
+     "note_seasoned": "Soap earns its place only with thorough coverage of the lower leaf surfaces on a few-day repeat, and it wets soft-bodied beneficials, so confine it to the patches carrying colonies. Reach for it when conservation and the water pass have stopped keeping up."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other spray here and goes on the same way, undersides covered and repeated every few days. Read its heat and bee cautions before choosing it.",
+     "note_seasoned": "Oil is the alternative contact material at the same point, with the same coverage demand and repeat interval. On an open planting in flower its bee precaution is the binding constraint, so plan the timing around that."
+    }
+   ]
+  },
+  {
+   "id": "whiteflies",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Keep the nitrogen feed moderate. Whiteflies do best on the soft, lush growth heavy feeding produces, and under the warmth of a greenhouse or tunnel that growth comes on quickly.",
+     "note_seasoned": "Feeding restraint denies whitefly the over-fed growth it favors, and under cover there is no run of bad weather to knock the population back for you. Hold it as a habit through the crop rather than reacting to a trap count."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Strip the lower leaves that are heavily loaded with whitefly young and carry them out of the structure rather than dropping them under the plants.",
+     "note_seasoned": "Taking off the worst-infested lower foliage removes a share of the immature stages in one pass and is worth doing before any spray program starts. Move the trimmings right out, since adults left on them can simply return to the canopy."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Set yellow sticky traps, cards with a glue coating, up among the plants. They catch adults, and more usefully they tell you the first arrivals are in while there is still time to act.",
+     "note_seasoned": "Traps do double duty here, monitoring and some reduction in adults, and early detection is what the whole program under cover turns on. Keep them up from the start of the crop rather than hanging them once a cloud lifts off the foliage."
+    },
+    {
+     "method": "augmentative_release",
+     "note_beginner": "Encarsia formosa is a tiny helper wasp that attacks whitefly young, and under cover it is the standard control and works well. Release it onto an infestation you have found rather than in advance.",
+     "note_seasoned": "Encarsia formosa is the named biological control for whitefly in a greenhouse or tunnel, and an enclosed structure is where a purchased release is best justified. Keep broad-spectrum material off the crop afterward so it survives to work."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "Insecticidal soap, a soap-based spray, kills what it wets, so aim it up under the leaves where the young feed and repeat often. The adults mostly fly off ahead of the spray.",
+     "note_seasoned": "Soap acts by contact on nymphs held on the lower leaf surfaces, so underside coverage and frequent repeats are the whole of it, while winged adults evade the pass. It also wets soft-bodied beneficials, so reconcile it with any release you are running."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other option, worked onto the leaf undersides the same way and repeated. Check its cautions about heat, dry plants and open flowers before you mix it.",
+     "note_seasoned": "Oil is the alternative contact material with the same underside demand and repeat schedule, and it carries the same conflict with a released parasitoid. Its heat and water-stress limits apply in a warm structure as much as outdoors."
+    }
+   ]
+  },
+  {
+   "id": "cucumber-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Site the planting off ground that grew squash-family crops last season. That cuts how many beetles find the plants while they are small, which is the stretch when the wilt they carry does its damage.",
+     "note_seasoned": "Rotating out of cucurbit ground lowers early colonizing pressure, and the early colonizers are the group worth aiming at because they introduce the wilt. It belongs with weed and debris clearing as prevention for an outdoor or vented planting."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Stay on top of the weeds around the patch and haul old crop debris off. It removes the shelter beetles use, and it is worth keeping up through the season.",
+     "note_seasoned": "Clearing weeds and residue around the planting is named with rotation as standing prevention. It lowers pressure without substituting for keeping beetles off young plants."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover or screen young plants with a light fabric or fine mesh to keep beetles out. On seedless English types this does two jobs at once, because the same screening keeps bees off, which is what these varieties want.",
+     "note_seasoned": "Exclusion is the strongest move available here, and on a parthenocarpic type, one that sets fruit without pollination, the screening doubles as the pollinator exclusion the crop already calls for. Under full exclusion the beetle and the wilt it vectors are largely kept out, so little else is needed."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go over outdoor plants first thing in the morning and collect the beetles by hand while the cool still has them slow. On a small planting that often holds them.",
+     "note_seasoned": "Hand-collection while adults are sluggish at first light suits an open planting and is worth concentrating early in the season, when the beetles present are the wilt vectors. It has little to offer under full exclusion, where you rarely meet the pest."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "A yellow sticky trap is a glue-coated card you stand beside the crop, and it tells you beetles are around while taking a few out of circulation. Since the wilt they carry cannot be cured, that early warning is worth a great deal.",
+     "note_seasoned": "Traps serve mainly as monitoring on outdoor and vented plantings, with some reduction in adult numbers. With no cure for the wilt available, holding beetle numbers down early is the practical route to avoiding the disease."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a variety with some resistance, such as Tyria, when you order seed. Some English cucumbers stand up to this far better than others, and it costs nothing extra to pick one that does.",
+     "note_seasoned": "Tolerant cultivars are the highest-leverage decision available and are taken at seed-buying time, for the disease this crop meets most often under cover. Resistance varies across the English types, so check the specific variety rather than the class."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room and train them up a single stem so air moves through the planting, and keep them in good light. Crowding, shade and still air are what this fungus likes best.",
+     "note_seasoned": "Spacing and single-stem training are layout decisions set at planting, since a dense canopy with little air movement is what worsens it, and full light belongs in the same call. Venting to hold humidity down is the other half and is managed through the crop."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Ease off the nitrogen feed. Heavy feeding pushes soft growth this disease takes to, and it thickens the canopy at the same time.",
+     "note_seasoned": "Avoiding excess nitrogen is listed with spacing and light as prevention; the mechanism is the soft, dense growth that also holds humid air inside the canopy."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Direct your watering down at soil level and keep it off the foliage. Worth knowing, though: this fungus can get going without wet leaves, so treat that as a sound habit here rather than as the thing that stops it.",
+     "note_seasoned": "Base watering is a standing habit on this crop, but unlike most leaf diseases this one infects in humid air without free water on the leaf, so it carries less weight against powdery mildew than elsewhere. Venting for humidity is the input that acts on it directly."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Strip out the leaves carrying the heaviest coating as soon as you spot them. Once the white bloom is over the whole plant you are limiting damage rather than curing anything.",
+     "note_seasoned": "Stripping the heaviest-infected leaves lowers what is on hand to spread from, though once it is general across the canopy the work becomes damage limitation. Early defoliation is what cuts the crop short and leaves fruit exposed to sunscald, which is the loss being managed."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Go in at the very first white specks with a labeled fungicide, sulfur among them, and cover both faces of every leaf you treat. Leave it until the coating is widespread and it gets much harder to stop. Read the product's cautions about heat and dry plants before you mix any.",
+     "note_seasoned": "Applied at the first symptom with coverage on both faces of the leaf, sulfur has a narrow window that repays the effort, and scouting from early in the crop is what keeps that window open. Its own cautions bind here: it sits poorly with oil sprays, and it can set back predatory mites released under cover unless they are a sulfur-tolerant strain."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where downy mildew turns up most years, look for a resistant variety as you choose seed. They are not offered for every type, so check before you order.",
+     "note_seasoned": "Resistant cultivars are worth seeking where they exist, and the availability qualifier is real rather than a formality. Cucumbers take this readily, so the seed decision is the leverage you hold before humid weather arrives."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants and train them to a single stem so air moves through and leaves dry sooner. Under cover, open the vents, because damp, still air is what this one needs.",
+     "note_seasoned": "Spacing and single-stem training shorten the wet periods on the foliage, and leaf wetness is what infection requires. High humidity under cover can drive it hard, so venting belongs in the same decision as the layout."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Keep the irrigation under the canopy rather than over it. Damp foliage is what lets this one get going, so watering from over the top hands it the condition it wants.",
+     "note_seasoned": "Irrigating at the soil line removes the one source of leaf wetness fully under your control. It works with venting rather than instead of it, since humid air under cover can keep foliage damp on its own."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Stay out of the rows while the vines are wet, and do your picking and leaf work once the foliage has dried. This one is about when you go in, not what you put on.",
+     "note_seasoned": "Timing your handling to dry foliage is named in prevention here, and it still applies after rain, dew or a humid night under cover, which no watering choice reaches. It slows spread rather than halting an infection already running."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Remove the worst-blotched leaves as you find them. It cuts down what is sitting in the planting, though this disease also arrives on the wind, so do not expect removal alone to hold it.",
+     "note_seasoned": "Pulling heavily infected leaves lowers the local source, but the spores travel on wind from outside the planting, so removal contributes rather than controls. It moves fast once established, which is why the preventive work is worth more than in-season tidying."
+    },
+    {
+     "method": "copper_fungicide",
+     "note_beginner": "Once the weather turns damp and humid, a labeled copper fungicide is worth reaching for, and the spray has to get up under the leaves where the fuzzy growth sits. Time it to that turn in the weather instead of to the first spots you notice, and read its cautions about waterways and about building up in soil.",
+     "note_seasoned": "Copper is protective, so it goes on as conditions turn favorable rather than once lesions are running, with the undersides covered because that is where the fungus sporulates. This crop's guidance names copper and stops there, so nothing heavier is offered for it on this crop."
+    }
+   ]
+  },
+  {
+   "id": "gummy-stem-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Begin with clean seed. This one can ride in on infected seed, so what you sow decides whether you bring it into the house at all.",
+     "note_seasoned": "The pathogen can be seedborne, so clean seed shuts a route that none of the in-season steps can reach. Skip it and everything later works against a source planted with the crop."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Choose a variety with resistance when you place that same seed order.",
+     "note_seasoned": "Variety resistance is named alongside clean seed as the pair set before planting, and it is the leverage you hold against a disease with a habit of persisting where cucumbers are grown under cover."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move cucumbers to a fresh spot and keep squash-family crops out of the old one. The fungus lives on in the debris left behind.",
+     "note_seasoned": "Rotating cucurbits out of the bed outlasts survival on crop residue, the carryover route that remains once seed is clean. It pairs with residue removal rather than replacing it, since the fungus persists in what is left behind."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Run the water in at the root zone and keep the leaves out of it. Warm, damp air is what this fungus wants, and watering from above adds to it.",
+     "note_seasoned": "Base irrigation keeps you from adding to the humidity this disease works in, and it is named with venting as the moisture half of the program. Overhead water on a crop already held in humid air is the input most easily removed."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Prune and handle the plants only when they are dry. The fungus gets in through cuts and wounds, and cuts made in damp conditions stay open to it longer.",
+     "note_seasoned": "Pruning dry is specified here because the pathogen enters through wounds and pruning cuts, and cuts made in dry conditions heal faster. It is a decision about when you work, and it holds after a humid night as much as after irrigation."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut out infected leaves and fruit whenever you spot them, and pull the old plants once the crop finishes. Do not leave the trimmings lying under the plants.",
+     "note_seasoned": "In-season removal of affected leaves and fruit plus destruction of residue at the end addresses both current spread and survival between crops. Get the material out of the structure rather than leaving it on the floor."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Where a stem shows a dark, sunken, gummy patch, cut it back past the damage into sound tissue and destroy what comes off. Clean your hands and pruning tools between plants, since single-stem training means the same blade touches every plant in the row.",
+     "note_seasoned": "Cankered stem tissue is cut back beyond the visible margin and destroyed, and disinfecting tools between plants is what keeps single-stem training from carrying the fungus down the row on hands and blades. Do the work on dry plants so cuts are not left open in humid air."
+    }
+   ]
+  },
+  {
+   "id": "gray-mold",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room and train them up a single stem so air keeps moving through the planting. This mold works in cool, damp, still air, which is what a closed-up greenhouse or tunnel turns into.",
+     "note_seasoned": "Humidity and air movement are the controlling factors on this one, and spacing plus single-stem training is where that is set at planting. Venting to keep the air moving is the running half of the same job."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Keep the watering down at soil level and off the plants themselves. Wet flowers, leaves and fruit are where this mold gets started.",
+     "note_seasoned": "Base irrigation keeps the surfaces the fungus colonizes from staying wet, and on a crop held in a humid structure that is one of the few moisture inputs you fully control."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Prune and pick when the plants are dry. Fresh cuts and picking scars made in damp conditions are exactly what this mold moves into.",
+     "note_seasoned": "Handling in dry conditions matters because the fungus colonizes wounds and cut surfaces, so the timing of pruning and harvest is itself a control. It applies after a humid night as much as after irrigation."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take off spent flowers, dying leaves and any moldy fruit as you go, and carry the trimmings away instead of leaving them under the plants. This mold starts on dead and dying tissue before it moves to good fruit.",
+     "note_seasoned": "The fungus colonizes dead and dying tissue, spent flowers and pruning wounds first, so removing that material is the core in-season action rather than a tidying job. Trimmings left on the floor are still a source, so take them out of the structure."
+    }
+   ]
+  },
+  {
+   "id": "cucumber-mosaic-virus",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Grow a resistant variety where one is sold for the type you want. Nothing cures a plant once it is infected, so the seed you choose is the strongest move you get.",
+     "note_seasoned": "Resistant cultivars where available are the one preventive lever aimed at the virus itself, since nothing treats an infected plant. The availability qualifier is real, so check what is offered for the type you intend to grow."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Reflective mulch is a silver or foil sheet laid over the soil, and it puts aphids off small outdoor plants. Since aphids are what move this virus, keeping them from settling on young plants is the point of it.",
+     "note_seasoned": "Foil or reflective mulch deters colonizing aphids on young outdoor plantings, and aphid deterrence is the practical route to the virus because the vector is what you can act on. Put it in place before any colony has settled, which means early, on a small crop."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out any plant with mottled, puckered leaves and destroy it, and keep the weeds down around the planting, since some of them carry the virus. Wash your hands and tools after handling a suspect plant.",
+     "note_seasoned": "Rogue infected plants at the first clear symptoms and destroy them, since the plant is a source and cannot be recovered. Clearing nearby weeds that harbor the virus and cleaning hands and tools after handling suspect plants belong with it as the rest of the practical program."
+    }
+   ]
+  }
+ ]
+}
