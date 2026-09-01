@@ -1,10 +1,10 @@
-# PLA-8 -- HANDOFF: the roots batch is NEXT, and the catalog is ready for it
+# PLA-8 -- HANDOFF: the roots batch is NEXT, and everything around it is now clean
 
 **Written 2026-09-01 at the end of a long session. Read this before starting roots.**
 
-Canonical is `6a67a677` (catalog round 8). Working tree clean, `main` in sync with origin.
+Canonical is `b118f19d` (thin-ladder backfill). Working tree clean, `main` in sync with origin.
 **Verify first:** `shasum -a 256 crops_data_final.json` must read
-`6a67a677960afcf3a0a85069c73737243d8117869232ec66ce8b79e99bdc8797`.
+`b118f19d36d021db95d755225e566843676fe3fa393299f250a8d34bb9605710`.
 
 Everything below is committed and pushed. Nothing is half-done.
 
@@ -14,186 +14,191 @@ Everything below is committed and pushed. Nothing is half-done.
 
 | commit | what |
 |---|---|
-| `839c9de` | **PLA-8 batch 22, the stragglers** -- english-cucumber, edamame, pumpkin; 26 problems, 135 rungs, 4 mints; roster laddered **91 -> 94** of 121 |
-| `a405351` | `COMMIT_FOR` registration for `919eabc4` |
+| `839c9de` | **PLA-8 batch 22, the stragglers** -- english-cucumber, edamame, pumpkin; 26 problems, 135 rungs; roster **91 -> 94** of 121 |
+| `a405351` | `COMMIT_FOR` for `919eabc4` |
 | `ad571e6` | **`ladder_batch verify` absolute-vocabulary reconciliation** + a drift test |
-| `a0caf3d` | the absolutes finding re-measured: a campaign of **85**, not 3 defects |
-| `4c8bf1e` | **PLA-8 catalog round 8** -- `cure_and_store` + `lower_soil_ph`; methods **62 -> 64** |
-| `2e352f5` | `COMMIT_FOR` registration for `6a67a677` |
+| `a0caf3d` | the absolutes finding re-measured |
+| `4c8bf1e` | **catalog r8** -- `cure_and_store` + `lower_soil_ph`; methods **62 -> 64** |
+| `2e352f5` | `COMMIT_FOR` for `6a67a677` |
+| `409b23f` | roots handoff v1; the thin-ladder scan; an `even_watering` claim corrected |
+| `5c23d15` | **catalog r9** -- `even_watering` widened to reach `bacterial` |
+| `cb42118` | `COMMIT_FOR` for `4f33522c` |
+| `c35b27a` | **thin-ladder backfill** -- 8 rungs onto 6 shipped problems |
+| `2c77e68` | `COMMIT_FOR` for `b118f19d` |
 
-Verification across both promote arcs: batch 22 suite 103/103 and harness **72 injected / 0
-survived**; catalog r8 suite 57/57 and harness **42 / 0**. Full repo suite **4132 passed, 1 skipped**
-(4070 before + exactly the 62 new tests, so nothing was lost). `gate_all` 121/121 on both.
-
-Close-outs for both are appended to **PLA-8** in Linear.
+Four promote arcs, each mutation-tested: batch 22 **72/0**, catalog r8 **42/0**, catalog r9 **39/0**,
+backfill **41/0**. Suites 103, 57, 53 and 49, all green on both runners.
 
 ## 2. START HERE: the roots batch, as ONE batch
 
-parsnip (6 problems), potato (8), sweet-potato (8) = **22 problems**. Trevor asked whether to split
-it in two; measured, the answer is no and the measurement is worth keeping:
-
-* **The three crops share ZERO prose with each other.** There is no read to amortize, so splitting
-  saves nothing on the expensive step and doubles the fixed overhead (promote + suite + harness +
-  gauntlet + state trio + close-out).
-* **The premise is uniform**: all 22 problems are FULL schema, all carry coarse types (`pest` x8,
-  `disease` x8 across the three), and all carry `severity`. That is batch 17's shape, the simplest
-  there is, and one promote covers it.
-* It is **smaller than batch 22** (22 problems vs 26).
+parsnip (6 problems), potato (8), sweet-potato (8) = **22 problems**. Splitting it in two was
+measured and rejected: the three crops share **zero prose** with each other, so there is no read to
+amortize and a split only doubles the fixed overhead. The premise is uniform (all full-schema, all
+coarse types, `severity` throughout) -- batch 17's shape, the simplest there is.
 
 ### Three things that are DIFFERENT from batch 22 -- do not inherit its promote wholesale
 
-1. **ZERO template twins.** Measured: no roots problem shares byte-identical source prose with any
-   laddered crop. Batch 22's `check_template_sibling_divergence` would be VACUOUS, and its own
-   anti-vacuity branch will refuse rather than pass quietly. **Drop it and choose a guard by
-   measuring**, the way batch 22 did. Three batches have now needed three different divergence
-   guards; the ratio of exact-vs-diverging ladders does NOT pick the right one.
-2. **The type rule is uniformly coarse -> upgrade**, not batch 22's split-by-crop. Assert it in the
-   direction that actually holds.
+1. **ZERO template twins.** No roots problem shares byte-identical source prose with any laddered
+   crop, so batch 22's `check_template_sibling_divergence` would be VACUOUS and its anti-vacuity
+   branch will refuse. **Drop it and choose a guard by measuring.** Four batches have now needed
+   four different divergence guards; the exact-vs-diverging ratio does NOT pick the right one.
+2. **The type rule is uniformly coarse -> upgrade**, not batch 22's split-by-crop.
 3. **Run the substring / token-subset id scan**, not an equality check. Batch 21 earned "check every
-   mint BY ID"; batch 22 followed that and still missed two, because an exact-id check passes an id
-   that merely *resembles* a live one. See `docs/2026-09-01-pla8-batch22-outcome-and-carryforward.md`
-   section 5.
+   mint BY ID"; batch 22 followed it and still missed two, because an exact-id check passes an id
+   that merely *resembles* a live one.
 
-### The catalog is now ready, and that is why r8 ran first
+### The catalog is ready. Author against 64 methods, and mint nothing mid-batch.
 
-7 of the 22 roots problems needed methods that did not exist. `cure_and_store` and `lower_soil_ph`
-are now live, so **author against the 64-method catalog**. Do not mint mid-batch: `ladder_batch
-prepare` regenerates its brief FROM CANONICAL, and batch 1's documented defect was being authored
-against a 37-method catalog that grew to 43 underneath it.
+`ladder_batch prepare` regenerates its brief FROM CANONICAL, and batch 1's documented defect was
+being authored against a 37-method catalog that grew to 43 underneath it.
 
-**Still unplaceable in roots, so expect these instructions to have no home:**
+**Still unplaceable in roots, so expect these instructions to have no home:** hilling / mounding
+(see section 5); seed-piece suberization before planting (potato blackleg), which is distinct from
+post-harvest curing; "do not move soil on tools or shoes".
 
-* **"keep the soil evenly moist" on common scab** -- see the correction in section 4. No legal
-  method exists.
-* **hilling / mounding over stems and crowns** (parsnip canker, and 4 shipped squash problems).
-  DEFERRED at r8, not refused; see section 5.
-* seed-piece suberization before planting (potato blackleg) -- distinct from post-harvest curing.
-* "do not move soil on tools or shoes" (sweet-potato SCN-adjacent, edamame).
+## 3. The thin-ladder scan -- RUN and ACTED ON. Do not re-derive it.
 
-## 3. THE THIN-LADDER SCAN -- run, and here is the whole result
+**Population:** 775 laddered problems / 3,149 rungs; 133 carry <= 2 rungs.
 
-Recommended at the end of the r8 work and run before writing this. **It is done; do not re-derive
-it.**
+A thin ladder is not itself a defect. The check was narrower: *the prose names a control that
+EXISTS, is LEGAL for that type, and is missing from the ladder.* Phrases generated leads; every hit
+was READ. **10 leads over 9 problems: 6 real, 4 false.**
 
-**Population.** 775 laddered problems / 3,149 rungs. 133 carry <= 2 rungs, 167 carry 3.
+**All 6 real ones are FIXED** in `c35b27a`: `strawberry`/`red-stele` gained `improve_drainage` and
+`certified_clean_stock`; both fig problems gained `prompt_harvest`; `beet`/`common-scab` gained
+`even_watering` and `lower_soil_ph`; `garlic`'s two rots each gained `cure_and_store`. **Two were
+unfixable a day earlier** -- their methods were minted in r8 and unblocked in r9.
 
-**Method.** A thin ladder is not itself a defect -- some problems have two rungs because two is all
-there is. The defect shape is narrower: *the prose names a control that EXISTS in the catalog, is
-LEGAL for that problem's type, and is absent from the ladder.* High-precision instruction phrases
-were used as a **lead generator only**, over the <= 2-rung population, and every hit was READ.
-
-**Result: 10 leads over 9 problems. 6 real, 4 false.**
-
-### The 6 real gaps
-
-| problem | ladder | missing | note |
-|---|---|---|---|
-| `strawberry`/`red-stele` | `crop_rotation`, `resistant_varieties` | **`improve_drainage`**, **`certified_clean_stock`** | prose: "Plant in well-drained soil or raised beds, buy certified plants". Also: **`crop_rotation` is ON the ladder and is named NOWHERE in the prose** -- a rung with no prose support, the inverse defect, worth its own look |
-| `fig`/`dried-fruit-beetle-souring` | `garden_sanitation`, `resistant_varieties` | **`prompt_harvest`** | `prompt_harvest`'s own `best_use` literally names "fig souring" as its case |
-| `fig`/`fig-endosepsis` | `garden_sanitation`, `resistant_varieties` | **`prompt_harvest`** | "pick promptly, remove affected and dropped fruit" |
-| `beet`/`common-scab` | `crop_rotation` | **`lower_soil_ph`** | now available as of r8 |
-| `garlic`/`botrytis-neck-rot` | `balance_nitrogen` | **`cure_and_store`** | now available as of r8; `garlic`/`fusarium-basal-rot` is the same shape |
-
-All five are on **already-laddered, shipped crops**. None is in the roots batch. Each is a small
-guarded promote; the two fig ones share a method and could go together.
-
-### The 4 false positives, and why they matter more than the count suggests
-
-**Every one failed for the same reason: the prose names the control in order to DISCOUNT it.**
-
-* `lemon`/`huanglongbing` and `lime`/`huanglongbing` -> `resistant_varieties`. The prose says
-  "Research into tolerant varieties is ongoing but there is no home cure." Adding the rung would
-  assert that resistance exists.
-* `cantaloupe`/`bacterial-wilt` -> `resistant_varieties`. "Few home varieties carry useful
-  resistance, so exclusion and early beetle control are the reliable tools."
-* `chamomile`/`gray-mold` -> `improve_drainage`. The match is "well-drained" inside "lean,
-  well-drained, airy plantings rarely see it" -- a descriptive aside about where the disease does
-  NOT occur, not an instruction.
+**The 4 false positives are the more useful half, and every one failed for the same reason: the
+prose names the control in order to DISCOUNT it.** Both huanglongbing records say research into
+tolerant varieties is ongoing and nothing cures it; cantaloupe says few home varieties carry useful
+resistance; chamomile's "well-drained" sits inside an aside about where gray mold does *not* occur.
 
 **A keyword scan cannot tell "do X" from "X will not help here", and 40% of its hits were the
-latter.** That is the `document-subject-defeats-proximity-scans` lesson again: the scan is a
-reproducible way to generate leads and is not a verdict. Do not automate this into a gate.
+latter. Do NOT automate this into a gate.** The reassuring half: 10 leads across 133 thin ladders
+means the thin population is overwhelmingly thin for good reason.
 
-**The reassuring half of the result:** only 10 leads across 133 thin ladders. The thin population is
-overwhelmingly thin for good reason. This is bounded follow-up work, not a rot.
+**One scan result was itself wrong and is corrected:** it reported `strawberry`/`red-stele` carrying
+a `crop_rotation` rung its prose "names nowhere". That was an artifact of the scan reading only the
+prevention and treatment fields; `cause_seasoned` says the pathogens "persist for years", which is
+exactly what rotation acts on. The rung is supported and stays.
 
-## 4. A CORRECTION I OWE, made during the scan
+## 4. The absolutes "campaign" -- SCOPED OUT. It is not a campaign.
 
-The r8 record claimed that `even_watering` "already carries" the soil-moisture half of common scab
-control. **That is wrong.** `even_watering.applies_to` is `['physiological', 'mite']`, which does not
-intersect `TYPE_TARGETS['bacterial']`, so it is **ILLEGAL** on both potato and beet common scab, and
-no other method carries a "keep the soil evenly moist" instruction for a disease. I asserted method
-availability without checking legality -- the exact failure the repo has a rule against.
+I reported three banned absolutes from batch 22 and they were approved for fixing. Measuring
+roster-wide first turned that into 85 prescriptive "never" instructions, which looked like a large
+campaign. **Reading the actual standard turned it into almost nothing**, and that is the finding.
 
-Corrected in the live surfaces (`LATEST.txt`, `CURRENT_STATE.md`, the r8 content module docstring,
-and the batch-22 carry-forward). **`STATE_HISTORY.md` was deliberately left byte-for-byte**, per its
-append-only rule, and commit `4c8bf1e`'s message stands as the historical record. The mint itself is
-unaffected: `lower_soil_ph` never claimed the moisture half.
+`per_crop_cleanup_checklist_v1_0.md` section 5 says, verbatim:
 
-**r9 candidate: widen `even_watering` to reach `bacterial` / `disease_general`**, or the scab
-moisture instruction stays homeless on potato, beet and any future scab host. The PNW handbook names
-*Streptomyces scabies* on beet, potato, parsnip, carrot and radish, so the population is larger than
-two.
+> Scan the crop's user-facing fields for: `harmless`, `safe for`, `nontoxic`, `no risk`,
+> `completely`, `will not`, `never`, `always`, `cannot`, `guaranteed`.
+> **Lead generator, not verdict. Most hits are legitimate** -- "does not tolerate frost" is a correct
+> absolute. What is being looked for is **an absolute standing where the biology is conditional**.
+> **Two field families where an absolute costs most:** anything under `control_methods` or
+> `pesticide_safety_education` (safety), and `weather_triggers` (falsifiable in front of the user).
 
-## 5. The r9 catalog queue, in evidence order
+Scanned with the standard's own 10 terms, on the families it names:
 
-1. **Widen `even_watering`** to reach disease types (section 4). Cheapest, and it unblocks a control
-   both scab sources call half the answer.
-2. **In-season mounding**, DEFERRED at r8 with its measurement recorded in
+| family | hits | verdict |
+|---|---|---|
+| `control_methods` | 52 across 34 of 64 methods | almost all are correctly-stated LIMITS in `cons` ("will not cure an established infection") -- the OPPOSITE of an overclaim |
+| `pesticide_safety_education` | 5 | all correct. A safety instruction SHOULD be absolute: "Never spray a plant that is in bloom", "the label is the law" |
+| `weather_triggers` | 50 | mostly correct frost absolutes ("Marigolds cannot survive frost") |
+
+**The standard's own worked example of the defect is "will not flower in summer", and the dataset
+contains that exact sentence on chard.** I read it expecting the canonical instance. It is not one:
+chard's record says in four places that it does **not** bolt from summer heat (only from
+vernalization or in year two), and the trigger's full text is "will not flower in summer *the way
+lettuce and spinach do*" -- a comparative, not an absolute. Parsley's "will not flower from it" is
+the same shape and its record supports it in roughly forty places.
+
+**Net: the 85 are a lead list, not a defect list, and the prose pass should NOT be run.** Two items
+survive, and neither is an absolutes campaign:
+
+1. **`beneficial_nematodes.pros[1]` "Cannot infect people, pets, or plants"** -- an absolute SAFETY
+   claim in the highest-cost family. This is already a known owed item from PLA-253, which hedged
+   Bt's equivalent claim and left this one **owing a T1 read**. It is the one hit that sits exactly
+   where the standard says an absolute costs most.
+2. **A chard internal contradiction, found while reading** and NOT an absolutes defect: one field
+   says "Chard usually bolts in its second year **or under prolonged heat and stress**" while four
+   others say it does not bolt from summer heat. The weather trigger is on the correct side of it.
+
+**Also still open, and untouched by any of this:** the standard names an INVERSE defect with no term
+to scan for -- a source's hedge dropped in compression. That has never been swept.
+
+## 5. The r10 catalog queue, in evidence order
+
+1. **In-season mounding**, DEFERRED at r8 with its measurement recorded in
    `build_pla8_catalog_r8_content.py`. 5 problems / 5 crops, 4 already laddered with the instruction
    unplaced. Blocked on ONE thing: reading splits it into three mechanisms (adventitious rooting for
    resilience; a physical barrier against larval entry; covering a crown against a canker fungus) and
    **the barrier reading has no document** -- asked directly, UIUC names burying nodes for rooting
    and does not mention mounding over the lower stem to prevent entry. Source that, or admit it as
    two methods.
-3. **`horticultural_oil` cannot reach `fungal`** -- reported by three batches now.
-4. **General plant vigor** -- four berry authors, citrus, edamame, pumpkin.
-5. **Humidity / venting under cover** -- the most-repeated instruction in english-cucumber's record
+2. **`horticultural_oil` cannot reach `fungal`** -- reported by three batches.
+3. **General plant vigor** -- four berry authors, citrus, edamame, pumpkin.
+4. **Humidity / venting under cover** -- the most-repeated instruction in english-cucumber's record
    (5 problems) with no method at all.
-6. **`weed_host_control` cannot reach `viral` or `nematode`** -- english-cucumber's CMV is the
+5. **`weed_host_control` cannot reach `viral` or `nematode`** -- english-cucumber's CMV is the
    textbook case, an aphid-vectored virus with a named weed reservoir.
-7. Seed-piece suberization; potassium bicarbonate; lawn/grub management; a lift-fruit-onto-a-board
+6. Seed-piece suberization; potassium bicarbonate; lawn/grub management; a lift-fruit-onto-a-board
    method; dormant lime sulfur; watering QUANTITY.
 
 ## 6. Open, filed, NOT fixed
 
-1. **The absolutes campaign: 85, not 3.** Measured roster-wide: 171 absolute-word hits in problem
-   prose, 134 "never" clauses, of which **85 instruct the reader** and ~45 are ordinary descriptive
-   English ("seeds that never come up"). I originally reported this as three defects from batch 22's
-   crops and Trevor approved fixing them; measuring first showed that fixing 3 of 85 would make the
-   dataset **less** consistent. **It needs a read-then-adjudicate pass, NOT a find-and-replace.**
-   The tooling half is already fixed in `ad571e6`.
-2. **FOUR one-token id repoints** would retire the lone-crop minority-id class: asparagus `cutworm`,
+1. **FOUR one-token id repoints** would retire the lone-crop minority-id class: asparagus `cutworm`,
    swiss-chard `flea-beetle`, basil `japanese-beetle`, artichoke `botrytis-gray-mold`. Batch 21's and
    batch 22's `check_singular_variants_not_taken` both refuse once the first three are repaired --
    **retire the guard in the same change.**
-3. **`wet_foliage_discipline` missing from 13 laddered problems** whose own prose says to time work
+2. **`wet_foliage_discipline` missing from 13 laddered problems** whose own prose says to time work
    to dry foliage (34 carry the instruction, 21 carry the rung).
-4. **The 5 thin-ladder gaps** in section 3.
+3. **`beneficial_nematodes` owes a T1 read** (section 4).
+4. **The chard bolting contradiction** (section 4).
 5. **Mis-pointed / unstable source keys** -- a measured class across batches 17, 18, 20 and 22. Each
-   problem's own `anchoring_urls` is correct; the KEY is not stable. Mechanically detectable; the
-   scan is still worth building and still has not been.
+   problem's own `anchoring_urls` is correct; the KEY is not. Mechanically detectable; not built.
 6. **viola's own note recommends Bt on a butterfly host** (batch 21). The ladder already omits it.
-7. **The batch-18 oil temperature ruling was OVERTURNED** by reading (batch 19 outcome doc section 8).
-   Specified, not actioned.
+7. **The batch-18 oil temperature ruling was OVERTURNED** by reading (batch 19 outcome doc §8).
+8. **The dropped-hedge inverse sweep** has never been run (section 4).
 
-## 7. Operational notes
+## 7. Guard-writing lessons this session earned, in order of how much they cost
 
-* **The pre-commit E1 hook will always block a dataset commit**, and this is structural, not a
-  problem to fix: it wants `~/plant-app`'s export to reference a commit that cannot exist until
-  after the commit. Batch 21 bypassed it too -- plant-app's provenance records `dataset_commit
-  27a9f87`, batch 21's OWN second commit. Use `--no-verify` and put the reason in the message.
-* **plant-app owes a `npm run build:guides` covering THREE dataset revisions** (batch 21's, batch
-  22's and r8's), not one. Trevor is having the app pick this up when its current work finishes. The
-  shipped export is that far behind; it does not block dataset work.
+These are worth reading before writing the roots suite, because three of the four arcs lost time to
+the same family of mistake.
+
+1. **Reach the guard through the ENTRY POINT, and make the sabotage one only that guard can see.**
+   r8's harness found that cutting `check(data)` out of `main` left all 53 tests green -- every
+   driver called `check()` directly. Fixed. Then the BACKFILL harness found the replacement driver
+   *still* passed with `check()` removed, because the sabotage it used (`a wrong rung count`) is
+   ALSO caught by `verify_post`. The rule has two halves and I learned them one round apart.
+2. **A test that iterates a table cannot notice an entry deleted from the table.** r9's
+   `MUST_SURVIVE` check looped over whatever the table held, so emptying it one fragment at a time
+   was invisible. Pin table CONTENTS with a coverage assertion.
+3. **Do not hedge an assertion across branches that share a constant.** Three backfill drivers
+   asserted `"expected 7"`, which appears in two different guards' messages, so either could be
+   disabled. Assert the whole specific sentence.
+4. **A forward assertion is not a gap.** Two checks this session are genuinely unreachable by
+   post-state mutation (r9's method COUNT, the backfill's added-rung count) because an earlier
+   set-comparison fires first. Both are now documented in the promote and WITHDRAWN from their
+   harness rather than left reported as permanent survivors.
+5. **`expect_before` pays for itself immediately.** The backfill's first dry run refused because I
+   had taken fig's ladder order from the scan's SORTED output rather than the real sequence.
+
+## 8. Operational notes
+
+* **The pre-commit E1 hook will always block a dataset commit**, and this is structural: it wants
+  `~/plant-app`'s export to reference a commit that cannot exist until after the commit. Batch 21
+  bypassed it too. Use `--no-verify` and put the reason in the message.
+* **plant-app owes a `npm run build:guides` covering FIVE dataset revisions now** (batch 21, batch
+  22, r8, r9, the backfill). Trevor is having the app pick this up when its current work finishes.
+  It does not block dataset work.
 * **`release_verify` is single-crop-pilot-shaped.** It demands exactly one changed crop, so a
   catalog-only round always reports one section-A concern it cannot avoid. Read section B, the
-  top-level line, and the reference-crop line instead.
+  top-level line and the reference-crop line instead.
 
-## 8. Roster position
+## 9. Roster position
 
-**94 / 121 laddered.** Remaining **27 crops / 138 problems / 7 batches**, counts COMPUTED from
-canonical:
+**94 / 121 laddered.** Remaining **27 crops / 138 problems / 7 batches**, computed from canonical:
 
 | batch | crops | n | problems |
 |---|---|---|---|
@@ -203,7 +208,7 @@ canonical:
 | woody herbs | lavender, rosemary, sage, thyme | 4 | 20 |
 | soft herbs | lemongrass, mint, oregano | 3 | 16 |
 | pome fruit | pear-asian, pear-european | 2 | 15 |
-| microgreens (**LAST**, standing ruling) | arugula-, broccoli-, cilantro-microgreens, pea-shoots, radish-microgreens, sunflower-sprouts, wheatgrass | 7 | 14 |
+| microgreens (**LAST**, standing ruling) | 7 microgreens crops | 7 | 14 |
 
-Note the alliums batch inherits `cure_and_store` directly: onion and shallot both carry Botrytis neck
-rot with curing and storage instructions, and garlic's shipped one-rung ladder is the backfill.
+The alliums batch inherits `cure_and_store` directly: onion and shallot both carry Botrytis neck rot
+with curing and storage instructions, and garlic's backfill is already done as the worked example.
