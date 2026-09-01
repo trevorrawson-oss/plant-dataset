@@ -1,0 +1,355 @@
+{
+ "slug": "orange-navel",
+ "name": "Orange (Navel)",
+ "category": "Citrus",
+ "pests": [
+  {
+   "name": "Asian citrus psyllid",
+   "type": "insect",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/asian-citrus-psyllid/",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "The psyllid itself is a tiny mottled-brown insect, about an eighth of an inch, that feeds tilted up at a 45-degree angle on new flush, a posture no other citrus pest shares. Its nymphs produce distinctive waxy tubules and curl tender new growth; heavy feeding twists and notches expanding leaves. The insect matters less for its direct damage than for what it carries: it is the vector of Huanglongbing (citrus greening), the most serious citrus disease worldwide. Scout the youngest flush, where it concentrates.",
+   "symptoms_beginner": "This tiny brown insect has a distinctive resting posture: it perches on new leaves at an angle, with its rear end raised and pointed upward, which is your identification clue. The young ones produce little waxy white threads and cause the new leaf tips to curl. The real danger is not the feeding itself but a fatal disease the psyllid spreads, citrus greening, so it is worth acting on even where the pest is uncommon.",
+   "cause_seasoned": "Adults lay eggs only on new flush, so populations track flushing cycles and explode in warm weather when trees push tender growth. The pest has spread through most citrus-growing regions of the southern United States; in much of California and the Gulf states it is now established, and any psyllid should be assumed a potential disease carrier.",
+   "cause_beginner": "The psyllid breeds on fresh new leaves, so it builds up fastest when the tree is putting out tender growth in warm weather. It has spread across the southern states, and any psyllid you find could be carrying the disease.",
+   "prevention_seasoned": "Buy only certified citrus from a reputable nursery and never move citrus plants or leaves out of a quarantine area, which is the main way the pest and disease jump regions. Inspect each new flush in the warm season. Conserve the natural enemies (a parasitic wasp, Tamarixia, and general predators) that suppress it. Where the disease is present, area-wide psyllid control is the front line.",
+   "prevention_beginner": "Buy certified citrus from a trusted nursery, and never carry citrus plants or cuttings out of a quarantine zone, because that is how the pest and its disease spread. Check the new leaves often in warm weather. If citrus greening is in your area, follow local guidance on controlling the psyllid.",
+   "organic_treatment_seasoned": "On a backyard tree, horticultural oil and insecticidal soap applied to new flush reduce nymphs; thorough coverage of tender growth is key, and repeat as each flush emerges. Do not apply oil above 95°F or to a drought-stressed tree. Most importantly, report suspected psyllids or greening symptoms to your county agricultural office, since this is a regulated pest.",
+   "organic_treatment_beginner": "Spray horticultural oil or insecticidal soap on the new growth to knock back the young psyllids, and repeat each time fresh leaves appear. Hold off on oil when it is hot, above roughly 95°F, or when the tree is short on water, since either condition lets oil burn the leaves. Also report any psyllids or signs of the disease to your local farm advisor or county office, because it is closely tracked."
+  },
+  {
+   "name": "Citrus leafminer",
+   "type": "insect",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/citrus-leafminer/",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Silvery, serpentine tunnels winding through new leaves, with a thin dark line of frass down the center of each mine, and leaf margins that curl and pucker around the damage. The larva mines only young, expanding foliage; hardened mature leaves are not attacked. On established trees the injury is cosmetic, but on young trees pushing lots of flush it can slow growth and the curled tissue can shelter other pests.",
+   "symptoms_beginner": "You will see squiggly silver trails snaking through the new leaves, often with the leaf edge curled up. A tiny caterpillar makes these tunnels inside young leaves only. It looks alarming but rarely hurts an established tree, though it can set back a small young one.",
+   "cause_seasoned": "A small moth lays eggs on tender new flush, and the larvae mine between the leaf surfaces. Generations cycle quickly in warm weather, so damage peaks on the late-summer and fall flushes rather than the spring growth.",
+   "cause_beginner": "A tiny moth lays its eggs on the newest leaves, and the larvae tunnel inside them. They breed fast in warm weather, so the worst damage shows up on the late-summer growth.",
+   "prevention_seasoned": "Avoid pushing excess tender flush with heavy nitrogen or unnecessary summer pruning, since the moth needs young leaves to breed. Tolerate cosmetic mining on bearing trees; resident parasitic wasps usually provide good control if broad-spectrum sprays are avoided.",
+   "prevention_beginner": "Do not over-fertilize or prune a lot in summer, because that creates the tender new leaves the moth needs. On a healthy grown tree, it is best to just live with the trails, since helpful wasps keep it in check.",
+   "organic_treatment_seasoned": "Chemical control is rarely warranted, and broad-spectrum sprays undermine the parasitic wasps that naturally suppress leafminer populations. For young trees, where the canopy is small enough that leafminer damage slows establishment, a lightweight horticultural oil applied at bud break can discourage adults from laying eggs on the new flush; repeat as each flush emerges because oil breaks down quickly. Follow label heat restrictions and do not spray above 95°F. Leave mined leaves in place, as they continue photosynthesizing.",
+   "organic_treatment_beginner": "Usually no treatment is needed, and spraying can kill the good bugs that control it. On a small young tree you want to protect, light horticultural oil on the new leaves discourages the moth. Only spray oil in mild conditions, not in high heat or on a thirsty tree, and leave the tunneled leaves on the tree."
+  },
+  {
+   "name": "Scale insects",
+   "type": "insect",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/cottony-cushion-scale/",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Scale appear as fixed, non-moving bumps clustered on twigs, along the leaf midrib, and beneath the leaves. The armored types form firm gray or brown shells that look almost like raised bark, while the softer types are plumper and somewhat glossy. The soft kinds give themselves away by the honeydew they secrete, which leaves foliage tacky and grows a black sooty film, and you will often find ants patrolling the colony for that sugar. Where numbers run high, expect mottled yellow leaves, premature leaf fall, and dieback at the twig tips.",
+   "symptoms_beginner": "Scale look like little hard or waxy lumps that sit still on twigs and the undersides of leaves, so it is easy to think they are just part of the branch. The softer kinds make the leaves tacky and a sooty black coating grows on that stickiness. Ants are often crawling around them.",
+   "cause_seasoned": "A mix of armored and soft scale species tap into the tree and feed on its sap. They get the upper hand on trees that are dusty, crowded, or patrolled by ants, because the ants drive away the ladybugs and parasitic wasps that would otherwise thin the colony.",
+   "cause_beginner": "Scale are little insects that feed on the tree's sap. They get worst when ants are around, since the ants protect them from the helpful bugs that eat scale.",
+   "prevention_seasoned": "Keep the tree vigorous and rinse dust off the canopy, and cut off the ants with a sticky trunk band so the resident beneficial insects can do the work. Look any incoming nursery tree over carefully, because scale frequently hitchhikes in on new stock.",
+   "prevention_beginner": "Keep ants from climbing the tree by wrapping a sticky band around the trunk, which lets the good bugs control the scale, and look over any new tree for lumps before planting it.",
+   "organic_treatment_seasoned": "A thorough horticultural oil application, narrow-range petroleum or neem, smothers the scale and is the usual home remedy; the key is wetting every surface, especially twig undersides and leaf backs. Skip oil above roughly 95°F or on a tree that is drought-stressed, since heat plus oil scorches foliage. Plan a follow-up as fresh crawlers hatch.",
+   "organic_treatment_beginner": "Coat the lumps with horticultural oil, making sure to reach the backs of leaves and the twigs. Save the spray for cooler, well-watered days, never above roughly 95°F or on a drought-stressed tree, or it can scorch the foliage. Spray again later as new ones appear."
+  },
+  {
+   "name": "Aphids",
+   "type": "insect",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "tamu_agrilife"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/aphids/",
+     "verified": "2026-06-12"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Clusters of soft-bodied green, black, or brown aphids on the youngest flush and flower buds, with curled, distorted new leaves and a sticky honeydew coating that draws ants and grows sooty mold. Spring and fall flushes are the targets. One species, the brown citrus aphid, is also a vector of citrus tristeza virus, which raises the stakes where that disease is a concern.",
+   "symptoms_beginner": "Look for clusters of tiny soft-bodied insects, often green or black, packed onto the newest leaves and flower buds, causing the tips to curl. They secrete a sticky coating that ants follow and that leads to a black sooty film. Navel oranges are most vulnerable during the spring and fall flushes when tender new growth is available.",
+   "cause_seasoned": "Aphids reproduce explosively on tender new growth in mild weather and are tended by ants for their honeydew. Lush, over-fertilized flush is especially attractive, and ant protection lets colonies outrun their natural enemies.",
+   "cause_beginner": "Aphids multiply very fast on soft new growth in mild weather, and ants protect them. Too much fertilizer makes extra tender leaves that draw them in.",
+   "prevention_seasoned": "Avoid forcing excessive tender flush with heavy nitrogen. Control ants so ladybugs, lacewings, and parasitic wasps can suppress colonies. A strong jet of water knocks aphids off new growth and is often all that is needed.",
+   "prevention_beginner": "Do not over-fertilize, which makes the soft growth aphids love, and keep ants out so ladybugs and other helpers can eat them. A blast of water from the hose usually clears them off.",
+   "organic_treatment_seasoned": "A forceful water spray, insecticidal soap, or horticultural oil controls aphids; cover the undersides of curled leaves. Repeat as needed. Observe oil heat limits (not above 95°F or on stressed trees). Preserve natural enemies by skipping broad-spectrum insecticides.",
+   "organic_treatment_beginner": "Spray them off with water, or use insecticidal soap or horticultural oil, getting under the curled leaves. Keep oil for mild days only, not in high heat or on a stressed, dry tree, and avoid harsh sprays that kill the good bugs."
+  },
+  {
+   "name": "Citrus red mite",
+   "type": "mite",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "ucr_citrus"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/citrus-red-mite/",
+     "verified": "2026-06-12"
+    },
+    "ucr_citrus": {
+     "url": "https://citrusvariety.ucr.edu",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "A fine stippling or silvering on leaves and sometimes fruit rind, with tiny dark-red mites and their cast skins visible on leaf surfaces under a hand lens. Heavy populations bronze the foliage and can cause leaf drop. Mites flare in hot, dusty, dry conditions and after broad-spectrum sprays kill their predators, so outbreaks are often a sign the tree is dust-stressed or was over-sprayed.",
+   "symptoms_beginner": "Look for leaves that turn a dull, speckled, silvery color, sometimes with tiny red dots moving on them (a hand lens helps). Mites get worse when it is hot, dry, and dusty. A lot of them can bronze the leaves and cause some to drop.",
+   "cause_seasoned": "Citrus red mite thrives in heat and dust and reproduces rapidly on stressed trees. Dusty roadside or driveway trees and trees sprayed with broad-spectrum insecticides (which remove predatory mites) are the most prone to damaging populations.",
+   "cause_beginner": "These mites love hot, dusty conditions and build up fast on stressed trees. Dusty trees and trees that have been sprayed with strong insecticides (which kill the helpful mites) get the worst of it.",
+   "prevention_seasoned": "Hose dust off the canopy in hot, dry spells and keep the tree well watered, since vigorous trees tolerate mites better. Avoid broad-spectrum insecticides that destroy the predatory mites providing natural control.",
+   "prevention_beginner": "Rinse dust off the leaves during hot dry weather and keep the tree watered, because a healthy tree handles mites better. Avoid strong insecticides that kill the good mites.",
+   "organic_treatment_seasoned": "Damage is usually cosmetic and rarely needs treatment. If populations are heavy on a stressed tree, horticultural oil provides control; observe heat limits strictly, as mite outbreaks coincide with the hot weather when oil is riskiest. Do not apply oil above 95°F or to a drought-stressed tree.",
+   "organic_treatment_beginner": "Usually the damage is just cosmetic and needs nothing. If there are a lot of mites, horticultural oil works, but timing is tricky: mites peak in hot weather, which is the riskiest time to oil a tree. Only spray when it has cooled off, never on a hot, dry, stressed tree."
+  },
+  {
+   "name": "Katydids and fruit-surface chewers",
+   "type": "insect",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "az_coop_ext"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/precautions-for-using-petroleum-oil-sprays/",
+     "verified": "2026-06-12"
+    },
+    "az_coop_ext": {
+     "url": "https://extension.arizona.edu/publication/low-desert-citrus-varieties",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Irregular chewed notches on young leaves and, more conspicuously, smooth shallow gouges or healed scars on the rind of developing fruit, where a katydid or similar chewing insect fed when the fruit was tiny. The damage scars over and grows out as the fruit expands, so it is a cosmetic, surface-only blemish that does not reach the flesh of a navel.",
+   "symptoms_beginner": "You may find ragged bites out of young leaves, or smooth shallow scars on the skin of the fruit where something chewed it when it was small. On a navel this is only skin-deep: the fruit inside is fine, it just looks marked.",
+   "cause_seasoned": "Katydids and other occasional chewing insects feed on tender foliage and very young fruit in spring and early summer. Populations are usually low and sporadic in a backyard, and the visible scarring is out of proportion to the actual number of insects.",
+   "cause_beginner": "Katydids and a few other leaf-chewing insects nibble soft leaves and tiny fruit in spring and early summer. There are usually only a few of them, even though the scars look like a lot.",
+   "prevention_seasoned": "No action is generally needed on a home tree. Healthy trees outgrow the cosmetic injury, and the chewers are kept in check by birds and general predators. Hand-pick if a particular insect is abundant on a small tree.",
+   "prevention_beginner": "Caterpillar chewing rarely warrants intervention. An established tree outgrows the leaf notches quickly, and natural predators, including birds and beneficial wasps, keep populations in check on their own. If you spot a caterpillar on a small young tree, you can simply pick it off by hand.",
+   "organic_treatment_seasoned": "Treatment is rarely justified for cosmetic rind scarring. Hand-picking handles the occasional katydid. Reserve any spray for genuine defoliation of a young tree, and prefer a targeted product over a broad-spectrum insecticide that would disrupt the citrus natural-enemy complex.",
+   "organic_treatment_beginner": "Spraying is almost never worth it for marks on the skin. Just pick off the bugs by hand. Only consider a spray if a small tree is being stripped of leaves, and then pick a targeted one rather than a harsh insecticide."
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Huanglongbing (citrus greening, HLB)",
+   "type": "bacterial",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/huanglongbing/",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Blotchy, asymmetric yellowing of leaves that does not mirror across the midrib (distinguishing it from a nutrient deficiency, which is usually symmetric), yellow shoots, and corky, enlarged leaf veins. Fruit are small, lopsided, fail to color fully, stay green at the bottom, and taste bitter and salty; seeds often abort. The tree declines over several years and there is no cure. This is the most destructive citrus disease worldwide.",
+   "symptoms_beginner": "The classic sign is a leaf that is yellow in a blotchy, uneven pattern, with the yellow on one side of the leaf not matching the other (a nutrient problem is usually even on both sides). Fruit stay small, lopsided, green on the bottom, and taste bad. There is no cure, and the tree slowly dies. It is the worst citrus disease there is.",
+   "cause_seasoned": "Candidatus Liberibacter asiaticus, the bacterium behind citrus greening, spreads tree to tree via the Asian citrus psyllid feeding on new growth. Inside the tree it clogs the phloem so nutrients cannot reach roots and fruit. No treatment can clear the infection once established, so management is entirely about suppressing the psyllid and removing confirmed trees before they seed the pest further.",
+   "cause_beginner": "Bacteria spread by the Asian citrus psyllid as it feeds on new shoots clog the tree's vascular system, blocking the flow of nutrients to roots and fruit. No treatment can reverse the infection; an affected tree is a permanent source of disease spread. The entire management strategy is preventing psyllid feeding and removing any confirmed tree before it extends the outbreak.",
+   "prevention_seasoned": "Plant only certified disease-free nursery trees, never move citrus out of quarantine areas, and control the psyllid vector aggressively where it is present. Inspect trees regularly and report suspected greening to your county agricultural commissioner, since coordinated removal of infected trees is the only effective area-wide defense.",
+   "prevention_beginner": "Buy only certified clean trees, never move citrus out of a quarantine zone, and control the psyllid that spreads it. Check your tree often, and report anything that looks like greening to your local agricultural office, because removing infected trees quickly is what protects everyone's citrus.",
+   "organic_treatment_seasoned": "There is no cure and no organic remedy for an infected tree. Management is prevention and vector control only: protect trees from the psyllid, and remove and properly dispose of confirmed-infected trees promptly so they cannot serve as a reservoir for further spread.",
+   "organic_treatment_beginner": "There is no treatment that saves an infected tree. Focus entirely on prevention: keep the psyllid off your trees with regular inspection and treatment, and if a tree is diagnosed with citrus greening, remove it promptly to protect your neighbors' trees and the surrounding area. An infected tree left in place becomes an ongoing source of psyllid pressure."
+  },
+  {
+   "name": "Phytophthora foot rot, root rot, and gummosis",
+   "type": "fungal",
+   "severity": "high",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "uf_ifas_hs132",
+    "ucr_citrus",
+    "uf_ifas_edis"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/DISEASE/phytogumm.html",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_edis": {
+     "url": "https://edis.ifas.ufl.edu/publication/CG009",
+     "verified": "2026-06-12"
+    },
+    "ucr_citrus": {
+     "url": "https://citrusvariety.ucr.edu",
+     "verified": "2026-06-12"
+    },
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Watch for gum weeping from the lower trunk and crown (gummosis), and bark at the soil line that turns dark and water-soaked, then later splits and dries as a sunken lesion (foot rot). When the disease works on the feeder roots instead, the tree fades slowly, with leaves yellowing and the canopy thinning out (root rot). The diagnostic clue is foliage that yellows and wilts yet fails to perk up after irrigation, which sets it apart from simple drought, and lesions can climb from the crown onto the lower scaffold limbs.",
+   "symptoms_beginner": "This soil water-mold disease shows up as gum oozing low on the trunk, dark mushy bark right at ground level, and a tree that gradually yellows and gets sparse. The big clue: the leaves yellow and wilt but do not bounce back when you water, which means rot rather than thirst.",
+   "cause_seasoned": "Phytophthora organisms, which are water molds rather than true fungi, live in the soil and release swimming spores whenever conditions turn wet; those spores splash up onto the trunk or move through saturated ground to the roots. The disease is set up by soggy or poorly draining soil, soil or mulch heaped against the trunk, a graft union buried below grade, and the chronic overwatering that young trees so often receive.",
+   "cause_beginner": "It lives in the soil and travels in standing water. It gets going when the ground stays wet, when soil or mulch is mounded up around the trunk, or when the graft union ends up buried. The graft union is that knob low on the trunk, the point where the fruiting variety was joined onto the roots, and it needs to stay above the soil. Watering young trees too much is the usual trigger.",
+   "prevention_seasoned": "Engineer this one out when you plant, because that is the only reliable defense. The goal is a crown that drains immediately: build a low mound or berm, position the tree so only the uppermost roots are covered, and keep the graft union at least six inches above finished grade per UF/IFAS guidance. Grade the surrounding soil for positive drainage away from the base, hold mulch a foot back from the trunk, and keep drip emitters out of the crown zone. A Phytophthora-tolerant rootstock such as Carrizo, Swingle, or trifoliate provides an additional layer of protection.",
+   "prevention_beginner": "Prevention is mostly in the planting. Put the tree up on a small mound, hold the graft union clear of the soil (UF/IFAS says more than six inches above it), make sure water drains off fast, hold mulch a hand's width away from the trunk, and never point water at the base. This is the disease most worth preventing from the start.",
+   "organic_treatment_seasoned": "Fix the water and drainage problem before anything else, since the tree cannot recover while the roots stay wet. On a fresh trunk lesion you can pare back the dark, dead bark to a rim of healthy green tissue and let the area dry; opening a buried crown to the air sometimes arrests it. Once root rot is advanced on an established tree it is hard to turn around, which is exactly why the planting practices matter so much.",
+   "organic_treatment_beginner": "Sort out the drainage or stop the overwatering first, or nothing else will work. For a gummy patch on the trunk, you can gently trim away the dark dead bark down to healthy bark and let it dry out. A serious root case is tough to cure, so getting the planting right up front is what counts."
+  },
+  {
+   "name": "Citrus canker",
+   "type": "bacterial",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uf_ifas_hs132",
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/citrus-canker/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Raised, corky, tan lesions with a water-soaked or oily margin and often a yellow halo, appearing on leaves, twigs, and fruit rind. Unlike many leaf spots, canker lesions erupt through both leaf surfaces and feel rough and raised. Severe infection causes defoliation, twig dieback, and blemished, sometimes dropping fruit. It is a regulated disease in the Gulf states and is far more of a problem in warm, wet, windy climates than in arid ones.",
+   "symptoms_beginner": "Canker makes raised, rough, tan spots, often ringed with yellow and looking a bit oily at the edges, on leaves, twigs, and the skin of the fruit. The spots come through both sides of the leaf and feel bumpy. Bad cases drop leaves and mark the fruit. It is mostly a problem in warm, wet, windy places like the Gulf Coast.",
+   "cause_seasoned": "A bacterium (Xanthomonas citri) that spreads in wind-driven rain and on contaminated tools and hands, entering through natural openings and wounds, including leafminer mines. Warm temperatures, frequent rain, and wind (which wounds tissue and drives the bacteria) make it severe; it is largely absent from dry interior and desert climates.",
+   "cause_beginner": "Bacteria spread it through wind-blown rain and on dirty tools and hands. It gets in through tiny wounds, including the tunnels made by leafminers. Warm, rainy, windy weather makes it worse, so it is mainly a humid-climate problem and rarely shows up in dry inland or desert areas.",
+   "prevention_seasoned": "Plant certified disease-free stock and choose less-susceptible varieties where canker is established. Avoid working in the canopy when wet, disinfect pruning tools, manage leafminer (whose mines are infection courts) on young trees, and provide good air movement. In regulated areas, follow state guidance, which may include copper programs.",
+   "prevention_beginner": "Start with certified clean nursery trees. In regions where canker is established, avoid pruning or working around the tree during or after rain, since the bacteria spread in water, and disinfect your cutting tools between each cut. Controlling leafminer on young trees matters because the feeding tunnels create entry points for the bacteria. Where canker is active in your county, follow your state extension's current guidance.",
+   "organic_treatment_seasoned": "Copper-based protectant sprays applied before and during the wet season are the primary backyard tool in canker regions; they reduce the rate of new infections without curing what is already present. Once infection establishes in wood, prune out and dispose of heavily affected material and disinfect tools between trees to limit spread. In arid California and the desert Southwest, where the humid conditions canker requires are largely absent, growers rarely encounter this disease.",
+   "organic_treatment_beginner": "There is no cure, only ways to slow it down. In humid regions, copper sprays during the rainy season help prevent new spots, and you should remove badly infected branches and clean your tools. In dry climates you usually do not need to worry about it."
+  },
+  {
+   "name": "Greasy spot",
+   "type": "fungal",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uf_ifas_hs132",
+    "lsu_agcenter"
+   ],
+   "anchoring_urls": {
+    "uf_ifas_hs132": {
+     "url": "https://edis.ifas.ufl.edu/publication/HS132",
+     "verified": "2026-06-12"
+    },
+    "lsu_agcenter": {
+     "url": "https://www.lsuagcenter.com/topics/crops/citrus",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Yellow mottling on the upper leaf surface that develops into greasy-looking, blister-like brown-to-black lesions on the underside, giving the leaf a translucent, oily appearance. Affected leaves drop prematurely, often in late winter, thinning the canopy. On fruit a fine black speckling (greasy spot rind blotch) can appear. It is primarily a problem in the humid Southeast and Gulf, driven by warm, wet, humid conditions.",
+   "symptoms_beginner": "The leaves develop yellow splotches on the upper surface and raised, greasy-looking brown or black blisters on the underside, making the leaf look oily. Affected leaves drop early, usually in late winter, which gradually thins out the tree's canopy. This is mainly a humid-climate disease, concentrated in Florida and along the Gulf Coast, and is rarely seen in the arid West.",
+   "cause_seasoned": "Zasmidium citri-griseum, the causal fungus, completes its spore cycle in the layer of decomposing fallen leaves beneath the tree; from that litter, spores are released during warm, humid, wet periods and infect the leaf undersides, with a long latent interval before the characteristic blistering appears. Because the disease regenerates from its own debris, sanitation under the canopy disrupts the cycle.",
+   "cause_beginner": "A fungus causes it, growing on the old fallen leaves under the tree and then infecting new leaves in warm, humid, wet weather. The dead leaves on the ground are where it comes from, so it keeps itself going through the litter.",
+   "prevention_seasoned": "Rake up and remove fallen leaves under the tree to break the disease cycle, the single most useful cultural step. Promote air movement and avoid prolonged leaf wetness where you can. In dry inland and desert climates the disease is essentially absent and no action is needed.",
+   "prevention_beginner": "Rake up and get rid of the fallen leaves under the tree, since that is where the fungus lives, and that one step helps the most. Good airflow helps too. In dry inland or desert areas you will probably never see it.",
+   "organic_treatment_seasoned": "Sanitation (removing leaf litter) is the core organic control. Where pressure is high in humid regions, a horticultural oil or copper spray timed to early summer reduces infection; oil also helps by suppressing the fungus on leaf surfaces. Observe oil heat limits. Most home trees outside the humid Southeast need no treatment.",
+   "organic_treatment_beginner": "Cleaning up the fallen leaves is the main organic fix. In humid regions with a lot of it, a horticultural oil or copper spray in early summer helps, but remember not to use oil on very hot days. Most trees outside the humid Southeast do not need anything."
+  },
+  {
+   "name": "Sooty mold",
+   "type": "fungal",
+   "severity": "low",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "tamu_agrilife"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/cottony-cushion-scale/",
+     "verified": "2026-06-12"
+    },
+    "tamu_agrilife": {
+     "url": "https://aggie-horticulture.tamu.edu/fruit-nut/fact-sheets/citrus/",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "Honeydew secreted by sap-sucking insects colonizes leaf surfaces as a black, powdery-sooty layer on leaves, twigs, and fruit; it can be rubbed off, leaving the tissue beneath undamaged. The mold itself does not infect the tree, but heavy deposits shade the leaf and blemish the rind, and the presence of sooty mold is a reliable indicator that aphids, soft scale, mealybugs, or whitefly are active on the tree.",
+   "symptoms_beginner": "You will see a black, dusty powder covering the leaves and sometimes the fruit; it wipes off and does not actually damage the tree tissue underneath. This is sooty mold, and it grows on the sticky droppings of sap-sucking insects like aphids, scale, or whitefly feeding above. Finding it is a cue to look for the insect that is producing the honeydew.",
+   "cause_seasoned": "Saprophytic fungi colonize the sugary honeydew excreted by aphids, soft scale, mealybugs, or whitefly. The presence of sooty mold is therefore a symptom of an insect infestation, and ants tending those insects make it worse by protecting them from predators.",
+   "cause_beginner": "The black mold grows on the sweet honeydew that sap-sucking insects leave behind. So sooty mold really means you have one of those insects feeding on the tree, and ants often make it worse by protecting them.",
+   "prevention_seasoned": "Control the underlying honeydew producer (aphids, scale, mealybug, or whitefly) and manage ants, and the mold has nothing to grow on. There is no need to treat the mold itself directly.",
+   "prevention_beginner": "Get rid of the insect that is making the honeydew (aphids, scale, and so on) and keep ants out, and the mold will have nothing to grow on. You do not need to treat the mold by itself.",
+   "organic_treatment_seasoned": "Treat the insect, not the mold: horticultural oil or insecticidal soap on the honeydew producer, plus ant control, resolves both. Existing mold can be hosed or wiped off and will weather away once the honeydew stops. Observe oil heat limits.",
+   "organic_treatment_beginner": "Treat the insect causing it with horticultural oil or insecticidal soap, and keep ants away. The mold already there can be rinsed or wiped off and will fade once the stickiness stops. Do not use oil on very hot days."
+  },
+  {
+   "name": "Brown rot of fruit",
+   "type": "fungal",
+   "severity": "medium",
+   "audience": "core",
+   "sources": [
+    "uc_ipm",
+    "ucr_citrus"
+   ],
+   "anchoring_urls": {
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/agriculture/citrus/brown-rot/",
+     "verified": "2026-06-12"
+    },
+    "ucr_citrus": {
+     "url": "https://citrusvariety.ucr.edu",
+     "verified": "2026-06-12"
+    }
+   },
+   "symptoms_seasoned": "A firm, leathery, light-brown decay on fruit hanging low in the canopy, usually within a few feet of the ground, often with a pungent odor and, in humid weather, a white mold on the surface. It typically appears on the rind of mature fruit during cool, wet fall and winter weather and can continue to rot fruit in storage. The low position on the tree is the giveaway, since the fungus splashes up from the soil.",
+   "symptoms_beginner": "Brown rot is a firm tan rot on fruit, almost always on the low-hanging fruit near the ground, often with a strong smell. It shows up on ripe fruit in cool, wet fall and winter weather. The clue is that it is the bottom fruit that rots, because the disease splashes up from the soil.",
+   "cause_seasoned": "Soil-borne Phytophthora species splash onto low fruit during rain, infecting the rind. Cool, wet weather and fruit or skirt foliage close to the ground create the conditions; the same water molds that cause foot rot are responsible here, attacking fruit instead of trunk.",
+   "cause_beginner": "The same kind of soil water-mold that causes trunk rot splashes up onto low fruit when it rains, especially in cool wet weather. Fruit and branches hanging near the ground are the ones that get it.",
+   "prevention_seasoned": "Skirt-prune the tree so no foliage or fruit hangs within about two feet of the ground, mulch to reduce splash, and harvest low fruit promptly. Good drainage (the same practice that prevents foot rot) reduces the inoculum. In dry-fall climates the disease is uncommon.",
+   "prevention_beginner": "Trim the lowest branches so no fruit or leaves hang within about two feet of the ground, add mulch to cut down on splashing, and pick the low fruit early. The same good drainage that prevents trunk rot helps here too. In areas with dry falls it is uncommon.",
+   "organic_treatment_seasoned": "Remove and dispose of rotted fruit promptly so it does not spread in storage. Where brown rot recurs in wet-winter regions, a copper spray to the lower canopy and fruit before the rainy season is the standard preventive. Skirting and mulching remain the most reliable cultural controls.",
+   "organic_treatment_beginner": "Pick off and throw away any rotted fruit right away so it does not spread to stored fruit. In wet-winter areas where it keeps coming back, a copper spray on the lower fruit before the rains helps. Keeping the low branches trimmed and mulching are the most dependable fixes."
+  }
+ ]
+}
