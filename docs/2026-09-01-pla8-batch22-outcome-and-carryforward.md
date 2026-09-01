@@ -124,12 +124,35 @@ thing tried and it saw only `japanese-beetle(s)`.
    jalapeno/bacterial-spot; slicing-cucumber, pickling-cucumber and cucumber (downy-mildew and
    angular-leaf-spot each); sugar-snap-peas and snow-peas (powdery-mildew); swiss-chard,
    butternut-squash, acorn-squash and spaghetti-squash (downy-mildew).
-3. **THREE banned absolutes are live in shipped consumer prose**, not the one the handoff recorded:
-   english-cucumber downy mildew ("Water at the soil line, **never** overhead"), edamame SCN
-   ("**never** grow soybeans in the same spot every year"), pumpkin phytophthora ("**never** let
-   water stand"). None is carried into any rung. **The reason the tooling did not surface them:
-   `ladder_batch verify`'s absolute scan omits "never" while the promote's own `hygiene()` includes
-   it.** Two checks that read as the same check are not. Worth reconciling before batch 23.
+3. **The absolutes are a CAMPAIGN, not three defects. MEASURED 2026-09-01 after the batch shipped.**
+   The three found in these crops (english-cucumber downy mildew "Water at the soil line, **never**
+   overhead"; edamame SCN "**never** grow soybeans in the same spot every year"; pumpkin
+   phytophthora "**never** let water stand") are typical members of a large live population, not
+   outliers:
+
+   | measure | count |
+   |---|---|
+   | absolute-word hits in problem prose, roster-wide | **171** |
+   | of which "never" | 136 (134 distinct clauses) |
+   | "never" clauses that INSTRUCT the reader | **85** |
+   | "never" clauses that are descriptive ("seeds that never come up") | ~45 |
+   | absolutes in shipped RUNG notes | 22 |
+   | absolutes in batch 22's 270 new rung strings | **0** |
+
+   `"Water at the base of the plant, never from above"` (beefsteak-tomato) is the same shape as
+   english-cucumber's. **Fixing three of eighty-five would make the dataset less consistent, not
+   more.** Scope it as a prose pass with a real unit of decision, and note that most of the ~45
+   descriptive uses are correct English that must NOT be touched -- this is a read-then-adjudicate
+   campaign, not a find-and-replace. The §9 language standard bans absolute SAFETY and EFFICACY
+   claims; a flat prescriptive "never" is a weaker offence than "harmless", so the priority order
+   inside the campaign is worth setting before starting.
+
+   **The tooling half IS fixed** (`ad571e6`): `ladder_batch verify`'s absolute vocabulary omitted
+   "never" while every batch-17-to-22 promote's `hygiene()` included it, which is why the step
+   whose job is to report copy hygiene reported zero. `tools/test_ladder_batch_absolutes.py` now
+   re-derives every promote's list from source and fails if `verify` stops covering it; on its
+   first run it found a second gap, `eliminates?`, in 18 promotes.
+
 4. **english-cucumber powdery mildew has an inverted register pair**: `prevention_beginner` names
    the cultivar Tyria and `prevention_seasoned` generalizes. The seasoned register should be the
    more specific one.
