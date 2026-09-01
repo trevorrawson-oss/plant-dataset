@@ -42,6 +42,17 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, "tools"))
 CANON = os.path.join(REPO, "crops_data_final.json")
 
+# THE ABSOLUTE-CLAIM VOCABULARY. Must be a SUPERSET of every promote's own `hygiene()` list, or a
+# batch passes `verify` and is then refused by its own promote -- or worse, ships prose `verify` said
+# was clean. This list omitted "never" until 2026-09-01, while every batch-17-to-22 promote's
+# `hygiene()` included it, so three "never" absolutes in batch 22's SOURCE prose went unreported by
+# the step whose job is to report them. Two checks that read as the same check were not.
+# `tools/test_ladder_batch_absolutes.py` re-derives every promote's list from source and fails if
+# this one stops covering them. On its FIRST run that test found a second gap nobody had noticed:
+# 18 promotes ban `eliminates?` and this list did not carry it either.
+ABSOLUTE_WORDS = ("always", "never", "completely", "totally", "harmless", "guaranteed",
+                  "eliminate", "eliminates")
+
 
 def load():
     return json.load(open(CANON))
@@ -475,7 +486,7 @@ def cmd_verify(a):
         "em/en dash": lambda t: re.search(r"[—–]", t),
         "double hyphen": lambda t: "--" in t,
         "absolute claim": lambda t: re.search(
-            r"\b(always|guaranteed|completely|totally|harmless)\b", t, re.I),
+            r"\b(%s)\b" % "|".join(ABSOLUTE_WORDS), t, re.I),
         "spaced degF": lambda t: re.search(r"\s°F", t),
         "British spelling": lambda t: any(re.search(rf"\b{w}\b", t, re.I) for w in BR),
     }
