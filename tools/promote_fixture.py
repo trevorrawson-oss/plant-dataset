@@ -223,6 +223,8 @@ COMMIT_FOR = {
     '919eabc4d2dae936e3f5b876c52799f5a3a3e3d1983c2c8ac324384ab986c073': '839c9de',
     # PLA-8 catalog r8: cure_and_store + lower_soil_ph; methods 62 -> 64, no crop touched.
     '6a67a677960afcf3a0a85069c73737243d8117869232ec66ce8b79e99bdc8797': '4c8bf1e',
+    # PLA-8 catalog r9: even_watering widened to `bacterial`; no mint, no crop touched.
+    '4f33522cbbf945ea1fe878c64f038623d4a98d0c3cf0211bf57cfa7b5c161866': '5c23d15',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
