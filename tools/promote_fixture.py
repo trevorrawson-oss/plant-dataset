@@ -225,6 +225,8 @@ COMMIT_FOR = {
     '6a67a677960afcf3a0a85069c73737243d8117869232ec66ce8b79e99bdc8797': '4c8bf1e',
     # PLA-8 catalog r9: even_watering widened to `bacterial`; no mint, no crop touched.
     '4f33522cbbf945ea1fe878c64f038623d4a98d0c3cf0211bf57cfa7b5c161866': '5c23d15',
+    # PLA-8 thin-ladder backfill: 8 rungs onto 6 shipped problems; 4 crops, no catalog change.
+    'b118f19d36d021db95d755225e566843676fe3fa393299f250a8d34bb9605710': 'c35b27a',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
