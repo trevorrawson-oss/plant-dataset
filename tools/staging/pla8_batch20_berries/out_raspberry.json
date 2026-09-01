@@ -1,0 +1,256 @@
+{
+ "pests": [
+  {
+   "id": "spotted-wing-drosophila",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "prompt_harvest",
+     "note_beginner": "Start here: pick every ripe berry every day or two so no soft fruit is left sitting on the cane. This fly lays eggs in good ripe fruit, not just rotten fruit, so tight, complete picking takes away most of what it breeds in.",
+     "note_seasoned": "Complete harvest on a one to two day interval is the backbone, since the female cuts into sound ripening fruit rather than waiting for it to break down; anything held past color is breeding habitat, and fall-bearing and late crops take the worst of the season's build-up."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear the overripe and fallen berries too, the ones that are past picking. Seal them in a bag and put them out with the trash rather than on the compost pile.",
+     "note_seasoned": "Culls and drops are the other half of the source, so bag and dispose of them rather than composting; picking clean and cleaning up underneath work together, and neither substitutes for the other."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Wild brambles along a fence line or in the hedgerow can host this fly as well, so clearing them out lowers what arrives at your row.",
+     "note_seasoned": "Wild brambles around the planting are a documented host, so clearing the edges belongs with the harvest and cleanup work rather than after it."
+    },
+    {
+     "method": "swd_monitoring_traps",
+     "note_beginner": "A cup of apple cider vinegar hung near the canes catches the flies and tells you when they have shown up, so you can time everything else. It is a warning device rather than a control.",
+     "note_seasoned": "Vinegar traps hung before fruit ripens and checked weekly give the arrival date the rest of the program is timed off; catches detect, they do not suppress."
+    },
+    {
+     "method": "swd_exclusion_netting",
+     "note_beginner": "Fine netting, finer than a millimeter of mesh, put over the planting before the first berries color and sealed down at the edges, keeps the flies off the fruit.",
+     "note_seasoned": "Exclusion mesh under 1 mm, installed ahead of first color and closed at every edge, is the physical option; the install date is what decides whether it is worth the labor."
+    }
+   ]
+  },
+  {
+   "id": "raspberry-cane-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "As soon as a new cane tip wilts and flops over, cut it off a few inches below the two rings of punctures and get rid of it. The egg or young grub is inside that top piece, so taking it early removes the insect before it tunnels further down the cane.",
+     "note_seasoned": "Removing each wilted tip a few inches below the lower puncture ring takes out the egg or young larva while it is still in the upper cane; on a scouting pass through early summer this is the treatment, and destroying what you cut matters as much as making the cut."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Wild brambles near the planting harbor this beetle, so clearing them out around the row lowers the pressure on your canes.",
+     "note_seasoned": "Volunteer brambles at the edges harbor the beetle, so keeping them cleared reduces what moves into the planting."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "If you spot the beetle itself, slim and black and yellow, pick it off. Between that and cutting out the wilted tips, a backyard planting usually does not need a spray.",
+     "note_seasoned": "Handpicking the slender long-horned adults backs up tip removal through the early summer flight; the guidance puts a home planting below the point where a spray is usually called for."
+    }
+   ]
+  },
+  {
+   "id": "raspberry-crown-borer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Start a new patch on ground with no recent bramble history, using certified borer-free nursery plants. The grubs work inside the crown, the woody base of the plant, where nothing you spray can reach them, so where you plant and what you plant with does more than anything you can do afterward.",
+     "note_seasoned": "Siting on ground without a recent bramble history, from certified clean stock, is the most effective control the record offers, because the larvae feed inside the crown out of reach of any material; replacing a failing patch on a fresh site is the same move made later."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear wild brambles from around the planting, since they can carry the borer to your row.",
+     "note_seasoned": "Wild brambles nearby are a standing source that can reinfest clean ground, so clearing the edges protects the siting decision above."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Dig out and destroy plants that are badly infested, crown and all. It feels drastic, but the grubs are hidden down inside where sprays do not reach, and removing them is what breaks the two-year cycle.",
+     "note_seasoned": "Digging and destroying infested crowns removes larvae that spend two years in the base of the plant, which is how the cycle is broken; an infested plant declines over two seasons and can die anyway, so removal is not costing you a producer."
+    }
+   ]
+  },
+  {
+   "id": "japanese-beetles",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "Go out in the cool of the morning while the beetles are still slow and knock them into a jar of soapy water. This is the most effective thing you can do about them at home. Leave the bag traps sold for them alone, since they pull in more beetles than they catch. Vigorous, healthy canes also shrug off a good deal of the leaf chewing.",
+     "note_seasoned": "Morning handpicking into soapy water, kept up through the flight, is the primary home control; pheromone traps draw in more beetles than they remove, so they work against the planting they hang near. Vigor carries much of the rest, since established canes tolerate the skeletonizing better than the fruit feeding suggests."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Where the beetles are working on the berries, a light cover over the fruiting canes keeps them off the fruit as it ripens.",
+     "note_seasoned": "A cover over the fruiting canes through the flight protects ripening fruit, which is the loss that is hard to absorb; it does nothing for the foliage feeding, which a healthy planting carries better."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen fertilizer. Heavy feeding pushes out the soft new growth these insects build up on, so a modest hand makes the planting less inviting.",
+     "note_seasoned": "Restrained nitrogen limits the flush of succulent tissue colonies multiply on; the feeding damage itself is minor here, so holding numbers down is about the viruses several of these species move, with the large raspberry aphid the one called out in particular."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Pull out wild brambles growing near the patch. They give aphids somewhere to build up right next door to your canes.",
+     "note_seasoned": "Clearing wild brambles at the edges removes a nearby source of both the aphids and what they carry into the planting."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard jet of water knocks a light infestation off the shoot tips. Do it early in the day so the leaves dry quickly afterward.",
+     "note_seasoned": "A forceful spray dislodges light colonies from tips and leaf undersides with no material applied; go early so the foliage is not left wet."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs and other helpful insects eat aphids and often keep them in check for free. Protecting them mostly means holding off on broad sprays that would kill them along with the aphids.",
+     "note_seasoned": "Resident natural enemies carry most of the suppression on a pest rated low for damage; conserving them means declining the broad-spectrum materials that would take them out too."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If there are a lot of them, insecticidal soap kills the aphids it wets directly, so coat the shoot tips and the undersides of the leaves. Skip it in a hot spell or on a plant short of water, since the leaves can burn.",
+     "note_seasoned": "Contact soap with no residual: coverage of tips and leaf undersides decides the result, and it spares the beneficials it does not wet. Hold it back in heat or on a water-stressed planting."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "phytophthora-root-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "This is the whole answer, because rotted roots cannot be brought back. Plant on tall raised rows or ridges so the roots sit above the wet, and shape the ground so surface water runs away from the row instead of standing in it.",
+     "note_seasoned": "Drainage is the control: tall raised beds or ridges lift the root zone clear of saturation, and diverting surface water keeps the low end of a row from being where plants collapse. Red raspberries on heavy ground are the most exposed."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where the ground tends to stay damp, look for varieties described as more tolerant of root rot. Tolerant is not the same as immune, so it goes alongside the drainage work rather than in place of it.",
+     "note_seasoned": "Cultivar tolerance varies and is worth using on an imperfect site, but it moderates the risk rather than removing it on ground that stays saturated."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with disease-free plants, and when you replace ones you have lost, set the clean plants on better-drained ground rather than back into the same wet spot.",
+     "note_seasoned": "Clean planting stock keeps the pathogen from arriving with the plants, and replanting losses onto a better-drained position rather than the original one is what keeps the replacement from following the plant it replaced."
+    }
+   ]
+  },
+  {
+   "id": "cane-anthracnose",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where this turns up every wet spring, choosing a variety with some resistance takes pressure off. Black raspberries are hit hardest, so the choice counts for most there.",
+     "note_seasoned": "Cultivar resistance reduces pressure rather than removing it; black raspberries are the most susceptible, which is where the variety decision earns the most."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Set a new planting with clean plants, so the fungus does not arrive on the canes you buy.",
+     "note_seasoned": "Clean stock keeps the fungus out of the planting material, which matters because it carries over on cane tissue rather than needing to blow in each year."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Keep the row narrow and the canes thinned so air moves through and wet foliage dries quickly. A crowded row stays damp, and damp weather is when this fungus infects.",
+     "note_seasoned": "A narrow, open row shortens the wetness periods that drive spring infection; canopy density is set at planting and held with annual thinning, and wet springs are when it shows."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water at the soil rather than over the top of the plants, so you are not wetting canes and leaves that would otherwise stay dry.",
+     "note_seasoned": "Base watering takes out the overhead wetting that extends infection periods; you cannot control the rain, but irrigation is yours to place."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut out the old canes that already fruited, along with the worst-spotted new ones, and take them away from the planting. The fungus spends the winter on old canes, so clearing them every year cuts down what is there to infect the new growth.",
+     "note_seasoned": "Annual removal of spent floricanes and the most heavily spotted primocanes strips the overwintering source ahead of spring infection; it is a yearly job rather than a one-time cleanup, and it does more than anything else on this list."
+    }
+   ]
+  },
+  {
+   "id": "cane-blight",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Thin the canes to the number the row is meant to carry and keep the row narrow so air moves through. Crowded, wet plantings are where both of these blights do their worst.",
+     "note_seasoned": "Thinning to the recommended cane density and holding the row narrow lowers the sustained wetness both pathogens favor; dense plantings are where the guidance puts the heaviest losses."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy on nitrogen. An overfed planting puts out crowded, soft growth, which is the condition these fungi do best in.",
+     "note_seasoned": "Excess nitrogen thickens the canopy and pushes soft wood, and over-fertilized plantings are named alongside dense and wet ones as the worst cases."
+    },
+    {
+     "method": "wet_foliage_discipline",
+     "note_beginner": "Prune when the canes are dry rather than in rain or heavy dew. These fungi get in through cuts, and dry-weather pruning is what the guidance calls for.",
+     "note_seasoned": "Restricting pruning to dry weather narrows the gap between a fresh wound and a dry surface; wounds are the entry point, so when you cut carries real weight. It lowers the rate of spread rather than protecting a cane already infected."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take the old fruited canes out promptly once picking is finished and move them away from the row. Avoid scraping and bruising the canes you keep, since injuries are where the fungus gets in.",
+     "note_seasoned": "Prompt removal of spent floricanes after harvest cuts the source held in dying wood, and keeping handling injuries down on the canes you keep denies the fungi the wounds they need."
+    },
+    {
+     "method": "prune_out_infection",
+     "note_beginner": "Where a cane already carries a canker, a dark sunken patch on the stem, cut it out well below the damage and into clean wood, then destroy what you removed. Dip your pruners between cuts so you are not carrying it to the next cane.",
+     "note_seasoned": "Cut well below the canker margin into sound tissue and destroy the wood; placing the cut far enough down counts for more than the disinfecting, though a shear dip between cuts is worth the seconds. Canes that snap at a canker are the ones that were missed."
+    }
+   ]
+  },
+  {
+   "id": "orange-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean nursery plants. There is no cure once a plant has this, so keeping it out of the planting is the part you control.",
+     "note_seasoned": "Clean nursery stock is the front door: the fungus is systemic, so a plant that arrives infected carries it for life and works as a source from the day it goes in."
+    },
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Where this rust is common locally, red raspberries hold up better than black or purple ones, so the type you choose to plant is a real lever.",
+     "note_seasoned": "Red raspberries are the more resistant group and black and purple types take the worst of it, which makes the choice a live one wherever rust runs in the neighborhood."
+    },
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Clear wild brambles from around the planting. They carry this rust and stand close enough to shed spores onto your plants.",
+     "note_seasoned": "Wild brambles are a standing reservoir for the rust, so clearing the edges is part of protecting a clean planting rather than a tidiness measure."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Look the new shoots over each spring, and if you find one that is weak and spindly with bright orange powder under the leaves, dig that plant out, roots and all, and destroy it before the powder starts spreading. There is nothing you can spray that will save it.",
+     "note_seasoned": "Spring scouting and prompt roguing, roots included, is the treatment: pull infected plants as the orange pustules appear and ahead of spore release onto healthy neighbors. The whole plant is infected, so cutting out the affected shoots does not clear it."
+    }
+   ]
+  },
+  {
+   "id": "raspberry-mosaic-virus",
+   "type": "viral",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "The defense here is mostly what you buy: start with certified virus-free plants. There is no fixing a plant once it has these viruses, so keeping them out is the work.",
+     "note_seasoned": "Certified virus-free stock is the primary control, since the complex travels in planting material and nothing cures an infected plant; propagating from your own suckers out of a declining patch carries it forward instead."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Put a new planting well away from old raspberry patches and from wild brambles. When a patch is going downhill, start the replacement on fresh ground with new plants rather than with suckers dug from the old one.",
+     "note_seasoned": "Siting away from old and wild brambles separates a new planting from the standing reservoir, and replacing a declining patch on fresh ground with bought stock breaks the carry-over that replanting suckers would preserve."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull out and destroy plants showing mottled leaves and small crumbly berries. They will not come back, and leaving them in place keeps a source of the virus standing in the row.",
+     "note_seasoned": "Prompt roguing of symptomatic plants cuts the reservoir the aphid vectors pick up from; decline deepens year over year, so a mottled plant with crumbly fruit is not one that returns to production."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,245 @@
+{
+  "pests": [
+    {
+      "id": "birds",
+      "type": "vertebrate",
+      "control_ladder": [
+        {
+          "method": "bird_scare_deterrents",
+          "note_beginner": "Reflective tape and fake owls cost little to try and can push birds off the bush for a while. Birds get used to them, so move the devices around and swap types, and treat this as a stopgap rather than the thing that saves your crop.",
+          "note_seasoned": "Visual scares buy a short reprieve before habituation sets in, so reposition and rotate rather than leaving one arrangement standing. Growers widely rate birds the top blueberry pest, and deterrents on their own do not hold that pressure; hang them alongside exclusion, not in place of it."
+        },
+        {
+          "method": "bird_netting",
+          "note_beginner": "This is the step that holds. Drape bird netting, roughly 1/2 to 3/4 inch mesh, over the bush or over a frame before the berries start to turn blue, and tuck the edges in at the base so birds cannot get underneath. Put it up again every season.",
+          "note_seasoned": "Netting at about 1/2 to 3/4 inch mesh, carried on the bush or a frame with the skirt secured at ground level, is the exclusion that works; an unprotected bush can be stripped within days of color break, and pecked, half-eaten fruit is left behind. Install pre-ripening every year rather than after the first losses."
+        }
+      ]
+    },
+    {
+      "id": "spotted-wing-drosophila",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Pick every ripe berry every one to three days instead of letting fruit hang. This fly lays its eggs in sound, ripe fruit, so berries left on the bush are what it breeds in, and a tight picking schedule is the strongest everyday step you have.",
+          "note_seasoned": "Harvesting the bush clean on a one to three day interval lifts fruit out of the window in which females cut into healthy ripe berries to lay, which is what separates this fly from the vinegar flies that use only rotting fruit. Picking interval carries most of the weight here."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Collect any fallen or overripe berries and get rid of them, sealed in a bag rather than added to the compost pile. Soft fruit on the ground keeps the flies going even after you have picked the bush clean.",
+          "note_seasoned": "Drops and overripe culls are breeding substrate, so bagging and destroying them rather than composting closes the route that clean picking alone leaves open. A planting kept clear of dropped fruit is the standing condition the harvest schedule works inside."
+        },
+        {
+          "method": "swd_monitoring_traps",
+          "note_beginner": "Set out a cup of apple cider vinegar near the fruit to catch the flies. It tells you when they have arrived so you can time the other steps; it is a warning tool rather than a control.",
+          "note_seasoned": "Apple cider vinegar traps read adult arrival so the picking interval and the netting are timed to the population instead of guessed. Detection rather than suppression: a catch is the cue to tighten harvest and get exclusion on."
+        },
+        {
+          "method": "swd_exclusion_netting",
+          "note_beginner": "Cover the fruiting bush with very fine mesh, finer than about 1 mm, and seal it at the edges so the flies cannot reach the fruit. It goes on before the berries begin to ripen, not after.",
+          "note_seasoned": "Mesh below about 1 mm over fruiting plants reduces egg-laying by keeping females off the fruit. It is a pre-ripening install, paired with the traps above so the timing comes from observed arrival rather than the calendar."
+        }
+      ]
+    },
+    {
+      "id": "blueberry-maggot",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Gather up dropped and infested berries and destroy them, so the maggots cannot finish growing in the soil below the bush. Do not compost them: the resting stage between maggot and fly, called the pupa, survives composting, so bag them instead.",
+          "note_seasoned": "The larva develops inside the fruit and then drops to the soil to pupate, so removing infested and fallen berries denies it that step. Pupae come through composting intact, which is why infested fruit is destroyed rather than turned into a pile."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Pick often and promptly as the fruit ripens. The fly lays in nearly ripe berries, so taking them off the bush on time leaves less fruit sitting in the stage it wants.",
+          "note_seasoned": "The female places a single egg just beneath the skin of an almost-ripe berry, so a tight picking schedule narrows the laying window and takes infested fruit off the bush before the larvae finish inside it."
+        },
+        {
+          "method": "yellow_sticky_traps",
+          "note_beginner": "Hang baited yellow sticky traps, bright cards coated in glue, a few weeks before the berries ripen. They show you when the small banded-wing fly is around so you can time the cleanup and picking; read them as a watching tool more than a control.",
+          "note_seasoned": "Baited yellow cards hung ahead of ripening give a first-catch date for an adult flight that runs across midsummer, which is what times the harvest and sanitation effort. Monitoring rather than suppression: nothing reaches a larva already inside a berry."
+        }
+      ]
+    },
+    {
+      "id": "aphids",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on nitrogen fertilizer. Heavy feeding pushes out the soft new growth these insects multiply on, so a modestly fed bush gives them less to work with. The reason to bother is less the feeding itself than the viruses aphids can carry.",
+          "note_seasoned": "Nitrogen-driven flush is what colonies build on, so restrained feeding lowers the peak instead of responding to it. The stake here is potential virus transmission more than sap loss, which is what justifies acting on numbers that look modest."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Clear the weeds around the planting that aphids live on, since those are where they build up before they find the bush.",
+          "note_seasoned": "Aphid-hosting weeds at the edges of the planting feed the colonies that turn up on new growth, so clearing them lowers the pressure the bush sees. Host-specific rather than general tidiness, so it is worth knowing which weeds are involved."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Knock light clusters off with a strong jet of water, aimed at the new shoots and the undersides of the leaves where they gather. Do it early in the day so the leaves dry quickly.",
+          "note_seasoned": "A forceful jet dislodges light colonies from tender growth without touching the predator complex; repeat as they rebuild on each flush, and spray early so foliage dries."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Ladybugs and other helpful insects eat aphids and often keep them in check for free. Protect them by keeping broad, strong insecticides off the bush.",
+          "note_seasoned": "Resident predators such as ladybugs carry much of the control on an unstressed bush, so conserving them is the working step; a broad-spectrum material removes them along with the aphids and leaves the rebound unopposed."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If there are a lot of them, insecticidal soap kills the aphids you spray directly. It works only while wet, so coat the clusters well. Skip it on a dry, stressed bush or in hot weather, when it can burn leaves.",
+          "note_seasoned": "Contact soap acts on what it wets and leaves no residue, so coverage of shoot tips and leaf undersides governs the result; spot treatment spares the soft-bodied beneficials a whole-bush spray would hit. Withhold it on water-stressed plants and in heat."
+        }
+      ]
+    },
+    {
+      "id": "scale-insects",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "At winter pruning, look over the older branches and cut out any that are heavily crusted with these bumps, then destroy what you take off rather than leaving it lying by the bush.",
+          "note_seasoned": "Dormant pruning is the practical inspection point for scale, which settles on older wood; cutting out and destroying heavily infested canes removes the colonies along with the wood they are fixed to, before a heavy population starts costing vigor."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Natural enemies already living around the bush feed on scale and help hold it down, so keep broad, strong insecticides off the planting.",
+          "note_seasoned": "Resident natural enemies supply the ongoing suppression here, so the operative choice is keeping broad-spectrum material out of the bush rather than adding anything to it."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "Spray dormant horticultural oil, a light oil that smothers insects rather than poisoning them, onto the bare wood in winter to coat the scale overwintering there. It works only where it lands, so wet the stems thoroughly. Hold off in hot weather and on a dry, stressed bush.",
+          "note_seasoned": "Dormant-season oil smothers overwintering scale, so coverage of stems and older wood decides the outcome more than rate does. Withhold it in hot weather or on a water-stressed plant, where foliage injury follows."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "mummy-berry",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Where this shows up most springs, plant a resistant variety, and in a mixed planting take out the varieties that get hit hardest.",
+          "note_seasoned": "Cultivar susceptibility varies, so variety choice is the durable lever here, and in a mixed planting the highly susceptible cultivars are the ones to remove."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Rake up the hard, shriveled berries under the bush, the ones called mummies, and throw them away rather than leaving them on the ground. That is where the fungus spends the winter, and clearing them in late winter is what breaks the spring cycle.",
+          "note_seasoned": "The fungus overwinters in mummified fruit on the ground, and the spring shoot and blossom infections start from spore cups that form on those mummies, so raking and destroying them is what the organic program rests on. The work belongs in late winter, ahead of cup formation."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Keep the bush open and give it room so air moves through and wet growth dries quickly. This disease is at its worst in cool, rainy springs, which is exactly when a crowded bush stays damp.",
+          "note_seasoned": "Air movement through the canopy shortens the spells of wet tissue that favor infection, and it earns most of its keep in the cool, wet springs that make the disease worse."
+        }
+      ]
+    },
+    {
+      "id": "phytophthora-root-rot",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "improve_drainage",
+          "note_beginner": "This one is decided by where and how you plant. Set bushes on raised beds or mounds in heavy ground, and do not let them stand in soggy soil. Once the roots have rotted there is nothing to spray, so drainage is the job that matters.",
+          "note_seasoned": "The water molds behind this attack roots in wet, poorly drained ground, so raised beds or mounds on heavy or low-lying soil remove the condition they depend on. No organic cure exists once roots have rotted, which is what puts the whole program before planting rather than after symptoms."        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "If the ground has ever stayed wet, the type you buy matters: rabbiteye blueberries are less susceptible to this rot than southern highbush, so the choice at the nursery stacks with the drainage work.",
+          "note_seasoned": "Southern highbush is the more susceptible of the two and rabbiteye the less, so type selection is a plant-once decision that lowers exposure where drainage cannot be made perfect."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start with healthy, disease-free nursery plants, and use clean nursery stock again for any bush you replace.",
+          "note_seasoned": "Disease-free nursery stock is one of the named prevention steps, set once at purchase rather than in the bed, and it applies again to every replacement plant."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "A bush whose roots have rotted is not going to recover, so pull it out and destroy it. Put its replacement on better-drained ground rather than back into the same wet spot.",
+          "note_seasoned": "Removing dead plants is the honest response to a rot with no rescue treatment, and the guidance pairs replacement with a better-drained site, since returning clean stock to saturated ground reproduces the conditions that killed the first plant."
+        }
+      ]
+    },
+    {
+      "id": "botrytis-blossom-blight",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Prune the bush open so air moves through it and the flowers dry fast. Gray mold takes hold in damp, crowded, still growth, so an open bush does a lot of the work.",
+          "note_seasoned": "Canopy openness and spacing shorten the humid spell around the blossoms that the fungus needs; dense, poorly ventilated tissue is where blighting concentrates, and frost-injured flowers are the most vulnerable of all."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the soil rather than over the top of the bush. Wetting the flowers with a sprinkler or hose hands the mold the damp it wants at exactly the wrong moment.",
+          "note_seasoned": "Base watering keeps the blossoms out of the wetting pattern overhead irrigation creates. Bloom is when the exposure counts, since this fungus takes the flower cluster first and can carry on into fruit rot."
+        },
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Do not overfeed with nitrogen. It pushes out dense, soft growth that traps moisture in the canopy, which is what this mold wants.",
+          "note_seasoned": "Excess nitrogen thickens the canopy and slows drying, so restrained feeding removes part of the humidity that favors blossom blight. A feeding habit set ahead of bloom rather than a response during it."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off the browned, moldy flower clusters and get rid of them when you spot them.",
+          "note_seasoned": "Removing blighted clusters takes out the tissue the fungus is sporulating on and limits what carries forward into fruit rot."
+        }
+      ]
+    },
+    {
+      "id": "blueberry-ripe-rot",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Some varieties stand up to this rot better than others, so if it costs you fruit most years, variety choice is worth checking first.",
+          "note_seasoned": "Cultivar susceptibility varies, so variety selection is the durable lever on a rot that only declares itself at ripening, when little else about the crop can still be changed."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Prune the bush so air moves through it and wet fruit and leaves dry quickly. Infection happens in wet weather, so a canopy that dries fast picks up less of it.",
+          "note_seasoned": "An open canopy shortens the wet periods across both of this fungus's windows, the bloom infection and the ripening expression, which makes ventilation the primary cultural lever."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the soil instead of overhead, so you are not adding wet spells of your own on top of the rain.",
+          "note_seasoned": "Dropping overhead irrigation removes the controllable share of the fruit and foliage wetting that infection depends on, and it counts through bloom as much as at ripening."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Pick ripe berries on time rather than letting them hang, and get them into the refrigerator soon after picking, since chilling slows the rot down.",
+          "note_seasoned": "Timely picking takes fruit off the bush before latent infections express as soft, sunken lesions, and rapid cooling slows the rot in picked fruit. This is a common post-harvest rot as well as a field one, so handling after the pick carries real weight."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Take off and throw away the berries that have rotted rather than leaving them on the bush or underneath it.",
+          "note_seasoned": "Removing and destroying rotted fruit lowers what is available to sporulate, the salmon to orange masses on a rotting berry being the source that seeds the fruit beside it during a wet spell."
+        }
+      ]
+    },
+    {
+      "id": "stem-blight",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Start with a variety adapted to your area that grows vigorously. Resistance to this one is largely a variety matter, and some hold up better than others.",
+          "note_seasoned": "Resistance here is variety-led, so an adapted, vigorous cultivar is the primary decision; these canker fungi enter through wounds and stressed or winter-injured wood, which a poorly adapted plant supplies more of."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give the bush room and keep the canopy open so air moves through it.",
+          "note_seasoned": "Good air movement through the planting is part of the standing prevention here, alongside vigor and clean pruning."
+        },
+        {
+          "method": "prune_out_infection",
+          "note_beginner": "Cut dying branches out well below the reddish-brown patch, back into healthy wood, and clean your pruners between cuts so you do not carry it to the next branch. Destroy what you take off rather than leaving it under the bush.",
+          "note_seasoned": "Place the cut well below the visible margin in sound tissue, since these lesions advance from smaller wood toward larger branches and can take a young plant outright. Disinfect between cuts, and remove the prunings from the planting rather than dropping them."
+        }
+      ]
+    }
+  ]
+}
