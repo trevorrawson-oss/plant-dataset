@@ -219,6 +219,8 @@ COMMIT_FOR = {
     '5409c0ce32a87c04d92724aedae17b902a572ab14c01847980078ac158521441': '8a31d66',
     # PLA-8 BATCH 21: flowers (note schema); roster 88 -> 91.
     'fabdaae1d3c35d54ccc49704253b5eb4e191700897786c1ec761e340166b5cb6': '333c623',
+    # PLA-8 BATCH 22: the stragglers (full schema, type split by crop); roster 91 -> 94.
+    '919eabc4d2dae936e3f5b876c52799f5a3a3e3d1983c2c8ac324384ab986c073': '839c9de',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
