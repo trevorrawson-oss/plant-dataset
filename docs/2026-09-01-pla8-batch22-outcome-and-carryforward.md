@@ -179,6 +179,40 @@ thing tried and it saw only `japanese-beetle(s)`.
 9. **The oil temperature ruling from batch 18 was OVERTURNED** by reading (batch 19 outcome doc
    §8). Specified but not actioned.
 
+## 6b. CATALOG ROUND 8 -- shipped 2026-09-01 (`919eabc4` -> `6a67a677`)
+
+Run BEFORE the roots batch, on the r5/r7 method: measure the crops' prose against the catalog first.
+`control_methods` 62 -> 64, `source_catalog` steady at 218, **zero crops touched**.
+
+| minted | demand | why admitted |
+|---|---|---|
+| `cure_and_store` | 7 problems / 5 crops (garlic x2, onion, shallot, potato, sweet-potato x2) | spans three batches; garlic ships a ONE-RUNG ladder with this instruction unplaced |
+| `lower_soil_ph` | 2 problems (potato common scab, beet scab) | it is the WHOLE control, and `raise_soil_ph` already points the OPPOSITE way under a near-identical name |
+
+**DEFERRED, not refused: in-season mounding.** 5 problems / 5 crops, 4 already laddered with the
+instruction unplaced -- it qualifies on demand. Reading splits it into three mechanisms (adventitious
+rooting for resilience; a barrier against larval entry; covering a crown against a canker fungus),
+and the barrier reading has no document: asked directly, UIUC names burying nodes for rooting and
+does not mention mounding over the lower stem to prevent entry. Measurement recorded in
+`build_pla8_catalog_r8_content.py` so r9 starts from it. **Sourcing the barrier reading is the one
+piece of work that would unblock it.**
+
+### TWO CHEAP BACKFILLS ARE NOW UNBLOCKED, both on already-laddered crops
+
+Neither is part of the roots batch, and both were found by measuring, not by looking for them:
+
+1. **`garlic`/`botrytis-neck-rot` ships `['balance_nitrogen']` alone.** Its prose asks for four
+   things; three are unplaced, and two of those three are now expressible (`cure_and_store`, plus
+   the pre-harvest watering stop which still has no method). `garlic`/`fusarium-basal-rot` is the
+   same shape.
+2. **`beet`/`scab` ships `['crop_rotation']` alone.** Its prose asks for even moisture and pH
+   restraint. `lower_soil_ph` now covers the second, and **`even_watering` already covered the
+   first before this round** -- that rung could have been added at any point since the method
+   existed. A one-rung ladder on a laddered crop is worth treating as a signal in its own right.
+
+**Worth a roster-wide scan before the next batch: how many laddered problems ship a one- or
+two-rung ladder while their own prose names more?** Both of the above were found incidentally.
+
 ## 7. After batch 22
 
 Roster **94 / 121**. Remaining **27 crops / 138 problems / 7 batches** (crop and problem counts
