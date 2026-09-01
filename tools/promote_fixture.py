@@ -217,6 +217,8 @@ COMMIT_FOR = {
     '50bc203faddfb10f2fddb56bc0361c107efc8e3d0095b3a740c34b24d7b78ba8': '9e8151e',
     # PLA-8 BATCH 20: berries; the category closes; roster 84 -> 88.
     '5409c0ce32a87c04d92724aedae17b902a572ab14c01847980078ac158521441': '8a31d66',
+    # PLA-8 BATCH 21: flowers (note schema); roster 88 -> 91.
+    'fabdaae1d3c35d54ccc49704253b5eb4e191700897786c1ec761e340166b5cb6': '333c623',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
