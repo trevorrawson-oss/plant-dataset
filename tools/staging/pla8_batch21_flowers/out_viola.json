@@ -1,0 +1,175 @@
+{
+ "pests": [
+  {
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Slugs and snails pass the day tucked into anything damp and dark, so lift boards, thin heavy mulch back from the plants, and clear leaf litter and weeds along the bed edges. Less shelter within crawling distance means fewer of them reaching the leaves and flowers after dark.",
+     "note_seasoned": "Cutting harborage is the base step, and it pays most where this pest is heaviest: shaded, mulched, irrigated beds hold exactly the damp daytime cover the population rests in. Pull mulch back from the crowns and tidy the edges before a run of mild, wet weather rather than after the holes appear."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Go out after dark with a flashlight and pick them off the leaves and blooms into soapy water. Most of the feeding happens at night, so an evening round is where you actually meet the ones doing it.",
+     "note_seasoned": "Night rounds through cool, damp spells take feeders off foliage and bloom directly and give you a read on how heavy pressure is running. This is the workhorse step in the weather violas themselves prefer, which is the same weather that suits slugs."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Give them somewhere easy to collect from: lay a flat board on damp soil for them to gather under by day, or sink a shallow dish of beer level with the ground, then clear whatever has collected on a regular round. A copper strip around a pot rim or bed edge also blocks the way in.",
+     "note_seasoned": "Boards and sunken beer dishes checked on a routine pull numbers down between night patrols, and copper edging on containers and bed borders closes off an approach. Worth setting where the planting stays shaded and irrigated and pressure keeps rebuilding after each handpicking pass."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "If the cleanup, the picking, and the boards are not keeping up, scatter an iron phosphate bait on the soil around the plants rather than over the foliage, and follow the label. It is a lower-risk choice as slug baits go, but it is still a pesticide.",
+     "note_seasoned": "Iron phosphate bait is the escalation this crop's guidance names once harborage reduction and handpicking stop holding through a wet stretch. Apply it to the soil surface around the planting at the label rate rather than over the plants themselves."
+    }
+   ]
+  },
+  {
+   "id": "aphids",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "water_spray",
+     "note_beginner": "A hard stream of water knocks the clusters off the new growth and buds where they gather. Spray early in the day so the leaves dry, and look again in a few days, since colonies can rebuild quickly in cool weather.",
+     "note_seasoned": "Hose colonies off tender shoots and buds as the opening move. Cool-season populations build fast, so treat this as a repeated pass on a scouting rhythm rather than a single clearing."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Ladybugs and hoverflies eat aphids, and skipping broad insect sprays lets them get on with it. The feeding itself does limited damage here; the reason to keep numbers down is that these insects can carry viruses from one plant to the next.",
+     "note_seasoned": "Conserve the resident ladybugs and hoverflies before reaching for a material: a broad-spectrum spray removes the predators holding colonies back and leaves you doing their job. Virus transmission, more than the sap feeding, is what makes a building colony worth acting on."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If clusters keep building after the water sprays, coat them with insecticidal soap, a soap-based spray that acts only where it lands. Aim it at the shoots and buds carrying aphids so the ladybugs and hoverflies working elsewhere on the plant are spared.",
+     "note_seasoned": "Reserve soap for colonies the hose and the resident predators are not holding, and wet the aphids themselves, since nothing happens where the spray misses. Keeping the application narrow limits the hit on the soft-bodied beneficials this planting relies on."
+    }
+   ]
+  },
+  {
+   "id": "spider-mites",
+   "type": "mite",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Water on a steady schedule as the weather warms, rather than swinging the bed from soaked to bone dry and back. These are very tiny pests that build fastest where a plant has gone dry and stressed, and the fine leaf speckling they cause shows up in the hot, dry stretch that closes out the viola season.",
+     "note_seasoned": "Steady soil moisture is the practical lever, since an evenly watered planting offers much less to a pest that flares in heat and drought. Timing is diagnostic too: stippling on viola belongs to the warming end of the season, arriving alongside the plant's own heat decline."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Rinse the leaves with a stream of water, undersides included, to knock the mites off, and do it early enough in the day that the foliage dries. On a planting already fading in the heat, this plus steady watering is usually as far as it is worth going.",
+     "note_seasoned": "Directed water sprays dislodge colonies and cut the dry conditions that favor them; work the undersides, where the stippling and fine webbing show first. Going further is rarely worth it on a planting that is winding down with the heat anyway."
+    }
+   ]
+  },
+  {
+   "id": "caterpillars",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "handpick",
+     "note_beginner": "Look the leaves and flowers over now and then and take off the caterpillars you would rather not have chewing. The damage is usually cosmetic, and if you keep violas partly for butterflies, leave the fritillary caterpillars alone: fritillaries are butterflies whose young feed on violets, and viola is one of the plants they need.",
+     "note_seasoned": "Scouting and hand removal cover the usual light pressure, which tends to stay cosmetic on foliage and bloom. Sort what you find rather than clearing the lot: fritillary larvae favor violets, and on a planting kept for butterflies those are the ones to leave in place."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "crown-and-root-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "More violas are lost this way than any other, so start with the ground they go into. Pick a bed that drains freely, water with restraint rather than keeping the soil soaked, and aim for slightly acidic soil where you can, since these rots run hardest in warm, wet ground that drains poorly or sits high on pH, the measure of how acid or alkaline soil is. A plant that wilts, yellows, and gives way at the base has usually been sitting wet.",
+     "note_seasoned": "Drainage carries most of this program, and the soil detail matters: the complex on viola includes black root rot (Thielaviopsis) alongside Pythium and Phytophthora, and the conditions that favor it are warm, wet soil that drains badly, plus a high pH. Excellent drainage, restrained irrigation, and holding the bed slightly acidic address the conditions rather than the organisms, which is what is available here."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with healthy plants. Look transplants over before buying and pass on any already wilting, yellowing, or soft where the stems meet the soil, since a plant that arrives compromised at the base is not one better drainage will rescue.",
+     "note_seasoned": "Healthy transplants sit in the same management list as drainage and watering, and it is worth taking at face value: the crown is where this disease ends up, so judge the stock at purchase, while declining it is still an option. Sound material gives the cultural work something to protect."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "If violas have rotted in a bed before, put the next ones somewhere else and give that ground a rest. Moving the planting, which gardeners call rotation, keeps the new set from going straight back on top of whatever built up there.",
+     "note_seasoned": "Move the planting off ground that has already taken losses: Thielaviopsis and the Pythium and Phytophthora side of this complex build up where violas have rotted before, and shifting the bed is the step the guidance names for it. Pair it with the drainage and soil pH work rather than treating it as a substitute."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Leave enough space between plants for air to pass through the planting. The yellow blotching on top with grayish fuzz underneath takes hold in cool, wet weather, and a crowded planting holds that dampness right where the leaves are.",
+     "note_seasoned": "Spacing set at planting is the lead move against a disease that wants cool, wet, still air. The signature is angular yellow lesions on the upper surface with sporulation on the underside; an open canopy shortens the leaf wetness that sporulation depends on."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Put the water into the soil instead of onto the foliage. Where watering from above cannot be avoided, run it in the morning so the leaves have the whole day to dry, since the hours a leaf spends wet are what this disease trades on.",
+     "note_seasoned": "Base irrigation, timed early where overhead cannot be avoided, keeps the wet-leaf window short. This is the half of the cool, wet setting you can actually control; the weather supplies the rest, which is why it pairs with spacing rather than standing alone."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off leaves showing the blotching and fuzz as you notice them, and clear infected fallen leaves out of the bed rather than composting them.",
+     "note_seasoned": "Clear infected debris through the season and again at cleanup. Sporulating tissue left lying in a cool, damp planting keeps supplying the next round of infection, and the guidance names sanitation alongside the spacing and the watering."
+    }
+   ]
+  },
+  {
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Crowding is what this one mostly rides on, so leave real space between plants and let air move through the planting. The white powdery film shows up first where leaves are packed against each other.",
+     "note_seasoned": "Spacing is the primary control: a planting thin enough for air to move through denies the crowding that favors this coating. Damage runs cosmetic to moderate on viola, so the layout decision is usually the whole investment worth making."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil rather than the leaves. On this one that sits alongside the spacing rather than doing the job by itself, but keeping the planting from staying damp is what the viola guidance asks for.",
+     "note_seasoned": "Base watering rather than overhead wetting is the second half of what the guidance names here, with the weight still on spacing and airflow. It is a reasonable habit on a planting prone to this, even where it is not the main lever."
+    }
+   ]
+  },
+  {
+   "id": "viola-leaf-spots",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Keep the water at the soil line. The brown and dark spots spread while leaves stay wet and when splashing water carries them from leaf to leaf, so overhead sprinkling is the habit to change first. If you have to water from above, do it in the morning.",
+     "note_seasoned": "Overhead wetness and splash are the dispersal routes for this foliar spotting, pansy leaf spot and anthracnose among the pieces of it, so base irrigation removes the main one. Where overhead cannot be avoided, run it early enough that the canopy dries within the day."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space plants out so the leaves are not sitting against each other holding moisture. Foliage that dries quickly after rain or watering gives the spots less to work with.",
+     "note_seasoned": "Room between plants shortens the leaf wetness this spotting needs and keeps the canopy from staying saturated after rain you have no say over. Set it at planting, since crowding is awkward to correct later without pulling plants."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take the worst-spotted leaves off when you notice them, and gather up the ones that have already dropped, so neither stays in the bed. Left where they fall, they go on supplying the spots that reach clean foliage.",
+     "note_seasoned": "Sanitation of infected debris is the third piece the guidance names: spotted tissue on the plant and on the ground goes on producing what splash then moves. Discard it rather than composting it."
+    }
+   ]
+  },
+  {
+   "id": "gray-mold",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Keep faded flowers picked off and dead leaves cleared away. This gray fuzzy mold gets going on tissue that is already spent, so a planting tidied on a regular round gives it much less to start from.",
+     "note_seasoned": "Prompt deadheading is the working control: Botrytis takes hold on spent bloom and senescing tissue, and the problem tends to follow a planting left uncleaned. Take the debris out of the bed rather than dropping it between plants, where it goes on sporulating."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give plants room so air moves through them. The mold does its work in cool, damp, still conditions, and a planting that dries out between wet spells is a harder place for it to get established.",
+     "note_seasoned": "Open the planting up so still, humid pockets do not sit around the crowns and lower bloom. Airflow supports the deadheading rather than replacing it; in cool, humid weather the spent-flower cleanup is what carries this."
+    }
+   ]
+  }
+ ]
+}
