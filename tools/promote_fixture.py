@@ -221,6 +221,8 @@ COMMIT_FOR = {
     'fabdaae1d3c35d54ccc49704253b5eb4e191700897786c1ec761e340166b5cb6': '333c623',
     # PLA-8 BATCH 22: the stragglers (full schema, type split by crop); roster 91 -> 94.
     '919eabc4d2dae936e3f5b876c52799f5a3a3e3d1983c2c8ac324384ab986c073': '839c9de',
+    # PLA-8 catalog r8: cure_and_store + lower_soil_ph; methods 62 -> 64, no crop touched.
+    '6a67a677960afcf3a0a85069c73737243d8117869232ec66ce8b79e99bdc8797': '4c8bf1e',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
