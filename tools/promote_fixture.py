@@ -215,6 +215,8 @@ COMMIT_FOR = {
     '514903dbaa59fa66d550fc88525d56dcdfe7150398f6f639e5b5905f1ddf85e4': 'f4355e3',
     # PLA-8 BATCH 19: sweet citrus; the category closes; roster 81 -> 84.
     '50bc203faddfb10f2fddb56bc0361c107efc8e3d0095b3a740c34b24d7b78ba8': '9e8151e',
+    # PLA-8 BATCH 20: berries; the category closes; roster 84 -> 88.
+    '5409c0ce32a87c04d92724aedae17b902a572ab14c01847980078ac158521441': '8a31d66',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
