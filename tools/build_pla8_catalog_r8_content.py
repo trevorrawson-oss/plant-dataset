@@ -81,8 +81,15 @@ failure mode with a loaded gun, and the fix is a method that says what it is and
 `bacterial` on the roster, and the PNW handbook names the causal organism a filamentous bacterium.
 
 **The moisture half of scab control is NOT part of this method.** Both sheets pair low pH with
-steady soil moisture during tuber formation, and `even_watering` already carries that action. Two
-methods, cleanly split, rather than one that quietly does both.
+steady soil moisture during tuber formation.
+
+CORRECTED 2026-09-01, after this round shipped: the original text here said `even_watering`
+already carried that action. **It does not.** `even_watering.applies_to` is
+`['physiological', 'mite']`, which does not intersect `TYPE_TARGETS['bacterial']`, so it is
+ILLEGAL on common scab. The moisture instruction has NO legal home on either potato or beet.
+Widening `even_watering` to reach `bacterial`/`disease_general` is an r9 candidate. The mint
+itself is unaffected: this method never claimed the moisture half and its `cons` entry says only
+that the sources pair the two.
 
 **beet/scab is the second shipped gap this round found**: it ships a ONE-RUNG ladder,
 `crop_rotation` alone, while its prose asks for both even moisture and pH restraint. Neither is on

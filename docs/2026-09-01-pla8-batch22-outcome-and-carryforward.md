@@ -206,9 +206,10 @@ Neither is part of the roots batch, and both were found by measuring, not by loo
    the pre-harvest watering stop which still has no method). `garlic`/`fusarium-basal-rot` is the
    same shape.
 2. **`beet`/`scab` ships `['crop_rotation']` alone.** Its prose asks for even moisture and pH
-   restraint. `lower_soil_ph` now covers the second, and **`even_watering` already covered the
-   first before this round** -- that rung could have been added at any point since the method
-   existed. A one-rung ladder on a laddered crop is worth treating as a signal in its own right.
+   restraint. `lower_soil_ph` now covers the second. **CORRECTED: the moisture half has NO legal
+   method at all** -- `even_watering` is scoped `['physiological','mite']` and cannot reach a
+   `bacterial` problem, so an earlier claim here that it "was already available" was wrong.
+   Widening it is an r9 candidate. A one-rung ladder on a laddered crop is still a signal.
 
 **Worth a roster-wide scan before the next batch: how many laddered problems ship a one- or
 two-rung ladder while their own prose names more?** Both of the above were found incidentally.
