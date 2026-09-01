@@ -1,5 +1,13 @@
 # PLA-8 BATCH 22 (stragglers) -- HANDOFF: authored, NOT merged, NOT committed
 
+> **SUPERSEDED 2026-09-01 -- DO NOT ACT ON THIS FILE.** Batch 22 is merged, read, promoted
+> and gauntleted; canonical is now `919eabc4`, not `fabdaae1`. Everything in
+> section 2 ("What remains") is DONE, and sections 3-6 have been superseded by measurement:
+> the pumpkin "template defect" in section 4 was NOT a defect, and section 6's "three
+> singular/plural repoints" is four. Read
+> `docs/2026-09-01-pla8-batch22-outcome-and-carryforward.md` instead. Kept for the record of
+> what was known before the read.
+
 **Written 2026-09-01 at the end of a long session. Read this before touching batch 22.**
 
 Canonical is `fabdaae1` (batch 21, flowers). Working tree clean, `main` in sync with origin.
