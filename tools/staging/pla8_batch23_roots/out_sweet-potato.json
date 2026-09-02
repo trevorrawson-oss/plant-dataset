@@ -1,0 +1,209 @@
+{
+  "pests": [
+    {
+      "id": "sweet-potato-weevil",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "After you dig, go back over the bed and collect the roots you missed, the culls you set aside, and any volunteers, meaning plants that sprout on their own from a root left behind. Destroy the lot rather than leaving it in the ground, because the weevil keeps living and breeding in those roots between crops. Sweet potatoes that are already tunneled cannot be salvaged, so they go out with them.",
+          "note_seasoned": "Left-behind, cull and volunteer roots are the reservoir that carries this weevil from one crop to the next, so stripping them out is most of the control that is actually available. Tunneled roots have no rescue: larval mining induces the bitter terpenes even at low feeding levels, so grade them out and destroy them rather than holding them back."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Put the new patch on fresh ground, away from last season's bed and away from wherever you keep sweet potatoes stored. The weevil travels only short distances on its own, so distance from both of those sources buys you real protection. Where it is a bad problem locally, keep to a strict rotation and give the ground a fallow break.",
+          "note_seasoned": "Site the planting at a distance from both the previous bed and any sweet potato storage, since the adult disperses only short distances and spreads mainly on infested slips and in roots left in the soil. Under heavy regional pressure the guidance is a strict rotation with a fallow break rather than a one-bed shuffle."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Dig the crop as soon as it is mature instead of letting it sit in the ground. Each extra week in infested soil is more time for the grubs to bore into roots you meant to eat.",
+          "note_seasoned": "Lift at maturity rather than holding the crop in the bed. Feeding accumulates for as long as the roots stay in infested soil, and the weevil breeds continuously in warm climates, so the length of that exposure is the variable you control."
+        }
+      ]
+    },
+    {
+      "id": "wireworms-root-feeding-larvae",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Keep sweet potatoes out of a bed that was lawn, pasture, or corn in the last year or two. That is where wireworms, the hard shiny larvae of click beetles, are thickest, and the grubs of cucumber beetles and flea beetles chew the roots in much the same way. Rotate the patch around the garden, and if one bed keeps giving you scarred roots, grow the crop elsewhere or in a raised bed of clean soil.",
+          "note_seasoned": "Wireworm populations peak in ground recently out of sod, pasture or corn, so lengthen the interval between grass and a root crop instead of following one with the other. Diabrotica and Systena larvae work the same roots alongside them. Where a bed has a bad history, move the planting off it or use clean raised-bed soil."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Pull the grassy weeds in the bed and along its edges. Grass is the cover these soil grubs favor, so taking it out makes the ground less hospitable to them.",
+          "note_seasoned": "Grassy weeds sustain the habitat this larval complex prefers, so clearing them from the bed and its margins removes standing cover next to the developing roots."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Dig on time rather than leaving the crop in the ground to size up a little more. The boring keeps adding up for as long as the roots sit in soil that holds these grubs, and pitted roots do not keep well afterward.",
+          "note_seasoned": "Damage accumulates with time in infested ground, so lifting at maturity caps it. It also matters for what follows, since the punctures and grooves are openings the storage rots use."
+        },
+        {
+          "method": "off_season_tillage",
+          "note_beginner": "Work the bed over once the crop is out, and keep working it in the seasons that follow. Wireworms stay down in the soil for years, so treat this as something you do repeatedly rather than a single pass that settles it. Working the soil has costs of its own, so see this method's cautions before making it a habit in a no-dig bed.",
+          "note_seasoned": "Cultivation breaks up the soil habitat these larvae occupy. Wireworms persist in the ground across several years, so this is a multi-season lever, and it works alongside keeping the grassy cover down rather than in place of it."
+        }
+      ]
+    },
+    {
+      "id": "flea-beetles",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Start the patch somewhere other than last year's sweet potato bed. These beetles pass the winter close to where they fed, so fresh ground means fewer of them finding your slips in spring.",
+          "note_seasoned": "Adults overwinter nearby and move onto young foliage in spring and early summer, so siting the planting away from the previous bed lowers the number arriving on freshly set slips."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clear the spent vines and old crop debris out at the end of the season. That leftover growth is what the beetles shelter in over winter.",
+          "note_seasoned": "Crop residue left standing in the bed is overwintering shelter, so a clean-up once the vines are finished cuts how many adults are on hand when the next planting goes out."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Keep the weeds down in the bed and around its edges through the season. Weedy cover gives flea beetles somewhere to hole up, so a clean edge makes the patch less inviting.",
+          "note_seasoned": "Weeds are named alongside crop debris as the shelter this pest carries over in, so clear the ground before slips go in and hold the margins clean afterward."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Cover freshly set slips with a floating row cover, a light fabric that lets sun and rain through while keeping insects off. Leave it on through the first weeks, when the peppering of small round holes does the most harm to a small plant, and take it off as the vines start to sprawl. Slips kept well watered and growing strongly tend to shrug off the leaf feeding once they are running.",
+          "note_seasoned": "Cover at transplanting and hold it through establishment, the window when shot-hole feeding on limited leaf area actually stunts the plant, then pull it as the vines begin to run. Vigorous, evenly watered transplants tolerate the same beetle numbers far better than stressed ones, which is why the cover is a temporary measure. Avoid laying it over ground that carried a crop from the same family last season, or emerging soil pests can be trapped underneath with the planting."
+        }
+      ]
+    },
+    {
+      "id": "whiteflies-virus-vectors",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Clear the weeds around the patch and keep the edges tidy. Weeds nearby can hold both whiteflies and the plant viruses they carry, so removing them takes away the launching pad.",
+          "note_seasoned": "Nearby weeds host the vector and the viruses together, so clearing them and holding the margins clean reduces the reservoir feeding new introductions into the planting."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "When a plant clearly has a virus, with mottled, curled leaves and stunted growth, pull it out promptly and get rid of it. A plant that has picked up a virus does not recover, so leaving it in the row just gives the whiteflies something to carry the virus away from.",
+          "note_seasoned": "Rogue symptomatic plants without waiting. Infected plants do not recover, so one left standing is a source the vector can acquire from and move down the row."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Where the whiteflies have built into heavy clusters, a strong jet of water aimed under the leaves knocks them off. Do it early in the day so the foliage dries again.",
+          "note_seasoned": "A forceful spray directed at leaf undersides dislodges dense colonies where they sit and costs nothing; light numbers are worth leaving alone. Spray early enough for the foliage to dry, since a long wet period favors disease."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Put up with a few whiteflies. Helpful insects usually hold their numbers down on their own, and the harsh sprays that would wipe out the whiteflies take those helpers with them.",
+          "note_seasoned": "Resident natural enemies commonly keep whitefly numbers below the level worth acting on, so tolerate light populations and stay off broad-spectrum materials, which remove the predators doing that work."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "For heavy clusters the water jet has not handled, insecticidal soap is the next step. It only acts on what it wets, so coat the undersides of the leaves directly. Keep it off drought-stressed plants and do not spray it above 90°F.",
+          "note_seasoned": "Contact soap works on dense colonies on the leaf undersides, so coverage decides the result and it does nothing to what it misses. It also kills soft-bodied beneficials it wets directly, so treat the infested foliage rather than the whole patch, and avoid it on water-stressed plants or above 90°F. Note UC IPM's moderate acute rating for potassium salts of fatty acids, and wear gloves, long sleeves and eye protection when mixing and spraying, since many consumer labels do not print it."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "fusarium-wilt",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Buy certified, disease-free slips. This fungus rides in on infected slips, so the planting material is the piece you settle before anything reaches the bed. If a patch wilted on you, do not save slips off it for next year.",
+          "note_seasoned": "Certified slips close the route into ground that is still clean, since the pathogen travels on planting material as well as surviving in soil. Propagating from a patch that showed wilt carries it forward, so that stock is not worth keeping."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Where the wilt has turned up before, grow a variety bred to resist it, such as Sumor. There is no spray that fixes this one, so the variety you pick at buying time does more than anything you can do later in the season.",
+          "note_seasoned": "Wilt-resistant releases such as Sumor are the durable lever on ground where the fungus is established. With no curative material available, cultivar choice and clean stock carry the program between them."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Avoid growing sweet potatoes in the same bed season after season, which is how the fungus builds up. Once a bed is infected, keep the crop off it for several years before you come back.",
+          "note_seasoned": "The fungus survives for years in soil and accumulates under repeated sweet potato cropping, so an infected bed wants a multi-year break rather than a single season off."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "There is no way to cure a plant once it is wilting, so pull it, take it out of the garden, and bin it instead of composting it.",
+          "note_seasoned": "An infected plant does not recover, so lift and destroy it rather than composting. That keeps infected tissue out of what returns to the bed, though it does not clear a soil population already there."
+        }
+      ]
+    },
+    {
+      "id": "root-knot-nematode",
+      "type": "nematode",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Begin with certified, clean slips. Root-knot nematodes are microscopic worms that live in the soil, and clean planting material keeps you from importing a fresh population into a bed that does not have one yet.",
+          "note_seasoned": "Certified slips keep a new Meloidogyne population from arriving on planting material, which is the introduction route settled at purchase rather than in the bed."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Grow a variety with root-knot resistance, such as Centennial or Covington. In sandy soil and a warm region, where the cracking and knotting run worst, this choice does the most work.",
+          "note_seasoned": "Resistant releases such as Centennial and Covington are the leading lever, and they matter most in the sandy soils and warm regions where southern root-knot nematode pressure and the resulting galled, split roots are heaviest."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Rotate the bed so sweet potatoes and the other crops these worms feed on are not sitting in the same ground each year, and work cover crops into the sequence, which can bring numbers down over time. They feed on many kinds of plants, so rotation lowers the pressure rather than clearing the bed.",
+          "note_seasoned": "Rotate to non-host or less susceptible crops on a multi-year cycle. The wide host range is why a short rotation returns little, and cover cropping through the off years contributes to a gradual decline rather than a reset."
+        },
+        {
+          "method": "soil_solarization",
+          "note_beginner": "In a hot climate, cover the moist, cleared bed with clear plastic through the summer months. The trapped heat drives the numbers down in ground you already know is infested. It needs a genuinely hot, sunny stretch to accomplish anything.",
+          "note_seasoned": "Solarizing infested ground through the hot months is the in-soil knockdown available here, run between crops rather than as routine practice. It depends on a sustained hot, sunny stretch; under cool or cloudy conditions the soil may not reach working temperatures."
+        }
+      ]
+    },
+    {
+      "id": "sweet-potato-black-rot",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Buy certified, disease-free slips from clean stock. This fungus travels on infected slips, so what you plant is the first place to stop it.",
+          "note_seasoned": "Ceratocystis fimbriata moves on infected slips as well as persisting in soil and debris, so certified stock shuts the route that arrives with the planting material."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move the crop off a bed where black rot has shown up. The fungus survives in the soil and in old plant debris, so replanting in the same ground sets the new crop straight back down on it.",
+          "note_seasoned": "The fungus carries over in soil and crop residue, so rotate off an affected bed rather than planting back into standing inoculum."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Gather up the culls and any volunteer sweet potatoes left in the bed after digging and destroy them, since they are what carries the fungus over to the next crop.",
+          "note_seasoned": "Cull and volunteer roots hold the fungus over alongside soil and residue, so remove and destroy them rather than leaving or turning them under."
+        },
+        {
+          "method": "cure_and_store",
+          "note_beginner": "Handle the roots gently as you dig and carry them, because this fungus gets in through cuts and bruises, so a rough harvest opens the door for it. Cure the crop right after digging, pack it into clean containers, and keep blemished roots out of storage, since the rot goes on developing on sweet potatoes in the bin.",
+          "note_seasoned": "Wounds are the infection court, so gentle lifting and handling are the operative control, followed by prompt curing. Warmth and moisture favor the fungus and it continues to develop on stored roots, so keep damaged or spotted ones out of the bin and use clean containers. Take the curing and storage conditions from sweet potato guidance rather than from another root or bulb crop."
+        }
+      ]
+    },
+    {
+      "id": "scurf-storage-soft-rot",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Plant certified, scurf-free slips. Scurf is a skin fungus that arrives on infected slips and then stays in the soil, so clean planting material is where you head it off.",
+          "note_seasoned": "Monilochaetes infuscans is carried on slips and persists in soil, so certified scurf-free stock is what keeps it out of a bed that is still clean."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Rotate out of a bed where scurf has appeared, because the fungus stays behind in that soil.",
+          "note_seasoned": "Rotate off infested ground. With the fungus soil-resident and confined to the skin, rotation and clean stock are the two levers that act before the crop is ever lifted."
+        },
+        {
+          "method": "cure_and_store",
+          "note_beginner": "Be gentle digging and carrying the roots, because bruises and cuts are where the soft rots get in. Cure them warm and humid right after digging so the skins heal over, then keep them somewhere warm rather than cold or wet; a refrigerator is too cold for sweet potatoes, and chilled roots break down into soft rot. Set bruised or spotted ones aside to eat first instead of storing them, since one rotting root spreads to what it touches. Scurf blotches sit on the skin, so peeling takes care of them.",
+          "note_seasoned": "Curing warm and humid straight after harvest heals the wounds the soft rots enter through; hold the cured crop warm rather than cold afterward, since chilling and wet are what tip a bruised root into a soft breakdown. Take the temperatures from sweet potato guidance rather than from an onion or garlic crop, where cold storage is right and would injure this one. Grade out bruised, cut and spotted roots to use first rather than binning them. Scurf itself stays superficial, costing skin quality and moisture loss in storage rather than the flesh."
+        }
+      ]
+    }
+  ]
+}

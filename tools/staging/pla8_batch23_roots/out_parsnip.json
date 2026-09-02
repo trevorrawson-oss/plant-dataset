@@ -1,0 +1,147 @@
+{
+  "pests": [
+    {
+      "id": "carrot-rust-fly",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Sow parsnips somewhere other than the bed that grew carrots, parsley, or another carrot-family crop, and keep the family moving around the garden from year to year. Good rotation, along with the natural controls already at work in your garden, brings the background pressure down before you get to the timing and the cover.",
+          "note_seasoned": "Rotate the crop off any ground that carried carrot-family plants. With two or more fly generations in a season and roots that stay in the bed for months, rotation and the naturally occurring controls set the baseline pressure that the timing and exclusion steps then work against."
+        },
+        {
+          "method": "planting_time_avoidance",
+          "note_beginner": "Where the calendar gives you a choice, shift your sowing date to dodge the peak flights, the stretches when adult flies are out laying eggs. Those dates move with the region and the season, so work from a local window rather than one carried in from somewhere else.",
+          "note_seasoned": "Set sowing against local flight periods rather than a fixed calendar date. There are typically two or more generations a season, and the late ones do the damage that shows up at lifting, so what this step decides is which flights the crop is standing through. Published windows shift by region and belong as starting points to confirm."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Pull the roots once they are ready instead of leaving them in the ground longer than you need to, and where this fly runs bad locally, get the crop out before the late-season flies build up. Damage adds up the whole time a root sits there, and the tunnel wounds also give parsnip canker a way in.",
+          "note_seasoned": "Lift on schedule rather than holding mature roots in the bed, and where pressure is high, harvest ahead of the late-season generations. Injury accumulates with time in the ground, and the wounds are an entry point for Itersonilia canker, so the harvest date caps two problems rather than one."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "A root that is already tunneled cannot be repaired, so this step is cleanup rather than rescue. Lift the damaged roots and carry them off the bed instead of leaving culls, the rejects you were not going to eat, sitting in the row.",
+          "note_seasoned": "Mined roots are past saving, so the work here is removal: lift the damaged ones and clear culls off the bed instead of leaving them in the row. Doing it at lifting, while you are already sorting the crop, is the practical moment for it."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Lay fine insect mesh or a floating row cover over the bed as soon as you sow, and tuck the edges down all around. It stops the adult flies from reaching the row to lay eggs, and it is the most effective defense a home garden has here. Put it over rotated ground rather than last year's carrot bed, since a cover on the wrong bed can hold flies underneath with your plants.",
+          "note_seasoned": "Fine mesh or row cover laid at sowing and sealed at the edges is the strongest home defense on this pest, because it denies the egg-laying females access to the row. It has to be on from sowing, given that parsnip stands through several flights, and it belongs on rotated ground rather than over a bed that carried the family last season."
+        }
+      ]
+    },
+    {
+      "id": "parsnip-leafminer",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off leaves with pale trails or blotches as soon as you see them, and throw them away instead of composting them; the larva, the young insect feeding inside, goes out with the leaf. A spray has little chance against something feeding between the two surfaces of a leaf, and a plant growing well shrugs off light mining anyway.",
+          "note_seasoned": "Taking mined leaves off as they appear removes the larvae with the tissue, which is why it works where a contact spray is largely ineffective against a feeder sitting between the leaf surfaces. Getting the first mined leaves off promptly is what interrupts the sequence, and vigorous plants absorb light mining without it reaching the root you are growing."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Clear the weeds around the bed that these flies also live on, and rake up old crop leaves nearby. Both give the pest somewhere to carry over between plantings, which is how a clean bed picks the problem back up.",
+          "note_seasoned": "Keeping the bed edges free of weed hosts, alongside clearing crop debris, cuts the carryover that several generations a season otherwise ride on. The relationship is host-specific rather than general tidiness, so it is worth knowing which weeds near you hold leafminers before clearing ground that was doing no harm."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "A row cover, a light fabric laid over the bed, keeps the adult flies from landing to lay eggs in the first place. On parsnip it earns its keep mainly over young plants, since heavy mining while they are small is the case that can reach the harvest.",
+          "note_seasoned": "Row cover excludes the egg-laying adults. Given that mining on an established parsnip is mostly cosmetic on a crop grown for its root, the case for covering is strongest early, when heavy mining on small plants is what actually costs harvest."
+        }
+      ]
+    },
+    {
+      "id": "aster-leafhoppers",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Spraying the hoppers to head off aster yellows generally does not work and is not the recommended route, so put the effort into removal instead. Pull plants showing the disease as soon as you notice them, which leaves fewer infected plants for the hoppers to pick it up from and carry down the row.",
+          "note_seasoned": "Vector control aimed at preventing aster yellows is generally ineffective and not recommended, which leaves roguing as the practical response: take out symptomatic plants promptly. The insect does little direct feeding damage, so what is being managed is acquisition, and a symptomatic plant left standing is where that happens."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Pull the broadleaf weeds near your bed, dandelion above all. They can harbor the disease this insect moves around, so a weedy edge keeps a supply of it right beside the crop.",
+          "note_seasoned": "Clear dandelion and other broadleaf weeds from the planting's edges. They harbor the phytoplasma, so they hold a reservoir that roguing the crop alone does not reach, and on this problem the reservoir is the half of the system a home garden can act on."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "On a small planting, a row cover, a light fabric over the bed, can cut how many leafhoppers get to your plants. Treat it as reducing their access rather than shutting them out, and as a better use of effort than spraying, which generally does not pay off here.",
+          "note_seasoned": "Row cover reduces leafhopper access on a small planting, which is the exclusion available for a vector that spraying does not reliably suppress. It is scale-limited by nature: practical over a bed, harder to justify down a long row."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "itersonilia-canker",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "If canker has turned up in your beds before, pick a resistant variety when you order seed. Avonresister and Cobham Improved Marrow are the two named for it, and variety is a choice you can only make before sowing.",
+          "note_seasoned": "Where canker recurs, start from a resistant cultivar; Avonresister and Cobham Improved Marrow are the named ones. Resistance lowers what the cultural steps have to carry through the cool, wet weather that favors the fungus, which is also the weather a late-harvested crop stands in."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Keep parsnips and their carrot-family relatives out of the same bed for two to three years. Old parsnip remains are part of what carries the fungus to the next crop, so the bed needs the break as much as the plants do.",
+          "note_seasoned": "Two to three years out of the carrot family. The reservoir here is the bed itself, since residue from the previous crop carries inoculum forward, and a same-family replant sets a susceptible crop down on top of it."
+        },
+        {
+          "method": "improve_drainage",
+          "note_beginner": "Do not put parsnips in a bed that stays waterlogged; improve the drainage or grow them in a raised bed if your ground holds water. The fungus does best in cool, wet conditions, so soggy soil is working in its favor all season.",
+          "note_seasoned": "Site the crop off waterlogged ground, open up the drainage, or raise the bed on heavy soil. Itersonilia perplexans is favored by cool, wet conditions, so a bed that holds water keeps the crown and shoulders, where the cankers form, sitting in what the pathogen wants."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Lift the roots before the season runs very late, especially through a cold, wet spell. Canker is worst on parsnips left in the ground late, so harvesting on time keeps the crop out of the weather that drives it.",
+          "note_seasoned": "Harvest before the season runs very late, particularly in cold, wet spells; the disease is worst on late-harvested crops, so lifting on time shortens exposure rather than doing anything for an infection already underway. It pairs with keeping carrot rust fly down, since larval tunnels are what predispose the roots to infection."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "There is no cure for a root that already has canker, and sprays do not control it, so sort as you dig: set the sound ones aside for the kitchen and get the rotted ones out of the garden. Clear the old parsnip tops and leftover roots out of the bed after harvest as well, rather than leaving them to carry the fungus into next year.",
+          "note_seasoned": "Infected roots cannot be salvaged and fungicides do not control the root cankers, so sanitation carries the end of the program rather than sitting below a spray. Grade at lifting, use the sound roots, discard the rotted ones, and clear the crop's residue after harvest so less of it stays with the ground the next crop will meet."
+        }
+      ]
+    },
+    {
+      "id": "aster-yellows",
+      "type": "bacterial",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "There is no cure once a plant is infected, so pull any parsnip with the yellowed, twisted, bunched-up top as soon as you spot it and take it out of the garden. Pull the suspect weeds nearby too, dandelion above all, since they can carry the same organism.",
+          "note_seasoned": "An infected plant does not recover, so the response is removal on sight: pull parsnips carrying the bunchy, discolored tops and the slender, hairy roots that go with them, and take out suspect weed hosts such as dandelion at the same time. What is being removed is acquisition material, since the leafhopper picks the phytoplasma up from an infected plant and moves it on."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Because nothing treats the disease inside the plant, the preventive lever is the carrier: on a small bed, a row cover cuts how many aster leafhoppers, the insects that move it around, reach the crop. It goes on early and stays on, since the protection lasts only while the cover is in place.",
+          "note_seasoned": "Row cover on a small planting intercepts the vector rather than the pathogen, which is the shape prevention takes for an infection with no treatment and a vector that sprays do not reliably suppress. Its limits are scale and duration: it protects the bed it covers, for as long as it is on."
+        }
+      ]
+    },
+    {
+      "id": "damping-off",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "sound_sowing_practice",
+          "note_beginner": "Sow fresh seed, not too deep, once the soil has warmed to about 50°F and drains, rather than into cold, wet ground. Keep the seedbed damp but not soaked, and since parsnip takes a long while to come up, resist watering more just because nothing has appeared yet.",
+          "note_seasoned": "Seed quality, depth, soil warmth and watering restraint are all set on sowing day: fresh seed at a modest depth into well-drained ground at about 50°F. Parsnip's slow emergence is what makes the restraint matter, because the bed has to be held damp through a long germination, and the longer that window runs the more of it the soil pathogens have to work in."
+        },
+        {
+          "method": "improve_drainage",
+          "note_beginner": "On heavy ground that crusts over and stays wet, work on the drainage or sow into a raised bed. These soil organisms do their damage in cool, soggy conditions, so a bed that drains gives a slow-starting crop better odds.",
+          "note_seasoned": "Heavy, slow-draining ground is worth correcting before sowing, or working around with raised beds. Cool, wet, poorly drained soil is the condition Pythium and Rhizoctonia are favored by, and a crusted seedbed adds to the losses on top of that."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "A seedling that has gone over at the soil line is finished, so take the collapsed ones out of the row. Easing off the water so the top of the bed dries down somewhat takes some of the drive out of what is left. Once it is underway there is nothing you can apply at home to stop it, so the rest of the work belongs to the next sowing.",
+          "note_seasoned": "Collapsed seedlings are unrecoverable, so clear them and pause irrigation to dry the surface down, which takes some momentum out of a stand already going. With no home treatment available past that point, the gaps in the row are a signal to fix sowing conditions rather than to look for a rescue."
+        }
+      ]
+    }
+  ]
+}

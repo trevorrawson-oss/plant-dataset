@@ -1,0 +1,199 @@
+{
+  "_why": "PLA-8 batch 23 (roots). Ids PINNED BEFORE FAN-OUT (batch 17's lesson: zero drift). Every id below was decided against the live roster with a STEMMED token-subset scan (not equality -- batch 22 missed two with an equality check) plus a TAXON CHECK read from each crop's own prose. Authoring agents MUST use these verbatim and MUST NOT mint their own.",
+  "_scan": "216 distinct live problem ids over 775 id-bearing problems, canonical b118f19d.",
+  "parsnip": {
+    "pests": [
+      {
+        "name": "Carrot rust fly",
+        "id": "carrot-rust-fly",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x3 (carrot, celery, parsley), all Apiaceae; same Chamaepsila rosae host range.",
+        "type": "insect",
+        "type_evidence": "roster unanimous x3"
+      },
+      {
+        "name": "Leafminers",
+        "id": "parsnip-leafminer",
+        "decision": "MINT (crop-scoped)",
+        "evidence": "No bare `leafminer` id exists; all four live ones are crop-prefixed AND SINGULAR (allium-, beet-spinach-, celery-, citrus-leafminer). Parsnip's prose names no genus, so a genus-bearing id would overclaim.",
+        "type": "insect",
+        "type_evidence": "matches beet-spinach-leafminer / celery-leafminer, both insect"
+      },
+      {
+        "name": "Aster leafhopper (aster yellows vector)",
+        "id": "aster-leafhoppers",
+        "decision": "REUSE",
+        "evidence": "cosmos carries `aster-leafhoppers` for the same insect in the same vector role. Roster form is plural; parsnip's display name is singular. Id follows the roster, not the name.",
+        "type": "insect",
+        "type_evidence": "roster unanimous x1"
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Itersonilia canker (parsnip canker)",
+        "id": "itersonilia-canker",
+        "decision": "MINT (novel)",
+        "evidence": "No stem-level subset or superset anywhere on the roster.",
+        "type": "fungal",
+        "type_evidence": "Itersonilia perplexans, a fungus. CORRECTED 2026-09-01: this line first read 'Itersonilia pastinacae', which I asserted rather than read; parsnip's own prose names I. perplexans in both registers. Caught by the authoring agent. The type is fungal on either reading, so nothing was blocked."
+      },
+      {
+        "name": "Aster yellows",
+        "id": "aster-yellows",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x5 including carrot; same phytoplasma, same vector.",
+        "type": "bacterial",
+        "type_evidence": "ROSTER UNANIMOUS x5 -- phytoplasma is typed bacterial, NOT viral. Do not re-derive."
+      },
+      {
+        "name": "Damping-off",
+        "id": "damping-off",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x13 including carrot. Do NOT use `root-rots-damping-off` (x3), which is a WIDER compound problem.",
+        "type": "fungal",
+        "type_evidence": "roster unanimous x13"
+      }
+    ]
+  },
+  "potato": {
+    "pests": [
+      {
+        "name": "Colorado potato beetle",
+        "id": "colorado-potato-beetle",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x1 (eggplant); Leptinotarsa decemlineata, same insect.",
+        "type": "insect",
+        "type_evidence": "roster unanimous x1"
+      },
+      {
+        "name": "Flea beetles",
+        "id": "flea-beetles",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x32, the dominant roster form. Do NOT copy swiss-chard's singular `flea-beetle` -- that is a KNOWN open one-token repoint (roots handoff section 6), not a precedent to spread.",
+        "type": "insect",
+        "type_evidence": "roster unanimous x32"
+      },
+      {
+        "name": "Aphids and the viruses they spread",
+        "id": "aphids-virus-vectors",
+        "decision": "MINT (scope variant)",
+        "evidence": "Bare `aphids` (x59) names a FEEDING pest; potato's entry says outright 'Virus pressure, not the feeding itself, is the main reason to manage them' and turns on PVY/leafroll and certified seed. A shorter roster id would name a narrower problem.",
+        "type": "insect",
+        "type_evidence": "sits in pests[]; the ORGANISM is the aphid. cf. bare `aphids` x59 insect. The viral half is the consequence, not the type."
+      },
+      {
+        "name": "Wireworms",
+        "id": "wireworms",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x1 (radish); click beetle larvae, prose matches radish's closely.",
+        "type": "insect",
+        "type_evidence": "roster unanimous x1"
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Late blight",
+        "id": "late-blight",
+        "decision": "REUSE",
+        "evidence": "Phytophthora infestans, identical to the 6 tomato-crop precedents; potato's own prose says it infects both. NOTE celery also holds `late-blight` for Septoria apiicola -- its own prose flags the unrelatedness. That is a PRE-EXISTING collision, not one this batch creates, and ids are per-crop join keys.",
+        "type": "fungal",
+        "type_evidence": "roster unanimous x6 (oomycete typed fungal)"
+      },
+      {
+        "name": "Early blight",
+        "id": "early-blight",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x7; potato's prose names Alternaria solani, the same pathogen as the tomato precedents.",
+        "type": "fungal",
+        "type_evidence": "roster unanimous x7"
+      },
+      {
+        "name": "Common scab",
+        "id": "common-scab",
+        "decision": "REUSE",
+        "evidence": "TAXON CHECK PASSES EXPLICITLY: beet's own prose says Streptomyces scabies is 'the same organism that causes potato scab'. beet/common-scab also just gained even_watering + lower_soil_ph in the thin-ladder backfill, which is the control set potato scab needs.",
+        "type": "bacterial",
+        "type_evidence": "roster unanimous x1 (beet); Streptomyces is a bacterium"
+      },
+      {
+        "name": "Blackleg and bacterial soft rot",
+        "id": "blackleg-bacterial-soft-rot",
+        "decision": "MINT (taxon collision + compound)",
+        "evidence": "TAXON CHECK FAILS on reuse: live `blackleg` (cabbage, kohlrabi) is the FUNGUS Phoma lingam / Leptosphaeria maculans; potato's is BACTERIA in Pectobacterium. Different kingdom, same word. Compound-id precedent: root-rots-damping-off, dried-fruit-beetle-souring, cane-canker-dieback.",
+        "type": "bacterial",
+        "type_evidence": "Pectobacterium (prose). NOTE live `blackleg` is typed FUNGAL because the brassica one IS a fungus -- another face of the same collision."
+      }
+    ]
+  },
+  "sweet-potato": {
+    "pests": [
+      {
+        "name": "Sweet potato weevil",
+        "id": "sweet-potato-weevil",
+        "decision": "MINT (novel)",
+        "evidence": "No stem-level subset or superset on the roster.",
+        "type": "insect",
+        "type_evidence": "Cylas formicarius"
+      },
+      {
+        "name": "Wireworms and root-feeding beetle larvae",
+        "id": "wireworms-root-feeding-larvae",
+        "decision": "MINT (scope variant)",
+        "evidence": "radish's `wireworms` is click beetle larvae ALONE. Sweet potato's entry explicitly widens to a complex: 'The same root-scarring complex includes larvae of spotted and banded cucumber beetles (Diabrotica) and flea beetles (Systena)'. Reusing the bare id would narrow a compound problem.",
+        "type": "insect",
+        "type_evidence": "click beetle + Diabrotica + Systena larvae"
+      },
+      {
+        "name": "Flea beetles",
+        "id": "flea-beetles",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x32. NOTE: this is the FOLIAR entry; Systena flea beetle LARVAE appear inside wireworms-root-feeding-larvae. Keep the two ladders distinct -- do not cross-write root controls onto the foliar entry.",
+        "type": "insect",
+        "type_evidence": "roster unanimous x32"
+      },
+      {
+        "name": "Whiteflies and the viruses they spread",
+        "id": "whiteflies-virus-vectors",
+        "decision": "MINT (scope variant)",
+        "evidence": "Bare `whiteflies` (x5, e.g. english-cucumber) is a FEEDING entry about populations building under cover. Sweet potato's says 'Virus pressure, not the feeding itself, is the main reason' and turns on feathery mottle / leaf curl virus and certified slips. Deliberately parallel to potato's aphids-virus-vectors.",
+        "type": "insect",
+        "type_evidence": "sits in pests[]; cf. bare `whiteflies` x5 insect"
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Fusarium wilt (stem rot)",
+        "id": "fusarium-wilt",
+        "decision": "REUSE",
+        "evidence": "Fusarium oxysporum, the same species as all 8 precedents. Each precedent carries its own forma specialis (spinach names f. sp. spinaciae); sweet potato names the species bare. Same-species-different-f.sp. is the established roster pattern for this id.",
+        "type": "fungal",
+        "type_evidence": "roster unanimous x8"
+      },
+      {
+        "name": "Root-knot nematode",
+        "id": "root-knot-nematode",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x4 (carrot, fig, okra, swiss-chard); Meloidogyne spp.",
+        "type": "nematode",
+        "type_evidence": "roster unanimous x4"
+      },
+      {
+        "name": "Black rot",
+        "id": "sweet-potato-black-rot",
+        "decision": "MINT (taxon collision)",
+        "evidence": "TAXON CHECK FAILS on reuse: live `black-rot` (x10, all brassicas) is the BACTERIUM Xanthomonas campestris pv. campestris; sweet potato's is the FUNGUS Ceratocystis fimbriata. Different kingdom, same words. Crop-prefix precedent: carrot-leaf-blight, citrus-brown-rot, bee-balm-rust, sunflower-rust.",
+        "type": "fungal",
+        "type_evidence": "Ceratocystis fimbriata (prose)"
+      },
+      {
+        "name": "Scurf and storage soft rot",
+        "id": "scurf-storage-soft-rot",
+        "decision": "MINT (novel compound)",
+        "evidence": "No stem-level subset or superset on the roster.",
+        "type": "fungal",
+        "type_evidence": "MIXED and flagged for the read: scurf is Monilochaetes infuscans (fungus) and leads the entry; the storage soft rots are \"bacteria and fungi (including Rhizopus)\". Typed on the named lead organism. Either fungal or bacterial reaches disease_general, so cure_and_store is legal on both readings."
+      }
+    ]
+  },
+  "_types_note": "type is PINNED TOO. Every REUSED id inherits a roster-UNANIMOUS type (measured, not assumed). All 22 source records carry the coarse type 'pest'/'disease'; this is the uniform coarse -> fine upgrade the roots handoff specified."
+}

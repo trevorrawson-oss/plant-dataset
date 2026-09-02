@@ -1,0 +1,229 @@
+{
+  "pests": [
+    {
+      "id": "colorado-potato-beetle",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move potatoes to a bed well away from where potatoes or eggplant grew last year. The beetles pass the winter in the soil right where those plants stood, then walk onto the first shoots they find in spring.",
+          "note_seasoned": "Overwintered adults sit 5 to 10 inches down in and around last season's potatoes and emerge onto whatever is nearest, so distance from the previous nightshade ground lowers how many reach the new planting at emergence. It also hosts on eggplant and other nightshades, so count those beds too."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Lay floating row cover, a light fabric that lets in sun and water while keeping insects off, over the bed as the shoots come through. Take it off when the growing plants need the room.",
+          "note_seasoned": "Cover from emergence excludes the colonizing adults through the window when the canopy is smallest; it comes off for the developing plants rather than at a fixed date, so it protects the early stretch rather than the season. Pair it with the rotation step above, and see this method's caution about covering ground that carried the same family last year."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "Knock the striped adults and the fat pinkish grubs into a pail of soapy water, and crush the bright orange egg clusters on the undersides of the leaves. Walk the row every couple of days, because there is no quick spray to fall back on here.",
+          "note_seasoned": "Handpicking adults and larvae with egg-mass crushing is the workhorse control here: this beetle has developed resistance to many insecticides, so steady removal does the work a spray would otherwise be asked for. Crushing the first clusters takes out a generation before the last-stage larvae, which cause most of the defoliation, ever feed. Potatoes tolerate up to about 30 percent defoliation before flowering but only about 10 percent once tubers are sizing, so the scouting interval tightens as the crop bulks."
+        }
+      ]
+    },
+    {
+      "id": "flea-beetles",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Move the crop off last year's nightshade bed, the ground that grew potatoes, tomatoes, peppers, or eggplant. The beetles winter over nearby and go straight for young plants in spring.",
+          "note_seasoned": "Rotating away from last season's solanaceous ground lowers the number of overwintered adults arriving while the plants are small, which is the stage where shot-hole feeding actually costs growth."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clear weeds and old crop debris out of the bed and its edges. That litter is the shelter the beetles winter in, so taking it away leaves them fewer places to wait.",
+          "note_seasoned": "Removing weedy cover and crop residue strips the overwintering shelter that feeds the spring move onto young foliage. It is a between-seasons step, and what it buys shows up as lighter early pressure rather than as a change in the plants you are looking at now."
+        },
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "Cover young plants with floating row cover, a light fabric that keeps insects off while letting light and water through, and leave it on through the vulnerable early weeks. Take it off once the plants are established.",
+          "note_seasoned": "Exclusion covers the window when leaf area is smallest and feeding sets plants back; established, vigorous plants usually outgrow light feeding, which is why the cover comes off instead of staying on all season. Check this method's caution before laying it over ground that carried the same family last year."
+        }
+      ]
+    },
+    {
+      "id": "aphids-virus-vectors",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Keep weeds down in the bed and along its edges. Nearby weeds can host both the aphids and the potato viruses they carry, so clearing them lowers what moves into the row.",
+          "note_seasoned": "Weedy hosts around the planting hold aphid colonies and act as virus reservoirs, so clearing before the crop is up and keeping the margins clear works on the transmission side, which is the half of this problem that costs yield."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull out any plant showing clear virus symptoms, the mottled, curled, or rolled leaves, and get rid of it. An infected plant does not recover, and leaving it standing gives the aphids something to carry away.",
+          "note_seasoned": "Rogue symptomatic plants promptly: infection is not reversible, so a virus-positive plant is a source rather than a patient, and taking it out early keeps one plant from starting a wider spread."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Where aphids are clustered thick on the growing tips, knock them off with a strong jet of water. Go early in the day, so the foliage has time to dry off.",
+          "note_seasoned": "A forceful jet dislodges heavy colonies on sturdy stems and is the physical knock-back to try before reaching for a spray. Keep to the early-in-the-day timing in this method's caution, since long leaf wetness favors foliar disease."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "A few aphids are fine. Ladybugs, lacewings, and small parasitic wasps usually keep them in check on their own, so skip the harsh broad sprays that would take out those helpers along with the pest.",
+          "note_seasoned": "Tolerate light populations and conserve the resident predator and parasitoid complex; broad-spectrum material removes the natural enemies doing the suppression, which is the argument for keeping the response soft on a pest whose feeding damage is minor."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "For heavy clusters the softer steps have not held, insecticidal soap sprayed straight onto them works on contact. It also hits soft-bodied helpers it wets, so treat the clusters and leave the rest of the plant alone, and skip it on a plant short of water or when it is above 90°F.",
+          "note_seasoned": "Contact soap knocks down established colonies; coverage is the entire mechanism, so it reaches only what it wets, beneficials included. Observe the heat and water-stress cautions, and note UC IPM's moderate acute rating for potassium salts of fatty acids when mixing and spraying."
+        }
+      ]
+    },
+    {
+      "id": "wireworms",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Keep potatoes out of a bed that was lawn or pasture in the last year or two, where wireworms are worst, and move the crop to other ground if a bed turns out to be full of them.",
+          "note_seasoned": "Numbers run highest in ground recently in sod or grass, and the larvae live in the soil for several years, so this is a multi-season siting decision rather than something that helps the crop already planted."
+        },
+        {
+          "method": "off_season_tillage",
+          "note_beginner": "Keep the bed worked rather than leaving the soil undisturbed between crops. See this method's cautions if you garden no-dig, since working the soil has costs of its own.",
+          "note_seasoned": "Cultivation of an infested bed is one of the few levers available against a larva that gives no useful aboveground signal until harvest. Weigh it against the soil-structure cost in this method's cautions where the damage has been light."
+        },
+        {
+          "method": "prompt_harvest",
+          "note_beginner": "Dig the potatoes as soon as the crop is ready. Every extra week in infested soil is more time for the worms to bore in.",
+          "note_seasoned": "Lift at maturity rather than holding tubers in infested ground, where the tunneling accumulates. The injury is found at harvest, so shortening the exposure is the only in-season lever this problem offers."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "late-blight",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start with certified disease-free seed potatoes rather than tubers you saved. The disease rides over from one year to the next inside infected potatoes, so clean seed keeps it from arriving with the planting.",
+          "note_seasoned": "Certified seed closes the tuber-borne carryover route: Phytophthora infestans survives between seasons in infected tubers and cull piles, which makes what goes into the ground the first decision that matters."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Where late blight turns up in your area, choose a resistant variety such as Kennebec or Sebago. The spores travel on wind and splashing water, so resistance is working for you before anything shows up in the row.",
+          "note_seasoned": "Kennebec and Sebago are the resistant cultivars this crop's guidance names. Against a pathogen that arrives on wind and splash and can collapse the foliage within days, resistance chosen at seed-buying time is the highest-leverage decision available."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give the plants enough room that air moves between them and wet leaves dry sooner. This disease gets going in cool, wet, humid weather, and a canopy that dries faster is harder for it to hold.",
+          "note_seasoned": "Spacing for air movement shortens the leaf-wetness periods the pathogen needs to establish. It is a standing structural defense set at planting, not a response available once lesions are running."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the soil in the morning instead of over the tops of the plants, so the foliage stays dry.",
+          "note_seasoned": "Base watering in the morning removes the leaf wetness you control; splashing water is one of the two dispersal routes named for this pathogen, alongside wind."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull and destroy infected plants quickly, and keep them out of the compost. Clear away volunteer potatoes and cull piles too, and cut and remove infected vines before you dig, so spores do not reach the potatoes underneath. Get rid of every infected tuber instead of saving it.",
+          "note_seasoned": "There is no home cure once a plant is badly infected, so removal is the response rather than a treatment: destroy infected foliage and tubers rather than composting them, clear the volunteers and cull piles that carry the pathogen between seasons, and take the vines off before lifting so tubers are not harvested through sporulating tissue."
+        },
+        {
+          "method": "copper_fungicide",
+          "note_beginner": "In a wet season a copper fungicide started early and repeated can hold it back, though it will not rescue a plant that is already going down. Follow the label rate, keep spray and runoff away from ponds and streams, since copper is highly to very highly toxic to fish and aquatic life, and go easy on repeat use over the years, because copper builds up in the soil.",
+          "note_seasoned": "Copper is a preventive suppressant here: applied early and repeated through wet weather it slows establishment while the cultural steps carry the real defense. Read the active ingredient rather than the brand name, since the acute hazard band differs by copper compound, and mind the aquatic toxicity and the surface accumulation that comes with repeat use."
+        }
+      ]
+    },
+    {
+      "id": "early-blight",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Keep potatoes, and tomatoes and peppers with them, out of the same bed for several years. The fungus survives in the soil and on old crop debris, so coming back to the same ground feeds it.",
+          "note_seasoned": "Alternaria solani carries over in soil and residue, so a multi-year rotation away from potatoes and the other nightshades is the between-seasons reset for a disease that builds where the family repeats."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Begin with clean, certified seed potatoes so the planting does not start out carrying the fungus.",
+          "note_seasoned": "Clean seed removes one introduction route; the other reservoirs, soil and crop residue, are what the rotation and sanitation steps are for."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Pick a variety with some resistance where early blight shows up most years. It takes pressure off the rest of the list rather than doing the job on its own.",
+          "note_seasoned": "This crop's guidance names resistant varieties alongside clean seed. The choice is made once, at seed-buying time, and it carries through the warm, humid stretches when the fungus moves."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Space the plants so air moves through the row and the leaves dry quickly after rain or dew. The fungus spreads in warm, damp weather while the foliage is wet.",
+          "note_seasoned": "Spacing for canopy drying works against the warm, humid, wet-leaf conditions the fungus needs, and it is set at planting rather than adjusted once the lower canopy is spotted."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water at the soil rather than over the plants, and water in the morning so the leaves dry fast. Overhead watering is the habit to drop here.",
+          "note_seasoned": "Base watering in the morning cuts the foliar wetness the fungus needs; overhead irrigation is the practice this crop's guidance names to avoid."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off the worst spotted lower leaves as you find them, and clear old plant debris out of the bed at the end of the season, since the fungus lives on that debris into the next year.",
+          "note_seasoned": "Removing the most heavily spotted lower leaves lowers the spore source driving the climb up the canopy, and end-of-season debris removal closes the overwintering reservoir. See this method's caution on destroying diseased material rather than leaving or burying it."
+        },
+        {
+          "method": "copper_fungicide",
+          "note_beginner": "A copper fungicide can slow the spread if you start it early in a wet spell, but keeping the plants unstressed and the leaves dry does most of the work. Follow the label rate, and keep spray and runoff out of ponds and streams, since copper is highly to very highly toxic to fish and aquatic life.",
+          "note_seasoned": "Copper is protectant rather than curative: begun early in a wet season it slows spread while the cultural steps do the structural work on what is a slow, stress-related decline. Read the active ingredient, since the acute hazard band differs by copper compound, and observe the aquatic-toxicity and accumulation cautions."
+        }
+      ]
+    },
+    {
+      "id": "common-scab",
+      "type": "bacterial",
+      "control_ladder": [
+        {
+          "method": "lower_soil_ph",
+          "note_beginner": "Hold off on lime in a potato bed and keep the soil on the acidic side, around pH 5.0 to 5.3 where scab is a problem. Scab does better as soil moves up toward neutral, so the useful move is adding nothing that raises the pH.",
+          "note_seasoned": "The lever is restraint rather than an application: skip lime and wood ashes on this bed, since the organism is favored above roughly pH 5.5. Test before changing anything, and hold the low range for the potato bed rather than acidifying the whole garden."
+        },
+        {
+          "method": "even_watering",
+          "note_beginner": "Keep the bed evenly moist while the potatoes are forming, roughly the 4 to 9 weeks after planting. It is dry soil while the tubers are sizing that gives scab its opening.",
+          "note_seasoned": "Tuber initiation and bulking, roughly weeks 4 to 9 from planting, is when the developing skin is vulnerable, and it is dryness across that stretch that favors infection. Soil pH is settled before anything goes in the ground; irrigation is the part of scab management still in the gardener's hands after planting, and it is decided week by week."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "If scab keeps coming back in the same ground, plant a scab-resistant variety such as Russet Burbank or Superior next time.",
+          "note_seasoned": "Russet Burbank and Superior are the scab-resistant cultivars this crop's guidance names, worth choosing where the disease recurs, since the soil population persists for years."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Rotate the potato bed on a 3 to 4 year cycle. The germ lives in the soil for years and on many other plants, so moving the crop lowers the odds rather than settling the problem. Scabbed potatoes are still fine to eat once peeled.",
+          "note_seasoned": "A 3 to 4 year rotation reduces recurrence without clearing the bed: Streptomyces scabies persists for years in soil and on many hosts, which is why rotation sits alongside the pH and moisture steps rather than in place of them. There is no in-season rescue and no spray for this one; affected tubers stay edible after peeling, and the loss is skin quality and storage."
+        }
+      ]
+    },
+    {
+      "id": "blackleg-bacterial-soft-rot",
+      "type": "bacterial",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Buy certified seed potatoes rather than planting saved or bargain tubers, since this one often arrives on an infected seed piece. Planting whole small seed potatoes, instead of cut pieces, is another way to skip the cut surface altogether.",
+          "note_seasoned": "The bacteria commonly come in on infected or poorly cured seed, so certified stock closes the main introduction route; whole small seed tubers avoid the cut face entirely, which is the wound these organisms enter through."
+        },
+        {
+          "method": "improve_drainage",
+          "note_beginner": "Choose a bed that drains well and keep it from sitting waterlogged. These bacteria do their worst in wet, poorly drained soil, so ground that sheds water takes away the conditions they like.",
+          "note_seasoned": "Wet, poorly drained ground favors both the stem rot and the tuber rot, so drainage is the site decision that carries this problem. On heavy or low-lying ground it is worth correcting before planting rather than after the tops start yellowing."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull out plants with a blackened, slimy stem base and get rid of them. There is no cure for a plant that is already infected, so removal is the useful step.",
+          "note_seasoned": "Infected plants are not recoverable, so roguing the stunted, yellowed tops with inky stem bases takes a bacterial source out of the bed rather than treating it. Discard the pulled material instead of leaving it in the row."
+        },
+        {
+          "method": "cure_and_store",
+          "note_beginner": "Dig in dry weather, handle the potatoes gently so they do not get bruised or cut, and cure the crop before it goes into storage. Set aside damaged, soft, or wet tubers to eat first rather than storing them, because one rotting potato spreads to what it touches.",
+          "note_seasoned": "The bacteria enter through wounds, so gentle lifting in dry conditions and a proper cure ahead of storage are what keep them out; hold back bruised, cut, or soft tubers to use first. Take the curing and storage figures from this crop's own guidance rather than from another crop's, since those conditions genuinely conflict between crops."
+        }
+      ]
+    }
+  ]
+}
