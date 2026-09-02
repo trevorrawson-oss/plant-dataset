@@ -230,6 +230,9 @@ COMMIT_FOR = {
     # PLA-8 batch 23, the roots: 22 problems / 87 rungs on parsnip, potato, sweet-potato;
     # no catalog change. NEVER AMEND 128e390 -- this pin is what keeps the suite non-vacuous.
     'e6c986e38e15a0219d64c805cfc11a8786e974320f915e1dd35e6031422f0419': '128e390',
+    # PLA-8 catalog r10: certified_clean_stock widened to `insect_general` + prose
+    # generalized; one source added. No crop touched. NEVER AMEND a1fc62a.
+    'c24d7754e9d708b09169b5b8979f1f63bdd35b14cd77e0adf86ba03b88870c6f': 'a1fc62a',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
