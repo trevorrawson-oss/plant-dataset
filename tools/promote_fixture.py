@@ -227,6 +227,9 @@ COMMIT_FOR = {
     '4f33522cbbf945ea1fe878c64f038623d4a98d0c3cf0211bf57cfa7b5c161866': '5c23d15',
     # PLA-8 thin-ladder backfill: 8 rungs onto 6 shipped problems; 4 crops, no catalog change.
     'b118f19d36d021db95d755225e566843676fe3fa393299f250a8d34bb9605710': 'c35b27a',
+    # PLA-8 batch 23, the roots: 22 problems / 87 rungs on parsnip, potato, sweet-potato;
+    # no catalog change. NEVER AMEND 128e390 -- this pin is what keeps the suite non-vacuous.
+    'e6c986e38e15a0219d64c805cfc11a8786e974320f915e1dd35e6031422f0419': '128e390',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
