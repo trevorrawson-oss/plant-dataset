@@ -770,12 +770,23 @@ class BaseShaRefusal(unittest.TestCase):
         finally:
             os.unlink(path)
 
-    def test_main_runs_clean_on_the_real_canonical(self):
-        import subprocess
-        r = subprocess.run([sys.executable, P.__file__],
-                           capture_output=True, text=True)
-        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        self.assertIn(POST_SHA, r.stdout)
+    def test_main_runs_clean_end_to_end_on_the_REPLAYED_pre_state(self):
+        """Drives main() through the real entry point against a REPLAYED pre-state written to a
+        temp file. It must NOT read live canonical: this test passed until the promote landed and
+        then failed, because live canonical had become the POST state and main() correctly refused
+        its own base-SHA check. A promote suite that asserts against live canonical reddens on
+        every future promote -- the same trap as pinning `post` to live canonical."""
+        import subprocess, tempfile
+        with tempfile.NamedTemporaryFile("wb", suffix=".json", delete=False) as fh:
+            fh.write(promote_fixture.pre_state(P.BASE_SHA))
+            path = fh.name
+        try:
+            r = subprocess.run([sys.executable, P.__file__, path],
+                               capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertIn(POST_SHA, r.stdout)
+        finally:
+            os.unlink(path)
 
 
 # ---------------------------------------------------------------- entry-point wiring
