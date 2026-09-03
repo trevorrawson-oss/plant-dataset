@@ -243,6 +243,9 @@ COMMIT_FOR = {
     # fabricated 20-to-30-year white rot figure, and leek rust's UK severity and seasonality.
     # NEVER AMEND dcd7b48.
     'b89763b76e03584a270a569eb1ad0d5359a6a00d8ad217eb9493cf9eaa795a8f': 'dcd7b48',
+    # Chives aphids retired: one problem removed, roster 913 -> 912, the open finding amended.
+    # NEVER AMEND 61d5f8b.
+    '80519a28548586aedd9754a664f1618b722fb55976d8eb6c3314891ddc5c328f': '61d5f8b',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
