@@ -249,6 +249,8 @@ COMMIT_FOR = {
     # PLA-8 allium record corrections r2 (leek moth + leek allium leaf miner). Also in CHAIN;
     # _from_commit is tried first, both hash-verified.
     '50ffedb00d680576d413a73e1ec7c2bcb1fd07db66bf9c09c017dce148a035f8': '69e96a3',
+    # PLA-8 allium record corrections r3 (the repoint round). Also in CHAIN; _from_commit first.
+    '9d2031ff5ba3abd7a61fe6f0d02715b67d3d0f880cb9d89c0f1729e52df48e8b': '2063c46',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
