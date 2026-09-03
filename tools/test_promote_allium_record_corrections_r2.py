@@ -613,17 +613,24 @@ class MainWiringIsDriven(unittest.TestCase):
             os.unlink(path)
 
     def test_the_canonical_flag_form_is_accepted(self):
-        """promote_fixture's CHAIN replay passes `--canonical PATH`; r3's suite rebuilds its base by
-        replaying this promote until r2 is committed and pinned."""
+        """promote_fixture's CHAIN replay passes `--canonical PATH`. Driven with a file whose SHA
+        differs from live canonical, so ignoring the flag (silently reading the default path) is
+        refused by the base-SHA check wherever live canonical happens to sit. The first version
+        passed the pinned pre-state, byte-identical to live canonical whenever this promote is the
+        next to land, and the harness mutation survived by that accident."""
         import subprocess, tempfile
+        d = _pre()
+        d["_probe"] = "canonical-flag driver"
+        raw = P.serialize(d)
+        sha = hashlib.sha256(raw).hexdigest()
         with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as fh:
-            fh.write(promote_fixture.pre_state(P.BASE_SHA))
+            fh.write(raw)
             path = fh.name
         try:
-            r = subprocess.run([sys.executable, P.__file__, "--canonical", path,
-                                "--expect-sha", P.BASE_SHA], capture_output=True, text=True)
-            self.assertEqual(r.returncode, 0, r.stderr)
-            self.assertIn("post  SHA           : " + POST_SHA, r.stdout)
+            r = subprocess.run([sys.executable, P.__file__, "--canonical", path, "--expect-sha", sha],
+                               capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            self.assertIn("base  SHA           : " + sha, r.stdout)
         finally:
             os.unlink(path)
 

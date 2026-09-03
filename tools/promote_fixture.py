@@ -268,6 +268,10 @@ CHAIN = {
     '9d2031ff5ba3abd7a61fe6f0d02715b67d3d0f880cb9d89c0f1729e52df48e8b': (
         '50ffedb00d680576d413a73e1ec7c2bcb1fd07db66bf9c09c017dce148a035f8',
         'promote_allium_record_corrections_r3.py'),
+    # r4 (onion thrips) -> batch 24's base. The re-authored batch is verifiable before r4 lands.
+    '47e7b5c03cd91829a40279f319f11140de800a127aff2d277d1e977f95b6b143': (
+        '9d2031ff5ba3abd7a61fe6f0d02715b67d3d0f880cb9d89c0f1729e52df48e8b',
+        'promote_allium_record_corrections_r4.py'),
     # PLA-6 Round 2 runs the year-pill trio as a PILOT plus rollout WAVES, back to back before
     # a commit, so each wave's base is the previous wave's output and is not a commit. Replay is
     # the only way to rebuild them; each is verified by hash on use, so a wrong link fails loudly.
