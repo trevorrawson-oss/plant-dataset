@@ -255,6 +255,16 @@ COMMIT_FOR = {
 # canonical SHA -> (predecessor SHA, promote script that produces it).
 # Hunt 1's intermediate states, which were never committed on their own.
 CHAIN = {
+    # PLA-8 allium record corrections r2 (leek moth + leek allium leaf miner). r3's base is r2's
+    # output and is not a commit until r2 lands, so r3's suite is verifiable before either does.
+    # Superseded by COMMIT_FOR once r2 commits; _from_commit is tried first, both hash-verified.
+    '50ffedb00d680576d413a73e1ec7c2bcb1fd07db66bf9c09c017dce148a035f8': (
+        '80519a28548586aedd9754a664f1618b722fb55976d8eb6c3314891ddc5c328f',
+        'promote_allium_record_corrections_r2.py'),
+    # r3 (the repoint round) -> r4's base (onion thrips). Same shape: replayable before r3 lands.
+    '9d2031ff5ba3abd7a61fe6f0d02715b67d3d0f880cb9d89c0f1729e52df48e8b': (
+        '50ffedb00d680576d413a73e1ec7c2bcb1fd07db66bf9c09c017dce148a035f8',
+        'promote_allium_record_corrections_r3.py'),
     # PLA-6 Round 2 runs the year-pill trio as a PILOT plus rollout WAVES, back to back before
     # a commit, so each wave's base is the previous wave's output and is not a commit. Replay is
     # the only way to rebuild them; each is verified by hash on use, so a wrong link fails loudly.
