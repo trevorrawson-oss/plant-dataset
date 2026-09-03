@@ -10,6 +10,32 @@ with their evidence and is the spec for everything below.
 
 ---
 
+## 0. A LATER MEMO GOVERNS THIS DOCUMENT
+
+`parallelization_and_naming_decisions_memo.md` (2026-09-03, claude.ai lane) was written AFTER this
+handoff and **overrides it wherever they differ**. Its ruling, in one line: **PLA-8 finishes as-is
+-- no pipeline changes, no renames, no source restructuring until the arc closes.** Keep running
+batches the way this arc has been running them.
+
+Two items in this handoff conflicted with that and have been amended in place; both amendments are
+marked **[MEMO]** at the point of change:
+
+1. **§3 no longer says to wire the rare-n-gram check.** The finding stands; building it is a
+   pipeline change and is barred until the arc closes.
+2. **§4 decision 4 no longer proposes renaming the chives Botrytis entry.** Its name sits inside
+   one of the 39 near-duplicate groups now being adjudicated in the claude.ai lane, so the rename
+   belongs to the single post-PLA-8 pass, not to the record pass. The entry's SOURCE and CONTENT
+   fixes are unaffected and still in scope.
+
+Nothing else in this handoff conflicts. The catalog widenings in §7 are ordinary arc work, not
+pipeline changes.
+
+**Still open, and NOT for this session to settle:** whether a name guard lands before the arc
+closes (memo §3, Trevor's call -- do not build it), and four findings to be filed rather than
+actioned (memo §4).
+
+---
+
 ## 1. THE HEADLINE: batch 24 is NOT nearly done
 
 The previous handoff said batch 24 was staged with a passing promote and needed only a suite. That
@@ -73,7 +99,9 @@ fired correctly in all three cases.
 `garden_sanitation` lifts a **72-character verbatim run** from garlic and recombines phrasing from
 two crops, scoring 0.593 and 0.618 pairwise -- under the line, because the borrowing is split. A
 rare-n-gram check (a >=6-word run occurring exactly once elsewhere in canonical) catches it and
-pairwise comparison never will. **Wire that check before batch 24 re-authors.**
+pairwise comparison never will. **[MEMO] Recorded as a finding only -- do NOT build it.** A new
+check is a pipeline change, barred until PLA-8 closes (memo §1, §8). Until then the onion rung is
+handled as content: it is on the §5 rework list and gets rewritten, not detected.
 
 ---
 
@@ -109,13 +137,19 @@ aphids (#4), plus the two live-defect fixes above.
    document read, and it is the WHITE ROT rule that migrated across entries.** Carry the rotation
    caveat: UC IPM says 3 to 6 years, NMSU says rotation "is not highly effective", USU says it
    "does not have an effect."
-4. **CHIVES BOTRYTIS -- rename or split.** The entry is named "Botrytis (leaf blight and neck rot)"
-   and every field describes the FOLIAR disease. **These are different organisms** (leaf blight
-   *B. squamosa*; neck rot *B. allii/aclada*) and **their spacing advice points in opposite
-   directions** -- UC IPM for leaf blight says 12-inch spacing, Purdue for neck rot says close
-   spacing, 12 plants per foot. Repoint to UC IPM `/botrytis-leafspot/`, drop the in-season
-   senescing-leaf-removal claim (absent from every document), and **note the pinned id
-   `botrytis-leaf-blight-neck-rot` changes if the entry is renamed.**
+4. **CHIVES BOTRYTIS -- source and content fixes now; the RENAME is deferred. [MEMO]**
+   The entry is named "Botrytis (leaf blight and neck rot)" and every field describes the FOLIAR
+   disease. **These are different organisms** (leaf blight *B. squamosa*; neck rot
+   *B. allii/aclada*) and **their spacing advice points in opposite directions** -- UC IPM for leaf
+   blight says 12-inch spacing, Purdue for neck rot says close spacing, 12 plants per foot.
+   **IN SCOPE NOW:** repoint to UC IPM `/botrytis-leafspot/` and drop the in-season
+   senescing-leaf-removal claim (absent from every document). Neither renames anything.
+   **DEFERRED to the post-PLA-8 naming pass:** the rename or split itself. The name normalises to
+   the same key as `Botrytis (gray mold)`, so it is one of the 39 groups the claude.ai lane is
+   adjudicating now (memo §2). Renaming it here would pre-empt that list and change a name during
+   the arc, which memo §1 rules out.
+   **Consequence for batch 24: the pinned id `botrytis-leaf-blight-neck-rot` does NOT change**, so
+   the id table is stable and this problem's rework is source-and-prose only.
 5. **CHIVES RUST -- add the PNW source.** UC IPM's rust page supports NONE of the crowding, nitrogen
    or spacing claims; **the PNW garlic-rust page supports all three** verbatim ("Avoid dense
    plantings which favors disease", "Avoid over application of nitrogen, which enhances
@@ -152,7 +186,7 @@ if any decision in §4 touches its record.
 | crop | problem | rungs | why it moves |
 |---|---|---|---|
 | chives | aphids | 4 | **entry retired -- rungs go** |
-| chives | botrytis-leaf-blight-neck-rot | 3 | entry renamed -> **pinned id changes**; in-season leaf removal unsupported |
+| chives | botrytis-leaf-blight-neck-rot | 3 | repoint to `/botrytis-leafspot/`; in-season leaf removal unsupported. **[MEMO] id UNCHANGED -- the rename is deferred to the post-PLA-8 naming pass** |
 | chives | chives-rust | 4 | attribution false until PNW is added |
 | chives | onion-maggot | 3 | repoint; "at emergence" unsourced |
 | leek | allium-leafminer | 2 | UK window; cover-during -> cover-before |
@@ -258,3 +292,62 @@ DOES have a laddered precedent inside it** (`microgreens-mix`, 2 problems, 7 run
 method's `applies_to` reaches except the four `any` methods. It is a phytoplasma, and the roster
 types every phytoplasma `bacterial` -- 7 shipped laddered precedents. Re-type as a pinned
 adjudication.
+
+---
+
+## 9. ANSWER TO MEMO §7 -- are pest/disease NAMES keys or lookups? (read-only, measured)
+
+**Short answer: no, not anywhere in the data. The rename is contained in the dataset and NOT
+contained in the tooling.**
+
+### In the data: names are inert strings
+
+| check | result |
+|---|---|
+| pest/disease name used as a dict KEY anywhere in the file | **0 occurrences** |
+| name overlapping a `control_methods` key | **0** |
+| name overlapping a problem `id` | **0** |
+
+### `control_methods` is keyed on METHOD SLUGS, and a shared control library already exists
+
+64 entries, keyed snake_case (`airflow_spacing`, `crop_rotation`, `balance_nitrogen`, ...). **All
+3,243 `control_ladder` rungs join to it via `r["method"]`, with 0 dangling.** Nothing joins to it by
+name.
+
+**This narrows memo §6 exactly as that section suspected.** The shared library is not hypothetical:
+`control_methods` IS one, and the join is proven at 3,243 references. The ladder-library question is
+therefore "extend an existing, working pattern from methods to whole ladders", not "build a new
+indirection layer".
+
+### What DOES join on pest/disease identity is the problem `id`, never the name
+
+| join | count | dangling |
+|---|---|---|
+| `varieties[].resistance` keys -> a problem id | 67 | 0 |
+| `ladder_delta` keys -> a problem id | 62 | 0 |
+
+Both are enforced by live gates (`variety_resistance_gate.py`, `variety_ladder_delta_gate.py`).
+CLAUDE.md's rule already covers this: an id is a join key, pinned at first authoring and never
+re-derived. **So the canonical name list can be designed freely, provided the rename changes NAMES
+and leaves IDS alone.** Nothing derives a problem id from a name at runtime -- the one
+`slugify(name)` coupling in the repo is PLA-290 and is scoped to VARIETY ids, not problems.
+
+### The real exposure is tooling, and batch 24 is the live case
+
+**66 tool files embed 227 distinct literal pest/disease names.**
+
+* **Shipped, replay-pinned suites are immune.** They reconstruct a frozen `pre_state` through
+  `COMMIT_FOR` and are gated by base SHA, so a rename in current canonical cannot reach them.
+* **Unshipped tooling is not.** `promote_pla8_batch24.py` pins **14** names and
+  `test_promote_pla8_batch24.py` pins **13**, and the promote's `check_ids` asserts each against
+  canonical (`pre[i].get("name") != name` -> REFUSED). A rename landing before batch 24 ships breaks
+  batch 24's promote.
+
+That is an independent, mechanical argument for the memo's own ordering in §2 -- rename after PLA-8
+closes -- and it is worth recording as the REASON rather than as a preference. The current arc's
+other unshipped promotes pin 1-4 names each and would need the same treatment.
+
+**Recommendation for the rename pass, not for now:** do it as one promote with the same shape as
+this arc's corrections -- pinned before/after per field, a coverage assertion that no old name
+survives anywhere, and an explicit assertion that every problem `id`, every
+`varieties[].resistance` key and every `ladder_delta` key is byte-identical afterward.
