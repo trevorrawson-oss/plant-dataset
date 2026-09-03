@@ -233,6 +233,9 @@ COMMIT_FOR = {
     # PLA-8 catalog r10: certified_clean_stock widened to `insect_general` + prose
     # generalized; one source added. No crop touched. NEVER AMEND a1fc62a.
     'c24d7754e9d708b09169b5b8979f1f63bdd35b14cd77e0adf86ba03b88870c6f': 'a1fc62a',
+    # Row-cover trap precondition carried into the beginner register: 10 registers on 7 brassica
+    # crops, no catalog change, problem and rung totals unchanged. NEVER AMEND 363fe14.
+    'f851dc15a75db4b08b6659e2a2ed06a628d2b34cf688b7a5965ad269ba0c6dab': '363fe14',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
