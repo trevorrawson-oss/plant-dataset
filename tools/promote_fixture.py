@@ -239,6 +239,10 @@ COMMIT_FOR = {
     # Reflective mulch dropped from the allium thrips advice: 3 prose edits + one rung removed
     # (garlic/onion-thrips/reflective_mulch). The peas keep theirs. NEVER AMEND 112a8f7.
     '3e408f5886f3f78dec3583bd0faa6c1f7c3b481c20039941112719193dc419ee': '112a8f7',
+    # Allium record corrections r1: shallot downy mildew's non-existent tolerant varieties, the
+    # fabricated 20-to-30-year white rot figure, and leek rust's UK severity and seasonality.
+    # NEVER AMEND dcd7b48.
+    'b89763b76e03584a270a569eb1ad0d5359a6a00d8ad217eb9493cf9eaa795a8f': 'dcd7b48',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
