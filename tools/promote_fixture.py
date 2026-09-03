@@ -246,6 +246,9 @@ COMMIT_FOR = {
     # Chives aphids retired: one problem removed, roster 913 -> 912, the open finding amended.
     # NEVER AMEND 61d5f8b.
     '80519a28548586aedd9754a664f1618b722fb55976d8eb6c3314891ddc5c328f': '61d5f8b',
+    # PLA-8 allium record corrections r2 (leek moth + leek allium leaf miner). Also in CHAIN;
+    # _from_commit is tried first, both hash-verified.
+    '50ffedb00d680576d413a73e1ec7c2bcb1fd07db66bf9c09c017dce148a035f8': '69e96a3',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
