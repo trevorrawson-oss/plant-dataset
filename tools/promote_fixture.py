@@ -236,6 +236,9 @@ COMMIT_FOR = {
     # Row-cover trap precondition carried into the beginner register: 10 registers on 7 brassica
     # crops, no catalog change, problem and rung totals unchanged. NEVER AMEND 363fe14.
     'f851dc15a75db4b08b6659e2a2ed06a628d2b34cf688b7a5965ad269ba0c6dab': '363fe14',
+    # Reflective mulch dropped from the allium thrips advice: 3 prose edits + one rung removed
+    # (garlic/onion-thrips/reflective_mulch). The peas keep theirs. NEVER AMEND 112a8f7.
+    '3e408f5886f3f78dec3583bd0faa6c1f7c3b481c20039941112719193dc419ee': '112a8f7',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
