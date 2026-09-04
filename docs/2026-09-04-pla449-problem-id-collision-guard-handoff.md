@@ -144,3 +144,15 @@ name, so only check 1 reaches it; the CLI warns on stderr rather than returning 
 * **`celery-early-blight` / `celery-late-blight` (§4c) is untouched** -- a content defect, not an
   id-collision one. The guard cannot see it: celery shares an id with 7 crops *correctly* by the
   string, and wrongly by the organism.
+
+---
+
+## 9. Landed
+
+Committed `d1197c7` on `main` and **PUSHED** 2026-09-04: `3372091..d1197c7`, `origin/main` at
+`d1197c7`. Six files, +1071/-1. Pre-commit release-verify skipped by design
+(`crops_data_final.json` not staged). **Never amend this commit** -- the promote fixtures pin
+commits by SHA.
+
+Canonical remains `a9c84847fe2e0ad595db8cf9cc7d7e82ac65803e3284e16071be6d536bf9dad7`; `LATEST.txt`
+untouched. No plant-astro submodule bump is owed, because no dataset content changed.
