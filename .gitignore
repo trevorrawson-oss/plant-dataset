@@ -32,3 +32,10 @@ crops_data_final.*.json
 
 # Per-crop export for external blind audits (generated, never committed)
 audit_export/
+
+# PLA-8 batch staging: derivable copies, never committed (batch 24 convention).
+# scratch canonicals are 27MB and reproducible from the promote; control_methods and
+# shipped_precedents are extracts of canonical itself.
+tools/staging/*/scratch_*.json
+tools/staging/*/control_methods.json
+tools/staging/*/shipped_precedents.json

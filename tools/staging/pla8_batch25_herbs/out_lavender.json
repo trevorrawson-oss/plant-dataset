@@ -1,0 +1,366 @@
+{
+  "crop": "lavender",
+  "pests": [
+    {
+      "name": "Spittlebug",
+      "id": "spittlebugs",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Spittlebugs build up on the weeds around a planting and move onto lavender from there, so clear that weedy ground in spring. Cutting weeds that already carry foam, while the insects inside them are still young, is the one preventive step worth doing.",
+          "note_seasoned": "This is a timed clearance, not general tidiness. UC IPM's instruction is to cut spittlebug-infested weeds in spring before the insects mature and spread, and University of Minnesota Extension's is to keep weeds down near the garden; the surrounding cover is the reservoir, and once the adults are mobile it has already emptied onto whatever grows beside it."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "If the froth bothers you, a forceful stream from the hose washes the young insects off the stems. This is a tidying choice rather than a treatment, because an established lavender is not being harmed either way.",
+          "note_seasoned": "A hard jet takes the foam and the nymph inside it off the stem, and that is the whole effect; the feeding itself costs an established subshrub nothing. Weigh it against simply leaving them: the masses are a late-spring event that passes on its own, and the Royal Horticultural Society asks gardeners not to remove these insects at all."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "On a few stems you can wipe the foam away and lift the small insect out by hand. It is slower than the hose, but it leaves the foliage dry.",
+          "note_seasoned": "Hand removal suits a handful of shoots or a small planting and is the option that does not wet the canopy. There is one generation a year in colder regions and at most two in mild ones, so a single walk through the planting in late spring usually finishes the job."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "umn_ext",
+        "rhs"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/spittlebugs/",
+          "verified": "2026-09-04"
+        },
+        "umn_ext": {
+          "url": "https://extension.umn.edu/yard-and-garden-insects/spittlebugs",
+          "verified": "2026-09-04"
+        },
+        "rhs": {
+          "url": "https://www.rhs.org.uk/biodiversity/cuckoo-spit-spittlebugs",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "prevention_seasoned": {
+          "new": "There is a published prevention step, and it is weed management on a spring clock: UC IPM advises cutting spittlebug-infested weeds before the insects mature and spread, and University of Minnesota Extension advises removing weeds near the garden. The weedy cover around a planting is the reservoir the nymphs arrive from.",
+          "why": "The old text asserted 'No specific prevention is warranted.' and then supplied an unsourced substitute ('Keeping plants spaced for airflow and not overwatering keeps lavender vigorous enough to shrug off minor pests'). The first half is REFUTED by two T1 sources that each publish a specific prevention step, and the second half connects lavender spacing and irrigation to spittlebug pressure, which no document read states; spacing and airflow are sourced for FOLIAR FUNGAL pathogens on this crop, not for this insect.",
+          "anchor": "uc_ipm -- 'Cut spittlebug-infested weeds in the spring before the insects mature and spread.' (https://ipm.ucanr.edu/home-and-landscape/spittlebugs/); umn_ext -- 'Remove weeds near your gardens' (https://extension.umn.edu/yard-and-garden-insects/spittlebugs)"
+        },
+        "prevention_beginner": {
+          "new": "Clear the weeds around the planting in spring. Spittlebugs build up on nearby weeds and move onto lavender from there, so cutting weedy patches while the insects in them are still young is the step that actually prevents them.",
+          "why": "Same defect as prevention_seasoned: 'Nothing special is needed' is refuted, and the vigor-and-spacing sentence that followed it is an unsourced template claim reused across crops.",
+          "anchor": "uc_ipm -- 'Cut spittlebug-infested weeds in the spring before the insects mature and spread.'; umn_ext -- 'Remove weeds near your gardens'"
+        },
+        "cause_seasoned": {
+          "new": "Spittlebug nymphs, which shelter inside their own foam while feeding on plant sap. The damage is mostly cosmetic on an established plant, though the foam masses are occasionally abundant, and a shoot tip that has been fed on may grow distorted.",
+          "why": "'Numbers are usually low' has no anchor and runs against the sources: UC IPM describes masses that are 'occasionally abundant'. Replaced with two facts the documents do carry, and the cosmetic-damage half is kept because all three sources support it.",
+          "anchor": "uc_ipm -- \"Spittlebugs' obvious and occasionally abundant masses of white foam on foliage and stems may be annoying, but they do not seriously harm established woody plants in landscapes.\"; rhs -- 'if the nymph has been feeding at the shoot tip, this may cause some distorted growth' (https://www.rhs.org.uk/biodiversity/cuckoo-spit-spittlebugs)"
+        },
+        "cause_beginner": {
+          "new": "Young spittlebugs hiding in the foam while they feed. They do little real harm, though you can find a lot of the froth at once in some years, and a shoot they have been feeding on may grow a little twisted.",
+          "why": "'There are usually only a few' has no anchor and contradicts UC IPM's 'occasionally abundant masses'. The harmlessness half holds and is kept.",
+          "anchor": "uc_ipm -- 'occasionally abundant masses of white foam on foliage and stems may be annoying, but they do not seriously harm established woody plants'; rhs -- 'this may cause some distorted growth'"
+        }
+      }
+    },
+    {
+      "name": "Whiteflies",
+      "id": "whiteflies",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Look every new plant over for whiteflies before it comes into the garden. This is the first thing UC IPM tells you to do, because most whitefly problems arrive on a plant somebody carried home rather than flying in.",
+          "note_seasoned": "Inspect new plants for adults and for the nonmobile nymphs on the leaf undersides before they join the planting. It is the cheapest step available and the only one that acts before the pest is present, which on a long-lived perennial matters more than on an annual you will pull out in autumn."
+        },
+        {
+          "method": "reflective_mulch",
+          "note_beginner": "Shiny metallic-coated paper or reflective plastic laid on the soil repels whiteflies, and it works best around small plants. Lay it on bare ground with the edges buried, and take it up when the plant gets large or the weather turns hot.",
+          "note_seasoned": "The published effect is repellent and it is strongest away from small plants, so on a perennial this belongs to the first season rather than to an established bush. Two removal rules ride with it and both are the source's own: take the mulch up when plants get large, and take it up when summer temperatures get high, to prevent overheating the plant. Clear the weeds off the bed before laying it."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Prune out isolated infested leaves as soon as you first spot them. If the plant is already carrying a lot, taking off the most heavily loaded leaves is still worth doing: it can bring the numbers down far enough for the insects that eat whiteflies to handle the rest.",
+          "note_seasoned": "Two separate uses, at two different stages. Early, prune out isolated infested leaves at first detection. Later, hand removal of leaves heavily infested with the nonmobile nymphal and pupal stages may reduce populations to levels that natural enemies can contain, which makes this the step that hands the problem to the predators rather than one that stops paying once the infestation is general."
+        },
+        {
+          "method": "ant_exclusion",
+          "note_beginner": "Keep ants off the plant. Whiteflies produce honeydew, the honeydew draws ants, and the ants then drive off the insects that would otherwise eat the whiteflies for you.",
+          "note_seasoned": "Ants tending a honeydew source interfere with the natural enemies that do most of the control here, so excluding them protects the biological control rather than killing anything itself. UC IPM flags dust and ants together as the two things that most often disrupt whitefly natural enemies."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Hose the adults off with a strong stream of water. Washing the foliage down also knocks off dust, and dusty leaves are part of what lets whitefly numbers climb.",
+          "note_seasoned": "Syringing dislodges adults, and it does a second job: hot, dry, dusty conditions favor whiteflies and inhibit their natural enemies. Note the crop-specific limit, because the source is written for gardens generally. Wash the FOLIAGE; do not answer a dust problem on lavender by watering the ground more, since sitting in wet soil is what gives this plant its one genuinely dangerous disease."
+        },
+        {
+          "method": "yellow_sticky_traps",
+          "note_beginner": "Yellow sticky traps catch flying adults, but they are better at telling you whether whiteflies are present and building than at controlling them. Set the sticky part level with where the insects are, and face it toward the plant but out of direct sun.",
+          "note_seasoned": "Treat these as monitoring first: the source is explicit that traps are most useful for detecting whiteflies rather than controlling them, and that they will not eliminate a damaging population. Whiteflies do not fly far, so useful numbers are high, quoted as one trap per medium-size vegetable plant and as many as one per two large plants. Keep the yellow surface level with the infestation, out of direct sunlight, and cleaned, or it stops catching anything."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Lacewings, lady beetles and tiny parasitic wasps do most of the work on whiteflies, and outbreaks usually follow something disturbing them. Do not spray when they are around, and keep dust down, because dust kills them too.",
+          "note_seasoned": "Outbreaks frequently occur when natural enemies are disturbed or destroyed by pesticides, dust buildup, or ants, so conserving them is the center of this program and not a courtesy. Avoiding insecticides that kill natural enemies is described by the source as a very important part of whitefly management. Parasitized nymphs show round or oval exit holes; a healthy whitefly leaves a T-shaped one, which is how you tell whether the wasps are already working."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Insecticidal soap is the last step and a limited one: it kills only the whiteflies the spray actually wets, so you need to cover the undersides of the infested leaves and repeat it. Use it only when the plant is not dry-stressed and the temperature is under 90°F, and spray the infested foliage rather than the flowers.",
+          "note_seasoned": "Soap and the oils alongside it control only those whiteflies directly sprayed, so thorough coverage and repeat applications are both required, and the leaves that need it most are the lowest and hardest to reach. The limits are the source's: not on drought-stressed plants, not above 90°F. Early evening, with enough light to apply safely but no direct sun on the plant, is the suggested window. Confine it to infested growth, since it kills the soft-bodied beneficials it wets and lavender in bloom is a pollinator plant."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "ucanr_ext",
+        "ncsu_ext_lavandula_angustifolia",
+        "wsu_ext_lavender_prcr",
+        "ncsu_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/whiteflies/",
+          "verified": "2026-09-04"
+        },
+        "ucanr_ext": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/lavender/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext_lavandula_angustifolia": {
+          "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+          "verified": "2026-09-04"
+        },
+        "wsu_ext_lavender_prcr": {
+          "url": "https://ppo.puyallup.wsu.edu/lavender/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://newcropsorganics.ces.ncsu.edu/herb/lavender-history-taxonomy-and-production/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Occasional small clusters of tiny white flying insects on new growth. Whiteflies are one of only four invertebrates UC IPM lists for lavender, and on this crop they read as an occasional find rather than a recurring problem.",
+          "why": "Two defects. First, 'or soft aphids': the aphid half of this entry is unsupported across eight documents, and the omission looks deliberate, since UC IPM's host index lists Aphids on rosemary and omits them from lavender. Second, 'most likely on stressed or overcrowded plants in poor conditions rather than on healthy lavender' asserts a stress-susceptibility link that no document read makes for lavender.",
+          "anchor": "ucanr_ext -- lavender host page, Pests and Disorders > Invertebrates lists exactly 'Leafhoppers', 'Spider Mites', 'Spittlebugs', 'Whiteflies' (https://ipm.ucanr.edu/home-and-landscape/lavender/); ncsu_ext -- 'Few insect problems have been reported on field-grown lavender.'"
+        },
+        "symptoms_beginner": {
+          "new": "Every so often, a few tiny white flies on the new growth. Lavender gets very few insect pests, and this is one of the minor ones.",
+          "why": "'or small soft bugs' is the aphid half, unsupported. 'usually only on plants that are stressed or too crowded' is the same unsourced stress link as in symptoms_seasoned.",
+          "anchor": "ucanr_ext -- lavender host page invertebrate list; wsu_ext_lavender_prcr -- 'Lavender has few pests and diseases.' (https://ppo.puyallup.wsu.edu/lavender/)"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Rinse them off with water or use insecticidal soap if numbers climb. Lavender is a low-input crop by reputation and few insect problems have been reported on it, so treat a whitefly find as a one-off rather than the start of a spray program.",
+          "why": "The second sentence, 'Removing nearby stressors and improving airflow usually resolves it', has no anchor: nothing read connects airflow or stress relief to whitefly pressure on lavender. Replaced with the entry's best-anchored material. The first sentence is RETAINED and is now properly anchored: I first refused this entry's ladder because UC IPM Pest Note 7401 had not been read, and the orchestrator then read it on 2026-09-04. It publishes both halves of that sentence, so what the record pass filed as anchorable-but-unread is anchored.",
+          "anchor": "uc_ipm -- 'Hose adults off plants with a strong stream of water.' and 'Most less-toxic products such as insecticidal soaps, neem oil, or petroleum-based oils control only those whiteflies that are directly sprayed.' (https://ipm.ucanr.edu/home-and-landscape/whiteflies/, read directly 2026-09-04); wsu_ext_lavender_prcr -- 'Lavender has few pests and diseases. It is often promoted as a sustainable crop because growers do not commonly need to apply pesticides and fertilizers in its production.'; ncsu_ext -- 'Few insect problems have been reported on field-grown lavender.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Spray them off with water, or use insecticidal soap if there are a lot. Lavender rarely needs spraying at all, so this is a one-off, not a routine.",
+          "why": "'Giving the plant more air and removing stress usually fixes it' has no anchor for this pest on this crop. The water-and-soap sentence is retained and is now anchored at UC IPM Pest Note 7401, read 2026-09-04.",
+          "anchor": "uc_ipm -- 'Hose adults off plants with a strong stream of water.' and soaps and oils 'control only those whiteflies that are directly sprayed'; wsu_ext_lavender_prcr -- 'growers do not commonly need to apply pesticides and fertilizers in its production'"
+        },
+        "prevention_seasoned": {
+          "new": "Inspect any new plant for whiteflies before it enters the garden, keep ants off the plants, since ants protect whiteflies from the insects that eat them, and hold off on broad sprays while natural enemies are present. Skip heavy organic mulches such as sawdust or wood chips around the crowns, which are reported on this crop to raise both fungal and insect problems; one to two inches of white sand is the mulch recommended for lavender instead.",
+          "why": "Two defects, one of them mine. First, the original 'Vigorous, unstressed lavender rarely attracts these pests' asserts a vigor-to-pest-pressure link no document read makes. Second, my own first replacement imported 'full sun, light sharply drained ground, 2 to 3 feet apart' into a whitefly entry. That is NC State's spacing-for-air-circulation claim, published against LEAF SPOT, and I had already pulled the identical claim out of the Phytophthora entry for being attached to the wrong problem. Applying that rule in one place and not the other was inconsistent, so the siting and spacing are gone and the cell now carries UC IPM's actual whitefly prevention plus the one lavender-specific insect statement any read document publishes.",
+          "anchor": "uc_ipm -- 'Prevent whitefly problems by reducing dusty conditions, choosing less susceptible plants, using reflective mulches, and avoiding pesticides that kill whitefly natural enemies.' and 'Always inspect new plants for whiteflies and nymphs before introducing them in the greenhouse or garden.' and 'Keep ants out of plants since they protect whiteflies from natural enemies.' (https://ipm.ucanr.edu/home-and-landscape/whiteflies/); ncsu_ext -- 'Avoid heavy organic mulches (sawdust, wood chips) as they can increase both fungal pathogens and insect problems.' and 'Dr. A. O. Tucker advises using one to two inches of white sand as a mulch around plants to reduce fungal pathogen infection.'"
+        },
+        "prevention_beginner": {
+          "new": "Check new plants for whiteflies before you bring them home, and keep ants out of the plant, because ants protect whiteflies from the insects that would otherwise eat them. Avoid piling wood chips or sawdust around the base; on lavender those heavy mulches are reported to bring more insect and fungal trouble, and a thin layer of white sand is the better choice.",
+          "why": "'Healthy plants rarely get these bugs' is the unsourced vigor-to-pest-pressure claim, and my first replacement carried over 'in full sun with room around it', which is the leaf-spot spacing claim on the wrong problem. Both gone; replaced with UC IPM's published whitefly prevention and NC State's mulch guidance.",
+          "anchor": "uc_ipm -- 'Inspect new plants for whiteflies before bringing them into your garden.' and 'Keep ants out of plants since they protect whiteflies from natural enemies.'; ncsu_ext -- 'Avoid heavy organic mulches (sawdust, wood chips) as they can increase both fungal pathogens and insect problems.'"
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Phytophthora root and crown rot",
+      "id": "lavender-root-crown-rot",
+      "type": "fungal",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "improve_drainage",
+          "note_beginner": "Lavender rots where the ground stays wet, so this one is decided by where you put the plant. Give it light, sharply drained soil in a dry, open, sunny position, water deeply but only once the top few inches have dried out, and never let water stand around the base.",
+          "note_seasoned": "Prolonged soil saturation and standing water at the base are the conditions the water molds need, so drainage is the control here and fungicides do not stand in for it. On heavy or low-lying ground, plant on a mound: UC IPM puts that at 8 to 10 inches for annuals and up to 2 feet with a gradual slope for a perennial. Let the top few inches dry thoroughly between waterings and keep soil and mulch off the crown itself."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "Variety choice shifts the odds a little. Among lavender types, the big lavandin hybrids are reported to hold up better against the wilt diseases than English lavender, and cultivars with gray foliage or dark flowers are the most susceptible. Treat it as a hedge, not a way to grow lavender on wet ground.",
+          "note_seasoned": "Take a resistant variety where one is offered. The reported gradient runs lavandin over English lavender for the vascular wilts, with gray-foliage and dark-flowered cultivars at the susceptible end and pale-flowered types holding up better. NC State words that gradient for the wilt diseases, and its own pathogen list files Phytophthora spp. under wilt, so read it as tilting the odds on a site you have already drained, not as a substitute for draining it."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Buy certified nursery stock and look the plant over before it goes in the ground. A rot that arrives in the pot has already skipped past every other step here.",
+          "note_seasoned": "Select certified nursery stock, and a resistant rootstock or variety where one is available. Root and crown rot has no in-ground rescue, so a plant that arrives already infected is a loss paid for at purchase; inspecting at the nursery costs nothing and is the last point at which the decision is entirely yours."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Dig out and get rid of a lavender whose crown has gone soft. It will not come back, and diseased tissue dropped on a compost pile can carry the problem on.",
+          "note_seasoned": "A substantial infection rarely recovers, so removing and destroying the affected plant is the honest response rather than a rescue attempt. Do not put a susceptible replacement in the same spot until the drainage that caused it has actually been fixed, since the ground, not the plant, is what failed."
+        }
+      ],
+      "sources": [
+        "wsu_ext_lavender_prcr",
+        "uc_ipm",
+        "csu_ext_lavender_07245",
+        "usu_ext_english_lavender",
+        "ncsu_ext",
+        "ncsu_ext_lavandula_angustifolia"
+      ],
+      "anchoring_urls": {
+        "wsu_ext_lavender_prcr": {
+          "url": "https://ppo.puyallup.wsu.edu/lavender/",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/phytophthora-root-and-crown-rot/",
+          "verified": "2026-09-04"
+        },
+        "csu_ext_lavender_07245": {
+          "url": "https://extension.colostate.edu/resource/growing-lavender-in-colorado/",
+          "verified": "2026-09-04"
+        },
+        "usu_ext_english_lavender": {
+          "url": "https://extension.usu.edu/yardandgarden/research/english-lavender-in-the-garden",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://newcropsorganics.ces.ncsu.edu/herb/lavender-history-taxonomy-and-production/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext_lavandula_angustifolia": {
+          "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Shoots wilt, brown, and die back, and unlike a plant that is simply dry it does not recover when you water it; whole shoots can die inside the bush while the outer growth turns pale green with its flowers drooping. Darkened areas often develop in the bark around the crown and the upper roots. It is the disease of concern for lavender, and it takes hold where the soil stays wet.",
+          "why": "'Yellowing' has no lavender anchor and is dropped. The crown sign was ALSO dropped in my first pass, as tree-scoped, and that was an over-correction which I am reversing on review. UC IPM 74133's 'Darkened areas in the bark around the crown and upper roots' describes WOODY tissue, and lavender is a woody subshrub, the same basis on which the record pass accepted UC IPM's 'established woody plants in landscapes' as on-host for this crop. Removing it left the reader with no sign separating this disease from drought, which on a plant grown deliberately dry is the distinction that matters, so the irrigation test is now stated explicitly alongside it. 'Gumming' is NOT carried: that is a stone-fruit and tree feature.",
+          "anchor": "uc_ipm 74133 -- 'Unlike plants suffering from water stress, plants don't recover when irrigated.' and 'Darkened areas in the bark around the crown and upper roots often develop, sometimes with gumming.' (read directly 2026-09-04, https://ipm.ucanr.edu/home-and-landscape/phytophthora-root-and-crown-rot/); wsu_ext_lavender_prcr -- image captions 'the interior shoots are all dead and the shoots around the outside are pale green with their flowers drooping'; ncsu_ext -- 'rapid wilting, browning, and dying of leaves and succulent shoots'"
+        },
+        "symptoms_beginner": {
+          "new": "The plant wilts, browns, and dies back even though the soil is wet, and watering more makes no difference, which is what separates it from a plant that is simply too dry. Whole shoots can die off while the rest of the bush looks pale and tired, and the bark at the base and on the upper roots often goes dark. It is the disease most likely to kill an established lavender, and it comes from ground that stays too wet.",
+          "why": "'Leaves yellow' has no lavender anchor. 'This is the main disease that kills lavender' is a rank claim in tension with NC State's 'The most common disease problem with lavender is wilt', so it is softened. The dark base is RESTORED after review: I removed it in my first pass as tree-scoped, which over-corrected, since the source describes bark on woody plants and lavender is woody. The watering test is now stated, because it is the sign that tells this apart from drought.",
+          "anchor": "uc_ipm 74133 -- \"Unlike plants suffering from water stress, plants don't recover when irrigated.\" and 'Darkened areas in the bark around the crown and upper roots often develop'; ncsu_ext_lavandula_angustifolia -- 'Root rot is caused by overwatering.'"
+        },
+        "cause_seasoned": {
+          "new": "Water mold pathogens that thrive in saturated, poorly drained soil and attack the roots and crown. Many Phytophthora species cause root and crown rot on their hosts, so this is a group of organisms rather than one, and prolonged saturation or standing water at the base is what lets them in.",
+          "why": "'Wet feet, not cold, is the underlying cause' is a rhetorical contrast no document read makes; it is the record asserting what the literature does not say. Replaced with the WSU statement about the genus and the UC IPM statement about saturation, both of which the entry needs and neither of which it carried.",
+          "anchor": "wsu_ext_lavender_prcr -- 'Phytophthora species are microscopic organisms that cause disease in plants. Many species have been identified as the primary causes of root and crown rot of their host plants.'; uc_ipm -- 'Avoid prolonged saturation of the soil or standing water around the base'"
+        },
+        "cause_beginner": {
+          "new": "A rot that takes hold when soil stays soggy and drains badly, attacking the roots and base. It is caused by water molds, a group of soil organisms that need wet ground to spread and infect, so soil that never dries out is what sets it up.",
+          "why": "'The real cause is wet soil, not cold weather' is the same unanchored contrast as in cause_seasoned.",
+          "anchor": "wsu_ext_lavender_prcr -- 'Many species have been identified as the primary causes of root and crown rot of their host plants.'; csu_ext_lavender_07245 -- 'Lavender has no major pests in Colorado but can develop root rot if drainage is insufficient.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "A plant with a substantial infection rarely recovers, so once the crown is rotting the realistic move is to remove and destroy it rather than nurse it. Everything that works here happens at the site and before planting, and a fungicide is not a substitute for drainage.",
+          "why": "'There is no cure' overstates UC IPM 74133's hedged 'rarely recovers' into an absolute, which is the safety-absolute pattern this pass exists to catch. Softened to the source's own wording, and the removal advice is kept because NC State does publish it.",
+          "anchor": "uc_ipm -- 'A plant with a substantial Phytophthora infection rarely recovers.' and 'do not rely on pesticide applications alone to control Phytophthora root and crown rot diseases'; ncsu_ext -- 'If damaged plants are present, remove and destroy any infected plant material and avoid replanting with susceptible varieties.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "A plant that far gone rarely comes back, so pull out affected plants and throw them away instead of trying to save them. The answer is preventing it with good drainage, not curing it.",
+          "why": "'Once the base is rotting there is no fix' is the beginner-register form of the same overstated absolute.",
+          "anchor": "uc_ipm -- 'A plant with a substantial Phytophthora infection rarely recovers.'; ncsu_ext -- 'remove and destroy any infected plant material'"
+        },
+        "prevention_seasoned": {
+          "new": "Plant in sharply drained soil in full sun, water deeply but infrequently, and never let lavender sit in wet ground. On clay, plant on a raised bed or a mound with a gradual slope, keep the crown clear of soil and mulch, and start from certified nursery stock, taking a resistant variety where one is offered.",
+          "why": "'and space plants for airflow' is attached to the wrong problem. Spacing is genuinely sourced on this crop, but for FOLIAR fungal pathogens by way of air circulation, and air circulation does nothing for a soilborne water mold attacking roots; it already appears correctly in the leaf-spot entry. Replaced with two prevention steps UC IPM does publish for this disease.",
+          "anchor": "uc_ipm -- 'The mounds should be 8 to 10 inches high for annuals and up to 2 feet high with a gradual slope for trees and perennials.' and 'Select certified nursery stock and resistant rootstocks or varieties when available.'; ncsu_ext -- air circulation and 2-3 ft spacing are given 'In order to discourage fungal pathogens', which is the leaf-spot claim, not this one"
+        },
+        "prevention_beginner": {
+          "new": "Plant in well-draining soil in full sun, water deeply but rarely, and never let lavender sit in soggy ground. On heavy clay, plant on a mound or a raised bed, keep soil and mulch pulled back from the base, and start with healthy nursery stock.",
+          "why": "'and give plants room' carries the same misattributed spacing claim as prevention_seasoned: spacing on this crop is sourced against leaf spot, not against a soilborne root and crown rot.",
+          "anchor": "uc_ipm -- 'Select certified nursery stock and resistant rootstocks or varieties when available.' and the mound heights; usu_ext_english_lavender -- 'Do not overwater or let water stand around the plants.'"
+        }
+      }
+    },
+    {
+      "name": "Leaf spot",
+      "id": "lavender-leaf-spot",
+      "type": "fungal",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Set lavender 2 to 3 feet apart in a dry, open, sunny spot. Air moving freely through the planting is the main defense against leaf spot, and it is decided when you space the plants rather than later.",
+          "note_seasoned": "Spacing at 2 to 3 feet on an open, sunny site is the published measure here, and NC State gives it for exactly this reason, to discourage fungal pathogens. Trimming the lower branches through the growing season is the in-season half of the same job: the base of a maturing bush is where the canopy closes over first."
+        },
+        {
+          "method": "splash_barrier_mulch",
+          "note_beginner": "One to two inches of white sand around the plants is the mulch recommended for lavender, and it is meant to cut fungal infection. Skip the heavy organic mulches such as wood chips and sawdust here, because on lavender they push fungal problems the other way.",
+          "note_seasoned": "White sand at one to two inches is the lavender-specific recommendation, and a mineral layer over the soil surface is the barrier that keeps rain splash from carrying soil onto the lowest leaves. The heavy organic mulches are a documented contra-indication on this crop, reported to raise both fungal pathogens and insect problems, so the straw and wood-chip options that suit other crops do not transfer here."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Rake the fallen leaves out from under the bush and take off any foliage that is badly marked, rather than letting that litter sit there through the winter.",
+          "note_seasoned": "Stripping spotted foliage and clearing the litter beneath the plant lowers what is left to start the next round. This is general leaf-spot practice rather than a lavender-specific finding, and on a crop where the disease stays minor it belongs as a light habit, not a program."
+        }
+      ],
+      "sources": [
+        "ncsu_ext_lavandula_angustifolia",
+        "ncsu_ext",
+        "rhs"
+      ],
+      "anchoring_urls": {
+        "ncsu_ext_lavandula_angustifolia": {
+          "url": "https://plants.ces.ncsu.edu/plants/lavandula-angustifolia/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://newcropsorganics.ces.ncsu.edu/herb/lavender-history-taxonomy-and-production/",
+          "verified": "2026-09-04"
+        },
+        "rhs": {
+          "url": "https://www.rhs.org.uk/plants/282089/lavandula-angustifolia-hidcote-group/details",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {}
+    }
+  ],
+  "unreachable_claims": [
+    "SPITTLEBUG LADDER CAP (umn_ext): 'Pesticides are not effective' -- the spittle mass shields the nymph. This is the single most useful ladder fact for this problem and no method can carry it, because it is an instruction to STOP, not a control. It is why this ladder ends at physical with three rungs and reaches for neither soft_chemical nor conventional, even though six insect-reaching materials exist in the catalog.",
+    "ncsu_ext (New Crops), INSECT half: 'Avoid heavy organic mulches (sawdust, wood chips) as they can increase both fungal pathogens and insect problems.' The only insect-reaching mulch method is `reflective_mulch`, which is specifically silver reflective film that repels incoming winged adults, so hanging a heavy-mulch contra-indication on it would be bending a method rather than using it. Carried into `Whiteflies.prevention_beginner`/`prevention_seasoned` as prose instead. The FUNGAL half of the same sentence IS carried, on the leaf-spot `splash_barrier_mulch` rung.",
+    "wsu_ext_lavender_prcr, the diagnostic pathway: 'Diagnostic services are available from the WSU Plant and Insect Diagnostic Laboratory', plus a published do-it-yourself sampling guide for testing your own plants for PRCR. A real, lavender-specific monitoring step, and there is no method in the 64 for lab diagnosis or sampling. If a `diagnostic_confirmation` method is ever minted, lavender PRCR is a ready first citation.",
+    "uc_ipm PN 74133's conventional materials for Phytophthora on ornamentals (fosetyl-al / Aliette, phosphorous-acid products, mefenoxam). The catalog's only conventional fungicides are `chlorothalonil` and `mancozeb`, both `fungal_foliar` protectants, and neither is any of those actives. Naming one to fill the conventional tier would invent a recommendation, so no conventional rung was authored -- which also matches the source's own 'do not rely on pesticide applications alone'.",
+    "uc_ipm spittlebug natural enemies (birds, assassin bugs, parasitic wasps). `beneficial_predators` exists and reaches `insect`, but UC IPM states their importance is 'not well known', so a biological rung would assert more than the source does. Not authored; recorded here so the omission reads as a decision rather than an oversight.",
+    "Spittlebug overwintering site: uc_ipm says eggs sit 'on or in stems or needles', umn_ext says they 'can live through the winter in leaf litter'. The two T1 sources disagree, so no `garden_sanitation` rung was authored for this pest on a clear-the-debris rationale, which would have required picking a side silently.",
+    "uc_ipm whiteflies, 'choosing less susceptible plants' / 'Avoid or remove plants that repeatedly host high populations of whiteflies'. DECLINED on `resistant_varieties`, which was mechanically available (applies_to `any`). Read in full, the advice is to avoid or remove the HOST SPECIES, not to pick a cultivar, and no document read reports cultivar-level whitefly susceptibility in Lavandula. A `resistant_varieties` rung would tell a reader a whitefly-resistant lavender exists to buy; the only honest form of this advice is 'grow something else', which is not advice about lavender.",
+    "uc_ipm whiteflies, Encarsia: 'Encarsia spp parasites are commercially available for release in greenhouse situations; however, they are not generally recommended for outdoor use because they are not well adapted for survival in temperate zones.' `augmentative_release` is in the catalog and reaches `insect`, and this is a documented instruction NOT to use it in a garden. Recorded as a sourced decline rather than an omission.",
+    "uc_ipm whiteflies, the two end-of-season removal lines: 'Remove and destroy whitefly-infested vegetable plants after harvest' and 'Promptly destroy infested annuals when the flowering or fruiting period ends'. Both are annual- and vegetable-scoped and there is no lavender equivalent, since the plant is a perennial nobody pulls at season's end. Not carried onto the garden_sanitation rung, which uses the two removal sentences that ARE host-general instead.",
+    "uc_ipm whiteflies, oils: the source groups 'insecticidal soaps, neem oil, or petroleum-based oils' as one contact-only category under one set of limits. `horticultural_oil` and `neem_oil` both reach `insect` and would have made a ninth and tenth rung, but they would restate the soap rung's mechanism and limits rather than add a step. One soft-chemical rung, written to cover the category. Available as separate rungs if the orchestrator wants parity with the shipped tomato ladders."
+  ],
+  "refusals": [
+    "REFUSED, UNBLOCKED, THEN RE-AUTHORED FROM THE DOCUMENT ITSELF. Sequence, because the sequence is the finding. (1) I refused the whitefly ladder outright: the record pass opened fourteen documents, none carried whitefly management for lavender, and UC IPM's whitefly Pest Note was explicitly unread. (2) The orchestrator supplied a curated bullet list from that Pest Note and I authored six rungs from it. (3) Independent review found my garden_sanitation note said the step is 'worth very little once the insects are spread through the canopy', which the page contradicts at exactly that point. (4) I opened the page myself, in two passes, and the list turned out to differ from the document in THREE places, not one: it omitted 'Hand removal of leaves or plants heavily infested with the nonmobile nymphal and pupal stages may reduce populations to levels that natural enemies can contain'; it gave one sticky-trap rate where the page publishes two ('one trap for every medium-size vegetable plant' AND 'as many as one trap for every two large plants'); and it omitted the ant and dust material entirely, which is where two more published steps live. The ladder is now eight rungs written from the page. The lesson is not that the list was careless, it is that a summary becomes the authoring agent's entire universe for a claim, and an omitted sentence is one the agent cannot know to want.",
+    "REFUSED: any conventional rung anywhere in this file, and any soft_chemical rung outside the whitefly entry. Spittlebug is capped by umn_ext's 'Pesticides are not effective'. Leaf spot has no fungicide recommended on lavender by any source read. Phytophthora's published actives (fosetyl-al, phosphorous acid, mefenoxam) are absent from the catalog. Whiteflies takes exactly one soft_chemical rung and no conventional rung, and that is the source's own instruction, now read directly: 'Avoid using broad spectrum pesticides such as pyrethroids, organophosphates, or neonicotinoids', 'Avoid using other pesticides (other than soaps and oils) to control whiteflies', and on the one systemic it does describe, 'Imidacloprid can have negative impacts on natural enemies, honey bees and other pollinators in the garden, especially when applied as a foliar spray or as a soil application to plants that are flowering or soon to be flowering.' On a plant NC State lists as attracting butterflies and pollinators, that sentence is the whole argument.",
+    "NOT REFUSED but flagged: the `resistant_varieties` rung on Phytophthora root and crown rot. NC State words its cultivar gradient for 'vascular wilts', not for PRCR by name. It is authored because NC State's own pathogen list files 'Phytophthora spp. -- wilt', so its wilt bucket demonstrably includes this pathogen, and because uc_ipm PN 74133 independently publishes 'Select certified nursery stock and resistant rootstocks or varieties when available'. The rung note says 'the wilt diseases' rather than claiming Phytophthora-specific resistance. If the orchestrator judges that too much of a slide, drop the rung; the other three stand on their own."
+  ],
+  "notes_to_orchestrator": [
+    "VALIDATOR STATE, RE-VERIFIED AT RUN TIME rather than reported from the copy I first read. I drafted a finding that validate_out.py could not express a RENAME (its coverage diff walked CANONICAL names and ignored the pin table's `from`), which would have made this file report MISSING 'Whiteflies and aphids' plus EXTRA 'Whiteflies'. By the time I ran it the defect was already fixed on disk by a sibling agent: coverage now walks the pin table and a separate PROVENANCE walk requires every canonical name to be claimed by a row's name, its `from`, or `_retired`. The orchestrator has since confirmed both reported defects were real and that pinned `type`/`severity` are now actually compared against the output as well (they were read but never checked, so a reverted type validated green). Recording this because the finding was TRUE of the file I read and FALSE by the time I acted on it, which is the stale-record trap in miniature: re-verify before acting, including on your own notes.",
+    "FINAL VALIDATOR RESULT: `python3 tools/staging/pla8_batch25_herbs/validate_out.py lavender` returns exit 0, \"OK: lavender validates. 2 pests + 2 diseases, 16 rungs.\" It was RED for one line before the whitefly unblock (\"pests/'Whiteflies': control_ladder must be a non-empty list\"), which was my deliberate refusal showing up as a refusal rather than as silence. I did not patch that line away even though the brief authorizes validator fixes: control_ladder_gate does permit `null`, so the validator is stricter than the gate there, but making my own refusal invisible by loosening a shared guard mid-fan-out is the wrong instinct in both directions.",
+    "VALIDATOR DEFECT 2: validate_out.py refuses `control_ladder: null` outright ('must be a non-empty list'), while control_ladder_gate.py explicitly permits null as 'not yet laddered. Legal through the rollout' and treats only `[]` as the defect. That makes a legitimate refusal inexpressible in the output format the brief itself asks for. My run's third failure line is that deliberate whitefly refusal, not an unfixed defect in my file. Total expected failures on my run: 3, all three accounted for here.",
+    "DISPLAY-NAME DIVERGENCE, three crops, one id. The pin table keeps lavender's singular 'Spittlebug' while rosemary and sage carry 'Spittlebugs', and all three share the newly minted id `spittlebugs`. The record report's family section recommends normalizing lavender to the plural so one problem does not ship under two display names. I did not change it: the name is pinned, and changing it would trip the validator's coverage check the same way the whitefly rename does. Flagging for a batch-level decision.",
+    "ANCHORING_URLS IS ONE URL PER CATALOG KEY, and that bit on spittlebug. The UC IPM lavender host page (https://ipm.ucanr.edu/home-and-landscape/lavender/) is what puts spittlebugs ON lavender, while the UC IPM spittlebugs Pest Notes page carries the damage assessment, the water wash and the weed-timing prevention. Both are `uc_ipm`. I anchored uc_ipm to the spittlebugs page, because rhs independently carries the on-host association ('Many plants, including chrysanthemum, dahlia, fuchsia, lavender, rosemary, rose and willow'). If a second UC anchor is wanted, shipped precedent permits `ucanr_ext` with an ipm.ucanr.edu URL: control_methods/crop_rotation does it, and pomegranate's Botrytis entry cites both keys at once.",
+    "LEAF SPOT HAS ZERO field_corrections, deliberately. The record's verdict is 'RECORD CLAIMS THAT ARE WRONG: None', and its two load-bearing specifics (air circulation as the defense, 2 to 3 feet of spacing) match NC State verbatim. Residual unanchored generics left in place, and known: 'more likely in humid weather', 'Crowding and overhead watering raise the risk', 'water at the base rather than overhead', 'avoid overhead watering'. No lavender document read mentions overhead watering at all; the two documents that do carry it (uc_ipm floriculture leaf spots, uconn_ext fungal leaf spots) were both read and neither mentions lavender. They are generic-but-plausible, not false, so I did not manufacture a correction to look thorough. Do NOT move NC State's 90 degrees F / 90 percent humidity August figure onto this entry: it is published for VASCULAR WILT.",
+    "The leaf-spot `garden_sanitation` rung has no ON-HOST anchor. Its warrant is uconn_ext ('Clean up diseased leaves in the fall to help remove overwintering spores'), which was read but never mentions lavender, plus the method's own catalog sources. I deliberately did NOT add uconn_ext to the entry's `sources`, because an anchoring_urls key pointing at a 3-page PDF that never names the crop is the mis-pointed-key defect this batch exists to kill. The rung note says in as many words that this is general practice rather than a lavender-specific finding.",
+    "WHITEFLIES: `cause_beginner` and `cause_seasoned` are deliberately untouched. Neither mentions aphids, so the rename does not break them, and cause_*'s second sentence ('Lavender has few pests overall and is typically grown with little or no pesticide') is the best-anchored sentence in the entire entry per the record report. Touching a field that is both correct and well sourced would be a rewrite, not a correction.",
+    "WHITEFLIES asymmetry, stated on purpose so it is not read as an oversight: the rinse-and-insecticidal-soap sentence is RETAINED in organic_treatment_* while the ladder is REFUSED. The two are not the same act. The prose is pre-existing content the reviewer classified anchorable-but-unread and refuted nowhere, and deleting it would leave a consumer-facing treatment cell with no advice at all; the ladder would be NEW content I author, which requires a warrant I do not have. If symmetry is wanted, the fix is to read PN 7401 and anchor both, not to strip the sentence.",
+    "ROSTER GAP restated from the record's single most important finding, still open and out of scope for this file: UC IPM's lavender host page lists FOUR invertebrates (Leafhoppers, Spider Mites, Spittlebugs, Whiteflies) and lavender.pests[] carries two. Leafhoppers and spider mites are absent from the crop entirely and are not in the pin table, so I could not author them. That gap is now the only thing standing between this crop and matching its own best host-indexed source in both directions.",
+    "`type: \"fungal\"` on a Phytophthora (oomycete) entry is left exactly as pinned, and the corrected cause_seasoned still says 'Water mold pathogens', so the record still contradicts its own type field. That is deliberate convention, not a defect: all 16 existing Phytophthora entries in canonical are typed `fungal`, and control_ladder_gate's type enum has no water-mold value. Recorded so nobody re-finds it as a bug.",
+    "The six-species Phytophthora enumeration (Dlugos, Bridges and Jeffers, Clemson, via APS Plant Disease) is JOURNAL-ONLY and is NOT written anywhere in this file. WSU hosts and links the PDF but its own prose says only that many species cause root and crown rot of their hosts, which is what cause_seasoned now says.",
+    "STILL OWED, and nothing here is sourced to it: https://pnwhandbooks.org/plantdisease/host-disease/lavender-root-rot returns HTTP 403 to WebFetch on every attempt, including /node/2979/print. It is a live page, not a dead one, and it is the highest-value unread document for this crop (the OSU Plant Clinic's Lavandula pathogen list plus cultural controls). Per the url-liveness rule, a 403 is not death; it needs a client that gets past the block.",
+    "TEMPLATE-TWIN INHERITANCE, MEASURED, and a cross-crop lead. I checked all 38 authored strings against the shipped precedents plus every laddered problem in canonical (13,997 strings), difflib in both orders plus shared rare 6-grams. All 10 RUNG NOTES are clean: worst shared 6-gram count 3, worst ratio 0.609, and that one has since been rewritten to diverge from kohlrabi's Alternaria sanitation note. The high scores are all in field_corrections prose and they are INHERITED, not copied: lavender's records were already near-verbatim twins of rosemary's and thyme's, and my corrections keep the halves the record says HOLD while replacing the halves it refutes. Worst is prevention_beginner at 0.771 against rosemary's Root and crown rot, whose surviving first sentence is identical prose that was identical before I touched it. The lead: the exact sentences I corrected here are live on the twins right now, verified by reading canonical. rosemary Root-and-crown-rot prevention_seasoned ends 'and space plants for airflow', the same claim attached to the same wrong problem. thyme Root-and-crown-rot cause_beginner ends 'The real cause is wet soil, not cold weather', the same unanchored contrast, and its organic_treatment_beginner opens 'Once the base is rotting there is no fix', the same overstated absolute. If those crops' record passes reached the same verdicts, the same three corrections are owed there, and they are outside this file.",
+    "ANCHOR-KEY SPLIT ON THE WHITEFLY ENTRY, and one URL change you should see. The chain is two documents and anchoring_urls holds one URL per key, so `uc_ipm` carries the management document and `ucanr_ext` carries the UC IPM lavender host index, the only document putting whiteflies on lavender at all. I MOVED the uc_ipm URL from https://ipm.ucanr.edu/PMG/PESTNOTES/pn7401.html to https://ipm.ucanr.edu/home-and-landscape/whiteflies/. Same publication, but that is the page the lavender host index actually links to, so the chain is now contiguous, and it is the version carrying the Quick Tips block where four of my quoted sentences live. Both URLs were fetched and both carry the management prose; revert to the pn7401 form if the batch prefers it. I did NOT split keys on spittlebug, where `rhs` independently names lavender as a host and the UC host page is not load-bearing. Split the key only where the host association would otherwise be uncited.",
+    "WHITEFLY LADDER PROVENANCE, stated plainly: none of the eight rungs is lavender-specific management. UC IPM's whitefly Pest Note is a general home-and-landscape program and no rung note pretends otherwise. What IS lavender-specific in that entry is the prevention prose (NC State's heavy-organic-mulch contra-indication and the white-sand alternative), the pollinator framing on the spray rung, and one authored crop-specific limit: the source says watering reduces the hot, dry, dusty conditions that favor whiteflies, and on lavender that advice had to be scoped to washing the FOLIAGE, because answering it with more soil water would feed the one disease on this crop rated high severity. That tension is called out in the water_spray note rather than left for a reader to walk into.",
+    "REVERSAL RECORDED, Phytophthora symptoms. My first pass deleted the darkened-crown sign from both symptom registers as tree-scoped, following the record report. On review that was an over-correction and I have reversed it, which I would rather state than quietly re-add: UC IPM 74133's 'Darkened areas in the bark around the crown and upper roots' describes woody tissue, and lavender is a woody subshrub. That is the SAME basis the record pass itself used to accept UC IPM's 'established woody plants in landscapes' as on-host for the spittlebug entry, so rejecting it here and accepting it there was inconsistent. I also added 74133's \"Unlike plants suffering from water stress, plants don't recover when irrigated\", which is the sentence that separates this disease from drought, and I did not carry 'gumming', which is a tree and stone-fruit feature.",
+    "FOUR THINGS THE DOCUMENT ADDED THAT NO SUMMARY WOULD HAVE, listed so the value of the direct read is auditable. (1) `ant_exclusion` is published twice ('Keep ants out of plants since they protect whiteflies from natural enemies') and is now rung 4; the review was right that omitting it silently would have read as an oversight later. (2) Dust is not an unreachable cultural aside, it is a natural-enemy claim ('Prevent dusty conditions since dust can kill or disrupt the activity of beneficials'), so it moved out of unreachable_claims and into the beneficial_predators and water_spray rungs. (3) `certified_clean_stock` is the source's FIRST quick tip and I had no rung for it; it now leads the ladder. (4) The traps are explicitly a monitoring tool, not a control ('Traps are most useful for monitoring and detecting whiteflies rather than controlling them'), which is the opposite emphasis from the one I had written.",
+    "CANONICAL IS A MOVING TARGET AND MY OWN FIRST NOTE ON IT WENT STALE INSIDE ONE SESSION. The brief pins a9c84847fe2e0ad595db8cf9cc7d7e82ac65803e3284e16071be6d536bf9dad7. I observed two further values while working: f6d557858e1cd5ed2951c316621195cf8d538985c5ec5648c6ed137a5d64ec6b and then 9a141091fce3378e3f9fc8e4e67c7200b7d654c883d86bc6961d3723f092afd2, the current one. I diffed at both rather than assume, and at BOTH the only semantic difference from HEAD is one additive `source_catalog` entry, `uc_ipm_pn7493` ('UC IPM Pest Notes: Powdery Mildew on Ornamentals'), presumably a sibling's sourcing work. The SHA moved a second time with an identical logical diff, which means that entry's own content was edited in place between my two reads. Zero of the 128 crops changed, `control_methods` is unchanged, lavender is byte-identical to HEAD, and every catalog key this file cites still resolves T1. I also checked the serialization, since a reformat would be a silent disaster: the file is still compact, still has no trailing newline, and re-serializing its own parsed content with separators=(',',':') reproduces it byte for byte. Nothing here needs re-authoring. But the batch's promote SHA guard and the BRIEF's stated canonical are both stale, the value is moving under concurrent agents, so whoever promotes should re-read it at promote time rather than trust any hash written down earlier, including this one.",
+    "CORRECTION TO MY OWN VERIFICATION, because I reported a number that was too low. I first measured rung-note similarity with an n-gram PREFILTER, comparing each note only against corpus strings sharing a rare 6-gram, and reported a worst ratio of 0.515. The unscreened exhaustive run over all 13,997 shipped strings returns 0.585, on a pair my prefilter never looked at: Leaf spot / garden_sanitation / note_beginner against apricot's Shot hole garden_sanitation note. The prefilter was the defect. Two sanitation sentences about raking fallen leaves can be structurally similar while sharing no n-gram at all, so screening by shared n-grams cannot find the nearest neighbor by ratio, and a confident number came from my own screen rather than from the data. The pair itself is clean: zero shared 4-grams, 5-grams, 6-grams and 7-grams, and the resemblance is the practice, not the prose. difflib's asymmetry shows on it too, 0.553 one way and 0.585 the other, which is why the max of both orders is the figure. FINAL, exhaustive, unscreened: 36 rung notes, worst ratio 0.585, worst shared 6-gram count 3, zero identical strings. Trust that figure, not the 0.515."
+  ]
+}

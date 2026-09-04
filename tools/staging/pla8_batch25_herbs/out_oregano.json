@@ -1,0 +1,516 @@
+{
+  "crop": "oregano",
+  "pests": [
+    {
+      "name": "Aphids",
+      "id": "aphids",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go easy on the fertilizer. Oregano does not need rich feeding, and the soft, sappy shoots that a heavy dose of nitrogen pushes out are exactly what aphids breed on. Feeding lightly, or not at all, gives them much less to work with.",
+          "note_seasoned": "Aphid reproduction tracks the soluble nitrogen in new growth, so a heavy feed raises the ceiling on a colony rather than simply feeding one that was coming anyway. Feed in small portions rather than in one push, and judge the effect by how fast a colony builds, not by whether one turns up at all."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "When the aphids are packed onto two or three shoot tips, pinch those tips off and put them in the trash. On a plant the size of an oregano that can be the whole treatment.",
+          "note_seasoned": "UC IPM's own line is that where populations are localized on a few curled leaves or new shoots, pruning those out and disposing of them may be the best control. It works here because oregano's aphids concentrate on young growth, so the infested tissue is a small, identifiable fraction of the plant rather than something spread through the canopy."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Knock them off with a hard jet from the hose, aiming under the leaves and into the shoot tips. Most of the aphids that land on the ground never make it back. Do it in the morning so the plant dries through the day.",
+          "note_seasoned": "Expect to repeat it every few days while numbers are climbing; one pass thins a colony rather than ending it. The catch on this crop is that oregano's aphids concentrate on seedlings and young plants, and a stream forceful enough to dislodge a colony will flatten a seedling, so hold the hose back until the plant has some substance to it and pinch out the infested tips instead until then."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Ladybugs, lacewings and tiny wasps eat aphids, and on a plant this small they usually find the colony before you would have. Give a light infestation a week or two and watch it before reaching for anything.",
+          "note_seasoned": "Conservation costs nothing and is why most oregano aphid flare-ups end on their own. The real cost sits on the other side: a broad-spectrum insecticide takes the predators out along with the aphids, and the colony that rebuilds afterward has nothing left holding it down. Ants working the plant do the same job from the other direction, driving predators off a colony they are farming for honeydew."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If a young plant is being overwhelmed, insecticidal soap works, but only where the spray actually lands on an insect. Cover the undersides of the leaves and plan on repeating it.",
+          "note_seasoned": "Soap leaves no residual, so this is a coverage problem rather than a dose problem and anything the spray misses is the population that rebuilds. Keep it off a plant that is already dry and stressed, and off any plant when the temperature is near 90°F, since that is when the foliage burns. It also kills the soft-bodied predators it wets, so spray the colony rather than the planting."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "ucanr_ext",
+        "psu_ext",
+        "uf_ifas"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/oregano/",
+          "verified": "2026-09-04"
+        },
+        "ucanr_ext": {
+          "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-oregano",
+          "verified": "2026-09-04"
+        },
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Clusters of small soft-bodied insects on the tender new growth of young plants. Mature oregano's aroma tends to repel them, so this is usually a minor, early-season problem that fades as the plant fills out.",
+          "why": "The old text named 'stressed, crowded plants' as a second risk group alongside seedlings. Nothing in the record pass anchors it, and UC IPM Pest Note 7404 runs the other way, putting aphid reproduction on the lush growth that high nitrogen pushes rather than on stress.",
+          "anchor": "psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"Aphids, spider mites, and white flies, which are often repelled by the aroma of oregano emitted by mature plants, can be a problem for young seedlings.\" For the deleted half, the counter-evidence is ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary.\""
+        },
+        "symptoms_beginner": {
+          "new": "Small soft bugs grouped on the new growth of young plants. Grown oregano's scent tends to keep them away, so this is normally minor and eases off as the plant matures.",
+          "why": "Same correction as symptoms_seasoned: the 'stressed plants' framing is unanchored and inverts the published mechanism.",
+          "anchor": "psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"Aphids, spider mites, and white flies, which are often repelled by the aroma of oregano emitted by mature plants, can be a problem for young seedlings.\""
+        },
+        "cause_seasoned": {
+          "new": "Sap-feeding insects that occasionally find oregano, mainly at the seedling stage, before the plant is mature enough for its own aroma to put them off. Oregano is relatively pest-resistant, and a heavy nitrogen feed is the surest way to change that, since the soft growth it pushes is what aphid numbers track.",
+          "why": "\"Oregano has few pests overall and is typically grown with little or no pesticide\" asserted a practice claim no document supports. uf_ifas backs only the resistance half. The nitrogen lever is published, actionable and was absent from the record entirely.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"oregano is relatively pest-resistant\". psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"...often repelled by the aroma of oregano emitted by mature plants, can be a problem for young seedlings.\" ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary.\""
+        },
+        "cause_beginner": {
+          "new": "Small sap-sucking insects that sometimes turn up, mostly on young plants that are not yet big enough for their own scent to put the insects off. Oregano has few pest problems, though feeding it heavily with a high-nitrogen fertilizer makes aphids more likely, because it pushes out soft new growth.",
+          "why": "Same correction as cause_seasoned: the unsourced 'rarely needs spraying' practice claim is out, the anchored resistance claim and the nitrogen lever are in.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"oregano is relatively pest-resistant\". ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary.\""
+        },
+        "organic_treatment_seasoned": {
+          "new": "Knock them off with a strong stream of water, and where a colony sits on a few shoot tips, prune those out and dispose of them. Insecticidal soap is the next step if numbers keep climbing, and since it has no residual, coverage is what makes it work.",
+          "why": "Neem was named as a product for oregano aphids and no source in the record pass names neem for this crop. \"A hard harvest removes much of the infested growth at once\" is also unanchored; UC IPM's actual instruction is to prune out the localized shoots, which is what replaces it.",
+          "anchor": "ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"Spray aphids with a strong stream of water to knock them off sturdy plants.\" / \"Where aphid populations are localized on a few curled leaves or new shoots, the best control may be to prune out these areas and dispose of them.\" / \"Insecticidal soaps and oils are the best choices for most situations\"."
+        },
+        "organic_treatment_beginner": {
+          "new": "Spray them off with water. If they are clustered on a few shoot tips, pinch those off and put them in the trash. Insecticidal soap works when there are a lot of them, but only where the spray lands on the insect.",
+          "why": "Same correction as organic_treatment_seasoned: neem and the hard-harvest claim are unanchored and are out.",
+          "anchor": "ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"Spray aphids with a strong stream of water to knock them off sturdy plants.\" / \"Where aphid populations are localized on a few curled leaves or new shoots, the best control may be to prune out these areas and dispose of them.\""
+        },
+        "prevention_seasoned": {
+          "new": "Feed lightly: a heavy nitrogen dose pushes out the soft growth aphid numbers build on. Check the new growth of seedlings and young plants at least twice a week while they are growing fast, which is when a colony is both easiest to find and cheapest to deal with, and leave the ladybugs and lacewings that turn up to finish the job.",
+          "why": "\"Vigorous, unstressed oregano rarely attracts aphids\" inverts the published mechanism, and \"full sun\" and \"lean soil\" are not anchored as aphid measures. The published monitoring cadence and the natural-enemy instruction were both missing.",
+          "anchor": "ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary.\" / \"Check your plants regularly for aphids-at least twice a week when plants are growing rapidly-in order to catch infestations early.\" / \"Ants protect aphids from natural enemies\"."
+        },
+        "prevention_beginner": {
+          "new": "Go easy on the fertilizer, since rich feeding gives aphids the soft new growth they multiply on. Look young plants over a couple of times a week while they are growing fast, and let the ladybugs and lacewings that show up do their work.",
+          "why": "Same correction as prevention_seasoned: the vigor claim, the full-sun claim and the lean-soil claim are unanchored as aphid measures and are out; the published check-twice-a-week cadence is in.",
+          "anchor": "ucanr_ext, UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html: \"Check your plants regularly for aphids-at least twice a week when plants are growing rapidly-in order to catch infestations early.\""
+        }
+      }
+    },
+    {
+      "name": "Spider mites",
+      "id": "spider-mites",
+      "type": "mite",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "even_watering",
+          "note_beginner": "Mites build up fastest on a plant that has been left dry and stressed. Oregano likes it on the dry side, but a pot baking through a heat wave is a different thing, so water it before it starts to wilt.",
+          "note_seasoned": "The distinction worth holding on a drought-adapted herb is between soil that drains fast and a rootball that has actually run out. The first is how oregano should be grown; the second is what tips a mite population into a flare, because water-stressed plants are highly susceptible. Containers reach that point first, since they hold days of water where a bed holds weeks."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Rinse the plant hard with the hose, getting the water under the leaves where the mites actually sit, and repeat every few days in hot weather. On a garden plant this alone often settles it.",
+          "note_seasoned": "UC IPM's finding for gardens and small plants is that regular, forceful water spraying often reduces mite numbers adequately on its own, which puts this ahead of any product rather than beside one. It also works on the second half of the problem: mites are first found on plants next to dusty roadways and at garden margins, so wetting the paths and bare ground nearby at regular intervals belongs in the same habit."
+        },
+        {
+          "method": "augmentative_release",
+          "note_beginner": "You can buy predatory mites, but be honest about the scale. They are meant for a large planting, and on a few oregano plants most of them will simply leave. The predators already in your garden do more.",
+          "note_seasoned": "UC IPM scopes purchase and release to large plantings and orchards, and released predators starve or move on when prey is not already there, so on a herb bed this is a top-up rather than a plan. If you do release, the working guideline is roughly one predator per ten spider mites, and it closes off sulfur afterward, which harms predatory mites that are not sulfur-resistant."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Before you spray anything, make sure the mites are still there. The speckling stays on the leaf long after they have gone. If they are, insecticidal soap kills what it touches, so cover the undersides of the leaves and plan on repeating it.",
+          "note_seasoned": "The published instruction is to be sure mites are present before treating, because they are often gone by the time the damage is noticed and plants recover on their own once they leave. Stippling is a record of the past, not a reading of the present, so confirm with a hand lens first. Then treat for coverage: there is no residual, and whatever the spray misses is the population that comes back."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "Light horticultural oil smothers mites the same way and can be the better choice on a heavier infestation. Do not use it on a dry, stressed plant or when it is above 90°F.",
+          "note_seasoned": "Soap and oil are the two selective materials UC IPM names for mites, and the reason to stop at them is that broad-spectrum insecticides do the opposite: they set off mite outbreaks by clearing out the predators that were holding numbers down. Keep oil and sulfur 30 days apart, which is the published interval, since the combination injures foliage."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "ucanr_ext_spider_mites",
+        "psu_ext",
+        "uf_ifas"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/oregano/",
+          "verified": "2026-09-04"
+        },
+        "ucanr_ext_spider_mites": {
+          "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-oregano",
+          "verified": "2026-09-04"
+        },
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Fine stippling or yellowing on the leaves with faint webbing on the stems, most likely in hot weather and on plants sitting where dust settles or where the rootball has been left dry. Oregano is relatively pest-resistant, so this is usually minor.",
+          "why": "\"Hot, dry weather\" drops the actionable half of UC IPM's finding, which is dust, and dust is the lever a gardener can pull. \"Stressed or indoor plants\" is unanchored: no source in the record pass puts oregano mites indoors. The resistance claim gains its anchor here rather than sitting unsourced in cause_seasoned.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Spider mites prefer hot, dusty conditions and usually are first found on trees or plants adjacent to dusty roadways or at margins of gardens. Plants under water stress also are highly susceptible.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"oregano is relatively pest-resistant\"."
+        },
+        "symptoms_beginner": {
+          "new": "Leaves that look faded and finely speckled all over rather than spotted in patches, with a little webbing between the stems in bad cases. Look for it in hot spells, on plants coated in path dust or left to dry right out. It is rarely serious on oregano.",
+          "why": "Same correction as symptoms_seasoned: dust replaces the vaguer 'dry weather', and the unanchored indoor claim is out. Rewritten a second time on measurement: my first replacement kept the shipped sentence frame and still scored 0.783 against thyme's shipped Spider mites symptoms_beginner, which is the same template twin one register down from where it started (the shipped pair scores 0.909).",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Spider mites prefer hot, dusty conditions and usually are first found on trees or plants adjacent to dusty roadways or at margins of gardens.\" Thyme's shipped twin, for the record: \"Tiny yellow speckles on the leaves and faint webbing on the stems, usually in hot, dry weather. Thyme rarely has pest trouble, so this is normally minor.\""
+        },
+        "cause_seasoned": {
+          "new": "Tiny sap-feeding mites that build up in hot, dusty conditions and on plants under water stress. They are usually found first at the margins of a garden and beside dusty paths and roadways, which is where the practical lever sits.",
+          "why": "Same dust correction, and \"on plants grown indoors\" goes with it. \"Oregano has few pests overall and seldom needs treatment\" was an unsourced practice claim; the sourced half of it now sits in symptoms_seasoned with its uf_ifas anchor.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Spider mites prefer hot, dusty conditions and usually are first found on trees or plants adjacent to dusty roadways or at margins of gardens. Plants under water stress also are highly susceptible.\""
+        },
+        "cause_beginner": {
+          "new": "Very small sap-sucking mites that build up in hot weather, especially where dust settles on the leaves or where a plant has been left dry. They usually show up first at the edge of a garden or beside a dusty path.",
+          "why": "Same correction as cause_seasoned: dust in, indoor culture and the practice claim out.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Spider mites prefer hot, dusty conditions and usually are first found on trees or plants adjacent to dusty roadways or at margins of gardens.\""
+        },
+        "organic_treatment_seasoned": {
+          "new": "Check that the mites are still present before treating: the stippling stays on the leaf after they have gone, and plants often recover on their own. If they are there, rinse the plant with a forceful spray of water, which often reduces numbers adequately by itself, and fall back on insecticidal soap or horticultural oil only if that is not holding.",
+          "why": "\"A hard harvest or shear removes much of the infested growth\" is unanchored. More importantly, the published rule that gates this whole response, confirm the mites are present before you treat, was missing, and it is the least invasive step there is.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Be sure mites are present before you treat. Sometimes the mites will be gone by the time you notice the damage; plants will often recover after mites have left.\" / \"In gardens and on small fruit trees, regular, forceful spraying of plants with water often will reduce spider mite numbers adequately.\" / \"If a treatment for mites is necessary, use selective materials, preferably insecticidal soap or insecticidal oil.\""
+        },
+        "organic_treatment_beginner": {
+          "new": "First make sure the mites are still there, since the speckling stays on the leaf long after they leave and plants often recover by themselves. If they are, rinse the plant hard with water, getting under the leaves, and use insecticidal soap or horticultural oil only if that is not enough.",
+          "why": "Same correction as organic_treatment_seasoned: the hard-harvest claim is out, the published confirm-before-you-treat rule is in.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Be sure mites are present before you treat. Sometimes the mites will be gone by the time you notice the damage; plants will often recover after mites have left.\""
+        },
+        "prevention_seasoned": {
+          "new": "Do not let a container plant bake bone-dry through a heat wave, since water-stressed plants are the ones that flare. Damp down dusty paths and bare ground beside the bed at regular intervals, and keep broad-spectrum insecticides off the planting, since they touch off mite outbreaks by clearing out the predators.",
+          "why": "\"Full sun and good airflow\" are not anchored as mite measures, and \"vigorous, unstressed oregano rarely attracts mites\" repeats the vigor claim the record pass found unanchored. Dust suppression and the broad-spectrum warning are both published and were both missing.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Apply water to pathways and other dusty areas at regular intervals.\" / \"Broad-spectrum insecticide treatments for other pests frequently cause mite outbreaks, so avoid these pesticides when possible.\" / \"Plants under water stress also are highly susceptible.\""
+        },
+        "prevention_beginner": {
+          "new": "Do not let a potted plant dry out completely in a heat wave. Wet down dusty paths and bare ground near the plants now and then, and avoid all-purpose bug sprays, which kill the mites' natural enemies and make outbreaks worse.",
+          "why": "Same correction as prevention_seasoned: the unanchored full-sun, airflow and vigor claims are out; dust suppression and the broad-spectrum warning are in.",
+          "anchor": "ucanr_ext_spider_mites, UC IPM Pest Note 7405, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html: \"Apply water to pathways and other dusty areas at regular intervals.\" / \"Broad-spectrum insecticide treatments for other pests frequently cause mite outbreaks, so avoid these pesticides when possible.\""
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Root and stem rot",
+      "id": "root-and-stem-rots",
+      "type": "fungal",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "improve_drainage",
+          "note_beginner": "This is the whole game. Oregano will take drought and will not take wet feet, so plant it where water drains away fast, and on heavy ground put it on a raised bed or grow it in a pot. Water it, then let it dry out before watering again.",
+          "note_seasoned": "Drainage is the control here, not a preference: the rot organisms need free water in the soil pores to move and infect, so a bed that is still saturated hours after a soaking is the disease condition itself. NC State groups prolonged watering, poor drainage and standing water together as what favors it, and RHS puts the same weight on winter, when the plant is drawing almost nothing down and the ground holds everything it gets."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Look at what you are bringing home. Slide a new plant out of its pot and check that the roots are pale and firm rather than brown, black and mushy, so you are not carrying the rot into a clean bed.",
+          "note_seasoned": "These pathogens arrive with the plant more often than they arrive on their own, and a bed that has been infested stays infested, so the inspection at purchase buys more than anything available afterward. The same care applies to a division handed over the fence, which comes with a rootball and its own soil."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Once the roots have gone there is no bringing the plant back, so pull it out and get rid of it. Wash the pot and the tools before they touch anything else.",
+          "note_seasoned": "There is no rescue at the crown, so the only in-season decisions are how quickly the plant comes out and what the tools and containers touch next. Sanitizing both sits on NC State's cultural list, and it matters most on the way out: a pot that grew a rotted plant is the shortest route to the next one."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Do not put another oregano into the spot where one rotted. The disease stays in that soil, so give the new plant fresh ground or a pot of new mix.",
+          "note_seasoned": "This is the fact that changes the advice from remove the plant to do not replant here: NC State records that the pathogen survives in soil from season to season, and that once a bed is infested it cannot be eradicated without extreme measures. UC IPM's oregano guidance says the same thing in one line, to avoid areas that have had previous disease problems. Treat the ground as spent for susceptible plants rather than treating the plant that died."
+        },
+        {
+          "method": "soil_solarization",
+          "note_beginner": "If a bed has already killed a plant or two and you want it back, you can cook it: wet the bare soil, cover it with clear plastic, and leave it through the hottest four to six weeks of summer. It costs you the bed for a season, and it lowers what is living down there rather than clearing it out.",
+          "note_seasoned": "Solarization is on NC State's list, and the same document's line that the pathogen cannot be eradicated without extreme measures is the honest expectation to hold: this reduces the load, it does not sterilize the ground. It also needs a genuinely hot, clear stretch to drive lethal temperatures into the top foot, so it is worth attempting only where summer reliably delivers that. Nothing waits behind it either: NC State records a lack of OMRI-approved products that effectively manage Phytophthora diseases, so the soil is where the whole of this disease gets dealt with and there is no spray to fall back on."
+        }
+      ],
+      "sources": [
+        "uf_ifas",
+        "ncsu_ext",
+        "rhs",
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials",
+          "verified": "2026-09-04"
+        },
+        "rhs": {
+          "url": "https://www.rhs.org.uk/herbs/oregano/grow-your-own",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/oregano/cultural-tips/index.html",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Gradual wilting, yellowing and dieback that does not recover with watering, with the roots underneath turning brown to black or decaying away. Oregano is drought-tolerant and generally resistant to disease, but it will not survive ground that stays wet.",
+          "why": "Two corrections. The old text put the decay \"at the base of the stems and roots\", and no anchor on this crop describes a stem rot; the read documents describe root decay. It also called this \"the main way oregano is lost\", a ranking no source makes, which was left reading as sourced.",
+          "anchor": "ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"Affected roots would appear brown to black or roots may be mostly decayed.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Oregano is generally resistant to diseases, but it can occasionally suffer from fungal infections like powdery mildew or root rot.\" / \"Oregano is drought-tolerant, so it will struggle if it is sitting in standing water or grown in soil that is waterlogged.\""
+        },
+        "symptoms_beginner": {
+          "new": "The plant slowly wilts, yellows and dies back even though the soil is wet, and the roots underneath are brown or black and rotted away. Oregano copes with drought and with most diseases, but it will not survive soggy ground.",
+          "why": "Same correction as symptoms_seasoned: the unanchored stem-rot symptom and the unsourced ranking claim are both out.",
+          "anchor": "ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"Affected roots would appear brown to black or roots may be mostly decayed.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Root rot occurs when oregano plants are exposed to excessive moisture, leading to fungal infections and root decay.\""
+        },
+        "cause_seasoned": {
+          "new": "Soilborne rot organisms that take hold in saturated, poorly drained soil and destroy the roots. NC State lists oregano among the herbaceous perennials susceptible to Phytophthora and names prolonged watering, poor drainage and standing water as what favors the disease. Wet ground over winter is the hardest case, because the plant is drawing almost no water down while the soil holds what it gets.",
+          "why": "Two corrections, both directed by batch adjudication A4. \"Soilborne root and stem rots\" asserts a stem rot no anchor describes on oregano. \"Waterlogged ground and wet winters, not cold, are the underlying cause\" is an authoring addition: the RHS sentence it rests on says winter waterlogging rots the roots and says nothing about cold, and UMD documents excessively wet, cold soil killing Mediterranean herbs over winter. The positive claim is kept; the negation is dropped, and the pathogen genus that IS named on this crop is added.",
+          "anchor": "ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"Herbaceous perennials that are susceptible to Phytophthora include lavender, osteospermum, rosemary, delphinium, epimedium, oregano, polemonium, hosta, heuchera, euphorbia, and others.\" / \"Prolonged irrigation or watering, poor drainage, and standing water all favor disease development.\" rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"It's important to protect oregano from waterlogging over winter, which will cause the roots to rot.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Root rot occurs when oregano plants are exposed to excessive moisture, leading to fungal infections and root decay.\""
+        },
+        "cause_beginner": {
+          "new": "Rot organisms in the soil that take hold when the ground stays soggy and drains badly, and destroy the roots. Wet ground over winter is the worst of it, because the plant is taking up hardly any water while the soil holds everything it gets.",
+          "why": "Same correction as cause_seasoned: the unanchored stem rot is out, and so is the \"not cold\" negation, which no anchor supports and which UMD refutes for Mediterranean herbs generally.",
+          "anchor": "rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"It's important to protect oregano from waterlogging over winter, which will cause the roots to rot.\" / \"If you have heavy or damp soil, the roots are liable to rot\". uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Root rot occurs when oregano plants are exposed to excessive moisture, leading to fungal infections and root decay.\""
+        },
+        "prevention_seasoned": {
+          "new": "Plant in sharply drained soil and keep plants on the dry side; on heavy or damp ground use a raised bed or a container, where drainage is better. Space plants with their mature size in mind, and where a plant has already rotted, put the next one somewhere else, because the pathogen survives in that soil from season to season.",
+          "why": "\"Lean\" soil and \"full sun\" are not anchored: what the sources publish is well-drained soil of average fertility. The soil-persistence fact, which turns \"remove the plant\" into \"do not replant here\", is the most actionable thing NC State says about this disease and the record carried nothing like it.",
+          "anchor": "ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"The pathogen can survive in soil from season to season, so once the bed is infested the pathogen cannot be eradicated without extreme measures.\" / \"Improve drainage in areas where standing water occurs; use raised beds\". rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"If you have heavy or damp soil, the roots are liable to rot\" / \"plant in a raised bed or a container, where drainage will be better\". psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"well-drained, average soil with a pH of 6.8\". uc_ipm, https://ipm.ucanr.edu/home-and-landscape/oregano/cultural-tips/index.html: \"Also avoid areas that have had previous disease problems\" / \"Space plants at least 18 inches apart to accommodate their full size.\""
+        },
+        "prevention_beginner": {
+          "new": "Plant in fast-draining soil, keep it on the dry side, and never let oregano sit in soggy ground. On heavy clay, plant on a raised bed or grow it in a pot instead. If a plant does rot, do not put the next one in the same spot, because the disease stays in that soil.",
+          "why": "Same correction as prevention_seasoned: unanchored \"lean\" soil and \"full sun\" are out, and the do-not-replant instruction that follows from the soil-persistence fact is in.",
+          "anchor": "ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"The pathogen can survive in soil from season to season, so once the bed is infested the pathogen cannot be eradicated without extreme measures.\" rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"plant in a raised bed or a container, where drainage will be better\". uc_ipm, https://ipm.ucanr.edu/home-and-landscape/oregano/cultural-tips/index.html: \"Also avoid areas that have had previous disease problems\"."
+        },
+        "organic_treatment_seasoned": {
+          "new": "A rotted oregano does not recover, so the only live decisions are how fast it comes out and what happens to the ground it stood in. NC State records both halves of the bad news: the pathogen survives in soil from season to season and cannot be eradicated from an infested bed without extreme measures, and there is a lack of OMRI-approved products that manage it effectively. On ground that has already taken one plant, the answer RHS gives for oregano is to stop fighting the bed and grow it in a raised bed or a container instead, where you set the drainage yourself. Sanitize the tools and the pot first, or you carry the problem into the new mix.",
+          "why": "MEASURED, not impression: the shipped beginner register of this field is BYTE-IDENTICAL across oregano, thyme, rosemary and lavender, and the seasoned register scores 0.917 to 0.957 against the same three. One sentence pair replicated across four crops whose pathogens adjudication C1 records as genuinely different. REVIEW FIX-4 is upheld against my first replacement: it lowered the similarity metric while every claim in it still came from a document that names lavender, rosemary and oregano in one host list, so it would have dropped into any of the three unchanged. The metric was satisfied and the condition was not. This version pivots on the one instruction an admitted source gives for OREGANO specifically, on oregano's own page: RHS's answer to ground that rots roots is to stop fighting the bed and grow the plant in a raised bed or a container. AND THE HONEST HALF, stated rather than hidden: the rest of the response genuinely does not differ between oregano, rosemary, thyme and lavender, because it follows from the pathogen and from drainage rather than from the host. A reviewer should expect these four to converge on substance even where the sentences differ, and should read a future sibling that reads differently in substance as the suspicious one.",
+          "anchor": "rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own (oregano's own page): \"If you have heavy or damp soil, the roots are liable to rot\" / \"plant in a raised bed or a container, where drainage will be better\". ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"The pathogen can survive in soil from season to season, so once the bed is infested the pathogen cannot be eradicated without extreme measures.\" / \"There is a lack of OMRI-approved products that effectively manage diseases caused by Phytophthora species.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Remove affected plants promptly to prevent the spread of disease.\""
+        },
+        "organic_treatment_beginner": {
+          "new": "An oregano whose roots have rotted cannot be saved. Lift it, bin it, and wash anything that touched it. No spray fixes this, and the disease stays behind in that soil, so instead of replanting in the same place, put the next one in a pot or a raised bed where you control the drainage.",
+          "why": "MEASURED, not impression: the shipped beginner register of this field is BYTE-IDENTICAL across oregano, thyme, rosemary and lavender, and the seasoned register scores 0.917 to 0.957 against the same three. One sentence pair replicated across four crops whose pathogens adjudication C1 records as genuinely different. REVIEW FIX-4 is upheld against my first replacement: it lowered the similarity metric while every claim in it still came from a document that names lavender, rosemary and oregano in one host list, so it would have dropped into any of the three unchanged. The metric was satisfied and the condition was not. This version pivots on the one instruction an admitted source gives for OREGANO specifically, on oregano's own page: RHS's answer to ground that rots roots is to stop fighting the bed and grow the plant in a raised bed or a container. AND THE HONEST HALF, stated rather than hidden: the rest of the response genuinely does not differ between oregano, rosemary, thyme and lavender, because it follows from the pathogen and from drainage rather than from the host. A reviewer should expect these four to converge on substance even where the sentences differ, and should read a future sibling that reads differently in substance as the suspicious one.",
+          "anchor": "rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own (oregano's own page): \"If you have heavy or damp soil, the roots are liable to rot\" / \"plant in a raised bed or a container, where drainage will be better\". ncsu_ext, https://content.ces.ncsu.edu/phytophthora-blight-and-root-rot-on-annuals-and-herbaceous-perennials: \"The pathogen can survive in soil from season to season, so once the bed is infested the pathogen cannot be eradicated without extreme measures.\" / \"There is a lack of OMRI-approved products that effectively manage diseases caused by Phytophthora species.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Remove affected plants promptly to prevent the spread of disease.\""
+        }
+      }
+    },
+    {
+      "name": "Mint rust",
+      "id": "oregano-rust",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give each plant room and an open spot where the sun and a bit of breeze reach it, so the leaves dry off soon after rain or dew. Rust needs the leaf to stay wet to get in, so the faster it dries the fewer chances it gets.",
+          "note_seasoned": "What you are really setting with spacing and site is how many hours the foliage stays wet. A crowded mat holds moisture well into the morning after an open plant has dried, and that difference is what decides whether a spore landing overnight gets the window it needs. This is a layout decision, so it is made once, at planting, and is hard to undo afterward without taking a knife to an established clump."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water the soil at the foot of the plant instead of sprinkling over the top, and water in the morning where you can. Wet leaves are exactly what rust needs, and a sprinkler hands it that for free.",
+          "note_seasoned": "Overhead water does two jobs for the fungus at once: it keeps the leaf wet long enough for a spore to germinate, and it splashes spores from a marked leaf onto a clean one. Rain and dew are outside your control, which is why this sits alongside spacing rather than replacing it. What is inside your control is not adding hours of leaf wetness to a plant that is already carrying the disease."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Oregano gets passed around as divisions and cuttings, and rust can travel with them. Take pieces only from a plant that has stayed clean all season, and look a new plant over before it joins the bed.",
+          "note_seasoned": "On mint, where this disease is best documented, outbreaks are usually traced to infection already inside the rhizomes and stem cuttings used for propagation rather than to spores arriving on the wind, and the published response is to inspect source material and discard anything infected. The oregano side of that has not been documented to the same depth, so treat clean stock as the prudent move rather than a proven mechanism, and simply do not propagate from a plant that showed rust this year."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick the rusty leaves off as soon as you see them and put them in the trash, not on the compost heap. If a plant is covered in pustules, take the whole plant out: that is the step that protects the rest of the bed. Clear the old growth away at the end of the season.",
+          "note_seasoned": "Removal, not spot pruning, is what the control literature calls for. RHS's instruction is to remove affected plants promptly, before the black resting spores form, and cutting the marked leaves off a badly infected plant leaves the fungus in tissue that has not spotted yet. Carry what you remove out in a bag rather than shaking it over the bed, since rust spores move easily on air currents."
+        }
+      ],
+      "sources": [
+        "psu_ext",
+        "rhs"
+      ],
+      "anchoring_urls": {
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-oregano",
+          "verified": "2026-09-04"
+        },
+        "rhs": {
+          "url": "https://www.rhs.org.uk/herbs/oregano/grow-your-own",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "name": {
+          "new": "Mint rust",
+          "why": "The bare display name \"Rust\" under-specified one organism nobody ever pinned. PLA-448 4f asked whether it was an umbrella; the record pass answers that it is a single organism, and that every source naming it on oregano calls it mint rust. Ruled by Trevor 2026-09-04 (ADJUDICATIONS B7, option a).",
+          "anchor": "psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"Oregano can be susceptible to fungal diseases such as mint rust and root rot.\" rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"The fungal disease mint rust can affect oregano\"."
+        },
+        "symptoms_seasoned": {
+          "new": "Small circular spots with dusty orange to brown pustules on the leaves and stems, sometimes followed by darker pustules later in the season. Pale, distorted shoots in spring can be the same disease showing before any pustules do, and it will spread through a planting if it is left alone.",
+          "why": "The entry ended \"Caught early, pruning off affected parts can save the plant.\" No document in the record pass supports it, four point the other way and recommend removing affected plants, and the sibling mint record states outright that there is no reliable home cure once it is established. That sentence is replaced by the RHS spring-shoot symptom, which is real and was missing.",
+          "anchor": "rhs, https://www.rhs.org.uk/disease/mint-rust: \"Dusty orange pustules on the stems and leaves. These may be followed by dusty yellow or black pustules\" / \"Pale and distorted shoots in spring\" / \"Remove affected plants promptly before the black resting spores are formed\". rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"Mint rust is a common fungal disease of garden mint, but also affects marjoram and savory. The fungus causes dusty orange, yellow and black spots on l...\" (truncated at fetch). Note: one url per catalog key is allowed in anchoring_urls, so the crop-scoped RHS page is the one recorded there and the RHS mint rust profile is recorded here."
+        },
+        "symptoms_beginner": {
+          "new": "Small round spots and dusty orange or brown powder on the leaves and stems, sometimes turning darker later in the season. Shoots that come up pale and twisted in spring can be the same disease. Left alone, it spreads through the planting.",
+          "why": "Same correction as symptoms_seasoned: \"if you catch it early, cutting off the affected parts can save the plant\" has no anchor and is refuted in direction by every control source read.",
+          "anchor": "rhs, https://www.rhs.org.uk/disease/mint-rust: \"Dusty orange pustules on the stems and leaves\" / \"Pale and distorted shoots in spring\" / \"Remove affected plants promptly before the black resting spores are formed\"."
+        },
+        "organic_treatment_seasoned": {
+          "new": "Remove affected plants promptly, before the dark resting spores form, and take out a heavily infected plant rather than trying to prune the disease off it. Bag what you remove instead of shaking it out over the bed, and put it in the trash rather than the compost heap.",
+          "why": "The old text made pruning out affected growth the primary response, which, read with the symptoms line it accompanied, told the reader that spot pruning cures the plant. It does not: the fungus is present in tissue that has not spotted yet, and the control literature calls for removal.",
+          "anchor": "rhs, https://www.rhs.org.uk/disease/mint-rust: \"Remove affected plants promptly before the black resting spores are formed\"."
+        },
+        "organic_treatment_beginner": {
+          "new": "Pull out badly infected plants rather than trying to cut the disease off them, and do it before the spots turn black. Carry what you remove out in a bag and put it in the trash, not on the compost heap.",
+          "why": "Same correction as organic_treatment_seasoned: the prune-to-cure framing is replaced with the removal instruction the sources actually give.",
+          "anchor": "rhs, https://www.rhs.org.uk/disease/mint-rust: \"Remove affected plants promptly before the black resting spores are formed\"."
+        },
+        "prevention_seasoned": {
+          "new": "Space plants so the foliage dries quickly after rain and dew, and water at the soil rather than over the top. Take divisions and cuttings only from plants that showed no rust this season, and clear the old growth away at the end of the year.",
+          "why": "\"Site in full sun\" was carried with no anchor as a rust measure on this crop. The propagation route was missing entirely, and on mint it is where outbreaks are documented to start, which makes it the cheapest rung available.",
+          "anchor": "rhs, https://www.rhs.org.uk/disease/mint-rust: \"In the case of garden mint it is also necessary to remove infected rhizomes\" (scoped to mint by RHS itself, which is why the prose says take clean cuttings rather than asserting an oregano rhizome mechanism). Corroborated, NO CATALOG KEY EXISTS: WSU, D. A. Johnson, \"Management of Rust on Mint\", https://s3.wp.wsu.edu/uploads/sites/2195/2014/06/MintrustA.doc, read verbatim by the record pass: \"Such rust outbreaks are usually initiated from systemic infections and pustules on rhizomes and stem cuttings used in propagation.\" / \"Source materials should be inspected and be rust-free before propagating stem cuttings.\" The record pass recommends minting a `wsu_mint_rust` key on the already-admitted s3.wp.wsu.edu host."
+        },
+        "prevention_beginner": {
+          "new": "Give plants room so the leaves dry off quickly after rain, and water the soil rather than the leaves. When you divide a plant or take cuttings, use one that has stayed clean all season, and clear away the old growth in fall.",
+          "why": "Same correction as prevention_seasoned: unanchored \"full sun\" out, the clean-propagation step in.",
+          "anchor": "rhs, https://www.rhs.org.uk/disease/mint-rust: \"In the case of garden mint it is also necessary to remove infected rhizomes\". Corroborated by the unadmitted WSU mint rust document quoted under prevention_seasoned."
+        },
+        "cause_seasoned": {
+          "new": "The same fungal disease gardeners meet on mint, which is where the name comes from; it runs on marjoram and savory as well. Every opening it gets comes down to how long the foliage stays wet, so a damp, crowded, poorly ventilated planting and water thrown over the top of the plant are what it needs.",
+          "why": "Two reasons, both of which arrived with the rename, and neither is a sourcing defect. First, under the display name \"Mint rust\" the prose never said why the disease carries mint's name, which leaves it reading oddly on an oregano page; the brief asks specifically that renamed prose still read correctly under the new name. Second, MEASURED: the two shipped registers scored 0.711 against each other on a both-orders difflib ratio, above this batch's 0.70 threshold and in the top 5% of the 3,026 register pairs in canonical. They were the same sentence with words swapped, which the brief names as a hard consumer-copy rule. The record pass found nothing false in this field, so the surviving claims about leaf wetness and crowding are carried across in substance and only the framing changes.",
+          "anchor": "rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"The fungal disease mint rust can affect oregano\" / \"Mint rust is a common fungal disease of garden mint, but also affects marjoram and savory.\" psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"Oregano can be susceptible to fungal diseases such as mint rust and root rot.\" The leaf-wetness and crowding claims are carried over from the shipped prose, which the record pass ruled SURVIVES on generic rust biology (uconn_ext, \"They need wet leaf surfaces to germinate and cause infection\"; WSU, \"prolong leaf wetness from irrigation, dew, and rainfall favor rust development\") with nothing refuting it."
+        },
+        "cause_beginner": {
+          "new": "This is the same rust that turns up on mint, which is how it got its name. It gets in while the leaves are wet, so crowded plants sitting in still, damp air are the ones that catch it.",
+          "why": "Two reasons, both of which arrived with the rename, and neither is a sourcing defect. First, under the display name \"Mint rust\" the prose never said why the disease carries mint's name, which leaves it reading oddly on an oregano page; the brief asks specifically that renamed prose still read correctly under the new name. Second, MEASURED: the two shipped registers scored 0.711 against each other on a both-orders difflib ratio, above this batch's 0.70 threshold and in the top 5% of the 3,026 register pairs in canonical. They were the same sentence with words swapped, which the brief names as a hard consumer-copy rule. The record pass found nothing false in this field, so the surviving claims about leaf wetness and crowding are carried across in substance and only the framing changes.",
+          "anchor": "rhs, https://www.rhs.org.uk/herbs/oregano/grow-your-own: \"The fungal disease mint rust can affect oregano\" / \"Mint rust is a common fungal disease of garden mint, but also affects marjoram and savory.\" psu_ext, https://extension.psu.edu/herb-garden-plants-oregano: \"Oregano can be susceptible to fungal diseases such as mint rust and root rot.\" The leaf-wetness and crowding claims are carried over from the shipped prose, which the record pass ruled SURVIVES on generic rust biology (uconn_ext, \"They need wet leaf surfaces to germinate and cause infection\"; WSU, \"prolong leaf wetness from irrigation, dew, and rainfall favor rust development\") with nothing refuting it."
+        }
+      }
+    },
+    {
+      "name": "Powdery mildew",
+      "id": "powdery-mildew",
+      "type": "fungal",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give plants room and an open, sunny spot. Air moving through the planting is the thing that reliably keeps powdery mildew down on oregano, because a crowded clump holds still, humid air right where the leaves are.",
+          "note_seasoned": "UF/IFAS ties spacing to the humidity inside the canopy rather than to water on the leaf, and that distinction is the whole point: powdery mildew infects without free water on the surface, so keeping the foliage dry is not the lever it is on most leaf diseases. Published spacing for oregano runs from 10 inches up to 18 inches depending on which extension source you read, so take the wider end in a humid summer, and thin an established clump rather than letting it close over. Site matters for the same reason: shade is a favoring condition for this fungus, so an open position is doing real work and not just growing better oregano."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "If mildew keeps coming back on a plant you actually want to pick from, sulfur spray or dust is the standard organic option. It works by stopping new infection rather than clearing what is there, so it goes on early, and you follow the label.",
+          "note_seasoned": "UF/IFAS names sulfur or copper for oregano, and sulfur is the one with established powdery mildew activity, so it is the one worth buying. It is a protectant: it stops spores landing on treated tissue from establishing and does nothing to the colonies already on the leaf, which makes it worth reaching for only on a plant with a history of the disease, applied before the season turns. Keep it off the plant near or above 90°F and at least two weeks away from any oil spray, and observe the label's interval before harvest."
+        }
+      ],
+      "sources": [
+        "uf_ifas",
+        "ucanr_ext"
+      ],
+      "anchoring_urls": {
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/",
+          "verified": "2026-09-04"
+        },
+        "ucanr_ext": {
+          "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "name": {
+          "new": "Powdery mildew",
+          "why": "The old name, \"Botrytis and humid-weather foliar disease\", led with the one organism no document attaches to this crop, while the attested one was buried in the prose. Oregano's own shipped uf_ifas anchor publishes exactly two diseases for the crop, powdery mildew and root rot; Botrytis is in neither. Ruled by Trevor 2026-09-04 (ADJUDICATIONS B8), reusing the existing 32-crop powdery-mildew id.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Oregano is generally resistant to diseases, but it can occasionally suffer from fungal infections like powdery mildew or root rot.\" / \"Powdery mildew appears as a white, powdery coating on oregano leaves, affecting plant health and appearance.\" The record pass confirmed on a second, independently prompted fetch that \"Botrytis\" and \"gray mold\" do not appear on the page."
+        },
+        "symptoms_seasoned": {
+          "new": "A dry white bloom on the leaf surface, heaviest inside a crowded clump where the air sits still and dense enough there to whiten whole shoots. It grows on the surface rather than rotting the leaf, so what it costs is vigor and appearance; on oregano it stays a minor problem next to root rot.",
+          "why": "Every description of gray mold has been removed: \"grayish moldy patches\" describes Botrytis, and no document in the record pass attaches Botrytis to oregano. \"Spotting\" went with it, since it was attributed to no named pathogen. The replacement was rewritten a second time: my first version differed from the beginner register only by word swaps and scored 0.751 on a both-orders difflib ratio, inside the top 0.8% of the 3,026 register pairs in canonical, which is the dual-register rule the brief states as hard. REVIEW FIX-3: the replacement still carried \"gray out whole shoots\", a residual gray-mold word in an entry whose whole point is that Botrytis is not attested here, and inaccurate besides, since the coating is white. Changed to \"whiten\".",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Powdery mildew appears as a white, powdery coating on oregano leaves, affecting plant health and appearance.\" / \"Oregano is generally resistant to diseases, but it can occasionally suffer from fungal infections like powdery mildew or root rot.\""
+        },
+        "symptoms_beginner": {
+          "new": "A white, powdery film on the leaves, worst where plants are packed together and the air does not move. It spoils how the plant looks and slows it down, but it will not kill it, and it is a much smaller problem than root rot.",
+          "why": "Same correction as symptoms_seasoned: gray mold and the unattributed spotting are out, because nothing attaches Botrytis to this crop.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Powdery mildew appears as a white, powdery coating on oregano leaves, affecting plant health and appearance.\""
+        },
+        "cause_seasoned": {
+          "new": "A leaf fungus that gets going on crowded plants where the air does not move and humidity builds inside the canopy. The band that favors it is moderate rather than extreme, roughly 60°F to 80°F, and shade favors it too, so the plant at risk is the one tucked into a shaded, still corner rather than the one out in the summer heat. Unlike most leaf diseases, it does not need water sitting on the leaf in order to infect.",
+          "why": "Three corrections. The umbrella named \"Botrytis (gray mold)\" as a member and nothing attaches it to oregano, so the organism list is now the one attested organism. The final sentence is added deliberately to block the standard keep-the-leaves-dry inference, which is wrong for this pathogen and which the entry's own uf_ifas anchor invites. And REVIEW FIX-2, which is mine to own: my first replacement introduced \"hot\" as a driver where the shipped prose said only \"humid-climate\", making the field LESS TRUE than what it replaced. The anchor I had offered for \"hot\" was uf_ifas's \"Our high temperatures and humidity can be challenging\", which sits under a general Tips for the Floridian Gardener heading and is not a statement about this disease at all. \"Hot\" is removed and the published band and the shade condition are written in its place, anchored to Pest Note 7406, Powdery Mildew on VEGETABLES, which is the correctly scoped document for a culinary herb. It is deliberately NOT anchored to Pest Note 7493, the ORNAMENTALS note, whose own citable_for states that its admission is not a general re-anchor of herb powdery mildew away from 7406.",
+          "anchor": "ucanr_ext, UC IPM Pest Note 7406, Powdery Mildew on Vegetables, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html: \"Moderate temperatures (60° to 80°F) and shady conditions generally are the most favorable for powdery mildew development.\" and \"Although humidity requirements for germination vary, all powdery mildew species can germinate and infect in the absence of free water.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Oregano is generally resistant to diseases, but it can occasionally suffer from fungal infections like powdery mildew or root rot.\" / \"Space your plants 10-12 inches apart, this will help with air circulation and prevent extra humidity\". The shipped control_methods entry `wet_foliage_discipline` carries the no-free-water finding independently as an explicit caution, cited there to usu_ext."
+        },
+        "cause_beginner": {
+          "new": "A leaf fungus that takes hold on crowded plants where the air sits still and humidity builds up among the leaves. It likes mild weather, around 60°F to 80°F, and shade, so a plant squeezed into a shady corner is the one to watch. It is not caused by wet leaves, which is what makes it different from most leaf diseases.",
+          "why": "Three corrections. The umbrella named \"Botrytis (gray mold)\" as a member and nothing attaches it to oregano, so the organism list is now the one attested organism. The final sentence is added deliberately to block the standard keep-the-leaves-dry inference, which is wrong for this pathogen and which the entry's own uf_ifas anchor invites. And REVIEW FIX-2, which is mine to own: my first replacement introduced \"hot\" as a driver where the shipped prose said only \"humid-climate\", making the field LESS TRUE than what it replaced. The anchor I had offered for \"hot\" was uf_ifas's \"Our high temperatures and humidity can be challenging\", which sits under a general Tips for the Floridian Gardener heading and is not a statement about this disease at all. \"Hot\" is removed and the published band and the shade condition are written in its place, anchored to Pest Note 7406, Powdery Mildew on VEGETABLES, which is the correctly scoped document for a culinary herb. It is deliberately NOT anchored to Pest Note 7493, the ORNAMENTALS note, whose own citable_for states that its admission is not a general re-anchor of herb powdery mildew away from 7406.",
+          "anchor": "ucanr_ext, UC IPM Pest Note 7406, Powdery Mildew on Vegetables, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html: \"Moderate temperatures (60° to 80°F) and shady conditions generally are the most favorable for powdery mildew development.\" and \"Although humidity requirements for germination vary, all powdery mildew species can germinate and infect in the absence of free water.\" uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Oregano is generally resistant to diseases, but it can occasionally suffer from fungal infections like powdery mildew or root rot.\" / \"Space your plants 10-12 inches apart, this will help with air circulation and prevent extra humidity\". The shipped control_methods entry `wet_foliage_discipline` carries the no-free-water finding independently as an explicit caution, cited there to usu_ext."
+        },
+        "organic_treatment_seasoned": {
+          "new": "Open the planting up: thin a crowded clump and cut back the growth that is shading its middle, which is the step that changes the conditions. If it keeps returning on a plant you are picking from, a sulfur spray or dust used as a protectant is the standard organic option, applied to label and kept off the plant in heat.",
+          "why": "Two corrections. \"Water at the base rather than overhead\" is not a powdery mildew control: UC IPM Pest Note 7406, the vegetables note and the correctly scoped one for a culinary herb, reports that all powdery mildew species can germinate and infect in the absence of free water, and goes further, that overhead sprinkling may help reduce powdery mildew by washing spores off the plant. \"A hard harvest or shear clears and renews the canopy\" is unanchored. Separately, the crop's own anchor names a soft-chemical option and the record recommended no product at all.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"To prevent powdery mildew, provide good air circulation around plants\" / \"Apply fungicidal sprays containing sulfur or copper if necessary, following label instructions.\" For the deleted overhead-watering advice: ucanr_ext, UC IPM Pest Note 7406, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html: \"Although humidity requirements for germination vary, all powdery mildew species can germinate and infect in the absence of free water.\". NOTE: the deletion runs against the second half of the uf_ifas sentence, which does say \"and avoid overhead watering\"; see refusals."
+        },
+        "organic_treatment_beginner": {
+          "new": "Thin out crowded growth and cut back anything shading the center of the plant, so air can move through it. If the mildew keeps coming back on a plant you are harvesting, a sulfur spray or dust is the usual organic option; follow the label, and do not use it in hot weather.",
+          "why": "Same correction as organic_treatment_seasoned: the overhead-watering advice does not act on this disease, the hard-harvest claim is unanchored, and the sourced sulfur option was missing.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"To prevent powdery mildew, provide good air circulation around plants\" / \"Apply fungicidal sprays containing sulfur or copper if necessary, following label instructions.\""
+        },
+        "prevention_seasoned": {
+          "new": "Space plants for air circulation, at 10 to 12 inches apart or wider, and give them an open, sunny position. Thin an established clump rather than letting it close over, which is where the still, humid air that favors this disease collects.",
+          "why": "\"Favor upright culinary types over dense low ones where humidity is high\" is a varietal claim with nothing behind it in any read document; it is the shape a prevention field pulls out of a plant's growth habit, and if it were carried into a variety pass it would become a varieties[].resistance claim. \"Avoid overhead watering\" is dropped for the reason given under organic_treatment_seasoned. The spacing figure now comes from the entry's own anchor rather than being left unstated.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Space your plants 10-12 inches apart, this will help with air circulation and prevent extra humidity\" / \"To prevent powdery mildew, provide good air circulation around plants\"."
+        },
+        "prevention_beginner": {
+          "new": "Give each plant room, 10 to 12 inches apart or more, in an open sunny spot so air can move through the leaves. Thin a clump that has grown dense rather than leaving it packed.",
+          "why": "Same correction as prevention_seasoned: the unsupported upright-versus-mat variety claim and the overhead-watering advice are both out, and the anchored spacing figure is in.",
+          "anchor": "uf_ifas, https://blogs.ifas.ufl.edu/pascoco/2024/04/02/spice-up-your-life-a-beginners-guide-to-growing-oregano/: \"Space your plants 10-12 inches apart, this will help with air circulation and prevent extra humidity\"."
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "HOT-WATER TREATMENT of infected propagation material. rhs mint rust profile, https://www.rhs.org.uk/disease/mint-rust: \"Immerse in hot water at 44ºC (111ºF) (no higher) for 10 minutes, then cool in cold water and plant\". No method in control_methods carries hot-water treatment, and the brief says so explicitly. It is a PHYSICAL rung and would sit exactly between the cultural rungs and the (absent) chemical end of the mint rust ladder. NOT bent onto another method. Note if it is ever built: take the °F/°C pair from RHS, not from WSU, whose \"113 F (34 C)\" is internally inconsistent (113°F is 45°C).",
+    "ANT EXCLUSION on aphids. ucanr_ext, UC IPM Pest Note 7404: \"Ants protect aphids from natural enemies.\" The method `ant_exclusion` is tier-legal and applies_to reaches insect_soft_bodied, so the gate would have accepted it. I did not author it: the method's actionable form is a sticky band on a trunk plus skirt pruning of branches within 12 to 30 inches of the ground, and a low herbaceous oregano mat has no trunk to band and no skirt to prune. The fact is carried in the beneficial_predators note_seasoned as a reason the predators are not working, with no action attached. This is a method-coverage gap for herbaceous crops, not an oregano gap.",
+    "MONITORING CADENCE, both pests. UC IPM 7404: \"Check your plants regularly for aphids-at least twice a week when plants are growing rapidly.\" UC IPM 7405: \"Be sure mites are present before you treat.\" There is no monitoring/scouting method and no do-nothing rung, and on mites the confirm-before-you-treat rule is genuinely the least invasive step in the whole response. Both are carried in entry prose and inside the first treatment rung's note instead of as rungs of their own.",
+    "END-OF-SEASON RUST SCOUTING as a predictor. WSU mint rust document (no catalog key): \"Fields should be monitored regularly for rust through out the season. Infections in late fall will indicate potential infections in the spring.\" Same monitoring gap.",
+    "INCREASING SOIL ORGANIC MATTER against root rot. On ncsu_ext's cultural list per the record pass. No method carries it; `improve_drainage` is about drainage structure and raised beds, not amendment, so I did not stretch it.",
+    "NEARBY WILD OR ESCAPED HOST PLANTS as a rust inoculum source. WSU: \"Rust from escaped mint and non-cultivated mint can also be a source of rust infection in the spring.\" `weed_host_control` exists and reaches fungal_foliar, so this was reachable by the gate. NOT authored: WSU scopes it to Mentha, and given the host-specialized populations the oregano analogue would be other Origanum, not mint. Writing it would license the inference that a rusty mint plant threatens the oregano, which is the exact advice the two-id ruling exists to prevent.",
+    "OVERHEAD SPRINKLING AS A POSITIVE STEP AGAINST POWDERY MILDEW. MEASURED: `water_spray.applies_to` is {insect_soft_bodied, mite} and `TYPE_TARGETS['fungal']` is {disease_general, fungal_foliar, fungal_soilborne}; the intersection is EMPTY, so no washing-the-foliage method can be attached to a fungal problem at all. This is the sharp edge of the powdery-mildew correction: the reason overhead watering is not a control here is not that it is neutral, it is that UC IPM finds it actively REDUCES spread by washing spores off the leaf, and there is no method in the catalog that can say so on a fungal entry. So the record can now avoid giving the wrong advice but still cannot give the right one. A `wash_foliage` method reaching fungal_foliar, or widening `water_spray`, is the fix, and it would land on every powdery mildew entry in the roster, not only oregano's.",
+    "PREDATOR CONSERVATION ON THE MITE ENTRY -- REPORTED AS REACHABLE, NOT UNREACHABLE. The review asked me to file this as unreachable because `beneficial_predators.applies_to` has no `mite`. That is true of the literal list and not true of the gate: applies_to is {insect_general, insect_soft_bodied}, `TYPE_TARGETS['mite']` is {insect_general, mite}, they intersect on `insect_general`, and the method therefore REACHES a mite problem. I checked it twice, once against the gate's imported tables and once by injecting a `beneficial_predators` rung into a scratch copy of this file and running the validator, which returned OK at 22 rungs. Filing it here so the finding is recorded with the right reason. Why I still did not author the rung: my record report frames UC IPM 7405's broad-spectrum warning as a cap on the ladder rather than as a conservation step, 7405 names no mite predator except the purchasable predatory mites, and those are already carried by `augmentative_release`, whose own text covers conserving naturally occurring predators. The claim itself is carried in three places: the augmentative_release note, the horticultural_oil note and prevention_seasoned. If the batch would rather see it as its own rung, it is legal and I have no objection; it is a fit judgment, not a gap."
+  ],
+  "refusals": [
+    "REFUSED to write the binomial Puccinia menthae anywhere in oregano's record. My brief permits it conditionally (\"only if your record report shows an admitted source carrying it\"). The condition fails as the report states it: rhs's mint rust profile does name the binomial for the DISEASE, but the report rules that the binomial tied specifically to Origanum vulgare is JOURNAL-ONLY (Koike et al. 1998 via PubMed; Stiles & Rayside 2006 unread, 403) and \"cannot be written into the record under the current catalog\". The prose therefore says mint rust and never names the organism. If the batch wants the binomial, the cheap route is a decision to accept the two-step chain psu_ext (oregano gets mint rust) plus rhs (mint rust is caused by P. menthae); the expensive-but-clean route is admitting `pubmed`. Both are catalog decisions, not authoring ones.",
+    "REFUSED neem for aphids. The shipped record says \"use insecticidal soap or neem if numbers climb\" in both registers. The record pass is explicit: \"Neem specifically is not named by any source I read.\" Removed from the prose and no `neem_oil` rung authored, although the method is tier-legal and applies_to reaches insect_soft_bodied.",
+    "REFUSED `sulfur` on Spider mites even though the pinned type correction (insect -> mite) makes it legal, which I verified against control_ladder_gate.TYPE_TARGETS rather than assuming. Nothing in the oregano record anchors sulfur against mites; UC IPM 7405's named materials are \"insecticidal soap or insecticidal oil\", both of which I authored; and sulfur harms predatory mites that are not sulfur-resistant, which would undercut the augmentative_release rung sitting directly above it. The type correction is still load-bearing: `even_watering`, the ladder's opening rung, is legal ONLY under `mite`.",
+    "REFUSED to carry RHS's product-availability sentences into US copy: \"No fungicides with activity against mint rust are available for use on mint or other herbs that will be used for culinary purposes\" and \"The RHS recommends that you don't use fungicides\". UK product law, not a fact about the reader's options. Region discipline, per the brief. The mint rust ladder ends at cultural anyway, but it ends there because nothing US-scoped supports a chemical rung, not because RHS says so.",
+    "REFUSED WSU's fungicide list for mint rust (Rally 40W, Headline, Amistar). Commercial mint only, with 7 to 30 day preharvest intervals. Nowhere near a home-garden culinary-herb ladder.",
+    "REFUSED `resistant_varieties` on Root and stem rot. ncsu_ext recommends planting \"Phytophthora resistant or tolerant hosts in affected areas\", but that means OTHER SPECIES in an infested bed, not a resistant oregano cultivar. No oregano cultivar resistance is published anywhere the record pass looked. Encoding it as `resistant_varieties` would seed a false varieties[].resistance claim later, which the record pass warns about by name.",
+    "REFUSED `resistant_varieties` on Mint rust. uconn_ext's \"Select less susceptible cultivars, if available\" is generic ornamentals guidance in a document that never mentions oregano, mint or Origanum.",
+    "REFUSED `copper_fungicide` on Powdery mildew. uf_ifas names \"sulfur or copper\" in one sentence, so copper is technically anchored on this crop, but the shipped copper_fungicide method describes downy mildew and bacterial leaf spots and does not claim powdery mildew activity, while the sulfur method does. Authoring both off one sentence would double the chemical end of a `low`-severity ladder for no gain.",
+    "REFUSED to carry \"avoid overhead watering\" as a powdery mildew control, ON INSTRUCTION and with the mechanism behind it. THIS IS A DIRECT CONFLICT WITH THE ENTRY'S OWN ANCHOR: uf_ifas says \"To prevent powdery mildew, provide good air circulation around plants and avoid overhead watering.\" I kept the first half and dropped the second, because UC IPM Pest Note 7406, Powdery Mildew on Vegetables and the correctly scoped document for a culinary herb, reports that all powdery mildew species can germinate and infect in the absence of free water, and that overhead sprinkling may help reduce powdery mildew by washing spores off the plant, batch adjudications A9 and A10 make the same correction on sage and rosemary, and the shipped `wet_foliage_discipline` method already carries the exception as an explicit caution. Flagging it as a conflict rather than burying it: a reviewer reading the uf_ifas page will find the sentence I did not carry.",
+    "DID NOT change the pinned entry name \"Root and stem rot\", per the pin table, but flagging that no oregano-scoped source documents a STEM rot: uf_ifas says root rot, ncsu_ext describes root decay. The prose no longer asserts stem decay; the display name still says it. That is a name-versus-evidence mismatch inherited from the 6-crop umbrella, not something this crop's authoring created.",
+    "DID NOT add `uconn_ext` to Mint rust's sources. Its rust fact sheet is useful and was read in full, but it contains zero occurrences of oregano, Origanum, mint, Mentha or menthae, and it sits on a divergent media subdomain (ipm-cahnr.media.uconn.edu, versus the catalog's ipm.cahnr.uconn.edu). Listing it would make a document that never mentions the crop look like evidence about the crop. The generic rust biology it carries is instead delivered through `airflow_spacing` and `water_at_the_base`, which carry their own method-level provenance.",
+    "REFUSED `prune_out_infection` on Mint rust, on the documents, after the orchestrator corrected the brief and opened the permission. The gate does allow it (applies_to {bacterial, disease_general}; TYPE_TARGETS['fungal'] contains disease_general), and I had already flagged the brief's claim that it cannot reach fungal as wrong. It is still the wrong method here, and the method's OWN definition says so: \"Where the affected part is simply removed rather than cut back into clean tissue, a spotted leaf picked off, a rotted fruit taken away, a plant too far gone to save pulled out, that is garden sanitation and not this.\" Oregano rust is exactly that list. What prune_out_infection describes is cutting 6 to 8 inches beyond a visible margin into clean wood on a stem or branch, which a herbaceous mat does not have and which no rust document prescribes. Beyond the fit, adding it would reintroduce at ladder level the precise defect this entry exists to correct: the record's \"caught early, pruning off affected parts can save the plant\", which the record pass calls the most defect-shaped thing in oregano's rust record. The `garden_sanitation` rung already carries both actions the sources give, picking off marked leaves and taking out a heavily infected plant, and its note_seasoned says in terms that removal rather than spot pruning is what the literature calls for."
+  ],
+  "notes_to_orchestrator": [
+    "SOURCE KEYS, Aphids: `uc_ipm` stays pointed at the oregano host page (presence), and `ucanr_ext` is added pointed at UC IPM Pest Note 7404, https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html, which is where the aphid control and nitrogen content lives. That pairing is the repo's own existing convention, not an invention: the shipped `water_spray` method cites `ucanr_ext` with pn7404 as its anchoring url, and `beneficial_predators`, `insecticidal_soap`, `augmentative_release`, `improve_drainage`, `soil_solarization`, `airflow_spacing`, `crop_rotation` and `garden_sanitation` all cite UC IPM content under `ucanr_ext` as well. No crop entry in canonical cites pn7404 or pn7405 at all today (checked). The record pass's own preference is a new pathed `ucanr_ext_aphids` key, sibling to the existing `ucanr_ext_spider_mites` and `ucanr_ext_thrips`; that is a catalog decision and I did not take it.",
+    "SOURCE KEYS, Spider mites: `ucanr_ext_spider_mites` is already catalog-admitted and its catalog url IS pn7405, so that key is an exact match rather than a path assertion.",
+    "SOURCE KEYS, Mint rust: `psu_ext` and `rhs` only, both crop-scoped pages that name mint rust on oregano. anchoring_urls allows one url per key, so `rhs` points at the oregano grow-your-own page (the one that attaches the disease to the crop) and the RHS mint rust profile url appears inside the field_corrections anchors, where the symptom and removal quotes come from. If the batch wants both RHS urls addressable, it needs a pathed rhs sibling key.",
+    "TYPE TENSION on Root and stem rot, reported not acted on: the only pathogen genus any source names on oregano is Phytophthora, an oomycete, while `type` is pinned `fungal`. uf_ifas calls it a \"fungal infection\", so the record is faithful to its own anchor, and `fungal` is what makes `improve_drainage`, `soil_solarization` and `certified_clean_stock` reachable. I named Phytophthora in cause_seasoned because ncsu_ext names oregano as a host by name; I did not touch `type`.",
+    "TEMPLATE RISK on Powdery mildew, now REDUCED rather than open. PART D of ADJUDICATIONS records that the UF/IFAS Pasco \"Spice Up Your Life\" series is a find-and-replace template across herbs, and when I first wrote this entry its ENTIRE sourcing rested on that one blog post. It no longer does: the 7406 re-anchor adds a second, independent T1 document, so the crop-scoped claims (powdery mildew occurs on oregano, spacing, humidity in the canopy) rest on uf_ifas while the pathogen biology (the favorable band, shade, infection without free water) rests on UC IPM. The templated-page risk now falls only on the crop-scoped half, which is the half a template would be least likely to get wrong. Still worth the roster-wide check PART D calls for, on other crops anchored to that series.",
+    "The record pass ruled the claim \"excess winter moisture rather than to cold\" TRUE, anchored to rhs. I did not follow that, per ADJUDICATIONS A4 and my brief. The verbatim RHS sentence the reviewer cites is \"It's important to protect oregano from waterlogging over winter, which will cause the roots to rot\", which carries the positive claim and does not carry the negation. I kept the positive claim and dropped \"not cold\". Recording it because it is a place where the record report and the adjudication surface disagree and I sided with the adjudication.",
+    "The Koike caveat is preserved by omission rather than by statement: the California report found no teliospores on oregano or marjoram, so the overwintering route documented for mint rust is documented on Mentha, not on Origanum. The `certified_clean_stock` note_seasoned therefore scopes the mechanism to mint explicitly and calls clean stock prudent rather than proven, and no rung asserts an oregano rhizome mechanism. The source for that caveat is journal-only, so it is not quoted in consumer prose.",
+    "Ladder shapes and why: Aphids 5 rungs, Spider mites 5, Root and stem rot 5 ending at physical, Mint rust 4 all cultural, Powdery mildew 2. The two short ones are short on purpose. Mint rust has no chemical rung because nothing US-scoped supports one for a culinary herb, and root rot stops at soil_solarization because ncsu_ext records \"There is a lack of OMRI-approved products that effectively manage diseases caused by Phytophthora species\", which is a US source making a US availability statement and is therefore usable as a ladder terminator.",
+    "RECORD GAPS reported by the record pass and NOT acted on here, since they are new entries rather than corrections to existing ones: UC IPM's oregano page lists Leafhoppers, Spittlebugs and Thrips; psu_ext adds leaf miners and cutworms; the ncsu_ext plant toolbox adds leaf miners. Thrips is named by three sources and the catalog already holds an admitted pathed anchor for it, `ucanr_ext_thrips`, so a thrips entry on oregano is the cheapest addition available.",
+    "VALIDATOR: ONE change made on disk by me, and a CORRECTION to what I nearly claimed. When I first read validate_out.py it compared output problem names against CANONICAL names, which is broken for RENAME and SPLIT rows and would have thrown four false failures on oregano's two renames. By the time I ran it, THE MINT AUTHORING AGENT HAD ALREADY FIXED THAT, and better than I had planned: it walks the pin table for target coverage and adds a separate provenance walk that requires every canonical entry to be kept, named in some row's `from`, or listed in `_retired`. I take no credit for it; recording it because two agents finding the same bug in a concurrently edited file is worth the orchestrator knowing. MY change is a different, still-open gap: the validator read `type` and `severity` from the PIN to check ladder legality but never compared the OUTPUT's own values to them, which is the batch-24 unpinned-target-field failure mode. MEASURED, not asserted: a copy of out_oregano.json with `spider-mites` reverted from the pinned `mite` to `insect` -- the exact defect adjudication A1 exists to fix, and the one that makes `even_watering` and `sulfur` illegal -- validated GREEN, because the ladder was still being checked against the pin's `mite`. Root rot's severity flipped high to low passed green too. Both now REFUSE. Harness evidence: 12 mutations injected into scratch copies (pinned type, pinned severity, un-renamed entry, wrong id, swapped tier order, method illegal for the type, em dash in a rung note, byte-identical registers, empty ladder, dropped entry, repeated method, unknown method) -- 12 RED, 0 survivors -- plus a clean sentinel re-run afterward that returned OK, so the harness was demonstrably not running a clean fixture and reporting mutations as caught.",
+    "REGISTER-PAIR MEASUREMENT on this crop, so the orchestrator does not have to redo it. I computed the both-orders difflib ratio for every beginner/seasoned pair in canonical (n=3,026): median 0.398, p75 0.518, p90 0.607, p95 0.653, max 0.976. On the finished file, all 20 field register pairs and all 21 rung-note pairs are below 0.70: worst field pair 0.668 (Aphids / symptoms), worst rung-note pair 0.306. Two drafts had to be rewritten to get there and I am recording both rather than only the outcome. Powdery mildew's symptoms pair came out of my first draft at 0.751, the same sentence with words swapped. Mint rust's cause pair sat at 0.711 as SHIPPED, and I originally decided to leave it, on the grounds that the record pass ruled that prose HOLDS and the brief says change no field you do not declare. The measurement changed that call: a 0.711 pair is above this batch's threshold and in the top 5% of canonical, and the rename gave it a second, independent problem, that under the name \"Mint rust\" the prose never said why the disease carries mint's name. It is now declared as a rename-fit and dual-register correction with its substance carried across unchanged, which is the honest label for it: it is not a sourcing fix.",
+    "REWORDED three note_seasoned fields on the orchestrator's instruction, substance kept: aphids/water_spray now says to hold the hose back until the plant has substance and pinch infested tips until then; root-and-stem-rots/soil_solarization keeps the no-OMRI-product finding and says the soil is where the whole of the disease gets dealt with, with no spray to fall back on; powdery-mildew/sulfur now says sulfur is the one with established powdery mildew activity so it is the one worth buying. I also swept every consumer string in the file, both rung notes AND the field_corrections `new` prose, for rung / ladder / tier / control_ladder / applies_to / note_beginner / note_seasoned / field_corrections / catalog / canonical / schema: 4 hits before the fix, all in rung notes (the third field carried two, `catalog` as well as `rung`), 0 after. No field_corrections prose carried any of them.",
+    "TEMPLATE-TWIN MEASUREMENT on this crop, before and after, since the brief names template twins as where a fabricated claim propagates. I scored every one of oregano's 20 register fields against every problem field on the batch's other six crops in canonical, both orders, shipped versus mine. SHIPPED: 61 pairs above 0.70, including three at 1.000, the root-rot organic_treatment_beginner sentence pair replicated BYTE-IDENTICALLY across oregano, thyme, rosemary and lavender. AFTER my corrections: 2 pairs above 0.70, worst 0.635, zero byte-identical. Biggest single drops: powdery mildew organic_treatment_seasoned 0.962 -> 0.178 against thyme, spider mites organic_treatment_beginner 1.000 -> 0.311 against thyme, aphids prevention_beginner 0.926 -> 0.250 against thyme. Two of the survivors are root-rot organic_treatment fields I had originally left alone because the record pass found nothing false in them; I corrected them anyway once the measurement showed they were the byte-identical four-crop twin, and both are now declared with oregano's own NC State anchors. After the second round of rewrites there are ZERO pairs above 0.70 and zero byte-identical fields; the worst surviving sibling similarity anywhere on this crop is 0.635.",
+    "FIX-1, ANCHOR-CHECKED AND SPLIT, AND MY EARLIER NOTE ON IT WAS ITSELF WRONG. I first reported that the catalog carries a wrong two-week figure in both `sulfur` and `horticultural_oil`. That is not right, and the corrected version matters because the two UC IPM Pest Notes disagree with each other. `control_methods.sulfur` says two weeks and is anchored to PN 7406, which says two weeks: FAITHFUL. `control_methods.horticultural_oil` says two weeks and is anchored to PN 7405, which says 30 days: it MISQUOTES ITS OWN ANCHOR by more than half. So the interval is not a single wrong number, it is document-dependent. WHAT I CHECKED ON MY TWO ENTRIES AND WHAT I DID: (1) `spider-mites` / `horticultural_oil` anchors PN 7405 TWICE, at entry level via `ucanr_ext_spider_mites` -> pn7405.html and at method level via `ucanr_ext` -> pn7405.html. 30 days is the sourced figure. CHANGED to 30 days and it stays. (2) `powdery-mildew` / `sulfur`: the ENTRY cites NEITHER Pest Note, its only source is uf_ifas; the rung's method `sulfur` is anchored solely to pn7406.html. Two weeks is what its source says, so I REVERTED my 30-day edit and it now reads two weeks again. THE CONSEQUENCE, FLAGGED LOUDLY SO NOBODY TIDIES IT: this one file now states two different oil-and-sulfur intervals, 30 days on the mite entry and two weeks on the mildew entry. That is correct, it is not an inconsistency, and each figure matches the document its own rung is anchored to. A future consistency sweep that harmonizes them will be introducing an error, not removing one. Roster-wide context, measured earlier and unchanged: `horticultural_oil` is on 76 rungs across 42 crops and the two-week figure is already live in 15 shipped rung notes on 7 crops (apple, apricot, cherry-sour, cherry-sweet, grape-tomato, plum, strawberry). Whether those are wrong depends, entry by entry, on which Pest Note each one anchors. Not mine to fix and I touched nothing outside my file.",
+    "FIX-2 accepted in full and it is the one I most want on the record, because it is the failure mode the memory index calls \"the shape is the defect\". The shipped prose said \"humid-climate\". My replacement said \"hot, humid-summer\". Nothing made me write \"hot\" except that the sentence had a slot for a weather word and Florida was the source; the anchor I then attached, \"Our high temperatures and humidity can be challenging\", is a general gardening-tips line and not a statement about this disease. I had UC IPM 7493 in the SAME field's anchor string, two sentences later, saying moderate temperatures and shade, and did not read my own citation against my own sentence. Worth noting that the correction also strengthens a rung I had already written on weaker grounds: `airflow_spacing`'s \"open, sunny spot\" is now anchored, because shade is a favoring condition, and I have said so in that note. To avoid confusing a later reader: the document I failed to read against my own sentence was 7493, because that is the note the adjudication surface quoted, but the entry does NOT end up citing 7493. Pest Note 7406 carries the same two sentences verbatim and is the correctly scoped document for a culinary herb, so that is what the entry is anchored to. The lesson is unchanged and is about reading your own citation, not about which note it was.",
+    "ONE \"hot\" SURVIVES IN THE POWDERY MILDEW ENTRY AND SHOULD: organic_treatment_beginner says \"do not use it in hot weather\", which is the sulfur heat-safety caution (burns foliage near or above 90°F), not a claim about what drives the disease. FIX-2 was about heat as a DRIVER. Flagging it so a re-check does not read it as a missed item.",
+    "FIX-4 accepted, and the reviewer's framing is the useful part: my de-twinning satisfied the metric without satisfying the condition. The rewrite now pivots on the one instruction an admitted source gives for oregano on oregano's own page (RHS: raised bed or container as the answer to soil that rots roots), and it says plainly in the `why` that the rest of the response does not differ between oregano, rosemary, thyme and lavender, because it follows from the pathogen and from drainage rather than from the host. That is the honest answer and I would rather state it than manufacture a difference. Practical consequence for the batch: expect these four crops to converge on substance, and treat a sibling that differs in SUBSTANCE as the one worth checking, rather than treating similarity itself as the defect.",
+    "SCOPE TRAP RAISED AND RESOLVED, option (a). Canonical moved under me mid-task (a9c84847 -> f6d55785, uncommitted) and the change was a single catalog addition, `uc_ipm_pn7493`. I diffed it before trusting anything: ZERO problem entries changed on any crop and oregano's five are byte-identical to my snapshot, so no correction of mine went stale. The trap was that FIX-2 handed me the temperature band in 7493's wording, and 7493 is Powdery Mildew on ORNAMENTALS, whose own citable_for says the admission is \"NOT a general re-anchor of herb powdery mildew away from 7406, which remains the correctly scoped document for culinary crops.\" I wrote the band but refused to add the key, and flagged it. The orchestrator then checked 7406 and it carries both sentences verbatim: \"Moderate temperatures (60° to 80°F) and shady conditions generally are the most favorable for powdery mildew development\" and \"Although humidity requirements for germination vary, all powdery mildew species can germinate and infect in the absence of free water.\" So the entry is now anchored to 7406 under `ucanr_ext`, which is the same key and the same url the shipped `sulfur` method already uses for this document, and NOTHING in oregano's file references 7493 as an anchor. Sage is the different case and is untouched by this: 7493's host list names salvia specifically, which is the basis of its admission."
+  ]
+}

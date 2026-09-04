@@ -31,7 +31,7 @@ sys.path.insert(0, os.path.join(REPO, "tools"))
 import problem_id_collision_gate as G  # noqa: E402
 
 CANON = os.path.join(REPO, "crops_data_final.json")
-PINNED_SHA = "500a61262d5870636d8b33845cb81072940e677d3674938c0375319eab6d6fc9"
+PINNED_SHA = "132980d52dd2f4c7850729401fdcfde8b5485ab0eb03f734e9acf949755d27b4"
 
 # ---------------------------------------------------------------------------------------------
 # The PLA-449 fixture, transcribed from the ticket. NEVER computed from a scan.
@@ -187,9 +187,23 @@ class AuditFixture(unittest.TestCase):
                                  "registry suppresses the real duplicate %r" % (p,))
 
     def test_audit_output_is_exactly_pinned(self):
-        """Both directions of PLA-449's bar. Re-measure on a canonical move; never retune."""
-        self.assertEqual(len(self.findings), 34, "raw finding count moved")
+        """Both directions of PLA-449's bar. Re-measure on a canonical move; never retune.
+
+        RE-MEASURED 2026-09-04 for PLA-8 batch 25 (the herbs), 34 -> 37 raw. The delta is exactly
+        the three pairs that batch introduced, all three adjudicated and REGISTERED, so registered
+        went 12 -> 15 while ACTIONABLE DID NOT MOVE. That last part is the check that matters: a
+        batch is allowed to add registered pairs and is not allowed to add open ones, and holding
+        `actionable` at 22 across a 38-problem reshape is the assertion, not the raw total."""
+        self.assertEqual(len(self.findings), 37, "raw finding count moved")
         self.assertEqual(len(self.actionable), 22, "actionable count moved")
+        registered = [f for f in self.findings if f.registered]
+        self.assertEqual(len(registered), 15, "registered count moved")
+        for pair in (("carrot-leaf-blight", "lemongrass-leaf-blight"),
+                     ("leafhoppers", "sage-leafhoppers"),
+                     ("mint-rust", "oregano-rust")):
+            self.assertIn(pair, self.flagged, "batch-25 pair %r stopped being flagged" % (pair,))
+            self.assertTrue(self.reg.registered(*pair))
+            self.assertNotIn(pair, self.actionable)
 
     def test_batch24_minted_the_ninth_pair(self):
         """Regression for the finding this build produced: `pink-rot` (celery) carried an id all
@@ -226,9 +240,20 @@ class BatchMode(unittest.TestCase):
         """A minted id with no record in `data` carries no display name, so checks 2 and 3 cannot
         run on it and the caller is getting a THIRD of the guard while the output looks complete.
         The gate must say so rather than return a quiet clean."""
-        partial = G.checks_unavailable_for(self.data, {"mint-rust", "cutworms"})
-        self.assertEqual(partial, ["mint-rust"])
-        self.assertEqual(G.checks_unavailable_for(self.data, {"cutworms"}), [])
+        # FIND THE ABSENT ID BY THE PROPERTY UNDER TEST, NEVER BY NAME. This test used to hardcode
+        # `mint-rust` as its example of an id not in the data. PLA-8 batch 25 minted `mint-rust`,
+        # so the example silently stopped being absent and the test failed on a DATASET change
+        # rather than a code change. plant-app hit the identical shape when a batch gave
+        # cherry-tomato the ladder its fixture used it to lack. Any fixture naming a specific id to
+        # mean "an id without X" is a tripwire waiting for the batch that gives it an X.
+        live = {p.get("id") for c in self.data["crops"]
+                for f in ("pests", "diseases") for p in (c.get(f) or []) if p.get("id")}
+        absent = "no-such-problem-id-anywhere"
+        self.assertNotIn(absent, live, "the chosen absent id is present; test would be vacuous")
+        present = sorted(live)[0]
+        partial = G.checks_unavailable_for(self.data, {absent, present})
+        self.assertEqual(partial, [absent])
+        self.assertEqual(G.checks_unavailable_for(self.data, {present}), [])
 
     def test_minted_mode_catches_an_id_not_yet_in_the_data(self):
         """The real batch case: the id is being MINTED, so it is absent from `data`."""

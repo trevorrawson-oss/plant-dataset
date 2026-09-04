@@ -1,0 +1,524 @@
+{
+  "crop": "rosemary",
+  "pests": [
+    {
+      "name": "Spider mites",
+      "id": "spider-mites",
+      "type": "mite",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "even_watering",
+          "note_beginner": "Water rosemary every week or two through hot weather and let the soil dry out in between, instead of forgetting it for a month. Mites build up fastest on a plant that has been left dry and stressed. This is not a plant you keep damp, it is a plant you keep from getting desperate.",
+          "note_seasoned": "Outbreaks track water stress, so the target is the middle of this crop's range: soak, let the soil dry thoroughly, soak again on roughly a one to two week cycle in heat. Rosemary hides thirst, because its needles do not flag the way broad leaves do, so the interval matters more here than how the bush looks. Do not read this as constant moisture, which is what feeds the root rot on this plant."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Clip out the weak and worst-hit growth and get it away from the plant, and prune the bush now and then rather than letting it thicken into a mat. Removing infested growth and pruning regularly are among the best defenses on herbs, and a thinner bush is a harder place for mites to hide.",
+          "note_seasoned": "Sanitation here is as much pruning as cleanup: taking out weak and infested shoots removes colonies wholesale, and the open canopy it leaves behind is the same lever that keeps an overwintered plant out of trouble, since dense foliage and poor air movement are what drive the indoor outbreaks. Bag what you cut; trimmings left at the foot of the bush are still carrying live mites."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Hose the bush down hard and often, especially through a dry spell. A strong stream carries mites off the needles and settles the dust that lets them build up, and on rosemary it is frequently enough by itself. Rinse in the morning so the plant is dry by evening.",
+          "note_seasoned": "Regular forceful rinsing does most of the work on this crop, and it does two jobs, dislodging colonies and settling the dust that touches outbreaks off in the first place. Wet nearby paths and dusty ground on the same pass. Get into the middle of the bush, where the needles are dense and a passing spray does not reach, and finish early enough that the plant is dry by evening."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Plenty of small hunters eat spider mites: predatory mites, tiny lady beetles, lacewing larvae, minute pirate bugs. They are usually already there, and the main thing you can do for them is not to spray anything broad that kills them along with the mites.",
+          "note_seasoned": "The resident complex, western predatory mite and its relatives plus sixspotted thrips, the spider mite destroyer lady beetle, bigeyed bugs and lacewing larvae, is what holds mites at a level you never notice. Sticking to selective materials is how you keep it, since a broad-spectrum spray takes out the predators along with the pest and hands the plant back to whatever recovers first."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If numbers keep climbing after rinsing, insecticidal soap is the selective choice. It only kills what it wets, so work it down into the bush rather than misting the outside. Leave it alone in heat over 90°F, and do not treat a plant that is already dry and stressed.",
+          "note_seasoned": "Soap, or a light horticultural oil, is the selective choice once rinsing is not holding, picked because it leaves the predators standing. There is no residue, so coverage decides the result and the dense needle canopy is where thorough coverage is hard. Note that the 90°F and water-stress limits collide with exactly the conditions that produce a mite problem, so correct the watering first and spray a day or two later rather than treating a drought-stressed plant in a heat wave."
+        }
+      ],
+      "sources": [
+        "ucanr_ext_spider_mites",
+        "clemson_hgic",
+        "tamu_agrilife",
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "ucanr_ext_spider_mites": {
+          "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html",
+          "verified": "2026-09-04"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/herbs/",
+          "verified": "2026-09-04"
+        },
+        "tamu_agrilife": {
+          "url": "https://aggie-horticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2010/10/E-623-Easty-Gardening-Rosemary.pdf",
+          "verified": "2026-09-04"
+        },
+        "umd_ext": {
+          "url": "https://extension.umd.edu/sites/extension.umd.edu/files/2022-03/MG%20Article-01-2022%20Uh-Oh%20What's%20Wrong%20With%20My%20Houseplant.pdf",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_beginner": {
+          "new": "Very small mites that come on in hot, dry spells and on plants that have gone short of water. They also turn up on rosemary brought indoors for winter, where crowded, dense growth and still air suit them.",
+          "why": "'love dry air' is the premise of the raise-the-humidity advice removed from the treatment and prevention fields, and leaving it stranded there was an incomplete fix: a reader given dry air as the diagnosis will reach for a humidifier, and a later pass would re-derive the advice from this field. No read document names air humidity as a driver; the anchored dry conditions are weather, drought and dust, and the anchored INDOOR driver is canopy density and still air.",
+          "anchor": "clemson_hgic: \"Spider mites thrive in dry conditions and can be discouraged by spraying the plants with a strong stream of water regularly during periods of drought.\" Plus ucanr_ext_spider_mites: \"Spider mites reproduce rapidly in hot weather\" and \"Dusty conditions often lead to mite outbreaks\" and \"plants under water stress also are highly susceptible.\" Indoor driver from umd_ext (Frederick Co. MG): \"Dense foliage and poor air circulation contribute to this problem.\""
+        },
+        "cause_seasoned": {
+          "new": "Tiny sap-feeding mites that build up fastest in heat, drought and dust, and on plants that have been left short of water. Indoors over winter is the other place they turn up on rosemary, where dense growth and poor air movement are what favor them.",
+          "why": "'Dry indoor air over winter is a classic trigger' is the unanchored mechanism the removed humidity advice rested on. Correcting the treatment and prevention fields while leaving this one fixed the instruction and kept the reason for it, which is the failure mode where a corrected claim survives in a neighboring field. Dry weather, drought stress and dust are anchored; dry indoor AIR is not, and pn7405 carries no humidity control at all.",
+          "anchor": "ucanr_ext_spider_mites: \"Spider mites reproduce rapidly in hot weather\"; \"Dusty conditions often lead to mite outbreaks. Apply water to pathways and other dusty areas at regular intervals.\"; \"plants under water stress also are highly susceptible\" -- the document's cultural controls are dust suppression and irrigation, with no humidity measure anywhere. Indoor driver from umd_ext (Frederick Co. MG): \"Dense foliage and poor air circulation contribute to this problem.\""
+        },
+        "organic_treatment_beginner": {
+          "new": "Rinse the bush hard and often with the hose, and wet dusty paths nearby on the same pass. Clip out the weakest, worst-hit growth. If the mites keep building, insecticidal soap is the next step, though not in heat over 90°F and not on a plant that is bone dry.",
+          "why": "'for indoor plants raise the humidity' has no anchor in any read document and points the reader the opposite way from this crop's own powdery mildew entry, which tells them to lower humidity and move air. 'A healthy, unstressed plant shrugs them off' overstates the sources, which say water-stressed plants are more susceptible, not that unstressed ones are immune. Replaced with the two cultural levers the documents do publish: dust suppression and removal of infested growth.",
+          "anchor": "ucanr_ext_spider_mites (UC IPM Pest Notes 7405): \"Dusty conditions often lead to mite outbreaks. Apply water to pathways and other dusty areas at regular intervals.\" and \"Regular, forceful spraying of plants with water often will reduce spider mite numbers adequately.\" and \"Don't use soaps or oils on water-stressed plants or when temperatures exceed 90°F.\" Plus clemson_hgic: \"Spider mites thrive in dry conditions and can be discouraged by spraying the plants with a strong stream of water regularly during periods of drought.\""
+        },
+        "organic_treatment_seasoned": {
+          "new": "Rinse the bush regularly with a strong stream of water, wetting nearby dusty ground on the same pass, since dust is a named driver. Cut out weak and heavily infested growth. If numbers keep climbing, use a selective material, insecticidal soap or horticultural oil, withholding it in heat over 90°F and on a plant that is already short of water.",
+          "why": "'raise humidity around indoor plants' is unanchored folk practice and contradicts the powdery mildew entry on the same crop. The field also omitted the two controls UC IPM actually names for mites, dust suppression and selective materials.",
+          "anchor": "ucanr_ext_spider_mites (UC IPM Pest Notes 7405): \"Use selective materials, preferably insecticidal soap or insecticidal oil.\" and \"Dusty conditions often lead to mite outbreaks.\" Plus clemson_hgic: \"The best defenses against pests on herbs are proper growing conditions, good sanitation, removal of weak or infested growth, and regular pruning.\""
+        },
+        "prevention_beginner": {
+          "new": "Water rosemary every week or two in hot weather and let the soil dry in between, instead of leaving it dry for a month. Keep dust down on nearby paths, prune it so it does not thicken into a mat, and give a plant brought indoors for winter room and some moving air.",
+          "why": "'Before bringing rosemary indoors for winter, check it over for pests first' is sensible standard practice but is carried by no document read in this pass, so it is not written. Replaced with the indoor driver an extension source does name, canopy density and still air, which also makes this entry agree with the powdery mildew entry instead of contradicting it.",
+          "anchor": "umd_ext (Frederick Co. MG, \"Uh-Oh! What's Wrong With My Houseplant?\"): \"Dense foliage and poor air circulation contribute to this problem.\" Plus tamu_agrilife E-623: \"On average, water rosemary every 1 to 2 weeks, depending on the plant size and climate conditions. Allow the plants to dry out thoroughly between each watering.\""
+        },
+        "prevention_seasoned": {
+          "new": "Keep the plant off both extremes of water: soak it, let the soil dry thoroughly, and repeat on roughly a one to two week cycle in heat rather than leaving it dry for weeks. Settle dust on nearby paths, prune to keep the bush open, and give an overwintered indoor plant space and moving air, which is the same lever that keeps powdery mildew off it.",
+          "why": "'indoors, give good light and some humidity' is unanchored, and its humidity half is the instruction that conflicts with this crop's powdery mildew entry. 'Inspect plants before bringing them in for winter' has no anchor either. The field also missed the drought-stress mechanism the source states, and read as though humidity rather than water status were the indoor variable.",
+          "anchor": "ucanr_ext_spider_mites (UC IPM Pest Notes 7405): \"plants under water stress also are highly susceptible\" and \"Dusty conditions often lead to mite outbreaks. Apply water to pathways and other dusty areas at regular intervals.\" Plus umd_ext (Frederick Co. MG): \"Dense foliage and poor air circulation contribute to this problem.\""
+        }
+      }
+    },
+    {
+      "name": "Aphids",
+      "id": "aphids",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Feed rosemary sparingly. Sap-sucking insects turn up most where fertilizer has been laid on heavily, and the soft new growth a big nitrogen feed pushes out is what aphid numbers climb on.",
+          "note_seasoned": "Nitrogen restraint is the crop-specific opening move: sap feeders on rosemary track over-fertilizing, and excess nitrogen raises aphid reproduction directly rather than only by making a bigger plant. A modest, infrequent feed keeps growth steady instead of producing the tender flushes colonies build on."
+        },
+        {
+          "method": "ant_exclusion",
+          "note_beginner": "If ants are running up the stems, shut them out. They collect the sugary waste the aphids give off and chase away the ladybugs and lacewings that would otherwise clear the colony. A sticky band on the main stem stops them, and if your plant sprawls low, the branches touching the ground are what they will use to get around it.",
+          "note_seasoned": "Ant tending is what turns a small colony into a persistent one, because the ants displace the predators and parasitoids that would regulate it. Excluding them restores that control rather than substituting for it: the point of shutting the ants out is to let the predators do the work, so it belongs before leaving the colony to its natural enemies, not instead of it. The band holds only once the branches bridging to soil, wall or paving are cut back."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Wash them off the new shoot tips with the hose, turned up hard enough to move them. Few find their way back. Repeat every few days while fresh growth keeps arriving, and rinse in the morning so the bush dries out.",
+          "note_seasoned": "A forceful jet dislodges colonies from the tips, and dislodged aphids largely fail to reestablish. The repeat interval is set by how fast the plant is reflushing rather than by the calendar, so look the tips over twice a week while growth is rapid."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Left alone, the aphid's own hunters handle most colonies: ladybugs, lacewing larvae, and wasps small enough to lay an egg inside an aphid. The sign that the wasps are ahead of you is a scattering of tan, papery aphids sitting among the live ones.",
+          "note_seasoned": "Conserved natural enemies are the default control here, and those parasitized mummies are the field sign that the population is already being taken down. Conserving them is nothing more than keeping broad-spectrum products away from the bush and keeping ants out of the canopy."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If the colonies keep rebuilding, spray insecticidal soap straight onto them. It kills only what it actually wets and leaves nothing behind, so aim into the clusters and expect to repeat. Hold off in heat over 90°F, and off a plant that is dry and stressed.",
+          "note_seasoned": "Soaps and oils are what the published guidance puts at this step for a garden aphid problem, and on a shrub you pick leaves from through the winter that is as far as it is worth taking it; nothing harsher earns its place. Contact-only action means coverage of the colonies, not of the bush, decides the result, and spraying only where aphids actually are spares the soft-bodied predators you are relying on to finish the job."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "ncsu_ext",
+        "clemson_hgic",
+        "tamu_agrilife"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/aphids/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+          "verified": "2026-09-04"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/herbs/",
+          "verified": "2026-09-04"
+        },
+        "tamu_agrilife": {
+          "url": "https://aggie-horticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2010/10/E-623-Easty-Gardening-Rosemary.pdf",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Small soft-bodied insects packed onto the newest shoot tips and the softest new growth. There may be a sticky shine on the growth below them, and often ants running up and down the stems.",
+          "why": "SPLIT 1/2. The bundled entry described aphids and whiteflies in one sentence, so neither organism was described properly. Written from the aphid anchors alone.",
+          "anchor": "ncsu_ext https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/ associates aphids with rosemary by listing an aphid factsheet in its \"Insects:\" row; that row is a list of linked factsheet TITLES, not source prose, so it anchors the ASSOCIATION and nothing about siting. The siting comes from uc_ipm aphids: \"They feed on soft, new plant growth.\" Plus uc_ipm aphids: \"the damage they do and unsightly honeydew they generate sometimes warrant control\" and \"Ants protect aphids from natural enemies.\""
+        },
+        "symptoms_seasoned": {
+          "new": "Colonies sit on the soft new shoot tips rather than on older woody growth, most often on plants pushing soft growth, standing in crowded conditions, or overwintering indoors. Honeydew and the ants that come for it are usually what gets noticed first.",
+          "why": "SPLIT 1/2. The bundle's symptom string covered two unrelated families at once. Aphid siting, and the crowding and indoor context, are separately anchored.",
+          "anchor": "ncsu_ext https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/ associates aphids with rosemary by listing an aphid factsheet in its \"Insects:\" row; that row is a list of linked factsheet TITLES, not source prose, so it anchors the ASSOCIATION and nothing about siting. The siting comes from uc_ipm aphids: \"They feed on soft, new plant growth.\" Plus clemson_hgic: \"Aphids are common in rapidly growing, succulent plants that are in crowded conditions.\" Indoor context from ncsu_ext editorial prose (not a title): \"Monitor the plant for aphids, mealybugs, whiteflies, and spider mites, particularly if indoors.\""
+        },
+        "cause_beginner": {
+          "new": "Sap-feeding insects that build up on soft new growth. They multiply fastest where a plant has been pushed with fertilizer or is packed in with others, and on rosemary brought inside for the winter.",
+          "why": "SPLIT 1/2, and the bundle's cause prose was backwards for the aphid half: it said healthy vigorous plants rarely have trouble, when the sources say soft, fast, well-fed growth is exactly what aphids build on.",
+          "anchor": "uc_ipm aphids: \"High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary.\" Plus clemson_hgic: \"Aphids are common in rapidly growing, succulent plants that are in crowded conditions.\""
+        },
+        "cause_seasoned": {
+          "new": "Aphids reproduce on tender, nitrogen-rich tissue, so a heavily fed or crowded rosemary is what they build on, not a lean, open, drought-hardened one. Ants tending the colony for its honeydew drive off the predators that would otherwise clear it, which is why an ant trail on the stems usually means the colony will keep growing.",
+          "why": "SPLIT 1/2. The bundle asserted that vigorous, unstressed rosemary rarely attracts these pests, which inverts the published aphid driver. Ant tending, the other named driver, was absent entirely.",
+          "anchor": "uc_ipm aphids: \"High levels of nitrogen fertilizer favor aphid reproduction\" and \"Ants protect aphids from natural enemies.\" Plus tamu_agrilife E-623: \"Insects that suck plant sap are generally more prevalent in areas where too much nitrogen fertilizer has been applied.\""
+        },
+        "organic_treatment_beginner": {
+          "new": "Wash them off with the hose, turned up hard, and go back every few days while new clusters keep appearing. Stop ants climbing the plant, since they protect the aphids from ladybugs and lacewings. If the colonies keep rebuilding, insecticidal soap sprayed straight onto them works well.",
+          "why": "SPLIT 1/2. The bundle offered one treatment string for two pests whose management diverges; the aphid half needed the ant lever, which the bundle never carried.",
+          "anchor": "uc_ipm aphids: \"Knock aphid populations off plants by shaking the plant or spraying it with a strong stream of water\" and \"Ants protect aphids from natural enemies\" and \"Insecticidal soaps and oils are the best choices for most situations.\""
+        },
+        "organic_treatment_seasoned": {
+          "new": "Water knockdown first, repeated as the tips reflush, and check the plant twice a week while it is growing fast, which is when a colony goes from a few insects to a crust. Shut the ants out and the resident predators usually finish the job; the tan, swollen mummies among the live aphids mean parasitic wasps are already at work. Soaps and oils are the materials of choice past that point, and they act only on contact.",
+          "why": "SPLIT 1/2. Adds the monitoring cadence and the parasitism sign the bundle lacked, and separates aphid management from whitefly management, which the sources treat differently at both ends of the ladder.",
+          "anchor": "uc_ipm aphids: \"Check your plants regularly for aphids, at least twice a week when plants are growing rapidly\" and \"Insecticidal soaps and oils are the best choices for most situations.\""
+        },
+        "prevention_beginner": {
+          "new": "Go easy on fertilizer. Rosemary does not want rich feeding, and an over-fed plant is where sap-sucking insects turn up most. Give plants room rather than crowding them, and look over the new tips through spring.",
+          "why": "SPLIT 1/2. The bundle's prevention field told the reader to avoid overwatering, which is this crop's root-rot lever and is tied to aphids by no document read in this pass. Replaced with the nitrogen and crowding levers that are anchored.",
+          "anchor": "tamu_agrilife E-623: \"Insects that suck plant sap are generally more prevalent in areas where too much nitrogen fertilizer has been applied. You can avoid most insect problems by fertilizing properly.\" Plus clemson_hgic: \"Aphids are common in rapidly growing, succulent plants that are in crowded conditions.\""
+        },
+        "prevention_seasoned": {
+          "new": "Feed sparingly: sap-sucking insects track over-fertilizing on this crop specifically, and excess nitrogen raises aphid reproduction rather than simply growing a bigger plant. Avoid crowded plantings, since succulent, closely packed growth is where colonies start, and check the growing tips twice a week through the spring flush.",
+          "why": "SPLIT 1/2. Removes 'avoid overwatering', a correct rosemary instruction filed under the wrong problem, and removes 'Vigorous, unstressed rosemary rarely attracts these pests', which is backwards for aphids.",
+          "anchor": "uc_ipm aphids: \"High levels of nitrogen fertilizer favor aphid reproduction, so never use more nitrogen than necessary\" and \"Check your plants regularly for aphids, at least twice a week when plants are growing rapidly.\" Plus tamu_agrilife E-623: \"Insects that suck plant sap are generally more prevalent in areas where too much nitrogen fertilizer has been applied.\""
+        }
+      }
+    },
+    {
+      "name": "Whiteflies",
+      "id": "whiteflies",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull off the growth carrying the most of them and carry it right away from the plant, out of the room or off the bed, not into a heap beside the pot. Done early and repeatedly, this is what actually holds the numbers down.",
+          "note_seasoned": "Removing infested foliage is half of the vigilance program that keeps an early population from establishing, and it is worth most before any spray decision is made. Carry the trimmings well away, since what you cut still holds live insects."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Hose the plant down. A firm spray knocks a good share of them off, and paired with picking off the worst growth it is the standard early response. Time it for the morning so the bush is dry well before dark.",
+          "note_seasoned": "Water spraying is the other half of that early program. It will not clear an established population, but while numbers are still building it removes enough to stop the climb. On an overwintering plant this means a trip outdoors or to a sink rather than a hose, which is one more reason the value sits early."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Outdoors, the natural enemies of whiteflies often keep them in check with no help from you. What ruins that is spraying something broad, which kills the helpers along with the pest.",
+          "note_seasoned": "Natural enemies frequently provide adequate control in the open garden, which is part of why the outdoor plant in full sun is the untroubled one. Protecting it means keeping every broad-spectrum product away from the plant, since whiteflies rebound from one faster than their enemies do."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Insecticidal soap, or a neem oil spray, will bring the numbers down but will not clear them. It kills only what it wets, so it takes thorough, repeated coverage, and it is worth knowing before you start that this is a holding measure rather than a fix. Not in heat over 90°F, and not on a plant that is already dry and stressed.",
+          "note_seasoned": "Soaps and oils reduce but do not eliminate a whitefly population, and that is the honest expectation to set before spraying. It is also as far as the sequence goes, and not because the options simply run out: stronger insecticides mostly kill the natural enemies, whiteflies build resistance to them quickly, and they perform poorly in garden settings, so there is nothing worth reaching for past this."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "psu_ext",
+        "ncsu_ext",
+        "umd_ext"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/whiteflies/",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/salvia-rosmarinus/",
+          "verified": "2026-09-04"
+        },
+        "umd_ext": {
+          "url": "https://extension.umd.edu/sites/extension.umd.edu/files/2022-03/MG%20Article-01-2022%20Uh-Oh%20What's%20Wrong%20With%20My%20Houseplant.pdf",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Tiny white insects that puff up off the foliage when the bush is disturbed, drift for a moment, and settle back onto it. They are most likely on a rosemary that spends the winter indoors.",
+          "why": "SPLIT 2/2. The bundled entry ran aphids and whiteflies through one description, so a reader could not tell which one they were looking at. Written from the whitefly anchors alone.",
+          "anchor": "umd_ext (Frederick Co. MG): \"Those tiny white insects flitting in and out of your plant are probably white flies; black ones are fungus gnats.\" Plus psu_ext: \"Thrips, aphids, whiteflies, mealy bugs, and spider mites may be a problem indoors.\""
+        },
+        "symptoms_seasoned": {
+          "new": "Small white adults that fly up when the plant is disturbed and resettle on it. On rosemary this is chiefly an indoor and overwintering problem: plants outside in full sun are largely untroubled.",
+          "why": "SPLIT 2/2. The bundle's 'on new growth and flowers' siting came from the aphid half. The whitefly half's real distinguishing fact, that it is an indoor problem on this crop, was buried in a shared clause.",
+          "anchor": "ncsu_ext: \"Monitor the plant for aphids, mealybugs, whiteflies, and spider mites, particularly if indoors.\" Plus psu_ext: \"Outdoor plants in full sun are resistant to pests.\""
+        },
+        "cause_beginner": {
+          "new": "Small sap-feeding flies. On rosemary they turn up mainly on plants kept indoors over winter, alongside aphids, mealybugs and spider mites, rather than on plants growing outside in full sun.",
+          "why": "SPLIT 2/2. A single cause sentence cannot serve two unrelated insect families; this one is written to the whitefly context the documents actually give for rosemary.",
+          "anchor": "ncsu_ext: \"Monitor the plant for aphids, mealybugs, whiteflies, and spider mites, particularly if indoors.\" Plus psu_ext: \"Thrips, aphids, whiteflies, mealy bugs, and spider mites may be a problem indoors.\""
+        },
+        "cause_seasoned": {
+          "new": "Whiteflies are a sheltered-conditions pest on this crop, turning up on indoor and overwintered plants in the same roll-call as aphids, mealybugs, thrips and spider mites, while plants outdoors in full sun are described as resistant. A heavy infestation is genuinely difficult to manage once established, so the value is concentrated in catching it early.",
+          "why": "SPLIT 2/2. The bundle's 'sap-feeding insects that occasionally find rosemary' framing hid the one thing that changes what a reader should do, which is that whitefly management is difficult after the fact and prevention is the published strategy.",
+          "anchor": "uc_ipm whiteflies: \"Management of heavy whitefly infestations is difficult. The best strategy is to prevent problems from developing in your garden or landscape.\" Plus psu_ext: \"Outdoor plants in full sun are resistant to pests.\""
+        },
+        "organic_treatment_beginner": {
+          "new": "Catch it early. Pick off the worst-covered growth and take it away from the plant, then knock the rest down with a spray of water. Insecticidal soap or a neem oil spray will reduce the numbers but will not clear them, and nothing stronger does better, so steady early attention beats one big treatment.",
+          "why": "SPLIT 2/2. The bundle said 'use insecticidal soap if numbers rise', which is true for aphids and misleading for whiteflies: the source is explicit that soaps and oils reduce but do not eliminate a whitefly population.",
+          "anchor": "uc_ipm whiteflies: \"whitefly populations in the early stages of population development can be held down by a vigilant program of removing infested leaves or hosing down with water sprays\" and \"insecticidal soaps or oils such as neem oil may reduce but not eliminate populations.\""
+        },
+        "organic_treatment_seasoned": {
+          "new": "Early removal is the whole strategy: taking off infested foliage and hosing the plant down, done while numbers are still low, is what holds it. Natural enemies often provide adequate control on their own. Soaps and oils, neem among them, reduce but do not eliminate a population, and stronger insecticides are worse than nothing here, since most kill the natural enemies, whiteflies build resistance to them quickly, and they perform poorly in a garden setting.",
+          "why": "SPLIT 2/2. The bundle's treatment string carried none of this: no early-removal program, no statement of the soap limit, and no record of the documented dead end below the soft-chemical rung, which is the single most decision-relevant fact about this pest.",
+          "anchor": "uc_ipm whiteflies: \"In many situations, natural enemies will provide adequate control of whiteflies\" and \"Avoid using other pesticides (other than soaps and oils) to control whiteflies; not only do most of them kill natural enemies, whiteflies quickly build up resistance to them, and most are not very effective in garden situations.\""
+        },
+        "prevention_beginner": {
+          "new": "Prevention is worth more than treatment with this one. Look the plant over regularly while it is indoors for the winter, and act on the first few rather than waiting for a cloud.",
+          "why": "SPLIT 2/2. The bundle's prevention field told the reader not to overwater, which is this crop's root-rot lever and is tied to whiteflies by no document read in this pass.",
+          "anchor": "uc_ipm whiteflies: \"The best strategy is to prevent problems from developing in your garden or landscape.\" Plus ncsu_ext: \"Monitor the plant for aphids, mealybugs, whiteflies, and spider mites, particularly if indoors.\""
+        },
+        "prevention_seasoned": {
+          "new": "The strategy is to keep a population from establishing at all, because management of a heavy infestation is difficult. Monitor an overwintering plant deliberately, since indoors is where rosemary meets this pest, and remove the first infested growth rather than holding out for a spray decision. Conserving natural enemies belongs here rather than later, so keep anything broad-spectrum away from the plant.",
+          "why": "SPLIT 2/2. Removes 'avoid overwatering' and the claim that vigorous rosemary rarely attracts these pests, and states the prevention-first strategy the source leads with.",
+          "anchor": "uc_ipm whiteflies: \"Management of heavy whitefly infestations is difficult. The best strategy is to prevent problems from developing in your garden or landscape.\" and \"In many situations, natural enemies will provide adequate control of whiteflies.\""
+        }
+      }
+    },
+    {
+      "name": "Spittlebugs",
+      "id": "spittlebugs",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Cut the weeds around the plant in spring, before the young spittlebugs living in them grow up and move. They build up on soft weedy plants first and spread onto woody ones like rosemary from there, so clearing that ground is the one step that reduces them.",
+          "note_seasoned": "The migration is the mechanism: spittlebugs become abundant on woody plants when they move in from nearby herbaceous hosts, so cutting infested weeds in spring, before the nymphs mature and disperse, is where the leverage is. Timing is the whole of it. Eggs overwinter on or in stems, there are one or two generations a year, and each nymph feeds for one to three months, so a single spring clearance covers the season."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "If the froth bothers you, wash it off with a firm stream of water. Nothing about the plant's health requires it: rosemary is woody, and this feeding does far less to it than it does to soft-stemmed plants.",
+          "note_seasoned": "Washing the nymphs off is a cosmetic call, not a control decision. Heavy feeding can distort tissue and slow growth, but chiefly on herbaceous species, and a spittle mass on an established shrub is not the start of a recurring problem. Water is also the only thing that gets to them: pesticides do not work on spittlebugs, because the nymph sits inside its own spittle mass and a spray does not reach it. Biological control is not considered important here either, so past a rinse there is nothing left to try, and the froth is part of the ordinary insect life a healthy garden supports rather than something to be cleared."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "umn_ext",
+        "rhs"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/spittlebugs/",
+          "verified": "2026-09-04"
+        },
+        "umn_ext": {
+          "url": "https://extension.umn.edu/yard-and-garden-insects/spittlebugs",
+          "verified": "2026-09-04"
+        },
+        "rhs": {
+          "url": "https://www.rhs.org.uk/biodiversity/cuckoo-spit-spittlebugs",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "prevention_beginner": {
+          "new": "There is one thing worth doing, and it is done to the weeds rather than to the rosemary: cut back weedy growth around the plant in spring, while the young spittlebugs are still in it. They start on soft weeds and move onto woody plants like rosemary from there.",
+          "why": "'Nothing special is needed' is refuted. UC IPM publishes a specific prevention for this pest, and it is a weed and timing lever. The rest of the field, about room, sun and not too much water, is this crop's root-rot advice pasted into a pest entry; no read document ties spittlebug pressure to rosemary's vigor or its watering.",
+          "anchor": "uc_ipm spittlebugs: \"Spittlebugs are more likely to become abundant on woody plants when they migrate from nearby herbaceous hosts. Cut spittlebug-infested weeds in the spring before the insects mature and spread.\""
+        },
+        "prevention_seasoned": {
+          "new": "There is a specific prevention, and it is not about the rosemary at all: cut spittlebug-infested weeds nearby in the spring, before the nymphs mature and spread, since spittlebugs become abundant on woody plants by migrating in from herbaceous hosts. Eggs overwinter on or in stems, so a spring clearance is what breaks the sequence.",
+          "why": "'No specific prevention is warranted' is refuted by the source, which publishes exactly one and makes it a weed and timing measure. 'Good spacing, full sun, and no overwatering keep rosemary vigorous enough to shrug off minor pests' is the crop's drainage advice relocated into a pest entry, and it displaced the only real prevention lever the documents give.",
+          "anchor": "uc_ipm spittlebugs: \"Spittlebugs are more likely to become abundant on woody plants when they migrate from nearby herbaceous hosts. Cut spittlebug-infested weeds in the spring before the insects mature and spread.\" and \"Overwintering occurs as tiny eggs on or in stems or needles.\""
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Root and crown rot",
+      "id": "crown-and-root-rot",
+      "type": "fungal",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "improve_drainage",
+          "note_beginner": "This is the one that kills rosemary, and drainage is the control, not a spray. Put it where water drains away instead of sitting: on a mound or a raised bed if your soil is heavy clay, and in a pot that drains freely. Then water deeply every week or two and let the soil dry out thoroughly in between, and do not plant it in a bed you have to water often for thirstier things.",
+          "note_seasoned": "Soil that stays saturated is the condition these rots need, so the response is siting and irrigation rather than treatment: raised or mounded ground on clay, no standing water at the base, and a soak-then-dry cycle of roughly one to two weeks once the plant is established. Two details do most of the damage on this crop. Rosemary hides thirst, since its needles do not flag the way broad leaves do, which pushes people onto a watering schedule the plant never wanted; and a first-year plant genuinely does need regular water to keep its root ball moist, so the drought-tolerant regime starts after establishment, not at planting. Keep soil and mulch off the crown itself, and group it with plants that want the same watering."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "If a rosemary has gone downhill in one spot, do not put another one, or another plant that rots the same way, back into that soil. These rots sit in the ground for years, so the safer move is a different spot altogether, and for a pot, fresh mix in a clean container rather than the old soil.",
+          "note_seasoned": "These rots persist in the soil for years, so replanting something susceptible into ground that has already taken one plant is the reliable way to repeat the outcome. Treat the site as spent rather than waiting out an interval: the published replant intervals are written for annuals, and nothing sets one for a shrub that will stand in the same ground for a decade. In a container the equivalent is fresh media in a clean pot, which is the one case where you genuinely can replace the soil."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start from certified or obviously healthy nursery stock. A rot like this can come in with the plant rather than turning up later, and once it is in the roots there is nothing to spray.",
+          "note_seasoned": "Clean stock is settled at purchase, before any of the rest of this applies, and it carries more weight for a soilborne rot than for most problems, because infected material introduces the pathogen to the site rather than to one plant. Rosemary is normally raised from cuttings, so the same logic reaches your own propagation: take cuttings from a plant that is thriving, not from the one you are trying to save."
+        }
+      ],
+      "sources": [
+        "uc_ipm",
+        "tamu_agrilife",
+        "psu_ext",
+        "uwi_hort"
+      ],
+      "anchoring_urls": {
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/phytophthora-root-and-crown-rot/",
+          "verified": "2026-09-04"
+        },
+        "tamu_agrilife": {
+          "url": "https://aggie-horticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2010/10/E-623-Easty-Gardening-Rosemary.pdf",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+          "verified": "2026-09-04"
+        },
+        "uwi_hort": {
+          "url": "https://hort.extension.wisc.edu/articles/rosemary-rosemarinus-officinalis/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "cause_beginner": {
+          "new": "A rot that takes hold in the roots and the base of the plant when the soil stays soggy and drains badly. Too much water is what causes it.",
+          "why": "'The real cause is too much water, not cold' carries a negation no read document makes: nothing in this pass frames rosemary root rot against cold injury. The clause is dropped rather than reversed, because the record pass grades it asserted and not sourced. Note this is the same 'not cold' construction the batch adjudication flags on oregano and thyme.",
+          "anchor": "psu_ext: \"Overwatering causes root rot, which can be deadly outdoors and especially in pots overwintered indoors.\" Plus uwi_hort: \"The biggest cause of plant decline and death is overwatering.\""
+        },
+        "cause_seasoned": {
+          "new": "A group of soilborne water molds and fungi that need saturated, poorly drained soil in order to move and infect, attacking the roots and the crown at the soil line. More than one genus causes this on woody herbs and which one is on rosemary is not settled, and that changes nothing about the response: the condition, not the organism, is what you manage. Overwatering and ground that stays wet are what set it up.",
+          "why": "The field named 'Phytophthora and related water molds' as the organism, and that identification is unresolved and contested rather than established. UC IPM's rosemary page links its Phytophthora root and crown rot document, but the PNW Plant Disease Management Handbook's own rosemary root-rot page names a different organism set. UPDATED 2026-09-04: that page has since been retrieved and read (text proxy plus an independent search snippet, not a first-party fetch; it 403s directly). Its Cause section reads \"Several root rotting organisms have been detected in rosemary root rot samples coming to the OSU Plant Clinic. Pythium, Berkeleyomyces sp. (formerly Thielaviopsis basicola), and Rhizoctonia are among the organisms found\", with NO Phytophthora. So the field as it stood was not merely over-confident, it was pointing at a genus the one rosemary-specific handbook page does not report. Two of the three organisms it does report are true fungi, which is why the replacement says \"water molds and fungi\" rather than water molds alone. The pinned id is deliberately the problem-class umbrella crown-and-root-rot for that reason, so the prose is made genus-agnostic to match it. The 'not cold' clause is dropped for the reason given on cause_beginner.",
+          "anchor": "uc_ipm phytophthora-root-and-crown-rot: \"Almost all fruit and nut trees, as well as many ornamental trees and shrubs (including many California natives), can develop Phytophthora root or crown rot if the soil around the base of the plant remains wet for prolonged periods\" -- host-general, and the document host-maps no species to rosemary. Plus uwi_hort: \"Root rot and botrytis are the most common disease problems\" and \"The biggest cause of plant decline and death is overwatering.\""
+        },
+        "organic_treatment_beginner": {
+          "new": "A spray is not the answer here. This one is prevented rather than treated: fix the drainage, water deeply but far less often, and do not put another susceptible plant into the same soil for a season or two.",
+          "why": "'Once the base is rotting there is no fix, so pull out and throw away affected plants' states an absolute no admitted document in this pass makes, and the remove-and-discard instruction, while standard practice, is carried only by a UMass Amherst greenhouse floriculture page that is not in the source catalog. Replaced with what UC IPM's management text does say.",
+          "anchor": "uc_ipm phytophthora-root-and-crown-rot: \"Do not rely on pesticide applications alone to control Phytophthora root and crown rot diseases\" and \"avoid planting them or other susceptible plants ... in the same soil for at least 1 or 2 seasons.\""
+        },
+        "organic_treatment_seasoned": {
+          "new": "Treatment is not where this is decided. A spray on its own is not to be relied on against these rots, and what does work is siting and watering: drainage first, then a soak-and-dry cycle rather than frequent light watering, and no susceptible plant back into that soil for a season or two.",
+          "why": "Same defect as the beginner field. 'There is no cure' is an absolute with no admitted anchor, and the field's only instruction, removal, rests on a source outside the catalog. The replacement keeps the field's correct emphasis on prevention while saying only what the documents support.",
+          "anchor": "uc_ipm phytophthora-root-and-crown-rot: \"Do not rely on pesticide applications alone to control Phytophthora root and crown rot diseases\" and \"Allow the top few inches of soil to dry thoroughly between watering.\""
+        },
+        "prevention_beginner": {
+          "new": "Plant in well-draining soil in full sun, and do not let it stand in soggy ground for days at a time. Water deeply and only every week or two once it is established, letting the soil dry out in between; a first-year plant needs more regular water than that until its roots take hold. On heavy clay, plant on a mound or a raised bed, and keep soil and mulch piled away from the base of the stems.",
+          "why": "'Never let rosemary sit in soggy ground' is an absolute where the source says prolonged saturation, and the blanket 'water deeply but rarely' is wrong for a first-year plant, which UC IPM's own rosemary cultural tips say needs regular water to keep the root ball moist. Crown burial, a separate mechanism from drainage, was missing. 'Give plants room' is dropped from this field: spacing is a powdery mildew lever, not a root-rot one.",
+          "anchor": "uc_ipm phytophthora-root-and-crown-rot: \"Avoid prolonged saturation of the soil or standing water around the base of trees\" and \"Never cover the root crown or graft union with soil or mulch.\" Plus uc_ipm rosemary cultural tips (https://ipm.ucanr.edu/home-and-landscape/rosemary/cultural-tips/index.html): \"In the first year of planting, water regularly to keep the root ball moist. Once established, rosemary is drought tolerant and needs little watering.\""
+        },
+        "prevention_seasoned": {
+          "new": "Plant in sharply drained soil in full sun and avoid prolonged saturation or standing water at the base. Water deeply and infrequently once established, roughly every one to two weeks in warm weather, letting the soil dry thoroughly between soakings; in the first year, water regularly enough to keep the root ball moist, because the drought-tolerant regime begins after establishment rather than at planting. On clay use a mound or a raised bed, keep soil and mulch off the crown, and do not site rosemary in a bed you have to water often for thirstier plants.",
+          "why": "Same three defects as the beginner field: an absolute that outruns the source's 'prolonged', a watering rule that is wrong for year one, and no crown-burial lever. Also adds irrigation grouping, which is directly relevant because rosemary is usually planted beside thirstier things, and drops 'space plants for airflow', which belongs to powdery mildew rather than to a soilborne rot.",
+          "anchor": "uc_ipm phytophthora-root-and-crown-rot: \"Avoid prolonged saturation of the soil or standing water around the base of trees\" / \"Allow the top few inches of soil to dry thoroughly between watering\" / \"Never cover the root crown or graft union with soil or mulch\" / \"Group plants according to their irrigation needs.\" Plus tamu_agrilife E-623: \"On average, water rosemary every 1 to 2 weeks, depending on the plant size and climate conditions. Allow the plants to dry out thoroughly between each watering\" and \"Raised or slightly mounded beds provide the best drainage for the herb.\""
+        }
+      }
+    },
+    {
+      "name": "Powdery mildew",
+      "id": "powdery-mildew",
+      "type": "fungal",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Give the plant room and moving air. On rosemary this is mostly an indoor winter problem, and it shows up where pots get pushed together in still air. Moving them apart usually clears it, and so does putting the plant back outside in spring.",
+          "note_seasoned": "Space and air movement are the whole lever, and the mechanism is humidity rather than leaf wetness: this fungus does not need wet foliage to infect, so room and movement work by thinning the humid, stagnant pocket that collects around the foliage, not by drying the leaves faster. Indoors that means separating crowded pots and getting a little air across them. Outdoors it means an open, sunny site and a bush pruned to let air through the middle of it rather than left to thicken. Moving the plant outside in spring is usually the end of it."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pick off the worst-coated growth and get it away from the plant. That will not rid the bush of the fungus, but the heaviest patches go with it, and with an indoor plant it is worth standing the affected pot away from its neighbors while you sort out the spacing.",
+          "note_seasoned": "Removing infected growth takes away a share of what is available to spread, and isolating an affected indoor plant limits what reaches the pots beside it. Neither is curative and neither substitutes for the spacing above: in most home conditions, removing infected parts and adjusting the conditions is what resolves this, so it is worth doing both properly before considering a spray at all."
+        }
+      ],
+      "sources": [
+        "psu_ext",
+        "tamu_agrilife",
+        "umd_ext",
+        "uc_ipm"
+      ],
+      "anchoring_urls": {
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-rosemary",
+          "verified": "2026-09-04"
+        },
+        "tamu_agrilife": {
+          "url": "https://aggie-horticulture.tamu.edu/vegetable/wp-content/uploads/sites/10/2010/10/E-623-Easty-Gardening-Rosemary.pdf",
+          "verified": "2026-09-04"
+        },
+        "umd_ext": {
+          "url": "https://extension.umd.edu/sites/extension.umd.edu/files/2022-03/MG%20Article-01-2022%20Uh-Oh%20What's%20Wrong%20With%20My%20Houseplant.pdf",
+          "verified": "2026-09-04"
+        },
+        "uc_ipm": {
+          "url": "https://ipm.ucanr.edu/home-and-landscape/powdery-mildew-on-vegetables/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "A white, powdery dusting on the leaves. It shows up on crowded plants standing in still air, and most often on a rosemary that has spent the winter indoors. Next to root rot it is a small problem.",
+          "why": "'more likely in damp, still air' carries the wrong condition. Powdery mildew is the one common leaf fungus that does not want wet foliage, and water sitting on the leaves works against it. Replaced with crowding and still air, which the documents do publish.",
+          "anchor": "uc_ipm powdery-mildew-on-vegetables: \"All powdery mildew species can germinate and infect in the absence of free water.\" Cited for generic powdery mildew biology only, since that document names no herb and no rosemary. Plus umd_ext (Frederick Co. MG): \"It is common on rosemary grown indoors and may happen when plants are crowded together.\""
+        },
+        "symptoms_seasoned": {
+          "new": "A white, powdery film over the foliage, favored by humid but still air, shade and crowding rather than by wet leaves. It is most common on rosemary overwintered indoors and among pots standing close together, and it is minor next to root and crown rot.",
+          "why": "Two defects. 'favored by damp, still, humid air' is wrong on the word damp: free water on the leaves is not required for infection and extended leaf wetness inhibits germination. And 'in humid regions' has no anchor: every rosemary-specific document read in this pass places this disease indoors or under cover, not in humid-region field conditions.",
+          "anchor": "uc_ipm powdery-mildew-on-vegetables: \"All powdery mildew species can germinate and infect in the absence of free water,\" the same document noting that water on plant surfaces can inhibit spore germination. Plus umd_ext (Frederick Co. MG): \"It is common on rosemary grown indoors and may happen when plants are crowded together.\""
+        },
+        "cause_beginner": {
+          "new": "A leaf fungus that likes still, humid air and close quarters. Wet foliage is not what it wants, which is how it runs on an indoor plant in winter while nothing outdoors is affected.",
+          "why": "'A leaf fungus that likes damp, stuffy air with no breeze' puts the word damp on the one common leaf fungus that wet foliage works against, and it is the sentence that produced the wrong watering advice in the prevention fields.",
+          "anchor": "uc_ipm powdery-mildew-on-vegetables: \"All powdery mildew species can germinate and infect in the absence of free water.\" Plus umd_ext https://extension.umd.edu/resource/powdery-mildew-indoor-plants: \"Any method that will lower the humidity, or increase air circulation will help to lessen the chances of infection.\""
+        },
+        "prevention_beginner": {
+          "new": "Keep air moving around the plant and give it room: full sun and space outdoors, and indoors do not push the winter pots together. Prune an overgrown bush so air gets through the middle of it, and put the plant back outside in spring.",
+          "why": "'water at the base' is the same wrong lever as the seasoned field's 'avoid overhead watering': wet leaves do not drive this disease. Base watering stays correct on rosemary for root-rot reasons, so it belongs on that entry. Added the pruning and spring-outdoors levers the record did not carry.",
+          "anchor": "umd_ext (Frederick Co. MG): \"It usually disappears when the plants are moved further apart or are taken outside in the spring.\" Plus tamu_agrilife E-623: \"You can reduce the incidence of diseases by pruning overgrown plants to improve air circulation within the plants.\""
+        },
+        "prevention_seasoned": {
+          "new": "Air movement and space are the defense, and the target is the humidity around the foliage rather than dry leaves. Site outdoor plants in full sun with room between them, prune an overgrown bush to open the inside of the canopy, keep indoor winter pots separated with a little air moving across them, and get the plant back outside in spring, which usually ends it on its own.",
+          "why": "'avoid overhead watering' is the standard instruction for leaf-wetness diseases and is being applied to the one disease the sources say leaf wetness inhibits. It is unsupported here and mildly contradicted. The field also missed the two most useful levers available for this crop: pruning for air movement inside the canopy, and simply moving the plant outdoors in spring.",
+          "anchor": "psu_ext: \"Ensure adequate airflow between plants to prevent powdery mildew.\" tamu_agrilife E-623: \"You can reduce the incidence of diseases by pruning overgrown plants to improve air circulation within the plants.\" umd_ext (Frederick Co. MG): \"It usually disappears when the plants are moved further apart or are taken outside in the spring.\" umd_ext https://extension.umd.edu/resource/powdery-mildew-indoor-plants: \"Any method that will lower the humidity, or increase air circulation will help to lessen the chances of infection.\" Against uc_ipm powdery-mildew-on-vegetables: \"All powdery mildew species can germinate and infect in the absence of free water.\""
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "DUST SUPPRESSION as a named cultural control for spider mites has no method of its own. ucanr_ext_spider_mites: \"Dusty conditions often lead to mite outbreaks. Apply water to pathways and other dusty areas at regular intervals.\" I carried it inside the water_spray rung note, which is the closest honest home (same tool, adjacent action), and inside the corrected prevention prose. A `dust_suppression` cultural method scoped to `mite` would be the right shape if the family ever earns one.",
+    "AIRFLOW AND CANOPY DENSITY as the named INDOOR driver for spider mites is unreachable for this type. umd_ext (Frederick Co. MG): \"Dense foliage and poor air circulation contribute to this problem.\" `airflow_spacing` is scoped fungal_foliar / bacterial / disease_general and does not reach `mite`; TYPE_TARGETS['mite'] is {insect_general, mite}. The claim is carried in the corrected prevention prose and partly inside the garden_sanitation rung, since pruning is what opens the canopy, but no method reaches it directly. This is the same two-class gap family the brief names for `even_watering`, running the other way.",
+    "CROWDING as an aphid driver has no method. clemson_hgic: \"Aphids are common in rapidly growing, succulent plants that are in crowded conditions.\" `airflow_spacing` does not reach `insect`. Carried in the corrected cause and prevention prose only.",
+    "IRRIGATION GROUPING is a distinct siting lever from drainage and has no method. uc_ipm: \"Group plants according to their irrigation needs.\" It matters on rosemary specifically, because rosemary is usually planted beside thirstier things. Carried inside the improve_drainage rung note.",
+    "CROWN BURIAL is a distinct physical mechanism from drainage and has no method. uc_ipm: \"Never cover the root crown or graft union with soil or mulch.\" Carried inside the improve_drainage rung note.",
+    "ISOLATING AN AFFECTED INDOOR PLANT has no method. umd_ext (Frederick Co. MG): \"you may want to isolate the plant.\" Carried inside the powdery mildew garden_sanitation rung note.",
+    "APHID MONITORING CADENCE has no method. uc_ipm aphids: \"Check your plants regularly for aphids, at least twice a week when plants are growing rapidly.\" Carried inside the water_spray rung note and the corrected organic_treatment_seasoned."
+  ],
+  "refusals": [
+    "REFUSED to cite `umn_ext` on the spittlebug entry, and refused to write the sentence \"Pesticides are not effective.\" My dispatch brief and ADJUDICATIONS A12 both attribute that line to UMN, but my record report does not carry it: its only umn_ext quote is about root rot (\"Constant moisture encourages root rot, especially indoors\"). The record governs, so I neither cited a document the record pass did not read for that claim nor wrote prose depending on it. The ladder I did write is consistent with the claim anyway and reaches the same endpoint on uc_ipm's own evidence: it terminates at `physical`, because uc_ipm's management is \"Ignore spittlebugs or wash nymphs off with a forceful stream of water\" and uc_ipm states \"biological control of spittlebugs is generally considered to be not important.\" If the orchestrator confirms the UMN sentence from the lavender or sage report, it belongs in this entry and strengthens the cap; it does not change a rung. RESOLVED 2026-09-04: the coordinator read the UMN page directly (https://extension.umn.edu/yard-and-garden-insects/spittlebugs) and the sentence is verbatim, \"Pesticides are not effective against spittlebugs as the nymphs are protected inside their spittle masses from any pesticide sprays.\" `umn_ext` is now cited on this entry and the mechanism, not the bare claim, is written into the water_spray note. The refusal is kept on the record rather than deleted, because what it refused was an attribution that had not been read, and that turned out to be the right thing to refuse for a second reason: see the A12 note.",
+    "REFUSED to write a chemical rung on powdery mildew. umd_ext does allow one (\"Registered fungicides can be used\"; \"you may want to isolate the plant and treat it with a fungicide spray\"), but no admitted document names a product for rosemary. The only host-scoped product list is the e-GRO Edible Alert E902, which is not in the source catalog, and uc_ipm's sulfur and oil guidance sits in a document host-scoped to eighteen vegetables that names no herb and no rosemary. Writing a `sulfur` rung from that would be lifting a product recommendation across a host boundary onto an edible herb.",
+    "REFUSED to keep \"There is no cure once the crown is rotting; remove and discard affected plants\" on root and crown rot. The absolute is stated by no admitted document read in this pass, and the removal instruction is carried only by UMass Amherst CAFE Greenhouse Floriculture (\"Remove diseased plants promptly\"), which is not admitted: the existing `umass_ext` key is scoped to the Vegetable Program. Consequently this ladder has NO `garden_sanitation` rung, which is a visible difference from parsley's shipped `crown-and-root-rot` ladder and from tomatillo's `root-and-stem-rots`. It is a sourcing gap, not a judgment that removal is wrong. See notes_to_orchestrator.",
+    "REFUSED to write \"check the plant over before bringing it indoors for the winter\" anywhere. The record pass grades it unanchored on spider mites, and it would be equally unanchored on whiteflies. It is standard, sensible practice and no document read in this pass carries it.",
+    "REFUSED to name *Phytophthora* as rosemary's organism, per the pin table, and went one step further than the pin required: I corrected `cause_seasoned`, which named it. Leaving that field would have had the entry asserting in prose the genus the pinned umbrella id deliberately declines to assert.",
+    "REFUSED to import RHS's *Xylella fastidiosa* material into the spittlebug entry. RHS frames it as a UK exclusion concern (\"*Xylella* is not in the UK but could be introduced through the importation of infected plants\"), which is UK plant-health scope, not a fact about a US home gardener's rosemary. RHS is used only for organism identity and impact, which is what the brief admits it for."
+  ],
+  "notes_to_orchestrator": [
+    "NO RETIRED ENTRY ON THIS CROP. Rosemary has neither of the two retirements, so there is no orphaned sourced content to relocate.",
+    "THE 'NOT COLD' TEMPLATE TWIN HAS A THIRD INSTANCE, AND IT IS THIS CROP. ADJUDICATIONS A4 and A5 flag \"wet ..., not cold, are the underlying cause\" on oregano and thyme and call it a template twin. Rosemary's `cause_seasoned` carries the same construction (\"Overwatering and wet feet, not cold, are the underlying cause\") and is NOT on the A4/A5 list. More pointedly, the UMD sentence quoted there as refuting it names rosemary by name: \"Excessively wet, cold soil can cause Mediterranean herbs such as rosemary, thyme, and lavenders to die over the winter.\" That sentence is not in my record report, so I acted only on what my report supports (it grades the clause asserted, not sourced) and DROPPED the clause rather than negating it. If the orchestrator confirms the UMD read, this is a three-crop twin, not a two-crop one.",
+    "THE TWO OPPOSITE INDOOR INSTRUCTIONS ARE NOW FULLY RESOLVED, AND MY FIRST PASS AT IT WAS INCOMPLETE IN A WAY WORTH RECORDING. The record told the reader to raise humidity for mites and lower it for powdery mildew. I removed the humidity ADVICE from the mite entry's treatment and prevention fields and declared the item resolved, while cause_seasoned still shipped \"Dry indoor air over winter is a classic trigger\" and cause_beginner still shipped \"love dry air\", which is the PREMISE the removed advice rested on. An independent reviewer caught it. That is the correct-every-field failure mode in its exact shape: fixing the instruction and leaving its reason standing in a neighboring field, where a later pass re-derives the instruction from it. All six fields are now corrected. The anchored drivers are dry weather, drought stress and dust (ucanr_ext_spider_mites, clemson_hgic) and, indoors, dense foliage and poor air circulation (umd_ext); air humidity is named by no read document, and pn7405 carries no humidity control at all. Both entries now point the same way. NOTE FOR THE ORCHESTRATOR: a declared RESOLVED is what a later pass trusts without re-checking, so treat this correction as the reason to re-verify any other agent's resolution claim in this batch against the fields rather than the summary.",
+    "ANCHORING_URLS HOLDS ONE URL PER CATALOG KEY, and three entries genuinely rest on two documents under one key. Recorded here rather than lost: (1) powdery mildew / `umd_ext` records the Frederick County MG article (the document that names rosemary and carries \"taken outside in the spring\"); the ladder and the corrected prose also rest on https://extension.umd.edu/resource/powdery-mildew-indoor-plants. (2) root and crown rot / `uc_ipm` records the Phytophthora root and crown rot management document, which is the document UC IPM's own rosemary page links for this disease and the source of every management sentence in the ladder; the first-year watering exception comes from https://ipm.ucanr.edu/home-and-landscape/rosemary/cultural-tips/index.html. (3) The aphid and whitefly entries each record the relevant UC IPM Pest Note rather than the rosemary crop page; rosemary-specific identity for both is carried by `ncsu_ext` and `psu_ext` instead.",
+    "CITING A PHYTOPHTHORA-NAMED URL WHILE KEEPING THE PROSE GENUS-AGNOSTIC IS DELIBERATE, not an oversight. UC IPM's rosemary page is what joins rosemary to that document; the document itself is host-general and host-maps no species to rosemary. The URL is the management anchor, not a taxon assertion, and the prose now says so in plain words.",
+    "THE PNW PAGE HAS BEEN READ, AND IT CHANGES THE VERDICT ON THIS CROP'S ORGANISM (updated 2026-09-04; this note previously said the page was unread and was the crop's one open item). Retrieved through a text proxy and corroborated by an independent search snippet, the Cause section of https://pnwhandbooks.org/plantdisease/host-disease/rosemary-rosmarinus-officinalis-root-rot reads: \"Several root rotting organisms have been detected in rosemary root rot samples coming to the OSU Plant Clinic. Pythium, Berkeleyomyces sp. (formerly Thielaviopsis basicola), and Rhizoctonia are among the organisms found.\" NO Phytophthora. CONSEQUENCE: stripping the genus from cause_seasoned was not merely cautious, it was correct, and a Phytophthora-named cause would have shipped a wrong organism. The ladder is unchanged, exactly as predicted: every rung is drainage, replant restriction and clean stock, all true under any of these genera. STANDING CAVEAT, and the reason the prose still names nothing: this is a proxy retrieval plus a snippet, not a first-party read, which is strong enough to justify saying LESS and not strong enough to name Pythium, Berkeleyomyces or Rhizoctonia in consumer copy. The 2026-07-06 cert-log [CORRECTION] append is the coordinator's, not mine.",
+    "TWO CATALOG ADMISSIONS WOULD EACH ADD A RUNG. (1) UMass Amherst CAFE Greenhouse Floriculture, \"Rosemary - Phytophthora root rot\": carries \"Remove diseased plants promptly\", \"Purchase disease-free plants. Inspect incoming plants for signs of disease\", \"Only take cuttings from healthy plants\", and the ladder-shaping \"There are very few fungicides labeled for herbs, therefore it is very important to prevent disease.\" Admitting it (the existing `umass_ext` key is scoped to the Vegetable Program, so this needs its own key or a scope ruling) gives root and crown rot a `garden_sanitation` rung and lets organic_treatment state the rescue limit directly instead of working around it. (2) e-GRO Edible Alert E902 (Jean Williams-Woodward, UGA): the only document found that discusses rosemary powdery mildew's organism, a humidity threshold and herb-labeled chemistry. Admitting it adds a `balance_nitrogen` rung (it reaches fungal_foliar, and E902 names excess nitrogen as a driver) and makes a defensible soft_chemical rung writable. Without either, the ladders are three cultural rungs and two cultural rungs, which is what the admitted sources actually support.",
+    "SOURCES ARE CAPPED AT 4 PER ENTRY to stay inside the canonical envelope. Measured, not assumed: across the 786 anchored problem entries in canonical the sources-count distribution is 1 -> 252, 2 -> 465, 3 -> 58, 4 -> 11, and no entry carries 5. Admitted T1 documents that support these entries and were left off for that reason: `ncsu_ext` on powdery mildew (\"Poor circulation and high humidity can cause powdery mildew\"); `ncsu_ext` and `uwi_hort` on spider mites, which carry the severity calibration (\"generally pest and disease free\", \"generally has few pest problems\"); and `uariz_ext_az2061` on all three insect entries (\"It is best not to use systemic insect controls on food plants\"), which is the crop-class reason none of the three carries a conventional rung. If the orchestrator prefers completeness over the envelope, these four are the additions to make.",
+    "THE POWDERY MILDEW ID WAS USED AS PINNED, AND THE RECORD REPORT ARGUED AGAINST IT. Raising it rather than changing it, per the brief. The shared 32-crop `powdery-mildew` id carries an organism claim in one crop's display name (\"Powdery mildew (*Leveillula taurica*, *Erysiphe cichoracearum*)\"), those are the vegetable powdery mildews, and rosemary's is a *Golovinomyces* unresolved to species in the US. An admitted T1 source states the principle on rosemary by name: \"Differing fungi affect different plants, so the same fungus that causes powdery mildew on rosemary may not be the same type that causes it on an African violet.\" Because the id joins `varieties[].resistance` and `varieties[].ladder_delta`, joining it means a vegetable-powdery-mildew resistance grade could later hang off rosemary. The pin table's evidence line does not address this. Either is defensible; what is not defensible is joining it silently.",
+    "SPIDER MITE TYPE CORRECTION, MEASURED CONSEQUENCE. Moving `type` from insect to mite is what makes this ladder's opening rung legal: TYPE_TARGETS['mite'] is {insect_general, mite}, so `even_watering` (physiological, mite, bacterial) becomes reachable and `sulfur` does too. I used `even_watering` and did NOT use `sulfur`, because no read document recommends sulfur for rosemary mites; legality is not a warrant. The `even_watering` note is written carefully against this crop's profile: the target is avoiding the bone-dry extreme on a one-to-two-week soak-and-dry cycle, NOT constant moisture, which would contradict the root-rot entry and would be actively harmful on rosemary.",
+    "SPLIT LIMBS NEED `audience`. Both canonical rosemary bundles and all five existing entries carry \"audience\": \"core\". The two split limbs need it too; it is not a prose field so it is not in my `field_corrections`, and the promote should carry it onto both new entries.",
+    "VALIDATOR: I DID NOT EDIT IT, AND ONE GAP REMAINS. The canonical-vs-output coverage bug (which reported rosemary's ruled split as one MISSING and two EXTRA problems) was already fixed on disk by the mint authoring agent at 12:01, and I verified its fix handles rosemary: it walks the pin table forward for the target set and canonical backward for provenance, and the `_retired` handling and the `from '...'` regex both cover this crop. I started an identical fix, found it already there, and dropped mine. THE REMAINING GAP, reported rather than patched because five sibling outputs are already written and a new refusal class would flood the parallel runs: the applies_to coherence check reads `ptype = row.get(\"type\")` from the PIN, not from the output entry, so an entry that ships a `type` differing from its pin would be validated for a coherence the shipped record does not have. That is the guard-derived-from-what-it-checks shape. The two-line fix is to compare the output's `type` and `severity` against the pin before using `ptype`. All seven crops' pin rows do carry both keys, so the check cannot go vacuous. Rosemary's output matches its pins on id, type and severity.",
+    "SCHEMA VOCABULARY REMOVED FROM CONSUMER COPY (coordinator, 2026-09-04). Eight note_seasoned strings named the data model (\"rung\", \"ladder\"); all eight are reworded and the substance is intact. The two that were carrying real content are preserved in plain terms: the aphid and whitefly soft-chemical notes still say that soaps and oils are where the sequence stops and are not a cure (\"as far as it is worth taking it; nothing harsher earns its place\" and \"as far as the sequence goes, and not because the options simply run out\"), and the ant-exclusion note still says ant control protects biological control rather than replacing it (\"the point of shutting the ants out is to let the predators do the work, so it belongs before leaving the colony to its natural enemies, not instead of it\"). Seven were on the coordinator's list; the eighth was in root and crown rot / certified_clean_stock, found by scanning all 75 consumer strings for the vocabulary rather than working the list. Zero remain.",
+    "`prune_out_infection` CONSIDERED AND DECLINED ON BOTH DISEASES, on the method's own text rather than on the brief's (corrected) reachability claim. The correction is right: applies_to is {bacterial, disease_general}, TYPE_TARGETS['fungal'] includes disease_general, so it is legal here. But the method defines itself against exactly what rosemary needs: \"Where the affected part is simply removed rather than cut back into clean tissue, a spotted leaf picked off, a rotted fruit taken away, a plant too far gone to save pulled out, that is garden sanitation and not this.\" Powdery mildew's rung is picking coated foliage off, which is that sentence verbatim, and the method's mechanism is cutting 6 to 8 inches beyond a visible margin into clean wood, which is not what umd_ext's \"removal of infected plant parts\" describes. Root and crown rot has nothing to cut back into: the tissue at issue is roots and crown, and I have no admitted anchor for removing the plant at all (see refusals). Both keep `garden_sanitation` / no removal rung respectively. Legality is not a warrant.",
+    "ADJUDICATIONS A12 FUSED TWO SOURCES INTO ONE ATTRIBUTION, and the coordinator caught it on the read that resolved my refusal. A12 credited \"Cut spittlebug-infested weeds in the spring before the insects mature and spread\" to \"UC IPM and UMN both\". UMN publishes a weed sentence with no spring timing (\"Remove weeds near your gardens to remove one of their food sources\"); the spring-timing version is UC IPM's alone. My weed_host_control note carries the spring timing and is warranted by UC IPM, which is the correct single attribution; UMN corroborates the weed lever without the timing. Worth recording because it is the same defect class this batch is correcting on mint's CAES credit (A8): a credit assembled from two documents reads as one document's claim. Coordinator has corrected the adjudication file.",
+    "UMN ALSO PUBLISHES HANDPICKING (\"Physically remove them by hand\"), which `handpick` would reach (physical; insect_chewing, insect_general, mollusk). NOT added. The entry's whole warranted framing is that removal is optional and cosmetic, water_spray already carries the physical removal step, and a second physical rung saying the same thing by hand would pad a two-step sequence that the sources deliberately keep short. Filed so the decision is visible rather than looking like an oversight. UMN's host list naming \"Herbs\" is a further crop-class anchor for this entry.",
+    "STRUCTURAL FINDING, LARGER THAN THIS CROP: an ncsu_ext \"Insects:\" ROW IS A LIST OF LINKED FACTSHEET TITLES, NOT SOURCE PROSE. My aphid limb sited colonies \"on flowers\" on the strength of the record report's ncsu_ext quote \"Aphids found on flowers and foliage.\" That is not a sentence about rosemary: it is the TITLE of a linked NCSU factsheet whose parent publication is \"Insect and Related Pests of Flowers and Foliage Plants\", an ORNAMENTAL CROP CLASS, not two plant parts, and the link now returns \"no longer available.\" Three consumer strings rode on it and it was the one surviving fragment of the UGA bundle the split existed to eliminate, retro-anchored after the fact. FIXED: \"and the flowers\" is deleted from symptoms_beginner, symptoms_seasoned and the water_spray note; \"soft new shoot tips\" survives on uc_ipm's \"They feed on soft, new plant growth\", and both anchor fields now state precisely what the NCSU row does and does not carry (it anchors the ASSOCIATION of aphids with rosemary and nothing about siting). ncsu_ext remains a source on this entry and on whiteflies, where the quoted material (\"Monitor the plant for aphids, mealybugs, whiteflies, and spider mites, particularly if indoors\") is genuine editorial prose rather than a title. THE EXPOSURE IS ROSTER-WIDE: any crop anchored on an NCSU Toolbox Insects/Diseases row is open to the same defect, and a title reads as a sentence once it is inside a record report. Worth a check beyond batch 25.",
+    "AN ELLIPSIS IN MY RECORD REPORT HID A SCOPE, AND I SHIPPED THE RESULT. The root-rot crop_rotation note called \"at least one or two seasons\" THE PUBLISHED INTERVAL. The report gave that quote as \"avoid planting them or other susceptible plants ... in the same soil for at least 1 or 2 seasons\", and the ellipsis is where the scoping lived: the bullet is annuals-only (\"If tomatoes, bedding plants, or other annuals have been affected...\"). No document sets a replant interval for a woody perennial, and the same page's host-general line says resting spores survive for years. FIXED: both registers now treat the site as spent rather than waiting out an interval, say the published intervals are written for annuals, and keep the container case, where the soil genuinely can be replaced. Generalizable: a quoted fragment carrying an ellipsis should be re-read at the source before any number inside it is called published.",
+    "PNW'S CLEAN-POT / FRESH-MEDIA RUNG: CONSIDERED, NOT ADDED, AND THE REASON IS THE KEY NOT THE CONTENT. The reviewer notes PNW supplies a rosemary-specific control I lack, sanitized pots and fresh media, and is right that it matters more on a potted crop than plant removal does. I did not add it as a cited rung for two reasons that both have to clear: the page is a PROXY retrieval rather than a first-party read, and `pnw_handbook_epn` is scoped to a single EPN page, so the plantdisease host-disease pages are not admitted under it. The practice itself now sits inside the corrected crop_rotation note as the container form of not-replanting-into-infested-soil, which is warranted by uc_ipm without PNW. If the handbook is admitted with its own key AND read first-party, this becomes a properly cited rung and the honest place for it is `garden_sanitation`, which this entry still lacks for the separate reason in the refusals."
+  ]
+}

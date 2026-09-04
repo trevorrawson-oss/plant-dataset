@@ -1,0 +1,664 @@
+{
+ "crop": "sage",
+ "pests": [
+  {
+   "name": "Spittlebugs",
+   "id": "spittlebugs",
+   "type": "insect",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "weed_host_control",
+     "note_beginner": "Cut back the weedy ground next to the sage in spring. Spittlebugs build up on weeds first and move across onto garden plants from there, so clearing that strip is the step that changes how many turn up.",
+     "note_seasoned": "The weedy reservoir is the lever, not the sage itself: numbers on garden plants track migration in from nearby herbaceous hosts, so cut infested weeds in spring before the nymphs mature and disperse."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Take last year's dead stems off the plant when you cut sage back in spring, and carry them out of the bed. The eggs sit on and inside stems over winter, so some of them leave with the trimmings.",
+     "note_seasoned": "Overwintering is as eggs on or in stems, so the spring cutback removes brood rather than just tidying. Expect it to trim numbers, not to prevent foam, since adults also arrive from outside the bed."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "If the froth bothers you, wash it off with a hard jet from the hose and the young insect inside goes with it. Nothing more is needed, because the foam is unsightly rather than harmful.",
+     "note_seasoned": "A forceful stream strips the spittle masses and the nymphs inside them. On an established plant this is cosmetic housekeeping, which is why anything stronger is not worth the trouble here."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "uwi_hort",
+    "uc_ipm",
+    "rhs"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uwi_hort": {
+     "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/spittlebugs/",
+     "verified": "2026-09-04"
+    },
+    "rhs": {
+     "url": "https://www.rhs.org.uk/biodiversity/cuckoo-spit-spittlebugs",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "cause_seasoned": {
+     "new": "Sucking insects in the family Cercopidae whose nymphs feed on the stems under cover of the foam they make. Some seasons bring a lot of them, but the harm to an established sage plant stays cosmetic.",
+     "why": "The old text asserted \"Numbers are usually low\" on sage, which no read document supports and which UC IPM contradicts by naming the foam masses \"occasionally abundant\". \"Sipping sap\" is also replaced by the source's own \"sucking insects\" framing.",
+     "anchor": "uc_ipm -- \"These sucking insects (family Cercopidae) can at least occasionally be found on almost any plant.\" and \"Spittlebugs' obvious and occasionally abundant masses of white foam on foliage and stems may be annoying, but they do not seriously harm established woody plants in landscapes.\""
+    },
+    "cause_beginner": {
+     "new": "Young spittlebugs feeding on the stems while they hide in their own foam. Some years there are more of them than others, and they do little real harm to a settled plant.",
+     "why": "Same defect as the seasoned register: \"There are usually only a few\" is an unanchored abundance claim that the source contradicts.",
+     "anchor": "uc_ipm -- \"Spittlebugs' obvious and occasionally abundant masses of white foam on foliage and stems may be annoying, but they do not seriously harm established woody plants in landscapes.\""
+    },
+    "prevention_seasoned": {
+     "new": "Cut spittlebug-infested weeds around the bed in spring, before the nymphs mature and move, since the insects build up on herbaceous hosts nearby and migrate in. Keep sage in full sun on well-drained ground, which is what holds its pest load down generally.",
+     "why": "\"Vigorous sage shrugs off minor pests\" is not in any read document, and the real published cultural lever is weed management, which the entry did not carry.",
+     "anchor": "uc_ipm -- \"Cut spittlebug-infested weeds in the spring before the insects mature and spread.\" and \"Spittlebugs are more likely to become abundant on woody plants when they migrate from nearby herbaceous hosts.\"; uwi_hort -- \"Sage has few pests when grown in well-drained soil.\""
+    },
+    "prevention_beginner": {
+     "new": "Cut back the weeds around the bed in spring, because that is where spittlebugs build up before they move onto sage. A sunny spot with soil that drains well keeps sage's pest problems low in general.",
+     "why": "Same unanchored vigor claim as the seasoned register, replaced with the weed-host lever the source actually publishes.",
+     "anchor": "uc_ipm -- \"Cut spittlebug-infested weeds in the spring before the insects mature and spread.\"; uwi_hort -- \"Sage has few pests when grown in well-drained soil.\""
+    }
+   }
+  },
+  {
+   "name": "Spider mites",
+   "id": "spider-mites",
+   "type": "mite",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "even_watering",
+     "note_beginner": "Do not let sage go bone dry through a heat wave, especially in a pot. A plant that has been left thirsty is the one that ends up covered in them.",
+     "note_seasoned": "Water-stressed plants are highly susceptible, so holding moisture steady through hot spells is the cheapest suppression available. Steady is not soggy: root and stem rot is the higher-consequence problem on this crop, so the aim is to remove the dry extreme, not to keep the soil wet."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Rinse the plant with a strong stream of water every few days in dry weather, aiming up underneath the leaves. The same rinse takes off the dust that mite outbreaks tend to follow.",
+     "note_seasoned": "Regular forceful spraying often reduces numbers adequately on its own. Coverage decides the outcome, so work the undersides deliberately, and treat dusty foliage at a path or roadside edge as a target in its own right, since dusty conditions are a named favoring factor."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "If rinsing is not keeping up, insecticidal soap is the next step. Check that mites are really there first, and wet the undersides of the leaves, because the soap only reaches what it touches. Do not spray it above 90°F or onto a plant that has gone dry and stressed, since soap burns foliage in those conditions.",
+     "note_seasoned": "Soap is the preferred selective material when a treatment is genuinely warranted. It kills on contact only, so underside coverage is the entire job, and confirming live mites beats treating stippling left over from an outbreak that has already passed. Mind the bind this crop puts you in: the heat and water stress that bring mites on are the same conditions in which soap burns foliage, so water the plant first and spray below 90°F rather than at the peak of the trouble."
+    },
+    {
+     "method": "horticultural_oil",
+     "note_beginner": "Horticultural oil is the other selective option if soap is not enough. The rule is the same: it has to land on the mites, so soak the leaf undersides.",
+     "note_seasoned": "Oil behaves like soap, contact-only with coverage governing the result. Keep it off drought-stressed plants and away from temperatures above 90°F, and do not apply sulfur within 30 days of an oil spray."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "uwi_hort",
+    "clemson_hgic",
+    "ucanr_ext_spider_mites",
+    "umd_ext"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uwi_hort": {
+     "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/herbs/",
+     "verified": "2026-09-04"
+    },
+    "ucanr_ext_spider_mites": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html",
+     "verified": "2026-09-04"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/herb-problems",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Fine stippling or bronzing of the leaves with faint webbing, worst in hot, dry, dusty spells and on plants that have been left short of water.",
+     "why": "\"stressed indoor plants\" has no anchor for sage in any read document; the sourced drivers are heat, dust and water stress.",
+     "anchor": "ucanr_ext_spider_mites -- \"Spider mites prefer hot, dusty conditions and usually are first found on trees or plants adjacent to dusty roadways or at margins of gardens. Plants under water stress also are highly susceptible.\""
+    },
+    "symptoms_beginner": {
+     "new": "Leaves look dusty and speckled or washed out, sometimes with fine webbing, and it happens in hot dry weather or on a plant that has been left thirsty.",
+     "why": "Same defect: \"on indoor plants\" is unanchored for sage.",
+     "anchor": "ucanr_ext_spider_mites -- \"Spider mites prefer hot, dusty conditions ... Plants under water stress also are highly susceptible.\""
+    },
+    "cause_seasoned": {
+     "new": "Tiny sap-sucking mites, which are not insects, that build up in hot, dusty conditions and on drought-stressed foliage.",
+     "why": "\"still air\" is not a driver in any read document; UC IPM names heat, dust and water stress. Stagnant air is anchored on sage for foliar disease, not for mites.",
+     "anchor": "ucanr_ext_spider_mites -- \"Spider mites prefer hot, dusty conditions ... Plants under water stress also are highly susceptible.\"; umd_ext -- \"Spider mites are tiny, eight-legged non-insects (related to spiders) about the size of a punctuation period.\""
+    },
+    "prevention_seasoned": {
+     "new": "Hose dust off the foliage in hot spells and keep containers from drying to the point of stress. Dusty, water-stressed plants are the ones that get hit.",
+     "why": "\"Maintain good airflow\" was carried in from the foliar-disease advice; no read document links airflow to spider mites.",
+     "anchor": "ucanr_ext_spider_mites -- \"Spider mites prefer hot, dusty conditions ... Plants under water stress also are highly susceptible.\""
+    },
+    "prevention_beginner": {
+     "new": "Rinse dust off the leaves in hot weather and do not let potted sage dry out until it is stressed. Those are the plants mites find.",
+     "why": "Same unanchored airflow clause as the seasoned register.",
+     "anchor": "clemson_hgic -- \"Spider mites thrive in dry conditions and can be discouraged by spraying the plants with a strong stream of water regularly during periods of drought.\""
+    }
+   }
+  },
+  {
+   "name": "Slugs and snails",
+   "id": "slugs-and-snails",
+   "type": "mollusk",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Water the soil around the plant rather than sprinkling the whole thing, and do it in the morning. Ground that dries out by evening is far less inviting.",
+     "note_seasoned": "Moving from sprinklers to drip or a wand at soil level cuts the humidity slugs depend on. On sage the same habit serves root and stem rot, so the crop's two damp-soil problems pull in one direction here."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away the boards, upturned pots, damp leaf litter and low weedy cover near the bed. Those are the daytime hiding places, and slugs will not settle where there is nowhere to shelter.",
+     "note_seasoned": "Removing daytime refuges is what makes trapping and baiting pay, because feeding happens at night and on cloudy or foggy days and the animals retreat to cover before morning. Clear the shelter first; a bed with hiding places refills as fast as you empty it."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Take a light out to the bed once it is properly dark and collect by hand what you find. Early morning works too, before the sun drives them back under cover. A few evenings of this clears a small planting.",
+     "note_seasoned": "Collection at night or in the early morning with a light is the most direct control there is. Run it on consecutive evenings rather than as a single sweep, since one pass only takes the animals that happened to be out."
+    },
+    {
+     "method": "slug_traps_barriers",
+     "note_beginner": "Lay a board flat near the plants, propped about an inch off the ground, and scrape off whatever has gathered underneath each day. A copper strip around a pot or a small bed works as a barrier.",
+     "note_seasoned": "Board traps on 1 inch runners give you a refuge you control, but they only pay if you service them daily. Copper reacts with the slime and disrupts the nervous system, which makes a copper band worth its cost around a container or a small raised bed."
+    },
+    {
+     "method": "iron_phosphate_slug_bait",
+     "note_beginner": "When trapping and collecting stop keeping pace, an iron phosphate bait is the next step. Spread it over the ground around the planting and never over the foliage. Among slug baits it is the gentler choice where children, pets, birds or wildlife share the garden; the older metaldehyde products are particularly poisonous to dogs and cats.",
+     "note_seasoned": "Iron phosphate is the lower-risk bait class and the one to choose where pets, birds, fish or wildlife use the garden; metaldehyde is the product it displaced. It is still a pesticide, so it goes on the ground rather than on the foliage and it follows its label."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "uwi_hort",
+    "ucanr_ext_snails_slugs",
+    "clemson_hgic"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uwi_hort": {
+     "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "ucanr_ext_snails_slugs": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7427.html",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/herbs/",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Ragged holes chewed in the leaves and silvery slime trails, in damp, shaded positions and after cloudy or wet weather.",
+     "why": "\"mainly on young or newly set plants\" is a general slug fact that no sage-scoped document states; the sourced conditions are damp, shade and overcast weather.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Snails and slugs are most active at night and on cloudy or foggy days.\""
+    },
+    "symptoms_beginner": {
+     "new": "Chewed, ragged holes in the leaves and shiny slime trails, mostly in damp shade and after wet or cloudy weather.",
+     "why": "Same defect: \"mostly on young plants\" is unanchored for sage.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Snails and slugs are most active at night and on cloudy or foggy days.\""
+    },
+    "cause_seasoned": {
+     "new": "Slugs feeding at night and on overcast days, sustained by damp ground, daytime hiding places, and overhead watering that keeps the surface humid.",
+     "why": "\"wet mulch, crowding\" is not named by any read document. UC IPM names moisture, hiding places and irrigation method; crowding and mulch were authoring additions.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Snails and slugs are most active at night and on cloudy or foggy days.\" and \"Switching from sprinkler irrigation to drip irrigation will reduce humidity\""
+    },
+    "cause_beginner": {
+     "new": "Slugs eating the leaves after dark. They need damp ground and somewhere shaded to shelter during the day.",
+     "why": "Same defect: \"crowded spots\" is unanchored.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Snails and slugs are most active at night and on cloudy or foggy days.\""
+    },
+    "organic_treatment_seasoned": {
+     "new": "Hand-pick at night, clear away damp hiding places, water at the soil rather than over the top, and back that up with board traps, a copper barrier, or an iron-phosphate bait scattered on the ground.",
+     "why": "\"around vulnerable seedlings\" carries the same young-plant scoping this pass struck from the symptom strings as unanchored for sage, and leaving it in the treatment field would have left the claim live in the fields I did not declare. The irrigation and barrier levers the source publishes were also missing.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Switching from sprinkler irrigation to drip irrigation will reduce humidity\" and \"copper reacts with the slime that snails and slugs secrete, causing a disruption in their nervous system\""
+    },
+    "organic_treatment_beginner": {
+     "new": "Pick them off after dark, clear away damp hiding spots, and set slug traps or scatter an iron-phosphate bait on the soil rather than on the plant. Iron phosphate is the gentler of the two bait chemistries around dogs and cats; metaldehyde, the older kind, is the one to keep away from where pets roam.",
+     "why": "Same defect: \"near young plants\" repeats the unanchored young-plant scoping struck from the symptoms. Splitting the sentence also lightens a 40-word beginner string the record pass flagged as heavy for its audience, and the pet-safety hedge is kept exactly as it was, since it is correctly hedged.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Iron phosphate baits...have the advantage of being safer for use around children, domestic animals, birds, fish, and other wildlife.\" and \"metaldehyde baits are particularly poisonous to dogs and cats\""
+    },
+    "prevention_seasoned": {
+     "new": "Plant in full sun on well-drained ground, water at the soil surface rather than over the top, and keep boards, pots and damp litter away from the bed. A site that dries out through the day is unfriendly to slugs.",
+     "why": "\"space plants for airflow\" is not a slug lever in any read document, and airflow_spacing is not even a legal method on a mollusk problem. The irrigation-method lever the source does publish was missing.",
+     "anchor": "ucanr_ext_snails_slugs -- \"Switching from sprinkler irrigation to drip irrigation will reduce humidity\"; clemson_hgic -- herbs \"require excellent drainage and dry soil in full sun\""
+    }
+   }
+  },
+  {
+   "name": "Leafhoppers",
+   "id": "sage-leafhoppers",
+   "type": "insect",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Cut sage back in spring as the new growth breaks, and take the trimmings out of the garden. The eggs spend the winter inside last year's leaves, so the cut carries some of them away before they hatch.",
+     "note_seasoned": "Most of the population overwinters as eggs in leaf tissue, so the spring cutback ahead of hatch removes brood rather than merely tidying. Take the prunings away from the herb bed; a pile left beside it defeats the purpose."
+    },
+    {
+     "method": "yellow_sticky_traps",
+     "note_beginner": "Yellow sticky cards set among the plants catch the adults as they move about, and they show you when numbers are climbing.",
+     "note_seasoned": "Yellow sticky traps are the non-spray control herb growers use against this species, and they double as your count: rising catches through the season are the signal to act, a card that stays clean is the signal to leave it alone."
+    },
+    {
+     "method": "beneficial_predators",
+     "note_beginner": "Birds, ladybugs, wasps and ground beetles all eat leafhoppers, so a garden that keeps them around does most of this work for you.",
+     "note_seasoned": "Natural enemies are the standing control, and the practical move is not to buy any but to avoid the broad-spectrum sprays that would remove them, since this insect almost never justifies one in the first place."
+    },
+    {
+     "method": "insecticidal_soap",
+     "note_beginner": "A spray is rarely called for. If the leaves are yellowing and drying and the insects are numerous, insecticidal soap sprayed up under the leaves is the mildest thing that works.",
+     "note_seasoned": "Reserve a spray for heavy feeding that is turning leaves and shoot tips yellow, then brown, curled and dead. Soap works on contact and the insects sit on the leaf undersides, so coverage there decides whether the application does anything at all."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "uc_ipm",
+    "uf_ifas",
+    "rhs"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/leafhoppers/",
+     "verified": "2026-09-04"
+    },
+    "uf_ifas": {
+     "url": "https://ask.ifas.ufl.edu/publication/IN1290",
+     "verified": "2026-09-04"
+    },
+    "rhs": {
+     "url": "https://www.rhs.org.uk/biodiversity/sage-and-ligurian-leafhoppers",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Coarse pale speckling, or stippling, on the upper surface of the leaves, with whitish cast skins and the insects themselves on the undersides. Where feeding is heavy, leaves and shoot tips yellow, then turn brown, curl and die.",
+     "why": "The old string named no symptom at all: \"occasional small hopping insects on the foliage\" describes seeing the insect, not seeing the damage, so a reader following it would not recognize the problem. It also blamed stress and crowding, which no document supports.",
+     "anchor": "uc_ipm -- \"Leafhopper feeding causes leaves to develop pale specks (stippling). Leaves and shoot tips fed upon by an abundance of leafhoppers may turn yellow then brown and curl and die.\" and \"As nymphs molt into the next (larger) instar, they leave whitish cast skins on the underside of foliage.\""
+    },
+    "symptoms_beginner": {
+     "new": "Pale spots and mottling on the top side of the leaves, with tiny insects and shed white skins hiding underneath. Badly fed-on leaves yellow, brown and curl. Leaves carrying the speckling are still fine to use in the kitchen.",
+     "why": "Same defect: the old string described the insect rather than the damage, and pointed the reader at the top of the leaf where the insects are not.",
+     "anchor": "rhs -- \"Coarse pale spotting on upper leaf surface. Leafhoppers may be seen on the underside of leaves\" and \"Affected herbs are safe to eat.\""
+    },
+    "cause_seasoned": {
+     "new": "Sap-feeding leafhoppers in the genus Eupteryx, the Ligurian leafhopper and the sage leafhopper, which specialize on mint-family plants: sage, rosemary, mint, oregano, thyme, basil and lemon balm. They are on sage because sage is a favored host, not because a plant is weak.",
+     "why": "The old text said these insects \"occasionally find sage\" and carried \"the plant has few serious pests\" inside the cause of a specific pest, which argues the reader out of acting. Sage is a preferred host of a host-specialized genus.",
+     "anchor": "uc_ipm -- \"The Ligurian leafhopper (Eupteryx decemnotata) is a pest of mint, rosemary, sage, and other plants in the mint family (Lamiaceae).\"; rhs -- \"Many aromatic plants in the Lamiaceae family, including sage, mints, lavender, bergamot, marjoram, oregano, rosemary, basil, thyme and lemon balm\""
+    },
+    "cause_beginner": {
+     "new": "Small sap-sucking insects that specialize in sage and its mint-family relatives. They show up because they like sage, not because something is wrong with the plant.",
+     "why": "Same defect: the old string framed the insect as an occasional visitor and told the reader sage rarely needs treatment inside the cause field.",
+     "anchor": "uc_ipm -- \"The Ligurian leafhopper (Eupteryx decemnotata) is a pest of mint, rosemary, sage, and other plants in the mint family (Lamiaceae).\""
+    },
+    "organic_treatment_seasoned": {
+     "new": "Usually nothing: in gardens and landscapes the standing guidance is that no control is needed. If numbers do climb, hang yellow sticky traps, protect the predators already present, and keep insecticidal soap for foliage that is genuinely yellowing and dying.",
+     "why": "\"Rinse them off with water\" is the spider mite and spittlebug recommendation borrowed onto this pest; UC IPM's leafhopper sprays are oil, soap or neem. \"Improving airflow and removing stress\" has no anchor and runs against the host-specialist biology. The published non-spray controls, sticky traps and natural enemies, were missing.",
+     "anchor": "uc_ipm -- \"In most situations, leafhoppers are just an annoyance or curiosity and do not threaten plant survival. Generally, no control of them is needed in gardens and landscapes.\"; uf_ifas -- \"In Poland, herb producers reportedly vacuum plants and employ yellow sticky traps.\""
+    },
+    "organic_treatment_beginner": {
+     "new": "You usually do not need to do anything at all. If the damage is spreading, put out yellow sticky cards and leave the ladybugs and birds to it; insecticidal soap on the undersides of the leaves is the last step.",
+     "why": "Same defects as the seasoned register: a borrowed water-rinse rung and an unanchored airflow-and-stress claim.",
+     "anchor": "uc_ipm -- \"Generally, no control of them is needed in gardens and landscapes.\"; rhs -- \"Encourage predators and other natural enemies of leafhoppers, in the garden, such as birds, ladybirds, wasps and ground beetles.\""
+    },
+    "prevention_seasoned": {
+     "new": "Cut the plant back hard in spring as new growth breaks, before the eggs that overwintered in leaf tissue hatch, taking the leggy stems but never cutting into the bare old wood, and carry the prunings away from the bed. Siting and feeding will not deter this insect, so the levers are timing and removal rather than plant vigor.",
+     "why": "\"Full sun, lean soil, and good spacing keep sage unstressed and unattractive to these pests\" is unsupported and, given a Lamiaceae specialist, probably false. The real cultural lever is the overwintering egg stage, which the entry never mentioned.",
+     "anchor": "uf_ifas -- \"In Italy, it is thought that most of the population overwinters as eggs.\""
+    },
+    "prevention_beginner": {
+     "new": "Prune sage back in spring when new growth starts and clear the trimmings away, since the eggs spend the winter in the old leaves. There is no way to make sage unattractive to these insects; they are here because it is sage.",
+     "why": "Same defect: \"healthy plants rarely get these bugs\" is contradicted by the host-specialist biology in every document read.",
+     "anchor": "uf_ifas -- \"In Italy, it is thought that most of the population overwinters as eggs.\"; uc_ipm -- \"The Ligurian leafhopper (Eupteryx decemnotata) is a pest of mint, rosemary, sage, and other plants in the mint family (Lamiaceae).\""
+    }
+   }
+  }
+ ],
+ "diseases": [
+  {
+   "name": "Root and stem rot",
+   "id": "root-and-stem-rots",
+   "type": "fungal",
+   "severity": "high",
+   "control_ladder": [
+    {
+     "method": "improve_drainage",
+     "note_beginner": "Sage will not survive in ground that stays soggy. On heavy or low-lying soil, plant on a mound or in a raised bed and set the plant so its crown sits right at the soil surface instead of in a dish that collects water.",
+     "note_seasoned": "Drainage is the whole contest on this crop. Raised beds are the standard fix on heavy ground, with mounds of 8 to 10 inches for annual plantings and up to 2 feet with a gradual slope for perennials. Set the root collar level with the surface and hold mulch to about 3 inches so it never banks against the crown."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "A plant rotting at the base will not recover. Lift it out and throw it away with the household trash instead of composting it, then rinse the soil off your trowel and your boots before working anywhere else in the garden.",
+     "note_seasoned": "Affected plants get destroyed rather than treated, because nothing cures this and fungicides only suppress these organisms. Decontaminating tools and footwear with a 10% bleach solution or 70% alcohol matters more than it sounds, since the pathogens ride from bed to bed in the soil you carry."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "If a plant rots out, start the next one somewhere else in the garden. These soil organisms stay behind for years after the plant is gone.",
+     "note_seasoned": "The pathogens survive in soil for years to decades, which makes replanting a siting decision rather than a soil-amendment one. Give the replacement fresh, sharply drained ground instead of the position that just failed."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "uwi_hort",
+    "clemson_hgic",
+    "umd_ext",
+    "rhs",
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uwi_hort": {
+     "url": "https://hort.extension.wisc.edu/articles/root-and-crown-rots/",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/hot-topic/drying-up-root-and-crown-rot-pathogens/",
+     "verified": "2026-09-04"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/herb-problems",
+     "verified": "2026-09-04"
+    },
+    "rhs": {
+     "url": "https://www.rhs.org.uk/herbs/sage/grow-your-own",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn74133.html",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Wilting, yellowing, and dieback that does not recover with watering, often with a darkened, decayed base at the soil line. It follows wet, poorly drained soil, which sage does not tolerate.",
+     "why": "\"It is the main disease of sage\" ranks sage's diseases, and no read document ranks them. The drainage half of the sentence is what the sources actually carry.",
+     "anchor": "ncsu_ext -- \"It is intolerant of wet or poorly drained soils.\""
+    },
+    "symptoms_beginner": {
+     "new": "Leaves wilt and yellow and the plant dies back even though the soil is wet, often with a dark, rotted patch where the stems meet the ground. Sage cannot cope with soil that stays soggy.",
+     "why": "Same defect: \"This is the main thing that kills sage\" is an unsourced ranking.",
+     "anchor": "ncsu_ext -- \"It is intolerant of wet or poorly drained soils.\""
+    },
+    "cause_seasoned": {
+     "new": "Soil-borne water molds and fungi that attack the roots and crown of plants sitting in saturated, poorly drained soil. Wet soil in any season is the agent, and wet winter soil is the version that kills established plants and containers.",
+     "why": "The flat \"not cold\" denial suppressed the winter-wet failure mode, which is what actually kills garden sage in cold, wet climates. The underlying point, that water rather than temperature is the agent, is preserved.",
+     "anchor": "umd_ext -- \"Excessively wet, cold soil can cause Mediterranean herbs such as rosemary, thyme, and lavenders to die over the winter.\"; rhs -- \"In winter, excess rain can cause the roots to rot, so move plants in containers to a sheltered spot, such as in the rain-shadow of a wall.\""
+    },
+    "cause_beginner": {
+     "new": "A rot that takes hold when soil stays soggy, attacking the roots and the base of the plant. Wet soil is the cause at any time of year, and a wet winter is the worst of it.",
+     "why": "Same \"not cold\" construction, which reads as a denial of the winter-wet failure mode the sources describe.",
+     "anchor": "rhs -- \"In winter, excess rain can cause the roots to rot, so move plants in containers to a sheltered spot, such as in the rain-shadow of a wall.\""
+    },
+    "prevention_seasoned": {
+     "new": "Plant in well-drained soil in full sun, water deeply but infrequently, and never let sage sit wet. On clay, use a mound or raised bed, set the crown level with the surface, and keep mulch shallow. Move containers into a sheltered spot for the winter, such as the rain shadow of a wall.",
+     "why": "\"Space plants for airflow\" is not a root-rot lever in any document read: the NC State air-circulation sentence is scoped to pests and foliar diseases. Replaced with the sourced levers the entry was missing, namely planting depth, mulch depth and winter rain shelter for containers.",
+     "anchor": "uwi_hort -- plant with \"the root collar just at the soil surface\", limit mulch to three inches; rhs -- \"In winter, excess rain can cause the roots to rot, so move plants in containers to a sheltered spot, such as in the rain-shadow of a wall.\""
+    },
+    "prevention_beginner": {
+     "new": "Use well-draining soil in full sun, water deeply but rarely, and never let sage sit in soggy ground. On heavy soil, plant on a mound. In winter, move pots somewhere sheltered from the rain, such as against a wall.",
+     "why": "Same airflow residue, replaced with the winter rain-shelter move, which is the most actionable step for the container growers this problem kills.",
+     "anchor": "rhs -- \"In winter, excess rain can cause the roots to rot, so move plants in containers to a sheltered spot, such as in the rain-shadow of a wall.\""
+    }
+   }
+  },
+  {
+   "name": "Powdery mildew",
+   "id": "powdery-mildew",
+   "type": "fungal",
+   "severity": "low",
+   "control_ladder": [
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Give sage a sunny position with room around it and thin any crowded growth. Shade is what this fungus wants, so a bright, open spot does most of the prevention on its own.",
+     "note_seasoned": "Site in sun and space plants so air moves through the canopy. Moderate temperatures of 60°F to 80°F together with shade are the favoring conditions, which makes an open, bright position a genuine control rather than tidiness."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Do not push sage along with rich feeding. A well-fed plant answers with a thicket of soft growth that shades its own interior, and shade is what this disease runs on.",
+     "note_seasoned": "Excess fertilizer is worth avoiding here on its own account: heavy nitrogen produces the soft, dense growth that shades the interior of the plant. Sage carries well on lean soil, so restraint costs nothing in yield."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off the leaves wearing the heaviest white coating as soon as you spot them, and collect what has already dropped underneath instead of leaving it lying there. Do the same with affected buds when you cut sage back in spring, and you remove what would otherwise start the next round.",
+     "note_seasoned": "This one works on tissue that is already infected, which is what makes it worth doing once the powder has shown and not only ahead of it. Taking out small infestations early removes the tissue producing spores before it seeds the rest of the plant, and clearing infected buds at the spring cutback removes the carryover into the new growth."
+    },
+    {
+     "method": "biofungicide",
+     "note_beginner": "A biofungicide is a spray of live bacteria that settle on the leaf and get in the fungus's way. It is the gentlest thing on the shelf that does anything at all here, but the timing is unforgiving: it has to go on when you find the very earliest patches, and it has to be repeated as often as the label says. It will not rescue a plant that has already gone white.",
+     "note_seasoned": "The Bacillus products colonize the leaf surface and interfere with germination and attachment rather than killing established mycelium, which puts them at preventive to early-curative and no further. They are the choice on a leaf herb you would rather not put sulfur on, at the cost of being less effective than sulfur and needing the label's repeat interval to do anything at all."
+    },
+    {
+     "method": "sulfur",
+     "note_beginner": "Sulfur is the classic treatment, but it works as a preventive, so it has to be on the leaves before the mildew shows rather than after. Do not use it in hot weather.",
+     "note_seasoned": "Sulfur is applied before symptoms appear, when conditions turn favorable, and it does little against colonies already established. Keep it off the plant near or above 90°F and off drought-stressed foliage, and leave two weeks either side of any oil spray."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "clemson_hgic",
+    "rhs",
+    "uc_ipm",
+    "uc_ipm_pn7493"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "clemson_hgic": {
+     "url": "https://hgic.clemson.edu/factsheet/salvia/",
+     "verified": "2026-09-04"
+    },
+    "rhs": {
+     "url": "https://www.rhs.org.uk/herbs/sage/grow-your-own",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7406.html",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm_pn7493": {
+     "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7493.html",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "A white to gray powdery film on the leaves, most often on shaded or crowded plants in mild weather. It disfigures the foliage and slows growth, but it rarely kills sage.",
+     "why": "\"most likely in humid weather\" inverts the source: powdery mildew needs no leaf wetness and is favored by moderate temperatures and shade. \"taints the flavor\" has no anchor in any document read.",
+     "anchor": "uc_ipm -- \"Moderate temperatures (60° to 80°F) and shady conditions generally are the most favorable for powdery mildew development.\""
+    },
+    "symptoms_beginner": {
+     "new": "A dusty white coating on the leaves, usually on plants sitting in shade or crowded together in mild weather. It looks bad and holds the plant back, but it does not normally kill sage.",
+     "why": "Same two defects: \"more likely in muggy weather\" inverts the source, and \"taste worse\" is unanchored.",
+     "anchor": "rhs -- powdery mildews give \"a white, dusty coating on leaves, stems and flowers\"; uc_ipm -- \"Moderate temperatures (60° to 80°F) and shady conditions generally are the most favorable for powdery mildew development.\""
+    },
+    "cause_seasoned": {
+     "new": "Fungi that colonize the leaf surface at moderate temperatures, roughly 60°F to 80°F, in shade. Unlike most leaf fungi they need no water on the leaf to germinate, so shaded, crowded, perfectly dry foliage is enough. Heat above 95°F may suppress the fungus outright, which is why sage often comes through a hot, bright summer clean while a shaded spring plant does not.",
+     "why": "WRONG CLAIM. \"Fungi favored by warm, humid, still air\" and \"Damp, stagnant conditions raise the risk\" are refuted: this fungus infects without free water, and standing water on the leaf inhibits it. The favoring conditions are moderate temperature and shade. The 95°F suppression figure is added because it is the fact that explains the seasonal pattern a grower actually sees, a clean plant through a hot bright summer and a mildewed one in a shaded spring.",
+     "anchor": "uc_ipm -- \"Although humidity requirements for germination vary, all powdery mildew species can germinate and infect in the absence of free water.\" and \"Moderate temperatures (60° to 80°F) and shady conditions generally are the most favorable for powdery mildew development.\"; uc_ipm_pn7493 -- \"Temperatures above 95°F may suppress growth of the fungus.\""
+    },
+    "cause_beginner": {
+     "new": "A fungus that grows on the leaf surface when the weather is mild and the plant sits in shade. Wet leaves are not part of it, which is what sets this apart from most leaf diseases.",
+     "why": "WRONG CLAIM. \"Fungi that like warm, damp, still air\" is refuted by the same sentences: infection happens in the absence of free water.",
+     "anchor": "uc_ipm -- \"Although humidity requirements for germination vary, all powdery mildew species can germinate and infect in the absence of free water.\""
+    },
+    "organic_treatment_seasoned": {
+     "new": "Take off the worst affected leaves, then open the plant up: thin crowded growth, move or replant into full sun, and hold back on fertilizer. Sulfur applied before symptoms appear is the spray that works. Do not expect keeping the leaves dry to help, because water on the foliage suppresses this particular fungus rather than spreading it.",
+     "why": "WRONG ADVICE. \"Avoid overhead watering\" tells the reader to stop doing the thing the source says helps: overhead sprinkling washes spores off and may reduce powdery mildew. Only that instruction is struck. The entry's \"remove affected leaves\" is kept, because it holds against a read document and because the ladder carries a garden_sanitation step it would otherwise contradict, and the sun, spacing, fertilizer and preventive sulfur guidance the source publishes is added.",
+     "anchor": "uc_ipm -- \"Overhead sprinkling may help reduce powdery mildew because spores are washed off the plant.\" and \"Plant in sunny areas as much as possible, provide good air circulation, and avoid applying excess fertilizer.\"; uc_ipm_pn7493 -- \"Prune out small infestations and remove infected buds during the dormant season.\""
+    },
+    "organic_treatment_beginner": {
+     "new": "Take off the leaves that are worst affected, thin the plant so light and air get in, ease off the feeding, and use sulfur early if you use anything at all. Keeping the leaves dry does not help against this one, because it is not a wet-leaf disease.",
+     "why": "WRONG ADVICE. \"Water at the soil instead of over the top\" was attributed to mildew control, which the source contradicts. Watering at the base remains right for sage, but the reason is root and stem rot, so the two entries no longer share a rationale. Picking off the worst leaves is kept, since it holds against a read document and matches the garden_sanitation step on this entry's ladder.",
+     "anchor": "uc_ipm -- \"Overhead sprinkling may help reduce powdery mildew because spores are washed off the plant.\"; uc_ipm_pn7493 -- \"Prune out small infestations and remove infected buds during the dormant season.\""
+    },
+    "prevention_seasoned": {
+     "new": "Space plants well, site in full sun, and avoid heavy nitrogen. Sun and air movement are the defense here. Watering at the base is still the right habit on sage, but that is protection against root and stem rot, the serious disease on this plant, and it does nothing against mildew.",
+     "why": "WRONG ADVICE. \"Avoid overhead watering\" as a mildew defense is refuted, and leaving it in place created an internal contradiction between this entry and the root rot entry. The base-watering habit is kept and re-attributed to the problem that justifies it.",
+     "anchor": "uc_ipm -- \"Overhead sprinkling may help reduce powdery mildew because spores are washed off the plant. However, overhead sprinklers are not usually recommended as a control method in vegetables because their use may contribute to other pest problems.\"; ncsu_ext -- \"It is intolerant of wet or poorly drained soils.\""
+    },
+    "prevention_beginner": {
+     "new": "Leave room between plants, plant in full sun, and do not overfeed. Watering at the soil rather than over the top is still good practice for sage, but that is to protect it from root rot, not from mildew.",
+     "why": "Same wrong advice as the seasoned register, with the base-watering instruction kept and re-attributed to root and stem rot.",
+     "anchor": "uc_ipm -- \"Plant in sunny areas as much as possible, provide good air circulation, and avoid applying excess fertilizer.\"; ncsu_ext -- \"It is intolerant of wet or poorly drained soils.\""
+    }
+   }
+  },
+  {
+   "name": "Verticillium wilt",
+   "id": "verticillium-wilt",
+   "type": "fungal",
+   "severity": "medium",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with healthy plants from a clean source. Planting only disease-free stock is the first step, because a wilt that arrives with the plant lands straight into soil that will hold on to it.",
+     "note_seasoned": "Plant only pathogen-free stock, and take cuttings from plants with no wilt history. Sage is normally bought as a transplant or grown on from cuttings, so this is the one point in its life where the pathogen can be excluded rather than managed."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Once a plant has wilted in a spot, do not put sage or another susceptible plant back there. The fungus stays in the soil for many years.",
+     "note_seasoned": "The site, not the plant, carries this forward: these fungi remain in soil for many years, and Verticillium's host range is broad enough that choosing a genuinely non-susceptible replacement is difficult. Treat the position as compromised for more than sage."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Nothing will cure a plant that has this, so lift the wilted one and send it out with the trash instead of onto the compost heap.",
+     "note_seasoned": "Sanitation is one of the two primary strategies for this disease, because nothing sprayed on a leaf reaches a fungus living inside the water-conducting tissue. Remove and destroy affected plants; do not chip or compost them back onto the bed."
+    },
+    {
+     "method": "soil_solarization",
+     "note_beginner": "In a hot, sunny stretch you can cover cleared, damp soil with clear plastic for several weeks and let it cook. That knocks the fungus back near the surface, though it does not clear the ground.",
+     "note_seasoned": "Solarization reduces Verticillium in the upper few inches of soil, which is a real reduction and not an eradication, since the pathogen persists below the treated layer. Worth the season it costs on a bed you mean to replant, and no substitute for choosing a different position."
+    }
+   ],
+   "sources": [
+    "ncsu_ext",
+    "uwi_hort",
+    "umd_ext",
+    "uc_ipm"
+   ],
+   "anchoring_urls": {
+    "ncsu_ext": {
+     "url": "https://plants.ces.ncsu.edu/plants/salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "uwi_hort": {
+     "url": "https://hort.extension.wisc.edu/articles/sage-salvia-officinalis/",
+     "verified": "2026-09-04"
+    },
+    "umd_ext": {
+     "url": "https://extension.umd.edu/resource/wilt-diseases-flowers",
+     "verified": "2026-09-04"
+    },
+    "uc_ipm": {
+     "url": "https://ipm.ucanr.edu/home-and-landscape/verticillium-wilt/",
+     "verified": "2026-09-04"
+    }
+   },
+   "field_corrections": {
+    "symptoms_seasoned": {
+     "new": "Branches wilt and yellow and do not recover, often confined to one side of the plant or to scattered patches of the canopy. Yellowing starts at the leaf margins and between the veins, older leaves brown while young growth stays green, and a cut stem shows tan, reddish or dark streaking in the wood.",
+     "why": "\"sometimes on one side\" understates the source's \"often\", and the entry carried no way to tell this apart from root rot. The cut-stem vascular streaking is the diagnostic that separates two diseases with near-identical top-side symptoms and opposite management.",
+     "anchor": "uc_ipm -- \"Woody plants are often affected first on one side of the plant or only in scattered portions of the canopy.\" and \"Leaves infected with Verticillium wilt and turn yellow, first at the margins and between veins\"; umd_ext -- \"If you cut into the stem, the vascular tissues show discoloration as tan, reddish, or dark streaking.\""
+    },
+    "symptoms_beginner": {
+     "new": "Whole branches wilt and yellow, often on just one side, and never come back. Cut into a wilted stem: dark or reddish streaks in the wood point to this rather than to root rot.",
+     "why": "The entry gave the reader no way to distinguish this from root rot, which sits on the same plant with the same wilting and the opposite fix.",
+     "anchor": "umd_ext -- \"If you cut into the stem, the vascular tissues show discoloration as tan, reddish, or dark streaking.\""
+    },
+    "cause_seasoned": {
+     "new": "A soil-borne Verticillium fungus that plugs the plant's water-conducting tissue. It builds up where susceptible plants are grown repeatedly. It is not a wet-soil disease the way root rot is, so soggy ground is not what brings it on and drainage is not what governs it.",
+     "why": "The entry gave no clue that this disease is not driven by the wet soil next door, which is what let drainage advice migrate into it from the neighboring entry. The POSITIVE driver is deliberately softened to a negation: \"favored by droughty conditions\" rests on a single clause that is not sage-scoped, and the unread Ryan 1966 sage paper reportedly reports the opposite, worst on heavy clay and in poorly drained ground. Every read document supports the negation; the positive claim is not settled and should not be asserted until Ryan is read.",
+     "anchor": "umd_ext -- \"Fusarium and Verticillium are favored by droughty conditions.\""
+    },
+    "organic_treatment_seasoned": {
+     "new": "There is no cure. Remove affected plants and destroy them, and do not replant sage or another susceptible plant in that spot. Drainage is not the lever here: this is not the wet-soil disease that root rot is, so treat the two as separate problems with different fixes.",
+     "why": "WRONG ADVICE. \"Improve drainage and airflow\" is root-rot management copied into the neighboring entry. No read document links Verticillium to drainage, and UMD puts these wilts on droughty rather than wet ground, so drainage is not a control for it and offering it misdirects the reader. The replacement asserts only the negation, for the reason given on cause_seasoned.",
+     "anchor": "umd_ext -- \"Fusarium and Verticillium are favored by droughty conditions.\" and \"Once one of these diseases appears in a particular growing area, you must not plant the susceptible plant or take other cultural measures to reduce future losses.\""
+    },
+    "organic_treatment_beginner": {
+     "new": "There is no fix once a plant has it, so take it out and do not replant sage in the same spot. Improving drainage will not help against this one; that is the answer to root rot, which is a different disease.",
+     "why": "WRONG ADVICE. \"Better drainage and airflow help\" is refuted by the same UMD sentence and is the beginner-register twin of the seasoned defect.",
+     "anchor": "umd_ext -- \"Fusarium and Verticillium are favored by droughty conditions.\""
+    },
+    "prevention_seasoned": {
+     "new": "Start new plants from clean stock, keep them out of ground with any history of wilt, and expect a compromised bed to stay compromised for years. Sage is short-lived and often best replaced every few years in any case, which limits what one infection costs you.",
+     "why": "\"Plant in well-drained soil\" as a Verticillium control has no anchor and is contradicted in emphasis by the droughty-conditions sentence. The clean-stock step and the honest difficulty of finding a non-susceptible replacement were both missing.",
+     "anchor": "uc_ipm -- \"Plant only pathogen-free plants. Avoid planting susceptible cultivars. Plant in disease-free soil.\"; uwi_hort -- \"S. officinalis tends to be a short-lived perennial and is often best replaced every few years.\""
+    },
+    "prevention_beginner": {
+     "new": "Start new sage from healthy plants and put it in ground where nothing has wilted before. Sage is short-lived and worth replacing every few years anyway.",
+     "why": "Same unanchored drainage claim, and the entry's cheerful \"start new sage in a fresh spot\" understated how hard a clean spot is to find given the pathogen's broad host range and persistence.",
+     "anchor": "umd_ext -- \"Verticillium has a broader host range and so presents a more difficult problem in selecting 'non-susceptible' plants for rotation.\"; uwi_hort -- \"S. officinalis tends to be a short-lived perennial and is often best replaced every few years.\""
+    }
+   }
+  }
+ ],
+ "unreachable_claims": [
+  "ROOT AND STEM ROT, irrigation volume: Wisconsin D0094's core instruction is \"REDUCE SOIL MOISTURE! Provide enough water to fulfill a plant's growth needs and prevent drought stress, but do not over-water.\" No method carries irrigation VOLUME against a fungal problem: improve_drainage is site preparation and even_watering reaches physiological/mite/bacterial only. This is the two-class gap the brief already files. The instruction is carried in prevention prose instead of as a rung.",
+  "POWDERY MILDEW, horticultural oil: UC IPM lists oils for infections already present, but horticultural_oil.applies_to is insect_soft_bodied / insect_general / mite and does not reach fungal, so the one curative soft-chemical option for this disease cannot be laddered. NARROWED after review: my first statement of this gap said nothing on the legal set acts on tissue already infected, and that was too strong. garden_sanitation physically removes infected tissue, and biofungicide is preventive to early-curative by its own catalog text. But the catalog is equally explicit that biofungicide will not turn around mildew that is already through the planting, and sulfur is preventive, so the residual gap is real and narrower than stated: nothing legal treats an ESTABLISHED infection, which is the case UC IPM publishes oils for.",
+  "POWDERY MILDEW, overhead sprinkling: UC IPM's own finding is that overhead sprinkling washes spores off and may reduce the disease, done midmorning so foliage dries fast. No method carries it, and wet_foliage_discipline carries the opposite instruction. Deliberately NOT laddered: sage's high-severity root and stem rot makes base watering the right net advice on this crop, so the claim is stated in the corrected prose and left off the ladder.",
+  "LEAFHOPPERS, vacuuming: UF/IFAS EENY-750 reports herb producers vacuum plants as a non-spray control. No catalog method covers physical removal by suction; only the sticky-trap half of that sentence could be laddered.",
+  "SPITTLEBUGS, do nothing: UC IPM's explicit top recommendation is \"Ignore spittlebugs\" and RHS goes further with \"please don't remove them\". There is no no-action rung, so the do-nothing framing lives in the rung notes and the treatment prose.",
+  "VERTICILLIUM WILT, resistant plants: UC IPM names resistant plants as one of the two primary strategies and says to avoid susceptible cultivars, but no read document names a resistant or susceptible sage cultivar, so resistant_varieties is left off rather than offered without evidence.",
+  "SPIDER MITES, dust suppression: dusty conditions are a named favoring factor and hosing dust off is the practice, but no catalog method is about dust. Folded into the water_spray rung note rather than forced onto another method."
+ ],
+ "refusals": [
+  "REFUSED the sulfur rung on Spider mites. RESTATED after review: my first statement of this refusal said no read document recommends sulfur for mites on sage, and that was FALSE. UC IPM Pest Note 7405 does carry a sulfur paragraph, which both the record pass and I read as absent. The refusal stands, on what that paragraph actually says. Sulfur there is conditional on locality-specific plant safety, \"Don't use sulfur unless it has been shown to be safe for that plant in your locality\", and nothing read shows it safe on Salvia officinalis, a plant whose leaves are the crop. \"Don't use sulfur if temperatures exceed 90°F\" rules it out in precisely the hot weather that produces mite outbreaks. 7405's own stated preference is \"selective materials, preferably insecticidal soap or insecticidal oil\". And its 30-day interval between an oil spray and sulfur would hold the two soft-chemical options a month apart on a ladder where oil is the escalation. I also attributed a drought-stress caution to sulfur: in the UC documents that caution attaches to oils and soaps, though control_methods does carry it on sulfur too, so the claim was not baseless but the document-level grounds are the two above. Legal under type `mite` is still not the same as anchored",
+  "REFUSED to carry any disease-vector content on Leafhoppers, as instructed and as the record supports. Neither UC IPM's leafhopper page, UF/IFAS EENY-750 nor RHS attributes pathogen transmission to Eupteryx; the aster yellows and curly top vectors are different species with host lists that exclude sage. This is direct feeding and stippling damage only.",
+  "REFUSED to carry the RHS activity windows (\"May-July\" for spittlebugs, \"April to September\" for leafhoppers) into consumer copy. Both are UK-scoped seasonal windows for a US home-gardener audience, and no US extension document in my report publishes an equivalent. The existing \"in late spring\" in the spittlebug symptom strings is left untouched, since it was already adjudicated at cert and is not part of this pass.",
+  "REFUSED to name a spittlebug species for sage. RHS names Philaenus spumarius on lavender and rosemary and its host list excludes sage; UC IPM publishes no sage page. The entry stays at family level, Cercopidae, which is what a read document gives.",
+  "REFUSED to name a Verticillium binomial in sage's cause prose. V. dahliae and V. albo-atrum are UC IPM's organisms for the disease generally, but the only sage-scoped taxon attribution is Ryan (1966), which the reviewer could not read (HTTP 403). The corrected prose says \"a soil-borne Verticillium fungus\", which the disease name itself carries.",
+  "REFUSED resistant_varieties on Powdery mildew, as the record report directs: UC IPM names resistant cultivars for rose, crape myrtle, euonymus and sycamore, and not for salvia."
+ ],
+ "notes_to_orchestrator": [
+  "SEVERITY: Verticillium wilt is written at the pinned `medium`. My report recommends it and the pin carries it, but the report is explicit that this is Trevor's call, not the reviewer's, and that `severity` is a legacy un-normalized field. If Trevor declines the raise, ONLY the severity value changes; none of the prose or the ladder depends on it.",
+  "Powdery mildew pins two UC IPM documents: 7406 (the correctly scoped vegetables note) for the refutations, the favoring conditions, the fertilizer restraint and the sulfur guidance, and uc_ipm_pn7493 for the dormant-season sanitation step and the 95°F suppression figure, both of which 7493 uniquely carries and both of which are now written into this entry. 7493 also names salvia in its host list, the only document read that names the genus for this disease; that is not used here because presence on sage is already carried by ncsu_ext. uc_ipm_pn7493 is admitted scoped to those claims and is NOT a general re-anchor of herb powdery mildew away from 7406.",
+  "The `slugs-and-snails` NAME is wider than sage's evidence. Both sage-scoped documents (ncsu_ext, uwi_hort) say \"slugs\" and neither says \"snails\", so I wrote the corrected prose about slugs and did not invent snail-specific detail. The pinned id is right (exact match to the 11-crop majority) and UC IPM manages the two as one unit under a document titled Snails and Slugs, so the entry is coherent; it is the display NAME, not the id, that outruns the sage documents. Deliberate decision needed, not drift.",
+  "I did NOT touch `organic_treatment_seasoned` or `organic_treatment_beginner` on Spittlebugs, or `cause_beginner` on Spider mites, or `prevention_beginner` on Slugs and snails. All three hold against read documents (the spittlebug treatment strings are UC IPM's \"Ignore spittlebugs or wash nymphs off with a forceful stream of water\" almost verbatim), so they are left byte-for-byte per the declare-what-you-change rule.",
+  "The reviewer's style note on the slugs `organic_treatment_beginner` (a 40-word beginner sentence carrying two chemical names) is real but is not a correctness defect, and I left the field untouched rather than declare a cosmetic edit. If a copy sweep wants it, it is a separate, declarable change.",
+  "type `mite` on sage is correct and unchanged; the report's item 6 (oregano, rosemary, thyme must be corrected to `mite` before their ladders are authored) is a sibling-crop action, not a sage one. Sage's spider-mite ladder uses `even_watering`, which is legal ONLY because of that typing.",
+  "Sage's `sources_summary` does not currently carry `uc_ipm`. Four of these seven entries now depend on it (spittlebugs, leafhoppers, powdery mildew, verticillium wilt), plus `ucanr_ext_spider_mites` and `ucanr_ext_snails_slugs` on two more. All three keys are catalog-admitted T1; the crop-level vocabulary may need updating alongside the promote.",
+  "`uc_ipm` on Root and stem rot is pinned to Pest Note 74133 (Phytophthora), which carries the raised-bed and mound figures used in the improve_drainage rung. That document does NOT name sage or Salvia: it is cited for the practice, not for the host, exactly as the record report directs. Presence on sage rides on ncsu_ext and uwi_hort.",
+  "Catalog-addition candidates surfaced by this crop, none used: Virginia Cooperative Extension ENTO-412NP (Ligurian Leafhopper), an excellent T1 naming sage among favored hosts and giving a 68°F egg-hatch threshold, blocked because the catalog admits VCE only under four publication-specific keys; UC IPM Pest Note 7493 (above); and two journal leads the reviewer flagged UNREAD (Ryan 1966 on sage Verticillium, HTTP 403; APS Plant Disease 81(8):959 on Phytophthora cryptogea root rot of sage). The catalog carries zero journal entries.",
+  "Spittlebugs, lavender and rosemary share the pinned `spittlebugs` id and are being authored in parallel. I wrote sage's three rungs from my own report and did not coordinate wording. My weed_host_control and garden_sanitation rungs both come from the UC IPM spittlebug page, which those agents also hold, so the twins guard should be pointed at these three entries specifically.",
+  "PRUNE TIMING RECONCILED to sage's own sourced window. Three sanitation steps on this crop (spittlebugs, leafhoppers, powdery mildew) were carrying three different timings: late winter, early spring and dormant season. Sage's own record states one window four times over, in tip_seasoned, tip_beginner, description_seasoned and hardiness_notes_seasoned: \"Prune it hard each spring as new growth breaks, cutting back leggy stems but never into the bare old wood.\" All three now use that window. Note this deliberately does NOT import UC IPM's \"during the dormant season\", which is a generic ornamentals calendar that contradicts the crop's own guidance; it is the same operation, timed as sage is actually pruned. The never-into-old-wood constraint is now carried wherever the prose says to cut back hard, which it was not before.",
+  "OIL-TO-SULFUR INTERVAL differs between two entries on this crop, and both figures are correct because their SOURCE DOCUMENTS disagree. Spider mites is anchored to PN 7405, which says \"don't apply sulfur within 30 days of an oil spray\", and its horticultural_oil note now states 30 days in that direction. Powdery mildew is anchored to PN 7406, which says \"do not apply it within 2 weeks of an oil spray\" and \"never apply an oil spray within 2 weeks of a sulfur spray\", and its sulfur note states two weeks either side, which is faithful to both halves of that sentence pair. I WITHDRAW my earlier recommendation to harmonize the consumer copy to 30 days: harmonizing would make one of the two entries contradict its own anchor. Read as sourced, not inconsistent. ROOT CAUSE, out of batch-25 scope and flagged for Trevor: control_methods.horticultural_oil states \"Do not apply sulfur within 2 weeks of an oil spray\" while its own anchor PN 7405 says 30 days, so the library is unfaithful to its own source and hands the wrong figure to every author. control_methods.sulfur states two weeks and IS faithful, to 7406. The fix is to correct horticultural_oil to 30 days and leave sulfur at two weeks, after which per-entry prose still differs by governing document. Reported scope: horticultural_oil sits on 76 rungs across 42 crops with 15 shipped rung notes already stating the figure in prose.",
+  "LEAFHOPPER EGG TISSUE: corrected from \"leaf and stem tissue\" to leaf only. Flagging that my own record report's summary line said \"leaf/stem tissue\" while the uf_ifas sentence it quotes gives no location at all (\"In Italy, it is thought that most of the population overwinters as eggs\"). The leaf-tissue detail comes from the reviewer's read and from VCE ENTO-412NP, which is not catalog-admitted. If a promote wants the tissue named in prose it needs an admitted document that states it; \"in last year's growth\" would be the location-neutral fallback. The stem-egg fact is the spittlebug entry's, on the same crop, which is how it migrated.",
+  "BIOFUNGICIDE rung added to Powdery mildew on the METHOD's own anchors, not on a document I read. My record report never covered biofungicides for sage, and I am not claiming 7406 carries the Bacillus paragraph; control_methods' biofungicide entry is sourced to UC IPM's powdery-mildew-on-ornamentals page and Clemson's powdery mildew factsheet, and its applies_to reaches fungal_foliar. If the batch wants an entry-level anchor for it, someone has to read 7406 for that paragraph. Its note is written to the catalog's own limits: preventive to early-curative, less effective than sulfur, useless once the plant is white over.",
+  "VERTICILLIUM's positive driver is now softened to a negation, per review. The record pass itself warned that the admitted source (umd_ext, \"Fusarium and Verticillium are favored by droughty conditions\") and the UNREAD Ryan 1966 sage paper (reportedly: worst on heavy clay and poorly drained ground) disagree, and told the authoring pass not to fix the record toward either until one is read. I had asserted the droughty half in two fields; both now carry only \"this is not the wet-soil disease that root rot is\", which every read document supports. Ryan 1966 returned HTTP 403 and remains the thing that would settle it."
+ ]
+}

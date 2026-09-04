@@ -1,0 +1,70 @@
+coverage OK: 36 pin rows == 36 problems on 7 crops
+applied 36 ids to scratch
+scratch written: /Users/trevorrawson/plant-dataset/tools/staging/pla8_batch25_herbs/scratch_postapply.json  (24 distinct ids)
+
+$ /Users/trevorrawson/plant-dataset/tools/problem_id_collision_gate.py /Users/trevorrawson/plant-dataset/tools/staging/pla8_batch25_herbs/scratch_postapply.json --minted aphids,lavender-leaf-spot,lavender-whiteflies-aphids,leafhoppers,lemongrass-leaf-blight,lemongrass-pest-resistance,lemongrass-root-rot,lemongrass-rust,mint-foliar-diseases,mint-root-feeding-pests,mint-rust,oregano-botrytis,oregano-rust,phytophthora-root-crown-rot,powdery-mildew,root-and-stem-rots,rosemary-aphids-whiteflies,rosemary-root-crown-rot,slugs-and-snails,spider-mites,spittlebugs,thyme-foliar-fungal,thyme-root-crown-rot,verticillium-wilt --strict
+==============================================================================
+OPEN  FAMILY_MEMBER  aphids [62c] <-> lavender-whiteflies-aphids [1c]
+        'Aphids' is one conjunct of 'Whiteflies and aphids', and the ids nest
+        aphids                       acorn-squash, arugula, banana-pepper, basil, bee-balm, beefsteak-tomato, beet, bell-pepper, blackberry, blueberry, borage, broccoli, butternut-squash, calendula, cantaloupe, cayenne-pepper, celery, chamomile, cherry-tomato, cilantro-coriander, collards, cosmos, cucumber, dill, dry-bean, echinacea, eggplant, elderberry, english-cucumber, grape-tomato, green-beans-bush, habanero, heirloom-tomato, honeydew-melon, jalapeno, kale, lettuce-leaf, marigold, mint, nasturtium, okra, oregano, parsley, pickling-cucumber, pole-beans, pumpkin, raspberry, roma-tomato, slicing-cucumber, spaghetti-squash, spinach, strawberry, sunflower, sweet-alyssum, sweet-pea, swiss-chard, thyme, tomatillo, turnip, viola, watermelon, zinnia
+        lavender-whiteflies-aphids   lavender
+OPEN  NAME_SHARED    aphids [62c] <-> plum-aphids [1c]
+        name 'Aphids' == 'Aphids (leaf curl plum aphid and mealy plum aphid)' once normalized
+        aphids                       acorn-squash, arugula, banana-pepper, basil, bee-balm, beefsteak-tomato, beet, bell-pepper, blackberry, blueberry, borage, broccoli, butternut-squash, calendula, cantaloupe, cayenne-pepper, celery, chamomile, cherry-tomato, cilantro-coriander, collards, cosmos, cucumber, dill, dry-bean, echinacea, eggplant, elderberry, english-cucumber, grape-tomato, green-beans-bush, habanero, heirloom-tomato, honeydew-melon, jalapeno, kale, lettuce-leaf, marigold, mint, nasturtium, okra, oregano, parsley, pickling-cucumber, pole-beans, pumpkin, raspberry, roma-tomato, slicing-cucumber, spaghetti-squash, spinach, strawberry, sunflower, sweet-alyssum, sweet-pea, swiss-chard, thyme, tomatillo, turnip, viola, watermelon, zinnia
+        plum-aphids                  plum
+OPEN  FAMILY_MEMBER  aphids [62c] <-> rosemary-aphids-whiteflies [1c]
+        'Aphids' is one conjunct of 'Aphids and whiteflies', and the ids nest
+        aphids                       acorn-squash, arugula, banana-pepper, basil, bee-balm, beefsteak-tomato, beet, bell-pepper, blackberry, blueberry, borage, broccoli, butternut-squash, calendula, cantaloupe, cayenne-pepper, celery, chamomile, cherry-tomato, cilantro-coriander, collards, cosmos, cucumber, dill, dry-bean, echinacea, eggplant, elderberry, english-cucumber, grape-tomato, green-beans-bush, habanero, heirloom-tomato, honeydew-melon, jalapeno, kale, lettuce-leaf, marigold, mint, nasturtium, okra, oregano, parsley, pickling-cucumber, pole-beans, pumpkin, raspberry, roma-tomato, slicing-cucumber, spaghetti-squash, spinach, strawberry, sunflower, sweet-alyssum, sweet-pea, swiss-chard, thyme, tomatillo, turnip, viola, watermelon, zinnia
+        rosemary-aphids-whiteflies   rosemary
+OPEN  NAME_SHARED    bee-balm-rust [1c] <-> oregano-rust [1c]
+        name 'Rust' == 'Rust' once normalized
+        bee-balm-rust                bee-balm
+        oregano-rust                 oregano
+OPEN  NAME_SHARED    carrot-leaf-blight [1c] <-> lemongrass-leaf-blight [1c]
+        name 'Leaf blight (Alternaria and Cercospora)' == 'Leaf blight' once normalized
+        carrot-leaf-blight           carrot
+        lemongrass-leaf-blight       lemongrass
+OPEN  NAME_SHARED    chives-rust [1c] <-> oregano-rust [1c]
+        name 'Rust' == 'Rust' once normalized
+        chives-rust                  chives
+        oregano-rust                 oregano
+OPEN  NAME_SHARED    crown-and-root-rot [2c] <-> rosemary-root-crown-rot [1c]
+        name 'Crown and root rot' == 'Root and crown rot' once normalized
+        crown-and-root-rot           parsley, viola
+        rosemary-root-crown-rot      rosemary
+OPEN  NAME_SHARED    crown-and-root-rot [2c] <-> thyme-root-crown-rot [1c]
+        name 'Crown and root rot' == 'Root and crown rot' once normalized
+        crown-and-root-rot           parsley, viola
+        thyme-root-crown-rot         thyme
+OPEN  NAME_SHARED    lavender-whiteflies-aphids [1c] <-> rosemary-aphids-whiteflies [1c]
+        name 'Whiteflies and aphids' == 'Aphids and whiteflies' once normalized
+        lavender-whiteflies-aphids   lavender
+        rosemary-aphids-whiteflies   rosemary
+OPEN  FAMILY_MEMBER  lavender-whiteflies-aphids [1c] <-> whiteflies [5c]
+        'Whiteflies' is one conjunct of 'Whiteflies and aphids', and the ids nest
+        lavender-whiteflies-aphids   lavender
+        whiteflies                   calendula, english-cucumber, grape-tomato, nasturtium, roma-tomato
+OPEN  NAME_SHARED    oregano-rust [1c] <-> sunflower-rust [1c]
+        name 'Rust' == 'Rust' once normalized
+        oregano-rust                 oregano
+        sunflower-rust               sunflower
+OPEN  FAMILY_MEMBER  rosemary-aphids-whiteflies [1c] <-> whiteflies [5c]
+        'Whiteflies' is one conjunct of 'Aphids and whiteflies', and the ids nest
+        rosemary-aphids-whiteflies   rosemary
+        whiteflies                   calendula, english-cucumber, grape-tomato, nasturtium, roma-tomato
+OPEN  NAME_SHARED    rosemary-root-crown-rot [1c] <-> thyme-root-crown-rot [1c]
+        name 'Root and crown rot' == 'Root and crown rot' once normalized
+        rosemary-root-crown-rot      rosemary
+        thyme-root-crown-rot         thyme
+OPEN  FAMILY_MEMBER  slugs [1c] <-> slugs-and-snails [12c]
+        'Slugs' is one conjunct of 'Slugs & snails', and the ids nest; 'Slugs' is one conjunct of 'Slugs and snails', and the ids nest
+        slugs                        strawberry
+        slugs-and-snails             arugula, basil, bok-choy, calendula, lettuce-leaf, marigold, nasturtium, sage, sweet-alyssum, sweet-pea, swiss-chard, viola
+OPEN  NAME_SHARED    slugs-and-snails [12c] <-> snails-and-slugs [1c]
+        name 'Slugs & snails' == 'Snails and slugs (Cornu aspersum, Deroceras reticulatum)' once normalized
+        slugs-and-snails             arugula, basil, bok-choy, calendula, lettuce-leaf, marigold, nasturtium, sage, sweet-alyssum, sweet-pea, swiss-chard, viola
+        snails-and-slugs             artichoke
+
+17 findings: 15 OPEN, 2 registered
+==============================================================================
+gate exit: 1

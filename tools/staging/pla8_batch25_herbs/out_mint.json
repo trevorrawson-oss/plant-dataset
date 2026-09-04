@@ -1,0 +1,631 @@
+{
+  "crop": "mint",
+  "pests": [
+    {
+      "name": "Aphids",
+      "id": "aphids",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Go light on feeding. A rich feed makes the plant throw out soft, juicy shoots, and those are the ones that end up covered in aphids. Mint does not need much anyway: you are picking it all season, and that is what keeps it in new leaf.",
+          "note_seasoned": "Aphid reproduction tracks the flush, and UC IPM's rule is never to use more nitrogen than necessary. On mint the fertilizer is the part to hold back, because cutting the plant already keeps fresh growth coming without any help."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Hit the plant with a forceful jet of water and knock the aphids off, working up underneath the leaves where the clusters sit. Look again in a few days and repeat if they are back.",
+          "note_seasoned": "Lean on plain water before anything sprayed on a crop you cut and eat fresh; it is the one control both Utah State and UC IPM give for aphids in the same breath. UC IPM's monitoring interval is at least twice a week while plants are growing rapidly, which is what makes an early knock-back possible."
+        },
+        {
+          "method": "beneficial_predators",
+          "note_beginner": "Lady beetles, lacewings, hoverfly larvae and small parasitic wasps will usually take an aphid run down for you. Broad bug sprays kill them along with the aphids, so leaving the patch alone is often the fastest route.",
+          "note_seasoned": "UC IPM names those four groups as mint-scale aphid natural enemies and tells you to avoid broad-spectrum insecticides toxic to them. Conservation costs nothing and it is the reason a light infestation is usually worth watching for a week before it is worth treating."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If the aphids hold on after repeated hosing, insecticidal soap will take them out, but it only kills what it lands on. Wet the undersides of the leaves, not just the tops, and expect to go again.",
+          "note_seasoned": "Utah State names insecticidal soap for mint directly. Apply it in a high volume of water and cover the undersides, and respect UC IPM's two exclusions: not on a drought-stressed plant, and not when it is very hot."
+        },
+        {
+          "method": "horticultural_oil",
+          "note_beginner": "A horticultural oil is the other choice at this level, put on the same way: thorough wetting, undersides included, and never on a plant that is dry at the roots or during a hot spell.",
+          "note_seasoned": "UC IPM's application language for oils is a 1 to 2 percent solution in a high volume of water, targeting leaf undersides as well as tops. Like soap it kills only on contact, so a missed underside is a surviving colony, and the drought and heat exclusions are the same."
+        }
+      ],
+      "sources": ["usu_ext", "uc_ipm"],
+      "anchoring_urls": {
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden", "verified": "2026-09-04"},
+        "uc_ipm": {"url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7404.html", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Clusters of tiny soft green or gray insects on the growing tips and the undersides of the leaves. Where they feed, the foliage curls, yellows, or stops growing, and the leaves can turn sticky with honeydew.",
+          "why": "The curl, yellow and stunt limbs come from Utah State's sentence, which the record did not fully use. REVERSED 2026-09-04 (review FIX-2): I had STRUCK the 'sticky' limb on the grounds that 'the record pass could not surface a honeydew sentence in either cited document'. That was false, and the fault is mine rather than the record pass's: the pass marked honeydew UNVERIFIED and said so explicitly, and I wrote it up as absent. Pest Notes 7404 carries it repeatedly. Fetched and confirmed here, so the limb is restored with the anchor it always had.",
+          "anchor": "usu_ext, verbatim: 'Aphids | Green or black soft-bodied insects that feed on leaves. Foliage curls, yellows or becomes stunted.' + uc_ipm (ANR Pub 7404), verbatim: 'Aphids can curl leaves and produce sticky honeydew that may attract ants and sooty mold.' and 'aphids can also produce large quantities of a sticky exudate known as honeydew, which often turns black with the growth of a sooty mold fungus.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Colonies build on the growing tips and leaf undersides, which is where Utah State puts mint's aphids; several species are involved rather than one, and soft, overfed growth carries the heaviest numbers. UC IPM's Pest Notes supplies the reason to catch them early: aphids can carry viruses from plant to plant.",
+          "why": "'honeydew and the insects themselves contaminate a crop eaten fresh' is on none of the cited documents. It is a food-quality claim with no anchor and is struck. The UC IPM credit is also repointed: this entry's uc_ipm URL now resolves to Pest Notes 7404, so the mint listing is credited to Utah State, which publishes it, and UC IPM is credited only for the virus transmission it actually publishes.",
+          "anchor": "usu_ext, verbatim: 'Aphids | Green or black soft-bodied insects that feed on leaves.' + uc_ipm (ANR Pub 7404), verbatim: 'Aphids may transmit viruses from plant to plant on certain vegetable and ornamental plants.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Knock them off with a strong jet of water first, aiming up into the leaf undersides, and repeat every few days. If they keep coming back, insecticidal soap or a horticultural oil will work, but only where you can wet the undersides, and not on a plant that is dry at the roots or on a very hot day.",
+          "why": "'Rinse cut sprigs well before use' is a food-handling instruction with no document behind it and is struck. The heat and drought limit UC IPM publishes for these sprays was missing and is added. CORRECTED 2026-09-04 (review FIX-2): the earlier version of this justification said 'Neem is named on neither cited document for mint'. That is FALSE, and fetched-and-confirmed false here. Pest Notes 7404 names neem twice, as a plant-derived oil and in the list of contact materials. The record pass had marked neem UNVERIFIED, not absent, and flagged that it had not transcribed 7404's full oil paragraph; I converted that hedge into an absence, which is the error class this whole batch exists to catch. The prose still reads 'a horticultural oil' and that is now an EDITORIAL choice rather than a forced one: the class is accurate, it covers neem, it matches the laddered method, and the only mint-specific naming, Utah State's, is of soaps.",
+          "anchor": "usu_ext, verbatim: 'Use insecticidal soaps, registered insecticides or spray plant with a forceful jet of water to dislodge the insects.' + uc_ipm (7404), verbatim: 'Don't apply them to drought-stressed plants or when it is very hot.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Break the colonies up with a water jet before reaching for anything else, then treat with soap or a horticultural oil only if numbers hold, taking the undersides with a high volume of water and repeating. UC IPM's line is not to use these materials on a drought-stressed plant or when it is very hot. Lady beetles, lacewings, syrphid larvae and small parasitic wasps do most of the work if broad-spectrum insecticides stay off the patch.",
+          "why": "The seasoned register gains the two limits UC IPM publishes and the record omitted, the coverage and volume requirement and the drought-and-heat exclusion, and the natural-enemy list is corrected to the four groups Pest Notes 7404 actually names. CORRECTED 2026-09-04 (review FIX-2): this justification previously read 'Neem is generalized for the same reason as in the beginner field', inheriting a false absence claim from that field. See the corrected beginner justification: 7404 does name neem, the generalization to the oil class is retained as an editorial choice, and the stated reason is now the real one.",
+          "anchor": "uc_ipm (7404), verbatim: 'Apply these materials with a high volume of water, usually a 1 to 2% oil solution in water, and target the underside of leaves as well as the top.' + 'Don't apply them to drought-stressed plants or when it is very hot.' + 'Avoid the use of broad-spectrum insecticides that can be toxic to natural enemies.'"
+        }
+      }
+    },
+    {
+      "name": "Spider mites",
+      "id": "spider-mites",
+      "type": "mite",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "even_watering",
+          "note_beginner": "Keep mint evenly moist and mulched. Mites build up fastest on a plant that has been allowed to dry out, so steady water is the main defense on this crop.",
+          "note_seasoned": "UC IPM puts water-stressed plants in the highly susceptible class and has mite numbers climbing through June into September. The bad mite years on mint are the ones where a pot or a bed edge went dry and hot more than once."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Wash the undersides of the leaves with a strong spray of water. Done regularly, and in hot weather even daily, this alone often holds mites down, and it keeps the foliage from getting dusty.",
+          "note_seasoned": "UC IPM's finding is that regular forceful spraying often reduces mite numbers adequately, with a water spray or mist to leaf undersides at least once a day in a hot spell. Confirm the mites before starting: a hand lens is needed to tell mites and their eggs and webbing from stippling something else left."
+        },
+        {
+          "method": "augmentative_release",
+          "note_beginner": "Predatory mites can be bought and released onto an infestation. UC IPM names one for mint specifically, Neoseiulus fallacis, and a release makes more sense on a big patch than on a few plants.",
+          "note_seasoned": "The published release figures are commercial, quoted per acre and triggered off a sampled leaf count, so the numbers do not scale to a garden bed; what transfers is that a mint-specific predatory mite exists and is sold. Conserve what is already present first, because UC IPM also reports that mite outbreaks frequently follow an insecticide application."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "Insecticidal soap will knock mites back, but only where the spray actually reaches them, so coat the leaf undersides and expect to repeat. Do not use it on a plant that is dry at the roots, and not when the temperature is above 90°F.",
+          "note_seasoned": "Soap kills mites on contact and nothing else, so coverage decides the outcome and repeat applications are normal. The 90°F ceiling and the water-stress exclusion are UC IPM's, and they bite hard here, because mite weather and spray-injury weather are the same weather."
+        }
+      ],
+      "sources": ["uc_ipm", "ucanr_ext_spider_mites"],
+      "anchoring_urls": {
+        "uc_ipm": {"url": "https://ipm.ucanr.edu/agriculture/peppermint/webspinning-spider-mites/", "verified": "2026-09-04"},
+        "ucanr_ext_spider_mites": {"url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "organic_treatment_beginner": {
+          "new": "Spray the undersides of the leaves with a strong jet of water to knock the mites off, and keep the plant well watered, since drought stress is what lets them build. If they persist, insecticidal soap will work, but not on a plant that is dry at the roots and not above 90°F.",
+          "why": "The record recommended a spray without the two limits UC IPM publishes for it, and those limits apply in exactly the hot, dry weather that produces the mites in the first place. CORRECTED 2026-09-04 (review FIX-2): the earlier justification said 'Neem is named for mites on neither cited document'. FALSE, and confirmed false by fetching Pest Notes 7405, which reads 'Both petroleum-based horticultural oils and plant-based oils such as neem, canola, or cottonseed oils are acceptable.' Dropping the product name remains defensible on its own terms, since soap is what this ladder carries and what the entry recommends, but it was justified by an absence that does not exist.",
+          "anchor": "ucanr_ext_spider_mites (ANR Pub 7405), verbatim: 'Don't use soaps or oils on water-stressed plants or when temperatures exceed 90°F' + 'regular, forceful spraying of plants with water often will reduce spider mite numbers adequately'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Hose the undersides forcefully and repeat daily while it is hot, hold steady soil moisture, and treat with insecticidal soap only where you can coat the undersides, since these materials kill on contact and nothing else. Conserve whatever is already hunting them: UC IPM's Pest Notes names predatory mites, minute pirate bugs, bigeyed bugs and lacewing larvae, and its peppermint guidelines name a predatory mite released on mint itself, Neoseiulus fallacis. It also reports that spider mites frequently become a problem after an insecticide has been applied.",
+          "why": "The soap recommendation gains the contact-and-coverage limit it lacked, and the pesticide-induced-outbreak warning, which is the reason a least-invasive-first sequence matters on this pest. REVERSED 2026-09-04 (review FIX-2): I had struck 'minute pirate bugs' on the grounds that it 'has no anchor on either cited document'. FALSE. Pest Notes 7405 names them, and I confirmed it by fetching the page rather than taking the correction on trust. One refinement on the review's wording, which matters because over-generalizing across documents is the exact error being fixed here: minute pirate bugs appear in 7405 ONLY. I checked 7404 too and it does not mention them, so 'either cited document' would have been wrong in the other direction as well. The group is restored alongside the mint-specific Neoseiulus fallacis, which is the stronger anchor and which the original record did not have.",
+          "anchor": "ucanr_ext_spider_mites (ANR Pub 7405), verbatim: 'various general predators such as minute pirate bugs, bigeyed bugs, and lacewing larvae.' + 'Oils and soaps must contact mites to kill them, so excellent coverage...is essential, and repeat applications may be required' + 'Spider mites frequently become a problem after applying insecticides' + uc_ipm https://ipm.ucanr.edu/agriculture/peppermint/webspinning-spider-mites/, verbatim: 'Neoseiulus fallacis'"
+        }
+      }
+    },
+    {
+      "name": "Cutworms",
+      "id": "cutworms",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "stem_collars",
+          "note_beginner": "Set a barrier around each new plant when you put it in: a rim cut from a plastic pot, or a can with both ends out, sunk about an inch into the ground so nothing can reach the stem from the soil.",
+          "note_seasoned": "This is Utah State's own control for cutworms on mint, protecting the individual plant, and it earns its keep only through establishment, while one severed stem is the entire plant. The barriers come off once a plant has spread and has stems to spare."
+        },
+        {
+          "method": "handpick",
+          "note_beginner": "A felled shoot marks the spot. Sift the top inch or two of soil beside it and you will usually turn up the caterpillar, which can be lifted out by hand.",
+          "note_seasoned": "Utah State places the larvae at or below ground level, which tells you where to search: fresh damage is a located target, and turning soil there is far more productive than any general hunt across the bed."
+        }
+      ],
+      "sources": ["usu_ext"],
+      "anchoring_urls": {
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Young shoots and newly set plants are found cut through at or just below the soil line, with the severed top lying beside the stump.",
+          "why": "SPLIT 1/3. The bundle's symptom line described three unrelated organisms at once, mixing severed shoots, shot-holed leaves and root damage into one sentence, so no single limb read correctly. This is written from Utah State's cutworm row alone.",
+          "anchor": "usu_ext, verbatim: 'Cutworm | Larvae feed at or below ground and sever stems of seedlings or plants.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Utah State lists cutworms among mint's insect pests: the larvae feed at or below ground level and sever the stems of seedlings and young plants, so the damage reads as a clean cut at the base rather than as chewed foliage. The loss is per plant and it lands during establishment.",
+          "why": "SPLIT 1/3. The bundle's seasoned field also carried 'On a home planting numbers are usually modest', an unanchored severity judgment doing severity's job in prose; it is not carried onto this limb. The Utah State credit is verbatim true and is kept.",
+          "anchor": "usu_ext, verbatim: 'Cutworm | Larvae feed at or below ground and sever stems of seedlings or plants.'"
+        },
+        "cause_beginner": {
+          "new": "Cutworms are caterpillars that live in the soil and feed at or just below ground level, chewing straight through the stems of young plants.",
+          "why": "SPLIT 1/3. The bundle's cause fields described 'a mix of chewing pests' spanning three organisms, which is not a cause statement for any of them. Written from Utah State's cutworm row.",
+          "anchor": "usu_ext, verbatim: 'Larvae feed at or below ground and sever stems of seedlings or plants.'"
+        },
+        "cause_seasoned": {
+          "new": "Soil-dwelling caterpillars feeding at or below the soil surface. No cited document gives a species for mint, and Utah State names none, so this stays at the group level. The feeding position is what decides the control: a stem cut underground is not reachable by anything applied to the foliage.",
+          "why": "SPLIT 1/3. The bundle's cause_seasoned fused cutworms with the mint flea beetle and with root and rhizome feeders and attributed the below-ground stages to mint's root mass, which is a claim about a different organism. Written from Utah State's cutworm row alone, with no species asserted.",
+          "anchor": "usu_ext, verbatim: 'Cutworm | Larvae feed at or below ground and sever stems of seedlings or plants. | Protect individual plants with a collar or trap, use registered insecticides.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Ring each newly set plant with a collar at the base: a rim cut from a plastic pot, or a can with both ends out, sunk about an inch into the ground. If a shoot goes down anyway, turn the top inch of soil beside the stump and remove the caterpillar you find there.",
+          "why": "SPLIT 1/3. The bundle's treatment field mixed cutworm collars, flea beetle hosing and patch division into one instruction. The 'at dusk' timing on handpicking is dropped: it is on no cited page. Collars are Utah State's own instruction.",
+          "anchor": "usu_ext, verbatim: 'Protect individual plants with a collar or trap, use registered insecticides.' + 'Larvae feed at or below ground'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Utah State's control for mint is a collar or a trap on individual plants, so the work is per plant and belongs to the planting-out window rather than to the season. Searching the soil at the point of fresh damage is the follow-up where a collar was missed. Utah State's other listed option is a registered insecticide; this record stops at the barrier, because the pest is a soil-level chewer on a crop that is cut and eaten fresh.",
+          "why": "SPLIT 1/3. Same bundling defect. The dusk timing is dropped as unanchored, and Utah State's insecticide option is disclosed rather than silently omitted, with the reason it is not laddered stated.",
+          "anchor": "usu_ext, verbatim: 'Protect individual plants with a collar or trap, use registered insecticides.'"
+        },
+        "prevention_beginner": {
+          "new": "Protect new plants at planting time rather than after the first one goes down, since the damage happens overnight and cannot be undone.",
+          "why": "SPLIT 1/3. The bundle's prevention prose ('Clear plant debris where cutworms shelter', 'keep plants vigorous so they outgrow light feeding') is on no cited page for mint; Utah State's only cutworm prevention is protection of the individual plant. The debris-shelter claim is common cutworm knowledge but it is not in this crop's documents, so it is not carried.",
+          "anchor": "usu_ext, verbatim: 'Protect individual plants with a collar or trap'"
+        },
+        "prevention_seasoned": {
+          "new": "The window is establishment. Collars go on as plants are set out and come off once each plant has several stems, because after that a running mint patch has more growing points than a soil-level chewer can reach.",
+          "why": "SPLIT 1/3. The bundle's prevention_seasoned attributed a multi-year reset cycle to this pest, which belongs to the root-borer limb, and asserted a debris-sanitation step no cited document carries for mint.",
+          "anchor": "usu_ext, verbatim: 'Protect individual plants with a collar or trap, use registered insecticides.'"
+        }
+      }
+    },
+    {
+      "name": "Flea beetles",
+      "id": "flea-beetles",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "floating_row_cover",
+          "note_beginner": "In spring, before the beetles turn up, spread a light row cover fabric over the mint and weight the edges down. Water and light reach the plants through it; the beetles do not. Take it off once the patch is growing hard.",
+          "note_seasoned": "Utah State's stated control for flea beetles on mint is to cover plants in spring with row covers, so the timing is the whole of it: on before the beetles move, off when the stand is in full growth. Nothing applied afterwards repairs a chewed leaf, so the cover has to go on ahead of the damage and never in response to it."
+        }
+      ],
+      "sources": ["usu_ext"],
+      "anchoring_urls": {
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "The leaves come up peppered with small holes. The beetles making them are tiny, black and glossy, and they are easy to miss because they leave the plant as you lean in.",
+          "why": "SPLIT 2/3. The bundle's symptom line ran flea beetle damage together with severed shoots and root decline. Written from Utah State's flea beetle row alone.",
+          "anchor": "usu_ext, verbatim: 'Flea Beetle | Small, shiny black beetles that chew tiny holes in leaves.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Utah State lists flea beetles among mint's insect pests and describes small, shiny black beetles chewing tiny holes in the leaves. Its control for them is a row cover in spring, which places the pressure on new growth early in the season rather than on a stand in full run.",
+          "why": "SPLIT 2/3, and DE-NAMED. The bundle called these 'mint flea beetles' in four fields. Utah State writes only 'Flea Beetle', with no species, and Longitarsus waterhousei appears on no catalog-admitted document. This is the same defect class mint's own cert log fixed once already when it de-named the mint root borer.",
+          "anchor": "usu_ext, verbatim: 'Flea Beetle | Small, shiny black beetles that chew tiny holes in leaves. | Control with registered insecticides or cover plants in spring with row covers.'"
+        },
+        "cause_beginner": {
+          "new": "Flea beetles are small leaf-chewing beetles that show up in spring and feed on the new leaves, leaving them full of little holes.",
+          "why": "SPLIT 2/3, and DE-NAMED. The bundle's cause_beginner named 'mint flea beetles' as an above-ground half of a three-organism complex. Written from Utah State's row, with no species asserted.",
+          "anchor": "usu_ext, verbatim: 'Flea Beetle | Small, shiny black beetles that chew tiny holes in leaves.'"
+        },
+        "cause_seasoned": {
+          "new": "Flea beetles as a group rather than one named species: Utah State's mint listing gives no binomial and no admitted document ties a particular flea beetle to garden mint. The pressure is a spring one, which is why the published control is exclusion at that time of year rather than a treatment applied to damage.",
+          "why": "SPLIT 2/3, and DE-NAMED. The bundle's cause_seasoned asserted 'mint flea beetle' as a species identity. The mint flea beetle is a real animal, but its identity sits only on non-admitted hosts and on documents that returned 403 in the record pass, so the record says at group level what the sources say and states plainly that no species is published.",
+          "anchor": "usu_ext, verbatim: 'Flea Beetle | Small, shiny black beetles that chew tiny holes in leaves. | Control with registered insecticides or cover plants in spring with row covers.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Cover new plantings in spring with a floating row cover, a light fabric that lets in sun and rain but keeps the beetles off. That is the practical control; there is nothing to wash or pick off once the holes have been chewed.",
+          "why": "SPLIT 2/3. The bundle told the gardener to 'hose or handpick flea beetles'. Utah State offers only two controls, a registered insecticide or a spring row cover, and neither is hosing or handpicking, so the unanchored instruction is replaced by the published one.",
+          "anchor": "usu_ext, verbatim: 'Control with registered insecticides or cover plants in spring with row covers.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Utah State offers two controls for mint, a spring row cover or a registered insecticide. The cover is the one that belongs on a crop cut and eaten fresh, and it has to go on before the beetles arrive rather than after the first holes appear, because the feeding damage does not heal.",
+          "why": "SPLIT 2/3. Same defect: the bundle's 'dislodge flea beetles with water' has no anchor. Utah State's insecticide option is disclosed rather than dropped, with the reason this record does not ladder it.",
+          "anchor": "usu_ext, verbatim: 'Control with registered insecticides or cover plants in spring with row covers.'"
+        },
+        "prevention_beginner": {
+          "new": "Get the cover on early in spring, when the new growth is coming and the beetles are on the move.",
+          "why": "SPLIT 2/3. The bundle's prevention prose was written for the three organisms jointly and turned on debris clearance and multi-year resetting, neither of which any cited document attaches to flea beetles on mint.",
+          "anchor": "usu_ext, verbatim: 'cover plants in spring with row covers'"
+        },
+        "prevention_seasoned": {
+          "new": "Exclusion is timed against the spring flush. Utah State's instruction is to cover plants in spring, which makes this a planting-season job rather than a response to damage, and there is no preventive step published for it later in the year.",
+          "why": "SPLIT 2/3. Same bundling defect. The record's shared prevention prose implied a debris-and-rotation program for a pest whose only published prevention is a seasonal cover.",
+          "anchor": "usu_ext, verbatim: 'cover plants in spring with row covers'"
+        }
+      }
+    },
+    {
+      "name": "Mint root borer",
+      "id": "mint-root-borer",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "off_season_tillage",
+          "note_beginner": "Turn the bed over in late fall, or in spring before June. That is when the caterpillars are sitting in the soil just under the surface instead of inside the runners, and digging through reaches them.",
+          "note_seasoned": "UC IPM's window is exact: tillage is effective in late fall or spring while the borer is overwintering, or before adults emerge in June. The larvae leave the rhizomes in October and sit an inch or so down, so a fall dig follows them out of the runner and into reach, and a spring dig catches them before they pupate."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Where a patch has been going downhill, move the mint to fresh ground and put something else in the old bed for a season or two.",
+          "note_seasoned": "UC IPM lists rotation to a non-host as an option, which at garden scale means resetting divisions into ground with no mint history rather than replanting the same corner. With one generation a year and mint as the host, a bed given a season without mint gives the next generation nothing to go back into."
+        },
+        {
+          "method": "beneficial_nematodes",
+          "note_beginner": "Beneficial nematodes, sold as a soil drench, are used against this pest. Water them into moist, warm soil where the larvae are, rather than spraying anything on the leaves.",
+          "note_seasoned": "UC IPM releases parasitic nematodes through the irrigation system against mint root borer. The published rate is a per-acre commercial figure and does not translate, so follow the pack for dose; what carries over is the delivery, a watered-in drench onto soil holding larvae, and the timing, the fall stretch after the larvae have left the rhizomes."
+        }
+      ],
+      "sources": ["uc_ipm"],
+      "anchoring_urls": {
+        "uc_ipm": {"url": "https://ipm.ucanr.edu/agriculture/peppermint/mint-root-borer/", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "A patch that thins and weakens with nothing obviously wrong above ground. Lift a piece and the underground runners are tunneled and hollowed where a small caterpillar has fed inside them.",
+          "why": "SPLIT 3/3, and RE-CITED. The bundle described 'grubs feeding on the roots and rhizomes' as an unnamed third limb credited to Utah State, which does not carry it. The claim is true and now sits on the UC IPM page that publishes it, which the record never cited.",
+          "anchor": "uc_ipm (ANR Pub 3457, mint root borer), verbatim: 'Larvae bore into and feed on rhizomes of peppermint.'"
+        },
+        "symptoms_seasoned": {
+          "new": "The damage is below ground and shows as decline in a stand rather than as a mark on a leaf. UC IPM's account is that the larvae feed on leaves for two to four days, then drop to the soil surface and burrow into a rhizome, and the feeding that matters happens inside it. Its own sampling window is September through October, which is when lifting a runner and looking will actually find them.",
+          "why": "SPLIT 3/3, and RE-CITED. The bundle asserted root and rhizome damage with 'Utah State lists flea beetles and cutworms' as the only credit in the field, which anchors the other two limbs and not this one. UC IPM's mint root borer page carries all of it.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Larvae feed on leaves for 2 to 4 days then drop to the soil surface and burrow into a rhizome.' + 'Sample for mint root borer larvae from September through October.'"
+        },
+        "cause_beginner": {
+          "new": "The mint root borer is a moth caterpillar that feeds inside mint's underground runners. There is one generation a year, and the adults are flying in early summer.",
+          "why": "SPLIT 3/3. The bundle's cause fields called this limb 'root-feeding larvae' with no organism and no document. UC IPM names the species and publishes the life cycle.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Fumibotys fumalis' + 'Adult mint root borers start emerging between early and mid-June, with peak emergence occurring from mid- to late July.'"
+        },
+        "cause_seasoned": {
+          "new": "Fumibotys fumalis, the mint root borer. UC IPM puts adult emergence between early and mid-June with peak flight from mid to late July, one generation a year; the larvae leave the rhizomes in October and overwinter in the soil an inch or so below the surface, then pupate in spring. Every step that works against it is keyed to that calendar.",
+          "why": "SPLIT 3/3, and NAMED where the bundle could not name. Mint's cert log de-named 'mint root borer' on 2026-07-06 because it was on neither cited page, but it left the claim standing, which is a de-naming that did not finish. The fix is to cite the UC IPM page that carries the organism and its phenology, not to delete the limb.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'In October, larvae leave the rhizomes to overwinter in hibernacula just below the surface (2-4 cm below). Larvae pupate in spring.' + 'Adult mint root borers start emerging between early and mid-June, with peak emergence occurring from mid- to late July.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "There is no spray for a caterpillar sitting inside a runner. What works is turning the bed over in late fall or early spring, while the larvae are just under the soil surface, and starting a fresh planting on ground that has not grown mint.",
+          "why": "SPLIT 3/3. The bundle's instruction was 'dividing and resetting a tired patch in fresh ground breaks root-pest cycles', which is the record's own framing rather than a sourced control. UC IPM publishes tillage with two timing windows and rotation to a non-host, and both are stated here as it states them.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Tillage can be effective in late fall or spring when the mint root borer is overwintering or before adults emerge in June. Rotation with a non-host crop is also a possibility.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "UC IPM's timing is explicit: tillage works in late fall or spring, when the borer is overwintering, or before adults emerge in June. Rotation to a non-host is the other published option. Parasitic nematodes are used against it as well, released through the irrigation, which at home is a watered-in soil drench; the published release rate is per acre and is not a garden figure.",
+          "why": "SPLIT 3/3. Same defect, plus disclosure: the UC IPM page carrying this limb is a commercial peppermint guideline, so its rates and thresholds are named as commercial rather than carried across as advice.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Tillage can be effective in late fall or spring when the mint root borer is overwintering or before adults emerge in June.' + 'Parasitic nematodes can be released through irrigation at 2 billion infective juveniles per acre.'"
+        },
+        "prevention_beginner": {
+          "new": "Check the runners when you divide the patch in fall, and reset a declining patch into ground that has not carried mint.",
+          "why": "SPLIT 3/3. The bundle's prevention prose was written for three organisms at once and gave debris clearance, which no document attaches to this pest. UC IPM's sampling window lines up with the fall division a mint patch gets anyway.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Sample for mint root borer larvae from September through October.' + 'Rotation with a non-host crop is also a possibility.'"
+        },
+        "prevention_seasoned": {
+          "new": "UC IPM samples for larvae from September through October, which is also when a home patch is lifted and divided, so the check costs nothing extra. Its treatment threshold is a commercial one and is not the point at this scale; finding larvae at all is reason enough to use one of the two tillage windows UC IPM names, late fall or before adults emerge in June.",
+          "why": "SPLIT 3/3. The bundle's 'reset an infested patch into fresh ground on a multi-year cycle, the same renewal that keeps mint from getting woody' asserted a cycle no document publishes for this pest. Replaced with UC IPM's sampling window and its two tillage windows, with the commercial threshold disclosed and declined.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Sample for mint root borer larvae from September through October.' + 'Consider a postharvest treatment if two or more larvae are found per sample.' + 'Tillage can be effective in late fall or spring when the mint root borer is overwintering or before adults emerge in June.'"
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Mint rust",
+      "id": "mint-rust",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Take the rusted leaves off as you see them, and in fall clear the old stems and fallen foliage right off the bed. That debris is where the fungus spends the winter, and leaving it is what starts next spring.",
+          "note_seasoned": "WSU puts the overwintering stage on mint stubble and foliage, where the pustules go dark chocolate brown in late summer and fall and become the following spring's inoculum. RHS supplies the in-season deadline: take affected growth out before the black resting spores form and reach the soil."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Thin or divide a crowded patch so air moves through it and the leaves dry off faster after rain or dew.",
+          "note_seasoned": "WSU has the disease recycling every 8 to 10 days whenever moisture sits on the foliage, so the lever is the number of hours a day the canopy stays wet. Utah State treats thinning and dividing as maintenance a spreading mint patch needs anyway, which makes this the cheapest thing you can do about rust: it costs an afternoon you were going to spend on the patch regardless."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Water in the morning, and get it down at the roots rather than over the top. What feeds rust is foliage that stays damp all night, so the aim is to have the leaves dry by evening.",
+          "note_seasoned": "Utah State's rust row gives both halves: use drip irrigation, or apply overhead water before mid-day, and avoid wet leaves overnight. Dew and rain still wet the canopy, so watering this way shortens the wet hours rather than removing them, which is enough to cut the number of cycles in a season."
+        },
+        {
+          "method": "weed_host_control",
+          "note_beginner": "Mint escapes. If there are patches of wild or run-away mint near the bed, cut them back, because rust comes across from them in spring.",
+          "note_seasoned": "WSU names escaped and non-cultivated mint as a spring source of infection, which matters more on this crop than on most: the plant runs out of a bed and keeps going, and an untended stand along a fence or a ditch is a reservoir that no amount of tidying inside the bed will reach."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start new plants from cuttings taken off clean, healthy mint. Rust travels on the cuttings and runners you plant with, so a new bed can begin infected.",
+          "note_seasoned": "WSU traces outbreaks to systemic infections and pustules on the rhizomes and stem cuttings used in propagation, and its instruction is to inspect source material, monitor cuttings closely and discard infected ones promptly. Propagation is the one point in the cycle where the disease can be kept out of a new bed entirely."
+        }
+      ],
+      "sources": ["usu_ext", "ncsu_ext", "rhs", "wsu_ext"],
+      "anchoring_urls": {
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden", "verified": "2026-09-04"},
+        "ncsu_ext": {"url": "https://plants.ces.ncsu.edu/plants/mentha-spicata/", "verified": "2026-09-04"},
+        "rhs": {"url": "https://www.rhs.org.uk/disease/mint-rust", "verified": "2026-09-04"},
+        "wsu_ext": {"url": "https://s3.wp.wsu.edu/uploads/sites/2195/2014/06/MintrustA.doc", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Small orange to rust-brown powdery spots on the undersides of the leaves and on the stems and leaf stalks. Badly affected leaves curl, turn yellow then brown, and fall. Pick the affected growth off and get rid of it as soon as you see it.",
+          "why": "'rusty leaves are not good to eat' has no catalog-admitted anchor. The only extension-branded text saying it is a 2019 Ask Extension answer from a single county, on a domain the source catalog does not admit, and it is a consumption claim. It is replaced with the removal instruction RHS actually publishes, which is the action the do-not-eat line was standing in for. 'pale spots on the upper surface' is also dropped: the closest admitted text is RHS's 'Pale and distorted shoots in spring', which is about shoots, not upper leaf surfaces.",
+          "anchor": "wsu_ext (Johnson, Management of Rust on Mint), verbatim: 'When these pustules become numerous, the infected leave curl, turn yellow and then brown, and drop from plants.' + rhs, verbatim: 'Remove affected plants promptly before the black resting spores are formed and contaminate the soil.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Mint rust is Puccinia menthae, named by both RHS and WSU; NC State lists rust as one of spearmint's two main diseases without naming the fungus. Golden to cinnamon-brown pustules build on the stems and leaf undersides through the season, and a heavy infection defoliates the patch and reduces the essential oil in what is left. The stage worth learning is the early spring one: systemic infections throw up twisted, distorted shoots whose stems break easily, carrying pale blister-like pustules on the stems and leaf stalks, and those few plants are what seeds the rest of the year.",
+          "why": "Read normally, the shipped sentence credits the binomial to NC State, which does not publish it: NC State's entire disease text is 'Fungal diseases are common diseases in spearmint. Two main diseases are rust and leaf spot.' This is a mis-pointed key. The binomial is repointed to RHS and WSU, which both carry it, and NC State is credited only for what it says. The unanchored 'It overwinters in the rhizomes' clause is removed from this field and rewritten in the cause fields. WSU's early-spring systemic stage, the highest-leverage thing to recognize on this crop, was missing entirely.",
+          "anchor": "wsu_ext, verbatim: 'Mint rust, caused by the fungus Puccinia menthae, infects Scotch spearmint and Native spearmint in central Washington.' + 'Early spring infections are systemic in spearmint and infected plants are twisted and distorted, and stems easily break.' + 'Defoliation and a reduction in essential oil content of mint plants results from severe rust infection.' + ncsu_ext, verbatim: 'Two main diseases are rust and leaf spot.'"
+        },
+        "cause_beginner": {
+          "new": "A rust fungus that spreads on airborne spores and needs the leaves to stay wet. It lives through the winter on last year's stubble and fallen leaves, and it can also ride in on the cuttings or runners you plant with, so a patch left standing reinfects itself each spring.",
+          "why": "'lives over on the roots and rhizomes from year to year' is on neither cited document, and the two admitted documents that address overwintering do not agree with it. WSU puts the overwintering stage on stubble and fallen foliage; RHS reports the rhizome version as a past consensus and says what is known is that resting spores in the soil, or contaminating the outside of the rhizomes, infect new shoots in spring. The rewrite states what both support, and it changes the advice: clearing the stubble is a cheap step the old claim wrote out of existence, leaving 'start over in a new spot' as the only escalation.",
+          "anchor": "wsu_ext, verbatim: 'In late summer and fall, pustules on mint stubble and foliage become dark chocolate brown. This is the overwintering stage (telia) of the rust fungus and is the source of new infections the following spring.' + 'Such rust outbreaks are usually initiated from systemic infections and pustules on rhizomes and stem cuttings used in propagation.' + rhs, verbatim: 'It is known that resting spores present in the soil or contaminating the outside of the rhizomes can infect new shoots in spring.'"
+        },
+        "cause_seasoned": {
+          "new": "Puccinia menthae. Wet, cloudy weather and long spells of leaf wetness from rain, dew or sprinklers drive it, and under those conditions WSU has it recycling every 8 to 10 days. It carries over as dark overwintering pustules on stubble and fallen foliage, and on the runners and cuttings used for propagation, with resting spores in the soil as well; escaped mint growing nearby is a second reservoir the bed itself does not control.",
+          "why": "Same defect as cause_beginner: 'carried over in the root and rhizome mass' is unanchored and, on WSU's account, in the wrong place. The replacement carries WSU's overwintering site, its recycle interval and the outside reservoir in escaped mint, none of which the record held, and all three of which change what the ladder can offer.",
+          "anchor": "wsu_ext, verbatim: 'Wet, cloudy weather and prolong leaf wetness from irrigation, dew, and rainfall favor rust development.' + 'the disease is recycled every 8 to 10 days when favored by moisture on foliage from rain, dew or sprinkler irrigation.' + 'Rust from escaped mint and non-cultivated mint can also be a source of rust infection in the spring.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Pull off and bin the rusted growth as soon as it shows, before the dark overwintering spots form on it. Thin a crowded patch so air moves through, water at the soil rather than over the top, and clear the stubble and fallen leaves off the bed in fall. Where it comes back every year, start again from cuttings taken off clean, rust-free plants.",
+          "why": "'cut a badly infected patch to the ground' is not what any source says for rust. Utah State puts a cut-to-the-ground step under anthracnose, not rust, and its rust row is about leaf wetness. It is replaced with the fall stubble clearance WSU supports and RHS's timing constraint on removal, neither of which the record carried.",
+          "anchor": "rhs, verbatim: 'Remove affected plants promptly before the black resting spores are formed and contaminate the soil.' + wsu_ext, verbatim: 'In late summer and fall, pustules on mint stubble and foliage become dark chocolate brown. This is the overwintering stage (telia) of the rust fungus and is the source of new infections the following spring.' + usu_ext, verbatim: 'Avoid wet leaves overnight. Use drip irrigation or apply overhead water before mid-day.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Rogue the twisted, distorted shoots out in early spring, before they throw spores across the rest of the patch, and keep taking infected leaves off through the season ahead of the dark resting stage. Open the stand up by dividing, move the water to the soil line or at least to the morning, and take the stubble and fallen foliage off the bed in fall, which is where the fungus is sitting when the season ends. Renew from inspected, rust-free cuttings: WSU's instruction is to monitor cuttings closely and discard infected ones rather than plant through the problem.",
+          "why": "The cut-to-the-ground instruction is dropped for the same reason as in the beginner field. 'There is no reliable home cure once it is established' is also dropped, and deliberately not re-anchored: the only admitted document that would support it is RHS's statement that no fungicides are available for use on mint or other culinary herbs, which is UK product law and is named in the batch brief as a sentence that must not reach US consumer copy. What replaces it is the early-spring rogueing and the propagation hygiene WSU publishes, neither of which the record held.",
+          "anchor": "wsu_ext, verbatim: 'Early spring infections are systemic in spearmint and infected plants are twisted and distorted, and stems easily break.' + 'Source materials should be inspected and be rust-free before propagating stem cuttings.' + 'Monitor stem cuttings closely for rust and discard infected plants promptly.'"
+        }
+      }
+    },
+    {
+      "name": "Verticillium wilt",
+      "id": "verticillium-wilt",
+      "type": "fungal",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Dig out a wilting plant, roots and all, and get it off the bed. Knock the soil off your tools and boots before you walk to another bed.",
+          "note_seasoned": "UC IPM's field sanitation is cleaning equipment, vehicles and shoes, and the shoe clause scales straight down to a garden: the fungus travels as microsclerotia in soil, so soil on a spade is the vector. Minimizing cultivation in an affected bed matters for the same reason, since digging through spreads them."
+        },
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Do not push the patch with fertilizer. Utah State lists over-feeding as one of the things to avoid where verticillium wilt has shown up.",
+          "note_seasoned": "This is Utah State's third named control for the disease on mint, alongside rotation and removal, and it is the only one that costs nothing and changes nothing about the bed. Feed for steady growth rather than for a flush."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Once wilt has been in a bed, keep mint out of it for at least five years, and keep potatoes and strawberries out too. Corn, onions, garlic and cereals are fine to grow there in the meantime.",
+          "note_seasoned": "UC IPM's minimum is five years in crops that do not build the fungus up, and it names both sides: do not rotate to mint, potatoes or strawberry; acceptable are grass hays, corn, sudangrass, alfalfa, cereals, onions and garlic. At garden scale that constraint is the real cost, because five years is longer than most beds go without a susceptible crop."
+        },
+        {
+          "method": "certified_clean_stock",
+          "note_beginner": "Start a new patch from cuttings or divisions off plants that have never wilted, not from a piece of the bed that is going down.",
+          "note_seasoned": "The commercial standard is rootstock certified free of Verticillium dahliae. No certification scheme exists for a garden division, so the working equivalent is provenance: propagate from a stand with no wilt history, and never carry divisions out of an affected bed into clean ground."
+        }
+      ],
+      "sources": ["usu_ext", "uc_ipm"],
+      "anchoring_urls": {
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden", "verified": "2026-09-04"},
+        "uc_ipm": {"url": "https://ipm.ucanr.edu/agriculture/peppermint/verticillium-wilt/", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Leaves yellow from the edges inward, curl up and die, starting low on the plant, and whole shoots wilt and die back. There is no spray that cures it; an affected plant is pulled out.",
+          "why": "'often on just one side of a stem' could not be anchored for mint in any admitted document. One-sidedness is a real Verticillium sign in general, but the documents that carry it for mint returned 403 in the record pass, so it is dropped rather than asserted from memory. The symptom text is brought back onto Utah State's own wording.",
+          "anchor": "usu_ext, verbatim: 'Verticillium Wilt | Leaf yellowing starting at the margin and they eventually curl up and die.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Utah State lists verticillium wilt for mint and describes leaf yellowing that starts at the margin, with the leaves curling and dying; UC IPM's peppermint guidelines carry it through to wilting and plant death. The fungus is Verticillium dahliae, and the reason this is a siting problem rather than a spraying one is that it survives between crops and through winter as microsclerotia, pinhead-sized hardened bodies in the soil. Neither document offers any chemical control.",
+          "why": "'The Connecticut Experiment Station and Utah State both flag it for mint' is a fabricated attribution and is struck. The Connecticut Agricultural Experiment Station is not in the source catalog, is in neither this entry's sources nor its anchoring_urls, and mint's own cert log records striking exactly this credit class from the rust and powdery mildew entries on 2026-07-06; it survived here because fixing one field left it live in a neighbor. Three more claims go with it: 'the disease that most limits mint's longevity' is a superlative with no document behind it, and 'slow, bronze-cast spring growth' and 'one-sided branch development' could not be anchored for mint.",
+          "anchor": "usu_ext, verbatim: 'Verticillium Wilt | Leaf yellowing starting at the margin and they eventually curl up and die.' + uc_ipm (UC ANR Pub 3457, peppermint), verbatim: 'Verticillium dahliae' and 'The fungus survives between crops and through winter as hardened fungal bodies called microsclerotia, which are pinhead size and barely visible.'"
+        },
+        "cause_beginner": {
+          "new": "A soil-borne fungus that gets into the plant's water-carrying tissue and blocks it. There is no cure for a plant once it is infected, and the fungus stays in the ground for years after the plant is gone. UC IPM puts a number on the cost: a stand that might have run five years or longer can be cut back to as little as two to four.",
+          "why": "Two changes. (1) 'the disease that shortens the life of a mint patch' is a superlative with no document behind it, and UC IPM independently uses 'shorter productive expectancy of mint stands' for a different problem on the same crop, the mint root borer; the superlative is struck. (2) Severity was adopted at `high` on 2026-09-04, and the first softening of that superlative, to 'one of the things', then undersold the entry and read like something a grower shrugs off. The replacement states the anchored CONSEQUENCE rather than a ranking: an infected plant cannot be saved, and the ground stays infested for years. That is what makes it high, and unlike the superlative it is what the documents actually say. (3) RESTORED 2026-09-04 (review FIX-4): the stand-longevity claim I struck as unanchored IS published, on the page this entry already cites, and in a better form than the superlative it was wearing. Fetched and confirmed here before restoring, since the whole reason it came out was an absence claim I could not stand behind. It is a concrete, sourced number rather than a ranking, which is exactly what a `high` severity should be able to point at.",
+          "anchor": "uc_ipm (ANR 3457, peppermint verticillium wilt), verbatim: 'Useful stand longevity may be reduced from 5 years or longer to as little as 2 to 4 years.' + 'The fungus survives between crops and through winter as hardened fungal bodies called microsclerotia, which are pinhead size and barely visible.' + 'Rotation to crops that do not encourage reproduction of V. dahliae for a minimum of five years' + usu_ext, verbatim: 'Rotate planting areas, remove infected plants, and do not over fertilize plants.' (removal is the only thing either document offers for an infected plant; neither offers any chemical control) + uc_ipm (ANR 3457, mint root borer), verbatim: 'shorter productive expectancy of mint stands' (the phrase the struck superlative was borrowing, on a different problem)"
+        },
+        "cause_seasoned": {
+          "new": "Verticillium dahliae, a soilborne fungus that invades the vascular system. It survives between crops as microsclerotia, and UC IPM's figure for infested ground is a minimum of five years in crops that do not build it up, with mint, potatoes and strawberry named as the ones not to rotate to.",
+          "why": "'tomato' is named by no document read for mint. UC IPM's mint rotation guidance names mint, potatoes, strawberry and red clover; tomato and eggplant are Verticillium hosts in general, but no mint document says to avoid following them, so the list is trimmed to what is published. The binomial and the five-year figure are added, both from the UC IPM page the record never cited.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Verticillium dahliae' + 'Rotation to crops that do not encourage reproduction of V. dahliae for a minimum of five years' + 'Do not rotate to mint, potatoes, or strawberry.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "There is no cure for an infected plant, so pull it out. Start the new planting from clean cuttings in a bed with no history of the disease. Go easy on the fertilizer as well: Utah State names over-feeding as something to avoid here. And once wilt has been in a bed, do not follow the mint with potatoes or strawberries, which build the same fungus up.",
+          "why": "Tomatoes are trimmed for the reason given in cause_seasoned. Utah State's third control, 'do not over fertilize plants', was dropped by the record entirely and is restored. DIRECTION CORRECTED 2026-09-04 (review FIX-1): this field had said to keep mint off ground that has grown potatoes or strawberries. That reverses UC IPM, which is telling you what NOT to plant AFTER mint in infested ground. The earlier pass fixed the LIST, correctly trimming tomato and eggplant, and never checked the DIRECTION, so a trimmed list kept pointing the wrong way. UC IPM also says the reverse risk is small.",
+          "anchor": "usu_ext, verbatim: 'Rotate planting areas, remove infected plants, and do not over fertilize plants.' + uc_ipm (ANR 3457), verbatim: 'Do not rotate to mint, potatoes, or strawberry.'"
+        },
+        "prevention_beginner": {
+          "new": "Plant clean stock in ground with no history of the disease. Where wilt has already shown up, that ground needs a long break: UC IPM's figure is at least five years in crops that do not feed the fungus, and it says not to follow with mint, potatoes or strawberry. Corn, onions, garlic and cereals are on its acceptable list.",
+          "why": "'move the patch to fresh ground every few years' is materially shorter than the published minimum and reads as a rotation interval; UC IPM's figure is a minimum of five years. The record also told the gardener what not to plant and never what they could, and UC IPM's non-host list is directly home-garden usable. DIRECTION CORRECTED 2026-09-04 (review FIX-1): 'keep mint out of a bed that has grown potatoes or strawberries' pointed the rotation backwards. The potato and strawberry names belong to what you plant AFTER mint in infested ground, and they are now stated in that direction.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'Rotation to crops that do not encourage reproduction of V. dahliae for a minimum of five years' + 'grass hays (orchardgrass, fescue, or timothy), corn, sudangrass, alfalfa, cereals, onions, and garlic'"
+        },
+        "prevention_seasoned": {
+          "new": "Use clean stock: UC IPM's standard for commercial plantings is rootstock certified free of Verticillium dahliae, and the home equivalent is taking divisions from a patch that has never wilted. Avoid working through or cultivating an infected patch, since that spreads the microsclerotia, and clean the soil off tools and boots on the way out. Note which way the rotation warning runs: UC IPM is telling you what not to plant after mint in infested ground, and it adds that strains specialized on other crops such as potatoes usually do not attack mint, so old potato ground is not the hazard for mint that a general verticillium warning would imply.",
+          "why": "Tomato and eggplant are dropped as unanchored for mint. Three UC IPM management steps the record never carried are added: certified clean rootstock, minimizing cultivation because it spreads microsclerotia, and sanitation on equipment and footwear. DIRECTION CORRECTED 2026-09-04 (review FIX-1): 'Keep new beds off ground that grew potatoes or strawberries' was the third live instance of the reversed rotation. The seasoned register now states the direction explicitly and carries UC IPM's host-specialization sentence, which is the thing that makes the direction make sense rather than look arbitrary. UC IPM's own hedge, 'although exceptions may occur', is preserved as 'usually'.",
+          "anchor": "uc_ipm (ANR 3457), verbatim: 'use only rootstock certified to be free of V. dahliae' + 'Minimize cultivation to avoid spreading microsclerotia' + 'cleaning all equipment and vehicles entering mint fields and cleaning shoes'"
+        }
+      }
+    },
+    {
+      "name": "Powdery mildew",
+      "id": "powdery-mildew",
+      "type": "fungal",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Thin the patch and give it light. Powdery mildew builds where growth is packed and shaded, and mint fills in until the middle of a stand is both.",
+          "note_seasoned": "Crowding and shade are the levers on this disease, and leaf wetness is not one of them. WSU has it severe on greenhouse mint because of humid, shady conditions, so opening the stand and siting it in sun takes away both drivers at once. Mint is one of the few crops this dataset is happy to put in part shade, which is exactly why the siting decision carries weight here."
+        },
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Feed lightly. The soft, fast growth that a heavy dose of nitrogen produces is what this fungus takes hold on first.",
+          "note_seasoned": "WSU's driver is explicit: the disease is most severe on young, succulent plants such as those resulting from heavy nitrogen fertilization and irrigation. On a herb you cut repeatedly there is a standing temptation to push regrowth with fertilizer, and that flush is what the mildew colonizes."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull out badly coated plants, and clear the old growth off the bed at the end of the season along with any wild mint growing beside it.",
+          "note_seasoned": "WSU's overwintering account is infected mint plants, stubble and wild hosts of the mint family, so clearing up in fall is preventive for next year rather than curative for this one. Rust and anthracnose on the same crop want the identical fall clear-out, which is the argument for doing it once and doing it thoroughly."
+        },
+        {
+          "method": "sulfur",
+          "note_beginner": "Sulfur works on powdery mildew, but only if you get in before the coating appears, and on a herb there is a catch: WSU says not to apply it within 30 days of harvest. If you are cutting mint every week or two, that makes sulfur an early-season option and not something to reach for once you are picking. Do not spray it either if the temperature is heading above 90°F in the next three days.",
+          "note_seasoned": "WSU starts sulfur when plants are 4 to 6 inches tall, a calendar trigger rather than a symptom one, and warns that once the disease is established it is very hard to control. Two limits govern it. No application within 30 days of harvest, because sulfide from sulfur taints the essential oil that carries mint's flavor, and none if temperatures will exceed 90°F within three days. Together those put the only usable window early, well before a patch is in regular cutting, which on most home plantings means this material stays in the shed."
+        }
+      ],
+      "sources": ["uc_ipm", "uc_ipm_pn7493", "wsu_ext"],
+      "anchoring_urls": {
+        "uc_ipm": {"url": "https://ipm.ucanr.edu/home-and-landscape/mint/", "verified": "2026-09-04"},
+        "uc_ipm_pn7493": {"url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7493.html", "verified": "2026-09-04"},
+        "wsu_ext": {"url": "https://s3.wp.wsu.edu/uploads/sites/2195/2014/06/PowderyMildewMint.doc", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "A white to gray powdery coating on the leaves, stems and leaf stalks. It starts as small round patches, up to about half an inch across, that spread and run together until they cover the plant. In a bad case the leaves yellow and fall.",
+          "why": "SPLIT 1/2. The bundle's symptom line described powdery mildew and anthracnose in one breath and gave powdery mildew 'white powdery patches that brown and shrivel heavy foliage', a stretch on what WSU says. Written from the WSU mint-specific document, which the record never cited.",
+          "anchor": "wsu_ext (Johnson, Managing Powdery Mildew on Mint), verbatim: 'Powdery mildew appears on mint leaves, stems, and petioles as a powdery, white to gray coating of fungal mycelium and spores.' + 'Infections consist of discrete circular colonies of up to 1/2 inch in diameter and can become numerous, coalesce and spread over the entire plant.' + 'Leaves may turn yellow and drop with severe infections.'"
+        },
+        "symptoms_seasoned": {
+          "new": "White to gray mycelium and spores on leaves, stems and petioles, appearing as discrete round colonies up to half an inch across that gray with age, run together and can spread over the whole plant; severe infections yellow the leaves and drop them. Susceptibility is not uniform across the mints: WSU has Scotch spearmint severely damaged, with peppermint and native spearmint usually not seriously affected.",
+          "why": "SPLIT 1/2. The bundle described two unrelated fungi in one field. The 'brown and shrivel' wording is dropped as a stretch on WSU's 'turn yellow and drop', and the cultivar-susceptibility line, a resistance signal the record did not carry, is added. 'Heavily spotted or coated leaves are not good to eat' is struck for the same reason as on mint rust: it is a consumption claim with no catalog-admitted anchor.",
+          "anchor": "wsu_ext, verbatim: 'Colonies turn gray with age.' + 'Leaves may turn yellow and drop with severe infections.' + 'Scotch spearmint can be severely damaged while peppermint and native spearmint are usually not seriously affected.'"
+        },
+        "cause_beginner": {
+          "new": "A powdery mildew fungus. Unlike most leaf diseases it does not need wet leaves to get going; what it wants is crowding, shade and soft growth.",
+          "why": "SPLIT 1/2, and this is the correction the split exists for. The bundle's cause fields put powdery mildew and anthracnose together as diseases 'driven by high humidity, crowding, and prolonged leaf wetness', which is right for the anthracnose half and wrong for this one.",
+          "anchor": "wsu_ext, verbatim: 'Powdery mildew is often severe on mint grown in the greenhouse due to humid, shady conditions.' + 'The disease is most severe on young, succulent plants such as those resulting from heavy nitrogen fertilization and irrigation.' + uc_ipm_pn7493 (UC ANR Pub 7493), added 2026-09-04 per review FIX-3 and read here before citing, verbatim: 'all powdery mildew species can germinate and infect without water on the plant's surface' and 'Moderate temperatures of 60° to 80°F and shady conditions are most favorable for powdery mildew development.' This is the direct anchor for the 'does not need wet leaves' clause, which previously leaned on WSU's mint observations alone."
+        },
+        "cause_seasoned": {
+          "new": "A powdery mildew of the mint family, and not a settled single species: WSU notes the name commonly applied to it has been split into more than twenty, with several powdery mildews attacking Lamiaceae in the Pacific Northwest, so this record does not hard-name the fungus. The drivers it does publish are young, succulent growth from heavy nitrogen and irrigation, and humid, shady conditions, which is why greenhouse mint gets it worst. It overwinters on infected mint plants, on stubble, and on wild hosts of the mint family.",
+          "why": "SPLIT 1/2. The bundle's cause_seasoned named 'powdery mildew; anthracnose and other leaf-spot fungi' as one driven complex. It also gave no organism guidance; WSU's warning that the name is unsettled is the reason to state that deliberately rather than to leave a gap that later invites a fabricated binomial.",
+          "anchor": "wsu_ext, verbatim: 'A name commonly applied to powdery mildew on mint is Erysiphe cichoracearum' with its own caveat that the species has been split and that 'several species of powdery mildews attack members of the mint family (Lamiaceae) in the Pacific Northwest' + 'Overwinter of the powdery mildews that infect mint are thought to be infected mint plants, stubble and wild hosts of the mint family.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Cut out the worst-covered stems and thin the patch so light and air get in. Do not try to fix this one by keeping the leaves dry, because it is not a wet-leaf disease. If it turns up every year, sulfur applied early, before the coating appears, is the treatment that works; once it is established it is hard to shift.",
+          "why": "SPLIT 1/2, and the core correction. The bundle told the gardener to 'water at the soil line to keep the leaves dry' for both diseases. For powdery mildew that is backwards: UC IPM's Pest Notes states the fungus does not require moist conditions and that water on plant surfaces for extended periods inhibits spore germination, and WSU reports mint under overhead sprinklers is generally not a powdery mildew problem. The replacement removes the wrong lever without recommending overhead sprinkling, which UC IPM itself hedges as not usually recommended because it may contribute to other pest problems.",
+          "anchor": "wsu_ext, verbatim: 'Timing of application is very important because once powdery mildew becomes established it is very hard to control.' + 'Powdery mildew is generally not a problem in mint irrigated with overhead sprinklers from a center pivot system.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Timing decides this one: WSU's point is that once powdery mildew is established it is very hard to control, and its sulfur program starts when plants are 4 to 6 inches tall rather than at first symptom. Sulfur carries two limits, and on a culinary herb the harvest one bites hardest: not within 30 days of cutting, because sulfide from it taints the oil that carries mint's flavor, and not at all if temperatures will exceed 90°F within three days. Leaf wetness is not the lever here and treating it as one wastes the effort: mint under overhead sprinklers is generally not a powdery mildew problem, and it is when that irrigation stops for a few days that the disease runs, on the humidity trapped in the canopy.",
+          "why": "SPLIT 1/2. The bundle's seasoned treatment prescribed 'water at the soil line' and 'avoiding overnight leaf wetness' for both halves, credited to Utah State, whose page does not mention powdery mildew at all. The replacement is written from the WSU mint-specific document. CORRECTED 2026-09-04 (review FIX-5): the first version carried WSU's 90°F limit but omitted its 30-day preharvest interval, which is the limit that actually governs on a herb cut and eaten weekly. I verified the interval belongs to SULFUR and not to the commercial fungicides before adding it, because my own earlier note had conflated the two ranges: WSU gives Headline 14 days, Amistar and Quadris 7, Kaligreen day-of-harvest, and sulfur its own 30, with the reason stated.",
+          "anchor": "wsu_ext, verbatim: 'Initial applications of sulfur are usually made when plants are 4 to 6 inches tall.' + 'Sulfur should not be applied if temperatures will exceed 90F within 3 days after application.' + 'when the overhead sprinkler irrigation is ceased for more than a few days, powdery mildew can increase very rapidly due to the humidity in the plant canopy.'"
+        },
+        "prevention_beginner": {
+          "new": "Give the patch room and light, and go easy on the nitrogen. Crowding, shade and soft, over-fed growth are what this disease needs; whether the leaves are wet or dry makes far less difference.",
+          "why": "SPLIT 1/2. The bundle's prevention_beginner read 'Space for airflow, water at the base rather than overhead, and avoid crowding'. The middle clause is the wrong advice this split exists to remove.",
+          "anchor": "wsu_ext, verbatim: 'The disease is most severe on young, succulent plants such as those resulting from heavy nitrogen fertilization and irrigation.' + 'Powdery mildew is often severe on mint grown in the greenhouse due to humid, shady conditions.'"
+        },
+        "prevention_seasoned": {
+          "new": "Site and feeding do the work here. WSU has the disease most severe on young succulent plants produced by heavy nitrogen and irrigation, and severe on greenhouse mint because of humid, shady conditions, so an open, sunlit stand fed modestly is the prevention. Clearing infected plants and stubble in fall matters too, since that, together with wild mint-family hosts, is where it is thought to overwinter.",
+          "why": "SPLIT 1/2. The bundle's prevention_seasoned said 'keep the foliage dry', which is the same wrong lever. The replacement is built on the two drivers WSU publishes plus its overwintering account, none of which the record carried.",
+          "anchor": "wsu_ext, verbatim: 'The disease is most severe on young, succulent plants such as those resulting from heavy nitrogen fertilization and irrigation.' + 'Overwinter of the powdery mildews that infect mint are thought to be infected mint plants, stubble and wild hosts of the mint family.'"
+        }
+      }
+    },
+    {
+      "name": "Anthracnose",
+      "id": "anthracnose",
+      "type": "fungal",
+      "severity": "medium",
+      "control_ladder": [
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pull the diseased plants out, and in fall cut the healthy growth right down to the ground and rake the debris off the bed.",
+          "note_seasoned": "Two of Utah State's three named controls for anthracnose on mint are here: remove diseased plants, and prune healthy plants to the ground in fall. Note where it places the cut, in fall and after the season, not as a mid-season shear to force clean regrowth; on a perennial that regrows from the crown the fall version costs nothing."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Thin or divide the patch so it is not a solid mat. Sun into the middle of the stand and air moving through it is what Utah State's general advice for mint comes down to.",
+          "note_seasoned": "Utah State frames thinning and dividing as maintenance mint needs anyway and pairs proper sunlight with appropriate watering as the way most of the crop's diseases are minimized or eliminated. A mint bed left to itself becomes exactly the dense, shaded, slow-drying interior this fungus wants."
+        },
+        {
+          "method": "water_at_the_base",
+          "note_beginner": "Put the water on the soil, not on the leaves. Drip or a soaker hose is the easiest way to manage that on a bed of mint.",
+          "note_seasoned": "Utah State calls out drip irrigation by name as the way to provide regular water and keep foliage dry. Unlike powdery mildew on the same plant, this is a disease where the dry-foliage instruction is the correct one, which is precisely why the two are separate records now."
+        },
+        {
+          "method": "crop_rotation",
+          "note_beginner": "Where the spotting comes back year after year, move the mint to fresh ground rather than replanting the same bed.",
+          "note_seasoned": "Rotating the planting area is the first of Utah State's three anthracnose controls. On a perennial it is a division-and-reset decision rather than an annual one, and it pairs naturally with the fall cut-down, which is when the patch is easiest to lift."
+        }
+      ],
+      "sources": ["usu_ext"],
+      "anchoring_urls": {
+        "usu_ext": {"url": "https://extension.usu.edu/yardandgarden/research/mint-in-the-garden", "verified": "2026-09-04"}
+      },
+      "field_corrections": {
+        "symptoms_beginner": {
+          "new": "Small water-soaked spots on the leaves and on the stems. A badly hit patch looks spotted and ragged rather than dusted or coated.",
+          "why": "SPLIT 2/2. The bundle described two unrelated fungi in one field, and gave anthracnose 'dark sunken spots and blotches'. Utah State says small water-soaked spots; 'sunken' and 'blotches' are the record's own additions and are dropped. 'Heavily spotted or coated leaves are not good to eat' is also struck, as a consumption claim with no catalog-admitted anchor.",
+          "anchor": "usu_ext, verbatim: 'Anthracnose | Small water soaked spots on leaves and stems.'"
+        },
+        "symptoms_seasoned": {
+          "new": "Utah State's description for mint is small water-soaked spots on the leaves and stems. NC State's spearmint page lists leaf spot as one of the crop's two main diseases without naming an organism, so this record describes anthracnose on mint from Utah State alone; no admitted document gives it a binomial.",
+          "why": "SPLIT 2/2, and a mis-credit corrected. The bundle read 'Utah State and NC State list leaf-spotting fungi for mint'. NC State says only 'leaf spot', generically, with no organism and no anthracnose, so attributing anthracnose to NC State overstates a one-word entry, and ncsu_ext was not even in the bundle's sources array while its prose credited NC State. That is the same shape as the fabricated credit found on verticillium wilt.",
+          "anchor": "usu_ext, verbatim: 'Anthracnose | Small water soaked spots on leaves and stems.' + ncsu_ext, verbatim: 'Two main diseases are rust and leaf spot.'"
+        },
+        "cause_beginner": {
+          "new": "A leaf-spotting fungus that gets going in a crowded, damp patch and keeps spreading while the foliage stays wet. No spray is offered for it on mint: Utah State's fix is to take the diseased plants out, cut the patch to the ground in fall, and move the planting to fresh ground.",
+          "why": "SPLIT 2/2. The bundle's cause_beginner covered 'fungal leaf diseases' in the plural, which is what let one prevention string serve two diseases that need opposite moisture management. Written from Utah State's anthracnose row and its own disease preamble. EXTENDED 2026-09-04, when severity was adopted at `medium` (up from the provisional `low`): the original replacement described the fungus and named no consequence at all, which reads as cosmetic. The added sentence states the published cost, which is the thing `medium` is recording, and it is Utah State's three-part control verbatim in substance.",
+          "anchor": "usu_ext, verbatim: 'Anthracnose | Small water soaked spots on leaves and stems. | Rotate planting areas, remove diseased plants, and prune healthy plants to the ground in fall.' (that control list is the whole of what Utah State offers for it; no spray appears anywhere on the page for this disease) + 'Most diseases can be minimized or eliminated by appropriate watering and ensuring proper sunlight to plants. Consider drip irrigation as an excellent method to provide regular water and keep foliage dry.'"
+        },
+        "cause_seasoned": {
+          "new": "A leaf and stem spotting fungus. No admitted document names the organism on mint, so this record does not name it either. Utah State's general disease line for the crop is the mechanism it publishes: appropriate watering and enough sunlight prevent most of it, drip irrigation is named as the way to keep the foliage dry, and thinning or dividing a thickening patch is part of keeping mint healthy.",
+          "why": "SPLIT 2/2. The bundle's cause_seasoned fused 'powdery mildew; anthracnose and other leaf-spot fungi' into one driven complex, and 'anthracnose or leaf spot' was used as if the two were synonyms, which no document says. The binomial in the literature was found only on non-admitted hosts in the record pass and is deliberately not written in.",
+          "anchor": "usu_ext, verbatim: 'Most diseases can be minimized or eliminated by appropriate watering and ensuring proper sunlight to plants. Consider drip irrigation as an excellent method to provide regular water and keep foliage dry. As the mint grows and multiplies, thinning or dividing may be essential to maintain healthy plants.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Take out the spotted plants. Water at the soil so the leaves stay dry, thin the patch to let sun and air in, and cut the whole planting to the ground in fall and clear the debris away.",
+          "why": "SPLIT 2/2. The bundle's shared treatment string had to serve both diseases and ended up describing neither: it prescribed a mid-season cut-back to 'encourage clean new growth'. Utah State's instruction is to prune healthy plants to the ground in fall, which is a different action at a different time.",
+          "anchor": "usu_ext, verbatim: 'Anthracnose | ... | Rotate planting areas, remove diseased plants, and prune healthy plants to the ground in fall.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Utah State's control is three parts: rotate the planting area, remove diseased plants, and prune healthy plants to the ground in fall. The fall cut is the one that does the work, and it is a fall sanitation step rather than the mid-season shear the old record described. No spray is offered for this disease on mint by any source read for it.",
+          "why": "SPLIT 2/2. Same defect. 'Shear a badly affected patch to force clean regrowth' is close to Utah State's control but is not the same instruction, and the bundle's credit line ('drip irrigation and avoiding overnight leaf wetness are the practical controls Utah State recommends') carried Utah State's rust-row advice onto a disease Utah State treats differently. The absence of a spray option is stated plainly rather than left as a gap.",
+          "anchor": "usu_ext, verbatim: 'Rotate planting areas, remove diseased plants, and prune healthy plants to the ground in fall.'"
+        },
+        "prevention_beginner": {
+          "new": "Give the patch sun and space, water at the soil line, and start a new bed in fresh ground if the spotting comes back year after year.",
+          "why": "SPLIT 2/2. The bundle's prevention string was written to cover both diseases and is kept here, on the half where it is correct, with Utah State's rotation step added; the same string is removed from the powdery mildew limb, where it is wrong.",
+          "anchor": "usu_ext, verbatim: 'Rotate planting areas, remove diseased plants, and prune healthy plants to the ground in fall.' + 'Most diseases can be minimized or eliminated by appropriate watering and ensuring proper sunlight to plants.'"
+        },
+        "prevention_seasoned": {
+          "new": "Utah State's preamble is the prevention: most of mint's diseases can be minimized by appropriate watering and enough sunlight, with drip irrigation named as the way to keep the foliage dry and thinning or dividing treated as maintenance a spreading patch needs anyway. Rotating the planting area is the fourth part, and it is the one that takes planning rather than an afternoon.",
+          "why": "SPLIT 2/2. The bundle's prevention_seasoned closed with 'renew a chronically diseased stand from clean cuttings', which no source offers for anthracnose on mint; Utah State's fourth lever is rotation of the planting area, and that is what replaces it.",
+          "anchor": "usu_ext, verbatim: 'Most diseases can be minimized or eliminated by appropriate watering and ensuring proper sunlight to plants. Consider drip irrigation as an excellent method to provide regular water and keep foliage dry. As the mint grows and multiplies, thinning or dividing may be essential to maintain healthy plants.' + 'Rotate planting areas'"
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "MINT RUST, hot-water treatment of planting material. No control_methods entry reaches hot-water treatment of rhizomes or cuttings, and per the brief no other method was bent to carry it, so this stays unreachable and appears in no prose field or rung note. TEMPERATURE NOW RESOLVED (2026-09-04). The reviewer decoded the WSU .doc byte-level and it literally reads '113 F (34 C)', which is internally inconsistent (113°F is 45°C; 34°C is 93°F), so no re-read of WSU could ever settle it, and my refusal to publish a figure was correct on the evidence I had. RHS settles it, and I fetched the page here rather than take it second-hand: 'Wash rhizomes thoroughly in early autumn and immerse in hot water at 44ºC (111ºF) (no higher) for 10 minutes, then cool in cold water and plant.' USE 111°F, AND THE CEILING IS NOT OPTIONAL, because RHS gives the reason: '44ºC (111ºF) is very near the lethal temperature for the plant'. ONE THING THIS CHANGES, and it argues against my earlier framing: RHS's next clause is 'it may be more profitable to spend the money on some new plants.' So this is not the valuable missing step I called it. It is a narrow technique its own publisher half-discourages, with a few degrees between working and killing the plant. If a method is ever built for it, that ceiling and that caveat are the method, not footnotes to it; and if no method is built, little is lost.",
+    "MINT RUST, in-season scouting cadence. WSU: 'the disease is recycled every 8 to 10 days when favored by moisture on foliage from rain, dew or sprinkler irrigation.' There is no monitoring or scouting method in control_methods, so the interval is carried inside the airflow_spacing and water_at_the_base rung notes as the reason those rungs work, rather than as its own rung.",
+    "MINT ROOT BORER, monitoring with a threshold. UC IPM: 'Sample for mint root borer larvae from September through October' and 'Consider a postharvest treatment if two or more larvae are found per sample.' No method carries a sampling threshold, and the threshold is commercial in any case. The September to October window is carried in prose because it coincides with the fall division a home patch gets anyway; the threshold is disclosed as commercial and declined.",
+    "MINT ROOT BORER, nematode release rate. UC IPM: 'Parasitic nematodes can be released through irrigation at 2 billion infective juveniles per acre.' beneficial_nematodes carries the rung, but the rate is a per-acre commercial figure with no home equivalent in any admitted document, so the rung note carries the delivery and the timing and sends the reader to the product's own directions for dose.",
+    "SPIDER MITES, predatory-mite release rate and trigger. UC IPM ANR 3457: release Neoseiulus fallacis 'at 2000 per acre when approximately 20% of sampled leaves have at least 1 spider mite', and treat at 'five mites per leaf or more'. augmentative_release carries the rung; both figures are per-acre or sampled-leaf commercial numbers and are disclosed as such rather than translated.",
+    "POWDERY MILDEW, the eradicant oil rung. UC IPM Pest Notes 7406: 'use a horticultural oil ... or one of the plant-based oils such as neem oil or jojoba oil ... to eradicate mild to moderate powdery mildew infections.' Both horticultural_oil (applies_to insect_soft_bodied / insect_general / mite) and neem_oil (insect_soft_bodied / insect_general) are scoped to animal pests and reach no fungal target, so no method can carry an oil rung on a fungal problem. This is the same class of gap as prune_out_infection not reaching fungal_foliar, and it costs this crop one of the few eradicant soft rungs in the dataset."
+  ],
+  "refusals": [
+    "REFUSED: re-anchoring mint rust's 'There is no reliable home cure once it is established' to RHS. The record report's recommendation is to reword the claim to track RHS's 'No fungicides with activity against mint rust are available for use on mint or other herbs that will be used for culinary purposes', on the grounds that it is stronger because it says why. That sentence is UK pesticide product law. The brief's region-discipline section names this exact sentence as the example of what must never be carried into US consumer copy, and the source catalog's own rhs entry carries the same warning. So the absolute is DROPPED rather than re-anchored, and no availability statement of any kind appears in the rust prose. If Trevor wants a US-scoped version of the claim, it needs a US document making a US availability statement, which no document read for this crop provides.",
+    "REFUSED: writing the species identity of mint's flea beetle. Complied with the pin table's de-naming, and going further: cause_seasoned states positively that no admitted document names a species, rather than leaving a silent gap that a later pass could fill with Longitarsus waterhousei from a non-admitted host. This is a refusal of the SHIPPED RECORD, which asserts 'mint flea beetles' in four fields, not of the brief.",
+    "REFUSED: carrying UC IPM's commercial figures into consumer prose. The mint root borer, verticillium wilt and webspinning spider mite pages are all UC ANR Publication 3457, a commercial peppermint guideline. Per-acre nematode and predatory-mite release rates, the two-larvae-per-sample postharvest threshold, the five-mites-per-leaf treatment threshold, annual fall flaming, and the Murray and Todds resistant clones are all disclosed in unreachable_claims or notes and are absent from every prose field and rung note. The biology and the calendar are carried; the commercial scale is not.",
+    "REFUSED: shipping the do-not-eat lines. 'rusty leaves are not good to eat' (mint rust) and 'Heavily spotted or coated leaves are not good to eat' (the disease bundle) are both struck. Neither has a catalog-admitted anchor; the only extension-branded text saying it is a single 2019 Ask Extension answer from one county on a domain the catalog does not admit. They are replaced with the removal instruction RHS publishes, which is the action they were standing in for. If the do-not-eat line is wanted, it is a catalog-addition decision on ask.extension.org, not a silent anchor."
+  ],
+  "notes_to_orchestrator": [
+    "SCOPE: 6 canonical entries authored out to 9 targets. 5 of the 9 are SPLIT limbs and carry the full 8-field prose set as field_corrections (cutworms, flea beetles, mint root borer, powdery mildew, anthracnose). Each limb is written from its own anchors; no bundle sentence was divided between limbs. Verticillium wilt takes 7 corrections, mint rust 6, aphids 4, spider mites 2. Counted from the file, not asserted: 59 field_corrections and 32 rungs (aphids 5, spider mites 4, cutworms 2, flea beetles 1, mint root borer 3, mint rust 5, verticillium wilt 4, powdery mildew 4, anthracnose 4).",
+    "PIN DISAGREEMENTS: RAISED, THEN ADOPTED BY THE COORDINATOR 2026-09-04, and this file now matches the updated pin table. verticillium-wilt medium -> `high`; anthracnose low -> `medium`. Both ids and both types were correct from the start and are used verbatim; no id objections. PROSE FOLLOWED THE NUMBER, which was the real work: `cause_beginner` on both entries had been written at the old severity and would otherwise have contradicted the new one. Verticillium's read 'it is one of the things that shortens the life of a mint patch', a hedge introduced when the unanchored superlative was struck, and at `high` that reads as shruggable; it now states the anchored consequence instead of a ranking, that an infected plant cannot be saved and the ground stays infested for years. Anthracnose's described the fungus and named no consequence at all, which reads cosmetic; it now carries Utah State's published cost, remove the plants, cut the patch to the ground in fall, move the planting. Nothing was inflated to fit a number: both additions are sentences the entry's existing anchors already carried and the prose had simply not stated. The other two disease severities are unchanged and their prose was re-read at those values: mint-rust `medium` (defoliating, no home chemical option, but the patch recovers) and powdery-mildew `low` (WSU: peppermint and native spearmint 'usually not seriously affected') both still read right.",
+    "SAGE'S verticillium-wilt STAYING AT `medium` WHILE MINT GOES TO `high`: NO OBJECTION, and it is not an inconsistency that needs fixing. MEASURED, not asserted: of the 118 problem ids that appear on more than one crop in shipped canonical, 43 already carry MIXED severities across their crops (36%), so per-crop severity divergence on a shared id is established practice rather than a new exception. Structurally it is also safe: `id` is the join key for varieties[].resistance and varieties[].ladder_delta, and nothing in the dataset joins or rolls up severity across an id, so two crops disagreeing costs nothing. Two things to record with it. (1) My agreement is about the MODEL, not an independent verdict on sage's value: I have not read sage's record report, so I cannot second the frequency-and-consequence judgment behind `medium`. (2) Corroboration for both new mint values, computed from canonical: `anthracnose` scores 4 medium / 1 low across the five crops carrying a value, so mint at `medium` joins the majority and its provisional `low` was the outlier; `verticillium-wilt` currently has only one valued instance roster-wide (strawberry, `medium`; artichoke and eggplant are null), so mint will be the first `high` on that id, which is expected rather than anomalous given the id is thinly valued and `powdery-mildew` already spans low, medium and high across its 16 valued crops.",
+    "MINT ROOT BORER, how the commercial page was handled, as asked. UC IPM's mint-root-borer page is UC ANR Publication 3457, an AGRICULTURE guideline for commercial peppermint. What I carried across: the organism (Fumibotys fumalis), the life cycle (larvae feed on leaves 2 to 4 days then drop and burrow into a rhizome; leave the rhizomes in October; overwinter just below the surface; pupate in spring; adults early to mid June, peak mid to late July; one generation), and the two management levers whose LOGIC is scale-free, tillage timed to the overwintering stage and rotation to a non-host. What I did NOT carry: the 2 billion infective juveniles per acre nematode rate, and the two-larvae-per-sample postharvest treatment threshold. The nematode rung exists because the delivery translates (a watered-in soil drench onto soil holding larvae) and the timing translates (the fall window after the larvae leave the rhizomes); the rung note says in plain words that the published rate is per acre and sends the reader to the product's directions. The September to October sampling window IS carried, in prose and in prevention_seasoned, because it coincides exactly with the fall lift-and-divide a home mint patch gets anyway, so the check costs nothing; the threshold hanging off it is disclosed as commercial and declined. The '2 to 4 cm below the surface' hibernaculum depth is rendered as 'an inch or so below the surface' rather than converted with a figure, since it is a depth and not a temperature.",
+    "ANCHORING_URLS holds ONE URL PER CATALOG KEY (verified: all 1,400 anchoring_urls values in canonical are dicts, none is a list), and mint needs more UC IPM URLs than it has UC IPM keys. Forced choices, each stated so the promote can check them: (a) APHIDS, uc_ipm points at Pest Notes 7404, because nearly all the substantive content (nitrogen, virus transmission, the water-spray, the twice-weekly monitoring interval, the coverage and volume language, the drought-and-heat exclusion) is there; the mint host-index listing therefore loses its URL, so symptoms_seasoned was rewritten to credit UTAH STATE for the mint listing, which Utah State publishes in its own table, and UC IPM only for what 7404 says. No credit is now left without a matching key and URL. (b) SPIDER MITES, uc_ipm points at the peppermint webspinning-spider-mites page (the binomial, the silvery and bronze damage description, Neoseiulus fallacis), with ucanr_ext_spider_mites carrying Pest Notes 7405 separately; the existing prose credit 'which UC IPM lists for mint' stays true because that page is UC IPM covering mites on mint. (c) POWDERY MILDEW, uc_ipm points at the mint host-index page, because that listing is what legitimately attaches powdery mildew to mint at all; all the mint-specific content comes from wsu_ext instead, so 7406 is never load-bearing for a sentence in this record even though it corroborates the biology. CATALOG GAP WORTH FILING: the catalog admits pn7405, pn7411, pn7427, pn7429 and pn74108 as their own keys but not pn7404 (Aphids) or pn7406 (Powdery Mildew on Vegetables). Minting `ucanr_ext_aphids` and a 7406 key would remove this whole class of forced choice across the roster.",
+    "wsu_ext ADMISSION: CLOSED by the coordinator 2026-09-04, no action owed. The key is already used with s3.wp.wsu.edu URLs 192 times in shipped canonical, plus treefruit (43), wpcdn (97), mtvernon (15) and hortsense (3), so it is a broad WSU institutional key and this citation sits inside established practice. The original flag is kept below for the record, since ten rewritten prose fields depend on it and a future reader should be able to see the question was asked and answered rather than never noticed. ORIGINAL FLAG: unresolved and inherited from the record report. Both WSU documents used here sit on s3.wp.wsu.edu (WSU WordPress asset host, site 2195 = WSU Plant Pathology), authored by Dennis A. Johnson, WSU Extension plant pathologist. The catalog's wsu_ext entry is https://extension.wsu.edu, but the catalog ALREADY uses that same s3 host for wsu_em051e and wsu_em057e, so the host is not novel. I anchored to wsu_ext on that basis; the batch ADJUDICATIONS separately floats a `wsu_mint_rust` key as a catalog-addition candidate. Four of mint rust's rewritten fields and six of powdery mildew's eight depend on these two documents, so if wsu_ext is judged not to cover them, both entries need re-anchoring before promote, not after.",
+    "MINT RUST, what changed and why it matters to the ladder. The record's flat 'it overwinters in the rhizomes' was the reason its only escalation was 'start over in a new spot'. WSU puts the overwintering stage (telia) on stubble and fallen foliage; RHS reports the rhizome version as a past consensus ('the general consensus WAS') and says what is KNOWN is resting spores in the soil or on the OUTSIDE of the rhizomes. Rewriting it to what both support inserts three cheap rungs below 'abandon the patch': clear the stubble in fall, rogue the twisted early-spring systemic shoots, and propagate only from inspected clean cuttings. The hot-water dip would be a fourth and cannot be laddered, see unreachable_claims. The ladder is five cultural rungs and no chemical rung: WSU's Rally 40W, Headline and Amistar are commercial oil-crop materials that do not transfer to a herb cut and eaten the same day, and RHS's no-fungicide sentence is UK law (see refusals). CORRECTED 2026-09-04: I had written that those fungicides 'come with 7 to 30 day preharvest intervals', inheriting a range from the record report. Fetched and measured: WSU gives Headline 14 days, Amistar and Quadris 7, and Kaligreen day-of-harvest. The 30 days is SULFUR's own interval and belongs to the powdery mildew entry, not to this range. Conflating the two would have overstated the fungicides and, worse, hidden the one interval that actually governs a home grower.",
+    "MINT RUST and OREGANO RUST: consumer prose is SILENT on cross-infection in both directions, per the record report's §4f verdict. Nothing in mint's prose says or implies that oregano's rust is a different fungus (it is one species, Puccinia menthae, and RHS puts marjoram in its host list), and nothing claims the races do not cross (that result is JOURNAL-ONLY, four APS records, all 403 on read). The registry entry for the mint-rust / oregano-rust pair under `deliberately_distinct` in tools/problem_id_registry.json is still OWED; it is not there today and the PLA-449 collision guard will otherwise flag the pair later.",
+    "POWDERY MILDEW, how the moisture correction was written. The prevention prose is built on airflow, spacing, sun and thinning, plus nitrogen, and it says explicitly that leaf wetness is not the lever. It does NOT tell a home gardener to sprinkle mint overhead: UC IPM's own hedge ('overhead sprinklers are not usually recommended as a control method in vegetables because their use may contribute to other pest problems') is respected, and the same crop's rust and anthracnose want the opposite. The one place the sprinkler evidence appears is organic_treatment_seasoned, as WSU's observation that mint under overhead irrigation is generally not a powdery mildew problem and runs rapidly when that irrigation stops, which is offered as the reason NOT to spend effort on leaf drying rather than as an instruction to wet the leaves. The sulfur rung ships with WSU's two limits, the 4 to 6 inch calendar trigger and the no-application-if-above-90°F-within-three-days ceiling; note that WSU's sulfur program is a commercial mint OIL crop program and no admitted document gives a preharvest interval for sulfur on culinary mint, so the rung carries timing and the temperature limit and no rate.",
+    "CUTWORMS, one inference disclosed. The handpick rung rests on Utah State's 'Larvae feed at or below ground and sever stems of seedlings or plants', which tells you WHERE to look but does not itself name handpicking; Utah State's named controls are a collar or trap and registered insecticides. The record report flagged only the DUSK TIMING of the shipped 'Handpick cutworms at dusk' as unanchored, which I read as leaving handpicking itself acceptable, and the dusk timing is dropped. If a stricter reading is wanted, drop rung 2 and cutworms ships a one-rung collar ladder. FLEA BEETLES ships a genuine one-rung ladder (row cover), which is what Utah State supports and matches the shipped flea-beetles precedent on cherry-tomato, roma-tomato and beefsteak-tomato. For both pests Utah State's other option is 'registered insecticides' with no active ingredient named on any admitted document, so no conventional rung was authored and the option is disclosed in the prose rather than silently dropped.",
+    "VERTICILLIUM WILT: resistant_varieties was CONSIDERED and NOT laddered. UC IPM names Murray and Todds in place of Black Mitcham in infested fields, but those are commercial peppermint clones, not garden-centre plants, and a rung telling a gardener to buy something they cannot buy is worse than no rung. It is recorded here as a 'resistance exists in this crop' signal instead. WSU's separate cultivar signal for POWDERY MILDEW ('Scotch spearmint can be severely damaged while peppermint and native spearmint are usually not seriously affected') IS carried, in symptoms_seasoned, and would hang off varieties[].resistance cleanly if mint ever gets a variety pass.",
+    "verification_log_ref APPEND OWED, per docs/verification_log_ref_convention.md: mint's log records striking the '(Connecticut Experiment Station and University of Illinois)' credits from the rust and powdery-mildew entries on 2026-07-06, and that assertion did not hold, because the same credit was still live on Verticillium wilt eight weeks later. Append '[CORRECTION 2026-09-04: the Connecticut Experiment Station credit was struck from the rust and powdery mildew entries only; it survived on Verticillium wilt.symptoms_seasoned until PLA-8 batch 25 -- see the mint record pass.]' and leave the original prose byte-for-byte. Do not rewrite it into current tense.",
+    "VALIDATOR FIXED ON DISK, as the brief invites. validate_out.py compared output names against CANONICAL names in both directions, which cannot work for a batch whose pin table splits four bundles, renames three entries and retires two: on mint it produced 5 spurious refusals (3 EXTRA + 1 MISSING in pests, 2 EXTRA + 1 MISSING in diseases) against correct output. Coverage now runs both directions against the PIN TABLE, which is the declared target state, and a SECOND walk checks provenance, that every canonical entry is accounted for by some pin row (kept under its own name, named inside a `from` string, or listed in the pin table's `_retired`), so silently dropping a canonical problem still fails. The change is generic across all seven crops. MUTATION-TESTED before this claim was written, each mutant run through the validator and confirmed RED, then the clean file restored and re-verified at sha256 3840b273...977780 (out_mint.json's current sha differs from that only because this note was written after the test): (M1) the Anthracnose limb deleted from the output -> REFUSED 'MISSING problem, pinned target, absent from output'; (M2) 'Mint root borer' renamed to an off-pin name -> REFUSED 3 ways (MISSING, EXTRA, no pin row); (M3) SENTINEL, spider mites' type reverted from the pinned `mite` to `insect` -> REFUSED by the oregano agent's pinned-field check, which proves the harness was running the mutated file and not a cached clean one; (M4) provenance, run in a scratch copy of the tree so the shared pin table was never touched, BOTH split rows' `from` stripped -> REFUSED 'canonical problem Powdery mildew and anthracnose (leaf spot) is accounted for by no pin row'. Note M4 stripped from only ONE of the two limbs SURVIVES, and that is correct, not a hole: one limb naming the bundle is sufficient provenance, so a single-row strip is a refusal-spec pass. The `_retired` branch was exercised two-state in the same scratch tree (Aphids unpinned and unshipped REFUSES; the same state plus a `_retired` row PASSES). Nothing else in the file was touched, and the oregano agent's concurrent addition of the type/severity pin check is intact.",
+    "prune_out_infection: PERMISSION DECLINED on all three fungal problems, and the brief's correction needs a second correction. The coordinator is right that the stated reason was wrong: applies_to is {bacterial, disease_general}, TYPE_TARGETS['fungal'] includes disease_general, so the method IS legal on mint-rust, powdery-mildew and anthracnose, and my validate run confirms it. But the CONCLUSION the brief drew was right for a different reason, and it is a stronger one: the method's own definition excludes exactly the actions mint needs. Its how_it_works_seasoned reads, verbatim, 'Where the affected part is simply removed rather than cut back into clean tissue, a spotted leaf picked off, a rotted fruit taken away, a plant too far gone to save pulled out, that is garden sanitation and not this', and its best_use is 'Cutting an infection out of a stem or branch by taking the cut well beyond the visible margin, back into clean tissue. The core fire blight control on a backyard apple or pear.' Everything these three problems ask for is on the excluded side of that line: RHS's 'Remove affected plants promptly', WSU's rogueing of systemic spring shoots, Utah State's 'remove diseased plants' and its fall cut of the WHOLE patch to the ground, and picking rusted leaves off as they show. There is no cut-back-into-clean-tissue action anywhere in mint's documents, and mint has no wood to cut into. So all three keep garden_sanitation and no rung was added. FLAG FOR THE OTHER SIX AGENTS: the permission as worded ('the action being cut out the infected growth rather than clear the debris') could read as licensing prune_out_infection for any herb leaf-spot where a source says to remove affected growth. On this method's own text that is garden_sanitation. The gate would pass it; the method definition would not.",
+    "COPY-GUARD CATCHES, both real, both fixed, and the second was a TWO-DONOR recombination the flag only half described. (1) aphids/balance_nitrogen/note_beginner scored 0.737 against spaghetti-squash with four shared 6-grams; I reproduced that number exactly before rewriting, which is worth doing because it distinguishes a lift from a twitchy metric. Rewritten, it now maxes 0.444 with zero shared 6-grams, and it also became MORE distinct from its own seasoned partner (0.233 -> 0.052), which is the tell that the original tail was borrowed rather than mine. (2) mint-rust/water_at_the_base/note_beginner was flagged for one byte-identical sentence from beefsteak-tomato/early-blight. It had a SECOND donor the flag did not name: its other sentence tracked marigold/leaf-spots ('If you have no choice but to sprinkle from above, do it in the morning so foliage dries during the day'), 3 shared 6-grams, and my own full-corpus sweep had independently ranked that note as the file's worst 6-gram overlap. Splitting one sentence out would have left the other donor live, so the whole note was rewritten: both sentences now have ZERO shipped donors, max similarity 0.651 -> 0.520, shared 6-grams 3 -> 0. It also cut the intra-crop echo against my own anthracnose water_at_the_base note from 0.545 to 0.295, since rust's note now leads on TIMING (Utah State's rust-specific 'avoid wet leaves overnight') and anthracnose's leads on DELIVERY (Utah State's general drip preamble), which is a cleaner split than both saying the same thing. SWEEP, run here against all 6,623 shipped rung notes in both orders, max taken: 64 note fields, 0 at or above 0.70, worst now 0.663 (mint-rust/airflow_spacing vs apricot/shot-hole, zero shared 6-grams), next 0.638 and 0.615, and the most-similar register PAIR within any one rung is 0.439. RE-RUN AFTER BOTH REWRITES, and scored the coordinator's own donor-count way as well: of every sentence in all 64 note fields, the number with EXACTLY ONE shipped donor, which is the shape of a lift rather than of house phrasing, is now ZERO. That is the direct evidence that no third echo like the water_at_the_base one is still sitting in the file, and it is a better check than the ratio alone, because the ratio is what let a two-donor recombination sit at 0.651 and look clean.",
+    "CANONICAL MOVED UNDER THIS BATCH, mid-authoring. crops_data_final.json is dirty in the working tree and is no longer a9c84847; it now hashes f6d55785, while pinned_ids.json `_base_sha` and my brief both still name a9c84847. I did not touch it. VERIFIED, because a moved base can silently invalidate every measurement made against it: the change is confined ENTIRELY to `source_catalog` (one key added, uc_ipm_pn7493, UC IPM Pest Notes 7493 Powdery Mildew on Ornamentals, which is sage's and rosemary's anchor per adjudications A9/A10). Zero crops changed, zero control_methods changed, and all 19 methods my ladders use are byte-identical in tier and applies_to to HEAD. So every ladder legality check and every copy-guard number in this file remains valid against the moved base, and mint's own six canonical entries are untouched and still bundled. TWO THINGS TO DECIDE: whether `_base_sha` in the pin table should be re-pinned to the post-catalog SHA before the record-and-ladder promote runs, and whether any promote guard asserts a pre-state SHA of a9c84847, because that assertion will now refuse or, worse, be skipped and go vacuous. Also note uc_ipm_pn7493 is NOW ADMITTED and carries the general powdery-mildew biology ('Water on plant surfaces for extended periods inhibits spore germination'). I did NOT add it to mint's powdery mildew: my record report never fetched 7493, the sage reviewer did, and the record governs. It is available as a corroborating third anchor if a reader opens it for mint.",
+    "REVIEW RESPONSE 2026-09-04, all 13 FIX items worked, none disputed, and every document-content claim in the review was re-verified here by fetching the page rather than accepted on trust. That mattered: the review said minute pirate bugs appear in 'Pest Notes 7405', and my `why` had said they appear in 'neither cited document'. Both needed checking, because the error being corrected IS an over-generalization across documents. Result: 7405 names them, 7404 does NOT, so the corrected justification names 7405 specifically rather than swapping one loose claim for another. FIX-1 (the direction inversion) is the one I would rank as most serious, and it is worse than a wording slip: the earlier pass fixed the LIST and never the DIRECTION, so a correctly-trimmed list went on pointing the wrong way in three fields while the crop_rotation rung said the opposite, and the record contradicted itself in public. Note it was ALSO unsupported by my own anchor set before the review supplied the host-specialization sentence: 'Do not rotate to mint, potatoes, or strawberry' never licensed 'do not plant mint after potatoes', so this was reachable from the evidence I already had and I did not catch it. FIX-2 has a common root worth naming: in four places the record pass wrote UNVERIFIED and I wrote it up as ABSENT. An unverified claim and a refuted claim are not the same finding, and a `why` that converts one into the other is exactly the artifact a later pass trusts and repeats. Two strikes made on those false absences are reversed (sticky honeydew, minute pirate bugs), both restored with real anchors; the neem generalization is retained, but it is now labelled as the editorial choice it always was rather than a forced one.",
+    "FIX-3 ACCEPTED, having read the document first. uc_ipm_pn7493 is added to powdery mildew as a third source with its own key and URL, which also resolves the one-URL-per-key squeeze I complained about earlier in these notes. I fetched it before citing it, so the record-governs objection that made me decline it is now satisfied rather than waived. It names mint explicitly in its host list, and it carries the direct anchor for the clause that was leaning on WSU alone: 'all powdery mildew species can germinate and infect without water on the plant's surface', plus 'Moderate temperatures of 60° to 80°F and shady conditions are most favorable'. ONE SCOPE CAVEAT TO RECORD, because it will matter to whoever reads this next: 7493 is 'Powdery Mildew on ORNAMENTALS' and lists mint among ornamental plants. It is a sound anchor for the biology and for the fact that mint is a named host; it is not a culinary-herb document, and nothing about harvest, edibility or preharvest intervals should ever be sourced from it. The harvest-side limits in this entry all come from WSU.",
+    "OUT OF SCOPE, reported not acted on. (1) UC IPM's mint page lists LEAFHOPPERS and THRIPS for mint and neither is in the record; ucanr_ext_thrips is already a catalog key and sage in this same batch carries Leafhoppers. Coverage gap, not an error, and not in my pin table. (2) UC IPM also lists 'Cold Injury and Frost Damage' and 'Common Environmental Disorders of Vegetables' for mint, outside pests[] and diseases[]. (3) pnw_handbook_epn (PNW Handbooks, Entomopathogenic Nematodes) is catalog-admitted and is the obvious home-scale co-anchor for the mint root borer nematode rung, but neither the reviewer nor I opened it, so it is NOT cited anywhere in this output. It should be read before the nematode rung ships. (4) The five documents the reviewer could not open (PNW handbook mint rust and mint verticillium, OSU EM 9299, OSU verticillium recognition, Illinois RPD 1221) bear on three claims I dropped as unverified rather than false: one-sided verticillium symptoms, bronze-cast spring growth, and the flea beetle's species. If a working fetch opens them, those three are the first things to re-check."
+  ]
+}

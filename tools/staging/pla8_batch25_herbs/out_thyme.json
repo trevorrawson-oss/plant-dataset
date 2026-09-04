@@ -1,0 +1,352 @@
+{
+  "crop": "thyme",
+  "pests": [
+    {
+      "name": "Spider mites",
+      "id": "spider-mites",
+      "type": "mite",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "even_watering",
+          "note_beginner": "Thyme likes dry soil, but a plant left bone dry through a heat wave is the one mites take over. In a long dry spell, give it a single deep soak and then let it dry out again, rather than a splash of water every day.",
+          "note_seasoned": "The lever is drought stress, not the moisture level itself: soak deeply during a prolonged dry stretch, then leave it alone until the ground has dried out. Frequent light watering would trade a mite flare for the root rot that actually kills thyme."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Blast the mites off with the hose on a hard setting, working in under the sprigs as well as over the top. Thyme's stems are woody enough to take it, and you will need to repeat while the hot, dry weather holds.",
+          "note_seasoned": "A thyme plant is a tough enough subshrub to hose forcefully, and repetition is what stops a colony rebuilding; the low, spreading habit means the water has to come in from the side to reach anything. Take the pass in the morning so the mat is dry by evening."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If the speckling keeps spreading, reach for insecticidal soap, sold for exactly these soft-bodied pests. It kills only what the spray directly wets, so on leaves this small, work slowly and get in under the mat as well as over the top.",
+          "note_seasoned": "Soap leaves no residual, so it only kills what it lands on, and on a dense low mat that means getting the nozzle in under the canopy. Skip it during a heat wave: it burns foliage on a plant already hot and short of water, which is exactly when mite numbers peak."
+        }
+      ],
+      "sources": [
+        "iastate_ext",
+        "ucanr_marin_mg",
+        "psu_ext",
+        "ncsu_ext",
+        "clemson_hgic",
+        "umd_ext",
+        "uf_ifas"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/article/2004/8-13-2004/thyme.html",
+          "verified": "2026-09-04"
+        },
+        "ucanr_marin_mg": {
+          "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/thyme",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-thyme",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/thymus/",
+          "verified": "2026-09-04"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/herbs/",
+          "verified": "2026-09-04"
+        },
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/herb-problems",
+          "verified": "2026-09-04"
+        },
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/23/spice-up-your-life-a-beginners-guide-to-growing-thyme/",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Fine yellow stippling on the small leaves, sometimes with faint webbing, most likely during a stretch of hot, dry weather. Thyme carries about as light a pest load as any herb in the garden, so this is a weather-driven flare rather than a standing problem.",
+          "why": "Dropped 'or on stressed or crowded plants': nothing read attributes mites on thyme to stress or crowding, and the one source that names crowding attaches it to APHIDS ('Aphids are common in rapidly growing, succulent plants that are in crowded conditions'), so the attribute looks transferred from the aphid entry. Also moved the webbing off 'the stems', which no source states.",
+          "anchor": "iastate_ext: 'Spider mites can occasionally become a problem during hot, dry weather.' + 'Thyme has relatively few serious pest and disease issues when planted in suitable conditions.' | ucanr_marin_mg: 'Thyme is fairly pest and disease resistant, although spider mites can be a problem in dry weather.' | ncsu_ext: 'This genus has no serious insect or disease problems.' | uf_ifas (Pasco, TEMPLATE-WEAK): 'Spider mites are tiny pests that feed on plant sap, causing stippling and webbing on leaves.'"
+        },
+        "symptoms_beginner": {
+          "new": "Tiny yellow speckles across the leaves, sometimes with a little fine webbing. It shows up in hot, dry weather and is usually minor, since thyme sees very few pests.",
+          "why": "Same webbing placement fix as the seasoned register: the record said 'webbing on the stems' and the only source that describes the webbing puts it on leaves. Correcting one register and leaving the other would have left the wrong placement live.",
+          "anchor": "uf_ifas (Pasco, TEMPLATE-WEAK): 'causing stippling and webbing on leaves.' | iastate_ext: 'Spider mites can occasionally become a problem during hot, dry weather.'"
+        },
+        "cause_seasoned": {
+          "new": "Tiny sap-feeding mites, closer kin to spiders than to insects, that flare in hot, dry weather. Thyme carries a light pest load and this is one of only a handful of pests any extension source reports on it.",
+          "why": "Removed 'is typically grown with little or no pesticide': no anchor in any of the eleven documents read, none of which makes a statement about pesticide practice on thyme. Added the not-an-insect fact, which is the biology behind this pass flipping the pinned type from insect to mite.",
+          "anchor": "umd_ext: 'Spider mites are tiny, eight-legged non-insects (related to spiders) about the size of a punctuation period.' | iastate_ext: 'Thyme has relatively few serious pest and disease issues when planted in suitable conditions.' + 'Spider mites can occasionally become a problem during hot, dry weather. Aphids are occasional pests.'"
+        },
+        "cause_beginner": {
+          "new": "Very small sap-sucking mites, more closely related to spiders than to insects. They build up during hot, dry weather, and thyme is a plant they bother only occasionally.",
+          "why": "Removed 'rarely needs spraying', the same unanchored pesticide-practice claim the seasoned register carried. Added the not-an-insect fact.",
+          "anchor": "umd_ext: 'Spider mites are tiny, eight-legged non-insects (related to spiders) about the size of a punctuation period.' | ncsu_ext: 'This genus has no serious insect or disease problems.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Hose the mites off and keep repeating while the hot, dry weather lasts; step up to insecticidal soap only if numbers keep climbing. Water deeply through a long dry spell rather than letting the plant bake, but do not shift to frequent light watering.",
+          "why": "Removed 'A hard harvest or shear removes much of the infested growth at once': no source says shearing removes mites. ISU's shearing guidance is about habit and rejuvenating declining growth, a vigor claim, so the mite-control reading was a modeled inference. Replaced it with the drought guidance ISU actually publishes, which is also the ladder's first rung.",
+          "anchor": "clemson_hgic (herb-general scope): 'can be discouraged by spraying the plants with a strong stream of water regularly during periods of drought' | iastate_ext: 'Water plants during prolonged dry periods, but avoid frequent irrigation.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Wash them off with the hose every few days while the hot weather lasts. Use insecticidal soap only if there are a lot. In a long dry spell, give the plant one deep watering rather than letting it bake.",
+          "why": "Removed 'Cutting the plant back also removes most of them', the beginner-register form of the same unanchored shearing claim.",
+          "anchor": "clemson_hgic (herb-general scope): 'spraying the plants with a strong stream of water regularly during periods of drought' | iastate_ext: 'Water plants during prolonged dry periods, but avoid frequent irrigation.'"
+        },
+        "prevention_seasoned": {
+          "new": "Give plants full sun and room around them, and keep a pot from baking dry through a heat wave. The flare follows hot, dry weather, so the summer watering habit is the part to get right.",
+          "why": "Removed 'Vigorous, unstressed thyme rarely attracts mites': no anchor. Nothing read links thyme's vigor to whether mites find it, and the sentence is the same vigor-repels-pests construction the aphid entry states outright backwards.",
+          "anchor": "iastate_ext: 'Good drainage, proper spacing, and periodic replacement of aging plants help minimize these issues.' + 'Water plants during prolonged dry periods, but avoid frequent irrigation.' | ucanr_marin_mg: 'Prune for good air circulation.' + 'spider mites can be a problem in dry weather'"
+        },
+        "prevention_beginner": {
+          "new": "Grow thyme in full sun with space around each plant, and keep pots from baking dry in a heat wave. Mites turn up in hot, dry spells, so that is when to watch for them.",
+          "why": "Removed 'Healthy plants rarely get mites': no anchor, and it is the beginner form of the vigor-repels-pests claim.",
+          "anchor": "iastate_ext: 'Water plants during prolonged dry periods, but avoid frequent irrigation.' + 'Spider mites can occasionally become a problem during hot, dry weather.'"
+        }
+      }
+    },
+    {
+      "name": "Aphids",
+      "id": "aphids",
+      "type": "insect",
+      "severity": "low",
+      "control_ladder": [
+        {
+          "method": "balance_nitrogen",
+          "note_beginner": "Feed thyme sparingly, or not at all. Extra fertilizer and rich ground give it soft, sappy new shoots, which is exactly what aphids breed on, and thyme is happier on poor dry soil in any case.",
+          "note_seasoned": "Lean ground works by withholding the soft, succulent tissue aphid colonies need, not by making the plant tough enough to fight them off. Overfeeding buys weak, sprawling stems and weaker aromatic oils along with the aphids, so restraint costs nothing here."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Pinch off any sprig that stays covered and take it to the trash, not back onto the bed. On a plant this small, a few snips take out most of a colony.",
+          "note_seasoned": "Removing weak and infested growth is the standard herb-bed answer, and on thyme it doubles as the light shaping the plant wants after flowering. The clippings should leave the bed, not land at the base of the plant."
+        },
+        {
+          "method": "water_spray",
+          "note_beginner": "Thyme's low mat means the hose has to come in sideways: angle a firm spray up under the shoots and most of the colony goes with it, and few aphids climb back afterward.",
+          "note_seasoned": "Thyme's wiry stems take a forceful jet that would flatten a seedling, so this is a real first move rather than a token one. Repeat as new clusters appear, and go in the morning so the canopy dries."
+        },
+        {
+          "method": "insecticidal_soap",
+          "note_beginner": "If a colony holds on after a couple of hosings, insecticidal soap will finish it. It kills only what the spray actually wets, so cover the shoots properly instead of misting the top of the plant.",
+          "note_seasoned": "This is the last step the problem should ever need on thyme, where aphids are reported as occasional rather than damaging. Soap leaves nothing behind, so predators arriving later are unharmed, and a repeat pass catches what the first missed."
+        }
+      ],
+      "sources": [
+        "iastate_ext",
+        "clemson_hgic",
+        "umd_ext",
+        "ncsu_ext",
+        "uf_ifas"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/article/2004/8-13-2004/thyme.html",
+          "verified": "2026-09-04"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/herbs/",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/thymus/",
+          "verified": "2026-09-04"
+        },
+        "uf_ifas": {
+          "url": "https://blogs.ifas.ufl.edu/pascoco/2024/04/23/spice-up-your-life-a-beginners-guide-to-growing-thyme/",
+          "verified": "2026-09-04"
+        },
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/herb-problems",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Occasional colonies of small soft-bodied insects on the stems and under the leaves, most likely where plants are crowded or have been pushed along with rich soil or fertilizer. Rarely a serious problem on thyme.",
+          "why": "'On tender new growth' is unsupported by anything read. Two documents give a feeding site and they do not agree in scope: umd_ext puts aphids 'on plant stems and on leaves', the uf_ifas Pasco post says undersides of leaves. My first draft took the narrower one, which rested the placement on the template post alone; it is widened here to what the non-template source actually says, with the template as the corroborating half rather than the load-bearing one. 'Stressed' is also unsupported, and the source that names crowding pairs it with rapid succulent growth, which the record dropped, keeping only the half that reads as a stress story.",
+          "anchor": "umd_ext: 'on plant stems and on leaves' | clemson_hgic (herb-general scope): 'Aphids and spider mites can be a problem. Aphids are common in rapidly growing, succulent plants that are in crowded conditions.' | uf_ifas (Pasco, TEMPLATE-WEAK): 'These small, soft-bodied insects can cluster on the undersides of leaves, sucking sap and causing wilting.' | iastate_ext: 'Aphids are occasional pests.'"
+        },
+        "symptoms_beginner": {
+          "new": "Small soft bugs clustered on the stems and under the leaves now and again, usually where plants are crowded or growing soft and sappy in rich soil. Rarely a big deal on thyme.",
+          "why": "Same two fixes as the seasoned register: the feeding site moves off 'tender new growth' and is stated at the width umd_ext gives it rather than narrowed onto the template post, and 'stressed' is replaced by the growth condition the source actually names.",
+          "anchor": "umd_ext: 'on plant stems and on leaves' | clemson_hgic (herb-general scope): 'Aphids are common in rapidly growing, succulent plants that are in crowded conditions.' | uf_ifas (Pasco, TEMPLATE-WEAK): 'can cluster on the undersides of leaves'"
+        },
+        "cause_seasoned": {
+          "new": "Sap-feeding insects that turn up on thyme now and then. They multiply on soft, fast growth, which is why a plant on lean, dry ground sees fewer of them than a well-fed one.",
+          "why": "The record's cause field said only that thyme 'is fairly pest-resistant and seldom needs treatment', which is the same treatment-practice claim the reviewer found unanchored on the mite entry, and it left the entry with no mechanism at all. The published mechanism belongs here, stated the right way round.",
+          "anchor": "clemson_hgic (herb-general scope): 'Aphids are common in rapidly growing, succulent plants that are in crowded conditions.' | iastate_ext: 'Aphids are occasional pests.' + 'Excess fertility can produce weak, sprawling growth and diminish the concentration of aromatic oils.'"
+        },
+        "cause_beginner": {
+          "new": "Small sap-sucking insects that show up now and then. They build up on soft, sappy growth, so thyme kept lean and dry gets fewer of them.",
+          "why": "Removed 'rarely needs spraying' (the unanchored treatment-practice claim) and put the sourced mechanism in its place, matching the seasoned register.",
+          "anchor": "clemson_hgic (herb-general scope): 'Aphids are common in rapidly growing, succulent plants.' | iastate_ext: 'Thyme grows best in full sun and well-drained soil. It tolerates poor, dry, and rocky sites where many other plants struggle.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Hose the clusters off and pinch out any shoot that stays covered, then use insecticidal soap only if numbers keep building. Trimmings leave the bed; do not let them drop at the foot of the plant.",
+          "why": "Removed 'Improving airflow and removing stress usually resolves it': no source says airflow controls aphids, and no source attributes aphids on thyme to stress. The herb-general sentence that does exist supports sanitation and removal of infested growth, which is a different rung and is what the ladder now carries.",
+          "anchor": "clemson_hgic (herb-general scope): 'The best defenses against pests on herbs are proper growing conditions, good sanitation, removal of weak or infested growth, and regular pruning.' | uf_ifas (Pasco, TEMPLATE-WEAK): 'Use a strong jet of water to dislodge aphids from the plant. Spraying insecticidal soap or neem oil will help control their numbers.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Wash them off with the hose, and pinch off any sprig that stays covered in them. Use insecticidal soap only if there are a lot.",
+          "why": "Removed 'More air and less stress usually fixes it', the beginner form of the same unanchored airflow-and-stress claim.",
+          "anchor": "clemson_hgic (herb-general scope): 'good sanitation, removal of weak or infested growth, and regular pruning' | uf_ifas (Pasco, TEMPLATE-WEAK): 'Use a strong jet of water to dislodge aphids from the plant.'"
+        },
+        "prevention_seasoned": {
+          "new": "Full sun, lean soil, room between plants, and restraint with the watering can. Lean ground helps because it does not push the soft, succulent growth aphids multiply on, not because a fast-growing plant fights them off; heavy feeding buys weak, sprawling stems and less flavor along with the aphids.",
+          "why": "THE HEADLINE FIX. The record said this practice keeps thyme 'vigorous enough to shrug off aphids', which states the mechanism backwards: aphids favor rapid succulent growth, so lean soil works by not producing it. As written the record taught a reader that pushing a plant harder is aphid protection, which inverts the advice on every crop they would generalize it to. The practice is right and is kept; the reason is replaced.",
+          "anchor": "clemson_hgic (herb-general scope): 'Aphids are common in rapidly growing, succulent plants that are in crowded conditions.' | iastate_ext: 'Apply fertilizer sparingly, if at all. Excess fertility can produce weak, sprawling growth and diminish the concentration of aromatic oils.'"
+        },
+        "prevention_beginner": {
+          "new": "Grow thyme in full sun with space around each plant, in poor dry soil, and go easy on fertilizer and water. Aphids go for soft, sappy growth, and lean soil is what keeps thyme from making any.",
+          "why": "'Healthy plants rarely get aphids' is the beginner form of the same inverted mechanism and is the sentence a beginner is most likely to act on, so it is corrected rather than softened.",
+          "anchor": "clemson_hgic (herb-general scope): 'Aphids are common in rapidly growing, succulent plants that are in crowded conditions.' | iastate_ext: 'Apply fertilizer sparingly, if at all. Excess fertility can produce weak, sprawling growth.'"
+        }
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "name": "Root and crown rot",
+      "id": "crown-and-root-rot",
+      "type": "fungal",
+      "severity": "high",
+      "control_ladder": [
+        {
+          "method": "improve_drainage",
+          "note_beginner": "This is a wet-soil disease with no spray behind it. What decides the outcome is where you put the plant: a slope, a raised bed, gravelly ground, or a pot with plenty of drainage holes, and never the low corner that stays damp after rain.",
+          "note_seasoned": "Drainage is the whole control: nothing available to a home gardener saves a crown that is already rotting. Thyme will take poor, rocky ground that would starve most plants, so moving it or building the bed up beats trying to improve a heavy wet spot in place."
+        },
+        {
+          "method": "resistant_varieties",
+          "note_beginner": "In a hot, humid region, pick one of the taller, smooth-leaved culinary thymes instead of a low, woolly creeping type: they cope with heat and damp air better. That is the plant coping with the climate, not beating the rot, so it belongs on top of good drainage and never in place of it.",
+          "note_seasoned": "Thyme is a Mediterranean plant, and in humid regions the taller smooth-leaved species tolerate the heat and damp where the low woolly types struggle. This is tolerance of the conditions that bring the rot on rather than resistance to the organisms themselves, so it shifts the odds without settling them."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "A plant whose roots and base have rotted will not recover, so lift it out and dispose of it rather than waiting to see. Clear the dead material away instead of leaving it lying under the neighbors.",
+          "note_seasoned": "Take the loss out promptly and put the effort back into the site: overwatering and pooling do damage to an herb that is not reversible, so a collapsed plant is not something a change of watering habit rescues."
+        }
+      ],
+      "sources": [
+        "iastate_ext",
+        "ncsu_ext",
+        "ucanr_marin_mg",
+        "csu_ext",
+        "umd_ext",
+        "clemson_hgic",
+        "psu_ext"
+      ],
+      "anchoring_urls": {
+        "iastate_ext": {
+          "url": "https://yardandgarden.extension.iastate.edu/article/2004/8-13-2004/thyme.html",
+          "verified": "2026-09-04"
+        },
+        "ncsu_ext": {
+          "url": "https://plants.ces.ncsu.edu/plants/thymus/",
+          "verified": "2026-09-04"
+        },
+        "ucanr_marin_mg": {
+          "url": "https://ucanr.edu/site/uc-marin-master-gardeners/document/thyme",
+          "verified": "2026-09-04"
+        },
+        "csu_ext": {
+          "url": "https://cmg.extension.colostate.edu/Gardennotes/731.pdf",
+          "verified": "2026-09-04"
+        },
+        "umd_ext": {
+          "url": "https://extension.umd.edu/resource/herb-problems",
+          "verified": "2026-09-04"
+        },
+        "clemson_hgic": {
+          "url": "https://hgic.clemson.edu/factsheet/herbs/",
+          "verified": "2026-09-04"
+        },
+        "psu_ext": {
+          "url": "https://extension.psu.edu/herb-garden-plants-thyme",
+          "verified": "2026-09-04"
+        }
+      },
+      "field_corrections": {
+        "symptoms_seasoned": {
+          "new": "Yellowing, wilting and dieback on a plant that only worsens the more it is watered. Wet, poorly drained ground is behind it, and it is the single biggest killer of thyme.",
+          "why": "Two fixes. (1) 'rather than to cold' is refuted: UMD couples the two rather than opposing them, and ISU reports winter injury as a separate real loss mode, so the record turned 'the usual cause is wet soil' (true) into 'cold is not a cause' (false). (2) 'often with a darkened, decayed base at the soil line' is anchorable only through UMD's southern blight page, which this entry does not admit (see notes_to_orchestrator), so it is dropped rather than left standing unsourced.",
+          "anchor": "iastate_ext: 'Most problems result from excessive moisture and poor drainage. Root rots and other fungal diseases may develop in wet soils.' + 'Overwatering can lead to root rot and reduced vigor.' | umd_ext: 'Poorly drained soil, water that pools due to the slope or plants being overwatered can cause irreversible damage to herbs.'"
+        },
+        "symptoms_beginner": {
+          "new": "The leaves yellow and the plant collapses while the soil around it is still wet. This is what kills most thyme plants, and it comes from ground that stays too damp.",
+          "why": "Drops 'often with a dark, rotted spot at the base' for the same reason as the seasoned register: the soil-line lesion is described only on UMD's southern blight page, which this entry does not admit.",
+          "anchor": "iastate_ext: 'Overwatering can lead to root rot and reduced vigor.' + 'Wet or poorly drained locations should be avoided because thyme is susceptible to root diseases in saturated soils.'"
+        },
+        "cause_seasoned": {
+          "new": "Soilborne rots that get going in saturated, badly drained ground and destroy the roots and crown from below. Thyme is intolerant of wet feet and waterlogged soil is the usual cause, but cold is not ruled out: wet, cold soil over winter is a documented way Mediterranean herbs like thyme are lost, and winter injury on the woody stems is a separate risk after a hard winter.",
+          "why": "'Waterlogged ground, not cold, is the underlying cause' is an authoring addition that inverts a real mechanism. UMD couples wet and cold in one sentence about thyme by name, and ISU reports winter injury separately. The same construction appears on oregano's root rot from a different agent, so it is a template twin carrying a wrong claim across crops; these sentences are written from the documents rather than from the sibling.",
+          "anchor": "umd_ext: 'Excessively wet, cold soil can cause Mediterranean herbs such as rosemary, thyme, and lavenders to die over the winter.' | iastate_ext: 'Winter injury can also occur on woody stems, particularly after severe winters.' | ncsu_ext: 'They are intolerant to wet soils or poor drainage.'"
+        },
+        "cause_beginner": {
+          "new": "A rot in the soil that gets going where the ground stays soggy and drains slowly, killing the roots and the crown at soil level. Wet soil is the usual cause, and soil that is both wet and cold over winter can kill thyme in cold regions.",
+          "why": "'The real cause is wet soil, not cold weather' is the beginner form of the refuted claim and is the flatter, more quotable version of it. Correcting the seasoned register alone would leave the wrong statement live in the register more readers see.",
+          "anchor": "umd_ext: 'Excessively wet, cold soil can cause Mediterranean herbs such as rosemary, thyme, and lavenders to die over the winter.' | iastate_ext: 'Winter injury can also occur on woody stems, particularly after severe winters.'"
+        },
+        "organic_treatment_seasoned": {
+          "new": "Once the roots and crown are rotting the damage is not reversible, so lift affected plants out and destroy them; nursing one along does not work. Everything worth doing on this one is drainage, done before the fact.",
+          "why": "The record asserted 'There is no cure once the crown is rotting' flatly. I kept the claim but scoped it to the wording of the source that carries it. CORRECTED after review: my first rationale said 'no thyme document states it', which was an absence I had not verified. The uf_ifas Pasco thyme post does state it ('There is no saving a plant with root rot', relayed by the independent reviewer, not read by me). That does not change the prose or the anchor, since Pasco is the find-and-replace template and umd_ext's 'irreversible damage' is the better warrant, but the rationale overstated an absence and is corrected rather than left standing.",
+          "anchor": "umd_ext (herb-general scope): 'Poorly drained soil, water that pools due to the slope or plants being overwatered can cause irreversible damage to herbs.' | iastate_ext: 'Good drainage, proper spacing, and periodic replacement of aging plants help minimize these issues.'"
+        },
+        "organic_treatment_beginner": {
+          "new": "Once the roots and the base have gone soft there is no bringing the plant back, so dig it out and throw it away. What helps is drainage from the start, not a cure later on.",
+          "why": "Same scoping fix as the seasoned register: 'there is no fix' becomes 'will not recover', which is what the herb-general source's 'irreversible damage' supports.",
+          "anchor": "umd_ext (herb-general scope): 'can cause irreversible damage to herbs' | iastate_ext: 'Wet or poorly drained locations should be avoided because thyme is susceptible to root diseases in saturated soils.'"
+        },
+        "prevention_seasoned": {
+          "new": "Site it in sharply drained, lean soil in full sun, err on the dry side with water, and keep thyme out of ground that holds moisture. On heavy soil grow it raised or in a container of fast-draining mix, space plants so the ground dries between waterings, and in hot, humid regions favor the taller, smooth-leaved culinary types over the low woolly ones.",
+          "why": "Two changes. (1) The variety guidance is rescued here from the retired 'Foliar fungal problems in humid weather' entry: it is thyme-scoped, sourced and useful, and the humid-region risk it addresses is the one this entry manages. (2) 'use a mound or raised bed' kept but repointed: its only thyme-document sentence sat in the retired entry's powdery mildew paragraph, so the raised-bed half now rides on the improve_drainage method's own anchor while the container half takes a thyme-scoped source.",
+          "anchor": "clemson_hgic (thyme-scoped): 'In general, the taller growing species and those with smooth leaves will tolerate heat and humidity better than low growing or wooly types.' + 'Plant thyme in full sun in very well drained soil that stays dry.' | csu_ext: 'Thyme grows well in containers, especially indoors. Do not overwater due to root rot susceptibility.' | iastate_ext: 'Good drainage, proper spacing, and periodic replacement of aging plants help minimize these issues.' | RAISED BED HALF: carried by the improve_drainage method entry (its own anchor ucanr_ext, https://ipm.ucanr.edu/PMG/PESTNOTES/pn74133.html), not by a thyme document. Flagged in notes_to_orchestrator."
+        },
+        "prevention_beginner": {
+          "new": "Give it fast-draining soil and full sun, water on the light side, and keep it out of ground that stays soggy. Where the soil is heavy clay, grow it raised or in a pot, and in humid areas pick one of the taller, leafier kinds rather than a low fuzzy one.",
+          "why": "Same two changes as the seasoned register, in plain words: the rescued variety guidance arrives, and the raised-bed advice is retained on the method's warrant rather than on the cross-applied powdery mildew sentence.",
+          "anchor": "clemson_hgic (thyme-scoped): 'the taller growing species and those with smooth leaves will tolerate heat and humidity better than low growing or wooly types' | csu_ext: 'Thyme grows well in containers, especially indoors. Do not overwater due to root rot susceptibility.' | ncsu_ext: 'They prefer well-drained soils and can tolerate drought once they are established. They are intolerant to wet soils or poor drainage.'"
+        }
+      }
+    }
+  ],
+  "unreachable_claims": [
+    "RENEWAL OF AN AGEING CLUMP. iastate_ext puts 'periodic replacement of aging plants' in the same sentence as drainage and spacing as a way to minimize thyme's root and fungal problems, and ucanr_marin_mg says 'It will become woody with age and the center starts to die out after a few years. Replace it or propagate cuttings from the old plant.' NO method in the 64 carries replacing or renewing a declining woody perennial. certified_clean_stock is about the material you buy or propagate from, not about retiring a plant you already have, and crop_rotation is an annual-bed method. Filed, not forced: I did not bend either one to carry it. It is a real, twice-sourced cultural control for thyme's highest-severity problem and the only rung the ladder is genuinely missing.",
+    "REGULAR PRUNING AS A PEST MEASURE. clemson_hgic's herb-general sentence is 'The best defenses against pests on herbs are proper growing conditions, good sanitation, removal of weak or infested growth, and regular pruning.' The sanitation and removal halves are carried by garden_sanitation, but there is no method for routine pruning against an INSECT or MITE problem: prune_out_infection is physical and scoped bacterial / disease_general, so it cannot reach either of thyme's pest entries. This is the same two-class shape as the even_watering gap already filed in the brief.",
+    "NOT UNREACHABLE, DELIBERATELY NOT USED: sulfur. The pinned type flip from insect to mite makes sulfur legal for spider mites under control_ladder_gate. No document read recommends sulfur, or any chemical, on thyme for anything, and the horticultural_oil method entry warns against sulfur within two weeks of an oil spray. Recording it so the next pass does not read its absence as an oversight."
+  ],
+  "refusals": [
+    "I did not author any powdery mildew, leaf spot or gray mold claim anywhere in thyme's record, including as a surviving sentence relocated out of the retired entry. No admitted source names a foliar fungal pathogen on Thymus; the one document that names powdery mildew published the identical paragraph about oregano with the crop name swapped.",
+    "I did not write an aromatic-oil deterrence rationale for thyme's low pest load, even though the sibling precedent exists on lemongrass. No document read attributes thyme's low pest load to its essential oils, and iastate_ext's only oil statement runs the other way: over-fertilizing 'diminish[es] the concentration of aromatic oils'.",
+    "I did not author a biological rung on either pest entry. Nothing read publishes a natural-enemy statement for aphids or mites on thyme, so a beneficial_predators or augmentative_release rung would have been written off a generic document with no crop warrant. Three and four rungs is what the evidence pays for.",
+    "I did not author a soft_chemical or conventional rung on root and crown rot. Nothing read recommends a fungicide for thyme root rot, so the ladder is cultural-only. That is unusual enough to state rather than pad around, and it is why that entry has three rungs to the mite entry's three and the aphid entry's four.",
+    "I did not pin a binomial anywhere. No thyme-scoped document read names a mite species, an aphid species, or an admitted-catalog pathogen for the rot. The entries stay at common-name level, which is what the sources support.",
+    "I did not write a threshold, a count, or a treat-at trigger on either pest entry. No document read publishes one for thyme, and the ladder must not invent the number that would make it feel more precise.",
+    "I did not build prose on the UF/IFAS Pasco 'Spice Up Your Life' post's wording, per the dispatch instruction, and I have not treated it as independent corroboration of anything. It is cited on the two pest entries because it is the only thyme-titled document that names those pests and their treatments, and every field_correction that leans on it is marked TEMPLATE-WEAK in its anchor string."
+  ],
+  "notes_to_orchestrator": [
+    "THE RETIRED ENTRY, ANSWERED DIRECTLY: yes, exactly ONE sentence from 'Foliar fungal problems in humid weather' deserves to survive, and I have moved it. clemson_hgic's thyme-scoped variety guidance ('In general, the taller growing species and those with smooth leaves will tolerate heat and humidity better than low growing or wooly types') is now (a) the resistant_varieties rung on crown-and-root-rot and (b) a declared correction to that entry's prevention_seasoned and prevention_beginner. It goes there rather than to crop-level prose because the humid-region risk it addresses is the risk this entry manages, and because as a ladder rung it is actionable at the moment a reader is choosing a plant. If you would rather it also appear in the crop's descriptive prose, that is a crop-level field outside my declared set and I have not touched it.",
+    "WHAT FROM THE RETIRED ENTRY DOES NOT SURVIVE, AND WHY. (1) The symptom list 'powdery white film, spots, or grayish mold' is three diseases in one clause and no admitted source reports any of them on thyme; it is dropped, not relocated. (2) 'Water at the base rather than overhead' and 'open up airflow' read as rescuable but are not: their warrant is csu_ext's herb-general splashing sentence and umn_ext's crowding sentence, both FOLIAR-disease rationales. Moving them onto a root-zone entry would be reading a leaf-disease document into a root-disease claim, which is the reviewer's own point 4. Spacing survives on the rot entry only in the form iastate_ext itself anchors to root disease ('Good drainage, proper spacing, and periodic replacement of aging plants help minimize these issues'), phrased as letting the ground dry rather than as canopy airflow. (3) The post-bloom shear is real thyme husbandry (iastate_ext, csu_ext) but is not a disease control in any document; it belongs in crop-level care prose and no method carries it.",
+    "SOUTHERN BLIGHT, AND THE ONE-URL-PER-SOURCE-KEY CONSTRAINT THAT DECIDED IT. umd_ext is the only admitted source that attributes a binomial-resolved pathogen to thyme: its Southern Blight of Vegetables page carries a photo captioned 'Thyme infected with southern blight' (Agroathelia rolfsii, = Sclerotium rolfsii per ncsu_ext), plus real symptoms at the soil line, a disposal protocol, and 'raise soil pH above 6.5'. I did NOT admit it into crown-and-root-rot, for three reasons. (a) anchoring_urls is keyed by source id and carries exactly one URL per key per node, so admitting it would have cost me umd_ext's Herb Problems URL, which is the anchor for the wet-and-cold correction this dispatch mandates. (b) The pin defines this id as parsley's water-mold and fungal-rot umbrella (Pythium, Phytophthora, Rhizoctonia); A. rolfsii sits outside that set, so admitting it widens a SHARED join key on one crop, which is an orchestrator decision and not a fan-out agent's. (c) It would have unlocked a raise_soil_ph rung that points the same way as thyme's own preferred pH (ucanr_marin_mg: 'pH between 6.5 and 7'), which is genuinely attractive and is exactly why I want you to decide it rather than me. The cost of my call is visible in the record: the soil-line lesion detail is dropped from both symptom registers for want of an anchor.",
+    "PIN COMPLIANCE, WITH ONE CONSEQUENCE WORTH RECORDING. I used all three pinned ids, types and severities verbatim, including crown-and-root-rot. Note the consequence the pin's own evidence field acknowledges: parsley's umbrella asserts Pythium, Phytophthora and Rhizoctonia, while the only document that names an organism on thyme (VCE, unadmitted) gives thyme Pythium alone. The id is now permanent, and the entry's prose deliberately names no organism, so nothing in the consumer copy asserts the wider set. This is a note, not a refusal.",
+    "TYPE FLIP: spider-mites goes insect to mite as pinned, and I used the widening. even_watering is legal for mite and illegal for insect, and it is the mite ladder's first rung, scoped honestly: thyme wants dry soil, so the rung is a deep soak during a prolonged dry spell rather than steady moisture, which is what iastate_ext actually publishes ('Water plants during prolonged dry periods, but avoid frequent irrigation'). The rung note says outright that frequent light watering would trade a mite flare for the root rot that kills the crop, so the two entries do not give a reader opposite instructions.",
+    "NEW SOURCE KEYS FOR THYME: iastate_ext and csu_ext, both already admitted in the catalog, neither previously in thyme's vocabulary (its source_set is clemson_hgic, ncsu_ext, psu_ext, ucanr_marin_mg, uf_ifas, umd_ext, usu_ext, wvu_ext). iastate_ext is the load-bearing anchor on all three entries and is cited first everywhere. csu_ext appears only on the rot entry. Also note two keys in thyme's existing source_set that this pass could not use: usu_ext (no USU thyme page exists, the URL 302s to a not-found page) and wvu_ext (HTTP 403 on both URL forms, so no read, which is not an absence).",
+    "ncsu_ext is pointed at the GENUS page (plants.ces.ncsu.edu/plants/thymus/), not the species page the crop record currently cites. The genus page carries the sentence that matters ('This genus has no serious insect or disease problems. Although, it may be susceptible to root rot if soils are wet or poorly drained'); the species page says only 'No significant problems'. Same key, better document, and the species page's sentence is a subset of it.",
+    "OPEN FINDING thyme_pilot_finding_004 DESCRIBES THE RETIRED ENTRY and goes moot on this promote. I re-verified it against the record rather than assuming it stale: it is accurate, it says the gray-mold naming is modeled, and its subject is the entry Trevor retired on 2026-09-04. It should be closed or superseded in the same promote that drops the entry, otherwise it sits open quoting an entry that no longer exists. That field is outside my declared set and I have not touched it.",
+    "VERIFICATION_LOG_REF: thyme's cert log (2026-07-06) states 'Pruning caution + the generic low-severity pest/disease entries left as-is (no false pathogen name, no clear mis-cite).' This pass retires one of those entries and corrects three sub-claims inside the others, so per the append-only convention the promote may owe a '[CORRECTION 2026-09-04: ...]' line appended to that log, with the original prose left byte-for-byte. Crop-level field, outside my declared set, untouched here.",
+    "TEMPLATE-TWIN DISCLOSURE, BOTH DIRECTIONS. (1) The 'not cold' construction on this entry is the twin of oregano's, so I wrote the replacement sentences from umd_ext and iastate_ext rather than from any sibling; oregano's needs the same fix and the same UMD sentence anchors it. (2) uf_ifas Pasco is cited on both pest entries and is boilerplate: its thyme and oregano posts carry the same spider-mite, aphid and powdery-mildew sentences with the crop name swapped. Oregano's currently shipped uf_ifas anchor rests on the same template. Every anchor string of mine that uses it is marked TEMPLATE-WEAK so a later reader does not count it as corroboration.",
+    "VALIDATOR: I touched NOTHING. I read validate_out.py at 11:21 and it did a two-way coverage walk against CANONICAL names with no knowledge of pinned_ids.json's _retired list, which would have refused thyme's correct output for 'MISSING problem Foliar fungal problems in humid weather (present in canonical)'. By the time I ran it, the mint authoring agent had already replaced that walk with a pin-table walk plus a separate canonical-provenance check that honors _retired (its own comment dates the fix 2026-09-04). So the defect was real and is already fixed; I did not write the fix and I am not claiming it. Worth recording that I nearly reported a fix I had not made, because I read the file once and assumed it was still what I had read.",
+    "I DID NOT TRUST THE GREEN VALIDATOR RUN. A pass on a tool another agent rewrote mid-flight is not evidence until the tool is shown to bite, so I ran an instrumented mutation harness over a scratch copy of out_thyme.json: a sentinel assert that the clean fixture is GREEN first (or the run is meaningless), then eight injected defects, one per guard family. All 8 reddened: wrong pinned id, inverted tier order, an illegal applies_to (sulfur on an insect problem), the retired entry re-authored, an em dash in a rung note, byte-identical registers, a dropped pinned problem, an unknown method slug. The file was restored and byte-compared against a pre-harness copy. The validator is live on this crop, not vacuously green.",
+    "DE-TWINNING, MEASURED THEN ACTED ON. I ran my own rare-6-gram plus two-order difflib check against the whole shipped corpus (5,841 rung notes, 6,052 problem-prose fields) rather than assuming my sentences were original. It found four RARE phrase lifts in my rung notes, each appearing in exactly one or two shipped notes ('a hard stream from the hose' from basil/Aphids, 'carry the trimmings out of the' from chives/Onion thrips, 'and get rid of it rather' from grapefruit/Citrus canker, 'and put it in the trash'), and I rewrote all four. It also showed my field_corrections still carried the shared rosemary / oregano / sage / lavender rot template in the clauses I had RETAINED as correct ('a rot that takes hold when', 'and attack the roots and crown', 'and dies back even though the'). Since a declared correction replaces the whole field anyway, keeping the twin's wording cost nothing to fix, so I rewrote those clauses too: every field I declare is now thyme's own sentences, not the family's. Max cross-crop difflib ratio after the rewrite is 0.53 on rung notes; the remaining shared 6-grams are common English collocations ('on the undersides of the leaves', 'off with a strong spray of water') that appear in 20 to 50 shipped notes, i.e. house register rather than lifts. Note that the twin clauses I removed here are still live on rosemary, oregano and sage: de-twinning the rest of the family is a batch-level call, not a single-crop one.",
+    "RE-READ THE BRIEF AFTER IT WAS AMENDED MID-RUN. BRIEF_authoring.md changed at 12:12, after I had read it, so I re-read it rather than working from my copy. The only change is the prune_out_infection correction (it IS legal on a fungal problem, because TYPE_TARGETS['fungal'] contains disease_general). It does not change thyme: my one fungal problem is a root and crown rot, there is nothing above ground to prune out, and nothing read recommends cutting into an affected plant. garden_sanitation carries the right action here, which is lifting and disposing of the plant. Recording the check so its absence is not read as a stale brief.",
+    "POST-REVIEW FIXES (2026-09-04, 6 of 6 applied, none disputed). FIX-3 taken as the beginner-register fix rather than narrowing the rung: the reviewer is right that clemson_hgic says 'tolerate heat and humidity better' and says nothing about rot, soil moisture or disease, while every thyme document binds the rot to WET SOIL, so the rung is SYNTHESIS and the beginner register was asserting it without the limit the seasoned register carried. The beginner note now says outright that this is the plant coping with the climate, not beating the rot, and that it goes alongside the drainage rather than instead of it. I kept the rung rather than narrowing it because the relocation into prevention_* is record-licensed and the rung is the only place a reader meets the fact at the moment they choose a plant; with the limit stated in both registers the synthesis is disclosed rather than hidden.",
+    "FIX-1 changed a sourcing shape, not just a sentence. Widening the aphid feeding site to 'stems and the undersides of the leaves' moves the load off the Pasco template onto umd_ext, which is exactly the direction this batch is trying to go, so umd_ext is now on the aphid entry's sources and anchoring_urls (Herb Problems, the same URL the mite entry uses). The entry now has a non-template anchor for its placement claim, which it did not have when I filed it. NOTE: I did not read umd_ext's aphid sentence myself; 'on plant stems and on leaves' is relayed from the independent review and is cited as such.",
+    "FIX-6 is the one I would have caught with my own rules and did not. My `why` asserted 'no thyme document states it' about the no-cure claim, when what I actually knew was that no document IN MY RECORD REPORT stated it. That is the absence-is-document-scoped failure written into a rationale, the same shape the reviewer found four times on mint. The prose and the anchor are unchanged and still correct; the rationale is corrected in place and says where the correction came from. Worth the orchestrator noting that a `why` field is exactly where this shape hides, because nothing consumer-facing changes when it is wrong.",
+    "MEASUREMENT NOTE ON FIX-4/5, because the ratio depends on the denominator. I complied ('an herb', 'throw it away'), and American English is the CLAUDE.md rule regardless. But I measured before accepting the figure: across the WHOLE canonical document it is 'an herb' 18 to 'a herb' 10, and inside PROBLEM-ENTRY consumer prose specifically it is 'an herb' 0 to 'a herb' 1 (cilantro-coriander/Aphids/note_beginner). The 17-to-3 figure is presumably a third field set. The corpus is close to silent where my sentence actually lives, so this is the style rule deciding it, not precedent. Separately: 'bin it / bin them' already appears 5 times in shipped problem prose (beefsteak-tomato Early blight twice, jalapeno Pepper weevil, swiss-chard Downy mildew, and one more). Mine is gone; those five are a house-wide sweep and not a batch-25 edit.",
+    "RELAYED, NOT READ BY ME, AND WORTH A LOOK LATER: the reviewer's RHS read reportedly gives thyme slugs, snails, rosemary beetle and sage leafhopper, none of which thyme's record carries an entry for. Two cautions before anyone acts on that. RHS is UK-scoped, and the brief admits it for organism identity and biology but not for climate or product statements; rosemary beetle in particular is a European pest that is not a US home-garden problem, so importing that list wholesale would put a pest on a US crop record that US readers cannot encounter. Slugs and snails on thyme is the one worth testing against a US source. I did not act on any of it. Recorded so the convergence evidence for the RETIREMENT (nine institutions) is not confused with a mandate to ADD pest entries.",
+    "SELF-CORRECTION ON MY OWN EARLIER CLAIM, because I stated it in this file and it was scoped wrong. I reported 'zero rare shared 6-grams' on my rung notes. That check compared rungs only against FULL-schema shipped entries, which silently excluded every NOTE-schema crop's rungs, and the brief's guard compares against the WHOLE shipped corpus. Re-run against all 6,052 shipped prose fields plus every shipped rung including note-schema, it was NOT zero: the post-review fixes and the original text together carried rare phrase overlaps with nasturtium/Aphids ('from the hose lifts the clusters'), raspberry, marigold and viola aphid notes, potato/Common scab, turnip/White rust, garlic/Fusarium basal rot, grape-tomato and leek. All are now rewritten and the rung surface is genuinely clean against the full corpus. The lesson is the one already in the house rules: a filter that drops a class of rows returns a confident zero about the rows it kept. The FULL-schema restriction came from the brief's warning about comparing PROSE against note-schema crops, and I carried it into a RUNG comparison where it does not belong, since a note-schema crop's rungs are real rungs.",
+    "REMAINING N-GRAM OVERLAPS ARE DELIBERATE, and here is the full list so nobody has to re-derive it. Eleven rare 6-grams survive, all on the FIELD surface, and nine are against thyme's OWN current record: 'rarely a serious problem on thyme', 'rarely a big deal on thyme', 'thyme is intolerant of wet feet', and three overlapping grams inside 'in sharply drained lean soil in full sun'. Those are clauses the record pass found CORRECT and that I retained on purpose; a correction that rewrote them would be changing right prose for the sake of a similarity score. The other two are against thyme's own retired entry ('favor the taller smooth leaved culinary types over'), which is the sanctioned relocation of the Clemson sentence and is evidence the rescue happened rather than evidence of a lift. Zero cross-crop rare overlaps remain on either surface.",
+    "CANONICAL MOVED UNDER THIS FILE WHILE I WORKED, AND I CHECKED IT RATHER THAN ASSUMING. crops_data_final.json is no longer at the pinned base a9c84847; it is now 9a141091 and shows as modified in git. I diffed it against HEAD before reporting anything alarming. The ONLY change is source_catalog, 219 to 220 entries, one key added (uc_ipm_pn7493). Zero crops changed, zero control_methods changed, thyme's four canonical problem entries are untouched (still no ids, still type insect on the mites, retired entry still present), so the crop-side batch-25 promote has NOT run. Three consequences worth stating. (1) My file is unaffected: I re-verified every rung's tier order and applies_to legality against the LIVE control_methods and all 10 rungs still pass. (2) All eight source keys I cite are still admitted in the live catalog. (3) `pinned_ids.json._base_sha` and BRIEF_authoring.md both still name a9c84847, which is now stale by one catalog promote; whatever guard reads that pin will need it bumped, or it will refuse the crop promote for a reason that has nothing to do with the crop data. Flagging rather than editing, since the pin file is not mine to touch."
+  ]
+}

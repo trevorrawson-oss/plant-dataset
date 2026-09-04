@@ -1,0 +1,404 @@
+{
+  "_why": "PLA-8 batch 25 (herbs). TARGET STATE, pinned before fan-out. Decided against the live roster from the seven record/source reports plus Trevor's four structural rulings (2026-09-04): retire both non-problems, split all four bundles, drop lavender's aphid half, oregano names become 'Mint rust' + 'Powdery mildew'. `from` records provenance so the promote can be verified against canonical.",
+  "_base_sha": "9a141091fce3378e3f9fc8e4e67c7200b7d654c883d86bc6961d3723f092afd2",
+  "_counts": "36 canonical problems -> 38 target (2 retired, 4 bundles split into 9, 1 half deleted).",
+  "lavender": {
+    "pests": [
+      {
+        "name": "Spittlebug",
+        "id": "spittlebugs",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "No spittlebug id exists anywhere on the roster; this batch mints the family. Philaenus spumarius, per rhs which names the binomial and lists 'lavender, rosemary' in one host sentence. Shared with rosemary and sage."
+      },
+      {
+        "name": "Whiteflies",
+        "id": "whiteflies",
+        "type": "insect",
+        "severity": "low",
+        "from": "RENAME from 'Whiteflies and aphids' (aphid half DELETED, Trevor 2026-09-04)",
+        "decision": "REUSE",
+        "evidence": "`whiteflies` live on 5 crops. Aphid half unsupported across 8 documents; UC IPM's lavender host-index omits aphids while its rosemary page lists them, so the omission reads deliberate."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Phytophthora root and crown rot",
+        "id": "lavender-root-crown-rot",
+        "type": "fungal",
+        "severity": "high",
+        "from": "KEEP",
+        "decision": "MINT (host-scoped)",
+        "evidence": "THE EXCEPTION to the rot-family rule, and the only one: taxon RESOLVED and NARROWER than the umbrella (Phytophthora, P. nicotianae per Putnam 1991 via the dedicated admitted source wsu_ext_lavender_prcr), and the display name already names the genus. Distinct from `phytophthora-root-rot` (blueberry/raspberry/blackberry), a different Phytophthora on a different host family."
+      },
+      {
+        "name": "Leaf spot",
+        "id": "lavender-leaf-spot",
+        "type": "fungal",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "MINT (host-scoped, UMBRELLA BY INTENT)",
+        "evidence": "PLA-448 4f RULING: umbrella, NOT one unpinned organism. US extension names exactly one organism on Lavandula (Septoria lavandulae, ncsu newcropsorganics) in a bulk list with no symptoms, distribution or management; ncsu toolbox itself says only 'susceptible to leaf spot and root rot'. Do NOT reuse `leaf-spots` (marigold's bundles powdery mildew)."
+      }
+    ]
+  },
+  "lemongrass": {
+    "pests": [
+      {
+        "name": "Spider mites (indoor and hot, dry conditions)",
+        "id": "spider-mites",
+        "type": "mite",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "`spider-mites` live on 16 crops. Type corrected from coarse `pest` to `mite`: zero of 823 laddered entries carry coarse types."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Lemongrass rust",
+        "id": "lemongrass-rust",
+        "type": "fungal",
+        "severity": "medium",
+        "from": "KEEP",
+        "decision": "MINT (host-scoped)",
+        "evidence": "Puccinia nakanishikii Dietel, per CTAHR PD-57 read in full. PD-57 prints the host range as Cymbopogon only, so the Poaceae/Lamiaceae separation from mint-rust and oregano-rust is on evidence, not assumption."
+      },
+      {
+        "name": "Leaf blight",
+        "id": "lemongrass-leaf-blight",
+        "type": "fungal",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "MINT (host-scoped)",
+        "evidence": "usu_ext genuinely lists it ('Reddish brown spots on leaf tips and margins'). Organism JOURNAL-ONLY (four reports, all Curvularia, four different species) so the id stays host-scoped and taxon-neutral. NAME_SHARED with carrot-leaf-blight is a parenthetical-deletion artifact; register."
+      },
+      {
+        "name": "Root rot (overwatering in poor drainage)",
+        "id": "root-and-stem-rots",
+        "type": "fungal",
+        "severity": "medium",
+        "from": "KEEP",
+        "decision": "REUSE (problem-class umbrella)",
+        "evidence": "Neither cited source names an organism. Monocot grass, so not the Lamiaceae rots; the existing 6-crop umbrella is the roster's problem-class id for exactly this shape and all 6 ladder improve_drainage-first."
+      }
+    ]
+  },
+  "mint": {
+    "pests": [
+      {
+        "name": "Aphids",
+        "id": "aphids",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "59 crops. type/severity were ABSENT keys on all 6 mint problems; supplied."
+      },
+      {
+        "name": "Spider mites",
+        "id": "spider-mites",
+        "type": "mite",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "16 crops; roster convention `mite` (30/34)."
+      },
+      {
+        "name": "Cutworms",
+        "id": "cutworms",
+        "type": "insect",
+        "severity": "low",
+        "from": "SPLIT 1/3 from 'Cutworms, mint flea beetles, and root-feeding pests'",
+        "decision": "REUSE",
+        "evidence": "9 crops. usu_ext: 'Larvae feed at or below ground and sever stems of seedlings or plants.'"
+      },
+      {
+        "name": "Flea beetles",
+        "id": "flea-beetles",
+        "type": "insect",
+        "severity": "low",
+        "from": "SPLIT 2/3 from 'Cutworms, mint flea beetles, and root-feeding pests'",
+        "decision": "REUSE",
+        "evidence": "34 crops. DE-NAMED from 'mint flea beetles': usu_ext writes only 'Flea Beetle' with no species, and Longitarsus waterhousei appears on NO catalog-admitted document. On a home patch the beetle seen is more likely a drifting Epitrix or Phyllotreta."
+      },
+      {
+        "name": "Mint root borer",
+        "id": "mint-root-borer",
+        "type": "insect",
+        "severity": "low",
+        "from": "SPLIT 3/3 from 'Cutworms, mint flea beetles, and root-feeding pests'",
+        "decision": "MINT (host-scoped)",
+        "evidence": "Fumibotys fumalis, per uc_ipm mint-root-borer (ANR 3457). The record's root-feeder limb was cited to nothing; this page carries it. NOTE: this is a UC IPM AGRICULTURE page, so its per-acre nematode rate and postharvest threshold need translation for home growers."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Mint rust",
+        "id": "mint-rust",
+        "type": "fungal",
+        "severity": "medium",
+        "from": "KEEP",
+        "decision": "MINT (host-scoped)",
+        "evidence": "Puccinia menthae. Host-scoped per the roster's whole rust family. Correctly DISTINCT from oregano-rust: host-specialized races (wsu_ext: 'One type infects Native spearmint but not peppermint'). Register the pair."
+      },
+      {
+        "name": "Verticillium wilt",
+        "id": "verticillium-wilt",
+        "type": "fungal",
+        "severity": "high",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "V. dahliae, matches eggplant/strawberry/artichoke. Record carries a LIVE FABRICATED ATTRIBUTION to strike (CAES not in catalog). SEVERITY RAISED medium -> high 2026-09-04, adopting the mint record report's crop-specific reasoning over the orchestrator's provisional default. This is the stand-limiting disease of mint: no cure, soil-persistent as microsclerotia, managed only by site and renewal (uc_ipm ANR 3457). NOTE this deliberately differs from sage's verticillium-wilt at `medium` in the same batch: sage's is a lower-frequency, lower-consequence case, and two crops sharing an id may carry different severities."
+      },
+      {
+        "name": "Powdery mildew",
+        "id": "powdery-mildew",
+        "type": "fungal",
+        "severity": "low",
+        "from": "SPLIT 1/2 from 'Powdery mildew and anthracnose (leaf spot)'",
+        "decision": "REUSE",
+        "evidence": "32 crops. uc_ipm's mint page names powdery mildew for mint. The bundle forced one prevention string across two diseases whose sources disagree on leaf wetness (7406: 'Overhead sprinkling may help reduce powdery mildew')."
+      },
+      {
+        "name": "Anthracnose",
+        "id": "anthracnose",
+        "type": "fungal",
+        "severity": "medium",
+        "from": "SPLIT 2/2 from 'Powdery mildew and anthracnose (leaf spot)'",
+        "decision": "REUSE",
+        "evidence": "14 crops. uc_ipm does NOT name anthracnose for mint; the anchor for this limb is usu_ext. SEVERITY RAISED low -> medium 2026-09-04, adopting the mint record report's reasoning: usu_ext's control is rotate plus remove plants plus cut the whole patch to the ground in fall, which is a real cost to the grower, not a cosmetic problem."
+      }
+    ]
+  },
+  "oregano": {
+    "pests": [
+      {
+        "name": "Aphids",
+        "id": "aphids",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "59 crops."
+      },
+      {
+        "name": "Spider mites",
+        "id": "spider-mites",
+        "type": "mite",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "TYPE CORRECTED insect -> mite. MEASURED: typing a spider mite `insect` makes `sulfur` and `even_watering` ILLEGAL under control_ladder_gate.TYPE_TARGETS."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Root and stem rot",
+        "id": "root-and-stem-rots",
+        "type": "fungal",
+        "severity": "high",
+        "from": "KEEP",
+        "decision": "REUSE (problem-class umbrella)",
+        "evidence": "Name matches the existing 6-crop umbrella exactly. Taxon unresolved: ncsu_ext names oregano a Phytophthora host, but the shipped Pasco anchor says only 'root rot ... excessive moisture' and never says stem rot."
+      },
+      {
+        "name": "Mint rust",
+        "id": "oregano-rust",
+        "type": "fungal",
+        "severity": "medium",
+        "from": "RENAME from 'Rust' (Trevor 2026-09-04)",
+        "decision": "MINT (host-scoped)",
+        "evidence": "PLA-448 4f RULING: ONE UNPINNED ORGANISM, not an umbrella. Puccinia menthae. T1 anchors already in oregano's vocabulary: psu_ext 'Oregano can be susceptible to fungal diseases such as mint rust and root rot'; rhs 'The fungal disease mint rust can affect oregano'. Display name follows the sources; a bare 'Oregano rust' appears in none."
+      },
+      {
+        "name": "Powdery mildew",
+        "id": "powdery-mildew",
+        "type": "fungal",
+        "severity": "low",
+        "from": "RENAME from 'Botrytis and humid-weather foliar disease' (Trevor 2026-09-04)",
+        "decision": "REUSE",
+        "evidence": "The old name led with the ONE organism no source attaches to oregano. VERIFIED: oregano's own shipped uf_ifas anchor publishes exactly two diseases, Powdery Mildew and Root Rot. Botrytis appears in neither."
+      }
+    ]
+  },
+  "rosemary": {
+    "pests": [
+      {
+        "name": "Spider mites",
+        "id": "spider-mites",
+        "type": "mite",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "TYPE CORRECTED insect -> mite. SEVERITY medium -> low: every source that ranks rosemary ranks it down ('generally pest and disease free', 'fairly resistant to pests'); no document converts mention-frequency into severity."
+      },
+      {
+        "name": "Aphids",
+        "id": "aphids",
+        "type": "insect",
+        "severity": "low",
+        "from": "SPLIT 1/2 from 'Aphids and whiteflies'",
+        "decision": "REUSE",
+        "evidence": "59 crops. uc_ipm's rosemary page lists aphids explicitly (unlike its lavender page). Management diverges from whiteflies at both ends of the ladder."
+      },
+      {
+        "name": "Whiteflies",
+        "id": "whiteflies",
+        "type": "insect",
+        "severity": "low",
+        "from": "SPLIT 2/2 from 'Aphids and whiteflies'",
+        "decision": "REUSE",
+        "evidence": "5 crops. Sources give whiteflies 'difficult', soap 'reduces but does not eliminate', and an explicit conventional dead end. Bundle origin traced to UGA B1170's 'Aphids; Whiteflies' heading, which attributes susceptibility to germander and monarda and whose rosemary section has no pest content."
+      },
+      {
+        "name": "Spittlebugs",
+        "id": "spittlebugs",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "Philaenus spumarius, shared with lavender and sage. rhs names the binomial and lists 'lavender, rosemary'."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Root and crown rot",
+        "id": "crown-and-root-rot",
+        "type": "fungal",
+        "severity": "high",
+        "from": "KEEP",
+        "decision": "REUSE (problem-class umbrella)",
+        "evidence": "RULE APPLIED CONSISTENTLY ACROSS THE FIVE-CROP ROT FAMILY: reuse the existing problem-class umbrella whose display name matches, UNLESS the crop's taxon is resolved AND narrower than that umbrella. parsley's `crown-and-root-rot` record defines itself as exactly this umbrella: 'Soilborne water-mold and fungal rots (Pythium, Phytophthora, Rhizoctonia)' -- the same genus set in play here. rosemary's taxon is UNRESOLVED AND CONTESTED (uc_ipm links lavender's PRCR document; VCE gives Phytophthora + Pythium; the PNW handbook page indexes Pythium / Berkeleyomyces / Rhizoctonia and NO Phytophthora but returned 403 to every fetch path available and is NOT READ). Unresolved means the umbrella is the honest key. The LADDER must stay genus-agnostic until that page is read."
+      },
+      {
+        "name": "Powdery mildew",
+        "id": "powdery-mildew",
+        "type": "fungal",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "32 crops. Named on rosemary by ncsu/psu/tamu/umd. Decisively an INDOOR problem (umd: 'usually disappears when the plants are moved further apart or are taken outside in the spring')."
+      }
+    ]
+  },
+  "sage": {
+    "pests": [
+      {
+        "name": "Spittlebugs",
+        "id": "spittlebugs",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "MINT (new family)",
+        "evidence": "Shared with lavender and rosemary. Sage's leg is INFERRED not read: rhs names P. spumarius on lavender and rosemary but not sage, and uc_ipm publishes no sage page (404)."
+      },
+      {
+        "name": "Spider mites",
+        "id": "spider-mites",
+        "type": "mite",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "16 crops. sage already types `mite` correctly, unlike oregano/rosemary/thyme."
+      },
+      {
+        "name": "Slugs and snails",
+        "id": "slugs-and-snails",
+        "type": "mollusk",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "Exact name match to the 11-crop majority id. NOTE both sage sources say 'slugs', neither says 'snails'. LADDER CONSTRAINT MEASURED: the `mollusk` type reaches exactly 8 methods and `airflow_spacing` is NOT one of them, though the record's slug prevention prose leans on airflow."
+      },
+      {
+        "name": "Leafhoppers",
+        "id": "sage-leafhoppers",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "MINT (host-scoped)",
+        "evidence": "MUST NOT reuse `leafhoppers` (cilantro's aster-yellows/curly-top framing) or `aster-leafhoppers` (parsnip/cosmos vector). Sage's are Eupteryx decemnotata / E. melissae, Lamiaceae specialists and NOT vectors (uc_ipm: 'The Ligurian leafhopper (Eupteryx decemnotata) is a pest of mint, rosemary, sage'; uf_ifas EENY-750). Reusing a vector id would attach a vector ladder to a non-vector pest."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Root and stem rot",
+        "id": "root-and-stem-rots",
+        "type": "fungal",
+        "severity": "high",
+        "from": "KEEP",
+        "decision": "REUSE (problem-class umbrella)",
+        "evidence": "Name matches the 6-crop umbrella exactly and no admitted document narrows sage's to a genus (Wisconsin D0094 lists Phytophthora/Pythium/Rhizoctonia solani/Fusarium)."
+      },
+      {
+        "name": "Powdery mildew",
+        "id": "powdery-mildew",
+        "type": "fungal",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "32 crops."
+      },
+      {
+        "name": "Verticillium wilt",
+        "id": "verticillium-wilt",
+        "type": "fungal",
+        "severity": "medium",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "SEVERITY low -> medium. Defensible on frequency, not consequence: umd 'These fungi remain in the soil for many years ... you must not plant the susceptible plant'; the entry's own text says 'There is no cure.' `low` would make sage the lowest Verticillium record in the dataset (strawberry is medium)."
+      }
+    ]
+  },
+  "thyme": {
+    "pests": [
+      {
+        "name": "Spider mites",
+        "id": "spider-mites",
+        "type": "mite",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "TYPE CORRECTED insect -> mite."
+      },
+      {
+        "name": "Aphids",
+        "id": "aphids",
+        "type": "insect",
+        "severity": "low",
+        "from": "KEEP",
+        "decision": "REUSE",
+        "evidence": "59 crops. Record's mechanism is INVERTED and must be fixed: it says lean soil keeps thyme 'vigorous enough to shrug off aphids'; clemson_hgic says 'Aphids are common in rapidly growing, succulent plants.'"
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Root and crown rot",
+        "id": "crown-and-root-rot",
+        "type": "fungal",
+        "severity": "high",
+        "from": "KEEP",
+        "decision": "REUSE (problem-class umbrella)",
+        "evidence": "RULE APPLIED CONSISTENTLY ACROSS THE FIVE-CROP ROT FAMILY: reuse the existing problem-class umbrella whose display name matches, UNLESS the crop's taxon is resolved AND narrower than that umbrella. parsley's `crown-and-root-rot` record defines itself as exactly this umbrella: 'Soilborne water-mold and fungal rots (Pythium, Phytophthora, Rhizoctonia)' -- the same genus set in play here. thyme's VCE line ('Thyme (Thymus) - Pythium root rot') is narrower, but it is ONE line in ONE pest-management guide against a record entry whose own name is generic ('Root and crown rot'). That is not enough to mint a one-crop join key. Thyme still does NOT share lavender's id, which was the reviewer's actual finding: lavender is Phytophthora-resolved with a dedicated WSU source."
+      }
+    ]
+  },
+  "_retired": [
+    {
+      "crop": "lemongrass",
+      "field": "pests",
+      "name": "Generally pest-resistant (aromatic-oil deterrence)",
+      "why": "Trevor 2026-09-04. An absence-assertion wearing a pest entry's shape; you cannot ladder controls against 'there are no pests.' A walk of all 128 crops / 912 problem entries found it is the ONLY entry of its kind, so retiring costs no precedent. The sourced absence half (usu_ext 'generally free of pests and diseases WHEN GROWN CORRECTLY'; uwi_hort 'essentially no pest problems IN THE MIDWEST') moves to descriptive prose with its qualifiers restored. The oil-deterrence mechanism is unanchored and refuted and must be corrected in the surviving fields regardless."
+    },
+    {
+      "crop": "thyme",
+      "field": "diseases",
+      "name": "Foliar fungal problems in humid weather",
+      "why": "Trevor 2026-09-04. A hedge with no organism, no disease and no identifying symptom. The evidence is an INFORMED absence, not a failed hunt: CSU Extension CMG GardenNotes #731 names diseases for eleven herbs and gives Thymus vulgaris exactly one line, 'Do not overwater due to root rot susceptibility.' Corroborated by ncsu (both pages), iastate_ext, uf_ifas Santa Rosa ('no serious pests or diseases are normally seen on the plant'), umd_ext, clemson_hgic's 23-host powdery-mildew list (no herbs) and vce."
+    }
+  ],
+  "_base_sha_note": "REBASED 2026-09-04. The pin table was measured against a9c84847fe2e0ad595db8cf9cc7d7e82ac65803e3284e16071be6d536bf9dad7 and the batch then rebased onto 9a141091fce3378e3f9fc8e4e67c7200b7d654c883d86bc6961d3723f092afd2, which is that canonical plus ONE additive source_catalog entry (uc_ipm_pn7493) and nothing else. Four authoring agents independently diffed the move and confirmed ZERO crop records changed, so no id decision, no ladder legality check and no copy measurement taken against the old base went stale. Recorded rather than silently overwritten, because a base SHA that changes without explanation is how a promote guard goes vacuous by SKIPPING while reporting green."
+}
