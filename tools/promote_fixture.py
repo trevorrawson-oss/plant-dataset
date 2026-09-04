@@ -253,6 +253,8 @@ COMMIT_FOR = {
     '9d2031ff5ba3abd7a61fe6f0d02715b67d3d0f880cb9d89c0f1729e52df48e8b': '2063c46',
     # PLA-8 allium record corrections r4 (onion thrips). Also in CHAIN; _from_commit first.
     '47e7b5c03cd91829a40279f319f11140de800a127aff2d277d1e977f95b6b143': '264747c',
+    # PLA-8 BATCH 24: the alliums, re-authored against the corrected records; roster 97 -> 101.
+    'a9c84847fe2e0ad595db8cf9cc7d7e82ac65803e3284e16071be6d536bf9dad7': '4906b22',
 }
 
 # Uncommitted intermediates from the 2026-07-31 cleanup batch: rebuilt by REPLAY from the
