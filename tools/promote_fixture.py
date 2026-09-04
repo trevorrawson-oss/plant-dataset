@@ -48,6 +48,9 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-8 BATCH 25, the herbs: roster 101 -> 108, 36 problems -> 38 (3 renamed, 4 bundles
+    # split into 9, 1 half deleted, 2 retired). Base is the catalog pre-step 500a6126.
+    '132980d52dd2f4c7850729401fdcfde8b5485ab0eb03f734e9acf949755d27b4': 'e5e7db0',
     # PLA-8 batch 25 pre-step: uc_ipm_pn7493 admitted to source_catalog (219 -> 220,
     # zero crops). Its own commit so the herbs batch's BASE_SHA is reachable; without it
     # that fixture cannot rebuild its pre-state and the promote guards SKIP while green.
