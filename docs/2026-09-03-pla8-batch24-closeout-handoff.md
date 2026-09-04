@@ -17,7 +17,7 @@ one point by Trevor's direct instruction; everything else in PLA-448 stands.
 
 ---
 
-## 1. What landed this session (all committed locally, NOTHING pushed)
+## 1. What landed this session (all PUSHED to origin/main 2026-09-03, `6663862..742343f`)
 
 | commit | what | canonical |
 |---|---|---|
@@ -38,7 +38,9 @@ state trio amended, and a fixture pin registered. E1 blocked every commit (plant
 with the reason in the message. **Never amend any of these commits**: `COMMIT_FOR` pins them and
 breakage shows up as guards SKIPPING while reporting green.
 
-**Trevor confirms every push. Nothing was pushed.**
+**PUSHED 2026-09-03 on Trevor's go-ahead**: `6663862..742343f`, origin/main now at `742343f`.
+A dataset change reaches the live site only via a plant-astro submodule bump, which is a website
+concern owned by that repo's session and is NOT done here.
 
 ---
 
