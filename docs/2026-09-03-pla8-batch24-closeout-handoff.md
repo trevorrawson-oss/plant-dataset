@@ -27,8 +27,8 @@ one point by Trevor's direct instruction; everything else in PLA-448 stands.
 | `55afcb2` | `COMMIT_FOR` for `9d2031ff` | |
 | `264747c` | **r4** -- onion thrips on five crops; two shipped `crop_rotation` rungs replaced in place by `garden_sanitation` | `9d2031ff` -> `47e7b5c0` |
 | `a200d35` | `COMMIT_FOR` for `47e7b5c0` | |
-| (see git log) | **BATCH 24** -- chives, leek, onion, shallot; 26 problems laddered from the CORRECTED records; roster 97 -> **101** | `47e7b5c0` -> (see LATEST.txt) |
-| (see git log) | `COMMIT_FOR` for batch 24's post-state | |
+| `4906b22` | **BATCH 24** -- chives, leek, onion, shallot; 26 problems / 95 rungs laddered from the CORRECTED records; roster 97 -> **101** | `47e7b5c0` -> `a9c84847` |
+| `cccc8c6` | `COMMIT_FOR` for `a9c84847` | |
 
 Each shipped with a guard suite and a mutation harness at ZERO survivors, gauntlet green
 (`gate_all` 121/121, every touched crop PASS, `control_ladder_gate` 0, A54 0,
@@ -96,8 +96,10 @@ whose records say nothing about weeds, and REWRITTEN on leek, whose record says 
 edges early in the year. The siting claim survives in the three records and, on some crops, inside
 the garden_sanitation seasoned note.
 
-Final counts are in the promote (`EXPECTED_RUNGS`) and the STATE_HISTORY entry; the docstring of
-this handoff deliberately does not restate them.
+Final counts: chives 27, leek 29, onion 16, shallot 23 = **95 rungs on 26 problems**; 10 warranted
+temperature figures; precedent copy worst 0.612 over 260 + 20904 comparisons; suite 116; harness
+88/88 (85 in four parallel groups, then the template-twin family 5/5 after three anti-vacuity
+drivers were added, see §5.7).
 
 ### Claims the records carry that NO method can reach (filed, not forced)
 
@@ -170,6 +172,13 @@ this handoff deliberately does not restate them.
 5. **The unpinned-field check then MASKED the prose-count check**: an extra change is refused
    earlier, so only a REVERTED pinned field reaches the count. r4's harness reported the survivor;
    a reverted-field driver was added and the harness re-run in full.
+7. **Three template-twin mutations survived the re-authored batch's harness** because their
+   drivers had been written against the OLD records: on the corrected data the historical-bug
+   mutation (FULL fields imposed on an allium-schema crop) produces no false twin, the presence
+   filters silently skip every problem of that crop instead, and the two filter mutations are
+   no-ops on real data because every real problem carries its schema. The only observable is the
+   COMPARISON COUNT, so three drivers now measure through the anti-vacuity branch on a leek-only
+   batch. A driver that fires on a real twin proves nothing about non-coverage.
 6. **The per-crop validator handed to the authoring agents was itself wrong twice**, and two
    agents fixed it on disk: the promote's declared-identity check demanded onion's pin from every
    single-crop run, and a length mismatch skipped the whole pests loop so an early "4 refused" was a
