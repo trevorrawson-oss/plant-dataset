@@ -32,6 +32,7 @@ import unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
+import promote_fixture  # noqa: E402
 import promote_pla8_batch25 as P  # noqa: E402
 
 # ---- PINNED, MEASURED on the passing run. Re-measure on a canonical move; never retune to match.
@@ -42,8 +43,8 @@ N_RETIRED = 2
 N_SPLIT_ROWS = 7
 N_RENAMED = 3
 N_RUNGS = 141
-N_CORRECTIONS = 246
-N_SOURCE_KEYS = 130
+N_CORRECTIONS = 248   # re-measured against the APPLIED promote, not an earlier --check run
+N_SOURCE_KEYS = 131   # re-measured against the APPLIED promote
 N_HOUSE_SENTENCES = 760      # shipped sentences with 2+ donors; the house-phrasing exemption
 CROPS = ("lavender", "lemongrass", "mint", "oregano", "rosemary", "sage", "thyme")
 
@@ -51,7 +52,14 @@ CROPS = ("lavender", "lemongrass", "mint", "oregano", "rosemary", "sage", "thyme
 class Base(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data = P.load_canonical()
+        # REBUILD THE PRE-STATE FROM THE COMMITTED BASE, never from live canonical. Reading
+        # `crops_data_final.json` only works BEFORE this promote applies; the moment it lands, or
+        # any later promote moves canonical, every driver here fails on a base mismatch and the
+        # suite goes permanently red. A permanently red suite gets ignored, or "fixed" by deleting
+        # the assertion, which is how a guard family quietly stops guarding. `promote_fixture`
+        # reaches the exact bytes via COMMIT_FOR and RAISES rather than skipping if it cannot,
+        # because a fixture that skips is vacuous while reporting green.
+        cls.data = json.loads(promote_fixture.pre_state(P.BASE_SHA))
         cls.pins, cls.batch = P.staged()
         cls.cm = cls.data["control_methods"]
 
@@ -73,21 +81,20 @@ class Base(unittest.TestCase):
 
 class Preflight(Base):
     def test_base_sha_is_the_pinned_one(self):
-        """If canonical moved, every count below is measuring a different object."""
+        """The FIXTURE must hash to the pinned base, not live canonical. Asserting against the live
+        file made this suite unrunnable the instant its own promote applied."""
         self.assertEqual(P.BASE_SHA, BASE_SHA)
-        raw = open(P.CANON, "rb").read()
-        self.assertEqual(P.sha256_bytes(raw), BASE_SHA, "canonical has moved; re-measure the pins")
+        self.assertEqual(P.sha256_bytes(promote_fixture.pre_state(P.BASE_SHA)), BASE_SHA)
 
     def test_load_canonical_refuses_a_moved_base(self):
-        """REACH THE ENTRY POINT. The pin test asserts the CONSTANT and never calls the function, so
-        deleting the SHA check inside `load_canonical` survived it. This calls it."""
+        """REACH THE ENTRY POINT. The pin test asserts a constant and never calls the function, so
+        deleting the SHA check inside `load_canonical` survived it."""
         real = P.BASE_SHA
         try:
             P.BASE_SHA = "0" * 64
             self.assertRefuses("base SHA mismatch", P.load_canonical)
         finally:
             P.BASE_SHA = real
-        P.load_canonical()   # and it must still succeed on the true pin
 
     def test_all_seven_crops_are_staged(self):
         self.assertEqual(tuple(sorted(self.batch)), tuple(sorted(CROPS)))

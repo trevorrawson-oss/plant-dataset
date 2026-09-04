@@ -18,14 +18,18 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import promote_fixture  # noqa: E402
 import promote_rosemary_certlog_correction as P  # noqa: E402
 
 BASE_SHA = "132980d52dd2f4c7850729401fdcfde8b5485ab0eb03f734e9acf949755d27b4"
 
 
 def canon():
-    with open(P.CANON, encoding="utf-8") as f:
-        return json.load(f)
+    """The PRE-state, rebuilt from the committed base. Reading live canonical made this suite
+    unrunnable the instant its own promote applied: the append lands, the SHA moves, and every
+    driver fails on a base mismatch. promote_fixture raises rather than skips if it cannot reach
+    the bytes, because a fixture that skips is vacuous while reporting green."""
+    return json.loads(promote_fixture.pre_state(P.BASE_SHA))
 
 
 class Base(unittest.TestCase):
@@ -46,8 +50,8 @@ class Base(unittest.TestCase):
 class Preflight(Base):
     def test_base_sha_is_pinned(self):
         self.assertEqual(P.BASE_SHA, BASE_SHA)
-        self.assertEqual(P.sha256_bytes(open(P.CANON, "rb").read()), BASE_SHA,
-                         "canonical moved; re-measure rather than retune")
+        self.assertEqual(P.sha256_bytes(promote_fixture.pre_state(P.BASE_SHA)), BASE_SHA,
+                         "the rebuilt fixture does not hash to the pinned base")
 
     def test_the_stale_claim_is_actually_present(self):
         """POSITIVE CONTROL. If the claim were absent the promote would be correcting nothing and
