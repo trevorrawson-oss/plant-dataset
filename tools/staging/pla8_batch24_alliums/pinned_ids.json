@@ -1,0 +1,213 @@
+{
+  "_why": "PLA-8 batch 24 (alliums). Ids PINNED BEFORE FAN-OUT. Decided against the live roster with the CORRECTED stemmed scan (the batch-23 stemmer turned `beetles` into `beetl` and missed a real pair; this one strips a trailing plural `s`) plus a taxon check read from each crop's own prose. Authoring agents MUST use these verbatim.",
+  "_premise": "SCHEMA-SPLIT BATCH. chives is FULL-schema (symptoms_*/cause_*/organic_treatment_*/prevention_*) and carries NO severity. leek, onion and shallot use the allium-only identification_*/management_* schema and ALL carry severity. Measured roster-wide: identification/management is used by exactly 5 crops, all alliums (garlic, leek, onion, shallot, spring-onion), and garlic + spring-onion are already laddered from it, so the method is proven for this shape. All 27 problems carry NO type at all (the batch 20/21 shape, NOT roots' coarse->fine upgrade). SCHEMA-AWARE COMPARISON IS MANDATORY IN THIS BATCH: any cross-crop prose comparison must use the field set the crop actually carries, or it compares None to None and reports identity. That is the defect that produced the retracted _twins claim.",
+  "_twins": "CORRECTED 2026-09-02 -- THE ORIGINAL CLAIM IN THIS FIELD WAS FALSE. It said 3 template twins existed against spring-onion (onion/Onion thrips, onion/Fusarium basal rot, shallot/Onion thrips). There are ZERO. The scan compared the 8 FULL-schema fields (symptoms_*, organic_treatment_*, prevention_*) on crops that DO NOT CARRY THEM: leek, onion and shallot use identification_*/management_*, so 6 of the 8 compared fields were None on BOTH sides and the tuples matched on ABSENCE. Re-measured on the fields these crops actually have (identification_*, management_*, cause_*): all three share ONLY cause_beginner and cause_seasoned and DIFFER on both management fields, which is where a ladder comes from. TWO AUTHORING AGENTS INDEPENDENTLY REFUSED THE COPY INSTRUCTION AND MEASURED INSTEAD, and had they complied it would have shipped two defects: onion/onion-thrips would have DROPPED reflective_mulch, a control onion's prose names and spring-onion's does not, and onion/fusarium-basal-rot would have carried the word 'scallion' into the onion record. The real management relative is GARLIC, not spring-onion: onion/Onion thrips' management_seasoned is byte-identical to garlic's. Batch 22's check_template_sibling_divergence is therefore NOT armed for this batch on a spring-onion axis; any divergence guard must be re-derived per schema.",
+  "chives": {
+    "pests": [
+      {
+        "name": "Onion thrips",
+        "id": "onion-thrips",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM, live on garlic + spring-onion, roster-unanimous type insect."
+      },
+      {
+        "name": "Allium leafminer",
+        "id": "allium-leafminer",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM, live on spring-onion. Phytomyza gymnostoma."
+      },
+      {
+        "name": "Onion maggot",
+        "id": "onion-maggot",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM, live on garlic + spring-onion."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Downy mildew",
+        "id": "downy-mildew",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM x32, roster-unanimous fungal. NOTE the roster treats `downy-mildew` as a PROBLEM-CLASS id, not a species id: chives and shallot name Peronospora destructor while spinach names P. effusa and the cucurbits a different genus again. Reuse follows the established convention KNOWINGLY, not by oversight."
+      },
+      {
+        "name": "Rust",
+        "id": "chives-rust",
+        "type": "fungal",
+        "decision": "MINT (crop-scoped)",
+        "evidence": "No bare `rust` id exists; every live rust is crop-prefixed (garlic-rust, bee-balm-rust, sunflower-rust, fig-rust, elderberry-rust, asparagus-rust). chives' prose names Puccinia rust fungi, as garlic's does."
+      },
+      {
+        "name": "White rot",
+        "id": "white-rot",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "TAXON CHECK PASSES: chives, leek, shallot, garlic and spring-onion ALL name Sclerotium cepivorum (leek gives the current name Stromatinia cepivora). Allium-specific, one organism."
+      },
+      {
+        "name": "Botrytis (leaf blight and neck rot)",
+        "id": "botrytis-leaf-blight-neck-rot",
+        "type": "fungal",
+        "decision": "MINT (scope variant)",
+        "evidence": "Live `botrytis-neck-rot` is specifically the STORAGE rot: onion, shallot and garlic all describe infection of immature or insufficiently cured NECKS. chives' entry is compound in its own name and its cause describes a FOLIAR blight (dense canopies, splashing water, leaf wetness). The shorter id would name a narrower problem."
+      }
+    ]
+  },
+  "leek": {
+    "pests": [
+      {
+        "name": "Onion thrips",
+        "id": "onion-thrips",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM."
+      },
+      {
+        "name": "Leek moth",
+        "id": "leek-moth",
+        "type": "insect",
+        "decision": "MINT (novel)",
+        "evidence": "Acrolepiopsis assectella. No stem relative on the roster."
+      },
+      {
+        "name": "Onion maggot",
+        "id": "onion-maggot",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM."
+      },
+      {
+        "name": "Allium leaf miner",
+        "id": "allium-leafminer",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "THE SCAN SCORED THIS NOVEL AND IT IS NOT. leek spells it 'leaf miner' (two words) where chives, shallot and spring-onion spell it 'leafminer', so the stem key differs. Both records name Phytomyza gymnostoma: ONE insect. Minting off the spelling would have put two ids on one taxon."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Leek rust",
+        "id": "leek-rust",
+        "type": "fungal",
+        "decision": "MINT (crop-scoped)",
+        "evidence": "Puccinia porri (formerly P. allii). Crop-prefixed per the roster's rust convention."
+      },
+      {
+        "name": "White rot",
+        "id": "white-rot",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "Sclerotium cepivorum, same organism as the other four alliums."
+      },
+      {
+        "name": "Pink root",
+        "id": "pink-root",
+        "type": "fungal",
+        "decision": "MINT (novel)",
+        "evidence": "No stem relative. onion and shallot name Setophoma terrestris; leek's prose says only 'a soilborne fungus' but describes the same disease in the same words otherwise, so all three share the id."
+      }
+    ]
+  },
+  "onion": {
+    "pests": [
+      {
+        "name": "Onion thrips",
+        "id": "onion-thrips",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM. NOTE: this problem is a TEMPLATE TWIN of spring-onion's, byte-identical across all its prose fields."
+      },
+      {
+        "name": "Onion maggot",
+        "id": "onion-maggot",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Botrytis neck rot",
+        "id": "botrytis-neck-rot",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM, live on garlic + spring-onion; the same neck/storage rot."
+      },
+      {
+        "name": "Fusarium basal rot",
+        "id": "fusarium-basal-rot",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM. TEMPLATE TWIN of spring-onion's."
+      },
+      {
+        "name": "Pink root",
+        "id": "pink-root",
+        "type": "fungal",
+        "decision": "MINT (novel)",
+        "evidence": "Setophoma terrestris."
+      }
+    ]
+  },
+  "shallot": {
+    "pests": [
+      {
+        "name": "Onion thrips",
+        "id": "onion-thrips",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM. TEMPLATE TWIN of spring-onion's."
+      },
+      {
+        "name": "Onion maggot",
+        "id": "onion-maggot",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM."
+      },
+      {
+        "name": "Allium leafminer",
+        "id": "allium-leafminer",
+        "type": "insect",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM."
+      }
+    ],
+    "diseases": [
+      {
+        "name": "White rot",
+        "id": "white-rot",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "Sclerotium cepivorum."
+      },
+      {
+        "name": "Downy mildew",
+        "id": "downy-mildew",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "Peronospora destructor; problem-class id, see chives."
+      },
+      {
+        "name": "Botrytis neck rot",
+        "id": "botrytis-neck-rot",
+        "type": "fungal",
+        "decision": "REUSE",
+        "evidence": "EXACT-STEM; the neck/storage rot."
+      },
+      {
+        "name": "Pink root",
+        "id": "pink-root",
+        "type": "fungal",
+        "decision": "MINT (novel)",
+        "evidence": "Setophoma terrestris."
+      }
+    ]
+  },
+  "_aphids_retired": "2026-09-03: chives/Aphids was RETIRED by promote_drop_chives_aphids (b89763b7 -> 80519a28); its pin is removed. chives now carries 3 pests + 4 diseases = 7 problems; the batch is 26 problems.",
+  "_records_corrected": "2026-09-03: the record pass (r2 leek moth + leek allium leaf miner; r3 onion maggot x6, pink root x3, chives rust, chives botrytis; r4 onion thrips x5) changed the INPUTS of 20 of these problems. Author against <crop>_source.json in this directory (dumped from the corrected state 47e7b5c0), never against live canonical or prev_out_*.json."
+}

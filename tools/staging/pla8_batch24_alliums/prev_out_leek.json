@@ -1,0 +1,138 @@
+{
+ "pests": [
+  {
+   "id": "onion-thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give leeks a bed that did not carry onions or leeks last season. Alliums are the onion family, which covers onions, leeks, garlic and their relatives, and the advice for thrips on this crop is to keep a new planting off ground that just grew one. You settle it when you pick the bed, before any silvery streaking shows up.",
+     "note_seasoned": "Site the crop off last season's allium ground. This is placement rather than treatment, and it is the preventive side of the guidance alongside keeping plants vigorous and evenly watered; hosing is what is left once insects are already down in the leaf folds."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Light thrips numbers wash off with a strong jet from the hose. Aim down into the tight creases where the leaves fold together, and into the neck of the stem where the leaves wrap tight, since that is where they shelter. Work in the morning so the foliage dries out again. Healthy, evenly watered plants take the feeding better, because thrips press hardest on plants that are already dry and stressed. If the infestation is heavy, ask your local extension office what to use in your area.",
+     "note_seasoned": "Hosing knocks back a light infestation. Direct it down where the leaves fold together and into the tight neck of the shaft, since that is where the insects sit and where coverage from any material is poorest. Numbers build through hot, dry spells and drought-stressed plants take the worst of it, so even moisture and vigor work with the physical pass rather than behind it. Do the work in the first part of the day so the foliage is not standing wet afterward, and an infestation that keeps building past this is one for local extension guidance."
+    }
+   ]
+  },
+  {
+   "id": "leek-moth",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Grow the next leeks somewhere else rather than replanting the same bed. It is a planning decision, made when you lay out the garden rather than after caterpillars are already inside the leaves.",
+     "note_seasoned": "Rotate the allium planting rather than holding it in one place. Two generations work the crop, roughly May to June and again August to October, so a bed left in the same ground is exposed twice in a season, and placement is the part of that settled in advance."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Drape fine insect netting over the bed while the moths are flying, through the late-spring wave and again through the one in late summer. The mesh has to be fine enough to stop a small moth and tucked in at the edges, because one that gets underneath can lay on the leaves as if the cover were not there. Put it on ahead of the flight rather than after you see the pale papery patches.",
+     "note_seasoned": "Insect-proof mesh through the flight periods, roughly May to June and August to October, is the primary defense named here. It has to go on ahead of a flight: the window-pane patches are the work of larvae already feeding inside the leaf, so a cover added then is behind the pest. Ground that has not just carried alliums is the better place for it."
+    },
+    {
+     "method": "handpick",
+     "note_beginner": "Check the leaves for the small white cocoons, which look like little nets of silk, and crush the ones you find. The older caterpillars spin them on the foliage once they finish feeding, so this stage is sitting still in plain sight, unlike the ones tunneling in the shaft.",
+     "note_seasoned": "Scout the foliage for the net-like silk cocoons and destroy them by hand. Pupation happens out on the leaves, which is what makes this stage findable when the mining and boring stages are not, so treat it as a routine pass along the row rather than a single cleanup."
+    }
+   ]
+  },
+  {
+   "id": "onion-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not plant leeks into ground where alliums, the onion family, have grown recently. This pest carries over in leftover allium material in the soil, so a bed with a recent allium history is the one to pass over.",
+     "note_seasoned": "Site the crop away from recent allium ground. What carries this fly between crops is the allium debris left behind in a bed, so what you are choosing against is that bed's cropping history, and that choice is also what makes covering the young crop worth doing rather than counterproductive."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Rake out old allium tops, roots and trimmings once a planting is finished, and take the culls with them, meaning the runty or damaged plants you pulled and did not use. That leftover material is where the problem carries over, so move it out of the garden rather than heaping it at the edge of the bed.",
+     "note_seasoned": "Strip cull plants and crop residue at the end of the crop. Residue is the stated carryover reservoir, so tissue heaped beside the bed still counts as the same ground for this purpose, and clearing it properly is what makes the rotation worth making."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put a floating row cover over the young plants while they establish. That is the light fabric that passes water and daylight but shuts insects out. The fly lays its eggs at the base of the plant, so a cover sealed down along the ground takes that opening away. Use it on rotated ground, since a cover over a bed that just grew alliums can shut the problem in with the crop.",
+     "note_seasoned": "Exclusion at establishment is the window the guidance names, and it turns on the seal at ground level rather than on the fabric itself, since the eggs go in at the plant base. Losses among young plants peak in the cool, wet part of the early season, which is the same stretch the cover is up for."
+    }
+   ]
+  },
+  {
+   "id": "allium-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Shift the leek bed onto fresh ground from one year to the next. The flies come out of pupae, the small brown resting cases, down in the soil, so ground that carried an infested crop of leeks or onions can turn out the next batch of flies on its own.",
+     "note_seasoned": "Rotation is stated with its reason on this one: the flies emerge from pupae in the soil, which makes last season's allium ground a source in its own right. The decision comes before either flight period opens."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Cover the plants with fine insect netting through the two stretches when the flies are active, roughly from March into April and then from September into November. The fall wave usually does the most damage. Get the netting on before the flies arrive: the neat rows of white dots are punched by the egg-laying flies themselves, so by the time you see them the cover is late.",
+     "note_seasoned": "Insect-proof mesh across both flight periods, March into April and September into November, is the main control, with the autumn generation usually the more damaging of the two. Cover ahead of a flight rather than on symptoms, since the rows of white punctures are the adults' own marks. Pair it with rotated ground, because the flies come up out of soil-borne pupae under whatever is over the bed."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "leek-rust",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "When you are choosing seed or young plants, look for varieties described as rust-tolerant, meaning they carry an infection better rather than staying clean. They are not offered for every kind of leek, so take one where you can find it.",
+     "note_seasoned": "Choose a more rust-tolerant variety where one is available. Tolerance is the word the guidance uses rather than resistance, and what limits the move is whether a tolerant type is sold at all rather than the worth of the trait, so it opens the season's decisions without carrying them."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Space the plants far enough apart that air moves between them. Crowding and humid weather are what this rust likes, and spacing is the half of that you decide when you plant.",
+     "note_seasoned": "Set spacing for air movement at planting. Crowded stands and humid weather are named together among the conditions that favor the fungus, so the layout decision is aimed at how fast the foliage dries."
+    },
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy with nitrogen, the nutrient in fertilizer that pushes leafy growth, and keep the feeding balanced instead of heavy. This rust is worse on plants pushed with too much of it, and heavy feeding also thickens the stand you just spaced out.",
+     "note_seasoned": "Hold nitrogen back and balance the feeding. Nitrogen-rich, low-potassium soils sit among the conditions named for this rust, so the ratio is the point rather than the total, and the soft, dense growth heavy feeding brings works against the spacing decision."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull off badly spotted leaves and throw them out instead of composting them, and clear the old foliage out of the bed after harvest. A bad case shrivels leaves early, so taking the worst ones off leaves the plant more of what it grows on.",
+     "note_seasoned": "Remove and destroy badly infected leaves through the season and the crop debris once it is over. Severe infection shrivels foliage early and saps vigor, so stripping the worst of them protects the leaf area the shaft still has to size on; the post-harvest clearing is the end-of-season half of the same move."
+    }
+   ]
+  },
+  {
+   "id": "white-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean plants from a source you trust. It is what the guidance asks you to begin with, and the one decision settled before anything reaches your soil. There is no cure once plants are infected, and moving to a fresh bed later does not answer it on its own, because this fungus can sit in the ground for more than 20 years.",
+     "note_seasoned": "Clean planting stock carries the most weight of anything here because it is decided before the crop reaches the ground. There is no cure once plants are infected, and the sclerotia, the resting bodies, persist in soil for over 20 years, which is why the guidance says outright that rotation on its own will not control it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pull the infected plants and destroy them; the compost pile is not the place for them. Then keep the soil itself from traveling: knock the dirt off tools, boots and pots before you work clean ground. It takes very little to seed a new bed, since a soil sample holding only a handful of those tiny black resting bodies is enough to get the disease going.",
+     "note_seasoned": "Rogue and destroy affected plants, then treat the soil as the thing that moves. Strict sanitation here means not carrying infested soil on tools, boots or containers into clean ground, and the margin is thin: a soil sample holding only a handful of sclerotia is enough to get the disease going, with allium roots as the cue that sets them germinating."
+    }
+   ]
+  },
+  {
+   "id": "pink-root",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep leeks and their onion relatives out of a bed for several years rather than a single season. This fungus builds up where alliums, the onion family, are grown in the same ground again and again, so the break needs to be a long one.",
+     "note_seasoned": "Rotate away from alliums for several years. The fungus accumulates where alliums follow alliums, and warm soil favors it, so the bed's cropping history is the lever, and one season out is short of what the guidance asks."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Set out clean, healthy transplants. It is a choice made when you buy or raise the plants, before anything goes in the ground, and it goes with the change of bed rather than instead of it.",
+     "note_seasoned": "Clean transplants are named alongside the rotation. The decision sits at purchase or propagation rather than in the bed, and on a disease that shows as pink, then red, shriveling roots, the state of the transplant is the last thing you can look at before it is out of sight."
+    }
+   ]
+  }
+ ]
+}

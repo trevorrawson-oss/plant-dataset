@@ -1,0 +1,153 @@
+{
+ "pests": [
+  {
+   "id": "onion-thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give shallots a different bed each season instead of returning to the same ground. Alliums, the onion family that also takes in onions, garlic, and leeks, are what these insects build up on, so a bed that carried one last year is the likeliest place to meet them again.",
+     "note_seasoned": "Rotation is the part of this settled before anything goes in the ground. Shallots shelter their thrips down in the tight leaf necks of the clump, and a bed replanted to alliums season after season keeps that population supplied, so site the new planting on ground that grew something else."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "This is a light-colored or shiny sheet spread on the soil around the plants, and it is one of the measures named for thrips on shallots. Get it down at planting time, since it has to see open soil to do anything and a filled-in row of leaves shades it out.",
+     "note_seasoned": "Reflective mulch sits in the crop's own guidance for onion thrips. Treat it as a planting-time decision: what it does depends on exposed soil surface, so it is worth laying while the clumps are small rather than adding it once the tops have closed the row."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "Water does two jobs against thrips on shallots. A clump that has not been allowed to dry out copes with the feeding better, and a burst from the hose knocks the insects loose while there are still only a few of them. Point the nozzle down between the leaves instead of over the top of the clump, because that is where they sit. Pick a morning for it so nothing is left damp. Once an infestation has grown past what washing holds, your local extension office is who to ask about materials.",
+     "note_seasoned": "Two uses of water sit inside this one decision: irrigation held steady so the clump carries what feeding it takes, and a forceful pass that dislodges thrips while their numbers are low. Send that pass down between the leaves at the neck of the clump rather than across the tops, since the insects sit deep in those folds, which is the same place any material that has to hit them struggles to reach. Choose a morning for it, because foliage left wet for long can encourage disease. Beyond the point where washing holds the count, shallot's own sourcing hands the question to a local extension office rather than naming a product."
+    }
+   ]
+  },
+  {
+   "id": "onion-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Do not put shallots or their onion-family relatives back into the same bed year after year. The maggots carry over in leftover allium material in the ground, so fresh ground starts the crop away from what is left of last season.",
+     "note_seasoned": "Choose a bed that has not grown alliums recently. The population persists in old allium tissue rather than arriving fresh each spring, so bed history is the variable in play and it is settled before the sets go in. Cool, wet springs are when the resulting stand loss reads worst."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear out old shallot and onion scraps once a bed is finished: tops, roots, and any culls, the small or damaged bulbs you set aside and did not use. Take that material away rather than leaving it at the edge of the bed, because it is what the pest lives on between crops.",
+     "note_seasoned": "Lift cull bulbs and crop residue as the planting finishes and move them off the site rather than to a heap beside the bed. Old allium tissue is what the population carries over in, so debris left within reach of next season's planting has not really left."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Row-cover fabric is a light cloth that passes light and water while holding insects out. Put it over the bed as the shoots come up and hold the edges down all the way around. Egg-laying happens at the base of the plant, so a cover the fly cannot get under is what stops it. Save this for ground that did not carry alliums last year, since a cover over an old allium bed can shut emerging flies in with the crop instead of out.",
+     "note_seasoned": "Install at emergence, the timing the crop's guidance names, and seal the perimeter: eggs go in at the plant base, so a gap along the edge undoes the barrier. Use it on rotated ground, because fabric laid over a bed that recently grew alliums can hold what comes up out of the soil underneath it with the crop."
+    }
+   ]
+  },
+  {
+   "id": "allium-leafminer",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant your alliums somewhere new rather than coming back to the same bed. The grubs tunnel down into the bulb and spend the winter there as pupae, their resting stage, so ground that grew a mined crop is where the next batch of flies comes up.",
+     "note_seasoned": "Rotate away from alliums. Pupae overwinter in the bulb, which makes a bed that carried a mined crop a source for the next flight, and the crop's guidance lists rotation beside the covers rather than in place of them."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Put row-cover fabric or fine insect netting over the plants ahead of the flies both times they appear, once in spring and once in fall, and seal the edges down so nothing slips under. Covers put on ahead of each flight come close to full control here. Pair them with moving your allium bed, since fabric over ground that grew alliums last year can trap what emerges from it under the netting.",
+     "note_seasoned": "Covers or insect netting installed ahead of each flight and sealed at the edges come close to full control on this pest. Time installation to adult emergence, roughly March into May in spring and September into October in fall, and confirm those dates locally rather than carrying them across regions. Put it on rotated ground, since bulbs in an old allium bed carry overwintering pupae a cover would shut in with the crop."
+    },
+    {
+     "method": "spinosad",
+     "note_beginner": "If covering the plants is not practical, a spinosad spray is an option. Spinosad is a naturally derived insecticide used against leafminers and similar pests. It is toxic to bees while wet and for about a day after, so keep it off anything in flower and spray at dusk when bees are not out.",
+     "note_seasoned": "Spinosad is the material the crop's guidance names where covers are not practical, so it substitutes for exclusion rather than supplementing it. Larvae feed inside the leaf tissue, which limits what any contact material reaches, so timing to the flight counts for more than volume. It is toxic to bees on contact and for roughly a day afterward: apply at dusk and keep it off flowering plants."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "white-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Buy shallot sets from a source you trust and look them over before planting. This fungus travels on infested sets and on soil that comes along with them, and there is no cure for a plant that catches it, so keeping it out of your garden is where the effort goes.",
+     "note_seasoned": "Sets, and soil moving with them, are the routes this fungus takes into clean ground, so screening what you buy acts before the pathogen has anywhere to persist. Nothing applied afterward reverses an infection, which is what puts this ahead of everything else on the crop."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "If a clump does go down with it, dig it out along with the soil that comes up on the roots and put it in the trash rather than the compost pile. Those tiny black specks at the rotted base are survival bodies, and composting scatters them through the garden.",
+     "note_seasoned": "Rogue affected clumps and dispose of them off the property rather than composting them. The sclerotia, the poppyseed-sized black resting bodies on the rotted base, are what persist, so tissue routed through a compost heap returns them to ground you use. Handle soil moved off that bed the same way."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Keep shallots and other alliums out of that bed for as many years as you can manage. The survival specks last decades in the ground, so a season or two away does not clear it and the bed stays a problem for a long stretch.",
+     "note_seasoned": "Rotate alliums out of an infested bed for as long as is practical. Sclerotia are reported to survive 20 to 30 years, so the organism sets the length of the break rather than any normal rotation interval, and the ground is best treated as carrying it indefinitely."
+    }
+   ]
+  },
+  {
+   "id": "downy-mildew",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "If downy mildew turns up in your garden most years, look for varieties described as tolerant when you buy. Tolerant means the plant handles the disease better, not that it stays clear of it, so treat it as a head start rather than the whole answer.",
+     "note_seasoned": "Tolerant varieties are worth seeking where this disease recurs, and the choice is made at buying time rather than in the bed. The crop's guidance says tolerant rather than resistant, so expect a lower ceiling on damage rather than a clean stand, and keep the other measures here in place alongside it."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "This mildew travels from leaf to leaf, and a row packed tight gives it short trips to make and still, damp air to make them in. Setting the plants farther apart when the sets go in lets a breeze through and lets the foliage dry after a humid morning, which is when the fuzzy gray-purple growth shows itself. Room between plants cannot be added later, so it is worth deciding on at planting.",
+     "note_seasoned": "Crowded, poorly aired plantings are described as where this one moves fastest, so the spacing settled at planting governs how quickly it can work through a bed. Width does two things here: it lengthens the trip from an infected leaf to the next healthy one, and it lets the canopy dry off after the humid mornings the pathogen sporulates in. There is no second chance at it once the crop is in the ground, and it works with basal watering rather than in place of it."
+    },
+    {
+     "method": "water_at_the_base",
+     "note_beginner": "Put the water on the soil rather than over the tops. This mildew wants leaves that stay wet, so watering overhead hands it the conditions it does best in.",
+     "note_seasoned": "Keep irrigation at the root zone instead of running it over the tops. Lingering leaf wetness is the condition named for this pathogen, so basal irrigation removes the half of it you control; dew and humid mornings set the rest."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Rotating away from alliums is one of the measures named for this disease, so give the shallots different ground rather than replanting the same bed each year.",
+     "note_seasoned": "Rotate away from alliums. The crop's guidance pairs rotation with clearing infected debris, and both act on what a bed carries into the next season rather than on an infection already running."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Pick off and get rid of the leaves that have gone pale and fuzzy, and clear sick foliage out of the bed instead of leaving it lying there.",
+     "note_seasoned": "Remove infected foliage and debris from the bed rather than leaving it or turning it in. Yellowed, collapsing leaves cost the clump the sizing it has left, so taking out the worst of them serves the bulb as much as it serves sanitation."
+    }
+   ]
+  },
+  {
+   "id": "botrytis-neck-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Go easy with fertilizer late in the season. Too much nitrogen, the nutrient that pushes leafy growth, is named as one of the things that makes this rot worse.",
+     "note_seasoned": "Hold back late nitrogen. Excess feeding late in the season sits beside bent-over green tops among the factors that worsen neck rot, and it is the one a feeding schedule settles outright rather than at harvest."
+    },
+    {
+     "method": "cure_and_store",
+     "note_beginner": "Let the tops go over on their own instead of knocking them down to hurry bulbing, then dry (cure) the shallots until the necks are tight before putting them somewhere cool and dry. Bulbs lifted while still green, or dried too little, are the ones that go soft at the neck weeks later.",
+     "note_seasoned": "The control here is set at harvest and in the weeks after: let the tops mature on their own, cure until the necks are tight, then hold the crop cool and dry. Immature or under-cured necks are the opening this rot uses, so the practice keeps sound bulbs sound and offers nothing to one that is already rotting. Read the curing and storage conditions off this crop's own guidance, since they differ between crops."
+    }
+   ]
+  },
+  {
+   "id": "pink-root",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give shallots and their onion-family relatives several years away from a bed where the roots have gone pink. This fungus builds up where alliums grow in the same ground season after season, so time away from alliums is what the guidance leans on.",
+     "note_seasoned": "Rotate away from alliums for several years. The fungus builds in ground kept in continuous alliums, so the variable is how recently that bed last grew one, not anything you can change during the crop; warm soils are where it reads worst."
+    },
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Start with clean, healthy sets rather than saving doubtful ones. Sound planting stock, plus keeping the plants well cared for so they are not stressed, is what the guidance asks for here, since stressed plants show this worst.",
+     "note_seasoned": "Start from clean, disease-free sets. That is the half of the decision made at purchase, and it pairs with keeping the crop unstressed through the season, since stressed plants are where the stunting and the shrunken clumps show up hardest."
+    }
+   ]
+  }
+ ]
+}

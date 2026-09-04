@@ -1,0 +1,101 @@
+{
+ "pests": [
+  {
+   "id": "onion-thrips",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Give onions a different bed each year instead of coming back to the same ground. Rotating away from alliums, the onion family, is one of the steps named here, and it is a choice you make when you pick the bed rather than something you reach for once thrips appear.",
+     "note_seasoned": "Site the crop off last season's allium ground. This is the standing half of thrips management on onions, settled at bed selection rather than in response to an outbreak, and it sits under the in-season work rather than beside it."
+    },
+    {
+     "method": "reflective_mulch",
+     "note_beginner": "Onion guidance lists reflective mulch among the thrips steps. It is a pale or shiny sheet spread across the soil between the rows, and its useful life is early: a young planting still shows plenty of bare ground for it to work from, while a filled-in stand shows almost none.",
+     "note_seasoned": "Named in this crop's thrips guidance alongside vigor, hosing off and rotation. The value is front-loaded, since a reflective surface acts only where soil is still visible between plants, so it belongs under a young crop rather than added to a stand that has already closed over."
+    },
+    {
+     "method": "water_spray",
+     "note_beginner": "While the numbers are still light, a hard jet of water from the hose knocks thrips off. Aim into the crease where the leaves meet, since that is where they shelter. Spray early in the day so the leaves dry off, and keep the plants healthy and watered so they can carry the feeding they do get. If an infestation keeps building past this, your local extension office can tell you what is recommended in your area.",
+     "note_seasoned": "A forceful water knock-down is the response to a light infestation, worked into the leaf axils where the insects sit. Those same folds are why coverage-dependent materials tend to underperform here, so vigor and steady water matter alongside the physical pass. Keep the pass to early in the day so foliage is not left wet, and take a persistent outbreak to local extension guidance rather than to a material named here."
+    }
+   ]
+  },
+  {
+   "id": "onion-maggot",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Plant onions somewhere new rather than in the same place each year. This pest carries over in leftover allium material in the ground, so a fresh bed starts the crop away from what the last one left behind.",
+     "note_seasoned": "Rotate the planting off allium ground. Populations carry over in allium residue, so bed choice is the base the cleanup and the cover both sit on, and it is settled before the crop is sown."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Clear away the leftover onion tops, roots and trimmings once a bed is finished, and pull out cull bulbs, the small or damaged ones you set aside and did not use. That material is what carries the problem into the next season, so take it out of the garden rather than piling it at the edge.",
+     "note_seasoned": "Strip cull bulbs and crop residue from the bed and get them out of the garden. Residue is the carryover reservoir the guidance names, so tissue left at a bed edge still counts as carryover."
+    },
+    {
+     "method": "floating_row_cover",
+     "note_beginner": "Get the fabric down before the fly arrives. Row-cover fabric is a light cloth that lets light and rain through while shutting insects out, and because the eggs go in at the base of the plant, it has to be sealed at every edge from the moment the seedlings show. One place it backfires: over a bed that carried onions last season, flies coming up out of that soil finish up on the inside of it. Save it for ground you have rotated.",
+     "note_seasoned": "Two conditions govern this one. The first is timing: onion guidance says at emergence, and that reads as a deadline rather than a preference, since egg-laying happens down at the plant base and a cover set late, or lifting anywhere along an edge, gives up what it was there for. The second is siting: allium ground can hatch its own flies beneath the fabric, so exclusion belongs on a rotated bed and not on a repeat planting. Cool, wet springs are when stand loss runs worst."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "botrytis-neck-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "balance_nitrogen",
+     "note_beginner": "Heavy feeding works against you here. Nitrogen is the nutrient that drives leafy growth, and onion guidance names too much of it as one of the things that makes neck rot worse. Easing off costs nothing and is settled across the season, long before the bulbs come up.",
+     "note_seasoned": "Onion's guidance names two aggravating factors for neck rot, and excess nitrogen is the one governed purely by choice; the other is green tops bent over. Restraint in the feeding program is the whole of this step, and it is spent through the growing season rather than at lifting."
+    },
+    {
+     "method": "cure_and_store",
+     "note_beginner": "Dry the onions thoroughly after lifting, then keep them in a cool, dry place. The mold takes hold in necks that came in green or were not dried properly, so the curing is what shuts that door. Put aside any bulb that is bruised or spotted and use it first rather than storing it.",
+     "note_seasoned": "Curing thoroughly is the control this one turns on, since infection enters immature or insufficiently cured necks and the loss then shows up in the bin weeks later rather than in the bed. Hold the cured crop cool and dry, and take the conditions from onion guidance rather than from another crop's, since they differ between crops. White-skinned bulbs are among the most susceptible, so they are worth checking first."
+    }
+   ]
+  },
+  {
+   "id": "fusarium-basal-rot",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "resistant_varieties",
+     "note_beginner": "Onion guidance puts variety choice at the head of its list for this rot, so the seed catalog is where to start. The wording is conditional though: take a resistant variety if one is offered for what you want to grow, and carry on with the other steps whether or not you find one.",
+     "note_seasoned": "This heads onion's own list for basal rot, and the decision lands at seed-buying time, ahead of any work in the bed. The source hedges it as where available, so read it as taking resistance when the catalog offers it rather than as a condition the catalog will reliably meet."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Several years, not next season. The fungus lives in the soil itself rather than on the plants you pulled, so the bed stays risky long after the crop is gone. Give it that stretch before onions or their relatives go back in.",
+     "note_seasoned": "The count is what carries this one. A single-season shuffle does nothing against an organism described as persisting in soil for years, so plan the bed several seasons clear of alliums. Warm soil is what favors it, so the bed's past is what you are managing, not the weather this year happens to bring."
+    },
+    {
+     "method": "cure_and_store",
+     "note_beginner": "Lift and move the bulbs carefully so they do not get bruised or nicked. Wounds are one of the ways this fungus gets in, and maggot damage is another. Set aside any bulb that is cut or damaged to use first rather than putting it into storage.",
+     "note_seasoned": "Careful handling acts on the entry route rather than on the organism: wounds and maggot feeding are what open a bulb to it, and bulbs rot from the bottom in storage as well as in the field. Keep cut or bruised bulbs out of the bin and use them first, since one rotting bulb reaches what it touches. It guards sound bulbs and does not reach one already infected in the bed."
+    }
+   ]
+  },
+  {
+   "id": "pink-root",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "certified_clean_stock",
+     "note_beginner": "Onion guidance asks for clean, disease-free transplants. That is a buying decision more than a growing one, so it gets made at the nursery or in your own propagation, and it is the only move here available before the crop exists.",
+     "note_seasoned": "Clean, disease-free transplants are named directly in onion's guidance for pink root. Sequencing puts it early for a practical reason: nothing else on the list can be acted on until there is stock to plant, so it is settled while the bed is still only a plan."
+    },
+    {
+     "method": "crop_rotation",
+     "note_beginner": "Move where you grow onions and keep alliums off an affected spot for several years. This fungus builds up in ground that carries onions and their relatives year after year, and that repetition is where the trouble is most common.",
+     "note_seasoned": "Keep alliums off the ground for several years. The fungus builds in continuous allium ground and shows up most where alliums are grown repeatedly and in warm soils, so what is needed is a break long enough to interrupt that build-up rather than a one-year gap."
+    }
+   ]
+  }
+ ]
+}
