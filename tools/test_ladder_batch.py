@@ -32,6 +32,7 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ladder_batch as lb
+import control_ladder_gate as clg
 
 # the fields a rung is RESTATED FROM. anchoring_urls/sources are provenance, not rung content;
 # they are checked separately because a divergence there is a sourcing defect, not a ladder one.
@@ -298,10 +299,51 @@ class TheRosterHasRunOutOfTrueTwins(unittest.TestCase):
                 if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
         cls.todo = [c for c in cert if not lb.laddered(c)]
 
-    def test_there_are_unladdered_crops_left_to_measure(self):
-        self.assertGreater(len(self.todo), 0)
+    def test_the_roster_is_fully_laddered_and_the_floor_agrees(self):
+        """RETIRED AND INVERTED 2026-09-05, on this class's own written instruction.
+
+        This was `test_there_are_unladdered_crops_left_to_measure`, the reachability guard for the
+        twin test below -- `assertGreater(len(self.todo), 0)`. Its denominator emptied when PLA-8
+        closed on batch 27, exactly as the predecessor's denominator emptied on batch 5, and the
+        docstring above already ruled what to do: retire the assertion rather than leave it green
+        and empty. So the guard now asserts the fact the emptying created.
+
+        TWO INDEPENDENT WALKS, because one of them alone would prove less than it looks. `laddered`
+        is the arc's progress metric and it is the WEAKER predicate -- ANY problem on the crop
+        carrying a `control_ladder` key makes the whole crop count as done, so a crop with 3 of 5
+        entries laddered reads as laddered here. `coverage_violations` is the shipped A57 floor and
+        checks EVERY entry. A crop can satisfy the first and fail the second; that gap is what the
+        floor was armed to close, and asserting both together is what pins it shut."""
+        self.assertEqual([c["slug"] for c in self.todo], [],
+                         "an unladdered certified crop is back on the roster. Not a failure: it "
+                         "means the twin test below has re-armed and a propagation path may exist "
+                         "again. Read it, then take the crop as a batch.")
+        d = lb.load()
+        cert = [c for c in d["crops"]
+                if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
+        # Scoped to the CERTIFIED roster deliberately, matching gate_all's population. A57 itself
+        # is cert-independent and fires on whatever crop is gated -- the mutation harness proves
+        # that by injecting into a SHELL -- but asserting it roster-wide here would redden this
+        # file during the legitimate mid-flight state of authoring a not-yet-certified crop, and a
+        # test that fires on correct work gets bypassed by habit.
+        unladdered_entries = [v for c in cert for v in clg.coverage_violations(c)]
+        self.assertEqual(unladdered_entries, [],
+                         "the A57 coverage floor sees unladdered problem ENTRIES that `laddered` "
+                         "reports as done -- the any-entry / every-entry gap.")
 
     def test_no_true_twin_group_remains_on_the_roster(self):
+        """DORMANT while the roster is fully laddered, and it re-arms itself.
+
+        `self.todo` is empty at the arc's close, so `family_cut` returns no groups and this passes
+        trivially. That is recorded rather than hidden: the test is not measuring anything today.
+        It is kept, not deleted, because it costs nothing and comes back to life the moment an
+        unladdered certified crop exists again, which is the only time its answer matters.
+
+        Measured 2026-09-05 for the record: run over all 121 CERTIFIED crops instead of `todo`,
+        `family_cut` finds THREE twin groups -- field-corn/flint-corn/popcorn,
+        yellow-summer-squash/zucchini-courgette, dry-bean/green-beans-bush. Those are the sibling
+        sets the arc deliberately propagated identical prose across, so repointing this test at the
+        full roster would arm it RED on data that is correct. It stays pointed at `todo`."""
         twins, _singles = lb.family_cut(self.todo)
         self.assertEqual(
             [sorted(g) for g in twins], [],
@@ -420,14 +462,43 @@ class BriefCarriesTheWholeMeaning(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        import tempfile, argparse
+        """Builds its own unladdered target as of 2026-09-05, because the roster no longer has one.
+
+        This used to pick the first unladdered certified crop off live canonical. PLA-8 closed on
+        batch 27 at 913 of 913 entries laddered, so that `next()` began raising StopIteration and
+        took all six tests below down as ERRORS -- an arc completing, not a defect. Skipping the
+        class would have been the wrong repair: these tests protect a defect that has recurred
+        twice (`best_use[:150]` in cmd_prepare, `[:104]` in cmd_verify) on methods this arc
+        actually confused, and a skipped suite protects nothing.
+
+        The brief's content is the CATALOG, not the crop -- the crop is only needed because
+        cmd_prepare rightly ABORTs on an already-laddered target ("re-laddering changes shipped
+        ids", the pinned-id rule). So build a scratch canonical with one crop's ladders removed and
+        point the tool at that. The denominator stays real; nothing shipped is touched. Note the
+        keys must be DELETED, not nulled: `lb.laddered` tests key presence, so a null ladder still
+        reads as laddered."""
+        import tempfile, argparse, copy
         cls.tmp = tempfile.mkdtemp(prefix="brieftest_")
         d = lb.load()
         cls.cm = d["control_methods"]
-        target = next(c["slug"] for c in d["crops"]
-                      if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"
-                      and not lb.laddered(c))
-        lb.cmd_prepare(argparse.Namespace(crops=target, out=cls.tmp))
+        cert = [c for c in d["crops"]
+                if (c.get("verification_status") or {}).get("status") == "verified_gs_arc"]
+        target = next((c["slug"] for c in cert if not lb.laddered(c)), None)
+        real_canon = lb.CANON
+        try:
+            if target is None:
+                scratch = copy.deepcopy(d)
+                victim = next(c for c in scratch["crops"]
+                              if c["slug"] == cert[0]["slug"])
+                for _f, prob in lb.problems(victim):
+                    prob.pop("control_ladder", None)
+                assert not lb.laddered(victim), "scratch target is still laddered"
+                lb.CANON = os.path.join(cls.tmp, "scratch_canonical.json")
+                json.dump(scratch, open(lb.CANON, "w"))
+                target = victim["slug"]
+            lb.cmd_prepare(argparse.Namespace(crops=target, out=cls.tmp))
+        finally:
+            lb.CANON = real_canon
         cls.brief = open(os.path.join(cls.tmp, "brief_catalog.md")).read()
 
     @classmethod
