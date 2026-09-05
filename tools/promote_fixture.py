@@ -51,6 +51,7 @@ COMMIT_FOR = {
     # PLA-8 BATCH 26, the trees and shrubs: roster 108 -> 114, 39 problems -> 38 (3 retired
     # array duplicates, 1 renamed, 2 bundles split into 4 limbs), 115 rungs. NEVER AMEND a3f0837:
     # tools/test_promote_pla8_batch26.py rebuilds its entire pre-state from this pin.
+    '95e66f6d1a8ea8550b2df3825d3bcbb00d39056e106d037290737923f74d0879': '890fdf7',  # PLA-8 batch 27, the microgreens -- the arc closes
     'ba61762a21e52bad85ec1ddca98a92b34e6216d8258497325ec8b0630787beb3': 'a3f0837',
     # Rosemary cert-log correction: the PNW read retracts "Phytophthora-only" from the
     # 2026-07-06 log. One appended string on one crop, batch 25's last owed data item.
