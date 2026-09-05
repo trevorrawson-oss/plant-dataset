@@ -259,9 +259,15 @@ about containers, which was only discoverable by reading it.
 - Refused deliberately, do not "finish the job" without re-arguing the biology: `even_watering`+insect,
   `even_watering`+nematode, `straw_mulch`+nematode, `airflow_spacing`+insect (all tolerance, not
   control) and `beneficial_predators`+viral (predators control the vector, not the virus).
-- **The coverage floor is NOT armed.** `control_ladder_gate`'s integrity half is wired in as
-  `whole_crop_gate` A56; the "a certified crop must HAVE a ladder" floor is deliberately held back,
-  because arming it today takes `gate_all` from 121/121 to 7/121. Arm it when coverage lands.
+- ~~**The coverage floor is NOT armed.**~~ **ARMED 2026-09-05**, at the arc's close, as
+  `whole_crop_gate` **A57** (`control_ladder_gate.coverage_violations`). Coverage landed at 913 of
+  913 problem entries, so the condition this row was waiting on is met and `gate_all` stayed
+  121/121. **The unit is the problem ENTRY, not the crop** -- "every certified crop carries a
+  ladder" would sit red at 121 of 128 forever, because the seven shells carry `pests: []` /
+  `diseases: []` and hold nothing to ladder. Entry-scoped, they pass with no carve-out at any
+  certification status. `[]` stays A56's defect ("laddered and left blank"); A57 owns absence only.
+  Proof it fires: `tools/mutate_a57_coverage_floor.py` -- 7 injected / 7 caught, on both problem
+  schemas, graded through `whole_crop_gate`, `gate_all` AND the pre-commit hook.
 - Content defects found and NOT fixed: swiss-chard's slug prose calls iron-phosphate bait "safe
   around pets and wildlife" (unhedged absolute); basil's slug entry recommends tighter spacing while
   its downy-mildew entry recommends spacing for airflow (real contradiction, mildew is the

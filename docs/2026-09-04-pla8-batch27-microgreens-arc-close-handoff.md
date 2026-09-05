@@ -135,7 +135,17 @@ detectable by construction.
 
 Ordered by consequence. Each row is a decision or a task, with its own evidence.
 
-### 6a. Arm the coverage floor. This is the headline item and the arc unlocks it.
+### 6a. Arm the coverage floor. This is the headline item and the arc unlocks it. **DONE 2026-09-05.**
+
+> **CLOSED 2026-09-05 -- armed as `whole_crop_gate` A57.** Outcome, evidence and the two defects the
+> arming turned up: `docs/2026-09-05-pla8-coverage-floor-armed.md`. In short: the floor is
+> ENTRY-scoped (`control_ladder_gate.coverage_violations`), so the seven shells pass with no
+> carve-out and the question this row left open -- may a crop certify carrying zero problems? --
+> is answered YES, in the guard's tests, exactly where the correction below said it belonged.
+> `gate_all` stayed 121/121; `tools/mutate_a57_coverage_floor.py` 7 injected / 7 caught, graded
+> through `whole_crop_gate`, `gate_all` and the pre-commit hook. Row 6a-bis item 5 is also closed:
+> `test_ladder_batch`'s 1 failure + 6 errors are repaired, not skipped.
+
 
 `docs/ladder_batch_playbook.md` §7 states it exactly: "`control_ladder_gate`'s integrity half is
 wired in as `whole_crop_gate` A56; the 'a certified crop must HAVE a ladder' floor is **deliberately
@@ -173,7 +183,7 @@ the arc finishing.** Zero are dataset defects.
 | 2 | `test_cited_claim_scan::test_MUTATION_the_anchoring_only_walk_reproduces_the_false_pass` | `UnreportableAbsence: 8 of 28 cited URLs are uncached`, and the named URLs are ALLIUM ones (leek/shallot thrips, onion downy mildew, onion maggots). A URL-cache completeness problem. | **Zero.** Batch 27 added and removed **0** anchoring URLs (1,369 distinct before, 1,369 after, empty symmetric difference). |
 | 3 | `test_problem_id_collision_gate::Preflight::test_canonical_is_the_pinned_sha` | `PINNED_SHA = ce98b0a6` (batch 25 + rosemary) while canonical was **already `ba61762a`** at HEAD. | **Zero.** Already red before this session began. |
 | 4 | `test_problem_id_collision_gate::AuditFixture::test_audit_output_is_exactly_pinned` | Same stale pin. | **Zero.** |
-| 5 | `test_ladder_batch::TheRosterHasRunOutOfTrueTwins::test_there_are_unladdered_crops_left_to_measure` **+ the 6 `BriefCarriesTheWholeMeaning` ERRORS** | **The arc is complete.** | This batch, by design. |
+| 5 | `test_ladder_batch::TheRosterHasRunOutOfTrueTwins::test_there_are_unladdered_crops_left_to_measure` **+ the 6 `BriefCarriesTheWholeMeaning` ERRORS** | **The arc is complete.** | This batch, by design. **FIXED 2026-09-05**, both on the class's own written instruction: the emptied reachability guard is retired and inverted into the arc-complete invariant (cross-walked against the A57 floor, because `laddered` is the weaker any-entry predicate), and the brief suite now builds its own unladdered scratch target instead of being skipped. 27/27. |
 
 A first run of this regression overlapped the state-trio rewrite, which raised the possibility that
 some failures were a mid-write race. **They were not**: a clean re-run after the trio settled
