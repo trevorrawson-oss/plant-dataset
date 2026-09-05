@@ -124,3 +124,84 @@ assert ladder_violations(data(_vcat, [crop([_birds_ok])]), crop([_birds_ok])) ==
 # incoherent: an insecticide does not apply to a vertebrate
 assert any("applies_to" in v for v in
            ladder_violations(data(_vcat, [crop([_birds_bad])]), crop([_birds_bad])))
+
+# ---------------------------------------------------------------------------------------------
+# THE COVERAGE FLOOR (PLA-8 arc close, 2026-09-05). `control_ladder_gate`'s INV-1 condition.
+#
+# THE UNIT IS THE PROBLEM ENTRY, NOT THE CROP. "every crop laddered" is the wrong test and would
+# fail at 121/128 forever: the seven shells (avocado, olive, the five mushrooms) carry
+# `pests: []` / `diseases: []` -- present and empty by intent -- so they hold ZERO entries to
+# ladder and satisfy an entry-scoped floor by construction, at any certification status.
+#
+# ABSENCE only. `[]` is a DIFFERENT defect ("laddered and left blank") and belongs to
+# ladder_violations, which has owned it since 2026-08-24. The floor must stay silent on it, or the
+# same defect is reported twice under two names.
+from control_ladder_gate import coverage_violations
+
+_LAD = [{"method": "rotate_crops"}]
+
+# fully laddered -> silent
+assert coverage_violations({"slug": "apple", "pests": [{"id": "codling-moth", "control_ladder": _LAD}]}) == []
+# control_ladder: None -> the floor fires
+assert any("no control_ladder" in v for v in
+           coverage_violations({"slug": "apple", "pests": [{"id": "codling-moth", "control_ladder": None}]}))
+# control_ladder KEY ABSENT -> the floor fires. This is the shape a newly-authored problem entry
+# actually arrives in; a floor that only checks `is None` never sees it.
+assert any("no control_ladder" in v for v in
+           coverage_violations({"slug": "apple", "pests": [{"id": "codling-moth"}]}))
+# ...and on diseases[] as well as pests[]
+assert any("no control_ladder" in v for v in
+           coverage_violations({"slug": "apple", "diseases": [{"id": "apple-scab"}]}))
+# THE SEVEN SHELLS: present-and-empty arrays hold no entries -> the floor is silent, cert status
+# irrelevant. A floor written "every crop carries a ladder" fails here, which is the whole point.
+assert coverage_violations({"slug": "avocado", "pests": [], "diseases": []}) == []
+assert coverage_violations({"slug": "olive", "pests": [], "diseases": [],
+                            "verification_status": {"status": "verified_gs_arc"}}) == []
+# a crop carrying neither key at all -> also silent
+assert coverage_violations({"slug": "button-mushroom"}) == []
+# REFUSAL SPEC: `[]` is ladder_violations' defect, not the floor's. Silent here is the contract.
+assert coverage_violations({"slug": "sweet-corn", "pests": [{"id": "raccoons", "control_ladder": []}]}) == []
+
+# THE MICROGREEN SCHEMA (PLA-452): `name_seasoned` / `name_beginner`, NO `name`, on 8 crops. Three
+# instruments this arc were blind to it or dead. The floor must READ these entries, and must name
+# them legibly when it fires -- a floor that reports "?" is a floor nobody can act on.
+_MICRO = {"id": "fungus-gnats", "name_beginner": "Fungus gnats", "name_seasoned": "Fungus gnats",
+          "type": "insect"}
+_v = coverage_violations({"slug": "wheatgrass", "pests": [dict(_MICRO)]})
+assert any("no control_ladder" in v for v in _v), _v
+assert any("fungus-gnats" in v for v in _v), _v
+# and with no `id` either -- the label falls through the display-name schema, never to "?"
+_v = coverage_violations({"slug": "wheatgrass",
+                          "diseases": [{"name_beginner": "Damping off", "name_seasoned": "Damping-off"}]})
+assert any("Damping" in v for v in _v), _v
+assert not any("?" in v for v in _v), _v
+
+# ---------------------------------------------------------------------------------------------
+# WHERE THE FLOOR IS WIRED, AND WHERE IT DELIBERATELY IS NOT.
+#
+# `all_violations` STAYS INTEGRITY-ONLY. Putting the floor in it was tried on 2026-09-05 and
+# reverted the same day: 29 pinned PLA-8 promote suites assert `all_violations(post) == []` on
+# HISTORICAL post-states, and those states legitimately carried unladdered problems -- batch 20's
+# post-state has 190 of them, because it is a snapshot of a rollout in progress. Widening
+# `all_violations` made every one of those suites assert something FALSE about its own moment, and
+# turned a 5-failure tree into 33. A gate must not be armed on data it reddens; a pinned fixture is
+# data. Do not "finish the job" by adding it back.
+_mid_arc = {"crops": [{"slug": "apple", "pests": [{"id": "codling-moth"}]}],
+            "control_methods": {}, "source_catalog": {}}
+assert not any("no control_ladder" in v for v in all_violations(_mid_arc)), all_violations(_mid_arc)
+
+# It IS reached from the two places that police the SHIPPING roster: whole_crop_gate A57 (covered by
+# tools/mutate_a57_coverage_floor.py, graded through the full gate) and this module's own CLI. A
+# guard whose entry point is never called is a zero with extra steps -- the catalog-r8 lesson was 53
+# green tests over a main() that never called check() -- so the CLI path is exercised for real.
+import subprocess, tempfile, json as _json
+_fh = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False)
+_json.dump(_mid_arc, _fh); _fh.close()
+_r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                                  "control_ladder_gate.py"), _fh.name],
+                    capture_output=True, text=True)
+os.unlink(_fh.name)
+assert _r.returncode != 0, _r.stdout
+assert "COVERAGE FLOOR" in _r.stdout, _r.stdout
+assert "no control_ladder" in _r.stdout, _r.stdout
+print("coverage_violations tests: OK")

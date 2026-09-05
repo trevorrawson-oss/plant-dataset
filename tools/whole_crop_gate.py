@@ -815,7 +815,7 @@ print(f"  over-length titles: {len(_tlv)}")
 for m in _tlv:
     fail(f"trigger-title: {m}")
 
-# ---------------- A56. control-ladder INTEGRITY (PLA-8; the coverage floor is NOT here) ----------
+# ---------------- A56. control-ladder INTEGRITY (PLA-8; the coverage floor is A57, below) --------
 # ARMED 2026-08-22, ahead of the roster-wide ladder rollout and DELIBERATELY ONLY HALF OF IT.
 #
 # `control_ladder_gate` bundles two separable things, and they have opposite readiness:
@@ -828,12 +828,15 @@ for m in _tlv:
 #                           114 certified crops that carry no ladder yet this costs exactly nothing.
 #                           Measured before arming: 0 violations roster-wide.
 #
-#   COVERAGE FLOOR (NOT armed)  "a certified crop must HAVE a ladder." Measured 2026-08-22: 7 of 121
-#                           certified crops carry one, so arming this today would take gate_all from
-#                           121/121 to 7/121 and block every unrelated promote, including any
-#                           parallel session's. That is the gates-arm-off-the-data rule. It arms
-#                           when the rollout actually lands, which is `control_ladder_gate`'s own
-#                           stated INV-1 condition.
+#   COVERAGE FLOOR (ARMED 2026-09-05 as A57, below)  "every problem ENTRY must be laddered."
+#                           Written here on 2026-08-22 as NOT armed and phrased then as "a certified
+#                           crop must HAVE a ladder": 7 of 121 certified crops carried one, so
+#                           arming it that day would have taken gate_all from 121/121 to 7/121 and
+#                           blocked every unrelated promote, including any parallel session's. That
+#                           is the gates-arm-off-the-data rule, and the condition it named --
+#                           `control_ladder_gate`'s own INV-1 -- was met by batch 27 at 913 of 913.
+#                           The floor armed on 2026-09-05, scoped to the problem ENTRY rather than
+#                           the crop; see A57 for why that is what lets the seven shells pass.
 #
 # WHY ARM THE HALF NOW rather than waiting for both. The rollout is ~23 batches of 5 crops. Left
 # standalone, ladder integrity is enforced by a side script somebody has to remember to run on each
@@ -848,6 +851,41 @@ print(f"  control-ladder integrity violations: {len(_clv)}"
       f"{'  (no-op: crop carries no ladder)' if not any('control_ladder' in p for f_ in ('pests','diseases') for p in crop.get(f_) or [] if isinstance(p, dict)) else ''}")
 for m in _clv:
     fail(f"control-ladder: {m}")
+
+# ---------------- A57. control-ladder COVERAGE FLOOR (PLA-8; A56's other half) ----------------
+# ARMED 2026-09-05, at the PLA-8 arc close. A56's header above says this floor "arms when the
+# rollout actually lands, which is control_ladder_gate's own stated INV-1 condition." The rollout
+# landed: 913 of 913 problem entries across the 121 certified crops carry a ladder. Measured on
+# 95e66f6d BEFORE arming -- 0 entries with the key missing, 0 None, 0 [] -- so this arms GREEN and
+# is a no-op on today's data by construction. That is the gates-arm-off-the-data rule satisfied,
+# not dodged: a roster gate armed red would flood every unrelated promote, including a parallel
+# session's. Green is not evidence, though; `tools/mutate_a57_coverage_floor.py` is.
+#
+# THE UNIT IS THE PROBLEM ENTRY, NOT THE CROP -- which is what lets the seven shells pass with no
+# carve-out at all. avocado, olive and the five mushrooms carry `pests: []` / `diseases: []` with
+# verification_status.status None: zero entries in, zero violations out, at any certification
+# status. An early draft of the batch-27 handoff claimed a carve-out "must be explicit ... or the
+# floor takes the seven shells down"; that was wrong twice over (they are not certified, AND they
+# hold nothing to ladder) and is corrected in ea3f91b. It also settles the question that correction
+# left open -- a crop that certifies carrying zero problems stays legal here, because there is
+# nothing unladdered about it.
+#
+# ABSENCE ONLY. `control_ladder: []` is the separate "laddered and left blank" defect and belongs to
+# A56, which has owned it since 2026-08-24. Reporting it here too would name one defect twice.
+#
+# WHY ITS OWN NUMBER. A56 is INTEGRITY, and it no-ops on an unladdered problem by design -- its
+# reachability harness grades guard families through exactly that silence. Coverage is the opposite
+# predicate: it fires precisely where A56 goes quiet. Separate number, separate fail prefix,
+# separate harness -- the call A50 made rather than folding into A39.
+from control_ladder_gate import (coverage_violations as _cl_coverage,
+                                 _problems as _cl_problems)
+print("A57. control-ladder coverage floor (every problem entry is laddered)")
+_ccv = _cl_coverage(crop)
+_cnt = len(_cl_problems(crop))
+print(f"  problem entries scanned: {_cnt}; unladdered: {len(_ccv)}"
+      f"{'  (no-op: crop carries no problem entries)' if not _cnt else ''}")
+for m in _ccv:
+    fail(f"control-ladder-coverage: {m}")
 
 # ---------------- A55. perennial year-pill coherence (PLA-6 Round 2) ----------------
 # HARD-FLIPPED 2026-08-22, the day its findings reached zero, which is the same soft-then-hard
