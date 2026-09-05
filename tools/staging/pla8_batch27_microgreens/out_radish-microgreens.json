@@ -1,0 +1,48 @@
+{
+ "pests": [
+  {
+   "id": "fungus-gnats",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "bottom_watering",
+     "note_beginner": "Water from underneath, by adding water to the tray below rather than pouring over the top, and let the surface dry back a little between drinks instead of leaving it soaking. The larvae, the small grub stage that does the feeding, live down in mix that stays wet around the clock, so a surface that dries gives them less to settle into. Keep a little air moving over the tray too.",
+     "note_seasoned": "The larval stage depends on medium that is held damp without interruption, so the control is to deny it that: irrigate from below and give the top layer a chance to firm up before the next drink. Air moving over the stand pushes the same direction. Radish also turns a tray over quickly, and a good share of trays are cut before numbers amount to much."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Wash out your trays and start each batch with fresh mix. Old mix and dirty trays are how gnats carry over from one batch into the next, so a clean start holds their numbers down.",
+     "note_seasoned": "Cleaned trays and fresh medium at each turnaround cut the carryover that would otherwise let a resident population establish across batches."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sensible_seeding_rate",
+     "note_beginner": "Sow thinly enough that the stand is not packed shoulder to shoulder. Damping-off, the rot that collapses seedlings right at the base, gets its opening in a crowded tray, where moisture sits and the air between stems goes still. Radish is one of the less trouble-prone microgreens, so a restrained sowing rate carries a lot of the load.",
+     "note_seasoned": "Sowing density sets the microclimate at the base of the stand. Packed too tightly, it holds free moisture and stalls air movement between stems, which is the combination Rhizoctonia, Botrytis and their relatives work in. Radish sits at the easier end of the microgreen range, so rate is usually the lever that matters most here."
+    },
+    {
+     "method": "bottom_watering",
+     "note_beginner": "Keep the mix about as damp as a sponge you have wrung out, moist but not soggy, and once the leaves are up add water to the tray underneath instead of over the top. A surface that stays wet is the usual trigger.",
+     "note_seasoned": "Hold the medium at wrung-out-sponge dampness while the seed is germinating, then switch to watering from beneath once the stand greens up, keeping free water off the stem bases where the rot takes hold."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Set a small fan to blow gently across the tray and leave it running, rather than airing the tray out now and then. Moving air dries the surface and the stems between waterings, which works against both the rot at the base and the fuzzy growth that shows up on top of the mix.",
+     "note_seasoned": "Continuous low-velocity air, not intermittent venting, shortens the wet period on the medium surface and on the stems, acting on the base rot and on the warm, humid surface mold in one move."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "You cannot spray your way out of this on greens cut young and eaten raw, so the cleaning steps are what you have. Sanitize trays between batches, and if a tray goes heavily moldy, put it in the compost and begin again with clean equipment instead of trying to rescue it.",
+     "note_seasoned": "With no rescue treatment available on a raw cut crop, sanitation between cycles is the step that carries. A tray well into collapse goes to the compost and the batch restarts in clean equipment rather than being nursed along."
+    }
+   ]
+  }
+ ]
+}

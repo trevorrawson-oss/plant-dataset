@@ -1,0 +1,47 @@
+{
+ "pests": [
+  {
+   "id": "fungus-gnats",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "bottom_watering",
+     "note_beginner": "Once the shoots are up, let the top of the mix dry a little between waterings and water from the bottom, meaning the tray draws water up from below instead of you pouring it over the top. Keep a little air moving across the tray as well. The larvae live in mix that stays wet, and sunflower shoots are cut so quickly that gnats often do not get the chance to build.",
+     "note_seasoned": "After the canopy closes in, shift to watering from beneath and give the top of the medium a chance to dry off between fills; the thick sunflower mat gives up water slowly, and steady air movement over the tray helps. The cut comes at 8 to 14 days, which usually beats a gnat population to it."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Wash your trays and start each batch on fresh growing mix, so one batch does not hand its gnats to the next.",
+     "note_seasoned": "Cleaning trays and starting each cycle on fresh medium denies the larvae a place to carry over."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sensible_seeding_rate",
+     "note_beginner": "Do not sow the seed too thickly. A crowded mat holds moisture and stays stuffy, and that is the setup this rot wants.",
+     "note_seasoned": "Hold the seeding rate down; an overseeded mat stays wet and still, the condition these fungi rot seedlings under."
+    },
+    {
+     "method": "bottom_watering",
+     "note_beginner": "Aim for mix that feels just damp instead of soggy. As soon as the first leaves show, switch to letting the tray take up its water from underneath rather than pouring over the top, which is what bottom watering means. Trouble starts when the surface stays wet.",
+     "note_seasoned": "Hold the medium at the dampness of a squeezed-out sponge, and once the tray has greened up, move the water underneath it, so neither the mat surface nor the stem bases sit saturated."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Run a small fan so gentle air keeps moving over the tray, which helps the surface and the stems dry between waterings."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "There is no rescue spray on the table for a crop that gets eaten raw, so prevention carries this one. Clean your trays between batches, and if a tray molds badly, get rid of it and start again on clean trays.",
+     "note_seasoned": "Nothing sprayable belongs on a shoot crop eaten uncooked, which puts the full weight on hygiene: disinfect each tray before it is refilled, and write off a heavily molded mat to the compost rather than trying to carry it through to cutting."
+    }
+   ]
+  }
+ ]
+}

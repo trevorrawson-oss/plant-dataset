@@ -1,0 +1,48 @@
+{
+  "pests": [
+    {
+      "id": "fungus-gnats",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "bottom_watering",
+          "note_beginner": "Water the tray from underneath and let the top of the mix come back from sopping between drinks. The larvae, the young grub stage, are living down in that wet layer, so a surface that stays wet around the clock is what invites them. Keep a little air moving over the tray as well.",
+          "note_seasoned": "Larvae persist in medium that is held continuously wet, so let the surface recover from saturation between waterings as far as the crop tolerates, deliver water from below, and hold airflow up. A thick mat of soaked peas carries more water than a fine-seeded tray, which slows that surface drydown."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Wash the trays and start each batch on fresh mix, which clears out whatever was breeding in the last round. Pea shoots are also cut so quickly that gnats seldom get the run of a tray before harvest.",
+          "note_seasoned": "Disinfecting each tray, then refilling it with medium that has not carried a crop before, interrupts the breeding sequence, and the crop's short turnaround means most trays are cut before a population reaches a level that matters."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "damping-off",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "sensible_seeding_rate",
+          "note_beginner": "Spread the soaked peas in an even layer instead of heaping them on. A packed stand holds water against itself and goes stuffy inside, which is the kind of setting where damping-off, the rot that collapses seedlings right at the base, gets going.",
+          "note_seasoned": "Sow at a rate the tray can carry rather than an overwhelming one. A dense mat of large soaked seed traps moisture and mats down air movement through the stand, which is the condition set these soil-borne fungi work in."
+        },
+        {
+          "method": "bottom_watering",
+          "note_beginner": "Keep the mix damp like a wrung-out sponge rather than soggy, and once the leaves are up, switch to watering from underneath so you are not rewetting the surface from above.",
+          "note_seasoned": "Wrung-sponge moisture is the target for the mix, with watering shifted underneath once the tray has greened, which keeps the surface layer off saturation where both the stem-line rot and the fuzzy surface mold establish."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Run a small fan so gentle air moves across the tray steadily. Still air is one of the conditions that lets a crowded tray go over, and a fan is the part of that you can control indoors.",
+          "note_seasoned": "Constant gentle airflow is the counterweight to a dense, humid mat, and it is set up before symptoms rather than in response to them. Moving air earns its keep more on a crop of large seed that packs down under its own weight than it would on a fine-seeded tray."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Wash the trays before each new batch. Because these get eaten raw, spraying is not on the table here, so a tray that molds heavily is best emptied out and the batch begun again on cleaned trays.",
+          "note_seasoned": "Sanitation between cycles carries the load a spray would carry elsewhere, since a raw cut crop has no rescue treatment. A tray that has gone over is composted and the run started fresh on sanitized equipment."
+        }
+      ]
+    }
+  ]
+}

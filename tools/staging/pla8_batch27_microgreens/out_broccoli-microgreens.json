@@ -1,0 +1,48 @@
+{
+  "pests": [
+    {
+      "id": "fungus-gnats",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "bottom_watering",
+          "note_beginner": "Tiny dark flies hanging around the tray usually tell you the mix is sitting far too wet. Put water in from underneath so the tray draws it up and the top can dry out between waterings, since the young gnats, called larvae, live down in the sodden part of the mix. A gentle breeze across the tray helps as well.",
+          "note_seasoned": "Dry the surface between waterings as far as the crop tolerates and sub-irrigate instead of top-watering; the persistently wet medium is the driver, not the adult fly. Hold airflow up, and note that at roughly 8 to 12 days to cut, most broccoli trays finish before gnats build to anything that matters."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Wash and sanitize your trays between batches and start each one with fresh mix, so the next tray does not inherit the problem from the last.",
+          "note_seasoned": "Sanitized trays and fresh medium each cycle break the breeding cycle rather than treat an active one, which is the approach a crop this short leaves you."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "damping-off",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "sensible_seeding_rate",
+          "note_beginner": "Sow thinner than feels natural. Broccoli seed goes down dense, and a packed stand traps moisture around the stem bases, which is where damping-off, meaning seedlings rotting off right at the base, gets started.",
+          "note_seasoned": "This is a fine brassica sown tight, which is a large part of why it is prone here; ease the rate so the stand is not both wet and airless. Penn State reported damping-off as the single problem, disease or pest, that its microgreens trials turned up."
+        },
+        {
+          "method": "bottom_watering",
+          "note_beginner": "Go for the feel of a sponge you have wrung out, not something sodden, and put the water in from underneath so the leaf tops and the top of the mix stay dry. Wetness sitting up on that surface is what sets this problem off.",
+          "note_seasoned": "Wrung-sponge moisture plus sub-irrigation holds the foliage and the medium surface dry, which is the lever that matters most once the stand has greened up."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Set a small fan to run steadily near the tray so gentle air keeps moving over it and the surface and stem bases can dry between waterings.",
+          "note_seasoned": "Constant gentle air from a small fan keeps the surface and the stem bases from sitting damp; still air is the third condition this wants, alongside wet and crowded."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Use clean, sanitized trays and fresh mix for every batch. On a crop you cut young and eat raw there is no rescue spray to fall back on, so prevention carries the whole job. A tray that molds badly is better composted than rescued; restart it with clean equipment.",
+          "note_seasoned": "Fresh medium and sanitized trays at every cycle, with a badly affected tray composted and restarted clean rather than salvaged. Nothing sprayable is available for greens cut this young and eaten raw, so the whole defense sits in how the tray is grown and how it is cleaned, not in what goes on it."
+        }
+      ]
+    }
+  ]
+}

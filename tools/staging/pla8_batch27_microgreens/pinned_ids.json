@@ -1,0 +1,132 @@
+{
+ "arugula-microgreens": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Damping-off (and surface mold)",
+    "name_beginner": "Damping-off and mold",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "broccoli-microgreens": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Damping-off (and surface mold)",
+    "name_beginner": "Damping-off and mold",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "cilantro-microgreens": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Damping-off and surface mold",
+    "name_beginner": "Damping-off and mold",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "pea-shoots": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Damping-off (and surface mold)",
+    "name_beginner": "Damping-off and mold",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "radish-microgreens": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Damping-off (and surface mold)",
+    "name_beginner": "Damping-off and mold",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "sunflower-sprouts": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Damping-off and mold in the seed mat",
+    "name_beginner": "Damping-off and mold",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "wheatgrass": {
+  "pests": [
+   {
+    "name_seasoned": "Fungus gnats",
+    "name_beginner": "Fungus gnats",
+    "id": "fungus-gnats",
+    "type": "insect"
+   }
+  ],
+  "diseases": [
+   {
+    "name_seasoned": "Mold and damping-off",
+    "name_beginner": "Mold and damping-off",
+    "id": "damping-off",
+    "type": "fungal"
+   }
+  ]
+ },
+ "_reused_ids": {
+  "fungus-gnats": "REUSE from microgreens-mix (same schema, same organism). Mints nothing.",
+  "damping-off": "REUSE from microgreens-mix + 13 crops. T1 (PSU, Virginia Tech) attribute microgreen tray fuzz to the damping-off organisms; no readable .edu/.gov source supports a separate saprophytic mold problem, so this is ONE disease complex, not a bundle to split."
+ }
+}

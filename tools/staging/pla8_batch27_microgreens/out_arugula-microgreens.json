@@ -1,0 +1,48 @@
+{
+  "pests": [
+    {
+      "id": "fungus-gnats",
+      "type": "insect",
+      "control_ladder": [
+        {
+          "method": "bottom_watering",
+          "note_beginner": "Gnat larvae, the tiny worm-like young, live in mix that stays soaking wet, so let the top dry out a little between waterings. Once the leaves are up, water from the bottom (pour into the tray underneath) rather than misting the surface, and keep a little air moving over the tray. Arugula is cut so fast that gnats often do not get the chance to build up.",
+          "note_seasoned": "The larvae develop in medium that stays wet, so allow the surface to dry between waterings as far as this crop permits and bottom-water once the tray has greened. Keep gentle air moving as well. Arugula's 6 to 8 day cycle works in your favor here, since most trays are harvested before numbers reach a level that matters."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Wash your trays and start each batch on fresh growing mix. That keeps gnats from one tray from carrying over into the next.",
+          "note_seasoned": "Fresh medium and a sanitized tray at the start of each cycle take away the breeding sites, so a population does not carry from one batch into the next."
+        }
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "damping-off",
+      "type": "fungal",
+      "control_ladder": [
+        {
+          "method": "sensible_seeding_rate",
+          "note_beginner": "Do not sow too thickly. A crowded, stuffy stand is where this rot takes hold, and arugula's fine leaves already close in tightly on their own.",
+          "note_seasoned": "Hold the seeding rate near the 10 g per 1020 tray this crop is sown at. The canopy is dense and fine to begin with, so overseeding compounds both the crowding and the trapped surface moisture that damping-off needs."
+        },
+        {
+          "method": "bottom_watering",
+          "note_beginner": "Aim for damp mix rather than wet mix. Once the leaves are up, water from the bottom (pour into the tray underneath) instead of wetting the leaves. Arugula seed turns sticky when wet and holds water right at the surface, so a soaked top is the main trigger.",
+          "note_seasoned": "Aim for a wrung-sponge feel and nothing wetter, then switch to watering from below as soon as the tray greens, keeping the foliage dry. The mucilaginous seed coat keeps water sitting at the surface, which is the soil line where these fungi rot the seedlings."
+        },
+        {
+          "method": "airflow_spacing",
+          "note_beginner": "Keep a small fan running so gentle air moves across the tray and the surface and stems do not sit damp. Still, stuffy air is half of what this problem needs to get going.",
+          "note_seasoned": "Constant gentle airflow earns more here than on a looser crop: arugula's dense fine canopy closes over the surface early and holds humidity right at the soil line."
+        },
+        {
+          "method": "garden_sanitation",
+          "note_beginner": "Microgreens are eaten raw and whole, so no spray is on the table here and prevention is the whole job. Wash and sanitize each tray before you sow in it. A heavily molded tray is not worth rescuing: get rid of it and start again on gear you have just cleaned.",
+          "note_seasoned": "No rescue spray is available for a raw cut crop, so sanitizing trays between cycles is part of the control rather than housekeeping. Compost a tray that has molded badly and restart the cycle on clean equipment."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+ "pests": [
+  {
+   "id": "fungus-gnats",
+   "type": "insect",
+   "control_ladder": [
+    {
+     "method": "bottom_watering",
+     "note_beginner": "The larvae, the young worm-like stage, develop down in the wet mat, so let the top dry off a little between waterings and add water underneath, into the tray below, rather than pouring it over the grass. A small fan kept running helps too.",
+     "note_seasoned": "Larvae need medium that stays wet, so allowing a brief dry-down at the top of the mat between irrigations, then watering from below, removes the habitat rather than the insect. Steady air movement supports it, and a 7 to 10 day grow-out often finishes before adult numbers amount to much."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Start each batch with fresh medium and clean trays, so fewer larvae carry over from the last crop.",
+     "note_seasoned": "Sanitizing the trays and starting on new medium each cycle interrupts the carryover from one grow-out to the next, which is where a persistent tray population would otherwise come from."
+    }
+   ]
+  }
+ ],
+ "diseases": [
+  {
+   "id": "damping-off",
+   "type": "fungal",
+   "control_ladder": [
+    {
+     "method": "sensible_seeding_rate",
+     "note_beginner": "Scatter the seed so it sits as a single flat layer with no mounds. A heaped patch holds water and stays stuffy in its middle, and that is usually where rot gets going.",
+     "note_seasoned": "An even single layer rather than a heaped sowing holds local density down. Wheatgrass already runs a tighter mat than the quick salad microgreens, so piling compounds the crowding that keeps moisture against the base."
+    },
+    {
+     "method": "bottom_watering",
+     "note_beginner": "Keep the mat damp like a sponge you have wrung out, not soggy. Once the grass has greened up, water from underneath, into the tray below, so you are not wetting the surface from above.",
+     "note_seasoned": "Hold the mat at the damp-sponge level rather than saturated, then switch to bottom-watering once the stand greens. The point is to stop free water sitting on the seed layer, which is where the fuzzy growth tends to show first."
+    },
+    {
+     "method": "airflow_spacing",
+     "note_beginner": "Run a small fan on low so gentle air is moving over the tray the whole time. Moving air dries the surface between waterings, and a still, humid tray is where fuzzy growth spreads.",
+     "note_seasoned": "Constant gentle air movement holds humidity down right at the mat surface, and it is the main lever left once the watering is already disciplined. The dense mat and the 7 to 10 day grow-out are exactly what make wheatgrass more mold-prone than a fast salad tray."
+    },
+    {
+     "method": "garden_sanitation",
+     "note_beginner": "Sprays are not an option on grass you juice and drink raw, so everything rides on getting the conditions right up front. If a tray molds badly, compost it and start the next one on clean trays with fresh medium.",
+     "note_seasoned": "No rescue material is available on grass that goes straight to the juicer, so a tray that has molded through gets composted and the next one started on sanitized equipment and new medium. Every step that helps here is one taken ahead of the trouble rather than in answer to it."
+    }
+   ]
+  }
+ ]
+}
