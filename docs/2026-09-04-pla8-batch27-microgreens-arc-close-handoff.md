@@ -141,9 +141,25 @@ Ordered by consequence. Each row is a decision or a task, with its own evidence.
 wired in as `whole_crop_gate` A56; the 'a certified crop must HAVE a ladder' floor is **deliberately
 held back**, because arming it today takes `gate_all` from 121/121 to 7/121. **Arm it when coverage
 lands.**" Coverage has now landed: 913/913. Arming it makes an unladdered problem un-certifiable and
-ends the deferral. It is a new guard, so it ships mutation-tested per PLA-215, and the shell
-carve-out must be explicit (`pests: []` / `diseases: []` with `status: None` must stay legal, or the
-floor takes the seven shells down).
+ends the deferral. It is a new guard, so it ships mutation-tested per PLA-215.
+
+**CORRECTION (2026-09-05), measured after this handoff was first written: NO SHELL CARVE-OUT IS
+NEEDED.** An earlier draft of this section said the carve-out "must be explicit ... or the floor
+takes the seven shells down." That is wrong. The seven shells carry
+`verification_status.status = None`, so they are **not** `verified_gs_arc` and sit outside the
+certified population a floor would run over -- `gate_all` runs `whole_crop_gate` on the 121
+certified crops, and the shells are not among them. Measured on `95e66f6d`:
+
+    certified: 121   shells: 7   fully laddered: 121
+    shells that are CERTIFIED (would the floor see them?): NONE
+    certified set == fully-laddered set: True
+    certified crops lacking a ladder: NONE
+
+So arming the floor is a **no-op on today's data by construction**: the set it would police is
+exactly the set that already satisfies it. The real design question is not a carve-out but what
+happens if a shell ever certifies while still carrying `pests: []` / `diseases: []` -- that is when
+the floor has to decide whether "certified with zero problems" is legal. Worth answering in the
+guard's tests rather than discovering later.
 
 ### 6a-bis. THE FULL-TREE REGRESSION: 5 failures + 6 errors, NONE attributable to this batch
 
