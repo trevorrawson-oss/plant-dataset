@@ -48,6 +48,10 @@ TOOLS = os.path.join(REPO, 'tools')
 # canonical SHA -> the commit whose crops_data_final.json IS that SHA.
 # Verified by hash on every use; a stale entry fails loudly rather than yielding a bad fixture.
 COMMIT_FOR = {
+    # PLA-8 BATCH 26, the trees and shrubs: roster 108 -> 114, 39 problems -> 38 (3 retired
+    # array duplicates, 1 renamed, 2 bundles split into 4 limbs), 115 rungs. NEVER AMEND a3f0837:
+    # tools/test_promote_pla8_batch26.py rebuilds its entire pre-state from this pin.
+    'ba61762a21e52bad85ec1ddca98a92b34e6216d8258497325ec8b0630787beb3': 'a3f0837',
     # Rosemary cert-log correction: the PNW read retracts "Phytophthora-only" from the
     # 2026-07-06 log. One appended string on one crop, batch 25's last owed data item.
     'ce98b0a6f83cc04b380a6c3be3009709a7c6c3626b2611c88fafec1164997144': '111cda6',
